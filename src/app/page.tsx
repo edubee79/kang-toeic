@@ -1,4 +1,5 @@
 'use client';
+// Winter Camp Deployment Check
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
