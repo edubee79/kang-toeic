@@ -48,15 +48,15 @@ export default function ShadowingPractice() {
         const dayData = shadowingData[day] || [];
         const startIdx = (setId - 1) * 20;
         const endIdx = startIdx + 20;
-        const setSentences = dayData.slice(startIdx, endIdx);
+        const subset = dayData.slice(startIdx, endIdx);
 
-        if (setSentences.length === 0) {
+        if (subset.length === 0) {
             alert("해당 세트 데이터가 없습니다.");
             router.push('/homework/shadowing-part1');
             return;
         }
 
-        setSentences(setSentences);
+        setSentences(subset);
         setLoading(false);
 
         // Init Speech API

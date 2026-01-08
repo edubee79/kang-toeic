@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import {
-    LayerGroup, Type, UserSquare, Star, Zap, MapPin,
-    Settings, ArrowRightToLine, Loader, Scissors, Link as LinkIcon,
+    Layers as LayerGroup, Type, SquareUser as UserSquare, Star, Zap, MapPin,
+    Settings, ArrowRightToLine, Loader2 as Loader, Scissors, Link2 as LinkIcon,
     GitBranch, Archive, ChevronRight
 } from 'lucide-react';
 

@@ -11,28 +11,24 @@ import { auth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 
-export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boolean) => void }) {
-    const pathname = usePathname();
-    const router = useRouter();
+const menuItems = [
+    { href: "/", label: "Dashboard", icon: Home },
+    { href: "/homework/shadowing-part1", label: "Part 1 Shadowing", icon: Mic2 },
+    { href: "/homework/part2-practice", label: "Part 2 Real Test", icon: Headphones },
+    { href: "/homework/part5", label: "Part 5 Grammar", icon: BookOpen },
+    { href: "/homework/voca", label: "Vocabulary", icon: BookOpen },
+];
 
-    const menuItems = [
-        { href: "/", label: "Dashboard", icon: Home },
-        { href: "/homework/shadowing-part1", label: "Part 1 Shadowing", icon: Mic2 },
-        { href: "/homework/part2-practice", label: "Part 2 Real Test", icon: Headphones },
-        { href: "/homework/part5", label: "Part 5 Grammar", icon: BookOpen },
-        { href: "/homework/voca", label: "Vocabulary", icon: BookOpen },
-    ];
-
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            router.push("/login");
-        } catch (error) {
-            console.error("Logout failed", error);
-        }
-    };
-
-    const NavContent = () => (
+function NavContent({
+    pathname,
+    setOpen,
+    handleLogout
+}: {
+    pathname: string;
+    setOpen?: (v: boolean) => void;
+    handleLogout: () => void;
+}) {
+    return (
         <div className="flex flex-col h-full bg-slate-900 text-white p-6 border-r border-slate-800">
             <div className="mb-10 flex items-center gap-2">
                 <h1 className="text-xl font-black italic tracking-tighter text-indigo-400">
@@ -80,13 +76,27 @@ export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boole
             </div>
         </div>
     );
+}
+
+export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boolean) => void }) {
+    const pathname = usePathname();
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            router.push("/login");
+        } catch (error) {
+            console.error("Logout failed", error);
+        }
+    };
 
     // Mobile Sheet View
     if (setOpen) {
         return (
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetContent side="left" className="p-0 border-r-slate-800 w-80 bg-slate-900 border-none">
-                    <NavContent />
+                    <NavContent pathname={pathname} setOpen={setOpen} handleLogout={handleLogout} />
                 </SheetContent>
             </Sheet>
         )
@@ -95,7 +105,7 @@ export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boole
     // Desktop Side View
     return (
         <div className="hidden md:block w-72 h-screen fixed left-0 top-0">
-            <NavContent />
+            <NavContent pathname={pathname} handleLogout={handleLogout} />
         </div>
     );
 }
