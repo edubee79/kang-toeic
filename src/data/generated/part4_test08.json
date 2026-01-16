@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 8,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "Where does the speaker work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a roofing company"
+          },
+          {
+            "label": "B",
+            "text": "At a catering company"
+          },
+          {
+            "label": "C",
+            "text": "At a community park headquarters"
+          },
+          {
+            "label": "D",
+            "text": "At an interior-design firm"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q72",
+        "text": "What information was incorrect?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An order number"
+          },
+          {
+            "label": "B",
+            "text": "A file name"
+          },
+          {
+            "label": "C",
+            "text": "An address"
+          },
+          {
+            "label": "D",
+            "text": "A price"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q73",
+        "text": "Why does the speaker recommend placing an order soon?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A material is in high demand."
+          },
+          {
+            "label": "B",
+            "text": "The rainy season is coming."
+          },
+          {
+            "label": "C",
+            "text": "Some new fees will be introduced."
+          },
+          {
+            "label": "D",
+            "text": "A permit is about to expire."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "M-Au Hi, 71 this is Alexi from Petrov Roofing Company. I just heard back from my supplier. Unfortunately, 72 the estimate I gave you yesterday for the new roof shingles was a little low. The ones you chose are actually 39 dollars per bundle. That's more than what I quoted. So, I just wanted to get your approval for this new price before I put in the order. And 73I recommend that we order soon, since the rainy season's only a month away. Once the rain starts, it'll take more time to install the new roof."
+  },
+  {
+    "testId": 8,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "Who are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Artists"
+          },
+          {
+            "label": "B",
+            "text": "Journalists"
+          },
+          {
+            "label": "C",
+            "text": "Real estate agents"
+          },
+          {
+            "label": "D",
+            "text": "Sales representatives"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q75",
+        "text": "What does the speaker say the listeners should learn to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Manage their time"
+          },
+          {
+            "label": "B",
+            "text": "Negotiate prices"
+          },
+          {
+            "label": "C",
+            "text": "Give memorable presentations"
+          },
+          {
+            "label": "D",
+            "text": "Create effective advertisements"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q76",
+        "text": "What does the speaker mention about Insook Lee?",
+        "options": [
+          {
+            "label": "A",
+            "text": "She has won an award."
+          },
+          {
+            "label": "B",
+            "text": "She is on a lecture tour."
+          },
+          {
+            "label": "C",
+            "text": "She hosts a popular podcast."
+          },
+          {
+            "label": "D",
+            "text": "She recently started a company."
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "W-Am 74 Thanks for attending today's seminar for new real estate agents. As people just joining the industry, 75 it's very important that you learn how to create a memorable property advertisement. The way you describe a house or apartment can determine how quickly the property sells. I've invited a guest speaker to discuss this very point. 76 Insook Lee has recently won our county's agent of the year award, and she attributes her success in large part to the fact that she has mastered the art of writing a great description. Insook, welcome, and thank you for joining us today."
+  },
+  {
+    "testId": 8,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "What happened last January?",
+        "options": [
+          {
+            "label": "A",
+            "text": "There was an election."
+          },
+          {
+            "label": "B",
+            "text": "There was a snowstorm."
+          },
+          {
+            "label": "C",
+            "text": "A shopping mall opened."
+          },
+          {
+            "label": "D",
+            "text": "A bridge was closed."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q78",
+        "text": "Why have some citizens complained?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A toll has increased."
+          },
+          {
+            "label": "B",
+            "text": "Traffic lights are badly timed."
+          },
+          {
+            "label": "C",
+            "text": "There is not enough parking."
+          },
+          {
+            "label": "D",
+            "text": "The roads are in poor condition."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q79",
+        "text": "Who has been invited to attend a city council meeting?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Engineers"
+          },
+          {
+            "label": "B",
+            "text": "Educators"
+          },
+          {
+            "label": "C",
+            "text": "Finance experts"
+          },
+          {
+            "label": "D",
+            "text": "Business owners"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn In local news, town officials are ready to take action on the untimely degradation of some of our town's main roads. Since 77 the Bellville shopping mall opened last January, there has been significantly more traffic on the streets leading to the mall. 78 City officials have received numerous complaints from citizens about large cracks and potholes in the roads, which can be damaging to cars. 79 The city council has invited a few concrete engineers to their next meeting, which will be open to the public. The engineers will share their expertise on the options available for upgrading our roads, and the city council will vote on a budget for the project."
+  },
+  {
+    "testId": 8,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "What is the purpose of an equipment update?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To promote healthy lifestyles"
+          },
+          {
+            "label": "B",
+            "text": "To protect consumer privacy"
+          },
+          {
+            "label": "C",
+            "text": "To comply with safety standards"
+          },
+          {
+            "label": "D",
+            "text": "To increase energy efficiency"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q81",
+        "text": "What are the listeners warned about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Price increases"
+          },
+          {
+            "label": "B",
+            "text": "Service interruptions"
+          },
+          {
+            "label": "C",
+            "text": "Loud noises"
+          },
+          {
+            "label": "D",
+            "text": "Increased traffic"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q82",
+        "text": "What are some listeners encouraged to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Sign up early for a service"
+          },
+          {
+            "label": "B",
+            "text": "Use a community space"
+          },
+          {
+            "label": "C",
+            "text": "Attend an information session"
+          },
+          {
+            "label": "D",
+            "text": "Take public transportation"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "W-Br Thank you for coming to this short meeting for all residents of Atrium Apartment Complex. 80 Our power provider, Crewdson Energy Company, will be updating the electrical equipment in all units starting next week. This update is to improve the energy efficiency in our buildings. 81 Please be warned that there will be intermittent power failures while work is being done. 82 If you work from home and need alternate space to work during power failures, you're free to use the apartment complex clubhouse. We'll make sure there's power there at all times."
+  },
+  {
+    "testId": 8,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "Who is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A sports coach"
+          },
+          {
+            "label": "B",
+            "text": "A computer programmer"
+          },
+          {
+            "label": "C",
+            "text": "A company executive"
+          },
+          {
+            "label": "D",
+            "text": "A sales representative"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q84",
+        "text": "What is the speaker mainly discussing?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An upcoming retirement"
+          },
+          {
+            "label": "B",
+            "text": "A corporate fund-raiser"
+          },
+          {
+            "label": "C",
+            "text": "An innovative product"
+          },
+          {
+            "label": "D",
+            "text": "An annual dinner"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q85",
+        "text": "Why does the speaker say, \"There are a lot of talented people in this group\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To question a management policy"
+          },
+          {
+            "label": "B",
+            "text": "To suggest a group size be decreased"
+          },
+          {
+            "label": "C",
+            "text": "To reassure the listeners about a decision"
+          },
+          {
+            "label": "D",
+            "text": "To express appreciation for an award"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Am Hello. 83 As your senior vice president of Product Development, it has been a privilege leading this team over the past several decades. As you may have heard, 84I will be ending my time with the company next month. Now, 85 when I shared this news with a few of you individually, there were some concerns about the future of the team under new leadership. Frankly, that surprised me. I mean, look around the room. There are a lot of talented people in this group. In fact, I should take this opportunity to thank you all for our collective success."
+  },
+  {
+    "testId": 8,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Who is the man most likely calling?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A police officer"
+          },
+          {
+            "label": "B",
+            "text": "A customer"
+          },
+          {
+            "label": "C",
+            "text": "A mechanic"
+          },
+          {
+            "label": "D",
+            "text": "A supervisor"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q87",
+        "text": "What will take place tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A store sale"
+          },
+          {
+            "label": "B",
+            "text": "A road closure"
+          },
+          {
+            "label": "C",
+            "text": "A farmers market"
+          },
+          {
+            "label": "D",
+            "text": "A musical performance"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q88",
+        "text": "What does the speaker mean when he says, \"there are three cars parked there now\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An event is not popular."
+          },
+          {
+            "label": "B",
+            "text": "A task cannot be completed."
+          },
+          {
+            "label": "C",
+            "text": "A parking fee has been paid."
+          },
+          {
+            "label": "D",
+            "text": "A delivery will be delayed."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "M-Cn Hello, Ms. Schulz. 86 This is Yuri Federov, calling from our downtown store. I was just going over the checklist that you gave us. 87 We've already done most of the things you've asked us to do in preparation for our outdoor sale, but there's a bit of a problem. 87, 88 You wanted us to rope off the parking spaces in front of the shop after we closed today so we can set up tables there tomorrow morning. Well, it's eight fifteen, and there are three cars parked there now. Please give me a call back as soon as you can."
+  },
+  {
+    "testId": 8,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What change does the speaker announce?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Departments will be reorganized."
+          },
+          {
+            "label": "B",
+            "text": "New technicians will be hired."
+          },
+          {
+            "label": "C",
+            "text": "An additional warehouse will open."
+          },
+          {
+            "label": "D",
+            "text": "An automated system will be used."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q90",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Accountants"
+          },
+          {
+            "label": "B",
+            "text": "Warehouse stockers"
+          },
+          {
+            "label": "C",
+            "text": "Human resources managers"
+          },
+          {
+            "label": "D",
+            "text": "Customer service representatives"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q91",
+        "text": "What does the speaker ask the listeners to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Update service numbers"
+          },
+          {
+            "label": "B",
+            "text": "Submit salary requirements"
+          },
+          {
+            "label": "C",
+            "text": "Keep a record of complaints"
+          },
+          {
+            "label": "D",
+            "text": "Post some shipping schedules"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Br 89,90 We'll be rolling out some changes starting next week. When customers call the service number, they'll be prompted to say which department they're trying to reach, and then voice-recognition software will direct their call automatically. I'm sure most of you have experiences of your own calling customer-service hotlines that utilize this kind of system. Usually, it works, but it can be frustrating when it doesn't. 90,91 Some customers might be upset with you if they were unable to reach the right department quickly. If this happens to you, please summarize the exchange in writing. I'll give the feedback to the programmers so they can make improvements to the program accordingly."
+  },
+  {
+    "testId": 8,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "What is the speaker promoting?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Audio equipment"
+          },
+          {
+            "label": "B",
+            "text": "Cleaning tools"
+          },
+          {
+            "label": "C",
+            "text": "A security device"
+          },
+          {
+            "label": "D",
+            "text": "A software program"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q93",
+        "text": "What industry do the listeners most likely work in?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Transportation"
+          },
+          {
+            "label": "B",
+            "text": "Manufacturing"
+          },
+          {
+            "label": "C",
+            "text": "Banking"
+          },
+          {
+            "label": "D",
+            "text": "Health care"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q94",
+        "text": "What does the speaker mean when he says, \"the manual's just fifteen pages long\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The listeners should read the manual now."
+          },
+          {
+            "label": "B",
+            "text": "A manual would be inexpensive to print."
+          },
+          {
+            "label": "C",
+            "text": "A product is not ready to be released."
+          },
+          {
+            "label": "D",
+            "text": "A product is easy to use."
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "M-Cn Welcome to the booth for Pondrew Technologies. I hope you're enjoying today's trade show. 92 Let me tell you about the software we released last month. 93 It's designed to make your factory's production cycle more efficient. How? Well, as you know, if a machine in an assembly line malfunctions, it can trigger significant downtime. Pondrew's software continuously gathers and processes data from each machine, so issues can be diagnosed faster. Yes, 94 there are other software programs on the market that perform similar tasks, but they're complicated and require hours of training. Consider this about Pondrew's: the manual's just fifteen pages long."
+  },
+  {
+    "testId": 8,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "What is the speaker's company planning to purchase?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A 3-D printer"
+          },
+          {
+            "label": "B",
+            "text": "A large-screen television"
+          },
+          {
+            "label": "C",
+            "text": "Some new laptops"
+          },
+          {
+            "label": "D",
+            "text": "Some adjustable desks"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q96",
+        "text": "Why has the company decided to make the purchase?",
+        "options": [
+          {
+            "label": "A",
+            "text": "More employees were hired."
+          },
+          {
+            "label": "B",
+            "text": "A vendor increased its prices."
+          },
+          {
+            "label": "C",
+            "text": "A store went out of business."
+          },
+          {
+            "label": "D",
+            "text": "Some software was out-of-date."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q97",
+        "text": "Look at the graphic. Where will Jerome move to?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Office 1"
+          },
+          {
+            "label": "B",
+            "text": "Office 2"
+          },
+          {
+            "label": "C",
+            "text": "Office 3"
+          },
+          {
+            "label": "D",
+            "text": "Office 4"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Am I have an announcement for the team. 95 We'll be making a big purchase-a top-of-the-line 3-D printer. 96 We've been outsourcing the work to a printing company, but it recently doubled its prices. We think it's time to have our own in-house printer. The only issue is size-the only space big enough for the new machine is the office next to the reception area, so we'll be rearranging our work space. 97 Jerome, I'm sorry, but you'll have to move. We hope you won't mind using the office in the corner across from the conference room."
+  },
+  {
+    "testId": 8,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Where does the speaker most likely work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a factory"
+          },
+          {
+            "label": "B",
+            "text": "At an architecture firm"
+          },
+          {
+            "label": "C",
+            "text": "At a landscaping service"
+          },
+          {
+            "label": "D",
+            "text": "At a government inspection office"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q99",
+        "text": "Look at the graphic. Which number does the speaker want to change?",
+        "options": [
+          {
+            "label": "A",
+            "text": "20"
+          },
+          {
+            "label": "B",
+            "text": "12"
+          },
+          {
+            "label": "C",
+            "text": "8"
+          },
+          {
+            "label": "D",
+            "text": "15"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q100",
+        "text": "What information would the speaker like added to a list?",
+        "options": [
+          {
+            "label": "A",
+            "text": "His home address"
+          },
+          {
+            "label": "B",
+            "text": "His office location"
+          },
+          {
+            "label": "C",
+            "text": "His telephone number"
+          },
+          {
+            "label": "D",
+            "text": "His e-mail address"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "M-Au Hi, Amy! 98 This is Paul Baxter from the manufacturing team. Listen, 99I made a mistake in the order form I left on your desk earlier today. I actually only need ten pairs of safety goggles for my team on the assembly floor. Hopefully, you get this message before you submit the order. Oh, and by the way-100 when you place the order, could you add my e-mail address to the notification list, so I know when everything's scheduled to arrive? It's paul.baxter@allymanufacturing.com. Thanks."
+  }
+]

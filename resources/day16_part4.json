@@ -1,0 +1,290 @@
+[
+    {
+        "day": 16,
+        "no": 137,
+        "word": "withstand",
+        "meaning": "견디다, 이겨내다",
+        "targetScore": 900,
+        "exampleEn": "The company is strong enough to withstand the economic downturn.",
+        "exampleKo": "그 회사는 경기 침체를 견딜(이겨낼) 수 있을 만큼 튼튼합니다."
+    },
+    {
+        "day": 16,
+        "no": 138,
+        "word": "run an article",
+        "meaning": "기사를 게재하다",
+        "targetScore": 900,
+        "exampleEn": "The magazine will run an article about the new product launch.",
+        "exampleKo": "그 잡지는 신제품 출시에 관한 기사를 게재할 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 139,
+        "word": "step down",
+        "meaning": "물러나다",
+        "targetScore": 900,
+        "exampleEn": "The CEO announced his decision to step down next month.",
+        "exampleKo": "CEO는 다음 달에 물러나겠다는 결정을 발표했습니다."
+    },
+    {
+        "day": 16,
+        "no": 140,
+        "word": "come to power",
+        "meaning": "권력을 잡다",
+        "targetScore": 900,
+        "exampleEn": "When the new party came to power, they changed the tax laws.",
+        "exampleKo": "새로운 정당이 권력을 잡았을 때, 그들은 세법을 변경했습니다."
+    },
+    {
+        "day": 16,
+        "no": 141,
+        "word": "write up",
+        "meaning": "(사건을) 기록하다, 쓰다",
+        "targetScore": 900,
+        "exampleEn": "The supervisor will write up a report on the incident.",
+        "exampleKo": "감독관은 그 사건에 대한 보고서를 작성할(기록할) 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 142,
+        "word": "barring",
+        "meaning": "~이 없다면",
+        "targetScore": 900,
+        "exampleEn": "Barring any unforeseen circumstances, we will finish on time.",
+        "exampleKo": "예기치 못한 상황이 없다면, 우리는 제시간에 끝낼 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 143,
+        "word": "itemized",
+        "meaning": "항목별로 구분된",
+        "targetScore": 900,
+        "exampleEn": "Please provide an itemized list of expenses.",
+        "exampleKo": "항목별로 구분된 지출 목록을 제공해 주십시오."
+    },
+    {
+        "day": 16,
+        "no": 144,
+        "word": "protocol",
+        "meaning": "의정서",
+        "targetScore": 900,
+        "exampleEn": "Strict safety protocols must be followed in the laboratory.",
+        "exampleKo": "실험실에서는 엄격한 안전 의정서(프로토콜)를 따라야 합니다."
+    },
+    {
+        "day": 16,
+        "no": 145,
+        "word": "drawback",
+        "meaning": "약점, 문제점",
+        "targetScore": 900,
+        "exampleEn": "One drawback of this plan is the high implementation cost.",
+        "exampleKo": "이 계획의 한 가지 약점(문제점)은 높은 실행 비용입니다."
+    },
+    {
+        "day": 16,
+        "no": 146,
+        "word": "parliament",
+        "meaning": "의회, 국회",
+        "targetScore": 900,
+        "exampleEn": "The bill was debated in parliament for several days.",
+        "exampleKo": "그 법안은 며칠 동안 의회(국회)에서 토론되었습니다."
+    },
+    {
+        "day": 16,
+        "no": 147,
+        "word": "peddler",
+        "meaning": "행상인",
+        "targetScore": 900,
+        "exampleEn": "City regulations prohibit peddlers from selling in this zone.",
+        "exampleKo": "시 규정은 행상인들이 이 구역에서 판매하는 것을 금지합니다."
+    },
+    {
+        "day": 16,
+        "no": 148,
+        "word": "be closed to the public",
+        "meaning": "일반인 출입이 금지되다",
+        "targetScore": 900,
+        "exampleEn": "The park will be closed to the public for renovations.",
+        "exampleKo": "공원은 보수 공사를 위해 일반인 출입이 금지될 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 149,
+        "word": "profoundly",
+        "meaning": "깊이",
+        "targetScore": 900,
+        "exampleEn": "Her speech profoundly affected everyone in the audience.",
+        "exampleKo": "그녀의 연설은 청중의 모든 사람에게 깊이 영향을 주었습니다."
+    },
+    {
+        "day": 16,
+        "no": 150,
+        "word": "take an action against",
+        "meaning": "~를 고소하다",
+        "targetScore": 900,
+        "exampleEn": "The company decided to take an action against the copyright infringer.",
+        "exampleKo": "회사는 저작권 침해자를 고소하기로(상대로 조치를 취하기로) 결정했습니다."
+    },
+    {
+        "day": 16,
+        "no": 151,
+        "word": "contend with",
+        "meaning": "~와 다투다",
+        "targetScore": 900,
+        "exampleEn": "We have to contend with intense competition in the market.",
+        "exampleKo": "우리는 시장에서의 치열한 경쟁과 다투어야(씨름해야) 합니다."
+    },
+    {
+        "day": 16,
+        "no": 152,
+        "word": "in the prepaid envelope",
+        "meaning": "우편요금이 선납 된 봉투에",
+        "targetScore": 900,
+        "exampleEn": "Return the signed contract in the prepaid envelope.",
+        "exampleKo": "서명된 계약서를 우편요금이 선납 된 봉투에 넣어 반송해 주십시오."
+    },
+    {
+        "day": 16,
+        "no": 153,
+        "word": "cast a ballot",
+        "meaning": "투표하다",
+        "targetScore": 900,
+        "exampleEn": "Over 70% of eligible voters came out to cast a ballot.",
+        "exampleKo": "유권자의 70% 이상이 투표하러(투표권을 행사하러) 나왔습니다."
+    },
+    {
+        "day": 16,
+        "no": 154,
+        "word": "nationalize",
+        "meaning": "국영화하다",
+        "targetScore": 900,
+        "exampleEn": "The new government plans to nationalize the railway system.",
+        "exampleKo": "새 정부는 철도 시스템을 국영화할 계획입니다."
+    },
+    {
+        "day": 16,
+        "no": 155,
+        "word": "diversified",
+        "meaning": "다양한, 여러 가지의",
+        "targetScore": 900,
+        "exampleEn": "A diversified investment portfolio reduces risk.",
+        "exampleKo": "다양한(분산된) 투자 포트폴리오는 위험을 줄여줍니다."
+    },
+    {
+        "day": 16,
+        "no": 156,
+        "word": "in place of",
+        "meaning": "~을 대신하여",
+        "targetScore": 900,
+        "exampleEn": "We engaged a freelancer in place of the regular employee.",
+        "exampleKo": "우리는 정규 직원 대신 프리랜서를 고용했습니다."
+    },
+    {
+        "day": 16,
+        "no": 157,
+        "word": "keep track of",
+        "meaning": "~을 계속 알고 있다",
+        "targetScore": 900,
+        "exampleEn": "Use this software to keep track of your daily expenses.",
+        "exampleKo": "일일 지출을 계속 알고 있기(추적하기) 위해 이 소프트웨어를 사용하십시오."
+    },
+    {
+        "day": 16,
+        "no": 158,
+        "word": "breaking news",
+        "meaning": "속보",
+        "targetScore": 900,
+        "exampleEn": "We interrupt this program for breaking news.",
+        "exampleKo": "속보를 위해 정규 방송을 중단합니다."
+    },
+    {
+        "day": 16,
+        "no": 159,
+        "word": "scarcity",
+        "meaning": "부족",
+        "targetScore": 900,
+        "exampleEn": "The scarcity of affordable housing is a major issue.",
+        "exampleKo": "저렴한 주택의 부족은 주요 문제입니다."
+    },
+    {
+        "day": 16,
+        "no": 160,
+        "word": "surrender",
+        "meaning": "양도하다; 항복하다",
+        "targetScore": 900,
+        "exampleEn": "He had to surrender his passport to the authorities.",
+        "exampleKo": "그는 자신의 여권을 당국에 양도해야(반납해야) 했습니다."
+    },
+    {
+        "day": 16,
+        "no": 161,
+        "word": "predominantly",
+        "meaning": "대개, 대부분",
+        "targetScore": 900,
+        "exampleEn": "The workforce is predominantly male in this sector.",
+        "exampleKo": "이 부문의 노동력은 대개(대부분) 남성입니다."
+    },
+    {
+        "day": 16,
+        "no": 162,
+        "word": "facilitator",
+        "meaning": "조력자, 협력자",
+        "targetScore": 900,
+        "exampleEn": "The facilitator helped the group reach a consensus.",
+        "exampleKo": "조력자(진행자)는 그룹이 합의에 도달하도록 도왔습니다."
+    },
+    {
+        "day": 16,
+        "no": 163,
+        "word": "summit",
+        "meaning": "정상 회담",
+        "targetScore": 900,
+        "exampleEn": "The climate change summit concluded with a new agreement.",
+        "exampleKo": "기후 변화 정상 회담은 새로운 합의로 끝났습니다."
+    },
+    {
+        "day": 16,
+        "no": 164,
+        "word": "third party",
+        "meaning": "제삼자",
+        "targetScore": 900,
+        "exampleEn": "Disputes are often settled by a neutral third party.",
+        "exampleKo": "분쟁은 종종 중립적인 제삼자에 의해 해결됩니다."
+    },
+    {
+        "day": 16,
+        "no": 165,
+        "word": "bureaucracy",
+        "meaning": "관료 제도",
+        "targetScore": 900,
+        "exampleEn": "Excessive bureaucracy can slow down decision-making.",
+        "exampleKo": "과도한 관료 제도는 의사 결정을 늦출 수 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 166,
+        "word": "constituency",
+        "meaning": "단골, 고객층; 선거구, 유권자",
+        "targetScore": 900,
+        "exampleEn": "The senator visited his constituency to meet with voters.",
+        "exampleKo": "그 상원의원은 유권자들을 만나기 위해 자신의 선거구(constituency)를 방문했습니다."
+    },
+    {
+        "day": 16,
+        "no": 167,
+        "word": "unsuccessful candidate",
+        "meaning": "불합격자, 낙선 후보",
+        "targetScore": 900,
+        "exampleEn": "The unsuccessful candidate thanked his supporters.",
+        "exampleKo": "낙선 후보(불합격자)는 지지자들에게 감사를 표했습니다."
+    },
+    {
+        "day": 16,
+        "no": 168,
+        "word": "price quote",
+        "meaning": "견적서",
+        "targetScore": 900,
+        "exampleEn": "We requested a price quote from three different vendors.",
+        "exampleKo": "우리는 세 곳의 다른 공급업체에 견적서를 요청했습니다."
+    }
+]

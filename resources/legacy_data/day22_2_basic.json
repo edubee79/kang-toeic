@@ -1,0 +1,254 @@
+[
+    {
+        "day": 22,
+        "no": 41,
+        "word": "preside",
+        "meaning": "사회를 보다, 주재하다",
+        "targetScore": 650,
+        "exampleEn": "Preside over the committee.",
+        "exampleKo": "위원회를 주재하다."
+    },
+    {
+        "day": 22,
+        "no": 42,
+        "word": "attend",
+        "meaning": "참석하다, 주의하다",
+        "targetScore": 650,
+        "exampleEn": "Attend a conference.",
+        "exampleKo": "회의에 참석하다."
+    },
+    {
+        "day": 22,
+        "no": 43,
+        "word": "basis",
+        "meaning": "기초, 근거",
+        "targetScore": 650,
+        "exampleEn": "On a daily basis.",
+        "exampleKo": "매일."
+    },
+    {
+        "day": 22,
+        "no": 44,
+        "word": "break",
+        "meaning": "휴식; 고장나다",
+        "targetScore": 650,
+        "exampleEn": "Take a break.",
+        "exampleKo": "휴식을 취하다."
+    },
+    {
+        "day": 22,
+        "no": 45,
+        "word": "challenge",
+        "meaning": "도전, 난제",
+        "targetScore": 650,
+        "exampleEn": "Face a challenge.",
+        "exampleKo": "도전에 직면하다."
+    },
+    {
+        "day": 22,
+        "no": 46,
+        "word": "choose",
+        "meaning": "선택하다",
+        "targetScore": 650,
+        "exampleEn": "Choose a career.",
+        "exampleKo": "직업을 선택하다."
+    },
+    {
+        "day": 22,
+        "no": 47,
+        "word": "collection",
+        "meaning": "수집, 소장품",
+        "targetScore": 650,
+        "exampleEn": "Stamp collection.",
+        "exampleKo": "우표 수집."
+    },
+    {
+        "day": 22,
+        "no": 48,
+        "word": "come",
+        "meaning": "오다",
+        "targetScore": 650,
+        "exampleEn": "Come early.",
+        "exampleKo": "일찍 오세요."
+    },
+    {
+        "day": 22,
+        "no": 49,
+        "word": "committee",
+        "meaning": "위원회",
+        "targetScore": 650,
+        "exampleEn": "Form a committee.",
+        "exampleKo": "위원회를 구성하다."
+    },
+    {
+        "day": 22,
+        "no": 50,
+        "word": "conference",
+        "meaning": "회의",
+        "targetScore": 650,
+        "exampleEn": "Annual conference.",
+        "exampleKo": "연례 회의."
+    },
+    {
+        "day": 22,
+        "no": 51,
+        "word": "consider",
+        "meaning": "고려하다",
+        "targetScore": 650,
+        "exampleEn": "Consider the proposal.",
+        "exampleKo": "제안을 고려하다."
+    },
+    {
+        "day": 22,
+        "no": 52,
+        "word": "discuss",
+        "meaning": "토론하다",
+        "targetScore": 650,
+        "exampleEn": "Discuss the matter.",
+        "exampleKo": "문제를 토론하다."
+    },
+    {
+        "day": 22,
+        "no": 53,
+        "word": "doubt",
+        "meaning": "의심; 의심하다",
+        "targetScore": 650,
+        "exampleEn": "Without a doubt.",
+        "exampleKo": "의심할 여지 없이."
+    },
+    {
+        "day": 22,
+        "no": 54,
+        "word": "due",
+        "meaning": "~할 예정인, 만기의",
+        "targetScore": 650,
+        "exampleEn": "Due to arrive.",
+        "exampleKo": "도착할 예정인."
+    },
+    {
+        "day": 22,
+        "no": 55,
+        "word": "expect",
+        "meaning": "기대하다, 예상하다",
+        "targetScore": 650,
+        "exampleEn": "Expect rain.",
+        "exampleKo": "비를 예상하다."
+    },
+    {
+        "day": 22,
+        "no": 56,
+        "word": "face",
+        "meaning": "직면하다; 얼굴",
+        "targetScore": 650,
+        "exampleEn": "Face a problem.",
+        "exampleKo": "문제에 직면하다."
+    },
+    {
+        "day": 22,
+        "no": 57,
+        "word": "focus",
+        "meaning": "초점; 집중하다",
+        "targetScore": 650,
+        "exampleEn": "Focus on work.",
+        "exampleKo": "일에 집중하다."
+    },
+    {
+        "day": 22,
+        "no": 58,
+        "word": "gather",
+        "meaning": "모이다, 수집하다",
+        "targetScore": 650,
+        "exampleEn": "Gather information.",
+        "exampleKo": "정보를 수집하다."
+    },
+    {
+        "day": 22,
+        "no": 59,
+        "word": "handle",
+        "meaning": "다루다, 처리하다",
+        "targetScore": 650,
+        "exampleEn": "Handle a complaint.",
+        "exampleKo": "불만을 처리하다."
+    },
+    {
+        "day": 22,
+        "no": 60,
+        "word": "heavy",
+        "meaning": "무거운, 심한",
+        "targetScore": 650,
+        "exampleEn": "Heavy rain.",
+        "exampleKo": "폭우."
+    },
+    {
+        "day": 22,
+        "no": 61,
+        "word": "idea",
+        "meaning": "생각, 아이디어",
+        "targetScore": 650,
+        "exampleEn": "Good idea.",
+        "exampleKo": "좋은 생각."
+    },
+    {
+        "day": 22,
+        "no": 62,
+        "word": "immediately",
+        "meaning": "즉시",
+        "targetScore": 650,
+        "exampleEn": "Start immediately.",
+        "exampleKo": "즉시 시작하세요."
+    },
+    {
+        "day": 22,
+        "no": 63,
+        "word": "likely",
+        "meaning": "~할 것 같은",
+        "targetScore": 650,
+        "exampleEn": "Most likely.",
+        "exampleKo": "가장 ~할 것 같은."
+    },
+    {
+        "day": 22,
+        "no": 64,
+        "word": "local",
+        "meaning": "지역의",
+        "targetScore": 650,
+        "exampleEn": "Local time.",
+        "exampleKo": "현지 시간."
+    },
+    {
+        "day": 22,
+        "no": 65,
+        "word": "matter",
+        "meaning": "문제",
+        "targetScore": 650,
+        "exampleEn": "Serious matter.",
+        "exampleKo": "심각한 문제."
+    },
+    {
+        "day": 22,
+        "no": 66,
+        "word": "meeting",
+        "meaning": "회의",
+        "targetScore": 650,
+        "exampleEn": "Hold a meeting.",
+        "exampleKo": "회의를 열다."
+    },
+    {
+        "day": 22,
+        "no": 67,
+        "word": "member",
+        "meaning": "회원, 구성원",
+        "targetScore": 650,
+        "exampleEn": "Team member.",
+        "exampleKo": "팀 구성원."
+    },
+    {
+        "day": 22,
+        "no": 68,
+        "word": "memorandum",
+        "meaning": "회람, 메모",
+        "targetScore": 650,
+        "exampleEn": "Write a memorandum.",
+        "exampleKo": "회람을 작성하다."
+    }
+]

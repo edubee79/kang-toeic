@@ -1,0 +1,614 @@
+[
+    {
+        "day": 23,
+        "no": 69,
+        "word": "check out",
+        "meaning": "(책을) 대여하다; 조사하다",
+        "targetScore": 800,
+        "exampleEn": "Check out a book.",
+        "exampleKo": "책을 대여하다."
+    },
+    {
+        "day": 23,
+        "no": 70,
+        "word": "accept",
+        "meaning": "받아들이다",
+        "targetScore": 800,
+        "exampleEn": "Accept a challenge.",
+        "exampleKo": "도전을 받아들이다."
+    },
+    {
+        "day": 23,
+        "no": 71,
+        "word": "additional",
+        "meaning": "추가의",
+        "targetScore": 800,
+        "exampleEn": "Additional cost.",
+        "exampleKo": "추가 비용."
+    },
+    {
+        "day": 23,
+        "no": 72,
+        "word": "advance",
+        "meaning": "진보, 승진; 나아가다",
+        "targetScore": 800,
+        "exampleEn": "Technological advance.",
+        "exampleKo": "기술적 진보."
+    },
+    {
+        "day": 23,
+        "no": 73,
+        "word": "aim",
+        "meaning": "목표하다; 목표",
+        "targetScore": 800,
+        "exampleEn": "Aim for excellence.",
+        "exampleKo": "탁월함을 목표로 하다."
+    },
+    {
+        "day": 23,
+        "no": 74,
+        "word": "appeal",
+        "meaning": "매력; 호소하다",
+        "targetScore": 800,
+        "exampleEn": "Universal appeal.",
+        "exampleKo": "보편적인 매력."
+    },
+    {
+        "day": 23,
+        "no": 75,
+        "word": "appreciate",
+        "meaning": "감사하다, 진가를 알아보다",
+        "targetScore": 800,
+        "exampleEn": "I appreciate your help.",
+        "exampleKo": "도와주셔서 감사합니다."
+    },
+    {
+        "day": 23,
+        "no": 76,
+        "word": "association",
+        "meaning": "협회, 연관",
+        "targetScore": 800,
+        "exampleEn": "Alumni association.",
+        "exampleKo": "동창회."
+    },
+    {
+        "day": 23,
+        "no": 77,
+        "word": "assume",
+        "meaning": "떠맡다, 가정하다",
+        "targetScore": 800,
+        "exampleEn": "Assume responsibility.",
+        "exampleKo": "책임을 떠맡다."
+    },
+    {
+        "day": 23,
+        "no": 78,
+        "word": "attention",
+        "meaning": "주의, 관심",
+        "targetScore": 800,
+        "exampleEn": "Pay extra attention.",
+        "exampleKo": "각별히 주의를 기울이다."
+    },
+    {
+        "day": 23,
+        "no": 79,
+        "word": "award",
+        "meaning": "상; 수여하다",
+        "targetScore": 800,
+        "exampleEn": "Win an award.",
+        "exampleKo": "상을 받다."
+    },
+    {
+        "day": 23,
+        "no": 80,
+        "word": "banquet",
+        "meaning": "연회",
+        "targetScore": 800,
+        "exampleEn": "Attend a banquet.",
+        "exampleKo": "연회에 참석하다."
+    },
+    {
+        "day": 23,
+        "no": 81,
+        "word": "benefit",
+        "meaning": "혜택; 이익을 얻다",
+        "targetScore": 800,
+        "exampleEn": "Benefit from the program.",
+        "exampleKo": "프로그램으로부터 혜택을 얻다."
+    },
+    {
+        "day": 23,
+        "no": 82,
+        "word": "broad",
+        "meaning": "폭넓은",
+        "targetScore": 800,
+        "exampleEn": "Broad range of topics.",
+        "exampleKo": "폭넓은 주제."
+    },
+    {
+        "day": 23,
+        "no": 83,
+        "word": "celebrate",
+        "meaning": "축하하다",
+        "targetScore": 800,
+        "exampleEn": "Celebrate the victory.",
+        "exampleKo": "승리를 축하하다."
+    },
+    {
+        "day": 23,
+        "no": 84,
+        "word": "charity",
+        "meaning": "자선 단체",
+        "targetScore": 800,
+        "exampleEn": "Donate to clarity.",
+        "exampleKo": "자선 단체에 기부하다."
+    },
+    {
+        "day": 23,
+        "no": 85,
+        "word": "commitment",
+        "meaning": "헌신, 약속",
+        "targetScore": 800,
+        "exampleEn": "Make a commitment.",
+        "exampleKo": "약속을 하다."
+    },
+    {
+        "day": 23,
+        "no": 86,
+        "word": "committee",
+        "meaning": "위원회",
+        "targetScore": 800,
+        "exampleEn": "Steering committee.",
+        "exampleKo": "운영 위원회."
+    },
+    {
+        "day": 23,
+        "no": 87,
+        "word": "compensate",
+        "meaning": "보상하다",
+        "targetScore": 800,
+        "exampleEn": "Compensate for the loss.",
+        "exampleKo": "손실을 보상하다."
+    },
+    {
+        "day": 23,
+        "no": 88,
+        "word": "complimentary",
+        "meaning": "무료의, 칭찬하는",
+        "targetScore": 800,
+        "exampleEn": "Complimentary breakfast.",
+        "exampleKo": "무료 아침 식사."
+    },
+    {
+        "day": 23,
+        "no": 89,
+        "word": "conduct",
+        "meaning": "실시하다, 수행하다",
+        "targetScore": 800,
+        "exampleEn": "Conduct an experiment.",
+        "exampleKo": "실험을 하다."
+    },
+    {
+        "day": 23,
+        "no": 90,
+        "word": "confront",
+        "meaning": "직면하다",
+        "targetScore": 800,
+        "exampleEn": "Confront a difficulty.",
+        "exampleKo": "어려움에 직면하다."
+    },
+    {
+        "day": 23,
+        "no": 91,
+        "word": "constantly",
+        "meaning": "끊임없이",
+        "targetScore": 800,
+        "exampleEn": "Constantly changing.",
+        "exampleKo": "끊임없이 변화하는."
+    },
+    {
+        "day": 23,
+        "no": 92,
+        "word": "contribution",
+        "meaning": "기여, 기부금",
+        "targetScore": 800,
+        "exampleEn": "Make a contribution.",
+        "exampleKo": "기여를 하다."
+    },
+    {
+        "day": 23,
+        "no": 93,
+        "word": "convenience",
+        "meaning": "편의",
+        "targetScore": 800,
+        "exampleEn": "For your convenience.",
+        "exampleKo": "당신의 편의를 위해."
+    },
+    {
+        "day": 23,
+        "no": 94,
+        "word": "create",
+        "meaning": "창출하다, 만들다",
+        "targetScore": 800,
+        "exampleEn": "Create opportunities.",
+        "exampleKo": "기회를 창출하다."
+    },
+    {
+        "day": 23,
+        "no": 95,
+        "word": "delighted",
+        "meaning": "기뻐하는",
+        "targetScore": 800,
+        "exampleEn": "I am delighted to accept.",
+        "exampleKo": "수락하게 되어 기쁩니다."
+    },
+    {
+        "day": 23,
+        "no": 96,
+        "word": "demonstrator",
+        "meaning": "시위자, 시범 설명자",
+        "targetScore": 800,
+        "exampleEn": "Product demonstrator.",
+        "exampleKo": "제품 시연자."
+    },
+    {
+        "day": 23,
+        "no": 97,
+        "word": "dismiss",
+        "meaning": "해고하다, 묵살하다",
+        "targetScore": 800,
+        "exampleEn": "Dismiss an employee.",
+        "exampleKo": "직원을 해고하다."
+    },
+    {
+        "day": 23,
+        "no": 98,
+        "word": "donate",
+        "meaning": "기부하다",
+        "targetScore": 800,
+        "exampleEn": "Donate money to charity.",
+        "exampleKo": "자선 단체에 돈을 기부하다."
+    },
+    {
+        "day": 23,
+        "no": 99,
+        "word": "donation",
+        "meaning": "기부",
+        "targetScore": 800,
+        "exampleEn": "Generous donation.",
+        "exampleKo": "후한 기부."
+    },
+    {
+        "day": 23,
+        "no": 100,
+        "word": "donor",
+        "meaning": "기증자",
+        "targetScore": 800,
+        "exampleEn": "Blood donor.",
+        "exampleKo": "헌혈자."
+    },
+    {
+        "day": 23,
+        "no": 101,
+        "word": "due",
+        "meaning": "~때문인, 회비",
+        "targetScore": 800,
+        "exampleEn": "Membership dues.",
+        "exampleKo": "회비."
+    },
+    {
+        "day": 23,
+        "no": 102,
+        "word": "earn",
+        "meaning": "얻다, 벌다",
+        "targetScore": 800,
+        "exampleEn": "Earn respect.",
+        "exampleKo": "존경을 얻다."
+    },
+    {
+        "day": 23,
+        "no": 103,
+        "word": "edition",
+        "meaning": "판",
+        "targetScore": 800,
+        "exampleEn": "First edition.",
+        "exampleKo": "초판."
+    },
+    {
+        "day": 23,
+        "no": 104,
+        "word": "elect",
+        "meaning": "선출하다",
+        "targetScore": 800,
+        "exampleEn": "Elect a president.",
+        "exampleKo": "대통령을 선출하다."
+    },
+    {
+        "day": 23,
+        "no": 105,
+        "word": "eligible",
+        "meaning": "자격이 있는",
+        "targetScore": 800,
+        "exampleEn": "Eligible for promotion.",
+        "exampleKo": "승진 자격이 있는."
+    },
+    {
+        "day": 23,
+        "no": 106,
+        "word": "encourage",
+        "meaning": "장려하다",
+        "targetScore": 800,
+        "exampleEn": "Encourage creativity.",
+        "exampleKo": "창의성을 장려하다."
+    },
+    {
+        "day": 23,
+        "no": 107,
+        "word": "entertain",
+        "meaning": "즐겁게 하다, 접대하다",
+        "targetScore": 800,
+        "exampleEn": "Entertain clients.",
+        "exampleKo": "고객을 접대하다."
+    },
+    {
+        "day": 23,
+        "no": 108,
+        "word": "enthusiastic",
+        "meaning": "열정적인",
+        "targetScore": 800,
+        "exampleEn": "Enthusiastic applause.",
+        "exampleKo": "열렬한 박수."
+    },
+    {
+        "day": 23,
+        "no": 109,
+        "word": "exceptional",
+        "meaning": "뛰어난",
+        "targetScore": 800,
+        "exampleEn": "Exceptional talent.",
+        "exampleKo": "뛰어난 재능."
+    },
+    {
+        "day": 23,
+        "no": 110,
+        "word": "expect",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "Expect delays.",
+        "exampleKo": "지연을 예상하다."
+    },
+    {
+        "day": 23,
+        "no": 111,
+        "word": "fascinating",
+        "meaning": "매혹적인",
+        "targetScore": 800,
+        "exampleEn": "Fascinating story.",
+        "exampleKo": "매혹적인 이야기."
+    },
+    {
+        "day": 23,
+        "no": 112,
+        "word": "festival",
+        "meaning": "축제",
+        "targetScore": 800,
+        "exampleEn": "Music festival.",
+        "exampleKo": "음악 축제."
+    },
+    {
+        "day": 23,
+        "no": 113,
+        "word": "found",
+        "meaning": "설립하다",
+        "targetScore": 800,
+        "exampleEn": "Found a company.",
+        "exampleKo": "회사를 설립하다."
+    },
+    {
+        "day": 23,
+        "no": 114,
+        "word": "fund-raising",
+        "meaning": "모금",
+        "targetScore": 800,
+        "exampleEn": "Fund-raising event.",
+        "exampleKo": "모금 행사."
+    },
+    {
+        "day": 23,
+        "no": 115,
+        "word": "grant",
+        "meaning": "보조금; 수여하다",
+        "targetScore": 800,
+        "exampleEn": "Government grant.",
+        "exampleKo": "정부 보조금."
+    },
+    {
+        "day": 23,
+        "no": 116,
+        "word": "informative",
+        "meaning": "유익한",
+        "targetScore": 800,
+        "exampleEn": "Informative seminar.",
+        "exampleKo": "유익한 세미나."
+    },
+    {
+        "day": 23,
+        "no": 117,
+        "word": "intern",
+        "meaning": "인턴",
+        "targetScore": 800,
+        "exampleEn": "Summer intern.",
+        "exampleKo": "여름 인턴."
+    },
+    {
+        "day": 23,
+        "no": 118,
+        "word": "invite",
+        "meaning": "초대하다",
+        "targetScore": 800,
+        "exampleEn": "Invite guests.",
+        "exampleKo": "손님을 초대하다."
+    },
+    {
+        "day": 23,
+        "no": 119,
+        "word": "involve",
+        "meaning": "포함하다, 관련시키다",
+        "targetScore": 800,
+        "exampleEn": "Involve risk.",
+        "exampleKo": "위험을 수반하다."
+    },
+    {
+        "day": 23,
+        "no": 120,
+        "word": "lecture",
+        "meaning": "강연",
+        "targetScore": 800,
+        "exampleEn": "Lecture series.",
+        "exampleKo": "강연 시리즈."
+    },
+    {
+        "day": 23,
+        "no": 121,
+        "word": "limit",
+        "meaning": "한계; 제한하다",
+        "targetScore": 800,
+        "exampleEn": "Speed limit.",
+        "exampleKo": "속도 제한."
+    },
+    {
+        "day": 23,
+        "no": 122,
+        "word": "member",
+        "meaning": "회원",
+        "targetScore": 800,
+        "exampleEn": "Board member.",
+        "exampleKo": "이사회 임원."
+    },
+    {
+        "day": 23,
+        "no": 123,
+        "word": "nomination",
+        "meaning": "지명, 후보 추천",
+        "targetScore": 800,
+        "exampleEn": "Accept a nomination.",
+        "exampleKo": "지명을 수락하다."
+    },
+    {
+        "day": 23,
+        "no": 124,
+        "word": "organization",
+        "meaning": "조직, 단체",
+        "targetScore": 800,
+        "exampleEn": "Non-profit organization.",
+        "exampleKo": "비영리 단체."
+    },
+    {
+        "day": 23,
+        "no": 125,
+        "word": "participate",
+        "meaning": "참여하다",
+        "targetScore": 800,
+        "exampleEn": "Participate in a discussion.",
+        "exampleKo": "토론에 참여하다."
+    },
+    {
+        "day": 23,
+        "no": 126,
+        "word": "performance",
+        "meaning": "실적, 공연",
+        "targetScore": 800,
+        "exampleEn": "High performance.",
+        "exampleKo": "높은 실적."
+    },
+    {
+        "day": 23,
+        "no": 127,
+        "word": "praise",
+        "meaning": "칭찬하다; 칭찬",
+        "targetScore": 800,
+        "exampleEn": "Praise his effort.",
+        "exampleKo": "그의 노력을 칭찬하다."
+    },
+    {
+        "day": 23,
+        "no": 128,
+        "word": "present",
+        "meaning": "제시하다; 현재의",
+        "targetScore": 800,
+        "exampleEn": "Present a solution.",
+        "exampleKo": "해결책을 제시하다."
+    },
+    {
+        "day": 23,
+        "no": 129,
+        "word": "program",
+        "meaning": "프로그램, 계획",
+        "targetScore": 800,
+        "exampleEn": "Training program.",
+        "exampleKo": "훈련 프로그램."
+    },
+    {
+        "day": 23,
+        "no": 130,
+        "word": "promote",
+        "meaning": "촉진하다, 홍보하다",
+        "targetScore": 800,
+        "exampleEn": "Promote growth.",
+        "exampleKo": "성장을 촉진하다."
+    },
+    {
+        "day": 23,
+        "no": 131,
+        "word": "recognition",
+        "meaning": "인정, 표창",
+        "targetScore": 800,
+        "exampleEn": "In recognition of.",
+        "exampleKo": "~을 인정하여."
+    },
+    {
+        "day": 23,
+        "no": 132,
+        "word": "registration",
+        "meaning": "등록",
+        "targetScore": 800,
+        "exampleEn": "Registration fee.",
+        "exampleKo": "등록비."
+    },
+    {
+        "day": 23,
+        "no": 133,
+        "word": "remark",
+        "meaning": "발언; 말하다",
+        "targetScore": 800,
+        "exampleEn": "Closing remarks.",
+        "exampleKo": "폐회사."
+    },
+    {
+        "day": 23,
+        "no": 134,
+        "word": "representative",
+        "meaning": "대표자",
+        "targetScore": 800,
+        "exampleEn": "Legal representative.",
+        "exampleKo": "법정 대리인."
+    },
+    {
+        "day": 23,
+        "no": 135,
+        "word": "raise",
+        "meaning": "모으다, 올리다",
+        "targetScore": 800,
+        "exampleEn": "Raise funds.",
+        "exampleKo": "자금을 모으다."
+    },
+    {
+        "day": 23,
+        "no": 136,
+        "word": "distort",
+        "meaning": "왜곡하다",
+        "targetScore": 800,
+        "exampleEn": "Distort the facts.",
+        "exampleKo": "사실을 왜곡하다."
+    }
+]

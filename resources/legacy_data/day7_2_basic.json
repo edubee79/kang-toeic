@@ -1,0 +1,254 @@
+[
+    {
+        "day": 7,
+        "no": 41,
+        "word": "answer the phone",
+        "meaning": "전화를 받다",
+        "targetScore": 650,
+        "exampleEn": "Can you answer the phone, please?",
+        "exampleKo": "전화 좀 받아주시겠어요?"
+    },
+    {
+        "day": 7,
+        "no": 42,
+        "word": "result",
+        "meaning": "결과",
+        "targetScore": 650,
+        "exampleEn": "The result of the game was a draw.",
+        "exampleKo": "게임 결과는 무승부였습니다."
+    },
+    {
+        "day": 7,
+        "no": 43,
+        "word": "survey",
+        "meaning": "설문 조사",
+        "targetScore": 650,
+        "exampleEn": "We conducted a survey on customer habits.",
+        "exampleKo": "우리는 고객 습관에 대한 설문 조사를 실시했습니다."
+    },
+    {
+        "day": 7,
+        "no": 44,
+        "word": "accept",
+        "meaning": "수락하다",
+        "targetScore": 650,
+        "exampleEn": "I accept your apology.",
+        "exampleKo": "당신의 사과를 받아들입니다."
+    },
+    {
+        "day": 7,
+        "no": 45,
+        "word": "advertise",
+        "meaning": "광고하다",
+        "targetScore": 650,
+        "exampleEn": "We advertise in the local paper.",
+        "exampleKo": "우리는 지역 신문에 광고를 냅니다."
+    },
+    {
+        "day": 7,
+        "no": 46,
+        "word": "attract",
+        "meaning": "유인하다, 끌다",
+        "targetScore": 650,
+        "exampleEn": "The new store attracts many customers.",
+        "exampleKo": "새 가게는 많은 손님을 끕니다."
+    },
+    {
+        "day": 7,
+        "no": 47,
+        "word": "base",
+        "meaning": "기반을 두다",
+        "targetScore": 650,
+        "exampleEn": "The story is based on true events.",
+        "exampleKo": "그 이야기는 실제 사건에 기반을 두고 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 48,
+        "word": "briefly",
+        "meaning": "잠시, 간략하게",
+        "targetScore": 650,
+        "exampleEn": "He spoke briefly about his plans.",
+        "exampleKo": "그는 자신의 계획에 대해 간략하게 말했습니다."
+    },
+    {
+        "day": 7,
+        "no": 49,
+        "word": "collect",
+        "meaning": "모으다, 수집하다",
+        "targetScore": 650,
+        "exampleEn": "I collect stamps.",
+        "exampleKo": "나는 우표를 수집합니다."
+    },
+    {
+        "day": 7,
+        "no": 50,
+        "word": "compete",
+        "meaning": "경쟁하다",
+        "targetScore": 650,
+        "exampleEn": "Several companies are competing for the contract.",
+        "exampleKo": "여러 회사가 계약을 놓고 경쟁하고 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 51,
+        "word": "competitor",
+        "meaning": "경쟁자",
+        "targetScore": 650,
+        "exampleEn": "We need to beat our competitors.",
+        "exampleKo": "우리는 경쟁자들을 이겨야 합니다."
+    },
+    {
+        "day": 7,
+        "no": 52,
+        "word": "consume",
+        "meaning": "소비하다",
+        "targetScore": 650,
+        "exampleEn": "Americans consume a lot of sugar.",
+        "exampleKo": "미국인들은 많은 양의 설탕을 소비합니다."
+    },
+    {
+        "day": 7,
+        "no": 53,
+        "word": "convenient",
+        "meaning": "편리한",
+        "targetScore": 650,
+        "exampleEn": "Online shopping is very convenient.",
+        "exampleKo": "온라인 쇼핑은 매우 편리합니다."
+    },
+    {
+        "day": 7,
+        "no": 54,
+        "word": "customer",
+        "meaning": "손님, 고객",
+        "targetScore": 650,
+        "exampleEn": "We aim to please every customer.",
+        "exampleKo": "우리는 모든 고객을 만족시키는 것을 목표로 합니다."
+    },
+    {
+        "day": 7,
+        "no": 55,
+        "word": "demand",
+        "meaning": "요구하다; 수요",
+        "targetScore": 650,
+        "exampleEn": "I demand an answer.",
+        "exampleKo": "나는 대답을 요구합니다."
+    },
+    {
+        "day": 7,
+        "no": 56,
+        "word": "demonstrate",
+        "meaning": "보여주다, 입증하다",
+        "targetScore": 650,
+        "exampleEn": "He demonstrated how the machine works.",
+        "exampleKo": "그는 기계가 어떻게 작동하는지 보여주었습니다."
+    },
+    {
+        "day": 7,
+        "no": 57,
+        "word": "encourage",
+        "meaning": "장려하다, 격려하다",
+        "targetScore": 650,
+        "exampleEn": "My parents encouraged me to study hard.",
+        "exampleKo": "부모님은 나에게 열심히 공부하라고 격려하셨습니다."
+    },
+    {
+        "day": 7,
+        "no": 58,
+        "word": "favor",
+        "meaning": "호의, 친절",
+        "targetScore": 650,
+        "exampleEn": "Can you do me a favor?",
+        "exampleKo": "부탁 하나 들어줄 수 있나요?"
+    },
+    {
+        "day": 7,
+        "no": 59,
+        "word": "favorable",
+        "meaning": "호의적인",
+        "targetScore": 650,
+        "exampleEn": "The reviews were favorable.",
+        "exampleKo": "평론들은 호의적이었습니다."
+    },
+    {
+        "day": 7,
+        "no": 60,
+        "word": "finance",
+        "meaning": "자금을 조달하다; 재정",
+        "targetScore": 650,
+        "exampleEn": "The bank refused to finance the project.",
+        "exampleKo": "은행은 그 프로젝트에 자금 조달을 거부했습니다."
+    },
+    {
+        "day": 7,
+        "no": 61,
+        "word": "financial",
+        "meaning": "재정의, 금융의",
+        "targetScore": 650,
+        "exampleEn": "He is in financial difficulty.",
+        "exampleKo": "그는 재정적 어려움에 처해 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 62,
+        "word": "force",
+        "meaning": "강요하다; 힘",
+        "targetScore": 650,
+        "exampleEn": "They forced him to sign the contract.",
+        "exampleKo": "그들은 그에게 계약서에 서명하도록 강요했습니다."
+    },
+    {
+        "day": 7,
+        "no": 63,
+        "word": "majority",
+        "meaning": "대다수",
+        "targetScore": 650,
+        "exampleEn": "The majority of people voted yes.",
+        "exampleKo": "대다수의 사람들이 찬성표를 던졌습니다."
+    },
+    {
+        "day": 7,
+        "no": 64,
+        "word": "market research",
+        "meaning": "시장 조사",
+        "targetScore": 650,
+        "exampleEn": "Market research helps identify trends.",
+        "exampleKo": "시장 조사는 추세를 파악하는 데 도움이 됩니다."
+    },
+    {
+        "day": 7,
+        "no": 65,
+        "word": "persuade",
+        "meaning": "설득하다",
+        "targetScore": 650,
+        "exampleEn": "She persuaded me to go with her.",
+        "exampleKo": "그녀는 나를 설득해서 같이 가게 했습니다."
+    },
+    {
+        "day": 7,
+        "no": 66,
+        "word": "product",
+        "meaning": "제품",
+        "targetScore": 650,
+        "exampleEn": "This is our best-selling product.",
+        "exampleKo": "이것은 우리의 베스트셀러 제품입니다."
+    },
+    {
+        "day": 7,
+        "no": 67,
+        "word": "profit",
+        "meaning": "이익, 수익",
+        "targetScore": 650,
+        "exampleEn": "They made a huge profit.",
+        "exampleKo": "그들은 막대한 이익을 남겼습니다."
+    },
+    {
+        "day": 7,
+        "no": 68,
+        "word": "refundable",
+        "meaning": "환불 가능한",
+        "targetScore": 650,
+        "exampleEn": "The ticket is fully refundable.",
+        "exampleKo": "그 티켓은 전액 환불 가능합니다."
+    }
+]

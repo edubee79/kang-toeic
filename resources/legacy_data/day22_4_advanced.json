@@ -1,0 +1,290 @@
+[
+    {
+        "day": 22,
+        "no": 137,
+        "word": "reassure",
+        "meaning": "안심시키다",
+        "targetScore": 900,
+        "exampleEn": "Reassure the investors.",
+        "exampleKo": "투자자들을 안심시키다."
+    },
+    {
+        "day": 22,
+        "no": 138,
+        "word": "speculate",
+        "meaning": "추측하다; 투기하다",
+        "targetScore": 900,
+        "exampleEn": "Speculate on the outcome.",
+        "exampleKo": "결과를 추측하다."
+    },
+    {
+        "day": 22,
+        "no": 139,
+        "word": "alternative",
+        "meaning": "대안",
+        "targetScore": 900,
+        "exampleEn": "Find an alternative.",
+        "exampleKo": "대안을 찾다."
+    },
+    {
+        "day": 22,
+        "no": 140,
+        "word": "announce",
+        "meaning": "발표하다",
+        "targetScore": 900,
+        "exampleEn": "Announce the news.",
+        "exampleKo": "소식을 발표하다."
+    },
+    {
+        "day": 22,
+        "no": 141,
+        "word": "anxious",
+        "meaning": "걱정하는, 열망하는",
+        "targetScore": 900,
+        "exampleEn": "Anxious about the results.",
+        "exampleKo": "결과에 대해 걱정하는."
+    },
+    {
+        "day": 22,
+        "no": 142,
+        "word": "article",
+        "meaning": "기사, 물품, 조항",
+        "targetScore": 900,
+        "exampleEn": "Read an article.",
+        "exampleKo": "기사를 읽다."
+    },
+    {
+        "day": 22,
+        "no": 143,
+        "word": "as well as",
+        "meaning": "~뿐만 아니라",
+        "targetScore": 900,
+        "exampleEn": "As well as I.",
+        "exampleKo": "나뿐만 아니라."
+    },
+    {
+        "day": 22,
+        "no": 144,
+        "word": "concede",
+        "meaning": "인정하다, 양보하다",
+        "targetScore": 900,
+        "exampleEn": "Concede defeat.",
+        "exampleKo": "패배를 인정하다."
+    },
+    {
+        "day": 22,
+        "no": 145,
+        "word": "concise",
+        "meaning": "간결한",
+        "targetScore": 900,
+        "exampleEn": "Keep it concise.",
+        "exampleKo": "간결하게 하세요."
+    },
+    {
+        "day": 22,
+        "no": 146,
+        "word": "conclude",
+        "meaning": "결론짓다",
+        "targetScore": 900,
+        "exampleEn": "Conclude the deal.",
+        "exampleKo": "거래를 성사시키다."
+    },
+    {
+        "day": 22,
+        "no": 147,
+        "word": "confidential",
+        "meaning": "기밀의",
+        "targetScore": 900,
+        "exampleEn": "Confidential information.",
+        "exampleKo": "기밀 정보."
+    },
+    {
+        "day": 22,
+        "no": 148,
+        "word": "consequence",
+        "meaning": "결과",
+        "targetScore": 900,
+        "exampleEn": "Face the consequences.",
+        "exampleKo": "결과에 직면하다."
+    },
+    {
+        "day": 22,
+        "no": 149,
+        "word": "deadline",
+        "meaning": "마감 기한",
+        "targetScore": 900,
+        "exampleEn": "Miss the deadline.",
+        "exampleKo": "마감 기한을 놓치다."
+    },
+    {
+        "day": 22,
+        "no": 150,
+        "word": "debate",
+        "meaning": "토론하다",
+        "targetScore": 900,
+        "exampleEn": "Open for debate.",
+        "exampleKo": "토론을 위해 열려 있는."
+    },
+    {
+        "day": 22,
+        "no": 151,
+        "word": "detail",
+        "meaning": "세부 사항; 상술하다",
+        "targetScore": 900,
+        "exampleEn": "In detail.",
+        "exampleKo": "상세하게."
+    },
+    {
+        "day": 22,
+        "no": 152,
+        "word": "encounter",
+        "meaning": "직면하다, 우연히 만나다",
+        "targetScore": 900,
+        "exampleEn": "Encounter a problem.",
+        "exampleKo": "문제에 직면하다."
+    },
+    {
+        "day": 22,
+        "no": 153,
+        "word": "explanation",
+        "meaning": "설명",
+        "targetScore": 900,
+        "exampleEn": "Need an explanation.",
+        "exampleKo": "설명이 필요하다."
+    },
+    {
+        "day": 22,
+        "no": 154,
+        "word": "hint",
+        "meaning": "암시, 힌트",
+        "targetScore": 900,
+        "exampleEn": "Give a hint.",
+        "exampleKo": "힌트를 주다."
+    },
+    {
+        "day": 22,
+        "no": 155,
+        "word": "hypothesis",
+        "meaning": "가설",
+        "targetScore": 900,
+        "exampleEn": "Test a hypothesis.",
+        "exampleKo": "가설을 검증하다."
+    },
+    {
+        "day": 22,
+        "no": 156,
+        "word": "impact",
+        "meaning": "영향",
+        "targetScore": 900,
+        "exampleEn": "Environmental impact.",
+        "exampleKo": "환경적 영향."
+    },
+    {
+        "day": 22,
+        "no": 157,
+        "word": "impediment",
+        "meaning": "장애물",
+        "targetScore": 900,
+        "exampleEn": "Speech impediment.",
+        "exampleKo": "언어 장애."
+    },
+    {
+        "day": 22,
+        "no": 158,
+        "word": "inquire",
+        "meaning": "문의하다",
+        "targetScore": 900,
+        "exampleEn": "Inquire about the price.",
+        "exampleKo": "가격을 문의하다."
+    },
+    {
+        "day": 22,
+        "no": 159,
+        "word": "interaction",
+        "meaning": "상호 작용",
+        "targetScore": 900,
+        "exampleEn": "Social interaction.",
+        "exampleKo": "사회적 상호 작용."
+    },
+    {
+        "day": 22,
+        "no": 160,
+        "word": "interrupt",
+        "meaning": "방해하다",
+        "targetScore": 900,
+        "exampleEn": "Don't interrupt.",
+        "exampleKo": "방해하지 마세요."
+    },
+    {
+        "day": 22,
+        "no": 161,
+        "word": "issue",
+        "meaning": "문제; 발행하다",
+        "targetScore": 900,
+        "exampleEn": "Key issue.",
+        "exampleKo": "핵심 문제."
+    },
+    {
+        "day": 22,
+        "no": 162,
+        "word": "material",
+        "meaning": "자료, 물질",
+        "targetScore": 900,
+        "exampleEn": "Raw material.",
+        "exampleKo": "원자재."
+    },
+    {
+        "day": 22,
+        "no": 163,
+        "word": "matter",
+        "meaning": "문제",
+        "targetScore": 900,
+        "exampleEn": "Practical matter.",
+        "exampleKo": "실질적인 문제."
+    },
+    {
+        "day": 22,
+        "no": 164,
+        "word": "notify",
+        "meaning": "통지하다",
+        "targetScore": 900,
+        "exampleEn": "Notify the winner.",
+        "exampleKo": "우승자에게 통지하다."
+    },
+    {
+        "day": 22,
+        "no": 165,
+        "word": "oppose",
+        "meaning": "반대하다",
+        "targetScore": 900,
+        "exampleEn": "Oppose a Bill.",
+        "exampleKo": "법안에 반대하다."
+    },
+    {
+        "day": 22,
+        "no": 166,
+        "word": "option",
+        "meaning": "선택권",
+        "targetScore": 900,
+        "exampleEn": "Choose an option.",
+        "exampleKo": "옵션을 선택하다."
+    },
+    {
+        "day": 22,
+        "no": 167,
+        "word": "placate",
+        "meaning": "달래다",
+        "targetScore": 900,
+        "exampleEn": "Placate the crowd.",
+        "exampleKo": "군중을 달래다."
+    },
+    {
+        "day": 22,
+        "no": 168,
+        "word": "coherent",
+        "meaning": "일관성 있는, 조리 있는",
+        "targetScore": 900,
+        "exampleEn": "Coherent explanation.",
+        "exampleKo": "조리 있는 설명."
+    }
+]

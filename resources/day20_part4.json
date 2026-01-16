@@ -1,0 +1,290 @@
+[
+  {
+    "day": 20,
+    "no": 137,
+    "word": "well in advance",
+    "meaning": "훨씬 앞서서",
+    "targetScore": 900,
+    "exampleEn": "We must book the venue well in advance.",
+    "exampleKo": "우리는 장소를 훨씬 앞서서 예약해야 합니다."
+  },
+  {
+    "day": 20,
+    "no": 138,
+    "word": "ledger",
+    "meaning": "회계 장부",
+    "targetScore": 900,
+    "exampleEn": "The accountant updated the general ledger.",
+    "exampleKo": "회계사가 총계정 원장(회계 장부)을 갱신했습니다."
+  },
+  {
+    "day": 20,
+    "no": 139,
+    "word": "adjournment",
+    "meaning": "연기, 휴회",
+    "targetScore": 900,
+    "exampleEn": "The meeting ended in adjournment until next week.",
+    "exampleKo": "회의는 다음 주까지 연기(휴회)되는 것으로 끝났습니다."
+  },
+  {
+    "day": 20,
+    "no": 140,
+    "word": "cash reserves",
+    "meaning": "현금 보유고",
+    "targetScore": 900,
+    "exampleEn": "The company has significant cash reserves.",
+    "exampleKo": "그 회사는 상당한 현금 보유고를 가지고 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 141,
+    "word": "inconsistency",
+    "meaning": "불일치",
+    "targetScore": 900,
+    "exampleEn": "There is an inconsistency between the reports.",
+    "exampleKo": "보고서들 사이에 불일치가 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 142,
+    "word": "preclude",
+    "meaning": "막다",
+    "targetScore": 900,
+    "exampleEn": "The bad weather precludes outdoor activities.",
+    "exampleKo": "나쁜 날씨는 야외 활동을 막습니다."
+  },
+  {
+    "day": 20,
+    "no": 143,
+    "word": "pretax",
+    "meaning": "세금 공제 전의",
+    "targetScore": 900,
+    "exampleEn": "The pretax profit was higher than expected.",
+    "exampleKo": "세금 공제 전 이익은 예상보다 높았습니다."
+  },
+  {
+    "day": 20,
+    "no": 144,
+    "word": "plus tax",
+    "meaning": "세금 별도",
+    "targetScore": 900,
+    "exampleEn": "The price is $50, plus tax.",
+    "exampleKo": "가격은 50달러이며, 세금 별도입니다."
+  },
+  {
+    "day": 20,
+    "no": 145,
+    "word": "in place",
+    "meaning": "제자리에",
+    "targetScore": 900,
+    "exampleEn": "We have safety measures in place.",
+    "exampleKo": "우리는 안전 조치들이 제자리에 있습니다(마련되어 있습니다)."
+  },
+  {
+    "day": 20,
+    "no": 146,
+    "word": "statistics",
+    "meaning": "통계학",
+    "targetScore": 900,
+    "exampleEn": "Statistics show a decline in unemployment.",
+    "exampleKo": "통계학(통계)은 실업률 감소를 보여줍니다."
+  },
+  {
+    "day": 20,
+    "no": 147,
+    "word": "back order",
+    "meaning": "이월 주문",
+    "targetScore": 900,
+    "exampleEn": "The item is currently on back order.",
+    "exampleKo": "그 물품은 현재 이월 주문 상태입니다(재고가 없어 추후 배송됩니다)."
+  },
+  {
+    "day": 20,
+    "no": 148,
+    "word": "be in the red",
+    "meaning": "적자 상태에 있다",
+    "targetScore": 900,
+    "exampleEn": "The company has been in the red for two years.",
+    "exampleKo": "그 회사는 2년 동안 적자 상태에 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 149,
+    "word": "liability",
+    "meaning": "책임",
+    "targetScore": 900,
+    "exampleEn": "The defective product is a liability for the company.",
+    "exampleKo": "결함 있는 제품은 회사에 책임(골칫거리)입니다."
+  },
+  {
+    "day": 20,
+    "no": 150,
+    "word": "classification",
+    "meaning": "분류; 등급",
+    "targetScore": 900,
+    "exampleEn": "The job classification system needs updating.",
+    "exampleKo": "직무 분류(등급) 시스템은 갱신이 필요합니다."
+  },
+  {
+    "day": 20,
+    "no": 151,
+    "word": "pros and cons",
+    "meaning": "찬반양론; 이해득실",
+    "targetScore": 900,
+    "exampleEn": "We weighed the pros and cons of the proposal.",
+    "exampleKo": "우리는 제안의 찬반양론(이해득실)을 따져보았습니다."
+  },
+  {
+    "day": 20,
+    "no": 152,
+    "word": "implicate",
+    "meaning": "연루되었음을 시사하다",
+    "targetScore": 900,
+    "exampleEn": "Evidence seemed to implicate him in the fraud.",
+    "exampleKo": "증거는 그가 사기에 연루되었음을 시사하는 것 같았습니다."
+  },
+  {
+    "day": 20,
+    "no": 153,
+    "word": "incrementally",
+    "meaning": "증가하여",
+    "targetScore": 900,
+    "exampleEn": "We will increase the budget incrementally.",
+    "exampleKo": "우리는 예산을 점차적으로(증가하여) 늘릴 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 154,
+    "word": "stringently",
+    "meaning": "엄격히, 엄중하게",
+    "targetScore": 900,
+    "exampleEn": "Safety regulations are stringently enforced.",
+    "exampleKo": "안전 규정은 엄격히(엄중하게) 시행됩니다."
+  },
+  {
+    "day": 20,
+    "no": 155,
+    "word": "year-end",
+    "meaning": "연말의",
+    "targetScore": 900,
+    "exampleEn": "We are preparing for the year-end audit.",
+    "exampleKo": "우리는 연말 감사를 준비하고 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 156,
+    "word": "substantively",
+    "meaning": "사실상, 실제로",
+    "targetScore": 900,
+    "exampleEn": "The two plans do not differ substantively.",
+    "exampleKo": "두 계획은 실질적으로(사실상) 다르지 않습니다."
+  },
+  {
+    "day": 20,
+    "no": 157,
+    "word": "whereabout",
+    "meaning": "소재, 행방",
+    "targetScore": 900,
+    "exampleEn": "The whereabouts of the document are unknown.",
+    "exampleKo": "그 문서의 소재(행방)는 알려지지 않았습니다."
+  },
+  {
+    "day": 20,
+    "no": 158,
+    "word": "discrepancy",
+    "meaning": "불일치, 차이",
+    "targetScore": 900,
+    "exampleEn": "There is a discrepancy in the accounts.",
+    "exampleKo": "계좌에 불일치(차이)가 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 159,
+    "word": "reliably",
+    "meaning": "신뢰할 수 있게, 확실하게",
+    "targetScore": 900,
+    "exampleEn": "The system works reliably under pressure.",
+    "exampleKo": "시스템은 압박 속에서도 신뢰할 수 있게(확실하게) 작동합니다."
+  },
+  {
+    "day": 20,
+    "no": 160,
+    "word": "amply",
+    "meaning": "풍부하게, 충분히",
+    "targetScore": 900,
+    "exampleEn": "The evidence amply demonstrates his guilt.",
+    "exampleKo": "증거는 그의 유죄를 풍부하게(충분히) 입증합니다."
+  },
+  {
+    "day": 20,
+    "no": 161,
+    "word": "precedent",
+    "meaning": "전례",
+    "targetScore": 900,
+    "exampleEn": "This decision sets a precedent for future cases.",
+    "exampleKo": "이 결정은 미래의 사건들에 대한 전례를 만듭니다."
+  },
+  {
+    "day": 20,
+    "no": 162,
+    "word": "be in the black",
+    "meaning": "흑자 상태에 있다",
+    "targetScore": 900,
+    "exampleEn": "We hope to be in the black by next year.",
+    "exampleKo": "우리는 내년까지 흑자 상태가 되기를 희망합니다."
+  },
+  {
+    "day": 20,
+    "no": 163,
+    "word": "operation budget",
+    "meaning": "운영 예산",
+    "targetScore": 900,
+    "exampleEn": "The operation budget for the department was cut.",
+    "exampleKo": "부서의 운영 예산이 삭감되었습니다."
+  },
+  {
+    "day": 20,
+    "no": 164,
+    "word": "levy",
+    "meaning": "부과금",
+    "targetScore": 900,
+    "exampleEn": "The government imposed a levy on luxury goods.",
+    "exampleKo": "정부는 사치품에 부과금을 부과했습니다."
+  },
+  {
+    "day": 20,
+    "no": 165,
+    "word": "relevance",
+    "meaning": "적절, 타당성; 관련성",
+    "targetScore": 900,
+    "exampleEn": "The document has no relevance to the case.",
+    "exampleKo": "그 문서는 사건과 관련성(적절성)이 없습니다."
+  },
+  {
+    "day": 20,
+    "no": 166,
+    "word": "vary from A to B",
+    "meaning": "상황에 따라 다르다",
+    "targetScore": 900,
+    "exampleEn": "Prices vary from store to store.",
+    "exampleKo": "가격은 가게마다 다릅니다(상황에 따라 다릅니다)."
+  },
+  {
+    "day": 20,
+    "no": 167,
+    "word": "by a considerable margin",
+    "meaning": "큰 차이로",
+    "targetScore": 900,
+    "exampleEn": "He won the election by a considerable margin.",
+    "exampleKo": "그는 큰 차이로 선거에서 이겼습니다."
+  },
+  {
+    "day": 20,
+    "no": 168,
+    "word": "break-even point",
+    "meaning": "손익 분기점",
+    "targetScore": 900,
+    "exampleEn": "We need to calculate the break-even point.",
+    "exampleKo": "우리는 손익 분기점을 계산해야 합니다."
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "day": 28,
+    "no": 41,
+    "word": "prototype",
+    "meaning": "시제품",
+    "targetScore": 650,
+    "exampleEn": "The prototype will be tested next week.",
+    "exampleKo": "시제품은 다음 주에 테스트될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 42,
+    "word": "design",
+    "meaning": "설계",
+    "targetScore": 650,
+    "exampleEn": "The product design is innovative.",
+    "exampleKo": "제품 설계는 혁신적입니다."
+  },
+  {
+    "day": 28,
+    "no": 43,
+    "word": "blueprint",
+    "meaning": "청사진",
+    "targetScore": 650,
+    "exampleEn": "Review the blueprint before production.",
+    "exampleKo": "생산 전에 청사진을 검토하세요."
+  },
+  {
+    "day": 28,
+    "no": 44,
+    "word": "assembly line",
+    "meaning": "조립 라인",
+    "targetScore": 650,
+    "exampleEn": "Workers on the assembly line are trained.",
+    "exampleKo": "조립 라인의 근로자들은 훈련받았습니다."
+  },
+  {
+    "day": 28,
+    "no": 45,
+    "word": "conveyor belt",
+    "meaning": "컨베이어 벨트",
+    "targetScore": 650,
+    "exampleEn": "Products move on the conveyor belt.",
+    "exampleKo": "제품은 컨베이어 벨트 위를 이동합니다."
+  },
+  {
+    "day": 28,
+    "no": 46,
+    "word": "forklift",
+    "meaning": "지게차",
+    "targetScore": 650,
+    "exampleEn": "Use the forklift to move pallets.",
+    "exampleKo": "팔레트를 옮기려면 지게차를 사용하세요."
+  },
+  {
+    "day": 28,
+    "no": 47,
+    "word": "pallet",
+    "meaning": "팔레트",
+    "targetScore": 650,
+    "exampleEn": "Stack the boxes on pallets.",
+    "exampleKo": "상자를 팔레트에 쌓으세요."
+  },
+  {
+    "day": 28,
+    "no": 48,
+    "word": "crate",
+    "meaning": "상자",
+    "targetScore": 650,
+    "exampleEn": "The products are packed in crates.",
+    "exampleKo": "제품은 상자에 포장됩니다."
+  },
+  {
+    "day": 28,
+    "no": 49,
+    "word": "container",
+    "meaning": "컨테이너",
+    "targetScore": 650,
+    "exampleEn": "Shipping containers arrive daily.",
+    "exampleKo": "선적 컨테이너가 매일 도착합니다."
+  },
+  {
+    "day": 28,
+    "no": 50,
+    "word": "cargo",
+    "meaning": "화물",
+    "targetScore": 650,
+    "exampleEn": "The cargo will be shipped tomorrow.",
+    "exampleKo": "화물은 내일 선적될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 51,
+    "word": "freight",
+    "meaning": "화물",
+    "targetScore": 650,
+    "exampleEn": "Freight costs have increased.",
+    "exampleKo": "화물 비용이 증가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 52,
+    "word": "logistics",
+    "meaning": "물류",
+    "targetScore": 650,
+    "exampleEn": "The logistics team handles shipping.",
+    "exampleKo": "물류 팀이 선적을 처리합니다."
+  },
+  {
+    "day": 28,
+    "no": 53,
+    "word": "dispatch",
+    "meaning": "발송",
+    "targetScore": 650,
+    "exampleEn": "Orders are dispatched within 24 hours.",
+    "exampleKo": "주문은 24시간 이내에 발송됩니다."
+  },
+  {
+    "day": 28,
+    "no": 54,
+    "word": "tracking",
+    "meaning": "추적",
+    "targetScore": 650,
+    "exampleEn": "Use the tracking number to monitor shipments.",
+    "exampleKo": "추적 번호를 사용하여 선적을 모니터링하세요."
+  },
+  {
+    "day": 28,
+    "no": 55,
+    "word": "barcode",
+    "meaning": "바코드",
+    "targetScore": 650,
+    "exampleEn": "Scan the barcode for inventory.",
+    "exampleKo": "재고를 위해 바코드를 스캔하세요."
+  },
+  {
+    "day": 28,
+    "no": 56,
+    "word": "scanner",
+    "meaning": "스캐너",
+    "targetScore": 650,
+    "exampleEn": "Use the scanner to check products.",
+    "exampleKo": "제품을 확인하려면 스캐너를 사용하세요."
+  },
+  {
+    "day": 28,
+    "no": 57,
+    "word": "calibration",
+    "meaning": "보정",
+    "targetScore": 650,
+    "exampleEn": "Equipment requires regular calibration.",
+    "exampleKo": "장비는 정기적인 보정이 필요합니다."
+  },
+  {
+    "day": 28,
+    "no": 58,
+    "word": "tolerance",
+    "meaning": "허용 오차",
+    "targetScore": 650,
+    "exampleEn": "The tolerance level is very strict.",
+    "exampleKo": "허용 오차 수준은 매우 엄격합니다."
+  },
+  {
+    "day": 28,
+    "no": 59,
+    "word": "precision",
+    "meaning": "정밀도",
+    "targetScore": 650,
+    "exampleEn": "Precision is critical in manufacturing.",
+    "exampleKo": "제조에서 정밀도는 중요합니다."
+  },
+  {
+    "day": 28,
+    "no": 60,
+    "word": "accuracy",
+    "meaning": "정확도",
+    "targetScore": 650,
+    "exampleEn": "Ensure measurement accuracy.",
+    "exampleKo": "측정 정확도를 보장하세요."
+  },
+  {
+    "day": 28,
+    "no": 61,
+    "word": "compliance",
+    "meaning": "준수",
+    "targetScore": 650,
+    "exampleEn": "Compliance with regulations is mandatory.",
+    "exampleKo": "규정 준수는 필수입니다."
+  },
+  {
+    "day": 28,
+    "no": 62,
+    "word": "certification",
+    "meaning": "인증",
+    "targetScore": 650,
+    "exampleEn": "The product has ISO certification.",
+    "exampleKo": "제품은 ISO 인증을 받았습니다."
+  },
+  {
+    "day": 28,
+    "no": 63,
+    "word": "warranty",
+    "meaning": "보증",
+    "targetScore": 650,
+    "exampleEn": "The product comes with a 2-year warranty.",
+    "exampleKo": "제품은 2년 보증이 제공됩니다."
+  },
+  {
+    "day": 28,
+    "no": 64,
+    "word": "guarantee",
+    "meaning": "보증",
+    "targetScore": 650,
+    "exampleEn": "We guarantee product quality.",
+    "exampleKo": "우리는 제품 품질을 보증합니다."
+  },
+  {
+    "day": 28,
+    "no": 65,
+    "word": "recall",
+    "meaning": "리콜",
+    "targetScore": 650,
+    "exampleEn": "The company issued a product recall.",
+    "exampleKo": "회사는 제품 리콜을 발표했습니다."
+  },
+  {
+    "day": 28,
+    "no": 66,
+    "word": "safety",
+    "meaning": "안전",
+    "targetScore": 650,
+    "exampleEn": "Safety is our top concern.",
+    "exampleKo": "안전이 우리의 최우선 관심사입니다."
+  },
+  {
+    "day": 28,
+    "no": 67,
+    "word": "hazard",
+    "meaning": "위험",
+    "targetScore": 650,
+    "exampleEn": "Identify potential hazards.",
+    "exampleKo": "잠재적 위험을 식별하세요."
+  },
+  {
+    "day": 28,
+    "no": 68,
+    "word": "protective gear",
+    "meaning": "보호 장비",
+    "targetScore": 650,
+    "exampleEn": "Wear protective gear at all times.",
+    "exampleKo": "항상 보호 장비를 착용하세요."
+  }
+]

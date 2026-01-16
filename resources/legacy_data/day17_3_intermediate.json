@@ -1,0 +1,614 @@
+[
+    {
+        "day": 17,
+        "no": 69,
+        "word": "shipping",
+        "meaning": "배송, 선박",
+        "targetScore": 800,
+        "exampleEn": "Free shipping globally.",
+        "exampleKo": "전 세계 무료 배송."
+    },
+    {
+        "day": 17,
+        "no": 70,
+        "word": "acquisition",
+        "meaning": "인수, 획득",
+        "targetScore": 800,
+        "exampleEn": "The museum's new acquisition.",
+        "exampleKo": "그 박물관의 새로운 인수품."
+    },
+    {
+        "day": 17,
+        "no": 71,
+        "word": "adequate",
+        "meaning": "충분한, 적절한",
+        "targetScore": 800,
+        "exampleEn": "Adequate parking space.",
+        "exampleKo": "충분한 주차 공간."
+    },
+    {
+        "day": 17,
+        "no": 72,
+        "word": "adjust",
+        "meaning": "조절하다, 적응하다",
+        "targetScore": 800,
+        "exampleEn": "Adjust the volume.",
+        "exampleKo": "음량을 조절하세요."
+    },
+    {
+        "day": 17,
+        "no": 73,
+        "word": "affect",
+        "meaning": "영향을 미치다",
+        "targetScore": 800,
+        "exampleEn": "The weather affected our plans.",
+        "exampleKo": "날씨가 우리 계획에 영향을 미쳤습니다."
+    },
+    {
+        "day": 17,
+        "no": 74,
+        "word": "affix",
+        "meaning": "부착하다",
+        "targetScore": 800,
+        "exampleEn": "Affix a label to the box.",
+        "exampleKo": "상자에 라벨을 붙이세요."
+    },
+    {
+        "day": 17,
+        "no": 75,
+        "word": "agree",
+        "meaning": "동의하다",
+        "targetScore": 800,
+        "exampleEn": "I agree with you.",
+        "exampleKo": "당신에게 동의합니다."
+    },
+    {
+        "day": 17,
+        "no": 76,
+        "word": "anticipate",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "We anticipate a profit.",
+        "exampleKo": "우리는 이익을 예상합니다."
+    },
+    {
+        "day": 17,
+        "no": 77,
+        "word": "arrange",
+        "meaning": "배열하다, 마련하다",
+        "targetScore": 800,
+        "exampleEn": "Arrange a meeting.",
+        "exampleKo": "회의를 마련하세요."
+    },
+    {
+        "day": 17,
+        "no": 78,
+        "word": "assess",
+        "meaning": "평가하다",
+        "targetScore": 800,
+        "exampleEn": "Assess the value.",
+        "exampleKo": "가치를 평가하세요."
+    },
+    {
+        "day": 17,
+        "no": 79,
+        "word": "attract",
+        "meaning": "끌다, 유인하다",
+        "targetScore": 800,
+        "exampleEn": "The sale attracted many customers.",
+        "exampleKo": "세일은 많은 손님을 끌었습니다."
+    },
+    {
+        "day": 17,
+        "no": 80,
+        "word": "available",
+        "meaning": "시간이 있는, 이용 가능한",
+        "targetScore": 800,
+        "exampleEn": "Are you available tomorrow?",
+        "exampleKo": "내일 시간이 있습니까?"
+    },
+    {
+        "day": 17,
+        "no": 81,
+        "word": "balance",
+        "meaning": "잔고; 균형",
+        "targetScore": 800,
+        "exampleEn": "Check your account balance.",
+        "exampleKo": "계좌 잔고를 확인하세요."
+    },
+    {
+        "day": 17,
+        "no": 82,
+        "word": "banquet",
+        "meaning": "연회",
+        "targetScore": 800,
+        "exampleEn": "A wedding banquet.",
+        "exampleKo": "결혼 연회."
+    },
+    {
+        "day": 17,
+        "no": 83,
+        "word": "beverage",
+        "meaning": "음료",
+        "targetScore": 800,
+        "exampleEn": "Food and beverages.",
+        "exampleKo": "음식과 음료."
+    },
+    {
+        "day": 17,
+        "no": 84,
+        "word": "block",
+        "meaning": "막다; 구역",
+        "targetScore": 800,
+        "exampleEn": "A blocked road.",
+        "exampleKo": "막힌 도로."
+    },
+    {
+        "day": 17,
+        "no": 85,
+        "word": "board",
+        "meaning": "이사회; 탑승하다",
+        "targetScore": 800,
+        "exampleEn": "Board of directors.",
+        "exampleKo": "이사회."
+    },
+    {
+        "day": 17,
+        "no": 86,
+        "word": "broker",
+        "meaning": "중개인",
+        "targetScore": 800,
+        "exampleEn": "A stock broker.",
+        "exampleKo": "주식 중개인."
+    },
+    {
+        "day": 17,
+        "no": 87,
+        "word": "building",
+        "meaning": "건물",
+        "targetScore": 800,
+        "exampleEn": "An office building.",
+        "exampleKo": "사무실 건물."
+    },
+    {
+        "day": 17,
+        "no": 88,
+        "word": "capital",
+        "meaning": "자본; 수도",
+        "targetScore": 800,
+        "exampleEn": "We need more capital.",
+        "exampleKo": "우리는 자본이 더 필요합니다."
+    },
+    {
+        "day": 17,
+        "no": 89,
+        "word": "cargo",
+        "meaning": "화물",
+        "targetScore": 800,
+        "exampleEn": "Air cargo.",
+        "exampleKo": "항공 화물."
+    },
+    {
+        "day": 17,
+        "no": 90,
+        "word": "career",
+        "meaning": "경력, 직업",
+        "targetScore": 800,
+        "exampleEn": "A successful career.",
+        "exampleKo": "성공적인 경력."
+    },
+    {
+        "day": 17,
+        "no": 91,
+        "word": "carriage",
+        "meaning": "운송, 차량",
+        "targetScore": 800,
+        "exampleEn": "Carriage paid.",
+        "exampleKo": "운송비 지불 완료."
+    },
+    {
+        "day": 17,
+        "no": 92,
+        "word": "cash",
+        "meaning": "현금",
+        "targetScore": 800,
+        "exampleEn": "Pay in cash.",
+        "exampleKo": "현금으로 지불하세요."
+    },
+    {
+        "day": 17,
+        "no": 93,
+        "word": "check",
+        "meaning": "수표",
+        "targetScore": 800,
+        "exampleEn": "Write a check.",
+        "exampleKo": "수표를 쓰세요."
+    },
+    {
+        "day": 17,
+        "no": 94,
+        "word": "checkout",
+        "meaning": "계산대, 퇴실",
+        "targetScore": 800,
+        "exampleEn": "Long lines at the checkout.",
+        "exampleKo": "계산대의 긴 줄."
+    },
+    {
+        "day": 17,
+        "no": 95,
+        "word": "chef",
+        "meaning": "주방장",
+        "targetScore": 800,
+        "exampleEn": "Head chef.",
+        "exampleKo": "주방장."
+    },
+    {
+        "day": 17,
+        "no": 96,
+        "word": "claim",
+        "meaning": "수령하다, 주장하다",
+        "targetScore": 800,
+        "exampleEn": "Claim your baggage.",
+        "exampleKo": "수하물을 찾으세요."
+    },
+    {
+        "day": 17,
+        "no": 97,
+        "word": "commercial",
+        "meaning": "상업적인",
+        "targetScore": 800,
+        "exampleEn": "Commercial vehicles.",
+        "exampleKo": "상업용 차량."
+    },
+    {
+        "day": 17,
+        "no": 98,
+        "word": "committee",
+        "meaning": "위원회",
+        "targetScore": 800,
+        "exampleEn": "The committee met yesterday.",
+        "exampleKo": "위원회는 어제 모였습니다."
+    },
+    {
+        "day": 17,
+        "no": 99,
+        "word": "compensate",
+        "meaning": "보상하다",
+        "targetScore": 800,
+        "exampleEn": "Compensate for the loss.",
+        "exampleKo": "손실을 보상하다."
+    },
+    {
+        "day": 17,
+        "no": 100,
+        "word": "complete",
+        "meaning": "완료하다; 완전한",
+        "targetScore": 800,
+        "exampleEn": "Complete the form.",
+        "exampleKo": "양식을 작성하세요."
+    },
+    {
+        "day": 17,
+        "no": 101,
+        "word": "complex",
+        "meaning": "복잡한",
+        "targetScore": 800,
+        "exampleEn": "A complex issue.",
+        "exampleKo": "복잡한 문제."
+    },
+    {
+        "day": 17,
+        "no": 102,
+        "word": "comply",
+        "meaning": "따르다, 준수하다",
+        "targetScore": 800,
+        "exampleEn": "Comply with regulations.",
+        "exampleKo": "규정을 준수하세요."
+    },
+    {
+        "day": 17,
+        "no": 103,
+        "word": "confirm",
+        "meaning": "확정하다",
+        "targetScore": 800,
+        "exampleEn": "Confirm your booking.",
+        "exampleKo": "예약을 확정하세요."
+    },
+    {
+        "day": 17,
+        "no": 104,
+        "word": "consolidate",
+        "meaning": "통합하다, 강화하다",
+        "targetScore": 800,
+        "exampleEn": "Consolidate your debts.",
+        "exampleKo": "빚을 통합하세요."
+    },
+    {
+        "day": 17,
+        "no": 105,
+        "word": "consignment",
+        "meaning": "위탁 판매물",
+        "targetScore": 800,
+        "exampleEn": "A large consignment of goods.",
+        "exampleKo": "대규모 위탁 판매 물품."
+    },
+    {
+        "day": 17,
+        "no": 106,
+        "word": "container",
+        "meaning": "용기, 컨테이너",
+        "targetScore": 800,
+        "exampleEn": "Shipping containers.",
+        "exampleKo": "선적 컨테이너."
+    },
+    {
+        "day": 17,
+        "no": 107,
+        "word": "contract",
+        "meaning": "계약",
+        "targetScore": 800,
+        "exampleEn": "Sign the contract.",
+        "exampleKo": "계약서에 서명하세요."
+    },
+    {
+        "day": 17,
+        "no": 108,
+        "word": "contribute",
+        "meaning": "기여하다",
+        "targetScore": 800,
+        "exampleEn": "Contribute to the fund.",
+        "exampleKo": "기금에 기부하세요."
+    },
+    {
+        "day": 17,
+        "no": 109,
+        "word": "cook",
+        "meaning": "요리사; 요리하다",
+        "targetScore": 800,
+        "exampleEn": "A good cook.",
+        "exampleKo": "훌륭한 요리사."
+    },
+    {
+        "day": 17,
+        "no": 110,
+        "word": "coordinate",
+        "meaning": "조정하다",
+        "targetScore": 800,
+        "exampleEn": "Coordinate the efforts.",
+        "exampleKo": "노력을 조정하세요."
+    },
+    {
+        "day": 17,
+        "no": 111,
+        "word": "correspondence",
+        "meaning": "서신",
+        "targetScore": 800,
+        "exampleEn": "Personal correspondence.",
+        "exampleKo": "개인 서신."
+    },
+    {
+        "day": 17,
+        "no": 112,
+        "word": "courier",
+        "meaning": "택배업자",
+        "targetScore": 800,
+        "exampleEn": "The courier arrived late.",
+        "exampleKo": "택배 기사가 늦게 도착했습니다."
+    },
+    {
+        "day": 17,
+        "no": 113,
+        "word": "cover",
+        "meaning": "보상하다, 덮다",
+        "targetScore": 800,
+        "exampleEn": "Insurance covers the cost.",
+        "exampleKo": "보험이 비용을 보상합니다."
+    },
+    {
+        "day": 17,
+        "no": 114,
+        "word": "crate",
+        "meaning": "나무 상자",
+        "targetScore": 800,
+        "exampleEn": "A crate of apples.",
+        "exampleKo": "사과 한 상자."
+    },
+    {
+        "day": 17,
+        "no": 115,
+        "word": "create",
+        "meaning": "창조하다",
+        "targetScore": 800,
+        "exampleEn": "Create a new file.",
+        "exampleKo": "새 파일을 만드세요."
+    },
+    {
+        "day": 17,
+        "no": 116,
+        "word": "damage",
+        "meaning": "손상; 손상시키다",
+        "targetScore": 800,
+        "exampleEn": "The box was damaged.",
+        "exampleKo": "상자가 손상되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 117,
+        "word": "dealer",
+        "meaning": "상인",
+        "targetScore": 800,
+        "exampleEn": "Car dealer.",
+        "exampleKo": "자동차 판매상."
+    },
+    {
+        "day": 17,
+        "no": 118,
+        "word": "degree",
+        "meaning": "학위, 정도",
+        "targetScore": 800,
+        "exampleEn": "A degree in business.",
+        "exampleKo": "경영학 학위."
+    },
+    {
+        "day": 17,
+        "no": 119,
+        "word": "delay",
+        "meaning": "지연",
+        "targetScore": 800,
+        "exampleEn": "Without delay.",
+        "exampleKo": "지체 없이."
+    },
+    {
+        "day": 17,
+        "no": 120,
+        "word": "delivery",
+        "meaning": "배달",
+        "targetScore": 800,
+        "exampleEn": "Overnight delivery.",
+        "exampleKo": "익일 배달."
+    },
+    {
+        "day": 17,
+        "no": 121,
+        "word": "demand",
+        "meaning": "수요",
+        "targetScore": 800,
+        "exampleEn": "In high demand.",
+        "exampleKo": "수요가 많은."
+    },
+    {
+        "day": 17,
+        "no": 122,
+        "word": "deposit",
+        "meaning": "입금하다; 보증금",
+        "targetScore": 800,
+        "exampleEn": "Deposit money in the bank.",
+        "exampleKo": "은행에 돈을 입금하세요."
+    },
+    {
+        "day": 17,
+        "no": 123,
+        "word": "depot",
+        "meaning": "저장소",
+        "targetScore": 800,
+        "exampleEn": "Supply depot.",
+        "exampleKo": "보급창."
+    },
+    {
+        "day": 17,
+        "no": 124,
+        "word": "description",
+        "meaning": "설명",
+        "targetScore": 800,
+        "exampleEn": "Brief description.",
+        "exampleKo": "간략한 설명."
+    },
+    {
+        "day": 17,
+        "no": 125,
+        "word": "design",
+        "meaning": "디자인하다",
+        "targetScore": 800,
+        "exampleEn": "Designed for comfort.",
+        "exampleKo": "편안함을 위해 디자인되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 126,
+        "word": "detail",
+        "meaning": "세부 사항",
+        "targetScore": 800,
+        "exampleEn": "In detail.",
+        "exampleKo": "상세하게."
+    },
+    {
+        "day": 17,
+        "no": 127,
+        "word": "detect",
+        "meaning": "감지하다",
+        "targetScore": 800,
+        "exampleEn": "Detect a leak.",
+        "exampleKo": "누출을 감지하다."
+    },
+    {
+        "day": 17,
+        "no": 128,
+        "word": "determine",
+        "meaning": "결정하다",
+        "targetScore": 800,
+        "exampleEn": "Determine the price.",
+        "exampleKo": "가격을 결정하세요."
+    },
+    {
+        "day": 17,
+        "no": 129,
+        "word": "develop",
+        "meaning": "개발하다",
+        "targetScore": 800,
+        "exampleEn": "Develop a plan.",
+        "exampleKo": "계획을 개발하세요."
+    },
+    {
+        "day": 17,
+        "no": 130,
+        "word": "device",
+        "meaning": "장치",
+        "targetScore": 800,
+        "exampleEn": "Electronic device.",
+        "exampleKo": "전자 장치."
+    },
+    {
+        "day": 17,
+        "no": 131,
+        "word": "direct",
+        "meaning": "직접적인; 지시하다",
+        "targetScore": 800,
+        "exampleEn": "Direct flight.",
+        "exampleKo": "직항편."
+    },
+    {
+        "day": 17,
+        "no": 132,
+        "word": "directory",
+        "meaning": "주소록",
+        "targetScore": 800,
+        "exampleEn": "Phone directory.",
+        "exampleKo": "전화번호부."
+    },
+    {
+        "day": 17,
+        "no": 133,
+        "word": "discount",
+        "meaning": "할인",
+        "targetScore": 800,
+        "exampleEn": "10% discount.",
+        "exampleKo": "10% 할인."
+    },
+    {
+        "day": 17,
+        "no": 134,
+        "word": "discover",
+        "meaning": "발견하다",
+        "targetScore": 800,
+        "exampleEn": "Discover new places.",
+        "exampleKo": "새로운 곳을 발견하세요."
+    },
+    {
+        "day": 17,
+        "no": 135,
+        "word": "discuss",
+        "meaning": "토론하다",
+        "targetScore": 800,
+        "exampleEn": "Discuss the matter.",
+        "exampleKo": "문제를 토론하세요."
+    },
+    {
+        "day": 17,
+        "no": 136,
+        "word": "dispatch",
+        "meaning": "발송하다",
+        "targetScore": 800,
+        "exampleEn": "Dispatch the goods.",
+        "exampleKo": "물건을 발송하세요."
+    }
+]

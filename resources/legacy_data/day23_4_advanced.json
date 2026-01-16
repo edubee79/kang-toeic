@@ -1,0 +1,290 @@
+[
+    {
+        "day": 23,
+        "no": 137,
+        "word": "fringe benefits",
+        "meaning": "부가 급부, 부가 혜택",
+        "targetScore": 900,
+        "exampleEn": "The job offers excellent fringe benefits.",
+        "exampleKo": "그 직업은 훌륭한 부가 혜택을 제공합니다."
+    },
+    {
+        "day": 23,
+        "no": 138,
+        "word": "acclaim",
+        "meaning": "찬사, 갈채; 환호하다",
+        "targetScore": 900,
+        "exampleEn": "The film received critical acclaim.",
+        "exampleKo": "그 영화는 비평가들의 찬사를 받았습니다."
+    },
+    {
+        "day": 23,
+        "no": 139,
+        "word": "accolade",
+        "meaning": "영예, 칭찬",
+        "targetScore": 900,
+        "exampleEn": "Receive numerous accolades.",
+        "exampleKo": "수많은 영예를 받다."
+    },
+    {
+        "day": 23,
+        "no": 140,
+        "word": "admiration",
+        "meaning": "감탄, 존경",
+        "targetScore": 900,
+        "exampleEn": "Express admiration for his work.",
+        "exampleKo": "그의 작품에 대한 감탄을 표현하다."
+    },
+    {
+        "day": 23,
+        "no": 141,
+        "word": "advocate",
+        "meaning": "옹호자; 옹호하다",
+        "targetScore": 900,
+        "exampleEn": "Advocate for change.",
+        "exampleKo": "변화를 옹호하다."
+    },
+    {
+        "day": 23,
+        "no": 142,
+        "word": "affiliation",
+        "meaning": "제휴, 가입",
+        "targetScore": 900,
+        "exampleEn": "Political affiliation.",
+        "exampleKo": "정치적 제휴."
+    },
+    {
+        "day": 23,
+        "no": 143,
+        "word": "amenity",
+        "meaning": "편의 시설",
+        "targetScore": 900,
+        "exampleEn": "Hotel amenities.",
+        "exampleKo": "호텔 편의 시설."
+    },
+    {
+        "day": 23,
+        "no": 144,
+        "word": "applaud",
+        "meaning": "박수를 보내다, 칭찬하다",
+        "targetScore": 900,
+        "exampleEn": "Applaud the decision.",
+        "exampleKo": "그 결정을 칭찬하다."
+    },
+    {
+        "day": 23,
+        "no": 145,
+        "word": "aspiration",
+        "meaning": "열망, 포부",
+        "targetScore": 900,
+        "exampleEn": "Career aspirations.",
+        "exampleKo": "직업적 포부."
+    },
+    {
+        "day": 23,
+        "no": 146,
+        "word": "assemble",
+        "meaning": "모으다, 조립하다",
+        "targetScore": 900,
+        "exampleEn": "Assemble the team.",
+        "exampleKo": "팀을 모으다."
+    },
+    {
+        "day": 23,
+        "no": 147,
+        "word": "attendee",
+        "meaning": "참석자",
+        "targetScore": 900,
+        "exampleEn": "Conference attendees.",
+        "exampleKo": "회의 참석자들."
+    },
+    {
+        "day": 23,
+        "no": 148,
+        "word": "auspicious",
+        "meaning": "길조의, 상서로운",
+        "targetScore": 900,
+        "exampleEn": "An auspicious beginning.",
+        "exampleKo": "상서로운 시작."
+    },
+    {
+        "day": 23,
+        "no": 149,
+        "word": "bestow",
+        "meaning": "수여하다, 주다",
+        "targetScore": 900,
+        "exampleEn": "Bestow an honor.",
+        "exampleKo": "영예를 수여하다."
+    },
+    {
+        "day": 23,
+        "no": 150,
+        "word": "camaraderie",
+        "meaning": "동료애",
+        "targetScore": 900,
+        "exampleEn": "Team camaraderie.",
+        "exampleKo": "팀 동료애."
+    },
+    {
+        "day": 23,
+        "no": 151,
+        "word": "candid",
+        "meaning": "솔직한",
+        "targetScore": 900,
+        "exampleEn": "A candid discussion.",
+        "exampleKo": "솔직한 토론."
+    },
+    {
+        "day": 23,
+        "no": 152,
+        "word": "commemorate",
+        "meaning": "기념하다",
+        "targetScore": 900,
+        "exampleEn": "Commemorate the anniversary.",
+        "exampleKo": "기념일을 기념하다."
+    },
+    {
+        "day": 23,
+        "no": 153,
+        "word": "commend",
+        "meaning": "칭찬하다",
+        "targetScore": 900,
+        "exampleEn": "Commend his efforts.",
+        "exampleKo": "그의 노력을 칭찬하다."
+    },
+    {
+        "day": 23,
+        "no": 154,
+        "word": "confer",
+        "meaning": "수여하다, 협의하다",
+        "targetScore": 900,
+        "exampleEn": "Confer a degree.",
+        "exampleKo": "학위를 수여하다."
+    },
+    {
+        "day": 23,
+        "no": 155,
+        "word": "cordial",
+        "meaning": "진심 어린, 다정한",
+        "targetScore": 900,
+        "exampleEn": "A cordial welcome.",
+        "exampleKo": "진심 어린 환영."
+    },
+    {
+        "day": 23,
+        "no": 156,
+        "word": "culminate",
+        "meaning": "절정에 달하다",
+        "targetScore": 900,
+        "exampleEn": "Culminate in success.",
+        "exampleKo": "성공으로 절정에 달하다."
+    },
+    {
+        "day": 23,
+        "no": 157,
+        "word": "dedicate",
+        "meaning": "헌신하다, 바치다",
+        "targetScore": 900,
+        "exampleEn": "Dedicate time to the project.",
+        "exampleKo": "프로젝트에 시간을 바치다."
+    },
+    {
+        "day": 23,
+        "no": 158,
+        "word": "deem",
+        "meaning": "여기다, 간주하다",
+        "targetScore": 900,
+        "exampleEn": "Deem it necessary.",
+        "exampleKo": "필요하다고 여기다."
+    },
+    {
+        "day": 23,
+        "no": 159,
+        "word": "delegate",
+        "meaning": "대표; 위임하다",
+        "targetScore": 900,
+        "exampleEn": "Delegate responsibilities.",
+        "exampleKo": "책임을 위임하다."
+    },
+    {
+        "day": 23,
+        "no": 160,
+        "word": "dignitaries",
+        "meaning": "고위 인사들",
+        "targetScore": 900,
+        "exampleEn": "Foreign dignitaries.",
+        "exampleKo": "외국 고위 인사들."
+    },
+    {
+        "day": 23,
+        "no": 161,
+        "word": "distinguish",
+        "meaning": "구별하다",
+        "targetScore": 900,
+        "exampleEn": "Distinguish between the two.",
+        "exampleKo": "둘을 구별하다."
+    },
+    {
+        "day": 23,
+        "no": 162,
+        "word": "eloquent",
+        "meaning": "웅변의, 설득력 있는",
+        "targetScore": 900,
+        "exampleEn": "An eloquent speech.",
+        "exampleKo": "설득력 있는 연설."
+    },
+    {
+        "day": 23,
+        "no": 163,
+        "word": "eminent",
+        "meaning": "저명한",
+        "targetScore": 900,
+        "exampleEn": "An eminent scholar.",
+        "exampleKo": "저명한 학자."
+    },
+    {
+        "day": 23,
+        "no": 164,
+        "word": "endeavor",
+        "meaning": "노력; 노력하다",
+        "targetScore": 900,
+        "exampleEn": "A worthy endeavor.",
+        "exampleKo": "가치 있는 노력."
+    },
+    {
+        "day": 23,
+        "no": 165,
+        "word": "endorse",
+        "meaning": "지지하다, 보증하다",
+        "targetScore": 900,
+        "exampleEn": "Endorse the candidate.",
+        "exampleKo": "후보를 지지하다."
+    },
+    {
+        "day": 23,
+        "no": 166,
+        "word": "exemplary",
+        "meaning": "모범적인",
+        "targetScore": 900,
+        "exampleEn": "Exemplary behavior.",
+        "exampleKo": "모범적인 행동."
+    },
+    {
+        "day": 23,
+        "no": 167,
+        "word": "goodwill",
+        "meaning": "호의, 선의",
+        "targetScore": 900,
+        "exampleEn": "Gesture of goodwill.",
+        "exampleKo": "호의의 표시."
+    },
+    {
+        "day": 23,
+        "no": 168,
+        "word": "gratitude",
+        "meaning": "감사",
+        "targetScore": 900,
+        "exampleEn": "Express gratitude.",
+        "exampleKo": "감사를 표하다."
+    }
+]

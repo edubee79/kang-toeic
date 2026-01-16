@@ -1,0 +1,362 @@
+[
+  {
+    "day": 30,
+    "no": 1,
+    "word": "fatigue",
+    "meaning": "피로",
+    "targetScore": 650,
+    "exampleEn": "Chronic fatigue affecting employees can reduce overall productivity.",
+    "exampleKo": "직원들에게 영향을 미치는 만성 피로는 전반적인 생산성을 감소시킬 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 2,
+    "word": "checkup",
+    "meaning": "건강 진단",
+    "targetScore": 650,
+    "exampleEn": "All new employees are required to undergo a mandatory health checkup.",
+    "exampleKo": "모든 신입 사원들은 의무적인 건강 진단을 받아야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 3,
+    "word": "symptom",
+    "meaning": "증상",
+    "targetScore": 650,
+    "exampleEn": "Please report any symptoms of illness to the infirmary immediately.",
+    "exampleKo": "질병의 증상이 있으면 즉시 양호실에 보고해 주십시오."
+  },
+  {
+    "day": 30,
+    "no": 4,
+    "word": "physician",
+    "meaning": "내과 의사",
+    "targetScore": 650,
+    "exampleEn": "Consult a physician before starting any strenuous exercise program.",
+    "exampleKo": "격렬한 운동 프로그램을 시작하기 전에 내과 의사와 상담하십시오."
+  },
+  {
+    "day": 30,
+    "no": 5,
+    "word": "diagnosis",
+    "meaning": "진단",
+    "targetScore": 650,
+    "exampleEn": "The precise diagnosis allowed for a more effective treatment plan.",
+    "exampleKo": "정확한 진단은 더 효과적인 치료 계획을 가능하게 했습니다."
+  },
+  {
+    "day": 30,
+    "no": 6,
+    "word": "prescribe",
+    "meaning": "(약을) 처방하다",
+    "targetScore": 650,
+    "exampleEn": "The doctor prescribed medication to alleviate the patient's pain.",
+    "exampleKo": "의사는 환자의 통증을 완화하기 위해 약을 처방했습니다."
+  },
+  {
+    "day": 30,
+    "no": 7,
+    "word": "recovery",
+    "meaning": "회복, 쾌유",
+    "targetScore": 650,
+    "exampleEn": "The manager wished him a speedy recovery and return to work.",
+    "exampleKo": "관리자는 그의 빠른 회복(쾌유)과 직장 복귀를 기원했습니다."
+  },
+  {
+    "day": 30,
+    "no": 8,
+    "word": "recognize",
+    "meaning": "인정하다, 알아보다",
+    "targetScore": 650,
+    "exampleEn": "The hospital is recognized as a leader in medical research.",
+    "exampleKo": "그 병원은 의학 연구 분야의 선두 주자로 인정받고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 9,
+    "word": "join",
+    "meaning": "~에 가입하다",
+    "targetScore": 650,
+    "exampleEn": "Employees are encouraged to join the company's fitness club.",
+    "exampleKo": "직원들은 회사의 피트니스 클럽에 가입하도록 권장됩니다."
+  },
+  {
+    "day": 30,
+    "no": 10,
+    "word": "comprehensive",
+    "meaning": "종합적인, 포괄적인",
+    "targetScore": 650,
+    "exampleEn": "The updated policy offers comprehensive coverage for dental care.",
+    "exampleKo": "개정된 정책은 치과 진료에 대한 포괄적인 보장 범위를 제공합니다."
+  },
+  {
+    "day": 30,
+    "no": 11,
+    "word": "participate",
+    "meaning": "참여하다, 참가하다",
+    "targetScore": 650,
+    "exampleEn": "Staff members are invited to participate in the blood drive.",
+    "exampleKo": "직원들은 헌혈 운동에 참여하도록 초대됩니다."
+  },
+  {
+    "day": 30,
+    "no": 12,
+    "word": "recommend",
+    "meaning": "권고하다, 추천하다",
+    "targetScore": 650,
+    "exampleEn": "Health experts recommend taking regular breaks to avoid eye strain.",
+    "exampleKo": "건강 전문가들은 눈의 피로를 피하기 위해 규칙적인 휴식을 취할 것을 권고합니다."
+  },
+  {
+    "day": 30,
+    "no": 13,
+    "word": "necessary",
+    "meaning": "필요한",
+    "targetScore": 650,
+    "exampleEn": "Immediate surgery may be necessary to correct the structural defect.",
+    "exampleKo": "구조적 결함을 교정하기 위해 즉각적인 수술이 필요할 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 14,
+    "word": "ability",
+    "meaning": "능력",
+    "targetScore": 650,
+    "exampleEn": "The candidate demonstrated the ability to work under high pressure.",
+    "exampleKo": "그 지원자는 높은 압박 속에서도 일할 수 있는 능력을 보여주었습니다."
+  },
+  {
+    "day": 30,
+    "no": 15,
+    "word": "operation",
+    "meaning": "수술",
+    "targetScore": 650,
+    "exampleEn": "The surgical operation was performed by a team of specialists.",
+    "exampleKo": "그 외과 수술은 전문의 팀에 의해 수행되었습니다."
+  },
+  {
+    "day": 30,
+    "no": 16,
+    "word": "cleanliness",
+    "meaning": "청결",
+    "targetScore": 650,
+    "exampleEn": "Restaurants must maintain strict standards of cleanliness and hygiene.",
+    "exampleKo": "식당들은 엄격한 청결 및 위생 기준을 유지해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 17,
+    "word": "duration",
+    "meaning": "지속 기간, 지속",
+    "targetScore": 650,
+    "exampleEn": "Benefits will be suspended for the duration of the leave of absence.",
+    "exampleKo": "휴직 지속 기간 동안 혜택은 중단될 것입니다."
+  },
+  {
+    "day": 30,
+    "no": 18,
+    "word": "examination",
+    "meaning": "진찰, 검사",
+    "targetScore": 650,
+    "exampleEn": "A thorough physical examination is part of the hiring process.",
+    "exampleKo": "철저한 신체 검사(진찰)는 채용 과정의 일부입니다."
+  },
+  {
+    "day": 30,
+    "no": 19,
+    "word": "eliminate",
+    "meaning": "제거하다",
+    "targetScore": 650,
+    "exampleEn": "The new safety measures aim to eliminate workplace hazards.",
+    "exampleKo": "새로운 안전 조치는 직장 내 위험 요소를 제거하는 것을 목표로 합니다."
+  },
+  {
+    "day": 30,
+    "no": 20,
+    "word": "easily",
+    "meaning": "쉽게",
+    "targetScore": 650,
+    "exampleEn": "Infections can spread easily in poorly ventilated offices.",
+    "exampleKo": "감염은 환기가 잘 되지 않는 사무실에서 쉽게 퍼질 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 21,
+    "word": "dental",
+    "meaning": "치과의",
+    "targetScore": 650,
+    "exampleEn": "The company insurance plan includes full dental benefits.",
+    "exampleKo": "회사 보험 계획에는 완전한 치과 혜택이 포함됩니다."
+  },
+  {
+    "day": 30,
+    "no": 22,
+    "word": "dietary",
+    "meaning": "식이 요법의, 규정식의",
+    "targetScore": 650,
+    "exampleEn": "The cafeteria offers options for those with special dietary needs.",
+    "exampleKo": "구내식당은 특별한 식이 요법 요구 사항이 있는 사람들을 위한 선택 사항을 제공합니다."
+  },
+  {
+    "day": 30,
+    "no": 23,
+    "word": "related",
+    "meaning": "관련된",
+    "targetScore": 650,
+    "exampleEn": "Absenteeism due to stress-related illnesses has decreased.",
+    "exampleKo": "스트레스와 관련된 질병으로 인한 결근이 감소했습니다."
+  },
+  {
+    "day": 30,
+    "no": 24,
+    "word": "transmit",
+    "meaning": "전염시키다",
+    "targetScore": 650,
+    "exampleEn": "Certain diseases are transmitted through direct contact.",
+    "exampleKo": "특정 질병들은 직접적인 접촉을 통해 전염됩니다."
+  },
+  {
+    "day": 30,
+    "no": 25,
+    "word": "periodically",
+    "meaning": "주기적으로",
+    "targetScore": 650,
+    "exampleEn": "Safety equipment must be inspected periodically to ensure compliance.",
+    "exampleKo": "안전 장비는 규정 준수를 보장하기 위해 주기적으로 점검되어야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 26,
+    "word": "reaction",
+    "meaning": "반응",
+    "targetScore": 650,
+    "exampleEn": "The patient experienced a severe allergic reaction to the drug.",
+    "exampleKo": "환자는 그 약물에 심각한 알레르기 반응을 겪었습니다."
+  },
+  {
+    "day": 30,
+    "no": 27,
+    "word": "simple",
+    "meaning": "단순한",
+    "targetScore": 650,
+    "exampleEn": "The application process for medical leave is relatively simple.",
+    "exampleKo": "병가 신청 절차는 비교적 단순합니다."
+  },
+  {
+    "day": 30,
+    "no": 28,
+    "word": "coverage",
+    "meaning": "(보험의) 보상 범위, (신문 등의) 보도, 취재 범위",
+    "targetScore": 650,
+    "exampleEn": "Please review the details of your insurance coverage carefully.",
+    "exampleKo": "귀하의 보험 보장 범위에 대한 세부 사항을 주의 깊게 검토하십시오."
+  },
+  {
+    "day": 30,
+    "no": 29,
+    "word": "exposure",
+    "meaning": "노출",
+    "targetScore": 650,
+    "exampleEn": "Limit your exposure to hazardous chemicals by wearing protective gear.",
+    "exampleKo": "보호 장비를 착용하여 위험한 화학 물질에 대한 노출을 제한하십시오."
+  },
+  {
+    "day": 30,
+    "no": 30,
+    "word": "pharmaceutical",
+    "meaning": "제약의, 약학의",
+    "targetScore": 650,
+    "exampleEn": "The pharmaceutical firm announced a merger with a global rival.",
+    "exampleKo": "그 제약 회사는 글로벌 경쟁사와의 합병을 발표했습니다."
+  },
+  {
+    "day": 30,
+    "no": 31,
+    "word": "premium",
+    "meaning": "보험료",
+    "targetScore": 650,
+    "exampleEn": "Insurance premiums are expected to rise by 5% next year.",
+    "exampleKo": "보험료가 내년에 5% 인상될 것으로 예상됩니다."
+  },
+  {
+    "day": 30,
+    "no": 32,
+    "word": "relieve",
+    "meaning": "완화시키다",
+    "targetScore": 650,
+    "exampleEn": "Ergonomic chairs help relieve back pain for office workers.",
+    "exampleKo": "인체공학적 의자는 사무실 근로자들의 요통을 완화하는 데 도움을 줍니다."
+  },
+  {
+    "day": 30,
+    "no": 33,
+    "word": "combination",
+    "meaning": "결합, 연합",
+    "targetScore": 650,
+    "exampleEn": "Success requires a combination of technical skill and leadership.",
+    "exampleKo": "성공은 기술적 숙련도와 리더십의 결합을 필요로 합니다."
+  },
+  {
+    "day": 30,
+    "no": 34,
+    "word": "conscious",
+    "meaning": "알고 있는, 자각하고 있는",
+    "targetScore": 650,
+    "exampleEn": "Management is conscious of the need for better work-life balance.",
+    "exampleKo": "경영진은 더 나은 일과 삶의 균형에 대한 필요성을 자각하고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 35,
+    "word": "deprivation",
+    "meaning": "박탈, 상실",
+    "targetScore": 650,
+    "exampleEn": "Chronic sleep deprivation can negatively impact decision-making.",
+    "exampleKo": "만성적인 수면 박탈(부족)은 의사 결정에 부정적인 영향을 미칠 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 36,
+    "word": "health",
+    "meaning": "건강, (사회·기관의) 번영, 안녕",
+    "targetScore": 650,
+    "exampleEn": "The ministry issued a new directive regarding public health safety.",
+    "exampleKo": "부처는 공중 보건 안전에 관한 새로운 지시를 내렸습니다."
+  },
+  {
+    "day": 30,
+    "no": 37,
+    "word": "induce",
+    "meaning": "유발하다",
+    "targetScore": 650,
+    "exampleEn": "Loud noise in the factory can induce hearing loss over time.",
+    "exampleKo": "공장 내의 시끄러운 소음은 시간이 지남에 따라 청력 손실을 유발할 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 38,
+    "word": "insurance",
+    "meaning": "보험",
+    "targetScore": 650,
+    "exampleEn": "Full-time employees are eligible for health insurance benefits.",
+    "exampleKo": "정규직 직원들은 건강 보험 혜택을 받을 자격이 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 39,
+    "word": "nutrition",
+    "meaning": "영양",
+    "targetScore": 650,
+    "exampleEn": "The seminar focused on the importance of proper nutrition.",
+    "exampleKo": "그 세미나는 적절한 영양의 중요성에 초점을 맞추었습니다."
+  },
+  {
+    "day": 30,
+    "no": 40,
+    "word": "prevention",
+    "meaning": "예방",
+    "targetScore": 650,
+    "exampleEn": "Prevention of accidents is the primary goal of the safety committee.",
+    "exampleKo": "사고의 예방은 안전 위원회의 주된 목표입니다."
+  }
+]

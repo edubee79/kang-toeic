@@ -1,0 +1,614 @@
+[
+    {
+        "day": 10,
+        "no": 69,
+        "word": "at the moment",
+        "meaning": "마침, 지금",
+        "targetScore": 800,
+        "exampleEn": "She is busy at the moment.",
+        "exampleKo": "그녀는 지금 바쁩니다."
+    },
+    {
+        "day": 10,
+        "no": 70,
+        "word": "affordable",
+        "meaning": "저렴한, 감당할 수 있는",
+        "targetScore": 800,
+        "exampleEn": "Housing is not affordable here.",
+        "exampleKo": "이곳의 주택 가격은 감당하기 어렵습니다."
+    },
+    {
+        "day": 10,
+        "no": 71,
+        "word": "alteration",
+        "meaning": "수선, 변경",
+        "targetScore": 800,
+        "exampleEn": "The dress needs some alterations.",
+        "exampleKo": "그 드레스는 약간의 수선이 필요합니다."
+    },
+    {
+        "day": 10,
+        "no": 72,
+        "word": "apparel",
+        "meaning": "의류",
+        "targetScore": 800,
+        "exampleEn": "They sell sports apparel.",
+        "exampleKo": "그들은 스포츠 의류를 팝니다."
+    },
+    {
+        "day": 10,
+        "no": 73,
+        "word": "apply",
+        "meaning": "적용되다, 지원하다",
+        "targetScore": 800,
+        "exampleEn": "Restrictions apply to certain items.",
+        "exampleKo": "특정 품목에는 제한이 적용됩니다."
+    },
+    {
+        "day": 10,
+        "no": 74,
+        "word": "arrangement",
+        "meaning": "준비, 배열",
+        "targetScore": 800,
+        "exampleEn": "We made arrangements for the party.",
+        "exampleKo": "우리는 파티 준비를 했습니다."
+    },
+    {
+        "day": 10,
+        "no": 75,
+        "word": "atmosphere",
+        "meaning": "분위기",
+        "targetScore": 800,
+        "exampleEn": "The restaurant has a cozy atmosphere.",
+        "exampleKo": "그 식당은 아늑한 분위기입니다."
+    },
+    {
+        "day": 10,
+        "no": 76,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 800,
+        "exampleEn": "Is this seat available?",
+        "exampleKo": "이 좌석 이용 가능한가요?"
+    },
+    {
+        "day": 10,
+        "no": 77,
+        "word": "belongings",
+        "meaning": "소지품",
+        "targetScore": 800,
+        "exampleEn": "Take all your belongings with you.",
+        "exampleKo": "모든 소지품을 가져가세요."
+    },
+    {
+        "day": 10,
+        "no": 78,
+        "word": "blend",
+        "meaning": "섞다, 혼합물",
+        "targetScore": 800,
+        "exampleEn": "Oil and water do not blend.",
+        "exampleKo": "기름과 물은 섞이지 않습니다."
+    },
+    {
+        "day": 10,
+        "no": 79,
+        "word": "charge",
+        "meaning": "비용; 청구하다",
+        "targetScore": 800,
+        "exampleEn": "There is an extra charge for delivery.",
+        "exampleKo": "배송비가 추가로 부과됩니다."
+    },
+    {
+        "day": 10,
+        "no": 80,
+        "word": "clearance",
+        "meaning": "정리, 제거",
+        "targetScore": 800,
+        "exampleEn": "Items on clearance cannot be returned.",
+        "exampleKo": "정리 세일 품목은 반품할 수 없습니다."
+    },
+    {
+        "day": 10,
+        "no": 81,
+        "word": "clothing",
+        "meaning": "의류",
+        "targetScore": 800,
+        "exampleEn": "Wear warm clothing.",
+        "exampleKo": "따뜻한 옷을 입으세요."
+    },
+    {
+        "day": 10,
+        "no": 82,
+        "word": "convenient",
+        "meaning": "편리한",
+        "targetScore": 800,
+        "exampleEn": "Online shopping is convenient.",
+        "exampleKo": "온라인 쇼핑은 편리합니다."
+    },
+    {
+        "day": 10,
+        "no": 83,
+        "word": "credit",
+        "meaning": "신용; 성과를 인정하다",
+        "targetScore": 800,
+        "exampleEn": "She got credit for the team's success.",
+        "exampleKo": "그녀는 팀의 성공에 대해 인정을 받았습니다."
+    },
+    {
+        "day": 10,
+        "no": 84,
+        "word": "crowded",
+        "meaning": "붐비는",
+        "targetScore": 800,
+        "exampleEn": "The store was crowded with shoppers.",
+        "exampleKo": "가게는 쇼핑객들로 붐볐습니다."
+    },
+    {
+        "day": 10,
+        "no": 85,
+        "word": "cuisine",
+        "meaning": "요리",
+        "targetScore": 800,
+        "exampleEn": "I love French cuisine.",
+        "exampleKo": "나는 프랑스 요리를 좋아합니다."
+    },
+    {
+        "day": 10,
+        "no": 86,
+        "word": "customer",
+        "meaning": "고객",
+        "targetScore": 800,
+        "exampleEn": "The customer is always right.",
+        "exampleKo": "고객은 항상 옳습니다."
+    },
+    {
+        "day": 10,
+        "no": 87,
+        "word": "description",
+        "meaning": "설명, 서술",
+        "targetScore": 800,
+        "exampleEn": "Can you give me a description of the thief?",
+        "exampleKo": "도둑에 대한 인상착의를 설명해 주시겠습니까?"
+    },
+    {
+        "day": 10,
+        "no": 88,
+        "word": "dine",
+        "meaning": "식사하다",
+        "targetScore": 800,
+        "exampleEn": "We dined at a fancy restaurant.",
+        "exampleKo": "우리는 고급 레스토랑에서 식사했습니다."
+    },
+    {
+        "day": 10,
+        "no": 89,
+        "word": "discount",
+        "meaning": "할인",
+        "targetScore": 800,
+        "exampleEn": "They offer a 10% discount.",
+        "exampleKo": "그들은 10% 할인을 제공합니다."
+    },
+    {
+        "day": 10,
+        "no": 90,
+        "word": "display",
+        "meaning": "진열하다; 전시",
+        "targetScore": 800,
+        "exampleEn": "The goods are on display.",
+        "exampleKo": "상품이 진열되어 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 91,
+        "word": "elegant",
+        "meaning": "우아한, 고상한",
+        "targetScore": 800,
+        "exampleEn": "She wore an elegant dress.",
+        "exampleKo": "그녀는 우아한 드레스를 입었습니다."
+    },
+    {
+        "day": 10,
+        "no": 92,
+        "word": "equivalent",
+        "meaning": "동등한; 상당하는 것",
+        "targetScore": 800,
+        "exampleEn": "One dollar is equivalent to 100 cents.",
+        "exampleKo": "1달러는 100센트와 같습니다."
+    },
+    {
+        "day": 10,
+        "no": 93,
+        "word": "exclusively",
+        "meaning": "독점적으로",
+        "targetScore": 800,
+        "exampleEn": "Sold exclusively at our stores.",
+        "exampleKo": "우리 매장에서만 독점 판매합니다."
+    },
+    {
+        "day": 10,
+        "no": 94,
+        "word": "exquisite",
+        "meaning": "정교한, 훌륭한",
+        "targetScore": 800,
+        "exampleEn": "The jewelry is exquisite.",
+        "exampleKo": "그 보석은 정교합니다."
+    },
+    {
+        "day": 10,
+        "no": 95,
+        "word": "fitting room",
+        "meaning": "탈의실",
+        "targetScore": 800,
+        "exampleEn": "You can try it on in the fitting room.",
+        "exampleKo": "탈의실에서 입어보실 수 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 96,
+        "word": "fresh",
+        "meaning": "신선한",
+        "targetScore": 800,
+        "exampleEn": "Buy fresh vegetables.",
+        "exampleKo": "신선한 채소를 사세요."
+    },
+    {
+        "day": 10,
+        "no": 97,
+        "word": "guarantee",
+        "meaning": "보장하다; 보증",
+        "targetScore": 800,
+        "exampleEn": "Satisfaction guaranteed.",
+        "exampleKo": "만족 보장."
+    },
+    {
+        "day": 10,
+        "no": 98,
+        "word": "ingredient",
+        "meaning": "재료, 성분",
+        "targetScore": 800,
+        "exampleEn": "Fresh ingredients make the best food.",
+        "exampleKo": "신선한 재료가 최고의 음식을 만듭니다."
+    },
+    {
+        "day": 10,
+        "no": 99,
+        "word": "instruction",
+        "meaning": "설명서, 지시",
+        "targetScore": 800,
+        "exampleEn": "Read the instructions before use.",
+        "exampleKo": "사용 전에 설명서를 읽으세요."
+    },
+    {
+        "day": 10,
+        "no": 100,
+        "word": "latest",
+        "meaning": "최신의",
+        "targetScore": 800,
+        "exampleEn": "This is the latest model.",
+        "exampleKo": "이것이 최신 모델입니다."
+    },
+    {
+        "day": 10,
+        "no": 101,
+        "word": "limit",
+        "meaning": "제한하다; 한계",
+        "targetScore": 800,
+        "exampleEn": "Limit your intake of sugar.",
+        "exampleKo": "설탕 섭취를 제한하세요."
+    },
+    {
+        "day": 10,
+        "no": 102,
+        "word": "list",
+        "meaning": "목록; 열거하다",
+        "targetScore": 800,
+        "exampleEn": "Make a shopping list.",
+        "exampleKo": "쇼핑 목록을 만드세요."
+    },
+    {
+        "day": 10,
+        "no": 103,
+        "word": "make a purchase",
+        "meaning": "구매하다",
+        "targetScore": 800,
+        "exampleEn": "You must be 18 to make a purchase.",
+        "exampleKo": "구매하려면 18세 이상이어야 합니다."
+    },
+    {
+        "day": 10,
+        "no": 104,
+        "word": "merchandise",
+        "meaning": "상품",
+        "targetScore": 800,
+        "exampleEn": "Inspect the merchandise carefully.",
+        "exampleKo": "상품을 주의 깊게 검사하세요."
+    },
+    {
+        "day": 10,
+        "no": 105,
+        "word": "mix",
+        "meaning": "섞다, 혼합하다",
+        "targetScore": 800,
+        "exampleEn": "Mix the flour and sugar.",
+        "exampleKo": "밀가루와 설탕을 섞으세요."
+    },
+    {
+        "day": 10,
+        "no": 106,
+        "word": "mixture",
+        "meaning": "혼합물",
+        "targetScore": 800,
+        "exampleEn": "Air is a mixture of gases.",
+        "exampleKo": "공기는 기체의 혼합물입니다."
+    },
+    {
+        "day": 10,
+        "no": 107,
+        "word": "notice",
+        "meaning": "통지; 알아차리다",
+        "targetScore": 800,
+        "exampleEn": "Until further notice.",
+        "exampleKo": "추후 공지가 있을 때까지."
+    },
+    {
+        "day": 10,
+        "no": 108,
+        "word": "occasion",
+        "meaning": "행사, 경우",
+        "targetScore": 800,
+        "exampleEn": "Save it for a special occasion.",
+        "exampleKo": "특별한 날을 위해 아껴 두세요."
+    },
+    {
+        "day": 10,
+        "no": 109,
+        "word": "open",
+        "meaning": "열다; 영업 중인",
+        "targetScore": 800,
+        "exampleEn": "The store is open daily.",
+        "exampleKo": "그 가게는 매일 영업합니다."
+    },
+    {
+        "day": 10,
+        "no": 110,
+        "word": "order",
+        "meaning": "주문",
+        "targetScore": 800,
+        "exampleEn": "Your order has been shipped.",
+        "exampleKo": "주문하신 물품이 발송되었습니다."
+    },
+    {
+        "day": 10,
+        "no": 111,
+        "word": "outlet",
+        "meaning": "할인점, 배출구",
+        "targetScore": 800,
+        "exampleEn": "I bought it at an outlet store.",
+        "exampleKo": "나는 아울렛 매장에서 그것을 샀습니다."
+    },
+    {
+        "day": 10,
+        "no": 112,
+        "word": "payment",
+        "meaning": "지불, 납입",
+        "targetScore": 800,
+        "exampleEn": "Late payment fees apply.",
+        "exampleKo": "연체료가 부과됩니다."
+    },
+    {
+        "day": 10,
+        "no": 113,
+        "word": "prior",
+        "meaning": "이전의",
+        "targetScore": 800,
+        "exampleEn": "She has a prior engagement.",
+        "exampleKo": "그녀는 선약이 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 114,
+        "word": "purchase",
+        "meaning": "구매하다",
+        "targetScore": 800,
+        "exampleEn": "They purchased a new home.",
+        "exampleKo": "그들은 새 집을 구매했습니다."
+    },
+    {
+        "day": 10,
+        "no": 115,
+        "word": "quality",
+        "meaning": "품질",
+        "targetScore": 800,
+        "exampleEn": "We focus on quality.",
+        "exampleKo": "우리는 품질에 집중합니다."
+    },
+    {
+        "day": 10,
+        "no": 116,
+        "word": "quantity",
+        "meaning": "수량, 양",
+        "targetScore": 800,
+        "exampleEn": "Quality is more important than quantity.",
+        "exampleKo": "양보다 질이 중요합니다."
+    },
+    {
+        "day": 10,
+        "no": 117,
+        "word": "receipt",
+        "meaning": "영수증, 수령",
+        "targetScore": 800,
+        "exampleEn": "Acknowledge receipt of this letter.",
+        "exampleKo": "이 편지의 수령을 알리세요."
+    },
+    {
+        "day": 10,
+        "no": 118,
+        "word": "recipe",
+        "meaning": "요리법, 비결",
+        "targetScore": 800,
+        "exampleEn": "It's a recipe for disaster.",
+        "exampleKo": "그것은 재앙을 부르는 길입니다 (비유적)."
+    },
+    {
+        "day": 10,
+        "no": 119,
+        "word": "refreshments",
+        "meaning": "다과",
+        "targetScore": 800,
+        "exampleEn": "Light refreshments will be served.",
+        "exampleKo": "가벼운 다과가 제공될 것입니다."
+    },
+    {
+        "day": 10,
+        "no": 120,
+        "word": "refund",
+        "meaning": "환불하다; 환불",
+        "targetScore": 800,
+        "exampleEn": "We will refund your money.",
+        "exampleKo": "돈을 환불해 드리겠습니다."
+    },
+    {
+        "day": 10,
+        "no": 121,
+        "word": "return",
+        "meaning": "반납하다, 돌아오다",
+        "targetScore": 800,
+        "exampleEn": "Please return the book.",
+        "exampleKo": "책을 반납해 주세요."
+    },
+    {
+        "day": 10,
+        "no": 122,
+        "word": "selection",
+        "meaning": "선택, 선정된 것들",
+        "targetScore": 800,
+        "exampleEn": "They have a wide selection of wines.",
+        "exampleKo": "그들은 다양한 종류의 와인을 보유하고 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 123,
+        "word": "service",
+        "meaning": "서비스, 봉사",
+        "targetScore": 800,
+        "exampleEn": "The service was excellent.",
+        "exampleKo": "서비스가 훌륭했습니다."
+    },
+    {
+        "day": 10,
+        "no": 124,
+        "word": "shopping",
+        "meaning": "쇼핑",
+        "targetScore": 800,
+        "exampleEn": "I hate grocery shopping.",
+        "exampleKo": "나는 장보기를 싫어합니다."
+    },
+    {
+        "day": 10,
+        "no": 125,
+        "word": "sour",
+        "meaning": "신, 시큼한",
+        "targetScore": 800,
+        "exampleEn": "The milk has gone sour.",
+        "exampleKo": "우유가 상했습니다."
+    },
+    {
+        "day": 10,
+        "no": 126,
+        "word": "specify",
+        "meaning": "명시하다",
+        "targetScore": 800,
+        "exampleEn": "Please specify the color you want.",
+        "exampleKo": "원하는 색상을 명시해 주세요."
+    },
+    {
+        "day": 10,
+        "no": 127,
+        "word": "stir",
+        "meaning": "젓다, 휘젓다",
+        "targetScore": 800,
+        "exampleEn": "Stir the sauce until smooth.",
+        "exampleKo": "소스가 부드러워질 때까지 저으세요."
+    },
+    {
+        "day": 10,
+        "no": 128,
+        "word": "stock",
+        "meaning": "재고, 주식",
+        "targetScore": 800,
+        "exampleEn": "The item is out of stock.",
+        "exampleKo": "그 물건은 품절입니다."
+    },
+    {
+        "day": 10,
+        "no": 129,
+        "word": "store",
+        "meaning": "가게; 저장하다",
+        "targetScore": 800,
+        "exampleEn": "Store in a cool, dry place.",
+        "exampleKo": "서늘하고 건조한 곳에 보관하세요."
+    },
+    {
+        "day": 10,
+        "no": 130,
+        "word": "style",
+        "meaning": "양식, 스타일",
+        "targetScore": 800,
+        "exampleEn": "I like your style.",
+        "exampleKo": "나는 당신의 스타일이 좋습니다."
+    },
+    {
+        "day": 10,
+        "no": 131,
+        "word": "suit",
+        "meaning": "어울리다; 정장",
+        "targetScore": 800,
+        "exampleEn": "Red suits you.",
+        "exampleKo": "빨간색이 당신에게 어울립니다."
+    },
+    {
+        "day": 10,
+        "no": 132,
+        "word": "supply",
+        "meaning": "공급; 공급하다",
+        "targetScore": 800,
+        "exampleEn": "We have a limited supply.",
+        "exampleKo": "공급량이 제한되어 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 133,
+        "word": "taste",
+        "meaning": "맛; 기호",
+        "targetScore": 800,
+        "exampleEn": "It tastes sweet.",
+        "exampleKo": "달콤한 맛이 납니다."
+    },
+    {
+        "day": 10,
+        "no": 134,
+        "word": "temporary",
+        "meaning": "일시적인",
+        "targetScore": 800,
+        "exampleEn": "This is a temporary solution.",
+        "exampleKo": "이것은 임시 해결책입니다."
+    },
+    {
+        "day": 10,
+        "no": 135,
+        "word": "temporarily",
+        "meaning": "일시적으로",
+        "targetScore": 800,
+        "exampleEn": "The store is closed temporarily.",
+        "exampleKo": "그 가게는 일시적으로 문을 닫았습니다."
+    },
+    {
+        "day": 10,
+        "no": 136,
+        "word": "trend",
+        "meaning": "유행, 경향",
+        "targetScore": 800,
+        "exampleEn": "Follow the latest fashion trends.",
+        "exampleKo": "최신 패션 유행을 따르세요."
+    }
+]

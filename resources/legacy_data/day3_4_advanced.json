@@ -1,0 +1,290 @@
+[
+    {
+        "day": 3,
+        "no": 137,
+        "word": "arrange item on the self",
+        "meaning": "선반에 물건을 정리하다",
+        "targetScore": 900,
+        "exampleEn": "The clerk is arranging items on the shelf.",
+        "exampleKo": "점원이 선반에 물건을 정리하고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 138,
+        "word": "remove",
+        "meaning": "제거하다, 해고하다",
+        "targetScore": 900,
+        "exampleEn": "He was removed from his position.",
+        "exampleKo": "그는 자신의 직위에서 해임되었습니다."
+    },
+    {
+        "day": 3,
+        "no": 139,
+        "word": "removal",
+        "meaning": "제거, 해임",
+        "targetScore": 900,
+        "exampleEn": "The removal of the old bridge took weeks.",
+        "exampleKo": "오래된 다리의 철거는 몇 주가 걸렸습니다."
+    },
+    {
+        "day": 3,
+        "no": 140,
+        "word": "removable",
+        "meaning": "이동시킬 수 있는",
+        "targetScore": 900,
+        "exampleEn": "The laptop has a removable battery.",
+        "exampleKo": "그 노트북은 탈착식 배터리를 가지고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 141,
+        "word": "responsible",
+        "meaning": "책임이 있는",
+        "targetScore": 900,
+        "exampleEn": "The pilot is responsible for the safety of the passengers.",
+        "exampleKo": "조종사는 승객들의 안전에 책임이 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 142,
+        "word": "responsibility",
+        "meaning": "책임",
+        "targetScore": 900,
+        "exampleEn": "She takes her responsibilities very seriously.",
+        "exampleKo": "그녀는 자신의 책임을 매우 진지하게 받아들입니다."
+    },
+    {
+        "day": 3,
+        "no": 143,
+        "word": "responsive",
+        "meaning": "반응을 보이는",
+        "targetScore": 900,
+        "exampleEn": "The engine is very responsive.",
+        "exampleKo": "엔진 반응이 매우 좋습니다."
+    },
+    {
+        "day": 3,
+        "no": 144,
+        "word": "supervise",
+        "meaning": "감독하다",
+        "targetScore": 900,
+        "exampleEn": "He supervises the loading of the cargo.",
+        "exampleKo": "그는 화물 적재를 감독합니다."
+    },
+    {
+        "day": 3,
+        "no": 145,
+        "word": "supervisor",
+        "meaning": "감독관",
+        "targetScore": 900,
+        "exampleEn": "The supervisor approved the overtime request.",
+        "exampleKo": "감독관이 초과 근무 요청을 승인했습니다."
+    },
+    {
+        "day": 3,
+        "no": 146,
+        "word": "turn in",
+        "meaning": "제출하다",
+        "targetScore": 900,
+        "exampleEn": "Turn in your badges at the front desk.",
+        "exampleKo": "안내 데스크에 배지를 반납하세요."
+    },
+    {
+        "day": 3,
+        "no": 147,
+        "word": "admit",
+        "meaning": "인정하다; 입장을 허락하다",
+        "targetScore": 900,
+        "exampleEn": "This ticket admits one person.",
+        "exampleKo": "이 티켓은 한 사람의 입장을 허용합니다."
+    },
+    {
+        "day": 3,
+        "no": 148,
+        "word": "author",
+        "meaning": "저자; 쓰다",
+        "targetScore": 900,
+        "exampleEn": "He authored the report on climate change.",
+        "exampleKo": "그는 기후 변화에 관한 보고서를 저술했습니다."
+    },
+    {
+        "day": 3,
+        "no": 149,
+        "word": "bulletin board",
+        "meaning": "게시판",
+        "targetScore": 900,
+        "exampleEn": "Notices are posted on the bulletin board.",
+        "exampleKo": "공지 사항들이 게시판에 게시되어 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 150,
+        "word": "clerical",
+        "meaning": "서기의, 사무원의",
+        "targetScore": 900,
+        "exampleEn": "It was a clerical error.",
+        "exampleKo": "그것은 사무 착오였습니다."
+    },
+    {
+        "day": 3,
+        "no": 151,
+        "word": "conclude",
+        "meaning": "결론을 내리다; 끝내다",
+        "targetScore": 900,
+        "exampleEn": "The meeting concluded with a vote.",
+        "exampleKo": "회의는 투표로 끝났습니다."
+    },
+    {
+        "day": 3,
+        "no": 152,
+        "word": "conclusion",
+        "meaning": "결론",
+        "targetScore": 900,
+        "exampleEn": "In conclusion, we recommend the merger.",
+        "exampleKo": "결론적으로, 우리는 합병을 권장합니다."
+    },
+    {
+        "day": 3,
+        "no": 153,
+        "word": "conclusive",
+        "meaning": "결정적인",
+        "targetScore": 900,
+        "exampleEn": "The DNA evidence was conclusive.",
+        "exampleKo": "DNA 증거는 결정적이었습니다."
+    },
+    {
+        "day": 3,
+        "no": 154,
+        "word": "contrary to",
+        "meaning": "~에 반하여",
+        "targetScore": 900,
+        "exampleEn": "He acted contrary to my instructions.",
+        "exampleKo": "그는 내 지시에 반하여 행동했습니다."
+    },
+    {
+        "day": 3,
+        "no": 155,
+        "word": "double as",
+        "meaning": "~의 역할을 겸하다",
+        "targetScore": 900,
+        "exampleEn": "The sofa doubles as a bed.",
+        "exampleKo": "그 소파는 침대 겸용입니다."
+    },
+    {
+        "day": 3,
+        "no": 156,
+        "word": "editorial",
+        "meaning": "사설, 논설",
+        "targetScore": 900,
+        "exampleEn": "The editorial criticized the government's policy.",
+        "exampleKo": "사설은 정부의 정책을 비판했습니다."
+    },
+    {
+        "day": 3,
+        "no": 157,
+        "word": "forward",
+        "meaning": "보내다; 앞으로",
+        "targetScore": 900,
+        "exampleEn": "We look forward to hearing from you.",
+        "exampleKo": "당신의 소식을 기다리겠습니다."
+    },
+    {
+        "day": 3,
+        "no": 158,
+        "word": "have one's hands full",
+        "meaning": "손이 모자라다, 몹시 바쁘다",
+        "targetScore": 900,
+        "exampleEn": "She has her hands full with three kids.",
+        "exampleKo": "그녀는 세 아이로 손이 모자랍니다."
+    },
+    {
+        "day": 3,
+        "no": 159,
+        "word": "just in time for",
+        "meaning": "~에 딱 맞춰",
+        "targetScore": 900,
+        "exampleEn": "The flowers arrived just in time for the party.",
+        "exampleKo": "꽃들은 파티에 딱 맞춰 도착했습니다."
+    },
+    {
+        "day": 3,
+        "no": 160,
+        "word": "lax",
+        "meaning": "느슨한, 규율이 없는",
+        "targetScore": 900,
+        "exampleEn": "He was lax in his duties.",
+        "exampleKo": "그는 자신의 직무에 태만했습니다."
+    },
+    {
+        "day": 3,
+        "no": 161,
+        "word": "lengthen",
+        "meaning": "길게 하다",
+        "targetScore": 900,
+        "exampleEn": "Yoga can help lengthen your muscles.",
+        "exampleKo": "요가는 근육을 길게 하는 데 도움을 줄 수 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 162,
+        "word": "lengthy",
+        "meaning": "장황한, 너무 긴",
+        "targetScore": 900,
+        "exampleEn": "It was a lengthy explanation.",
+        "exampleKo": "그것은 장황한 설명이었습니다."
+    },
+    {
+        "day": 3,
+        "no": 163,
+        "word": "make a copy",
+        "meaning": "복사하다",
+        "targetScore": 900,
+        "exampleEn": "I need to make a copy of my passport.",
+        "exampleKo": "여권을 복사해야 합니다."
+    },
+    {
+        "day": 3,
+        "no": 164,
+        "word": "negligent",
+        "meaning": "태만한",
+        "targetScore": 900,
+        "exampleEn": "The driver was negligent.",
+        "exampleKo": "운전자는 부주의했습니다."
+    },
+    {
+        "day": 3,
+        "no": 165,
+        "word": "negligible",
+        "meaning": "하찮은",
+        "targetScore": 900,
+        "exampleEn": "The damage to the car was negligible.",
+        "exampleKo": "차의 손상은 미미했습니다."
+    },
+    {
+        "day": 3,
+        "no": 166,
+        "word": "officiate",
+        "meaning": "사회를 보다",
+        "targetScore": 900,
+        "exampleEn": "The priest officiated at the funeral.",
+        "exampleKo": "신부가 장례식을 집전했습니다."
+    },
+    {
+        "day": 3,
+        "no": 167,
+        "word": "on vacation",
+        "meaning": "휴가 중",
+        "targetScore": 900,
+        "exampleEn": "I met him while I was on vacation.",
+        "exampleKo": "나는 휴가 중에 그를 만났습니다."
+    },
+    {
+        "day": 3,
+        "no": 168,
+        "word": "oversee",
+        "meaning": "감독하다",
+        "targetScore": 900,
+        "exampleEn": "The UN oversees the election process.",
+        "exampleKo": "유엔이 선거 과정을 감독합니다."
+    }
+]

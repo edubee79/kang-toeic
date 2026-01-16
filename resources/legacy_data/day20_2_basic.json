@@ -1,0 +1,254 @@
+[
+    {
+        "day": 20,
+        "no": 41,
+        "word": "spend",
+        "meaning": "쓰다, 소비하다",
+        "targetScore": 650,
+        "exampleEn": "Spend money wisely.",
+        "exampleKo": "돈을 현명하게 쓰세요."
+    },
+    {
+        "day": 20,
+        "no": 42,
+        "word": "account",
+        "meaning": "계좌; 설명하다",
+        "targetScore": 650,
+        "exampleEn": "Open a bank account.",
+        "exampleKo": "은행 계좌를 개설하세요."
+    },
+    {
+        "day": 20,
+        "no": 43,
+        "word": "agree",
+        "meaning": "동의하다, 일치하다",
+        "targetScore": 650,
+        "exampleEn": "I agree with the terms.",
+        "exampleKo": "나는 약관에 동의합니다."
+    },
+    {
+        "day": 20,
+        "no": 44,
+        "word": "amount",
+        "meaning": "양, 액수",
+        "targetScore": 650,
+        "exampleEn": "A large amount of money.",
+        "exampleKo": "거액의 돈."
+    },
+    {
+        "day": 20,
+        "no": 45,
+        "word": "balance",
+        "meaning": "잔고, 균형",
+        "targetScore": 650,
+        "exampleEn": "Check the balance.",
+        "exampleKo": "잔고를 확인하세요."
+    },
+    {
+        "day": 20,
+        "no": 46,
+        "word": "bill",
+        "meaning": "청구서; 청구하다",
+        "targetScore": 650,
+        "exampleEn": "Pay the bill.",
+        "exampleKo": "청구서를 지불하세요."
+    },
+    {
+        "day": 20,
+        "no": 47,
+        "word": "borrow",
+        "meaning": "빌리다",
+        "targetScore": 650,
+        "exampleEn": "Borrow money.",
+        "exampleKo": "돈을 빌리다."
+    },
+    {
+        "day": 20,
+        "no": 48,
+        "word": "carefully",
+        "meaning": "신중하게, 조심스럽게",
+        "targetScore": 650,
+        "exampleEn": "Read it carefully.",
+        "exampleKo": "신중하게 읽으세요."
+    },
+    {
+        "day": 20,
+        "no": 49,
+        "word": "cash",
+        "meaning": "현금",
+        "targetScore": 650,
+        "exampleEn": "Cash or credit?",
+        "exampleKo": "현금입니까, 신용카드입니까?"
+    },
+    {
+        "day": 20,
+        "no": 50,
+        "word": "change",
+        "meaning": "잔돈; 바꾸다",
+        "targetScore": 650,
+        "exampleEn": "Keep the change.",
+        "exampleKo": "잔돈은 가지세요."
+    },
+    {
+        "day": 20,
+        "no": 51,
+        "word": "check",
+        "meaning": "수표; 확인하다",
+        "targetScore": 650,
+        "exampleEn": "Sign the check.",
+        "exampleKo": "수표에 서명하세요."
+    },
+    {
+        "day": 20,
+        "no": 52,
+        "word": "cost",
+        "meaning": "비용",
+        "targetScore": 650,
+        "exampleEn": "High cost.",
+        "exampleKo": "높은 비용."
+    },
+    {
+        "day": 20,
+        "no": 53,
+        "word": "credit",
+        "meaning": "신용",
+        "targetScore": 650,
+        "exampleEn": "Good credit score.",
+        "exampleKo": "좋은 신용 점수."
+    },
+    {
+        "day": 20,
+        "no": 54,
+        "word": "deposit",
+        "meaning": "입금하다; 보증금",
+        "targetScore": 650,
+        "exampleEn": "Deposit cash.",
+        "exampleKo": "현금을 입금하다."
+    },
+    {
+        "day": 20,
+        "no": 55,
+        "word": "economy",
+        "meaning": "경제, 절약",
+        "targetScore": 650,
+        "exampleEn": "The economy is growing.",
+        "exampleKo": "경제가 성장하고 있습니다."
+    },
+    {
+        "day": 20,
+        "no": 56,
+        "word": "error",
+        "meaning": "오류, 실수",
+        "targetScore": 650,
+        "exampleEn": "A billing error.",
+        "exampleKo": "청구 오류."
+    },
+    {
+        "day": 20,
+        "no": 57,
+        "word": "expense",
+        "meaning": "비용, 지출",
+        "targetScore": 650,
+        "exampleEn": "Travel expenses.",
+        "exampleKo": "여행 경비."
+    },
+    {
+        "day": 20,
+        "no": 58,
+        "word": "fund",
+        "meaning": "자금; 자금을 대다",
+        "targetScore": 650,
+        "exampleEn": "Raise funds.",
+        "exampleKo": "자금을 모으다."
+    },
+    {
+        "day": 20,
+        "no": 59,
+        "word": "interest",
+        "meaning": "이자; 이익",
+        "targetScore": 650,
+        "exampleEn": "Low interest rate.",
+        "exampleKo": "낮은 이자율."
+    },
+    {
+        "day": 20,
+        "no": 60,
+        "word": "loan",
+        "meaning": "대출; 빌려주다",
+        "targetScore": 650,
+        "exampleEn": "Take out a loan.",
+        "exampleKo": "대출을 받다."
+    },
+    {
+        "day": 20,
+        "no": 61,
+        "word": "money",
+        "meaning": "돈",
+        "targetScore": 650,
+        "exampleEn": "Save money.",
+        "exampleKo": "돈을 모으세요."
+    },
+    {
+        "day": 20,
+        "no": 62,
+        "word": "pay",
+        "meaning": "지불하다; 급료",
+        "targetScore": 650,
+        "exampleEn": "Pay the rent.",
+        "exampleKo": "임대료를 내세요."
+    },
+    {
+        "day": 20,
+        "no": 63,
+        "word": "payment",
+        "meaning": "지불, 납입",
+        "targetScore": 650,
+        "exampleEn": "Monthly payment.",
+        "exampleKo": "월 납입금."
+    },
+    {
+        "day": 20,
+        "no": 64,
+        "word": "profit",
+        "meaning": "이익",
+        "targetScore": 650,
+        "exampleEn": "Make a profit.",
+        "exampleKo": "이익을 내다."
+    },
+    {
+        "day": 20,
+        "no": 65,
+        "word": "rate",
+        "meaning": "요금, 비율",
+        "targetScore": 650,
+        "exampleEn": "Exchange rate.",
+        "exampleKo": "환율."
+    },
+    {
+        "day": 20,
+        "no": 66,
+        "word": "review",
+        "meaning": "검토하다; 검토",
+        "targetScore": 650,
+        "exampleEn": "Review the budget.",
+        "exampleKo": "예산을 검토하세요."
+    },
+    {
+        "day": 20,
+        "no": 67,
+        "word": "tax",
+        "meaning": "세금; 과세하다",
+        "targetScore": 650,
+        "exampleEn": "Income tax.",
+        "exampleKo": "소득세."
+    },
+    {
+        "day": 20,
+        "no": 68,
+        "word": "withdraw",
+        "meaning": "인출하다",
+        "targetScore": 650,
+        "exampleEn": "Withdraw cash.",
+        "exampleKo": "현금을 인출하다."
+    }
+]

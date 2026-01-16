@@ -1,0 +1,614 @@
+[
+    {
+        "day": 19,
+        "no": 69,
+        "word": "send",
+        "meaning": "보내다",
+        "targetScore": 800,
+        "exampleEn": "Send an email.",
+        "exampleKo": "이메일을 보내세요."
+    },
+    {
+        "day": 19,
+        "no": 70,
+        "word": "asset",
+        "meaning": "자산, 재산",
+        "targetScore": 800,
+        "exampleEn": "Valuable asset.",
+        "exampleKo": "귀중한 자산."
+    },
+    {
+        "day": 19,
+        "no": 71,
+        "word": "assignment",
+        "meaning": "과제, 임무",
+        "targetScore": 800,
+        "exampleEn": "Finish the assignment.",
+        "exampleKo": "과제를 끝내세요."
+    },
+    {
+        "day": 19,
+        "no": 72,
+        "word": "assume",
+        "meaning": "추정하다, (책임을) 맡다",
+        "targetScore": 800,
+        "exampleEn": "Assume responsibility.",
+        "exampleKo": "책임을 맡다."
+    },
+    {
+        "day": 19,
+        "no": 73,
+        "word": "auction",
+        "meaning": "경매",
+        "targetScore": 800,
+        "exampleEn": "Sold at auction.",
+        "exampleKo": "경매에서 팔렸습니다."
+    },
+    {
+        "day": 19,
+        "no": 74,
+        "word": "authority",
+        "meaning": "권한, 당국",
+        "targetScore": 800,
+        "exampleEn": "Local authority.",
+        "exampleKo": "지방 당국."
+    },
+    {
+        "day": 19,
+        "no": 75,
+        "word": "authorize",
+        "meaning": "권한을 부여하다",
+        "targetScore": 800,
+        "exampleEn": "Authorized personnel only.",
+        "exampleKo": "관계자 외 출입 금지."
+    },
+    {
+        "day": 19,
+        "no": 76,
+        "word": "benefit",
+        "meaning": "혜택, 이익",
+        "targetScore": 800,
+        "exampleEn": "Employee benefits.",
+        "exampleKo": "직원 혜택."
+    },
+    {
+        "day": 19,
+        "no": 77,
+        "word": "bid",
+        "meaning": "입찰하다; 입찰",
+        "targetScore": 800,
+        "exampleEn": "Make a bid.",
+        "exampleKo": "입찰하세요."
+    },
+    {
+        "day": 19,
+        "no": 78,
+        "word": "boost",
+        "meaning": "증대하다, 신장시키다",
+        "targetScore": 800,
+        "exampleEn": "Boost sales.",
+        "exampleKo": "매출을 증대하다."
+    },
+    {
+        "day": 19,
+        "no": 79,
+        "word": "brand",
+        "meaning": "상표, 브랜드",
+        "targetScore": 800,
+        "exampleEn": "Popular brand.",
+        "exampleKo": "인기 있는 브랜드."
+    },
+    {
+        "day": 19,
+        "no": 80,
+        "word": "budget",
+        "meaning": "예산",
+        "targetScore": 800,
+        "exampleEn": "Within budget.",
+        "exampleKo": "예산 내에서."
+    },
+    {
+        "day": 19,
+        "no": 81,
+        "word": "calculate",
+        "meaning": "계산하다",
+        "targetScore": 800,
+        "exampleEn": "Calculate the total.",
+        "exampleKo": "합계를 계산하세요."
+    },
+    {
+        "day": 19,
+        "no": 82,
+        "word": "campaign",
+        "meaning": "캠페인",
+        "targetScore": 800,
+        "exampleEn": "Advertising campaign.",
+        "exampleKo": "광고 캠페인."
+    },
+    {
+        "day": 19,
+        "no": 83,
+        "word": "cancellation",
+        "meaning": "취소",
+        "targetScore": 800,
+        "exampleEn": "Cancellation fee.",
+        "exampleKo": "취소 수수료."
+    },
+    {
+        "day": 19,
+        "no": 84,
+        "word": "claim",
+        "meaning": "청구하다, 주장하다",
+        "targetScore": 800,
+        "exampleEn": "Claim a refund.",
+        "exampleKo": "환불을 청구하다."
+    },
+    {
+        "day": 19,
+        "no": 85,
+        "word": "client",
+        "meaning": "의뢰인, 고객",
+        "targetScore": 800,
+        "exampleEn": "Meet a client.",
+        "exampleKo": "고객을 만나다."
+    },
+    {
+        "day": 19,
+        "no": 86,
+        "word": "collection",
+        "meaning": "수금, 수집",
+        "targetScore": 800,
+        "exampleEn": "Debt collection.",
+        "exampleKo": "부채 수금."
+    },
+    {
+        "day": 19,
+        "no": 87,
+        "word": "commercial",
+        "meaning": "상업광고; 상업의",
+        "targetScore": 800,
+        "exampleEn": "TV commercial.",
+        "exampleKo": "TV 광고."
+    },
+    {
+        "day": 19,
+        "no": 88,
+        "word": "commodity",
+        "meaning": "상품, 원자재",
+        "targetScore": 800,
+        "exampleEn": "Agricultural commodities.",
+        "exampleKo": "농산물."
+    },
+    {
+        "day": 19,
+        "no": 89,
+        "word": "compare",
+        "meaning": "비교하다",
+        "targetScore": 800,
+        "exampleEn": "Compare prices.",
+        "exampleKo": "가격을 비교하세요."
+    },
+    {
+        "day": 19,
+        "no": 90,
+        "word": "compete",
+        "meaning": "경쟁하다",
+        "targetScore": 800,
+        "exampleEn": "Compete with rivals.",
+        "exampleKo": "경쟁자들과 경쟁하다."
+    },
+    {
+        "day": 19,
+        "no": 91,
+        "word": "competition",
+        "meaning": "경쟁",
+        "targetScore": 800,
+        "exampleEn": "Fierce competition.",
+        "exampleKo": "치열한 경쟁."
+    },
+    {
+        "day": 19,
+        "no": 92,
+        "word": "competitive",
+        "meaning": "경쟁력 있는",
+        "targetScore": 800,
+        "exampleEn": "Competitive market.",
+        "exampleKo": "경쟁력 있는 시장."
+    },
+    {
+        "day": 19,
+        "no": 93,
+        "word": "competitor",
+        "meaning": "경쟁자",
+        "targetScore": 800,
+        "exampleEn": "Main competitor.",
+        "exampleKo": "주요 경쟁자."
+    },
+    {
+        "day": 19,
+        "no": 94,
+        "word": "complaint",
+        "meaning": "불만, 항의",
+        "targetScore": 800,
+        "exampleEn": "File a complaint.",
+        "exampleKo": "불만을 제기하세요."
+    },
+    {
+        "day": 19,
+        "no": 95,
+        "word": "condition",
+        "meaning": "조건, 상태",
+        "targetScore": 800,
+        "exampleEn": "Terms and conditions.",
+        "exampleKo": "약관."
+    },
+    {
+        "day": 19,
+        "no": 96,
+        "word": "consequence",
+        "meaning": "결과",
+        "targetScore": 800,
+        "exampleEn": "Serious consequences.",
+        "exampleKo": "심각한 결과."
+    },
+    {
+        "day": 19,
+        "no": 97,
+        "word": "considerable",
+        "meaning": "상당한",
+        "targetScore": 800,
+        "exampleEn": "Considerable effort.",
+        "exampleKo": "상당한 노력."
+    },
+    {
+        "day": 19,
+        "no": 98,
+        "word": "consistently",
+        "meaning": "일관되게, 지속적으로",
+        "targetScore": 800,
+        "exampleEn": "Perform consistently.",
+        "exampleKo": "일관되게 수행하다."
+    },
+    {
+        "day": 19,
+        "no": 99,
+        "word": "consumer",
+        "meaning": "소비자",
+        "targetScore": 800,
+        "exampleEn": "Consumer demand.",
+        "exampleKo": "소비자 수요."
+    },
+    {
+        "day": 19,
+        "no": 100,
+        "word": "contract",
+        "meaning": "계약하다",
+        "targetScore": 800,
+        "exampleEn": "Contract a disease.",
+        "exampleKo": "병에 걸리다."
+    },
+    {
+        "day": 19,
+        "no": 101,
+        "word": "cooperate",
+        "meaning": "협력하다",
+        "targetScore": 800,
+        "exampleEn": "Cooperate with others.",
+        "exampleKo": "다른 사람들과 협력하세요."
+    },
+    {
+        "day": 19,
+        "no": 102,
+        "word": "corporation",
+        "meaning": "기업, 회사",
+        "targetScore": 800,
+        "exampleEn": "Multinational corporation.",
+        "exampleKo": "다국적 기업."
+    },
+    {
+        "day": 19,
+        "no": 103,
+        "word": "costly",
+        "meaning": "비싼",
+        "targetScore": 800,
+        "exampleEn": "Costly mistake.",
+        "exampleKo": "비싼 대가를 치른 실수."
+    },
+    {
+        "day": 19,
+        "no": 104,
+        "word": "coupon",
+        "meaning": "쿠폰",
+        "targetScore": 800,
+        "exampleEn": " 할인 쿠폰.",
+        "exampleKo": "Discount coupon."
+    },
+    {
+        "day": 19,
+        "no": 105,
+        "word": "credit",
+        "meaning": "신용; 입금하다",
+        "targetScore": 800,
+        "exampleEn": "Credit card.",
+        "exampleKo": "신용카드."
+    },
+    {
+        "day": 19,
+        "no": 106,
+        "word": "customer",
+        "meaning": "고객",
+        "targetScore": 800,
+        "exampleEn": "Customer service.",
+        "exampleKo": "고객 서비스."
+    },
+    {
+        "day": 19,
+        "no": 107,
+        "word": "deal",
+        "meaning": "거래하다, 다루다",
+        "targetScore": 800,
+        "exampleEn": "Deal with a problem.",
+        "exampleKo": "문제를 다루다."
+    },
+    {
+        "day": 19,
+        "no": 108,
+        "word": "dealer",
+        "meaning": "판매업자",
+        "targetScore": 800,
+        "exampleEn": "Authorized dealer.",
+        "exampleKo": "공인 판매업자."
+    },
+    {
+        "day": 19,
+        "no": 109,
+        "word": "debt",
+        "meaning": "빚, 부채",
+        "targetScore": 800,
+        "exampleEn": "Pay off debt.",
+        "exampleKo": "빚을 갚다."
+    },
+    {
+        "day": 19,
+        "no": 110,
+        "word": "decide",
+        "meaning": "결정하다",
+        "targetScore": 800,
+        "exampleEn": "Decide on a plan.",
+        "exampleKo": "계획을 결정하다."
+    },
+    {
+        "day": 19,
+        "no": 111,
+        "word": "decrease",
+        "meaning": "감소하다",
+        "targetScore": 800,
+        "exampleEn": "Decrease in sales.",
+        "exampleKo": "매출 감소."
+    },
+    {
+        "day": 19,
+        "no": 112,
+        "word": "deduction",
+        "meaning": "공제, 추론",
+        "targetScore": 800,
+        "exampleEn": "Tax deduction.",
+        "exampleKo": "세금 공제."
+    },
+    {
+        "day": 19,
+        "no": 113,
+        "word": "deficit",
+        "meaning": "적자",
+        "targetScore": 800,
+        "exampleEn": "Budget deficit.",
+        "exampleKo": "예산 적자."
+    },
+    {
+        "day": 19,
+        "no": 114,
+        "word": "demand",
+        "meaning": "수요; 요구하다",
+        "targetScore": 800,
+        "exampleEn": "Meet the demand.",
+        "exampleKo": "수요를 충족시키다."
+    },
+    {
+        "day": 19,
+        "no": 115,
+        "word": "demonstrate",
+        "meaning": "증명하다, 시연하다",
+        "targetScore": 800,
+        "exampleEn": "Demonstrate a product.",
+        "exampleKo": "제품을 시연하다."
+    },
+    {
+        "day": 19,
+        "no": 116,
+        "word": "deposit",
+        "meaning": "보증금, 예금",
+        "targetScore": 800,
+        "exampleEn": "Make a deposit.",
+        "exampleKo": "예금하다."
+    },
+    {
+        "day": 19,
+        "no": 117,
+        "word": "depreciation",
+        "meaning": "가치 하락, 감가상각",
+        "targetScore": 800,
+        "exampleEn": "Currency depreciation.",
+        "exampleKo": "통화 가치 하락."
+    },
+    {
+        "day": 19,
+        "no": 118,
+        "word": "description",
+        "meaning": "설명, 묘사",
+        "targetScore": 800,
+        "exampleEn": "Detailed description.",
+        "exampleKo": "상세한 설명."
+    },
+    {
+        "day": 19,
+        "no": 119,
+        "word": "develop",
+        "meaning": "개발하다",
+        "targetScore": 800,
+        "exampleEn": "Develop a strategy.",
+        "exampleKo": "전략을 개발하다."
+    },
+    {
+        "day": 19,
+        "no": 120,
+        "word": "discount",
+        "meaning": "할인",
+        "targetScore": 800,
+        "exampleEn": "Get a discount.",
+        "exampleKo": "할인을 받다."
+    },
+    {
+        "day": 19,
+        "no": 121,
+        "word": "distribute",
+        "meaning": "유통시키다, 분배하다",
+        "targetScore": 800,
+        "exampleEn": "Distribute products.",
+        "exampleKo": "제품을 유통시키다."
+    },
+    {
+        "day": 19,
+        "no": 122,
+        "word": "dividend",
+        "meaning": "배당금",
+        "targetScore": 800,
+        "exampleEn": "Pay dividends.",
+        "exampleKo": "배당금을 지급하다."
+    },
+    {
+        "day": 19,
+        "no": 123,
+        "word": "dramatic",
+        "meaning": "극적인",
+        "targetScore": 800,
+        "exampleEn": "Dramatic increase.",
+        "exampleKo": "극적인 증가."
+    },
+    {
+        "day": 19,
+        "no": 124,
+        "word": "due",
+        "meaning": "만기의, ~할 예정인",
+        "targetScore": 800,
+        "exampleEn": "Payment is due.",
+        "exampleKo": "지불 기한이 되었습니다."
+    },
+    {
+        "day": 19,
+        "no": 125,
+        "word": "earnings",
+        "meaning": "소득, 수익",
+        "targetScore": 800,
+        "exampleEn": "Quarterly earnings.",
+        "exampleKo": "분기 수익."
+    },
+    {
+        "day": 19,
+        "no": 126,
+        "word": "economics",
+        "meaning": "경제학",
+        "targetScore": 800,
+        "exampleEn": "Study economics.",
+        "exampleKo": "경제학을 공부하다."
+    },
+    {
+        "day": 19,
+        "no": 127,
+        "word": "economy",
+        "meaning": "경제",
+        "targetScore": 800,
+        "exampleEn": "Global economy.",
+        "exampleKo": "세계 경제."
+    },
+    {
+        "day": 19,
+        "no": 128,
+        "word": "effect",
+        "meaning": "효과, 결과",
+        "targetScore": 800,
+        "exampleEn": "Side effect.",
+        "exampleKo": "부작용."
+    },
+    {
+        "day": 19,
+        "no": 129,
+        "word": "effective",
+        "meaning": "효과적인",
+        "targetScore": 800,
+        "exampleEn": "Effective method.",
+        "exampleKo": "효과적인 방법."
+    },
+    {
+        "day": 19,
+        "no": 130,
+        "word": "eliminate",
+        "meaning": "제거하다",
+        "targetScore": 800,
+        "exampleEn": "Eliminate waste.",
+        "exampleKo": "낭비를 제거하다."
+    },
+    {
+        "day": 19,
+        "no": 131,
+        "word": "employee",
+        "meaning": "직원",
+        "targetScore": 800,
+        "exampleEn": "Full-time employee.",
+        "exampleKo": "정규직 직원."
+    },
+    {
+        "day": 19,
+        "no": 132,
+        "word": "encourage",
+        "meaning": "장려하다",
+        "targetScore": 800,
+        "exampleEn": "Encourage investment.",
+        "exampleKo": "투자를 장려하다."
+    },
+    {
+        "day": 19,
+        "no": 133,
+        "word": "endorse",
+        "meaning": "지지하다, 보증하다",
+        "targetScore": 800,
+        "exampleEn": "Endorse a check.",
+        "exampleKo": "수표에 배서하다."
+    },
+    {
+        "day": 19,
+        "no": 134,
+        "word": "ensure",
+        "meaning": "보장하다",
+        "targetScore": 800,
+        "exampleEn": "Ensure safety.",
+        "exampleKo": "안전을 보장하다."
+    },
+    {
+        "day": 19,
+        "no": 135,
+        "word": "enterprise",
+        "meaning": "기업, 사업",
+        "targetScore": 800,
+        "exampleEn": "Small enterprise.",
+        "exampleKo": "중소기업."
+    },
+    {
+        "day": 19,
+        "no": 136,
+        "word": "estimate",
+        "meaning": "추정치",
+        "targetScore": 800,
+        "exampleEn": "Cost estimate.",
+        "exampleKo": "비용 추정치."
+    }
+]

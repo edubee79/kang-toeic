@@ -1,0 +1,254 @@
+[
+    {
+        "day": 16,
+        "no": 41,
+        "word": "consignment",
+        "meaning": "위탁 판매",
+        "targetScore": 650,
+        "exampleEn": "Sold on consignment.",
+        "exampleKo": "위탁 판매로 팔렸습니다."
+    },
+    {
+        "day": 16,
+        "no": 42,
+        "word": "refund",
+        "meaning": "환불하다; 환불",
+        "targetScore": 650,
+        "exampleEn": "I would like a refund.",
+        "exampleKo": "환불받고 싶습니다."
+    },
+    {
+        "day": 16,
+        "no": 43,
+        "word": "share",
+        "meaning": "공유하다; 몫, 주식",
+        "targetScore": 650,
+        "exampleEn": "We share the profit.",
+        "exampleKo": "우리는 이익을 공유합니다."
+    },
+    {
+        "day": 16,
+        "no": 44,
+        "word": "address",
+        "meaning": "다루다, 연설하다; 주소",
+        "targetScore": 650,
+        "exampleEn": "Address the problem immediately.",
+        "exampleKo": "문제를 즉시 다루세요."
+    },
+    {
+        "day": 16,
+        "no": 45,
+        "word": "shipment",
+        "meaning": "선적, 발송",
+        "targetScore": 650,
+        "exampleEn": "The shipment has arrived.",
+        "exampleKo": "화물이 도착했습니다."
+    },
+    {
+        "day": 16,
+        "no": 46,
+        "word": "shipped",
+        "meaning": "선적된",
+        "targetScore": 650,
+        "exampleEn": "Shipped via air mail.",
+        "exampleKo": "항공 우편으로 발송되었습니다."
+    },
+    {
+        "day": 16,
+        "no": 47,
+        "word": "status",
+        "meaning": "상태, 지위",
+        "targetScore": 650,
+        "exampleEn": "Check the status of your order.",
+        "exampleKo": "주문 상태를 확인하세요."
+    },
+    {
+        "day": 16,
+        "no": 48,
+        "word": "surplus",
+        "meaning": "잉여의",
+        "targetScore": 650,
+        "exampleEn": "Surplus goods are sold at a discount.",
+        "exampleKo": "잉여 상품은 할인 판매됩니다."
+    },
+    {
+        "day": 16,
+        "no": 49,
+        "word": "throw",
+        "meaning": "던지다",
+        "targetScore": 650,
+        "exampleEn": "Don't throw it away.",
+        "exampleKo": "그것을 버리지 마세요."
+    },
+    {
+        "day": 16,
+        "no": 50,
+        "word": "totally",
+        "meaning": "전적으로, 완전히",
+        "targetScore": 650,
+        "exampleEn": "I totally agree.",
+        "exampleKo": "전적으로 동의합니다."
+    },
+    {
+        "day": 16,
+        "no": 51,
+        "word": "warehouse",
+        "meaning": "창고",
+        "targetScore": 650,
+        "exampleEn": "Goods are stored in the warehouse.",
+        "exampleKo": "상품은 창고에 보관됩니다."
+    },
+    {
+        "day": 16,
+        "no": 52,
+        "word": "waive",
+        "meaning": "(권리 등을) 포기하다, 면제하다",
+        "targetScore": 650,
+        "exampleEn": "They waived the fee.",
+        "exampleKo": "그들은 수수료를 면제해 주었습니다."
+    },
+    {
+        "day": 16,
+        "no": 53,
+        "word": "alter",
+        "meaning": "고치다, 바꾸다",
+        "targetScore": 650,
+        "exampleEn": "The dress needs to be altered.",
+        "exampleKo": "그 드레스는 수선이 필요합니다."
+    },
+    {
+        "day": 16,
+        "no": 54,
+        "word": "analyze",
+        "meaning": "분석하다",
+        "targetScore": 650,
+        "exampleEn": "Analyze the data carefully.",
+        "exampleKo": "데이터를 주의 깊게 분석하세요."
+    },
+    {
+        "day": 16,
+        "no": 55,
+        "word": "approach",
+        "meaning": "접근하다; 접근법",
+        "targetScore": 650,
+        "exampleEn": "Winter is approaching.",
+        "exampleKo": "겨울이 다가오고 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 56,
+        "word": "approval",
+        "meaning": "승인",
+        "targetScore": 650,
+        "exampleEn": "We need written approval.",
+        "exampleKo": "우리는 서면 승인이 필요합니다."
+    },
+    {
+        "day": 16,
+        "no": 57,
+        "word": "article",
+        "meaning": "기사, 물품, 조항",
+        "targetScore": 650,
+        "exampleEn": "I read an interesting article.",
+        "exampleKo": "나는 흥미로운 기사를 읽었습니다."
+    },
+    {
+        "day": 16,
+        "no": 58,
+        "word": "chain",
+        "meaning": "체인점; 사슬",
+        "targetScore": 650,
+        "exampleEn": "It is a fast-food chain.",
+        "exampleKo": "그것은 패스트푸드 체인점입니다."
+    },
+    {
+        "day": 16,
+        "no": 59,
+        "word": "claim",
+        "meaning": "청구하다, 주장하다; 청구",
+        "targetScore": 650,
+        "exampleEn": "Claim your refund.",
+        "exampleKo": "환불을 청구하세요."
+    },
+    {
+        "day": 16,
+        "no": 60,
+        "word": "common",
+        "meaning": "공통의, 흔한",
+        "targetScore": 650,
+        "exampleEn": "It is a common mistake.",
+        "exampleKo": "그것은 흔한 실수입니다."
+    },
+    {
+        "day": 16,
+        "no": 61,
+        "word": "confirm",
+        "meaning": "확인하다",
+        "targetScore": 650,
+        "exampleEn": "Can you confirm the date?",
+        "exampleKo": "날짜를 확인해 주시겠습니까?"
+    },
+    {
+        "day": 16,
+        "no": 62,
+        "word": "defective",
+        "meaning": "결함이 있는",
+        "targetScore": 650,
+        "exampleEn": "The product is defective.",
+        "exampleKo": "그 제품은 결함이 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 63,
+        "word": "delivery",
+        "meaning": "배달",
+        "targetScore": 650,
+        "exampleEn": "Free delivery on all orders.",
+        "exampleKo": "모든 주문 무료 배송."
+    },
+    {
+        "day": 16,
+        "no": 64,
+        "word": "demand",
+        "meaning": "수요; 요구하다",
+        "targetScore": 650,
+        "exampleEn": "Demand for oil is rising.",
+        "exampleKo": "석유 수요가 증가하고 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 65,
+        "word": "description",
+        "meaning": "설명, 제품 설명서",
+        "targetScore": 650,
+        "exampleEn": "It matches the description.",
+        "exampleKo": "그것은 설명과 일치합니다."
+    },
+    {
+        "day": 16,
+        "no": 66,
+        "word": "diverse",
+        "meaning": "다양한",
+        "targetScore": 650,
+        "exampleEn": "We serve a diverse community.",
+        "exampleKo": "우리는 다양한 지역 사회에 봉사합니다."
+    },
+    {
+        "day": 16,
+        "no": 67,
+        "word": "efficient",
+        "meaning": "효율적인",
+        "targetScore": 650,
+        "exampleEn": "The new system is efficient.",
+        "exampleKo": "새로운 시스템은 효율적입니다."
+    },
+    {
+        "day": 16,
+        "no": 68,
+        "word": "encourage",
+        "meaning": "장려하다",
+        "targetScore": 650,
+        "exampleEn": "We encourage creativity.",
+        "exampleKo": "우리는 창의성을 장려합니다."
+    }
+]

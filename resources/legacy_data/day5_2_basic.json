@@ -1,0 +1,254 @@
+[
+    {
+        "day": 5,
+        "no": 41,
+        "word": "briefcase",
+        "meaning": "서류 가방",
+        "targetScore": 650,
+        "exampleEn": "He carries a leather briefcase.",
+        "exampleKo": "그는 가죽 서류 가방을 들고 다닙니다."
+    },
+    {
+        "day": 5,
+        "no": 42,
+        "word": "commuter",
+        "meaning": "통근자",
+        "targetScore": 650,
+        "exampleEn": "The train was packed with commuters.",
+        "exampleKo": "기차는 통근자들로 꽉 찼습니다."
+    },
+    {
+        "day": 5,
+        "no": 43,
+        "word": "officer",
+        "meaning": "장교, 공무원",
+        "targetScore": 650,
+        "exampleEn": "A police officer directed traffic.",
+        "exampleKo": "경찰관이 교통 정리를 했습니다."
+    },
+    {
+        "day": 5,
+        "no": 44,
+        "word": "unfortunately",
+        "meaning": "불행하게도",
+        "targetScore": 650,
+        "exampleEn": "Unfortunately, I cannot help you.",
+        "exampleKo": "불행하게도, 도와드릴 수가 없습니다."
+    },
+    {
+        "day": 5,
+        "no": 45,
+        "word": "working",
+        "meaning": "일하는, 작동하는",
+        "targetScore": 650,
+        "exampleEn": "We need maintain a good working relationship.",
+        "exampleKo": "우리는 좋은 업무 관계를 유지해야 합니다."
+    },
+    {
+        "day": 5,
+        "no": 46,
+        "word": "allow",
+        "meaning": "허락하다",
+        "targetScore": 650,
+        "exampleEn": "Pets are not allowed in the hotel.",
+        "exampleKo": "호텔 내 애완동물 반입은 허용되지 않습니다."
+    },
+    {
+        "day": 5,
+        "no": 47,
+        "word": "connect",
+        "meaning": "연결하다",
+        "targetScore": 650,
+        "exampleEn": "This cable connects the printer to the PC.",
+        "exampleKo": "이 케이블은 프린터를 PC에 연결합니다."
+    },
+    {
+        "day": 5,
+        "no": 48,
+        "word": "deadline",
+        "meaning": "마감 시한",
+        "targetScore": 650,
+        "exampleEn": "The deadline was extended by two days.",
+        "exampleKo": "마감 시한이 이틀 연장되었습니다."
+    },
+    {
+        "day": 5,
+        "no": 49,
+        "word": "describe",
+        "meaning": "묘사하다, 설명하다",
+        "targetScore": 650,
+        "exampleEn": "Can you describe the lost item?",
+        "exampleKo": "분실물을 묘사해 주시겠습니까?"
+    },
+    {
+        "day": 5,
+        "no": 50,
+        "word": "description",
+        "meaning": "묘사, 설명",
+        "targetScore": 650,
+        "exampleEn": "The job description is very clear.",
+        "exampleKo": "직무 설명이 매우 명확합니다."
+    },
+    {
+        "day": 5,
+        "no": 51,
+        "word": "difficult",
+        "meaning": "어려운",
+        "targetScore": 650,
+        "exampleEn": "It was a difficult decision to make.",
+        "exampleKo": "내리기 어려운 결정이었습니다."
+    },
+    {
+        "day": 5,
+        "no": 52,
+        "word": "difficulty",
+        "meaning": "어려움",
+        "targetScore": 650,
+        "exampleEn": "We experienced some technical difficulties.",
+        "exampleKo": "우리는 몇 가지 기술적 어려움을 겪었습니다."
+    },
+    {
+        "day": 5,
+        "no": 53,
+        "word": "distribute",
+        "meaning": "분배하다, 배포하다",
+        "targetScore": 650,
+        "exampleEn": "Volunteers distributed food to the homeless.",
+        "exampleKo": "자원봉사자들은 노숙자들에게 음식을 배포했습니다."
+    },
+    {
+        "day": 5,
+        "no": 54,
+        "word": "distribution",
+        "meaning": "분배, 배급",
+        "targetScore": 650,
+        "exampleEn": "The distribution of wealth is uneven.",
+        "exampleKo": "부의 분배가 불평등합니다."
+    },
+    {
+        "day": 5,
+        "no": 55,
+        "word": "distributor",
+        "meaning": "배급업자",
+        "targetScore": 650,
+        "exampleEn": "They are the sole distributor of this product.",
+        "exampleKo": "그들은 이 제품의 독점 배급업자입니다."
+    },
+    {
+        "day": 5,
+        "no": 56,
+        "word": "energy",
+        "meaning": "에너지, 활기",
+        "targetScore": 650,
+        "exampleEn": "Solar energy is renewable.",
+        "exampleKo": "태양 에너지는 재생 가능합니다."
+    },
+    {
+        "day": 5,
+        "no": 57,
+        "word": "fiscal",
+        "meaning": "재정의, 회계의",
+        "targetScore": 650,
+        "exampleEn": "The fiscal year ends in December.",
+        "exampleKo": "회계 연도는 12월에 끝납니다."
+    },
+    {
+        "day": 5,
+        "no": 58,
+        "word": "happen to",
+        "meaning": "우연히 ~하다",
+        "targetScore": 650,
+        "exampleEn": "I happened to meet him at the store.",
+        "exampleKo": "나는 우연히 가게에서 그를 만났습니다."
+    },
+    {
+        "day": 5,
+        "no": 59,
+        "word": "image",
+        "meaning": "이미지, 인상",
+        "targetScore": 650,
+        "exampleEn": "The company wants to improve its image.",
+        "exampleKo": "그 회사는 이미지를 개선하고 싶어 합니다."
+    },
+    {
+        "day": 5,
+        "no": 60,
+        "word": "luxury",
+        "meaning": "호화로움, 사치품",
+        "targetScore": 650,
+        "exampleEn": "They live in luxury.",
+        "exampleKo": "그들은 호화롭게 삽니다."
+    },
+    {
+        "day": 5,
+        "no": 61,
+        "word": "mainly",
+        "meaning": "주로",
+        "targetScore": 650,
+        "exampleEn": "The customers are mainly teenagers.",
+        "exampleKo": "고객은 주로 십대들입니다."
+    },
+    {
+        "day": 5,
+        "no": 62,
+        "word": "market",
+        "meaning": "시장",
+        "targetScore": 650,
+        "exampleEn": "The housing market is booming.",
+        "exampleKo": "주택 시장이 호황입니다."
+    },
+    {
+        "day": 5,
+        "no": 63,
+        "word": "marketing",
+        "meaning": "마케팅",
+        "targetScore": 650,
+        "exampleEn": "She is the director of marketing.",
+        "exampleKo": "그녀는 마케팅 이사입니다."
+    },
+    {
+        "day": 5,
+        "no": 64,
+        "word": "mistakenly",
+        "meaning": "잘못하여, 실수로",
+        "targetScore": 650,
+        "exampleEn": "I mistakenly took someone else's bag.",
+        "exampleKo": "나는 실수로 다른 사람의 가방을 가져갔습니다."
+    },
+    {
+        "day": 5,
+        "no": 65,
+        "word": "oppose",
+        "meaning": "반대하다",
+        "targetScore": 650,
+        "exampleEn": "Many residents oppose the new highway.",
+        "exampleKo": "많은 주민들이 고속도로 건설에 반대합니다."
+    },
+    {
+        "day": 5,
+        "no": 66,
+        "word": "opposition",
+        "meaning": "반대",
+        "targetScore": 650,
+        "exampleEn": "There is strong opposition to the plan.",
+        "exampleKo": "그 계획에 대한 강한 반대가 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 67,
+        "word": "producer",
+        "meaning": "생산자, 제작자",
+        "targetScore": 650,
+        "exampleEn": "Brazil is a major producer of coffee.",
+        "exampleKo": "브라질은 주요 커피 생산국입니다."
+    },
+    {
+        "day": 5,
+        "no": 68,
+        "word": "rewarding",
+        "meaning": "보람 있는",
+        "targetScore": 650,
+        "exampleEn": "Teaching is a rewarding career.",
+        "exampleKo": "가르치는 것은 보람 있는 직업입니다."
+    }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "day": 30,
+    "no": 137,
+    "word": "robust",
+    "meaning": "튼튼한, 강건한",
+    "targetScore": 900,
+    "exampleEn": "The company has implemented a robust data security system.",
+    "exampleKo": "회사는 튼튼한(강건한) 데이터 보안 시스템을 구현했습니다."
+  },
+  {
+    "day": 30,
+    "no": 138,
+    "word": "refill",
+    "meaning": "(약을) 재조제하다",
+    "targetScore": 900,
+    "exampleEn": "Patients can request to refill their prescriptions online.",
+    "exampleKo": "환자들은 온라인으로 처방전 재조제를 요청할 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 139,
+    "word": "intuitively",
+    "meaning": "직관적으로",
+    "targetScore": 900,
+    "exampleEn": "Experienced managers intuitively understand market trends.",
+    "exampleKo": "경험 많은 관리자들은 직관적으로 시장 동향을 이해합니다."
+  },
+  {
+    "day": 30,
+    "no": 140,
+    "word": "dehydration",
+    "meaning": "탈수(증)",
+    "targetScore": 900,
+    "exampleEn": "Athletes must stay hydrated to avoid severe dehydration during the match.",
+    "exampleKo": "선수들은 경기 중 심각한 탈수(증)를 피하기 위해 수분을 유지해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 141,
+    "word": "vocation",
+    "meaning": "직업, 천직, 사명감",
+    "targetScore": 900,
+    "exampleEn": "She found her true vocation in medical research.",
+    "exampleKo": "그녀는 의학 연구에서 그녀의 진정한 천직(사명감)을 찾았습니다."
+  },
+  {
+    "day": 30,
+    "no": 142,
+    "word": "quarantine",
+    "meaning": "격리",
+    "targetScore": 900,
+    "exampleEn": "Imported animals are held in quarantine to prevent disease spread.",
+    "exampleKo": "수입된 동물들은 질병 확산을 막기 위해 격리되어 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 143,
+    "word": "outpatient clinic",
+    "meaning": "외래 환자 진료소",
+    "targetScore": 900,
+    "exampleEn": "The outpatient clinic handles minor surgeries and consultations.",
+    "exampleKo": "외래 환자 진료소는 가벼운 수술과 상담을 처리합니다."
+  },
+  {
+    "day": 30,
+    "no": 144,
+    "word": "acute",
+    "meaning": "(통증이) 심한",
+    "targetScore": 900,
+    "exampleEn": "The economy is facing an acute shortage of skilled labor.",
+    "exampleKo": "경제는 숙련된 노동력의 심각한(급성) 부족에 직면해 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 145,
+    "word": "life span",
+    "meaning": "수명",
+    "targetScore": 900,
+    "exampleEn": "Advances in technology have extended the life span of electronic devices.",
+    "exampleKo": "기술의 발전은 전자 기기의 수명을 연장시켰습니다."
+  },
+  {
+    "day": 30,
+    "no": 146,
+    "word": "get a prescription filled",
+    "meaning": "처방전을 조제 받다",
+    "targetScore": 900,
+    "exampleEn": "Please wait here while the pharmacist gets your prescription filled.",
+    "exampleKo": "약사가 처방전을 조제하는 동안 여기서 기다려 주십시오."
+  },
+  {
+    "day": 30,
+    "no": 147,
+    "word": "epidemic",
+    "meaning": "전염성의",
+    "targetScore": 900,
+    "exampleEn": "The sudden drop in sales reached epidemic levels across the industry.",
+    "exampleKo": "갑작스러운 매출 하락은 업계 전반에 걸쳐 유행병 수준에 도달했습니다."
+  },
+  {
+    "day": 30,
+    "no": 148,
+    "word": "over-the-counter medicine",
+    "meaning": "처방전 없이 살 수 있는 약",
+    "targetScore": 900,
+    "exampleEn": "Consult a doctor before mixing prescription and over-the-counter medicine.",
+    "exampleKo": "처방약과 처방전 없이 살 수 있는 약을 섞기 전에 의사와 상담하십시오."
+  },
+  {
+    "day": 30,
+    "no": 149,
+    "word": "blurry",
+    "meaning": "흐릿한",
+    "targetScore": 900,
+    "exampleEn": "The details of the contract remain blurry and need clarification.",
+    "exampleKo": "계약의 세부 사항들은 여전히 흐릿하며 명확화가 필요합니다."
+  },
+  {
+    "day": 30,
+    "no": 150,
+    "word": "life expectancy",
+    "meaning": "평균 수명",
+    "targetScore": 900,
+    "exampleEn": "Rising life expectancy is reshaping pension fund strategies.",
+    "exampleKo": "증가하는 평균 수명은 연금 기금 전략을 재편하고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 151,
+    "word": "practitioner",
+    "meaning": "전문의",
+    "targetScore": 900,
+    "exampleEn": "He is a renowned practitioner in the field of corporate law.",
+    "exampleKo": "그는 기업법 분야에서 저명한 전문의(실무자)입니다."
+  },
+  {
+    "day": 30,
+    "no": 152,
+    "word": "insistent",
+    "meaning": "끈질긴, 강요하는",
+    "targetScore": 900,
+    "exampleEn": "The client was insistent on approving the final design personally.",
+    "exampleKo": "그 고객은 최종 디자인을 직접 승인하겠다고 끈질기게 요구했습니다."
+  },
+  {
+    "day": 30,
+    "no": 153,
+    "word": "palpitations",
+    "meaning": "비정상적으로 빠른 심장 박동",
+    "targetScore": 900,
+    "exampleEn": "News of the merger caused palpitations on Wall Street.",
+    "exampleKo": "합병 소식은 월가에 두근거림(동요)을 일으켰습니다."
+  },
+  {
+    "day": 30,
+    "no": 154,
+    "word": "respire",
+    "meaning": "호흡하다",
+    "targetScore": 900,
+    "exampleEn": "The ventilation system allows the building to 'respire' efficiently.",
+    "exampleKo": "환기 시스템은 건물이 효율적으로 '호흡'할 수 있게 해줍니다."
+  },
+  {
+    "day": 30,
+    "no": 155,
+    "word": "compressed",
+    "meaning": "압축된, 압착된, 간결한",
+    "targetScore": 900,
+    "exampleEn": "The report provides a compressed overview of the fiscal year.",
+    "exampleKo": "그 보고서는 회계 연도에 대한 압축된(간결한) 개요를 제공합니다."
+  },
+  {
+    "day": 30,
+    "no": 156,
+    "word": "sterilize",
+    "meaning": "살균하다",
+    "targetScore": 900,
+    "exampleEn": "Laboratories must sterilize equipment to maintain a sterile environment.",
+    "exampleKo": "실험실들은 무균 환경을 유지하기 위해 장비를 살균해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 157,
+    "word": "milestone",
+    "meaning": "획기적인 사건, 중요한 단계",
+    "targetScore": 900,
+    "exampleEn": "Listing on the stock exchange was a major milestone for the startup.",
+    "exampleKo": "증권 거래소 상장은 그 스타트업에게 주요한 획기적인 사건이었습니다."
+  },
+  {
+    "day": 30,
+    "no": 158,
+    "word": "deter",
+    "meaning": "단념시키다, 막다",
+    "targetScore": 900,
+    "exampleEn": "Strict penalties are intended to deter fraudulent activities.",
+    "exampleKo": "엄격한 처벌은 사기 행위를 단념시키기(막기) 위해 의도되었습니다."
+  },
+  {
+    "day": 30,
+    "no": 159,
+    "word": "recuperate",
+    "meaning": "회복하다, 건강을 되찾다",
+    "targetScore": 900,
+    "exampleEn": "The tourism industry is beginning to recuperate from the crisis.",
+    "exampleKo": "관광 산업은 위기에서 회복하기 시작하고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 160,
+    "word": "wing",
+    "meaning": "별관, 부속 건물",
+    "targetScore": 900,
+    "exampleEn": "The executive offices are located in the west wing of the building.",
+    "exampleKo": "임원 사무실들은 건물의 서관(별관)에 위치해 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 161,
+    "word": "on an empty stomach",
+    "meaning": "공복에",
+    "targetScore": 900,
+    "exampleEn": "Important decisions should not be made on an empty stomach.",
+    "exampleKo": "중요한 결정들은 공복에 내려져서는 안 됩니다."
+  },
+  {
+    "day": 30,
+    "no": 162,
+    "word": "be on medication",
+    "meaning": "약물 치료 중이다",
+    "targetScore": 900,
+    "exampleEn": "Employees on medication should notify their supervisors if side effects occur.",
+    "exampleKo": "약물 치료 중인 직원들은 부작용이 발생하면 감독관에게 알려야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 163,
+    "word": "plausible",
+    "meaning": "그럴듯한",
+    "targetScore": 900,
+    "exampleEn": "The proposed budget cuts seem plausible given the current revenue.",
+    "exampleKo": "제안된 예산 삭감은 현재 수익을 고려할 때 그럴듯해 보입니다."
+  },
+  {
+    "day": 30,
+    "no": 164,
+    "word": "prolonged",
+    "meaning": "장기의, 오래 끄는",
+    "targetScore": 900,
+    "exampleEn": "Prolonged negotiations delayed the signing of the trade agreement.",
+    "exampleKo": "장기적인(오래 끄는) 협상은 무역 협정 체결을 지연시켰습니다."
+  },
+  {
+    "day": 30,
+    "no": 165,
+    "word": "elderly",
+    "meaning": "나이 든",
+    "targetScore": 900,
+    "exampleEn": "The new product line helps the elderly maintain their independence.",
+    "exampleKo": "새로운 제품 라인은 노인들이 독립성을 유지하도록 돕습니다."
+  },
+  {
+    "day": 30,
+    "no": 166,
+    "word": "perspire",
+    "meaning": "땀을 흘리다",
+    "targetScore": 900,
+    "exampleEn": "The lengthy interrogation made the suspect perspire nervously.",
+    "exampleKo": "긴 심문은 용의자가 초조하게 땀을 흘리게 만들었습니다."
+  },
+  {
+    "day": 30,
+    "no": 167,
+    "word": "respiratory system",
+    "meaning": "호흡 기관",
+    "targetScore": 900,
+    "exampleEn": "Air pollution poses a threat to the respiratory system.",
+    "exampleKo": "대기 오염은 호흡 기관에 위협을 가합니다."
+  },
+  {
+    "day": 30,
+    "no": 168,
+    "word": "recurring",
+    "meaning": "되풀이하여 반복하는",
+    "targetScore": 900,
+    "exampleEn": "Budget deficits are a recurring theme in the annual report.",
+    "exampleKo": "예산 적자는 연례 보고서에서 되풀이하여 반복하는 주제입니다."
+  }
+]

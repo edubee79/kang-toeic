@@ -1,0 +1,389 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Target, CheckCircle2, RefreshCw } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { updateTargetDetails, UserProfile } from '@/services/userService';
+
+import { Zap, Lock, Unlock, AlertCircle, TrendingUp } from 'lucide-react';
+
+interface TargetSettingSectionProps {
+    user: UserProfile;
+    currentStats: {
+        shadowing: number;
+        lc2: number;
+        grammar: number;
+        voca: number;
+    };
+    onUpdate: () => void;
+}
+
+export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSettingSectionProps) {
+    // 1. Total Score State
+    const [totalScore, setTotalScore] = useState(user.targetScore || 850);
+    const [isEditing, setIsEditing] = useState(false);
+
+    // 2. LC/RC Split State
+    const [targetLC, setTargetLC] = useState(user.targetLC || 450);
+    const [targetRC, setTargetRC] = useState(user.targetRC || 400);
+
+    // 3. Part Targets State
+    const [partTargets, setPartTargets] = useState(user.partTargets || {
+        p1: 0, p2: 0, p3: 0, p4: 0,
+        p5: 0, p6: 0, p7: 0
+    });
+
+    // Max questions per part
+    const MAX_Q = {
+        p1: 6, p2: 25, p3: 39, p4: 30,
+        p5: 30, p6: 16, p7: 54
+    };
+
+    // Determine Required Counts based on Score (Approx / 5)
+    // Max 100 questions per section
+    const requiredLC = Math.min(100, Math.ceil(targetLC / 5));
+    const requiredRC = Math.min(100, Math.ceil(targetRC / 5));
+
+    // Calculate current sums
+    const currentLCSum = partTargets.p1 + partTargets.p2 + partTargets.p3 + partTargets.p4;
+    const currentRCSum = partTargets.p5 + partTargets.p6 + partTargets.p7;
+
+    // Remaining Points
+    const remainingLC = requiredLC - currentLCSum;
+    const remainingRC = requiredRC - currentRCSum;
+
+    // AI Auto-Allocate Logic
+    const handleAutoAllocate = () => {
+        // LC Strategy: P1 -> P2 -> P4 -> P3 (Difficulty adjustment)
+        let lcBudget = requiredLC;
+        const newP1 = Math.min(MAX_Q.p1, lcBudget); lcBudget -= newP1; // Easy
+        const newP2 = Math.min(MAX_Q.p2, lcBudget); lcBudget -= newP2; // Medium
+        const newP4 = Math.min(MAX_Q.p4, lcBudget); lcBudget -= newP4; // Med-Hard
+        const newP3 = Math.min(MAX_Q.p3, lcBudget); lcBudget -= newP3; // Hard
+
+        // RC Strategy: P5 -> P6 -> P7
+        let rcBudget = requiredRC;
+        const newP5 = Math.min(MAX_Q.p5, rcBudget); rcBudget -= newP5; // Grammar/Vocab (Study pays off fast)
+        const newP6 = Math.min(MAX_Q.p6, rcBudget); rcBudget -= newP6; // Context
+        const newP7 = Math.min(MAX_Q.p7, rcBudget); rcBudget -= newP7; // Reading (Time intensive)
+
+        setPartTargets({
+            p1: newP1, p2: newP2, p3: newP3, p4: newP4,
+            p5: newP5, p6: newP6, p7: newP7
+        });
+    };
+
+    // Use Effect to Auto-Allocate on open or when total changes significantly if not set
+    // For now, let's just leave it manual or button click to avoid overriding user data annoyingly
+
+    // Auto-calculate Split when Total Changes
+    const handleTotalChange = (val: string) => {
+        const score = parseInt(val);
+        if (isNaN(score)) return;
+        setTotalScore(score);
+
+        // LC = RC + 50
+        // Total = 2*RC + 50 => RC = (Total - 50)/2
+        const rc = Math.floor((score - 50) / 2);
+        const lc = score - rc;
+        setTargetRC(rc);
+        setTargetLC(lc);
+        // We do NOT auto-allocate parts here instantly to let user see the new "Required" counts first
+    };
+
+    const handleSave = async () => {
+        try {
+            await updateTargetDetails(user.userId, {
+                targetScore: totalScore,
+                targetLC,
+                targetRC,
+                partTargets
+            });
+            setIsEditing(false);
+            onUpdate();
+        } catch (error) {
+            console.error("Failed to save targets", error);
+        }
+    };
+
+    const updatePart = (part: keyof typeof MAX_Q, val: number) => {
+        // Smart Constraint: 
+        // Allow updating only if it fits in budget OR if we are reducing value
+        // But the Slider 'max' prop handles the upper bound constraint visually.
+        // Here we just set state.
+        setPartTargets(prev => ({ ...prev, [part]: val }));
+    };
+
+    if (!isEditing) {
+        // Comparison View Logic
+        const getPartCurrent = (part: string) => {
+            switch (part) {
+                // Mapping Real Stats
+                case 'p2': return currentStats.lc2; // Part 2 Practice
+                case 'p5': return currentStats.grammar; // Grammar units approximation
+                // Placeholders for now
+                case 'p1': return null;
+                default: return null;
+            }
+        };
+
+        return (
+            <Card className="bg-slate-900 border-indigo-500/30 p-6 relative overflow-hidden">
+                <div className="absolute right-0 top-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl"></div>
+                <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-6">
+                        <div>
+                            <div className="flex items-center gap-2 mb-1">
+                                <Target className="text-indigo-400 w-5 h-5" />
+                                <h3 className="text-lg font-bold text-white">나의 목표 상세 현황</h3>
+                            </div>
+                            <p className="text-slate-400 text-sm">
+                                목표: <span className="text-white font-bold">{totalScore}점</span>
+                                (LC {targetLC} / RC {targetRC})
+                            </p>
+                        </div>
+                        <Button onClick={() => setIsEditing(true)} variant="outline" className="h-8 text-xs border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white">
+                            목표 수정하기
+                        </Button>
+                    </div>
+
+                    {/* Comparison Grid */}
+                    <div className="grid grid-cols-2 gap-8">
+                        {/* LC Column */}
+                        <div className="space-y-3">
+                            <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
+                            {['p1', 'p2', 'p3', 'p4'].map((p) => {
+                                const key = p as keyof typeof partTargets;
+                                const goal = partTargets[key];
+                                const current = getPartCurrent(p);
+                                const gap = current !== null ? current - goal : null;
+
+                                return (
+                                    <div key={p} className="flex justify-between items-center text-sm">
+                                        <span className="text-slate-400 font-bold w-8 uppercase">{p}</span>
+                                        <div className="flex-1 flex justify-between px-3 bg-slate-800/50 rounded py-1 mx-2">
+                                            <span className="text-slate-500 text-xs">목표 <span className="text-white font-bold text-sm">{goal}</span></span>
+                                            {current !== null ? (
+                                                <span className="text-slate-500 text-xs">현재 <span className={cn("font-bold text-sm", gap && gap < 0 ? "text-rose-400" : "text-emerald-400")}>{current}</span></span>
+                                            ) : (
+                                                <span className="text-slate-700 text-xs">-</span>
+                                            )}
+                                        </div>
+                                        <span className={cn("text-xs w-8 text-right font-bold", gap && gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                            {gap !== null ? (gap > 0 ? `+${gap}` : gap) : '-'}
+                                        </span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+
+                        {/* RC Column */}
+                        <div className="space-y-3">
+                            <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
+                            {['p5', 'p6', 'p7'].map((p) => {
+                                const key = p as keyof typeof partTargets;
+                                const goal = partTargets[key];
+                                const current = getPartCurrent(p);
+                                const gap = current !== null ? current - goal : null;
+
+                                return (
+                                    <div key={p} className="flex justify-between items-center text-sm">
+                                        <span className="text-slate-400 font-bold w-8 uppercase">{p}</span>
+                                        <div className="flex-1 flex justify-between px-3 bg-slate-800/50 rounded py-1 mx-2">
+                                            <span className="text-slate-500 text-xs">목표 <span className="text-white font-bold text-sm">{goal}</span></span>
+                                            {current !== null ? (
+                                                <span className="text-slate-500 text-xs">현재 <span className={cn("font-bold text-sm", gap && gap < 0 ? "text-rose-400" : "text-emerald-400")}>{current}</span></span>
+                                            ) : (
+                                                <span className="text-slate-700 text-xs">-</span>
+                                            )}
+                                        </div>
+                                        <span className={cn("text-xs w-8 text-right font-bold", gap && gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                            {gap !== null ? (gap > 0 ? `+${gap}` : gap) : '-'}
+                                        </span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </Card>
+        );
+    }
+
+    return (
+        <Card className="bg-slate-900 border-indigo-500/30 p-6 relative overflow-hidden animate-in fade-in zoom-in-95">
+            <div className="absolute right-0 top-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl"></div>
+            <div className="relative z-10 space-y-8">
+                {/* Header */}
+                <div className="flex justify-between items-center border-b border-slate-800 pb-4">
+                    <div className="flex items-center gap-3">
+                        <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                            <Target className="text-indigo-400" />
+                            목표 상세 설정
+                        </h3>
+                        <Button
+                            size="sm"
+                            variant="outline"
+                            className="h-8 border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10 gap-2"
+                            onClick={handleAutoAllocate}
+                        >
+                            <Zap className="w-3 h-3" />
+                            AI Auto-Set
+                        </Button>
+                    </div>
+                    <div className="flex gap-2">
+                        <Button variant="ghost" size="sm" onClick={() => setIsEditing(false)}>취소</Button>
+                        <Button size="sm" className="bg-indigo-600 hover:bg-indigo-500" onClick={handleSave}>
+                            <CheckCircle2 className="w-4 h-4 mr-2" />
+                            저장하기
+                        </Button>
+                    </div>
+                </div>
+
+                {/* 1. Total Score Input */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                        <label className="text-xs font-bold text-slate-500 uppercase mb-2 block">총 목표 점수</label>
+                        <div className="flex items-center gap-2">
+                            <Input
+                                type="number"
+                                value={totalScore}
+                                onChange={(e) => handleTotalChange(e.target.value)}
+                                className="text-2xl font-black text-white h-12 bg-slate-900 border-slate-700"
+                            />
+                            <span className="text-slate-500 font-bold">점</span>
+                        </div>
+                    </div>
+
+                    {/* LC Target */}
+                    <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 relative">
+                        <label className="text-xs font-bold text-blue-400 uppercase mb-2 block">LC 목표 (청해)</label>
+                        <div className="flex justify-between items-end">
+                            <div>
+                                <div className="text-2xl font-black text-white">{targetLC}</div>
+                                <div className="text-xs text-slate-500">필요 정답수: <span className="text-blue-400 font-bold">{requiredLC}개</span></div>
+                            </div>
+                            <div className="text-[10px] text-slate-600 mb-1">RC + 50점 Recommended</div>
+                        </div>
+                    </div>
+
+                    {/* RC Target */}
+                    <div className="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                        <label className="text-xs font-bold text-indigo-400 uppercase mb-2 block">RC 목표 (독해)</label>
+                        <div className="flex justify-between items-end">
+                            <div>
+                                <div className="text-2xl font-black text-white">{targetRC}</div>
+                                <div className="text-xs text-slate-500">필요 정답수: <span className="text-indigo-400 font-bold">{requiredRC}개</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 2. Part Allocation */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* LC Section */}
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center mb-2">
+                            <h4 className="font-bold text-blue-400">LC Part-by-Part</h4>
+                            <div className={cn(
+                                "flex items-center gap-2 px-3 py-1.5 rounded-lg border",
+                                remainingLC === 0 ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400" :
+                                    remainingLC > 0 ? "bg-blue-500/10 border-blue-500/30 text-blue-400" :
+                                        "bg-rose-500/10 border-rose-500/30 text-rose-400"
+                            )}>
+                                <span className="text-xs font-bold uppercase">포인트(문제)</span>
+                                <span className="font-black text-lg">{remainingLC > 0 ? remainingLC : remainingLC === 0 ? "OK" : remainingLC}</span>
+                            </div>
+                        </div>
+
+                        {['p1', 'p2', 'p3', 'p4'].map((p) => {
+                            const key = p as keyof typeof MAX_Q;
+                            const currentVal = partTargets[key];
+                            // Smart Limit: Can only go up to (Current + Remaining)
+                            // But also capped by MAX_Q[key] (Total questions in that part)
+                            // If remaining is negative, max is currentVal (can't increase, only decrease to fix)
+                            const smartMax = Math.min(MAX_Q[key], remainingLC >= 0 ? currentVal + remainingLC : currentVal);
+
+                            return (
+                                <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                    <div className="flex justify-between text-xs mb-2">
+                                        <span className="text-slate-300 font-bold uppercase">{p} ({MAX_Q[key]}문항)</span>
+                                        <span className={cn("font-bold", currentVal === MAX_Q[key] ? "text-emerald-400" : "text-white")}>
+                                            {currentVal}개
+                                        </span>
+                                    </div>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max={smartMax}
+                                        value={currentVal}
+                                        onChange={(e) => updatePart(key, parseInt(e.target.value))}
+                                        className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500 touch-none"
+                                        disabled={smartMax === 0 && currentVal === 0}
+                                    />
+                                </div>
+                            );
+                        })}
+                        {remainingLC < 0 && (
+                            <div className="flex items-center gap-2 text-xs text-rose-400 font-bold bg-rose-500/10 p-2 rounded">
+                                <AlertCircle className="w-3 h-3" />
+                                {Math.abs(remainingLC)}개를 줄여야 합니다!
+                            </div>
+                        )}
+                    </div>
+
+                    {/* RC Section */}
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center mb-2">
+                            <h4 className="font-bold text-indigo-400">RC Part-by-Part</h4>
+                            <div className={cn(
+                                "flex items-center gap-2 px-3 py-1.5 rounded-lg border",
+                                remainingRC === 0 ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400" :
+                                    remainingRC > 0 ? "bg-indigo-500/10 border-indigo-500/30 text-indigo-400" :
+                                        "bg-rose-500/10 border-rose-500/30 text-rose-400"
+                            )}>
+                                <span className="text-xs font-bold uppercase">포인트(문제)</span>
+                                <span className="font-black text-lg">{remainingRC > 0 ? remainingRC : remainingRC === 0 ? "OK" : remainingRC}</span>
+                            </div>
+                        </div>
+
+                        {['p5', 'p6', 'p7'].map((p) => {
+                            const key = p as keyof typeof MAX_Q;
+                            const currentVal = partTargets[key];
+                            const smartMax = Math.min(MAX_Q[key], remainingRC >= 0 ? currentVal + remainingRC : currentVal);
+
+                            return (
+                                <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                    <div className="flex justify-between text-xs mb-2">
+                                        <span className="text-slate-300 font-bold uppercase">{p} ({MAX_Q[key]}문항)</span>
+                                        <span className={cn("font-bold", currentVal === MAX_Q[key] ? "text-emerald-400" : "text-white")}>
+                                            {currentVal}개
+                                        </span>
+                                    </div>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max={smartMax}
+                                        value={currentVal}
+                                        onChange={(e) => updatePart(key, parseInt(e.target.value))}
+                                        className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500 touch-none"
+                                        disabled={smartMax === 0 && currentVal === 0}
+                                    />
+                                </div>
+                            );
+                        })}
+                        {remainingRC < 0 && (
+                            <div className="flex items-center gap-2 text-xs text-rose-400 font-bold bg-rose-500/10 p-2 rounded">
+                                <AlertCircle className="w-3 h-3" />
+                                {Math.abs(remainingRC)}개를 줄여야 합니다!
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </Card>
+    );
+}

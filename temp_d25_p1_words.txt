@@ -1,0 +1,41 @@
+ No           Word                       Meaning
+  1     congestion                   (교통의)체증, 혼잡
+  2      alleviate                          완화하다
+  3         divert             우회시키다, 다른 곳으로 돌리다
+  4         detour                            우회
+  5           fuel                            연료
+  6    malfunction                    오작동, 기능 불량
+  7         permit                     허락하다, 허가증
+  8 transportation                교통 (수단), 운송 수단
+  9    opportunity                            기회
+ 10        clearly                           명확히
+ 11        ongoing                      계속 진행 중인
+ 12       detailed                           상세한
+ 13    alternative               대안, 대체, 다른, 대신의
+ 14         obtain                      획득하다, 얻다
+ 15     designated                           지정된
+ 16   intersection                    교차로, 교차 지점
+ 17          equip                     갖추다, 설비하다
+ 18        commute                          통근하다
+ 19       downtown                    시내에서, 도심지로
+ 20     automotive                          자동차의
+ 21        closure                            폐쇄
+ 22        vehicle                     차량, 운송 수단
+ 23       platform                           승강장
+ 24       official                 공무원, 관리, 공식적인
+ 25        transit                        교통, 수송
+ 26           fare                         교통 요금
+ 27        expense                        비용, 지출
+ 28          trust              신뢰, 신임, 믿다, 신뢰하다
+ 29           head        (~의 방향으로) 나아가다, 향하게 하다
+ 30          drive      (차 등을) 운전하다, 타고 가다, 조종하다
+ 31           fine                            벌금
+ 32           pass                    지나가다, 통과하다
+ 33       securely            (매듭 등이) 단단하게, 튼튼하게
+ 34    prominently                눈에 잘 띄게, 두드러지게
+ 35       reserved                 예약된, 예약한, 지정된
+ 36        average                       평균치, 평균
+ 37      collision                            충돌
+ 38            tow                     (차를) 견인하다
+ 39        reverse                       뒤의, 반대의
+ 40       obstruct (전망 등을) 가리다, 차단하다; (도로 등을) 막다

@@ -1,0 +1,456 @@
+
+    // Test 2: ETS TOEIC Vol 4 - Test 2
+    {
+        testId: 2,
+        title: "ETS TOEIC Vol 4 - Test 2",
+        passages: [
+          {
+                    id: "p6-t2-p1",
+                    type: "EMAIL",
+                    title: "Order update",
+                    content: "To: Myung-Hee Hahn\nFrom: Dellwyn Home Store\nDate: January 15\nSubject: Order update\n\nDear Ms. Hahn,\n\nYour order of a red oak dining table and six matching chairs arrived at our store this morning.\n[131]. We would now like to arrange for the delivery of the [132]. Please call us at 517-555-0188 and\nask ---- to Coleman Cobb, our delivery manager.\n[133].\n[134].\n\nCustomer Service, Dellwyn Home Store",
+                    questions: [
+                              {
+                                        id: "131",
+                                        text: "Which sentence best fits in position 131?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "specially"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "specialize"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "special"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "specializing"
+                                                  }
+                                        ],
+                                        correctAnswer: "C",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "132",
+                                        text: "What is the best word for position 132?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "furniture"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "appliances"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "refund"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "tools"
+                                                  }
+                                        ],
+                                        correctAnswer: "A",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "133",
+                                        text: "What is the best word for position 133?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "speak"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "spoken"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "is speaking"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "to speak"
+                                                  }
+                                        ],
+                                        correctAnswer: "D",
+                                        classification: "P6_GRAMMAR",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "134",
+                                        text: "Which sentence best fits in position 134?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "He can schedule a convenient time."
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "He began working here yesterday."
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "He can meet you at 11:00 A.м."
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "He recently moved to Dellwyn."
+                                                  }
+                                        ],
+                                        correctAnswer: "A",
+                                        classification: "P6_SENTENCE_INSERT",
+                                        translation: "",
+                                        explanation: ""
+                              }
+                    ]
+          },
+          {
+                    id: "p6-t2-p2",
+                    type: "ADVERTISEMENT",
+                    title: null,
+                    content: "Keep Cool Service Contractors:\n67 Main Road, Edinburgh Village\nChaguanas, Trinidad and Tobago\n\nKeep Cool Service Contractors can bring you peace of mind. As part of an annual contract, we will\nservice your air-conditioning system, ensuring your [135]. and comfort. This includes inspecting\nthe system, making repairs as needed, and professionally cleaning your air ducts. [136]. , if\nnecessary, we can replace your old air-conditioning system with a new, cost-efficient one.\n\nOur workers are highly qualified licensed technicians who stay up-to-date with ongoing training.\n[137]. We promise you fair prices and professional work, [138]. by our Keep Cool guarantee.\nCall 1-868-555-0129 for a free quote today.",
+                    questions: [
+                              {
+                                        id: "135",
+                                        text: "What is the best word for position 135?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "safe"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "safely"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "safest"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "safety"
+                                                  }
+                                        ],
+                                        correctAnswer: "D",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "136",
+                                        text: "Which sentence best fits in position 136?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "On one hand"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "Nonetheless"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "Furthermore"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "And yet"
+                                                  }
+                                        ],
+                                        correctAnswer: "C",
+                                        classification: "P6_GRAMMAR",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "137",
+                                        text: "Which sentence best fits in position 137?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "Take advantage of dozens of useful online tools."
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "Moreover, the air conditioner you chose is very popular."
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "Plus, they are friendly, clean, and knowledgeable."
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "Thank you for visiting our contractor showroom."
+                                                  }
+                                        ],
+                                        correctAnswer: "C",
+                                        classification: "P6_SENTENCE_INSERT",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "138",
+                                        text: "What is the best word for position 138?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "backed"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "backs"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "backing"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "back"
+                                                  }
+                                        ],
+                                        correctAnswer: "A",
+                                        classification: "P6_GRAMMAR",
+                                        translation: "",
+                                        explanation: ""
+                              }
+                    ]
+          },
+          {
+                    id: "p6-t2-p3",
+                    type: "EMAIL",
+                    title: "Information",
+                    content: "To: All Customers\nFrom: asquires@lightidea.com\nDate: March 6\nSubject: Information\n\nDear Light Idea Customers,\n\nLight Idea is enacting a price increase on select energy-efficient products, effective April 17.\nSpecific product pricing will [139]. Please contact your sales representative for details and\nquestions.\n\nThe last date for ordering at current prices is April 16. All orders [140]. after this date will follow the\nnew price list. [141]. Customers will be able to find this on our Web site.\n\nWe will continue to provide quality products and [142]. service to our valued customers. Thank you\nfor your business.\n\nSincerely,\nArvin Squires\nHead of Sales, Light Idea",
+                    questions: [
+                              {
+                                        id: "139",
+                                        text: "What is the best word for position 139?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "agree"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "vary"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "wait"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "decline"
+                                                  }
+                                        ],
+                                        correctAnswer: "B",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "140",
+                                        text: "What is the best word for position 140?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "receiving"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "having received"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "received"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "will be received"
+                                                  }
+                                        ],
+                                        correctAnswer: "C",
+                                        classification: "P6_GRAMMAR",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "141",
+                                        text: "Which sentence best fits in position 141?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "The updated price list will be available on March 20."
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "We apologize for this inconvenience."
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "Your orders will be shipped after April 17."
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "We are increasing prices because of rising costs."
+                                                  }
+                                        ],
+                                        correctAnswer: "A",
+                                        classification: "P6_SENTENCE_INSERT",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "142",
+                                        text: "What is the best word for position 142?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "exceptionally"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "exception"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "exceptional"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "exceptionalism"
+                                                  }
+                                        ],
+                                        correctAnswer: "C",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              }
+                    ]
+          },
+          {
+                    id: "p6-t2-p4",
+                    type: "EMAIL",
+                    title: "Good news",
+                    content: "To: Jang-Ho Kwon <jkwon@newart.nz>\nFrom: Kenneth Okim <k.okim@okimjewelry.nz>\nSubject: Good news\nDate: 30 August\n\nDear Jang-Ho,\n\nThank you for the shipment last month of 80 units of your jewelry pieces. I am happy to report\nthat they have been selling very well in my shop. My [143]. love the colourful designs as well as\nthe quality of your workmanship.\n\n[144]. I would like to increase the number of units I order from you. Would you be able to\n[145]. my order for the September shipment?\n\nFinally, I would like to discuss the possibility of featuring your work exclusively in my store. I\nbelieve that I could reach your target audience best and that the agreement would serve\n[146]. both very well. I look forward to hearing from you.\n\nBest regards,\nKenneth Okim\nOkim Jewelry",
+                    questions: [
+                              {
+                                        id: "143",
+                                        text: "What is the best word for position 143?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "patients"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "students"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "customers"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "teammates"
+                                                  }
+                                        ],
+                                        correctAnswer: "C",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "144",
+                                        text: "Which sentence best fits in position 144?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "If you need more time, please let me know."
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "Unfortunately, I do not have adequate shelf space at this time."
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "I would like to show you some of my own designs."
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "The reasonable prices also make your pieces a great value."
+                                                  }
+                                        ],
+                                        correctAnswer: "D",
+                                        classification: "P6_SENTENCE_INSERT",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "145",
+                                        text: "What is the best word for position 145?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "include"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "double"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "repeat"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "insure"
+                                                  }
+                                        ],
+                                        correctAnswer: "B",
+                                        classification: "P6_VOCABULARY",
+                                        translation: "",
+                                        explanation: ""
+                              },
+                              {
+                                        id: "146",
+                                        text: "What is the best word for position 146?",
+                                        options: [
+                                                  {
+                                                            label: "A",
+                                                            text: "us"
+                                                  },
+                                                  {
+                                                            label: "B",
+                                                            text: "you"
+                                                  },
+                                                  {
+                                                            label: "C",
+                                                            text: "we"
+                                                  },
+                                                  {
+                                                            label: "D",
+                                                            text: "these"
+                                                  }
+                                        ],
+                                        correctAnswer: "A",
+                                        classification: "P6_GRAMMAR",
+                                        translation: "",
+                                        explanation: ""
+                              }
+                    ]
+          }
+]
+    },

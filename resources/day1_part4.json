@@ -1,0 +1,290 @@
+[
+  {
+    "day": 1,
+    "no": 137,
+    "word": "credential",
+    "meaning": "신임장, 자격 증명서",
+    "targetScore": 900,
+    "exampleEn": "Her teaching credentials are impressive.",
+    "exampleKo": "그녀의 교육 자격 증명은 인상적입니다."
+  },
+  {
+    "day": 1,
+    "no": 138,
+    "word": "firsthand",
+    "meaning": "직접적인",
+    "targetScore": 900,
+    "exampleEn": "I have firsthand experience with this software.",
+    "exampleKo": "나는 이 소프트웨어에 대한 직접적인 경험이 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 139,
+    "word": "hiring committee",
+    "meaning": "고용 위원회",
+    "targetScore": 900,
+    "exampleEn": "The hiring committee will make a decision soon.",
+    "exampleKo": "고용 위원회가 곧 결정을 내릴 것입니다."
+  },
+  {
+    "day": 1,
+    "no": 140,
+    "word": "not to mention",
+    "meaning": "~은 말할 것도 없고",
+    "targetScore": 900,
+    "exampleEn": "He speaks French and German, not to mention English.",
+    "exampleKo": "그는 영어는 말할 것도 없고, 프랑스어와 독일어도 구사합니다."
+  },
+  {
+    "day": 1,
+    "no": 141,
+    "word": "on occasion",
+    "meaning": "때때로",
+    "targetScore": 900,
+    "exampleEn": "We meet on occasion to discuss progress.",
+    "exampleKo": "우리는 진척 상황을 논의하기 위해 가끔 만납니다."
+  },
+  {
+    "day": 1,
+    "no": 142,
+    "word": "overqualified",
+    "meaning": "필요이상으로 교육을 받은",
+    "targetScore": 900,
+    "exampleEn": "He was rejected for being overqualified for the entry-level job.",
+    "exampleKo": "그는 신입 사원 직책에 비해 필요 이상으로 고학력이라 거절당했습니다."
+  },
+  {
+    "day": 1,
+    "no": 143,
+    "word": "screening",
+    "meaning": "심사, 선발",
+    "targetScore": 900,
+    "exampleEn": "The screening process acts as a filter for candidates.",
+    "exampleKo": "심사 과정은 후보자들을 걸러내는 필터 역할을 합니다."
+  },
+  {
+    "day": 1,
+    "no": 144,
+    "word": "lag",
+    "meaning": "뒤처지다, 뒤떨어지다",
+    "targetScore": 900,
+    "exampleEn": "Production creates a lag in delivery time.",
+    "exampleKo": "생산 과정이 배송 시간에 지연을 초래합니다."
+  },
+  {
+    "day": 1,
+    "no": 145,
+    "word": "on the waiting list",
+    "meaning": "대기자 명단에",
+    "targetScore": 900,
+    "exampleEn": "Please put my name on the waiting list.",
+    "exampleKo": "대기자 명단에 제 이름을 올려주세요."
+  },
+  {
+    "day": 1,
+    "no": 146,
+    "word": "oriented",
+    "meaning": "~을 지향하는",
+    "targetScore": 900,
+    "exampleEn": "We are looking for a detail-oriented person.",
+    "exampleKo": "우리는 꼼꼼한 성격의 사람을 찾고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 147,
+    "word": "pertaining to",
+    "meaning": "~에 관계된",
+    "targetScore": 900,
+    "exampleEn": "Please review all documents pertaining to the lawsuit.",
+    "exampleKo": "소송과 관련된 모든 문서를 검토해 주십시오."
+  },
+  {
+    "day": 1,
+    "no": 148,
+    "word": "questionably",
+    "meaning": "의심스럽게",
+    "targetScore": 900,
+    "exampleEn": "The decision was questionably legal.",
+    "exampleKo": "그 결정은 합법적인지 의심스러웠습니다."
+  },
+  {
+    "day": 1,
+    "no": 149,
+    "word": "regularity",
+    "meaning": "정기적임",
+    "targetScore": 900,
+    "exampleEn": "The meetings are held with regularity.",
+    "exampleKo": "회의는 정기적으로 열립니다."
+  },
+  {
+    "day": 1,
+    "no": 150,
+    "word": "replenish",
+    "meaning": "다시 채우다, 보충하다",
+    "targetScore": 900,
+    "exampleEn": "We need to replenish our stock of paper.",
+    "exampleKo": "우리는 종이 재고를 보충해야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 151,
+    "word": "simplicity",
+    "meaning": "간단함",
+    "targetScore": 900,
+    "exampleEn": "For the sake of simplicity, let's use the first method.",
+    "exampleKo": "간단하게 하기 위해, 첫 번째 방법을 사용합시다."
+  },
+  {
+    "day": 1,
+    "no": 152,
+    "word": "stellar",
+    "meaning": "뛰어난, 별의",
+    "targetScore": 900,
+    "exampleEn": "She has a stellar reputation in the industry.",
+    "exampleKo": "그녀는 업계에서 뛰어난 평판을 가지고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 153,
+    "word": "versatile",
+    "meaning": "다재다능한",
+    "targetScore": 900,
+    "exampleEn": "This tool is versatile and easy to use.",
+    "exampleKo": "이 도구는 다재다능하고 사용하기 쉽습니다."
+  },
+  {
+    "day": 1,
+    "no": 154,
+    "word": "adept",
+    "meaning": "능숙한",
+    "targetScore": 900,
+    "exampleEn": "She is adept at handling difficult customers.",
+    "exampleKo": "그녀는 까다로운 고객을 다루는 데 능숙합니다."
+  },
+  {
+    "day": 1,
+    "no": 155,
+    "word": "against all odds",
+    "meaning": "모든 역경을 딛고",
+    "targetScore": 900,
+    "exampleEn": "Against all odds, he succeeded in his business.",
+    "exampleKo": "모든 역경을 딛고, 그는 사업에 성공했습니다."
+  },
+  {
+    "day": 1,
+    "no": 156,
+    "word": "command",
+    "meaning": "(언어)구사력, 명령, 지배력",
+    "targetScore": 900,
+    "exampleEn": "She has a good command of Japanese.",
+    "exampleKo": "그녀는 일본어 구사력이 좋습니다."
+  },
+  {
+    "day": 1,
+    "no": 157,
+    "word": "commensurate",
+    "meaning": "비례한, 액수가 상응하는",
+    "targetScore": 900,
+    "exampleEn": "Salary will be commensurate with experience.",
+    "exampleKo": "급여는 경력에 비례할 것입니다."
+  },
+  {
+    "day": 1,
+    "no": 158,
+    "word": "computer literate",
+    "meaning": "컴퓨터 사용 기술을 가진",
+    "targetScore": 900,
+    "exampleEn": "All employees must be computer literate.",
+    "exampleKo": "모든 직원은 컴퓨터를 다룰 줄 알아야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 159,
+    "word": "eagerness",
+    "meaning": "열의",
+    "targetScore": 900,
+    "exampleEn": "His eagerness to learn impressed the manager.",
+    "exampleKo": "배우려는 그의 열의가 매니저에게 깊은 인상을 주었습니다."
+  },
+  {
+    "day": 1,
+    "no": 160,
+    "word": "familiarize oneself with",
+    "meaning": "~에 정통하다, 익숙하다",
+    "targetScore": 900,
+    "exampleEn": "Please familiarize yourself with the safety regulations.",
+    "exampleKo": "안전 규정을 숙지해 주십시오."
+  },
+  {
+    "day": 1,
+    "no": 161,
+    "word": "increment",
+    "meaning": "증가, 인상",
+    "targetScore": 900,
+    "exampleEn": "Employees receive a salary increment every year.",
+    "exampleKo": "직원들은 매년 임금 인상을 받습니다."
+  },
+  {
+    "day": 1,
+    "no": 162,
+    "word": "interpersonal skills",
+    "meaning": "대인관계능력",
+    "targetScore": 900,
+    "exampleEn": "Strong interpersonal skills are essential for this role.",
+    "exampleKo": "이 역할에는 강력한 대인 관계 기술이 필수적입니다."
+  },
+  {
+    "day": 1,
+    "no": 163,
+    "word": "mindful",
+    "meaning": "유념하는",
+    "targetScore": 900,
+    "exampleEn": "We should be mindful of the budget.",
+    "exampleKo": "우리는 예산에 유념해야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 164,
+    "word": "preeminent",
+    "meaning": "우수한, 탁월한",
+    "targetScore": 900,
+    "exampleEn": "He is the preeminent expert in his field.",
+    "exampleKo": "그는 자신의 분야에서 독보적인 전문가입니다."
+  },
+  {
+    "day": 1,
+    "no": 165,
+    "word": "preliminary",
+    "meaning": "예비의",
+    "targetScore": 900,
+    "exampleEn": "Preliminary results show a positive trend.",
+    "exampleKo": "예비 결과는 긍정적인 추세를 보여줍니다."
+  },
+  {
+    "day": 1,
+    "no": 166,
+    "word": "prerequisite",
+    "meaning": "필수조건, 필수적인",
+    "targetScore": 900,
+    "exampleEn": "A bachelor's degree is a prerequisite for this course.",
+    "exampleKo": "학사 학위는 이 과정의 필수 조건입니다."
+  },
+  {
+    "day": 1,
+    "no": 167,
+    "word": "probationer",
+    "meaning": "수습직원, 견습생",
+    "targetScore": 900,
+    "exampleEn": "The probationer is learning the ropes.",
+    "exampleKo": "수습 직원이 요령을 배우고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 168,
+    "word": "sternly",
+    "meaning": "엄격하게, 단호하게",
+    "targetScore": 900,
+    "exampleEn": "The manager spoke sternly to the late employees.",
+    "exampleKo": "매니저는 지각한 직원들에게 엄격하게 말했습니다."
+  }
+]

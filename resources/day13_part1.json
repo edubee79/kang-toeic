@@ -1,0 +1,362 @@
+[
+  {
+    "day": 13,
+    "no": 1,
+    "word": "complaint",
+    "meaning": "불평",
+    "targetScore": 650,
+    "exampleEn": "We received a complaint about the service.",
+    "exampleKo": "우리는 서비스에 대한 불평(항의)을 접수했습니다."
+  },
+  {
+    "day": 13,
+    "no": 2,
+    "word": "deal",
+    "meaning": "처리하다, 거래하다, 분배하다, 거래",
+    "targetScore": 650,
+    "exampleEn": "We deal with customer inquiries daily.",
+    "exampleKo": "우리는 매일 고객 문의를 처리합니다."
+  },
+  {
+    "day": 13,
+    "no": 3,
+    "word": "argumentative",
+    "meaning": "논쟁적인, 논쟁을 좋아하는",
+    "targetScore": 650,
+    "exampleEn": "The customer became argumentative.",
+    "exampleKo": "그 고객은 논쟁적으로 변했습니다."
+  },
+  {
+    "day": 13,
+    "no": 4,
+    "word": "appropriately",
+    "meaning": "적절하게",
+    "targetScore": 650,
+    "exampleEn": "Staff should dress appropriately for work.",
+    "exampleKo": "직원들은 업무에 적절하게 옷을 입어야 합니다."
+  },
+  {
+    "day": 13,
+    "no": 5,
+    "word": "respond",
+    "meaning": "응답하다",
+    "targetScore": 650,
+    "exampleEn": "Please respond to the email promptly.",
+    "exampleKo": "이메일에 신속하게 응답해 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 6,
+    "word": "infuriate",
+    "meaning": "화나게 하다, 격분시키다",
+    "targetScore": 650,
+    "exampleEn": "The delay infuriated the passengers.",
+    "exampleKo": "지연이 승객들을 격분시켰습니다."
+  },
+  {
+    "day": 13,
+    "no": 7,
+    "word": "courteous",
+    "meaning": "예의 바른",
+    "targetScore": 650,
+    "exampleEn": "The staff was courteous and helpful.",
+    "exampleKo": "직원은 예의 바르고 도움이 되었습니다."
+  },
+  {
+    "day": 13,
+    "no": 8,
+    "word": "satisfaction",
+    "meaning": "만족",
+    "targetScore": 650,
+    "exampleEn": "Customer satisfaction is our top priority.",
+    "exampleKo": "고객 만족은 우리의 최우선 사항입니다."
+  },
+  {
+    "day": 13,
+    "no": 9,
+    "word": "inconvenience",
+    "meaning": "불편, ~에게 불편을 느끼게 하다",
+    "targetScore": 650,
+    "exampleEn": "We apologize for the inconvenience.",
+    "exampleKo": "불편을 드려 죄송합니다."
+  },
+  {
+    "day": 13,
+    "no": 10,
+    "word": "complete",
+    "meaning": "완료하다, 완성하다, 완료된, 완성된",
+    "targetScore": 650,
+    "exampleEn": "Please complete the survey form.",
+    "exampleKo": "설문지 작성을 완료해 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 11,
+    "word": "specific",
+    "meaning": "구체적인, 명확한",
+    "targetScore": 650,
+    "exampleEn": "Can you be more specific about the problem?",
+    "exampleKo": "문제에 대해 좀 더 구체적으로 말씀해 주시겠습니까?"
+  },
+  {
+    "day": 13,
+    "no": 12,
+    "word": "return",
+    "meaning": "반환하다, 반송하다, 돌아오다, 돌아가다",
+    "targetScore": 650,
+    "exampleEn": "Please return the defective item.",
+    "exampleKo": "결함이 있는 물품을 반품해 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 13,
+    "word": "replace",
+    "meaning": "~을 교체하다, 대체하다",
+    "targetScore": 650,
+    "exampleEn": "We will replace the damaged product.",
+    "exampleKo": "우리는 손상된 제품을 교체해 드릴 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 14,
+    "word": "presentation",
+    "meaning": "발표",
+    "targetScore": 650,
+    "exampleEn": "I enjoyed your presentation on sales.",
+    "exampleKo": "영업에 대한 당신의 발표를 잘 들었습니다."
+  },
+  {
+    "day": 13,
+    "no": 15,
+    "word": "evaluation",
+    "meaning": "평가",
+    "targetScore": 650,
+    "exampleEn": "The performance evaluation is next week.",
+    "exampleKo": "직무 수행 평가가 다음 주에 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 16,
+    "word": "confident",
+    "meaning": "확신하는, 자신 있는",
+    "targetScore": 650,
+    "exampleEn": "I am confident in our team's ability.",
+    "exampleKo": "저는 우리 팀의 능력을 확신합니다."
+  },
+  {
+    "day": 13,
+    "no": 17,
+    "word": "cause",
+    "meaning": "~을 야기하다, ~의 원인이 되다, 원인",
+    "targetScore": 650,
+    "exampleEn": "The storm caused extensive damage.",
+    "exampleKo": "폭풍이 광범위한 피해를 야기했습니다(일으켰습니다)."
+  },
+  {
+    "day": 13,
+    "no": 18,
+    "word": "commentary",
+    "meaning": "해설, 설명",
+    "targetScore": 650,
+    "exampleEn": "The DVD includes a director's commentary.",
+    "exampleKo": "DVD에는 감독의 해설이 포함되어 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 19,
+    "word": "notification",
+    "meaning": "통지",
+    "targetScore": 650,
+    "exampleEn": "You will receive notification by email.",
+    "exampleKo": "당신은 이메일로 통지(알림)를 받을 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 20,
+    "word": "apologize",
+    "meaning": "사과하다",
+    "targetScore": 650,
+    "exampleEn": "I apologize for the mistake.",
+    "exampleKo": "실수에 대해 사과드립니다."
+  },
+  {
+    "day": 13,
+    "no": 21,
+    "word": "interact",
+    "meaning": "소통하다, 교류하다, 상호 작용을 하다",
+    "targetScore": 650,
+    "exampleEn": "Staff interact with customers daily.",
+    "exampleKo": "직원들은 매일 고객들과 상호 작용합니다(소통합니다)."
+  },
+  {
+    "day": 13,
+    "no": 22,
+    "word": "certain",
+    "meaning": "확신하는, 확실한, 특정한",
+    "targetScore": 650,
+    "exampleEn": "I am certain that we will succeed.",
+    "exampleKo": "저는 우리가 성공할 것이라고 확신합니다."
+  },
+  {
+    "day": 13,
+    "no": 23,
+    "word": "commitment",
+    "meaning": "헌신, 전념",
+    "targetScore": 650,
+    "exampleEn": "We appreciate your commitment to the project.",
+    "exampleKo": "프로젝트에 대한 당신의 헌신에 감사드립니다."
+  },
+  {
+    "day": 13,
+    "no": 24,
+    "word": "applaud",
+    "meaning": "~에게 박수를 보내다, 칭찬하다",
+    "targetScore": 650,
+    "exampleEn": "We applaud your efforts.",
+    "exampleKo": "우리는 당신의 노력에 박수를 보냅니다(칭찬합니다)."
+  },
+  {
+    "day": 13,
+    "no": 25,
+    "word": "biography",
+    "meaning": "약력, 전기",
+    "targetScore": 650,
+    "exampleEn": "The book is a biography of the CEO.",
+    "exampleKo": "그 책은 CEO의 전기입니다."
+  },
+  {
+    "day": 13,
+    "no": 26,
+    "word": "critical",
+    "meaning": "비판적인, 중요한, 위기의",
+    "targetScore": 650,
+    "exampleEn": "Customer feedback is critical to us.",
+    "exampleKo": "고객 피드백은 우리에게 매우 중요합니다(비판적입니다)."
+  },
+  {
+    "day": 13,
+    "no": 27,
+    "word": "depend on",
+    "meaning": "~에 달려 있다, ~에게 의존하다",
+    "targetScore": 650,
+    "exampleEn": "Our success depends on your support.",
+    "exampleKo": "우리의 성공은 당신의 지지에 달려 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 28,
+    "word": "combine",
+    "meaning": "결합시키다",
+    "targetScore": 650,
+    "exampleEn": "We combine innovation with tradition.",
+    "exampleKo": "우리는 혁신과 전통을 결합합니다."
+  },
+  {
+    "day": 13,
+    "no": 29,
+    "word": "priority",
+    "meaning": "우선권, 우선 사항",
+    "targetScore": 650,
+    "exampleEn": "Safety is our top priority.",
+    "exampleKo": "안전이 우리의 최우선 사항입니다."
+  },
+  {
+    "day": 13,
+    "no": 30,
+    "word": "observe",
+    "meaning": "관찰하다, 주시하다, (규칙 등을) 준수하다,, 지키다",
+    "targetScore": 650,
+    "exampleEn": "Please observe the safety regulations.",
+    "exampleKo": "안전 규정을 준수해 주십시오(지켜 주십시오)."
+  },
+  {
+    "day": 13,
+    "no": 31,
+    "word": "defective",
+    "meaning": "결함이 있는",
+    "targetScore": 650,
+    "exampleEn": "The product was found to be defective.",
+    "exampleKo": "그 제품은 결함이 있는 것으로 밝혀졌습니다."
+  },
+  {
+    "day": 13,
+    "no": 32,
+    "word": "reflect",
+    "meaning": "반영하다, 나타내다",
+    "targetScore": 650,
+    "exampleEn": "The price reflects the quality.",
+    "exampleKo": "가격은 품질을 반영합니다."
+  },
+  {
+    "day": 13,
+    "no": 33,
+    "word": "attitude",
+    "meaning": "태도, 마음가짐",
+    "targetScore": 650,
+    "exampleEn": "He has a positive attitude toward work.",
+    "exampleKo": "그는 일에 대해 긍정적인 태도를 가지고 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 34,
+    "word": "disappoint",
+    "meaning": "실망시키다",
+    "targetScore": 650,
+    "exampleEn": "We do not want to disappoint our clients.",
+    "exampleKo": "우리는 고객들을 실망시키고 싶지 않습니다."
+  },
+  {
+    "day": 13,
+    "no": 35,
+    "word": "inquire",
+    "meaning": "문의하다, 질문하다",
+    "targetScore": 650,
+    "exampleEn": "I would like to inquire about the job.",
+    "exampleKo": "그 일자리에 대해 문의하고 싶습니다."
+  },
+  {
+    "day": 13,
+    "no": 36,
+    "word": "insert",
+    "meaning": "삽입하다",
+    "targetScore": 650,
+    "exampleEn": "Please insert your card into the slot.",
+    "exampleKo": "슬롯에 카드를 삽입해 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 37,
+    "word": "disclose",
+    "meaning": "공개하다, 드러내다",
+    "targetScore": 650,
+    "exampleEn": "Do not disclose confidential information.",
+    "exampleKo": "기밀 정보를 공개하지(누설하지) 마십시오."
+  },
+  {
+    "day": 13,
+    "no": 38,
+    "word": "guarantee",
+    "meaning": "보장하다, 보장",
+    "targetScore": 650,
+    "exampleEn": "We guarantee satisfaction with our service.",
+    "exampleKo": "우리는 우리 서비스에 대한 만족을 보장합니다."
+  },
+  {
+    "day": 13,
+    "no": 39,
+    "word": "politely",
+    "meaning": "공손하게, 예의바르게",
+    "targetScore": 650,
+    "exampleEn": "Ask politely for assistance.",
+    "exampleKo": "도움을 정중하게 요청하십시오."
+  },
+  {
+    "day": 13,
+    "no": 40,
+    "word": "seriously",
+    "meaning": "진지하게",
+    "targetScore": 650,
+    "exampleEn": "We take customer complaints seriously.",
+    "exampleKo": "우리는 고객 불만 사항을 진지하게 받아들입니다."
+  }
+]

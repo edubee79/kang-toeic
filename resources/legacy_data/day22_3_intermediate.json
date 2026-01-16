@@ -1,0 +1,614 @@
+[
+    {
+        "day": 22,
+        "no": 69,
+        "word": "local time",
+        "meaning": "현지 시간",
+        "targetScore": 800,
+        "exampleEn": "Arrive at 3 PM local time.",
+        "exampleKo": "현지 시간 오후 3시에 도착하다."
+    },
+    {
+        "day": 22,
+        "no": 70,
+        "word": "action",
+        "meaning": "조치, 행동",
+        "targetScore": 800,
+        "exampleEn": "Take action immediately.",
+        "exampleKo": "즉시 조치를 취하다."
+    },
+    {
+        "day": 22,
+        "no": 71,
+        "word": "adjourn",
+        "meaning": "중단하다, 휴회하다",
+        "targetScore": 800,
+        "exampleEn": "Adjourn for lunch.",
+        "exampleKo": "점심 식사를 위해 휴회하다."
+    },
+    {
+        "day": 22,
+        "no": 72,
+        "word": "agreement",
+        "meaning": "합의, 계약",
+        "targetScore": 800,
+        "exampleEn": "Reach an agreement.",
+        "exampleKo": "합의에 도달하다."
+    },
+    {
+        "day": 22,
+        "no": 73,
+        "word": "allocate",
+        "meaning": "할당하다",
+        "targetScore": 800,
+        "exampleEn": "Allocate resources.",
+        "exampleKo": "자원을 할당하다."
+    },
+    {
+        "day": 22,
+        "no": 74,
+        "word": "anniversary",
+        "meaning": "기념일",
+        "targetScore": 800,
+        "exampleEn": "Wedding anniversary.",
+        "exampleKo": "결혼기념일."
+    },
+    {
+        "day": 22,
+        "no": 75,
+        "word": "appoint",
+        "meaning": "지명하다",
+        "targetScore": 800,
+        "exampleEn": "Appoint a chairperson.",
+        "exampleKo": "의장을 지명하다."
+    },
+    {
+        "day": 22,
+        "no": 76,
+        "word": "approval",
+        "meaning": "승인",
+        "targetScore": 800,
+        "exampleEn": "Get approval.",
+        "exampleKo": "승인을 받다."
+    },
+    {
+        "day": 22,
+        "no": 77,
+        "word": "argue",
+        "meaning": "논쟁하다, 주장하다",
+        "targetScore": 800,
+        "exampleEn": "Argue against the policy.",
+        "exampleKo": "정책에 반대하여 논쟁하다."
+    },
+    {
+        "day": 22,
+        "no": 78,
+        "word": "ascertain",
+        "meaning": "확인하다",
+        "targetScore": 800,
+        "exampleEn": "Ascertain the facts.",
+        "exampleKo": "사실을 확인하다."
+    },
+    {
+        "day": 22,
+        "no": 79,
+        "word": "assess",
+        "meaning": "평가하다",
+        "targetScore": 800,
+        "exampleEn": "Assess the damage.",
+        "exampleKo": "피해를 평가하다."
+    },
+    {
+        "day": 22,
+        "no": 80,
+        "word": "brief",
+        "meaning": "간략히 보고하다",
+        "targetScore": 800,
+        "exampleEn": "Brief the team.",
+        "exampleKo": "팀에게 간략히 보고하다."
+    },
+    {
+        "day": 22,
+        "no": 81,
+        "word": "briefing",
+        "meaning": "상황 설명",
+        "targetScore": 800,
+        "exampleEn": "Morning briefing.",
+        "exampleKo": "아침 브리핑."
+    },
+    {
+        "day": 22,
+        "no": 82,
+        "word": "catch",
+        "meaning": "잡다, 이해하다",
+        "targetScore": 800,
+        "exampleEn": "Catch his meaning.",
+        "exampleKo": "그의 뜻을 이해하다."
+    },
+    {
+        "day": 22,
+        "no": 83,
+        "word": "chairman",
+        "meaning": "의장, 회장",
+        "targetScore": 800,
+        "exampleEn": "Chairman of the board.",
+        "exampleKo": "이사회 의장."
+    },
+    {
+        "day": 22,
+        "no": 84,
+        "word": "collaborate",
+        "meaning": "협력하다",
+        "targetScore": 800,
+        "exampleEn": "Collaborate with partners.",
+        "exampleKo": "파트너들과 협력하다."
+    },
+    {
+        "day": 22,
+        "no": 85,
+        "word": "come up with",
+        "meaning": "내놓다, 제안하다",
+        "targetScore": 800,
+        "exampleEn": "Come up with a plan.",
+        "exampleKo": "계획을 내놓다."
+    },
+    {
+        "day": 22,
+        "no": 86,
+        "word": "conclude",
+        "meaning": "결론짓다",
+        "targetScore": 800,
+        "exampleEn": "Conclude the meeting.",
+        "exampleKo": "회의를 마치다."
+    },
+    {
+        "day": 22,
+        "no": 87,
+        "word": "confirm",
+        "meaning": "확정하다",
+        "targetScore": 800,
+        "exampleEn": "Confirm the reservation.",
+        "exampleKo": "예약을 확정하다."
+    },
+    {
+        "day": 22,
+        "no": 88,
+        "word": "conference",
+        "meaning": "총회, 회담",
+        "targetScore": 800,
+        "exampleEn": "International conference.",
+        "exampleKo": "국제 회의."
+    },
+    {
+        "day": 22,
+        "no": 89,
+        "word": "congratulate",
+        "meaning": "축하하다",
+        "targetScore": 800,
+        "exampleEn": "Congratulate him on his promotion.",
+        "exampleKo": "그의 승진을 축하하다."
+    },
+    {
+        "day": 22,
+        "no": 90,
+        "word": "consecutive",
+        "meaning": "연속적인",
+        "targetScore": 800,
+        "exampleEn": "Three consecutive days.",
+        "exampleKo": "3일 연속으로."
+    },
+    {
+        "day": 22,
+        "no": 91,
+        "word": "consent",
+        "meaning": "동의; 동의하다",
+        "targetScore": 800,
+        "exampleEn": "Written consent.",
+        "exampleKo": "서면 동의."
+    },
+    {
+        "day": 22,
+        "no": 92,
+        "word": "contact",
+        "meaning": "연락하다",
+        "targetScore": 800,
+        "exampleEn": "Contact us by email.",
+        "exampleKo": "이메일로 연락주세요."
+    },
+    {
+        "day": 22,
+        "no": 93,
+        "word": "content",
+        "meaning": "내용물; 만족하는",
+        "targetScore": 800,
+        "exampleEn": "Table of contents.",
+        "exampleKo": "목차."
+    },
+    {
+        "day": 22,
+        "no": 94,
+        "word": "convention",
+        "meaning": "대회, 관습",
+        "targetScore": 800,
+        "exampleEn": "Annual convention.",
+        "exampleKo": "연례 대회."
+    },
+    {
+        "day": 22,
+        "no": 95,
+        "word": "crowded",
+        "meaning": "혼잡한",
+        "targetScore": 800,
+        "exampleEn": "Crowded street.",
+        "exampleKo": "혼잡한 거리."
+    },
+    {
+        "day": 22,
+        "no": 96,
+        "word": "deadline",
+        "meaning": "마감 기한",
+        "targetScore": 800,
+        "exampleEn": "Meet the deadline.",
+        "exampleKo": "마감 기한을 맞추다."
+    },
+    {
+        "day": 22,
+        "no": 97,
+        "word": "debate",
+        "meaning": "토론하다; 토론",
+        "targetScore": 800,
+        "exampleEn": "Debate the issue.",
+        "exampleKo": "문제를 토론하다."
+    },
+    {
+        "day": 22,
+        "no": 98,
+        "word": "decide",
+        "meaning": "결심하다",
+        "targetScore": 800,
+        "exampleEn": "Decide to go.",
+        "exampleKo": "가기로 결심하다."
+    },
+    {
+        "day": 22,
+        "no": 99,
+        "word": "decision",
+        "meaning": "결정",
+        "targetScore": 800,
+        "exampleEn": "Final decision.",
+        "exampleKo": "최종 결정."
+    },
+    {
+        "day": 22,
+        "no": 100,
+        "word": "demonstrate",
+        "meaning": "입증하다",
+        "targetScore": 800,
+        "exampleEn": "Demonstrate its effectiveness.",
+        "exampleKo": "그 효과를 입증하다."
+    },
+    {
+        "day": 22,
+        "no": 101,
+        "word": "development",
+        "meaning": "개발, 발전",
+        "targetScore": 800,
+        "exampleEn": "Urban development.",
+        "exampleKo": "도시 개발."
+    },
+    {
+        "day": 22,
+        "no": 102,
+        "word": "discussion",
+        "meaning": "논의",
+        "targetScore": 800,
+        "exampleEn": "Under discussion.",
+        "exampleKo": "논의 중인."
+    },
+    {
+        "day": 22,
+        "no": 103,
+        "word": "display",
+        "meaning": "보여주다, 전시하다",
+        "targetScore": 800,
+        "exampleEn": "Display courage.",
+        "exampleKo": "용기를 보여주다."
+    },
+    {
+        "day": 22,
+        "no": 104,
+        "word": "dispute",
+        "meaning": "분쟁, 논쟁",
+        "targetScore": 800,
+        "exampleEn": "Settle a dispute.",
+        "exampleKo": "분쟁을 해결하다."
+    },
+    {
+        "day": 22,
+        "no": 105,
+        "word": "diverse",
+        "meaning": "다양한",
+        "targetScore": 800,
+        "exampleEn": "Diverse cultures.",
+        "exampleKo": "다양한 문화."
+    },
+    {
+        "day": 22,
+        "no": 106,
+        "word": "effective",
+        "meaning": "유효한",
+        "targetScore": 800,
+        "exampleEn": "Effective immediately.",
+        "exampleKo": "즉시 유효한."
+    },
+    {
+        "day": 22,
+        "no": 107,
+        "word": "encounter",
+        "meaning": "마주치다",
+        "targetScore": 800,
+        "exampleEn": "Encounter difficulties.",
+        "exampleKo": "어려움에 부딪히다."
+    },
+    {
+        "day": 22,
+        "no": 108,
+        "word": "engage",
+        "meaning": "관여하다, 약혼하다",
+        "targetScore": 800,
+        "exampleEn": "Engage in conversation.",
+        "exampleKo": "대화에 참여하다."
+    },
+    {
+        "day": 22,
+        "no": 109,
+        "word": "exchange",
+        "meaning": "교환하다",
+        "targetScore": 800,
+        "exampleEn": "Exchange cards.",
+        "exampleKo": "명함을 교환하다."
+    },
+    {
+        "day": 22,
+        "no": 110,
+        "word": "facilitate",
+        "meaning": "용이하게 하다",
+        "targetScore": 800,
+        "exampleEn": "Facilitate learning.",
+        "exampleKo": "학습을 돕다."
+    },
+    {
+        "day": 22,
+        "no": 111,
+        "word": "feedback",
+        "meaning": "피드백, 반응",
+        "targetScore": 800,
+        "exampleEn": "Give feedback.",
+        "exampleKo": "피드백을 주다."
+    },
+    {
+        "day": 22,
+        "no": 112,
+        "word": "formal",
+        "meaning": "격식을 차린, 공식적인",
+        "targetScore": 800,
+        "exampleEn": "Formal dress.",
+        "exampleKo": "정장."
+    },
+    {
+        "day": 22,
+        "no": 113,
+        "word": "generally",
+        "meaning": "일반적으로",
+        "targetScore": 800,
+        "exampleEn": "Generally speaking.",
+        "exampleKo": "일반적으로 말해서."
+    },
+    {
+        "day": 22,
+        "no": 114,
+        "word": "honor",
+        "meaning": "기리다, 존중하다; 명예",
+        "targetScore": 800,
+        "exampleEn": "Honor the contract.",
+        "exampleKo": "계약을 이행하다."
+    },
+    {
+        "day": 22,
+        "no": 115,
+        "word": "impromptu",
+        "meaning": "즉석의",
+        "targetScore": 800,
+        "exampleEn": "Impromptu speech.",
+        "exampleKo": "즉석 연설."
+    },
+    {
+        "day": 22,
+        "no": 116,
+        "word": "inform",
+        "meaning": "통지하다",
+        "targetScore": 800,
+        "exampleEn": "Inform them of the change.",
+        "exampleKo": "그들에게 변경 사항을 통지하다."
+    },
+    {
+        "day": 22,
+        "no": 117,
+        "word": "interrupt",
+        "meaning": "방해하다",
+        "targetScore": 800,
+        "exampleEn": "Interrupt the speaker.",
+        "exampleKo": "연설자를 방해하다."
+    },
+    {
+        "day": 22,
+        "no": 118,
+        "word": "issue",
+        "meaning": "지급하다; 쟁점",
+        "targetScore": 800,
+        "exampleEn": "Issue a passport.",
+        "exampleKo": "여권을 발급하다."
+    },
+    {
+        "day": 22,
+        "no": 119,
+        "word": "lengthy",
+        "meaning": "장황한, 긴",
+        "targetScore": 800,
+        "exampleEn": "Lengthy meeting.",
+        "exampleKo": "긴 회의."
+    },
+    {
+        "day": 22,
+        "no": 120,
+        "word": "limit",
+        "meaning": "제한하다; 한계",
+        "targetScore": 800,
+        "exampleEn": "Limit the number.",
+        "exampleKo": "수를 제한하다."
+    },
+    {
+        "day": 22,
+        "no": 121,
+        "word": "matter",
+        "meaning": "중요하다",
+        "targetScore": 800,
+        "exampleEn": "It matters to me.",
+        "exampleKo": "그것은 나에게 중요합니다."
+    },
+    {
+        "day": 22,
+        "no": 122,
+        "word": "meet",
+        "meaning": "만나다, 충족시키다",
+        "targetScore": 800,
+        "exampleEn": "Meet the requirements.",
+        "exampleKo": "요구 조건을 충족시키다."
+    },
+    {
+        "day": 22,
+        "no": 123,
+        "word": "minutes",
+        "meaning": "회의 의사록",
+        "targetScore": 800,
+        "exampleEn": "Read the minutes.",
+        "exampleKo": "의사록을 읽다."
+    },
+    {
+        "day": 22,
+        "no": 124,
+        "word": "notify",
+        "meaning": "통보하다",
+        "targetScore": 800,
+        "exampleEn": "Notify the police.",
+        "exampleKo": "경찰에 알리다."
+    },
+    {
+        "day": 22,
+        "no": 125,
+        "word": "object",
+        "meaning": "반대하다",
+        "targetScore": 800,
+        "exampleEn": "I object.",
+        "exampleKo": "반대합니다."
+    },
+    {
+        "day": 22,
+        "no": 126,
+        "word": "oppose",
+        "meaning": "반대하다",
+        "targetScore": 800,
+        "exampleEn": "Oppose the plan.",
+        "exampleKo": "계획에 반대하다."
+    },
+    {
+        "day": 22,
+        "no": 127,
+        "word": "participant",
+        "meaning": "참가자",
+        "targetScore": 800,
+        "exampleEn": "Active participant.",
+        "exampleKo": "적극적인 참가자."
+    },
+    {
+        "day": 22,
+        "no": 128,
+        "word": "permit",
+        "meaning": "허락하다; 허가증",
+        "targetScore": 800,
+        "exampleEn": "Parking permit.",
+        "exampleKo": "주차 허가증."
+    },
+    {
+        "day": 22,
+        "no": 129,
+        "word": "persuade",
+        "meaning": "설득하다",
+        "targetScore": 800,
+        "exampleEn": "Persuade customers.",
+        "exampleKo": "고객을 설득하다."
+    },
+    {
+        "day": 22,
+        "no": 130,
+        "word": "plan",
+        "meaning": "계획; 계획하다",
+        "targetScore": 800,
+        "exampleEn": "Make a plan.",
+        "exampleKo": "계획을 세우다."
+    },
+    {
+        "day": 22,
+        "no": 131,
+        "word": "policy",
+        "meaning": "정책, 방침",
+        "targetScore": 800,
+        "exampleEn": "Company policy.",
+        "exampleKo": "회사 방침."
+    },
+    {
+        "day": 22,
+        "no": 132,
+        "word": "postpone",
+        "meaning": "연기하다",
+        "targetScore": 800,
+        "exampleEn": "Postpone the meeting.",
+        "exampleKo": "회의를 연기하다."
+    },
+    {
+        "day": 22,
+        "no": 133,
+        "word": "presentation",
+        "meaning": "발표, 프레젠테이션",
+        "targetScore": 800,
+        "exampleEn": "PowerPoint presentation.",
+        "exampleKo": "파워포인트 발표."
+    },
+    {
+        "day": 22,
+        "no": 134,
+        "word": "preside",
+        "meaning": "사회를 보다",
+        "targetScore": 800,
+        "exampleEn": "Preside at the meeting.",
+        "exampleKo": "회의에서 사회를 보다."
+    },
+    {
+        "day": 22,
+        "no": 135,
+        "word": "press",
+        "meaning": "언론",
+        "targetScore": 800,
+        "exampleEn": "Freedom of the press.",
+        "exampleKo": "언론의 자유."
+    },
+    {
+        "day": 22,
+        "no": 136,
+        "word": "progress",
+        "meaning": "진전, 진행",
+        "targetScore": 800,
+        "exampleEn": "Work in progress.",
+        "exampleKo": "진행 중인 작업."
+    }
+]

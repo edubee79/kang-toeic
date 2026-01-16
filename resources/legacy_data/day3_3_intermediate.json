@@ -1,0 +1,614 @@
+[
+    {
+        "day": 3,
+        "no": 69,
+        "word": "adjust the mirror",
+        "meaning": "거울을 똑바로 맞추다",
+        "targetScore": 800,
+        "exampleEn": "Always adjust the mirrors before driving a new car.",
+        "exampleKo": "새 차를 운전하기 전에는 항상 거울을 조정하세요."
+    },
+    {
+        "day": 3,
+        "no": 70,
+        "word": "agreeable",
+        "meaning": "쾌적한, 동의하는",
+        "targetScore": 800,
+        "exampleEn": "We need to find a mutually agreeable solution.",
+        "exampleKo": "우리는 상호 동의할 수 있는 해결책을 찾아야 합니다."
+    },
+    {
+        "day": 3,
+        "no": 71,
+        "word": "apology",
+        "meaning": "사과",
+        "targetScore": 800,
+        "exampleEn": "Please accept my sincere apology for the delay.",
+        "exampleKo": "지연에 대한 저의 진심 어린 사과를 받아주십시오."
+    },
+    {
+        "day": 3,
+        "no": 72,
+        "word": "apologize",
+        "meaning": "사과하다",
+        "targetScore": 800,
+        "exampleEn": "The manager apologized to the customer for the error.",
+        "exampleKo": "매니저는 실수에 대해 고객에게 사과했습니다."
+    },
+    {
+        "day": 3,
+        "no": 73,
+        "word": "aspiration",
+        "meaning": "포부, 열망",
+        "targetScore": 800,
+        "exampleEn": "He has high aspirations for his children.",
+        "exampleKo": "그는 자녀들에 대해 높은 포부를 가지고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 74,
+        "word": "aspire",
+        "meaning": "열망하다",
+        "targetScore": 800,
+        "exampleEn": "Many young musicians aspire to be famous.",
+        "exampleKo": "많은 젊은 음악가들이 유명해지기를 열망합니다."
+    },
+    {
+        "day": 3,
+        "no": 75,
+        "word": "assign",
+        "meaning": "할당하다",
+        "targetScore": 800,
+        "exampleEn": "The teacher assigned homework to the students.",
+        "exampleKo": "선생님은 학생들에게 숙제를 할당했습니다."
+    },
+    {
+        "day": 3,
+        "no": 76,
+        "word": "assignment",
+        "meaning": "과제, 할당",
+        "targetScore": 800,
+        "exampleEn": "This is a challenging assignment.",
+        "exampleKo": "이것은 도전적인 과제입니다."
+    },
+    {
+        "day": 3,
+        "no": 77,
+        "word": "assist",
+        "meaning": "돕다",
+        "targetScore": 800,
+        "exampleEn": "Technology assists in daily tasks.",
+        "exampleKo": "기술은 일상 업무를 돕습니다."
+    },
+    {
+        "day": 3,
+        "no": 78,
+        "word": "assistance",
+        "meaning": "도움",
+        "targetScore": 800,
+        "exampleEn": "We offer financial assistance to students.",
+        "exampleKo": "우리는 학생들에게 재정적 지원을 제공합니다."
+    },
+    {
+        "day": 3,
+        "no": 79,
+        "word": "assistant",
+        "meaning": "보조자",
+        "targetScore": 800,
+        "exampleEn": "She works as a personal assistant.",
+        "exampleKo": "그녀는 개인 비서로 일합니다."
+    },
+    {
+        "day": 3,
+        "no": 80,
+        "word": "assume",
+        "meaning": "가정하다, (책임을) 지다",
+        "targetScore": 800,
+        "exampleEn": "I assume you are coming to the party.",
+        "exampleKo": "당신이 파티에 올 것이라고 가정합니다."
+    },
+    {
+        "day": 3,
+        "no": 81,
+        "word": "assumption",
+        "meaning": "가정",
+        "targetScore": 800,
+        "exampleEn": "His argument is based on a false assumption.",
+        "exampleKo": "그의 주장은 잘못된 가정에 근거하고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 82,
+        "word": "be engaged in",
+        "meaning": "~에 종사하다",
+        "targetScore": 800,
+        "exampleEn": "He is engaged in international trade.",
+        "exampleKo": "그는 국제 무역에 종사하고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 83,
+        "word": "calmly",
+        "meaning": "차분하게",
+        "targetScore": 800,
+        "exampleEn": "She reacted calmly to the bad news.",
+        "exampleKo": "그녀는 나쁜 소식에 차분하게 반응했습니다."
+    },
+    {
+        "day": 3,
+        "no": 84,
+        "word": "combined",
+        "meaning": "결합된",
+        "targetScore": 800,
+        "exampleEn": "The combined income of the family has increased.",
+        "exampleKo": "가족의 수입 합계가 증가했습니다."
+    },
+    {
+        "day": 3,
+        "no": 85,
+        "word": "coming",
+        "meaning": "다가오는",
+        "targetScore": 800,
+        "exampleEn": "We are preparing for the coming year.",
+        "exampleKo": "우리는 다가오는 해를 준비하고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 86,
+        "word": "comment",
+        "meaning": "논평하다, 의견",
+        "targetScore": 800,
+        "exampleEn": "He refused to comment on the situation.",
+        "exampleKo": "그는 상황에 대해 논평하기를 거부했습니다."
+    },
+    {
+        "day": 3,
+        "no": 87,
+        "word": "conduct",
+        "meaning": "수행하다",
+        "targetScore": 800,
+        "exampleEn": "They will conduct a review of the policy.",
+        "exampleKo": "그들은 정책 검토를 수행할 것입니다."
+    },
+    {
+        "day": 3,
+        "no": 88,
+        "word": "conductor",
+        "meaning": "지휘자; 차장",
+        "targetScore": 800,
+        "exampleEn": "The conductor led the orchestra brilliantly.",
+        "exampleKo": "지휘자는 오케스트라를 훌륭하게 이끌었습니다."
+    },
+    {
+        "day": 3,
+        "no": 89,
+        "word": "confidentiality",
+        "meaning": "기밀성",
+        "targetScore": 800,
+        "exampleEn": "Please respect the confidentiality of the meeting.",
+        "exampleKo": "회의의 기밀성을 존중해 주십시오."
+    },
+    {
+        "day": 3,
+        "no": 90,
+        "word": "contract",
+        "meaning": "계약",
+        "targetScore": 800,
+        "exampleEn": "Sign the contract at the bottom of the page.",
+        "exampleKo": "페이지 하단에 계약서에 서명하세요."
+    },
+    {
+        "day": 3,
+        "no": 91,
+        "word": "contractor",
+        "meaning": "계약자, 도급업자",
+        "targetScore": 800,
+        "exampleEn": "The contractor finished the job on time.",
+        "exampleKo": "도급업자는 제시간에 일을 끝냈습니다."
+    },
+    {
+        "day": 3,
+        "no": 92,
+        "word": "coordinate",
+        "meaning": "조정하다",
+        "targetScore": 800,
+        "exampleEn": "Colors should coordinate with the logo.",
+        "exampleKo": "색상은 로고와 조화를 이루어야 합니다."
+    },
+    {
+        "day": 3,
+        "no": 93,
+        "word": "coordination",
+        "meaning": "조정, 조화",
+        "targetScore": 800,
+        "exampleEn": "This task requires hand-eye coordination.",
+        "exampleKo": "이 작업은 손과 눈의 협응력을 요구합니다."
+    },
+    {
+        "day": 3,
+        "no": 94,
+        "word": "coordinator",
+        "meaning": "조정자",
+        "targetScore": 800,
+        "exampleEn": "He acts as the safety coordinator.",
+        "exampleKo": "그는 안전 조정자 역할을 합니다."
+    },
+    {
+        "day": 3,
+        "no": 95,
+        "word": "count on",
+        "meaning": "믿다, 기대하다",
+        "targetScore": 800,
+        "exampleEn": "I'm counting on your support.",
+        "exampleKo": "당신의 지지를 기대하고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 96,
+        "word": "coworker",
+        "meaning": "동료",
+        "targetScore": 800,
+        "exampleEn": "She gets along well with her coworkers.",
+        "exampleKo": "그녀는 동료들과 잘 지냅니다."
+    },
+    {
+        "day": 3,
+        "no": 97,
+        "word": "creditable",
+        "meaning": "훌륭한",
+        "targetScore": 800,
+        "exampleEn": "He made a creditable attempt at the record.",
+        "exampleKo": "그는 기록 경신에 훌륭한 시도를 했습니다."
+    },
+    {
+        "day": 3,
+        "no": 98,
+        "word": "direct",
+        "meaning": "직접적인; 지시하다",
+        "targetScore": 800,
+        "exampleEn": "Give me a direct answer.",
+        "exampleKo": "나에게 직접적인 대답을 주세요."
+    },
+    {
+        "day": 3,
+        "no": 99,
+        "word": "direction",
+        "meaning": "방향",
+        "targetScore": 800,
+        "exampleEn": "He pointed in the direction of the station.",
+        "exampleKo": "그는 역 방향을 가리켰습니다."
+    },
+    {
+        "day": 3,
+        "no": 100,
+        "word": "directly",
+        "meaning": "곧장",
+        "targetScore": 800,
+        "exampleEn": "Go directly to jail.",
+        "exampleKo": "곧장 감옥으로 가십시오."
+    },
+    {
+        "day": 3,
+        "no": 101,
+        "word": "director",
+        "meaning": "이사",
+        "targetScore": 800,
+        "exampleEn": "The director called a board meeting.",
+        "exampleKo": "이사가 이사회 회의를 소집했습니다."
+    },
+    {
+        "day": 3,
+        "no": 102,
+        "word": "directory",
+        "meaning": "안내 책자",
+        "targetScore": 800,
+        "exampleEn": "You can find local businesses in the directory.",
+        "exampleKo": "안내 책자에서 지역 기업을 찾을 수 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 103,
+        "word": "distressing",
+        "meaning": "괴로움을 주는",
+        "targetScore": 800,
+        "exampleEn": "It was a distressing experience.",
+        "exampleKo": "그것은 괴로움을 주는 경험이었습니다."
+    },
+    {
+        "day": 3,
+        "no": 104,
+        "word": "disturb",
+        "meaning": "방해하다",
+        "targetScore": 800,
+        "exampleEn": "Please do not disturb the occupants.",
+        "exampleKo": "입주자들을 방해하지 마십시오."
+    },
+    {
+        "day": 3,
+        "no": 105,
+        "word": "disturbing",
+        "meaning": "불안하게 하는",
+        "targetScore": 800,
+        "exampleEn": "The noise was very disturbing.",
+        "exampleKo": "그 소음은 매우 불안하게 했습니다."
+    },
+    {
+        "day": 3,
+        "no": 106,
+        "word": "draw on",
+        "meaning": "~을 활용하다",
+        "targetScore": 800,
+        "exampleEn": "The writer draws on his childhood memories.",
+        "exampleKo": "그 작가는 자신의 어린 시절 기억을 활용합니다."
+    },
+    {
+        "day": 3,
+        "no": 107,
+        "word": "excuse",
+        "meaning": "변명; 용서하다",
+        "targetScore": 800,
+        "exampleEn": "There is no excuse for being late.",
+        "exampleKo": "늦은 것에 대한 변명은 없습니다."
+    },
+    {
+        "day": 3,
+        "no": 108,
+        "word": "extend",
+        "meaning": "연장하다, 뻗다",
+        "targetScore": 800,
+        "exampleEn": "They plan to extend the road.",
+        "exampleKo": "그들은 도로를 연장할 계획입니다."
+    },
+    {
+        "day": 3,
+        "no": 109,
+        "word": "extension",
+        "meaning": "확장",
+        "targetScore": 800,
+        "exampleEn": "The house needs an extension.",
+        "exampleKo": "그 집은 확장이 필요합니다."
+    },
+    {
+        "day": 3,
+        "no": 110,
+        "word": "extensive",
+        "meaning": "광범위한",
+        "targetScore": 800,
+        "exampleEn": "The storm caused extensive damage.",
+        "exampleKo": "폭풍은 광범위한 피해를 입혔습니다."
+    },
+    {
+        "day": 3,
+        "no": 111,
+        "word": "head",
+        "meaning": "우두머리; 향하다",
+        "targetScore": 800,
+        "exampleEn": "He heads the committee.",
+        "exampleKo": "그는 위원회를 이끕니다."
+    },
+    {
+        "day": 3,
+        "no": 112,
+        "word": "hesitate",
+        "meaning": "주저하다",
+        "targetScore": 800,
+        "exampleEn": "Don't hesitate to ask for help.",
+        "exampleKo": "도움을 요청하는 것을 주저하지 마세요."
+    },
+    {
+        "day": 3,
+        "no": 113,
+        "word": "intention",
+        "meaning": "의도",
+        "targetScore": 800,
+        "exampleEn": "It was not my intention to offend you.",
+        "exampleKo": "당신을 기분 나쁘게 할 의도는 아니었습니다."
+    },
+    {
+        "day": 3,
+        "no": 114,
+        "word": "intentional",
+        "meaning": "고의적인",
+        "targetScore": 800,
+        "exampleEn": "The foul was intentional.",
+        "exampleKo": "크 파울은 고의적이었습니다."
+    },
+    {
+        "day": 3,
+        "no": 115,
+        "word": "intentionally",
+        "meaning": "고의로",
+        "targetScore": 800,
+        "exampleEn": "He intentionally missed the meeting.",
+        "exampleKo": "그는 고의로 회의에 빠졌습니다."
+    },
+    {
+        "day": 3,
+        "no": 116,
+        "word": "intend",
+        "meaning": "의도하다",
+        "targetScore": 800,
+        "exampleEn": "We intend to stay for a week.",
+        "exampleKo": "우리는 일주일 동안 머물 작정입니다."
+    },
+    {
+        "day": 3,
+        "no": 117,
+        "word": "make a copy",
+        "meaning": "복사하다",
+        "targetScore": 800,
+        "exampleEn": "Please make a copy of this document.",
+        "exampleKo": "이 문서의 사본을 만들어 주세요."
+    },
+    {
+        "day": 3,
+        "no": 118,
+        "word": "make a mistake",
+        "meaning": "실수하다",
+        "targetScore": 800,
+        "exampleEn": "Anyone can make a mistake.",
+        "exampleKo": "누구나 실수할 수 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 119,
+        "word": "neutral",
+        "meaning": "중립적인",
+        "targetScore": 800,
+        "exampleEn": "I remained neutral during the argument.",
+        "exampleKo": "나는 논쟁 중에 중립을 지켰습니다."
+    },
+    {
+        "day": 3,
+        "no": 120,
+        "word": "neutrality",
+        "meaning": "중립",
+        "targetScore": 800,
+        "exampleEn": "Switzerland is known for its neutrality.",
+        "exampleKo": "스위스는 중립으로 유명합니다."
+    },
+    {
+        "day": 3,
+        "no": 121,
+        "word": "neutralize",
+        "meaning": "무효화하다, 중화하다",
+        "targetScore": 800,
+        "exampleEn": "The medicine neutralizes the stomach acid.",
+        "exampleKo": "그 약은 위산을 중화시킵니다."
+    },
+    {
+        "day": 3,
+        "no": 122,
+        "word": "operate",
+        "meaning": "작동하다, 수술하다",
+        "targetScore": 800,
+        "exampleEn": "Do not operate heavy machinery after taking this drug.",
+        "exampleKo": "이 약을 복용한 후에는 중장비를 작동하지 마십시오."
+    },
+    {
+        "day": 3,
+        "no": 123,
+        "word": "operation",
+        "meaning": "작동, 작전",
+        "targetScore": 800,
+        "exampleEn": "The rescue operation was successful.",
+        "exampleKo": "구조 작전은 성공적이었습니다."
+    },
+    {
+        "day": 3,
+        "no": 124,
+        "word": "operational",
+        "meaning": "사용 가능한",
+        "targetScore": 800,
+        "exampleEn": "The airport is now fully operational.",
+        "exampleKo": "공항은 이제 완전히 운영 가능합니다."
+    },
+    {
+        "day": 3,
+        "no": 125,
+        "word": "partially",
+        "meaning": "부분적으로",
+        "targetScore": 800,
+        "exampleEn": "The building was partially destroyed.",
+        "exampleKo": "그 건물은 부분적으로 파괴되었습니다."
+    },
+    {
+        "day": 3,
+        "no": 126,
+        "word": "personnel",
+        "meaning": "인원, 직원",
+        "targetScore": 800,
+        "exampleEn": "Only authorized personnel are allowed.",
+        "exampleKo": "허가된 인원만 출입이 허용됩니다."
+    },
+    {
+        "day": 3,
+        "no": 127,
+        "word": "place on standby",
+        "meaning": "대기시키다",
+        "targetScore": 800,
+        "exampleEn": "The medical team was placed on standby.",
+        "exampleKo": "의료팀이 대기 상태에 들어갔습니다."
+    },
+    {
+        "day": 3,
+        "no": 128,
+        "word": "press",
+        "meaning": "누르다; 언론",
+        "targetScore": 800,
+        "exampleEn": "The press covered the story extensively.",
+        "exampleKo": "언론은 그 이야기를 광범위하게 다루었습니다."
+    },
+    {
+        "day": 3,
+        "no": 129,
+        "word": "pressure",
+        "meaning": "압력",
+        "targetScore": 800,
+        "exampleEn": "He is under high pressure at work.",
+        "exampleKo": "그는 직장에서 높은 압박을 받고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 130,
+        "word": "pressing",
+        "meaning": "긴급한",
+        "targetScore": 800,
+        "exampleEn": "We have pressing matters to discuss.",
+        "exampleKo": "우리는 논의해야 할 긴급한 문제들이 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 131,
+        "word": "psychological",
+        "meaning": "심리적인",
+        "targetScore": 800,
+        "exampleEn": "The trauma caused psychological damage.",
+        "exampleKo": "그 트라우마는 심리적 손상을 입혔습니다."
+    },
+    {
+        "day": 3,
+        "no": 132,
+        "word": "relax",
+        "meaning": "긴장을 풀다",
+        "targetScore": 800,
+        "exampleEn": "Try to relax and breathe deeply.",
+        "exampleKo": "긴장을 풀고 심호흡을 하세요."
+    },
+    {
+        "day": 3,
+        "no": 133,
+        "word": "relaxation",
+        "meaning": "휴식",
+        "targetScore": 800,
+        "exampleEn": "I need some rest and relaxation.",
+        "exampleKo": "나는 휴식과 여가가 필요합니다."
+    },
+    {
+        "day": 3,
+        "no": 134,
+        "word": "relaxed",
+        "meaning": "느긋한",
+        "targetScore": 800,
+        "exampleEn": "He has a relaxed management style.",
+        "exampleKo": "그는 느긋한 경영 스타일을 가지고 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 135,
+        "word": "remind",
+        "meaning": "상기시키다",
+        "targetScore": 800,
+        "exampleEn": "That song reminds me of my youth.",
+        "exampleKo": "그 노래는 내 젊은 시절을 상기시킵니다."
+    },
+    {
+        "day": 3,
+        "no": 136,
+        "word": "reminder",
+        "meaning": "독촉장, 상기시키는 것",
+        "targetScore": 800,
+        "exampleEn": "This bill is a final reminder.",
+        "exampleKo": "이 청구서는 최종 독촉장입니다."
+    }
+]

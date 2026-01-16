@@ -1,0 +1,41 @@
+ No         Word                Meaning
+  1    furnished                가구가 비치된
+  2    residence                거주지, 주택
+  3     spacious                (공간이)넓은
+  4        drape      (방 등을 커튼 등으로)장식하다
+  5   unoccupied (집 등이) 비어있는, 사람이 살지 않는
+  6   renovation                 수리, 개조
+  7  appropriate               적당한, 적합한
+  8        delay        연기하다, ~을 뒤로 미루다
+  9    community             지역 사회, 공동체
+ 10 construction                 건설, 건축
+ 11       repair                   수리하다
+ 12    currently                     현재
+ 13    regularly                  정기적으로
+ 14      arrange             배열하다, 정돈하다
+ 15     location                 장소, 위치
+ 16      restore            복구하다, 회복시키다
+ 17    presently                     현재
+ 18     numerous                     많은
+ 19      abandon              그만두다, 버리다
+ 20   contractor              계약자, 도급업자
+ 21      develop                   개발하다
+ 22     maintain             유지하다, 관리하다
+ 23      densely              빽빽히, 밀집하여
+ 24      prepare          준비하다, 채비를 갖추다
+ 25      finally                결국, 마침내
+ 26     district                 지역, 지구
+ 27      renewal                    재개발
+ 28   compulsory                   의무적인
+ 29    interfere              방해하다, 해치다
+ 30   relocation                이전, 재배치
+ 31      totally              완전히, 전적으로
+ 32     actually               실제로, 사실은
+ 33    architect                    건축가
+ 34      enlarge             확장하다, 확대하다
+ 35      install             설치하다, 장치하다
+ 36      suppose             생각하다, 추측하다
+ 37    permanent                   영구적인
+ 38     adjacent                    인접한
+ 39      consist            구성되다, 이루어지다
+ 40      utility             공공시설, 공공요금

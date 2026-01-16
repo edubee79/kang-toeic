@@ -1,0 +1,4 @@
+Passage_ID,Doc_Type,Passage_Content (Use \n for new line),Question_No,Question,Option_A,Option_B,Option_C,Option_D,Answer,Q_Type_Tag
+P7_001,Email,"From: John Smith <john@email.com>\nTo: All Staff\nDate: Jan 10\nSubject: Office Policy\n\nDear Staff,\nPlease note that...",147,What is the purpose of the email?,To announce a policy change,To request a refund,To scheduler a meeting,To hire new staff,a,Q_MAIN
+P7_001,Email,"(Repeated for Q148 context)",148,Who is Mr. Smith?,Manager,Customer,Doctor,Driver,a,Q_DETAIL
+P7_002,Notice,"NOTICE\n\nLibrary Hours will change...",149,When will the change take effect?,Monday,Tuesday,Wednesday,Thursday,a,Q_DETAIL_TIME

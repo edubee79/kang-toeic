@@ -1,0 +1,362 @@
+[
+  {
+    "day": 24,
+    "no": 1,
+    "word": "appoint",
+    "meaning": "임명하다, 지명하다",
+    "targetScore": 650,
+    "exampleEn": "The board appointed him as the new CEO.",
+    "exampleKo": "이사회는 그를 새로운 CEO로 임명했습니다."
+  },
+  {
+    "day": 24,
+    "no": 2,
+    "word": "appraisal",
+    "meaning": "평가",
+    "targetScore": 650,
+    "exampleEn": "Employees receive a performance appraisal annually.",
+    "exampleKo": "직원들은 매년 업무 평가를 받습니다."
+  },
+  {
+    "day": 24,
+    "no": 3,
+    "word": "promote",
+    "meaning": "승진시키다, 촉진하다",
+    "targetScore": 650,
+    "exampleEn": "She was promoted to division manager last month.",
+    "exampleKo": "그녀는 지난달에 부서장으로 승진했습니다."
+  },
+  {
+    "day": 24,
+    "no": 4,
+    "word": "skilled",
+    "meaning": "숙련된, 노련한",
+    "targetScore": 650,
+    "exampleEn": "We are looking for skilled technicians.",
+    "exampleKo": "우리는 숙련된 기술자들을 찾고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 5,
+    "word": "radically",
+    "meaning": "완전히, 철저히",
+    "targetScore": 650,
+    "exampleEn": "The new policy radically changed the workflow.",
+    "exampleKo": "새로운 정책은 업무 절차를 완전히 바꾸어 놓았습니다."
+  },
+  {
+    "day": 24,
+    "no": 6,
+    "word": "exceptional",
+    "meaning": "뛰어난, 예외적인",
+    "targetScore": 650,
+    "exampleEn": "He showed exceptional leadership skills.",
+    "exampleKo": "그는 뛰어난 리더십 기술을 보여주었습니다."
+  },
+  {
+    "day": 24,
+    "no": 7,
+    "word": "appreciation",
+    "meaning": "감사",
+    "targetScore": 650,
+    "exampleEn": "In appreciation of your hard work, we offer this bonus.",
+    "exampleKo": "당신의 노고에 대한 감사의 표시로, 이 보너스를 드립니다."
+  },
+  {
+    "day": 24,
+    "no": 8,
+    "word": "evaluate",
+    "meaning": "평가하다",
+    "targetScore": 650,
+    "exampleEn": "Supervisors evaluate staff performance every six months.",
+    "exampleKo": "관리자들은 6개월마다 직원들의 실적을 평가합니다."
+  },
+  {
+    "day": 24,
+    "no": 9,
+    "word": "suggest",
+    "meaning": "제안하다, 추천하다",
+    "targetScore": 650,
+    "exampleEn": "I suggest that we postpone the meeting until Friday.",
+    "exampleKo": "저는 회의를 금요일까지 연기할 것을 제안합니다."
+  },
+  {
+    "day": 24,
+    "no": 10,
+    "word": "preference",
+    "meaning": "선호",
+    "targetScore": 650,
+    "exampleEn": "Candidates with experience are given preference.",
+    "exampleKo": "경력이 있는 지원자들에게 우선권이 주어집니다."
+  },
+  {
+    "day": 24,
+    "no": 11,
+    "word": "management",
+    "meaning": "경영진, 경영",
+    "targetScore": 650,
+    "exampleEn": "The management is discussing the proposed merger.",
+    "exampleKo": "경영진은 제안된 합병에 대해 논의하고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 12,
+    "word": "predict",
+    "meaning": "예측하다",
+    "targetScore": 650,
+    "exampleEn": "Economists predict a slow economic recovery.",
+    "exampleKo": "경제학자들은 더딘 경기 회복을 예측합니다."
+  },
+  {
+    "day": 24,
+    "no": 13,
+    "word": "transfer",
+    "meaning": "보내다, 전근시키다",
+    "targetScore": 650,
+    "exampleEn": "He was transferred to the London branch.",
+    "exampleKo": "그는 런던 지사로 전근되었습니다."
+  },
+  {
+    "day": 24,
+    "no": 14,
+    "word": "award",
+    "meaning": "상, (상 등을)수여하다",
+    "targetScore": 650,
+    "exampleEn": "The company awarded him the Employee of the Year title.",
+    "exampleKo": "회사는 그에게 올해의 사원 상을 수여했습니다."
+  },
+  {
+    "day": 24,
+    "no": 15,
+    "word": "mandatory",
+    "meaning": "의무적인",
+    "targetScore": 650,
+    "exampleEn": "Attendance at the safety training is mandatory.",
+    "exampleKo": "안전 교육 참석은 의무적입니다."
+  },
+  {
+    "day": 24,
+    "no": 16,
+    "word": "competent",
+    "meaning": "유능한, 능숙한",
+    "targetScore": 650,
+    "exampleEn": "She is a very competent administrative assistant.",
+    "exampleKo": "그녀는 매우 유능한 행정 보조원입니다."
+  },
+  {
+    "day": 24,
+    "no": 17,
+    "word": "performance",
+    "meaning": "실적, 성과, 공연, 연주, 연기",
+    "targetScore": 650,
+    "exampleEn": "The company's financial performance has improved significantly.",
+    "exampleKo": "회사의 재무 실적이 상당히 개선되었습니다."
+  },
+  {
+    "day": 24,
+    "no": 18,
+    "word": "reward",
+    "meaning": "~에 보답하다, 보상하다, 보상, 포상",
+    "targetScore": 650,
+    "exampleEn": "The firm rewards employees for valid suggestions.",
+    "exampleKo": "그 회사는 타당한 제안을 한 직원들에게 보상합니다."
+  },
+  {
+    "day": 24,
+    "no": 19,
+    "word": "search",
+    "meaning": "찾기, 수색, 조사",
+    "targetScore": 650,
+    "exampleEn": "We are conducting a search for a new marketing director.",
+    "exampleKo": "우리는 새로운 마케팅 이사를 찾고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 20,
+    "word": "inexperienced",
+    "meaning": "경험 없는, 미숙한",
+    "targetScore": 650,
+    "exampleEn": "He is inexperienced but eager to learn.",
+    "exampleKo": "그는 경험은 없지만 배우고자 하는 열의가 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 21,
+    "word": "early",
+    "meaning": "시간상 이른, 조기의",
+    "targetScore": 650,
+    "exampleEn": "The company offers an early retirement package.",
+    "exampleKo": "그 회사는 조기 퇴직 패키지를 제공합니다."
+  },
+  {
+    "day": 24,
+    "no": 22,
+    "word": "designate",
+    "meaning": "지명하다, 지정하다",
+    "targetScore": 650,
+    "exampleEn": "The area is designated as a non-smoking zone.",
+    "exampleKo": "그 구역은 금연 구역으로 지정되어 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 23,
+    "word": "executive",
+    "meaning": "경영의, 관리의",
+    "targetScore": 650,
+    "exampleEn": "He holds an executive position in the firm.",
+    "exampleKo": "그는 회사에서 간부직을 맡고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 24,
+    "word": "dedication",
+    "meaning": "헌신",
+    "targetScore": 650,
+    "exampleEn": "We admire his dedication to the job.",
+    "exampleKo": "우리는 일에 대한 그의 헌신에 감탄합니다."
+  },
+  {
+    "day": 24,
+    "no": 25,
+    "word": "unanimously",
+    "meaning": "만장일치로",
+    "targetScore": 650,
+    "exampleEn": "The proposal was approved unanimously by the board.",
+    "exampleKo": "그 안건은 이사회에서 만장일치로 승인되었습니다."
+  },
+  {
+    "day": 24,
+    "no": 26,
+    "word": "progress",
+    "meaning": "진행, 진척, 진전",
+    "targetScore": 650,
+    "exampleEn": "We are making steady progress on the construction project.",
+    "exampleKo": "우리는 건설 프로젝트에서 꾸준한 진척을 보이고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 27,
+    "word": "congratulate",
+    "meaning": "축하하다",
+    "targetScore": 650,
+    "exampleEn": "I congratulated him on his promotion to vice president.",
+    "exampleKo": "저는 그의 부사장 승진을 축하했습니다."
+  },
+  {
+    "day": 24,
+    "no": 28,
+    "word": "dismiss",
+    "meaning": "해임하다, 해고하다",
+    "targetScore": 650,
+    "exampleEn": "The manager was dismissed for misconduct.",
+    "exampleKo": "그 매니저는 위법 행위로 해고되었습니다."
+  },
+  {
+    "day": 24,
+    "no": 29,
+    "word": "independence",
+    "meaning": "독립성",
+    "targetScore": 650,
+    "exampleEn": "The division needs more independence in decision-making.",
+    "exampleKo": "그 부서는 의사 결정에 있어 더 많은 독립성이 필요합니다."
+  },
+  {
+    "day": 24,
+    "no": 30,
+    "word": "participation",
+    "meaning": "참여, 참가, 가입",
+    "targetScore": 650,
+    "exampleEn": "Participation in the survey is voluntary.",
+    "exampleKo": "설문 조사 참여는 자발적입니다."
+  },
+  {
+    "day": 24,
+    "no": 31,
+    "word": "praise",
+    "meaning": "칭찬",
+    "targetScore": 650,
+    "exampleEn": "The boss praised her for her initiative.",
+    "exampleKo": "상사는 그녀의 진취성을 칭찬했습니다."
+  },
+  {
+    "day": 24,
+    "no": 32,
+    "word": "accomplishment",
+    "meaning": "성과, 업적",
+    "targetScore": 650,
+    "exampleEn": "We celebrated the accomplishment of our quarterly goals.",
+    "exampleKo": "우리는 분기 목표 달성을 축하했습니다."
+  },
+  {
+    "day": 24,
+    "no": 33,
+    "word": "deliberation",
+    "meaning": "토의, 심의",
+    "targetScore": 650,
+    "exampleEn": "After much deliberation, they selected a vendor.",
+    "exampleKo": "심사숙고 끝에, 그들은 공급업체를 선정했습니다."
+  },
+  {
+    "day": 24,
+    "no": 34,
+    "word": "leadership",
+    "meaning": "리더십, 지도력",
+    "targetScore": 650,
+    "exampleEn": "Strong leadership is essential for business success.",
+    "exampleKo": "강력한 리더십은 사업 성공에 필수적입니다."
+  },
+  {
+    "day": 24,
+    "no": 35,
+    "word": "retire",
+    "meaning": "퇴직하다, 은퇴하다",
+    "targetScore": 650,
+    "exampleEn": "He plans to retire after 30 years of service.",
+    "exampleKo": "그는 30년 근무 후 은퇴할 계획입니다."
+  },
+  {
+    "day": 24,
+    "no": 36,
+    "word": "nomination",
+    "meaning": "임명, 지명",
+    "targetScore": 650,
+    "exampleEn": "The deadline for nominations is this Friday.",
+    "exampleKo": "후보 지명 마감기한은 이번주 금요일입니다."
+  },
+  {
+    "day": 24,
+    "no": 37,
+    "word": "reorganize",
+    "meaning": "재편성하다, 재조직하다",
+    "targetScore": 650,
+    "exampleEn": "The company plans to reorganize its marketing division.",
+    "exampleKo": "회사는 마케팅 부서를 개편할 계획입니다."
+  },
+  {
+    "day": 24,
+    "no": 38,
+    "word": "serve",
+    "meaning": "일하다, 근무하다",
+    "targetScore": 650,
+    "exampleEn": "He served as vice president for ten years.",
+    "exampleKo": "그는 10년 동안 부사장으로 재직했습니다."
+  },
+  {
+    "day": 24,
+    "no": 39,
+    "word": "encouragement",
+    "meaning": "격려",
+    "targetScore": 650,
+    "exampleEn": "Your encouragement means a lot to the team.",
+    "exampleKo": "당신의 격려는 팀에게 큰 힘이 됩니다."
+  },
+  {
+    "day": 24,
+    "no": 40,
+    "word": "resignation",
+    "meaning": "사임, 사직, 사직서",
+    "targetScore": 650,
+    "exampleEn": "He handed in his letter of resignation yesterday.",
+    "exampleKo": "그는 어제 사직서를 제출했습니다."
+  }
+]

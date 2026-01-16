@@ -1,0 +1,614 @@
+[
+    {
+        "day": 13,
+        "no": 69,
+        "word": "a loaf of",
+        "meaning": "한 덩어리의 (빵 등)",
+        "targetScore": 800,
+        "exampleEn": "I bought a loaf of bread.",
+        "exampleKo": "나는 빵 한 덩어리를 샀습니다."
+    },
+    {
+        "day": 13,
+        "no": 70,
+        "word": "a piece of",
+        "meaning": "한 조각의, 하나의",
+        "targetScore": 800,
+        "exampleEn": "Can I have a piece of paper?",
+        "exampleKo": "종이 한 장 주시겠어요?"
+    },
+    {
+        "day": 13,
+        "no": 71,
+        "word": "a sheet of",
+        "meaning": "한 장의 (종이 등)",
+        "targetScore": 800,
+        "exampleEn": "I need a sheet of paper.",
+        "exampleKo": "나는 종이 한 장이 필요합니다."
+    },
+    {
+        "day": 13,
+        "no": 72,
+        "word": "a slice of",
+        "meaning": "한 조각의 (얇게 썬 것)",
+        "targetScore": 800,
+        "exampleEn": "Would you like a slice of cake?",
+        "exampleKo": "케이크 한 조각 드시겠어요?"
+    },
+    {
+        "day": 13,
+        "no": 73,
+        "word": "accomplished",
+        "meaning": "성취된; 숙련된",
+        "targetScore": 800,
+        "exampleEn": "She is an accomplished artist.",
+        "exampleKo": "그녀는 숙련된 예술가입니다."
+    },
+    {
+        "day": 13,
+        "no": 74,
+        "word": "act",
+        "meaning": "행동하다; 연기하다",
+        "targetScore": 800,
+        "exampleEn": "He acted strangely.",
+        "exampleKo": "그는 이상하게 행동했습니다."
+    },
+    {
+        "day": 13,
+        "no": 75,
+        "word": "action",
+        "meaning": "조치, 행동",
+        "targetScore": 800,
+        "exampleEn": "Take immediate action.",
+        "exampleKo": "즉각적인 조치를 취하세요."
+    },
+    {
+        "day": 13,
+        "no": 76,
+        "word": "adjust",
+        "meaning": "조절하다, 적응하다",
+        "targetScore": 800,
+        "exampleEn": "You will adjust to the new environment.",
+        "exampleKo": "당신은 새로운 환경에 적응할 것입니다."
+    },
+    {
+        "day": 13,
+        "no": 77,
+        "word": "adjustment",
+        "meaning": "조정, 적응",
+        "targetScore": 800,
+        "exampleEn": "It requires some adjustment.",
+        "exampleKo": "그것은 약간의 조정이 필요합니다."
+    },
+    {
+        "day": 13,
+        "no": 78,
+        "word": "agree",
+        "meaning": "동의하다",
+        "targetScore": 800,
+        "exampleEn": "I agree with you.",
+        "exampleKo": "당신에게 동의합니다."
+    },
+    {
+        "day": 13,
+        "no": 79,
+        "word": "agreement",
+        "meaning": "합의, 계약",
+        "targetScore": 800,
+        "exampleEn": "We reached an agreement.",
+        "exampleKo": "우리는 합의에 도달했습니다."
+    },
+    {
+        "day": 13,
+        "no": 80,
+        "word": "apologize",
+        "meaning": "사과하다",
+        "targetScore": 800,
+        "exampleEn": "He apologized for his mistake.",
+        "exampleKo": "그는 자신의 실수에 대해 사과했습니다."
+    },
+    {
+        "day": 13,
+        "no": 81,
+        "word": "apology",
+        "meaning": "사과",
+        "targetScore": 800,
+        "exampleEn": "Please accept my apology.",
+        "exampleKo": "사과를 받아주세요."
+    },
+    {
+        "day": 13,
+        "no": 82,
+        "word": "approve",
+        "meaning": "승인하다, 찬성하다",
+        "targetScore": 800,
+        "exampleEn": "The committee approved the plan.",
+        "exampleKo": "위원회는 그 계획을 승인했습니다."
+    },
+    {
+        "day": 13,
+        "no": 83,
+        "word": "argument",
+        "meaning": "논쟁, 주장",
+        "targetScore": 800,
+        "exampleEn": "They had a heated argument.",
+        "exampleKo": "그들은 격렬한 논쟁을 벌였습니다."
+    },
+    {
+        "day": 13,
+        "no": 84,
+        "word": "arrange",
+        "meaning": "정하다, 준비하다",
+        "targetScore": 800,
+        "exampleEn": "I arranged a meeting.",
+        "exampleKo": "나는 회의를 잡았습니다."
+    },
+    {
+        "day": 13,
+        "no": 85,
+        "word": "arrangement",
+        "meaning": "준비, 협의",
+        "targetScore": 800,
+        "exampleEn": "The new arrangement works well.",
+        "exampleKo": "새로운 합의는 잘 작동합니다."
+    },
+    {
+        "day": 13,
+        "no": 86,
+        "word": "ask",
+        "meaning": "물어보다, 요청하다",
+        "targetScore": 800,
+        "exampleEn": "Can I ask a favor?",
+        "exampleKo": "부탁 하나 해도 될까요?"
+    },
+    {
+        "day": 13,
+        "no": 87,
+        "word": "assist",
+        "meaning": "돕다",
+        "targetScore": 800,
+        "exampleEn": "I will assist you.",
+        "exampleKo": "내가 도와주겠습니다."
+    },
+    {
+        "day": 13,
+        "no": 88,
+        "word": "assistance",
+        "meaning": "도움, 원조",
+        "targetScore": 800,
+        "exampleEn": "Do you need assistance?",
+        "exampleKo": "도움이 필요합니까?"
+    },
+    {
+        "day": 13,
+        "no": 89,
+        "word": "belief",
+        "meaning": "믿음, 신념",
+        "targetScore": 800,
+        "exampleEn": "It is my firm belief.",
+        "exampleKo": "그것은 나의 확고한 신념입니다."
+    },
+    {
+        "day": 13,
+        "no": 90,
+        "word": "blame",
+        "meaning": "비난하다; 책임",
+        "targetScore": 800,
+        "exampleEn": "Don't blame me.",
+        "exampleKo": "나를 비난하지 마세요."
+    },
+    {
+        "day": 13,
+        "no": 91,
+        "word": "cause",
+        "meaning": "원인; 일으키다",
+        "targetScore": 800,
+        "exampleEn": "Comparison is the cause of unhappiness.",
+        "exampleKo": "비교는 불행의 원인입니다."
+    },
+    {
+        "day": 13,
+        "no": 92,
+        "word": "character",
+        "meaning": "성격, 등장인물",
+        "targetScore": 800,
+        "exampleEn": "He has a strong character.",
+        "exampleKo": "그는 강한 성격을 가지고 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 93,
+        "word": "characteristic",
+        "meaning": "특징; 특유의",
+        "targetScore": 800,
+        "exampleEn": "Kindness is her characteristic.",
+        "exampleKo": "친절함이 그녀의 특징입니다."
+    },
+    {
+        "day": 13,
+        "no": 94,
+        "word": "claim",
+        "meaning": "주장하다, 청구하다",
+        "targetScore": 800,
+        "exampleEn": "He claims to be innocent.",
+        "exampleKo": "그는 결백을 주장합니다."
+    },
+    {
+        "day": 13,
+        "no": 95,
+        "word": "colleague",
+        "meaning": "동료",
+        "targetScore": 800,
+        "exampleEn": "He is my colleague at work.",
+        "exampleKo": "그는 나의 직장 동료입니다."
+    },
+    {
+        "day": 13,
+        "no": 96,
+        "word": "comment",
+        "meaning": "논평, 언급",
+        "targetScore": 800,
+        "exampleEn": "No comment.",
+        "exampleKo": "노코멘트입니다."
+    },
+    {
+        "day": 13,
+        "no": 97,
+        "word": "complain",
+        "meaning": "불평하다",
+        "targetScore": 800,
+        "exampleEn": "He is always complaining.",
+        "exampleKo": "그는 항상 불평합니다."
+    },
+    {
+        "day": 13,
+        "no": 98,
+        "word": "complaint",
+        "meaning": "불만, 항의",
+        "targetScore": 800,
+        "exampleEn": "We received a complaint.",
+        "exampleKo": "우리는 항의를 받았습니다."
+    },
+    {
+        "day": 13,
+        "no": 99,
+        "word": "complete",
+        "meaning": "완료하다; 완전한",
+        "targetScore": 800,
+        "exampleEn": "The work is complete.",
+        "exampleKo": "작업이 완료되었습니다."
+    },
+    {
+        "day": 13,
+        "no": 100,
+        "word": "concern",
+        "meaning": "우려, 걱정; ~에 관계하다",
+        "targetScore": 800,
+        "exampleEn": "It concerns public safety.",
+        "exampleKo": "그것은 공공 안전에 관한 일입니다."
+    },
+    {
+        "day": 13,
+        "no": 101,
+        "word": "confuse",
+        "meaning": "혼란스럽게 하다",
+        "targetScore": 800,
+        "exampleEn": "Do not confuse the two issues.",
+        "exampleKo": "두 문제를 혼동하지 마세요."
+    },
+    {
+        "day": 13,
+        "no": 102,
+        "word": "confusion",
+        "meaning": "혼란",
+        "targetScore": 800,
+        "exampleEn": "There was some confusion.",
+        "exampleKo": "다소 혼란이 있었습니다."
+    },
+    {
+        "day": 13,
+        "no": 103,
+        "word": "contact",
+        "meaning": "연락하다; 접촉",
+        "targetScore": 800,
+        "exampleEn": "Contact me by email.",
+        "exampleKo": "이메일로 연락주세요."
+    },
+    {
+        "day": 13,
+        "no": 104,
+        "word": "cooperate",
+        "meaning": "협력하다",
+        "targetScore": 800,
+        "exampleEn": "We need to cooperate.",
+        "exampleKo": "우리는 협력해야 합니다."
+    },
+    {
+        "day": 13,
+        "no": 105,
+        "word": "cooperation",
+        "meaning": "협력",
+        "targetScore": 800,
+        "exampleEn": "Thanks for your cooperation.",
+        "exampleKo": "협조해 주셔서 감사합니다."
+    },
+    {
+        "day": 13,
+        "no": 106,
+        "word": "correct",
+        "meaning": "정정하다; 올바른",
+        "targetScore": 800,
+        "exampleEn": "Correct me if I'm wrong.",
+        "exampleKo": "내가 틀렸다면 정정해 주세요."
+    },
+    {
+        "day": 13,
+        "no": 107,
+        "word": "courage",
+        "meaning": "용기",
+        "targetScore": 800,
+        "exampleEn": "He showed great courage.",
+        "exampleKo": "그는 큰 용기를 보여주었습니다."
+    },
+    {
+        "day": 13,
+        "no": 108,
+        "word": "courteous",
+        "meaning": "정중한, 공손한",
+        "targetScore": 800,
+        "exampleEn": "Be courteous to others.",
+        "exampleKo": "타인에게 정중하세요."
+    },
+    {
+        "day": 13,
+        "no": 109,
+        "word": "courtesy",
+        "meaning": "예의, 공손",
+        "targetScore": 800,
+        "exampleEn": "He treated me with courtesy.",
+        "exampleKo": "그는 나를 예의 있게 대했습니다."
+    },
+    {
+        "day": 13,
+        "no": 110,
+        "word": "critic",
+        "meaning": "비평가",
+        "targetScore": 800,
+        "exampleEn": "The critics praised the movie.",
+        "exampleKo": "비평가들은 그 영화를 칭찬했습니다."
+    },
+    {
+        "day": 13,
+        "no": 111,
+        "word": "critical",
+        "meaning": "비판적인, 대단히 중요한",
+        "targetScore": 800,
+        "exampleEn": "It is a critical moment.",
+        "exampleKo": "중요한 순간입니다."
+    },
+    {
+        "day": 13,
+        "no": 112,
+        "word": "criticize",
+        "meaning": "비판하다",
+        "targetScore": 800,
+        "exampleEn": "Do not criticize others unfairly.",
+        "exampleKo": "남을 부당하게 비판하지 마세요."
+    },
+    {
+        "day": 13,
+        "no": 113,
+        "word": "deal",
+        "meaning": "거래하다, 다루다",
+        "targetScore": 800,
+        "exampleEn": "He deals in antiques.",
+        "exampleKo": "그는 골동품을 취급합니다."
+    },
+    {
+        "day": 13,
+        "no": 114,
+        "word": "deal with",
+        "meaning": "~을 다루다, 처리하다",
+        "targetScore": 800,
+        "exampleEn": "How do you deal with stress?",
+        "exampleKo": "스트레스를 어떻게 다루나요?"
+    },
+    {
+        "day": 13,
+        "no": 115,
+        "word": "decide",
+        "meaning": "결정하다",
+        "targetScore": 800,
+        "exampleEn": "I decided to stay home.",
+        "exampleKo": "나는 집에 있기로 결정했습니다."
+    },
+    {
+        "day": 13,
+        "no": 116,
+        "word": "disappointment",
+        "meaning": "실망",
+        "targetScore": 800,
+        "exampleEn": "To my disappointment, he failed.",
+        "exampleKo": "실망스럽게도 그는 실패했습니다."
+    },
+    {
+        "day": 13,
+        "no": 117,
+        "word": "discuss",
+        "meaning": "논의하다",
+        "targetScore": 800,
+        "exampleEn": "Let's discuss the matter.",
+        "exampleKo": "그 문제에 대해 논의합시다."
+    },
+    {
+        "day": 13,
+        "no": 118,
+        "word": "discussion",
+        "meaning": "논의, 토론",
+        "targetScore": 800,
+        "exampleEn": "We had a long discussion.",
+        "exampleKo": "우리는 긴 토론을 했습니다."
+    },
+    {
+        "day": 13,
+        "no": 119,
+        "word": "disturb",
+        "meaning": "방해하다",
+        "targetScore": 800,
+        "exampleEn": "Do not disturb.",
+        "exampleKo": "방해하지 마시오."
+    },
+    {
+        "day": 13,
+        "no": 120,
+        "word": "draw",
+        "meaning": "끌다, 그리다",
+        "targetScore": 800,
+        "exampleEn": "Draw a line.",
+        "exampleKo": "선을 그리세요."
+    },
+    {
+        "day": 13,
+        "no": 121,
+        "word": "encourage",
+        "meaning": "장려하다, 격려하다",
+        "targetScore": 800,
+        "exampleEn": "Teachers encourage students.",
+        "exampleKo": "선생님들은 학생들을 격려합니다."
+    },
+    {
+        "day": 13,
+        "no": 122,
+        "word": "entire",
+        "meaning": "전체의",
+        "targetScore": 800,
+        "exampleEn": "The entire village was destroyed.",
+        "exampleKo": "마을 전체가 파괴되었습니다."
+    },
+    {
+        "day": 13,
+        "no": 123,
+        "word": "evaluate",
+        "meaning": "평가하다",
+        "targetScore": 800,
+        "exampleEn": "Evaluate your own performance.",
+        "exampleKo": "자신의 성과를 평가하세요."
+    },
+    {
+        "day": 13,
+        "no": 124,
+        "word": "evaluation",
+        "meaning": "평가",
+        "targetScore": 800,
+        "exampleEn": "Pass the evaluation test.",
+        "exampleKo": "평가 시험에 합격하세요."
+    },
+    {
+        "day": 13,
+        "no": 125,
+        "word": "expand",
+        "meaning": "확대하다, 확장하다",
+        "targetScore": 800,
+        "exampleEn": "Metals expand when heated.",
+        "exampleKo": "금속은 가열하면 팽창합니다."
+    },
+    {
+        "day": 13,
+        "no": 126,
+        "word": "expect",
+        "meaning": "기대하다, 예상하다",
+        "targetScore": 800,
+        "exampleEn": "I expect to be back soon.",
+        "exampleKo": "나는 곧 돌아올 것으로 예상합니다."
+    },
+    {
+        "day": 13,
+        "no": 127,
+        "word": "expectation",
+        "meaning": "기대, 예상",
+        "targetScore": 800,
+        "exampleEn": "It exceeded my expectations.",
+        "exampleKo": "그것은 내 기대를 뛰어넘었습니다."
+    },
+    {
+        "day": 13,
+        "no": 128,
+        "word": "express",
+        "meaning": "표현하다; 급행의",
+        "targetScore": 800,
+        "exampleEn": "Express your feelings.",
+        "exampleKo": "감정을 표현하세요."
+    },
+    {
+        "day": 13,
+        "no": 129,
+        "word": "extend",
+        "meaning": "연장하다, 뻗다",
+        "targetScore": 800,
+        "exampleEn": "Extend your arm.",
+        "exampleKo": "팔을 뻗으세요."
+    },
+    {
+        "day": 13,
+        "no": 130,
+        "word": "extension",
+        "meaning": "연장, 내선 번호",
+        "targetScore": 800,
+        "exampleEn": "Can I have an extension?",
+        "exampleKo": "기한 연장을 할 수 있을까요?"
+    },
+    {
+        "day": 13,
+        "no": 131,
+        "word": "face",
+        "meaning": "직면하다; 얼굴",
+        "targetScore": 800,
+        "exampleEn": "Face the reality.",
+        "exampleKo": "현실을 직시하세요."
+    },
+    {
+        "day": 13,
+        "no": 132,
+        "word": "fascinate",
+        "meaning": "매혹하다",
+        "targetScore": 800,
+        "exampleEn": "Science fascinates him.",
+        "exampleKo": "과학은 그를 매료시킵니다."
+    },
+    {
+        "day": 13,
+        "no": 133,
+        "word": "fault",
+        "meaning": "잘못, 결점",
+        "targetScore": 800,
+        "exampleEn": "It's all my fault.",
+        "exampleKo": "모두 제 잘못입니다."
+    },
+    {
+        "day": 13,
+        "no": 134,
+        "word": "favor",
+        "meaning": "호의, 부탁",
+        "targetScore": 800,
+        "exampleEn": "Do me a favor.",
+        "exampleKo": "부탁 하나만 들어주세요."
+    },
+    {
+        "day": 13,
+        "no": 135,
+        "word": "favorable",
+        "meaning": "호의적인, 유리한",
+        "targetScore": 800,
+        "exampleEn": "The conditions are favorable.",
+        "exampleKo": "조건이 유리합니다."
+    },
+    {
+        "day": 13,
+        "no": 136,
+        "word": "feedback",
+        "meaning": "피드백, 의견",
+        "targetScore": 800,
+        "exampleEn": "Give me some feedback.",
+        "exampleKo": "피드백 좀 주세요."
+    }
+]

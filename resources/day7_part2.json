@@ -1,0 +1,254 @@
+[
+  {
+    "day": 7,
+    "no": 41,
+    "word": "answer the phone",
+    "meaning": "전화를 받다",
+    "targetScore": 650,
+    "exampleEn": "The receptionist is busy answering the phone.",
+    "exampleKo": "접수원은 전화를 받느라 바쁩니다."
+  },
+  {
+    "day": 7,
+    "no": 42,
+    "word": "as it is",
+    "meaning": "있는 그대로",
+    "targetScore": 650,
+    "exampleEn": "The item is sold as is, with no warranty.",
+    "exampleKo": "그 품목은 보증 없이 있는 그대로 판매됩니다."
+  },
+  {
+    "day": 7,
+    "no": 43,
+    "word": "be based on",
+    "meaning": "~에 근거하다",
+    "targetScore": 650,
+    "exampleEn": "Salary is based on experience and performance.",
+    "exampleKo": "급여는 경력과 성과에 근거합니다."
+  },
+  {
+    "day": 7,
+    "no": 44,
+    "word": "be familiar with",
+    "meaning": "~을 잘 알고 있다, ~에 익숙하다",
+    "targetScore": 650,
+    "exampleEn": "I am familiar with the new software program.",
+    "exampleKo": "저는 새 소프트웨어 프로그램에 익숙합니다(잘 알고 있습니다)."
+  },
+  {
+    "day": 7,
+    "no": 45,
+    "word": "concrete",
+    "meaning": "구체적인",
+    "targetScore": 650,
+    "exampleEn": "We need concrete evidence to support the claim.",
+    "exampleKo": "주장을 뒷받침할 구체적인 증거가 필요합니다."
+  },
+  {
+    "day": 7,
+    "no": 46,
+    "word": "conflict with",
+    "meaning": "~과 상충되다, 충돌하다",
+    "targetScore": 650,
+    "exampleEn": "The meeting time conflicts with my schedule.",
+    "exampleKo": "회의 시간이 제 일정과 겹칩니다(충돌합니다)."
+  },
+  {
+    "day": 7,
+    "no": 47,
+    "word": "on display",
+    "meaning": "전시된, 진열된",
+    "targetScore": 650,
+    "exampleEn": "New products are on display in the showroom.",
+    "exampleKo": "신제품들이 쇼룸에 전시되어(진열되어) 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 48,
+    "word": "shadow",
+    "meaning": "그림자, 그늘",
+    "targetScore": 650,
+    "exampleEn": "The tree cast a long shadow on the ground.",
+    "exampleKo": "나무가 땅에 긴 그림자를 드리웠습니다. (Part 1 빈출)"
+  },
+  {
+    "day": 7,
+    "no": 49,
+    "word": "around the world",
+    "meaning": "전 세계에",
+    "targetScore": 650,
+    "exampleEn": "Our products are sold throughout the world.",
+    "exampleKo": "우리 제품은 전 세계에서 판매됩니다."
+  },
+  {
+    "day": 7,
+    "no": 50,
+    "word": "array",
+    "meaning": "진열, 배열",
+    "targetScore": 650,
+    "exampleEn": "The store offers a wide array of electronic goods.",
+    "exampleKo": "그 가게는 다양한 종류의 전자 제품을 제공합니다."
+  },
+  {
+    "day": 7,
+    "no": 51,
+    "word": "attempt",
+    "meaning": "시도, 시도하다",
+    "targetScore": 650,
+    "exampleEn": "He made an attempt to finish the report on time.",
+    "exampleKo": "그는 보고서를 제시간에 끝내기 위해 시도했습니다."
+  },
+  {
+    "day": 7,
+    "no": 52,
+    "word": "audiovisual",
+    "meaning": "시청각의",
+    "targetScore": 650,
+    "exampleEn": "We need audiovisual equipment for the presentation.",
+    "exampleKo": "프레젠테이션을 위해 시청각 장비가 필요합니다."
+  },
+  {
+    "day": 7,
+    "no": 53,
+    "word": "avoid",
+    "meaning": "방지하다",
+    "targetScore": 650,
+    "exampleEn": "Regular maintenance helps avoid costly repairs.",
+    "exampleKo": "정기적인 유지 보수는 비용이 많이 드는 수리를 방지하는 데 도움이 됩니다."
+  },
+  {
+    "day": 7,
+    "no": 54,
+    "word": "based",
+    "meaning": "~에 기반을 둔",
+    "targetScore": 650,
+    "exampleEn": "The company is based in New York.",
+    "exampleKo": "그 회사는 뉴욕에 기반을 두고 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 55,
+    "word": "cinema",
+    "meaning": "영화관, 극장",
+    "targetScore": 650,
+    "exampleEn": "We went to the cinema to watch a movie.",
+    "exampleKo": "우리는 영화를 보러 극장에 갔습니다."
+  },
+  {
+    "day": 7,
+    "no": 56,
+    "word": "competitive",
+    "meaning": "경쟁을 하는, 경쟁력 있는",
+    "targetScore": 650,
+    "exampleEn": "The company offers competitive salaries and benefits.",
+    "exampleKo": "그 회사는 경쟁력 있는 급여와 복리후생을 제공합니다."
+  },
+  {
+    "day": 7,
+    "no": 57,
+    "word": "conclude",
+    "meaning": "결론을 내리다",
+    "targetScore": 650,
+    "exampleEn": "We can conclude that the marketing strategy was successful.",
+    "exampleKo": "우리는 마케팅 전략이 성공적이었다고 결론 내릴 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 58,
+    "word": "energy drink",
+    "meaning": "에너지 음료",
+    "targetScore": 650,
+    "exampleEn": "He drank an energy drink to stay awake.",
+    "exampleKo": "그는 깨어 있기 위해 에너지 음료를 마셨습니다."
+  },
+  {
+    "day": 7,
+    "no": 59,
+    "word": "find out",
+    "meaning": "찾아내다",
+    "targetScore": 650,
+    "exampleEn": "Please find out when the next train leaves.",
+    "exampleKo": "다음 기차가 언제 떠나는지 알아봐(찾아봐) 주십시오."
+  },
+  {
+    "day": 7,
+    "no": 60,
+    "word": "informal",
+    "meaning": "격식에 얽매이지 않는, 편안한",
+    "targetScore": 650,
+    "exampleEn": "The dress code for the party is informal.",
+    "exampleKo": "파티의 복장 규정은 격식에 얽매이지 않는(캐주얼한) 편안한 차림입니다."
+  },
+  {
+    "day": 7,
+    "no": 61,
+    "word": "marketplace",
+    "meaning": "시장",
+    "targetScore": 650,
+    "exampleEn": "We are targeting the overseas market.",
+    "exampleKo": "우리는 해외 시장을 목표로 하고 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 62,
+    "word": "pattern",
+    "meaning": "무늬, 경향, 모범",
+    "targetScore": 650,
+    "exampleEn": "Analysts noticed a changing pattern in consumer behavior.",
+    "exampleKo": "분석가들은 소비자 행동의 변화하는 경향(패턴)을 알아차렸습니다."
+  },
+  {
+    "day": 7,
+    "no": 63,
+    "word": "public relations(PR)department",
+    "meaning": "홍보부",
+    "targetScore": 650,
+    "exampleEn": "Contact the public relations department for press inquiries.",
+    "exampleKo": "언론 문의는 홍보부에 연락하십시오."
+  },
+  {
+    "day": 7,
+    "no": 64,
+    "word": "sales",
+    "meaning": "판매의",
+    "targetScore": 650,
+    "exampleEn": "The sales department achieved its monthly target.",
+    "exampleKo": "영업부(판매부)는 월간 목표를 달성했습니다."
+  },
+  {
+    "day": 7,
+    "no": 65,
+    "word": "strict",
+    "meaning": "엄격한",
+    "targetScore": 650,
+    "exampleEn": "We follow strict safety guidelines in the factory.",
+    "exampleKo": "우리는 공장에서 엄격한 안전 지침을 따릅니다."
+  },
+  {
+    "day": 7,
+    "no": 66,
+    "word": "tool",
+    "meaning": "도구",
+    "targetScore": 650,
+    "exampleEn": "A hammer is a useful tool for this job.",
+    "exampleKo": "망치는 이 작업에 유용한 도구입니다."
+  },
+  {
+    "day": 7,
+    "no": 67,
+    "word": "typical",
+    "meaning": "전형적인, 대표적인",
+    "targetScore": 650,
+    "exampleEn": "This is a typical example of poor customer service.",
+    "exampleKo": "이것은 형편없는 고객 서비스의 전형적인 예입니다."
+  },
+  {
+    "day": 7,
+    "no": 68,
+    "word": "all the way",
+    "meaning": "내내,멀리서",
+    "targetScore": 650,
+    "exampleEn": "The museum is open throughout the year.",
+    "exampleKo": "박물관은 연중내내 개관합니다."
+  }
+]

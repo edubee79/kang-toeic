@@ -1,0 +1,362 @@
+[
+  {
+    "day": 3,
+    "no": 1,
+    "word": "accustomed",
+    "meaning": "익숙한",
+    "targetScore": 650,
+    "exampleEn": "I have become accustomed to the new system.",
+    "exampleKo": "저는 새로운 시스템에 익숙해졌습니다."
+  },
+  {
+    "day": 3,
+    "no": 2,
+    "word": "corporation",
+    "meaning": "주식회사, 법인",
+    "targetScore": 650,
+    "exampleEn": "She works for a multinational corporation.",
+    "exampleKo": "그녀는 다국적 기업에서 일합니다."
+  },
+  {
+    "day": 3,
+    "no": 3,
+    "word": "demanding",
+    "meaning": "요구가 많은, 힘든",
+    "targetScore": 650,
+    "exampleEn": "The new project is very demanding.",
+    "exampleKo": "새 프로젝트는 매우 힘듭니다(요구가 많습니다)."
+  },
+  {
+    "day": 3,
+    "no": 4,
+    "word": "colleague",
+    "meaning": "(직업상의) 동료",
+    "targetScore": 650,
+    "exampleEn": "I discussed the issue with my colleague.",
+    "exampleKo": "저는 그 문제에 대해 동료와 상의했습니다."
+  },
+  {
+    "day": 3,
+    "no": 5,
+    "word": "division",
+    "meaning": "부서",
+    "targetScore": 650,
+    "exampleEn": "The sales division exceeded its targets.",
+    "exampleKo": "영업 부서는 목표를 초과 달성했습니다."
+  },
+  {
+    "day": 3,
+    "no": 6,
+    "word": "request",
+    "meaning": "요청, 요청하다",
+    "targetScore": 650,
+    "exampleEn": "He requested a leave of absence.",
+    "exampleKo": "그는 휴가를 요청했습니다."
+  },
+  {
+    "day": 3,
+    "no": 7,
+    "word": "efficiently",
+    "meaning": "효율적으로",
+    "targetScore": 650,
+    "exampleEn": "We need to manage our time efficiently.",
+    "exampleKo": "우리는 시간을 효율적으로 관리해야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 8,
+    "word": "manage",
+    "meaning": "~을 경영하다, 가까스로 하다",
+    "targetScore": 650,
+    "exampleEn": "The CEO manages the company effectively.",
+    "exampleKo": "CEO는 회사를 효과적으로 경영합니다."
+  },
+  {
+    "day": 3,
+    "no": 9,
+    "word": "submit",
+    "meaning": "제출하다",
+    "targetScore": 650,
+    "exampleEn": "Please submit your report by Friday.",
+    "exampleKo": "금요일까지 보고서를 제출해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 10,
+    "word": "directly",
+    "meaning": "곧바로",
+    "targetScore": 650,
+    "exampleEn": "Please report directly to the manager.",
+    "exampleKo": "매니저에게 곧바로 보고해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 11,
+    "word": "remind",
+    "meaning": "~에게 상기시키다, 일깨우다",
+    "targetScore": 650,
+    "exampleEn": "Please remind me to call the client.",
+    "exampleKo": "고객에게 전화하라고 제게 상기시켜 주세요."
+  },
+  {
+    "day": 3,
+    "no": 12,
+    "word": "instruct",
+    "meaning": "지시하다, 가르치다",
+    "targetScore": 650,
+    "exampleEn": "The supervisor instructed the staff to update the files.",
+    "exampleKo": "감독관은 직원들에게 파일을 업데이트하라고 지시했습니다."
+  },
+  {
+    "day": 3,
+    "no": 13,
+    "word": "deadline",
+    "meaning": "마감일, 마감 시간",
+    "targetScore": 650,
+    "exampleEn": "We must meet the deadline by 5 PM.",
+    "exampleKo": "우리는 오후 5시까지 마감 기한을 맞춰야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 14,
+    "word": "sample",
+    "meaning": "견본,샘플,표본,시식하다,(견본으로 질을) 시험하다",
+    "targetScore": 650,
+    "exampleEn": "We analyzed a sample of the product.",
+    "exampleKo": "우리는 제품의 견본을 분석했습니다."
+  },
+  {
+    "day": 3,
+    "no": 15,
+    "word": "notify",
+    "meaning": "~에게 통지하다, 알리다",
+    "targetScore": 650,
+    "exampleEn": "We will notify you of any changes.",
+    "exampleKo": "변경 사항이 있으면 알려드리겠습니다."
+  },
+  {
+    "day": 3,
+    "no": 16,
+    "word": "perform",
+    "meaning": "(일〮과제 〮의무 등을) 행하다, 실행하다",
+    "targetScore": 650,
+    "exampleEn": "The team performed the task successfully.",
+    "exampleKo": "팀은 그 과제를 성공적으로 수행했습니다."
+  },
+  {
+    "day": 3,
+    "no": 17,
+    "word": "monitor",
+    "meaning": "화면, 모니터, 감독하다, 감시하다, 검토하다",
+    "targetScore": 650,
+    "exampleEn": "The manager monitors the progress of the project.",
+    "exampleKo": "매니저는 프로젝트의 진행 상황을 감독합니다."
+  },
+  {
+    "day": 3,
+    "no": 18,
+    "word": "deserve",
+    "meaning": "~할 만하다, ~할 가치가 있다",
+    "targetScore": 650,
+    "exampleEn": "She deserves a promotion for her hard work.",
+    "exampleKo": "그녀는 열심히 일한 대가로 승진할 자격이 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 19,
+    "word": "assignment",
+    "meaning": "일, 임무, 과제",
+    "targetScore": 650,
+    "exampleEn": "The assignment must be completed by tomorrow.",
+    "exampleKo": "과제는 내일까지 완료되어야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 20,
+    "word": "entire",
+    "meaning": "전체의",
+    "targetScore": 650,
+    "exampleEn": "The entire staff attended the meeting.",
+    "exampleKo": "전체 직원이 회의에 참석했습니다."
+  },
+  {
+    "day": 3,
+    "no": 21,
+    "word": "release",
+    "meaning": "발표하다, 공개하다, 출시, 발매",
+    "targetScore": 650,
+    "exampleEn": "The company will release a new product next week.",
+    "exampleKo": "회사는 다음 주에 신제품을 출시할 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 22,
+    "word": "extension",
+    "meaning": "연장, 연기, (전화의) 내선",
+    "targetScore": 650,
+    "exampleEn": "You can reach me at extension 101.",
+    "exampleKo": "내선 번호 101번으로 저에게 연락하실 수 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 23,
+    "word": "electronically",
+    "meaning": "컴퓨터 통신망으로, 컴퓨터로",
+    "targetScore": 650,
+    "exampleEn": "Applications must be submitted electronically.",
+    "exampleKo": "지원서는 컴퓨터 통신망으로(온라인으로) 제출되어야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 24,
+    "word": "attendance",
+    "meaning": "출근, 출석",
+    "targetScore": 650,
+    "exampleEn": "Attendance at the seminar is mandatory.",
+    "exampleKo": "세미나 출석은 의무입니다."
+  },
+  {
+    "day": 3,
+    "no": 25,
+    "word": "absolutely",
+    "meaning": "절대적으로, 완전히",
+    "targetScore": 650,
+    "exampleEn": "You are absolutely right.",
+    "exampleKo": "당신 말이 전적으로 옳습니다."
+  },
+  {
+    "day": 3,
+    "no": 26,
+    "word": "delegate",
+    "meaning": "(권한 등을) 위임하다, 대표",
+    "targetScore": 650,
+    "exampleEn": "Managers should delegate tasks to their team members.",
+    "exampleKo": "관리자들은 팀원들에게 업무를 위임해야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 27,
+    "word": "attentively",
+    "meaning": "주의 깊게, 조심스럽게",
+    "targetScore": 650,
+    "exampleEn": "The audience listened attentively to the speaker.",
+    "exampleKo": "청중은 연사의 말을 주의 깊게 경청했습니다."
+  },
+  {
+    "day": 3,
+    "no": 28,
+    "word": "supervision",
+    "meaning": "감독",
+    "targetScore": 650,
+    "exampleEn": "New employees work under the supervision of a mentor.",
+    "exampleKo": "신입 사원들은 멘토의 감독하에 일합니다."
+  },
+  {
+    "day": 3,
+    "no": 29,
+    "word": "workshop",
+    "meaning": "워크숍, 연수",
+    "targetScore": 650,
+    "exampleEn": "We attended a workshop on leadership skills.",
+    "exampleKo": "우리는 리더십 스킬에 관한 워크숍에 참석했습니다."
+  },
+  {
+    "day": 3,
+    "no": 30,
+    "word": "draw",
+    "meaning": "끌다, 끌어당기다",
+    "targetScore": 650,
+    "exampleEn": "The event drew a large crowd.",
+    "exampleKo": "그 행사는 많은 관중을 끌어모았습니다."
+  },
+  {
+    "day": 3,
+    "no": 31,
+    "word": "revision",
+    "meaning": "수정, 개정",
+    "targetScore": 650,
+    "exampleEn": "The manuscript requires some revision.",
+    "exampleKo": "원고는 약간의 수정이 필요합니다."
+  },
+  {
+    "day": 3,
+    "no": 32,
+    "word": "reluctantly",
+    "meaning": "마지못해, 꺼려하여",
+    "targetScore": 650,
+    "exampleEn": "He reluctantly accepted the offer.",
+    "exampleKo": "그는 마지못해 제안을 수락했습니다."
+  },
+  {
+    "day": 3,
+    "no": 33,
+    "word": "acquaint",
+    "meaning": "~에게 숙지시키다, 잘 알게 하다",
+    "targetScore": 650,
+    "exampleEn": "Please acquaint yourself with the safety procedures.",
+    "exampleKo": "안전 절차를 숙지해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 34,
+    "word": "convey",
+    "meaning": "(용건을) 전달하다",
+    "targetScore": 650,
+    "exampleEn": "Please convey my message to the director.",
+    "exampleKo": "제 메시지를 이사님께 전달해 주세요."
+  },
+  {
+    "day": 3,
+    "no": 35,
+    "word": "check",
+    "meaning": "검사, 검사하다, 조사하다, 확인하다",
+    "targetScore": 650,
+    "exampleEn": "Please check your email regularly.",
+    "exampleKo": "이메일을 정기적으로 확인해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 36,
+    "word": "headquarters",
+    "meaning": "본부",
+    "targetScore": 650,
+    "exampleEn": "The company headquarters is located in New York.",
+    "exampleKo": "회사 본부는 뉴욕에 위치해 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 37,
+    "word": "file",
+    "meaning": "서류, (서류를) 정리하다, 철하다, 정식으로 제기하다",
+    "targetScore": 650,
+    "exampleEn": "Please file these documents in the cabinet.",
+    "exampleKo": "이 서류들을 캐비닛에 정리해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 38,
+    "word": "oversee",
+    "meaning": "감독하다",
+    "targetScore": 650,
+    "exampleEn": "The manager oversees daily operations.",
+    "exampleKo": "매니저는 일일 운영을 감독합니다."
+  },
+  {
+    "day": 3,
+    "no": 39,
+    "word": "involved",
+    "meaning": "관여하는, 관계된, 연루된",
+    "targetScore": 650,
+    "exampleEn": "He was involved in the decision-making process.",
+    "exampleKo": "그는 의사 결정 과정에 관여했습니다."
+  },
+  {
+    "day": 3,
+    "no": 40,
+    "word": "concentrate",
+    "meaning": "집중하다, 집중시키다",
+    "targetScore": 650,
+    "exampleEn": "I need to concentrate on my work.",
+    "exampleKo": "저는 제 업무에 집중해야 합니다."
+  }
+]

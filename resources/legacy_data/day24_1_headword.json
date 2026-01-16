@@ -1,0 +1,362 @@
+[
+    {
+        "day": 24,
+        "no": 1,
+        "word": "appoint",
+        "meaning": "임명하다, 지명하다",
+        "targetScore": 650,
+        "exampleEn": "The board will appoint a new CEO next month.",
+        "exampleKo": "이사회는 다음 달 새로운 CEO를 임명할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 2,
+        "word": "candidate",
+        "meaning": "후보자",
+        "targetScore": 650,
+        "exampleEn": "We interviewed five candidates for the position.",
+        "exampleKo": "우리는 그 직위에 대해 다섯 명의 후보자를 면접했습니다."
+    },
+    {
+        "day": 24,
+        "no": 3,
+        "word": "qualified",
+        "meaning": "자격을 갖춘",
+        "targetScore": 650,
+        "exampleEn": "Only qualified applicants will be considered.",
+        "exampleKo": "자격을 갖춘 지원자만 고려될 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 4,
+        "word": "resume",
+        "meaning": "이력서; 재개하다",
+        "targetScore": 650,
+        "exampleEn": "Please submit your resume by Friday.",
+        "exampleKo": "금요일까지 이력서를 제출해 주세요."
+    },
+    {
+        "day": 24,
+        "no": 5,
+        "word": "interview",
+        "meaning": "면접; 면접하다",
+        "targetScore": 650,
+        "exampleEn": "Your interview is scheduled for 2 PM.",
+        "exampleKo": "귀하의 면접은 오후 2시로 예정되어 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 6,
+        "word": "hire",
+        "meaning": "고용하다",
+        "targetScore": 650,
+        "exampleEn": "We plan to hire ten new employees this year.",
+        "exampleKo": "우리는 올해 10명의 신입 사원을 고용할 계획입니다."
+    },
+    {
+        "day": 24,
+        "no": 7,
+        "word": "position",
+        "meaning": "직위, 위치",
+        "targetScore": 650,
+        "exampleEn": "This position requires three years of experience.",
+        "exampleKo": "이 직위는 3년의 경력을 요구합니다."
+    },
+    {
+        "day": 24,
+        "no": 8,
+        "word": "applicant",
+        "meaning": "지원자",
+        "targetScore": 650,
+        "exampleEn": "All applicants must complete the online form.",
+        "exampleKo": "모든 지원자는 온라인 양식을 작성해야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 9,
+        "word": "vacancy",
+        "meaning": "공석, 결원",
+        "targetScore": 650,
+        "exampleEn": "There is a vacancy in the marketing department.",
+        "exampleKo": "마케팅 부서에 공석이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 10,
+        "word": "employment",
+        "meaning": "고용",
+        "targetScore": 650,
+        "exampleEn": "The employment contract is for two years.",
+        "exampleKo": "고용 계약은 2년입니다."
+    },
+    {
+        "day": 24,
+        "no": 11,
+        "word": "recruit",
+        "meaning": "모집하다; 신입 사원",
+        "targetScore": 650,
+        "exampleEn": "The company is recruiting experienced engineers.",
+        "exampleKo": "회사는 경험 있는 엔지니어를 모집하고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 12,
+        "word": "reference",
+        "meaning": "추천서, 참고 자료",
+        "targetScore": 650,
+        "exampleEn": "Please provide two professional references.",
+        "exampleKo": "두 명의 전문적인 추천인을 제공해 주세요."
+    },
+    {
+        "day": 24,
+        "no": 13,
+        "word": "skill",
+        "meaning": "기술, 능력",
+        "targetScore": 650,
+        "exampleEn": "Strong communication skills are essential.",
+        "exampleKo": "강력한 의사소통 능력이 필수적입니다."
+    },
+    {
+        "day": 24,
+        "no": 14,
+        "word": "experience",
+        "meaning": "경험",
+        "targetScore": 650,
+        "exampleEn": "She has five years of experience in sales.",
+        "exampleKo": "그녀는 영업 분야에서 5년의 경험이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 15,
+        "word": "qualification",
+        "meaning": "자격",
+        "targetScore": 650,
+        "exampleEn": "A university degree is a minimum qualification.",
+        "exampleKo": "대학 학위는 최소 자격 요건입니다."
+    },
+    {
+        "day": 24,
+        "no": 16,
+        "word": "promote",
+        "meaning": "승진시키다",
+        "targetScore": 650,
+        "exampleEn": "She was promoted to senior manager.",
+        "exampleKo": "그녀는 수석 관리자로 승진했습니다."
+    },
+    {
+        "day": 24,
+        "no": 17,
+        "word": "promotion",
+        "meaning": "승진",
+        "targetScore": 650,
+        "exampleEn": "His promotion was announced yesterday.",
+        "exampleKo": "그의 승진이 어제 발표되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 18,
+        "word": "transfer",
+        "meaning": "전근; 전근시키다",
+        "targetScore": 650,
+        "exampleEn": "He requested a transfer to the London office.",
+        "exampleKo": "그는 런던 사무소로의 전근을 요청했습니다."
+    },
+    {
+        "day": 24,
+        "no": 19,
+        "word": "resign",
+        "meaning": "사임하다",
+        "targetScore": 650,
+        "exampleEn": "The director resigned from his position.",
+        "exampleKo": "이사는 그의 직위에서 사임했습니다."
+    },
+    {
+        "day": 24,
+        "no": 20,
+        "word": "retire",
+        "meaning": "은퇴하다",
+        "targetScore": 650,
+        "exampleEn": "Mr. Kim will retire at the end of this year.",
+        "exampleKo": "김 씨는 올해 말에 은퇴할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 21,
+        "word": "dismiss",
+        "meaning": "해고하다",
+        "targetScore": 650,
+        "exampleEn": "The employee was dismissed for misconduct.",
+        "exampleKo": "그 직원은 비행으로 해고되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 22,
+        "word": "fire",
+        "meaning": "해고하다; 불",
+        "targetScore": 650,
+        "exampleEn": "The manager was fired for poor performance.",
+        "exampleKo": "그 관리자는 저조한 성과로 해고되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 23,
+        "word": "layoff",
+        "meaning": "정리 해고",
+        "targetScore": 650,
+        "exampleEn": "The company announced layoffs due to budget cuts.",
+        "exampleKo": "회사는 예산 삭감으로 인한 정리 해고를 발표했습니다."
+    },
+    {
+        "day": 24,
+        "no": 24,
+        "word": "termination",
+        "meaning": "해고, 종료",
+        "targetScore": 650,
+        "exampleEn": "The termination letter was sent last week.",
+        "exampleKo": "해고 통지서가 지난주에 발송되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 25,
+        "word": "pension",
+        "meaning": "연금",
+        "targetScore": 650,
+        "exampleEn": "Employees receive a pension after retirement.",
+        "exampleKo": "직원들은 퇴직 후 연금을 받습니다."
+    },
+    {
+        "day": 24,
+        "no": 26,
+        "word": "benefit",
+        "meaning": "혜택",
+        "targetScore": 650,
+        "exampleEn": "The job offers excellent health benefits.",
+        "exampleKo": "그 직업은 훌륭한 건강 혜택을 제공합니다."
+    },
+    {
+        "day": 24,
+        "no": 27,
+        "word": "insurance",
+        "meaning": "보험",
+        "targetScore": 650,
+        "exampleEn": "All employees are covered by health insurance.",
+        "exampleKo": "모든 직원은 건강 보험에 가입되어 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 28,
+        "word": "wage",
+        "meaning": "임금",
+        "targetScore": 650,
+        "exampleEn": "The minimum wage has increased this year.",
+        "exampleKo": "최저 임금이 올해 인상되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 29,
+        "word": "salary",
+        "meaning": "급여",
+        "targetScore": 650,
+        "exampleEn": "Her annual salary is $60,000.",
+        "exampleKo": "그녀의 연봉은 6만 달러입니다."
+    },
+    {
+        "day": 24,
+        "no": 30,
+        "word": "bonus",
+        "meaning": "보너스",
+        "targetScore": 650,
+        "exampleEn": "Employees will receive a year-end bonus.",
+        "exampleKo": "직원들은 연말 보너스를 받을 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 31,
+        "word": "raise",
+        "meaning": "인상; 인상하다",
+        "targetScore": 650,
+        "exampleEn": "I received a 5% raise this year.",
+        "exampleKo": "나는 올해 5% 인상을 받았습니다."
+    },
+    {
+        "day": 24,
+        "no": 32,
+        "word": "compensation",
+        "meaning": "보상, 급여",
+        "targetScore": 650,
+        "exampleEn": "The compensation package includes stock options.",
+        "exampleKo": "보상 패키지에는 주식 옵션이 포함됩니다."
+    },
+    {
+        "day": 24,
+        "no": 33,
+        "word": "payroll",
+        "meaning": "급여 명부",
+        "targetScore": 650,
+        "exampleEn": "The company has 500 employees on its payroll.",
+        "exampleKo": "회사는 급여 명부에 500명의 직원이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 34,
+        "word": "overtime",
+        "meaning": "초과 근무",
+        "targetScore": 650,
+        "exampleEn": "Employees are paid for overtime work.",
+        "exampleKo": "직원들은 초과 근무에 대해 급여를 받습니다."
+    },
+    {
+        "day": 24,
+        "no": 35,
+        "word": "shift",
+        "meaning": "교대 근무",
+        "targetScore": 650,
+        "exampleEn": "The night shift starts at 10 PM.",
+        "exampleKo": "야간 근무는 오후 10시에 시작합니다."
+    },
+    {
+        "day": 24,
+        "no": 36,
+        "word": "part-time",
+        "meaning": "시간제의",
+        "targetScore": 650,
+        "exampleEn": "She works part-time at the bookstore.",
+        "exampleKo": "그녀는 서점에서 시간제로 일합니다."
+    },
+    {
+        "day": 24,
+        "no": 37,
+        "word": "full-time",
+        "meaning": "정규직의",
+        "targetScore": 650,
+        "exampleEn": "We are looking for a full-time accountant.",
+        "exampleKo": "우리는 정규직 회계사를 찾고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 38,
+        "word": "temporary",
+        "meaning": "임시의",
+        "targetScore": 650,
+        "exampleEn": "This is a temporary position for six months.",
+        "exampleKo": "이것은 6개월간의 임시 직위입니다."
+    },
+    {
+        "day": 24,
+        "no": 39,
+        "word": "permanent",
+        "meaning": "영구적인",
+        "targetScore": 650,
+        "exampleEn": "After three months, you'll get a permanent contract.",
+        "exampleKo": "3개월 후, 당신은 정규직 계약을 받을 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 40,
+        "word": "resignation",
+        "meaning": "사임, 사직",
+        "targetScore": 650,
+        "exampleEn": "She submitted her resignation letter yesterday.",
+        "exampleKo": "그녀는 어제 사직서를 제출했습니다."
+    }
+]

@@ -1,0 +1,614 @@
+[
+    {
+        "day": 15,
+        "no": 69,
+        "word": "volume",
+        "meaning": "부피, 음량, 권",
+        "targetScore": 800,
+        "exampleEn": "Turn down the volume.",
+        "exampleKo": "음량을 줄이세요."
+    },
+    {
+        "day": 15,
+        "no": 70,
+        "word": "accumulate",
+        "meaning": "축적하다",
+        "targetScore": 800,
+        "exampleEn": "Debts began to accumulate.",
+        "exampleKo": "빚이 쌓이기 시작했습니다."
+    },
+    {
+        "day": 15,
+        "no": 71,
+        "word": "acquire",
+        "meaning": "획득하다, 얻다",
+        "targetScore": 800,
+        "exampleEn": "He acquired a new skill.",
+        "exampleKo": "그는 새로운 기술을 습득했습니다."
+    },
+    {
+        "day": 15,
+        "no": 72,
+        "word": "acquisition",
+        "meaning": "인수, 획득",
+        "targetScore": 800,
+        "exampleEn": "The company's latest acquisition.",
+        "exampleKo": "그 회사의 최신 인수 기업."
+    },
+    {
+        "day": 15,
+        "no": 73,
+        "word": "adequate",
+        "meaning": "적절한, 충분한",
+        "targetScore": 800,
+        "exampleEn": "The food was adequate.",
+        "exampleKo": "음식은 충분했습니다."
+    },
+    {
+        "day": 15,
+        "no": 74,
+        "word": "adhere",
+        "meaning": "고수하다, 들러붙다",
+        "targetScore": 800,
+        "exampleEn": "Adhere to the rules.",
+        "exampleKo": "규칙을 고수하세요."
+    },
+    {
+        "day": 15,
+        "no": 75,
+        "word": "adjourn",
+        "meaning": "휴회하다, 연기하다",
+        "targetScore": 800,
+        "exampleEn": "The meeting adjourned at 5 PM.",
+        "exampleKo": "회의는 오후 5시에 휴회했습니다."
+    },
+    {
+        "day": 15,
+        "no": 76,
+        "word": "allocate",
+        "meaning": "할당하다",
+        "targetScore": 800,
+        "exampleEn": "Funds were allocated for the project.",
+        "exampleKo": "프로젝트를 위해 자금이 할당되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 77,
+        "word": "anticipate",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "We anticipate a large crowd.",
+        "exampleKo": "우리는 많은 인파를 예상합니다."
+    },
+    {
+        "day": 15,
+        "no": 78,
+        "word": "attempt",
+        "meaning": "시도하다; 시도",
+        "targetScore": 800,
+        "exampleEn": "He attempted to escape.",
+        "exampleKo": "그는 탈출을 시도했습니다."
+    },
+    {
+        "day": 15,
+        "no": 79,
+        "word": "calculate",
+        "meaning": "계산하다",
+        "targetScore": 800,
+        "exampleEn": "Calculate the total cost.",
+        "exampleKo": "총비용을 계산하세요."
+    },
+    {
+        "day": 15,
+        "no": 80,
+        "word": "cancellation",
+        "meaning": "취소",
+        "targetScore": 800,
+        "exampleEn": "There were many cancellations.",
+        "exampleKo": "많은 취소가 있었습니다."
+    },
+    {
+        "day": 15,
+        "no": 81,
+        "word": "clash",
+        "meaning": "충돌하다; 충돌",
+        "targetScore": 800,
+        "exampleEn": "The dates clash.",
+        "exampleKo": "날짜가 겹칩니다."
+    },
+    {
+        "day": 15,
+        "no": 82,
+        "word": "come to an end",
+        "meaning": "끝나다",
+        "targetScore": 800,
+        "exampleEn": "The party came to an end.",
+        "exampleKo": "파티가 끝났습니다."
+    },
+    {
+        "day": 15,
+        "no": 83,
+        "word": "commence",
+        "meaning": "시작하다",
+        "targetScore": 800,
+        "exampleEn": "The ceremony will commence shortly.",
+        "exampleKo": "식이 곧 시작될 것입니다."
+    },
+    {
+        "day": 15,
+        "no": 84,
+        "word": "conclude",
+        "meaning": "결론짓다, 끝내다",
+        "targetScore": 800,
+        "exampleEn": "He concluded his speech.",
+        "exampleKo": "그는 연설을 마쳤습니다."
+    },
+    {
+        "day": 15,
+        "no": 85,
+        "word": "conclusion",
+        "meaning": "결론",
+        "targetScore": 800,
+        "exampleEn": "In conclusion, I agree.",
+        "exampleKo": "결론적으로, 나는 동의합니다."
+    },
+    {
+        "day": 15,
+        "no": 86,
+        "word": "consensus",
+        "meaning": "합의",
+        "targetScore": 800,
+        "exampleEn": "They reached a consensus.",
+        "exampleKo": "그들은 합의에 도달했습니다."
+    },
+    {
+        "day": 15,
+        "no": 87,
+        "word": "convene",
+        "meaning": "소집하다, 모이다",
+        "targetScore": 800,
+        "exampleEn": "The committee convened yesterday.",
+        "exampleKo": "위원회는 어제 소집되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 88,
+        "word": "deadline",
+        "meaning": "마감 기한",
+        "targetScore": 800,
+        "exampleEn": "Meet the deadline.",
+        "exampleKo": "마감 기한을 맞추세요."
+    },
+    {
+        "day": 15,
+        "no": 89,
+        "word": "determine",
+        "meaning": "결정하다, 알아내다",
+        "targetScore": 800,
+        "exampleEn": "Determine the cause of the fire.",
+        "exampleKo": "화재의 원인을 알아내세요."
+    },
+    {
+        "day": 15,
+        "no": 90,
+        "word": "differ",
+        "meaning": "다르다",
+        "targetScore": 800,
+        "exampleEn": "Opinions differ on this issue.",
+        "exampleKo": "이 문제에 대해 의견이 다릅니다."
+    },
+    {
+        "day": 15,
+        "no": 91,
+        "word": "draft",
+        "meaning": "초안; 초안을 작성하다",
+        "targetScore": 800,
+        "exampleEn": "This is a rough draft.",
+        "exampleKo": "이것은 대략적인 초안입니다."
+    },
+    {
+        "day": 15,
+        "no": 92,
+        "word": "duration",
+        "meaning": "지속 기간",
+        "targetScore": 800,
+        "exampleEn": "The duration of the contract.",
+        "exampleKo": "계약 기간."
+    },
+    {
+        "day": 15,
+        "no": 93,
+        "word": "emphasis",
+        "meaning": "강조",
+        "targetScore": 800,
+        "exampleEn": "He put emphasis on quality.",
+        "exampleKo": "그는 품질을 강조했습니다."
+    },
+    {
+        "day": 15,
+        "no": 94,
+        "word": "entitle",
+        "meaning": "자격을 주다",
+        "targetScore": 800,
+        "exampleEn": "You are entitled to a refund.",
+        "exampleKo": "당신은 환불받을 자격이 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 95,
+        "word": "establish",
+        "meaning": "설립하다, 확립하다",
+        "targetScore": 800,
+        "exampleEn": "They established a new rule.",
+        "exampleKo": "그들은 새로운 규칙을 확립했습니다."
+    },
+    {
+        "day": 15,
+        "no": 96,
+        "word": "estimate",
+        "meaning": "견적; 추정하다",
+        "targetScore": 800,
+        "exampleEn": "Can you give me an estimate?",
+        "exampleKo": "견적을 주시겠습니까?"
+    },
+    {
+        "day": 15,
+        "no": 97,
+        "word": "extend",
+        "meaning": "연장하다",
+        "targetScore": 800,
+        "exampleEn": "Extend the deadline.",
+        "exampleKo": "마감 기한을 연장하세요."
+    },
+    {
+        "day": 15,
+        "no": 98,
+        "word": "extension",
+        "meaning": "연장",
+        "targetScore": 800,
+        "exampleEn": "Request an extension.",
+        "exampleKo": "연장을 요청하세요."
+    },
+    {
+        "day": 15,
+        "no": 99,
+        "word": "extensive",
+        "meaning": "광범위한",
+        "targetScore": 800,
+        "exampleEn": "The damage was extensive.",
+        "exampleKo": "피해가 광범위했습니다."
+    },
+    {
+        "day": 15,
+        "no": 100,
+        "word": "flexible",
+        "meaning": "융통성 있는",
+        "targetScore": 800,
+        "exampleEn": "Work flexible hours.",
+        "exampleKo": "탄력적으로 근무하세요."
+    },
+    {
+        "day": 15,
+        "no": 101,
+        "word": "formal",
+        "meaning": "공식적인, 격식을 차린",
+        "targetScore": 800,
+        "exampleEn": "It was a formal dinner.",
+        "exampleKo": "그것은 격식을 차린 저녁 식사였습니다."
+    },
+    {
+        "day": 15,
+        "no": 102,
+        "word": "give up",
+        "meaning": "포기하다",
+        "targetScore": 800,
+        "exampleEn": "Don't give up.",
+        "exampleKo": "포기하지 마세요."
+    },
+    {
+        "day": 15,
+        "no": 103,
+        "word": "honor",
+        "meaning": "명예; 존중하다",
+        "targetScore": 800,
+        "exampleEn": "It is an honor to meet you.",
+        "exampleKo": "만나서 영광입니다."
+    },
+    {
+        "day": 15,
+        "no": 104,
+        "word": "impending",
+        "meaning": "임박한",
+        "targetScore": 800,
+        "exampleEn": "The impending storm.",
+        "exampleKo": "임박한 폭풍."
+    },
+    {
+        "day": 15,
+        "no": 105,
+        "word": "in charge",
+        "meaning": "담당하는",
+        "targetScore": 800,
+        "exampleEn": "Who is in charge here?",
+        "exampleKo": "여기 책임자가 누구입니까?"
+    },
+    {
+        "day": 15,
+        "no": 106,
+        "word": "indicate",
+        "meaning": "나타내다",
+        "targetScore": 800,
+        "exampleEn": "Sales figures indicate growth.",
+        "exampleKo": "매출 수치는 성장을 나타냅니다."
+    },
+    {
+        "day": 15,
+        "no": 107,
+        "word": "institute",
+        "meaning": "연구소; (제도를) 도입하다",
+        "targetScore": 800,
+        "exampleEn": "Wait for the institute's report.",
+        "exampleKo": "연구소의 보고서를 기다리세요."
+    },
+    {
+        "day": 15,
+        "no": 108,
+        "word": "interfere",
+        "meaning": "방해하다, 간섭하다",
+        "targetScore": 800,
+        "exampleEn": "Do not interfere with my work.",
+        "exampleKo": "내 일을 방해하지 마세요."
+    },
+    {
+        "day": 15,
+        "no": 109,
+        "word": "lengthy",
+        "meaning": "긴, 지루한",
+        "targetScore": 800,
+        "exampleEn": "It was a lengthy process.",
+        "exampleKo": "그것은 긴 과정이었습니다."
+    },
+    {
+        "day": 15,
+        "no": 110,
+        "word": "matter",
+        "meaning": "문제; 중요하다",
+        "targetScore": 800,
+        "exampleEn": "It doesn't matter.",
+        "exampleKo": "그건 중요하지 않습니다."
+    },
+    {
+        "day": 15,
+        "no": 111,
+        "word": "measure",
+        "meaning": "측정하다; 조치",
+        "targetScore": 800,
+        "exampleEn": "Take measures to reduce cost.",
+        "exampleKo": "비용 절감을 위한 조치를 취하세요."
+    },
+    {
+        "day": 15,
+        "no": 112,
+        "word": "modify",
+        "meaning": "수정하다",
+        "targetScore": 800,
+        "exampleEn": "The plan was modified.",
+        "exampleKo": "계획이 수정되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 113,
+        "word": "mutual",
+        "meaning": "상호 간의",
+        "targetScore": 800,
+        "exampleEn": "Mutual respect is key.",
+        "exampleKo": "상호 존중이 핵심입니다."
+    },
+    {
+        "day": 15,
+        "no": 114,
+        "word": "negotiate",
+        "meaning": "협상하다",
+        "targetScore": 800,
+        "exampleEn": "They are negotiating a deal.",
+        "exampleKo": "그들은 거래를 협상하고 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 115,
+        "word": "negotiation",
+        "meaning": "협상",
+        "targetScore": 800,
+        "exampleEn": "Negotiations broke down.",
+        "exampleKo": "협상이 결렬되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 116,
+        "word": "negotiator",
+        "meaning": "협상가",
+        "targetScore": 800,
+        "exampleEn": "He is a tough negotiator.",
+        "exampleKo": "그는 깐깐한 협상가입니다."
+    },
+    {
+        "day": 15,
+        "no": 117,
+        "word": "object",
+        "meaning": "반대하다; 물체",
+        "targetScore": 800,
+        "exampleEn": "I object to the plan.",
+        "exampleKo": "나는 그 계획에 반대합니다."
+    },
+    {
+        "day": 15,
+        "no": 118,
+        "word": "objection",
+        "meaning": "반대",
+        "targetScore": 800,
+        "exampleEn": "Raise an objection.",
+        "exampleKo": "이의를 제기하세요."
+    },
+    {
+        "day": 15,
+        "no": 119,
+        "word": "oppose",
+        "meaning": "반대하다",
+        "targetScore": 800,
+        "exampleEn": "They oppose the new law.",
+        "exampleKo": "그들은 새 법을 반대합니다."
+    },
+    {
+        "day": 15,
+        "no": 120,
+        "word": "opposition",
+        "meaning": "반대",
+        "targetScore": 800,
+        "exampleEn": "There was strong opposition.",
+        "exampleKo": "강한 반대가 있었습니다."
+    },
+    {
+        "day": 15,
+        "no": 121,
+        "word": "owe",
+        "meaning": "빚지다",
+        "targetScore": 800,
+        "exampleEn": "I owe you a favor.",
+        "exampleKo": "나는 당신에게 신세 졌습니다."
+    },
+    {
+        "day": 15,
+        "no": 122,
+        "word": "phase",
+        "meaning": "단계",
+        "targetScore": 800,
+        "exampleEn": "The first phase is complete.",
+        "exampleKo": "첫 단계가 완료되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 123,
+        "word": "postpone",
+        "meaning": "연기하다",
+        "targetScore": 800,
+        "exampleEn": "They postponed the wedding.",
+        "exampleKo": "그들은 결혼식을 연기했습니다."
+    },
+    {
+        "day": 15,
+        "no": 124,
+        "word": "progress",
+        "meaning": "진전; 진행되다",
+        "targetScore": 800,
+        "exampleEn": "We made good progress.",
+        "exampleKo": "우리는 좋은 진전을 이루었습니다."
+    },
+    {
+        "day": 15,
+        "no": 125,
+        "word": "progressive",
+        "meaning": "진보적인, 점진적인",
+        "targetScore": 800,
+        "exampleEn": "He has progressive ideas.",
+        "exampleKo": "그는 진보적인 생각을 가지고 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 126,
+        "word": "propose",
+        "meaning": "제안하다",
+        "targetScore": 800,
+        "exampleEn": "I propose a toast.",
+        "exampleKo": "건배를 제안합니다."
+    },
+    {
+        "day": 15,
+        "no": 127,
+        "word": "provision",
+        "meaning": "조항, 공급",
+        "targetScore": 800,
+        "exampleEn": "Under the provisions of the contract.",
+        "exampleKo": "계약 조항에 따라."
+    },
+    {
+        "day": 15,
+        "no": 128,
+        "word": "reach",
+        "meaning": "도달하다",
+        "targetScore": 800,
+        "exampleEn": "We reached a verdict.",
+        "exampleKo": "우리는 평결에 도달했습니다."
+    },
+    {
+        "day": 15,
+        "no": 129,
+        "word": "reception",
+        "meaning": "환영회, 접수처",
+        "targetScore": 800,
+        "exampleEn": "The wedding reception.",
+        "exampleKo": "결혼 피로연."
+    },
+    {
+        "day": 15,
+        "no": 130,
+        "word": "refusal",
+        "meaning": "거절",
+        "targetScore": 800,
+        "exampleEn": "His refusal was unexpected.",
+        "exampleKo": "그의 거절은 뜻밖이었습니다."
+    },
+    {
+        "day": 15,
+        "no": 131,
+        "word": "reject",
+        "meaning": "거절하다",
+        "targetScore": 800,
+        "exampleEn": "They rejected my application.",
+        "exampleKo": "그들은 내 신청을 거절했습니다."
+    },
+    {
+        "day": 15,
+        "no": 132,
+        "word": "represent",
+        "meaning": "대표하다",
+        "targetScore": 800,
+        "exampleEn": "He represents the company.",
+        "exampleKo": "그는 회사를 대표합니다."
+    },
+    {
+        "day": 15,
+        "no": 133,
+        "word": "resolve",
+        "meaning": "해결하다",
+        "targetScore": 800,
+        "exampleEn": "The issue was resolved.",
+        "exampleKo": "문제가 해결되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 134,
+        "word": "specify",
+        "meaning": "명시하다",
+        "targetScore": 800,
+        "exampleEn": "Specify the date and time.",
+        "exampleKo": "날짜와 시간을 명시하세요."
+    },
+    {
+        "day": 15,
+        "no": 135,
+        "word": "stipulate",
+        "meaning": "규정하다",
+        "targetScore": 800,
+        "exampleEn": "The law stipulates that...",
+        "exampleKo": "법은 ...라고 규정하고 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 136,
+        "word": "surplus",
+        "meaning": "잉여",
+        "targetScore": 800,
+        "exampleEn": "A budget surplus.",
+        "exampleKo": "예산 흑자."
+    }
+]

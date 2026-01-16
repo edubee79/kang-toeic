@@ -1,0 +1,290 @@
+[
+  {
+    "day": 6,
+    "no": 137,
+    "word": "show up",
+    "meaning": "나타나다, 돋보이게 하다",
+    "targetScore": 900,
+    "exampleEn": "Please ensure you show up on time for the interview.",
+    "exampleKo": "인터뷰 시간에 맞춰 나타나도록(도착하도록) 해 주십시오."
+  },
+  {
+    "day": 6,
+    "no": 138,
+    "word": "take a tour",
+    "meaning": "여행하다, 둘러보다",
+    "targetScore": 900,
+    "exampleEn": "Visitors can take a tour of the manufacturing facility.",
+    "exampleKo": "방문객들은 제조 시설을 둘러볼(견학할) 수 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 139,
+    "word": "be in line",
+    "meaning": "줄서다",
+    "targetScore": 900,
+    "exampleEn": "Patients must be in line to receive the vaccination.",
+    "exampleKo": "환자들은 예방 접종을 받기 위해 줄을 서 있어야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 140,
+    "word": "for change",
+    "meaning": "기분 전환으로",
+    "targetScore": 900,
+    "exampleEn": "I want to try something different for a change.",
+    "exampleKo": "기분 전환으로 뭔가 다른 것을 시도해 보고 싶습니다."
+  },
+  {
+    "day": 6,
+    "no": 141,
+    "word": "pass the time",
+    "meaning": "시간을 보내다, 시간을 떼우다",
+    "targetScore": 900,
+    "exampleEn": "Passengers read magazines to pass the time while waiting.",
+    "exampleKo": "승객들은 기다리는 동안 시간을 보내기 위해 잡지를 읽습니다."
+  },
+  {
+    "day": 6,
+    "no": 142,
+    "word": "pose",
+    "meaning": "자세를 취하다, (사진 등을 위한)자세",
+    "targetScore": 900,
+    "exampleEn": "The models were asked to pose for the fashion shoot.",
+    "exampleKo": "모델들은 패션 촬영을 위해 자세를 취해 달라는 요청을 받았습니다."
+  },
+  {
+    "day": 6,
+    "no": 143,
+    "word": "stay tuned",
+    "meaning": "채널을 고정시키다",
+    "targetScore": 900,
+    "exampleEn": "Stay tuned for more updates on the weather forecast.",
+    "exampleKo": "일기 예보에 대한 더 많은 소식을 위해 채널을 고정해 주십시오."
+  },
+  {
+    "day": 6,
+    "no": 144,
+    "word": "vacate",
+    "meaning": "집을 비우다, 방을 비우다",
+    "targetScore": 900,
+    "exampleEn": "Tenants must vacate the premises by the end of the month.",
+    "exampleKo": "세입자들은 이번 달 말까지 구내를 비워야 합니다. (Part 7 임대차 계약 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 145,
+    "word": "appreciative",
+    "meaning": "감사하는",
+    "targetScore": 900,
+    "exampleEn": "The audience was very appreciative of the performance.",
+    "exampleKo": "청중은 그 공연에 대해 매우 감사해했습니다(감상했습니다)."
+  },
+  {
+    "day": 6,
+    "no": 146,
+    "word": "casually",
+    "meaning": "(복장을)캐주얼하게, 약식으로",
+    "targetScore": 900,
+    "exampleEn": "Employees are allowed to dress casually on Fridays.",
+    "exampleKo": "직원들은 금요일에 캐주얼하게(약식으로) 입는 것이 허용됩니다."
+  },
+  {
+    "day": 6,
+    "no": 147,
+    "word": "enlightening",
+    "meaning": "계몽적인, 깨우치는",
+    "targetScore": 900,
+    "exampleEn": "The professor's lecture on economics was enlightening.",
+    "exampleKo": "경제학에 대한 교수의 강의는 깨우침을 주었습니다."
+  },
+  {
+    "day": 6,
+    "no": 148,
+    "word": "enthusiastically",
+    "meaning": "열광적으로, 매우 열심히",
+    "targetScore": 900,
+    "exampleEn": "The team worked enthusiastically to meet the deadline.",
+    "exampleKo": "팀은 마감 기한을 맞추기 위해 열광적으로(매우 열심히) 일했습니다."
+  },
+  {
+    "day": 6,
+    "no": 149,
+    "word": "excellence",
+    "meaning": "우수, 탁월성",
+    "targetScore": 900,
+    "exampleEn": "The award recognizes excellence in customer service.",
+    "exampleKo": "그 상은 고객 서비스에서의 탁월함을 인정합니다."
+  },
+  {
+    "day": 6,
+    "no": 150,
+    "word": "excursion",
+    "meaning": "소풍",
+    "targetScore": 900,
+    "exampleEn": "The tour includes a day excursion to the island.",
+    "exampleKo": "투어에는 섬으로의 당일 소풍(여행)이 포함되어 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 151,
+    "word": "festivity",
+    "meaning": "축제, 축하행사",
+    "targetScore": 900,
+    "exampleEn": "The city is planning festivities for the holidays.",
+    "exampleKo": "시는 연휴를 위한 축제 행사를 계획하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 152,
+    "word": "flock",
+    "meaning": "떼 지어가다, 모이다, 무리, 떼",
+    "targetScore": 900,
+    "exampleEn": "Tourists flocked to the museum to see the new exhibit.",
+    "exampleKo": "관광객들이 새로운 전시를 보기 위해 박물관으로 떼 지어 모였습니다."
+  },
+  {
+    "day": 6,
+    "no": 153,
+    "word": "intriguingly",
+    "meaning": "흥미를 자아내어, 호기심을 자극하여",
+    "targetScore": 900,
+    "exampleEn": "The plot of the novel develops intriguingly.",
+    "exampleKo": "그 소설의 줄거리는 흥미롭게 전개됩니다."
+  },
+  {
+    "day": 6,
+    "no": 154,
+    "word": "leg room",
+    "meaning": "(자동차 등에) 다리를 뻗을 수 있는 공간",
+    "targetScore": 900,
+    "exampleEn": "First-class seats offer more leg room for comfort.",
+    "exampleKo": "일등석 좌석은 편안함을 위해 더 넓은 다리 공간을 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 155,
+    "word": "mural",
+    "meaning": "벽화",
+    "targetScore": 900,
+    "exampleEn": "A large mural was painted on the side of the building.",
+    "exampleKo": "건물 측면에 큰 벽화가 그려졌습니다."
+  },
+  {
+    "day": 6,
+    "no": 156,
+    "word": "portrait",
+    "meaning": "초상화",
+    "targetScore": 900,
+    "exampleEn": "The artist was commissioned to paint a portrait of the CEO.",
+    "exampleKo": "그 예술가는 CEO의 초상화를 그리도록 의뢰받았습니다."
+  },
+  {
+    "day": 6,
+    "no": 157,
+    "word": "publication",
+    "meaning": "출판, 출판물",
+    "targetScore": 900,
+    "exampleEn": "His latest publication has received critical acclaim.",
+    "exampleKo": "그의 최신 출판물은 비평가들의 찬사를 받았습니다."
+  },
+  {
+    "day": 6,
+    "no": 158,
+    "word": "sculpture",
+    "meaning": "조각상",
+    "targetScore": 900,
+    "exampleEn": "The sculpture garden features works by modern artists.",
+    "exampleKo": "조각 공원은 현대 예술가들의 작품을 특징으로 합니다."
+  },
+  {
+    "day": 6,
+    "no": 159,
+    "word": "transferable",
+    "meaning": "양도가능한, 이동가능한",
+    "targetScore": 900,
+    "exampleEn": "The warranty is transferable to the new owner.",
+    "exampleKo": "보증서는 새 소유주에게 양도 가능합니다."
+  },
+  {
+    "day": 6,
+    "no": 160,
+    "word": "unsanitary",
+    "meaning": "비위생적인",
+    "targetScore": 900,
+    "exampleEn": "The health inspector closed the restaurant due to unsanitary conditions.",
+    "exampleKo": "보건 조사관은 비위생적인 상태 때문에 식당을 폐쇄했습니다."
+  },
+  {
+    "day": 6,
+    "no": 161,
+    "word": "be in the mood for-ing",
+    "meaning": "~하고 싶은 기분이다",
+    "targetScore": 900,
+    "exampleEn": "I'm not in the mood for going out tonight.",
+    "exampleKo": "저는 오늘 밤에 외출하고 싶은 기분이 아닙니다."
+  },
+  {
+    "day": 6,
+    "no": 162,
+    "word": "botanical garden",
+    "meaning": "식물원",
+    "targetScore": 900,
+    "exampleEn": "Many rare plants are grown in the botanical garden.",
+    "exampleKo": "많은 희귀 식물들이 식물원에서 재배됩니다."
+  },
+  {
+    "day": 6,
+    "no": 163,
+    "word": "censorship",
+    "meaning": "검열(제도)",
+    "targetScore": 900,
+    "exampleEn": "The article was edited to comply with censorship rules.",
+    "exampleKo": "그 기사는 검열 규정을 준수하기 위해 편집되었습니다."
+  },
+  {
+    "day": 6,
+    "no": 164,
+    "word": "have yet to do",
+    "meaning": "아직~해야 한다, 아직~하고 있지 않다",
+    "targetScore": 900,
+    "exampleEn": "They have yet to determine the cause of the accident.",
+    "exampleKo": "그들은 아직 사고의 원인을 밝혀내지 못했습니다."
+  },
+  {
+    "day": 6,
+    "no": 165,
+    "word": "intermission",
+    "meaning": "(연극·영화의) 휴식 시간, 막간",
+    "targetScore": 900,
+    "exampleEn": "There will be a 15-minute intermission between acts.",
+    "exampleKo": "막 사이에 15분의 휴식 시간이 있을 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 166,
+    "word": "memoirs",
+    "meaning": "회고록, 전기",
+    "targetScore": 900,
+    "exampleEn": "The former president published his memoirs last year.",
+    "exampleKo": "전직 대통령은 작년에 회고록을 출간했습니다."
+  },
+  {
+    "day": 6,
+    "no": 167,
+    "word": "must-see",
+    "meaning": "꼭 보아야 할 것",
+    "targetScore": 900,
+    "exampleEn": "This exhibition is a must-see for art lovers.",
+    "exampleKo": "이 전시회는 예술 애호가들이 꼭 보아야 할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 168,
+    "word": "rally",
+    "meaning": "랠리, (자동차·오토바이 등의 경주), 집회",
+    "targetScore": 900,
+    "exampleEn": "The stock market staged a rally late in the day.",
+    "exampleKo": "주식 시장은 장 후반에 반등(랠리)을 보였습니다."
+  }
+]

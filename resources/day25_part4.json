@@ -1,0 +1,290 @@
+[
+  {
+    "day": 25,
+    "no": 137,
+    "word": "compact car",
+    "meaning": "소형차",
+    "targetScore": 900,
+    "exampleEn": "Compact cars are popular in crowded cities.",
+    "exampleKo": "소형차는 붐비는 도시에서 인기가 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 138,
+    "word": "towing service",
+    "meaning": "견인 서비스",
+    "targetScore": 900,
+    "exampleEn": "The insurance company offers a 24-hour towing service.",
+    "exampleKo": "그 보험 회사는 24시간 견인 서비스를 제공합니다."
+  },
+  {
+    "day": 25,
+    "no": 139,
+    "word": "pass by",
+    "meaning": "지나가다",
+    "targetScore": 900,
+    "exampleEn": "We watched the parade pass by.",
+    "exampleKo": "우리는 퍼레이드가 지나가는 것을 지켜보았습니다."
+  },
+  {
+    "day": 25,
+    "no": 140,
+    "word": "pave",
+    "meaning": "(도로를) 포장하다",
+    "targetScore": 900,
+    "exampleEn": "The city plans to pave the dirt road.",
+    "exampleKo": "시 당국은 흙길을 포장할 계획입니다."
+  },
+  {
+    "day": 25,
+    "no": 141,
+    "word": "necessitate",
+    "meaning": "~을 필요하게 만들다",
+    "targetScore": 900,
+    "exampleEn": "The increase in traffic necessitated the road expansion.",
+    "exampleKo": "교통량 증가는 도로 확장을 필요하게 만들었습니다."
+  },
+  {
+    "day": 25,
+    "no": 142,
+    "word": "conform",
+    "meaning": "(규칙 등에) 부합하다, 따르다",
+    "targetScore": 900,
+    "exampleEn": "All vehicles must conform to safety standards.",
+    "exampleKo": "모든 차량은 안전 기준에 부합해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 143,
+    "word": "fuel-efficient",
+    "meaning": "연료 효율이 높은",
+    "targetScore": 900,
+    "exampleEn": "Consumers prefer fuel-efficient hybrids.",
+    "exampleKo": "소비자들은 연료 효율이 높은 하이브리드 차량을 선호합니다."
+  },
+  {
+    "day": 25,
+    "no": 144,
+    "word": "wagon",
+    "meaning": "화물 기차",
+    "targetScore": 900,
+    "exampleEn": "The train was pulling several wagons filled with coal.",
+    "exampleKo": "기차는 석탄이 가득 찬 화물 기차(화차) 여러 대를 끌고 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 145,
+    "word": "ridership",
+    "meaning": "(공공 교통 기관의) 이용자 수, 승객 수",
+    "targetScore": 900,
+    "exampleEn": "Public transit ridership has increased by 10%.",
+    "exampleKo": "대중교통 이용자 수가 10% 증가했습니다."
+  },
+  {
+    "day": 25,
+    "no": 146,
+    "word": "pull into",
+    "meaning": "(배가 항구에) 서다",
+    "targetScore": 900,
+    "exampleEn": "The ferry pulled into the harbor on time.",
+    "exampleKo": "여객선은 정시에 항구에 섰습니다(들어왔습니다)."
+  },
+  {
+    "day": 25,
+    "no": 147,
+    "word": "specialist",
+    "meaning": "전문가, 전공자",
+    "targetScore": 900,
+    "exampleEn": "He is a specialist in urban transportation planning.",
+    "exampleKo": "그는 도시 교통 계획 전문가입니다."
+  },
+  {
+    "day": 25,
+    "no": 148,
+    "word": "navigate",
+    "meaning": "길을 찾다",
+    "targetScore": 900,
+    "exampleEn": "It is difficult to navigate through the narrow streets.",
+    "exampleKo": "좁은 거리를 뚫고 길을 찾는 것은 어렵습니다."
+  },
+  {
+    "day": 25,
+    "no": 149,
+    "word": "opposition",
+    "meaning": "반대, 대항",
+    "targetScore": 900,
+    "exampleEn": "There was strong opposition to the new highway project.",
+    "exampleKo": "새 고속도로 프로젝트에 대한 강한 반대가 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 150,
+    "word": "streetcar",
+    "meaning": "전차",
+    "targetScore": 900,
+    "exampleEn": "The city is restoring its historic streetcar line.",
+    "exampleKo": "도시는 역사적인 전차 노선을 복원하고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 151,
+    "word": "pedestrian",
+    "meaning": "보행자",
+    "targetScore": 900,
+    "exampleEn": "This area is reserved for pedestrians only.",
+    "exampleKo": "이 구역은 보행자 전용입니다."
+  },
+  {
+    "day": 25,
+    "no": 152,
+    "word": "bear",
+    "meaning": "~을 몸에 지니다",
+    "targetScore": 900,
+    "exampleEn": "Drivers must bear a valid license at all times.",
+    "exampleKo": "운전자들은 항상 유효한 면허증을 몸에 지녀야(소지해야) 합니다."
+  },
+  {
+    "day": 25,
+    "no": 153,
+    "word": "emphatic",
+    "meaning": "단호한, 강한",
+    "targetScore": 900,
+    "exampleEn": "The mayor was emphatic about the need for better roads.",
+    "exampleKo": "시장은 더 나은 도로의 필요성에 대해 단호했습니다."
+  },
+  {
+    "day": 25,
+    "no": 154,
+    "word": "give off",
+    "meaning": "방출하다",
+    "targetScore": 900,
+    "exampleEn": "Old cars give off harmful emissions.",
+    "exampleKo": "오래된 차들은 해로운 배기가스를 방출합니다."
+  },
+  {
+    "day": 25,
+    "no": 155,
+    "word": "passerby",
+    "meaning": "행인",
+    "targetScore": 900,
+    "exampleEn": "A passerby witnessed the accident.",
+    "exampleKo": "한 행인이 그 사고를 목격했습니다."
+  },
+  {
+    "day": 25,
+    "no": 156,
+    "word": "spoke",
+    "meaning": "바퀴살",
+    "targetScore": 900,
+    "exampleEn": "The bicycle wheel has a broken spoke.",
+    "exampleKo": "자전거 바퀴에 부러진 바퀴살이 하나 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 157,
+    "word": "be towed away",
+    "meaning": "(차가) 견인되다",
+    "targetScore": 900,
+    "exampleEn": "Illegally parked cars will be towed away.",
+    "exampleKo": "불법 주차된 차들은 견인될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 158,
+    "word": "sidewalk",
+    "meaning": "보도",
+    "targetScore": 900,
+    "exampleEn": "Please keep the sidewalk clear for pedestrians.",
+    "exampleKo": "보행자를 위해 보도를 비워 두십시오."
+  },
+  {
+    "day": 25,
+    "no": 159,
+    "word": "ramp",
+    "meaning": "경사로",
+    "targetScore": 900,
+    "exampleEn": "There is a wheelchair ramp at the entrance.",
+    "exampleKo": "입구에 휠체어용 경사로가 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 160,
+    "word": "bicycle rack",
+    "meaning": "자전거 보관대",
+    "targetScore": 900,
+    "exampleEn": "You can lock your bike at the bicycle rack.",
+    "exampleKo": "자전거 보관대에 자전거를 잠가 둘 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 161,
+    "word": "overnight express",
+    "meaning": "심야 고속",
+    "targetScore": 900,
+    "exampleEn": "I took the overnight express bus to Seoul.",
+    "exampleKo": "저는 서울행 심야 고속버스를 탔습니다."
+  },
+  {
+    "day": 25,
+    "no": 162,
+    "word": "drawbridge",
+    "meaning": "도개교(위로 들어올리는 다리)",
+    "targetScore": 900,
+    "exampleEn": "The drawbridge opens to let ships pass.",
+    "exampleKo": "도개교는 배들이 지나가도록 열립니다."
+  },
+  {
+    "day": 25,
+    "no": 163,
+    "word": "gratuity",
+    "meaning": "팁, 봉사료",
+    "targetScore": 900,
+    "exampleEn": "Taxi drivers often expect a gratuity.",
+    "exampleKo": "택시 기사들은 종종 팁을 기대합니다."
+  },
+  {
+    "day": 25,
+    "no": 164,
+    "word": "inconveniently",
+    "meaning": "불편하게",
+    "targetScore": 900,
+    "exampleEn": "The hotel is inconveniently located far from the station.",
+    "exampleKo": "그 호텔은 역에서 멀리 떨어져 있어 불편하게 위치해 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 165,
+    "word": "carriage",
+    "meaning": "차량",
+    "targetScore": 900,
+    "exampleEn": "The train carriage was full of passengers.",
+    "exampleKo": "기차 객차(차량)는 승객들로 가득 찼습니다."
+  },
+  {
+    "day": 25,
+    "no": 166,
+    "word": "surround",
+    "meaning": "둘러싸다, 에워싸다",
+    "targetScore": 900,
+    "exampleEn": "The city is surrounded by mountains.",
+    "exampleKo": "그 도시는 산으로 둘러싸여 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 167,
+    "word": "hastily",
+    "meaning": "급히, 서둘러서",
+    "targetScore": 900,
+    "exampleEn": "He hastily packed his bags and left.",
+    "exampleKo": "그는 급히 가방을 싸서 떠났습니다."
+  },
+  {
+    "day": 25,
+    "no": 168,
+    "word": "refurbish",
+    "meaning": "개조하다, 새로 꾸미다",
+    "targetScore": 900,
+    "exampleEn": "The station was refurbished last year.",
+    "exampleKo": "그 역은 작년에 개조되었습니다(새로 꾸며졌습니다)."
+  }
+]

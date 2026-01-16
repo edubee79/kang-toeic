@@ -1,0 +1,362 @@
+[
+  {
+    "day": 9,
+    "no": 1,
+    "word": "stagnant",
+    "meaning": "침체된, 불경기의",
+    "targetScore": 650,
+    "exampleEn": "The economy has remained stagnant for the past year.",
+    "exampleKo": "경제는 지난 1년 동안 침체된 상태로 유지되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 2,
+    "word": "dramatically",
+    "meaning": "극적으로",
+    "targetScore": 650,
+    "exampleEn": "Sales increased dramatically after the advertisement aired.",
+    "exampleKo": "광고가 방송된 후 판매량이 극적으로 증가했습니다."
+  },
+  {
+    "day": 9,
+    "no": 3,
+    "word": "brisk",
+    "meaning": "활발한, 호황의",
+    "targetScore": 650,
+    "exampleEn": "Business has been brisk this holiday season.",
+    "exampleKo": "이번 연휴 시즌에는 사업이 활발했습니다."
+  },
+  {
+    "day": 9,
+    "no": 4,
+    "word": "unstable",
+    "meaning": "불안정한, 변하기 쉬운",
+    "targetScore": 650,
+    "exampleEn": "The political situation makes the market unstable.",
+    "exampleKo": "정치적 상황은 시장을 불안정하게 만듭니다."
+  },
+  {
+    "day": 9,
+    "no": 5,
+    "word": "rapidly",
+    "meaning": "급속히, 빨리",
+    "targetScore": 650,
+    "exampleEn": "The technology is rapidly evolving.",
+    "exampleKo": "기술은 급속히 발전하고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 6,
+    "word": "soar",
+    "meaning": "(물가 등이)폭등하다, 높이 치솟다",
+    "targetScore": 650,
+    "exampleEn": "Oil prices are expected to soar next month.",
+    "exampleKo": "유가가 다음 달에 치솟을(급등할) 것으로 예상됩니다."
+  },
+  {
+    "day": 9,
+    "no": 7,
+    "word": "assert",
+    "meaning": "단언하다, 주장하다",
+    "targetScore": 650,
+    "exampleEn": "The report asserts that the economy is recovering.",
+    "exampleKo": "그 보고서는 경제가 회복되고 있다고 주장합니다(단언합니다)."
+  },
+  {
+    "day": 9,
+    "no": 8,
+    "word": "boost",
+    "meaning": "(경기를) 부양시키다, 상승시키다",
+    "targetScore": 650,
+    "exampleEn": "The government plans to boost the economy.",
+    "exampleKo": "정부는 경기를 부양할(변화시킬) 계획입니다."
+  },
+  {
+    "day": 9,
+    "no": 9,
+    "word": "analyst",
+    "meaning": "분석가",
+    "targetScore": 650,
+    "exampleEn": "Financial analysts predict a downturn.",
+    "exampleKo": "금융 분석가들은 경기 침체를 예측합니다."
+  },
+  {
+    "day": 9,
+    "no": 10,
+    "word": "potential",
+    "meaning": "잠재적인, 가능성",
+    "targetScore": 650,
+    "exampleEn": "The region has great potential for investment.",
+    "exampleKo": "그 지역은 투자를 위한 큰 잠재력을 가지고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 11,
+    "word": "pleased",
+    "meaning": "만족해하는, 기쁜",
+    "targetScore": 650,
+    "exampleEn": "We are pleased to announce our new partnership.",
+    "exampleKo": "우리는 새로운 파트너십을 발표하게 되어 기쁩니다."
+  },
+  {
+    "day": 9,
+    "no": 12,
+    "word": "remain",
+    "meaning": "계속 ~한 상태이다, 아직 ~해야 한다",
+    "targetScore": 650,
+    "exampleEn": "Interest rates remained unchanged this month.",
+    "exampleKo": "이번 달 금리는 변동 없이 유지되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 13,
+    "word": "limited",
+    "meaning": "제한된, 한정된",
+    "targetScore": 650,
+    "exampleEn": "This offer is available for a limited time only.",
+    "exampleKo": "이 제안은 한정된 시간 동안만 유효합니다."
+  },
+  {
+    "day": 9,
+    "no": 14,
+    "word": "costly",
+    "meaning": "비용이 많이 드는, 손실이 큰",
+    "targetScore": 650,
+    "exampleEn": "Repairing the damage would be too costly.",
+    "exampleKo": "피해를 복구하는 것은 비용이 너무 많이 들 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 15,
+    "word": "particular",
+    "meaning": "특정한",
+    "targetScore": 650,
+    "exampleEn": "Are you looking for any particular item?",
+    "exampleKo": "특별히 찾으시는 물건이 있습니까?"
+  },
+  {
+    "day": 9,
+    "no": 16,
+    "word": "drastic",
+    "meaning": "과감한, 급격한",
+    "targetScore": 650,
+    "exampleEn": "Drastic measures are needed to reduce debt.",
+    "exampleKo": "부채를 줄이기 위해 과감한(급격한) 조치가 필요합니다."
+  },
+  {
+    "day": 9,
+    "no": 17,
+    "word": "evenly",
+    "meaning": "고르게, 균등하게",
+    "targetScore": 650,
+    "exampleEn": "The funds should be distributed evenly.",
+    "exampleKo": "자금은 골고루(공평하게) 분배되어야 합니다."
+  },
+  {
+    "day": 9,
+    "no": 18,
+    "word": "evidence",
+    "meaning": "증거",
+    "targetScore": 650,
+    "exampleEn": "There is no evidence of fraud.",
+    "exampleKo": "사기의 증거가 없습니다."
+  },
+  {
+    "day": 9,
+    "no": 19,
+    "word": "prospect",
+    "meaning": "전망, 예상",
+    "targetScore": 650,
+    "exampleEn": "The job offers excellent prospects for promotion.",
+    "exampleKo": "그 일자리는 승진에 대한 훌륭한 전망을 제공합니다."
+  },
+  {
+    "day": 9,
+    "no": 20,
+    "word": "lead",
+    "meaning": "이끌다, 지휘하다, (어떤 결과에)이르다",
+    "targetScore": 650,
+    "exampleEn": "Excessive spending can lead to bankruptcy.",
+    "exampleKo": "과도한 지출은 파산으로 이어질 수 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 21,
+    "word": "fall",
+    "meaning": "(값·가치가)하락하다",
+    "targetScore": 650,
+    "exampleEn": "Prices tend to fall after the holiday season.",
+    "exampleKo": "가격은 연휴 시즌이 지나면 떨어지는 경향이 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 22,
+    "word": "period",
+    "meaning": "기간, 시기",
+    "targetScore": 650,
+    "exampleEn": "The warranty covers a period of two years.",
+    "exampleKo": "보증 기간은 2년입니다."
+  },
+  {
+    "day": 9,
+    "no": 23,
+    "word": "indicator",
+    "meaning": "지표, 지수",
+    "targetScore": 650,
+    "exampleEn": "Consumer spending is a key indicator of economic health.",
+    "exampleKo": "소비자 지출은 경제 건전성의 주요 지표입니다."
+  },
+  {
+    "day": 9,
+    "no": 24,
+    "word": "industry",
+    "meaning": "산업",
+    "targetScore": 650,
+    "exampleEn": "The tourism industry has suffered due to the pandemic.",
+    "exampleKo": "관광 산업은 팬데믹으로 인해 고통받았습니다."
+  },
+  {
+    "day": 9,
+    "no": 25,
+    "word": "likely",
+    "meaning": "~할 것 같은",
+    "targetScore": 650,
+    "exampleEn": "It is likely to rain later today.",
+    "exampleKo": "오늘 늦게 비가 올 것 같습니다."
+  },
+  {
+    "day": 9,
+    "no": 26,
+    "word": "boom",
+    "meaning": "붐, 호황",
+    "targetScore": 650,
+    "exampleEn": "The housing market is experiencing a boom.",
+    "exampleKo": "주택 시장은 호황을 겪고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 27,
+    "word": "director",
+    "meaning": "임원, 책임자",
+    "targetScore": 650,
+    "exampleEn": "The board of directors approved the merger.",
+    "exampleKo": "이사회는 합병을 승인했습니다."
+  },
+  {
+    "day": 9,
+    "no": 28,
+    "word": "substitute",
+    "meaning": "대용품, 대신하다",
+    "targetScore": 650,
+    "exampleEn": "You can substitute margarine for butter.",
+    "exampleKo": "버터 대신 마가린을 사용할(대체할) 수 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 29,
+    "word": "consequence",
+    "meaning": "결과",
+    "targetScore": 650,
+    "exampleEn": "She had to face the consequences of her actions.",
+    "exampleKo": "그녀는 자신의 행동에 대한 결과(대가)를 직면해야 했습니다."
+  },
+  {
+    "day": 9,
+    "no": 30,
+    "word": "fairly",
+    "meaning": "상당히, 꽤",
+    "targetScore": 650,
+    "exampleEn": "The hotel is fairly close to the airport.",
+    "exampleKo": "그 호텔은 공항에서 꽤 가깝습니다."
+  },
+  {
+    "day": 9,
+    "no": 31,
+    "word": "economical",
+    "meaning": "경제적인, 절약되는",
+    "targetScore": 650,
+    "exampleEn": "It is more economical to buy in bulk.",
+    "exampleKo": "대량으로 구매하는 것이 더 경제적입니다."
+  },
+  {
+    "day": 9,
+    "no": 32,
+    "word": "thrive",
+    "meaning": "번영하다, 성공하다",
+    "targetScore": 650,
+    "exampleEn": "The business continues to thrive despite the recession.",
+    "exampleKo": "그 사업은 경기 침체에도 불구하고 계속 번창하고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 33,
+    "word": "implication",
+    "meaning": "영향, 밀접한 관계",
+    "targetScore": 650,
+    "exampleEn": "The decision will have serious implications for the company.",
+    "exampleKo": "그 결정은 회사에 심각한 영향(함축)을 미칠 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 34,
+    "word": "wane",
+    "meaning": "감소, 쇠퇴",
+    "targetScore": 650,
+    "exampleEn": "Interest in the product is beginning to wane.",
+    "exampleKo": "제품에 대한 관심이 시들해지기(약해지기) 시작했습니다."
+  },
+  {
+    "day": 9,
+    "no": 35,
+    "word": "prosperity",
+    "meaning": "번영",
+    "targetScore": 650,
+    "exampleEn": "Peace and prosperity are our goals.",
+    "exampleKo": "평화와 번영이 우리의 목표입니다."
+  },
+  {
+    "day": 9,
+    "no": 36,
+    "word": "depression",
+    "meaning": "불황",
+    "targetScore": 650,
+    "exampleEn": "The country is going through a deep depression.",
+    "exampleKo": "그 나라는 깊은 불황을 겪고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 37,
+    "word": "dwindle",
+    "meaning": "줄어들다, 감소되다",
+    "targetScore": 650,
+    "exampleEn": "Our supplies are dwindling rapidly.",
+    "exampleKo": "우리의 보급품이 급격히 줄어들고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 38,
+    "word": "impede",
+    "meaning": "저해하다, 방해하다",
+    "targetScore": 650,
+    "exampleEn": "Bad weather impeded the construction work.",
+    "exampleKo": "악천후가 공사 작업을 지연시켰습니다(방해했습니다)."
+  },
+  {
+    "day": 9,
+    "no": 39,
+    "word": "promising",
+    "meaning": "유망한, 전망이 좋은",
+    "targetScore": 650,
+    "exampleEn": "He is a promising young engineer.",
+    "exampleKo": "그는 유망한 젊은 엔지니어입니다."
+  },
+  {
+    "day": 9,
+    "no": 40,
+    "word": "adversity",
+    "meaning": "역경, 불운",
+    "targetScore": 650,
+    "exampleEn": "We successfully overcame adversity.",
+    "exampleKo": "우리는 역경을 성공적으로 극복했습니다."
+  }
+]

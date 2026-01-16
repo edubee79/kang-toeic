@@ -1,0 +1,614 @@
+[
+  {
+    "day": 14,
+    "no": 69,
+    "word": "travel",
+    "meaning": "여행, 여행가다",
+    "targetScore": 800,
+    "exampleEn": "Travel is a great way to learn.",
+    "exampleKo": "여행은 무언가를 배우는 훌륭한 방법입니다."
+  },
+  {
+    "day": 14,
+    "no": 70,
+    "word": "underwater",
+    "meaning": "수중의, 물속의",
+    "targetScore": 800,
+    "exampleEn": "We explored the underwater caves.",
+    "exampleKo": "우리는 수중 동굴을 탐험했습니다."
+  },
+  {
+    "day": 14,
+    "no": 71,
+    "word": "unique",
+    "meaning": "독특한",
+    "targetScore": 800,
+    "exampleEn": "The hotel has a unique design.",
+    "exampleKo": "그 호텔은 독특한 디자인을 가지고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 72,
+    "word": "visitor",
+    "meaning": "손님, 방문객",
+    "targetScore": 800,
+    "exampleEn": "Each visitor must sign in at the front desk.",
+    "exampleKo": "각 방문객은 프런트 데스크에서 서명(등록)해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 73,
+    "word": "aboard",
+    "meaning": "배로, 승선하여, ~에 타고",
+    "targetScore": 800,
+    "exampleEn": "Welcome aboard Flight 101.",
+    "exampleKo": "101편에 탑승하신 것을 환영합니다."
+  },
+  {
+    "day": 14,
+    "no": 74,
+    "word": "aircraft",
+    "meaning": "항공기",
+    "targetScore": 800,
+    "exampleEn": "The aircraft is ready for takeoff.",
+    "exampleKo": "항공기가 이륙 준비가 되었습니다."
+  },
+  {
+    "day": 14,
+    "no": 75,
+    "word": "airfare",
+    "meaning": "항공 요금",
+    "targetScore": 800,
+    "exampleEn": "The airfare is quite expensive.",
+    "exampleKo": "항공 요금이 꽤 비쌉니다."
+  },
+  {
+    "day": 14,
+    "no": 76,
+    "word": "aisle seat",
+    "meaning": "통로 쪽 좌석",
+    "targetScore": 800,
+    "exampleEn": "I prefer an aisle seat.",
+    "exampleKo": "저는 통로 쪽 좌석을 선호합니다."
+  },
+  {
+    "day": 14,
+    "no": 77,
+    "word": "be on a trip",
+    "meaning": "여행을 하다",
+    "targetScore": 800,
+    "exampleEn": "He is on a trip to Europe.",
+    "exampleKo": "그는 유럽으로 여행 중입니다."
+  },
+  {
+    "day": 14,
+    "no": 78,
+    "word": "board flight",
+    "meaning": "비행기에 탑승하다",
+    "targetScore": 800,
+    "exampleEn": "Please show your ID to board the flight.",
+    "exampleKo": "비행기에 탑승하려면 신분증을 보여주십시오."
+  },
+  {
+    "day": 14,
+    "no": 79,
+    "word": "boarding gate",
+    "meaning": "탑승구",
+    "targetScore": 800,
+    "exampleEn": "Please proceed to the boarding gate.",
+    "exampleKo": "탑승구로 이동해 주십시오."
+  },
+  {
+    "day": 14,
+    "no": 80,
+    "word": "boarding pass",
+    "meaning": "(비행기)탑승권",
+    "targetScore": 800,
+    "exampleEn": "Show your boarding pass to the attendant.",
+    "exampleKo": "승무원에게 탑승권을 보여주십시오."
+  },
+  {
+    "day": 14,
+    "no": 81,
+    "word": "boarding time",
+    "meaning": "탑승 시간",
+    "targetScore": 800,
+    "exampleEn": "The boarding time is 10:30 AM.",
+    "exampleKo": "탑승 시간은 오전 10시 30분입니다."
+  },
+  {
+    "day": 14,
+    "no": 82,
+    "word": "by air",
+    "meaning": "비행기로",
+    "targetScore": 800,
+    "exampleEn": "Sending goods by air is faster.",
+    "exampleKo": "항공편으로 상품을 보내는 것이 더 빠릅니다."
+  },
+  {
+    "day": 14,
+    "no": 83,
+    "word": "carry-on baggage",
+    "meaning": "기내 휴대 수하물",
+    "targetScore": 800,
+    "exampleEn": "You can bring one carry-on baggage.",
+    "exampleKo": "기내 반입 수하물은 하나만 가져갈 수 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 84,
+    "word": "connecting flight",
+    "meaning": "연결 항공편",
+    "targetScore": 800,
+    "exampleEn": "I missed my connecting flight.",
+    "exampleKo": "저는 연결편을 놓쳤습니다."
+  },
+  {
+    "day": 14,
+    "no": 85,
+    "word": "crew",
+    "meaning": "승무원",
+    "targetScore": 800,
+    "exampleEn": "The cabin crew will serve dinner.",
+    "exampleKo": "객실 승무원이 저녁 식사를 제공할 것입니다."
+  },
+  {
+    "day": 14,
+    "no": 86,
+    "word": "cruise",
+    "meaning": "유람선 여행",
+    "targetScore": 800,
+    "exampleEn": "We went on a Caribbean cruise.",
+    "exampleKo": "우리는 카리브해 크루즈 여행을 갔습니다."
+  },
+  {
+    "day": 14,
+    "no": 87,
+    "word": "currency exchange",
+    "meaning": "환전",
+    "targetScore": 800,
+    "exampleEn": "Where is the currency exchange counter?",
+    "exampleKo": "환전소는 어디에 있습니까?"
+  },
+  {
+    "day": 14,
+    "no": 88,
+    "word": "drift",
+    "meaning": "떠다니다",
+    "targetScore": 800,
+    "exampleEn": "The boat helped us drift downstream.",
+    "exampleKo": "그 배는 우리가 하류로 표류하도록 도왔습니다."
+  },
+  {
+    "day": 14,
+    "no": 89,
+    "word": "ferry",
+    "meaning": "여객선",
+    "targetScore": 800,
+    "exampleEn": "We took a ferry across the river.",
+    "exampleKo": "우리는 강을 건너기 위해 여객선을 탔습니다."
+  },
+  {
+    "day": 14,
+    "no": 90,
+    "word": "flight attendant",
+    "meaning": "승무원",
+    "targetScore": 800,
+    "exampleEn": "Ask the flight attendant for water.",
+    "exampleKo": "승무원에게 물을 요청하십시오."
+  },
+  {
+    "day": 14,
+    "no": 91,
+    "word": "fluid",
+    "meaning": "액체, 마실 것",
+    "targetScore": 800,
+    "exampleEn": "Drink plenty of fluid during the flight.",
+    "exampleKo": "비행 중에 수분을 충분히 섭취하십시오."
+  },
+  {
+    "day": 14,
+    "no": 92,
+    "word": "guest pass",
+    "meaning": "손님용 입장권",
+    "targetScore": 800,
+    "exampleEn": "You need a guest pass to enter.",
+    "exampleKo": "입장하려면 방문증(게스트 패스)이 필요합니다."
+  },
+  {
+    "day": 14,
+    "no": 93,
+    "word": "guided tour",
+    "meaning": "가이드 동반 여행",
+    "targetScore": 800,
+    "exampleEn": "We joined a guided tour of the museum.",
+    "exampleKo": "우리는 박물관 가이드 투어에 참여했습니다."
+  },
+  {
+    "day": 14,
+    "no": 94,
+    "word": "immigration",
+    "meaning": "입국 심사, 이민",
+    "targetScore": 800,
+    "exampleEn": "You must go through immigration.",
+    "exampleKo": "당신은 출입국 관리소를 통과해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 95,
+    "word": "in-flight",
+    "meaning": "기내의",
+    "targetScore": 800,
+    "exampleEn": "We offer in-flight entertainment.",
+    "exampleKo": "우리는 기내 오락(엔터테인먼트)을 제공합니다."
+  },
+  {
+    "day": 14,
+    "no": 96,
+    "word": "landing",
+    "meaning": "착륙",
+    "targetScore": 800,
+    "exampleEn": "The pilot made a smooth landing.",
+    "exampleKo": "조종사는 부드럽게 착륙했습니다."
+  },
+  {
+    "day": 14,
+    "no": 97,
+    "word": "landmark",
+    "meaning": "유명한 건물, 유명한 장소",
+    "targetScore": 800,
+    "exampleEn": "The tower is a famous landmark.",
+    "exampleKo": "그 탑은 유명한 랜드마크입니다."
+  },
+  {
+    "day": 14,
+    "no": 98,
+    "word": "layover",
+    "meaning": "(비행 시의) 도중 하차, 경유지",
+    "targetScore": 800,
+    "exampleEn": "We had a layover in Dubai.",
+    "exampleKo": "우리는 두바이에서 경유(체류)했습니다."
+  },
+  {
+    "day": 14,
+    "no": 99,
+    "word": "leave for",
+    "meaning": "~로 떠나다",
+    "targetScore": 800,
+    "exampleEn": "I will leave for London tomorrow.",
+    "exampleKo": "저는 내일 런던으로 떠날 것입니다."
+  },
+  {
+    "day": 14,
+    "no": 100,
+    "word": "line up",
+    "meaning": "한 줄로 늘어서다, 줄을 이루다",
+    "targetScore": 800,
+    "exampleEn": "Passengers line up at the gate.",
+    "exampleKo": "승객들이 게이트 앞에 줄을 섭니다."
+  },
+  {
+    "day": 14,
+    "no": 101,
+    "word": "luggage tag",
+    "meaning": "수하물 표",
+    "targetScore": 800,
+    "exampleEn": "Put a luggage tag on your bag.",
+    "exampleKo": "가방에 수하물 태그(꼬리표)를 붙이십시오."
+  },
+  {
+    "day": 14,
+    "no": 102,
+    "word": "mainland",
+    "meaning": "본토",
+    "targetScore": 800,
+    "exampleEn": "We took a ferry to the mainland.",
+    "exampleKo": "우리는 본토로 가는 여객선을 탔습니다."
+  },
+  {
+    "day": 14,
+    "no": 103,
+    "word": "missing luggage",
+    "meaning": "분실 수하물",
+    "targetScore": 800,
+    "exampleEn": "Report any missing luggage immediately.",
+    "exampleKo": "분실된 수하물은 즉시 신고하십시오."
+  },
+  {
+    "day": 14,
+    "no": 104,
+    "word": "native",
+    "meaning": "그 지방 고유의",
+    "targetScore": 800,
+    "exampleEn": "He is a native speaker of English.",
+    "exampleKo": "그는 영어 원어민입니다."
+  },
+  {
+    "day": 14,
+    "no": 105,
+    "word": "observation tower",
+    "meaning": "관측탑, 전망탑",
+    "targetScore": 800,
+    "exampleEn": "Visit the observation tower for a view.",
+    "exampleKo": "전망을 보려면 전망대에 방문하십시오."
+  },
+  {
+    "day": 14,
+    "no": 106,
+    "word": "overbook",
+    "meaning": "예약을 정원 이상으로 받다",
+    "targetScore": 800,
+    "exampleEn": "Airlines sometimes overbook flights.",
+    "exampleKo": "항공사들은 때때로 항공편을 초과 예약받습니다."
+  },
+  {
+    "day": 14,
+    "no": 107,
+    "word": "overhead rack",
+    "meaning": "(머리 위의 짐 넣는) 선반",
+    "targetScore": 800,
+    "exampleEn": "Place your bag in the overhead rack.",
+    "exampleKo": "가방을 머리 위 선반에 넣으십시오."
+  },
+  {
+    "day": 14,
+    "no": 108,
+    "word": "port",
+    "meaning": "항구",
+    "targetScore": 800,
+    "exampleEn": "The ship arrived at the port.",
+    "exampleKo": "배가 항구에 도착했습니다."
+  },
+  {
+    "day": 14,
+    "no": 109,
+    "word": "porter",
+    "meaning": "운반인, 짐꾼",
+    "targetScore": 800,
+    "exampleEn": "The porter carried our bags.",
+    "exampleKo": "짐꾼(포터)이 우리 가방을 날랐습니다."
+  },
+  {
+    "day": 14,
+    "no": 110,
+    "word": "reclaim",
+    "meaning": "(분실물을) 되찾다",
+    "targetScore": 800,
+    "exampleEn": "You can reclaim your bags downstairs.",
+    "exampleKo": "아래층에서 가방을 되찾을 수 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 111,
+    "word": "row the boat",
+    "meaning": "배를 젓다",
+    "targetScore": 800,
+    "exampleEn": "We row the boat across the lake.",
+    "exampleKo": "우리는 호수를 가로질러 배를 저었습니다."
+  },
+  {
+    "day": 14,
+    "no": 112,
+    "word": "stop over",
+    "meaning": "~에 잠깐 들르다",
+    "targetScore": 800,
+    "exampleEn": "We decided to stop over in Paris.",
+    "exampleKo": "우리는 파리에 잠시 들르기로(경유하기로) 결정했습니다."
+  },
+  {
+    "day": 14,
+    "no": 113,
+    "word": "take off",
+    "meaning": "이륙하다",
+    "targetScore": 800,
+    "exampleEn": "The plane will take off soon.",
+    "exampleKo": "비행기가 곧 이륙할 것입니다."
+  },
+  {
+    "day": 14,
+    "no": 114,
+    "word": "take one's bag off",
+    "meaning": "가방을 내려놓다",
+    "targetScore": 800,
+    "exampleEn": "He helped take one's bag off the rack.",
+    "exampleKo": "그는 선반에서 가방을 내리는 것을 도와주었습니다."
+  },
+  {
+    "day": 14,
+    "no": 115,
+    "word": "train conductor",
+    "meaning": "기차 차장",
+    "targetScore": 800,
+    "exampleEn": "The train conductor checked the tickets.",
+    "exampleKo": "기차 차장이 표를 확인했습니다."
+  },
+  {
+    "day": 14,
+    "no": 116,
+    "word": "travel agency",
+    "meaning": "여행사",
+    "targetScore": 800,
+    "exampleEn": "Contact the travel agency for bookings.",
+    "exampleKo": "예약을 위해 여행사에 연락하십시오."
+  },
+  {
+    "day": 14,
+    "no": 117,
+    "word": "unload",
+    "meaning": "짐을 내리다",
+    "targetScore": 800,
+    "exampleEn": "Workers unload the cargo from the ship.",
+    "exampleKo": "인부들이 배에서 화물을 내립니다."
+  },
+  {
+    "day": 14,
+    "no": 118,
+    "word": "unlock",
+    "meaning": "자물쇠를 열다",
+    "targetScore": 800,
+    "exampleEn": "Please unlock the door.",
+    "exampleKo": "문을 열어 주십시오(잠금을 해제해 주십시오)."
+  },
+  {
+    "day": 14,
+    "no": 119,
+    "word": "walking tour",
+    "meaning": "도보 여행",
+    "targetScore": 800,
+    "exampleEn": "We went on a walking tour of the city.",
+    "exampleKo": "우리는 도시 도보 여행을 갔습니다."
+  },
+  {
+    "day": 14,
+    "no": 120,
+    "word": "distant",
+    "meaning": "멀리 떨어진",
+    "targetScore": 800,
+    "exampleEn": "She traveled to a distant country.",
+    "exampleKo": "그녀는 먼 나라로 여행했습니다."
+  },
+  {
+    "day": 14,
+    "no": 121,
+    "word": "favor",
+    "meaning": "호의, 친절",
+    "targetScore": 800,
+    "exampleEn": "Can you do me a favor?",
+    "exampleKo": "제 부탁을 하나 들어주실 수 있습니까?"
+  },
+  {
+    "day": 14,
+    "no": 122,
+    "word": "overhead",
+    "meaning": "머리 위의",
+    "targetScore": 800,
+    "exampleEn": "Store luggage in the overhead bin.",
+    "exampleKo": "수하물을 머리 위 짐칸에 보관하십시오."
+  },
+  {
+    "day": 14,
+    "no": 123,
+    "word": "remains",
+    "meaning": "유물",
+    "targetScore": 800,
+    "exampleEn": "The remains of the castle are visible.",
+    "exampleKo": "그 성의 유적(잔해)이 보입니다."
+  },
+  {
+    "day": 14,
+    "no": 124,
+    "word": "rightly",
+    "meaning": "당연히, 마땅히",
+    "targetScore": 800,
+    "exampleEn": "He was rightly blamed for the error.",
+    "exampleKo": "그가 그 오류에 대해 비난받은 것은 마땅했습니다."
+  },
+  {
+    "day": 14,
+    "no": 125,
+    "word": "tastefully",
+    "meaning": "고상하게, 우아하게",
+    "targetScore": 800,
+    "exampleEn": "The room is tastefully decorated.",
+    "exampleKo": "그 방은 고상하게(세련되게) 장식되어 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 126,
+    "word": "travel arrangement",
+    "meaning": "여행 준비",
+    "targetScore": 800,
+    "exampleEn": "I made travel arrangement for the trip.",
+    "exampleKo": "저는 여행을 위해 여행 준비(수배)를 했습니다."
+  },
+  {
+    "day": 14,
+    "no": 127,
+    "word": "accumulate",
+    "meaning": "축적하다",
+    "targetScore": 800,
+    "exampleEn": "Miles accumulate with every flight.",
+    "exampleKo": "비행할 때마다 마일리지가 축적됩니다."
+  },
+  {
+    "day": 14,
+    "no": 128,
+    "word": "geographic",
+    "meaning": "지리상의",
+    "targetScore": 800,
+    "exampleEn": "The map shows geographic features.",
+    "exampleKo": "그 지도는 지리적 특징을 보여줍니다."
+  },
+  {
+    "day": 14,
+    "no": 129,
+    "word": "go through customs",
+    "meaning": "세관을 통과하다",
+    "targetScore": 800,
+    "exampleEn": "Passengers must go through customs.",
+    "exampleKo": "승객들은 세관을 통과해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 130,
+    "word": "jet lag",
+    "meaning": "시차증(여행 시 시차로 인한 피로)",
+    "targetScore": 800,
+    "exampleEn": "I am suffering from jet lag.",
+    "exampleKo": "저는 시차증(비행기 여행의 피로)으로 고생하고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 131,
+    "word": "memorable",
+    "meaning": "기억할 만한, 잊혀지지 않는",
+    "targetScore": 800,
+    "exampleEn": "It was a memorable trip.",
+    "exampleKo": "그것은 기억에 남는 여행이었습니다."
+  },
+  {
+    "day": 14,
+    "no": 132,
+    "word": "memorial",
+    "meaning": "기념물, 기념의",
+    "targetScore": 800,
+    "exampleEn": "The statue is a war memorial.",
+    "exampleKo": "그 동상은 전쟁 기념비입니다."
+  },
+  {
+    "day": 14,
+    "no": 133,
+    "word": "precisely",
+    "meaning": "정확히",
+    "targetScore": 800,
+    "exampleEn": "The train arrived precisely on time.",
+    "exampleKo": "기차는 정확히 제시간에 도착했습니다."
+  },
+  {
+    "day": 14,
+    "no": 134,
+    "word": "round trip",
+    "meaning": "왕복 여행",
+    "targetScore": 800,
+    "exampleEn": "I bought a round trip ticket.",
+    "exampleKo": "저는 왕복 티켓을 샀습니다."
+  },
+  {
+    "day": 14,
+    "no": 135,
+    "word": "runway",
+    "meaning": "활주로",
+    "targetScore": 800,
+    "exampleEn": "The plane is on the runway.",
+    "exampleKo": "비행기가 활주로에 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 136,
+    "word": "seasickness",
+    "meaning": "뱃멀미",
+    "targetScore": 800,
+    "exampleEn": "She took medicine for seasickness.",
+    "exampleKo": "그녀는 뱃멀미 약을 먹었습니다."
+  }
+]

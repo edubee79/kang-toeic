@@ -1,0 +1,362 @@
+[
+  {
+    "day": 30,
+    "no": 1,
+    "word": "environment",
+    "meaning": "환경",
+    "targetScore": 650,
+    "exampleEn": "The company is committed to protecting the environment.",
+    "exampleKo": "회사는 환경 보호에 전념하고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 2,
+    "word": "sustainable",
+    "meaning": "지속 가능한",
+    "targetScore": 650,
+    "exampleEn": "We use sustainable materials in our products.",
+    "exampleKo": "우리는 제품에 지속 가능한 재료를 사용합니다."
+  },
+  {
+    "day": 30,
+    "no": 3,
+    "word": "renewable",
+    "meaning": "재생 가능한",
+    "targetScore": 650,
+    "exampleEn": "The facility runs on renewable energy sources.",
+    "exampleKo": "시설은 재생 가능한 에너지원으로 운영됩니다."
+  },
+  {
+    "day": 30,
+    "no": 4,
+    "word": "recycle",
+    "meaning": "재활용하다",
+    "targetScore": 650,
+    "exampleEn": "Please recycle all paper and plastic materials.",
+    "exampleKo": "모든 종이와 플라스틱 재료를 재활용하세요."
+  },
+  {
+    "day": 30,
+    "no": 5,
+    "word": "conservation",
+    "meaning": "보존",
+    "targetScore": 650,
+    "exampleEn": "Energy conservation is a top priority.",
+    "exampleKo": "에너지 보존이 최우선 순위입니다."
+  },
+  {
+    "day": 30,
+    "no": 6,
+    "word": "pollution",
+    "meaning": "오염",
+    "targetScore": 650,
+    "exampleEn": "The factory reduced air pollution by 40%.",
+    "exampleKo": "공장은 대기 오염을 40% 줄였습니다."
+  },
+  {
+    "day": 30,
+    "no": 7,
+    "word": "emission",
+    "meaning": "배출",
+    "targetScore": 650,
+    "exampleEn": "Carbon emissions must be reduced significantly.",
+    "exampleKo": "탄소 배출을 크게 줄여야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 8,
+    "word": "waste",
+    "meaning": "폐기물",
+    "targetScore": 650,
+    "exampleEn": "The company minimizes waste through recycling programs.",
+    "exampleKo": "회사는 재활용 프로그램을 통해 폐기물을 최소화합니다."
+  },
+  {
+    "day": 30,
+    "no": 9,
+    "word": "disposal",
+    "meaning": "처리",
+    "targetScore": 650,
+    "exampleEn": "Proper waste disposal is mandatory.",
+    "exampleKo": "적절한 폐기물 처리는 필수입니다."
+  },
+  {
+    "day": 30,
+    "no": 10,
+    "word": "biodegradable",
+    "meaning": "생분해성의",
+    "targetScore": 650,
+    "exampleEn": "All packaging is biodegradable.",
+    "exampleKo": "모든 포장은 생분해성입니다."
+  },
+  {
+    "day": 30,
+    "no": 11,
+    "word": "eco-friendly",
+    "meaning": "친환경적인",
+    "targetScore": 650,
+    "exampleEn": "The product line is completely eco-friendly.",
+    "exampleKo": "제품 라인은 완전히 친환경적입니다."
+  },
+  {
+    "day": 30,
+    "no": 12,
+    "word": "green",
+    "meaning": "친환경의",
+    "targetScore": 650,
+    "exampleEn": "The company has adopted green business practices.",
+    "exampleKo": "회사는 친환경 비즈니스 관행을 채택했습니다."
+  },
+  {
+    "day": 30,
+    "no": 13,
+    "word": "organic",
+    "meaning": "유기농의",
+    "targetScore": 650,
+    "exampleEn": "We sell only organic produce.",
+    "exampleKo": "우리는 유기농 농산물만 판매합니다."
+  },
+  {
+    "day": 30,
+    "no": 14,
+    "word": "natural",
+    "meaning": "자연의",
+    "targetScore": 650,
+    "exampleEn": "The product contains only natural ingredients.",
+    "exampleKo": "제품은 자연 성분만 포함합니다."
+  },
+  {
+    "day": 30,
+    "no": 15,
+    "word": "toxic",
+    "meaning": "유독한",
+    "targetScore": 650,
+    "exampleEn": "The material is non-toxic and safe.",
+    "exampleKo": "재료는 무독성이며 안전합니다."
+  },
+  {
+    "day": 30,
+    "no": 16,
+    "word": "hazardous",
+    "meaning": "위험한",
+    "targetScore": 650,
+    "exampleEn": "Hazardous materials must be handled carefully.",
+    "exampleKo": "위험한 재료는 조심스럽게 다뤄야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 17,
+    "word": "contamination",
+    "meaning": "오염",
+    "targetScore": 650,
+    "exampleEn": "Water contamination was detected in the area.",
+    "exampleKo": "지역에서 수질 오염이 감지되었습니다."
+  },
+  {
+    "day": 30,
+    "no": 18,
+    "word": "purify",
+    "meaning": "정화하다",
+    "targetScore": 650,
+    "exampleEn": "The system purifies water before distribution.",
+    "exampleKo": "시스템은 배급 전에 물을 정화합니다."
+  },
+  {
+    "day": 30,
+    "no": 19,
+    "word": "filter",
+    "meaning": "여과하다",
+    "targetScore": 650,
+    "exampleEn": "Air filters remove harmful particles.",
+    "exampleKo": "공기 필터는 유해한 입자를 제거합니다."
+  },
+  {
+    "day": 30,
+    "no": 20,
+    "word": "climate",
+    "meaning": "기후",
+    "targetScore": 650,
+    "exampleEn": "Climate change affects business operations.",
+    "exampleKo": "기후 변화는 비즈니스 운영에 영향을 미칩니다."
+  },
+  {
+    "day": 30,
+    "no": 21,
+    "word": "carbon",
+    "meaning": "탄소",
+    "targetScore": 650,
+    "exampleEn": "The company aims to be carbon neutral by 2030.",
+    "exampleKo": "회사는 2030년까지 탄소 중립을 목표로 합니다."
+  },
+  {
+    "day": 30,
+    "no": 22,
+    "word": "footprint",
+    "meaning": "발자국",
+    "targetScore": 650,
+    "exampleEn": "We are reducing our carbon footprint.",
+    "exampleKo": "우리는 탄소 발자국을 줄이고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 23,
+    "word": "offset",
+    "meaning": "상쇄하다",
+    "targetScore": 650,
+    "exampleEn": "The company offsets emissions through tree planting.",
+    "exampleKo": "회사는 나무 심기를 통해 배출을 상쇄합니다."
+  },
+  {
+    "day": 30,
+    "no": 24,
+    "word": "efficiency",
+    "meaning": "효율성",
+    "targetScore": 650,
+    "exampleEn": "Energy efficiency saves costs and resources.",
+    "exampleKo": "에너지 효율성은 비용과 자원을 절약합니다."
+  },
+  {
+    "day": 30,
+    "no": 25,
+    "word": "consumption",
+    "meaning": "소비",
+    "targetScore": 650,
+    "exampleEn": "Water consumption has decreased by 20%.",
+    "exampleKo": "물 소비가 20% 감소했습니다."
+  },
+  {
+    "day": 30,
+    "no": 26,
+    "word": "resource",
+    "meaning": "자원",
+    "targetScore": 650,
+    "exampleEn": "Natural resources must be used wisely.",
+    "exampleKo": "자연 자원은 현명하게 사용되어야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 27,
+    "word": "depletion",
+    "meaning": "고갈",
+    "targetScore": 650,
+    "exampleEn": "Resource depletion is a global concern.",
+    "exampleKo": "자원 고갈은 세계적인 우려 사항입니다."
+  },
+  {
+    "day": 30,
+    "no": 28,
+    "word": "preserve",
+    "meaning": "보존하다",
+    "targetScore": 650,
+    "exampleEn": "We must preserve natural habitats.",
+    "exampleKo": "자연 서식지를 보존해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 29,
+    "word": "protect",
+    "meaning": "보호하다",
+    "targetScore": 650,
+    "exampleEn": "Regulations protect endangered species.",
+    "exampleKo": "규정은 멸종 위기 종을 보호합니다."
+  },
+  {
+    "day": 30,
+    "no": 30,
+    "word": "restore",
+    "meaning": "복원하다",
+    "targetScore": 650,
+    "exampleEn": "The project aims to restore wetlands.",
+    "exampleKo": "프로젝트는 습지를 복원하는 것을 목표로 합니다."
+  },
+  {
+    "day": 30,
+    "no": 31,
+    "word": "habitat",
+    "meaning": "서식지",
+    "targetScore": 650,
+    "exampleEn": "Wildlife habitats are being destroyed.",
+    "exampleKo": "야생 동물 서식지가 파괴되고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 32,
+    "word": "ecosystem",
+    "meaning": "생태계",
+    "targetScore": 650,
+    "exampleEn": "The ecosystem must be protected.",
+    "exampleKo": "생태계는 보호되어야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 33,
+    "word": "biodiversity",
+    "meaning": "생물 다양성",
+    "targetScore": 650,
+    "exampleEn": "Biodiversity is essential for ecosystem health.",
+    "exampleKo": "생물 다양성은 생태계 건강에 필수적입니다."
+  },
+  {
+    "day": 30,
+    "no": 34,
+    "word": "endangered",
+    "meaning": "멸종 위기의",
+    "targetScore": 650,
+    "exampleEn": "Many species are endangered due to habitat loss.",
+    "exampleKo": "많은 종이 서식지 손실로 멸종 위기에 처해 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 35,
+    "word": "extinction",
+    "meaning": "멸종",
+    "targetScore": 650,
+    "exampleEn": "Climate change threatens species with extinction.",
+    "exampleKo": "기후 변화는 종의 멸종을 위협합니다."
+  },
+  {
+    "day": 30,
+    "no": 36,
+    "word": "regulation",
+    "meaning": "규제",
+    "targetScore": 650,
+    "exampleEn": "Environmental regulations are becoming stricter.",
+    "exampleKo": "환경 규제가 더 엄격해지고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 37,
+    "word": "compliance",
+    "meaning": "준수",
+    "targetScore": 650,
+    "exampleEn": "Compliance with environmental laws is mandatory.",
+    "exampleKo": "환경법 준수는 필수입니다."
+  },
+  {
+    "day": 30,
+    "no": 38,
+    "word": "standard",
+    "meaning": "기준",
+    "targetScore": 650,
+    "exampleEn": "Products must meet environmental standards.",
+    "exampleKo": "제품은 환경 기준을 충족해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 39,
+    "word": "certification",
+    "meaning": "인증",
+    "targetScore": 650,
+    "exampleEn": "The company received green certification.",
+    "exampleKo": "회사는 친환경 인증을 받았습니다."
+  },
+  {
+    "day": 30,
+    "no": 40,
+    "word": "audit",
+    "meaning": "감사",
+    "targetScore": 650,
+    "exampleEn": "An environmental audit is conducted annually.",
+    "exampleKo": "환경 감사가 매년 실시됩니다."
+  }
+]

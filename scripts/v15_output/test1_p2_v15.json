@@ -1,0 +1,64 @@
+{
+  "passageId": 2,
+  "structure": {
+    "header_lines": [
+      "31 July",
+      "Akwasi Dombo",
+      "Fourth Avenue",
+      "GA 105",
+      "Accra, Ghana"
+    ],
+    "salutation": "Dear Mr. Dombo,",
+    "body_paragraphs": [
+      "Thank you for your support in helping me to plan the opening gala for Tokyo's fashion week. The event was a huge success, and I was honored to work with you. I know that our attendees follow your work closely, and they loved the designs you contributed for this event.",
+      "Your designs received a lot of  on social media. Shows like this will keep Tokyo on the map as a premier fashion centre. I realize that the multiple delays made the planning no easy task. The auction our Young Designers Award program is coming up soon and I look forward to working with you on that as well."
+    ],
+    "closing_lines": [
+      "Sincerely,",
+      "Asahi Ishioka",
+      "Director, Japanese Guild of Fashion Designers"
+    ]
+  },
+  "questions": [
+    {
+      "id": 135,
+      "is_sentence_insertion": false,
+      "options": [
+        "(A) amazed",
+        "(B) amazement",
+        "(C) amazing",
+        "(D) amazingly"
+      ]
+    },
+    {
+      "id": 136,
+      "is_sentence_insertion": false,
+      "options": [
+        "(A) attention",
+        "(B) proposals",
+        "(C) innovation",
+        "(D) criticism"
+      ]
+    },
+    {
+      "id": 137,
+      "is_sentence_insertion": true,
+      "options": [
+        "(A) Several other events have gone surprisingly well.",
+        "(B) Thank you also for your flexibility in planning the event.",
+        "(C) Please stop by our office the next time you are in the city.",
+        "(D) Tokyo is a top tourism destination for many reasons."
+      ]
+    },
+    {
+      "id": 138,
+      "is_sentence_insertion": false,
+      "options": [
+        "(A) will benefit",
+        "(B) to benefit",
+        "(C) has benefited",
+        "(D) benefits"
+      ]
+    }
+  ]
+}

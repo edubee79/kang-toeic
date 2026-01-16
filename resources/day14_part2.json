@@ -1,0 +1,254 @@
+[
+  {
+    "day": 14,
+    "no": 41,
+    "word": "unlimited",
+    "meaning": "무제한의",
+    "targetScore": 650,
+    "exampleEn": "We offer unlimited mileage on car rentals.",
+    "exampleKo": "저희는 렌터카에 대해 무제한 주행 거리를 제공합니다."
+  },
+  {
+    "day": 14,
+    "no": 42,
+    "word": "simply",
+    "meaning": "그저, 단지, 간단히",
+    "targetScore": 650,
+    "exampleEn": "Simply fill out this form.",
+    "exampleKo": "간단히 이 양식을 작성해 주십시오."
+  },
+  {
+    "day": 14,
+    "no": 43,
+    "word": "besides",
+    "meaning": "게다가, 뿐만 아니라, ~외에",
+    "targetScore": 650,
+    "exampleEn": "Besides English, he speaks Spanish.",
+    "exampleKo": "영어 외에도(영어 게다가), 그는 스페인어를 구사합니다."
+  },
+  {
+    "day": 14,
+    "no": 44,
+    "word": "traditionally",
+    "meaning": "전통적으로",
+    "targetScore": 650,
+    "exampleEn": "The festival is traditionally held in May.",
+    "exampleKo": "그 축제는 전통적으로 5월에 열립니다."
+  },
+  {
+    "day": 14,
+    "no": 45,
+    "word": "agent",
+    "meaning": "대리인",
+    "targetScore": 650,
+    "exampleEn": "Please contact your travel agent.",
+    "exampleKo": "여행사 직원(대리인)에게 연락하십시오."
+  },
+  {
+    "day": 14,
+    "no": 46,
+    "word": "airport",
+    "meaning": "공항",
+    "targetScore": 650,
+    "exampleEn": "We arrived at the airport early.",
+    "exampleKo": "우리는 공항에 일찍 도착했습니다."
+  },
+  {
+    "day": 14,
+    "no": 47,
+    "word": "beach",
+    "meaning": "해변",
+    "targetScore": 650,
+    "exampleEn": "The hotel is located near the beach.",
+    "exampleKo": "그 호텔은 해변 근처에 위치해 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 48,
+    "word": "boat",
+    "meaning": "보트, 작은 배",
+    "targetScore": 650,
+    "exampleEn": "We took a boat to the island.",
+    "exampleKo": "우리는 섬으로 가기 위해 배를 탔습니다."
+  },
+  {
+    "day": 14,
+    "no": 49,
+    "word": "business class",
+    "meaning": "(비행기의) 비즈니스석",
+    "targetScore": 650,
+    "exampleEn": "I prefer to fly business class.",
+    "exampleKo": "저는 비즈니스석(비즈니스 클래스)으로 비행하는 것을 선호합니다."
+  },
+  {
+    "day": 14,
+    "no": 50,
+    "word": "connect",
+    "meaning": "~을 연결하다",
+    "targetScore": 650,
+    "exampleEn": "This flight connects to New York.",
+    "exampleKo": "이 항공편은 뉴욕으로 연결됩니다."
+  },
+  {
+    "day": 14,
+    "no": 51,
+    "word": "departure time",
+    "meaning": "출발 시간",
+    "targetScore": 650,
+    "exampleEn": "Check the departure time on your ticket.",
+    "exampleKo": "티켓에 있는 출발 시간을 확인하십시오."
+  },
+  {
+    "day": 14,
+    "no": 52,
+    "word": "duty-free shop",
+    "meaning": "면세점",
+    "targetScore": 650,
+    "exampleEn": "I bought some perfume at the duty-free shop.",
+    "exampleKo": "저는 면세점에서 향수를 좀 샀습니다."
+  },
+  {
+    "day": 14,
+    "no": 53,
+    "word": "first class",
+    "meaning": "(비행기의) 일등석",
+    "targetScore": 650,
+    "exampleEn": "She traveled first class.",
+    "exampleKo": "그녀는 일등석으로 여행했습니다."
+  },
+  {
+    "day": 14,
+    "no": 54,
+    "word": "flight",
+    "meaning": "비행, 항공편, (비행기) 여행",
+    "targetScore": 650,
+    "exampleEn": "The flight was canceled due to weather.",
+    "exampleKo": "비행편이 날씨 때문에 취소되었습니다."
+  },
+  {
+    "day": 14,
+    "no": 55,
+    "word": "go on vacation",
+    "meaning": "휴가를 떠나다",
+    "targetScore": 650,
+    "exampleEn": "I plan to go on vacation next week.",
+    "exampleKo": "저는 다음 주에 휴가를 갈 계획입니다."
+  },
+  {
+    "day": 14,
+    "no": 56,
+    "word": "guidebook",
+    "meaning": "(여행) 안내서",
+    "targetScore": 650,
+    "exampleEn": "The guidebook lists local attractions.",
+    "exampleKo": "가이드북(여행 안내서)에는 지역 명소들이 나열되어 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 57,
+    "word": "journey",
+    "meaning": "여행",
+    "targetScore": 650,
+    "exampleEn": "We wish you a safe journey.",
+    "exampleKo": "안전한 여행(여정)이 되시기를 바랍니다."
+  },
+  {
+    "day": 14,
+    "no": 58,
+    "word": "nonstop flight",
+    "meaning": "직항",
+    "targetScore": 650,
+    "exampleEn": "There is a nonstop flight to London.",
+    "exampleKo": "런던으로 가는 직항편이 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 59,
+    "word": "pack",
+    "meaning": "짐, 짐을 꾸리다",
+    "targetScore": 650,
+    "exampleEn": "I need to pack my bags.",
+    "exampleKo": "저는 가방을 싸야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 60,
+    "word": "passport",
+    "meaning": "여권",
+    "targetScore": 650,
+    "exampleEn": "Please show your passport at the border.",
+    "exampleKo": "국경에서 여권을 보여 주십시오."
+  },
+  {
+    "day": 14,
+    "no": 61,
+    "word": "pilot",
+    "meaning": "비행기 조종사",
+    "targetScore": 650,
+    "exampleEn": "The pilot announced a delay.",
+    "exampleKo": "조종사는 지연을 알렸습니다(발표했습니다)."
+  },
+  {
+    "day": 14,
+    "no": 62,
+    "word": "salon",
+    "meaning": "(의상·미용실 등의)가게",
+    "targetScore": 650,
+    "exampleEn": "She visited the beauty salon.",
+    "exampleKo": "그녀는 미용실을 방문했습니다."
+  },
+  {
+    "day": 14,
+    "no": 63,
+    "word": "span",
+    "meaning": "(다리 등이 강 등에) 거리다, 놓이다",
+    "targetScore": 650,
+    "exampleEn": "The project spanned five years.",
+    "exampleKo": "그 프로젝트는 5년에 걸쳐 이어졌습니다."
+  },
+  {
+    "day": 14,
+    "no": 64,
+    "word": "trip",
+    "meaning": "여행",
+    "targetScore": 650,
+    "exampleEn": "How was your trip to Japan?",
+    "exampleKo": "일본 여행은 어땠습니까?"
+  },
+  {
+    "day": 14,
+    "no": 65,
+    "word": "border",
+    "meaning": "국경",
+    "targetScore": 650,
+    "exampleEn": "They crossed the border into Canada.",
+    "exampleKo": "그들은 국경을 넘어 캐나다로 들어갔습니다."
+  },
+  {
+    "day": 14,
+    "no": 66,
+    "word": "central",
+    "meaning": "중심이 되는, 가장 중요한",
+    "targetScore": 650,
+    "exampleEn": "The hotel is in a central location.",
+    "exampleKo": "그 호텔은 중심가에(중심 위치에) 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 67,
+    "word": "safe",
+    "meaning": "안전한",
+    "targetScore": 650,
+    "exampleEn": "Keep your passport in a safe place.",
+    "exampleKo": "여권을 안전한 장소에 보관하십시오."
+  },
+  {
+    "day": 14,
+    "no": 68,
+    "word": "sudden",
+    "meaning": "갑작스러운",
+    "targetScore": 650,
+    "exampleEn": "There was a sudden change in plans.",
+    "exampleKo": "계획에 갑작스러운 변경이 있었습니다."
+  }
+]

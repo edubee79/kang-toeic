@@ -1,0 +1,254 @@
+[
+    {
+        "day": 12,
+        "no": 41,
+        "word": "minimize",
+        "meaning": "최소화하다",
+        "targetScore": 650,
+        "exampleEn": "We must minimize the risk.",
+        "exampleKo": "우리는 위험을 최소화해야 합니다."
+    },
+    {
+        "day": 12,
+        "no": 42,
+        "word": "accuracy",
+        "meaning": "정확성",
+        "targetScore": 650,
+        "exampleEn": "Check the accuracy of the report.",
+        "exampleKo": "보고서의 정확성을 확인하세요."
+    },
+    {
+        "day": 12,
+        "no": 43,
+        "word": "arrange",
+        "meaning": "배열하다; 마련하다",
+        "targetScore": 650,
+        "exampleEn": "Arrange the books alphabetically.",
+        "exampleKo": "책을 알파벳 순으로 배열하세요."
+    },
+    {
+        "day": 12,
+        "no": 44,
+        "word": "build",
+        "meaning": "건설하다; 증강하다",
+        "targetScore": 650,
+        "exampleEn": "They built a new house.",
+        "exampleKo": "그들은 새 집을 지었습니다."
+    },
+    {
+        "day": 12,
+        "no": 45,
+        "word": "check",
+        "meaning": "검사하다; 수표",
+        "targetScore": 650,
+        "exampleEn": "Check the oil level.",
+        "exampleKo": "오일 레벨을 확인하세요."
+    },
+    {
+        "day": 12,
+        "no": 46,
+        "word": "contain",
+        "meaning": "포함하다; 억제하다",
+        "targetScore": 650,
+        "exampleEn": "This box contains fragile items.",
+        "exampleKo": "이 상자에는 깨지기 쉬운 물건이 들어 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 47,
+        "word": "correct",
+        "meaning": "맞는; 수정하다",
+        "targetScore": 650,
+        "exampleEn": "Your answer is correct.",
+        "exampleKo": "당신의 답이 맞습니다."
+    },
+    {
+        "day": 12,
+        "no": 48,
+        "word": "create",
+        "meaning": "만들어 내다, 창조하다",
+        "targetScore": 650,
+        "exampleEn": "God created the world.",
+        "exampleKo": "신이 세상을 창조했습니다."
+    },
+    {
+        "day": 12,
+        "no": 49,
+        "word": "depend",
+        "meaning": "의존하다, 달려 있다",
+        "targetScore": 650,
+        "exampleEn": "It depends on the weather.",
+        "exampleKo": "그것은 날씨에 달려 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 50,
+        "word": "design",
+        "meaning": "디자인; 고안하다",
+        "targetScore": 650,
+        "exampleEn": "He designed the logo.",
+        "exampleKo": "그가 로고를 디자인했습니다."
+    },
+    {
+        "day": 12,
+        "no": 51,
+        "word": "exhibit",
+        "meaning": "전시하다; 전시회",
+        "targetScore": 650,
+        "exampleEn": "The museum exhibits rare artifacts.",
+        "exampleKo": "그 박물관은 희귀 유물을 전시합니다."
+    },
+    {
+        "day": 12,
+        "no": 52,
+        "word": "final",
+        "meaning": "마지막의, 결정적인",
+        "targetScore": 650,
+        "exampleEn": "This is your final chance.",
+        "exampleKo": "이것은 당신의 마지막 기회입니다."
+    },
+    {
+        "day": 12,
+        "no": 53,
+        "word": "find",
+        "meaning": "찾다, 발견하다",
+        "targetScore": 650,
+        "exampleEn": "I found a wallet on the street.",
+        "exampleKo": "나는 길에서 지갑을 주웠습니다."
+    },
+    {
+        "day": 12,
+        "no": 54,
+        "word": "follow",
+        "meaning": "따르다",
+        "targetScore": 650,
+        "exampleEn": "Follow me.",
+        "exampleKo": "나를 따르세요."
+    },
+    {
+        "day": 12,
+        "no": 55,
+        "word": "helpful",
+        "meaning": "도움이 되는",
+        "targetScore": 650,
+        "exampleEn": "Thank you for being so helpful.",
+        "exampleKo": "도와주셔서 감사합니다."
+    },
+    {
+        "day": 12,
+        "no": 56,
+        "word": "increase",
+        "meaning": "증가하다; 인상",
+        "targetScore": 650,
+        "exampleEn": "Costs have increased.",
+        "exampleKo": "비용이 증가했습니다."
+    },
+    {
+        "day": 12,
+        "no": 57,
+        "word": "indication",
+        "meaning": "징후",
+        "targetScore": 650,
+        "exampleEn": "There is no indication of foul play.",
+        "exampleKo": "타살의 징후는 없습니다."
+    },
+    {
+        "day": 12,
+        "no": 58,
+        "word": "install",
+        "meaning": "설치하다",
+        "targetScore": 650,
+        "exampleEn": "Install the software on your computer.",
+        "exampleKo": "소프트웨어를 컴퓨터에 설치하세요."
+    },
+    {
+        "day": 12,
+        "no": 59,
+        "word": "invention",
+        "meaning": "발명, 발명품",
+        "targetScore": 650,
+        "exampleEn": "History is full of great inventions.",
+        "exampleKo": "역사는 위대한 발명품들로 가득 차 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 60,
+        "word": "involve",
+        "meaning": "포함하다, 관련시키다",
+        "targetScore": 650,
+        "exampleEn": "The job involves travel.",
+        "exampleKo": "그 일은 여행을 포함합니다."
+    },
+    {
+        "day": 12,
+        "no": 61,
+        "word": "lose",
+        "meaning": "잃다; 지다",
+        "targetScore": 650,
+        "exampleEn": "Don't lose hope.",
+        "exampleKo": "희망을 잃지 마세요."
+    },
+    {
+        "day": 12,
+        "no": 62,
+        "word": "method",
+        "meaning": "방법, 방식",
+        "targetScore": 650,
+        "exampleEn": "It is a reliable method.",
+        "exampleKo": "그것은 신뢰할 수 있는 방법입니다."
+    },
+    {
+        "day": 12,
+        "no": 63,
+        "word": "occur",
+        "meaning": "발생하다, 일어나다",
+        "targetScore": 650,
+        "exampleEn": "The accident occurred at night.",
+        "exampleKo": "사고는 밤에 일어났습니다."
+    },
+    {
+        "day": 12,
+        "no": 64,
+        "word": "organization",
+        "meaning": "조직, 단체",
+        "targetScore": 650,
+        "exampleEn": "She works for a non-profit organization.",
+        "exampleKo": "그녀는 비영리 단체에서 일합니다."
+    },
+    {
+        "day": 12,
+        "no": 65,
+        "word": "prevent",
+        "meaning": "예방하다, 막다",
+        "targetScore": 650,
+        "exampleEn": "This will prevent further damage.",
+        "exampleKo": "이것은 추가 피해를 막을 것입니다."
+    },
+    {
+        "day": 12,
+        "no": 66,
+        "word": "procedure",
+        "meaning": "절차, 순서",
+        "targetScore": 650,
+        "exampleEn": "Follow the standard procedure.",
+        "exampleKo": "표준 절차를 따르세요."
+    },
+    {
+        "day": 12,
+        "no": 67,
+        "word": "process",
+        "meaning": "공정, 과정",
+        "targetScore": 650,
+        "exampleEn": "The healing process takes time.",
+        "exampleKo": "치유 과정은 시간이 걸립니다."
+    },
+    {
+        "day": 12,
+        "no": 68,
+        "word": "productive",
+        "meaning": "생산적인",
+        "targetScore": 650,
+        "exampleEn": "We had a productive meeting.",
+        "exampleKo": "우리는 생산적인 회의를 했습니다."
+    }
+]

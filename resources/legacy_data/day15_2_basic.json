@@ -1,0 +1,254 @@
+[
+    {
+        "day": 15,
+        "no": 41,
+        "word": "pending",
+        "meaning": "미결인, 임박한",
+        "targetScore": 650,
+        "exampleEn": "The decision is pending.",
+        "exampleKo": "결정이 보류 중입니다."
+    },
+    {
+        "day": 15,
+        "no": 42,
+        "word": "abrupt",
+        "meaning": "갑작스러운",
+        "targetScore": 650,
+        "exampleEn": "The meeting came to an abrupt end.",
+        "exampleKo": "회의가 갑작스럽게 끝났습니다."
+    },
+    {
+        "day": 15,
+        "no": 43,
+        "word": "allow",
+        "meaning": "허용하다",
+        "targetScore": 650,
+        "exampleEn": "Smoking is not allowed.",
+        "exampleKo": "흡연은 허용되지 않습니다."
+    },
+    {
+        "day": 15,
+        "no": 44,
+        "word": "appreciation",
+        "meaning": "감사, 감상",
+        "targetScore": 650,
+        "exampleEn": "Show your appreciation.",
+        "exampleKo": "감사를 표하세요."
+    },
+    {
+        "day": 15,
+        "no": 45,
+        "word": "avoid",
+        "meaning": "피하다",
+        "targetScore": 650,
+        "exampleEn": "Avoid rush hour.",
+        "exampleKo": "러시아워를 피하세요."
+    },
+    {
+        "day": 15,
+        "no": 46,
+        "word": "briefly",
+        "meaning": "잠시, 간략하게",
+        "targetScore": 650,
+        "exampleEn": "He spoke briefly.",
+        "exampleKo": "그는 짧게 말했습니다."
+    },
+    {
+        "day": 15,
+        "no": 47,
+        "word": "busy",
+        "meaning": "바쁜",
+        "targetScore": 650,
+        "exampleEn": "I am very busy.",
+        "exampleKo": "나는 매우 바쁩니다."
+    },
+    {
+        "day": 15,
+        "no": 48,
+        "word": "cancel",
+        "meaning": "취소하다",
+        "targetScore": 650,
+        "exampleEn": "The event was canceled.",
+        "exampleKo": "행사가 취소되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 49,
+        "word": "careless",
+        "meaning": "부주의한",
+        "targetScore": 650,
+        "exampleEn": "It was a careless mistake.",
+        "exampleKo": "그것은 부주의한 실수였습니다."
+    },
+    {
+        "day": 15,
+        "no": 50,
+        "word": "comparative",
+        "meaning": "비교의",
+        "targetScore": 650,
+        "exampleEn": "Do a comparative study.",
+        "exampleKo": "비교 연구를 하세요."
+    },
+    {
+        "day": 15,
+        "no": 51,
+        "word": "consider",
+        "meaning": "고려하다",
+        "targetScore": 650,
+        "exampleEn": "I will consider your offer.",
+        "exampleKo": "당신의 제안을 고려해 보겠습니다."
+    },
+    {
+        "day": 15,
+        "no": 52,
+        "word": "convince",
+        "meaning": "설득하다, 확신시키다",
+        "targetScore": 650,
+        "exampleEn": "He convinced me.",
+        "exampleKo": "그는 나를 설득했습니다."
+    },
+    {
+        "day": 15,
+        "no": 53,
+        "word": "cover",
+        "meaning": "덮다, 다루다",
+        "targetScore": 650,
+        "exampleEn": "The insurance covers theft.",
+        "exampleKo": "그 보험은 도난을 보장합니다."
+    },
+    {
+        "day": 15,
+        "no": 54,
+        "word": "currently",
+        "meaning": "현재",
+        "targetScore": 650,
+        "exampleEn": "It is currently unavailable.",
+        "exampleKo": "그것은 현재 이용할 수 없습니다."
+    },
+    {
+        "day": 15,
+        "no": 55,
+        "word": "description",
+        "meaning": "설명, 묘사",
+        "targetScore": 650,
+        "exampleEn": "Give a detailed description.",
+        "exampleKo": "상세한 설명을 하세요."
+    },
+    {
+        "day": 15,
+        "no": 56,
+        "word": "develop",
+        "meaning": "개발하다",
+        "targetScore": 650,
+        "exampleEn": "We developed a new product.",
+        "exampleKo": "우리는 신제품을 개발했습니다."
+    },
+    {
+        "day": 15,
+        "no": 57,
+        "word": "display",
+        "meaning": "전시하다",
+        "targetScore": 650,
+        "exampleEn": "Display the results.",
+        "exampleKo": "결과를 보여주세요."
+    },
+    {
+        "day": 15,
+        "no": 58,
+        "word": "distribute",
+        "meaning": "배포하다, 나누어 주다",
+        "targetScore": 650,
+        "exampleEn": "Distribute the handouts.",
+        "exampleKo": "유인물을 나눠주세요."
+    },
+    {
+        "day": 15,
+        "no": 59,
+        "word": "during",
+        "meaning": "~동안",
+        "targetScore": 650,
+        "exampleEn": "Don't talk during the movie.",
+        "exampleKo": "영화 상영 중에 말하지 마세요."
+    },
+    {
+        "day": 15,
+        "no": 60,
+        "word": "extremely",
+        "meaning": "극도로",
+        "targetScore": 650,
+        "exampleEn": "It is extremely hot.",
+        "exampleKo": "극도로 덥습니다."
+    },
+    {
+        "day": 15,
+        "no": 61,
+        "word": "frequently",
+        "meaning": "자주",
+        "targetScore": 650,
+        "exampleEn": "I visit frequently.",
+        "exampleKo": "나는 자주 방문합니다."
+    },
+    {
+        "day": 15,
+        "no": 62,
+        "word": "improve",
+        "meaning": "개선하다",
+        "targetScore": 650,
+        "exampleEn": "I want to improve my English.",
+        "exampleKo": "나는 영어를 향상하고 싶습니다."
+    },
+    {
+        "day": 15,
+        "no": 63,
+        "word": "indicate",
+        "meaning": "나타내다, 가리키다",
+        "targetScore": 650,
+        "exampleEn": "The sign indicated the way.",
+        "exampleKo": "표지판이 길을 가리켰습니다."
+    },
+    {
+        "day": 15,
+        "no": 64,
+        "word": "majority",
+        "meaning": "다수, 대다수",
+        "targetScore": 650,
+        "exampleEn": "The majority voted yes.",
+        "exampleKo": "다수가 찬성표를 던졌습니다."
+    },
+    {
+        "day": 15,
+        "no": 65,
+        "word": "mark",
+        "meaning": "표시하다; 자국",
+        "targetScore": 650,
+        "exampleEn": "Mark the date on your calendar.",
+        "exampleKo": "달력에 날짜를 표시하세요."
+    },
+    {
+        "day": 15,
+        "no": 66,
+        "word": "offer",
+        "meaning": "제안하다; 제의",
+        "targetScore": 650,
+        "exampleEn": "He offered me a job.",
+        "exampleKo": "그는 나에게 일자리를 제안했습니다."
+    },
+    {
+        "day": 15,
+        "no": 67,
+        "word": "opening",
+        "meaning": "개장, 공석",
+        "targetScore": 650,
+        "exampleEn": "There is a job opening.",
+        "exampleKo": "빈 일자리가 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 68,
+        "word": "persuasive",
+        "meaning": "설득력 있는",
+        "targetScore": 650,
+        "exampleEn": "His argument was persuasive.",
+        "exampleKo": "그의 주장은 설득력이 있었습니다."
+    }
+]

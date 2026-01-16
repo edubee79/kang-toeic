@@ -1,0 +1,409 @@
+{
+  "testId": 5,
+  "passages": [
+    {
+      "id": "p6-t5-p1",
+      "guidance": "Questions 131-134 refer to the following article.",
+      "type": "article",
+      "title": "Grocery Chain to Host Event",
+      "content": "LEIGHTON (October 8)-Ohale Foods, one of the region's largest supermarket chains, is seeking to fill almost 100 open positions. For that reason, the company is holding a [131] event on October 20. Job opportunities exist at all fourteen of Ohale's current stores. [132] Ohale is seeking employees for its new Westside location, which is still under construction. [133].\n\nThose who [134] the event should bring copies of their résumé to the Grand Ballroom of the Palace Suites Hotel between 10 A.M. and 7 P.M. No appointment is required.",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "manufacturing"
+            },
+            {
+              "label": "B",
+              "text": "hiring"
+            },
+            {
+              "label": "C",
+              "text": "political"
+            },
+            {
+              "label": "D",
+              "text": "sporting"
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "If not"
+            },
+            {
+              "label": "B",
+              "text": "After all"
+            },
+            {
+              "label": "C",
+              "text": "Additionally"
+            },
+            {
+              "label": "D",
+              "text": "For example"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Its grand opening is scheduled for\nmid-November."
+            },
+            {
+              "label": "B",
+              "text": "Most applicants had prior experience."
+            },
+            {
+              "label": "C",
+              "text": "Its appointment of Linda Okumu as\nits CEO has surprised analysts."
+            },
+            {
+              "label": "D",
+              "text": "Local competitors cannot match its\nprices."
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "attending"
+            },
+            {
+              "label": "B",
+              "text": "to attend"
+            },
+            {
+              "label": "C",
+              "text": "attended"
+            },
+            {
+              "label": "D",
+              "text": "are attending"
+            }
+          ],
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "id": "p6-t5-p2",
+      "guidance": "Questions 135-138 refer to the following instructions.",
+      "type": "instruction",
+      "title": null,
+      "content": "Thank you for your purchase of an Ajaz Water Filter Pitcher. It isawonderful solution for water that tastes great! To improve the effectiveness of the Ajaz Water Filter Pitcher, we [135]\n\npriming the filter before the first use.\n\nThen screw the filter clockwise into the lid of the pitcher until it fits [136] . As you use the pitcher, remember that [137] water flow isasignal that the filter is becoming clogged and will need to be replaced soon. [138]",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "tried"
+            },
+            {
+              "label": "B",
+              "text": "recommend"
+            },
+            {
+              "label": "C",
+              "text": "consider"
+            },
+            {
+              "label": "D",
+              "text": "started"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Our filtration system will be\nredesigned within the next year."
+            },
+            {
+              "label": "B",
+              "text": "Water use may be reduced by\nrunning your dishwasher less\nfrequently."
+            },
+            {
+              "label": "C",
+              "text": "To do this, run cool tap water through\nthe filter for three minutes."
+            },
+            {
+              "label": "D",
+              "text": "There are 150 liters of water in the\nmain storage tank at all times."
+            }
+          ],
+          "correctAnswer": "C"
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "extremely"
+            },
+            {
+              "label": "B",
+              "text": "highly"
+            },
+            {
+              "label": "C",
+              "text": "tightly"
+            },
+            {
+              "label": "D",
+              "text": "steadily"
+            }
+          ],
+          "correctAnswer": "C"
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "diminished"
+            },
+            {
+              "label": "B",
+              "text": "diminishes"
+            },
+            {
+              "label": "C",
+              "text": "diminish"
+            },
+            {
+              "label": "D",
+              "text": "diminishable"
+            }
+          ],
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "id": "p6-t5-p3",
+      "guidance": "Questions 139-142 refer to the following policy.",
+      "type": "policy",
+      "title": "Returning merchandise",
+      "content": "Abney Home Products is committed to providing outstanding service, and we guarantee the [139] of all the products in our catalog. If you are not satisfied withapurchase, call our customer service line at 339-555-0177 to requestareturn authorization code. The service agent [140] you for the invoice number from the package insert. [141] Please be aware that Abney Home Products is not [142] for postage on merchandise returns.",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "condition"
+            },
+            {
+              "label": "B",
+              "text": "object"
+            },
+            {
+              "label": "C",
+              "text": "explanation"
+            },
+            {
+              "label": "D",
+              "text": "preview"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "asked"
+            },
+            {
+              "label": "B",
+              "text": "is asking"
+            },
+            {
+              "label": "C",
+              "text": "has asked"
+            },
+            {
+              "label": "D",
+              "text": "will ask"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Our employees have software training\nand are skilled at resolving problems."
+            },
+            {
+              "label": "B",
+              "text": "To cancel a furniture delivery, please call\nwithin 24 hours of ordering."
+            },
+            {
+              "label": "C",
+              "text": "When you send back the product, be\nsure to include the authorization code."
+            },
+            {
+              "label": "D",
+              "text": "The catalog has sections for kitchen\ngoods, lighting, appliances, and more."
+            }
+          ],
+          "correctAnswer": "C"
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "responsibly"
+            },
+            {
+              "label": "B",
+              "text": "responsible"
+            },
+            {
+              "label": "C",
+              "text": "responsibility"
+            },
+            {
+              "label": "D",
+              "text": "responsibleness"
+            }
+          ],
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "id": "p6-t5-p4",
+      "guidance": "Questions 143-146 refer to the following memo.",
+      "type": "memo",
+      "title": null,
+      "content": "To: All Employees\nFrom: Marina Papantonio, Safety Liaison\nDate: November 12\nSubject: Safety Training\n\nIt is time once again for our annual safety training workshop. This year, training will focus on digital safety measures, like avoiding scams and protecting against cyberattacks. Our technology experts already have installed new programs throughout our company's information system to reduce risk. [143] , we all need to understand how the programs work and what to do when a problem arises.\n\nTo accommodate [144] several workshops will be conducted throughout the upcoming week.\n\nYou can register for any one of these [145] on our company's intranet page. Just click on the link for \"Safety Training.\" [146] . If you are unable to take part in any of the scheduled workshops for any reason, you must inform your supervisor.",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "If so"
+            },
+            {
+              "label": "B",
+              "text": "However"
+            },
+            {
+              "label": "C",
+              "text": "Otherwise"
+            },
+            {
+              "label": "D",
+              "text": "In that case"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "itself"
+            },
+            {
+              "label": "B",
+              "text": "his"
+            },
+            {
+              "label": "C",
+              "text": "whose"
+            },
+            {
+              "label": "D",
+              "text": "everyone"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "sessions"
+            },
+            {
+              "label": "B",
+              "text": "positions"
+            },
+            {
+              "label": "C",
+              "text": "conferences"
+            },
+            {
+              "label": "D",
+              "text": "competitions"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Cyberattacks are on the rise."
+            },
+            {
+              "label": "B",
+              "text": "The training is held each summer."
+            },
+            {
+              "label": "C",
+              "text": "Please make every effort to sign up."
+            },
+            {
+              "label": "D",
+              "text": "Last year's program was canceled."
+            }
+          ],
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}

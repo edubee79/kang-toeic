@@ -1,0 +1,362 @@
+[
+  {
+    "day": 12,
+    "no": 1,
+    "word": "equipment",
+    "meaning": "장비, 설비",
+    "targetScore": 650,
+    "exampleEn": "The new equipment was installed yesterday.",
+    "exampleKo": "새 장비가 어제 설치되었습니다."
+  },
+  {
+    "day": 12,
+    "no": 2,
+    "word": "automate",
+    "meaning": "자동화하다",
+    "targetScore": 650,
+    "exampleEn": "The factory decided to automate the assembly line.",
+    "exampleKo": "공장은 조립 라인을 자동화하기로 결정했습니다."
+  },
+  {
+    "day": 12,
+    "no": 3,
+    "word": "specification",
+    "meaning": "명세서, 설명서, 사양",
+    "targetScore": 650,
+    "exampleEn": "Please review the technical specifications.",
+    "exampleKo": "기술 사양서를 검토해 주십시오."
+  },
+  {
+    "day": 12,
+    "no": 4,
+    "word": "properly",
+    "meaning": "제대로, 정확하게",
+    "targetScore": 650,
+    "exampleEn": "The machine is not working properly.",
+    "exampleKo": "기계가 제대로 작동하지 않고 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 5,
+    "word": "safety",
+    "meaning": "안전",
+    "targetScore": 650,
+    "exampleEn": "Safety creates a productive work environment.",
+    "exampleKo": "안전은 생산적인 업무 환경을 만듭니다."
+  },
+  {
+    "day": 12,
+    "no": 6,
+    "word": "precaution",
+    "meaning": "예방 조치, 예방책",
+    "targetScore": 650,
+    "exampleEn": "Take every precaution to avoid accidents.",
+    "exampleKo": "사고를 피하기 위해 모든 예방 조치를 취하십시오."
+  },
+  {
+    "day": 12,
+    "no": 7,
+    "word": "operate",
+    "meaning": "(기계 등이) 작동하다, 움직이다",
+    "targetScore": 650,
+    "exampleEn": "Trained staff will operate the machinery.",
+    "exampleKo": "숙련된 직원이 기계를 작동할 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 8,
+    "word": "processing",
+    "meaning": "가공, 처리",
+    "targetScore": 650,
+    "exampleEn": "The processing of orders takes two days.",
+    "exampleKo": "주문 처리는 이틀이 걸립니다."
+  },
+  {
+    "day": 12,
+    "no": 9,
+    "word": "capacity",
+    "meaning": "용량, 수용력, 역할",
+    "targetScore": 650,
+    "exampleEn": "The plant is operating at full capacity.",
+    "exampleKo": "공장이 최대 용량으로 가동되고 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 10,
+    "word": "assemble",
+    "meaning": "(부품·기계 등을)조립하다, (사람을)모으다",
+    "targetScore": 650,
+    "exampleEn": "Workers assemble the parts by hand.",
+    "exampleKo": "직원들은 부품을 손으로 조립합니다."
+  },
+  {
+    "day": 12,
+    "no": 11,
+    "word": "utilize",
+    "meaning": "이용하다, 활용하다",
+    "targetScore": 650,
+    "exampleEn": "We utilize advanced technology in production.",
+    "exampleKo": "우리는 생산에 선진 기술을 활용합니다."
+  },
+  {
+    "day": 12,
+    "no": 12,
+    "word": "place",
+    "meaning": "~을 ~한 상태에 두다, , (지시·주문·신청 등을) 하다",
+    "targetScore": 650,
+    "exampleEn": "Please place the order before Friday.",
+    "exampleKo": "금요일 전에 주문을 해 주십시오(넣어 주십시오)."
+  },
+  {
+    "day": 12,
+    "no": 13,
+    "word": "fill",
+    "meaning": "~을 채우다, (주문대로) 이행하다",
+    "targetScore": 650,
+    "exampleEn": "Staff must fill the order immediately.",
+    "exampleKo": "직원들은 주문을 즉시 처리해야(채워야) 합니다."
+  },
+  {
+    "day": 12,
+    "no": 14,
+    "word": "manufacturing",
+    "meaning": "제조(업)의",
+    "targetScore": 650,
+    "exampleEn": "The manufacturing cost is too high.",
+    "exampleKo": "제조 비용이 너무 높습니다."
+  },
+  {
+    "day": 12,
+    "no": 15,
+    "word": "renovate",
+    "meaning": "(낡은 건물·가구 등을)개조하다, 수리하다, , 보수하다",
+    "targetScore": 650,
+    "exampleEn": "We plan to renovate the old factory.",
+    "exampleKo": "우리는 오래된 공장을 개조할(보수할) 계획입니다."
+  },
+  {
+    "day": 12,
+    "no": 16,
+    "word": "decision",
+    "meaning": "결정, 판단",
+    "targetScore": 650,
+    "exampleEn": "The management made a difficult decision.",
+    "exampleKo": "경영진은 어려운 결정을 내렸습니다."
+  },
+  {
+    "day": 12,
+    "no": 17,
+    "word": "material",
+    "meaning": "재료, 물질",
+    "targetScore": 650,
+    "exampleEn": "Raw material costs have increased.",
+    "exampleKo": "원자재 비용이 증가했습니다."
+  },
+  {
+    "day": 12,
+    "no": 18,
+    "word": "success",
+    "meaning": "성공, 성과",
+    "targetScore": 650,
+    "exampleEn": "The product launch was a huge success.",
+    "exampleKo": "제품 출시는 큰 성공이었습니다."
+  },
+  {
+    "day": 12,
+    "no": 19,
+    "word": "attribute",
+    "meaning": "(원인을)~의 덕분으로 돌리다",
+    "targetScore": 650,
+    "exampleEn": "They attribute the success to teamwork.",
+    "exampleKo": "그들은 성공을 팀워크 덕분으로 돌립니다(탓으로 합니다)."
+  },
+  {
+    "day": 12,
+    "no": 20,
+    "word": "efficiency",
+    "meaning": "효율, 능률",
+    "targetScore": 650,
+    "exampleEn": "We aim to improve production efficiency.",
+    "exampleKo": "우리는 생산 효율성을 높이는 것을 목표로 합니다."
+  },
+  {
+    "day": 12,
+    "no": 21,
+    "word": "limit",
+    "meaning": "한계, 제한",
+    "targetScore": 650,
+    "exampleEn": "There is a limit to our resources.",
+    "exampleKo": "우리의 자원에는 한계가 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 22,
+    "word": "tailored",
+    "meaning": "맞춤의, 주문에 따라 맞춘",
+    "targetScore": 650,
+    "exampleEn": "The service is tailored to your needs.",
+    "exampleKo": "그 서비스는 귀하의 요구에 맞추어져 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 23,
+    "word": "component",
+    "meaning": "부품, (구성)요소",
+    "targetScore": 650,
+    "exampleEn": "Each component is tested individually.",
+    "exampleKo": "각 부품은 개별적으로 테스트됩니다."
+  },
+  {
+    "day": 12,
+    "no": 24,
+    "word": "capable",
+    "meaning": "~을 할 수 있는, ~할 능력이 있는",
+    "targetScore": 650,
+    "exampleEn": "She is capable of handling the task.",
+    "exampleKo": "그녀는 그 업무를 처리할 능력이 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 25,
+    "word": "economize",
+    "meaning": "절약하다, 아끼다",
+    "targetScore": 650,
+    "exampleEn": "We must economize on fuel.",
+    "exampleKo": "우리는 연료를 절약해야 합니다."
+  },
+  {
+    "day": 12,
+    "no": 26,
+    "word": "flexible",
+    "meaning": "융통성 있는, 유연한, 잘 구부러지는",
+    "targetScore": 650,
+    "exampleEn": "We need a flexible production schedule.",
+    "exampleKo": "우리는 유연한 생산 일정이 필요합니다."
+  },
+  {
+    "day": 12,
+    "no": 27,
+    "word": "comparable",
+    "meaning": "필적하는, 비교되는",
+    "targetScore": 650,
+    "exampleEn": "The quality is comparable to expensive brands.",
+    "exampleKo": "품질은 비싼 브랜드들과 필적합니다(비슷합니다)."
+  },
+  {
+    "day": 12,
+    "no": 28,
+    "word": "produce",
+    "meaning": "생산하다",
+    "targetScore": 650,
+    "exampleEn": "The factory produces 1000 units per day.",
+    "exampleKo": "그 공장은 하루에 1000개를 생산합니다."
+  },
+  {
+    "day": 12,
+    "no": 29,
+    "word": "respectively",
+    "meaning": "각각, 따로",
+    "targetScore": 650,
+    "exampleEn": "Tom and Ann are 30 and 25, respectively.",
+    "exampleKo": "팀과 앤은 각각 30세와 25세입니다."
+  },
+  {
+    "day": 12,
+    "no": 30,
+    "word": "device",
+    "meaning": "장치",
+    "targetScore": 650,
+    "exampleEn": "This device is used for measuring heat.",
+    "exampleKo": "이 장치는 열을 측정하는 데 사용됩니다."
+  },
+  {
+    "day": 12,
+    "no": 31,
+    "word": "trim",
+    "meaning": "(깎아) 다듬다, 없애다, 삭감하다",
+    "targetScore": 650,
+    "exampleEn": "We need to trim the budget.",
+    "exampleKo": "우리는 예산을 삭감해야(다듬어야) 합니다."
+  },
+  {
+    "day": 12,
+    "no": 32,
+    "word": "launch",
+    "meaning": "(신제품을) 출시하다",
+    "targetScore": 650,
+    "exampleEn": "The company will launch a new product.",
+    "exampleKo": "그 회사는 신제품을 출시할 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 33,
+    "word": "separately",
+    "meaning": "개별적으로, 따로따로",
+    "targetScore": 650,
+    "exampleEn": "Items are sold separately.",
+    "exampleKo": "물품들은 따로(별도로) 판매됩니다."
+  },
+  {
+    "day": 12,
+    "no": 34,
+    "word": "expiration",
+    "meaning": "(기간·임기 등의) 만료, 만기",
+    "targetScore": 650,
+    "exampleEn": "Check the expiration date on the package.",
+    "exampleKo": "포장의 유효 기간(만료일)을 확인하십시오."
+  },
+  {
+    "day": 12,
+    "no": 35,
+    "word": "maneuver",
+    "meaning": "이동시키다, 움직이다",
+    "targetScore": 650,
+    "exampleEn": "The driver maneuvered the truck carefully.",
+    "exampleKo": "운전자는 트럭을 조심스럽게 조종했습니다."
+  },
+  {
+    "day": 12,
+    "no": 36,
+    "word": "coming",
+    "meaning": "다가오는",
+    "targetScore": 650,
+    "exampleEn": "The coming year will be challenging.",
+    "exampleKo": "다가오는 해는 힘들 것(도전적일 것)입니다."
+  },
+  {
+    "day": 12,
+    "no": 37,
+    "word": "damaged",
+    "meaning": "손상된, 손해를 입은",
+    "targetScore": 650,
+    "exampleEn": "The package arrived damaged.",
+    "exampleKo": "소포가 손상된 채로 도착했습니다."
+  },
+  {
+    "day": 12,
+    "no": 38,
+    "word": "prevent",
+    "meaning": "~을 막다, ~을 예방하다",
+    "targetScore": 650,
+    "exampleEn": "Regular maintenance prevents breakdowns.",
+    "exampleKo": "정기적인 유지 보수는 고장을 예방합니다."
+  },
+  {
+    "day": 12,
+    "no": 39,
+    "word": "power",
+    "meaning": "전력, 전기",
+    "targetScore": 650,
+    "exampleEn": "The plant supplies power to the city.",
+    "exampleKo": "그 발전소(공장)는 도시에 전력을 공급합니다."
+  },
+  {
+    "day": 12,
+    "no": 40,
+    "word": "chemical",
+    "meaning": "화학 제품",
+    "targetScore": 650,
+    "exampleEn": "Handle the chemical substances with care.",
+    "exampleKo": "화학 물질을 주의해서 다루십시오."
+  }
+]

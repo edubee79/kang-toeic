@@ -1,0 +1,389 @@
+{
+  "testId": 3,
+  "passages": [
+    {
+      "id": "p6-t3-p1",
+      "type": "EMAIL",
+      "title": "Florence Shawn",
+      "content": "Hi Everyone,\nI have news to share about a [131] in the human resources department. After nearly twenty years with Cometti Creative, Florence Shawn has decided to retire from the position of director of human resources.\n\nOur current senior manager of human resources, Makoto Ichise, will replace Ms. Shawn when she retires. Ms. Shawn [132] Mr. Ichise since he joined the company five years ago.\n\nMs. Shawn's [133] day will be February 22. A retirement party will be held for her on that day at 4:00 P.M. in the Terey Lobby. [134]\n\nBest,\nYoreli Costa\nDirector of Operations, Cometti Creative",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "difference"
+            },
+            {
+              "label": "B",
+              "text": "strategy"
+            },
+            {
+              "label": "C",
+              "text": "change"
+            },
+            {
+              "label": "D",
+              "text": "practice"
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "mentors"
+            },
+            {
+              "label": "B",
+              "text": "is mentoring"
+            },
+            {
+              "label": "C",
+              "text": "will mentor"
+            },
+            {
+              "label": "D",
+              "text": "has been mentoring"
+            }
+          ]
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "last"
+            },
+            {
+              "label": "B",
+              "text": "original"
+            },
+            {
+              "label": "C",
+              "text": "flexible"
+            },
+            {
+              "label": "D",
+              "text": "alternate"
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Cometti Creative will hire a replacement soon."
+            },
+            {
+              "label": "B",
+              "text": "We hope that you can all attend to wish her well."
+            },
+            {
+              "label": "C",
+              "text": "Ms. Shawn was the first director of human resources at Cometti Creative."
+            },
+            {
+              "label": "D",
+              "text": "The first project will be the creation of a talent development program."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t3-p2",
+      "type": "ADVERTISEMENT",
+      "title": "Lovitt Real Estate",
+      "content": "Manuel Lovitt, [135] of Lovitt Real Estate, has been selling real estate for over 17 years. Mr. Lovitt and his award-winning team [136] in homes for families in the Winnipeg, Brandon, and Dauphin areas. They know about the schools, parks, services, transportation, and activities that enhance family life in the area where you want to reside.\n\n[137] Contact Lovitt Real Estate today and let the team guide you [138] the home of your dreams. They will listen to your needs, negotiate on your behalf, and get you the best home for your hard-earned money.\n\nCall 431-555-0168 to speak to an agent or visit www.lovittrealestate.ca for more information.",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "own"
+            },
+            {
+              "label": "B",
+              "text": "owned"
+            },
+            {
+              "label": "C",
+              "text": "owner"
+            },
+            {
+              "label": "D",
+              "text": "owning"
+            }
+          ]
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "practice"
+            },
+            {
+              "label": "B",
+              "text": "specialize"
+            },
+            {
+              "label": "C",
+              "text": "report"
+            },
+            {
+              "label": "D",
+              "text": "purchase"
+            }
+          ]
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "They can arrange transportation for your local elementary school."
+            },
+            {
+              "label": "B",
+              "text": "That is because they live in the communities they serve."
+            },
+            {
+              "label": "C",
+              "text": "They will be closed for the summer but will be back soon."
+            },
+            {
+              "label": "D",
+              "text": "Therefore, they can help you with all your banking needs."
+            }
+          ]
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "toward"
+            },
+            {
+              "label": "B",
+              "text": "fixing"
+            },
+            {
+              "label": "C",
+              "text": "because"
+            },
+            {
+              "label": "D",
+              "text": "along"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t3-p3",
+      "type": "INTRODUCTION",
+      "title": null,
+      "content": "Welcome to \"Distributing Your Savings.\" This slide [139] is the third of a twelve-segment educational series called \"Preparing for Retirement.\"\n\n[140] This series provides only [141] advice. It should not replace the guidance of your investment planner. The series has been developed as background material to help you ask key questions when [142] with your investment planner. We hope you find this information helpful.\n\nSwainson-Gray Investments",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "presenting"
+            },
+            {
+              "label": "B",
+              "text": "presents"
+            },
+            {
+              "label": "C",
+              "text": "presentation"
+            },
+            {
+              "label": "D",
+              "text": "presented"
+            }
+          ]
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "You are encouraged to visit our office for a free portfolio review."
+            },
+            {
+              "label": "B",
+              "text": "The series is designed to help you make informed financial decisions."
+            },
+            {
+              "label": "C",
+              "text": "Please fill out the paperwork before your appointment."
+            },
+            {
+              "label": "D",
+              "text": "Your responses will help us serve you better in the future."
+            }
+          ]
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "regional"
+            },
+            {
+              "label": "B",
+              "text": "expensive"
+            },
+            {
+              "label": "C",
+              "text": "supplemental"
+            },
+            {
+              "label": "D",
+              "text": "playful"
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "consulting"
+            },
+            {
+              "label": "B",
+              "text": "prescribing"
+            },
+            {
+              "label": "C",
+              "text": "listing"
+            },
+            {
+              "label": "D",
+              "text": "following"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t3-p4",
+      "type": "EMAIL",
+      "title": "My input",
+      "content": "Dear Dr. Paulwell,\nThis message is in response to yesterday's staff meeting, particularly the discussion on how certain aspects of the clinic may affect our work and mission. [143]\n\nCurrently, the vending machines in the hall outside our waiting room are stocked with sugary and salty products such as soft drinks and chips. As a health care provider, we [144] beverages and snacks that show our commitment to wellness [145] , our mission is focused on good health.\n\nI have attached an article about actions that medical centers like ours are taking to improve their hospitality stations. I hope you find it [146] . It details some easy and cost-effective changes we could consider.\n\nKind regards,\nSilas Laveau",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "I thought it went on longer than was necessary."
+            },
+            {
+              "label": "B",
+              "text": "I wish we had been informed about it sooner."
+            },
+            {
+              "label": "C",
+              "text": "I would like to make a suggestion on this topic."
+            },
+            {
+              "label": "D",
+              "text": "I would be honored to lead a follow-up session."
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "will offer"
+            },
+            {
+              "label": "B",
+              "text": "have offered"
+            },
+            {
+              "label": "C",
+              "text": "were offering"
+            },
+            {
+              "label": "D",
+              "text": "should be offering"
+            }
+          ]
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "After all"
+            },
+            {
+              "label": "B",
+              "text": "By the way"
+            },
+            {
+              "label": "C",
+              "text": "In the meantime"
+            },
+            {
+              "label": "D",
+              "text": "On the other hand"
+            }
+          ]
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "useful"
+            },
+            {
+              "label": "B",
+              "text": "eventful"
+            },
+            {
+              "label": "C",
+              "text": "profitable"
+            },
+            {
+              "label": "D",
+              "text": "comfortable"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

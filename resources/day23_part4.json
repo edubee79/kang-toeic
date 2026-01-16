@@ -1,0 +1,281 @@
+[
+  {
+    "day": 23,
+    "no": 137,
+    "word": "fringe benefits",
+    "meaning": "부가 급부",
+    "targetScore": 900,
+    "exampleEn": "The package includes competitive salary and fringe benefits.",
+    "exampleKo": "그 패키지는 경쟁력 있는 급여와 부가 혜택을 포함합니다."
+  },
+  {
+    "day": 23,
+    "no": 138,
+    "word": "give in",
+    "meaning": "굴복하다, 양보하다",
+    "targetScore": 900,
+    "exampleEn": "Management refused to give in to the union's demands.",
+    "exampleKo": "경영진은 노조의 요구에 굴복하기를 거부했습니다."
+  },
+  {
+    "day": 23,
+    "no": 139,
+    "word": "straightforward",
+    "meaning": "정직한; 간단한",
+    "targetScore": 900,
+    "exampleEn": "The instructions are simple and straightforward.",
+    "exampleKo": "지시 사항은 간단하고 솔직합니다(알기 쉽습니다)."
+  },
+  {
+    "day": 23,
+    "no": 140,
+    "word": "nursing",
+    "meaning": "간호, 간호학",
+    "targetScore": 900,
+    "exampleEn": "She is considering a career in nursing.",
+    "exampleKo": "그녀는 간호 분야에서의 경력을 고려하고 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 141,
+    "word": "cut benefits",
+    "meaning": "복리후생을 줄이다, 수당을 줄이다",
+    "targetScore": 900,
+    "exampleEn": "The company had to cut benefits due to budget constraints.",
+    "exampleKo": "회사는 예산 제약 때문에 혜택을 줄여야 했습니다."
+  },
+  {
+    "day": 23,
+    "no": 142,
+    "word": "flatter",
+    "meaning": "아첨하다, 듣기 좋은 칭찬을 하다",
+    "targetScore": 900,
+    "exampleEn": "He was flattered by the offer.",
+    "exampleKo": "그는 그 제안에 우쭐해졌습니다(기뻐했습니다)."
+  },
+  {
+    "day": 23,
+    "no": 143,
+    "word": "sabotage",
+    "meaning": "(고의적인) 방해 행위",
+    "targetScore": 900,
+    "exampleEn": "Disgruntled employees tried to sabotage the project.",
+    "exampleKo": "불만 품은 직원들이 프로젝트를 방해하려 했습니다."
+  },
+  {
+    "day": 23,
+    "no": 144,
+    "word": "hearty",
+    "meaning": "마음에서 우러난; (음식의 양이) 풍부한",
+    "targetScore": 900,
+    "exampleEn": "We received a hearty welcome from the host.",
+    "exampleKo": "우리는 주최측으로부터 진심 어린 환영을 받았습니다."
+  },
+  {
+    "day": 23,
+    "no": 145,
+    "word": "spry",
+    "meaning": "기운찬, 활발한",
+    "targetScore": 900,
+    "exampleEn": "He is remarkably spry for his age.",
+    "exampleKo": "그는 나이에 비해 놀라울 정도로 정정합니다."
+  },
+  {
+    "day": 23,
+    "no": 146,
+    "word": "flextime",
+    "meaning": "자율 근무 시간제",
+    "targetScore": 900,
+    "exampleEn": "Many employees prefer working on flextime.",
+    "exampleKo": "많은 직원들이 탄력 근무제로 일하는 것을 선호합니다."
+  },
+  {
+    "day": 23,
+    "no": 147,
+    "word": "yearn",
+    "meaning": "열망하다",
+    "targetScore": 900,
+    "exampleEn": "They yearn for a better work-life balance.",
+    "exampleKo": "그들은 더 나은 일과 삶의 균형을 갈망합니다."
+  },
+  {
+    "day": 23,
+    "no": 148,
+    "word": "chronological",
+    "meaning": "시간 순의, 연대 순의",
+    "targetScore": 900,
+    "exampleEn": "Please arrange the files in chronological order.",
+    "exampleKo": "파일들을 시간 순서대로 정리해 주십시오."
+  },
+  {
+    "day": 23,
+    "no": 149,
+    "word": "severance pay",
+    "meaning": "퇴직금",
+    "targetScore": 900,
+    "exampleEn": "He received a generous severance pay upon retirement.",
+    "exampleKo": "그는 은퇴 시 넉넉한 퇴직금을 받았습니다."
+  },
+  {
+    "day": 23,
+    "no": 150,
+    "word": "commemorate",
+    "meaning": "기념하다",
+    "targetScore": 900,
+    "exampleEn": "A plaque was placed to commemorate the founder.",
+    "exampleKo": "창립자를 기념하기 위해 현판이 설치되었습니다."
+  },
+  {
+    "day": 23,
+    "no": 151,
+    "word": "maternity leave",
+    "meaning": "출산 휴가",
+    "targetScore": 900,
+    "exampleEn": "She is currently on maternity leave.",
+    "exampleKo": "그녀는 현재 출산 휴가 중입니다."
+  },
+  {
+    "day": 23,
+    "no": 152,
+    "word": "nursery",
+    "meaning": "유아원, 놀이방; 보육",
+    "targetScore": 900,
+    "exampleEn": "The company runs an on-site nursery.",
+    "exampleKo": "그 회사는 사내 보육 시설을 운영합니다."
+  },
+  {
+    "day": 23,
+    "no": 153,
+    "word": "pique",
+    "meaning": "화, 불쾌",
+    "targetScore": 900,
+    "exampleEn": "The strange noise piqued my curiosity.",
+    "exampleKo": "이상한 소리가 제 호기심을 자극했습니다."
+  },
+  {
+    "day": 23,
+    "no": 154,
+    "word": "get reimbursed for",
+    "meaning": "~을 환급 받다",
+    "targetScore": 900,
+    "exampleEn": "You will get reimbursed for travel expenses.",
+    "exampleKo": "당신은 출장 경비를 상환(변제)받을 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 155,
+    "word": "conjunction",
+    "meaning": "연합, 공동",
+    "targetScore": 900,
+    "exampleEn": "The event is held in conjunction with the trade fair.",
+    "exampleKo": "그 행사는 무역 박람회와 함께(연계하여) 열립니다."
+  },
+  {
+    "day": 23,
+    "no": 156,
+    "word": "misuse",
+    "meaning": "오용, 악용",
+    "targetScore": 900,
+    "exampleEn": "Any misuse of company funds will result in dismissal.",
+    "exampleKo": "회사 자금의 오남용은 해고를 초래할 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 157,
+    "word": "knock off",
+    "meaning": "업무를 마치다",
+    "targetScore": 900,
+    "exampleEn": "We decided to knock off early today.",
+    "exampleKo": "우리는 오늘 일찍 일을 마치기로 결정했습니다."
+  },
+  {
+    "day": 23,
+    "no": 158,
+    "word": "exhibitor",
+    "meaning": "(전시회의) 출품자",
+    "targetScore": 900,
+    "exampleEn": "More than 500 exhibitors participated in the expo.",
+    "exampleKo": "500개 이상의 전시 업체가 엑스포에 참가했습니다."
+  },
+  {
+    "day": 23,
+    "no": 159,
+    "word": "labor costs",
+    "meaning": "인건비",
+    "targetScore": 900,
+    "exampleEn": "We need to cut labor costs to remain competitive.",
+    "exampleKo": "우리는 경쟁력을 유지하기 위해 인건비를 절감해야 합니다."
+  },
+  {
+    "day": 23,
+    "no": 160,
+    "word": "off-peak",
+    "meaning": "한산할 때의, 비수기의",
+    "targetScore": 900,
+    "exampleEn": "Travel expenses are lower during off-peak seasons.",
+    "exampleKo": "비수기에는 여행 경비가 더 저렴합니다."
+  },
+  {
+    "day": 23,
+    "no": 161,
+    "word": "discriminate",
+    "meaning": "차별하다",
+    "targetScore": 900,
+    "exampleEn": "It is illegal to discriminate against employees based on age.",
+    "exampleKo": "나이에 근거하여 직원을 차별하는 것은 불법입니다."
+  },
+  {
+    "day": 23,
+    "no": 162,
+    "word": "kindhearted",
+    "meaning": "친절한",
+    "targetScore": 900,
+    "exampleEn": "She is known as a kindhearted manager.",
+    "exampleKo": "그녀는 마음씨 고운 매니저로 알려져 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 163,
+    "word": "salary review",
+    "meaning": "연봉 심사",
+    "targetScore": 900,
+    "exampleEn": "Annual salary reviews will be held in March.",
+    "exampleKo": "연례 연봉 심사가 3월에 열릴 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 164,
+    "word": "second",
+    "meaning": "찬성하다, 지지하다",
+    "targetScore": 900,
+    "exampleEn": "I second the motion to adjourn the meeting.",
+    "exampleKo": "저는 회의를 휴회하자는 동의에 재청합니다."
+  },
+  {
+    "day": 23,
+    "no": 165,
+    "word": "citation",
+    "meaning": "인용구, 인용, 표창장",
+    "targetScore": 900,
+    "exampleEn": "He received a citation for his outstanding service.",
+    "exampleKo": "그는 뛰어난 복무로 표창장을 받았습니다."
+  },
+  {
+    "day": 23,
+    "no": 166,
+    "word": "labor dispute",
+    "meaning": "노동 쟁의, 노사 분규",
+    "targetScore": 900,
+    "exampleEn": "The labor dispute was resolved peacefully.",
+    "exampleKo": "노사 분규는 평화롭게 해결되었습니다."
+  },
+  {
+    "day": 23,
+    "no": 167,
+    "word": "goodwill",
+    "meaning": "호의",
+    "targetScore": 900,
+    "exampleEn": "We aim to build goodwill with our local community.",
+    "exampleKo": "우리는 지역 사회와 우호 관계를 구축하는 것을 목표로 합니다."
+  }
+]

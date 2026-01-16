@@ -1,0 +1,362 @@
+[
+  {
+    "day": 25,
+    "no": 1,
+    "word": "congestion",
+    "meaning": "(교통의)체증, 혼잡",
+    "targetScore": 650,
+    "exampleEn": "Traffic congestion is heavy during rush hour.",
+    "exampleKo": "출퇴근 시간에는 교통 체증이 심합니다."
+  },
+  {
+    "day": 25,
+    "no": 2,
+    "word": "alleviate",
+    "meaning": "완화하다",
+    "targetScore": 650,
+    "exampleEn": "The new highway will alleviate traffic congestion.",
+    "exampleKo": "새 고속도로는 교통 체증을 완화할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 3,
+    "word": "divert",
+    "meaning": "우회시키다, 다른 곳으로 돌리다",
+    "targetScore": 650,
+    "exampleEn": "Traffic was diverted to a side road due to the accident.",
+    "exampleKo": "사고로 인해 교통이 샛길로 우회되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 4,
+    "word": "detour",
+    "meaning": "우회",
+    "targetScore": 650,
+    "exampleEn": "We had to take a detour because of the roadwork.",
+    "exampleKo": "우리는 도로 공사 때문에 우회해야 했습니다."
+  },
+  {
+    "day": 25,
+    "no": 5,
+    "word": "fuel",
+    "meaning": "연료",
+    "targetScore": 650,
+    "exampleEn": "Rising fuel costs are affecting the transportation industry.",
+    "exampleKo": "상승하는 연료 비용이 운송 산업에 영향을 미치고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 6,
+    "word": "malfunction",
+    "meaning": "오작동, 기능 불량",
+    "targetScore": 650,
+    "exampleEn": "The signal malfunction caused a delay.",
+    "exampleKo": "신호 오작동이 지연을 초래했습니다."
+  },
+  {
+    "day": 25,
+    "no": 7,
+    "word": "permit",
+    "meaning": "허락하다, 허가증",
+    "targetScore": 650,
+    "exampleEn": "You need a parking permit to park here.",
+    "exampleKo": "여기에 주차하려면 주차 허가증이 필요합니다."
+  },
+  {
+    "day": 25,
+    "no": 8,
+    "word": "transportation",
+    "meaning": "교통 (수단), 운송 수단",
+    "targetScore": 650,
+    "exampleEn": "Public transportation is reliable and affordable.",
+    "exampleKo": "대중교통은 믿을 수 있고 가격이 알맞습니다."
+  },
+  {
+    "day": 25,
+    "no": 9,
+    "word": "opportunity",
+    "meaning": "기회",
+    "targetScore": 650,
+    "exampleEn": "This is a great opportunity to expand our business.",
+    "exampleKo": "이것은 우리 사업을 확장할 수 있는 좋은 기회입니다."
+  },
+  {
+    "day": 25,
+    "no": 10,
+    "word": "clearly",
+    "meaning": "명확히",
+    "targetScore": 650,
+    "exampleEn": "The instructions clearly state the parking rules.",
+    "exampleKo": "지시 사항은 주차 규칙을 명확히 명시하고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 11,
+    "word": "ongoing",
+    "meaning": "계속 진행 중인",
+    "targetScore": 650,
+    "exampleEn": "There is ongoing construction on the bridge.",
+    "exampleKo": "다리 위에서 공사가 계속 진행 중입니다."
+  },
+  {
+    "day": 25,
+    "no": 12,
+    "word": "detailed",
+    "meaning": "상세한",
+    "targetScore": 650,
+    "exampleEn": "Please provide a detailed map of the area.",
+    "exampleKo": "그 지역의 상세한 지도를 제공해 주십시오."
+  },
+  {
+    "day": 25,
+    "no": 13,
+    "word": "alternative",
+    "meaning": "대안, 대체, 다른, 대신의",
+    "targetScore": 650,
+    "exampleEn": "We are looking for an alternative route.",
+    "exampleKo": "우리는 대체 경로를 찾고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 14,
+    "word": "obtain",
+    "meaning": "획득하다, 얻다",
+    "targetScore": 650,
+    "exampleEn": "Where can I obtain a subway map?",
+    "exampleKo": "지하철 노선도는 어디서 얻을 수 있습니까?"
+  },
+  {
+    "day": 25,
+    "no": 15,
+    "word": "designated",
+    "meaning": "지정된",
+    "targetScore": 650,
+    "exampleEn": "Please park in the designated area only.",
+    "exampleKo": "지정된 구역에만 주차하십시오."
+  },
+  {
+    "day": 25,
+    "no": 16,
+    "word": "intersection",
+    "meaning": "교차로, 교차 지점",
+    "targetScore": 650,
+    "exampleEn": "Turn left at the next intersection.",
+    "exampleKo": "다음 교차로에서 좌회전하십시오."
+  },
+  {
+    "day": 25,
+    "no": 17,
+    "word": "equip",
+    "meaning": "갖추다, 설비하다",
+    "targetScore": 650,
+    "exampleEn": "The car is equipped with a navigation system.",
+    "exampleKo": "그 차는 내비게이션 시스템을 갖추고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 18,
+    "word": "commute",
+    "meaning": "통근하다",
+    "targetScore": 650,
+    "exampleEn": "He commutes to work by train every day.",
+    "exampleKo": "그는 매일 기차로 통근합니다."
+  },
+  {
+    "day": 25,
+    "no": 19,
+    "word": "downtown",
+    "meaning": "시내에서, 도심지로",
+    "targetScore": 650,
+    "exampleEn": "I am going downtown to meet a client.",
+    "exampleKo": "저는 고객을 만나러 시내에 가는 길입니다."
+  },
+  {
+    "day": 25,
+    "no": 20,
+    "word": "automotive",
+    "meaning": "자동차의",
+    "targetScore": 650,
+    "exampleEn": "The automotive industry is facing challenges.",
+    "exampleKo": "자동차 산업은 도전 과제들에 직면해 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 21,
+    "word": "closure",
+    "meaning": "폐쇄",
+    "targetScore": 650,
+    "exampleEn": "Road closures are expected during the festival.",
+    "exampleKo": "축제 기간 동안 도로 폐쇄가 예상됩니다."
+  },
+  {
+    "day": 25,
+    "no": 22,
+    "word": "vehicle",
+    "meaning": "차량, 운송 수단",
+    "targetScore": 650,
+    "exampleEn": "Company vehicles must be returned by 5 PM.",
+    "exampleKo": "회사 차량은 오후 5시까지 반납되어야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 23,
+    "word": "platform",
+    "meaning": "승강장",
+    "targetScore": 650,
+    "exampleEn": "Keep clear of the platform edge.",
+    "exampleKo": "승강장 가장자리에서 떨어져 있으십시오."
+  },
+  {
+    "day": 25,
+    "no": 24,
+    "word": "official",
+    "meaning": "공무원, 관리, 공식적인",
+    "targetScore": 650,
+    "exampleEn": "Government officials are inspecting the site.",
+    "exampleKo": "정부 관리들이 현장을 점검하고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 25,
+    "word": "transit",
+    "meaning": "교통, 수송",
+    "targetScore": 650,
+    "exampleEn": "Mass transit systems reduce pollution.",
+    "exampleKo": "대중교통 시스템은 오염을 줄여줍니다."
+  },
+  {
+    "day": 25,
+    "no": 26,
+    "word": "fare",
+    "meaning": "교통 요금",
+    "targetScore": 650,
+    "exampleEn": "Bus fares will increase next month.",
+    "exampleKo": "버스 요금이 다음 달에 인상될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 27,
+    "word": "expense",
+    "meaning": "비용, 지출",
+    "targetScore": 650,
+    "exampleEn": "Travel expenses will be reimbursed.",
+    "exampleKo": "출장 비용은 상환될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 28,
+    "word": "trust",
+    "meaning": "신뢰, 신임, 믿다, 신뢰하다",
+    "targetScore": 650,
+    "exampleEn": "We trust our drivers to deliver on time.",
+    "exampleKo": "우리는 우리 기사들이 정시에 배달할 것이라고 믿습니다."
+  },
+  {
+    "day": 25,
+    "no": 29,
+    "word": "head",
+    "meaning": "(~의 방향으로) 나아가다, 향하게 하다",
+    "targetScore": 650,
+    "exampleEn": "We are heading towards the airport.",
+    "exampleKo": "우리는 공항 쪽으로 향하고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 30,
+    "word": "drive",
+    "meaning": "(차 등을) 운전하다, 타고 가다, 조종하다",
+    "targetScore": 650,
+    "exampleEn": "He drives a truck for a living.",
+    "exampleKo": "그는 생계를 위해 트럭을 운전합니다."
+  },
+  {
+    "day": 25,
+    "no": 31,
+    "word": "fine",
+    "meaning": "벌금",
+    "targetScore": 650,
+    "exampleEn": "You will pay a fine for illegal parking.",
+    "exampleKo": "불법 주차에 대해서는 벌금을 내게 될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 32,
+    "word": "pass",
+    "meaning": "지나가다, 통과하다",
+    "targetScore": 650,
+    "exampleEn": "Please let the passengers pass.",
+    "exampleKo": "승객들이 지나가도록 비켜 주십시오."
+  },
+  {
+    "day": 25,
+    "no": 33,
+    "word": "securely",
+    "meaning": "(매듭 등이) 단단하게, 튼튼하게",
+    "targetScore": 650,
+    "exampleEn": "Ensure that the load is securely fastened.",
+    "exampleKo": "짐이 단단하게 고정되었는지 확인하십시오."
+  },
+  {
+    "day": 25,
+    "no": 34,
+    "word": "prominently",
+    "meaning": "눈에 잘 띄게, 두드러지게",
+    "targetScore": 650,
+    "exampleEn": "The sign was prominently displayed at the entrance.",
+    "exampleKo": "표지판은 입구에 눈에 잘 띄게 게시되어 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 35,
+    "word": "reserved",
+    "meaning": "예약된, 예약한, 지정된",
+    "targetScore": 650,
+    "exampleEn": "This parking space is reserved for disabled drivers.",
+    "exampleKo": "이 주차 공간은 장애인 운전자를 위해 지정(예약)되어 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 36,
+    "word": "average",
+    "meaning": "평균치, 평균",
+    "targetScore": 650,
+    "exampleEn": "The average commute time is 45 minutes.",
+    "exampleKo": "평균 통근 시간은 45분입니다."
+  },
+  {
+    "day": 25,
+    "no": 37,
+    "word": "collision",
+    "meaning": "충돌",
+    "targetScore": 650,
+    "exampleEn": "There was a collision between a bus and a taxi.",
+    "exampleKo": "버스와 택시 간의 충돌이 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 38,
+    "word": "tow",
+    "meaning": "(차를) 견인하다",
+    "targetScore": 650,
+    "exampleEn": "The car was towed away for illegal parking.",
+    "exampleKo": "그 차는 불법 주차로 견인되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 39,
+    "word": "reverse",
+    "meaning": "뒤의, 반대의",
+    "targetScore": 650,
+    "exampleEn": "Please put the car in reverse.",
+    "exampleKo": "차를 후진 기어에 놓으십시오."
+  },
+  {
+    "day": 25,
+    "no": 40,
+    "word": "obstruct",
+    "meaning": "(전망 등을) 가리다, 차단하다; (도로 등을) 막다",
+    "targetScore": 650,
+    "exampleEn": "A fallen tree obstructed the road.",
+    "exampleKo": "쓰러진 나무가 도로를 막았습니다."
+  }
+]

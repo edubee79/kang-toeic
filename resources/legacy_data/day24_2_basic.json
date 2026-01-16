@@ -1,0 +1,254 @@
+[
+    {
+        "day": 24,
+        "no": 41,
+        "word": "strictly",
+        "meaning": "엄격히",
+        "targetScore": 650,
+        "exampleEn": "The deadline must be strictly observed.",
+        "exampleKo": "마감일은 엄격히 준수되어야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 42,
+        "word": "ability",
+        "meaning": "능력",
+        "targetScore": 650,
+        "exampleEn": "She has the ability to lead the team.",
+        "exampleKo": "그녀는 팀을 이끌 능력이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 43,
+        "word": "accomplish",
+        "meaning": "성취하다",
+        "targetScore": 650,
+        "exampleEn": "We accomplished all our goals this quarter.",
+        "exampleKo": "우리는 이번 분기에 모든 목표를 달성했습니다."
+    },
+    {
+        "day": 24,
+        "no": 44,
+        "word": "achievement",
+        "meaning": "성취, 업적",
+        "targetScore": 650,
+        "exampleEn": "This award recognizes her outstanding achievement.",
+        "exampleKo": "이 상은 그녀의 뛰어난 업적을 인정합니다."
+    },
+    {
+        "day": 24,
+        "no": 45,
+        "word": "assign",
+        "meaning": "할당하다, 배정하다",
+        "targetScore": 650,
+        "exampleEn": "The manager will assign tasks tomorrow.",
+        "exampleKo": "관리자는 내일 업무를 배정할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 46,
+        "word": "assignment",
+        "meaning": "과제, 임무",
+        "targetScore": 650,
+        "exampleEn": "Please complete the assignment by Friday.",
+        "exampleKo": "금요일까지 과제를 완료해 주세요."
+    },
+    {
+        "day": 24,
+        "no": 47,
+        "word": "colleague",
+        "meaning": "동료",
+        "targetScore": 650,
+        "exampleEn": "My colleagues are very supportive.",
+        "exampleKo": "제 동료들은 매우 협조적입니다."
+    },
+    {
+        "day": 24,
+        "no": 48,
+        "word": "department",
+        "meaning": "부서",
+        "targetScore": 650,
+        "exampleEn": "She works in the human resources department.",
+        "exampleKo": "그녀는 인사부에서 일합니다."
+    },
+    {
+        "day": 24,
+        "no": 49,
+        "word": "duty",
+        "meaning": "의무, 직무",
+        "targetScore": 650,
+        "exampleEn": "It is your duty to report any problems.",
+        "exampleKo": "문제를 보고하는 것은 당신의 의무입니다."
+    },
+    {
+        "day": 24,
+        "no": 50,
+        "word": "efficient",
+        "meaning": "효율적인",
+        "targetScore": 650,
+        "exampleEn": "We need a more efficient system.",
+        "exampleKo": "우리는 더 효율적인 시스템이 필요합니다."
+    },
+    {
+        "day": 24,
+        "no": 51,
+        "word": "manage",
+        "meaning": "관리하다",
+        "targetScore": 650,
+        "exampleEn": "She manages a team of 20 people.",
+        "exampleKo": "그녀는 20명의 팀을 관리합니다."
+    },
+    {
+        "day": 24,
+        "no": 52,
+        "word": "manager",
+        "meaning": "관리자",
+        "targetScore": 650,
+        "exampleEn": "The sales manager will attend the meeting.",
+        "exampleKo": "영업 관리자가 회의에 참석할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 53,
+        "word": "perform",
+        "meaning": "수행하다",
+        "targetScore": 650,
+        "exampleEn": "Employees must perform their duties well.",
+        "exampleKo": "직원들은 자신의 직무를 잘 수행해야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 54,
+        "word": "performance",
+        "meaning": "성과, 실적",
+        "targetScore": 650,
+        "exampleEn": "Your performance has been excellent.",
+        "exampleKo": "당신의 성과는 훌륭했습니다."
+    },
+    {
+        "day": 24,
+        "no": 55,
+        "word": "productive",
+        "meaning": "생산적인",
+        "targetScore": 650,
+        "exampleEn": "It was a very productive meeting.",
+        "exampleKo": "매우 생산적인 회의였습니다."
+    },
+    {
+        "day": 24,
+        "no": 56,
+        "word": "productivity",
+        "meaning": "생산성",
+        "targetScore": 650,
+        "exampleEn": "The new software increased productivity.",
+        "exampleKo": "새 소프트웨어가 생산성을 높였습니다."
+    },
+    {
+        "day": 24,
+        "no": 57,
+        "word": "responsible",
+        "meaning": "책임이 있는",
+        "targetScore": 650,
+        "exampleEn": "He is responsible for quality control.",
+        "exampleKo": "그는 품질 관리를 책임지고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 58,
+        "word": "supervisor",
+        "meaning": "감독자",
+        "targetScore": 650,
+        "exampleEn": "Please contact your supervisor immediately.",
+        "exampleKo": "즉시 감독자에게 연락하세요."
+    },
+    {
+        "day": 24,
+        "no": 59,
+        "word": "task",
+        "meaning": "업무, 과제",
+        "targetScore": 650,
+        "exampleEn": "This task should take about two hours.",
+        "exampleKo": "이 업무는 약 2시간이 걸릴 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 60,
+        "word": "team",
+        "meaning": "팀",
+        "targetScore": 650,
+        "exampleEn": "Our team won the sales competition.",
+        "exampleKo": "우리 팀이 영업 경쟁에서 이겼습니다."
+    },
+    {
+        "day": 24,
+        "no": 61,
+        "word": "teamwork",
+        "meaning": "팀워크",
+        "targetScore": 650,
+        "exampleEn": "Good teamwork is essential for success.",
+        "exampleKo": "좋은 팀워크는 성공에 필수적입니다."
+    },
+    {
+        "day": 24,
+        "no": 62,
+        "word": "workload",
+        "meaning": "업무량",
+        "targetScore": 650,
+        "exampleEn": "My workload has increased significantly.",
+        "exampleKo": "제 업무량이 상당히 증가했습니다."
+    },
+    {
+        "day": 24,
+        "no": 63,
+        "word": "workplace",
+        "meaning": "직장",
+        "targetScore": 650,
+        "exampleEn": "We promote a safe workplace environment.",
+        "exampleKo": "우리는 안전한 직장 환경을 조성합니다."
+    },
+    {
+        "day": 24,
+        "no": 64,
+        "word": "deadline",
+        "meaning": "마감 기한",
+        "targetScore": 650,
+        "exampleEn": "The project deadline is next Monday.",
+        "exampleKo": "프로젝트 마감일은 다음 주 월요일입니다."
+    },
+    {
+        "day": 24,
+        "no": 65,
+        "word": "priority",
+        "meaning": "우선순위",
+        "targetScore": 650,
+        "exampleEn": "Customer satisfaction is our top priority.",
+        "exampleKo": "고객 만족이 우리의 최우선 순위입니다."
+    },
+    {
+        "day": 24,
+        "no": 66,
+        "word": "schedule",
+        "meaning": "일정",
+        "targetScore": 650,
+        "exampleEn": "Please check your schedule for next week.",
+        "exampleKo": "다음 주 일정을 확인해 주세요."
+    },
+    {
+        "day": 24,
+        "no": 67,
+        "word": "flexible",
+        "meaning": "유연한",
+        "targetScore": 650,
+        "exampleEn": "We offer flexible working hours.",
+        "exampleKo": "우리는 유연한 근무 시간을 제공합니다."
+    },
+    {
+        "day": 24,
+        "no": 68,
+        "word": "throughout the day",
+        "meaning": "하루 종일",
+        "targetScore": 650,
+        "exampleEn": "The office is open throughout the day.",
+        "exampleKo": "사무실은 하루 종일 열려 있습니다."
+    }
+]

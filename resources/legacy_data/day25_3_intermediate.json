@@ -1,0 +1,614 @@
+[
+  {
+    "day": 25,
+    "no": 69,
+    "word": "accommodate",
+    "meaning": "수용하다",
+    "targetScore": 800,
+    "exampleEn": "The new terminal can accommodate 10 million passengers annually.",
+    "exampleKo": "새 터미널은 연간 1천만 명의 승객을 수용할 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 70,
+    "word": "adjacent",
+    "meaning": "인접한",
+    "targetScore": 800,
+    "exampleEn": "The hotel is adjacent to the main train station.",
+    "exampleKo": "호텔은 중앙역에 인접해 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 71,
+    "word": "alleviate",
+    "meaning": "완화하다",
+    "targetScore": 800,
+    "exampleEn": "The new subway line will alleviate traffic congestion.",
+    "exampleKo": "새 지하철 노선이 교통 체증을 완화할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 72,
+    "word": "anticipate",
+    "meaning": "예상하다",
+    "targetScore": 800,
+    "exampleEn": "We anticipate heavy traffic during the holiday season.",
+    "exampleKo": "우리는 휴가철 동안 심한 교통 체증을 예상합니다."
+  },
+  {
+    "day": 25,
+    "no": 73,
+    "word": "bypass",
+    "meaning": "우회하다",
+    "targetScore": 800,
+    "exampleEn": "The new road will bypass the city center.",
+    "exampleKo": "새 도로는 도심을 우회할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 74,
+    "word": "circulate",
+    "meaning": "순환하다",
+    "targetScore": 800,
+    "exampleEn": "Shuttle buses circulate between terminals every 15 minutes.",
+    "exampleKo": "셔틀버스가 15분마다 터미널 사이를 순환합니다."
+  },
+  {
+    "day": 25,
+    "no": 75,
+    "word": "commence",
+    "meaning": "시작하다",
+    "targetScore": 800,
+    "exampleEn": "Boarding will commence at 2:30 PM.",
+    "exampleKo": "탑승은 오후 2시 30분에 시작됩니다."
+  },
+  {
+    "day": 25,
+    "no": 76,
+    "word": "comply",
+    "meaning": "준수하다",
+    "targetScore": 800,
+    "exampleEn": "All vehicles must comply with emission standards.",
+    "exampleKo": "모든 차량은 배출 기준을 준수해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 77,
+    "word": "congested",
+    "meaning": "혼잡한",
+    "targetScore": 800,
+    "exampleEn": "The downtown area is heavily congested during rush hour.",
+    "exampleKo": "도심 지역은 러시아워 동안 매우 혼잡합니다."
+  },
+  {
+    "day": 25,
+    "no": 78,
+    "word": "consecutive",
+    "meaning": "연속적인",
+    "targetScore": 800,
+    "exampleEn": "The flight was delayed for three consecutive days.",
+    "exampleKo": "비행기는 3일 연속 지연되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 79,
+    "word": "consolidate",
+    "meaning": "통합하다",
+    "targetScore": 800,
+    "exampleEn": "The city plans to consolidate bus routes.",
+    "exampleKo": "시는 버스 노선을 통합할 계획입니다."
+  },
+  {
+    "day": 25,
+    "no": 80,
+    "word": "corridor",
+    "meaning": "복도, 통로",
+    "targetScore": 800,
+    "exampleEn": "The transportation corridor connects major cities.",
+    "exampleKo": "교통 통로가 주요 도시들을 연결합니다."
+  },
+  {
+    "day": 25,
+    "no": 81,
+    "word": "curtail",
+    "meaning": "단축하다",
+    "targetScore": 800,
+    "exampleEn": "Bad weather curtailed flight operations.",
+    "exampleKo": "악천후가 항공 운항을 단축시켰습니다."
+  },
+  {
+    "day": 25,
+    "no": 82,
+    "word": "defer",
+    "meaning": "연기하다",
+    "targetScore": 800,
+    "exampleEn": "The departure was deferred until further notice.",
+    "exampleKo": "출발은 추후 공지가 있을 때까지 연기되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 83,
+    "word": "designate",
+    "meaning": "지정하다",
+    "targetScore": 800,
+    "exampleEn": "This area is designated for loading and unloading only.",
+    "exampleKo": "이 구역은 적재 및 하역 전용으로 지정되어 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 84,
+    "word": "deteriorate",
+    "meaning": "악화되다",
+    "targetScore": 800,
+    "exampleEn": "Road conditions deteriorated due to heavy rain.",
+    "exampleKo": "폭우로 인해 도로 상태가 악화되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 85,
+    "word": "disembark",
+    "meaning": "하선하다",
+    "targetScore": 800,
+    "exampleEn": "Passengers will disembark through the rear door.",
+    "exampleKo": "승객들은 뒷문을 통해 하차할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 86,
+    "word": "disruption",
+    "meaning": "중단",
+    "targetScore": 800,
+    "exampleEn": "The strike caused major disruptions to train services.",
+    "exampleKo": "파업으로 기차 서비스에 큰 중단이 발생했습니다."
+  },
+  {
+    "day": 25,
+    "no": 87,
+    "word": "divert",
+    "meaning": "우회시키다",
+    "targetScore": 800,
+    "exampleEn": "The flight was diverted to an alternate airport.",
+    "exampleKo": "비행기는 대체 공항으로 우회했습니다."
+  },
+  {
+    "day": 25,
+    "no": 88,
+    "word": "duration",
+    "meaning": "기간",
+    "targetScore": 800,
+    "exampleEn": "The flight duration is approximately 12 hours.",
+    "exampleKo": "비행 시간은 약 12시간입니다."
+  },
+  {
+    "day": 25,
+    "no": 89,
+    "word": "efficient",
+    "meaning": "효율적인",
+    "targetScore": 800,
+    "exampleEn": "The new traffic system is more efficient.",
+    "exampleKo": "새로운 교통 시스템이 더 효율적입니다."
+  },
+  {
+    "day": 25,
+    "no": 90,
+    "word": "embarkation",
+    "meaning": "승선",
+    "targetScore": 800,
+    "exampleEn": "The embarkation process takes about 30 minutes.",
+    "exampleKo": "탑승 절차는 약 30분이 걸립니다."
+  },
+  {
+    "day": 25,
+    "no": 91,
+    "word": "enhance",
+    "meaning": "향상시키다",
+    "targetScore": 800,
+    "exampleEn": "The upgrade will enhance passenger comfort.",
+    "exampleKo": "업그레이드는 승객 편의를 향상시킬 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 92,
+    "word": "expedite",
+    "meaning": "신속히 처리하다",
+    "targetScore": 800,
+    "exampleEn": "We will expedite the customs clearance process.",
+    "exampleKo": "우리는 세관 통관 절차를 신속히 처리하겠습니다."
+  },
+  {
+    "day": 25,
+    "no": 93,
+    "word": "facilitate",
+    "meaning": "용이하게 하다",
+    "targetScore": 800,
+    "exampleEn": "The new system facilitates faster boarding.",
+    "exampleKo": "새 시스템이 더 빠른 탑승을 용이하게 합니다."
+  },
+  {
+    "day": 25,
+    "no": 94,
+    "word": "fare",
+    "meaning": "요금",
+    "targetScore": 800,
+    "exampleEn": "Peak-hour fares are 20% higher than off-peak rates.",
+    "exampleKo": "피크 시간 요금은 비수기 요금보다 20% 높습니다."
+  },
+  {
+    "day": 25,
+    "no": 95,
+    "word": "feasible",
+    "meaning": "실행 가능한",
+    "targetScore": 800,
+    "exampleEn": "The proposed route expansion is financially feasible.",
+    "exampleKo": "제안된 노선 확장은 재정적으로 실행 가능합니다."
+  },
+  {
+    "day": 25,
+    "no": 96,
+    "word": "fluctuate",
+    "meaning": "변동하다",
+    "targetScore": 800,
+    "exampleEn": "Airfares fluctuate depending on the season.",
+    "exampleKo": "항공 요금은 계절에 따라 변동합니다."
+  },
+  {
+    "day": 25,
+    "no": 97,
+    "word": "freight",
+    "meaning": "화물",
+    "targetScore": 800,
+    "exampleEn": "The company specializes in freight transportation.",
+    "exampleKo": "회사는 화물 운송을 전문으로 합니다."
+  },
+  {
+    "day": 25,
+    "no": 98,
+    "word": "hub",
+    "meaning": "중심지",
+    "targetScore": 800,
+    "exampleEn": "The airport serves as a major international hub.",
+    "exampleKo": "공항은 주요 국제 허브 역할을 합니다."
+  },
+  {
+    "day": 25,
+    "no": 99,
+    "word": "implement",
+    "meaning": "시행하다",
+    "targetScore": 800,
+    "exampleEn": "The city will implement new parking regulations.",
+    "exampleKo": "시는 새로운 주차 규정을 시행할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 100,
+    "word": "impede",
+    "meaning": "방해하다",
+    "targetScore": 800,
+    "exampleEn": "Construction work may impede traffic flow.",
+    "exampleKo": "공사 작업이 교통 흐름을 방해할 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 101,
+    "word": "infrastructure",
+    "meaning": "기반 시설",
+    "targetScore": 800,
+    "exampleEn": "The government is investing in transportation infrastructure.",
+    "exampleKo": "정부는 교통 기반 시설에 투자하고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 102,
+    "word": "intermittent",
+    "meaning": "간헐적인",
+    "targetScore": 800,
+    "exampleEn": "Expect intermittent delays due to track maintenance.",
+    "exampleKo": "선로 유지보수로 인한 간헐적인 지연이 예상됩니다."
+  },
+  {
+    "day": 25,
+    "no": 103,
+    "word": "itinerary",
+    "meaning": "여행 일정",
+    "targetScore": 800,
+    "exampleEn": "Please confirm your travel itinerary by email.",
+    "exampleKo": "이메일로 여행 일정을 확인해 주세요."
+  },
+  {
+    "day": 25,
+    "no": 104,
+    "word": "logistics",
+    "meaning": "물류",
+    "targetScore": 800,
+    "exampleEn": "The company handles all shipping logistics.",
+    "exampleKo": "회사는 모든 배송 물류를 처리합니다."
+  },
+  {
+    "day": 25,
+    "no": 105,
+    "word": "mandatory",
+    "meaning": "의무적인",
+    "targetScore": 800,
+    "exampleEn": "Seatbelt use is mandatory on all flights.",
+    "exampleKo": "모든 항공편에서 안전벨트 착용은 의무입니다."
+  },
+  {
+    "day": 25,
+    "no": 106,
+    "word": "navigate",
+    "meaning": "항해하다",
+    "targetScore": 800,
+    "exampleEn": "The captain navigated through the storm safely.",
+    "exampleKo": "선장은 폭풍우를 안전하게 항해했습니다."
+  },
+  {
+    "day": 25,
+    "no": 107,
+    "word": "optimal",
+    "meaning": "최적의",
+    "targetScore": 800,
+    "exampleEn": "The GPS calculates the optimal route.",
+    "exampleKo": "GPS가 최적의 경로를 계산합니다."
+  },
+  {
+    "day": 25,
+    "no": 108,
+    "word": "pedestrian",
+    "meaning": "보행자",
+    "targetScore": 800,
+    "exampleEn": "The new bridge includes a pedestrian walkway.",
+    "exampleKo": "새 다리에는 보행자 통로가 포함되어 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 109,
+    "word": "postpone",
+    "meaning": "연기하다",
+    "targetScore": 800,
+    "exampleEn": "The departure has been postponed until tomorrow.",
+    "exampleKo": "출발이 내일로 연기되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 110,
+    "word": "precaution",
+    "meaning": "예방 조치",
+    "targetScore": 800,
+    "exampleEn": "Safety precautions must be followed at all times.",
+    "exampleKo": "안전 예방 조치는 항상 준수되어야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 111,
+    "word": "predominant",
+    "meaning": "주된",
+    "targetScore": 800,
+    "exampleEn": "Cars are the predominant mode of transportation.",
+    "exampleKo": "자동차가 주된 교통수단입니다."
+  },
+  {
+    "day": 25,
+    "no": 112,
+    "word": "preliminary",
+    "meaning": "예비의",
+    "targetScore": 800,
+    "exampleEn": "Preliminary reports indicate no major damage.",
+    "exampleKo": "예비 보고서는 큰 피해가 없음을 나타냅니다."
+  },
+  {
+    "day": 25,
+    "no": 113,
+    "word": "prevalent",
+    "meaning": "널리 퍼진",
+    "targetScore": 800,
+    "exampleEn": "Traffic jams are prevalent during peak hours.",
+    "exampleKo": "교통 체증은 피크 시간대에 널리 퍼져 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 114,
+    "word": "prioritize",
+    "meaning": "우선순위를 정하다",
+    "targetScore": 800,
+    "exampleEn": "The airline prioritizes passenger safety.",
+    "exampleKo": "항공사는 승객 안전을 우선시합니다."
+  },
+  {
+    "day": 25,
+    "no": 115,
+    "word": "prohibit",
+    "meaning": "금지하다",
+    "targetScore": 800,
+    "exampleEn": "Smoking is prohibited on all flights.",
+    "exampleKo": "모든 항공편에서 흡연이 금지됩니다."
+  },
+  {
+    "day": 25,
+    "no": 116,
+    "word": "prompt",
+    "meaning": "신속한",
+    "targetScore": 800,
+    "exampleEn": "We appreciate your prompt response.",
+    "exampleKo": "신속한 답변에 감사드립니다."
+  },
+  {
+    "day": 25,
+    "no": 117,
+    "word": "proximity",
+    "meaning": "근접성",
+    "targetScore": 800,
+    "exampleEn": "The hotel's proximity to the airport is convenient.",
+    "exampleKo": "공항과의 근접성이 편리합니다."
+  },
+  {
+    "day": 25,
+    "no": 118,
+    "word": "punctual",
+    "meaning": "시간을 엄수하는",
+    "targetScore": 800,
+    "exampleEn": "The train service is remarkably punctual.",
+    "exampleKo": "기차 서비스는 놀랍도록 시간을 엄수합니다."
+  },
+  {
+    "day": 25,
+    "no": 119,
+    "word": "regulate",
+    "meaning": "규제하다",
+    "targetScore": 800,
+    "exampleEn": "The government regulates airline safety standards.",
+    "exampleKo": "정부는 항공 안전 기준을 규제합니다."
+  },
+  {
+    "day": 25,
+    "no": 120,
+    "word": "relocate",
+    "meaning": "이전하다",
+    "targetScore": 800,
+    "exampleEn": "The bus terminal will relocate to a new site.",
+    "exampleKo": "버스 터미널이 새로운 장소로 이전할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 121,
+    "word": "remedy",
+    "meaning": "해결책",
+    "targetScore": 800,
+    "exampleEn": "The city is seeking a remedy for traffic congestion.",
+    "exampleKo": "시는 교통 체증에 대한 해결책을 찾고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 122,
+    "word": "renovate",
+    "meaning": "개조하다",
+    "targetScore": 800,
+    "exampleEn": "The station will be renovated next year.",
+    "exampleKo": "역은 내년에 개조될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 123,
+    "word": "resume",
+    "meaning": "재개하다",
+    "targetScore": 800,
+    "exampleEn": "Train services will resume at 6 AM.",
+    "exampleKo": "기차 서비스는 오전 6시에 재개됩니다."
+  },
+  {
+    "day": 25,
+    "no": 124,
+    "word": "route",
+    "meaning": "경로",
+    "targetScore": 800,
+    "exampleEn": "The airline has added three new international routes.",
+    "exampleKo": "항공사는 3개의 새로운 국제 노선을 추가했습니다."
+  },
+  {
+    "day": 25,
+    "no": 125,
+    "word": "seamless",
+    "meaning": "매끄러운",
+    "targetScore": 800,
+    "exampleEn": "The transfer process was seamless and efficient.",
+    "exampleKo": "환승 과정은 매끄럽고 효율적이었습니다."
+  },
+  {
+    "day": 25,
+    "no": 126,
+    "word": "streamline",
+    "meaning": "간소화하다",
+    "targetScore": 800,
+    "exampleEn": "The new system will streamline check-in procedures.",
+    "exampleKo": "새 시스템이 체크인 절차를 간소화할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 127,
+    "word": "subsequent",
+    "meaning": "그 다음의",
+    "targetScore": 800,
+    "exampleEn": "Subsequent flights were also delayed.",
+    "exampleKo": "그 다음 항공편들도 지연되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 128,
+    "word": "substantial",
+    "meaning": "상당한",
+    "targetScore": 800,
+    "exampleEn": "There was a substantial increase in passenger numbers.",
+    "exampleKo": "승객 수가 상당히 증가했습니다."
+  },
+  {
+    "day": 25,
+    "no": 129,
+    "word": "suspend",
+    "meaning": "중단하다",
+    "targetScore": 800,
+    "exampleEn": "Bus services were suspended due to the strike.",
+    "exampleKo": "파업으로 인해 버스 서비스가 중단되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 130,
+    "word": "terminal",
+    "meaning": "터미널",
+    "targetScore": 800,
+    "exampleEn": "The new terminal opened last month.",
+    "exampleKo": "새 터미널이 지난달에 개장했습니다."
+  },
+  {
+    "day": 25,
+    "no": 131,
+    "word": "transit",
+    "meaning": "운송",
+    "targetScore": 800,
+    "exampleEn": "The city is expanding its public transit network.",
+    "exampleKo": "시는 대중교통 네트워크를 확장하고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 132,
+    "word": "undergo",
+    "meaning": "겪다",
+    "targetScore": 800,
+    "exampleEn": "The airport will undergo major renovations.",
+    "exampleKo": "공항은 대대적인 개조를 겪을 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 133,
+    "word": "utilize",
+    "meaning": "활용하다",
+    "targetScore": 800,
+    "exampleEn": "Passengers can utilize the free Wi-Fi service.",
+    "exampleKo": "승객들은 무료 Wi-Fi 서비스를 활용할 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 134,
+    "word": "viable",
+    "meaning": "실행 가능한",
+    "targetScore": 800,
+    "exampleEn": "Electric buses are a viable alternative.",
+    "exampleKo": "전기 버스는 실행 가능한 대안입니다."
+  },
+  {
+    "day": 25,
+    "no": 135,
+    "word": "vicinity",
+    "meaning": "근처",
+    "targetScore": 800,
+    "exampleEn": "There are several hotels in the vicinity of the airport.",
+    "exampleKo": "공항 근처에 여러 호텔이 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 136,
+    "word": "warrant",
+    "meaning": "정당화하다",
+    "targetScore": 800,
+    "exampleEn": "The situation warrants immediate action.",
+    "exampleKo": "상황은 즉각적인 조치를 정당화합니다."
+  }
+]

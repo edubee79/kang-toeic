@@ -1,0 +1,614 @@
+[
+    {
+        "day": 6,
+        "no": 69,
+        "word": "menu",
+        "meaning": "메뉴, 식단",
+        "targetScore": 800,
+        "exampleEn": "May I see the menu, please?",
+        "exampleKo": "메뉴판 좀 볼 수 있을까요?"
+    },
+    {
+        "day": 6,
+        "no": 70,
+        "word": "painting",
+        "meaning": "그림",
+        "targetScore": 800,
+        "exampleEn": "This painting is very famous.",
+        "exampleKo": "이 그림은 매우 유명합니다."
+    },
+    {
+        "day": 6,
+        "no": 71,
+        "word": "plant",
+        "meaning": "식물; 공장; 심다",
+        "targetScore": 800,
+        "exampleEn": "They built a new car plant.",
+        "exampleKo": "그들은 새로운 자동차 공장을 지었습니다."
+    },
+    {
+        "day": 6,
+        "no": 72,
+        "word": "selection",
+        "meaning": "선택, 선정된 것",
+        "targetScore": 800,
+        "exampleEn": "The store offers a wide selection of wines.",
+        "exampleKo": "그 가게는 다양한 종류의 와인을 제공합니다."
+    },
+    {
+        "day": 6,
+        "no": 73,
+        "word": "sewing",
+        "meaning": "바느질",
+        "targetScore": 800,
+        "exampleEn": "She enjoys sewing in her free time.",
+        "exampleKo": "그녀는 여가 시간에 바느질하는 것을 즐깁니다."
+    },
+    {
+        "day": 6,
+        "no": 74,
+        "word": "shade",
+        "meaning": "그늘; 색조",
+        "targetScore": 800,
+        "exampleEn": "Let's sit in the shade.",
+        "exampleKo": "그늘에 앉읍시다."
+    },
+    {
+        "day": 6,
+        "no": 75,
+        "word": "silverware",
+        "meaning": "은식기류",
+        "targetScore": 800,
+        "exampleEn": "Set the table with the silverware.",
+        "exampleKo": "은식기류로 식탁을 차리세요."
+    },
+    {
+        "day": 6,
+        "no": 76,
+        "word": "solution",
+        "meaning": "해결책; 용액",
+        "targetScore": 800,
+        "exampleEn": "We need to find a solution to this problem.",
+        "exampleKo": "우리는 이 문제에 대한 해결책을 찾아야 합니다."
+    },
+    {
+        "day": 6,
+        "no": 77,
+        "word": "solve",
+        "meaning": "풀다, 해결하다",
+        "targetScore": 800,
+        "exampleEn": "Can you solve this puzzle?",
+        "exampleKo": "이 퍼즐을 풀 수 있나요?"
+    },
+    {
+        "day": 6,
+        "no": 78,
+        "word": "tool",
+        "meaning": "도구",
+        "targetScore": 800,
+        "exampleEn": "A hammer is a useful tool.",
+        "exampleKo": "망치는 유용한 도구입니다."
+    },
+    {
+        "day": 6,
+        "no": 79,
+        "word": "try on",
+        "meaning": "~을 입어보다",
+        "targetScore": 800,
+        "exampleEn": "Can I try these shoes on?",
+        "exampleKo": "이 신발을 신어봐도 될까요?"
+    },
+    {
+        "day": 6,
+        "no": 80,
+        "word": "unusual",
+        "meaning": "특이한, 드문",
+        "targetScore": 800,
+        "exampleEn": "It is unusual for him to be late.",
+        "exampleKo": "그가 늦는 것은 드문 일입니다."
+    },
+    {
+        "day": 6,
+        "no": 81,
+        "word": "variety",
+        "meaning": "다양성, 종류",
+        "targetScore": 800,
+        "exampleEn": "We need more variety in our diet.",
+        "exampleKo": "우리는 식단에 더 많은 다양성이 필요합니다."
+    },
+    {
+        "day": 6,
+        "no": 82,
+        "word": "various",
+        "meaning": "다양한",
+        "targetScore": 800,
+        "exampleEn": "There are various reasons for the delay.",
+        "exampleKo": "지연에는 다양한 이유가 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 83,
+        "word": "vary",
+        "meaning": "다르다, 바뀌다",
+        "targetScore": 800,
+        "exampleEn": "Prices vary depending on the season.",
+        "exampleKo": "가격은 계절에 따라 다릅니다."
+    },
+    {
+        "day": 6,
+        "no": 84,
+        "word": "accomplish",
+        "meaning": "성취하다",
+        "targetScore": 800,
+        "exampleEn": "He accomplished a lot in his life.",
+        "exampleKo": "그는 평생 많은 것을 성취했습니다."
+    },
+    {
+        "day": 6,
+        "no": 85,
+        "word": "accomplishment",
+        "meaning": "성취, 업적",
+        "targetScore": 800,
+        "exampleEn": "Winning the award was a great accomplishment.",
+        "exampleKo": "상을 받은 것은 대단한 성취였습니다."
+    },
+    {
+        "day": 6,
+        "no": 86,
+        "word": "accordingly",
+        "meaning": "그에 맞춰서, 따라서",
+        "targetScore": 800,
+        "exampleEn": "Please act accordingly.",
+        "exampleKo": "그에 맞춰 행동해 주세요."
+    },
+    {
+        "day": 6,
+        "no": 87,
+        "word": "accuracy",
+        "meaning": "정확성",
+        "targetScore": 800,
+        "exampleEn": "The accuracy of the data is questionable.",
+        "exampleKo": "데이터의 정확성이 의심스럽습니다."
+    },
+    {
+        "day": 6,
+        "no": 88,
+        "word": "accurate",
+        "meaning": "정확한",
+        "targetScore": 800,
+        "exampleEn": "Give me an accurate estimate.",
+        "exampleKo": "정확한 견적을 주세요."
+    },
+    {
+        "day": 6,
+        "no": 89,
+        "word": "accurately",
+        "meaning": "정확하게",
+        "targetScore": 800,
+        "exampleEn": "Measure the ingredients accurately.",
+        "exampleKo": "재료를 정확하게 측정하세요."
+    },
+    {
+        "day": 6,
+        "no": 90,
+        "word": "advance",
+        "meaning": "전진; 진보하다",
+        "targetScore": 800,
+        "exampleEn": "Technology advances rapidly.",
+        "exampleKo": "기술은 빠르게 진보합니다."
+    },
+    {
+        "day": 6,
+        "no": 91,
+        "word": "advanced",
+        "meaning": "고급의, 진보된",
+        "targetScore": 800,
+        "exampleEn": "This is an advanced course.",
+        "exampleKo": "이것은 고급 과정입니다."
+    },
+    {
+        "day": 6,
+        "no": 92,
+        "word": "advancement",
+        "meaning": "발전, 승진",
+        "targetScore": 800,
+        "exampleEn": "There are opportunities for advancement.",
+        "exampleKo": "승진 기회가 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 93,
+        "word": "allowance",
+        "meaning": "수당, 용돈",
+        "targetScore": 800,
+        "exampleEn": "He receives a monthly travel allowance.",
+        "exampleKo": "그는 매달 출장 수당을 받습니다."
+    },
+    {
+        "day": 6,
+        "no": 94,
+        "word": "brand",
+        "meaning": "상표, 브랜드",
+        "targetScore": 800,
+        "exampleEn": "This is a popular brand.",
+        "exampleKo": "이것은 인기 있는 브랜드입니다."
+    },
+    {
+        "day": 6,
+        "no": 95,
+        "word": "capability",
+        "meaning": "능력, 역량",
+        "targetScore": 800,
+        "exampleEn": "The system has the capability to process large files.",
+        "exampleKo": "그 시스템은 대용량 파일을 처리할 수 있는 능력이 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 96,
+        "word": "capable",
+        "meaning": "유능한",
+        "targetScore": 800,
+        "exampleEn": "She is a capable leader.",
+        "exampleKo": "그녀는 유능한 리더입니다."
+    },
+    {
+        "day": 6,
+        "no": 97,
+        "word": "check A for B",
+        "meaning": "B의 유무를 확인하기 위해 A를 점검하다",
+        "targetScore": 800,
+        "exampleEn": "Check the document for errors.",
+        "exampleKo": "오류가 있는지 문서를 확인하세요."
+    },
+    {
+        "day": 6,
+        "no": 98,
+        "word": "come up with",
+        "meaning": "~을 생각해내다",
+        "targetScore": 800,
+        "exampleEn": "He came up with a great idea.",
+        "exampleKo": "그는 훌륭한 아이디어를 생각해 냈습니다."
+    },
+    {
+        "day": 6,
+        "no": 99,
+        "word": "component",
+        "meaning": "구성 요소, 부품",
+        "targetScore": 800,
+        "exampleEn": "Trust is a key component of leadership.",
+        "exampleKo": "신뢰는 리더십의 핵심 구성 요소입니다."
+    },
+    {
+        "day": 6,
+        "no": 100,
+        "word": "corrode",
+        "meaning": "부식시키다",
+        "targetScore": 800,
+        "exampleEn": "Acid corrodes metal.",
+        "exampleKo": "산은 금속을 부식시킵니다."
+    },
+    {
+        "day": 6,
+        "no": 101,
+        "word": "corrosion",
+        "meaning": "부식",
+        "targetScore": 800,
+        "exampleEn": "Rust is a form of corrosion.",
+        "exampleKo": "녹은 부식의 한 형태입니다."
+    },
+    {
+        "day": 6,
+        "no": 102,
+        "word": "erosion",
+        "meaning": "침식",
+        "targetScore": 800,
+        "exampleEn": "Soil erosion is a serious problem.",
+        "exampleKo": "토양 침식은 심각한 문제입니다."
+    },
+    {
+        "day": 6,
+        "no": 103,
+        "word": "feature",
+        "meaning": "특징; 특집으로 다루다",
+        "targetScore": 800,
+        "exampleEn": "This phone features a high-resolution camera.",
+        "exampleKo": "이 전화기는 고해상도 카메라를 특징으로 합니다."
+    },
+    {
+        "day": 6,
+        "no": 104,
+        "word": "host",
+        "meaning": "주최하다; 주인",
+        "targetScore": 800,
+        "exampleEn": "We are hosting a dinner party.",
+        "exampleKo": "우리는 저녁 파티를 주최합니다."
+    },
+    {
+        "day": 6,
+        "no": 105,
+        "word": "improve",
+        "meaning": "개선하다",
+        "targetScore": 800,
+        "exampleEn": "I want to improve my English.",
+        "exampleKo": "나는 내 영어 실력을 늘리고 싶습니다."
+    },
+    {
+        "day": 6,
+        "no": 106,
+        "word": "indication",
+        "meaning": "징후, 표시",
+        "targetScore": 800,
+        "exampleEn": "There is no indication of forced entry.",
+        "exampleKo": "강제 진입의 흔적은 없습니다."
+    },
+    {
+        "day": 6,
+        "no": 107,
+        "word": "innovative",
+        "meaning": "혁신적인",
+        "targetScore": 800,
+        "exampleEn": "It is an innovative design.",
+        "exampleKo": "그것은 혁신적인 디자인입니다."
+    },
+    {
+        "day": 6,
+        "no": 108,
+        "word": "inspection",
+        "meaning": "검사",
+        "targetScore": 800,
+        "exampleEn": "The car passed the inspection.",
+        "exampleKo": "그 차는 검사를 통과했습니다."
+    },
+    {
+        "day": 6,
+        "no": 109,
+        "word": "inspector",
+        "meaning": "조사관",
+        "targetScore": 800,
+        "exampleEn": "The health inspector visited the restaurant.",
+        "exampleKo": "위생 조사관이 식당을 방문했습니다."
+    },
+    {
+        "day": 6,
+        "no": 110,
+        "word": "installation",
+        "meaning": "설치",
+        "targetScore": 800,
+        "exampleEn": "The installation was quick and easy.",
+        "exampleKo": "설치는 빠르고 쉬웠습니다."
+    },
+    {
+        "day": 6,
+        "no": 111,
+        "word": "interior",
+        "meaning": "실내의",
+        "targetScore": 800,
+        "exampleEn": "The interior design is modern.",
+        "exampleKo": "실내 디자인은 현대적입니다."
+    },
+    {
+        "day": 6,
+        "no": 112,
+        "word": "last",
+        "meaning": "지속되다; 마지막의",
+        "targetScore": 800,
+        "exampleEn": "The meeting lasted two hours.",
+        "exampleKo": "회의는 두 시간 동안 지속되었습니다."
+    },
+    {
+        "day": 6,
+        "no": 113,
+        "word": "lasting",
+        "meaning": "지속적인",
+        "targetScore": 800,
+        "exampleEn": "It left a lasting impression.",
+        "exampleKo": "그것은 지속적인 인상을 남겼습니다."
+    },
+    {
+        "day": 6,
+        "no": 114,
+        "word": "leading",
+        "meaning": "선도적인",
+        "targetScore": 800,
+        "exampleEn": "He is a leading expert in the field.",
+        "exampleKo": "그는 그 분야의 선도적인 전문가입니다."
+    },
+    {
+        "day": 6,
+        "no": 115,
+        "word": "means",
+        "meaning": "수단, 방법",
+        "targetScore": 800,
+        "exampleEn": "Language is a means of communication.",
+        "exampleKo": "언어는 의사소통의 수단입니다."
+    },
+    {
+        "day": 6,
+        "no": 116,
+        "word": "mechanic",
+        "meaning": "정비공",
+        "targetScore": 800,
+        "exampleEn": "The mechanic fixed the car.",
+        "exampleKo": "정비공이 차를 고쳤습니다."
+    },
+    {
+        "day": 6,
+        "no": 117,
+        "word": "mechanical",
+        "meaning": "기계의",
+        "targetScore": 800,
+        "exampleEn": "It was a mechanical failure.",
+        "exampleKo": "그것은 기계적 결함이었습니다."
+    },
+    {
+        "day": 6,
+        "no": 118,
+        "word": "mechanism",
+        "meaning": "기계 장치",
+        "targetScore": 800,
+        "exampleEn": "The locking mechanism is broken.",
+        "exampleKo": "잠금 장치가 고장 났습니다."
+    },
+    {
+        "day": 6,
+        "no": 119,
+        "word": "mode",
+        "meaning": "방식, 모드",
+        "targetScore": 800,
+        "exampleEn": "Switch the phone to silent mode.",
+        "exampleKo": "전화기를 무음 모드로 전환하세요."
+    },
+    {
+        "day": 6,
+        "no": 120,
+        "word": "monitor",
+        "meaning": "감시하다; 모니터",
+        "targetScore": 800,
+        "exampleEn": "We monitor the air quality daily.",
+        "exampleKo": "우리는 매일 공기 질을 모니터링합니다."
+    },
+    {
+        "day": 6,
+        "no": 121,
+        "word": "patent",
+        "meaning": "특허",
+        "targetScore": 800,
+        "exampleEn": "He filed a patent for his invention.",
+        "exampleKo": "그는 자신의 발명품에 대해 특허를 출원했습니다."
+    },
+    {
+        "day": 6,
+        "no": 122,
+        "word": "position",
+        "meaning": "위치; 두다",
+        "targetScore": 800,
+        "exampleEn": "Position the ladder carefully.",
+        "exampleKo": "사다리를 조심해서 놓으세요."
+    },
+    {
+        "day": 6,
+        "no": 123,
+        "word": "postpone",
+        "meaning": "연기하다",
+        "targetScore": 800,
+        "exampleEn": "We decided to postpone the trip.",
+        "exampleKo": "우리는 여행을 연기하기로 결정했습니다."
+    },
+    {
+        "day": 6,
+        "no": 124,
+        "word": "prediction",
+        "meaning": "예측",
+        "targetScore": 800,
+        "exampleEn": "His prediction was correct.",
+        "exampleKo": "그의 예측은 맞았습니다."
+    },
+    {
+        "day": 6,
+        "no": 125,
+        "word": "process",
+        "meaning": "과정; 처리하다",
+        "targetScore": 800,
+        "exampleEn": "Learning is a lifelong process.",
+        "exampleKo": "배움은 평생의 과정입니다."
+    },
+    {
+        "day": 6,
+        "no": 126,
+        "word": "production",
+        "meaning": "생산",
+        "targetScore": 800,
+        "exampleEn": "Mass production lowered the cost.",
+        "exampleKo": "대량 생산은 비용을 낮췄습니다."
+    },
+    {
+        "day": 6,
+        "no": 127,
+        "word": "productive",
+        "meaning": "생산적인",
+        "targetScore": 800,
+        "exampleEn": "We had a productive meeting.",
+        "exampleKo": "우리는 생산적인 회의를 했습니다."
+    },
+    {
+        "day": 6,
+        "no": 128,
+        "word": "prototype",
+        "meaning": "시제품",
+        "targetScore": 800,
+        "exampleEn": "They tested the prototype.",
+        "exampleKo": "그들은 시제품을 테스트했습니다."
+    },
+    {
+        "day": 6,
+        "no": 129,
+        "word": "reliable",
+        "meaning": "믿을 수 있는",
+        "targetScore": 800,
+        "exampleEn": "He is a reliable friend.",
+        "exampleKo": "그는 믿을 수 있는 친구입니다."
+    },
+    {
+        "day": 6,
+        "no": 130,
+        "word": "reliably",
+        "meaning": "확실하게",
+        "targetScore": 800,
+        "exampleEn": "The machine runs reliably.",
+        "exampleKo": "그 기계는 확실하게 작동합니다."
+    },
+    {
+        "day": 6,
+        "no": 131,
+        "word": "reliance",
+        "meaning": "의존",
+        "targetScore": 800,
+        "exampleEn": "Our reliance on oil must decrease.",
+        "exampleKo": "우리의 석유 의존도는 줄어들어야 합니다."
+    },
+    {
+        "day": 6,
+        "no": 132,
+        "word": "rely on",
+        "meaning": "~에 의존하다",
+        "targetScore": 800,
+        "exampleEn": "You can rely on me.",
+        "exampleKo": "당신은 나를 믿어도 됩니다."
+    },
+    {
+        "day": 6,
+        "no": 133,
+        "word": "renovate",
+        "meaning": "개조하다",
+        "targetScore": 800,
+        "exampleEn": "They plan to renovate the old house.",
+        "exampleKo": "그들은 낡은 집을 개조할 계획입니다."
+    },
+    {
+        "day": 6,
+        "no": 134,
+        "word": "request",
+        "meaning": "요청",
+        "targetScore": 800,
+        "exampleEn": "Your request has been approved.",
+        "exampleKo": "당신의 요청은 승인되었습니다."
+    },
+    {
+        "day": 6,
+        "no": 135,
+        "word": "specification",
+        "meaning": "명세서, 사양",
+        "targetScore": 800,
+        "exampleEn": "The engine meets all specifications.",
+        "exampleKo": "엔진은 모든 사양을 충족합니다."
+    },
+    {
+        "day": 6,
+        "no": 136,
+        "word": "specifics",
+        "meaning": "세부 사항",
+        "targetScore": 800,
+        "exampleEn": "I need the specifics of the plan.",
+        "exampleKo": "나는 계획의 세부 사항이 필요합니다."
+    }
+]

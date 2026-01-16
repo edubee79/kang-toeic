@@ -1,0 +1,254 @@
+[
+  {
+    "day": 4,
+    "no": 41,
+    "word": "foster",
+    "meaning": "촉진하다, 육성하다",
+    "targetScore": 650,
+    "exampleEn": "The workshop aims to foster a positive work environment.",
+    "exampleKo": "그 워크숍은 긍정적인 업무 환경을 조성하는(육성하는) 것을 목표로 합니다."
+  },
+  {
+    "day": 4,
+    "no": 42,
+    "word": "neutrality",
+    "meaning": "중립성, 중립",
+    "targetScore": 650,
+    "exampleEn": "The mediator maintained neutrality throughout the negotiation.",
+    "exampleKo": "중재자는 협상 내내 중립성을 유지했습니다."
+  },
+  {
+    "day": 4,
+    "no": 43,
+    "word": "widely",
+    "meaning": "널리",
+    "targetScore": 650,
+    "exampleEn": "The new software is widely used by graphic designers.",
+    "exampleKo": "그 새 소프트웨어는 그래픽 디자이너들에 의해 널리 사용됩니다."
+  },
+  {
+    "day": 4,
+    "no": 44,
+    "word": "externally",
+    "meaning": "외부에서, 외부적으로",
+    "targetScore": 650,
+    "exampleEn": "The position will be advertised externally as well as internally.",
+    "exampleKo": "그 직책은 내부뿐만 아니라 외부적으로도 광고될 것입니다."
+  },
+  {
+    "day": 4,
+    "no": 45,
+    "word": "bookcase",
+    "meaning": "책장, 책꽂이",
+    "targetScore": 650,
+    "exampleEn": "Please organize the binders on the bookcase.",
+    "exampleKo": "바인더들을 책장에 정리해 주십시오."
+  },
+  {
+    "day": 4,
+    "no": 46,
+    "word": "bookshelf",
+    "meaning": "책꽂이",
+    "targetScore": 650,
+    "exampleEn": "There is no more space on the bookshelf for these manuals.",
+    "exampleKo": "이 매뉴얼들을 꽂을 공간이 책꽂이에 더 이상 없습니다."
+  },
+  {
+    "day": 4,
+    "no": 47,
+    "word": "case",
+    "meaning": "(특정한 상황의)경우",
+    "targetScore": 650,
+    "exampleEn": "In case of emergency, please press the alarm button.",
+    "exampleKo": "비상 상황(경우)에는 알람 버튼을 눌러 주십시오."
+  },
+  {
+    "day": 4,
+    "no": 48,
+    "word": "central office",
+    "meaning": "중앙 사무실",
+    "targetScore": 650,
+    "exampleEn": "All reports must be submitted to the central office by Friday.",
+    "exampleKo": "모든 보고서는 금요일까지 중앙 사무실로 제출되어야 합니다."
+  },
+  {
+    "day": 4,
+    "no": 49,
+    "word": "copy machine",
+    "meaning": "복사기",
+    "targetScore": 650,
+    "exampleEn": "The copy machine is out of toner again.",
+    "exampleKo": "복사기에 또 토너가 떨어졌습니다."
+  },
+  {
+    "day": 4,
+    "no": 50,
+    "word": "fax",
+    "meaning": "팩스",
+    "targetScore": 650,
+    "exampleEn": "Can you fax this document to the legal department?",
+    "exampleKo": "이 문서를 법무팀에 팩스로 보내 주시겠습니까?"
+  },
+  {
+    "day": 4,
+    "no": 51,
+    "word": "file folder",
+    "meaning": "서류철",
+    "targetScore": 650,
+    "exampleEn": "Please put these contracts in the blue file folder.",
+    "exampleKo": "이 계약서들을 파란색 서류철에 넣어 주십시오."
+  },
+  {
+    "day": 4,
+    "no": 52,
+    "word": "greet",
+    "meaning": "~에게 인사하다, ~를 환영하다",
+    "targetScore": 650,
+    "exampleEn": "The receptionist greets visitors with a warm smile.",
+    "exampleKo": "접수원은 따뜻한 미소로 방문객들을 맞이합니다(인사합니다)."
+  },
+  {
+    "day": 4,
+    "no": 53,
+    "word": "handwriting",
+    "meaning": "(개인의) 글씨, 필체",
+    "targetScore": 650,
+    "exampleEn": "His handwriting is legible and easy to read.",
+    "exampleKo": "그의 글씨는 알아보기 쉽고 읽기 편합니다."
+  },
+  {
+    "day": 4,
+    "no": 54,
+    "word": "keypad",
+    "meaning": "(전화 〮계산기 등의) 소형 키보드",
+    "targetScore": 650,
+    "exampleEn": "Please enter your pin number on the keypad.",
+    "exampleKo": "키패드에 귀하의 비밀번호를 입력해 주십시오."
+  },
+  {
+    "day": 4,
+    "no": 55,
+    "word": "knife",
+    "meaning": "칼",
+    "targetScore": 650,
+    "exampleEn": "Use a utility knife to open the box carefully.",
+    "exampleKo": "상자를 조심스럽게 열기 위해 커터 칼을 사용하십시오."
+  },
+  {
+    "day": 4,
+    "no": 56,
+    "word": "log on to",
+    "meaning": "~에 로그인하다",
+    "targetScore": 650,
+    "exampleEn": "You need a secure password to log on to the server.",
+    "exampleKo": "서버에 로그인하려면 보안 비밀번호가 필요합니다."
+  },
+  {
+    "day": 4,
+    "no": 57,
+    "word": "online",
+    "meaning": "인터넷에 접속된, 온라인으로",
+    "targetScore": 650,
+    "exampleEn": "You can access your bank account online 24/7.",
+    "exampleKo": "귀하는 연중무휴 24시간 온라인으로 은행 계좌에 접속할 수 있습니다."
+  },
+  {
+    "day": 4,
+    "no": 58,
+    "word": "photocopier",
+    "meaning": "복사기",
+    "targetScore": 650,
+    "exampleEn": "The photocopier is currently under repair.",
+    "exampleKo": "복사기는 현재 수리 중입니다."
+  },
+  {
+    "day": 4,
+    "no": 59,
+    "word": "photocopy",
+    "meaning": "복사, 복사하다",
+    "targetScore": 650,
+    "exampleEn": "Could you make a photocopy of this passport for me?",
+    "exampleKo": "이 여권 복사본을 하나 만들어 주시겠습니까?"
+  },
+  {
+    "day": 4,
+    "no": 60,
+    "word": "print out",
+    "meaning": "(프린터로)출력하다",
+    "targetScore": 650,
+    "exampleEn": "I will print out the agenda for the meeting.",
+    "exampleKo": "회의 안건을 출력하겠습니다."
+  },
+  {
+    "day": 4,
+    "no": 61,
+    "word": "right away",
+    "meaning": "즉시, 당장",
+    "targetScore": 650,
+    "exampleEn": "I will handle that request right away.",
+    "exampleKo": "제가 그 요청을 지금 당장(즉시) 처리하겠습니다."
+  },
+  {
+    "day": 4,
+    "no": 62,
+    "word": "spell",
+    "meaning": "철자를 쓰다, 철자를 말하다",
+    "targetScore": 650,
+    "exampleEn": "Could you spell your last name for me?",
+    "exampleKo": "귀하의 성의 철자를 말씀해 주시겠습니까?"
+  },
+  {
+    "day": 4,
+    "no": 63,
+    "word": "wrap",
+    "meaning": "싸다, 감싸다",
+    "targetScore": 650,
+    "exampleEn": "Please wrap the fragile items in bubble wrap.",
+    "exampleKo": "파손되기 쉬운 물품은 뽁뽁이로 감싸 주십시오."
+  },
+  {
+    "day": 4,
+    "no": 64,
+    "word": "fold",
+    "meaning": "접다",
+    "targetScore": 650,
+    "exampleEn": "Please fold the brochures and place them in envelopes.",
+    "exampleKo": "브로슈어를 접어서 봉투에 넣어 주십시오."
+  },
+  {
+    "day": 4,
+    "no": 65,
+    "word": "least",
+    "meaning": "가장 작은, 가장 적은",
+    "targetScore": 650,
+    "exampleEn": "That is the least we can do for you.",
+    "exampleKo": "그것이 우리가 당신을 위해 할 수 있는 최소한의 것입니다."
+  },
+  {
+    "day": 4,
+    "no": 66,
+    "word": "paper",
+    "meaning": "서류",
+    "targetScore": 650,
+    "exampleEn": "Do you have any scrap paper I can write on?",
+    "exampleKo": "제가 쓸 수 있는 이면지(종이)가 좀 있습니까?"
+  },
+  {
+    "day": 4,
+    "no": 67,
+    "word": "planning",
+    "meaning": "계획, 입안",
+    "targetScore": 650,
+    "exampleEn": "Strategic planning is essential for long-term success.",
+    "exampleKo": "전략적 기획은 장기적인 성공을 위해 필수적입니다."
+  },
+  {
+    "day": 4,
+    "no": 68,
+    "word": "post",
+    "meaning": "붙이다, 공고하다",
+    "targetScore": 650,
+    "exampleEn": "The job opening has been posted on the company website.",
+    "exampleKo": "채용 공고가 회사 웹사이트에 게시되었습니다."
+  }
+]

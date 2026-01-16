@@ -1,0 +1,614 @@
+[
+  {
+    "day": 9,
+    "no": 69,
+    "word": "blueprint",
+    "meaning": "청사진, 계획",
+    "targetScore": 800,
+    "exampleEn": "The architect presented the blueprint for the new building.",
+    "exampleKo": "건축가는 새 건물의 청사진(설계도)을 제시했습니다."
+  },
+  {
+    "day": 9,
+    "no": 70,
+    "word": "business deal",
+    "meaning": "사업 거래",
+    "targetScore": 800,
+    "exampleEn": "They closed a major business deal yesterday.",
+    "exampleKo": "그들은 어제 주요 사업 거래를 성사시켰습니다."
+  },
+  {
+    "day": 9,
+    "no": 71,
+    "word": "family-run",
+    "meaning": "가족이 운영하는",
+    "targetScore": 800,
+    "exampleEn": "It is a small, family-run business.",
+    "exampleKo": "그것은 가족이 운영하는 소규모 사업체입니다."
+  },
+  {
+    "day": 9,
+    "no": 72,
+    "word": "fluctuation",
+    "meaning": "변동, 오르내림",
+    "targetScore": 800,
+    "exampleEn": "Market fluctuation is normal.",
+    "exampleKo": "시장의 변동은 정상입니다."
+  },
+  {
+    "day": 9,
+    "no": 73,
+    "word": "for business",
+    "meaning": "사업상",
+    "targetScore": 800,
+    "exampleEn": "He is traveling to Tokyo for business.",
+    "exampleKo": "그는 사업차 도쿄로 여행 중입니다."
+  },
+  {
+    "day": 9,
+    "no": 74,
+    "word": "foreign trade",
+    "meaning": "해외 무역",
+    "targetScore": 800,
+    "exampleEn": "Foreign trade is essential for the economy.",
+    "exampleKo": "해외 무역은 경제에 필수적입니다."
+  },
+  {
+    "day": 9,
+    "no": 75,
+    "word": "go into business",
+    "meaning": "사업을 시작하다",
+    "targetScore": 800,
+    "exampleEn": "She decided to go into business for herself.",
+    "exampleKo": "그녀는 자신의 사업을 시작하기로 결심했습니다."
+  },
+  {
+    "day": 9,
+    "no": 76,
+    "word": "go out of business",
+    "meaning": "폐업하다",
+    "targetScore": 800,
+    "exampleEn": "Many shops went out of business during the recession.",
+    "exampleKo": "불황기에 많은 가게들이 폐업했습니다."
+  },
+  {
+    "day": 9,
+    "no": 77,
+    "word": "mutual",
+    "meaning": "상호의",
+    "targetScore": 800,
+    "exampleEn": "The agreement was beneficial to mutual interests.",
+    "exampleKo": "그 합의는 상호 이익에 도움이 되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 78,
+    "word": "nationwide",
+    "meaning": "전국적인",
+    "targetScore": 800,
+    "exampleEn": "The company has a nationwide network of branches.",
+    "exampleKo": "그 회사는 전국적인 지점 망을 가지고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 79,
+    "word": "need monitoring",
+    "meaning": "관찰이 필요하다",
+    "targetScore": 800,
+    "exampleEn": "The patient's condition need monitoring.",
+    "exampleKo": "환자의 상태는 관찰이 필요합니다."
+  },
+  {
+    "day": 9,
+    "no": 80,
+    "word": "neighboring",
+    "meaning": "이웃의, 인접한",
+    "targetScore": 800,
+    "exampleEn": "We should cooperate with neighboring countries.",
+    "exampleKo": "우리는 인접한(이웃) 국가들과 협력해야 합니다."
+  },
+  {
+    "day": 9,
+    "no": 81,
+    "word": "real estate sale",
+    "meaning": "부동산 매매",
+    "targetScore": 800,
+    "exampleEn": "Real estate sales have dropped significantly.",
+    "exampleKo": "부동산 매매가 상당히 감소했습니다."
+  },
+  {
+    "day": 9,
+    "no": 82,
+    "word": "recession",
+    "meaning": "경기 후퇴",
+    "targetScore": 800,
+    "exampleEn": "The country is entering a deep recession.",
+    "exampleKo": "그 나라는 깊은 경기 후퇴(불황)에 들어서고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 83,
+    "word": "relieve pain",
+    "meaning": "고통을 덜어주다",
+    "targetScore": 800,
+    "exampleEn": "This medicine will relieve pain quickly.",
+    "exampleKo": "이 약은 고통을 빨리 덜어줄 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 84,
+    "word": "role model",
+    "meaning": "역할 모델",
+    "targetScore": 800,
+    "exampleEn": "He is a role model for young entrepreneurs.",
+    "exampleKo": "그는 젊은 기업가들의 역할 모델입니다."
+  },
+  {
+    "day": 9,
+    "no": 85,
+    "word": "unplug",
+    "meaning": "플러그를 뽑다",
+    "targetScore": 800,
+    "exampleEn": "Don't forget to unplug the printer.",
+    "exampleKo": "프린터 플러그를 뽑는 것을 잊지 마십시오."
+  },
+  {
+    "day": 9,
+    "no": 86,
+    "word": "worsen",
+    "meaning": "악화되다",
+    "targetScore": 800,
+    "exampleEn": "The weather conditions worsened overnight.",
+    "exampleKo": "기상 조건이 밤새 악화되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 87,
+    "word": "accumulation",
+    "meaning": "축적, 누적",
+    "targetScore": 800,
+    "exampleEn": "The accumulation of debt is a serious problem.",
+    "exampleKo": "부채의 축적(누적)은 심각한 문제입니다."
+  },
+  {
+    "day": 9,
+    "no": 88,
+    "word": "ascend",
+    "meaning": "오르다, 올라가다",
+    "targetScore": 800,
+    "exampleEn": "Smoke ascended from the chimney.",
+    "exampleKo": "연기가 굴뚝에서 올라갔습니다."
+  },
+  {
+    "day": 9,
+    "no": 89,
+    "word": "commerce",
+    "meaning": "통상, 교역",
+    "targetScore": 800,
+    "exampleEn": "E-commerce has revolutionized retail.",
+    "exampleKo": "전자 상거래는 소매업에 혁명을 일으켰습니다."
+  },
+  {
+    "day": 9,
+    "no": 90,
+    "word": "indifferent",
+    "meaning": "무관심한, 중요하지 않은",
+    "targetScore": 800,
+    "exampleEn": "He seemed indifferent to the news.",
+    "exampleKo": "그는 그 소식에 무관심한 듯 보였습니다."
+  },
+  {
+    "day": 9,
+    "no": 91,
+    "word": "prolong",
+    "meaning": "연장시키다",
+    "targetScore": 800,
+    "exampleEn": "The meeting was prolonged by an hour.",
+    "exampleKo": "회의가 한 시간 연장되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 92,
+    "word": "relevantly",
+    "meaning": "관련되어",
+    "targetScore": 800,
+    "exampleEn": "Please provide documents relevantly connected to the case.",
+    "exampleKo": "사건과 관련이 있는 문서를 제공해 주십시오."
+  },
+  {
+    "day": 9,
+    "no": 93,
+    "word": "stimulate",
+    "meaning": "자극하다, 격려하다",
+    "targetScore": 800,
+    "exampleEn": "Tax cuts can stimulate the economy.",
+    "exampleKo": "감세는 경제를 자극할 수 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 94,
+    "word": "supplement",
+    "meaning": "보완하다, 보충하다",
+    "targetScore": 800,
+    "exampleEn": "Vitamins supplement a healthy diet.",
+    "exampleKo": "비타민은 건강한 식단을 보완합니다."
+  },
+  {
+    "day": 9,
+    "no": 95,
+    "word": "tedious",
+    "meaning": "지루한, 싫증나는",
+    "targetScore": 800,
+    "exampleEn": "The data entry work was tedious.",
+    "exampleKo": "데이터 입력 작업은 지루했습니다."
+  },
+  {
+    "day": 9,
+    "no": 96,
+    "word": "unavoidable",
+    "meaning": "불가피한",
+    "targetScore": 800,
+    "exampleEn": "Delays are sometimes unavoidable.",
+    "exampleKo": "지연은 때때로 불가피합니다."
+  },
+  {
+    "day": 9,
+    "no": 97,
+    "word": "be related to",
+    "meaning": "~에 관련되다",
+    "targetScore": 800,
+    "exampleEn": "Changes in policy are related to the new law.",
+    "exampleKo": "정책의 변화는 새로운 법과 관련이 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 98,
+    "word": "bring in",
+    "meaning": "(시스템을)도입하다, (돈을)벌다",
+    "targetScore": 800,
+    "exampleEn": "The new product will bring in substantial revenue.",
+    "exampleKo": "새 제품은 상당한 수익을 가져올(벌어들일) 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 99,
+    "word": "brokerage",
+    "meaning": "중개, 중개업소",
+    "targetScore": 800,
+    "exampleEn": "She works for a stock brokerage firm.",
+    "exampleKo": "그녀는 주식 중개 회사에서 일합니다."
+  },
+  {
+    "day": 9,
+    "no": 100,
+    "word": "business management",
+    "meaning": "경영(학)",
+    "targetScore": 800,
+    "exampleEn": "He has a degree in business management.",
+    "exampleKo": "그는 경영학 학위를 가지고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 101,
+    "word": "business practice",
+    "meaning": "사업 관행",
+    "targetScore": 800,
+    "exampleEn": "Ethical business practice is important.",
+    "exampleKo": "윤리적인 사업 관행은 중요합니다."
+  },
+  {
+    "day": 9,
+    "no": 102,
+    "word": "collapse",
+    "meaning": "붕괴",
+    "targetScore": 800,
+    "exampleEn": "The building collapsed during the earthquake.",
+    "exampleKo": "그 건물은 지진 중에 붕괴되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 103,
+    "word": "cope with",
+    "meaning": "~에 대처하다",
+    "targetScore": 800,
+    "exampleEn": "We must cope with the changing market.",
+    "exampleKo": "우리는 변화하는 시장에 대처해야 합니다."
+  },
+  {
+    "day": 9,
+    "no": 104,
+    "word": "cost-effective",
+    "meaning": "비용 효율적인",
+    "targetScore": 800,
+    "exampleEn": "We need a cost-effective solution.",
+    "exampleKo": "우리는 비용 효율적인 해결책이 필요합니다."
+  },
+  {
+    "day": 9,
+    "no": 105,
+    "word": "descending",
+    "meaning": "내려가는, 하향의",
+    "targetScore": 800,
+    "exampleEn": "The prices are listed in descending order.",
+    "exampleKo": "가격은 내림차순으로 나열되어 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 106,
+    "word": "dominate",
+    "meaning": "지배하다, 우위를 차지하다",
+    "targetScore": 800,
+    "exampleEn": "The company dominates the software market.",
+    "exampleKo": "그 회사는 소프트웨어 시장을 지배합니다."
+  },
+  {
+    "day": 9,
+    "no": 107,
+    "word": "downturn",
+    "meaning": "(경기) 침체",
+    "targetScore": 800,
+    "exampleEn": "The industry is facing a downturn.",
+    "exampleKo": "그 산업은 침체(하락세)를 겪고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 108,
+    "word": "entail",
+    "meaning": "~을 수반하다, ~을 유발하다",
+    "targetScore": 800,
+    "exampleEn": "The job entails a lot of travel.",
+    "exampleKo": "그 일은 많은 여행을 수반합니다."
+  },
+  {
+    "day": 9,
+    "no": 109,
+    "word": "exchange rate",
+    "meaning": "환율",
+    "targetScore": 800,
+    "exampleEn": "The exchange rate fluctuates daily.",
+    "exampleKo": "환율은 매일 변동합니다."
+  },
+  {
+    "day": 9,
+    "no": 110,
+    "word": "flourish",
+    "meaning": "번창하다, 융성하다",
+    "targetScore": 800,
+    "exampleEn": "His business continued to flourish.",
+    "exampleKo": "그의 사업은 계속해서 번창했습니다."
+  },
+  {
+    "day": 9,
+    "no": 111,
+    "word": "for large purchases",
+    "meaning": "대량 구매에 대해서",
+    "targetScore": 800,
+    "exampleEn": "Discounts are available for large purchases.",
+    "exampleKo": "대량 구매에 대해서는 할인이 가능합니다."
+  },
+  {
+    "day": 9,
+    "no": 112,
+    "word": "for the benefit of",
+    "meaning": "~의 이익을 위해",
+    "targetScore": 800,
+    "exampleEn": "The charity event was held for the benefit of orphans.",
+    "exampleKo": "그 자선 행사는 고아들의 이익을 위해 열렸습니다."
+  },
+  {
+    "day": 9,
+    "no": 113,
+    "word": "foremost",
+    "meaning": "선두의, 으뜸가는",
+    "targetScore": 800,
+    "exampleEn": "He is the foremost expert in this field.",
+    "exampleKo": "그는 이 분야에서 으뜸가는 전문가입니다."
+  },
+  {
+    "day": 9,
+    "no": 114,
+    "word": "forerunner",
+    "meaning": "선구자",
+    "targetScore": 800,
+    "exampleEn": "That company was a forerunner in digital technology.",
+    "exampleKo": "그 회사는 디지털 기술의 선구자였습니다."
+  },
+  {
+    "day": 9,
+    "no": 115,
+    "word": "from around the globe",
+    "meaning": "전 세계에서",
+    "targetScore": 800,
+    "exampleEn": "Participants came from around the globe.",
+    "exampleKo": "참가자들은 전 세계에서 왔습니다."
+  },
+  {
+    "day": 9,
+    "no": 116,
+    "word": "infrastructure",
+    "meaning": "사회 기반 시설, 경제 기반 시설",
+    "targetScore": 800,
+    "exampleEn": "Investment in infrastructure is necessary.",
+    "exampleKo": "사회 기반 시설에 대한 투자가 필요합니다."
+  },
+  {
+    "day": 9,
+    "no": 117,
+    "word": "marketable",
+    "meaning": "시장성이 높은",
+    "targetScore": 800,
+    "exampleEn": "The product is highly marketable.",
+    "exampleKo": "그 제품은 시장성이 매우 높습니다."
+  },
+  {
+    "day": 9,
+    "no": 118,
+    "word": "momentary",
+    "meaning": "순간적인, 잠깐의",
+    "targetScore": 800,
+    "exampleEn": "The pain was only momentary.",
+    "exampleKo": "고통은 순간적이었습니다."
+  },
+  {
+    "day": 9,
+    "no": 119,
+    "word": "multinational corporation",
+    "meaning": "다국적 기업",
+    "targetScore": 800,
+    "exampleEn": "It is a large multinational corporation.",
+    "exampleKo": "그것은 대규모 다국적 기업입니다."
+  },
+  {
+    "day": 9,
+    "no": 120,
+    "word": "multi-regional",
+    "meaning": "다지역의",
+    "targetScore": 800,
+    "exampleEn": "We have a multi-regional marketing strategy.",
+    "exampleKo": "우리는 다지역 마케팅 전략을 가지고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 121,
+    "word": "nationality",
+    "meaning": "국적",
+    "targetScore": 800,
+    "exampleEn": "Applicants of any nationality may apply.",
+    "exampleKo": "어떤 국적의 지원자라도 지원 가능합니다."
+  },
+  {
+    "day": 9,
+    "no": 122,
+    "word": "net income",
+    "meaning": "순수입, 실수입",
+    "targetScore": 800,
+    "exampleEn": "Net income increased by 10% this quarter.",
+    "exampleKo": "이번 분기 순수입은 10% 증가했습니다."
+  },
+  {
+    "day": 9,
+    "no": 123,
+    "word": "penalize",
+    "meaning": "벌하다",
+    "targetScore": 800,
+    "exampleEn": "Drivers are penalized for speeding.",
+    "exampleKo": "운전자들은 과속으로 처벌받습니다."
+  },
+  {
+    "day": 9,
+    "no": 124,
+    "word": "put forth",
+    "meaning": "~을 내밀다, 내뿜다",
+    "targetScore": 800,
+    "exampleEn": "The team put forth a new proposal.",
+    "exampleKo": "그 팀은 새로운 제안을 내놓았습니다."
+  },
+  {
+    "day": 9,
+    "no": 125,
+    "word": "ratio",
+    "meaning": "비율",
+    "targetScore": 800,
+    "exampleEn": "The ratio of men to women is 2 to 1.",
+    "exampleKo": "남녀 비율은 2 대 1입니다."
+  },
+  {
+    "day": 9,
+    "no": 126,
+    "word": "set up",
+    "meaning": "~을 세우다, 시작하다",
+    "targetScore": 800,
+    "exampleEn": "He set up his own company.",
+    "exampleKo": "그는 자신의 회사를 세웠습니다(시작했습니다)."
+  },
+  {
+    "day": 9,
+    "no": 127,
+    "word": "skyrocket",
+    "meaning": "(가격 등이) 치솟다",
+    "targetScore": 800,
+    "exampleEn": "Housing prices have skyrocketed.",
+    "exampleKo": "주택 가격이 치솟았습니다."
+  },
+  {
+    "day": 9,
+    "no": 128,
+    "word": "so far(=to date)",
+    "meaning": "지금까지",
+    "targetScore": 800,
+    "exampleEn": "So far, everything is going according to plan.",
+    "exampleKo": "지금까지는 모든 것이 계획대로 진행되고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 129,
+    "word": "surge",
+    "meaning": "(물가가) 급등하다",
+    "targetScore": 800,
+    "exampleEn": "There was a sudden surge in demand.",
+    "exampleKo": "수요가 급등했습니다."
+  },
+  {
+    "day": 9,
+    "no": 130,
+    "word": "synergy",
+    "meaning": "상승효과",
+    "targetScore": 800,
+    "exampleEn": "The merger created a positive synergy.",
+    "exampleKo": "합병은 긍정적인 시너지(상승효과)를 창출했습니다."
+  },
+  {
+    "day": 9,
+    "no": 131,
+    "word": "synthesis",
+    "meaning": "종합, 통합",
+    "targetScore": 800,
+    "exampleEn": "The report is a synthesis of several studies.",
+    "exampleKo": "그 보고서는 여러 연구의 종합입니다."
+  },
+  {
+    "day": 9,
+    "no": 132,
+    "word": "tactics",
+    "meaning": "전략",
+    "targetScore": 800,
+    "exampleEn": "They used aggressive marketing tactics.",
+    "exampleKo": "그들은 공격적인 마케팅 전략(전술)을 사용했습니다."
+  },
+  {
+    "day": 9,
+    "no": 133,
+    "word": "unemployment",
+    "meaning": "실업",
+    "targetScore": 800,
+    "exampleEn": "Unemployment is a major economic issue.",
+    "exampleKo": "실업은 주요 경제 문제입니다."
+  },
+  {
+    "day": 9,
+    "no": 134,
+    "word": "variable",
+    "meaning": "변하기 쉬운, 변덕스러운",
+    "targetScore": 800,
+    "exampleEn": "The weather is variable at this time of year.",
+    "exampleKo": "이맘때의 날씨는 변덕스럽습니다."
+  },
+  {
+    "day": 9,
+    "no": 135,
+    "word": "vicious cycle",
+    "meaning": "악순환",
+    "targetScore": 800,
+    "exampleEn": "Poverty creates a vicious cycle.",
+    "exampleKo": "빈곤은 악순환을 만듭니다."
+  },
+  {
+    "day": 9,
+    "no": 136,
+    "word": "without a doubt",
+    "meaning": "의심할 바 없이",
+    "targetScore": 800,
+    "exampleEn": "He is without a doubt the best candidate.",
+    "exampleKo": "그는 의심할 여지 없이 최고의 후보자입니다."
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "testId": 1,
+    "passageId": 6,
+    "guidance": "Questions 135-138 refer to the following letter.",
+    "structure": {
+      "header_info": null,
+      "date_line": "31 July",
+      "salutation": "Dear Mr. Dombo,",
+      "paragraphs": [
+        "Thank you for your [135] support in helping me to plan the opening gala for Tokyo's fashion week. The event was a huge success, and I was honored to work with you. I know that our attendees follow your work closely, and they loved the designs you contributed for this event.",
+        "Your designs received a lot of [136] on social media. Shows like this will keep Tokyo on the map as a premier fashion centre. [137] I realize that the multiple delays made the planning no easy task. The auction [138] our Young Designers Award program is coming up soon and I look forward to working with you on that as well."
+      ],
+      "closing": "Sincerely,\nAsahi Ishioka\nDirector, Japanese Guild of Fashion Designers"
+    },
+    "questions": [
+      {
+        "id": 135,
+        "options": [
+          "(A) amazed",
+          "(B) amazement",
+          "(C) amazing",
+          "(D) amazingly"
+        ],
+        "is_sentence_insertion": false
+      },
+      {
+        "id": 136,
+        "options": [
+          "(A) attention",
+          "(B) proposals",
+          "(C) innovation",
+          "(D) criticism"
+        ],
+        "is_sentence_insertion": false
+      },
+      {
+        "id": 137,
+        "options": [
+          "(A) Several other events have gone surprisingly well.",
+          "(B) Thank you also for your flexibility in planning the event.",
+          "(C) Please stop by our office the next time you are in the city.",
+          "(D) Tokyo is a top tourism destination for many reasons."
+        ],
+        "is_sentence_insertion": true
+      },
+      {
+        "id": 138,
+        "options": [
+          "(A) will benefit",
+          "(B) to benefit",
+          "(C) has benefited",
+          "(D) benefits"
+        ],
+        "is_sentence_insertion": true
+      }
+    ]
+  }
+]

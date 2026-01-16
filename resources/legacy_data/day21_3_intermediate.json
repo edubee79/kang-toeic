@@ -1,0 +1,614 @@
+[
+    {
+        "day": 21,
+        "no": 69,
+        "word": "surface",
+        "meaning": "표면",
+        "targetScore": 800,
+        "exampleEn": "Smooth surface.",
+        "exampleKo": "매끄러운 표면."
+    },
+    {
+        "day": 21,
+        "no": 70,
+        "word": "account",
+        "meaning": "설명하다, 차지하다",
+        "targetScore": 800,
+        "exampleEn": "Account for the loss.",
+        "exampleKo": "손실을 설명하다."
+    },
+    {
+        "day": 21,
+        "no": 71,
+        "word": "address",
+        "meaning": "연설하다, 제기하다",
+        "targetScore": 800,
+        "exampleEn": "Address the audience.",
+        "exampleKo": "청중에게 연설하다."
+    },
+    {
+        "day": 21,
+        "no": 72,
+        "word": "adopt",
+        "meaning": "채택하다, 입양하다",
+        "targetScore": 800,
+        "exampleEn": "Adopt a new policy.",
+        "exampleKo": "새로운 정책을 채택하다."
+    },
+    {
+        "day": 21,
+        "no": 73,
+        "word": "agree",
+        "meaning": "동의하다",
+        "targetScore": 800,
+        "exampleEn": "Agree on a price.",
+        "exampleKo": "가격에 합의하다."
+    },
+    {
+        "day": 21,
+        "no": 74,
+        "word": "allow",
+        "meaning": "허락하다, 감안하다",
+        "targetScore": 800,
+        "exampleEn": "Allow for delays.",
+        "exampleKo": "지연을 감안하다."
+    },
+    {
+        "day": 21,
+        "no": 75,
+        "word": "alternative",
+        "meaning": "대안",
+        "targetScore": 800,
+        "exampleEn": "Alternative solution.",
+        "exampleKo": "대안책."
+    },
+    {
+        "day": 21,
+        "no": 76,
+        "word": "announce",
+        "meaning": "발표하다",
+        "targetScore": 800,
+        "exampleEn": "Announce the news.",
+        "exampleKo": "소식을 발표하다."
+    },
+    {
+        "day": 21,
+        "no": 77,
+        "word": "anticipate",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "Anticipate problems.",
+        "exampleKo": "문제를 예상하다."
+    },
+    {
+        "day": 21,
+        "no": 78,
+        "word": "appoint",
+        "meaning": "임명하다",
+        "targetScore": 800,
+        "exampleEn": "Appoint a committee.",
+        "exampleKo": "위원회를 임명하다."
+    },
+    {
+        "day": 21,
+        "no": 79,
+        "word": "arrange",
+        "meaning": "배열하다, 마련하다",
+        "targetScore": 800,
+        "exampleEn": "Arrange the furniture.",
+        "exampleKo": "가구를 배치하다."
+    },
+    {
+        "day": 21,
+        "no": 80,
+        "word": "assist",
+        "meaning": "돕다",
+        "targetScore": 800,
+        "exampleEn": "Assist the manager.",
+        "exampleKo": "매니저를 돕다."
+    },
+    {
+        "day": 21,
+        "no": 81,
+        "word": "attribute",
+        "meaning": "~의 탓으로 돌리다",
+        "targetScore": 800,
+        "exampleEn": "Attribute success to luck.",
+        "exampleKo": "성공을 운 탓으로 돌리다."
+    },
+    {
+        "day": 21,
+        "no": 82,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 800,
+        "exampleEn": "Available immediately.",
+        "exampleKo": "즉시 이용 가능."
+    },
+    {
+        "day": 21,
+        "no": 83,
+        "word": "boost",
+        "meaning": "증진시키다",
+        "targetScore": 800,
+        "exampleEn": "Boost morale.",
+        "exampleKo": "사기를 증진시키다."
+    },
+    {
+        "day": 21,
+        "no": 84,
+        "word": "buy",
+        "meaning": "매수하다; 구매",
+        "targetScore": 800,
+        "exampleEn": "Good buy.",
+        "exampleKo": "물건을 잘 샀음."
+    },
+    {
+        "day": 21,
+        "no": 85,
+        "word": "campaign",
+        "meaning": "캠페인",
+        "targetScore": 800,
+        "exampleEn": "Marketing campaign.",
+        "exampleKo": "마케팅 캠페인."
+    },
+    {
+        "day": 21,
+        "no": 86,
+        "word": "cause",
+        "meaning": "야기하다; 원인",
+        "targetScore": 800,
+        "exampleEn": "Cause trouble.",
+        "exampleKo": "문제를 야기하다."
+    },
+    {
+        "day": 21,
+        "no": 87,
+        "word": "clarify",
+        "meaning": "명확히 하다",
+        "targetScore": 800,
+        "exampleEn": "Clarify the situation.",
+        "exampleKo": "상황을 명확히 하다."
+    },
+    {
+        "day": 21,
+        "no": 88,
+        "word": "combine",
+        "meaning": "결합하다",
+        "targetScore": 800,
+        "exampleEn": "Combine forces.",
+        "exampleKo": "힘을 합치다."
+    },
+    {
+        "day": 21,
+        "no": 89,
+        "word": "comment",
+        "meaning": "논평하다; 논평",
+        "targetScore": 800,
+        "exampleEn": "No comment.",
+        "exampleKo": "논평 없음."
+    },
+    {
+        "day": 21,
+        "no": 90,
+        "word": "commit",
+        "meaning": "전념하다, 저지르다",
+        "targetScore": 800,
+        "exampleEn": "Commit to a goal.",
+        "exampleKo": "목표에 전념하다."
+    },
+    {
+        "day": 21,
+        "no": 91,
+        "word": "compete",
+        "meaning": "경쟁하다",
+        "targetScore": 800,
+        "exampleEn": "Compete globally.",
+        "exampleKo": "세계적으로 경쟁하다."
+    },
+    {
+        "day": 21,
+        "no": 92,
+        "word": "complaint",
+        "meaning": "불만",
+        "targetScore": 800,
+        "exampleEn": "Make a complaint.",
+        "exampleKo": "불만을 제기하다."
+    },
+    {
+        "day": 21,
+        "no": 93,
+        "word": "complete",
+        "meaning": "완료하다, 작성하다",
+        "targetScore": 800,
+        "exampleEn": "Complete a survey.",
+        "exampleKo": "설문 조사를 작성하다."
+    },
+    {
+        "day": 21,
+        "no": 94,
+        "word": "concentrate",
+        "meaning": "집중하다",
+        "targetScore": 800,
+        "exampleEn": "Concentrate on studies.",
+        "exampleKo": "공부에 집중하다."
+    },
+    {
+        "day": 21,
+        "no": 95,
+        "word": "conclusion",
+        "meaning": "결론",
+        "targetScore": 800,
+        "exampleEn": "Come to a conclusion.",
+        "exampleKo": "결론에 도달하다."
+    },
+    {
+        "day": 21,
+        "no": 96,
+        "word": "confirm",
+        "meaning": "확인하다",
+        "targetScore": 800,
+        "exampleEn": "Confirm the order.",
+        "exampleKo": "주문을 확인하다."
+    },
+    {
+        "day": 21,
+        "no": 97,
+        "word": "consequence",
+        "meaning": "결과",
+        "targetScore": 800,
+        "exampleEn": "Inevitable consequence.",
+        "exampleKo": "피할 수 없는 결과."
+    },
+    {
+        "day": 21,
+        "no": 98,
+        "word": "consider",
+        "meaning": "고려하다",
+        "targetScore": 800,
+        "exampleEn": "Consider the options.",
+        "exampleKo": "선택지를 고려하다."
+    },
+    {
+        "day": 21,
+        "no": 99,
+        "word": "consistent",
+        "meaning": "일관된",
+        "targetScore": 800,
+        "exampleEn": "Consistent performance.",
+        "exampleKo": "일관된 성과."
+    },
+    {
+        "day": 21,
+        "no": 100,
+        "word": "contact",
+        "meaning": "연락하다; 접촉",
+        "targetScore": 800,
+        "exampleEn": "Keep in contact.",
+        "exampleKo": "연락을 유지하다."
+    },
+    {
+        "day": 21,
+        "no": 101,
+        "word": "contain",
+        "meaning": "포함하다, 억제하다",
+        "targetScore": 800,
+        "exampleEn": "Contain the spread.",
+        "exampleKo": "확산을 억제하다."
+    },
+    {
+        "day": 21,
+        "no": 102,
+        "word": "contract",
+        "meaning": "계약; 수축하다",
+        "targetScore": 800,
+        "exampleEn": "Muscles contract.",
+        "exampleKo": "근육이 수축하다."
+    },
+    {
+        "day": 21,
+        "no": 103,
+        "word": "contribute",
+        "meaning": "기여하다",
+        "targetScore": 800,
+        "exampleEn": "Contribute ideas.",
+        "exampleKo": "아이디어를 기여하다."
+    },
+    {
+        "day": 21,
+        "no": 104,
+        "word": "control",
+        "meaning": "통제하다; 통제",
+        "targetScore": 800,
+        "exampleEn": "Under control.",
+        "exampleKo": "통제 하에."
+    },
+    {
+        "day": 21,
+        "no": 105,
+        "word": "convenient",
+        "meaning": "편리한",
+        "targetScore": 800,
+        "exampleEn": "Convenient time.",
+        "exampleKo": "편리한 시간."
+    },
+    {
+        "day": 21,
+        "no": 106,
+        "word": "convince",
+        "meaning": "납득시키다",
+        "targetScore": 800,
+        "exampleEn": "Convince him.",
+        "exampleKo": "그를 납득시키다."
+    },
+    {
+        "day": 21,
+        "no": 107,
+        "word": "cover",
+        "meaning": "다루다, 취재하다",
+        "targetScore": 800,
+        "exampleEn": "Cover the story.",
+        "exampleKo": "기사를 취재하다."
+    },
+    {
+        "day": 21,
+        "no": 108,
+        "word": "create",
+        "meaning": "만들다",
+        "targetScore": 800,
+        "exampleEn": "Create jobs.",
+        "exampleKo": "일자리를 만들다."
+    },
+    {
+        "day": 21,
+        "no": 109,
+        "word": "deal",
+        "meaning": "다루다, 처리하다",
+        "targetScore": 800,
+        "exampleEn": "Deal with customers.",
+        "exampleKo": "고객을 상대하다."
+    },
+    {
+        "day": 21,
+        "no": 110,
+        "word": "decline",
+        "meaning": "거절하다, 감소하다",
+        "targetScore": 800,
+        "exampleEn": "Decline an invitation.",
+        "exampleKo": "초대를 거절하다."
+    },
+    {
+        "day": 21,
+        "no": 111,
+        "word": "decrease",
+        "meaning": "감소하다",
+        "targetScore": 800,
+        "exampleEn": "Decrease in profits.",
+        "exampleKo": "수익 감소."
+    },
+    {
+        "day": 21,
+        "no": 112,
+        "word": "defer",
+        "meaning": "미루다",
+        "targetScore": 800,
+        "exampleEn": "Defer judgment.",
+        "exampleKo": "판단을 미루다."
+    },
+    {
+        "day": 21,
+        "no": 113,
+        "word": "delay",
+        "meaning": "지연",
+        "targetScore": 800,
+        "exampleEn": "Traffic delay.",
+        "exampleKo": "교통 지연."
+    },
+    {
+        "day": 21,
+        "no": 114,
+        "word": "deliver",
+        "meaning": "배달하다, 연설하다",
+        "targetScore": 800,
+        "exampleEn": "Deliver a speech.",
+        "exampleKo": "연설을 하다."
+    },
+    {
+        "day": 21,
+        "no": 115,
+        "word": "demonstrate",
+        "meaning": "증명하다",
+        "targetScore": 800,
+        "exampleEn": "Demonstrate clearly.",
+        "exampleKo": "명확하게 증명하다."
+    },
+    {
+        "day": 21,
+        "no": 116,
+        "word": "describe",
+        "meaning": "묘사하다",
+        "targetScore": 800,
+        "exampleEn": "Describe the event.",
+        "exampleKo": "사건을 묘사하다."
+    },
+    {
+        "day": 21,
+        "no": 117,
+        "word": "design",
+        "meaning": "설계하다, 디자인",
+        "targetScore": 800,
+        "exampleEn": "Design a logo.",
+        "exampleKo": "로고를 디자인하다."
+    },
+    {
+        "day": 21,
+        "no": 118,
+        "word": "detail",
+        "meaning": "상세하게 알리다",
+        "targetScore": 800,
+        "exampleEn": "Detail the plan.",
+        "exampleKo": "계획을 상세히 알리다."
+    },
+    {
+        "day": 21,
+        "no": 119,
+        "word": "determine",
+        "meaning": "결정하다",
+        "targetScore": 800,
+        "exampleEn": "Determine the cause.",
+        "exampleKo": "원인을 밝혀내다."
+    },
+    {
+        "day": 21,
+        "no": 120,
+        "word": "develop",
+        "meaning": "개발하다",
+        "targetScore": 800,
+        "exampleEn": "Develop film.",
+        "exampleKo": "필름을 현상하다."
+    },
+    {
+        "day": 21,
+        "no": 121,
+        "word": "differ",
+        "meaning": "다르다",
+        "targetScore": 800,
+        "exampleEn": "Opinions differ.",
+        "exampleKo": "의견이 다르다."
+    },
+    {
+        "day": 21,
+        "no": 122,
+        "word": "direct",
+        "meaning": "지시하다, 보내다",
+        "targetScore": 800,
+        "exampleEn": "Direct traffic.",
+        "exampleKo": "교통을 정리하다."
+    },
+    {
+        "day": 21,
+        "no": 123,
+        "word": "disagree",
+        "meaning": "반대하다",
+        "targetScore": 800,
+        "exampleEn": "Disagree with the proposal.",
+        "exampleKo": "제안에 반대하다."
+    },
+    {
+        "day": 21,
+        "no": 124,
+        "word": "discuss",
+        "meaning": "토론하다",
+        "targetScore": 800,
+        "exampleEn": "Discuss the details.",
+        "exampleKo": "세부 사항을 논의하다."
+    },
+    {
+        "day": 21,
+        "no": 125,
+        "word": "display",
+        "meaning": "전시하다; 전시",
+        "targetScore": 800,
+        "exampleEn": "On display.",
+        "exampleKo": "전시 중."
+    },
+    {
+        "day": 21,
+        "no": 126,
+        "word": "distribute",
+        "meaning": "배포하다",
+        "targetScore": 800,
+        "exampleEn": "Distribute leaflets.",
+        "exampleKo": "전단지를 배포하다."
+    },
+    {
+        "day": 21,
+        "no": 127,
+        "word": "divide",
+        "meaning": "나누다",
+        "targetScore": 800,
+        "exampleEn": "Divide the profits.",
+        "exampleKo": "수익을 나누다."
+    },
+    {
+        "day": 21,
+        "no": 128,
+        "word": "earn",
+        "meaning": "벌다, 얻다",
+        "targetScore": 800,
+        "exampleEn": "Earn a living.",
+        "exampleKo": "생계를 꾸리다."
+    },
+    {
+        "day": 21,
+        "no": 129,
+        "word": "effect",
+        "meaning": "효과, 효력",
+        "targetScore": 800,
+        "exampleEn": "Take effect.",
+        "exampleKo": "효력을 발생하다."
+    },
+    {
+        "day": 21,
+        "no": 130,
+        "word": "encourage",
+        "meaning": "격려하다",
+        "targetScore": 800,
+        "exampleEn": "Encourage participation.",
+        "exampleKo": "참여를 장려하다."
+    },
+    {
+        "day": 21,
+        "no": 131,
+        "word": "establish",
+        "meaning": "확립하다",
+        "targetScore": 800,
+        "exampleEn": "Establish a reputation.",
+        "exampleKo": "평판을 확립하다."
+    },
+    {
+        "day": 21,
+        "no": 132,
+        "word": "estimate",
+        "meaning": "견적을 내다",
+        "targetScore": 800,
+        "exampleEn": "Estimate the value.",
+        "exampleKo": "가치를 추정하다."
+    },
+    {
+        "day": 21,
+        "no": 133,
+        "word": "evaluate",
+        "meaning": "평가하다",
+        "targetScore": 800,
+        "exampleEn": "Evaluate performance.",
+        "exampleKo": "성과를 평가하다."
+    },
+    {
+        "day": 21,
+        "no": 134,
+        "word": "examine",
+        "meaning": "검사하다",
+        "targetScore": 800,
+        "exampleEn": "Examine the evidence.",
+        "exampleKo": "증거를 검사하다."
+    },
+    {
+        "day": 21,
+        "no": 135,
+        "word": "expect",
+        "meaning": "기대하다",
+        "targetScore": 800,
+        "exampleEn": "Expect a call.",
+        "exampleKo": "전화를 기다리다."
+    },
+    {
+        "day": 21,
+        "no": 136,
+        "word": "extend",
+        "meaning": "연장하다, 제공하다",
+        "targetScore": 800,
+        "exampleEn": "Extend a deadline.",
+        "exampleKo": "마감 기한을 연장하다."
+    }
+]

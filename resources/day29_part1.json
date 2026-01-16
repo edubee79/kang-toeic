@@ -1,0 +1,362 @@
+[
+  {
+    "day": 29,
+    "no": 1,
+    "word": "conserve",
+    "meaning": "보존하다, 유지하다",
+    "targetScore": 650,
+    "exampleEn": "We must conserve energy to reduce costs.",
+    "exampleKo": "우리는 비용을 줄이기 위해 에너지를 보존해야(아껴야) 합니다."
+  },
+  {
+    "day": 29,
+    "no": 2,
+    "word": "chance",
+    "meaning": "가능성, 기회",
+    "targetScore": 650,
+    "exampleEn": "There is a good chance of rain tomorrow.",
+    "exampleKo": "내일 비가 올 가능성이 높습니다."
+  },
+  {
+    "day": 29,
+    "no": 3,
+    "word": "forecast",
+    "meaning": "(날씨의) 예보",
+    "targetScore": 650,
+    "exampleEn": "The weather forecast predicts heavy snow.",
+    "exampleKo": "일기 예보는 폭설을 예측합니다."
+  },
+  {
+    "day": 29,
+    "no": 4,
+    "word": "waste",
+    "meaning": "쓰레기, 폐기물",
+    "targetScore": 650,
+    "exampleEn": "The factory produces a lot of industrial waste.",
+    "exampleKo": "그 공장은 많은 산업 폐기물(쓰레기)을 배출합니다."
+  },
+  {
+    "day": 29,
+    "no": 5,
+    "word": "dispose",
+    "meaning": "처분하다, 처리하다",
+    "targetScore": 650,
+    "exampleEn": "Please dispose of hazardous materials properly.",
+    "exampleKo": "위험 물질을 적절하게 처분해 주십시오."
+  },
+  {
+    "day": 29,
+    "no": 6,
+    "word": "recycling",
+    "meaning": "재활용",
+    "targetScore": 650,
+    "exampleEn": "Recycling is mandatory in this city.",
+    "exampleKo": "이 도시에서는 재활용이 의무적입니다."
+  },
+  {
+    "day": 29,
+    "no": 7,
+    "word": "clear",
+    "meaning": "말게 갠, 명백한, 분명한, 또렷하게, 완전히,, 떨어져서",
+    "targetScore": 650,
+    "exampleEn": "The sky is clear today.",
+    "exampleKo": "오늘 하늘이 맑습니다."
+  },
+  {
+    "day": 29,
+    "no": 8,
+    "word": "damage",
+    "meaning": "피해, 손해, (물건을) 손상시키다",
+    "targetScore": 650,
+    "exampleEn": "The storm caused significant damage to the building.",
+    "exampleKo": "폭풍은 건물에 상당한 피해를 입혔습니다."
+  },
+  {
+    "day": 29,
+    "no": 9,
+    "word": "significant",
+    "meaning": "상당한, 중대한, 중요한",
+    "targetScore": 650,
+    "exampleEn": "There has been a significant increase in sales.",
+    "exampleKo": "매출에 상당한(중대한) 증가가 있었습니다."
+  },
+  {
+    "day": 29,
+    "no": 10,
+    "word": "solution",
+    "meaning": "해결책",
+    "targetScore": 650,
+    "exampleEn": "We are looking for a solution to the pollution problem.",
+    "exampleKo": "우리는 오염 문제에 대한 해결책을 찾고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 11,
+    "word": "occur",
+    "meaning": "(일이) 발생하다, 생기다",
+    "targetScore": 650,
+    "exampleEn": "The accident occurred at the intersection.",
+    "exampleKo": "사고는 교차로에서 발생했습니다."
+  },
+  {
+    "day": 29,
+    "no": 12,
+    "word": "ideal",
+    "meaning": "이상적인",
+    "targetScore": 650,
+    "exampleEn": "The park is an ideal place for a picnic.",
+    "exampleKo": "그 공원은 소풍 가기에 이상적인 장소입니다."
+  },
+  {
+    "day": 29,
+    "no": 13,
+    "word": "preserve",
+    "meaning": "보존하다, 보호하다",
+    "targetScore": 650,
+    "exampleEn": "We must preserve our natural resources.",
+    "exampleKo": "우리는 천연 자원을 보존해야 합니다."
+  },
+  {
+    "day": 29,
+    "no": 14,
+    "word": "aid",
+    "meaning": "원조",
+    "targetScore": 650,
+    "exampleEn": "The organization provides aid to disaster victims.",
+    "exampleKo": "그 단체는 재난 피해자들에게 원조를 제공합니다."
+  },
+  {
+    "day": 29,
+    "no": 15,
+    "word": "excessive",
+    "meaning": "지나친, 과도한",
+    "targetScore": 650,
+    "exampleEn": "Excessive noise is prohibited.",
+    "exampleKo": "지나친 소음은 금지되어 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 16,
+    "word": "intensively",
+    "meaning": "집중적으로",
+    "targetScore": 650,
+    "exampleEn": "The team worked intensively on the project.",
+    "exampleKo": "팀은 그 프로젝트에 집중적으로 임했습니다."
+  },
+  {
+    "day": 29,
+    "no": 17,
+    "word": "vary",
+    "meaning": "다르다, 다양하다",
+    "targetScore": 650,
+    "exampleEn": "Prices vary depending on the season.",
+    "exampleKo": "가격은 계절에 따라 다릅니다."
+  },
+  {
+    "day": 29,
+    "no": 18,
+    "word": "pleasing",
+    "meaning": "즐거운, 기분 좋은, 만족스러운",
+    "targetScore": 650,
+    "exampleEn": "The results were pleasing to the investors.",
+    "exampleKo": "결과는 투자자들에게 만족스러웠습니다."
+  },
+  {
+    "day": 29,
+    "no": 19,
+    "word": "mark",
+    "meaning": "점수, 평점, 표시, 기념하다, 축하하다",
+    "targetScore": 650,
+    "exampleEn": "This year marks our 10th anniversary.",
+    "exampleKo": "올해는 우리의 10주년을 기념합니다(표시합니다)."
+  },
+  {
+    "day": 29,
+    "no": 20,
+    "word": "inaccessible",
+    "meaning": "접근이 불가능한, 이용이 불가능한",
+    "targetScore": 650,
+    "exampleEn": "The remote village is inaccessible by car.",
+    "exampleKo": "그 외딴 마을은 차로 접근이 불가능합니다."
+  },
+  {
+    "day": 29,
+    "no": 21,
+    "word": "disturb",
+    "meaning": "방해하다",
+    "targetScore": 650,
+    "exampleEn": "Do not disturb the wildlife.",
+    "exampleKo": "야생 동물을 방해하지 마십시오."
+  },
+  {
+    "day": 29,
+    "no": 22,
+    "word": "pollutant",
+    "meaning": "오염 물질",
+    "targetScore": 650,
+    "exampleEn": "Factories emit harmful pollutants.",
+    "exampleKo": "공장들은 해로운 오염 물질을 배출합니다."
+  },
+  {
+    "day": 29,
+    "no": 23,
+    "word": "emission",
+    "meaning": "배기가스, 방출",
+    "targetScore": 650,
+    "exampleEn": "The government plans to reduce carbon emissions.",
+    "exampleKo": "정부는 탄소 배출을 줄일 계획입니다."
+  },
+  {
+    "day": 29,
+    "no": 24,
+    "word": "dense",
+    "meaning": "빽빽한, 밀집한",
+    "targetScore": 650,
+    "exampleEn": "The forest is dense with trees.",
+    "exampleKo": "숲은 나무로 빽빽합니다."
+  },
+  {
+    "day": 29,
+    "no": 25,
+    "word": "environmental",
+    "meaning": "환경적인",
+    "targetScore": 650,
+    "exampleEn": "We must consider the environmental impact.",
+    "exampleKo": "우리는 환경적인 영향을 고려해야 합니다."
+  },
+  {
+    "day": 29,
+    "no": 26,
+    "word": "consistent",
+    "meaning": "일치하는, 지속적인, 한결같은",
+    "targetScore": 650,
+    "exampleEn": "His performance has been consistent.",
+    "exampleKo": "그의 성과는 한결같았습니다(지속적이었습니다)."
+  },
+  {
+    "day": 29,
+    "no": 27,
+    "word": "leak",
+    "meaning": "누출, 누출량, (물·빛이) 새게 하다",
+    "targetScore": 650,
+    "exampleEn": "Oil leaked from the tank.",
+    "exampleKo": "기름이 탱크에서 샜습니다(누출되었습니다)."
+  },
+  {
+    "day": 29,
+    "no": 28,
+    "word": "organization",
+    "meaning": "단체",
+    "targetScore": 650,
+    "exampleEn": "She works for a non-profit organization.",
+    "exampleKo": "그녀는 비영리 단체에서 일합니다."
+  },
+  {
+    "day": 29,
+    "no": 29,
+    "word": "continually",
+    "meaning": "계속해서",
+    "targetScore": 650,
+    "exampleEn": "Technology is continually evolving.",
+    "exampleKo": "기술은 계속해서 발전하고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 30,
+    "word": "contaminate",
+    "meaning": "오염시키다",
+    "targetScore": 650,
+    "exampleEn": "The river was contaminated by chemicals.",
+    "exampleKo": "강은 화학 물질로 오염되었습니다."
+  },
+  {
+    "day": 29,
+    "no": 31,
+    "word": "disaster",
+    "meaning": "재난",
+    "targetScore": 650,
+    "exampleEn": "The earthquake was a major disaster.",
+    "exampleKo": "지진은 대재난이었습니다."
+  },
+  {
+    "day": 29,
+    "no": 32,
+    "word": "discharge",
+    "meaning": "방출하다",
+    "targetScore": 650,
+    "exampleEn": "Factories must not discharge waste into the river.",
+    "exampleKo": "공장은 강으로 폐기물을 방출해서는 안 됩니다."
+  },
+  {
+    "day": 29,
+    "no": 33,
+    "word": "resource",
+    "meaning": "자원",
+    "targetScore": 650,
+    "exampleEn": "Water is a precious resource.",
+    "exampleKo": "물은 귀중한 자원입니다."
+  },
+  {
+    "day": 29,
+    "no": 34,
+    "word": "prominent",
+    "meaning": "유명한, 두드러진",
+    "targetScore": 650,
+    "exampleEn": "He is a prominent figure in the industry.",
+    "exampleKo": "그는 그 업계에서 저명한(두드러진) 인물입니다."
+  },
+  {
+    "day": 29,
+    "no": 35,
+    "word": "deplete",
+    "meaning": "고갈시키다",
+    "targetScore": 650,
+    "exampleEn": "We are depleting our natural reserves.",
+    "exampleKo": "우리는 천연 매장량을 고갈시키고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 36,
+    "word": "purify",
+    "meaning": "정화시키다",
+    "targetScore": 650,
+    "exampleEn": "Plants help purify the air.",
+    "exampleKo": "식물은 공기를 정화하는 데 도움을 줍니다."
+  },
+  {
+    "day": 29,
+    "no": 37,
+    "word": "endangered",
+    "meaning": "멸종 위기에 처한",
+    "targetScore": 650,
+    "exampleEn": "The panda is an endangered species.",
+    "exampleKo": "판다는 멸종 위기에 처한 종입니다."
+  },
+  {
+    "day": 29,
+    "no": 38,
+    "word": "extinction",
+    "meaning": "멸종",
+    "targetScore": 650,
+    "exampleEn": "Many species face extinction.",
+    "exampleKo": "많은 종들이 멸종에 직면해 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 39,
+    "word": "drought",
+    "meaning": "가뭄",
+    "targetScore": 650,
+    "exampleEn": "The drought damaged the crops.",
+    "exampleKo": "가뭄이 농작물에 피해를 주었습니다."
+  },
+  {
+    "day": 29,
+    "no": 40,
+    "word": "inflict",
+    "meaning": "(고통·피해를)입히다, 가하다",
+    "targetScore": 650,
+    "exampleEn": "The storm inflicted severe damage on the coast.",
+    "exampleKo": "폭풍은 해안에 심각한 피해를 입혔습니다(가했습니다)."
+  }
+]

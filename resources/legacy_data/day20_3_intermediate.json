@@ -1,0 +1,614 @@
+[
+    {
+        "day": 20,
+        "no": 69,
+        "word": "theme",
+        "meaning": "주제, 테마",
+        "targetScore": 800,
+        "exampleEn": "The theme of the conference.",
+        "exampleKo": "회의의 주제."
+    },
+    {
+        "day": 20,
+        "no": 70,
+        "word": "tour",
+        "meaning": "여행, 견학",
+        "targetScore": 800,
+        "exampleEn": "A guided tour.",
+        "exampleKo": "가이드 투어."
+    },
+    {
+        "day": 20,
+        "no": 71,
+        "word": "transaction",
+        "meaning": "거래",
+        "targetScore": 800,
+        "exampleEn": "Business transaction.",
+        "exampleKo": "비즈니스 거래."
+    },
+    {
+        "day": 20,
+        "no": 72,
+        "word": "transfer",
+        "meaning": "전송하다, 이체하다",
+        "targetScore": 800,
+        "exampleEn": "Transfer money.",
+        "exampleKo": "돈을 이체하다."
+    },
+    {
+        "day": 20,
+        "no": 73,
+        "word": "transportation",
+        "meaning": "교통, 운송",
+        "targetScore": 800,
+        "exampleEn": "Public transportation.",
+        "exampleKo": "대중교통."
+    },
+    {
+        "day": 20,
+        "no": 74,
+        "word": "valid",
+        "meaning": "유효한",
+        "targetScore": 800,
+        "exampleEn": "Valid passport.",
+        "exampleKo": "유효한 여권."
+    },
+    {
+        "day": 20,
+        "no": 75,
+        "word": "value",
+        "meaning": "가치; 소중히 여기다",
+        "targetScore": 800,
+        "exampleEn": "Value for money.",
+        "exampleKo": "가격 대비 가치."
+    },
+    {
+        "day": 20,
+        "no": 76,
+        "word": "wealth",
+        "meaning": "부, 재산",
+        "targetScore": 800,
+        "exampleEn": "Accumulate wealth.",
+        "exampleKo": "부를 축적하다."
+    },
+    {
+        "day": 20,
+        "no": 77,
+        "word": "accurate",
+        "meaning": "정확한",
+        "targetScore": 800,
+        "exampleEn": "Accurate data.",
+        "exampleKo": "정확한 데이터."
+    },
+    {
+        "day": 20,
+        "no": 78,
+        "word": "adhere",
+        "meaning": "고수하다, 지키다",
+        "targetScore": 800,
+        "exampleEn": "Adhere to the rules.",
+        "exampleKo": "규칙을 고수하다."
+    },
+    {
+        "day": 20,
+        "no": 79,
+        "word": "agenda",
+        "meaning": "의제",
+        "targetScore": 800,
+        "exampleEn": "Meeting agenda.",
+        "exampleKo": "회의 의제."
+    },
+    {
+        "day": 20,
+        "no": 80,
+        "word": "apologize",
+        "meaning": "사과하다",
+        "targetScore": 800,
+        "exampleEn": "I apologize for the delay.",
+        "exampleKo": "지연에 대해 사과드립니다."
+    },
+    {
+        "day": 20,
+        "no": 81,
+        "word": "conclusion",
+        "meaning": "결론",
+        "targetScore": 800,
+        "exampleEn": "Draw a conclusion.",
+        "exampleKo": "결론을 도출하다."
+    },
+    {
+        "day": 20,
+        "no": 82,
+        "word": "conference",
+        "meaning": "회의",
+        "targetScore": 800,
+        "exampleEn": "Press conference.",
+        "exampleKo": "기자 회견."
+    },
+    {
+        "day": 20,
+        "no": 83,
+        "word": "discussion",
+        "meaning": "토론",
+        "targetScore": 800,
+        "exampleEn": "Open discussion.",
+        "exampleKo": "공개 토론."
+    },
+    {
+        "day": 20,
+        "no": 84,
+        "word": "draft",
+        "meaning": "초안; 초안을 작성하다",
+        "targetScore": 800,
+        "exampleEn": "A rough draft.",
+        "exampleKo": "대략적인 초안."
+    },
+    {
+        "day": 20,
+        "no": 85,
+        "word": "enclose",
+        "meaning": "동봉하다",
+        "targetScore": 800,
+        "exampleEn": "Enclosed please find...",
+        "exampleKo": "~을 동봉하였으니 확인 바랍니다."
+    },
+    {
+        "day": 20,
+        "no": 86,
+        "word": "express",
+        "meaning": "표현하다; 신속한",
+        "targetScore": 800,
+        "exampleEn": "Express concern.",
+        "exampleKo": "우려를 표하다."
+    },
+    {
+        "day": 20,
+        "no": 87,
+        "word": "extension",
+        "meaning": "연장, 구내전화",
+        "targetScore": 800,
+        "exampleEn": "Request an extension.",
+        "exampleKo": "연장을 요청하다."
+    },
+    {
+        "day": 20,
+        "no": 88,
+        "word": "feature",
+        "meaning": "특징; 특징으로 삼다",
+        "targetScore": 800,
+        "exampleEn": "Key features.",
+        "exampleKo": "주요 특징."
+    },
+    {
+        "day": 20,
+        "no": 89,
+        "word": "finding",
+        "meaning": "발견, 결론",
+        "targetScore": 800,
+        "exampleEn": "Report the findings.",
+        "exampleKo": "발견 사항을 보고하다."
+    },
+    {
+        "day": 20,
+        "no": 90,
+        "word": "handout",
+        "meaning": "유인물",
+        "targetScore": 800,
+        "exampleEn": "Distribute handouts.",
+        "exampleKo": "유인물을 배포하다."
+    },
+    {
+        "day": 20,
+        "no": 91,
+        "word": "highlight",
+        "meaning": "강조하다; 하이라이트",
+        "targetScore": 800,
+        "exampleEn": "Highlight the importance.",
+        "exampleKo": "중요성을 강조하다."
+    },
+    {
+        "day": 20,
+        "no": 92,
+        "word": "inform",
+        "meaning": "알리다",
+        "targetScore": 800,
+        "exampleEn": "Inform the public.",
+        "exampleKo": "대중에게 알리다."
+    },
+    {
+        "day": 20,
+        "no": 93,
+        "word": "inquiry",
+        "meaning": "문의, 조사",
+        "targetScore": 800,
+        "exampleEn": "Make an inquiry.",
+        "exampleKo": "문의하다."
+    },
+    {
+        "day": 20,
+        "no": 94,
+        "word": "introductory",
+        "meaning": "소개의, 서두의",
+        "targetScore": 800,
+        "exampleEn": "Introductory remarks.",
+        "exampleKo": "서두 발언."
+    },
+    {
+        "day": 20,
+        "no": 95,
+        "word": "issue",
+        "meaning": "문제; 발행하다",
+        "targetScore": 800,
+        "exampleEn": "Issue a statement.",
+        "exampleKo": "성명을 발표하다."
+    },
+    {
+        "day": 20,
+        "no": 96,
+        "word": "lecture",
+        "meaning": "강의",
+        "targetScore": 800,
+        "exampleEn": "Give a lecture.",
+        "exampleKo": "강의하다."
+    },
+    {
+        "day": 20,
+        "no": 97,
+        "word": "lengthy",
+        "meaning": "긴, 지루한",
+        "targetScore": 800,
+        "exampleEn": "A lengthy discussion.",
+        "exampleKo": "긴 토론."
+    },
+    {
+        "day": 20,
+        "no": 98,
+        "word": "material",
+        "meaning": "자료, 재료",
+        "targetScore": 800,
+        "exampleEn": "Reference material.",
+        "exampleKo": "참고 자료."
+    },
+    {
+        "day": 20,
+        "no": 99,
+        "word": "matter",
+        "meaning": "문제; 중요하다",
+        "targetScore": 800,
+        "exampleEn": "It doesn't matter.",
+        "exampleKo": "그것은 중요하지 않습니다."
+    },
+    {
+        "day": 20,
+        "no": 100,
+        "word": "meeting",
+        "meaning": "회의",
+        "targetScore": 800,
+        "exampleEn": "Schedule a meeting.",
+        "exampleKo": "회의 일정을 잡다."
+    },
+    {
+        "day": 20,
+        "no": 101,
+        "word": "minutes",
+        "meaning": "회의록",
+        "targetScore": 800,
+        "exampleEn": "Take the minutes.",
+        "exampleKo": "회의록을 작성하다."
+    },
+    {
+        "day": 20,
+        "no": 102,
+        "word": "observe",
+        "meaning": "관찰하다, 준수하다",
+        "targetScore": 800,
+        "exampleEn": "Observe the rules.",
+        "exampleKo": "규칙을 준수하다."
+    },
+    {
+        "day": 20,
+        "no": 103,
+        "word": "offer",
+        "meaning": "제안하다; 제안",
+        "targetScore": 800,
+        "exampleEn": "Accept an offer.",
+        "exampleKo": "제안을 수락하다."
+    },
+    {
+        "day": 20,
+        "no": 104,
+        "word": "periodically",
+        "meaning": "주기적으로",
+        "targetScore": 800,
+        "exampleEn": "Check periodically.",
+        "exampleKo": "주기적으로 확인하다."
+    },
+    {
+        "day": 20,
+        "no": 105,
+        "word": "persuade",
+        "meaning": "설득하다",
+        "targetScore": 800,
+        "exampleEn": "Persuade him to go.",
+        "exampleKo": "그를 가도록 설득하다."
+    },
+    {
+        "day": 20,
+        "no": 106,
+        "word": "presentation",
+        "meaning": "발표",
+        "targetScore": 800,
+        "exampleEn": "Give a presentation.",
+        "exampleKo": "발표를 하다."
+    },
+    {
+        "day": 20,
+        "no": 107,
+        "word": "preside",
+        "meaning": "주재하다",
+        "targetScore": 800,
+        "exampleEn": "Preside over a meeting.",
+        "exampleKo": "회의를 주재하다."
+    },
+    {
+        "day": 20,
+        "no": 108,
+        "word": "press",
+        "meaning": "언론; 누르다",
+        "targetScore": 800,
+        "exampleEn": "Press release.",
+        "exampleKo": "보도 자료."
+    },
+    {
+        "day": 20,
+        "no": 109,
+        "word": "priority",
+        "meaning": "우선순위",
+        "targetScore": 800,
+        "exampleEn": "Top priority.",
+        "exampleKo": "최우선 순위."
+    },
+    {
+        "day": 20,
+        "no": 110,
+        "word": "productive",
+        "meaning": "생산적인",
+        "targetScore": 800,
+        "exampleEn": "Productive meeting.",
+        "exampleKo": "생산적인 회의."
+    },
+    {
+        "day": 20,
+        "no": 111,
+        "word": "progress",
+        "meaning": "진전; 진행하다",
+        "targetScore": 800,
+        "exampleEn": "Make progress.",
+        "exampleKo": "진전을 보이다."
+    },
+    {
+        "day": 20,
+        "no": 112,
+        "word": "proposal",
+        "meaning": "제안서",
+        "targetScore": 800,
+        "exampleEn": "Submit a proposal.",
+        "exampleKo": "제안서를 제출하다."
+    },
+    {
+        "day": 20,
+        "no": 113,
+        "word": "question",
+        "meaning": "질문; 질문하다",
+        "targetScore": 800,
+        "exampleEn": "Raise a question.",
+        "exampleKo": "질문을 제기하다."
+    },
+    {
+        "day": 20,
+        "no": 114,
+        "word": "recommend",
+        "meaning": "추천하다",
+        "targetScore": 800,
+        "exampleEn": "Highly recommended.",
+        "exampleKo": "강력 추천하는."
+    },
+    {
+        "day": 20,
+        "no": 115,
+        "word": "reference",
+        "meaning": "참조, 추천서",
+        "targetScore": 800,
+        "exampleEn": "For future reference.",
+        "exampleKo": "나중에 참조하기 위해."
+    },
+    {
+        "day": 20,
+        "no": 116,
+        "word": "refute",
+        "meaning": "반박하다",
+        "targetScore": 800,
+        "exampleEn": "Refute an argument.",
+        "exampleKo": "주장을 반박하다."
+    },
+    {
+        "day": 20,
+        "no": 117,
+        "word": "register",
+        "meaning": "등록하다",
+        "targetScore": 800,
+        "exampleEn": "Register for a course.",
+        "exampleKo": "코스에 등록하다."
+    },
+    {
+        "day": 20,
+        "no": 118,
+        "word": "reject",
+        "meaning": "거절하다",
+        "targetScore": 800,
+        "exampleEn": "Reject a proposal.",
+        "exampleKo": "제안을 거절하다."
+    },
+    {
+        "day": 20,
+        "no": 119,
+        "word": "remind",
+        "meaning": "상기시키다",
+        "targetScore": 800,
+        "exampleEn": "Remind me later.",
+        "exampleKo": "나중에 상기시켜 주세요."
+    },
+    {
+        "day": 20,
+        "no": 120,
+        "word": "respond",
+        "meaning": "응답하다",
+        "targetScore": 800,
+        "exampleEn": "Respond to an email.",
+        "exampleKo": "이메일에 응답하다."
+    },
+    {
+        "day": 20,
+        "no": 121,
+        "word": "result",
+        "meaning": "결과",
+        "targetScore": 800,
+        "exampleEn": "As a result.",
+        "exampleKo": "결과적으로."
+    },
+    {
+        "day": 20,
+        "no": 122,
+        "word": "schedule",
+        "meaning": "일정; 일정을 잡다",
+        "targetScore": 800,
+        "exampleEn": "Ahead of schedule.",
+        "exampleKo": "일정보다 앞서."
+    },
+    {
+        "day": 20,
+        "no": 123,
+        "word": "seminar",
+        "meaning": "세미나",
+        "targetScore": 800,
+        "exampleEn": "Attend a seminar.",
+        "exampleKo": "세미나에 참석하다."
+    },
+    {
+        "day": 20,
+        "no": 124,
+        "word": "session",
+        "meaning": "회, 기간",
+        "targetScore": 800,
+        "exampleEn": "Training session.",
+        "exampleKo": "훈련 시간."
+    },
+    {
+        "day": 20,
+        "no": 125,
+        "word": "share",
+        "meaning": "공유하다; 몫",
+        "targetScore": 800,
+        "exampleEn": "Share ideas.",
+        "exampleKo": "아이디어를 공유하세요."
+    },
+    {
+        "day": 20,
+        "no": 126,
+        "word": "shortage",
+        "meaning": "부족",
+        "targetScore": 800,
+        "exampleEn": "Water shortage.",
+        "exampleKo": "물 부족."
+    },
+    {
+        "day": 20,
+        "no": 127,
+        "word": "speech",
+        "meaning": "연설",
+        "targetScore": 800,
+        "exampleEn": "Make a speech.",
+        "exampleKo": "연설하다."
+    },
+    {
+        "day": 20,
+        "no": 128,
+        "word": "state",
+        "meaning": "진술하다; 상태",
+        "targetScore": 800,
+        "exampleEn": "State your opinion.",
+        "exampleKo": "당신의 의견을 말하세요."
+    },
+    {
+        "day": 20,
+        "no": 129,
+        "word": "subject",
+        "meaning": "주제; ~을 조건으로 하는",
+        "targetScore": 800,
+        "exampleEn": "Subject to approval.",
+        "exampleKo": "승인을 조건으로 하는."
+    },
+    {
+        "day": 20,
+        "no": 130,
+        "word": "suggest",
+        "meaning": "제안하다",
+        "targetScore": 800,
+        "exampleEn": "Suggest a solution.",
+        "exampleKo": "해결책을 제안하다."
+    },
+    {
+        "day": 20,
+        "no": 131,
+        "word": "summarize",
+        "meaning": "요약하다",
+        "targetScore": 800,
+        "exampleEn": "Summarize the report.",
+        "exampleKo": "보고서를 요약하다."
+    },
+    {
+        "day": 20,
+        "no": 132,
+        "word": "survey",
+        "meaning": "설문 조사",
+        "targetScore": 800,
+        "exampleEn": "Conduct a survey.",
+        "exampleKo": "설문 조사를 실시하다."
+    },
+    {
+        "day": 20,
+        "no": 133,
+        "word": "talk",
+        "meaning": "이야기; 이야기하다",
+        "targetScore": 800,
+        "exampleEn": "Give a talk.",
+        "exampleKo": "강연하다."
+    },
+    {
+        "day": 20,
+        "no": 134,
+        "word": "topic",
+        "meaning": "주제",
+        "targetScore": 800,
+        "exampleEn": "Main topic.",
+        "exampleKo": "주요 주제."
+    },
+    {
+        "day": 20,
+        "no": 135,
+        "word": "upcoming",
+        "meaning": "다가오는",
+        "targetScore": 800,
+        "exampleEn": "Upcoming events.",
+        "exampleKo": "다가오는 행사."
+    },
+    {
+        "day": 20,
+        "no": 136,
+        "word": "view",
+        "meaning": "관점, 견해",
+        "targetScore": 800,
+        "exampleEn": "Point of view.",
+        "exampleKo": "관점."
+    }
+]

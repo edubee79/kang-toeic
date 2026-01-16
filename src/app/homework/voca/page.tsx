@@ -1,71 +1,179 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Card } from "@/components/ui/card";
-import { BookOpen, CheckCircle, Lock } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { getUserTargetScore, getUserProgress, getDueReviews } from '@/services/vocabularyService';
+import { BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target } from 'lucide-react';
 
-export default function VocaLobby() {
-    const [passedDays, setPassedDays] = useState<number[]>([]);
+export default function VocabularyDashboard() {
+    const [loading, setLoading] = useState(true);
+    const [userId, setUserId] = useState<string | null>(null);
+    const [targetScore, setTargetScore] = useState<650 | 800 | 900 | null>(null);
+    const [progress, setProgress] = useState({
+        totalWords: 0,
+        unknown: 0,
+        learning: 0,
+        mastered: 0,
+        progress: 0
+    });
+    const [dueReviewCount, setDueReviewCount] = useState(0);
+    const router = useRouter();
 
     useEffect(() => {
-        const userStr = localStorage.getItem('toeic_user');
-        if (userStr) {
-            const user = JSON.parse(userStr);
-            setPassedDays(user.passedVocaDays || []);
-        }
-    }, []);
+        const init = async () => {
+            const userData = localStorage.getItem('toeic_user');
+            if (!userData) {
+                router.push('/login');
+                return;
+            }
 
-    // Generate 1-30 days
-    const days = Array.from({ length: 30 }, (_, i) => i + 1);
+            const user = JSON.parse(userData);
+            setUserId(user.userId);
+
+            try {
+                // Extract target score from userClass (e.g., "800반" → 800)
+                const classMatch = user.userClass?.match(/(\d+)반/);
+                const score = classMatch ? parseInt(classMatch[1]) : 800; // Default to 800
+
+                setTargetScore(score as 650 | 800 | 900);
+
+                const progressData = await getUserProgress(user.userId, score as 650 | 800 | 900);
+                setProgress(progressData);
+            } catch (error) {
+                console.error('Error loading vocabulary data:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        init();
+    }, [router]);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+                <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>
+            </div>
+        );
+    }
+
+    // Generate Day 1-30
+    // Generate Day 1-15 (User requested to hide 16-30 for now)
+    const days = Array.from({ length: 15 }, (_, i) => i + 1);
+
+    const DAY_THEMES: Record<number, string> = {
+        1: "인사/채용",
+        2: "사무/업무",
+        3: "의사소통",
+        4: "고객서비스",
+        5: "시설/장소",
+        6: "재무/회계",
+        7: "마케팅/광고",
+        8: "계약/협상",
+        9: "생산/제조",
+        10: "물류/배송",
+        11: "연구/개발",
+        12: "경영/관리",
+        13: "인사/복지",
+        14: "법률/규정",
+        15: "종합/숙어",
+    };
 
     return (
         <div className="max-w-md mx-auto space-y-8 pb-20">
+            {/* Header */}
             <div>
-                <h2 className="text-3xl font-black mb-2 tracking-tighter leading-tight">WORD<br /><span className="text-amber-500">MASTER</span></h2>
-                <p className="text-slate-400 font-medium text-xs">매일 20단어, 30일 완성</p>
+                <h2 className="text-3xl font-black mb-2 tracking-tighter leading-tight">
+                    WORD<br />
+                    <span className="text-indigo-500">MASTER</span>
+                </h2>
+                <p className="text-slate-400 font-medium text-xs">
+                    {targetScore}점 목표 | 매일 꾸준히, 15일 완성
+                </p>
             </div>
 
+            {/* Progress Overview */}
+            <Card className="bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-900 border-indigo-500/20 p-6">
+                <h3 className="text-lg font-black text-white mb-3">학습 진도</h3>
+
+                <div className="mb-4">
+                    <div className="flex justify-between text-sm mb-2">
+                        <span className="text-slate-400">전체 진행률</span>
+                        <span className="text-white font-bold">{progress.progress}%</span>
+                    </div>
+                    <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                        <div
+                            className="bg-gradient-to-r from-indigo-500 to-violet-500 h-full transition-all duration-500"
+                            style={{ width: `${progress.progress}%` }}
+                        ></div>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-3 gap-3">
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                        <div className="text-xl font-black text-emerald-400">{progress.unknown}</div>
+                        <div className="text-xs text-slate-400">새로운</div>
+                    </div>
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                        <div className="text-xl font-black text-blue-400">{progress.learning}</div>
+                        <div className="text-xs text-slate-400">학습 중</div>
+                    </div>
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                        <div className="text-xl font-black text-violet-400">{progress.mastered}</div>
+                        <div className="text-xs text-slate-400">완료</div>
+                    </div>
+                </div>
+            </Card>
+
+            {/* Day Grid */}
             <div className="grid grid-cols-3 gap-3">
                 {days.map((day) => {
-                    const isPassed = passedDays.includes(day);
-                    // Lock logic? For now, let's keep all open or sequential?. 
-                    // Let's keep all open to be safe as user might jump around.
-                    const isLocked = false;
+                    // TODO: Get actual completion status from Firestore
+                    const isPassed = false; // Placeholder
+                    const theme = DAY_THEMES[day] || "테마 준비중";
 
                     return (
                         <Link key={day} href={`/homework/voca/${day}`}>
-                            <Card className={cn(
-                                "group relative p-4 rounded-3xl border transition-all cursor-pointer overflow-hidden aspect-square flex flex-col items-center justify-center gap-2",
-                                isPassed
-                                    ? "bg-amber-500/10 border-amber-500/50 hover:bg-amber-500/20"
-                                    : "bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-amber-500/30"
-                            )}>
+                            <Card className={`
+                group relative p-4 rounded-3xl border transition-all cursor-pointer overflow-hidden flex flex-col items-center justify-center gap-1 h-32
+                ${isPassed
+                                    ? 'bg-indigo-500/10 border-indigo-500/50 hover:bg-indigo-500/20'
+                                    : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/30'
+                                }
+              `}>
                                 {isPassed ? (
-                                    <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-slate-900 shadow-lg shadow-amber-500/20">
-                                        <CheckCircle className="w-5 h-5" />
+                                    <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center text-slate-900 shadow-lg shadow-indigo-500/20">
+                                        <CheckCircle className="w-4 h-4" />
                                     </div>
                                 ) : (
-                                    <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-600 group-hover:text-amber-500 transition-colors">
-                                        <BookOpen className="w-4 h-4" />
+                                    <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-slate-600 group-hover:text-indigo-500 transition-colors">
+                                        <BookOpen className="w-3 h-3" />
                                     </div>
                                 )}
 
-                                <span className={cn(
-                                    "font-black text-lg italic tracking-tighter",
-                                    isPassed ? "text-amber-400" : "text-slate-300 group-hover:text-white"
-                                )}>DAY {day}</span>
+                                <div className="text-center mt-2">
+                                    <span className={`font-black text-2xl italic tracking-tighter block mb-1 ${isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
+                                        }`}>
+                                        DAY {String(day).padStart(2, '0')}
+                                    </span>
+                                    <span className="text-xs text-slate-500 font-bold bg-slate-900/50 px-2 py-1 rounded-full border border-slate-800 group-hover:border-indigo-500/30 group-hover:text-indigo-400 transition-colors">
+                                        {theme}
+                                    </span>
+                                </div>
                             </Card>
                         </Link>
                     );
                 })}
             </div>
 
-            <div className="bg-amber-500/10 p-6 rounded-3xl border border-amber-500/20 text-center">
-                <p className="text-xs text-amber-300 font-bold leading-relaxed">
-                    하루 20개 단어를 암기하고<br />
-                    TEST를 통과하면 출석이 인정됩니다.
+            {/* Info Card */}
+            <div className="bg-indigo-500/10 p-6 rounded-3xl border border-indigo-500/20 text-center">
+                <p className="text-xs text-indigo-300 font-bold leading-relaxed">
+                    각 Day를 클릭하여<br />
+                    Sort → Learn → Test 순서로 학습하세요
                 </p>
             </div>
         </div>

@@ -1,0 +1,254 @@
+[
+    {
+        "day": 9,
+        "no": 41,
+        "word": "business hours",
+        "meaning": "영업 시간",
+        "targetScore": 650,
+        "exampleEn": "Our business hours are from 9 to 5.",
+        "exampleKo": "영업 시간은 9시부터 5시까지입니다."
+    },
+    {
+        "day": 9,
+        "no": 42,
+        "word": "director",
+        "meaning": "이사, 책임자",
+        "targetScore": 650,
+        "exampleEn": "The director approved the budget.",
+        "exampleKo": "이사님이 예산을 승인했습니다."
+    },
+    {
+        "day": 9,
+        "no": 43,
+        "word": "during",
+        "meaning": "~동안에",
+        "targetScore": 650,
+        "exampleEn": "Please stay seated during the flight.",
+        "exampleKo": "비행 중에는 자리에 앉아 계십시오."
+    },
+    {
+        "day": 9,
+        "no": 44,
+        "word": "economy",
+        "meaning": "경제",
+        "targetScore": 650,
+        "exampleEn": "The global economy is recovering.",
+        "exampleKo": "세계 경제가 회복되고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 45,
+        "word": "even",
+        "meaning": "심지어; 평평한",
+        "targetScore": 650,
+        "exampleEn": "Even a child knows that.",
+        "exampleKo": "심지어 어린아이도 그것을 압니다."
+    },
+    {
+        "day": 9,
+        "no": 46,
+        "word": "fall",
+        "meaning": "떨어지다, 하락하다",
+        "targetScore": 650,
+        "exampleEn": "Leaves fall in autumn.",
+        "exampleKo": "가을에는 낙엽이 떨어집니다."
+    },
+    {
+        "day": 9,
+        "no": 47,
+        "word": "grow",
+        "meaning": "성장하다, 자라다",
+        "targetScore": 650,
+        "exampleEn": "Plants grow quickly in the rain.",
+        "exampleKo": "빗속에서 식물들은 빨리 자랍니다."
+    },
+    {
+        "day": 9,
+        "no": 48,
+        "word": "growth",
+        "meaning": "성장",
+        "targetScore": 650,
+        "exampleEn": "Economic growth is slowing down.",
+        "exampleKo": "경제 성장이 둔화되고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 49,
+        "word": "half",
+        "meaning": "절반",
+        "targetScore": 650,
+        "exampleEn": "Cut the apple in half.",
+        "exampleKo": "사과를 반으로 자르세요."
+    },
+    {
+        "day": 9,
+        "no": 50,
+        "word": "hope",
+        "meaning": "희망하다",
+        "targetScore": 650,
+        "exampleEn": "I hope to see you again.",
+        "exampleKo": "다시 만나기를 바랍니다."
+    },
+    {
+        "day": 9,
+        "no": 51,
+        "word": "industry",
+        "meaning": "산업, 업계",
+        "targetScore": 650,
+        "exampleEn": "She works in the fashion industry.",
+        "exampleKo": "그녀는 패션 업계에서 일합니다."
+    },
+    {
+        "day": 9,
+        "no": 52,
+        "word": "interest rate",
+        "meaning": "이자율, 금리",
+        "targetScore": 650,
+        "exampleEn": "Interest rates are rising.",
+        "exampleKo": "금리가 오르고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 53,
+        "word": "introduce",
+        "meaning": "소개하다, 도입하다",
+        "targetScore": 650,
+        "exampleEn": "They introduced a new system.",
+        "exampleKo": "그들은 새로운 시스템을 도입했습니다."
+    },
+    {
+        "day": 9,
+        "no": 54,
+        "word": "job",
+        "meaning": "일자리, 직업",
+        "targetScore": 650,
+        "exampleEn": "I am looking for a job.",
+        "exampleKo": "나는 일자리를 찾고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 55,
+        "word": "likely",
+        "meaning": "~할 것 같은",
+        "targetScore": 650,
+        "exampleEn": "It is likely to rain tomorrow.",
+        "exampleKo": "내일 비가 올 것 같습니다."
+    },
+    {
+        "day": 9,
+        "no": 56,
+        "word": "low",
+        "meaning": "낮은",
+        "targetScore": 650,
+        "exampleEn": "Prices are at an all-time low.",
+        "exampleKo": "가격이 사상 최저치입니다."
+    },
+    {
+        "day": 9,
+        "no": 57,
+        "word": "plan",
+        "meaning": "계획; 계획하다",
+        "targetScore": 650,
+        "exampleEn": "Do you have a plan?",
+        "exampleKo": "계획이 있습니까?"
+    },
+    {
+        "day": 9,
+        "no": 58,
+        "word": "practice",
+        "meaning": "연습하다; 관행",
+        "targetScore": 650,
+        "exampleEn": "Practice makes perfect.",
+        "exampleKo": "연습이 완벽을 만듭니다."
+    },
+    {
+        "day": 9,
+        "no": 59,
+        "word": "prepare",
+        "meaning": "준비하다",
+        "targetScore": 650,
+        "exampleEn": "She prepared a delicious meal.",
+        "exampleKo": "그녀는 맛있는 식사를 준비했습니다."
+    },
+    {
+        "day": 9,
+        "no": 60,
+        "word": "product",
+        "meaning": "제품",
+        "targetScore": 650,
+        "exampleEn": "The company launched a new product.",
+        "exampleKo": "그 회사는 신제품을 출시했습니다."
+    },
+    {
+        "day": 9,
+        "no": 61,
+        "word": "provide",
+        "meaning": "제공하다",
+        "targetScore": 650,
+        "exampleEn": "They provide free Internet access.",
+        "exampleKo": "그들은 무료 인터넷 접속을 제공합니다."
+    },
+    {
+        "day": 9,
+        "no": 62,
+        "word": "rapid",
+        "meaning": "빠른",
+        "targetScore": 650,
+        "exampleEn": "He made a rapid recovery.",
+        "exampleKo": "그는 빠르게 회복했습니다."
+    },
+    {
+        "day": 9,
+        "no": 63,
+        "word": "rate",
+        "meaning": "비율, 요금",
+        "targetScore": 650,
+        "exampleEn": "The unemployment rate is high.",
+        "exampleKo": "실업률이 높습니다."
+    },
+    {
+        "day": 9,
+        "no": 64,
+        "word": "reasonable",
+        "meaning": "합리적인",
+        "targetScore": 650,
+        "exampleEn": "The price is reasonable.",
+        "exampleKo": "가격이 합리적입니다."
+    },
+    {
+        "day": 9,
+        "no": 65,
+        "word": "reduced",
+        "meaning": "줄어든, 할인된",
+        "targetScore": 650,
+        "exampleEn": "We bought it at a reduced price.",
+        "exampleKo": "우리는 그것을 할인된 가격에 샀습니다."
+    },
+    {
+        "day": 9,
+        "no": 66,
+        "word": "related",
+        "meaning": "관련된",
+        "targetScore": 650,
+        "exampleEn": "The two crimes are related.",
+        "exampleKo": "두 범죄는 관련이 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 67,
+        "word": "remain",
+        "meaning": "남다, 여전히 ~이다",
+        "targetScore": 650,
+        "exampleEn": "The mystery remains unsolved.",
+        "exampleKo": "그 미스터리는 여전히 풀리지 않았습니다."
+    },
+    {
+        "day": 9,
+        "no": 68,
+        "word": "rise",
+        "meaning": "오르다, 상승하다",
+        "targetScore": 650,
+        "exampleEn": "The sun rises in the east.",
+        "exampleKo": "해는 동쪽에서 뜹니다."
+    }
+]

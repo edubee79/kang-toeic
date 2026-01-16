@@ -1,0 +1,362 @@
+[
+  {
+    "day": 10,
+    "no": 1,
+    "word": "purchase",
+    "meaning": "구매하다, 구매",
+    "targetScore": 650,
+    "exampleEn": "Tickets can be purchased online or at the box office.",
+    "exampleKo": "티켓은 온라인이나 매표소에서 구매할(구입할) 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 2,
+    "word": "price",
+    "meaning": "가격",
+    "targetScore": 650,
+    "exampleEn": "We offer quality products at a reasonable price.",
+    "exampleKo": "우리는 합리적인 가격에 양질의 제품을 제공합니다."
+  },
+  {
+    "day": 10,
+    "no": 3,
+    "word": "affordable",
+    "meaning": "(가격이) 알맞은, 감당할 수 있는",
+    "targetScore": 650,
+    "exampleEn": "The hotel provides affordable accommodation for travelers.",
+    "exampleKo": "그 호텔은 여행객들에게 감당할 수 있는(저렴한) 숙박 시설을 제공합니다."
+  },
+  {
+    "day": 10,
+    "no": 4,
+    "word": "exactly",
+    "meaning": "정확히",
+    "targetScore": 650,
+    "exampleEn": "The package arrived not exactly as described.",
+    "exampleKo": "소포는 설명된 것과 정확히 같지는 않게 도착했습니다."
+  },
+  {
+    "day": 10,
+    "no": 5,
+    "word": "installment",
+    "meaning": "할부",
+    "targetScore": 650,
+    "exampleEn": "You can pay for the item in monthly installments.",
+    "exampleKo": "물품 대금은 월 할부로 지불하실 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 6,
+    "word": "notice",
+    "meaning": "통지, 공고",
+    "targetScore": 650,
+    "exampleEn": "Please give us two weeks' notice before moving out.",
+    "exampleKo": "이사 나가기 전에 2주 전에 통지해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 7,
+    "word": "charge",
+    "meaning": "요금, 청구 금액, 책임, 의무, ~을 청구하다, (외상으로) 달아놓다",
+    "targetScore": 650,
+    "exampleEn": "There is an extra charge for shipping.",
+    "exampleKo": "배송에는 추가 요금(비용)이 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 8,
+    "word": "experienced",
+    "meaning": "경험이 있는, 노련한, 능숙한",
+    "targetScore": 650,
+    "exampleEn": "We are looking for an experienced sales manager.",
+    "exampleKo": "우리는 경험이 풍부한(노련한) 영업 매니저를 찾고 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 9,
+    "word": "instruction",
+    "meaning": "설명, 지시",
+    "targetScore": 650,
+    "exampleEn": "Please read the instructions carefully before use.",
+    "exampleKo": "사용 전에 설명서(지시 사항)를 주의 깊게 읽어 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 10,
+    "word": "expert",
+    "meaning": "전문가, 전문가의, 전문적인",
+    "targetScore": 650,
+    "exampleEn": "She is an expert in digital marketing.",
+    "exampleKo": "그녀는 디지털 마케팅 분야의 전문가입니다."
+  },
+  {
+    "day": 10,
+    "no": 11,
+    "word": "warranty",
+    "meaning": "(품질 등의) 보증, 보증서",
+    "targetScore": 650,
+    "exampleEn": "The product comes with a two-year warranty.",
+    "exampleKo": "그 제품은 2년 보증이 따라옵니다."
+  },
+  {
+    "day": 10,
+    "no": 12,
+    "word": "refund",
+    "meaning": "환불하다, 환불, 환불금",
+    "targetScore": 650,
+    "exampleEn": "Customers may request a full refund within 30 days.",
+    "exampleKo": "고객은 30일 이내에 전액 환불을 요청할 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 13,
+    "word": "subscriber",
+    "meaning": "가입자, 구독자",
+    "targetScore": 650,
+    "exampleEn": "The magazine offers a discount to new subscribers.",
+    "exampleKo": "그 잡지는 신규 구독자들에게 할인을 제공합니다."
+  },
+  {
+    "day": 10,
+    "no": 14,
+    "word": "delivery",
+    "meaning": "배달",
+    "targetScore": 650,
+    "exampleEn": "We guarantee free delivery on all orders.",
+    "exampleKo": "우리는 모든 주문에 대해 무료 배송을 보장합니다."
+  },
+  {
+    "day": 10,
+    "no": 15,
+    "word": "receipt",
+    "meaning": "영수증",
+    "targetScore": 650,
+    "exampleEn": "Please keep the receipt as proof of purchase.",
+    "exampleKo": "구매 증빙으로 영수증을 보관해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 16,
+    "word": "carefully",
+    "meaning": "주의 깊게, 신중히",
+    "targetScore": 650,
+    "exampleEn": "The documents must be examined carefully.",
+    "exampleKo": "문서는 주의 깊게 검토되어야 합니다."
+  },
+  {
+    "day": 10,
+    "no": 17,
+    "word": "offer",
+    "meaning": "제공하다, 제공, 오퍼",
+    "targetScore": 650,
+    "exampleEn": "The company offers a competitive salary package.",
+    "exampleKo": "그 회사는 경쟁력 있는 급여 패키지를 제공(제안)합니다."
+  },
+  {
+    "day": 10,
+    "no": 18,
+    "word": "benefit",
+    "meaning": "혜택, 이익, 혜택을 보다, 이익을 얻다",
+    "targetScore": 650,
+    "exampleEn": "Employees receive a wide range of benefits.",
+    "exampleKo": "직원들은 다양한 혜택(이익)을 받습니다."
+  },
+  {
+    "day": 10,
+    "no": 19,
+    "word": "exclusively",
+    "meaning": "오로지, 독점적으로",
+    "targetScore": 650,
+    "exampleEn": "This club is exclusively for members.",
+    "exampleKo": "이 클럽은 오직(독점적으로) 회원들만을 위한 곳입니다."
+  },
+  {
+    "day": 10,
+    "no": 20,
+    "word": "description",
+    "meaning": "(제품 등의) 설명, 해설",
+    "targetScore": 650,
+    "exampleEn": "Please provide a detailed description of the item.",
+    "exampleKo": "물품에 대한 상세한 설명을 제공해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 21,
+    "word": "relatively",
+    "meaning": "상대적으로",
+    "targetScore": 650,
+    "exampleEn": "The process is relatively simple.",
+    "exampleKo": "그 과정은 비교적 간단합니다."
+  },
+  {
+    "day": 10,
+    "no": 22,
+    "word": "preparation",
+    "meaning": "준비, 대비",
+    "targetScore": 650,
+    "exampleEn": "Preparation for the conference is underway.",
+    "exampleKo": "회의 준비가 진행 중입니다."
+  },
+  {
+    "day": 10,
+    "no": 23,
+    "word": "spare",
+    "meaning": "아끼다, 할애하다, 예배의, 여분의",
+    "targetScore": 650,
+    "exampleEn": "Do you have any spare time this afternoon?",
+    "exampleKo": "오늘 오후에 남는(여분의) 시간이 있으십니까?"
+  },
+  {
+    "day": 10,
+    "no": 24,
+    "word": "area",
+    "meaning": "지역, 구역",
+    "targetScore": 650,
+    "exampleEn": "Smoking is prohibited in this area.",
+    "exampleKo": "이 구역(지역)에서는 흡연이 금지되어 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 25,
+    "word": "clearance",
+    "meaning": "정리, 없애기, 허가",
+    "targetScore": 650,
+    "exampleEn": "All winter items are on clearance sale.",
+    "exampleKo": "모든 겨울 용품이 재고 정리(땡처리) 세일 중입니다."
+  },
+  {
+    "day": 10,
+    "no": 26,
+    "word": "alter",
+    "meaning": "(성질·형상을) 고치다, 바꾸다",
+    "targetScore": 650,
+    "exampleEn": "We can alter the suit to fit you perfectly.",
+    "exampleKo": "우리는 양복이 귀하에게 딱 맞도록 수선(변경)할 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 27,
+    "word": "apply",
+    "meaning": "적용하다, 지원하다",
+    "targetScore": 650,
+    "exampleEn": "You can apply for the membership online.",
+    "exampleKo": "온라인으로 멤버십을 신청할 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 28,
+    "word": "mutually",
+    "meaning": "서로, 상호간에",
+    "targetScore": 650,
+    "exampleEn": "The agreement was mutually beneficial.",
+    "exampleKo": "그 합의는 상호 이익이 되었습니다."
+  },
+  {
+    "day": 10,
+    "no": 29,
+    "word": "method",
+    "meaning": "방식, 방법",
+    "targetScore": 650,
+    "exampleEn": "We need to find a more efficient method.",
+    "exampleKo": "우리는 더 효율적인 방법(방식)을 찾아야 합니다."
+  },
+  {
+    "day": 10,
+    "no": 30,
+    "word": "acceptable",
+    "meaning": "용인되는, 받아들일 수 있는, 훌륭한, , 만족스러운",
+    "targetScore": 650,
+    "exampleEn": "The delay is not acceptable to our clients.",
+    "exampleKo": "지연은 우리 고객들에게 받아들여질 수 없습니다(용인될 수 없습니다)."
+  },
+  {
+    "day": 10,
+    "no": 31,
+    "word": "desire",
+    "meaning": "욕구, 갈망, 원하다, 바라다",
+    "targetScore": 650,
+    "exampleEn": "He has a strong desire to succeed.",
+    "exampleKo": "그는 성공에 대한 강한 욕구(소망)를 가지고 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 32,
+    "word": "redeemable",
+    "meaning": "(현금·상품과)교환할 수 있는, 환급할 수 있는",
+    "targetScore": 650,
+    "exampleEn": "This voucher is redeemable at any of our branches.",
+    "exampleKo": "이 상품권은 우리 지점 어디에서나 교환 가능합니다."
+  },
+  {
+    "day": 10,
+    "no": 33,
+    "word": "officially",
+    "meaning": "공식적으로",
+    "targetScore": 650,
+    "exampleEn": "The store will officially open next Monday.",
+    "exampleKo": "그 가게는 다음 주 월요일에 공식적으로 문을 열 것입니다."
+  },
+  {
+    "day": 10,
+    "no": 34,
+    "word": "consumption",
+    "meaning": "소비(량), 소모",
+    "targetScore": 650,
+    "exampleEn": "Energy consumption has increased significantly.",
+    "exampleKo": "에너지 소비량이 상당히 증가했습니다."
+  },
+  {
+    "day": 10,
+    "no": 35,
+    "word": "qualify",
+    "meaning": "~의 자격을 얻다",
+    "targetScore": 650,
+    "exampleEn": "She qualifies for the senior discount.",
+    "exampleKo": "그녀는 경로 할인 자격이 됩니다."
+  },
+  {
+    "day": 10,
+    "no": 36,
+    "word": "fabric",
+    "meaning": "섬유, 천",
+    "targetScore": 650,
+    "exampleEn": "This fabric is made of 100% cotton.",
+    "exampleKo": "이 직물(천)은 100% 면으로 만들어졌습니다."
+  },
+  {
+    "day": 10,
+    "no": 37,
+    "word": "auction",
+    "meaning": "경매",
+    "targetScore": 650,
+    "exampleEn": "The painting was sold at an auction.",
+    "exampleKo": "그 그림은 경매에서 팔렸습니다."
+  },
+  {
+    "day": 10,
+    "no": 38,
+    "word": "authentic",
+    "meaning": "진정한, 진짜의, 진품의",
+    "targetScore": 650,
+    "exampleEn": "The restaurant serves authentic Italian cuisine.",
+    "exampleKo": "그 식당은 정통 이탈리아 요리를 제공합니다 (진품의)."
+  },
+  {
+    "day": 10,
+    "no": 39,
+    "word": "valid",
+    "meaning": "유효한",
+    "targetScore": 650,
+    "exampleEn": "Your ticket is valid for one year.",
+    "exampleKo": "귀하의 티켓은 1년 동안 유효합니다."
+  },
+  {
+    "day": 10,
+    "no": 40,
+    "word": "vendor",
+    "meaning": "노점상, 가판대, 판매업체",
+    "targetScore": 650,
+    "exampleEn": "We deal with several reliable software vendors.",
+    "exampleKo": "우리는 몇몇 신뢰할 수 있는 소프트웨어 판매업체(공급업체)와 거래합니다."
+  }
+]

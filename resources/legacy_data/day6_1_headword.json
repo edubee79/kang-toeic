@@ -1,0 +1,362 @@
+[
+    {
+        "day": 6,
+        "no": 1,
+        "word": "rest",
+        "meaning": "휴식, 나머지; 쉬다",
+        "targetScore": 650,
+        "exampleEn": "You need to get some rest.",
+        "exampleKo": "당신은 휴식을 좀 취해야 합니다."
+    },
+    {
+        "day": 6,
+        "no": 2,
+        "word": "investigation",
+        "meaning": "조사",
+        "targetScore": 650,
+        "exampleEn": "The police launched an investigation.",
+        "exampleKo": "경찰은 수사에 착수했습니다."
+    },
+    {
+        "day": 6,
+        "no": 3,
+        "word": "safety",
+        "meaning": "안전",
+        "targetScore": 650,
+        "exampleEn": "Safety is our top priority.",
+        "exampleKo": "안전은 우리의 최우선 순위입니다."
+    },
+    {
+        "day": 6,
+        "no": 4,
+        "word": "consistently",
+        "meaning": "지속적으로, 일관되게",
+        "targetScore": 650,
+        "exampleEn": "He consistently performs well at work.",
+        "exampleKo": "그는 직장에서 지속적으로 좋은 성과를 냅니다."
+    },
+    {
+        "day": 6,
+        "no": 5,
+        "word": "inspect",
+        "meaning": "검사하다",
+        "targetScore": 650,
+        "exampleEn": "Inspect the equipment before use.",
+        "exampleKo": "사용 전에 장비를 검사하십시오."
+    },
+    {
+        "day": 6,
+        "no": 6,
+        "word": "unintentionally",
+        "meaning": "본의 아니게, 무심코",
+        "targetScore": 650,
+        "exampleEn": "I unintentionally offended her.",
+        "exampleKo": "나는 본의 아니게 그녀의 기분을 상하게 했습니다."
+    },
+    {
+        "day": 6,
+        "no": 7,
+        "word": "monitoring",
+        "meaning": "감시, 모니터링",
+        "targetScore": 650,
+        "exampleEn": "Monitoring the system is essential.",
+        "exampleKo": "시스템을 감시하는 것은 필수적입니다."
+    },
+    {
+        "day": 6,
+        "no": 8,
+        "word": "packaging",
+        "meaning": "포장",
+        "targetScore": 650,
+        "exampleEn": "The packaging is recyclable.",
+        "exampleKo": "그 포장은 재활용 가능합니다."
+    },
+    {
+        "day": 6,
+        "no": 9,
+        "word": "seriously",
+        "meaning": "진지하게, 심각하게",
+        "targetScore": 650,
+        "exampleEn": "Take this warning seriously.",
+        "exampleKo": "이 경고를 진지하게 받아들이세요."
+    },
+    {
+        "day": 6,
+        "no": 10,
+        "word": "occur",
+        "meaning": "일어나다, 발생하다",
+        "targetScore": 650,
+        "exampleEn": "When did the accident occur?",
+        "exampleKo": "사고가 언제 발생했습니까?"
+    },
+    {
+        "day": 6,
+        "no": 11,
+        "word": "ignore",
+        "meaning": "무시하다",
+        "targetScore": 650,
+        "exampleEn": "Don't ignore the warning signs.",
+        "exampleKo": "경고 표지판을 무시하지 마세요."
+    },
+    {
+        "day": 6,
+        "no": 12,
+        "word": "guarantee",
+        "meaning": "보장하다; 보증",
+        "targetScore": 650,
+        "exampleEn": "We guarantee customer satisfaction.",
+        "exampleKo": "우리는 고객 만족을 보장합니다."
+    },
+    {
+        "day": 6,
+        "no": 13,
+        "word": "specifically",
+        "meaning": "구체적으로, 명확하게",
+        "targetScore": 650,
+        "exampleEn": "I specifically asked for a window seat.",
+        "exampleKo": "나는 구체적으로 창가 좌석을 요청했습니다."
+    },
+    {
+        "day": 6,
+        "no": 14,
+        "word": "orient",
+        "meaning": "적응시키다, 향하게 하다",
+        "targetScore": 650,
+        "exampleEn": "New employees need to orient themselves to the office.",
+        "exampleKo": "신입 사원들은 사무실에 적응해야 합니다."
+    },
+    {
+        "day": 6,
+        "no": 15,
+        "word": "respond",
+        "meaning": "응답하다, 반응하다",
+        "targetScore": 650,
+        "exampleEn": "Please respond to my email.",
+        "exampleKo": "내 이메일에 답장해 주세요."
+    },
+    {
+        "day": 6,
+        "no": 16,
+        "word": "resemble",
+        "meaning": "닮다",
+        "targetScore": 650,
+        "exampleEn": "She resembles her mother.",
+        "exampleKo": "그녀는 어머니를 닮았습니다."
+    },
+    {
+        "day": 6,
+        "no": 17,
+        "word": "check",
+        "meaning": "확인하다, 점검하다",
+        "targetScore": 650,
+        "exampleEn": "Check the schedule again.",
+        "exampleKo": "일정을 다시 확인하세요."
+    },
+    {
+        "day": 6,
+        "no": 18,
+        "word": "environment",
+        "meaning": "환경",
+        "targetScore": 650,
+        "exampleEn": "We must protect the environment.",
+        "exampleKo": "우리는 환경을 보호해야 합니다."
+    },
+    {
+        "day": 6,
+        "no": 19,
+        "word": "manufacture",
+        "meaning": "제조하다, 생산하다",
+        "targetScore": 650,
+        "exampleEn": "They manufacture car parts.",
+        "exampleKo": "그들은 자동차 부품을 제조합니다."
+    },
+    {
+        "day": 6,
+        "no": 20,
+        "word": "release",
+        "meaning": "출시하다, 공개하다",
+        "targetScore": 650,
+        "exampleEn": "The movie will be released next week.",
+        "exampleKo": "그 영화는 다음 주에 개봉될 것입니다."
+    },
+    {
+        "day": 6,
+        "no": 21,
+        "word": "substantially",
+        "meaning": "상당히",
+        "targetScore": 650,
+        "exampleEn": "Profits increased substantially.",
+        "exampleKo": "수익이 상당히 증가했습니다."
+    },
+    {
+        "day": 6,
+        "no": 22,
+        "word": "coverage",
+        "meaning": "보상 범위, 보도",
+        "targetScore": 650,
+        "exampleEn": "The insurance policy provides full coverage.",
+        "exampleKo": "그 보험 증권은 전체 보장 범위를 제공합니다."
+    },
+    {
+        "day": 6,
+        "no": 23,
+        "word": "project",
+        "meaning": "예상하다, 계획하다; 과제",
+        "targetScore": 650,
+        "exampleEn": "Sales are projected to rise.",
+        "exampleKo": "매출이 증가할 것으로 예상됩니다."
+    },
+    {
+        "day": 6,
+        "no": 24,
+        "word": "reaction",
+        "meaning": "반응",
+        "targetScore": 650,
+        "exampleEn": "What was his reaction to the news?",
+        "exampleKo": "그 소식에 대한 그의 반응은 어떠했습니까?"
+    },
+    {
+        "day": 6,
+        "no": 25,
+        "word": "request",
+        "meaning": "요청하다, 요구하다",
+        "targetScore": 650,
+        "exampleEn": "I requested a day off.",
+        "exampleKo": "나는 하루 휴가를 요청했습니다."
+    },
+    {
+        "day": 6,
+        "no": 26,
+        "word": "anniversary",
+        "meaning": "기념일",
+        "targetScore": 650,
+        "exampleEn": "Create an invitation for our 10th anniversary.",
+        "exampleKo": "우리의 10주년 기념일 초대장을 만드세요."
+    },
+    {
+        "day": 6,
+        "no": 27,
+        "word": "rising",
+        "meaning": "상승하는, 오르는",
+        "targetScore": 650,
+        "exampleEn": "Rising costs are a concern.",
+        "exampleKo": "상승하는 비용이 우려됩니다."
+    },
+    {
+        "day": 6,
+        "no": 28,
+        "word": "reluctantly",
+        "meaning": "마지못해",
+        "targetScore": 650,
+        "exampleEn": "He reluctantly agreed to help.",
+        "exampleKo": "그는 마지못해 돕기로 동의했습니다."
+    },
+    {
+        "day": 6,
+        "no": 29,
+        "word": "contain",
+        "meaning": "포함하다, 들어있다",
+        "targetScore": 650,
+        "exampleEn": "This food contains nuts.",
+        "exampleKo": "이 음식에는 견과류가 들어 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 30,
+        "word": "allow",
+        "meaning": "허락하다",
+        "targetScore": 650,
+        "exampleEn": "Please allow me to introduce myself.",
+        "exampleKo": "제가 제 소개를 할 수 있도록 허락해 주세요."
+    },
+    {
+        "day": 6,
+        "no": 31,
+        "word": "anxious",
+        "meaning": "걱정하는, 열망하는",
+        "targetScore": 650,
+        "exampleEn": "He is anxious about the interview.",
+        "exampleKo": "그는 면접에 대해 걱정하고 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 32,
+        "word": "feedback",
+        "meaning": "의견, 반응",
+        "targetScore": 650,
+        "exampleEn": "Give me some feedback on my presentation.",
+        "exampleKo": "내 프레젠테이션에 대해 피드백을 좀 주세요."
+    },
+    {
+        "day": 6,
+        "no": 33,
+        "word": "acquire",
+        "meaning": "인수하다, 획득하다",
+        "targetScore": 650,
+        "exampleEn": "The company acquired a smaller firm.",
+        "exampleKo": "그 회사는 더 작은 회사를 인수했습니다."
+    },
+    {
+        "day": 6,
+        "no": 34,
+        "word": "limited",
+        "meaning": "제한된",
+        "targetScore": 650,
+        "exampleEn": "Tickets are limited.",
+        "exampleKo": "티켓은 제한되어 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 35,
+        "word": "finish",
+        "meaning": "끝내다",
+        "targetScore": 650,
+        "exampleEn": "I need to finish this report.",
+        "exampleKo": "나는 이 보고서를 끝내야 합니다."
+    },
+    {
+        "day": 6,
+        "no": 36,
+        "word": "propose",
+        "meaning": "제안하다",
+        "targetScore": 650,
+        "exampleEn": "He proposed a new plan.",
+        "exampleKo": "그는 새로운 계획을 제안했습니다."
+    },
+    {
+        "day": 6,
+        "no": 37,
+        "word": "intended",
+        "meaning": "의도된",
+        "targetScore": 650,
+        "exampleEn": "The message was intended for you.",
+        "exampleKo": "그 메시지는 당신을 위해 의도된 것이었습니다."
+    },
+    {
+        "day": 6,
+        "no": 38,
+        "word": "remind",
+        "meaning": "상기시키다",
+        "targetScore": 650,
+        "exampleEn": "Please remind me to call him.",
+        "exampleKo": "그에게 전화하라고 나에게 상기시켜 주세요."
+    },
+    {
+        "day": 6,
+        "no": 39,
+        "word": "switch",
+        "meaning": "바꾸다, 전환하다",
+        "targetScore": 650,
+        "exampleEn": "Let's switch seats.",
+        "exampleKo": "자리를 바꿉시다."
+    },
+    {
+        "day": 6,
+        "no": 40,
+        "word": "defective",
+        "meaning": "결함이 있는",
+        "targetScore": 650,
+        "exampleEn": "The product was defective.",
+        "exampleKo": "그 제품은 결함이 있었습니다."
+    }
+]

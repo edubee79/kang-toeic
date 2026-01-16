@@ -1,0 +1,290 @@
+[
+    {
+        "day": 19,
+        "no": 137,
+        "word": "up to",
+        "meaning": "~까지",
+        "targetScore": 900,
+        "exampleEn": "You can save up to 50% on selected items.",
+        "exampleKo": "선택된 품목에 대해 최대 50%까지 절약할 수 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 138,
+        "word": "terminology",
+        "meaning": "전문 용어",
+        "targetScore": 900,
+        "exampleEn": "The contract is full of legal terminology.",
+        "exampleKo": "그 계약서는 법률 전문 용어로 가득 차 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 139,
+        "word": "outsell",
+        "meaning": "~보다 많이 팔다",
+        "targetScore": 900,
+        "exampleEn": "The new model is expected to outsell the old one.",
+        "exampleKo": "새 모델은 구형 모델보다 많이 팔릴 것으로 예상됩니다."
+    },
+    {
+        "day": 19,
+        "no": 140,
+        "word": "outpace",
+        "meaning": "앞지르다",
+        "targetScore": 900,
+        "exampleEn": "Demand continues to outpace supply.",
+        "exampleKo": "수요가 공급을 계속해서 앞지르고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 141,
+        "word": "distributor",
+        "meaning": "분배자; 판매자",
+        "targetScore": 900,
+        "exampleEn": "We are the exclusive distributor for this product.",
+        "exampleKo": "우리는 이 제품의 독점 유통업체(판매자)입니다."
+    },
+    {
+        "day": 19,
+        "no": 142,
+        "word": "proportionate",
+        "meaning": "비례하는",
+        "targetScore": 900,
+        "exampleEn": "The punishment should be proportionate to the crime.",
+        "exampleKo": "처벌은 범죄에 비례해야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 143,
+        "word": "indicative",
+        "meaning": "나타내는, 암시하는",
+        "targetScore": 900,
+        "exampleEn": "These figures are indicative of a recovering economy.",
+        "exampleKo": "이 수치들은 경제가 회복되고 있음을 나타냅니다."
+    },
+    {
+        "day": 19,
+        "no": 144,
+        "word": "literally",
+        "meaning": "문자 그대로; 실제로",
+        "targetScore": 900,
+        "exampleEn": "I was literally speechless with shock.",
+        "exampleKo": "저는 충격으로 문자 그대로 말문이 막혔습니다."
+    },
+    {
+        "day": 19,
+        "no": 145,
+        "word": "deviate",
+        "meaning": "빗나가다, 일탈하다",
+        "targetScore": 900,
+        "exampleEn": "Do not deviate from the original plan.",
+        "exampleKo": "원래 계획에서 벗어나지(빗나가지) 마십시오."
+    },
+    {
+        "day": 19,
+        "no": 146,
+        "word": "retrieve",
+        "meaning": "되찾다",
+        "targetScore": 900,
+        "exampleEn": "I was able to retrieve the deleted files.",
+        "exampleKo": "저는 삭제된 파일을 되찾을(복구할) 수 있었습니다."
+    },
+    {
+        "day": 19,
+        "no": 147,
+        "word": "profit margin",
+        "meaning": "이윤 차액",
+        "targetScore": 900,
+        "exampleEn": "Our profit margin has increased this year.",
+        "exampleKo": "올해 우리의 이윤 차액(마진)이 증가했습니다."
+    },
+    {
+        "day": 19,
+        "no": 148,
+        "word": "variably",
+        "meaning": "변하기 쉽게, 일정치 않게",
+        "targetScore": 900,
+        "exampleEn": "The results were variably successful.",
+        "exampleKo": "결과는 일정치 않게 성공적이었습니다."
+    },
+    {
+        "day": 19,
+        "no": 149,
+        "word": "insolvent",
+        "meaning": "지불 불능의, 파산의",
+        "targetScore": 900,
+        "exampleEn": "The company became insolvent after the crisis.",
+        "exampleKo": "그 회사는 위기 이후 지불 불능(파산) 상태가 되었습니다."
+    },
+    {
+        "day": 19,
+        "no": 150,
+        "word": "steeply",
+        "meaning": "가파르게",
+        "targetScore": 900,
+        "exampleEn": "Prices rose steeply last month.",
+        "exampleKo": "지난달 가격이 가파르게 올랐습니다."
+    },
+    {
+        "day": 19,
+        "no": 151,
+        "word": "estimated",
+        "meaning": "견적의, 추측의",
+        "targetScore": 900,
+        "exampleEn": "The estimated cost is around $10,000.",
+        "exampleKo": "견적(추정) 비용은 약 1만 달러입니다."
+    },
+    {
+        "day": 19,
+        "no": 152,
+        "word": "financier",
+        "meaning": "재정가; 재무관",
+        "targetScore": 900,
+        "exampleEn": "The financier agreed to invest in the project.",
+        "exampleKo": "재정가가 그 프로젝트에 투자하기로 동의했습니다."
+    },
+    {
+        "day": 19,
+        "no": 153,
+        "word": "make forecast",
+        "meaning": "예측하다",
+        "targetScore": 900,
+        "exampleEn": "It is difficult to make forecasts about the economy.",
+        "exampleKo": "경제에 대해 예측하는 것은 어렵습니다."
+    },
+    {
+        "day": 19,
+        "no": 154,
+        "word": "signify",
+        "meaning": "의미하다",
+        "targetScore": 900,
+        "exampleEn": "A red flag signifies danger.",
+        "exampleKo": "붉은 깃발은 위험을 의미합니다."
+    },
+    {
+        "day": 19,
+        "no": 155,
+        "word": "even out",
+        "meaning": "~을 고르게 하다, 을 균등하게 나누다",
+        "targetScore": 900,
+        "exampleEn": "Prices are expected to even out soon.",
+        "exampleKo": "가격이 곧 고르게 될(안정될) 것으로 예상됩니다."
+    },
+    {
+        "day": 19,
+        "no": 156,
+        "word": "swell",
+        "meaning": "부풀다",
+        "targetScore": 900,
+        "exampleEn": "His ankle began to swell after the injury.",
+        "exampleKo": "부상 후 그의 발목이 부풀어 오르기 시작했습니다."
+    },
+    {
+        "day": 19,
+        "no": 157,
+        "word": "rewarding",
+        "meaning": "보답을 받는, 보상으로서의",
+        "targetScore": 900,
+        "exampleEn": "Teaching can be a very rewarding career.",
+        "exampleKo": "가르치는 일은 매우 보람 있는(보답을 받는) 직업일 수 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 158,
+        "word": "subside",
+        "meaning": "가라앉다, 진정되다",
+        "targetScore": 900,
+        "exampleEn": "We waited for the storm to subside.",
+        "exampleKo": "우리는 폭풍이 가라앉기를 기다렸습니다."
+    },
+    {
+        "day": 19,
+        "no": 159,
+        "word": "agile",
+        "meaning": "기민한",
+        "targetScore": 900,
+        "exampleEn": "The company needs to be agile to survive in this market.",
+        "exampleKo": "이 시장에서 살아남으려면 회사는 기민해야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 160,
+        "word": "minimally",
+        "meaning": "극히 작게, 최소한으로",
+        "targetScore": 900,
+        "exampleEn": "The new system is minimally invasive.",
+        "exampleKo": "새로운 시스템은 최소한으로 침습적입니다."
+    },
+    {
+        "day": 19,
+        "no": 161,
+        "word": "immeasurably",
+        "meaning": "헤아릴 수 없을 정도로",
+        "targetScore": 900,
+        "exampleEn": "The situation has improved immeasurably.",
+        "exampleKo": "상황이 헤아릴 수 없을 정도로 개선되었습니다."
+    },
+    {
+        "day": 19,
+        "no": 162,
+        "word": "vitally",
+        "meaning": "절대적으로, 중대하게",
+        "targetScore": 900,
+        "exampleEn": "It is vitally important to follow the rules.",
+        "exampleKo": "규칙을 따르는 것이 절대적으로(중대하게) 중요합니다."
+    },
+    {
+        "day": 19,
+        "no": 163,
+        "word": "infusion",
+        "meaning": "주입, 혼합",
+        "targetScore": 900,
+        "exampleEn": "The company needs an infusion of capital.",
+        "exampleKo": "그 회사는 자본 주입이 필요합니다."
+    },
+    {
+        "day": 19,
+        "no": 164,
+        "word": "gratified",
+        "meaning": "만족한, 기뻐하는",
+        "targetScore": 900,
+        "exampleEn": "We were gratified by the positive response.",
+        "exampleKo": "우리는 긍정적인 반응에 만족했습니다(기뻐했습니다)."
+    },
+    {
+        "day": 19,
+        "no": 165,
+        "word": "uncover",
+        "meaning": "알아내다",
+        "targetScore": 900,
+        "exampleEn": "The investigation aims to uncover the truth.",
+        "exampleKo": "그 조사는 진실을 알아내는 것을 목표로 합니다."
+    },
+    {
+        "day": 19,
+        "no": 166,
+        "word": "offset",
+        "meaning": "상쇄하다, 벌충하다",
+        "targetScore": 900,
+        "exampleEn": "The gains offset the losses.",
+        "exampleKo": "이익이 손실을 상쇄했습니다."
+    },
+    {
+        "day": 19,
+        "no": 167,
+        "word": "coil",
+        "meaning": "똘똘 감다",
+        "targetScore": 900,
+        "exampleEn": "The snake began to coil itself around the branch.",
+        "exampleKo": "뱀이 나뭇가지에 몸을 똘똘 감기 시작했습니다."
+    },
+    {
+        "day": 19,
+        "no": 168,
+        "word": "indicated",
+        "meaning": "계기에 표시된",
+        "targetScore": 900,
+        "exampleEn": "Drive at the indicated speed.",
+        "exampleKo": "계기에 표시된(지정된) 속도로 운전하십시오."
+    }
+]

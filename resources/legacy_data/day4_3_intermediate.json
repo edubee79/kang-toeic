@@ -1,0 +1,614 @@
+[
+    {
+        "day": 4,
+        "no": 69,
+        "word": "press the button",
+        "meaning": "버튼을 누르다",
+        "targetScore": 800,
+        "exampleEn": "Press the button to open the door.",
+        "exampleKo": "문을 열려면 버튼을 누르세요."
+    },
+    {
+        "day": 4,
+        "no": 70,
+        "word": "receive",
+        "meaning": "받다",
+        "targetScore": 800,
+        "exampleEn": "Did you receive my email?",
+        "exampleKo": "제 이메일을 받으셨나요?"
+    },
+    {
+        "day": 4,
+        "no": 71,
+        "word": "receptionist",
+        "meaning": "접수원",
+        "targetScore": 800,
+        "exampleEn": "The receptionist greeted the visitors.",
+        "exampleKo": "접수원이 방문객들을 맞이했습니다."
+    },
+    {
+        "day": 4,
+        "no": 72,
+        "word": "regard",
+        "meaning": "여기다, 간주하다",
+        "targetScore": 800,
+        "exampleEn": "I regard him as a close friend.",
+        "exampleKo": "나는 그를 친한 친구로 여깁니다."
+    },
+    {
+        "day": 4,
+        "no": 73,
+        "word": "regarding",
+        "meaning": "~에 관하여",
+        "targetScore": 800,
+        "exampleEn": "I am writing regarding your recent order.",
+        "exampleKo": "귀하의 최근 주문과 관련하여 글을 씁니다."
+    },
+    {
+        "day": 4,
+        "no": 74,
+        "word": "regardless of",
+        "meaning": "~에 상관없이",
+        "targetScore": 800,
+        "exampleEn": "Anyone can apply regardless of experience.",
+        "exampleKo": "경력에 상관없이 누구나 지원할 수 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 75,
+        "word": "salesclerk",
+        "meaning": "판매원",
+        "targetScore": 800,
+        "exampleEn": "Ask the salesclerk for assistance.",
+        "exampleKo": "판매원에게 도움을 요청하세요."
+    },
+    {
+        "day": 4,
+        "no": 76,
+        "word": "section",
+        "meaning": "구역, 부문",
+        "targetScore": 800,
+        "exampleEn": "This section is for non-smokers.",
+        "exampleKo": "이 구역은 비흡연자를 위한 곳입니다."
+    },
+    {
+        "day": 4,
+        "no": 77,
+        "word": "sheet",
+        "meaning": "한 장",
+        "targetScore": 800,
+        "exampleEn": "Take a clean sheet of paper.",
+        "exampleKo": "깨끗한 종이 한 장을 가져가세요."
+    },
+    {
+        "day": 4,
+        "no": 78,
+        "word": "stapler",
+        "meaning": "스테이플러",
+        "targetScore": 800,
+        "exampleEn": "My stapler is out of staples.",
+        "exampleKo": "제 스테이플러에 심이 다 떨어졌습니다."
+    },
+    {
+        "day": 4,
+        "no": 79,
+        "word": "stress",
+        "meaning": "강조하다; 스트레스",
+        "targetScore": 800,
+        "exampleEn": "The report stresses the need for change.",
+        "exampleKo": "그 보고서는 변화의 필요성을 강조합니다."
+    },
+    {
+        "day": 4,
+        "no": 80,
+        "word": "stressful",
+        "meaning": "스트레스가 많은",
+        "targetScore": 800,
+        "exampleEn": "Moving house can be very stressful.",
+        "exampleKo": "이사하는 것은 스트레스가 많을 수 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 81,
+        "word": "thorough",
+        "meaning": "철저한",
+        "targetScore": 800,
+        "exampleEn": "He did a thorough job.",
+        "exampleKo": "그는 일을 철저하게 했습니다."
+    },
+    {
+        "day": 4,
+        "no": 82,
+        "word": "thoroughly",
+        "meaning": "철저하게",
+        "targetScore": 800,
+        "exampleEn": "Wash your hands thoroughly.",
+        "exampleKo": "손을 철저하게 씻으세요."
+    },
+    {
+        "day": 4,
+        "no": 83,
+        "word": "too ~ to",
+        "meaning": "너무 ~해서 ...할 수 없다",
+        "targetScore": 800,
+        "exampleEn": "It is too late to apologize.",
+        "exampleKo": "사과하기에는 너무 늦었습니다."
+    },
+    {
+        "day": 4,
+        "no": 84,
+        "word": "typist",
+        "meaning": "타자수",
+        "targetScore": 800,
+        "exampleEn": "She works as a typist.",
+        "exampleKo": "그녀는 타자수로 일합니다."
+    },
+    {
+        "day": 4,
+        "no": 85,
+        "word": "visitor's pass",
+        "meaning": "방문증",
+        "targetScore": 800,
+        "exampleEn": "You need a visitor's pass to enter.",
+        "exampleKo": "입장하려면 방문증이 필요합니다."
+    },
+    {
+        "day": 4,
+        "no": 86,
+        "word": "accept",
+        "meaning": "수락하다",
+        "targetScore": 800,
+        "exampleEn": "He accepted the job offer.",
+        "exampleKo": "그는 일자리 제안을 수락했습니다."
+    },
+    {
+        "day": 4,
+        "no": 87,
+        "word": "acceptance",
+        "meaning": "수락",
+        "targetScore": 800,
+        "exampleEn": "We received a letter of acceptance.",
+        "exampleKo": "우리는 합격 통지서를 받았습니다."
+    },
+    {
+        "day": 4,
+        "no": 88,
+        "word": "anticipate",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "We anticipate a large crowd.",
+        "exampleKo": "우리는 많은 군중을 예상합니다."
+    },
+    {
+        "day": 4,
+        "no": 89,
+        "word": "assist with",
+        "meaning": "~을 돕다",
+        "targetScore": 800,
+        "exampleEn": "I can assist with the planning.",
+        "exampleKo": "제가 계획하는 것을 도울 수 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 90,
+        "word": "attend",
+        "meaning": "참석하다",
+        "targetScore": 800,
+        "exampleEn": "Over 100 people attended the lecture.",
+        "exampleKo": "100명이 넘는 사람들이 강의에 참석했습니다."
+    },
+    {
+        "day": 4,
+        "no": 91,
+        "word": "attendance",
+        "meaning": "출석",
+        "targetScore": 800,
+        "exampleEn": "Attendance creates a good impression.",
+        "exampleKo": "출석은 좋은 인상을 만듭니다."
+    },
+    {
+        "day": 4,
+        "no": 92,
+        "word": "attendant",
+        "meaning": "안내원, 수행원",
+        "targetScore": 800,
+        "exampleEn": "The flight attendant served drinks.",
+        "exampleKo": "승무원이 음료를 제공했습니다."
+    },
+    {
+        "day": 4,
+        "no": 93,
+        "word": "attendee",
+        "meaning": "참석자",
+        "targetScore": 800,
+        "exampleEn": "All attendees received a gift bag.",
+        "exampleKo": "모든 참석자는 선물 가방을 받았습니다."
+    },
+    {
+        "day": 4,
+        "no": 94,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 800,
+        "exampleEn": "Is this seat available?",
+        "exampleKo": "이 좌석 이용 가능한가요?"
+    },
+    {
+        "day": 4,
+        "no": 95,
+        "word": "be likely to",
+        "meaning": "~할 것 같다",
+        "targetScore": 800,
+        "exampleEn": "It is likely to rain tomorrow.",
+        "exampleKo": "내일 비가 올 것 같습니다."
+    },
+    {
+        "day": 4,
+        "no": 96,
+        "word": "confidential",
+        "meaning": "기밀의",
+        "targetScore": 800,
+        "exampleEn": "This information is strictly confidential.",
+        "exampleKo": "이 정보는 엄격한 기밀입니다."
+    },
+    {
+        "day": 4,
+        "no": 97,
+        "word": "confidentiality",
+        "meaning": "기밀 유지",
+        "targetScore": 800,
+        "exampleEn": "We guarantee client confidentiality.",
+        "exampleKo": "우리는 고객의 기밀 유지를 보장합니다."
+    },
+    {
+        "day": 4,
+        "no": 98,
+        "word": "controversial",
+        "meaning": "논란이 많은",
+        "targetScore": 800,
+        "exampleEn": "It was a controversial decision.",
+        "exampleKo": "그것은 논란이 많은 결정이었습니다."
+    },
+    {
+        "day": 4,
+        "no": 99,
+        "word": "controversy",
+        "meaning": "논란",
+        "targetScore": 800,
+        "exampleEn": "The book caused a lot of controversy.",
+        "exampleKo": "그 책은 많은 논란을 일으켰습니다."
+    },
+    {
+        "day": 4,
+        "no": 100,
+        "word": "coordinates",
+        "meaning": "조정하다",
+        "targetScore": 800,
+        "exampleEn": "She coordinates the volunteer program.",
+        "exampleKo": "그녀는 자원봉사 프로그램을 조정합니다."
+    },
+    {
+        "day": 4,
+        "no": 101,
+        "word": "courteous",
+        "meaning": "예의 바른",
+        "targetScore": 800,
+        "exampleEn": "The staff are always courteous.",
+        "exampleKo": "직원들은 항상 예의가 바릅니다."
+    },
+    {
+        "day": 4,
+        "no": 102,
+        "word": "courtesy",
+        "meaning": "예의, 공손함",
+        "targetScore": 800,
+        "exampleEn": "He treated us with courtesy.",
+        "exampleKo": "그는 우리를 예의 있게 대했습니다."
+    },
+    {
+        "day": 4,
+        "no": 103,
+        "word": "decline",
+        "meaning": "거절하다; 감소하다",
+        "targetScore": 800,
+        "exampleEn": "Sales declined this quarter.",
+        "exampleKo": "이번 분기에 매출이 감소했습니다."
+    },
+    {
+        "day": 4,
+        "no": 104,
+        "word": "deserve",
+        "meaning": "~자격이 있다",
+        "targetScore": 800,
+        "exampleEn": "They deserve to win.",
+        "exampleKo": "그들은 이길 자격이 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 105,
+        "word": "direct",
+        "meaning": "직접적인",
+        "targetScore": 800,
+        "exampleEn": "There is a direct flight to London.",
+        "exampleKo": "런던으로 가는 직항편이 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 106,
+        "word": "direction",
+        "meaning": "방향, 지시",
+        "targetScore": 800,
+        "exampleEn": "Follow the directions carefully.",
+        "exampleKo": "지시 사항을 주의 깊게 따르세요."
+    },
+    {
+        "day": 4,
+        "no": 107,
+        "word": "directory",
+        "meaning": "주소록",
+        "targetScore": 800,
+        "exampleEn": "Check the company directory.",
+        "exampleKo": "회사 주소록을 확인하세요."
+    },
+    {
+        "day": 4,
+        "no": 108,
+        "word": "drawback",
+        "meaning": "결점",
+        "targetScore": 800,
+        "exampleEn": "The main drawback is the cost.",
+        "exampleKo": "주요 결점은 비용입니다."
+    },
+    {
+        "day": 4,
+        "no": 109,
+        "word": "enlarge",
+        "meaning": "확대하다",
+        "targetScore": 800,
+        "exampleEn": "We need to enlarge the parking lot.",
+        "exampleKo": "우리는 주차장을 확대해야 합니다."
+    },
+    {
+        "day": 4,
+        "no": 110,
+        "word": "examine",
+        "meaning": "조사하다, 검진하다",
+        "targetScore": 800,
+        "exampleEn": "The doctor examined the patient.",
+        "exampleKo": "의사가 환자를 진찰했습니다."
+    },
+    {
+        "day": 4,
+        "no": 111,
+        "word": "excellent",
+        "meaning": "우수한",
+        "targetScore": 800,
+        "exampleEn": "The food was excellent.",
+        "exampleKo": "음식은 훌륭했습니다."
+    },
+    {
+        "day": 4,
+        "no": 112,
+        "word": "fascinated",
+        "meaning": "매료된",
+        "targetScore": 800,
+        "exampleEn": "I was fascinated by his story.",
+        "exampleKo": "나는 그의 이야기에 매료되었습니다."
+    },
+    {
+        "day": 4,
+        "no": 113,
+        "word": "fascinating",
+        "meaning": "대단히 흥미로운",
+        "targetScore": 800,
+        "exampleEn": "It is a fascinating subject.",
+        "exampleKo": "그것은 대단히 흥미로운 주제입니다."
+    },
+    {
+        "day": 4,
+        "no": 114,
+        "word": "formal",
+        "meaning": "격식 있는",
+        "targetScore": 800,
+        "exampleEn": "Wear formal attire to the wedding.",
+        "exampleKo": "결혼식에는 격식 있는 복장을 착용하세요."
+    },
+    {
+        "day": 4,
+        "no": 115,
+        "word": "formality",
+        "meaning": "형식상의 절차",
+        "targetScore": 800,
+        "exampleEn": "It's just a formality.",
+        "exampleKo": "그것은 단지 형식적인 절차일 뿐입니다."
+    },
+    {
+        "day": 4,
+        "no": 116,
+        "word": "handle",
+        "meaning": "다루다",
+        "targetScore": 800,
+        "exampleEn": "He knows how to handle difficult situations.",
+        "exampleKo": "그는 어려운 상황을 다루는 법을 압니다."
+    },
+    {
+        "day": 4,
+        "no": 117,
+        "word": "ideal",
+        "meaning": "이상적인",
+        "targetScore": 800,
+        "exampleEn": "This is the ideal location for a picnic.",
+        "exampleKo": "이곳은 소풍 가기에 이상적인 장소입니다."
+    },
+    {
+        "day": 4,
+        "no": 118,
+        "word": "ideally",
+        "meaning": "이상적으로",
+        "targetScore": 800,
+        "exampleEn": "Ideally, we should finish by noon.",
+        "exampleKo": "이상적으로는 정오까지 끝내야 합니다."
+    },
+    {
+        "day": 4,
+        "no": 119,
+        "word": "in a timely manner",
+        "meaning": "시기적절하게",
+        "targetScore": 800,
+        "exampleEn": "Please respond in a timely manner.",
+        "exampleKo": "시기적절하게 응답해 주세요."
+    },
+    {
+        "day": 4,
+        "no": 120,
+        "word": "lately",
+        "meaning": "최근에",
+        "targetScore": 800,
+        "exampleEn": "Have you seen him lately?",
+        "exampleKo": "최근에 그를 본 적 있나요?"
+    },
+    {
+        "day": 4,
+        "no": 121,
+        "word": "near",
+        "meaning": "가까운; 가까이",
+        "targetScore": 800,
+        "exampleEn": "The hotel is near the beach.",
+        "exampleKo": "그 호텔은 해변과 가깝습니다."
+    },
+    {
+        "day": 4,
+        "no": 122,
+        "word": "nearly",
+        "meaning": "거의",
+        "targetScore": 800,
+        "exampleEn": "It is nearly time to go.",
+        "exampleKo": "거의 갈 시간입니다."
+    },
+    {
+        "day": 4,
+        "no": 123,
+        "word": "occur",
+        "meaning": "일어나다, 발생하다",
+        "targetScore": 800,
+        "exampleEn": "Accidents can occur anywhere.",
+        "exampleKo": "사고는 어디서든 일어날 수 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 124,
+        "word": "occurrence",
+        "meaning": "발생, 사건",
+        "targetScore": 800,
+        "exampleEn": "Flooding is a common occurrence here.",
+        "exampleKo": "홍수는 이곳에서 흔한 일입니다."
+    },
+    {
+        "day": 4,
+        "no": 125,
+        "word": "personnel",
+        "meaning": "직원",
+        "targetScore": 800,
+        "exampleEn": "We are hiring new personnel.",
+        "exampleKo": "우리는 새 직원을 채용하고 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 126,
+        "word": "policy",
+        "meaning": "정책, 방침",
+        "targetScore": 800,
+        "exampleEn": "We have a strict no-smoking policy.",
+        "exampleKo": "우리는 엄격한 금연 정책을 가지고 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 127,
+        "word": "pollute",
+        "meaning": "오염시키다",
+        "targetScore": 800,
+        "exampleEn": "Factories pollute the air.",
+        "exampleKo": "공장들은 공기를 오염시킵니다."
+    },
+    {
+        "day": 4,
+        "no": 128,
+        "word": "pollution",
+        "meaning": "오염",
+        "targetScore": 800,
+        "exampleEn": "We must reduce plastic pollution.",
+        "exampleKo": "우리는 플라스틱 오염을 줄여야 합니다."
+    },
+    {
+        "day": 4,
+        "no": 129,
+        "word": "recovery",
+        "meaning": "회복",
+        "targetScore": 800,
+        "exampleEn": "He made a full recovery.",
+        "exampleKo": "그는 완전히 회복했습니다."
+    },
+    {
+        "day": 4,
+        "no": 130,
+        "word": "regain",
+        "meaning": "되찾다",
+        "targetScore": 800,
+        "exampleEn": "He managed to regain control of the car.",
+        "exampleKo": "그는 겨우 차의 통제력을 되찾았습니다."
+    },
+    {
+        "day": 4,
+        "no": 131,
+        "word": "regards",
+        "meaning": "안부",
+        "targetScore": 800,
+        "exampleEn": "Give my best regards to your family.",
+        "exampleKo": "당신 가족에게 안부 전해주세요."
+    },
+    {
+        "day": 4,
+        "no": 132,
+        "word": "report",
+        "meaning": "보고하다; 보고서",
+        "targetScore": 800,
+        "exampleEn": "The journalist reported on the war.",
+        "exampleKo": "그 기자는 전쟁에 대해 보도했습니다."
+    },
+    {
+        "day": 4,
+        "no": 133,
+        "word": "reportedly",
+        "meaning": "보도에 따르면",
+        "targetScore": 800,
+        "exampleEn": "He is reportedly earning a high salary.",
+        "exampleKo": "보도에 따르면 그는 높은 연봉을 받고 있다고 합니다."
+    },
+    {
+        "day": 4,
+        "no": 134,
+        "word": "return",
+        "meaning": "돌아오다; 반납하다",
+        "targetScore": 800,
+        "exampleEn": "Please return the books to the library.",
+        "exampleKo": "책들을 도서관에 반납해 주세요."
+    },
+    {
+        "day": 4,
+        "no": 135,
+        "word": "situate",
+        "meaning": "위치시키다",
+        "targetScore": 800,
+        "exampleEn": "The hotel is situated near the park.",
+        "exampleKo": "그 호텔은 공원 근처에 위치해 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 136,
+        "word": "situation",
+        "meaning": "상황",
+        "targetScore": 800,
+        "exampleEn": "We are closely monitoring the situation.",
+        "exampleKo": "우리는 상황을 예의주시하고 있습니다."
+    }
+]

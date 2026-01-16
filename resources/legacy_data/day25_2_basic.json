@@ -1,0 +1,254 @@
+[
+  {
+    "day": 25,
+    "no": 41,
+    "word": "adjacent",
+    "meaning": "인접한",
+    "targetScore": 650,
+    "exampleEn": "The parking garage is adjacent to the office building.",
+    "exampleKo": "주차장은 사무실 건물에 인접해 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 42,
+    "word": "alternate",
+    "meaning": "대체의; 교대하다",
+    "targetScore": 650,
+    "exampleEn": "Please use the alternate entrance during construction.",
+    "exampleKo": "공사 중에는 대체 입구를 이용하세요."
+  },
+  {
+    "day": 25,
+    "no": 43,
+    "word": "commuter",
+    "meaning": "통근자",
+    "targetScore": 650,
+    "exampleEn": "The train is crowded with commuters in the morning.",
+    "exampleKo": "아침에 기차는 통근자들로 붐빕니다."
+  },
+  {
+    "day": 25,
+    "no": 44,
+    "word": "crosswalk",
+    "meaning": "횡단보도",
+    "targetScore": 650,
+    "exampleEn": "Always use the crosswalk when crossing the street.",
+    "exampleKo": "길을 건널 때는 항상 횡단보도를 이용하세요."
+  },
+  {
+    "day": 25,
+    "no": 45,
+    "word": "curb",
+    "meaning": "연석",
+    "targetScore": 650,
+    "exampleEn": "Please park your car at the curb.",
+    "exampleKo": "연석에 차를 주차하세요."
+  },
+  {
+    "day": 25,
+    "no": 46,
+    "word": "detain",
+    "meaning": "지체시키다",
+    "targetScore": 650,
+    "exampleEn": "The accident detained traffic for two hours.",
+    "exampleKo": "사고로 교통이 2시간 지체되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 47,
+    "word": "divert",
+    "meaning": "우회시키다",
+    "targetScore": 650,
+    "exampleEn": "Traffic was diverted due to road repairs.",
+    "exampleKo": "도로 보수로 인해 교통이 우회되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 48,
+    "word": "embark",
+    "meaning": "승선하다, 착수하다",
+    "targetScore": 650,
+    "exampleEn": "Passengers will embark at gate 15.",
+    "exampleKo": "승객들은 15번 게이트에서 탑승할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 49,
+    "word": "expedite",
+    "meaning": "신속히 처리하다",
+    "targetScore": 650,
+    "exampleEn": "We will expedite your baggage claim.",
+    "exampleKo": "귀하의 수하물 찾기를 신속히 처리하겠습니다."
+  },
+  {
+    "day": 25,
+    "no": 50,
+    "word": "itinerary",
+    "meaning": "여행 일정",
+    "targetScore": 650,
+    "exampleEn": "Please review your travel itinerary carefully.",
+    "exampleKo": "여행 일정을 주의 깊게 검토하세요."
+  },
+  {
+    "day": 25,
+    "no": 51,
+    "word": "junction",
+    "meaning": "교차점",
+    "targetScore": 650,
+    "exampleEn": "Turn right at the next junction.",
+    "exampleKo": "다음 교차점에서 우회전하세요."
+  },
+  {
+    "day": 25,
+    "no": 52,
+    "word": "merge",
+    "meaning": "합류하다",
+    "targetScore": 650,
+    "exampleEn": "Vehicles must merge carefully onto the highway.",
+    "exampleKo": "차량은 고속도로로 조심스럽게 합류해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 53,
+    "word": "obstruct",
+    "meaning": "방해하다",
+    "targetScore": 650,
+    "exampleEn": "Do not obstruct the emergency exit.",
+    "exampleKo": "비상구를 막지 마세요."
+  },
+  {
+    "day": 25,
+    "no": 54,
+    "word": "overpass",
+    "meaning": "고가도로",
+    "targetScore": 650,
+    "exampleEn": "Use the overpass to cross the highway safely.",
+    "exampleKo": "고속도로를 안전하게 건너려면 고가도로를 이용하세요."
+  },
+  {
+    "day": 25,
+    "no": 55,
+    "word": "proceed",
+    "meaning": "진행하다",
+    "targetScore": 650,
+    "exampleEn": "Please proceed to the boarding gate.",
+    "exampleKo": "탑승 게이트로 진행하세요."
+  },
+  {
+    "day": 25,
+    "no": 56,
+    "word": "punctual",
+    "meaning": "시간을 엄수하는",
+    "targetScore": 650,
+    "exampleEn": "The train service is known for being punctual.",
+    "exampleKo": "기차 서비스는 시간을 엄수하는 것으로 알려져 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 57,
+    "word": "refund",
+    "meaning": "환불; 환불하다",
+    "targetScore": 650,
+    "exampleEn": "Tickets are non-refundable after purchase.",
+    "exampleKo": "티켓은 구매 후 환불이 불가능합니다."
+  },
+  {
+    "day": 25,
+    "no": 58,
+    "word": "reservation",
+    "meaning": "예약",
+    "targetScore": 650,
+    "exampleEn": "I'd like to make a reservation for two.",
+    "exampleKo": "2명 예약하고 싶습니다."
+  },
+  {
+    "day": 25,
+    "no": 59,
+    "word": "restrict",
+    "meaning": "제한하다",
+    "targetScore": 650,
+    "exampleEn": "Parking is restricted to permit holders only.",
+    "exampleKo": "주차는 허가증 소지자로만 제한됩니다."
+  },
+  {
+    "day": 25,
+    "no": 60,
+    "word": "roundabout",
+    "meaning": "로터리",
+    "targetScore": 650,
+    "exampleEn": "Take the second exit at the roundabout.",
+    "exampleKo": "로터리에서 두 번째 출구로 나가세요."
+  },
+  {
+    "day": 25,
+    "no": 61,
+    "word": "shuttle",
+    "meaning": "셔틀",
+    "targetScore": 650,
+    "exampleEn": "A free shuttle bus runs between terminals.",
+    "exampleKo": "터미널 간 무료 셔틀버스가 운행됩니다."
+  },
+  {
+    "day": 25,
+    "no": 62,
+    "word": "signage",
+    "meaning": "표지판",
+    "targetScore": 650,
+    "exampleEn": "Follow the signage to the parking area.",
+    "exampleKo": "주차 구역으로 가는 표지판을 따라가세요."
+  },
+  {
+    "day": 25,
+    "no": 63,
+    "word": "transit",
+    "meaning": "운송, 통과",
+    "targetScore": 650,
+    "exampleEn": "The city has an excellent public transit system.",
+    "exampleKo": "도시는 훌륭한 대중교통 시스템을 갖추고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 64,
+    "word": "underpass",
+    "meaning": "지하도",
+    "targetScore": 650,
+    "exampleEn": "Use the underpass to reach the other platform.",
+    "exampleKo": "다른 승강장에 가려면 지하도를 이용하세요."
+  },
+  {
+    "day": 25,
+    "no": 65,
+    "word": "upgrade",
+    "meaning": "업그레이드; 업그레이드하다",
+    "targetScore": 650,
+    "exampleEn": "You can upgrade to business class for $200.",
+    "exampleKo": "200달러에 비즈니스 클래스로 업그레이드할 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 66,
+    "word": "validate",
+    "meaning": "유효하게 하다",
+    "targetScore": 650,
+    "exampleEn": "Please validate your parking ticket before leaving.",
+    "exampleKo": "떠나기 전에 주차권을 확인받으세요."
+  },
+  {
+    "day": 25,
+    "no": 67,
+    "word": "via",
+    "meaning": "~을 경유하여",
+    "targetScore": 650,
+    "exampleEn": "The flight goes to Paris via London.",
+    "exampleKo": "비행기는 런던을 경유하여 파리로 갑니다."
+  },
+  {
+    "day": 25,
+    "no": 68,
+    "word": "yield",
+    "meaning": "양보하다",
+    "targetScore": 650,
+    "exampleEn": "Drivers must yield to pedestrians at crosswalks.",
+    "exampleKo": "운전자는 횡단보도에서 보행자에게 양보해야 합니다."
+  }
+]

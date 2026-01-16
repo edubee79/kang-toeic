@@ -1,0 +1,254 @@
+[
+    {
+        "day": 23,
+        "no": 41,
+        "word": "application",
+        "meaning": "지원, 신청",
+        "targetScore": 650,
+        "exampleEn": "Submit an application.",
+        "exampleKo": "신청서를 제출하다."
+    },
+    {
+        "day": 23,
+        "no": 42,
+        "word": "apply",
+        "meaning": "신청하다, 적용하다",
+        "targetScore": 650,
+        "exampleEn": "Apply for a job.",
+        "exampleKo": "일자리에 지원하다."
+    },
+    {
+        "day": 23,
+        "no": 43,
+        "word": "arrange",
+        "meaning": "마련하다, 정리하다",
+        "targetScore": 650,
+        "exampleEn": "Arrange a meeting.",
+        "exampleKo": "회의를 마련하다."
+    },
+    {
+        "day": 23,
+        "no": 44,
+        "word": "book",
+        "meaning": "예약하다; 책",
+        "targetScore": 650,
+        "exampleEn": "Book a ticket.",
+        "exampleKo": "표를 예약하다."
+    },
+    {
+        "day": 23,
+        "no": 45,
+        "word": "company",
+        "meaning": "회사, 일행",
+        "targetScore": 650,
+        "exampleEn": "Work for a company.",
+        "exampleKo": "회사에서 일하다."
+    },
+    {
+        "day": 23,
+        "no": 46,
+        "word": "design",
+        "meaning": "디자인; 설계하다",
+        "targetScore": 650,
+        "exampleEn": "New design.",
+        "exampleKo": "새로운 디자인."
+    },
+    {
+        "day": 23,
+        "no": 47,
+        "word": "distribute",
+        "meaning": "나누어 주다, 유통하다",
+        "targetScore": 650,
+        "exampleEn": "Distribute handouts.",
+        "exampleKo": "유인물을 나누어 주다."
+    },
+    {
+        "day": 23,
+        "no": 48,
+        "word": "enrollment",
+        "meaning": "등록",
+        "targetScore": 650,
+        "exampleEn": "Open enrollment.",
+        "exampleKo": "공개 등록."
+    },
+    {
+        "day": 23,
+        "no": 49,
+        "word": "experience",
+        "meaning": "경험; 경험하다",
+        "targetScore": 650,
+        "exampleEn": "Gain experience.",
+        "exampleKo": "경험을 쌓다."
+    },
+    {
+        "day": 23,
+        "no": 50,
+        "word": "fix",
+        "meaning": "고치다, 정하다",
+        "targetScore": 650,
+        "exampleEn": "Fix the problem.",
+        "exampleKo": "문제를 해결하다."
+    },
+    {
+        "day": 23,
+        "no": 51,
+        "word": "hiring",
+        "meaning": "고용",
+        "targetScore": 650,
+        "exampleEn": "Hiring process.",
+        "exampleKo": "채용 과정."
+    },
+    {
+        "day": 23,
+        "no": 52,
+        "word": "hold",
+        "meaning": "열다, 잡다",
+        "targetScore": 650,
+        "exampleEn": "Hold a conference.",
+        "exampleKo": "회의를 열다."
+    },
+    {
+        "day": 23,
+        "no": 53,
+        "word": "holiday",
+        "meaning": "휴가, 공휴일",
+        "targetScore": 650,
+        "exampleEn": "Public holiday.",
+        "exampleKo": "공휴일."
+    },
+    {
+        "day": 23,
+        "no": 54,
+        "word": "hotel",
+        "meaning": "호텔",
+        "targetScore": 650,
+        "exampleEn": "Stay at a hotel.",
+        "exampleKo": "호텔에 머물다."
+    },
+    {
+        "day": 23,
+        "no": 55,
+        "word": "join",
+        "meaning": "함께하다, 가입하다",
+        "targetScore": 650,
+        "exampleEn": "Join the club.",
+        "exampleKo": "클럽에 가입하다."
+    },
+    {
+        "day": 23,
+        "no": 56,
+        "word": "marketing",
+        "meaning": "마케팅",
+        "targetScore": 650,
+        "exampleEn": "Marketing strategy.",
+        "exampleKo": "마케팅 전략."
+    },
+    {
+        "day": 23,
+        "no": 57,
+        "word": "office",
+        "meaning": "사무실",
+        "targetScore": 650,
+        "exampleEn": "Office building.",
+        "exampleKo": "사무실 건물."
+    },
+    {
+        "day": 23,
+        "no": 58,
+        "word": "opening",
+        "meaning": "개점, 공석",
+        "targetScore": 650,
+        "exampleEn": "Grand opening.",
+        "exampleKo": "개점."
+    },
+    {
+        "day": 23,
+        "no": 59,
+        "word": "plan",
+        "meaning": "계획; 계획하다",
+        "targetScore": 650,
+        "exampleEn": "Business plan.",
+        "exampleKo": "사업 계획."
+    },
+    {
+        "day": 23,
+        "no": 60,
+        "word": "position",
+        "meaning": "위치, 직책",
+        "targetScore": 650,
+        "exampleEn": "Apply for a position.",
+        "exampleKo": "직책에 지원하다."
+    },
+    {
+        "day": 23,
+        "no": 61,
+        "word": "prepare",
+        "meaning": "준비하다",
+        "targetScore": 650,
+        "exampleEn": "Prepare for the exam.",
+        "exampleKo": "시험을 준비하다."
+    },
+    {
+        "day": 23,
+        "no": 62,
+        "word": "promote",
+        "meaning": "승진시키다, 홍보하다",
+        "targetScore": 650,
+        "exampleEn": "Promote a product.",
+        "exampleKo": "제품을 홍보하다."
+    },
+    {
+        "day": 23,
+        "no": 63,
+        "word": "recruit",
+        "meaning": "모집하다; 신입 사원",
+        "targetScore": 650,
+        "exampleEn": "Recruit new staff.",
+        "exampleKo": "새 직원을 모집하다."
+    },
+    {
+        "day": 23,
+        "no": 64,
+        "word": "serve",
+        "meaning": "시중들다, 근무하다",
+        "targetScore": 650,
+        "exampleEn": "Serve customers.",
+        "exampleKo": "고객을 시중들다."
+    },
+    {
+        "day": 23,
+        "no": 65,
+        "word": "staff",
+        "meaning": "직원",
+        "targetScore": 650,
+        "exampleEn": "Friendly staff.",
+        "exampleKo": "친절한 직원."
+    },
+    {
+        "day": 23,
+        "no": 66,
+        "word": "training",
+        "meaning": "훈련, 연수",
+        "targetScore": 650,
+        "exampleEn": "Job training.",
+        "exampleKo": "직무 훈련."
+    },
+    {
+        "day": 23,
+        "no": 67,
+        "word": "travel",
+        "meaning": "여행하다; 여행",
+        "targetScore": 650,
+        "exampleEn": "Travel abroad.",
+        "exampleKo": "해외여행을 하다."
+    },
+    {
+        "day": 23,
+        "no": 68,
+        "word": "a letter of gratitude",
+        "meaning": "감사 편지",
+        "targetScore": 650,
+        "exampleEn": "Send a letter of gratitude.",
+        "exampleKo": "감사 편지를 보내다."
+    }
+]

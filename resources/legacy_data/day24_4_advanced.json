@@ -1,0 +1,290 @@
+[
+    {
+        "day": 24,
+        "no": 137,
+        "word": "understaffed",
+        "meaning": "인원 부족의",
+        "targetScore": 900,
+        "exampleEn": "The department is severely understaffed during peak season.",
+        "exampleKo": "그 부서는 성수기 동안 심각하게 인원이 부족합니다."
+    },
+    {
+        "day": 24,
+        "no": 138,
+        "word": "in one's grasp",
+        "meaning": "~의 수중에",
+        "targetScore": 900,
+        "exampleEn": "Success is within our grasp if we work together.",
+        "exampleKo": "함께 일한다면 성공이 우리 손안에 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 139,
+        "word": "absenteeism",
+        "meaning": "결근",
+        "targetScore": 900,
+        "exampleEn": "High absenteeism rates indicate low employee morale.",
+        "exampleKo": "높은 결근율은 낮은 직원 사기를 나타냅니다."
+    },
+    {
+        "day": 24,
+        "no": 140,
+        "word": "acumen",
+        "meaning": "통찰력",
+        "targetScore": 900,
+        "exampleEn": "Her business acumen led to significant profits.",
+        "exampleKo": "그녀의 사업 통찰력은 상당한 이익으로 이어졌습니다."
+    },
+    {
+        "day": 24,
+        "no": 141,
+        "word": "adept",
+        "meaning": "숙련된",
+        "targetScore": 900,
+        "exampleEn": "He is adept at managing complex negotiations.",
+        "exampleKo": "그는 복잡한 협상 관리에 숙련되어 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 142,
+        "word": "adhere",
+        "meaning": "고수하다",
+        "targetScore": 900,
+        "exampleEn": "All staff must adhere to the company's code of conduct.",
+        "exampleKo": "모든 직원은 회사의 행동 강령을 고수해야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 143,
+        "word": "adverse",
+        "meaning": "불리한",
+        "targetScore": 900,
+        "exampleEn": "The adverse economic conditions affected hiring plans.",
+        "exampleKo": "불리한 경제 상황이 채용 계획에 영향을 미쳤습니다."
+    },
+    {
+        "day": 24,
+        "no": 144,
+        "word": "allegiance",
+        "meaning": "충성",
+        "targetScore": 900,
+        "exampleEn": "Employees showed strong allegiance to the company.",
+        "exampleKo": "직원들은 회사에 강한 충성심을 보였습니다."
+    },
+    {
+        "day": 24,
+        "no": 145,
+        "word": "alleviate",
+        "meaning": "완화하다",
+        "targetScore": 900,
+        "exampleEn": "The new policy helped alleviate workplace stress.",
+        "exampleKo": "새로운 정책은 직장 스트레스를 완화하는 데 도움이 되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 146,
+        "word": "ambiguous",
+        "meaning": "애매한",
+        "targetScore": 900,
+        "exampleEn": "The contract terms were too ambiguous and needed clarification.",
+        "exampleKo": "계약 조건이 너무 애매해서 명확히 할 필요가 있었습니다."
+    },
+    {
+        "day": 24,
+        "no": 147,
+        "word": "arduous",
+        "meaning": "힘든",
+        "targetScore": 900,
+        "exampleEn": "The recruitment process was long and arduous.",
+        "exampleKo": "채용 과정은 길고 힘들었습니다."
+    },
+    {
+        "day": 24,
+        "no": 148,
+        "word": "astute",
+        "meaning": "기민한",
+        "targetScore": 900,
+        "exampleEn": "Her astute observations improved the hiring process.",
+        "exampleKo": "그녀의 기민한 관찰은 채용 과정을 개선했습니다."
+    },
+    {
+        "day": 24,
+        "no": 149,
+        "word": "attrition",
+        "meaning": "마모, 감소",
+        "targetScore": 900,
+        "exampleEn": "The company faces high staff attrition rates.",
+        "exampleKo": "회사는 높은 직원 감소율에 직면해 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 150,
+        "word": "auspices",
+        "meaning": "후원",
+        "targetScore": 900,
+        "exampleEn": "The training was conducted under the auspices of the HR department.",
+        "exampleKo": "교육은 인사부의 후원 하에 실시되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 151,
+        "word": "caliber",
+        "meaning": "능력, 수준",
+        "targetScore": 900,
+        "exampleEn": "We are looking for candidates of the highest caliber.",
+        "exampleKo": "우리는 최고 수준의 후보자를 찾고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 152,
+        "word": "commensurate",
+        "meaning": "상응하는",
+        "targetScore": 900,
+        "exampleEn": "The salary is commensurate with experience and qualifications.",
+        "exampleKo": "급여는 경험과 자격에 상응합니다."
+    },
+    {
+        "day": 24,
+        "no": 153,
+        "word": "compelling",
+        "meaning": "강력한",
+        "targetScore": 900,
+        "exampleEn": "She presented a compelling case for the promotion.",
+        "exampleKo": "그녀는 승진에 대한 강력한 근거를 제시했습니다."
+    },
+    {
+        "day": 24,
+        "no": 154,
+        "word": "complacent",
+        "meaning": "안주하는",
+        "targetScore": 900,
+        "exampleEn": "Employees should not become complacent about safety.",
+        "exampleKo": "직원들은 안전에 대해 안주해서는 안 됩니다."
+    },
+    {
+        "day": 24,
+        "no": 155,
+        "word": "concerted",
+        "meaning": "협력한",
+        "targetScore": 900,
+        "exampleEn": "A concerted effort by all departments led to success.",
+        "exampleKo": "모든 부서의 협력한 노력이 성공으로 이어졌습니다."
+    },
+    {
+        "day": 24,
+        "no": 156,
+        "word": "conducive",
+        "meaning": "도움이 되는",
+        "targetScore": 900,
+        "exampleEn": "The office environment is conducive to productivity.",
+        "exampleKo": "사무실 환경은 생산성에 도움이 됩니다."
+    },
+    {
+        "day": 24,
+        "no": 157,
+        "word": "conscientious",
+        "meaning": "성실한",
+        "targetScore": 900,
+        "exampleEn": "She is a conscientious worker who pays attention to detail.",
+        "exampleKo": "그녀는 세부 사항에 주의를 기울이는 성실한 근로자입니다."
+    },
+    {
+        "day": 24,
+        "no": 158,
+        "word": "contingent",
+        "meaning": "조건부의",
+        "targetScore": 900,
+        "exampleEn": "The job offer is contingent upon passing the background check.",
+        "exampleKo": "채용 제안은 신원 조회 통과를 조건으로 합니다."
+    },
+    {
+        "day": 24,
+        "no": 159,
+        "word": "daunting",
+        "meaning": "벅찬",
+        "targetScore": 900,
+        "exampleEn": "The new role presents daunting challenges.",
+        "exampleKo": "새로운 역할은 벅찬 도전을 제시합니다."
+    },
+    {
+        "day": 24,
+        "no": 160,
+        "word": "deter",
+        "meaning": "단념시키다",
+        "targetScore": 900,
+        "exampleEn": "Strict policies deter employees from misconduct.",
+        "exampleKo": "엄격한 정책은 직원들의 비행을 단념시킵니다."
+    },
+    {
+        "day": 24,
+        "no": 161,
+        "word": "diligence",
+        "meaning": "근면",
+        "targetScore": 900,
+        "exampleEn": "His diligence and dedication earned him a promotion.",
+        "exampleKo": "그의 근면과 헌신이 그에게 승진을 안겨주었습니다."
+    },
+    {
+        "day": 24,
+        "no": 162,
+        "word": "discern",
+        "meaning": "식별하다",
+        "targetScore": 900,
+        "exampleEn": "It can be difficult to discern the best candidate.",
+        "exampleKo": "최고의 후보자를 식별하는 것은 어려울 수 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 163,
+        "word": "discretionary",
+        "meaning": "재량의",
+        "targetScore": 900,
+        "exampleEn": "Managers receive discretionary bonuses based on performance.",
+        "exampleKo": "관리자들은 성과에 따라 재량 보너스를 받습니다."
+    },
+    {
+        "day": 24,
+        "no": 164,
+        "word": "disparity",
+        "meaning": "불균형",
+        "targetScore": 900,
+        "exampleEn": "There is a significant wage disparity between departments.",
+        "exampleKo": "부서 간 상당한 임금 불균형이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 165,
+        "word": "exemplify",
+        "meaning": "예시하다",
+        "targetScore": 900,
+        "exampleEn": "Her work ethic exemplifies company values.",
+        "exampleKo": "그녀의 직업 윤리는 회사 가치를 예시합니다."
+    },
+    {
+        "day": 24,
+        "no": 166,
+        "word": "incumbent",
+        "meaning": "현직의",
+        "targetScore": 900,
+        "exampleEn": "The incumbent manager will retire next month.",
+        "exampleKo": "현직 관리자는 다음 달 은퇴할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 167,
+        "word": "extraordinary feat",
+        "meaning": "놀랄 만한 업적",
+        "targetScore": 900,
+        "exampleEn": "Completing the project early was an extraordinary feat.",
+        "exampleKo": "프로젝트를 일찍 완료한 것은 놀랄 만한 업적이었습니다."
+    },
+    {
+        "day": 24,
+        "no": 168,
+        "word": "irreversible",
+        "meaning": "되돌릴 수 없는",
+        "targetScore": 900,
+        "exampleEn": "The decision to restructure was irreversible.",
+        "exampleKo": "구조 조정 결정은 되돌릴 수 없었습니다."
+    }
+]

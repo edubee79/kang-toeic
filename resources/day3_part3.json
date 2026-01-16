@@ -1,0 +1,614 @@
+[
+  {
+    "day": 3,
+    "no": 69,
+    "word": "adjust the mirror",
+    "meaning": "거울을 똑바로 맞추다",
+    "targetScore": 800,
+    "exampleEn": "Before driving, please adjust the rearview mirror for better visibility.",
+    "exampleKo": "운전하기 전에, 더 나은 시야 확보를 위해 백미러를 조정해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 70,
+    "word": "advance reservation",
+    "meaning": "사전 예약",
+    "targetScore": 800,
+    "exampleEn": "We recommend making an advance reservation to secure a table.",
+    "exampleKo": "테이블을 확보하기 위해 사전 예약을 하시는 것을 권장합니다."
+  },
+  {
+    "day": 3,
+    "no": 71,
+    "word": "arrange an appointment",
+    "meaning": "약속을 잡다",
+    "targetScore": 800,
+    "exampleEn": "I will arrange an appointment with the director for next Tuesday.",
+    "exampleKo": "다음 주 화요일에 이사님과의 약속을 잡겠습니다."
+  },
+  {
+    "day": 3,
+    "no": 72,
+    "word": "bulletin board",
+    "meaning": "게시판",
+    "targetScore": 800,
+    "exampleEn": "Important notices are posted on the bulletin board in the lobby.",
+    "exampleKo": "중요 공지 사항들은 로비에 있는 게시판에 게시되어 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 73,
+    "word": "call back",
+    "meaning": "회신 전화하다",
+    "targetScore": 800,
+    "exampleEn": "Please call back during our regular business hours.",
+    "exampleKo": "정규 영업 시간 중에 다시 전화해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 74,
+    "word": "confused",
+    "meaning": "혼란스러운, 당황한",
+    "targetScore": 800,
+    "exampleEn": "Many customers were confused by the misleading advertisement.",
+    "exampleKo": "많은 고객들이 오해의 소지가 있는 광고 때문에 혼란스러워했습니다."
+  },
+  {
+    "day": 3,
+    "no": 75,
+    "word": "errand",
+    "meaning": "심부름",
+    "targetScore": 800,
+    "exampleEn": "I have to run an errand for my boss this afternoon.",
+    "exampleKo": "저는 오늘 오후에 상사의 심부름을 다녀와야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 76,
+    "word": "extend an invitation",
+    "meaning": "초대하다",
+    "targetScore": 800,
+    "exampleEn": "We would like to extend an invitation to our annual gala.",
+    "exampleKo": "저희 연례 갈라 행사에 귀하를 초대하고 싶습니다."
+  },
+  {
+    "day": 3,
+    "no": 77,
+    "word": "get a permit",
+    "meaning": "허가를 받다",
+    "targetScore": 800,
+    "exampleEn": "You must get a permit from the city council to host the event.",
+    "exampleKo": "행사를 주최하려면 시 의회로부터 허가를 받아야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 78,
+    "word": "hand in",
+    "meaning": "제출하다",
+    "targetScore": 800,
+    "exampleEn": "Please hand in your resignation letter by the end of the week.",
+    "exampleKo": "이번 주말까지 사직서를 제출해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 79,
+    "word": "have a day off",
+    "meaning": "하루 쉬다",
+    "targetScore": 800,
+    "exampleEn": "Employees are entitled to have a day off on their birthday.",
+    "exampleKo": "직원들은 자신의 생일에 하루 쉴 자격이 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 80,
+    "word": "have a long day",
+    "meaning": "힘든 하루를 보내다",
+    "targetScore": 800,
+    "exampleEn": "After dealing with customer complaints all day, I had a long day.",
+    "exampleKo": "하루 종일 고객 불만을 처리하느라 힘든 하루를 보냈습니다."
+  },
+  {
+    "day": 3,
+    "no": 81,
+    "word": "head up",
+    "meaning": "이끌다, 책임지다",
+    "targetScore": 800,
+    "exampleEn": "Mr. Smith was chosen to head up the new research division.",
+    "exampleKo": "스미스 씨가 새로운 연구 부서를 이끌도록 선정되었습니다."
+  },
+  {
+    "day": 3,
+    "no": 82,
+    "word": "in a hurry",
+    "meaning": "서둘러, 급히",
+    "targetScore": 800,
+    "exampleEn": "We are in a hurry to meet the production deadline.",
+    "exampleKo": "우리는 생산 마감 시한을 맞추기 위해 서두르고 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 83,
+    "word": "in alphabetical order",
+    "meaning": "알파벳 순으로",
+    "targetScore": 800,
+    "exampleEn": "The files should be organized in alphabetical order.",
+    "exampleKo": "파일들은 알파벳 순서대로 정리되어야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 84,
+    "word": "in luck",
+    "meaning": "운이 좋은",
+    "targetScore": 800,
+    "exampleEn": "You are in luck because we have one seat remaining.",
+    "exampleKo": "좌석이 하나 남아 있으니 당신은 운이 좋습니다."
+  },
+  {
+    "day": 3,
+    "no": 85,
+    "word": "leave A up to B",
+    "meaning": "A를 B에게 맡기다",
+    "targetScore": 800,
+    "exampleEn": "I will leave the decision up to the marketing manager.",
+    "exampleKo": "결정은 마케팅 매니저에게 맡기겠습니다."
+  },
+  {
+    "day": 3,
+    "no": 86,
+    "word": "leave A with B",
+    "meaning": "A를 B에게 맡기다",
+    "targetScore": 800,
+    "exampleEn": "Please leave your contact information with the receptionist.",
+    "exampleKo": "접수원에게 귀하의 연락처 정보를 남겨 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 87,
+    "word": "listing",
+    "meaning": "목록",
+    "targetScore": 800,
+    "exampleEn": "The directory contains a listing of all local businesses.",
+    "exampleKo": "그 디렉터리에는 모든 지역 업체의 목록이 포함되어 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 88,
+    "word": "make a call",
+    "meaning": "전화를 걸다",
+    "targetScore": 800,
+    "exampleEn": "I need to make a call to our supplier regarding the shipment.",
+    "exampleKo": "선적과 관련하여 공급업체에 전화를 걸어야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 89,
+    "word": "make a correction",
+    "meaning": "정정하다, 수정하다",
+    "targetScore": 800,
+    "exampleEn": "Please make a correction to the invoice number.",
+    "exampleKo": "청구서 번호를 정정해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 90,
+    "word": "make a final change",
+    "meaning": "최종 수정을 하다",
+    "targetScore": 800,
+    "exampleEn": "We need to make a final change to the proposal before submission.",
+    "exampleKo": "제출하기 전에 제안서에 최종 수정을 해야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 91,
+    "word": "make a note of",
+    "meaning": "~을 적어두다",
+    "targetScore": 800,
+    "exampleEn": "Please make a note of the conference schedule.",
+    "exampleKo": "컨퍼런스 일정을 적어 두십시오."
+  },
+  {
+    "day": 3,
+    "no": 92,
+    "word": "make an impression",
+    "meaning": "인상을 주다, 감동시키다",
+    "targetScore": 800,
+    "exampleEn": "Her presentation made a lasting impression on the investors.",
+    "exampleKo": "그녀의 프레젠테이션은 투자자들에게 깊은 인상을 남겼습니다."
+  },
+  {
+    "day": 3,
+    "no": 93,
+    "word": "move ahead with",
+    "meaning": "~을 순조롭게 진행시키다",
+    "targetScore": 800,
+    "exampleEn": "The committee decided to move ahead with the merger plan.",
+    "exampleKo": "위원회는 합병 계획을 예정대로 진행하기로 결정했습니다."
+  },
+  {
+    "day": 3,
+    "no": 94,
+    "word": "on a business trip",
+    "meaning": "출장 중인",
+    "targetScore": 800,
+    "exampleEn": "The CEO is currently away on a business trip in Europe.",
+    "exampleKo": "CEO는 현재 유럽으로 출장 중입니다."
+  },
+  {
+    "day": 3,
+    "no": 95,
+    "word": "on a weekly basis",
+    "meaning": "주 단위로",
+    "targetScore": 800,
+    "exampleEn": "Team meetings are held on a weekly basis.",
+    "exampleKo": "팀 회의는 주 단위로 열립니다."
+  },
+  {
+    "day": 3,
+    "no": 96,
+    "word": "on business",
+    "meaning": "업무자",
+    "targetScore": 800,
+    "exampleEn": "He traveled to Singapore on business last month.",
+    "exampleKo": "그는 지난달에 업무차 싱가포르로 여행했습니다."
+  },
+  {
+    "day": 3,
+    "no": 97,
+    "word": "on duty",
+    "meaning": "근무 중인",
+    "targetScore": 800,
+    "exampleEn": "Changes to the schedule will be handled by the manager on duty.",
+    "exampleKo": "일정 변경은 근무 중인 매니저가 처리할 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 98,
+    "word": "pick up the phone",
+    "meaning": "전화를 받다",
+    "targetScore": 800,
+    "exampleEn": "Please pick up the phone; it might be an urgent call.",
+    "exampleKo": "전화를 받아 주세요; 긴급한 전화일지도 모릅니다."
+  },
+  {
+    "day": 3,
+    "no": 99,
+    "word": "scrub",
+    "meaning": "문질러 씻다",
+    "targetScore": 800,
+    "exampleEn": "The cleaning crew will scrub the floors tonight.",
+    "exampleKo": "청소 팀이 오늘 밤 바닥을 문질러 닦을 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 100,
+    "word": "seal",
+    "meaning": "인장, 봉합, 밀봉하다",
+    "targetScore": 800,
+    "exampleEn": "Please seal the envelope before mailing it.",
+    "exampleKo": "우편을 보내기 전에 봉투를 밀봉해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 101,
+    "word": "speak into the microphone",
+    "meaning": "마이크에 대고 말하다",
+    "targetScore": 800,
+    "exampleEn": "Please speak into the microphone so everyone can hear you.",
+    "exampleKo": "모두가 들을 수 있도록 마이크에 대고 말씀해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 102,
+    "word": "speak on the phone",
+    "meaning": "통화하다",
+    "targetScore": 800,
+    "exampleEn": "It is dangerous to speak on the phone while driving.",
+    "exampleKo": "운전 중에 통화하는 것은 위험합니다."
+  },
+  {
+    "day": 3,
+    "no": 103,
+    "word": "stand in a line",
+    "meaning": "줄을 서 있다",
+    "targetScore": 800,
+    "exampleEn": "Customers had to stand in a line for over an hour.",
+    "exampleKo": "고객들은 한 시간 넘게 줄을 서 있어야 했습니다."
+  },
+  {
+    "day": 3,
+    "no": 104,
+    "word": "take a message",
+    "meaning": "메시지를 남겨주다",
+    "targetScore": 800,
+    "exampleEn": "I will take a message if he is not available.",
+    "exampleKo": "그가 자리에 없으면 제가 메시지를 남겨 드리겠습니다."
+  },
+  {
+    "day": 3,
+    "no": 105,
+    "word": "take apart",
+    "meaning": "분해하다, 해체하다",
+    "targetScore": 800,
+    "exampleEn": "Technicians had to take apart the machine to fix the problem.",
+    "exampleKo": "기술자들은 문제를 해결하기 위해 기계를 분해해야 했습니다."
+  },
+  {
+    "day": 3,
+    "no": 106,
+    "word": "utility provider",
+    "meaning": "공공 설비 공급자",
+    "targetScore": 800,
+    "exampleEn": "Please contact your local utility provider for service outages.",
+    "exampleKo": "서비스 중단에 대해서는 지역 공공 설비 공급업체에 문의하십시오."
+  },
+  {
+    "day": 3,
+    "no": 107,
+    "word": "acquired",
+    "meaning": "획득한",
+    "targetScore": 800,
+    "exampleEn": "The company has acquired a smaller rival firm.",
+    "exampleKo": "그 회사는 더 작은 경쟁사를 인수(획득)했습니다."
+  },
+  {
+    "day": 3,
+    "no": 108,
+    "word": "adapt",
+    "meaning": "적응하다",
+    "targetScore": 800,
+    "exampleEn": "Businesses must adapt to changing market conditions.",
+    "exampleKo": "기업들은 변화하는 시장 상황에 적응해야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 109,
+    "word": "administer",
+    "meaning": "관리하다",
+    "targetScore": 800,
+    "exampleEn": "The HR department administers the employee benefit program.",
+    "exampleKo": "인사부는 직원 복지 프로그램을 관리합니다."
+  },
+  {
+    "day": 3,
+    "no": 110,
+    "word": "clerical",
+    "meaning": "사무원의, 서기의",
+    "targetScore": 800,
+    "exampleEn": "She performs various clerical duties in the office.",
+    "exampleKo": "그녀는 사무실에서 다양한 사무 업무를 수행합니다."
+  },
+  {
+    "day": 3,
+    "no": 111,
+    "word": "conclusive",
+    "meaning": "결정적인, 단호한",
+    "targetScore": 800,
+    "exampleEn": "There is no conclusive evidence to support the claim.",
+    "exampleKo": "그 주장을 뒷받침할 결정적인 증거가 없습니다."
+  },
+  {
+    "day": 3,
+    "no": 112,
+    "word": "delete",
+    "meaning": "삭제하다",
+    "targetScore": 800,
+    "exampleEn": "You cannot delete this file without administrator permission.",
+    "exampleKo": "관리자 권한 없이는 이 파일을 삭제할 수 없습니다."
+  },
+  {
+    "day": 3,
+    "no": 113,
+    "word": "editorial",
+    "meaning": "편집자의, 사설의",
+    "targetScore": 800,
+    "exampleEn": "He made several editorial changes to the manuscript.",
+    "exampleKo": "그는 원고에 몇 가지 편집상의 수정을 가했습니다."
+  },
+  {
+    "day": 3,
+    "no": 114,
+    "word": "endless",
+    "meaning": "끝이 없는, 영원히 계속하는",
+    "targetScore": 800,
+    "exampleEn": "We faced an endless series of challenges during the project.",
+    "exampleKo": "우리는 프로젝트 기간 동안 끝없는 도전에 직면했습니다."
+  },
+  {
+    "day": 3,
+    "no": 115,
+    "word": "furthermore",
+    "meaning": "더욱이, 게다가",
+    "targetScore": 800,
+    "exampleEn": "The product is expensive; furthermore, it is not durable.",
+    "exampleKo": "그 제품은 비쌉니다; 게다가 내구성도 없습니다."
+  },
+  {
+    "day": 3,
+    "no": 116,
+    "word": "in one's absence",
+    "meaning": "~의 부재시에",
+    "targetScore": 800,
+    "exampleEn": "Mr. Jones will handle the inquiries in my absence.",
+    "exampleKo": "제 부재시에는 존스 씨가 문의 사항을 처리할 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 117,
+    "word": "on purpose",
+    "meaning": "고의로, 일부러",
+    "targetScore": 800,
+    "exampleEn": "He made the mistake on purpose to delay the process.",
+    "exampleKo": "그는 절차를 지연시키기 위해 일부러 실수를 저질렀습니다."
+  },
+  {
+    "day": 3,
+    "no": 118,
+    "word": "overseas",
+    "meaning": "해외의, 해외로",
+    "targetScore": 800,
+    "exampleEn": "We plan to expand our business to overseas markets.",
+    "exampleKo": "우리는 해외 시장으로 사업을 확장할 계획입니다."
+  },
+  {
+    "day": 3,
+    "no": 119,
+    "word": "perceive",
+    "meaning": "지각하다, 인지하다",
+    "targetScore": 800,
+    "exampleEn": "Customers perceive our brand as high-quality and reliable.",
+    "exampleKo": "고객들은 우리 브랜드를 고품질의 신뢰할 수 있는 브랜드로 인식합니다."
+  },
+  {
+    "day": 3,
+    "no": 120,
+    "word": "reminder",
+    "meaning": "생각나게 하는 것",
+    "targetScore": 800,
+    "exampleEn": "This email serves as a reminder of the upcoming meeting.",
+    "exampleKo": "이 이메일은 다가오는 회의를 상기시켜 주는 역할을 합니다."
+  },
+  {
+    "day": 3,
+    "no": 121,
+    "word": "roughly",
+    "meaning": "대략, 거의",
+    "targetScore": 800,
+    "exampleEn": "The project will cost roughly ten thousand dollars.",
+    "exampleKo": "그 프로젝트는 대략 1만 달러의 비용이 들 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 122,
+    "word": "strive",
+    "meaning": "분투하다",
+    "targetScore": 800,
+    "exampleEn": "We continuously strive to improve customer satisfaction.",
+    "exampleKo": "우리는 고객 만족을 향상시키기 위해 끊임없이 분투합니다."
+  },
+  {
+    "day": 3,
+    "no": 123,
+    "word": "translate",
+    "meaning": "번역하다, 통역하다",
+    "targetScore": 800,
+    "exampleEn": "The manual has been translated into several languages.",
+    "exampleKo": "그 매뉴얼은 여러 언어로 번역되었습니다."
+  },
+  {
+    "day": 3,
+    "no": 124,
+    "word": "boardroom",
+    "meaning": "회의실",
+    "targetScore": 800,
+    "exampleEn": "The shareholders' meeting will be held in the boardroom.",
+    "exampleKo": "주주 총회는 회의실에서 열릴 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 125,
+    "word": "in person",
+    "meaning": "몸소, 직접",
+    "targetScore": 800,
+    "exampleEn": "All applicants must appear in person for the interview.",
+    "exampleKo": "모든 지원자는 인터뷰에 직접 참석해야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 126,
+    "word": "including",
+    "meaning": "~을 포함하여",
+    "targetScore": 800,
+    "exampleEn": "The price includes all taxes, including VAT.",
+    "exampleKo": "가격에는 부가세(VAT)를 포함한 모든 세금이 포함되어 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 127,
+    "word": "on time",
+    "meaning": "정각에",
+    "targetScore": 800,
+    "exampleEn": "Please ensure that you arrive on time for the appointment.",
+    "exampleKo": "약속 시간에 맞춰 도착하도록 해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 128,
+    "word": "panic",
+    "meaning": "당황, 공황",
+    "targetScore": 800,
+    "exampleEn": "There is no need to panic about the market fluctuations.",
+    "exampleKo": "시장 변동에 대해 당황할 필요는 없습니다."
+  },
+  {
+    "day": 3,
+    "no": 129,
+    "word": "past due",
+    "meaning": "연체된, 미납된",
+    "targetScore": 800,
+    "exampleEn": "Your payment is now thirty days past due.",
+    "exampleKo": "귀하의 지불금이 현재 30일 연체되었습니다."
+  },
+  {
+    "day": 3,
+    "no": 130,
+    "word": "put forward",
+    "meaning": "앞당기다",
+    "targetScore": 800,
+    "exampleEn": "The deadline has been put forward by two days.",
+    "exampleKo": "마감일이 이틀 앞당겨졌습니다."
+  },
+  {
+    "day": 3,
+    "no": 131,
+    "word": "regard A as B",
+    "meaning": "A를 B로 여기다",
+    "targetScore": 800,
+    "exampleEn": "We regard safety as our top priority.",
+    "exampleKo": "우리는 안전을 최우선 순위로 여깁니다."
+  },
+  {
+    "day": 3,
+    "no": 132,
+    "word": "return one's call",
+    "meaning": "~에게 답신 전화를 하다",
+    "targetScore": 800,
+    "exampleEn": "I will return your call as soon as I get back to the office.",
+    "exampleKo": "사무실에 돌아가는 대로 답신 전화를 드리겠습니다."
+  },
+  {
+    "day": 3,
+    "no": 133,
+    "word": "secretarial",
+    "meaning": "비서의",
+    "targetScore": 800,
+    "exampleEn": "She has extensive experience in secretarial work.",
+    "exampleKo": "그녀는 비서 업무에 광범위한 경험이 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 134,
+    "word": "take charge of",
+    "meaning": "~을 담당하다",
+    "targetScore": 800,
+    "exampleEn": "Ms. Lee will take charge of the accounting department.",
+    "exampleKo": "이 씨가 회계 부서를 담당하게(책임지게) 될 것입니다."
+  },
+  {
+    "day": 3,
+    "no": 135,
+    "word": "take on responsibility",
+    "meaning": "책임을 지다",
+    "targetScore": 800,
+    "exampleEn": "He is willing to take on responsibility for the error.",
+    "exampleKo": "그는 기꺼이 그 오류에 대한 책임을 지려 합니다."
+  },
+  {
+    "day": 3,
+    "no": 136,
+    "word": "throw one's effort into",
+    "meaning": "~에 온 힘을 쏟다",
+    "targetScore": 800,
+    "exampleEn": "The team threw their effort into finishing the project.",
+    "exampleKo": "팀은 프로젝트를 끝내는 데 온 힘을 쏟았습니다."
+  }
+]

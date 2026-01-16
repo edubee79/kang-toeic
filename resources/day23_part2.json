@@ -1,0 +1,254 @@
+[
+  {
+    "day": 23,
+    "no": 41,
+    "word": "application",
+    "meaning": "지원, 신청",
+    "targetScore": 650,
+    "exampleEn": "Please submit your application by the deadline.",
+    "exampleKo": "마감 기한까지 지원서를 제출해 주십시오."
+  },
+  {
+    "day": 23,
+    "no": 42,
+    "word": "award ceremony",
+    "meaning": "시상식",
+    "targetScore": 650,
+    "exampleEn": "The award ceremony will be held tonight.",
+    "exampleKo": "시상식이 오늘 밤에 열릴 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 43,
+    "word": "chat",
+    "meaning": "담소, 담소를 나누다",
+    "targetScore": 650,
+    "exampleEn": "We had a quick chat about the project.",
+    "exampleKo": "우리는 프로젝트에 관해 짧은 담소를 나누었습니다."
+  },
+  {
+    "day": 23,
+    "no": 44,
+    "word": "clap",
+    "meaning": "박수, 손뼉 치다",
+    "targetScore": 650,
+    "exampleEn": "The audience began to clap.",
+    "exampleKo": "청중이 박수를 치기 시작했습니다."
+  },
+  {
+    "day": 23,
+    "no": 45,
+    "word": "get paid",
+    "meaning": "급여를 받다",
+    "targetScore": 650,
+    "exampleEn": "Interns also get paid for their work.",
+    "exampleKo": "인턴들도 자신의 일에 대해 급여를 받습니다."
+  },
+  {
+    "day": 23,
+    "no": 46,
+    "word": "grab",
+    "meaning": "잡다, 움켜쥐다",
+    "targetScore": 650,
+    "exampleEn": "He grabbed a sandwich for lunch.",
+    "exampleKo": "그는 점심으로 샌드위치를 집어 들었습니다(잡았습니다)."
+  },
+  {
+    "day": 23,
+    "no": 47,
+    "word": "group",
+    "meaning": "(그룹으로) 나누다",
+    "targetScore": 650,
+    "exampleEn": "The students were grouped by age.",
+    "exampleKo": "학생들은 나이별로 그룹이 나뉘었습니다."
+  },
+  {
+    "day": 23,
+    "no": 48,
+    "word": "hook",
+    "meaning": "걸이, ~에 걸다",
+    "targetScore": 650,
+    "exampleEn": "Please hang your coat on the hook.",
+    "exampleKo": "코트를 걸이에 걸어 주십시오."
+  },
+  {
+    "day": 23,
+    "no": 49,
+    "word": "introduction",
+    "meaning": "도입, 소개",
+    "targetScore": 650,
+    "exampleEn": "The introduction of the new system caused confusion.",
+    "exampleKo": "새 시스템의 도입은 혼란을 야기했습니다."
+  },
+  {
+    "day": 23,
+    "no": 50,
+    "word": "learning center",
+    "meaning": "교육 센터",
+    "targetScore": 650,
+    "exampleEn": "The learning center offers various courses.",
+    "exampleKo": "교육 센터는 다양한 과정을 제공합니다."
+  },
+  {
+    "day": 23,
+    "no": 51,
+    "word": "loudspeaker",
+    "meaning": "확성기",
+    "targetScore": 650,
+    "exampleEn": "An announcement was made over the loudspeaker.",
+    "exampleKo": "확성기를 통해 안내 방송이 나왔습니다."
+  },
+  {
+    "day": 23,
+    "no": 52,
+    "word": "lounge",
+    "meaning": "대합실",
+    "targetScore": 650,
+    "exampleEn": "Guests can wait in the lounge.",
+    "exampleKo": "손님들은 대합실(라운지)에서 기다릴 수 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 53,
+    "word": "management seminar",
+    "meaning": "경영 세미나",
+    "targetScore": 650,
+    "exampleEn": "The management seminar focuses on leadership.",
+    "exampleKo": "경영 세미나는 리더십에 초점을 맞춥니다."
+  },
+  {
+    "day": 23,
+    "no": 54,
+    "word": "smoking section",
+    "meaning": "흡연 구역",
+    "targetScore": 650,
+    "exampleEn": "Smoking is only allowed in the smoking section.",
+    "exampleKo": "흡연은 오직 흡연 구역에서만 허용됩니다."
+  },
+  {
+    "day": 23,
+    "no": 55,
+    "word": "take a vacation",
+    "meaning": "휴가를 얻다",
+    "targetScore": 650,
+    "exampleEn": "I plan to take a vacation next month.",
+    "exampleKo": "저는 다음 달에 휴가를 낼 계획입니다."
+  },
+  {
+    "day": 23,
+    "no": 56,
+    "word": "wallpaper",
+    "meaning": "벽지",
+    "targetScore": 650,
+    "exampleEn": "We chose a neutral color for the wallpaper.",
+    "exampleKo": "우리는 벽지로 중립적인 색상을 선택했습니다."
+  },
+  {
+    "day": 23,
+    "no": 57,
+    "word": "bold",
+    "meaning": "대담한, 용감한",
+    "targetScore": 650,
+    "exampleEn": "He made a bold decision.",
+    "exampleKo": "그는 대담한 결정을 내렸습니다."
+  },
+  {
+    "day": 23,
+    "no": 58,
+    "word": "finely",
+    "meaning": "곱게, 정교하게",
+    "targetScore": 650,
+    "exampleEn": "The vegetables were chopped finely.",
+    "exampleKo": "채소들은 곱게 다져졌습니다."
+  },
+  {
+    "day": 23,
+    "no": 59,
+    "word": "friendly",
+    "meaning": "친절한",
+    "targetScore": 650,
+    "exampleEn": "The staff are very friendly.",
+    "exampleKo": "직원들은 매우 친절합니다."
+  },
+  {
+    "day": 23,
+    "no": 60,
+    "word": "gentle",
+    "meaning": "온화한, 점잖은",
+    "targetScore": 650,
+    "exampleEn": "He is a gentle and kind person.",
+    "exampleKo": "그는 온화하고 친절한 사람입니다."
+  },
+  {
+    "day": 23,
+    "no": 61,
+    "word": "in charge of",
+    "meaning": "~을 맡아서, 담당해서",
+    "targetScore": 650,
+    "exampleEn": "Who is in charge of this department?",
+    "exampleKo": "누가 이 부서를 맡고 있습니까(담당입니까)?"
+  },
+  {
+    "day": 23,
+    "no": 62,
+    "word": "lively",
+    "meaning": "활기찬, 활발한",
+    "targetScore": 650,
+    "exampleEn": "We had a lively discussion.",
+    "exampleKo": "우리는 활기찬 토론을 했습니다."
+  },
+  {
+    "day": 23,
+    "no": 63,
+    "word": "pharmacy",
+    "meaning": "약국",
+    "targetScore": 650,
+    "exampleEn": "Please pick up your medicine at the pharmacy.",
+    "exampleKo": "약국에서 약을 가져가십시오."
+  },
+  {
+    "day": 23,
+    "no": 64,
+    "word": "precise",
+    "meaning": "정확한, 정밀한",
+    "targetScore": 650,
+    "exampleEn": "We need precise measurements.",
+    "exampleKo": "우리는 정밀한(정확한) 치수가 필요합니다."
+  },
+  {
+    "day": 23,
+    "no": 65,
+    "word": "prize",
+    "meaning": "상품, 소중하게 여기다",
+    "targetScore": 650,
+    "exampleEn": "She won the first prize.",
+    "exampleKo": "그녀는 1등 상(상품)을 받았습니다."
+  },
+  {
+    "day": 23,
+    "no": 66,
+    "word": "registration",
+    "meaning": "등록",
+    "targetScore": 650,
+    "exampleEn": "Registration begins at 9 AM.",
+    "exampleKo": "등록은 오전 9시에 시작합니다."
+  },
+  {
+    "day": 23,
+    "no": 67,
+    "word": "vacation",
+    "meaning": "휴가",
+    "targetScore": 650,
+    "exampleEn": "Where did you go for your vacation?",
+    "exampleKo": "휴가 때 어디를 가셨습니까?"
+  },
+  {
+    "day": 23,
+    "no": 68,
+    "word": "a letter of gratitude",
+    "meaning": "감사편지",
+    "targetScore": 650,
+    "exampleEn": "He sent a letter of gratitude to the donor.",
+    "exampleKo": "그는 기부자에게 감사 편지를 보냈습니다."
+  }
+]

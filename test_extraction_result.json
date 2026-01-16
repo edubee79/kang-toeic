@@ -1,0 +1,445 @@
+{
+  "part": "5",
+  "questions": [
+    {
+      "id": "q101",
+      "text": "Mougey Fine Gifts is known for its large range of ------ goods.",
+      "options": [
+        {
+          "label": "A",
+          "text": "regional"
+        },
+        {
+          "label": "B",
+          "text": "regionally"
+        },
+        {
+          "label": "C",
+          "text": "region"
+        },
+        {
+          "label": "D",
+          "text": "regions"
+        }
+      ]
+    },
+    {
+      "id": "q102",
+      "text": "Income levels are rising in the ------ and surrounding areas.",
+      "options": [
+        {
+          "label": "A",
+          "text": "family"
+        },
+        {
+          "label": "B",
+          "text": "world"
+        },
+        {
+          "label": "C",
+          "text": "company"
+        },
+        {
+          "label": "D",
+          "text": "city"
+        }
+      ]
+    },
+    {
+      "id": "q103",
+      "text": "Since we had a recent rate change, expect ------ next electricity bill to be slightly lower.",
+      "options": [
+        {
+          "label": "A",
+          "text": "you"
+        },
+        {
+          "label": "B",
+          "text": "yours"
+        },
+        {
+          "label": "C",
+          "text": "yourself"
+        },
+        {
+          "label": "D",
+          "text": "your"
+        }
+      ]
+    },
+    {
+      "id": "q104",
+      "text": "Hotel guests have a lovely view of the ocean ------ the south-facing windows.",
+      "options": [
+        {
+          "label": "A",
+          "text": "up"
+        },
+        {
+          "label": "B",
+          "text": "except"
+        },
+        {
+          "label": "C",
+          "text": "onto"
+        },
+        {
+          "label": "D",
+          "text": "through"
+        }
+      ]
+    },
+    {
+      "id": "q105",
+      "text": "Mr. Kim would like ------ a meeting about the Jasper account as soon as possible.",
+      "options": [
+        {
+          "label": "A",
+          "text": "to arrange"
+        },
+        {
+          "label": "B",
+          "text": "arranging"
+        },
+        {
+          "label": "C",
+          "text": "having arranged"
+        },
+        {
+          "label": "D",
+          "text": "arrangement"
+        }
+      ]
+    },
+    {
+      "id": "q106",
+      "text": "The factory is ------ located near the train station.",
+      "options": [
+        {
+          "label": "A",
+          "text": "regularly"
+        },
+        {
+          "label": "B",
+          "text": "conveniently"
+        },
+        {
+          "label": "C",
+          "text": "brightly"
+        },
+        {
+          "label": "D",
+          "text": "collectively"
+        }
+      ]
+    },
+    {
+      "id": "q107",
+      "text": "Because of transportation ------ due to winter weather, some conference participants may arrive late.",
+      "options": [
+        {
+          "label": "A",
+          "text": "are delayed"
+        },
+        {
+          "label": "B",
+          "text": "to delay"
+        },
+        {
+          "label": "C",
+          "text": "delays"
+        },
+        {
+          "label": "D",
+          "text": "had delayed"
+        }
+      ]
+    },
+    {
+      "id": "q108",
+      "text": "Proper maintenance of your heating equipment ensures that small issues can be fixed ------ they become big ones.",
+      "options": [
+        {
+          "label": "A",
+          "text": "as a result"
+        },
+        {
+          "label": "B",
+          "text": "in addition"
+        },
+        {
+          "label": "C",
+          "text": "although"
+        },
+        {
+          "label": "D",
+          "text": "before"
+        }
+      ]
+    },
+    {
+      "id": "q109",
+      "text": "The information on the Web site of Croyell Decorators is ------ organized.",
+      "options": [
+        {
+          "label": "A",
+          "text": "clear"
+        },
+        {
+          "label": "B",
+          "text": "clearing"
+        },
+        {
+          "label": "C",
+          "text": "clearest"
+        },
+        {
+          "label": "D",
+          "text": "clearly"
+        }
+      ]
+    },
+    {
+      "id": "q110",
+      "text": "The Copley Corporation is frequently ------ as a company that employs workers from all over the world.",
+      "options": [
+        {
+          "label": "A",
+          "text": "recognized"
+        },
+        {
+          "label": "B",
+          "text": "permitted"
+        },
+        {
+          "label": "C",
+          "text": "prepared"
+        },
+        {
+          "label": "D",
+          "text": "controlled"
+        }
+      ]
+    },
+    {
+      "id": "q111",
+      "text": "Payments made ------ 4:00 P.M. will be processed on the following business day.",
+      "options": [
+        {
+          "label": "A",
+          "text": "later"
+        },
+        {
+          "label": "B",
+          "text": "after"
+        },
+        {
+          "label": "C",
+          "text": "than"
+        },
+        {
+          "label": "D",
+          "text": "often"
+        }
+      ]
+    },
+    {
+      "id": "q112",
+      "text": "Greenfiddle Water Treatment hires engineers who have ------ mathematics skills.",
+      "options": [
+        {
+          "label": "A",
+          "text": "adjusted"
+        },
+        {
+          "label": "B",
+          "text": "advanced"
+        },
+        {
+          "label": "C",
+          "text": "eager"
+        },
+        {
+          "label": "D",
+          "text": "faithful"
+        }
+      ]
+    },
+    {
+      "id": "q113",
+      "text": "After ------ the neighborhood, Mr. Park decided not to move his café to Thomasville.",
+      "options": [
+        {
+          "label": "A",
+          "text": "evaluation"
+        },
+        {
+          "label": "B",
+          "text": "evaluate"
+        },
+        {
+          "label": "C",
+          "text": "evaluating"
+        },
+        {
+          "label": "D",
+          "text": "evaluated"
+        }
+      ]
+    },
+    {
+      "id": "q114",
+      "text": "The average precipitation in Campos ------ the past three years has been 22.7 centimeters.",
+      "options": [
+        {
+          "label": "A",
+          "text": "on"
+        },
+        {
+          "label": "B",
+          "text": "for"
+        },
+        {
+          "label": "C",
+          "text": "to"
+        },
+        {
+          "label": "D",
+          "text": "under"
+        }
+      ]
+    },
+    {
+      "id": "q115",
+      "text": "Improving efficiency at Perwon Manufacturing will require a ------ revision of existing processes.",
+      "options": [
+        {
+          "label": "A",
+          "text": "create"
+        },
+        {
+          "label": "B",
+          "text": "creativity"
+        },
+        {
+          "label": "C",
+          "text": "creation"
+        },
+        {
+          "label": "D",
+          "text": "creative"
+        }
+      ]
+    },
+    {
+      "id": "q116",
+      "text": "Conference attendees will share accommodations ------ they submit a special request for a single room.",
+      "options": [
+        {
+          "label": "A",
+          "text": "even"
+        },
+        {
+          "label": "B",
+          "text": "unless"
+        },
+        {
+          "label": "C",
+          "text": "similarly"
+        },
+        {
+          "label": "D",
+          "text": "also"
+        }
+      ]
+    },
+    {
+      "id": "q117",
+      "text": "To receive ------, please be sure the appropriate box is checked on the magazine order form.",
+      "options": [
+        {
+          "label": "A",
+          "text": "renew"
+        },
+        {
+          "label": "B",
+          "text": "renewed"
+        },
+        {
+          "label": "C",
+          "text": "renewals"
+        },
+        {
+          "label": "D",
+          "text": "to renew"
+        }
+      ]
+    },
+    {
+      "id": "q118",
+      "text": "Donations to the Natusi Wildlife Reserve rise when consumers feel ------ about the economy.",
+      "options": [
+        {
+          "label": "A",
+          "text": "careful"
+        },
+        {
+          "label": "B",
+          "text": "helpful"
+        },
+        {
+          "label": "C",
+          "text": "confident"
+        },
+        {
+          "label": "D",
+          "text": "durable"
+        }
+      ]
+    },
+    {
+      "id": "q119",
+      "text": "When ------ applied, Tilda's Restorative Cream reduces the appearance of fine lines and wrinkles.",
+      "options": [
+        {
+          "label": "A",
+          "text": "consistent"
+        },
+        {
+          "label": "B",
+          "text": "consist"
+        },
+        {
+          "label": "C",
+          "text": "consistently"
+        },
+        {
+          "label": "D",
+          "text": "consisting"
+        }
+      ]
+    },
+    {
+      "id": "q120",
+      "text": "The marketing director confirmed that the new software program would be ready to ------ by November 1.",
+      "options": [
+        {
+          "label": "A",
+          "text": "launch"
+        },
+        {
+          "label": "B",
+          "text": "facilitate"
+        },
+        {
+          "label": "C",
+          "text": "arise"
+        },
+        {
+          "label": "D",
+          "text": "exert"
+        }
+      ]
+    }
+  ]
+}

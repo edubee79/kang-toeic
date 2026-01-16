@@ -1,0 +1,254 @@
+[
+  {
+    "day": 1,
+    "no": 41,
+    "word": "application form",
+    "meaning": "신청서",
+    "targetScore": 650,
+    "exampleEn": "Please attach the completed application form to your email.",
+    "exampleKo": "작성된 신청서를 이메일에 첨부해 주십시오."
+  },
+  {
+    "day": 1,
+    "no": 42,
+    "word": "career",
+    "meaning": "직업,경력",
+    "targetScore": 650,
+    "exampleEn": "She has built a successful career in finance over the last decade.",
+    "exampleKo": "그녀는 지난 10년 동안 금융 분야에서 성공적인 경력을 쌓았습니다."
+  },
+  {
+    "day": 1,
+    "no": 43,
+    "word": "completion",
+    "meaning": "완료,완성",
+    "targetScore": 650,
+    "exampleEn": "Upon completion of the training, you will receive a certificate.",
+    "exampleKo": "교육 완료 시, 귀하는 수료증을 받게 됩니다."
+  },
+  {
+    "day": 1,
+    "no": 44,
+    "word": "fair",
+    "meaning": "공정한,타당한",
+    "targetScore": 650,
+    "exampleEn": "The selection process must be fair and transparent.",
+    "exampleKo": "선발 과정은 공정하고 투명해야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 45,
+    "word": "graduation",
+    "meaning": "졸업",
+    "targetScore": 650,
+    "exampleEn": "Recent college graduates are encouraged to apply.",
+    "exampleKo": "최근 대학 졸업생들의 지원을 권장합니다."
+  },
+  {
+    "day": 1,
+    "no": 46,
+    "word": "in fact",
+    "meaning": "사실은",
+    "targetScore": 650,
+    "exampleEn": "In fact, sales have increased by 20% this quarter.",
+    "exampleKo": "사실, 이번 분기 매출은 20% 증가했습니다."
+  },
+  {
+    "day": 1,
+    "no": 47,
+    "word": "job fair",
+    "meaning": "취업 박람회",
+    "targetScore": 650,
+    "exampleEn": "The annual job fair attracts hundreds of employers.",
+    "exampleKo": "연례 취업 박람회는 수백 명의 고용주를 끌어들입니다."
+  },
+  {
+    "day": 1,
+    "no": 48,
+    "word": "job offer",
+    "meaning": "일자리 제안",
+    "targetScore": 650,
+    "exampleEn": "Mr. Chen declined the job offer due to the relocation requirement.",
+    "exampleKo": "Chen 씨는 재배치 요건 때문에 일자리 제안을 거절했습니다."
+  },
+  {
+    "day": 1,
+    "no": 49,
+    "word": "list",
+    "meaning": "목록,명단,목록에 기입하다",
+    "targetScore": 650,
+    "exampleEn": "Please make a list of supplies needed for the workshop.",
+    "exampleKo": "워크숍에 필요한 물품 목록을 작성해 주세요."
+  },
+  {
+    "day": 1,
+    "no": 50,
+    "word": "newcomer",
+    "meaning": "새로 온 사람, 신입사원",
+    "targetScore": 650,
+    "exampleEn": "The manager introduced the newcomer to the team.",
+    "exampleKo": "매니저는 신입 사원을 팀에 소개했습니다."
+  },
+  {
+    "day": 1,
+    "no": 51,
+    "word": "part-time",
+    "meaning": "파트타임의, 시간제의",
+    "targetScore": 650,
+    "exampleEn": "There are several part-time positions available at the store.",
+    "exampleKo": "상점에는 몇 개의 파트타임 자리가 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 52,
+    "word": "previous job",
+    "meaning": "이전 직업",
+    "targetScore": 650,
+    "exampleEn": "She mentioned her achievements in her previous job.",
+    "exampleKo": "그녀는 이전 직장에서의 성취를 언급했습니다."
+  },
+  {
+    "day": 1,
+    "no": 53,
+    "word": "secretary",
+    "meaning": "비서",
+    "targetScore": 650,
+    "exampleEn": "The executive secretary manages the CEO's schedule.",
+    "exampleKo": "임원 비서는 CEO의 일정을 관리합니다."
+  },
+  {
+    "day": 1,
+    "no": 54,
+    "word": "send in",
+    "meaning": "~을 제출하다",
+    "targetScore": 650,
+    "exampleEn": "Candidates must send in their applications before the deadline.",
+    "exampleKo": "지원자는 마감 기한 전에 지원서를 제출해야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 55,
+    "word": "tidy",
+    "meaning": "단정한, 깔끔한",
+    "targetScore": 650,
+    "exampleEn": "Please keep your workspace tidy and organized.",
+    "exampleKo": "업무 공간을 단정하고 정돈된 상태로 유지해 주세요."
+  },
+  {
+    "day": 1,
+    "no": 56,
+    "word": "trainee",
+    "meaning": "훈련받는 사람",
+    "targetScore": 650,
+    "exampleEn": "Each trainee is assigned a mentor for the first month.",
+    "exampleKo": "각 훈련생은 첫 달 동안 멘토를 배정받습니다."
+  },
+  {
+    "day": 1,
+    "no": 57,
+    "word": "apply for",
+    "meaning": "~에 지원하다",
+    "targetScore": 650,
+    "exampleEn": "You can apply for the position online.",
+    "exampleKo": "온라인으로 그 직책에 지원할 수 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 58,
+    "word": "aptitude",
+    "meaning": "재능,소질",
+    "targetScore": 650,
+    "exampleEn": "The test measures the candidate's aptitude for programming.",
+    "exampleKo": "그 테스트는 지원자의 프로그래밍 적성을 측정합니다."
+  },
+  {
+    "day": 1,
+    "no": 59,
+    "word": "be admitted to",
+    "meaning": "~에 입장이 허용되다",
+    "targetScore": 650,
+    "exampleEn": "Only authorized personnel will be admitted to the secure area.",
+    "exampleKo": "허가된 인원만 보안 구역에 입장이 허용됩니다."
+  },
+  {
+    "day": 1,
+    "no": 60,
+    "word": "be advised to do",
+    "meaning": "~할 것을 권유받다",
+    "targetScore": 650,
+    "exampleEn": "Passengers are advised to arrive at the airport early.",
+    "exampleKo": "승객들은 공항에 일찍 도착할 것을 권유받습니다."
+  },
+  {
+    "day": 1,
+    "no": 61,
+    "word": "criteria",
+    "meaning": "기준(criterion의 복수형)",
+    "targetScore": 650,
+    "exampleEn": "The candidate meets all the criteria for the scholarship.",
+    "exampleKo": "그 지원자는 장학금에 대한 모든 기준을 충족합니다."
+  },
+  {
+    "day": 1,
+    "no": 62,
+    "word": "decade",
+    "meaning": "10년",
+    "targetScore": 650,
+    "exampleEn": "The company has grown significantly over the past decade.",
+    "exampleKo": "그 회사는 지난 10년 동안 크게 성장했습니다."
+  },
+  {
+    "day": 1,
+    "no": 63,
+    "word": "employ",
+    "meaning": "고용하다",
+    "targetScore": 650,
+    "exampleEn": "The factory employs over 500 workers.",
+    "exampleKo": "그 공장은 500명 이상의 근로자를 고용합니다."
+  },
+  {
+    "day": 1,
+    "no": 64,
+    "word": "insufficient",
+    "meaning": "불충분한",
+    "targetScore": 650,
+    "exampleEn": "Funding for the project was insufficient.",
+    "exampleKo": "프로젝트를 위한 자금이 불충분했습니다."
+  },
+  {
+    "day": 1,
+    "no": 65,
+    "word": "minimum",
+    "meaning": "최소한도, 최소한의",
+    "targetScore": 650,
+    "exampleEn": "A minimum of three years experience is required.",
+    "exampleKo": "최소 3년의 경력이 요구됩니다."
+  },
+  {
+    "day": 1,
+    "no": 66,
+    "word": "party",
+    "meaning": "단체,당사자,연회",
+    "targetScore": 650,
+    "exampleEn": "Both parties agreed to the terms of the contract.",
+    "exampleKo": "양 당사자는 계약 조건에 동의했습니다."
+  },
+  {
+    "day": 1,
+    "no": 67,
+    "word": "plentiful",
+    "meaning": "풍부한",
+    "targetScore": 650,
+    "exampleEn": "Fresh produce is plentiful during the summer season.",
+    "exampleKo": "여름철에는 신선한 농산물이 풍부합니다."
+  },
+  {
+    "day": 1,
+    "no": 68,
+    "word": "profession",
+    "meaning": "직업",
+    "targetScore": 650,
+    "exampleEn": "Doctors and lawyers are in the legal and medical professions.",
+    "exampleKo": "의사와 변호사는 법률 및 의료 직종에 종사합니다."
+  }
+]

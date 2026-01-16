@@ -1,0 +1,342 @@
+[
+  {
+    "no": "69",
+    "word": "shipping",
+    "meaning": "배송, 운송, 선적"
+  },
+  {
+    "no": "70",
+    "word": "trade",
+    "meaning": "무역"
+  },
+  {
+    "no": "71",
+    "word": "as of now",
+    "meaning": "현재로서는"
+  },
+  {
+    "no": "72",
+    "word": "broker",
+    "meaning": "중개인"
+  },
+  {
+    "no": "73",
+    "word": "canal",
+    "meaning": "운하, 수로"
+  },
+  {
+    "no": "74",
+    "word": "carry a large parcel",
+    "meaning": "큰 짐을 운반하다"
+  },
+  {
+    "no": "75",
+    "word": "closing",
+    "meaning": "폐쇄, 폐회의, 마감하는"
+  },
+  {
+    "no": "76",
+    "word": "courier service",
+    "meaning": "택배회사"
+  },
+  {
+    "no": "77",
+    "word": "door-to-door delivery",
+    "meaning": "택배"
+  },
+  {
+    "no": "78",
+    "word": "drive off",
+    "meaning": "(차를)출발시키다, 몰아내다"
+  },
+  {
+    "no": "79",
+    "word": "drop off",
+    "meaning": "갖다주다, 내려놓다"
+  },
+  {
+    "no": "80",
+    "word": "dry cleaner(=drycleaner's)",
+    "meaning": "세탁소"
+  },
+  {
+    "no": "81",
+    "word": "floor manager",
+    "meaning": "매장감독"
+  },
+  {
+    "no": "82",
+    "word": "hold onto the handrail",
+    "meaning": "난간을 붙잡다"
+  },
+  {
+    "no": "83",
+    "word": "in transit",
+    "meaning": "운송 중에"
+  },
+  {
+    "no": "84",
+    "word": "inn",
+    "meaning": "여관"
+  },
+  {
+    "no": "85",
+    "word": "lab report",
+    "meaning": "실험 보고서"
+  },
+  {
+    "no": "86",
+    "word": "lab technician",
+    "meaning": "연구실 기술자"
+  },
+  {
+    "no": "87",
+    "word": "lace",
+    "meaning": "끈, 끈을 묶다"
+  },
+  {
+    "no": "88",
+    "word": "legal department",
+    "meaning": "법률부서"
+  },
+  {
+    "no": "89",
+    "word": "load A onto B",
+    "meaning": "A를 B에 싣다"
+  },
+  {
+    "no": "90",
+    "word": "load a truck",
+    "meaning": "트럭에 짐을 싣다"
+  },
+  {
+    "no": "91",
+    "word": "loaded with",
+    "meaning": "(짐을) 실은"
+  },
+  {
+    "no": "92",
+    "word": "loading",
+    "meaning": "적재, 선적"
+  },
+  {
+    "no": "93",
+    "word": "lost in delivery",
+    "meaning": "배송 중에 분실된"
+  },
+  {
+    "no": "94",
+    "word": "mailing list",
+    "meaning": "우편물 수취인 명부"
+  },
+  {
+    "no": "95",
+    "word": "make a delivery",
+    "meaning": "배달하다"
+  },
+  {
+    "no": "96",
+    "word": "packing tape",
+    "meaning": "포장테이프"
+  },
+  {
+    "no": "97",
+    "word": "pass over",
+    "meaning": "~의 위를 지나가다"
+  },
+  {
+    "no": "98",
+    "word": "pavement",
+    "meaning": "포장도로, 인도"
+  },
+  {
+    "no": "99",
+    "word": "people on foot",
+    "meaning": "보행자들"
+  },
+  {
+    "no": "100",
+    "word": "pick up passengers",
+    "meaning": "승객을 태우다"
+  },
+  {
+    "no": "101",
+    "word": "pier",
+    "meaning": "부두, 방파제, 선창"
+  },
+  {
+    "no": "102",
+    "word": "pile up",
+    "meaning": "~을 쌓다"
+  },
+  {
+    "no": "103",
+    "word": "postal",
+    "meaning": "우편의"
+  },
+  {
+    "no": "104",
+    "word": "strap",
+    "meaning": "끈(줄)으로 묶다"
+  },
+  {
+    "no": "105",
+    "word": "time limit",
+    "meaning": "기한"
+  },
+  {
+    "no": "106",
+    "word": "waterway",
+    "meaning": "(배가 다닐 수 있는) 수로, 항로"
+  },
+  {
+    "no": "107",
+    "word": "weigh",
+    "meaning": "무게가~이다"
+  },
+  {
+    "no": "108",
+    "word": "weight limit",
+    "meaning": "중량 제한"
+  },
+  {
+    "no": "109",
+    "word": "wrap up",
+    "meaning": "~을 싸다, ~을 포장하다"
+  },
+  {
+    "no": "110",
+    "word": "correction",
+    "meaning": "정정, 수정"
+  },
+  {
+    "no": "111",
+    "word": "delivery option",
+    "meaning": "배송 선택 사항"
+  },
+  {
+    "no": "112",
+    "word": "discard",
+    "meaning": "버리다"
+  },
+  {
+    "no": "113",
+    "word": "express mail",
+    "meaning": "급행 우편"
+  },
+  {
+    "no": "114",
+    "word": "fortunately",
+    "meaning": "다행스럽게도, 운 좋게도"
+  },
+  {
+    "no": "115",
+    "word": "ideally",
+    "meaning": "이상적으로, 완벽하게"
+  },
+  {
+    "no": "116",
+    "word": "load size",
+    "meaning": "적재 수하물 크기"
+  },
+  {
+    "no": "117",
+    "word": "marginally",
+    "meaning": "아주 조금, 미미하게"
+  },
+  {
+    "no": "118",
+    "word": "ordered",
+    "meaning": "정돈된, (질서) 정연한"
+  },
+  {
+    "no": "119",
+    "word": "ordering",
+    "meaning": "정리, 배치"
+  },
+  {
+    "no": "120",
+    "word": "ordinarily",
+    "meaning": "보통은, 정상적으로는"
+  },
+  {
+    "no": "121",
+    "word": "packaging",
+    "meaning": "포장, 포장재"
+  },
+  {
+    "no": "122",
+    "word": "provided(that)",
+    "meaning": "(만약)~라면"
+  },
+  {
+    "no": "123",
+    "word": "respond to",
+    "meaning": "~에 응답하다"
+  },
+  {
+    "no": "124",
+    "word": "separation",
+    "meaning": "분리, 구분"
+  },
+  {
+    "no": "125",
+    "word": "sizable",
+    "meaning": "상당한 크기의, 꽤 큰"
+  },
+  {
+    "no": "126",
+    "word": "society",
+    "meaning": "사회, 협회"
+  },
+  {
+    "no": "127",
+    "word": "accelerate",
+    "meaning": "촉진하다, 가속화하다"
+  },
+  {
+    "no": "128",
+    "word": "additional charge",
+    "meaning": "추가 요금"
+  },
+  {
+    "no": "129",
+    "word": "ahead of schedule",
+    "meaning": "예정보다 일찍"
+  },
+  {
+    "no": "130",
+    "word": "at the last minute",
+    "meaning": "막판에"
+  },
+  {
+    "no": "131",
+    "word": "by hand",
+    "meaning": "인편으로, 손으로"
+  },
+  {
+    "no": "132",
+    "word": "car maintenance",
+    "meaning": "자동차 정비"
+  },
+  {
+    "no": "133",
+    "word": "city official",
+    "meaning": "시 공무원"
+  },
+  {
+    "no": "134",
+    "word": "free of charge",
+    "meaning": "무료"
+  },
+  {
+    "no": "135",
+    "word": "postage",
+    "meaning": "우편 요금"
+  },
+  {
+    "no": "136",
+    "word": "trade negotiation",
+    "meaning": "무역 협상"
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "day": 26,
+    "no": 137,
+    "word": "scrutinize",
+    "meaning": "세밀히 조사하다",
+    "targetScore": 900,
+    "exampleEn": "Regulators scrutinize bank mergers closely.",
+    "exampleKo": "규제 당국은 은행 합병을 세밀히 조사합니다."
+  },
+  {
+    "day": 26,
+    "no": 138,
+    "word": "sustain",
+    "meaning": "지속하다",
+    "targetScore": 900,
+    "exampleEn": "Can the company sustain this growth rate?",
+    "exampleKo": "회사가 이 성장률을 지속할 수 있을까요?"
+  },
+  {
+    "day": 26,
+    "no": 139,
+    "word": "wire money to",
+    "meaning": "~에게 송금하다",
+    "targetScore": 900,
+    "exampleEn": "I need to wire money to my supplier overseas.",
+    "exampleKo": "저는 해외에 있는 공급업체에게 돈을 송금해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 140,
+    "word": "wire transfer",
+    "meaning": "전신 송금",
+    "targetScore": 900,
+    "exampleEn": "Wire transfers are the fastest way to send money.",
+    "exampleKo": "전신 송금은 돈을 보내는 가장 빠른 방법입니다."
+  },
+  {
+    "day": 26,
+    "no": 141,
+    "word": "draw a check",
+    "meaning": "수표를 발행하다",
+    "targetScore": 900,
+    "exampleEn": "The company drew a check for the amount.",
+    "exampleKo": "회사는 그 액수에 대해 수표를 발행했습니다."
+  },
+  {
+    "day": 26,
+    "no": 142,
+    "word": "direct deposit",
+    "meaning": "은행 자동 이체",
+    "targetScore": 900,
+    "exampleEn": "Employees receive their salary via direct deposit.",
+    "exampleKo": "직원들은 은행 자동 이체를 통해 급여를 받습니다."
+  },
+  {
+    "day": 26,
+    "no": 143,
+    "word": "remit",
+    "meaning": "송금하다, 면제해 주다",
+    "targetScore": 900,
+    "exampleEn": "Please remit payment to the address below.",
+    "exampleKo": "아래 주소로 지불액을 송금해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 144,
+    "word": "collateral",
+    "meaning": "담보, 저당물",
+    "targetScore": 900,
+    "exampleEn": "He used his house as collateral for the loan.",
+    "exampleKo": "그는 대출을 위해 집을 담보로 사용했습니다."
+  },
+  {
+    "day": 26,
+    "no": 145,
+    "word": "secured",
+    "meaning": "보증된",
+    "targetScore": 900,
+    "exampleEn": "The loan is secured by government bonds.",
+    "exampleKo": "그 대출은 국채에 의해 보증됩니다."
+  },
+  {
+    "day": 26,
+    "no": 146,
+    "word": "confiscate",
+    "meaning": "압수하다, 몰수하다",
+    "targetScore": 900,
+    "exampleEn": "Customs officials may confiscate illegal goods.",
+    "exampleKo": "세관원들은 불법 물품을 압수할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 147,
+    "word": "counterfeit",
+    "meaning": "가짜, 모조품",
+    "targetScore": 900,
+    "exampleEn": "Detecting counterfeit currency is difficult.",
+    "exampleKo": "위조 지폐(가짜 통화)를 감지하는 것은 어렵습니다."
+  },
+  {
+    "day": 26,
+    "no": 148,
+    "word": "trust company",
+    "meaning": "신탁 회사, 신탁 은행",
+    "targetScore": 900,
+    "exampleEn": "The assets are managed by a trust company.",
+    "exampleKo": "그 자산은 신탁 회사에 의해 관리됩니다."
+  },
+  {
+    "day": 26,
+    "no": 149,
+    "word": "credit money to one's account",
+    "meaning": "~의 계좌에 돈을 입금하다",
+    "targetScore": 900,
+    "exampleEn": "The refund was credited to your account.",
+    "exampleKo": "환불액이 귀하의 계좌에 입금되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 150,
+    "word": "on standby",
+    "meaning": "대기 중인",
+    "targetScore": 900,
+    "exampleEn": "We have a backup generator on standby.",
+    "exampleKo": "우리는 대기 중인 비상 발전기를 가지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 151,
+    "word": "deterrent",
+    "meaning": "제지하는 것, 방해물",
+    "targetScore": 900,
+    "exampleEn": "High interest rates act as a deterrent to borrowing.",
+    "exampleKo": "높은 이자율은 차입(대출)에 대한 제지(방해물) 역할을 합니다."
+  },
+  {
+    "day": 26,
+    "no": 152,
+    "word": "bounce",
+    "meaning": "(수표 등이) 부도가 나 되돌아오다",
+    "targetScore": 900,
+    "exampleEn": "The check bounced due to insufficient funds.",
+    "exampleKo": "그 수표는 자금 부족으로 부도가 나서 되돌아왔습니다."
+  },
+  {
+    "day": 26,
+    "no": 153,
+    "word": "fortnight",
+    "meaning": "2주간",
+    "targetScore": 900,
+    "exampleEn": "We meet once every fortnight.",
+    "exampleKo": "우리는 2주마다 한 번씩 만납니다."
+  },
+  {
+    "day": 26,
+    "no": 154,
+    "word": "contender",
+    "meaning": "도전자, 경쟁자",
+    "targetScore": 900,
+    "exampleEn": "Our company is a leading contender in the market.",
+    "exampleKo": "우리 회사는 시장의 주요 경쟁자(도전자)입니다."
+  },
+  {
+    "day": 26,
+    "no": 155,
+    "word": "overdrawn",
+    "meaning": "잔액이 부족한",
+    "targetScore": 900,
+    "exampleEn": "Your account is currently overdrawn.",
+    "exampleKo": "귀하의 계좌는 현재 잔액이 부족합니다(초과 인출되었습니다)."
+  },
+  {
+    "day": 26,
+    "no": 156,
+    "word": "deposit slip",
+    "meaning": "예금 전표",
+    "targetScore": 900,
+    "exampleEn": "Fill out a deposit slip to add funds.",
+    "exampleKo": "자금을 추가하려면 예금 전표를 작성하십시오."
+  },
+  {
+    "day": 26,
+    "no": 157,
+    "word": "take out a loan",
+    "meaning": "융자를 받다",
+    "targetScore": 900,
+    "exampleEn": "We had to take out a loan to cover the costs.",
+    "exampleKo": "우리는 비용을 충당하기 위해 융자를 받아야 했습니다."
+  },
+  {
+    "day": 26,
+    "no": 158,
+    "word": "credible",
+    "meaning": "신용할 수 있는, 확실한",
+    "targetScore": 900,
+    "exampleEn": "He is a credible witness in the case.",
+    "exampleKo": "그는 그 사건의 신용할 수 있는(확실한) 증인입니다."
+  },
+  {
+    "day": 26,
+    "no": 159,
+    "word": "belatedly",
+    "meaning": "뒤늦게",
+    "targetScore": 900,
+    "exampleEn": "The company belatedly realized the error.",
+    "exampleKo": "회사는 뒤늦게 그 오류를 깨달았습니다."
+  },
+  {
+    "day": 26,
+    "no": 160,
+    "word": "spurious",
+    "meaning": "허위의, 잘못된",
+    "targetScore": 900,
+    "exampleEn": "He made spurious claims about the product.",
+    "exampleKo": "그는 제품에 대해 허위의 주장을 했습니다."
+  },
+  {
+    "day": 26,
+    "no": 161,
+    "word": "make a withdrawal",
+    "meaning": "돈을 인출하다",
+    "targetScore": 900,
+    "exampleEn": "I need to make a withdrawal from the ATM.",
+    "exampleKo": "저는 ATM에서 돈을 인출해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 162,
+    "word": "redemption",
+    "meaning": "구원, 구함",
+    "targetScore": 900,
+    "exampleEn": "The coupon is valid for redemption until June.",
+    "exampleKo": "그 쿠폰은 6월까지 상환(구원/사용)이 유효합니다."
+  },
+  {
+    "day": 26,
+    "no": 163,
+    "word": "crash",
+    "meaning": "(주가의) 폭락",
+    "targetScore": 900,
+    "exampleEn": "The stock market crash caused panic.",
+    "exampleKo": "주식 시장 붕괴(폭락)는 공황을 야기했습니다."
+  },
+  {
+    "day": 26,
+    "no": 164,
+    "word": "take out insurance on",
+    "meaning": "~에 보험을 들다",
+    "targetScore": 900,
+    "exampleEn": "You should take out insurance on your valuable items.",
+    "exampleKo": "당신의 귀중품에 보험을 들어야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 165,
+    "word": "curb",
+    "meaning": "억제하다",
+    "targetScore": 900,
+    "exampleEn": "The government is trying to curb inflation.",
+    "exampleKo": "정부는 인플레이션을 억제하려고 노력하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 166,
+    "word": "be held up",
+    "meaning": "잡히다; 지연되다",
+    "targetScore": 900,
+    "exampleEn": "The robbery was held up by a security guard.",
+    "exampleKo": "강도 사건은 경비원에 의해 저지되었습니다(잡혔습니다)."
+  },
+  {
+    "day": 26,
+    "no": 167,
+    "word": "cluster",
+    "meaning": "무리",
+    "targetScore": 900,
+    "exampleEn": "A cluster of banks is located in the financial district.",
+    "exampleKo": "은행들의 무리가 금융 지구에 위치해 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 168,
+    "word": "accrue",
+    "meaning": "축적하다, 모으다",
+    "targetScore": 900,
+    "exampleEn": "Interest will accrue on the unpaid balance.",
+    "exampleKo": "미지급 잔액에 대해 이자가 축적될 것입니다."
+  }
+]

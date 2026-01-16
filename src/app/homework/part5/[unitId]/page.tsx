@@ -15,6 +15,7 @@ interface Question {
     options: { [key: string]: string };
     answer: string;
     explanation?: string;
+    type?: string;
 }
 
 interface Log {
@@ -25,6 +26,7 @@ interface Log {
     user_choice: string;
     correct_answer: string;
     explanation: string;
+    question_type?: string;
 }
 
 export default function Part5Quiz() {
@@ -41,11 +43,14 @@ export default function Part5Quiz() {
     const [isFinished, setIsFinished] = useState(false);
     const [submitting, setSubmitting] = useState(false);
 
-    // Fetch Questions
+    // Data Import
+
+    // Fetch Questions (Firestore -> Local Fallback)
     useEffect(() => {
         const fetchQuestions = async () => {
             if (!unitId) return;
             try {
+                // 1. Try Firestore First
                 const docRef = doc(db, "Review_Questions", unitId);
                 const docSnap = await getDoc(docRef);
 
@@ -53,17 +58,38 @@ export default function Part5Quiz() {
                     const data = docSnap.data();
                     if (data.inter && Array.isArray(data.inter)) {
                         setQuestions(data.inter);
-                    } else {
-                        alert("문제 형식이 올바르지 않습니다.");
-                        router.back();
+                        setLoading(false);
+                        return;
                     }
+                }
+
+                // 2. Fallback to Local Data if Firestore fails or empty
+                console.log("Firestore data found (or empty), checking local fallback...");
+                const { part5Data } = await import('@/data/part5');
+                const localData = part5Data[unitId];
+
+                if (localData && localData.length > 0) {
+                    // console.log("Using Local Fallback Data for", unitId);
+                    setQuestions(localData);
                 } else {
                     alert("해당 유닛의 문제가 없습니다.");
                     router.back();
                 }
             } catch (error) {
-                console.error("Error fetching questions:", error);
-                alert("문제를 불러오는 중 오류가 발생했습니다.");
+                console.error("Error fetching questions, trying fallback:", error);
+                // Fallback on error too
+                try {
+                    const { part5Data } = await import('@/data/part5');
+                    const localData = part5Data[unitId];
+                    if (localData) setQuestions(localData);
+                    else {
+                        alert("문제를 불러오는 중 오류가 발생했습니다.");
+                        router.back();
+                    }
+                } catch (e) {
+                    alert("데이터를 로드할 수 없습니다.");
+                    router.back();
+                }
             } finally {
                 setLoading(false);
             }
@@ -85,7 +111,8 @@ export default function Part5Quiz() {
             is_correct: isCorrect,
             user_choice: selected,
             correct_answer: currentQ.answer,
-            explanation: currentQ.explanation || "해설이 없습니다."
+            explanation: currentQ.explanation || "해설이 없습니다.",
+            question_type: currentQ.type
         };
 
         const newLogs = [...logs, newLog];
@@ -215,7 +242,7 @@ export default function Part5Quiz() {
     const progress = ((currentIndex) / questions.length) * 100;
 
     return (
-        <div className="max-w-md mx-auto min-h-[80vh] flex flex-col pt-4 pb-20">
+        <div className="w-full max-w-2xl mx-auto min-h-[80vh] flex flex-col pt-4 pb-20 px-0 md:px-4">
             <div className="w-full bg-slate-800 h-1.5 rounded-full mb-8 overflow-hidden">
                 <div
                     className="bg-indigo-500 h-full transition-all duration-500 ease-out"
@@ -223,7 +250,7 @@ export default function Part5Quiz() {
                 ></div>
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 px-4 md:px-0">
                 <div className="mb-8 pl-1 relative">
                     <span className="absolute -left-4 -top-6 text-[8rem] font-black text-slate-800/20 italic -z-10 leading-none select-none">
                         {String(currentIndex + 1).padStart(2, '0')}
@@ -254,7 +281,26 @@ export default function Part5Quiz() {
             </div>
 
             <div className="mt-8 text-center">
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{unitId.replace(/_/g, ' ')}</p>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                    {(function () {
+                        const UNIT_TITLES: Record<string, string> = {
+                            "Unit_00_Structure": "문장 구조와 5형식",
+                            "Unit_01_Noun": "명사 (Noun)",
+                            "Unit_02_Pronoun": "대명사 (Pronoun)",
+                            "Unit_03_Adjective": "형용사 (Adjective)",
+                            "Unit_04_Adverb": "부사 (Adverb)",
+                            "Unit_05_Preposition": "전치사 (Preposition)",
+                            "Unit_06_Verb": "동사의 시제와 태",
+                            "Unit_07_To_Infinitive": "To 부정사",
+                            "Unit_08_Gerund": "동명사 (Gerund)",
+                            "Unit_09_Participle": "분사 (Participle)",
+                            "Unit_10_Adverb_Conjunctions": "부사절 접속사",
+                            "Unit_11_Relative_Clauses": "관계대명사",
+                            "Unit_12_Noun_Clauses": "명사절 접속사"
+                        };
+                        return UNIT_TITLES[unitId] || unitId.replace(/_/g, ' ');
+                    })()}
+                </p>
             </div>
         </div>
     );

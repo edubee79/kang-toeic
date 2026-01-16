@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 10,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "71",
+        "text": "What kind of product did the speaker order?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Printer ink"
+          },
+          {
+            "label": "B",
+            "text": "Eyeglasses"
+          },
+          {
+            "label": "C",
+            "text": "Picture frames"
+          },
+          {
+            "label": "D",
+            "text": "Furniture"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "72",
+        "text": "What problem does the speaker mention?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A package was not received."
+          },
+          {
+            "label": "B",
+            "text": "An invoice is missing."
+          },
+          {
+            "label": "C",
+            "text": "A product is the wrong color."
+          },
+          {
+            "label": "D",
+            "text": "A Web site is down."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "73",
+        "text": "What does the speaker ask about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A refund policy"
+          },
+          {
+            "label": "B",
+            "text": "A delivery fee"
+          },
+          {
+            "label": "C",
+            "text": "A shipping time"
+          },
+          {
+            "label": "D",
+            "text": "A mailing address"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "M-Au Hello, 71I recently ordered a pair of reading glasses from your Web site. 72I chose blue frames, but when the package arrived, the glasses had black frames instead. I'm going to send these back to you now to be exchanged for the correct color. But 73I wanted to ask how long it'll take for the blue pair to arrive. The original shipment took about three weeks, and I'd like to get the replacement sooner. My number's 555-0156. Thanks."
+  },
+  {
+    "testId": 10,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "74",
+        "text": "What award is being announced?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Best design"
+          },
+          {
+            "label": "B",
+            "text": "Top salesperson"
+          },
+          {
+            "label": "C",
+            "text": "Employee of the month"
+          },
+          {
+            "label": "D",
+            "text": "Excellence in research"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "75",
+        "text": "According to the speaker, what will the winner receive?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A commemorative plaque"
+          },
+          {
+            "label": "B",
+            "text": "A parking space"
+          },
+          {
+            "label": "C",
+            "text": "A gift certificate"
+          },
+          {
+            "label": "D",
+            "text": "A recognition dinner"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "76",
+        "text": "What does the speaker say will be published on a Web site?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A photograph"
+          },
+          {
+            "label": "B",
+            "text": "A biography"
+          },
+          {
+            "label": "C",
+            "text": "Professional accomplishments"
+          },
+          {
+            "label": "D",
+            "text": "Company event details"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "W-Am Good afternoon, everyone. As you know, 74it's time to announce our newest employee of the month, and it goes to Haru Watanabe. Congratulations! Haru did outstanding work this month securing the Thompson Limited account. He also volunteers in the community. 75As our winner, Haru will receive a preferred parking space right outside the building for the next 30 days. Haru, please come up here to have your picture taken. 76Like all our employees of the month, your photo will be featured on the company Web site."
+  },
+  {
+    "testId": 10,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "77",
+        "text": "What kind of product does the speaker's company sell?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Bicycles"
+          },
+          {
+            "label": "B",
+            "text": "Tools"
+          },
+          {
+            "label": "C",
+            "text": "Cars"
+          },
+          {
+            "label": "D",
+            "text": "Toys"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "78",
+        "text": "What will the listeners do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Watch a video"
+          },
+          {
+            "label": "B",
+            "text": "Vote on a policy"
+          },
+          {
+            "label": "C",
+            "text": "Inspect a brochure"
+          },
+          {
+            "label": "D",
+            "text": "Tour a facility"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "79",
+        "text": "What does the speaker mean when he says, \"I come in at eight\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "He is very busy this week."
+          },
+          {
+            "label": "B",
+            "text": "A store usually opens early."
+          },
+          {
+            "label": "C",
+            "text": "The listeners should arrive at that time."
+          },
+          {
+            "label": "D",
+            "text": "The listeners should prepare a shipment."
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "M-Cn Hi, everyone! My name is Sanjeep Gupta. 77We're excited to have so many new people working at our bicycle stores. During the week, you will learn how to repair bicycles and scooters for our customers. 78Before we begin your training, I'm going to show you around this model facility, which has been built to simulate the repair shop in the back of every one of our stores. Oh—79a couple of you asked about your schedule this week. I'll be overseeing your work, and I come in at eight."
+  },
+  {
+    "testId": 10,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "80",
+        "text": "What does the speaker mainly discuss?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Offering training opportunities"
+          },
+          {
+            "label": "B",
+            "text": "Changing product packaging"
+          },
+          {
+            "label": "C",
+            "text": "Updating safety regulations"
+          },
+          {
+            "label": "D",
+            "text": "Revising an advertising strategy"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "81",
+        "text": "What did the company do last month?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It expanded its social media presence."
+          },
+          {
+            "label": "B",
+            "text": "It agreed to organize a conference."
+          },
+          {
+            "label": "C",
+            "text": "It published a training manual."
+          },
+          {
+            "label": "D",
+            "text": "It hired an outside consultant."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "82",
+        "text": "What should interested listeners do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Contact their managers"
+          },
+          {
+            "label": "B",
+            "text": "Recruit some volunteers"
+          },
+          {
+            "label": "C",
+            "text": "Answer a survey"
+          },
+          {
+            "label": "D",
+            "text": "Watch a video"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Au 80A new report shows that customers prefer sustainable packaging in the products they buy. In order to expand our customer base, we've decided to look into using biodegradable packaging for the personal care products we make. 81Just last month, we hired a packaging consultant to develop environmentally friendly packaging for our products. Now we need to set up a committee to oversee the project. 82If you're interested in participating, contact your manager by the end of the week."
+  },
+  {
+    "testId": 10,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "83",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Engineers"
+          },
+          {
+            "label": "B",
+            "text": "Dentists"
+          },
+          {
+            "label": "C",
+            "text": "Educators"
+          },
+          {
+            "label": "D",
+            "text": "Architects"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "84",
+        "text": "Why does the speaker say, \"I'll be at the booth in the lobby until noon\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To request volunteers for the afternoon"
+          },
+          {
+            "label": "B",
+            "text": "To explain that a booth location has changed"
+          },
+          {
+            "label": "C",
+            "text": "To apologize for a scheduling conflict"
+          },
+          {
+            "label": "D",
+            "text": "To indicate availability to answer questions"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "85",
+        "text": "What does the speaker say will happen tonight?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A book signing"
+          },
+          {
+            "label": "B",
+            "text": "A photo shoot"
+          },
+          {
+            "label": "C",
+            "text": "A dinner reception"
+          },
+          {
+            "label": "D",
+            "text": "An award ceremony"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Br 83Thank you all for attending the thirtieth annual Dental Healthcare Conference. We have six sessions planned on the latest advances in tooth restoration. As a reminder, 84if you'd like to receive continuing education credit for attending the conference, you'll have to complete additional paperwork. Some of you may want to hear more details about that. I'll be at the booth in the lobby until noon. And finally, just a reminder that 85you are all invited to attend a dinner reception tonight starting right after the last presentation session."
+  },
+  {
+    "testId": 10,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "86",
+        "text": "What is Geeta Prasad's profession?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Research scientist"
+          },
+          {
+            "label": "B",
+            "text": "Medical doctor"
+          },
+          {
+            "label": "C",
+            "text": "University professor"
+          },
+          {
+            "label": "D",
+            "text": "Government official"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "87",
+        "text": "According to the speaker, what are some data used for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To evaluate a budget"
+          },
+          {
+            "label": "B",
+            "text": "To design new products"
+          },
+          {
+            "label": "C",
+            "text": "To make hiring decisions"
+          },
+          {
+            "label": "D",
+            "text": "To develop an exercise program"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "88",
+        "text": "Why should the listeners visit a Web site?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To download a manual"
+          },
+          {
+            "label": "B",
+            "text": "To read a report"
+          },
+          {
+            "label": "C",
+            "text": "To register for a study"
+          },
+          {
+            "label": "D",
+            "text": "To provide some feedback"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Am Welcome to this episode of our radio show, Research Now. On every show we talk to a different scientist about their work. 86Today's guest is Geeta Prasad. She's a scientist at McMillan Shoe Manufacturers. Her job is to research how people move their feet when they exercise. 87She then provides that data to the design team, who use it to design new shoes. In fact, 88her team is looking for participants to take part in their next study. To sign up, visit McMillan Shoe Manufacturers' Web site."
+  },
+  {
+    "testId": 10,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "89",
+        "text": "Where do the listeners most likely work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a home appliance store"
+          },
+          {
+            "label": "B",
+            "text": "At a hardware store"
+          },
+          {
+            "label": "C",
+            "text": "At a shipping company"
+          },
+          {
+            "label": "D",
+            "text": "At a furniture store"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "90",
+        "text": "According to the speaker, what has caused a problem?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Low-quality merchandise"
+          },
+          {
+            "label": "B",
+            "text": "Competition from other businesses"
+          },
+          {
+            "label": "C",
+            "text": "Increased rental costs"
+          },
+          {
+            "label": "D",
+            "text": "Poor customer service"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "91",
+        "text": "What will happen next month?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A focus group will be assembled."
+          },
+          {
+            "label": "B",
+            "text": "A customer loyalty program will be introduced."
+          },
+          {
+            "label": "C",
+            "text": "Some employees will receive training."
+          },
+          {
+            "label": "D",
+            "text": "New advertisements will be designed."
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "M-Cn Thanks for attending this management meeting. As you know, 89despite our strategy of positioning ourselves as a seller of high-quality furniture, 90we've been losing business to several secondhand stores selling used furniture in the area. There's one thing that we can start doing that many other furniture stores aren't: offering free assembly. By developing cross-functional delivery teams, we'll be able to gain a competitive edge. So 91next month, all of our delivery teams will attend sessions where they'll learn how to assemble our products in customers' homes."
+  },
+  {
+    "testId": 10,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "92",
+        "text": "Where is the speech being given?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a training session"
+          },
+          {
+            "label": "B",
+            "text": "At a press conference"
+          },
+          {
+            "label": "C",
+            "text": "At a job fair"
+          },
+          {
+            "label": "D",
+            "text": "At a store grand opening"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "93",
+        "text": "Why does the speaker apologize?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some repair work has caused delays."
+          },
+          {
+            "label": "B",
+            "text": "Some employees have been transferred."
+          },
+          {
+            "label": "C",
+            "text": "Some materials have not arrived."
+          },
+          {
+            "label": "D",
+            "text": "Some businesses have been temporarily closed."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "94",
+        "text": "What does the speaker mean when she says, \"the tracks and trains are not city property\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "She did not follow a recommendation."
+          },
+          {
+            "label": "B",
+            "text": "She is not responsible for a problem."
+          },
+          {
+            "label": "C",
+            "text": "Some directions were misleading."
+          },
+          {
+            "label": "D",
+            "text": "A contract contained errors."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "W-Br Hello everyone. 92Thanks for coming to this press conference. On behalf of the City of Sommerville, 93I want to sincerely apologize to all community members affected by this week's train delays. My department has received reports of delays averaging an hour at peak periods. 93It has become clear that the ongoing track and wire repair work has become far too disruptive for city commuters. 94With this week's unacceptable delays in mind, my department, the city transportation office, is negotiating with the contractor, National Rail. That's the company that owns the tracks and runs the trains for Sommerville. To be clear, the tracks and trains are not city property. OK, now I can take some questions."
+  },
+  {
+    "testId": 10,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "95",
+        "text": "Look at the graphic. Which hairstyle does the speaker recommend?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Style 1"
+          },
+          {
+            "label": "B",
+            "text": "Style 2"
+          },
+          {
+            "label": "C",
+            "text": "Style 3"
+          },
+          {
+            "label": "D",
+            "text": "Style 4"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "96",
+        "text": "What does the speaker say is included in the price?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A comb"
+          },
+          {
+            "label": "B",
+            "text": "A beverage"
+          },
+          {
+            "label": "C",
+            "text": "Blow-drying"
+          },
+          {
+            "label": "D",
+            "text": "Hair care instructions"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "97",
+        "text": "What does the speaker say happened yesterday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A photo shoot was held."
+          },
+          {
+            "label": "B",
+            "text": "A popular product arrived."
+          },
+          {
+            "label": "C",
+            "text": "A new hairstylist was hired."
+          },
+          {
+            "label": "D",
+            "text": "A product demonstration was conducted."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "W-Am Hi, Susan. It's Maria. You asked me to suggest a new hairstyle for your appointment tomorrow. 95I'd recommend something cut all the way up to your chin. I think that a style like this would give you a very professional look. I'll show you the picture from my hairstyle catalog when you come in. 96If you'd like me to blow-dry your hair during your appointment, that's included in the price. Oh, and by the way, 97yesterday we got a shipment in of the Hydro Five hair moisturizer that always sells out. I know you like to use it, so I thought you might want to know."
+  },
+  {
+    "testId": 10,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "98",
+        "text": "According to the speaker, what did the company do last week?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It installed software to monitor machines."
+          },
+          {
+            "label": "B",
+            "text": "It added a new machine to an assembly line."
+          },
+          {
+            "label": "C",
+            "text": "It hired some expert technicians."
+          },
+          {
+            "label": "D",
+            "text": "It reorganized a production team."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "99",
+        "text": "Look at the graphic. Which machine will a technician look at?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Machine 1"
+          },
+          {
+            "label": "B",
+            "text": "Machine 2"
+          },
+          {
+            "label": "C",
+            "text": "Machine 3"
+          },
+          {
+            "label": "D",
+            "text": "Machine 4"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "100",
+        "text": "What does the company hope to do next quarter?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Update their logo"
+          },
+          {
+            "label": "B",
+            "text": "Meet their production targets"
+          },
+          {
+            "label": "C",
+            "text": "Purchase similar technologies"
+          },
+          {
+            "label": "D",
+            "text": "Begin replacing outdated computers"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "M-Cn 98Our first topic is an update on the data analytic software we installed last week to identify problems with our plastic molding machines. As I'm sure you're aware, 100we've missed our production targets for the last two quarters. That means we're spending too much time assembling our products. As you can see on this chart, 99the data show that one of our machines is running a very slow production cycle at an average of six minutes, twenty-two seconds per cycle. We've already flagged it for repair by a technician. By next week, that machine should be at normal output. 100We're very optimistic about the impact the new analytic software will have on next quarter's targets."
+  }
+]

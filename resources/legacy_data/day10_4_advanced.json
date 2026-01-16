@@ -1,0 +1,290 @@
+[
+    {
+        "day": 10,
+        "no": 137,
+        "word": "automotive repair shop",
+        "meaning": "자동차 정비소",
+        "targetScore": 900,
+        "exampleEn": "My car is in the automotive repair shop.",
+        "exampleKo": "내 차는 자동차 정비소에 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 138,
+        "word": "awning",
+        "meaning": "차양, 덮개",
+        "targetScore": 900,
+        "exampleEn": "We sat under the awning.",
+        "exampleKo": "우리는 차양 아래에 앉았습니다."
+    },
+    {
+        "day": 10,
+        "no": 139,
+        "word": "banquet",
+        "meaning": "연회",
+        "targetScore": 900,
+        "exampleEn": "A banquet was held in his honor.",
+        "exampleKo": "그를 기리는 연회가 열렸습니다."
+    },
+    {
+        "day": 10,
+        "no": 140,
+        "word": "bargain",
+        "meaning": "특가품; 흥정하다",
+        "targetScore": 900,
+        "exampleEn": "It was a real bargain.",
+        "exampleKo": "그것은 정말 싼 물건이었습니다."
+    },
+    {
+        "day": 10,
+        "no": 141,
+        "word": "beverage",
+        "meaning": "음료",
+        "targetScore": 900,
+        "exampleEn": "Alcoholic beverages are not allowed.",
+        "exampleKo": "알코올음료는 허용되지 않습니다."
+    },
+    {
+        "day": 10,
+        "no": 142,
+        "word": "bistro",
+        "meaning": "작은 식당",
+        "targetScore": 900,
+        "exampleEn": "We ate at a charming bistro.",
+        "exampleKo": "우리는 매력적인 작은 식당에서 식사했습니다."
+    },
+    {
+        "day": 10,
+        "no": 143,
+        "word": "canopy",
+        "meaning": "캐노피, 덮개",
+        "targetScore": 900,
+        "exampleEn": "Trees formed a canopy over the road.",
+        "exampleKo": "나무들이 도로 위로 덮개를 형성했습니다."
+    },
+    {
+        "day": 10,
+        "no": 144,
+        "word": "cater",
+        "meaning": "음식을 공급하다",
+        "targetScore": 900,
+        "exampleEn": "They cater for weddings.",
+        "exampleKo": "그들은 결혼식에 음식을 공급합니다."
+    },
+    {
+        "day": 10,
+        "no": 145,
+        "word": "catering",
+        "meaning": "출장 뷔페, 음식 공급",
+        "targetScore": 900,
+        "exampleEn": "We hired a catering service.",
+        "exampleKo": "우리는 출장 뷔페 서비스를 고용했습니다."
+    },
+    {
+        "day": 10,
+        "no": 146,
+        "word": "commodity",
+        "meaning": "상품, 원자재",
+        "targetScore": 900,
+        "exampleEn": "Oil is a valuable commodity.",
+        "exampleKo": "석유는 귀중한 원자재입니다."
+    },
+    {
+        "day": 10,
+        "no": 147,
+        "word": "defect",
+        "meaning": "결함; 망명하다",
+        "targetScore": 900,
+        "exampleEn": "The car has a mechanical defect.",
+        "exampleKo": "그 차는 기계적 결함이 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 148,
+        "word": "drapery",
+        "meaning": "커튼, 휘장",
+        "targetScore": 900,
+        "exampleEn": "The heavy drapery blocked the light.",
+        "exampleKo": "두꺼운 휘장이 빛을 차단했습니다."
+    },
+    {
+        "day": 10,
+        "no": 149,
+        "word": "drugstore",
+        "meaning": "약국 (잡화점 겸용)",
+        "targetScore": 900,
+        "exampleEn": "I bought aspirin at the drugstore.",
+        "exampleKo": "나는 약국에서 아스피린을 샀습니다."
+    },
+    {
+        "day": 10,
+        "no": 150,
+        "word": "embroidery",
+        "meaning": "자수",
+        "targetScore": 900,
+        "exampleEn": "She enjoys embroidery.",
+        "exampleKo": "그녀는 자수를 즐깁니다."
+    },
+    {
+        "day": 10,
+        "no": 151,
+        "word": "entree",
+        "meaning": "주요리",
+        "targetScore": 900,
+        "exampleEn": "I chose the steak for my entree.",
+        "exampleKo": "나는 주요리로 스테이크를 선택했습니다."
+    },
+    {
+        "day": 10,
+        "no": 152,
+        "word": "garnish",
+        "meaning": "고명; 장식하다",
+        "targetScore": 900,
+        "exampleEn": "Garnish the dish with parsley.",
+        "exampleKo": "접시를 파슬리로 장식하세요."
+    },
+    {
+        "day": 10,
+        "no": 153,
+        "word": "grocery",
+        "meaning": "식료품",
+        "targetScore": 900,
+        "exampleEn": "I need to go grocery shopping.",
+        "exampleKo": "나는 식료품 쇼핑을 가야 합니다."
+    },
+    {
+        "day": 10,
+        "no": 154,
+        "word": "haggle",
+        "meaning": "흥정하다, 실랑이하다",
+        "targetScore": 900,
+        "exampleEn": "Don't haggle over the price.",
+        "exampleKo": "가격으로 흥정하지 마세요."
+    },
+    {
+        "day": 10,
+        "no": 155,
+        "word": "invoice",
+        "meaning": "청구서, 송장",
+        "targetScore": 900,
+        "exampleEn": "Please send the invoice.",
+        "exampleKo": "청구서를 보내주세요."
+    },
+    {
+        "day": 10,
+        "no": 156,
+        "word": "lavish",
+        "meaning": "호화로운; 아끼지 않는",
+        "targetScore": 900,
+        "exampleEn": "It was a lavish party.",
+        "exampleKo": "그것은 호화로운 파티였습니다."
+    },
+    {
+        "day": 10,
+        "no": 157,
+        "word": "luxury",
+        "meaning": "사치품",
+        "targetScore": 900,
+        "exampleEn": "A car is a necessity, not a luxury.",
+        "exampleKo": "자동차는 사치품이 아니라 필수품입니다."
+    },
+    {
+        "day": 10,
+        "no": 158,
+        "word": "napkin",
+        "meaning": "냅킨",
+        "targetScore": 900,
+        "exampleEn": "Put the napkin on your lap.",
+        "exampleKo": "냅킨을 무릎 위에 놓으세요."
+    },
+    {
+        "day": 10,
+        "no": 159,
+        "word": "outfit",
+        "meaning": "옷, 복장; 갖추어 주다",
+        "targetScore": 900,
+        "exampleEn": "That outfit looks great on you.",
+        "exampleKo": "그 옷은 당신에게 아주 잘 어울립니다."
+    },
+    {
+        "day": 10,
+        "no": 160,
+        "word": "patio",
+        "meaning": "테라스, 베란다",
+        "targetScore": 900,
+        "exampleEn": "We ate lunch on the patio.",
+        "exampleKo": "우리는 테라스에서 점심을 먹었습니다."
+    },
+    {
+        "day": 10,
+        "no": 161,
+        "word": "pharmacy",
+        "meaning": "약국 (조제 중심)",
+        "targetScore": 900,
+        "exampleEn": "Is there a pharmacy nearby?",
+        "exampleKo": "근처에 약국이 있습니까?"
+    },
+    {
+        "day": 10,
+        "no": 162,
+        "word": "preservative",
+        "meaning": "방부제",
+        "targetScore": 900,
+        "exampleEn": "This food contains no preservatives.",
+        "exampleKo": "이 음식에는 방부제가 들어있지 않습니다."
+    },
+    {
+        "day": 10,
+        "no": 163,
+        "word": "savor",
+        "meaning": "맛보다, 음미하다",
+        "targetScore": 900,
+        "exampleEn": "Savor the moment.",
+        "exampleKo": "그 순간을 음미하세요."
+    },
+    {
+        "day": 10,
+        "no": 164,
+        "word": "spree",
+        "meaning": "흥청망청하기",
+        "targetScore": 900,
+        "exampleEn": "She went on a shopping spree.",
+        "exampleKo": "그녀는 흥청망청 쇼핑을 했습니다."
+    },
+    {
+        "day": 10,
+        "no": 165,
+        "word": "textile",
+        "meaning": "직물",
+        "targetScore": 900,
+        "exampleEn": "The textile industry is important.",
+        "exampleKo": "직물 산업은 중요합니다."
+    },
+    {
+        "day": 10,
+        "no": 166,
+        "word": "thrift",
+        "meaning": "절약, 검소",
+        "targetScore": 900,
+        "exampleEn": "He learned thrift from his parents.",
+        "exampleKo": "그는 부모님에게서 절약을 배웠습니다."
+    },
+    {
+        "day": 10,
+        "no": 167,
+        "word": "voucher",
+        "meaning": "상품권, 할인권",
+        "targetScore": 900,
+        "exampleEn": "I have a voucher for a free meal.",
+        "exampleKo": "나는 무료 식사권이 있습니다."
+    },
+    {
+        "day": 10,
+        "no": 168,
+        "word": "wholesale",
+        "meaning": "도매",
+        "targetScore": 900,
+        "exampleEn": "We buy wholesale and sell retail.",
+        "exampleKo": "우리는 도매로 사서 소매로 팝니다."
+    }
+]

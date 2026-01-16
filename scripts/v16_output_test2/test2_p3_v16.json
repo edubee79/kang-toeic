@@ -1,0 +1,64 @@
+{
+  "passageId": 3,
+  "type": "EMAIL",
+  "structure": {
+    "header_lines": [
+      "To: All Customers",
+      "From: asquires@lightidea.com",
+      "Date: March 6",
+      "Subject: Information"
+    ],
+    "salutation": "Dear Light Idea Customers,",
+    "body_paragraphs": [
+      "Light Idea is enacting a price increase on select energy-efficient products, effective April 17.\nSpecific product pricing will [139]. Please contact your sales representative for details and questions.",
+      "The last date for ordering at current prices is April 16. All orders [140] after this date will follow the new price list. [141] Customers will be able to find this on our Web site.",
+      "We will continue to provide quality products and [142] service to our valued customers. Thank you for your business."
+    ],
+    "closing_lines": [
+      "Sincerely,",
+      "Arvin Squires\nHead of Sales, Light Idea"
+    ]
+  },
+  "questions": [
+    {
+      "id": 139,
+      "text": "(A) agree\n(B) vary\n(C) wait\n(D) decline",
+      "options": [
+        "(A) agree",
+        "(B) vary",
+        "(C) wait",
+        "(D) decline"
+      ]
+    },
+    {
+      "id": 140,
+      "text": "(A) receiving\n(B) having received\n(C) received\n(D) will be received",
+      "options": [
+        "(A) receiving",
+        "(B) having received",
+        "(C) received",
+        "(D) will be received"
+      ]
+    },
+    {
+      "id": 141,
+      "text": "(A) The updated price list will be available on\nMarch 20.\n(B) We apologize for this inconvenience.\n(C) Your orders will be shipped after April 17.\n(D) We are increasing prices because of\nrising costs.",
+      "options": [
+        "(A) The updated price list will be available on\nMarch 20.",
+        "(B) We apologize for this inconvenience.",
+        "(C) Your orders will be shipped after April 17.",
+        "(D) We are increasing prices because of\nrising costs."
+      ]
+    },
+    {
+      "id": 142,
+      "text": "(A) exceptionally\n(B) exception\n(C) exceptional\n(D) exceptionalism",
+      "options": [
+        "(A) exceptionally",
+        "(B) exception",
+        "(C) exceptional",
+        "(D) exceptionalism"
+      ]
+    }
+  ]
+}

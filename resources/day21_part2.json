@@ -1,0 +1,254 @@
+[
+  {
+    "day": 21,
+    "no": 41,
+    "word": "uncertain",
+    "meaning": "확신이 없는, 불확실한",
+    "targetScore": 650,
+    "exampleEn": "The economic outlook remains uncertain.",
+    "exampleKo": "경제 전망은 여전히 불확실합니다."
+  },
+  {
+    "day": 21,
+    "no": 42,
+    "word": "premier",
+    "meaning": "으뜸의, 첫째의",
+    "targetScore": 650,
+    "exampleEn": "We are the premier provider of legal services.",
+    "exampleKo": "우리는 으뜸가는(최고의) 법률 서비스 제공업체입니다."
+  },
+  {
+    "day": 21,
+    "no": 43,
+    "word": "branch",
+    "meaning": "지사, 분점, 나뭇가지",
+    "targetScore": 650,
+    "exampleEn": "The bank plans to open a new branch.",
+    "exampleKo": "은행은 새 지점을 열 계획입니다."
+  },
+  {
+    "day": 21,
+    "no": 44,
+    "word": "critic",
+    "meaning": "비평가",
+    "targetScore": 650,
+    "exampleEn": "The movie received praise from critics.",
+    "exampleKo": "그 영화는 비평가들로부터 찬사를 받았습니다."
+  },
+  {
+    "day": 21,
+    "no": 45,
+    "word": "end up",
+    "meaning": "결국 ~이 되다",
+    "targetScore": 650,
+    "exampleEn": "If you are late, you might end up missing the train.",
+    "exampleKo": "늦으면 결국 기차를 놓치게 될지도 모릅니다."
+  },
+  {
+    "day": 21,
+    "no": 46,
+    "word": "in the past",
+    "meaning": "과거에",
+    "targetScore": 650,
+    "exampleEn": "In the past, we relied on manual labor.",
+    "exampleKo": "과거에, 우리는 육체노동에 의존했습니다."
+  },
+  {
+    "day": 21,
+    "no": 47,
+    "word": "indoors",
+    "meaning": "실내에서",
+    "targetScore": 650,
+    "exampleEn": "The event will be held indoors due to rain.",
+    "exampleKo": "비 때문에 행사는 실내에서 열릴 것입니다."
+  },
+  {
+    "day": 21,
+    "no": 48,
+    "word": "inward",
+    "meaning": "안으로",
+    "targetScore": 650,
+    "exampleEn": "The door opens inward.",
+    "exampleKo": "문은 안으로 열립니다."
+  },
+  {
+    "day": 21,
+    "no": 49,
+    "word": "lean",
+    "meaning": "기울이다, 숙이다",
+    "targetScore": 650,
+    "exampleEn": "Please do not lean against the glass wall.",
+    "exampleKo": "유리 벽에 기대지 마십시오."
+  },
+  {
+    "day": 21,
+    "no": 50,
+    "word": "lift",
+    "meaning": "들어 올리다",
+    "targetScore": 650,
+    "exampleEn": "He is too weak to lift the heavy box.",
+    "exampleKo": "그는 너무 약해서 무거운 상자를 들어 올릴 수 없습니다."
+  },
+  {
+    "day": 21,
+    "no": 51,
+    "word": "partnership",
+    "meaning": "제휴, 협력",
+    "targetScore": 650,
+    "exampleEn": "We entered into a partnership with a local firm.",
+    "exampleKo": "우리는 지역 회사와 제휴(협력) 관계를 맺었습니다."
+  },
+  {
+    "day": 21,
+    "no": 52,
+    "word": "plaza",
+    "meaning": "광장",
+    "targetScore": 650,
+    "exampleEn": "Meet me at the central plaza at noon.",
+    "exampleKo": "정오에 중앙 광장에서 만납시다."
+  },
+  {
+    "day": 21,
+    "no": 53,
+    "word": "relax",
+    "meaning": "긴장을 풀다",
+    "targetScore": 650,
+    "exampleEn": "Please relax and enjoy the flight.",
+    "exampleKo": "긴장을 풀고 비행을 즐기십시오."
+  },
+  {
+    "day": 21,
+    "no": 54,
+    "word": "staff",
+    "meaning": "직원, 직원을 배치하다",
+    "targetScore": 650,
+    "exampleEn": "We need to hire more staff for the project.",
+    "exampleKo": "우리는 프로젝트를 위해 더 많은 직원을 고용해야 합니다."
+  },
+  {
+    "day": 21,
+    "no": 55,
+    "word": "stretch",
+    "meaning": "펴다, 잡아당기다, (연속된) 길, 기간",
+    "targetScore": 650,
+    "exampleEn": "It is important to stretch before exercising.",
+    "exampleKo": "운동하기 전에 몸을 펴는(스트레칭하는) 것이 중요합니다."
+  },
+  {
+    "day": 21,
+    "no": 56,
+    "word": "switch",
+    "meaning": "바꾸다",
+    "targetScore": 650,
+    "exampleEn": "Let's switch seats so you can see better.",
+    "exampleKo": "더 잘 볼 수 있도록 자리를 바꿉시다."
+  },
+  {
+    "day": 21,
+    "no": 57,
+    "word": "as long as",
+    "meaning": "~하는 한",
+    "targetScore": 650,
+    "exampleEn": "You can stay as long as you like.",
+    "exampleKo": "원하는 만큼(하는 한) 머물러도 좋습니다."
+  },
+  {
+    "day": 21,
+    "no": 58,
+    "word": "correctly",
+    "meaning": "바르게, 정확하게",
+    "targetScore": 650,
+    "exampleEn": "Please ensure the form is filled out correctly.",
+    "exampleKo": "양식이 바르게(정확하게) 작성되었는지 확인하십시오."
+  },
+  {
+    "day": 21,
+    "no": 59,
+    "word": "expressly",
+    "meaning": "분명히, 명확히",
+    "targetScore": 650,
+    "exampleEn": "The rules are expressly stated in the contract.",
+    "exampleKo": "규칙들은 계약서에 분명히 명시되어 있습니다."
+  },
+  {
+    "day": 21,
+    "no": 60,
+    "word": "fever",
+    "meaning": "열",
+    "targetScore": 650,
+    "exampleEn": "He missed work because of a high fever.",
+    "exampleKo": "그는 고열 때문에 결근했습니다."
+  },
+  {
+    "day": 21,
+    "no": 61,
+    "word": "founder",
+    "meaning": "창립자, 설립자",
+    "targetScore": 650,
+    "exampleEn": "The founder of the company retired last year.",
+    "exampleKo": "회사의 창립자는 작년에 은퇴했습니다."
+  },
+  {
+    "day": 21,
+    "no": 62,
+    "word": "in spite of",
+    "meaning": "~에도 불구하고",
+    "targetScore": 650,
+    "exampleEn": "We went out in spite of the bad weather.",
+    "exampleKo": "우리는 나쁜 날씨에도 불구하고 외출했습니다."
+  },
+  {
+    "day": 21,
+    "no": 63,
+    "word": "individual",
+    "meaning": "개인, 개인의",
+    "targetScore": 650,
+    "exampleEn": "Each individual is responsible for their own work.",
+    "exampleKo": "각 개인은 자신의 업무에 책임이 있습니다."
+  },
+  {
+    "day": 21,
+    "no": 64,
+    "word": "ironing",
+    "meaning": "다림질",
+    "targetScore": 650,
+    "exampleEn": "I need to do some ironing tonight.",
+    "exampleKo": "저는 오늘 밤에 다림질을 좀 해야 합니다."
+  },
+  {
+    "day": 21,
+    "no": 65,
+    "word": "minor",
+    "meaning": "사소한",
+    "targetScore": 650,
+    "exampleEn": "It was only a minor error.",
+    "exampleKo": "그것은 단지 사소한 실수였습니다."
+  },
+  {
+    "day": 21,
+    "no": 66,
+    "word": "poorly",
+    "meaning": "저조하게, 형편없이",
+    "targetScore": 650,
+    "exampleEn": "The team performed poorly in the last quarter.",
+    "exampleKo": "팀은 지난 분기에 저조하게(형편없이) 실적을 냈습니다."
+  },
+  {
+    "day": 21,
+    "no": 67,
+    "word": "region",
+    "meaning": "지역",
+    "targetScore": 650,
+    "exampleEn": "Sales in the southern region have increased.",
+    "exampleKo": "남부 지역의 매출이 증가했습니다."
+  },
+  {
+    "day": 21,
+    "no": 68,
+    "word": "sharply",
+    "meaning": "날카롭게",
+    "targetScore": 650,
+    "exampleEn": "Prices have risen sharply in recent months.",
+    "exampleKo": "최근 몇 달 동안 가격이 날카롭게(급격히) 올랐습니다."
+  }
+]

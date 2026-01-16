@@ -1,0 +1,362 @@
+[
+  {
+    "day": 25,
+    "no": 1,
+    "word": "congestion",
+    "meaning": "(교통의) 체증, 혼잡",
+    "targetScore": 650,
+    "exampleEn": "Traffic congestion is severe during rush hour.",
+    "exampleKo": "러시아워 동안 교통 체증이 심합니다."
+  },
+  {
+    "day": 25,
+    "no": 2,
+    "word": "commute",
+    "meaning": "통근하다; 통근",
+    "targetScore": 650,
+    "exampleEn": "My daily commute takes about 45 minutes.",
+    "exampleKo": "제 일일 통근 시간은 약 45분입니다."
+  },
+  {
+    "day": 25,
+    "no": 3,
+    "word": "pedestrian",
+    "meaning": "보행자",
+    "targetScore": 650,
+    "exampleEn": "Pedestrians must use the crosswalk.",
+    "exampleKo": "보행자는 횡단보도를 이용해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 4,
+    "word": "vehicle",
+    "meaning": "차량",
+    "targetScore": 650,
+    "exampleEn": "All vehicles must be registered with the city.",
+    "exampleKo": "모든 차량은 시에 등록되어야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 5,
+    "word": "route",
+    "meaning": "경로",
+    "targetScore": 650,
+    "exampleEn": "The bus follows a specific route through downtown.",
+    "exampleKo": "버스는 시내를 통과하는 특정 경로를 따릅니다."
+  },
+  {
+    "day": 25,
+    "no": 6,
+    "word": "detour",
+    "meaning": "우회로; 우회하다",
+    "targetScore": 650,
+    "exampleEn": "Due to construction, drivers must take a detour.",
+    "exampleKo": "공사로 인해 운전자들은 우회해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 7,
+    "word": "intersection",
+    "meaning": "교차로",
+    "targetScore": 650,
+    "exampleEn": "Turn left at the next intersection.",
+    "exampleKo": "다음 교차로에서 좌회전하세요."
+  },
+  {
+    "day": 25,
+    "no": 8,
+    "word": "lane",
+    "meaning": "차선",
+    "targetScore": 650,
+    "exampleEn": "Please stay in your lane while driving.",
+    "exampleKo": "운전하는 동안 차선을 유지하세요."
+  },
+  {
+    "day": 25,
+    "no": 9,
+    "word": "highway",
+    "meaning": "고속도로",
+    "targetScore": 650,
+    "exampleEn": "The highway connects the two cities.",
+    "exampleKo": "고속도로가 두 도시를 연결합니다."
+  },
+  {
+    "day": 25,
+    "no": 10,
+    "word": "toll",
+    "meaning": "통행료",
+    "targetScore": 650,
+    "exampleEn": "The bridge toll is $5 per vehicle.",
+    "exampleKo": "다리 통행료는 차량당 5달러입니다."
+  },
+  {
+    "day": 25,
+    "no": 11,
+    "word": "parking",
+    "meaning": "주차",
+    "targetScore": 650,
+    "exampleEn": "Parking is available in the underground garage.",
+    "exampleKo": "지하 주차장에 주차가 가능합니다."
+  },
+  {
+    "day": 25,
+    "no": 12,
+    "word": "permit",
+    "meaning": "허가증; 허가하다",
+    "targetScore": 650,
+    "exampleEn": "You need a parking permit to park here.",
+    "exampleKo": "여기에 주차하려면 주차 허가증이 필요합니다."
+  },
+  {
+    "day": 25,
+    "no": 13,
+    "word": "license",
+    "meaning": "면허증",
+    "targetScore": 650,
+    "exampleEn": "Please show me your driver's license.",
+    "exampleKo": "운전면허증을 보여주세요."
+  },
+  {
+    "day": 25,
+    "no": 14,
+    "word": "registration",
+    "meaning": "등록",
+    "targetScore": 650,
+    "exampleEn": "Vehicle registration must be renewed annually.",
+    "exampleKo": "차량 등록은 매년 갱신되어야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 15,
+    "word": "fare",
+    "meaning": "요금",
+    "targetScore": 650,
+    "exampleEn": "The subway fare has increased by 50 cents.",
+    "exampleKo": "지하철 요금이 50센트 인상되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 16,
+    "word": "schedule",
+    "meaning": "시간표, 일정",
+    "targetScore": 650,
+    "exampleEn": "Please check the train schedule before you leave.",
+    "exampleKo": "출발하기 전에 기차 시간표를 확인하세요."
+  },
+  {
+    "day": 25,
+    "no": 17,
+    "word": "departure",
+    "meaning": "출발",
+    "targetScore": 650,
+    "exampleEn": "The departure time is 3:30 PM.",
+    "exampleKo": "출발 시간은 오후 3시 30분입니다."
+  },
+  {
+    "day": 25,
+    "no": 18,
+    "word": "arrival",
+    "meaning": "도착",
+    "targetScore": 650,
+    "exampleEn": "The estimated arrival time is 6:00 PM.",
+    "exampleKo": "예상 도착 시간은 오후 6시입니다."
+  },
+  {
+    "day": 25,
+    "no": 19,
+    "word": "delay",
+    "meaning": "지연; 지연시키다",
+    "targetScore": 650,
+    "exampleEn": "The flight was delayed due to bad weather.",
+    "exampleKo": "비행기는 악천후로 인해 지연되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 20,
+    "word": "cancel",
+    "meaning": "취소하다",
+    "targetScore": 650,
+    "exampleEn": "The airline canceled all morning flights.",
+    "exampleKo": "항공사는 모든 오전 항공편을 취소했습니다."
+  },
+  {
+    "day": 25,
+    "no": 21,
+    "word": "terminal",
+    "meaning": "터미널",
+    "targetScore": 650,
+    "exampleEn": "International flights depart from Terminal 2.",
+    "exampleKo": "국제선은 2번 터미널에서 출발합니다."
+  },
+  {
+    "day": 25,
+    "no": 22,
+    "word": "platform",
+    "meaning": "승강장",
+    "targetScore": 650,
+    "exampleEn": "The train will arrive at platform 5.",
+    "exampleKo": "기차는 5번 승강장에 도착할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 23,
+    "word": "boarding",
+    "meaning": "탑승",
+    "targetScore": 650,
+    "exampleEn": "Boarding will begin at gate 12.",
+    "exampleKo": "탑승은 12번 게이트에서 시작됩니다."
+  },
+  {
+    "day": 25,
+    "no": 24,
+    "word": "passenger",
+    "meaning": "승객",
+    "targetScore": 650,
+    "exampleEn": "All passengers must fasten their seatbelts.",
+    "exampleKo": "모든 승객은 안전벨트를 매야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 25,
+    "word": "luggage",
+    "meaning": "짐",
+    "targetScore": 650,
+    "exampleEn": "Please place your luggage in the overhead compartment.",
+    "exampleKo": "짐을 머리 위 수납공간에 넣어주세요."
+  },
+  {
+    "day": 25,
+    "no": 26,
+    "word": "baggage",
+    "meaning": "수하물",
+    "targetScore": 650,
+    "exampleEn": "You can claim your baggage at carousel 3.",
+    "exampleKo": "3번 회전대에서 수하물을 찾을 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 27,
+    "word": "destination",
+    "meaning": "목적지",
+    "targetScore": 650,
+    "exampleEn": "What is your final destination?",
+    "exampleKo": "최종 목적지가 어디입니까?"
+  },
+  {
+    "day": 25,
+    "no": 28,
+    "word": "transfer",
+    "meaning": "환승하다; 환승",
+    "targetScore": 650,
+    "exampleEn": "You need to transfer at the next station.",
+    "exampleKo": "다음 역에서 환승해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 29,
+    "word": "connection",
+    "meaning": "연결편",
+    "targetScore": 650,
+    "exampleEn": "I missed my connection flight in Chicago.",
+    "exampleKo": "시카고에서 연결편을 놓쳤습니다."
+  },
+  {
+    "day": 25,
+    "no": 30,
+    "word": "direct",
+    "meaning": "직행의; 지시하다",
+    "targetScore": 650,
+    "exampleEn": "Is this a direct flight to London?",
+    "exampleKo": "이것은 런던행 직항편입니까?"
+  },
+  {
+    "day": 25,
+    "no": 31,
+    "word": "nonstop",
+    "meaning": "직행의",
+    "targetScore": 650,
+    "exampleEn": "We offer nonstop service to Tokyo.",
+    "exampleKo": "우리는 도쿄행 직항 서비스를 제공합니다."
+  },
+  {
+    "day": 25,
+    "no": 32,
+    "word": "layover",
+    "meaning": "경유",
+    "targetScore": 650,
+    "exampleEn": "There is a two-hour layover in Dubai.",
+    "exampleKo": "두바이에서 2시간 경유가 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 33,
+    "word": "turbulence",
+    "meaning": "난기류",
+    "targetScore": 650,
+    "exampleEn": "We may experience some turbulence during the flight.",
+    "exampleKo": "비행 중 약간의 난기류를 겪을 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 34,
+    "word": "runway",
+    "meaning": "활주로",
+    "targetScore": 650,
+    "exampleEn": "The plane is waiting on the runway.",
+    "exampleKo": "비행기가 활주로에서 대기 중입니다."
+  },
+  {
+    "day": 25,
+    "no": 35,
+    "word": "navigate",
+    "meaning": "항해하다, 길을 찾다",
+    "targetScore": 650,
+    "exampleEn": "Use GPS to navigate through the city.",
+    "exampleKo": "GPS를 사용하여 도시를 통과하세요."
+  },
+  {
+    "day": 25,
+    "no": 36,
+    "word": "accessible",
+    "meaning": "접근 가능한",
+    "targetScore": 650,
+    "exampleEn": "The building is accessible by public transportation.",
+    "exampleKo": "건물은 대중교통으로 접근 가능합니다."
+  },
+  {
+    "day": 25,
+    "no": 37,
+    "word": "proximity",
+    "meaning": "근접성",
+    "targetScore": 650,
+    "exampleEn": "The hotel's proximity to the airport is convenient.",
+    "exampleKo": "공항과의 근접성이 편리합니다."
+  },
+  {
+    "day": 25,
+    "no": 38,
+    "word": "vicinity",
+    "meaning": "근처",
+    "targetScore": 650,
+    "exampleEn": "There are several restaurants in the vicinity.",
+    "exampleKo": "근처에 여러 레스토랑이 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 39,
+    "word": "accommodate",
+    "meaning": "수용하다",
+    "targetScore": 650,
+    "exampleEn": "The parking lot can accommodate 200 vehicles.",
+    "exampleKo": "주차장은 200대의 차량을 수용할 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 40,
+    "word": "capacity",
+    "meaning": "수용력",
+    "targetScore": 650,
+    "exampleEn": "The bus has a seating capacity of 50 passengers.",
+    "exampleKo": "버스는 50명의 승객 좌석 수용력이 있습니다."
+  }
+]

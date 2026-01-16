@@ -1,0 +1,423 @@
+{
+  "testId": 2,
+  "title": "ETS TOEIC Vol 4 - Test 2",
+  "passages": [
+    {
+      "id": "p6-t2-p1",
+      "type": "EMAIL",
+      "guidance": "Questions 131-134 refer to the following email.",
+      "content": "To: Myung-Hee Hahn\nFrom: Dellwyn Home Store\nDate: January 15\nSubject: Order update\n\nDear Ms. Hahn,\n\nYour [131] order of a red oak dining table and six matching chairs arrived at our store this morning.\n\nWe would now like to arrange for the delivery of the [132]. Please call us at 517-555-0188 and ask [133] to Coleman Cobb, our delivery manager.\n\n[134]\n\nCustomer Service, Dellwyn Home Store",
+      "questions": [
+        {
+          "id": "131",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "specially"
+            },
+            {
+              "label": "B",
+              "text": "specialize"
+            },
+            {
+              "label": "C",
+              "text": "special"
+            },
+            {
+              "label": "D",
+              "text": "specializing"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "132",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "furniture"
+            },
+            {
+              "label": "B",
+              "text": "appliances"
+            },
+            {
+              "label": "C",
+              "text": "refund"
+            },
+            {
+              "label": "D",
+              "text": "tools"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "133",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "speak"
+            },
+            {
+              "label": "B",
+              "text": "spoken"
+            },
+            {
+              "label": "C",
+              "text": "is speaking"
+            },
+            {
+              "label": "D",
+              "text": "to speak"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "134",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "He can schedule a convenient time."
+            },
+            {
+              "label": "B",
+              "text": "He began working here yesterday."
+            },
+            {
+              "label": "C",
+              "text": "He can meet you at 11:00 A.м."
+            },
+            {
+              "label": "D",
+              "text": "He recently moved to Dellwyn."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t2-p2",
+      "type": "ADVERTISEMENT",
+      "guidance": "Questions 135-138 refer to the following advertisement.",
+      "title": "Keep Cool Service Contractors:",
+      "content": "Keep Cool Service Contractors:\n67 Main Road, Edinburgh Village\nChaguanas, Trinidad and Tobago\n\nKeep Cool Service Contractors can bring you peace of mind. As part of an annual contract, we will service your air-conditioning system, ensuring your [135] and comfort. This includes inspecting the system, making repairs as needed, and professionally cleaning your air ducts. [136] , if necessary, we can replace your old air-conditioning system with a new, cost-efficient one.\n\nOur workers are highly qualified licensed technicians who stay up-to-date with ongoing training. [137] . We promise you fair prices and professional work, [138] by our Keep Cool guarantee.\n\nCall 1-868-555-0129 for a free quote today.",
+      "questions": [
+        {
+          "id": "135",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "safe"
+            },
+            {
+              "label": "B",
+              "text": "safely"
+            },
+            {
+              "label": "C",
+              "text": "safest"
+            },
+            {
+              "label": "D",
+              "text": "safety"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "136",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "On one hand"
+            },
+            {
+              "label": "B",
+              "text": "Nonetheless"
+            },
+            {
+              "label": "C",
+              "text": "Furthermore"
+            },
+            {
+              "label": "D",
+              "text": "And yet"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "137",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "Take advantage of dozens of useful online tools."
+            },
+            {
+              "label": "B",
+              "text": "Moreover, the air conditioner you chose is very popular."
+            },
+            {
+              "label": "C",
+              "text": "Plus, they are friendly, clean, and knowledgeable."
+            },
+            {
+              "label": "D",
+              "text": "Thank you for visiting our contractor showroom."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "138",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "backed"
+            },
+            {
+              "label": "B",
+              "text": "backs"
+            },
+            {
+              "label": "C",
+              "text": "backing"
+            },
+            {
+              "label": "D",
+              "text": "back"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t2-p3",
+      "type": "EMAIL",
+      "guidance": "Questions 139-142 refer to the following email.",
+      "content": "To: Myung-Hee Hahn\nFrom: Dellwyn Home Store\nDate: January 15\nSubject: Order update\n\nDear Ms. Hahn,\n\nYour [131] order of a red oak dining table and six matching chairs arrived at our store this morning.\n\nWe would now like to arrange for the delivery of the [132] . Please call us at 517-555-0188 and ask [133] to Coleman Cobb, our delivery manager.\n\n[134].\n\nCustomer Service, Dellwyn Home Store",
+      "questions": [
+        {
+          "id": "131",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "specially"
+            },
+            {
+              "label": "B",
+              "text": "specialize"
+            },
+            {
+              "label": "C",
+              "text": "special"
+            },
+            {
+              "label": "D",
+              "text": "specializing"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "132",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "furniture"
+            },
+            {
+              "label": "B",
+              "text": "appliances"
+            },
+            {
+              "label": "C",
+              "text": "refund"
+            },
+            {
+              "label": "D",
+              "text": "tools"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "133",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "speak"
+            },
+            {
+              "label": "B",
+              "text": "spoken"
+            },
+            {
+              "label": "C",
+              "text": "is speaking"
+            },
+            {
+              "label": "D",
+              "text": "to speak"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "134",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "He can schedule a convenient time."
+            },
+            {
+              "label": "B",
+              "text": "He began working here yesterday."
+            },
+            {
+              "label": "C",
+              "text": "He can meet you at 11:00 A.м."
+            },
+            {
+              "label": "D",
+              "text": "He recently moved to Dellwyn."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t2-p4",
+      "type": "EMAIL",
+      "guidance": "Questions 143-146 refer to the following email.",
+      "content": "To: Jang-Ho Kwon <jkwon@newart.nz>\nFrom: Kenneth Okim <k.okim@okimjewelry.nz>\nSubject: Good news\nDate: 30 August\n\nDear Jang-Ho,\n\nThank you for the shipment last month of 80 units of your jewelry pieces. I am happy to report that they have been selling very well in my shop. My [143] love the colourful designs as well as the quality of your workmanship.\n\n[144] I would like to increase the number of units I order from you. Would you be able to [145] my order for the September shipment?\n\nFinally, I would like to discuss the possibility of featuring your work exclusively in my store. I believe that I could reach your target audience best and that the agreement would serve [146] both very well. I look forward to hearing from you.\n\nBest regards,\nKenneth Okim\nOkim Jewelry",
+      "questions": [
+        {
+          "id": "143",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "patients"
+            },
+            {
+              "label": "B",
+              "text": "students"
+            },
+            {
+              "label": "C",
+              "text": "customers"
+            },
+            {
+              "label": "D",
+              "text": "teammates"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "144",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "If you need more time, please let me know."
+            },
+            {
+              "label": "B",
+              "text": "Unfortunately, I do not have adequate shelf space at this time."
+            },
+            {
+              "label": "C",
+              "text": "I would like to show you some of my own designs."
+            },
+            {
+              "label": "D",
+              "text": "The reasonable prices also make your pieces a great value."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "145",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "include"
+            },
+            {
+              "label": "B",
+              "text": "double"
+            },
+            {
+              "label": "C",
+              "text": "repeat"
+            },
+            {
+              "label": "D",
+              "text": "insure"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "146",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "us"
+            },
+            {
+              "label": "B",
+              "text": "you"
+            },
+            {
+              "label": "C",
+              "text": "we"
+            },
+            {
+              "label": "D",
+              "text": "these"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    }
+  ]
+}

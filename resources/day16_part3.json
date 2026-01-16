@@ -1,0 +1,614 @@
+[
+  {
+    "day": 16,
+    "no": 69,
+    "word": "unlikely",
+    "meaning": "~일 것 같지 않은",
+    "targetScore": 800,
+    "exampleEn": "It is unlikely that the merger will be approved.",
+    "exampleKo": "합병이 승인될 것 같지 않습니다."
+  },
+  {
+    "day": 16,
+    "no": 70,
+    "word": "back away from",
+    "meaning": "~에서 뒷걸음치다, 물러나다",
+    "targetScore": 800,
+    "exampleEn": "The investors decided to back away from the deal.",
+    "exampleKo": "투자자들은 그 거래에서 물러나기로 결정했습니다."
+  },
+  {
+    "day": 16,
+    "no": 71,
+    "word": "be closed for the day",
+    "meaning": "(영업시간이 끝나) 문을 닫다",
+    "targetScore": 800,
+    "exampleEn": "The bank will be closed for the day at 4 PM.",
+    "exampleKo": "은행은 오후 4시에 (영업시간이 끝나) 문을 닫을 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 72,
+    "word": "be determined to do",
+    "meaning": "~하기로 결심하다",
+    "targetScore": 800,
+    "exampleEn": "The team is determined to finish the project on time.",
+    "exampleKo": "팀은 프로젝트를 제시간에 끝내기로 결심했습니다."
+  },
+  {
+    "day": 16,
+    "no": 73,
+    "word": "business day",
+    "meaning": "영업일",
+    "targetScore": 800,
+    "exampleEn": "Please allow 3-5 business days for delivery.",
+    "exampleKo": "배송까지 영업일 기준 3~5일을 여유를 주십시오."
+  },
+  {
+    "day": 16,
+    "no": 74,
+    "word": "commercial space",
+    "meaning": "상업공간",
+    "targetScore": 800,
+    "exampleEn": "Rents for commercial space in the city center are rising.",
+    "exampleKo": "도심의 상업공간 임대료가 오르고 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 75,
+    "word": "day after tomorrow",
+    "meaning": "모레",
+    "targetScore": 800,
+    "exampleEn": "We have a meeting scheduled for the day after tomorrow.",
+    "exampleKo": "우리는 모레 회의 일정이 잡혀 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 76,
+    "word": "front-page story",
+    "meaning": "1면 기사",
+    "targetScore": 800,
+    "exampleEn": "The scandal was the front-page story in all the newspapers.",
+    "exampleKo": "그 스캔들은 모든 신문의 1면 기사였습니다."
+  },
+  {
+    "day": 16,
+    "no": 77,
+    "word": "give a good price",
+    "meaning": "좋은 가격에 주다",
+    "targetScore": 800,
+    "exampleEn": "If you buy in bulk, we can give a good price.",
+    "exampleKo": "대량으로 구매하시면 좋은 가격에 드릴 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 78,
+    "word": "headline",
+    "meaning": "기사 제목",
+    "targetScore": 800,
+    "exampleEn": "The headline caught my attention immediately.",
+    "exampleKo": "그 기사 제목이 즉시 제 주의를 끌었습니다."
+  },
+  {
+    "day": 16,
+    "no": 79,
+    "word": "in stock",
+    "meaning": "재고가 있는",
+    "targetScore": 800,
+    "exampleEn": "Unfortunately, the model you want is not in stock.",
+    "exampleKo": "죄송합니다만, 원하시는 모델은 재고가 없습니다(재고가 있는 상태가 아닙니다)."
+  },
+  {
+    "day": 16,
+    "no": 80,
+    "word": "lead (up/down) to",
+    "meaning": "~로 이어지다, ~로 통하다",
+    "targetScore": 800,
+    "exampleEn": "Detailed planning will lead to successful execution.",
+    "exampleKo": "상세한 계획은 성공적인 실행으로 이어질 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 81,
+    "word": "make a recording",
+    "meaning": "녹음하다, 녹화하다",
+    "targetScore": 800,
+    "exampleEn": "It is illegal to make a recording of the performance without permission.",
+    "exampleKo": "허가 없이 공연을 녹화하는(녹음하는) 것은 불법입니다."
+  },
+  {
+    "day": 16,
+    "no": 82,
+    "word": "normal operating hours",
+    "meaning": "정상 영업시간",
+    "targetScore": 800,
+    "exampleEn": "Our normal operating hours are from 9 AM to 6 PM.",
+    "exampleKo": "우리의 정상 영업시간은 오전 9시부터 오후 6시까지입니다."
+  },
+  {
+    "day": 16,
+    "no": 83,
+    "word": "on sale",
+    "meaning": "판매되고 있는",
+    "targetScore": 800,
+    "exampleEn": "Tickets will go on sale starting next Monday.",
+    "exampleKo": "티켓은 다음 주 월요일부터 판매될 것입니다(판매되고 있을 것입니다)."
+  },
+  {
+    "day": 16,
+    "no": 84,
+    "word": "on the market",
+    "meaning": "시판 중인",
+    "targetScore": 800,
+    "exampleEn": "The house has been on the market for over a year.",
+    "exampleKo": "그 집은 1년 넘게 시장에 나와 있습니다(시판 중입니다)."
+  },
+  {
+    "day": 16,
+    "no": 85,
+    "word": "out of print",
+    "meaning": "절판된",
+    "targetScore": 800,
+    "exampleEn": "The book is out of print, but you might find a used copy.",
+    "exampleKo": "그 책은 절판되었지만, 중고본을 찾을 수도 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 86,
+    "word": "out of stock",
+    "meaning": "재고가 없는",
+    "targetScore": 800,
+    "exampleEn": "The item is temporarily out of stock.",
+    "exampleKo": "그 품목은 일시적으로 재고가 없습니다."
+  },
+  {
+    "day": 16,
+    "no": 87,
+    "word": "overcharge",
+    "meaning": "바가지 씌우다, 부당한 값을 요구하다",
+    "targetScore": 800,
+    "exampleEn": "Be careful not to overcharge the customer.",
+    "exampleKo": "고객에게 바가지를 씌우지(부당한 값을 요구하지) 않도록 주의하십시오."
+  },
+  {
+    "day": 16,
+    "no": 88,
+    "word": "payment option",
+    "meaning": "결제 방법",
+    "targetScore": 800,
+    "exampleEn": "We offer credit card as a convenient payment option.",
+    "exampleKo": "우리는 편리한 결제 방법으로 신용카드를 제공합니다."
+  },
+  {
+    "day": 16,
+    "no": 89,
+    "word": "place an order",
+    "meaning": "주문하다",
+    "targetScore": 800,
+    "exampleEn": "I would like to place an order for ten units.",
+    "exampleKo": "10개를 주문하고(주문하다) 싶습니다."
+  },
+  {
+    "day": 16,
+    "no": 90,
+    "word": "put A out for sale",
+    "meaning": "A를 판매하기 위해 내놓다",
+    "targetScore": 800,
+    "exampleEn": "We decided to put the old equipment out for sale.",
+    "exampleKo": "우리는 오래된 장비를 판매하기 위해 내놓기로 결정했습니다."
+  },
+  {
+    "day": 16,
+    "no": 91,
+    "word": "retail store",
+    "meaning": "소매점",
+    "targetScore": 800,
+    "exampleEn": "Products can be returned to any of our retail stores.",
+    "exampleKo": "제품은 우리 소매점 어디에서나 반품할 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 92,
+    "word": "run out of",
+    "meaning": "~을 다 써 버리다, ~이 바닥나다",
+    "targetScore": 800,
+    "exampleEn": "We are about to run out of ink for the printer.",
+    "exampleKo": "프린터 잉크가 거의 다 떨어져(바닥나) 갑니다."
+  },
+  {
+    "day": 16,
+    "no": 93,
+    "word": "sales presentation",
+    "meaning": "제품 소개",
+    "targetScore": 800,
+    "exampleEn": "The sales presentation highlighted the product's unique features.",
+    "exampleKo": "제품 소개는 제품의 독특한 기능을 강조했습니다."
+  },
+  {
+    "day": 16,
+    "no": 94,
+    "word": "salesperson",
+    "meaning": "판매원, 외판원",
+    "targetScore": 800,
+    "exampleEn": "A top salesperson can earn significant commissions.",
+    "exampleKo": "최고의 판매원(외판원)은 상당한 수수료를 벌 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 95,
+    "word": "sold out",
+    "meaning": "매진된",
+    "targetScore": 800,
+    "exampleEn": "All tickets were sold out within an hour.",
+    "exampleKo": "모든 티켓이 한 시간 만에 매진되었습니다(매진된 상태가 되었습니다)."
+  },
+  {
+    "day": 16,
+    "no": 96,
+    "word": "stay open late",
+    "meaning": "늦게까지 영업하다",
+    "targetScore": 800,
+    "exampleEn": "The library will stay open late during exam week.",
+    "exampleKo": "도서관은 시험 기간 동안 늦게까지 문을 열(영업할) 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 97,
+    "word": "stockroom",
+    "meaning": "물품 보관소",
+    "targetScore": 800,
+    "exampleEn": "Only authorized personnel may enter the stockroom.",
+    "exampleKo": "허가된 직원만 물품 보관소에 들어갈 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 98,
+    "word": "storage facility",
+    "meaning": "창고 시설",
+    "targetScore": 800,
+    "exampleEn": "The company rents a large storage facility for inventory.",
+    "exampleKo": "그 회사는 재고를 위해 대형 창고 시설을 임대합니다."
+  },
+  {
+    "day": 16,
+    "no": 99,
+    "word": "storeroom",
+    "meaning": "저장실",
+    "targetScore": 800,
+    "exampleEn": "Please put the boxes back in the storeroom.",
+    "exampleKo": "상자들을 다시 저장실에 넣어 두십시오."
+  },
+  {
+    "day": 16,
+    "no": 100,
+    "word": "take inventory",
+    "meaning": "재고 목록을 만들다",
+    "targetScore": 800,
+    "exampleEn": "We maximize efficiency when we take inventory.",
+    "exampleKo": "우리는 재고 목록을 만들 때 효율성을 극대화합니다."
+  },
+  {
+    "day": 16,
+    "no": 101,
+    "word": "accordingly",
+    "meaning": "그에 알맞게, 따라서",
+    "targetScore": 800,
+    "exampleEn": "Please note the changes and adjust your schedule accordingly.",
+    "exampleKo": "변경 사항을 유의하고 그에 알맞게 일정을 조정하십시오."
+  },
+  {
+    "day": 16,
+    "no": 102,
+    "word": "adaptable",
+    "meaning": "적응할 수 있는",
+    "targetScore": 800,
+    "exampleEn": "Software needs to be adaptable to user needs.",
+    "exampleKo": "소프트웨어는 사용자 요구에 적응할 수 있어야 합니다."
+  },
+  {
+    "day": 16,
+    "no": 103,
+    "word": "along with",
+    "meaning": "~와 함께",
+    "targetScore": 800,
+    "exampleEn": "The proposal was submitted along with a budget plan.",
+    "exampleKo": "그 제안서는 예산 계획과 함께 제출되었습니다."
+  },
+  {
+    "day": 16,
+    "no": 104,
+    "word": "at the latest",
+    "meaning": "늦어도",
+    "targetScore": 800,
+    "exampleEn": "I need your response by tomorrow noon at the latest.",
+    "exampleKo": "늦어도 내일 정오까지 답변이 필요합니다."
+  },
+  {
+    "day": 16,
+    "no": 105,
+    "word": "compliant",
+    "meaning": "준수하는",
+    "targetScore": 800,
+    "exampleEn": "The company is fully compliant with all labor laws.",
+    "exampleKo": "그 회사는 모든 노동법을 완전히 준수하고 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 106,
+    "word": "correspond",
+    "meaning": "일치하다, 부합하다",
+    "targetScore": 800,
+    "exampleEn": "The product description corresponds to the actual item.",
+    "exampleKo": "제품 설명이 실제 물품과 일치합니다."
+  },
+  {
+    "day": 16,
+    "no": 107,
+    "word": "cultivation",
+    "meaning": "우호 증진, 양성",
+    "targetScore": 800,
+    "exampleEn": "The cultivation of talent is crucial for long-term success.",
+    "exampleKo": "인재 양성(우호 증진)은 장기적인 성공을 위해 중요합니다."
+  },
+  {
+    "day": 16,
+    "no": 108,
+    "word": "do business with",
+    "meaning": "~와 거래하다",
+    "targetScore": 800,
+    "exampleEn": "It is a pleasure to do business with you.",
+    "exampleKo": "당신과 거래하게 되어 기쁩니다."
+  },
+  {
+    "day": 16,
+    "no": 109,
+    "word": "had better do",
+    "meaning": "~하는 편이 낫다, ~ 해야 한다",
+    "targetScore": 800,
+    "exampleEn": "You had better do some research before investing.",
+    "exampleKo": "투자하기 전에 조사를 좀 하는 편이 낫습니다."
+  },
+  {
+    "day": 16,
+    "no": 110,
+    "word": "honorable",
+    "meaning": "고결한, 정직한",
+    "targetScore": 800,
+    "exampleEn": "He received an award for his honorable conduct.",
+    "exampleKo": "그는 고결한(정직한) 행동으로 상을 받았습니다."
+  },
+  {
+    "day": 16,
+    "no": 111,
+    "word": "perceptive",
+    "meaning": "통찰력 있는",
+    "targetScore": 800,
+    "exampleEn": "The manager made a perceptive observation about the market trend.",
+    "exampleKo": "관리자는 시장 추세에 대해 통찰력 있는 관찰을 했습니다."
+  },
+  {
+    "day": 16,
+    "no": 112,
+    "word": "reasonably",
+    "meaning": "합리적으로, 적당하게",
+    "targetScore": 800,
+    "exampleEn": "We believe the goals are reasonably attainable.",
+    "exampleKo": "우리는 그 목표들이 합리적으로(적당하게) 달성 가능하다고 믿습니다."
+  },
+  {
+    "day": 16,
+    "no": 113,
+    "word": "transformation",
+    "meaning": "변화, 변신",
+    "targetScore": 800,
+    "exampleEn": "The company underwent a major transformation last year.",
+    "exampleKo": "그 회사는 작년에 대대적인 변화(변신)를 겪었습니다."
+  },
+  {
+    "day": 16,
+    "no": 114,
+    "word": "attain",
+    "meaning": "(목표를) 달성하다",
+    "targetScore": 800,
+    "exampleEn": "She worked hard to attain the position of director.",
+    "exampleKo": "그녀는 이사 직책을 달성하기(얻기) 위해 열심히 일했습니다."
+  },
+  {
+    "day": 16,
+    "no": 115,
+    "word": "barter",
+    "meaning": "물물 교환하다, 물물 교환",
+    "targetScore": 800,
+    "exampleEn": "In some cultures, people still barter for goods.",
+    "exampleKo": "일부 문화권에서는 사람들이 여전히 물건을 물물 교환합니다."
+  },
+  {
+    "day": 16,
+    "no": 116,
+    "word": "boycott",
+    "meaning": "불매하다, 불매 운동",
+    "targetScore": 800,
+    "exampleEn": "The group planned to boycott the event.",
+    "exampleKo": "그 단체는 행사를 불매하기로(불매 운동하기로) 계획했습니다."
+  },
+  {
+    "day": 16,
+    "no": 117,
+    "word": "capitalize on",
+    "meaning": "~을 이용하다, 기회로 삼다",
+    "targetScore": 800,
+    "exampleEn": "We should capitalize on the popularity of our new app.",
+    "exampleKo": "우리는 새로운 앱의 인기를 이용해야(기회로 삼아야) 합니다."
+  },
+  {
+    "day": 16,
+    "no": 118,
+    "word": "council",
+    "meaning": "이사회, 의회",
+    "targetScore": 800,
+    "exampleEn": "She was elected to the local council.",
+    "exampleKo": "그녀는 지방 의회(이사회)에 선출되었습니다."
+  },
+  {
+    "day": 16,
+    "no": 119,
+    "word": "Department of Commerce",
+    "meaning": "상무부",
+    "targetScore": 800,
+    "exampleEn": "The Department of Commerce promotes economic growth.",
+    "exampleKo": "상무부는 경제 성장을 촉진합니다."
+  },
+  {
+    "day": 16,
+    "no": 120,
+    "word": "depot",
+    "meaning": "창고, 저장소",
+    "targetScore": 800,
+    "exampleEn": "The bus depot is located on the outskirts of town.",
+    "exampleKo": "버스 차고지(창고)는 마을 외곽에 위치해 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 121,
+    "word": "diminish",
+    "meaning": "감소하다",
+    "targetScore": 800,
+    "exampleEn": "Our resources will diminish rapidly if not managed well.",
+    "exampleKo": "잘 관리되지 않으면 우리의 자원은 급격히 감소할 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 122,
+    "word": "duty-free",
+    "meaning": "관세가 없는, 면세의",
+    "targetScore": 800,
+    "exampleEn": "You can buy perfume at the airport's duty-free shop.",
+    "exampleKo": "공항의 면세점에서 향수를 살 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 123,
+    "word": "election",
+    "meaning": "선거",
+    "targetScore": 800,
+    "exampleEn": "Voter turnout was high in the recent election.",
+    "exampleKo": "최근 선거에서 투표율이 높았습니다."
+  },
+  {
+    "day": 16,
+    "no": 124,
+    "word": "exercise one's right",
+    "meaning": "권리를 행사하다",
+    "targetScore": 800,
+    "exampleEn": "He chose to exercise his right to remain silent.",
+    "exampleKo": "그는 침묵할 권리를 행사하기로 결정했습니다."
+  },
+  {
+    "day": 16,
+    "no": 125,
+    "word": "federal",
+    "meaning": "연방의",
+    "targetScore": 800,
+    "exampleEn": "Federal laws supersede state laws in this matter.",
+    "exampleKo": "이 사안에서는 연방 법률이 주 법률보다 우선합니다."
+  },
+  {
+    "day": 16,
+    "no": 126,
+    "word": "hold power",
+    "meaning": "권력을 쥐다",
+    "targetScore": 800,
+    "exampleEn": "The dictator acted to hold power at all costs.",
+    "exampleKo": "독재자는 무슨 수를 써서라도 권력을 쥐기(유지하기) 위해 행동했습니다."
+  },
+  {
+    "day": 16,
+    "no": 127,
+    "word": "inclination",
+    "meaning": "의향, 뜻",
+    "targetScore": 800,
+    "exampleEn": "My inclination is to agree with the proposal.",
+    "exampleKo": "저의 의향(뜻)은 그 제안에 동의하는 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 128,
+    "word": "inevitable",
+    "meaning": "불가피한",
+    "targetScore": 800,
+    "exampleEn": "Change is inevitable in the business world.",
+    "exampleKo": "비즈니스계에서 변화는 불가피합니다."
+  },
+  {
+    "day": 16,
+    "no": 129,
+    "word": "loyal customer",
+    "meaning": "단골 고객",
+    "targetScore": 800,
+    "exampleEn": "We appreciate the support of every loyal customer.",
+    "exampleKo": "우리는 모든 단골 고객의 지원에 감사드립니다."
+  },
+  {
+    "day": 16,
+    "no": 130,
+    "word": "outside provider",
+    "meaning": "외부 공급자",
+    "targetScore": 800,
+    "exampleEn": "We outsource our IT support to an outside provider.",
+    "exampleKo": "우리는 IT 지원을 외부 공급자에게 아웃소싱합니다."
+  },
+  {
+    "day": 16,
+    "no": 131,
+    "word": "poll",
+    "meaning": "여론 조사",
+    "targetScore": 800,
+    "exampleEn": "We conducted a poll to gauge customer satisfaction.",
+    "exampleKo": "우리는 고객 만족도를 측정하기 위해 여론 조사를 실시했습니다."
+  },
+  {
+    "day": 16,
+    "no": 132,
+    "word": "possession",
+    "meaning": "소유물, 소유",
+    "targetScore": 800,
+    "exampleEn": "He lost all his possessions in the fire.",
+    "exampleKo": "그는 화재로 모든 소유물을 잃었습니다."
+  },
+  {
+    "day": 16,
+    "no": 133,
+    "word": "scarce",
+    "meaning": "부족한",
+    "targetScore": 800,
+    "exampleEn": "Water is becoming a scarce resource in the region.",
+    "exampleKo": "그 지역에서 물은 부족한 자원이 되고 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 134,
+    "word": "status",
+    "meaning": "지위",
+    "targetScore": 800,
+    "exampleEn": "The project's current status is 'in progress'.",
+    "exampleKo": "프로젝트의 현재 상태(지위)는 '진행 중'입니다."
+  },
+  {
+    "day": 16,
+    "no": 135,
+    "word": "switch A to B",
+    "meaning": "A를 B를 바꾸다",
+    "targetScore": 800,
+    "exampleEn": "We decided to switch our supplier to a local one.",
+    "exampleKo": "우리는 공급업체를 현지 업체로 바꾸기로(A를 B로 바꾸기로) 결정했습니다."
+  },
+  {
+    "day": 16,
+    "no": 136,
+    "word": "wholesaler",
+    "meaning": "도매업자",
+    "targetScore": 800,
+    "exampleEn": "The retailer buys products in bulk from a wholesaler.",
+    "exampleKo": "소매업자는 도매업자로부터 제품을 대량으로 구매합니다."
+  }
+]

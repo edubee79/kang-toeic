@@ -1,0 +1,614 @@
+[
+  {
+    "day": 13,
+    "no": 69,
+    "word": "a loaf of",
+    "meaning": "한 덩어리의",
+    "targetScore": 800,
+    "exampleEn": "I bought a loaf of bread.",
+    "exampleKo": "저는 빵 한 덩어리를 샀습니다."
+  },
+  {
+    "day": 13,
+    "no": 70,
+    "word": "affair",
+    "meaning": "일, 사건",
+    "targetScore": 800,
+    "exampleEn": "The manager handled the affair discreetly.",
+    "exampleKo": "관리자는 그 사건(일)을 신중하게 처리했습니다."
+  },
+  {
+    "day": 13,
+    "no": 71,
+    "word": "aisle",
+    "meaning": "(좌석 열·진열대 사이의) 통로",
+    "targetScore": 800,
+    "exampleEn": "You can find the item in aisle 4.",
+    "exampleKo": "그 물품은 4번 통로에서 찾으실 수 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 72,
+    "word": "annoy",
+    "meaning": "짜증 나게 하다",
+    "targetScore": 800,
+    "exampleEn": "The noise began to annoy the customers.",
+    "exampleKo": "소음이 고객들을 짜증나게 하기 시작했습니다."
+  },
+  {
+    "day": 13,
+    "no": 73,
+    "word": "at no charge(=at no cost)",
+    "meaning": "무료로",
+    "targetScore": 800,
+    "exampleEn": "Repair service is provided at no charge.",
+    "exampleKo": "수리 서비스는 무료로 제공됩니다."
+  },
+  {
+    "day": 13,
+    "no": 74,
+    "word": "at no extra charge",
+    "meaning": "추가 비용 없이",
+    "targetScore": 800,
+    "exampleEn": "Extra sauce is available at no extra charge.",
+    "exampleKo": "추가 소스는 추가 비용 없이 이용 가능합니다."
+  },
+  {
+    "day": 13,
+    "no": 75,
+    "word": "be on another call",
+    "meaning": "다른 전화를 받고 있다",
+    "targetScore": 800,
+    "exampleEn": "He is on another call right now.",
+    "exampleKo": "그는 지금 다른 전화를 받고 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 76,
+    "word": "ceremonial",
+    "meaning": "의식의, 예식의",
+    "targetScore": 800,
+    "exampleEn": "They wore ceremonial robes.",
+    "exampleKo": "그들은 의식용 가운을 입었습니다."
+  },
+  {
+    "day": 13,
+    "no": 77,
+    "word": "for your own safety",
+    "meaning": "여러분 자신의 안전을 위해",
+    "targetScore": 800,
+    "exampleEn": "Please follow the rules for your own safety.",
+    "exampleKo": "안전을 위해(당신의 안전을 위해) 규칙을 따라 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 78,
+    "word": "follow-up",
+    "meaning": "후속의, 추가의",
+    "targetScore": 800,
+    "exampleEn": "This meeting is a follow-up to our last discussion.",
+    "exampleKo": "이 회의는 지난 토론의 후속 조치입니다."
+  },
+  {
+    "day": 13,
+    "no": 79,
+    "word": "get a replacement",
+    "meaning": "교환 받다",
+    "targetScore": 800,
+    "exampleEn": "You can get a replacement for the damaged part.",
+    "exampleKo": "손상된 부품에 대해 교체품을 받으실 수 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 80,
+    "word": "handheld",
+    "meaning": "휴대용의",
+    "targetScore": 800,
+    "exampleEn": "Use a handheld device to scan the barcode.",
+    "exampleKo": "바코드를 스캔하려면 휴대용 장치를 사용하십시오."
+  },
+  {
+    "day": 13,
+    "no": 81,
+    "word": "head toward",
+    "meaning": "~쪽으로 향하다",
+    "targetScore": 800,
+    "exampleEn": "Let's head toward the exit.",
+    "exampleKo": "출구 쪽으로 향합시다."
+  },
+  {
+    "day": 13,
+    "no": 82,
+    "word": "hold the line",
+    "meaning": "(전화를) 끊지 않고 기다리다",
+    "targetScore": 800,
+    "exampleEn": "Please hold the line while I check.",
+    "exampleKo": "확인하는 동안 잠시만 기다려 주십시오(전화를 끊지 말고)."
+  },
+  {
+    "day": 13,
+    "no": 83,
+    "word": "just to make sure",
+    "meaning": "확실히 해두기 위해",
+    "targetScore": 800,
+    "exampleEn": "Check the details just to make sure.",
+    "exampleKo": "확실히 하기 위해 세부 사항을 확인하십시오."
+  },
+  {
+    "day": 13,
+    "no": 84,
+    "word": "leftover",
+    "meaning": "남은, 남은 음식",
+    "targetScore": 800,
+    "exampleEn": "Put the leftover food in the fridge.",
+    "exampleKo": "남은 음식은 냉장고에 넣으십시오."
+  },
+  {
+    "day": 13,
+    "no": 85,
+    "word": "look through the manual",
+    "meaning": "사용 설명서를 읽다",
+    "targetScore": 800,
+    "exampleEn": "Please look through the manual carefully.",
+    "exampleKo": "설명서를 주의 깊게 훑어보십시오."
+  },
+  {
+    "day": 13,
+    "no": 86,
+    "word": "on delivery",
+    "meaning": "배달 시에",
+    "targetScore": 800,
+    "exampleEn": "Payment is due on delivery.",
+    "exampleKo": "지불은 배달 시에 해야 합니다."
+  },
+  {
+    "day": 13,
+    "no": 87,
+    "word": "pharmacist",
+    "meaning": "약사",
+    "targetScore": 800,
+    "exampleEn": "Ask the pharmacist about the medication.",
+    "exampleKo": "약사에게 약물에 대해 문의하십시오."
+  },
+  {
+    "day": 13,
+    "no": 88,
+    "word": "potential customer",
+    "meaning": "잠재적 고객",
+    "targetScore": 800,
+    "exampleEn": "We are targeting potential customers.",
+    "exampleKo": "우리는 잠재 고객들을 겨냥하고 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 89,
+    "word": "prepaid",
+    "meaning": "선불된, 선납된",
+    "targetScore": 800,
+    "exampleEn": "He used a prepaid card.",
+    "exampleKo": "그는 선불 카드를 사용했습니다."
+  },
+  {
+    "day": 13,
+    "no": 90,
+    "word": "questionnaire",
+    "meaning": "설문지",
+    "targetScore": 800,
+    "exampleEn": "Please fill out the questionnaire.",
+    "exampleKo": "설문지를 작성해 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 91,
+    "word": "recall",
+    "meaning": "(결함 제품을) 회수하다, 회수",
+    "targetScore": 800,
+    "exampleEn": "The company issued a recall for the product.",
+    "exampleKo": "회사는 그 제품에 대해 리콜을 실시했습니다."
+  },
+  {
+    "day": 13,
+    "no": 92,
+    "word": "return a phone call",
+    "meaning": "회답 전화를 하다",
+    "targetScore": 800,
+    "exampleEn": "I need to return a phone call.",
+    "exampleKo": "저는 답신 전화를 해야 합니다."
+  },
+  {
+    "day": 13,
+    "no": 93,
+    "word": "ridiculously",
+    "meaning": "터무니 없이",
+    "targetScore": 800,
+    "exampleEn": "The price is ridiculously high.",
+    "exampleKo": "가격이 터무니없이(우스꽝스럽게) 높습니다."
+  },
+  {
+    "day": 13,
+    "no": 94,
+    "word": "take back",
+    "meaning": "반품하다",
+    "targetScore": 800,
+    "exampleEn": "We cannot take back used items.",
+    "exampleKo": "우리는 사용한 물품을 반품 받을(도로 가져갈) 수 없습니다."
+  },
+  {
+    "day": 13,
+    "no": 95,
+    "word": "troubleshoot",
+    "meaning": "(문제를) 해결하다, (고장난 것을)검사하다",
+    "targetScore": 800,
+    "exampleEn": "Help me troubleshoot this computer problem.",
+    "exampleKo": "이 컴퓨터 문제를 해결하는 것을 도와주십시오."
+  },
+  {
+    "day": 13,
+    "no": 96,
+    "word": "tune",
+    "meaning": "조율하다, 음을 맞추다",
+    "targetScore": 800,
+    "exampleEn": "Stay tuned for more news.",
+    "exampleKo": "더 많은 소식을 위해 채널을 고정하십시오(맞추어 놓으십시오)."
+  },
+  {
+    "day": 13,
+    "no": 97,
+    "word": "wardrobe",
+    "meaning": "옷장",
+    "targetScore": 800,
+    "exampleEn": "She bought a new wardrobe for work.",
+    "exampleKo": "그녀는 직장에서 입을 새 옷장(옷)을 샀습니다."
+  },
+  {
+    "day": 13,
+    "no": 98,
+    "word": "water-resistant",
+    "meaning": "내수성의, 물이 잘 스며들지 않는",
+    "targetScore": 800,
+    "exampleEn": "This watch is water-resistant.",
+    "exampleKo": "이 시계는 방수가 됩니다."
+  },
+  {
+    "day": 13,
+    "no": 99,
+    "word": "adverse",
+    "meaning": "불리한",
+    "targetScore": 800,
+    "exampleEn": "The adverse weather cancelled the event.",
+    "exampleKo": "악천후(불리한 날씨)로 행사가 취소되었습니다."
+  },
+  {
+    "day": 13,
+    "no": 100,
+    "word": "argument",
+    "meaning": "논의, 토론, 말다툼, 언쟁",
+    "targetScore": 800,
+    "exampleEn": "They had an argument about the bill.",
+    "exampleKo": "그들은 청구서에 대해 말다툼(논쟁)을 했습니다."
+  },
+  {
+    "day": 13,
+    "no": 101,
+    "word": "as requested",
+    "meaning": "요청한 대로",
+    "targetScore": 800,
+    "exampleEn": "We sent the files as requested.",
+    "exampleKo": "우리는 요청대로 파일을 보냈습니다."
+  },
+  {
+    "day": 13,
+    "no": 102,
+    "word": "defect",
+    "meaning": "결함",
+    "targetScore": 800,
+    "exampleEn": "The car has a manufacturing defect.",
+    "exampleKo": "그 차에는 제조상의 결함이 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 103,
+    "word": "discouraging",
+    "meaning": "낙담시키는",
+    "targetScore": 800,
+    "exampleEn": "The results were discouraging.",
+    "exampleKo": "결과는 실망스러웠습니다(낙담시켰습니다)."
+  },
+  {
+    "day": 13,
+    "no": 104,
+    "word": "escort",
+    "meaning": "호위하다, 호위대",
+    "targetScore": 800,
+    "exampleEn": "Security will escort you to the exit.",
+    "exampleKo": "보안 요원이 당신을 출구까지 안내(호위)할 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 105,
+    "word": "exterior",
+    "meaning": "외부의, 외관",
+    "targetScore": 800,
+    "exampleEn": "The exterior of the building is modern.",
+    "exampleKo": "그 건물의 외관은 현대적입니다."
+  },
+  {
+    "day": 13,
+    "no": 106,
+    "word": "further",
+    "meaning": "더 먼, 그 이상의, 더 나아가서, 게다가",
+    "targetScore": 800,
+    "exampleEn": "For further information, contact us.",
+    "exampleKo": "추가(더 이상의) 정보를 원하시면 저희에게 연락해 주십시오."
+  },
+  {
+    "day": 13,
+    "no": 107,
+    "word": "go on",
+    "meaning": "(어떤 상황이) 계속되다",
+    "targetScore": 800,
+    "exampleEn": "The meeting will go on for an hour.",
+    "exampleKo": "회의는 한 시간 동안 계속될 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 108,
+    "word": "graciously",
+    "meaning": "상냥하게, 고맙게도",
+    "targetScore": 800,
+    "exampleEn": "She graciously accepted the invitation.",
+    "exampleKo": "그녀는 우아하게(자비롭게) 초대를 수락했습니다."
+  },
+  {
+    "day": 13,
+    "no": 109,
+    "word": "inconvenient",
+    "meaning": "불편한",
+    "targetScore": 800,
+    "exampleEn": "The location is inconvenient for parking.",
+    "exampleKo": "그 위치는 주차하기에 불편합니다."
+  },
+  {
+    "day": 13,
+    "no": 110,
+    "word": "instant",
+    "meaning": "즉각적인",
+    "targetScore": 800,
+    "exampleEn": "We need an instant solution.",
+    "exampleKo": "우리는 즉각적인 해결책이 필요합니다."
+  },
+  {
+    "day": 13,
+    "no": 111,
+    "word": "loyalty",
+    "meaning": "충실, 충성, 충성심",
+    "targetScore": 800,
+    "exampleEn": "Customer loyalty is important to us.",
+    "exampleKo": "고객 충성도는 우리에게 중요합니다."
+  },
+  {
+    "day": 13,
+    "no": 112,
+    "word": "refer to",
+    "meaning": "~을 나타내다, ~에게 문의하다",
+    "targetScore": 800,
+    "exampleEn": "Please refer to the manual.",
+    "exampleKo": "설명서를 참조하십시오."
+  },
+  {
+    "day": 13,
+    "no": 113,
+    "word": "smoothly",
+    "meaning": "순조롭게",
+    "targetScore": 800,
+    "exampleEn": "The event went smoothly.",
+    "exampleKo": "행사는 순조롭게 진행되었습니다."
+  },
+  {
+    "day": 13,
+    "no": 114,
+    "word": "trait",
+    "meaning": "(성격상의) 특성",
+    "targetScore": 800,
+    "exampleEn": "Honesty is a valuable trait.",
+    "exampleKo": "정직은 소중한 특성입니다."
+  },
+  {
+    "day": 13,
+    "no": 115,
+    "word": "user friendly",
+    "meaning": "사용하기 쉬운",
+    "targetScore": 800,
+    "exampleEn": "The software is user friendly.",
+    "exampleKo": "그 소프트웨어는 사용하기 쉽습니다(사용자 친화적입니다)."
+  },
+  {
+    "day": 13,
+    "no": 116,
+    "word": "willing",
+    "meaning": "기꺼이 하는, 자발적인",
+    "targetScore": 800,
+    "exampleEn": "He is willing to help us.",
+    "exampleKo": "그는 기꺼이 우리를 도우려 합니다."
+  },
+  {
+    "day": 13,
+    "no": 117,
+    "word": "at one's request",
+    "meaning": "~의 요청으로",
+    "targetScore": 800,
+    "exampleEn": "We sent the sample at one's request.",
+    "exampleKo": "우리는 요청에 따라 샘플을 보냈습니다."
+  },
+  {
+    "day": 13,
+    "no": 118,
+    "word": "breakage",
+    "meaning": "파손, 파손물",
+    "targetScore": 800,
+    "exampleEn": "We are not responsible for breakage during shipping.",
+    "exampleKo": "우리는 배송 중 파손에 대해 책임지지 않습니다."
+  },
+  {
+    "day": 13,
+    "no": 119,
+    "word": "compliment",
+    "meaning": "찬사, 칭찬",
+    "targetScore": 800,
+    "exampleEn": "He paid her a compliment.",
+    "exampleKo": "그는 그녀에게 칭찬을 했습니다."
+  },
+  {
+    "day": 13,
+    "no": 120,
+    "word": "cut back",
+    "meaning": "줄이다, 삭감하다",
+    "targetScore": 800,
+    "exampleEn": "We need to cut back on expenses.",
+    "exampleKo": "우리는 비용을 줄여야 합니다."
+  },
+  {
+    "day": 13,
+    "no": 121,
+    "word": "even now",
+    "meaning": "아직까지도, 지금도",
+    "targetScore": 800,
+    "exampleEn": "Even now, I remember his advice.",
+    "exampleKo": "지금도(심지어 지금에도), 저는 그의 조언을 기억합니다."
+  },
+  {
+    "day": 13,
+    "no": 122,
+    "word": "faulty",
+    "meaning": "결함이 있는",
+    "targetScore": 800,
+    "exampleEn": "The wiring is faulty.",
+    "exampleKo": "배선에 결함이 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 123,
+    "word": "general population",
+    "meaning": "일반 대중",
+    "targetScore": 800,
+    "exampleEn": "The survey covers the general population.",
+    "exampleKo": "그 설문조사는 일반 대중을 대상으로 합니다."
+  },
+  {
+    "day": 13,
+    "no": 124,
+    "word": "make a complaint",
+    "meaning": "불평하다",
+    "targetScore": 800,
+    "exampleEn": "She wants to make a complaint.",
+    "exampleKo": "그녀는 불평(항의)을 하고 싶어 합니다."
+  },
+  {
+    "day": 13,
+    "no": 125,
+    "word": "make a request",
+    "meaning": "요청하다",
+    "targetScore": 800,
+    "exampleEn": "I would like to make a request.",
+    "exampleKo": "요청을 하나 하고 싶습니다."
+  },
+  {
+    "day": 13,
+    "no": 126,
+    "word": "make a response",
+    "meaning": "응답하다",
+    "targetScore": 800,
+    "exampleEn": "We will make a response soon.",
+    "exampleKo": "우리는 곧 응답할 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 127,
+    "word": "make an appointment",
+    "meaning": "예약을 하다",
+    "targetScore": 800,
+    "exampleEn": "I need to make an appointment with the dentist.",
+    "exampleKo": "저는 치과 의사와 약속을 잡아야 합니다."
+  },
+  {
+    "day": 13,
+    "no": 128,
+    "word": "meet the standards",
+    "meaning": "기준을 충족시키다",
+    "targetScore": 800,
+    "exampleEn": "The product fails to meet the standards.",
+    "exampleKo": "그 제품은 기준을 충족하지 못했습니다."
+  },
+  {
+    "day": 13,
+    "no": 129,
+    "word": "mistakenly",
+    "meaning": "실수로",
+    "targetScore": 800,
+    "exampleEn": "I mistakenly deleted the file.",
+    "exampleKo": "저는 실수로 그 파일을 삭제했습니다."
+  },
+  {
+    "day": 13,
+    "no": 130,
+    "word": "people of all ages",
+    "meaning": "모든 연령대의 사람들",
+    "targetScore": 800,
+    "exampleEn": "The park is for people of all ages.",
+    "exampleKo": "그 공원은 모든 연령대의 사람들을 위한 곳입니다."
+  },
+  {
+    "day": 13,
+    "no": 131,
+    "word": "post an notice on",
+    "meaning": "~에 공지 사항을 게시하다",
+    "targetScore": 800,
+    "exampleEn": "Post a notice on the bulletin board.",
+    "exampleKo": "게시판에 공지 사항을 게시하십시오."
+  },
+  {
+    "day": 13,
+    "no": 132,
+    "word": "service depot",
+    "meaning": "서비스 센터",
+    "targetScore": 800,
+    "exampleEn": "Take the car to the service depot.",
+    "exampleKo": "차를 서비스 센터(창고)로 가져가십시오."
+  },
+  {
+    "day": 13,
+    "no": 133,
+    "word": "stain",
+    "meaning": "얼룩",
+    "targetScore": 800,
+    "exampleEn": "There is a stain on the shirt.",
+    "exampleKo": "셔츠에 얼룩이 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 134,
+    "word": "trace",
+    "meaning": "(진행 과정을) 기술하다, 자취, 극소량",
+    "targetScore": 800,
+    "exampleEn": "We are trying to trace the package.",
+    "exampleKo": "우리는 소포를 추적하려고 노력 중입니다."
+  },
+  {
+    "day": 13,
+    "no": 135,
+    "word": "wear out",
+    "meaning": "닳다, 닳게 하다",
+    "targetScore": 800,
+    "exampleEn": "The tires will wear out eventually.",
+    "exampleKo": "타이어는 결국 닳을 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 136,
+    "word": "work properly",
+    "meaning": "제대로 작동하다",
+    "targetScore": 800,
+    "exampleEn": "Ensure the machine works properly.",
+    "exampleKo": "기계가 제대로 작동하는지 확인하십시오."
+  }
+]

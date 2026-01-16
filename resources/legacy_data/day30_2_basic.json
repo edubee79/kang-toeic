@@ -1,0 +1,254 @@
+[
+  {
+    "day": 30,
+    "no": 41,
+    "word": "susceptible",
+    "meaning": "~에 감염되기 쉬운, 영향 받기 쉬운",
+    "targetScore": 650,
+    "exampleEn": "Please consider the susceptible.",
+    "exampleKo": "~에 감염되기 쉬운, 영향 받기 쉬운을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 42,
+    "word": "uncomfortably",
+    "meaning": "불쾌하게, 불편하게",
+    "targetScore": 650,
+    "exampleEn": "Please consider the uncomfortably.",
+    "exampleKo": "불쾌하게, 불편하게을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 43,
+    "word": "allergic",
+    "meaning": "알레르기가 있는, 알레르기의",
+    "targetScore": 650,
+    "exampleEn": "Please consider the allergic.",
+    "exampleKo": "알레르기가 있는, 알레르기의을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 44,
+    "word": "blind",
+    "meaning": "눈이 먼",
+    "targetScore": 650,
+    "exampleEn": "Please consider the blind.",
+    "exampleKo": "눈이 먼을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 45,
+    "word": "cavity",
+    "meaning": "충치",
+    "targetScore": 650,
+    "exampleEn": "Please consider the cavity.",
+    "exampleKo": "충치을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 46,
+    "word": "cold",
+    "meaning": "감기, 추위, 추운",
+    "targetScore": 650,
+    "exampleEn": "Please consider the cold.",
+    "exampleKo": "감기, 추위, 추운을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 47,
+    "word": "cosmetic",
+    "meaning": "미용의, 화장의",
+    "targetScore": 650,
+    "exampleEn": "Please consider the cosmetic.",
+    "exampleKo": "미용의, 화장의을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 48,
+    "word": "feel sick",
+    "meaning": "몸이 찌뿌드드하다, 메스껍다",
+    "targetScore": 650,
+    "exampleEn": "Please consider the feel sick.",
+    "exampleKo": "몸이 찌뿌드드하다, 메스껍다을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 49,
+    "word": "fitness",
+    "meaning": "건강 상태",
+    "targetScore": 650,
+    "exampleEn": "Please consider the fitness.",
+    "exampleKo": "건강 상태을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 50,
+    "word": "gym",
+    "meaning": "체육관",
+    "targetScore": 650,
+    "exampleEn": "Please consider the gym.",
+    "exampleKo": "체육관을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 51,
+    "word": "have an injection",
+    "meaning": "주사를 맞다",
+    "targetScore": 650,
+    "exampleEn": "Please consider the have an injection.",
+    "exampleKo": "주사를 맞다을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 52,
+    "word": "medical facility",
+    "meaning": "의료시설",
+    "targetScore": 650,
+    "exampleEn": "Please consider the medical facility.",
+    "exampleKo": "의료시설을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 53,
+    "word": "raincoat",
+    "meaning": "비옷",
+    "targetScore": 650,
+    "exampleEn": "Please consider the raincoat.",
+    "exampleKo": "비옷을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 54,
+    "word": "surgery",
+    "meaning": "수술",
+    "targetScore": 650,
+    "exampleEn": "Please consider the surgery.",
+    "exampleKo": "수술을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 55,
+    "word": "toothache",
+    "meaning": "치통",
+    "targetScore": 650,
+    "exampleEn": "Please consider the toothache.",
+    "exampleKo": "치통을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 56,
+    "word": "treat",
+    "meaning": "치료하다",
+    "targetScore": 650,
+    "exampleEn": "Please consider the treat.",
+    "exampleKo": "치료하다을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 57,
+    "word": "vision",
+    "meaning": "시력",
+    "targetScore": 650,
+    "exampleEn": "Please consider the vision.",
+    "exampleKo": "시력을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 58,
+    "word": "workout",
+    "meaning": "운동",
+    "targetScore": 650,
+    "exampleEn": "Please consider the workout.",
+    "exampleKo": "운동을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 59,
+    "word": "beat",
+    "meaning": "(심장·맥박이) 뛰다",
+    "targetScore": 650,
+    "exampleEn": "Please consider the beat.",
+    "exampleKo": "(심장·맥박이) 뛰다을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 60,
+    "word": "blink",
+    "meaning": "눈을 깜박이다",
+    "targetScore": 650,
+    "exampleEn": "Please consider the blink.",
+    "exampleKo": "눈을 깜박이다을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 61,
+    "word": "cure",
+    "meaning": "치료, 치료하다",
+    "targetScore": 650,
+    "exampleEn": "Please consider the cure.",
+    "exampleKo": "치료, 치료하다을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 62,
+    "word": "disease",
+    "meaning": "질병",
+    "targetScore": 650,
+    "exampleEn": "Please consider the disease.",
+    "exampleKo": "질병을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 63,
+    "word": "healing",
+    "meaning": "치료의",
+    "targetScore": 650,
+    "exampleEn": "Please consider the healing.",
+    "exampleKo": "치료의을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 64,
+    "word": "internal",
+    "meaning": "내부의",
+    "targetScore": 650,
+    "exampleEn": "Please consider the internal.",
+    "exampleKo": "내부의을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 65,
+    "word": "lung",
+    "meaning": "폐, 허파",
+    "targetScore": 650,
+    "exampleEn": "Please consider the lung.",
+    "exampleKo": "폐, 허파을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 66,
+    "word": "organ",
+    "meaning": "(신체)기관",
+    "targetScore": 650,
+    "exampleEn": "Please consider the organ.",
+    "exampleKo": "(신체)기관을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 67,
+    "word": "remedy",
+    "meaning": "치료법, 의약",
+    "targetScore": 650,
+    "exampleEn": "Please consider the remedy.",
+    "exampleKo": "치료법, 의약을(를) 고려하세요."
+  },
+  {
+    "day": 30,
+    "no": 68,
+    "word": "stomachache",
+    "meaning": "복통",
+    "targetScore": 650,
+    "exampleEn": "Please consider the stomachache.",
+    "exampleKo": "복통을(를) 고려하세요."
+  }
+]

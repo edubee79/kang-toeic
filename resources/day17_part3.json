@@ -1,0 +1,614 @@
+[
+    {
+        "day": 17,
+        "no": 69,
+        "word": "shipping",
+        "meaning": "배송, 운송, 선적",
+        "targetScore": 800,
+        "exampleEn": "We offer free shipping on orders over $50.",
+        "exampleKo": "50달러 이상의 주문에 대해서는 무료 배송을 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 70,
+        "word": "trade",
+        "meaning": "무역",
+        "targetScore": 800,
+        "exampleEn": "The two countries signed a new trade agreement.",
+        "exampleKo": "두 나라는 새로운 무역 협정에 서명했습니다."
+    },
+    {
+        "day": 17,
+        "no": 71,
+        "word": "as of now",
+        "meaning": "현재로서는",
+        "targetScore": 800,
+        "exampleEn": "As of now, we have not received any updates.",
+        "exampleKo": "현재로서는, 우리는 어떠한 업데이트도 받지 못했습니다."
+    },
+    {
+        "day": 17,
+        "no": 72,
+        "word": "broker",
+        "meaning": "중개인",
+        "targetScore": 800,
+        "exampleEn": "We hired a real estate broker to sell our house.",
+        "exampleKo": "우리는 집을 팔기 위해 부동산 중개인을 고용했습니다."
+    },
+    {
+        "day": 17,
+        "no": 73,
+        "word": "canal",
+        "meaning": "운하, 수로",
+        "targetScore": 800,
+        "exampleEn": "The canal connects the two major rivers.",
+        "exampleKo": "그 운하는 두 개의 주요 강을 연결합니다."
+    },
+    {
+        "day": 17,
+        "no": 74,
+        "word": "carry a large parcel",
+        "meaning": "큰 짐을 운반하다",
+        "targetScore": 800,
+        "exampleEn": "Use a cart to carry a large parcel.",
+        "exampleKo": "큰 짐을 운반할 때는 카트를 사용하십시오."
+    },
+    {
+        "day": 17,
+        "no": 75,
+        "word": "closing",
+        "meaning": "폐쇄, 폐회의, 마감하는",
+        "targetScore": 800,
+        "exampleEn": "The closing date for applications is next Friday.",
+        "exampleKo": "지원 마감일(closing date)은 다음 주 금요일입니다."
+    },
+    {
+        "day": 17,
+        "no": 76,
+        "word": "courier service",
+        "meaning": "택배회사",
+        "targetScore": 800,
+        "exampleEn": "Which courier service do you use for international shipments?",
+        "exampleKo": "국제 배송을 위해 어떤 택배회사를 이용하십니까?"
+    },
+    {
+        "day": 17,
+        "no": 77,
+        "word": "door-to-door delivery",
+        "meaning": "택배",
+        "targetScore": 800,
+        "exampleEn": "We provide door-to-door delivery for all purchases.",
+        "exampleKo": "우리는 모든 구매품에 대해 택배(문 앞 배송)를 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 78,
+        "word": "drive off",
+        "meaning": "(차를)출발시키다, 몰아내다",
+        "targetScore": 800,
+        "exampleEn": "He watched the car drive off into the distance.",
+        "exampleKo": "그는 차가 멀리 출발해 가는 것을 지켜보았습니다."
+    },
+    {
+        "day": 17,
+        "no": 79,
+        "word": "drop off",
+        "meaning": "갖다주다, 내려놓다",
+        "targetScore": 800,
+        "exampleEn": "Can you drop off these files at the client's office?",
+        "exampleKo": "이 파일들을 고객 사무실에 갖다줄 수 있습니까?"
+    },
+    {
+        "day": 17,
+        "no": 80,
+        "word": "dry cleaner(=drycleaner's)",
+        "meaning": "세탁소",
+        "targetScore": 800,
+        "exampleEn": "I need to pick up my suit from the dry cleaner.",
+        "exampleKo": "세탁소에서 제 정장을 찾아야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 81,
+        "word": "floor manager",
+        "meaning": "매장감독",
+        "targetScore": 800,
+        "exampleEn": "Please report any issues to the floor manager.",
+        "exampleKo": "어떤 문제라도 매장감독에게 보고해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 82,
+        "word": "hold onto the handrail",
+        "meaning": "난간을 붙잡다",
+        "targetScore": 800,
+        "exampleEn": "Please hold onto the handrail while using the escalator.",
+        "exampleKo": "에스컬레이터를 이용하는 동안 난간을 붙잡으십시오."
+    },
+    {
+        "day": 17,
+        "no": 83,
+        "word": "in transit",
+        "meaning": "운송 중에",
+        "targetScore": 800,
+        "exampleEn": "The package was damaged in transit.",
+        "exampleKo": "그 소포는 운송 중에 손상되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 84,
+        "word": "inn",
+        "meaning": "여관",
+        "targetScore": 800,
+        "exampleEn": "We stayed at a charming inn in the countryside.",
+        "exampleKo": "우리는 시골의 매력적인 여관에 머물렀습니다."
+    },
+    {
+        "day": 17,
+        "no": 85,
+        "word": "lab report",
+        "meaning": "실험 보고서",
+        "targetScore": 800,
+        "exampleEn": "The students submitted their lab report on time.",
+        "exampleKo": "학생들은 실험 보고서를 제시간에 제출했습니다."
+    },
+    {
+        "day": 17,
+        "no": 86,
+        "word": "lab technician",
+        "meaning": "연구실 기술자",
+        "targetScore": 800,
+        "exampleEn": "The lab technician analyzed the samples.",
+        "exampleKo": "연구실 기술자가 샘플들을 분석했습니다."
+    },
+    {
+        "day": 17,
+        "no": 87,
+        "word": "lace",
+        "meaning": "끈, 끈을 묶다",
+        "targetScore": 800,
+        "exampleEn": "He stopped to tie his shoe lace.",
+        "exampleKo": "그는 신발 끈을 묶기 위해 멈췄습니다."
+    },
+    {
+        "day": 17,
+        "no": 88,
+        "word": "legal department",
+        "meaning": "법률부서",
+        "targetScore": 800,
+        "exampleEn": "The contract is being reviewed by the legal department.",
+        "exampleKo": "계약서는 법률부서에서 검토 중입니다."
+    },
+    {
+        "day": 17,
+        "no": 89,
+        "word": "load A onto B",
+        "meaning": "A를 B에 싣다",
+        "targetScore": 800,
+        "exampleEn": "Workers load the boxes onto the truck.",
+        "exampleKo": "직원들이 상자들을(A) 트럭에(B) 싣습니다."
+    },
+    {
+        "day": 17,
+        "no": 90,
+        "word": "load a truck",
+        "meaning": "트럭에 짐을 싣다",
+        "targetScore": 800,
+        "exampleEn": "It took an hour to load a truck.",
+        "exampleKo": "트럭에 짐을 싣는 데 한 시간이 걸렸습니다."
+    },
+    {
+        "day": 17,
+        "no": 91,
+        "word": "loaded with",
+        "meaning": "(짐을) 실은",
+        "targetScore": 800,
+        "exampleEn": "The ship was loaded with containers.",
+        "exampleKo": "그 배는 컨테이너를(짐을) 싣고 있었습니다."
+    },
+    {
+        "day": 17,
+        "no": 92,
+        "word": "loading",
+        "meaning": "적재, 선적",
+        "targetScore": 800,
+        "exampleEn": "The loading dock is located at the back of the building.",
+        "exampleKo": "적재 데크는 건물 뒤편에 위치해 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 93,
+        "word": "lost in delivery",
+        "meaning": "배송 중에 분실된",
+        "targetScore": 800,
+        "exampleEn": "We will replace any items lost in delivery.",
+        "exampleKo": "우리는 배송 중에 분실된 모든 물품을 교체해 드릴 것입니다."
+    },
+    {
+        "day": 17,
+        "no": 94,
+        "word": "mailing list",
+        "meaning": "우편물 수취인 명부",
+        "targetScore": 800,
+        "exampleEn": "Would you like to be added to our mailing list?",
+        "exampleKo": "우리 우편물 수취인 명부(메일링 리스트)에 추가되기를 원하십니까?"
+    },
+    {
+        "day": 17,
+        "no": 95,
+        "word": "make a delivery",
+        "meaning": "배달하다",
+        "targetScore": 800,
+        "exampleEn": "The driver is scheduled to make a delivery at noon.",
+        "exampleKo": "운전자는 정오에 배달할 예정입니다."
+    },
+    {
+        "day": 17,
+        "no": 96,
+        "word": "packing tape",
+        "meaning": "포장테이프",
+        "targetScore": 800,
+        "exampleEn": "Secure the box with strong packing tape.",
+        "exampleKo": "튼튼한 포장테이프로 상자를 고정하십시오."
+    },
+    {
+        "day": 17,
+        "no": 97,
+        "word": "pass over",
+        "meaning": "~의 위를 지나가다",
+        "targetScore": 800,
+        "exampleEn": "The bridge allows cars to pass over the river.",
+        "exampleKo": "그 다리는 차들이 강 위를 지나갈 수 있게 합니다."
+    },
+    {
+        "day": 17,
+        "no": 98,
+        "word": "pavement",
+        "meaning": "포장도로, 인도",
+        "targetScore": 800,
+        "exampleEn": "Be careful of the uneven pavement.",
+        "exampleKo": "고르지 않은 포장도로(인도)를 조심하십시오."
+    },
+    {
+        "day": 17,
+        "no": 99,
+        "word": "people on foot",
+        "meaning": "보행자들",
+        "targetScore": 800,
+        "exampleEn": "The area is restricted to people on foot.",
+        "exampleKo": "이 구역은 보행자들로 제한됩니다."
+    },
+    {
+        "day": 17,
+        "no": 100,
+        "word": "pick up passengers",
+        "meaning": "승객을 태우다",
+        "targetScore": 800,
+        "exampleEn": "The bus will stop to pick up passengers.",
+        "exampleKo": "버스는 승객을 태우기 위해 정차할 것입니다."
+    },
+    {
+        "day": 17,
+        "no": 101,
+        "word": "pier",
+        "meaning": "부두, 방파제, 선창",
+        "targetScore": 800,
+        "exampleEn": "The ship is docked at the pier.",
+        "exampleKo": "배가 부두에 정박해 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 102,
+        "word": "pile up",
+        "meaning": "~을 쌓다",
+        "targetScore": 800,
+        "exampleEn": "Work began to pile up while I was on vacation.",
+        "exampleKo": "제가 휴가 중인 동안 일이 쌓이기 시작했습니다."
+    },
+    {
+        "day": 17,
+        "no": 103,
+        "word": "postal",
+        "meaning": "우편의",
+        "targetScore": 800,
+        "exampleEn": "The postal service has increased its rates.",
+        "exampleKo": "우편 서비스 요금이 인상되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 104,
+        "word": "strap",
+        "meaning": "끈(줄)으로 묶다",
+        "targetScore": 800,
+        "exampleEn": "Please strap the luggage securely to the roof.",
+        "exampleKo": "짐을 지붕에 끈으로 단단히 묶어 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 105,
+        "word": "time limit",
+        "meaning": "기한",
+        "targetScore": 800,
+        "exampleEn": "There is a strict time limit for the exam.",
+        "exampleKo": "시험에는 엄격한 시간제한(기한)이 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 106,
+        "word": "waterway",
+        "meaning": "(배가 다닐 수 있는) 수로, 항로",
+        "targetScore": 800,
+        "exampleEn": "The river is a major commercial waterway.",
+        "exampleKo": "그 강은 주요 상업 수로입니다."
+    },
+    {
+        "day": 17,
+        "no": 107,
+        "word": "weigh",
+        "meaning": "무게가~이다",
+        "targetScore": 800,
+        "exampleEn": "The suitcase must not weigh more than 20kg.",
+        "exampleKo": "여행 가방은 20kg을 초과해서는 안 됩니다(무게가 ~이면 안 됩니다)."
+    },
+    {
+        "day": 17,
+        "no": 108,
+        "word": "weight limit",
+        "meaning": "중량 제한",
+        "targetScore": 800,
+        "exampleEn": "Check the weight limit before loading the elevator.",
+        "exampleKo": "엘리베이터에 짐을 싣기 전에 중량 제한을 확인하십시오."
+    },
+    {
+        "day": 17,
+        "no": 109,
+        "word": "wrap up",
+        "meaning": "~을 싸다, ~을 포장하다",
+        "targetScore": 800,
+        "exampleEn": "Please wrap up the fragile items carefully.",
+        "exampleKo": "깨지기 쉬운 물건들은 주의해서 싸(포장해) 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 110,
+        "word": "correction",
+        "meaning": "정정, 수정",
+        "targetScore": 800,
+        "exampleEn": "Please make the necessary correction to the document.",
+        "exampleKo": "문서에 필요한 정정(수정)을 해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 111,
+        "word": "delivery option",
+        "meaning": "배송 선택 사항",
+        "targetScore": 800,
+        "exampleEn": "Choose the delivery option that best suits your needs.",
+        "exampleKo": "귀하의 필요에 가장 적합한 배송 선택 사항을 선택하십시오."
+    },
+    {
+        "day": 17,
+        "no": 112,
+        "word": "discard",
+        "meaning": "버리다",
+        "targetScore": 800,
+        "exampleEn": "Please discard any outdated materials.",
+        "exampleKo": "오래된 자료는 버려 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 113,
+        "word": "express mail",
+        "meaning": "급행 우편",
+        "targetScore": 800,
+        "exampleEn": "Send the contract via express mail to ensure it arrives tomorrow.",
+        "exampleKo": "내일 도착하도록 계약서를 급행 우편으로 보내십시오."
+    },
+    {
+        "day": 17,
+        "no": 114,
+        "word": "fortunately",
+        "meaning": "다행스럽게도, 운 좋게도",
+        "targetScore": 800,
+        "exampleEn": "Fortunately, we found a replacement quickly.",
+        "exampleKo": "다행스럽게도, 우리는 교체품을 빨리 찾았습니다."
+    },
+    {
+        "day": 17,
+        "no": 115,
+        "word": "ideally",
+        "meaning": "이상적으로, 완벽하게",
+        "targetScore": 800,
+        "exampleEn": "Ideally, the project should be completed by June.",
+        "exampleKo": "이상적으로는, 프로젝트가 6월까지 완료되어야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 116,
+        "word": "load size",
+        "meaning": "적재 수하물 크기",
+        "targetScore": 800,
+        "exampleEn": "Consider the load size when choosing a vehicle.",
+        "exampleKo": "차량을 선택할 때 적재 수하물 크기를 고려하십시오."
+    },
+    {
+        "day": 17,
+        "no": 117,
+        "word": "marginally",
+        "meaning": "아주 조금, 미미하게",
+        "targetScore": 800,
+        "exampleEn": "Sales increased marginally this quarter.",
+        "exampleKo": "이번 분기에 매출이 아주 조금 증가했습니다."
+    },
+    {
+        "day": 17,
+        "no": 118,
+        "word": "ordered",
+        "meaning": "정돈된, (질서) 정연한",
+        "targetScore": 800,
+        "exampleEn": "Keep the files in an ordered manner.",
+        "exampleKo": "파일들을 정돈된 상태로 유지하십시오."
+    },
+    {
+        "day": 17,
+        "no": 119,
+        "word": "ordering",
+        "meaning": "정리, 배치",
+        "targetScore": 800,
+        "exampleEn": "The ordering of the agenda items was changed.",
+        "exampleKo": "의제 항목들의 정리(순서)가 변경되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 120,
+        "word": "ordinarily",
+        "meaning": "보통은, 정상적으로는",
+        "targetScore": 800,
+        "exampleEn": "Ordinarily, we do not accept returns after 30 days.",
+        "exampleKo": "보통은 30일이 지난 후에는 반품을 받지 않습니다."
+    },
+    {
+        "day": 17,
+        "no": 121,
+        "word": "packaging",
+        "meaning": "포장, 포장재",
+        "targetScore": 800,
+        "exampleEn": "Attractive packaging can boost sales.",
+        "exampleKo": "매력적인 포장은 매출을 증대시킬 수 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 122,
+        "word": "provided(that)",
+        "meaning": "(만약)~라면",
+        "targetScore": 800,
+        "exampleEn": "You can borrow the car provided (that) you fill the gas tank.",
+        "exampleKo": "기름을 만땅 채운다면(만약 ~라면) 차를 빌릴 수 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 123,
+        "word": "respond to",
+        "meaning": "~에 응답하다",
+        "targetScore": 800,
+        "exampleEn": "Please respond to the invitation by Friday.",
+        "exampleKo": "금요일까지 초대에 응답해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 124,
+        "word": "separation",
+        "meaning": "분리, 구분",
+        "targetScore": 800,
+        "exampleEn": "The separation of duties helps prevent errors.",
+        "exampleKo": "업무 분리(구분)는 오류를 방지하는 데 도움이 됩니다."
+    },
+    {
+        "day": 17,
+        "no": 125,
+        "word": "sizable",
+        "meaning": "상당한 크기의, 꽤 큰",
+        "targetScore": 800,
+        "exampleEn": "The company made a sizable investment in new technology.",
+        "exampleKo": "그 회사는 신기술에 상당한 크기의 투자를 했습니다."
+    },
+    {
+        "day": 17,
+        "no": 126,
+        "word": "society",
+        "meaning": "사회, 협회",
+        "targetScore": 800,
+        "exampleEn": "He is a member of the Royal Society of Arts.",
+        "exampleKo": "그는 왕립 예술 협회(Society)의 회원입니다."
+    },
+    {
+        "day": 17,
+        "no": 127,
+        "word": "accelerate",
+        "meaning": "촉진하다, 가속화하다",
+        "targetScore": 800,
+        "exampleEn": "We need to accelerate the production process.",
+        "exampleKo": "우리는 생산 공정을 촉진해야(가속화해야) 합니다."
+    },
+    {
+        "day": 17,
+        "no": 128,
+        "word": "additional charge",
+        "meaning": "추가 요금",
+        "targetScore": 800,
+        "exampleEn": "Breakfast is available for an additional charge.",
+        "exampleKo": "아침 식사는 추가 요금을 내면 이용 가능합니다."
+    },
+    {
+        "day": 17,
+        "no": 129,
+        "word": "ahead of schedule",
+        "meaning": "예정보다 일찍",
+        "targetScore": 800,
+        "exampleEn": "The construction was completed ahead of schedule.",
+        "exampleKo": "공사가 예정보다 일찍 완료되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 130,
+        "word": "at the last minute",
+        "meaning": "막판에",
+        "targetScore": 800,
+        "exampleEn": "Don't wait until the last minute to book your flight.",
+        "exampleKo": "항공편 예약을 막판까지 기다리지 마십시오."
+    },
+    {
+        "day": 17,
+        "no": 131,
+        "word": "by hand",
+        "meaning": "인편으로, 손으로",
+        "targetScore": 800,
+        "exampleEn": "The letter was delivered by hand.",
+        "exampleKo": "그 편지는 인편으로(손으로) 전달되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 132,
+        "word": "car maintenance",
+        "meaning": "자동차 정비",
+        "targetScore": 800,
+        "exampleEn": "Regular car maintenance extends the vehicle's life.",
+        "exampleKo": "정기적인 자동차 정비는 차량의 수명을 연장합니다."
+    },
+    {
+        "day": 17,
+        "no": 133,
+        "word": "city official",
+        "meaning": "시 공무원",
+        "targetScore": 800,
+        "exampleEn": "A city official will inspect the site tomorrow.",
+        "exampleKo": "시 공무원이 내일 현장을 점검할 것입니다."
+    },
+    {
+        "day": 17,
+        "no": 134,
+        "word": "free of charge",
+        "meaning": "무료",
+        "targetScore": 800,
+        "exampleEn": "The consultation is free of charge.",
+        "exampleKo": "상담은 무료(free of charge)입니다."
+    },
+    {
+        "day": 17,
+        "no": 135,
+        "word": "postage",
+        "meaning": "우편 요금",
+        "targetScore": 800,
+        "exampleEn": "Postage is included in the price.",
+        "exampleKo": "우편 요금은 가격에 포함되어 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 136,
+        "word": "trade negotiation",
+        "meaning": "무역 협상",
+        "targetScore": 800,
+        "exampleEn": "The trade negotiation lasted for several days.",
+        "exampleKo": "무역 협상은 며칠 동안 지속되었습니다."
+    }
+]

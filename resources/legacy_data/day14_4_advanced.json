@@ -1,0 +1,290 @@
+[
+    {
+        "day": 14,
+        "no": 137,
+        "word": "sensation",
+        "meaning": "감각, 느낌; 대사건",
+        "targetScore": 900,
+        "exampleEn": "I had a strange sensation.",
+        "exampleKo": "나는 이상한 느낌을 받았습니다."
+    },
+    {
+        "day": 14,
+        "no": 138,
+        "word": "spectacular",
+        "meaning": "장관인, 볼 만한",
+        "targetScore": 900,
+        "exampleEn": "The fireworks were spectacular.",
+        "exampleKo": "불꽃놀이는 장관이었습니다."
+    },
+    {
+        "day": 14,
+        "no": 139,
+        "word": "stunning",
+        "meaning": "굉장히 아름다운",
+        "targetScore": 900,
+        "exampleEn": "She looked stunning in that dress.",
+        "exampleKo": "그녀는 그 드레스를 입고 굉장히 아름다워 보였습니다."
+    },
+    {
+        "day": 14,
+        "no": 140,
+        "word": "indulge in",
+        "meaning": "~에 탐닉하다, 빠지다",
+        "targetScore": 900,
+        "exampleEn": "He indulges in gambling.",
+        "exampleKo": "그는 도박에 빠져 있습니다."
+    },
+    {
+        "day": 14,
+        "no": 141,
+        "word": "airline",
+        "meaning": "항공사",
+        "targetScore": 900,
+        "exampleEn": "Which airline do you prefer?",
+        "exampleKo": "어떤 항공사를 선호하십니까?"
+    },
+    {
+        "day": 14,
+        "no": 142,
+        "word": "auditorium",
+        "meaning": "강당",
+        "targetScore": 900,
+        "exampleEn": "The concert was held in the auditorium.",
+        "exampleKo": "콘서트는 강당에서 열렸습니다."
+    },
+    {
+        "day": 14,
+        "no": 143,
+        "word": "beforehand",
+        "meaning": "사전에",
+        "targetScore": 900,
+        "exampleEn": "I knew about it beforehand.",
+        "exampleKo": "나는 그것에 대해 사전에 알고 있었습니다."
+    },
+    {
+        "day": 14,
+        "no": 144,
+        "word": "caterer",
+        "meaning": "출장 연회 업체",
+        "targetScore": 900,
+        "exampleEn": "We hired a caterer for the party.",
+        "exampleKo": "우리는 파티를 위해 출장 연회 업체를 고용했습니다."
+    },
+    {
+        "day": 14,
+        "no": 145,
+        "word": "centrally",
+        "meaning": "중심부에, 편리하게",
+        "targetScore": 900,
+        "exampleEn": "The hotel is centrally located.",
+        "exampleKo": "그 호텔은 중심부에 위치해 있습니다."
+    },
+    {
+        "day": 14,
+        "no": 146,
+        "word": "checklist",
+        "meaning": "점검표",
+        "targetScore": 900,
+        "exampleEn": "Go through the checklist.",
+        "exampleKo": "점검표를 검토하세요."
+    },
+    {
+        "day": 14,
+        "no": 147,
+        "word": "chef",
+        "meaning": "주방장",
+        "targetScore": 900,
+        "exampleEn": "The chef recommends the fish.",
+        "exampleKo": "주방장은 생선 요리를 추천합니다."
+    },
+    {
+        "day": 14,
+        "no": 148,
+        "word": "circumstance",
+        "meaning": "상황",
+        "targetScore": 900,
+        "exampleEn": "Example sentences are generated.",
+        "exampleKo": "예문이 생성되었습니다."
+    },
+    {
+        "day": 14,
+        "no": 149,
+        "word": "coincide",
+        "meaning": "동시에 일어나다, 일치하다",
+        "targetScore": 900,
+        "exampleEn": "My birthday coincides with the holiday.",
+        "exampleKo": "내 생일은 휴일과 겹칩니다."
+    },
+    {
+        "day": 14,
+        "no": 150,
+        "word": "committee",
+        "meaning": "위원회",
+        "targetScore": 900,
+        "exampleEn": "The committee will meet tomorrow.",
+        "exampleKo": "위원회는 내일 모일 것입니다."
+    },
+    {
+        "day": 14,
+        "no": 151,
+        "word": "comfortably",
+        "meaning": "안락하게",
+        "targetScore": 900,
+        "exampleEn": "Sit comfortably.",
+        "exampleKo": "편안하게 앉으세요."
+    },
+    {
+        "day": 14,
+        "no": 152,
+        "word": "confuse",
+        "meaning": "혼동하다",
+        "targetScore": 900,
+        "exampleEn": "I was confused by the layout.",
+        "exampleKo": "나는 배치 때문에 혼란스러웠습니다."
+    },
+    {
+        "day": 14,
+        "no": 153,
+        "word": "container",
+        "meaning": "그릇, 용기",
+        "targetScore": 900,
+        "exampleEn": "Put the food in a container.",
+        "exampleKo": "음식을 용기에 담으세요."
+    },
+    {
+        "day": 14,
+        "no": 154,
+        "word": "cruise",
+        "meaning": "순항하다; 유람선 여행",
+        "targetScore": 900,
+        "exampleEn": "The plane is cruising at 30,000 feet.",
+        "exampleKo": "비행기는 3만 피트 상공을 순항 중입니다."
+    },
+    {
+        "day": 14,
+        "no": 155,
+        "word": "culinary",
+        "meaning": "요리의",
+        "targetScore": 900,
+        "exampleEn": "He has great culinary skills.",
+        "exampleKo": "그는 훌륭한 요리 솜씨를 가지고 있습니다."
+    },
+    {
+        "day": 14,
+        "no": 156,
+        "word": "decoration",
+        "meaning": "장식",
+        "targetScore": 900,
+        "exampleEn": "The decorations are beautiful.",
+        "exampleKo": "장식이 아름답습니다."
+    },
+    {
+        "day": 14,
+        "no": 157,
+        "word": "deluxe",
+        "meaning": "호화로운",
+        "targetScore": 900,
+        "exampleEn": "We booked a deluxe room.",
+        "exampleKo": "우리는 디럭스 룸을 예약했습니다."
+    },
+    {
+        "day": 14,
+        "no": 158,
+        "word": "desk",
+        "meaning": "안내 데스크; 책상",
+        "targetScore": 900,
+        "exampleEn": "Ask at the front desk.",
+        "exampleKo": "프런트 데스크에 문의하세요."
+    },
+    {
+        "day": 14,
+        "no": 159,
+        "word": "directory",
+        "meaning": "안내 책자, 주소록",
+        "targetScore": 900,
+        "exampleEn": "Look it up in the directory.",
+        "exampleKo": "안내 책자에서 찾아보세요."
+    },
+    {
+        "day": 14,
+        "no": 160,
+        "word": "disembark",
+        "meaning": "(배, 비행기에서) 내리다",
+        "targetScore": 900,
+        "exampleEn": "Please disembark from the rear.",
+        "exampleKo": "뒤쪽으로 내려주세요."
+    },
+    {
+        "day": 14,
+        "no": 161,
+        "word": "distinguish",
+        "meaning": "구별하다",
+        "targetScore": 900,
+        "exampleEn": "It is hard to distinguish the two.",
+        "exampleKo": "둘을 구별하기 어렵습니다."
+    },
+    {
+        "day": 14,
+        "no": 162,
+        "word": "drastically",
+        "meaning": "급격하게, 과감하게",
+        "targetScore": 900,
+        "exampleEn": "Prices have dropped drastically.",
+        "exampleKo": "가격이 급격하게 떨어졌습니다."
+    },
+    {
+        "day": 14,
+        "no": 163,
+        "word": "ecotourism",
+        "meaning": "생태 관광",
+        "targetScore": 900,
+        "exampleEn": "Ecotourism protects nature.",
+        "exampleKo": "생태 관광은 자연을 보호합니다."
+    },
+    {
+        "day": 14,
+        "no": 164,
+        "word": "entitle",
+        "meaning": "자격을 주다",
+        "targetScore": 900,
+        "exampleEn": "This ticket entitles you to a free meal.",
+        "exampleKo": "이 티켓은 무료 식사 자격을 줍니다."
+    },
+    {
+        "day": 14,
+        "no": 165,
+        "word": "escort",
+        "meaning": "호위하다; 호위대",
+        "targetScore": 900,
+        "exampleEn": "He escorted her directly to the door.",
+        "exampleKo": "그는 그녀를 문까지 직접 에스코트했습니다."
+    },
+    {
+        "day": 14,
+        "no": 166,
+        "word": "exotic",
+        "meaning": "이국적인",
+        "targetScore": 900,
+        "exampleEn": "Exotic fruits are expensive.",
+        "exampleKo": "이국적인 과일은 비쌉니다."
+    },
+    {
+        "day": 14,
+        "no": 167,
+        "word": "flight attendant",
+        "meaning": "객실 승무원",
+        "targetScore": 900,
+        "exampleEn": "The flight attendant served coffee.",
+        "exampleKo": "승무원이 커피를 서빙했습니다."
+    },
+    {
+        "day": 14,
+        "no": 168,
+        "word": "geological",
+        "meaning": "지질학적인",
+        "targetScore": 900,
+        "exampleEn": "The area has geological importance.",
+        "exampleKo": "그 지역은 지질학적으로 중요합니다."
+    }
+]

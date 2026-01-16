@@ -1,0 +1,254 @@
+[
+    {
+        "day": 19,
+        "no": 41,
+        "word": "beyond",
+        "meaning": "~을 넘어서; ~외에",
+        "targetScore": 650,
+        "exampleEn": "Beyond the horizon.",
+        "exampleKo": "지평선 너머로."
+    },
+    {
+        "day": 19,
+        "no": 42,
+        "word": "cost",
+        "meaning": "비용; 비용이 들다",
+        "targetScore": 650,
+        "exampleEn": "What is the cost?",
+        "exampleKo": "비용이 얼마입니까?"
+    },
+    {
+        "day": 19,
+        "no": 43,
+        "word": "improve",
+        "meaning": "개선하다",
+        "targetScore": 650,
+        "exampleEn": "Improve quality.",
+        "exampleKo": "품질을 개선하다."
+    },
+    {
+        "day": 19,
+        "no": 44,
+        "word": "invest",
+        "meaning": "투자하다",
+        "targetScore": 650,
+        "exampleEn": "Invest in stocks.",
+        "exampleKo": "주식에 투자하세요."
+    },
+    {
+        "day": 19,
+        "no": 45,
+        "word": "manage",
+        "meaning": "관리하다, 경영하다",
+        "targetScore": 650,
+        "exampleEn": "Manage a team.",
+        "exampleKo": "팀을 관리하세요."
+    },
+    {
+        "day": 19,
+        "no": 46,
+        "word": "market",
+        "meaning": "시장",
+        "targetScore": 650,
+        "exampleEn": "The global market.",
+        "exampleKo": "세계 시장."
+    },
+    {
+        "day": 19,
+        "no": 47,
+        "word": "price",
+        "meaning": "가격",
+        "targetScore": 650,
+        "exampleEn": "Low price.",
+        "exampleKo": "낮은 가격."
+    },
+    {
+        "day": 19,
+        "no": 48,
+        "word": "product",
+        "meaning": "제품",
+        "targetScore": 650,
+        "exampleEn": "New product.",
+        "exampleKo": "신제품."
+    },
+    {
+        "day": 19,
+        "no": 49,
+        "word": "project",
+        "meaning": "프로젝트; 예상하다",
+        "targetScore": 650,
+        "exampleEn": "Start a project.",
+        "exampleKo": "프로젝트를 시작하다."
+    },
+    {
+        "day": 19,
+        "no": 50,
+        "word": "record",
+        "meaning": "기록; 기록하다",
+        "targetScore": 650,
+        "exampleEn": "Keep a record.",
+        "exampleKo": "기록을 남기세요."
+    },
+    {
+        "day": 19,
+        "no": 51,
+        "word": "report",
+        "meaning": "보고서; 보고하다",
+        "targetScore": 650,
+        "exampleEn": "Submit a report.",
+        "exampleKo": "보고서를 제출하세요."
+    },
+    {
+        "day": 19,
+        "no": 52,
+        "word": "result",
+        "meaning": "결과",
+        "targetScore": 650,
+        "exampleEn": "Good results.",
+        "exampleKo": "좋은 결과."
+    },
+    {
+        "day": 19,
+        "no": 53,
+        "word": "risk",
+        "meaning": "위험",
+        "targetScore": 650,
+        "exampleEn": "Take a risk.",
+        "exampleKo": "위험을 감수하다."
+    },
+    {
+        "day": 19,
+        "no": 54,
+        "word": "save",
+        "meaning": "저축하다, 아끼다",
+        "targetScore": 650,
+        "exampleEn": "Save money.",
+        "exampleKo": "돈을 저축하세요."
+    },
+    {
+        "day": 19,
+        "no": 55,
+        "word": "strategy",
+        "meaning": "전략",
+        "targetScore": 650,
+        "exampleEn": "Marketing strategy.",
+        "exampleKo": "마케팅 전략."
+    },
+    {
+        "day": 19,
+        "no": 56,
+        "word": "spend",
+        "meaning": "소비하다",
+        "targetScore": 650,
+        "exampleEn": "Spend time.",
+        "exampleKo": "시간을 보내다."
+    },
+    {
+        "day": 19,
+        "no": 57,
+        "word": "success",
+        "meaning": "성공",
+        "targetScore": 650,
+        "exampleEn": "Key to success.",
+        "exampleKo": "성공의 열쇠."
+    },
+    {
+        "day": 19,
+        "no": 58,
+        "word": "target",
+        "meaning": "목표; 목표로 삼다",
+        "targetScore": 650,
+        "exampleEn": "Target audience.",
+        "exampleKo": "목표 청중."
+    },
+    {
+        "day": 19,
+        "no": 59,
+        "word": "total",
+        "meaning": "합계의, 전체의",
+        "targetScore": 650,
+        "exampleEn": "Total cost.",
+        "exampleKo": "총비용."
+    },
+    {
+        "day": 19,
+        "no": 60,
+        "word": "trend",
+        "meaning": "경향, 유행",
+        "targetScore": 650,
+        "exampleEn": "Current trends.",
+        "exampleKo": "현재 유행."
+    },
+    {
+        "day": 19,
+        "no": 61,
+        "word": "worth",
+        "meaning": "~의 가치가 있는",
+        "targetScore": 650,
+        "exampleEn": "It is worth reading.",
+        "exampleKo": "읽을 가치가 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 62,
+        "word": "accomplishment",
+        "meaning": "성취, 업적",
+        "targetScore": 650,
+        "exampleEn": "A great accomplishment.",
+        "exampleKo": "위대한 업적."
+    },
+    {
+        "day": 19,
+        "no": 63,
+        "word": "acquire",
+        "meaning": "획득하다, 얻다",
+        "targetScore": 650,
+        "exampleEn": "Acquire knowledge.",
+        "exampleKo": "지식을 습득하다."
+    },
+    {
+        "day": 19,
+        "no": 64,
+        "word": "actually",
+        "meaning": "실제로",
+        "targetScore": 650,
+        "exampleEn": "Actually, I am busy.",
+        "exampleKo": "사실, 저는 바쁩니다."
+    },
+    {
+        "day": 19,
+        "no": 65,
+        "word": "adapt",
+        "meaning": "적응하다",
+        "targetScore": 650,
+        "exampleEn": "Adapt to change.",
+        "exampleKo": "변화에 적응하다."
+    },
+    {
+        "day": 19,
+        "no": 66,
+        "word": "address",
+        "meaning": "다루다, 처리하다",
+        "targetScore": 650,
+        "exampleEn": "Address the issue.",
+        "exampleKo": "문제를 다루다."
+    },
+    {
+        "day": 19,
+        "no": 67,
+        "word": "analysis",
+        "meaning": "분석",
+        "targetScore": 650,
+        "exampleEn": "Market analysis.",
+        "exampleKo": "시장 분석."
+    },
+    {
+        "day": 19,
+        "no": 68,
+        "word": "appraise",
+        "meaning": "평가하다",
+        "targetScore": 650,
+        "exampleEn": "Appraise the property.",
+        "exampleKo": "재산을 평가하다."
+    }
+]

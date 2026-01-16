@@ -1,0 +1,422 @@
+{
+  "testId": 2,
+  "title": "ETS TOEIC Vol 4 - Test 2",
+  "passages": [
+    {
+      "id": "p6-t2-p1",
+      "type": "EMAIL",
+      "guidance": "Questions 131-134 refer to the following email.",
+      "content": "To: Myung-Hee Hahn\nFrom: Dellwyn Home Store\nDate: January 15\nSubject: Order update\nDear Ms. Hahn,\n\nYour [131] order of a red oak dining table and six matching chairs arrived at our store this morning.\n\nWe would now like to arrange for the delivery of the [132]. Please call us at 517-555-0188 and ask [133] to Coleman Cobb, our delivery manager. [134]\n\nCustomer Service, Dellwyn Home Store",
+      "questions": [
+        {
+          "id": "131",
+          "text": "(A) specially\n(B) specialize\n(C) special\n(D) specializing",
+          "options": [
+            {
+              "label": "A",
+              "text": "specially"
+            },
+            {
+              "label": "B",
+              "text": "specialize"
+            },
+            {
+              "label": "C",
+              "text": "special"
+            },
+            {
+              "label": "D",
+              "text": "specializing"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "132",
+          "text": "(A) furniture\n(B) appliances\n(C) refund\n(D) tools",
+          "options": [
+            {
+              "label": "A",
+              "text": "furniture"
+            },
+            {
+              "label": "B",
+              "text": "appliances"
+            },
+            {
+              "label": "C",
+              "text": "refund"
+            },
+            {
+              "label": "D",
+              "text": "tools"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "133",
+          "text": "(A) speak\n(B) spoken\n(C) is speaking\n(D) to speak",
+          "options": [
+            {
+              "label": "A",
+              "text": "speak"
+            },
+            {
+              "label": "B",
+              "text": "spoken"
+            },
+            {
+              "label": "C",
+              "text": "is speaking"
+            },
+            {
+              "label": "D",
+              "text": "to speak"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "134",
+          "text": "(A) He can schedule a convenient time.\n(B) He began working here yesterday.\n(C) He can meet you at 11:00 A.м.\n(D) He recently moved to Dellwyn.",
+          "options": [
+            {
+              "label": "A",
+              "text": "He can schedule a convenient time."
+            },
+            {
+              "label": "B",
+              "text": "He began working here yesterday."
+            },
+            {
+              "label": "C",
+              "text": "He can meet you at 11:00 A.м."
+            },
+            {
+              "label": "D",
+              "text": "He recently moved to Dellwyn."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t2-p2",
+      "type": "ADVERTISEMENT",
+      "guidance": "Questions 135-138 refer to the following advertisement.",
+      "content": "Keep Cool Service Contractors can bring you peace of mind. As part of an annual contract, we will service your air-conditioning system, ensuring your [135] and comfort. This includes inspecting the system, making repairs as needed, and professionally cleaning your air ducts. [136], if necessary, we can replace your old air-conditioning system with a new, cost-efficient one.\n\nOur workers are highly qualified licensed technicians who stay up-to-date with ongoing training. [137], We promise you fair prices and professional work, [138] by our Keep Cool guarantee.\n\nCall 1-868-555-0129 for a free quote today.",
+      "questions": [
+        {
+          "id": "135",
+          "text": "------ and comfort.",
+          "options": [
+            {
+              "label": "A",
+              "text": "safe"
+            },
+            {
+              "label": "B",
+              "text": "safely"
+            },
+            {
+              "label": "C",
+              "text": "safest"
+            },
+            {
+              "label": "D",
+              "text": "safety"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "136",
+          "text": ", if necessary, we can replace your old air-conditioning system with a new, cost-efficient one.",
+          "options": [
+            {
+              "label": "A",
+              "text": "On one hand"
+            },
+            {
+              "label": "B",
+              "text": "Nonetheless"
+            },
+            {
+              "label": "C",
+              "text": "Furthermore"
+            },
+            {
+              "label": "D",
+              "text": "And yet"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "137",
+          "text": "We promise you fair prices and professional work,",
+          "options": [
+            {
+              "label": "A",
+              "text": "Take advantage of dozens of useful online tools."
+            },
+            {
+              "label": "B",
+              "text": "Moreover, the air conditioner you chose is very popular."
+            },
+            {
+              "label": "C",
+              "text": "Plus, they are friendly, clean, and knowledgeable."
+            },
+            {
+              "label": "D",
+              "text": "Thank you for visiting our contractor showroom."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "138",
+          "text": "by our Keep Cool guarantee.",
+          "options": [
+            {
+              "label": "A",
+              "text": "backed"
+            },
+            {
+              "label": "B",
+              "text": "backs"
+            },
+            {
+              "label": "C",
+              "text": "backing"
+            },
+            {
+              "label": "D",
+              "text": "back"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t2-p3",
+      "type": "EMAIL",
+      "guidance": "Questions 139-142 refer to the following email.",
+      "content": "To: All Customers\nFrom: asquires@lightidea.com\nDate: March 6\nSubject: Information\nDear Light Idea Customers,\n\nLight Idea is enacting a price increase on select energy-efficient products, effective April 17.\nSpecific product pricing will [139]. Please contact your sales representative for details and questions.\n\nThe last date for ordering at current prices is April 16. All orders after this date will follow the new price list [140]. Customers will be able to find this on our Web site [141].\n\nWe will continue to provide quality products and service to our valued customers. Thank you for your business [142].\n\nSincerely,\nArvin Squires\nHead of Sales, Light Idea",
+      "questions": [
+        {
+          "id": "139",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "agree"
+            },
+            {
+              "label": "B",
+              "text": "vary"
+            },
+            {
+              "label": "C",
+              "text": "wait"
+            },
+            {
+              "label": "D",
+              "text": "decline"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "140",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "receiving"
+            },
+            {
+              "label": "B",
+              "text": "having received"
+            },
+            {
+              "label": "C",
+              "text": "received"
+            },
+            {
+              "label": "D",
+              "text": "will be received"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "141",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "The updated price list will be available on March 20."
+            },
+            {
+              "label": "B",
+              "text": "We apologize for this inconvenience."
+            },
+            {
+              "label": "C",
+              "text": "Your orders will be shipped after April 17."
+            },
+            {
+              "label": "D",
+              "text": "We are increasing prices because of rising costs."
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "142",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "exceptionally"
+            },
+            {
+              "label": "B",
+              "text": "exception"
+            },
+            {
+              "label": "C",
+              "text": "exceptional"
+            },
+            {
+              "label": "D",
+              "text": "exceptionalism"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t2-p4",
+      "type": "EMAIL",
+      "guidance": "Questions 143-146 refer to the following email.",
+      "content": "To: Jang-Ho Kwon <jkwon@newart.nz>\nFrom: Kenneth Okim <k.okim@okimjewelry.nz>\nSubject: Good news\nDate: 30 August\nDear Jang-Ho,\n\nThank you for the shipment last month of 80 units of your jewelry pieces. I am happy to report that they have been selling very well in my shop. My [143] love the colourful designs as well as the quality of your workmanship.\n\nI would like to increase the number of units I order from you. Would you be able to [145] my order for the September shipment?\n\nFinally, I would like to discuss the possibility of featuring your work exclusively in my store. I believe that I could reach your target audience best and that the agreement would serve [146] both very well. I look forward to hearing from you.\n\nBest regards,\nKenneth Okim\nOkim Jewelry",
+      "questions": [
+        {
+          "id": "143",
+          "text": "Which of the following best completes the sentence?",
+          "options": [
+            {
+              "label": "A",
+              "text": "patients"
+            },
+            {
+              "label": "B",
+              "text": "students"
+            },
+            {
+              "label": "C",
+              "text": "customers"
+            },
+            {
+              "label": "D",
+              "text": "teammates"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "144",
+          "text": "Which of the following best completes the sentence?",
+          "options": [
+            {
+              "label": "A",
+              "text": "If you need more time, please let me"
+            },
+            {
+              "label": "B",
+              "text": "Unfortunately, I do not have adequate"
+            },
+            {
+              "label": "C",
+              "text": "I would like to show you some of my"
+            },
+            {
+              "label": "D",
+              "text": "The reasonable prices also make"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "145",
+          "text": "Which of the following best completes the sentence?",
+          "options": [
+            {
+              "label": "A",
+              "text": "include"
+            },
+            {
+              "label": "B",
+              "text": "double"
+            },
+            {
+              "label": "C",
+              "text": "repeat"
+            },
+            {
+              "label": "D",
+              "text": "insure"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "146",
+          "text": "Which of the following best completes the sentence?",
+          "options": [
+            {
+              "label": "A",
+              "text": "us"
+            },
+            {
+              "label": "B",
+              "text": "you"
+            },
+            {
+              "label": "C",
+              "text": "we"
+            },
+            {
+              "label": "D",
+              "text": "these"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    }
+  ]
+}

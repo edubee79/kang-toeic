@@ -1,0 +1,33 @@
+ No              Word                 Meaning
+137       compact car                     소형차
+138    towing service                  견인 서비스
+139           pass by                    지나가다
+140              pave              (도로를) 포장하다
+141       necessitate             ~을 필요하게 만들다
+142           conform       (규칙 등에) 부합하다, 따르다
+143    fuel-efficient               연료 효율이 높은
+144             wagon                   화물 기차
+145         ridership (공공 교통 기관의) 이용자 수, 승객 수
+146         pull into             (배가 항구에) 서다
+147        specialist                전문가, 전공자
+148          navigate                   길을 찾다
+149        opposition                  반대, 대항
+150         streetcar                      전차
+151        pedestrian                     보행자
+152              bear               ~을 몸에 지니다
+153          emphatic                 단호한, 강한
+154          give off                    방출하다
+155          passerby                      행인
+156             spoke                     바퀴살
+157     be towed away               (차가) 견인되다
+158          sidewalk                      보도
+159              ramp                     경사로
+160      bicycle rack                 자전거 보관대
+161 overnight express                   심야 고속
+162        drawbridge        도개교(위로 들어올리는 다리)
+163          gratuity                  팁, 봉사료
+164    inconveniently                    불편하게
+165          carriage                      차량
+166          surround              둘러싸다, 에워싸다
+167           hastily                급히, 서둘러서
+168         refurbish            개조하다, 새로 꾸미다

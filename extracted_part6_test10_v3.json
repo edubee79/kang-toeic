@@ -1,0 +1,393 @@
+{
+  "testId": 10,
+  "passages": [
+    {
+      "id": "p6-t10-p1",
+      "guidance": "Questions 131-134 refer to the following article.",
+      "type": "ARTICLE",
+      "title": "Kray Villa Museum To Celebrate Grand Opening",
+      "content": "DEERFIELD (May 2)—The official opening of the Kray Villa Museum will take place on May 29 at 10 A.M. To mark the occasion, various festivities will be held throughout the day. Visit www.krayvillamuseum.org for details.\n\nThe museum is housed in the imposing structure was home to the once-influential Kray family beginning in the late 1800s. Having laid abandoned for the last 30 years, the property was purchased 2 years ago by the Deerfield Historical Society. Subsequently, the gardens were restored to appear as they did when the first generation of Krays moved into the villa.\n\n, furnishings of the kind most likely used by the family are on display.\n\nDuring the museum's opening festivities, a live band music that was popular in the late nineteenth century.",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "This year's celebrations are part of a weeklong national campaign."
+            },
+            {
+              "label": "B",
+              "text": "Results of the survey will be presented at 6:00 P.M."
+            },
+            {
+              "label": "C",
+              "text": "Programs will be distributed at the next meeting."
+            },
+            {
+              "label": "D",
+              "text": "Admission is free, but a donation is suggested."
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "such"
+            },
+            {
+              "label": "B",
+              "text": "that"
+            },
+            {
+              "label": "C",
+              "text": "what"
+            },
+            {
+              "label": "D",
+              "text": "all"
+            }
+          ]
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Conversely"
+            },
+            {
+              "label": "B",
+              "text": "Additionally"
+            },
+            {
+              "label": "C",
+              "text": "In the meantime"
+            },
+            {
+              "label": "D",
+              "text": "To this end"
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "will perform"
+            },
+            {
+              "label": "B",
+              "text": "had to perform"
+            },
+            {
+              "label": "C",
+              "text": "was performing"
+            },
+            {
+              "label": "D",
+              "text": "could have performed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t10-p2",
+      "guidance": "Questions 135-138 refer to the following e-mail.",
+      "type": "EMAIL",
+      "title": "...",
+      "content": "To: All employees\nFrom: Cecil Radu, Information Technology Manager\nDate: April 8\n\nRe: Network alert We are experiencing some problems with our local network. Some of the affected services include the company Web site and the payroll database. We have also received information network data becoming corrupted and files not saving properly. Therefore, to ensure that you do not lose any work, please avoid using the network this morning while my team addresses these . We anticipate that the systems will be fully functional by this afternoon.",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "internalizing"
+            },
+            {
+              "label": "B",
+              "text": "internalize"
+            },
+            {
+              "label": "C",
+              "text": "internally"
+            },
+            {
+              "label": "D",
+              "text": "internal"
+            }
+          ]
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "as"
+            },
+            {
+              "label": "B",
+              "text": "in"
+            },
+            {
+              "label": "C",
+              "text": "about"
+            },
+            {
+              "label": "D",
+              "text": "with"
+            }
+          ]
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "issues"
+            },
+            {
+              "label": "B",
+              "text": "clients"
+            },
+            {
+              "label": "C",
+              "text": "articles"
+            },
+            {
+              "label": "D",
+              "text": "proposals"
+            }
+          ]
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "The network server will be expensive."
+            },
+            {
+              "label": "B",
+              "text": "Your computer may be corrupted."
+            },
+            {
+              "label": "C",
+              "text": "Thank you for your patience."
+            },
+            {
+              "label": "D",
+              "text": "Contact the IT help desk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t10-p3",
+      "guidance": "Questions 139-142 refer to the following notice.",
+      "type": "NOTICE",
+      "title": "...",
+      "content": "April 2 Dear TP&G Customer, Takoradi Power & Gas (TP&G) is committed to providing every customer with dependable electricity service. To this end, we need to make some improvements to our A maintenance crew will be upgrading transformers in your neighbourhood on or about 22 April, beginning at 10 A.M. , we will need to shut off the electricity to residences in your area from approximately 10 A.M. to 1 P.M. on that day. We hope that by this notice, any disruptions caused by the planned outage will be minimized.",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "office"
+            },
+            {
+              "label": "B",
+              "text": "system"
+            },
+            {
+              "label": "C",
+              "text": "vehicles"
+            },
+            {
+              "label": "D",
+              "text": "records"
+            }
+          ]
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "If not"
+            },
+            {
+              "label": "B",
+              "text": "Nonetheless"
+            },
+            {
+              "label": "C",
+              "text": "Unfortunately"
+            },
+            {
+              "label": "D",
+              "text": "On the other hand"
+            }
+          ]
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "We apologize for the temporary inconvenience."
+            },
+            {
+              "label": "B",
+              "text": "We respond to most service requests within 24 hours."
+            },
+            {
+              "label": "C",
+              "text": "Other companies specialize in lighting installations."
+            },
+            {
+              "label": "D",
+              "text": "Here are some tips for reducing your energy bill."
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "sent"
+            },
+            {
+              "label": "B",
+              "text": "to send"
+            },
+            {
+              "label": "C",
+              "text": "will send"
+            },
+            {
+              "label": "D",
+              "text": "sending"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t10-p4",
+      "guidance": "Questions 143-146 refer to the following e-mail.",
+      "type": "EMAIL",
+      "title": "...",
+      "content": "To: hanna.kalita@netmail.co.uk\nFrom: patientoutreach@ebmp.co.uk\nDate: 12 June\nSubject: Invitation to patient portal\n\nDear Ms. Kalita, East Burberry Medical Practice has recently rolled out its patient portal, Burmed Connect. This service to help you manage your healthcare at your convenience. You are invited to create an account to access the portal. Once enrolled, you will be able to book appointments with our doctors as well as view your medical records and request prescriptions. , you can use Burmed Connect to send messages to your doctor. Only you and your doctor will be able to see any messages exchanged between the two of you.\n\nTo create an account, start by going to www.eastburberrymedicalpractice/patient-portal.co.uk. If you experience any difficulties with the process, please call 20 5550 0169.\n\nSincerely, Emma Richardson, Patient Outreach Coordinator",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "has been intended"
+            },
+            {
+              "label": "B",
+              "text": "will be intended"
+            },
+            {
+              "label": "C",
+              "text": "was intended"
+            },
+            {
+              "label": "D",
+              "text": "is intended"
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Furthermore"
+            },
+            {
+              "label": "B",
+              "text": "Instead"
+            },
+            {
+              "label": "C",
+              "text": "However"
+            },
+            {
+              "label": "D",
+              "text": "Otherwise"
+            }
+          ]
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Our previous portal will no longer be updated."
+            },
+            {
+              "label": "B",
+              "text": "The health app can be downloaded from our Web site."
+            },
+            {
+              "label": "C",
+              "text": "Protecting your privacy is a responsibility we take seriously."
+            },
+            {
+              "label": "D",
+              "text": "You will be locked out of your account after a third failed attempt."
+            }
+          ]
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "selection"
+            },
+            {
+              "label": "B",
+              "text": "registration"
+            },
+            {
+              "label": "C",
+              "text": "invention"
+            },
+            {
+              "label": "D",
+              "text": "deletion"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

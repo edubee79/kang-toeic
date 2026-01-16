@@ -1,0 +1,196 @@
+{
+  "setId": "set1",
+  "title": "ETS TOEIC Test 1 - Part 1",
+  "audioBase": "/audio/lc/part1/set01.mp3",
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The women are setting up the room.",
+          "translation": "여자들이 방을 정리하고 있다."
+        },
+        {
+          "option": "B",
+          "text": "They are shaking hands across the table.",
+          "translation": "그들은 테이블 너머로 악수를 하고 있다."
+        },
+        {
+          "option": "C",
+          "text": "They're sitting at a table.",
+          "translation": "그들은 테이블에 앉아 있다."
+        },
+        {
+          "option": "D",
+          "text": "They are hanging a sign on the wall.",
+          "translation": "그들은 벽에 표지판을 걸고 있다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q1.jpg"
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The woman is looking into a refrigerated display case.",
+          "translation": "여자가 냉장 진열장을 들여다보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some merchandise is stacked next to the register.",
+          "translation": "일부 상품이 계산대 옆에 쌓여 있다."
+        },
+        {
+          "option": "C",
+          "text": "A shopping cart is being loaded with groceries.",
+          "translation": "쇼핑 카트에 식료품을 싣고 있다."
+        },
+        {
+          "option": "D",
+          "text": "The shelves are being rearranged by a worker.",
+          "translation": "선반들이 작업자에 의해 재배열되고 있다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q2.jpg"
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A man is doing some needlework.",
+          "translation": "남자가 바느질을 하고 있다."
+        },
+        {
+          "option": "B",
+          "text": "A sewing machine is being repaired on the table.",
+          "translation": "재봉틀이 테이블 위에서 수리되고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The desk drawers have been left open.",
+          "translation": "책상 서랍들이 열려 있다."
+        },
+        {
+          "option": "D",
+          "text": "The window blinds are pulled down.",
+          "translation": "창문 블라인드가 내려져 있다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q3.jpg"
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The chairs are arranged around a gathering area.",
+          "translation": "의자들이 모임 장소 주변에 배치되어 있다."
+        },
+        {
+          "option": "B",
+          "text": "The building overlooks the ocean.",
+          "translation": "건물이 바다를 내려다보고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The men are trimming the trees.",
+          "translation": "남자들은 나무를 다듬고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A boat is sailing on the water.",
+          "translation": "보트가 물 위에서 항해하고 있다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q4.jpg"
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The people at the table are looking over menus.",
+          "translation": "테이블에 있는 사람들이 메뉴를 살펴보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "They are paying the bill at the restaurant.",
+          "translation": "그들은 식당에서 계산서를 지불하고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The table is being set for dinner.",
+          "translation": "저녁 식사를 위해 테이블이 세팅되고 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is pouring water into a cup.",
+          "translation": "여성 중 한 명이 컵에 물을 붓고 있다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q5.jpg"
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "There is a bicycle with a trailer parked near the entrance.",
+          "translation": "입구 근처에 트레일러가 달린 자전거가 주차되어 있습니다."
+        },
+        {
+          "option": "B",
+          "text": "The people are sitting on a bench outside the structure.",
+          "translation": "사람들이 구조물 밖에 있는 벤치에 앉아 있습니다."
+        },
+        {
+          "option": "C",
+          "text": "Some baskets are being loaded onto the back of the vehicle.",
+          "translation": "몇몇 바구니들이 차량 뒤편에 실리고 있습니다."
+        },
+        {
+          "option": "D",
+          "text": "Two women are entering the building.",
+          "translation": "두 여자가 건물로 들어가고 있습니다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q6.jpg"
+    },
+    {
+      "id": "q7",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A cashier is scanning items for a customer.",
+          "translation": "계산원이 고객의 물품을 스캔하고 있습니다."
+        },
+        {
+          "option": "B",
+          "text": "The customers are lined up waiting for the store to open.",
+          "translation": "고객들이 가게가 문을 열기를 기다리며 줄을 서 있습니다."
+        },
+        {
+          "option": "C",
+          "text": "A woman is reaching across the counter to grab a bag.",
+          "translation": "여자가 가방을 잡기 위해 계산대 너머로 손을 뻗고 있습니다."
+        },
+        {
+          "option": "D",
+          "text": "The employees are stocking the shelves in the grocery store.",
+          "translation": "직원들이 식료품점 선반에 물품을 채우고 있습니다."
+        }
+      ],
+      "image": "/images/lc/part1/set01/q7.jpg"
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+[
+    {
+        "day": 19,
+        "no": 69,
+        "word": "send",
+        "meaning": "보내다",
+        "targetScore": 800,
+        "exampleEn": "I will send you the report by email.",
+        "exampleKo": "이메일로 보고서를 보내드리겠습니다."
+    },
+    {
+        "day": 19,
+        "no": 70,
+        "word": "be shaded",
+        "meaning": "그늘져 있다, 가려져 있다",
+        "targetScore": 800,
+        "exampleEn": "The patio is shaded by large trees.",
+        "exampleKo": "테라스는 큰 나무들에 의해 그늘져 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 71,
+        "word": "bring about",
+        "meaning": "야기하다",
+        "targetScore": 800,
+        "exampleEn": "The new policy will bring about positive changes.",
+        "exampleKo": "새로운 정책은 긍정적인 변화를 야기할 것입니다."
+    },
+    {
+        "day": 19,
+        "no": 72,
+        "word": "cut costs",
+        "meaning": "비용을 줄이다",
+        "targetScore": 800,
+        "exampleEn": "We must cut costs to remain profitable.",
+        "exampleKo": "수익성을 유지하기 위해 우리는 비용을 줄여야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 73,
+        "word": "figures",
+        "meaning": "액수, 값",
+        "targetScore": 800,
+        "exampleEn": "The sales figures for this month are impressive.",
+        "exampleKo": "이번 달 매출 액수(값)는 인상적입니다."
+    },
+    {
+        "day": 19,
+        "no": 74,
+        "word": "harsh",
+        "meaning": "거친, 가혹한",
+        "targetScore": 800,
+        "exampleEn": "The company faced harsh criticism for its actions.",
+        "exampleKo": "그 회사는 그들의 조치에 대해 가혹한 비판에 직면했습니다."
+    },
+    {
+        "day": 19,
+        "no": 75,
+        "word": "have the best rates",
+        "meaning": "요금이 가장 저렴하다",
+        "targetScore": 800,
+        "exampleEn": "We guarantee to have the best rates in town.",
+        "exampleKo": "우리는 시내에서 요금이 가장 저렴하다고 보장합니다."
+    },
+    {
+        "day": 19,
+        "no": 76,
+        "word": "harm",
+        "meaning": "해를 끼치다",
+        "targetScore": 800,
+        "exampleEn": "The scandal did a lot of harm to his reputation.",
+        "exampleKo": "그 스캔들은 그의 명성에 많은 해를 끼쳤습니다."
+    },
+    {
+        "day": 19,
+        "no": 77,
+        "word": "link together",
+        "meaning": "연결시키다",
+        "targetScore": 800,
+        "exampleEn": "The project aims to link together different communities.",
+        "exampleKo": "그 프로젝트는 서로 다른 지역 사회들을 연결시키는 것을 목표로 합니다."
+    },
+    {
+        "day": 19,
+        "no": 78,
+        "word": "make money",
+        "meaning": "돈을 벌다",
+        "targetScore": 800,
+        "exampleEn": "Every business wants to make money.",
+        "exampleKo": "모든 사업체는 돈을 벌기를 원합니다."
+    },
+    {
+        "day": 19,
+        "no": 79,
+        "word": "meet one's goal",
+        "meaning": "목표를 달성하다",
+        "targetScore": 800,
+        "exampleEn": "We are working hard to meet our goal.",
+        "exampleKo": "우리는 목표를 달성하기 위해 열심히 일하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 80,
+        "word": "misread",
+        "meaning": "잘못 읽다, 오해하다",
+        "targetScore": 800,
+        "exampleEn": "I think you misread the instructions.",
+        "exampleKo": "저는 당신이 지시 사항을 잘못 읽었다고(오해했다고) 생각합니다."
+    },
+    {
+        "day": 19,
+        "no": 81,
+        "word": "sales report",
+        "meaning": "매출 보고서",
+        "targetScore": 800,
+        "exampleEn": "Please submit the sales report by Friday.",
+        "exampleKo": "금요일까지 매출 보고서를 제출해 주십시오."
+    },
+    {
+        "day": 19,
+        "no": 82,
+        "word": "situated",
+        "meaning": "위치해 있는",
+        "targetScore": 800,
+        "exampleEn": "The hotel is situated near the beach.",
+        "exampleKo": "호텔은 해변 근처에 위치해 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 83,
+        "word": "slight chance",
+        "meaning": "희박한 가능성",
+        "targetScore": 800,
+        "exampleEn": "There is a slight chance of rain today.",
+        "exampleKo": "오늘 비가 올 희박한 가능성이 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 84,
+        "word": "take a course",
+        "meaning": "강의를 듣다",
+        "targetScore": 800,
+        "exampleEn": "I decided to take a course in marketing.",
+        "exampleKo": "저는 마케팅 강의를 듣기로 결정했습니다."
+    },
+    {
+        "day": 19,
+        "no": 85,
+        "word": "to be honest with you",
+        "meaning": "솔직히 말하자면",
+        "targetScore": 800,
+        "exampleEn": "To be honest with you, I don't like the idea.",
+        "exampleKo": "솔직히 말하자면, 저는 그 아이디어가 마음에 들지 않습니다."
+    },
+    {
+        "day": 19,
+        "no": 86,
+        "word": "allot",
+        "meaning": "할당하다",
+        "targetScore": 800,
+        "exampleEn": "We need to allot more time for this project.",
+        "exampleKo": "우리는 이 프로젝트에 더 많은 시간을 할당해야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 87,
+        "word": "allotment",
+        "meaning": "할당, 분배",
+        "targetScore": 800,
+        "exampleEn": "Each department received an allotment of office supplies.",
+        "exampleKo": "각 부서는 사무용품의 할당(분배)을 받았습니다."
+    },
+    {
+        "day": 19,
+        "no": 88,
+        "word": "charity",
+        "meaning": "자선 단체",
+        "targetScore": 800,
+        "exampleEn": "All proceeds will go to a local charity.",
+        "exampleKo": "모든 수익금은 지역 자선 단체로 갈 것입니다."
+    },
+    {
+        "day": 19,
+        "no": 89,
+        "word": "continued",
+        "meaning": "지속적인",
+        "targetScore": 800,
+        "exampleEn": "We appreciate your continued support.",
+        "exampleKo": "귀하의 지속적인 지원에 감사드립니다."
+    },
+    {
+        "day": 19,
+        "no": 90,
+        "word": "desperate",
+        "meaning": "필사적인, 절망적인",
+        "targetScore": 800,
+        "exampleEn": "The company is in desperate need of new investment.",
+        "exampleKo": "그 회사는 새로운 투자가 필사적으로(절망적으로) 필요합니다."
+    },
+    {
+        "day": 19,
+        "no": 91,
+        "word": "doubtful",
+        "meaning": "확신이 없는, 의심스러운",
+        "targetScore": 800,
+        "exampleEn": "It is doubtful whether the plan will succeed.",
+        "exampleKo": "그 계획이 성공할지는 의심스럽습니다."
+    },
+    {
+        "day": 19,
+        "no": 92,
+        "word": "downfall",
+        "meaning": "몰락",
+        "targetScore": 800,
+        "exampleEn": "Greed was the cause of his downfall.",
+        "exampleKo": "탐욕이 그의 몰락의 원인이었습니다."
+    },
+    {
+        "day": 19,
+        "no": 93,
+        "word": "enhancement",
+        "meaning": "상승, 향상",
+        "targetScore": 800,
+        "exampleEn": "The software update includes several enhancements.",
+        "exampleKo": "소프트웨어 업데이트에는 몇 가지 향상(기능)이 포함되어 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 94,
+        "word": "factor",
+        "meaning": "요소, 원인",
+        "targetScore": 800,
+        "exampleEn": "Price is a major factor in the decision.",
+        "exampleKo": "가격은 결정에 있어 주요한 요소입니다."
+    },
+    {
+        "day": 19,
+        "no": 95,
+        "word": "fortune",
+        "meaning": "부, 운",
+        "targetScore": 800,
+        "exampleEn": "He made a fortune in the stock market.",
+        "exampleKo": "그는 주식 시장에서 큰 부를 축적했습니다."
+    },
+    {
+        "day": 19,
+        "no": 96,
+        "word": "gross income",
+        "meaning": "총소득",
+        "targetScore": 800,
+        "exampleEn": "Gross income includes all earnings before taxes.",
+        "exampleKo": "총소득은 세금 공제 전의 모든 수입을 포함합니다."
+    },
+    {
+        "day": 19,
+        "no": 97,
+        "word": "impossible",
+        "meaning": "불가능한",
+        "targetScore": 800,
+        "exampleEn": "It is impossible to predict the future accurately.",
+        "exampleKo": "미래를 정확하게 예측하는 것은 불가능합니다."
+    },
+    {
+        "day": 19,
+        "no": 98,
+        "word": "linguistics",
+        "meaning": "언어학",
+        "targetScore": 800,
+        "exampleEn": "She is studying linguistics at the university.",
+        "exampleKo": "그녀는 대학에서 언어학을 공부하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 99,
+        "word": "loosely",
+        "meaning": "대략",
+        "targetScore": 800,
+        "exampleEn": "The movie is loosely based on a true story.",
+        "exampleKo": "그 영화는 실화에 대략적으로(느슨하게) 기반을 두고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 100,
+        "word": "make up for",
+        "meaning": "~을 만회하다, 보상하다",
+        "targetScore": 800,
+        "exampleEn": "We need to work overtime to make up for lost time.",
+        "exampleKo": "우리는 잃어버린 시간을 만회하기 위해 초과 근무를 해야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 101,
+        "word": "moderate",
+        "meaning": "적당한, 완화하다, 사회를 보다",
+        "targetScore": 800,
+        "exampleEn": "Cook over moderate heat.",
+        "exampleKo": "적당한 열(중불)에서 요리하십시오."
+    },
+    {
+        "day": 19,
+        "no": 102,
+        "word": "optimal",
+        "meaning": "최적의, 최선의",
+        "targetScore": 800,
+        "exampleEn": "We need to find the optimal solution.",
+        "exampleKo": "우리는 최적의 해결책을 찾아야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 103,
+        "word": "possess",
+        "meaning": "소유하다, 갖고 있다",
+        "targetScore": 800,
+        "exampleEn": "Candidates must possess strong communication skills.",
+        "exampleKo": "지원자들은 강력한 의사소통 기술을 갖추어야(소유해야) 합니다."
+    },
+    {
+        "day": 19,
+        "no": 104,
+        "word": "profitable(<->unprofitable)",
+        "meaning": "이익이 되는, 유익한",
+        "targetScore": 800,
+        "exampleEn": "The deal proved to be very profitable.",
+        "exampleKo": "그 거래는 매우 이익이 되는 것으로 판명되었습니다."
+    },
+    {
+        "day": 19,
+        "no": 105,
+        "word": "put A in jeopardy",
+        "meaning": "A를 위험에 빠뜨리다",
+        "targetScore": 800,
+        "exampleEn": "His mistake put the entire project in jeopardy.",
+        "exampleKo": "그의 실수는 전체 프로젝트를 위험에 빠뜨렸습니다."
+    },
+    {
+        "day": 19,
+        "no": 106,
+        "word": "quite",
+        "meaning": "꽤, 상당히",
+        "targetScore": 800,
+        "exampleEn": "The results were quite surprising.",
+        "exampleKo": "결과는 꽤 놀라웠습니다."
+    },
+    {
+        "day": 19,
+        "no": 107,
+        "word": "sales figure",
+        "meaning": "매출액",
+        "targetScore": 800,
+        "exampleEn": "We review the sales figure every month.",
+        "exampleKo": "우리는 매달 매출액을 검토합니다."
+    },
+    {
+        "day": 19,
+        "no": 108,
+        "word": "seek to do",
+        "meaning": "~하려 애쓰다",
+        "targetScore": 800,
+        "exampleEn": "We seek to improve our customer service.",
+        "exampleKo": "우리는 고객 서비스를 개선하려 애쓰고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 109,
+        "word": "split",
+        "meaning": "쪼개다, 분리시키다, 균열, 분열",
+        "targetScore": 800,
+        "exampleEn": "We agreed to split the profits equally.",
+        "exampleKo": "우리는 이익을 똑같이 쪼개기로(나누기로) 동의했습니다."
+    },
+    {
+        "day": 19,
+        "no": 110,
+        "word": "submission",
+        "meaning": "제출",
+        "targetScore": 800,
+        "exampleEn": "The deadline for submission is next week.",
+        "exampleKo": "제출 마감일은 다음 주입니다."
+    },
+    {
+        "day": 19,
+        "no": 111,
+        "word": "sufficient",
+        "meaning": "충분한",
+        "targetScore": 800,
+        "exampleEn": "We have sufficient funds to complete the project.",
+        "exampleKo": "우리는 프로젝트를 완료하기에 충분한 자금을 가지고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 112,
+        "word": "surrounding",
+        "meaning": "주위의, 주변의",
+        "targetScore": 800,
+        "exampleEn": "We explored the surrounding area.",
+        "exampleKo": "우리는 주변 지역을 탐험했습니다."
+    },
+    {
+        "day": 19,
+        "no": 113,
+        "word": "to that end",
+        "meaning": "그 목적을 위해",
+        "targetScore": 800,
+        "exampleEn": "We want to reduce costs, and to that end, we differ some projects.",
+        "exampleKo": "우리는 비용을 줄이기를 원하며, 그 목적을 위해, 몇몇 프로젝트를 연기합니다."
+    },
+    {
+        "day": 19,
+        "no": 114,
+        "word": "transition",
+        "meaning": "변화, 이행",
+        "targetScore": 800,
+        "exampleEn": "The transition to the new system was smooth.",
+        "exampleKo": "새로운 시스템으로의 이행(변화)은 원활했습니다."
+    },
+    {
+        "day": 19,
+        "no": 115,
+        "word": "unusually",
+        "meaning": "유난히, 비정상적으로",
+        "targetScore": 800,
+        "exampleEn": "The weather has been unusually warm.",
+        "exampleKo": "날씨가 유난히 따뜻했습니다."
+    },
+    {
+        "day": 19,
+        "no": 116,
+        "word": "added benefits",
+        "meaning": "부가적인 이점",
+        "targetScore": 800,
+        "exampleEn": "The job comes with added benefits such as health insurance.",
+        "exampleKo": "그 직업에는 건강 보험과 같은 부가적인 이점이 따라옵니다."
+    },
+    {
+        "day": 19,
+        "no": 117,
+        "word": "additional fee",
+        "meaning": "추가비용",
+        "targetScore": 800,
+        "exampleEn": "There is an additional fee for express delivery.",
+        "exampleKo": "특급 배송에는 추가 비용이 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 118,
+        "word": "at a rapid rate",
+        "meaning": "빠른 속도로",
+        "targetScore": 800,
+        "exampleEn": "Technology is advancing at a rapid rate.",
+        "exampleKo": "기술은 빠른 속도로 진보하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 119,
+        "word": "commercial value",
+        "meaning": "상업적 가치",
+        "targetScore": 800,
+        "exampleEn": "This invention has high commercial value.",
+        "exampleKo": "이 발명품은 높은 상업적 가치를 지니고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 120,
+        "word": "dean",
+        "meaning": "학장",
+        "targetScore": 800,
+        "exampleEn": "The dean welcomed the new students.",
+        "exampleKo": "학장은 신입생들을 환영했습니다."
+    },
+    {
+        "day": 19,
+        "no": 121,
+        "word": "disappointing",
+        "meaning": "실망스러운, 실망시키는",
+        "targetScore": 800,
+        "exampleEn": "The sales results were disappointing.",
+        "exampleKo": "매출 결과는 실망스러웠습니다."
+    },
+    {
+        "day": 19,
+        "no": 122,
+        "word": "do damage",
+        "meaning": "손상하다, 손해를 입다",
+        "targetScore": 800,
+        "exampleEn": "The storm did a lot of damage to the building.",
+        "exampleKo": "폭풍은 건물에 많은 손상을 입혔습니다."
+    },
+    {
+        "day": 19,
+        "no": 123,
+        "word": "engineering",
+        "meaning": "공학",
+        "targetScore": 800,
+        "exampleEn": "He has a degree in mechanical engineering.",
+        "exampleKo": "그는 기계 공학 학위를 가지고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 124,
+        "word": "file for bankruptcy",
+        "meaning": "파산 신청을 하다",
+        "targetScore": 800,
+        "exampleEn": "The company had to file for bankruptcy.",
+        "exampleKo": "그 회사는 파산 신청을 해야 했습니다."
+    },
+    {
+        "day": 19,
+        "no": 125,
+        "word": "growth potential",
+        "meaning": "성장 잠재력",
+        "targetScore": 800,
+        "exampleEn": "This market has huge growth potential.",
+        "exampleKo": "이 시장은 거대한 성장 잠재력을 가지고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 126,
+        "word": "highlight",
+        "meaning": "가장 중요한 부분, 강조하다",
+        "targetScore": 800,
+        "exampleEn": "The presentation highlighted the company's achievements.",
+        "exampleKo": "프레젠테이션은 회사의 업적을 강조했습니다."
+    },
+    {
+        "day": 19,
+        "no": 127,
+        "word": "long-term stability",
+        "meaning": "장기 안정(성)",
+        "targetScore": 800,
+        "exampleEn": "We are focused on long-term stability rather than short-term gains.",
+        "exampleKo": "우리는 단기적인 이익보다는 장기 안정(성)에 집중하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 128,
+        "word": "non-profit organization",
+        "meaning": "비영리조직",
+        "targetScore": 800,
+        "exampleEn": "She works for a non-profit organization.",
+        "exampleKo": "그녀는 비영리조직에서 일합니다."
+    },
+    {
+        "day": 19,
+        "no": 129,
+        "word": "on the rise",
+        "meaning": "상승하는",
+        "targetScore": 800,
+        "exampleEn": "Housing prices are on the rise again.",
+        "exampleKo": "주택 가격이 다시 상승하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 130,
+        "word": "piece by piece",
+        "meaning": "조금씩",
+        "targetScore": 800,
+        "exampleEn": "We rebuilt the engine piece by piece.",
+        "exampleKo": "우리는 엔진을 조금씩(하나하나) 재조립했습니다."
+    },
+    {
+        "day": 19,
+        "no": 131,
+        "word": "proportion",
+        "meaning": "부분, 몫",
+        "targetScore": 800,
+        "exampleEn": "A large proportion of the budget is spent on marketing.",
+        "exampleKo": "예산의 큰 부분(몫)이 마케팅에 쓰입니다."
+    },
+    {
+        "day": 19,
+        "no": 132,
+        "word": "raised",
+        "meaning": "높인, 높아진",
+        "targetScore": 800,
+        "exampleEn": "The raised platform gave us a better view.",
+        "exampleKo": "높아진 플랫폼 덕분에 더 잘 볼 수 있었습니다."
+    },
+    {
+        "day": 19,
+        "no": 133,
+        "word": "rising cost",
+        "meaning": "비용상승",
+        "targetScore": 800,
+        "exampleEn": "We are concerned about the rising cost of materials.",
+        "exampleKo": "우리는 자재의 비용 상승에 대해 우려하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 134,
+        "word": "semester",
+        "meaning": "학기",
+        "targetScore": 800,
+        "exampleEn": "The spring semester starts in March.",
+        "exampleKo": "봄 학기는 3월에 시작합니다."
+    },
+    {
+        "day": 19,
+        "no": 135,
+        "word": "timeline",
+        "meaning": "일정표",
+        "targetScore": 800,
+        "exampleEn": "We need to establish a timeline for the project.",
+        "exampleKo": "우리는 프로젝트를 위한 일정표를 수립해야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 136,
+        "word": "undergraduate",
+        "meaning": "대학생",
+        "targetScore": 800,
+        "exampleEn": "He is an undergraduate student at Seoul National University.",
+        "exampleKo": "그는 서울대학교의 대학생(학부생)입니다."
+    }
+]

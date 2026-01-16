@@ -1,0 +1,614 @@
+[
+  {
+    "day": 28,
+    "no": 69,
+    "word": "architecture",
+    "meaning": "건축물, 건축학",
+    "targetScore": 800,
+    "exampleEn": "He studied modern architecture in college.",
+    "exampleKo": "그는 대학에서 현대 건축학을 공부했습니다."
+  },
+  {
+    "day": 28,
+    "no": 70,
+    "word": "canopy",
+    "meaning": "덮개, 차양",
+    "targetScore": 800,
+    "exampleEn": "A canopy covers the entrance to the hotel.",
+    "exampleKo": "덮개(차양)가 호텔 입구를 덮고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 71,
+    "word": "cast a shadow",
+    "meaning": "그림자를 드리우다",
+    "targetScore": 800,
+    "exampleEn": "The tree cast a shadow on the wall.",
+    "exampleKo": "나무가 벽에 그림자를 드리웠습니다."
+  },
+  {
+    "day": 28,
+    "no": 72,
+    "word": "column",
+    "meaning": "기둥, 원주",
+    "targetScore": 800,
+    "exampleEn": "The roof is supported by stone columns.",
+    "exampleKo": "지붕은 돌기둥(원주)들에 의해 지탱됩니다."
+  },
+  {
+    "day": 28,
+    "no": 73,
+    "word": "courtyard",
+    "meaning": "안뜰",
+    "targetScore": 800,
+    "exampleEn": "The hotel has a beautiful courtyard.",
+    "exampleKo": "그 호텔은 아름다운 안뜰을 가지고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 74,
+    "word": "cupboard",
+    "meaning": "찬장",
+    "targetScore": 800,
+    "exampleEn": "The dishes are in the cupboard.",
+    "exampleKo": "접시들은 찬장에 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 75,
+    "word": "cut the grass",
+    "meaning": "잔디를 깎다",
+    "targetScore": 800,
+    "exampleEn": "We need to cut the grass in the backyard.",
+    "exampleKo": "우리는 뒷마당의 잔디를 깎아야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 76,
+    "word": "dedication ceremony",
+    "meaning": "준공식, 헌당식",
+    "targetScore": 800,
+    "exampleEn": "The dedication ceremony will be held tomorrow.",
+    "exampleKo": "준공식(헌당식)은 내일 열릴 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 77,
+    "word": "doorway",
+    "meaning": "문간",
+    "targetScore": 800,
+    "exampleEn": "Please stand in the doorway.",
+    "exampleKo": "문간에 서 주십시오."
+  },
+  {
+    "day": 28,
+    "no": 78,
+    "word": "dresser",
+    "meaning": "화장대, 서랍장",
+    "targetScore": 800,
+    "exampleEn": "She put her clothes in the dresser.",
+    "exampleKo": "그녀는 옷을 서랍장(화장대)에 넣었습니다."
+  },
+  {
+    "day": 28,
+    "no": 79,
+    "word": "emergency exit",
+    "meaning": "비상구",
+    "targetScore": 800,
+    "exampleEn": "In case of fire, use the emergency exit.",
+    "exampleKo": "화재 시에는 비상구를 이용하십시오."
+  },
+  {
+    "day": 28,
+    "no": 80,
+    "word": "erect",
+    "meaning": "똑바로 선, 세우다",
+    "targetScore": 800,
+    "exampleEn": "They erected a monument in the park.",
+    "exampleKo": "그들은 공원에 기념비를 세웠습니다."
+  },
+  {
+    "day": 28,
+    "no": 81,
+    "word": "every hour on the hour",
+    "meaning": "매정시에",
+    "targetScore": 800,
+    "exampleEn": "Buses run every hour on the hour.",
+    "exampleKo": "버스는 매 정시마다 운행합니다."
+  },
+  {
+    "day": 28,
+    "no": 82,
+    "word": "faucet",
+    "meaning": "수도꼭지",
+    "targetScore": 800,
+    "exampleEn": "The faucet is leaking.",
+    "exampleKo": "수도꼭지가 새고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 83,
+    "word": "floor plan",
+    "meaning": "(건물등의) 평면도",
+    "targetScore": 800,
+    "exampleEn": "Please review the floor plan for the new office.",
+    "exampleKo": "새 사무실을 위한 평면도를 검토해 주십시오."
+  },
+  {
+    "day": 28,
+    "no": 84,
+    "word": "flooring",
+    "meaning": "바닥재",
+    "targetScore": 800,
+    "exampleEn": "We installed wood flooring in the living room.",
+    "exampleKo": "우리는 거실에 나무 바닥재를 설치했습니다."
+  },
+  {
+    "day": 28,
+    "no": 85,
+    "word": "front door",
+    "meaning": "정문",
+    "targetScore": 800,
+    "exampleEn": "Someone is knocking at the front door.",
+    "exampleKo": "누군가가 정문을 두드리고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 86,
+    "word": "hallway",
+    "meaning": "복도",
+    "targetScore": 800,
+    "exampleEn": "The restroom is at the end of the hallway.",
+    "exampleKo": "화장실은 복도 끝에 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 87,
+    "word": "hammering",
+    "meaning": "쿵쾅거리는",
+    "targetScore": 800,
+    "exampleEn": "I heard hammering coming from next door.",
+    "exampleKo": "저는 옆집에서 쿵쾅거리는 소리를 들었습니다."
+  },
+  {
+    "day": 28,
+    "no": 88,
+    "word": "handrail",
+    "meaning": "(계단 등의)난간",
+    "targetScore": 800,
+    "exampleEn": "Please hold the handrail when shaking the stairs.",
+    "exampleKo": "계단을 이용할 때 난간을 잡으십시오."
+  },
+  {
+    "day": 28,
+    "no": 89,
+    "word": "home improvement",
+    "meaning": "주거 개선용의",
+    "targetScore": 800,
+    "exampleEn": "We sell a variety of home improvement products.",
+    "exampleKo": "우리는 다양한 주거 개선용 제품을 판매합니다."
+  },
+  {
+    "day": 28,
+    "no": 90,
+    "word": "lamppost",
+    "meaning": "가로등 기둥",
+    "targetScore": 800,
+    "exampleEn": "He leaned against the lamppost.",
+    "exampleKo": "그는 가로등 기둥에 기대었습니다."
+  },
+  {
+    "day": 28,
+    "no": 91,
+    "word": "lean against the fence",
+    "meaning": "울타리에 기대다",
+    "targetScore": 800,
+    "exampleEn": "Do not lean against the fence.",
+    "exampleKo": "울타리에 기대지 마십시오."
+  },
+  {
+    "day": 28,
+    "no": 92,
+    "word": "light bulb",
+    "meaning": "백열전구",
+    "targetScore": 800,
+    "exampleEn": "The light bulb needs to be changed.",
+    "exampleKo": "백열전구를 교체해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 93,
+    "word": "make repairs",
+    "meaning": "수리하다",
+    "targetScore": 800,
+    "exampleEn": "The landlord promised to make repairs.",
+    "exampleKo": "집주인은 수리를 하겠다고 약속했습니다."
+  },
+  {
+    "day": 28,
+    "no": 94,
+    "word": "make the bed",
+    "meaning": "잠자리를 준비하다",
+    "targetScore": 800,
+    "exampleEn": "I always make the bed in the morning.",
+    "exampleKo": "저는 항상 아침에 잠자리를 정돈합니다(준비합니다)."
+  },
+  {
+    "day": 28,
+    "no": 95,
+    "word": "multistory",
+    "meaning": "다층의, 고층의",
+    "targetScore": 800,
+    "exampleEn": "They live in a multistory apartment building.",
+    "exampleKo": "그들은 다층(고층) 아파트 건물에 살고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 96,
+    "word": "outdoor wall",
+    "meaning": "외벽, 바깥벽",
+    "targetScore": 800,
+    "exampleEn": "The outdoor wall is covered in ivy.",
+    "exampleKo": "외벽(바깥벽)은 담쟁이덩굴로 덮여 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 97,
+    "word": "plug in",
+    "meaning": "~에 플러그를 꽂다",
+    "targetScore": 800,
+    "exampleEn": "Please plug in the vacuum cleaner.",
+    "exampleKo": "진공청소기의 플러그를 꽂아 주십시오."
+  },
+  {
+    "day": 28,
+    "no": 98,
+    "word": "pole",
+    "meaning": "기둥, 원주",
+    "targetScore": 800,
+    "exampleEn": "A flag hangs from the pole.",
+    "exampleKo": "깃발이 기둥(폴)에 걸려 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 99,
+    "word": "private residence",
+    "meaning": "개인 주택",
+    "targetScore": 800,
+    "exampleEn": "The event will be held at a private residence.",
+    "exampleKo": "그 행사는 개인 주택에서 열릴 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 100,
+    "word": "put away",
+    "meaning": "집어 넣다, 치우다",
+    "targetScore": 800,
+    "exampleEn": "Please put away your toys.",
+    "exampleKo": "장난감을 치우십시오(집어 넣으십시오)."
+  },
+  {
+    "day": 28,
+    "no": 101,
+    "word": "rebuild",
+    "meaning": "재건하다",
+    "targetScore": 800,
+    "exampleEn": "They plan to rebuild the damaged bridge.",
+    "exampleKo": "그들은 손상된 다리를 재건할 계획입니다."
+  },
+  {
+    "day": 28,
+    "no": 102,
+    "word": "repairperson",
+    "meaning": "수리공",
+    "targetScore": 800,
+    "exampleEn": "Call a repairperson to fix the sink.",
+    "exampleKo": "싱크대를 고치기 위해 수리공을 부르십시오."
+  },
+  {
+    "day": 28,
+    "no": 103,
+    "word": "spread on",
+    "meaning": "~위에 펴 바르다",
+    "targetScore": 800,
+    "exampleEn": "Spread the glue on the surface.",
+    "exampleKo": "표면에 접착제를 펴 바르십시오."
+  },
+  {
+    "day": 28,
+    "no": 104,
+    "word": "staircase",
+    "meaning": "(난간이 있는) 계단",
+    "targetScore": 800,
+    "exampleEn": "Assuming the staircase is safe.",
+    "exampleKo": "계단이 안전하다고 가정하면."
+  },
+  {
+    "day": 28,
+    "no": 105,
+    "word": "stairway",
+    "meaning": "계단",
+    "targetScore": 800,
+    "exampleEn": "Walk up the stairway to the second floor.",
+    "exampleKo": "계단을 걸어 2층으로 올라가십시오."
+  },
+  {
+    "day": 28,
+    "no": 106,
+    "word": "storage cabinet",
+    "meaning": "보관용 수납장",
+    "targetScore": 800,
+    "exampleEn": "Files are kept in the storage cabinet.",
+    "exampleKo": "파일들은 보관용 수납장에 보관됩니다."
+  },
+  {
+    "day": 28,
+    "no": 107,
+    "word": "switch on",
+    "meaning": "~의 스위치를 켜다",
+    "targetScore": 800,
+    "exampleEn": "Please switch on the lights.",
+    "exampleKo": "불(스위치)을 켜 주십시오."
+  },
+  {
+    "day": 28,
+    "no": 108,
+    "word": "turn on its side",
+    "meaning": "뒤집다, 옆으로 돌리다",
+    "targetScore": 800,
+    "exampleEn": "Turn the box on its side.",
+    "exampleKo": "상자를 옆으로 돌리십시오(뒤집으십시오)."
+  },
+  {
+    "day": 28,
+    "no": 109,
+    "word": "undergo renovation",
+    "meaning": "개조(보수)중이다",
+    "targetScore": 800,
+    "exampleEn": "The museum is undergoing renovation.",
+    "exampleKo": "박물관은 개조(보수) 중입니다."
+  },
+  {
+    "day": 28,
+    "no": 110,
+    "word": "windowsill",
+    "meaning": "창턱",
+    "targetScore": 800,
+    "exampleEn": "She placed a flower pot on the windowsill.",
+    "exampleKo": "그녀는 창턱에 화분을 놓았습니다."
+  },
+  {
+    "day": 28,
+    "no": 111,
+    "word": "construct",
+    "meaning": "건설하다",
+    "targetScore": 800,
+    "exampleEn": "They plan to construct a new factory.",
+    "exampleKo": "그들은 새 공장을 건설할 계획입니다."
+  },
+  {
+    "day": 28,
+    "no": 112,
+    "word": "describe",
+    "meaning": "말로 설명하다, 묘사하다",
+    "targetScore": 800,
+    "exampleEn": "Can you describe the suspect?",
+    "exampleKo": "용의자를 묘사할 수 있습니까?"
+  },
+  {
+    "day": 28,
+    "no": 113,
+    "word": "desirable",
+    "meaning": "바람직한, 이상적인",
+    "targetScore": 800,
+    "exampleEn": "A quiet neighborhood is desirable for families.",
+    "exampleKo": "조용한 동네는 가족들에게 바람직합니다(이상적입니다)."
+  },
+  {
+    "day": 28,
+    "no": 114,
+    "word": "structure",
+    "meaning": "구조물",
+    "targetScore": 800,
+    "exampleEn": "The bridge is a massive structure.",
+    "exampleKo": "그 다리는 거대한 구조물입니다."
+  },
+  {
+    "day": 28,
+    "no": 115,
+    "word": "access road",
+    "meaning": "진입로",
+    "targetScore": 800,
+    "exampleEn": "The access road to the site is blocked.",
+    "exampleKo": "현장으로 가는 진입로가 막혀 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 116,
+    "word": "arrange the furniture",
+    "meaning": "가구를 배치하다",
+    "targetScore": 800,
+    "exampleEn": "Help me arrange the furniture.",
+    "exampleKo": "가구 배치하는 것을 도와주십시오."
+  },
+  {
+    "day": 28,
+    "no": 117,
+    "word": "be arranged on the patio",
+    "meaning": "테라스에 정돈되어 있다",
+    "targetScore": 800,
+    "exampleEn": "Chairs are arranged on the patio.",
+    "exampleKo": "의자들은 테라스에 정돈되어 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 118,
+    "word": "built-in",
+    "meaning": "붙박이의",
+    "targetScore": 800,
+    "exampleEn": "The kitchen has built-in cabinets.",
+    "exampleKo": "그 부엌에는 붙박이 장이 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 119,
+    "word": "carpentry",
+    "meaning": "목수일",
+    "targetScore": 800,
+    "exampleEn": "He is skilled in carpentry.",
+    "exampleKo": "그는 목수일에 능숙합니다."
+  },
+  {
+    "day": 28,
+    "no": 120,
+    "word": "fire alarm",
+    "meaning": "화재경보기",
+    "targetScore": 800,
+    "exampleEn": "The fire alarm went off accidentally.",
+    "exampleKo": "화재 경보기가 실수로 울렸습니다."
+  },
+  {
+    "day": 28,
+    "no": 121,
+    "word": "fire extinguisher",
+    "meaning": "소화기",
+    "targetScore": 800,
+    "exampleEn": "Every floor must have a fire extinguisher.",
+    "exampleKo": "모든 층에는 소화기가 있어야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 122,
+    "word": "fitting room",
+    "meaning": "탈의실",
+    "targetScore": 800,
+    "exampleEn": "Where is the fitting room?",
+    "exampleKo": "탈의실이 어디입니까?"
+  },
+  {
+    "day": 28,
+    "no": 123,
+    "word": "fixture",
+    "meaning": "붙박이 가구",
+    "targetScore": 800,
+    "exampleEn": "The price includes all fixtures.",
+    "exampleKo": "가격에는 모든 붙박이 가구(설비)가 포함되어 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 124,
+    "word": "homebuilder",
+    "meaning": "주택건설업자",
+    "targetScore": 800,
+    "exampleEn": "The homebuilder offers a warranty.",
+    "exampleKo": "그 주택 건설업자는 보증을 제공합니다."
+  },
+  {
+    "day": 28,
+    "no": 125,
+    "word": "housekeeping",
+    "meaning": "가사",
+    "targetScore": 800,
+    "exampleEn": "Housekeeping services are available daily.",
+    "exampleKo": "가사(객실 청소) 서비스는 매일 이용 가능합니다."
+  },
+  {
+    "day": 28,
+    "no": 126,
+    "word": "housewares",
+    "meaning": "가정용품",
+    "targetScore": 800,
+    "exampleEn": "We sell kitchenware and housewares.",
+    "exampleKo": "우리는 주방용품과 가정용품을 판매합니다."
+  },
+  {
+    "day": 28,
+    "no": 127,
+    "word": "housing development",
+    "meaning": "주택 개발",
+    "targetScore": 800,
+    "exampleEn": "It is a new housing development project.",
+    "exampleKo": "그것은 새로운 주택 개발 프로젝트입니다."
+  },
+  {
+    "day": 28,
+    "no": 128,
+    "word": "in error",
+    "meaning": "실수로, 잘못한",
+    "targetScore": 800,
+    "exampleEn": "The bill was sent in error.",
+    "exampleKo": "청구서가 실수로(잘못하여) 발송되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 129,
+    "word": "overprice",
+    "meaning": "과하게 값을 매기다",
+    "targetScore": 800,
+    "exampleEn": "The house is overpriced.",
+    "exampleKo": "그 집은 가격이 과하게 매겨졌습니다."
+  },
+  {
+    "day": 28,
+    "no": 130,
+    "word": "reinforce",
+    "meaning": "~을 보강하다",
+    "targetScore": 800,
+    "exampleEn": "We need to reinforce the foundation.",
+    "exampleKo": "우리는 기초를 보강해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 131,
+    "word": "resident",
+    "meaning": "거주자, 주민",
+    "targetScore": 800,
+    "exampleEn": "Residents are complaining about the noise.",
+    "exampleKo": "거주자(주민)들이 소음에 대해 불평하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 132,
+    "word": "restoration",
+    "meaning": "복원, 복구",
+    "targetScore": 800,
+    "exampleEn": "The restoration of the painting took years.",
+    "exampleKo": "그 그림의 복원(복구)은 수년이 걸렸습니다."
+  },
+  {
+    "day": 28,
+    "no": 133,
+    "word": "scrubbing",
+    "meaning": "문지르기",
+    "targetScore": 800,
+    "exampleEn": "Scrubbing the floor requires effort.",
+    "exampleKo": "바닥 문지르기는 노력을 요합니다."
+  },
+  {
+    "day": 28,
+    "no": 134,
+    "word": "skyscraper",
+    "meaning": "고층빌딩",
+    "targetScore": 800,
+    "exampleEn": "The city is famous for its skyscrapers.",
+    "exampleKo": "그 도시는 고층 빌딩들로 유명합니다."
+  },
+  {
+    "day": 28,
+    "no": 135,
+    "word": "space-saving",
+    "meaning": "공간 절약의",
+    "targetScore": 800,
+    "exampleEn": "This sofa has a space-saving design.",
+    "exampleKo": "이 소파는 공간 절약형 디자인을 가지고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 136,
+    "word": "tenant",
+    "meaning": "(가옥 등의) 임차인",
+    "targetScore": 800,
+    "exampleEn": "The tenant signed a one-year lease.",
+    "exampleKo": "임차인은 1년 임대 계약에 서명했습니다."
+  }
+]

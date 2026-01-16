@@ -1,0 +1,254 @@
+[
+    {
+        "day": 11,
+        "no": 41,
+        "word": "superior",
+        "meaning": "우수한, 상급의",
+        "targetScore": 650,
+        "exampleEn": "This model is superior to the old one.",
+        "exampleKo": "이 모델은 구형보다 우수합니다."
+    },
+    {
+        "day": 11,
+        "no": 42,
+        "word": "absolute",
+        "meaning": "절대적인, 완전한",
+        "targetScore": 650,
+        "exampleEn": "I have absolute confidence in him.",
+        "exampleKo": "나는 그를 절대적으로 신뢰합니다."
+    },
+    {
+        "day": 11,
+        "no": 43,
+        "word": "broaden",
+        "meaning": "넓히다",
+        "targetScore": 650,
+        "exampleEn": "Travel broadens the mind.",
+        "exampleKo": "여행은 견문을 넓혀줍니다."
+    },
+    {
+        "day": 11,
+        "no": 44,
+        "word": "compare",
+        "meaning": "비교하다",
+        "targetScore": 650,
+        "exampleEn": "Compare the two pictures.",
+        "exampleKo": "두 사진을 비교해 보세요."
+    },
+    {
+        "day": 11,
+        "no": 45,
+        "word": "conduct",
+        "meaning": "실시하다; 행동",
+        "targetScore": 650,
+        "exampleEn": "They conducted a survey.",
+        "exampleKo": "그들은 설문조사를 실시했습니다."
+    },
+    {
+        "day": 11,
+        "no": 46,
+        "word": "control",
+        "meaning": "통제하다, 관리하다",
+        "targetScore": 650,
+        "exampleEn": "She lost control of the car.",
+        "exampleKo": "그녀는 차의 통제력을 잃었습니다."
+    },
+    {
+        "day": 11,
+        "no": 47,
+        "word": "corrosion",
+        "meaning": "부식",
+        "targetScore": 650,
+        "exampleEn": "Rust is a form of corrosion.",
+        "exampleKo": "녹은 부식의 일종입니다."
+    },
+    {
+        "day": 11,
+        "no": 48,
+        "word": "design",
+        "meaning": "설계하다, 디자인",
+        "targetScore": 650,
+        "exampleEn": "The design is very modern.",
+        "exampleKo": "거 디자인은 매우 현대적입니다."
+    },
+    {
+        "day": 11,
+        "no": 49,
+        "word": "designer",
+        "meaning": "디자이너",
+        "targetScore": 650,
+        "exampleEn": "She is a fashion designer.",
+        "exampleKo": "그녀는 패션 디자이너입니다."
+    },
+    {
+        "day": 11,
+        "no": 50,
+        "word": "discover",
+        "meaning": "발견하다",
+        "targetScore": 650,
+        "exampleEn": "They discovered a new island.",
+        "exampleKo": "그들은 새로운 섬을 발견했습니다."
+    },
+    {
+        "day": 11,
+        "no": 51,
+        "word": "efficiency",
+        "meaning": "효율성",
+        "targetScore": 650,
+        "exampleEn": "We need to improve efficiency.",
+        "exampleKo": "우리는 효율성을 높여야 합니다."
+    },
+    {
+        "day": 11,
+        "no": 52,
+        "word": "element",
+        "meaning": "요소, 성분",
+        "targetScore": 650,
+        "exampleEn": "Water is a vital element.",
+        "exampleKo": "물은 필수적인 요소입니다."
+    },
+    {
+        "day": 11,
+        "no": 53,
+        "word": "engineer",
+        "meaning": "기술자, 기사",
+        "targetScore": 650,
+        "exampleEn": "He is a software engineer.",
+        "exampleKo": "그는 소프트웨어 엔지니어입니다."
+    },
+    {
+        "day": 11,
+        "no": 54,
+        "word": "equipment",
+        "meaning": "장비",
+        "targetScore": 650,
+        "exampleEn": "The gym has new equipment.",
+        "exampleKo": "체육관에 새 장비가 있습니다."
+    },
+    {
+        "day": 11,
+        "no": 55,
+        "word": "field",
+        "meaning": "분야; 들판",
+        "targetScore": 650,
+        "exampleEn": "He is an expert in his field.",
+        "exampleKo": "그는 자신의 분야에서 전문가입니다."
+    },
+    {
+        "day": 11,
+        "no": 56,
+        "word": "ignore",
+        "meaning": "무시하다",
+        "targetScore": 650,
+        "exampleEn": "Don't ignore the warning signs.",
+        "exampleKo": "경고 신호를 무시하지 마세요."
+    },
+    {
+        "day": 11,
+        "no": 57,
+        "word": "last",
+        "meaning": "지속되다; 마지막의",
+        "targetScore": 650,
+        "exampleEn": "The meeting lasted two hours.",
+        "exampleKo": "회의는 두 시간 동안 지속되었습니다."
+    },
+    {
+        "day": 11,
+        "no": 58,
+        "word": "material",
+        "meaning": "재료, 물질",
+        "targetScore": 650,
+        "exampleEn": "What material is this made of?",
+        "exampleKo": "이것은 어떤 재료로 만들어졌습니까?"
+    },
+    {
+        "day": 11,
+        "no": 59,
+        "word": "mode",
+        "meaning": "방식, 모드",
+        "targetScore": 650,
+        "exampleEn": "Switch to silent mode.",
+        "exampleKo": "진동 모드로 전환하세요."
+    },
+    {
+        "day": 11,
+        "no": 60,
+        "word": "overcome",
+        "meaning": "극복하다",
+        "targetScore": 650,
+        "exampleEn": "He overcame many obstacles.",
+        "exampleKo": "그는 많은 장애물을 극복했습니다."
+    },
+    {
+        "day": 11,
+        "no": 61,
+        "word": "process",
+        "meaning": "과정; 처리하다",
+        "targetScore": 650,
+        "exampleEn": "It is a long process.",
+        "exampleKo": "그것은 긴 과정입니다."
+    },
+    {
+        "day": 11,
+        "no": 62,
+        "word": "progress",
+        "meaning": "진전, 발전",
+        "targetScore": 650,
+        "exampleEn": "We are making good progress.",
+        "exampleKo": "우리는 좋은 진전을 보이고 있습니다."
+    },
+    {
+        "day": 11,
+        "no": 63,
+        "word": "properly",
+        "meaning": "제대로, 적절히",
+        "targetScore": 650,
+        "exampleEn": "Close the door properly.",
+        "exampleKo": "문을 제대로 닫으세요."
+    },
+    {
+        "day": 11,
+        "no": 64,
+        "word": "protective",
+        "meaning": "보호하는",
+        "targetScore": 650,
+        "exampleEn": "Wear protective gear.",
+        "exampleKo": "보호 장비를 착용하세요."
+    },
+    {
+        "day": 11,
+        "no": 65,
+        "word": "result",
+        "meaning": "결과; ~의 결과가 되다",
+        "targetScore": 650,
+        "exampleEn": "The result was unexpected.",
+        "exampleKo": "결과는 예상 밖이었습니다."
+    },
+    {
+        "day": 11,
+        "no": 66,
+        "word": "search",
+        "meaning": "찾다, 수색하다",
+        "targetScore": 650,
+        "exampleEn": "I searched everywhere for my keys.",
+        "exampleKo": "나는 열쇠를 찾으러 사방을 다 뒤졌습니다."
+    },
+    {
+        "day": 11,
+        "no": 67,
+        "word": "service",
+        "meaning": "점검하다; 서비스",
+        "targetScore": 650,
+        "exampleEn": "Get your car serviced regularly.",
+        "exampleKo": "차를 정기적으로 점검받으세요."
+    },
+    {
+        "day": 11,
+        "no": 68,
+        "word": "tool",
+        "meaning": "도구, 공구",
+        "targetScore": 650,
+        "exampleEn": "Hand me that tool.",
+        "exampleKo": "저 도구 좀 줘."
+    }
+]

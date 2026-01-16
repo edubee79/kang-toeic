@@ -1,0 +1,362 @@
+[
+    {
+        "day": 18,
+        "no": 1,
+        "word": "check in",
+        "meaning": "체크인하다, 투숙하다",
+        "targetScore": 650,
+        "exampleEn": "Check in at the front desk.",
+        "exampleKo": "프런트 데스크에서 체크인하세요."
+    },
+    {
+        "day": 18,
+        "no": 2,
+        "word": "compensate",
+        "meaning": "보상하다",
+        "targetScore": 650,
+        "exampleEn": "We will compensate you for the damage.",
+        "exampleKo": "우리는 손해에 대해 보상할 것입니다."
+    },
+    {
+        "day": 18,
+        "no": 3,
+        "word": "complimentary",
+        "meaning": "무료의",
+        "targetScore": 650,
+        "exampleEn": "Enjoy a complimentary breakfast.",
+        "exampleKo": "무료 아침 식사를 즐기세요."
+    },
+    {
+        "day": 18,
+        "no": 4,
+        "word": "chef",
+        "meaning": "주방장",
+        "targetScore": 650,
+        "exampleEn": "The chef prepared a special meal.",
+        "exampleKo": "주방장이 특별한 식사를 준비했습니다."
+    },
+    {
+        "day": 18,
+        "no": 5,
+        "word": "container",
+        "meaning": "용기, 그릇",
+        "targetScore": 650,
+        "exampleEn": "Store food in an airtight container.",
+        "exampleKo": "음식을 밀폐 용기에 보관하세요."
+    },
+    {
+        "day": 18,
+        "no": 6,
+        "word": "elegant",
+        "meaning": "우아한, 고상한",
+        "targetScore": 650,
+        "exampleEn": "Assume an elegant pose.",
+        "exampleKo": "우아한 자세를 취하세요."
+    },
+    {
+        "day": 18,
+        "no": 7,
+        "word": "flavor",
+        "meaning": "맛, 풍미",
+        "targetScore": 650,
+        "exampleEn": "This soup has a rich flavor.",
+        "exampleKo": "이 수프는 풍부한 맛이 납니다."
+    },
+    {
+        "day": 18,
+        "no": 8,
+        "word": "accommodate",
+        "meaning": "수용하다, 숙박시키다",
+        "targetScore": 650,
+        "exampleEn": "The hotel accommodates 200 guests.",
+        "exampleKo": "그 호텔은 200명의 손님을 수용합니다."
+    },
+    {
+        "day": 18,
+        "no": 9,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 650,
+        "exampleEn": "Rooms are available.",
+        "exampleKo": "방이 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 10,
+        "word": "reception",
+        "meaning": "접수처, 환영회",
+        "targetScore": 650,
+        "exampleEn": "Leave your key at the reception.",
+        "exampleKo": "접수처에 열쇠를 두세요."
+    },
+    {
+        "day": 18,
+        "no": 11,
+        "word": "advance",
+        "meaning": "미리, 사전에; 전진",
+        "targetScore": 650,
+        "exampleEn": "Book in advance.",
+        "exampleKo": "미리 예약하세요."
+    },
+    {
+        "day": 18,
+        "no": 12,
+        "word": "refreshments",
+        "meaning": "다과",
+        "targetScore": 650,
+        "exampleEn": "Refreshments will be served.",
+        "exampleKo": "다과가 제공될 것입니다."
+    },
+    {
+        "day": 18,
+        "no": 13,
+        "word": "make",
+        "meaning": "만들다, 예약하다",
+        "targetScore": 650,
+        "exampleEn": "Make a reservation.",
+        "exampleKo": "예약을 하세요."
+    },
+    {
+        "day": 18,
+        "no": 14,
+        "word": "cater",
+        "meaning": "음식을 공급하다",
+        "targetScore": 650,
+        "exampleEn": "We cater for weddings.",
+        "exampleKo": "우리는 결혼식 음식을 공급합니다."
+    },
+    {
+        "day": 18,
+        "no": 15,
+        "word": "reservation",
+        "meaning": "예약",
+        "targetScore": 650,
+        "exampleEn": "Cancel the reservation.",
+        "exampleKo": "예약을 취소하세요."
+    },
+    {
+        "day": 18,
+        "no": 16,
+        "word": "beverage",
+        "meaning": "음료",
+        "targetScore": 650,
+        "exampleEn": "Hot and cold beverages.",
+        "exampleKo": "뜨거운 음료와 차가운 음료."
+    },
+    {
+        "day": 18,
+        "no": 17,
+        "word": "confirm",
+        "meaning": "확인하다",
+        "targetScore": 650,
+        "exampleEn": "Please confirm your attendance.",
+        "exampleKo": "참석 여부를 확인해 주십시오."
+    },
+    {
+        "day": 18,
+        "no": 18,
+        "word": "cancel",
+        "meaning": "취소하다",
+        "targetScore": 650,
+        "exampleEn": "The flight was canceled.",
+        "exampleKo": "비행편이 취소되었습니다."
+    },
+    {
+        "day": 18,
+        "no": 19,
+        "word": "rate",
+        "meaning": "요금; 평가하다",
+        "targetScore": 650,
+        "exampleEn": "Room rates are reasonable.",
+        "exampleKo": "객실 요금이 합리적입니다."
+    },
+    {
+        "day": 18,
+        "no": 20,
+        "word": "conveniently",
+        "meaning": "편리하게",
+        "targetScore": 650,
+        "exampleEn": "Conveniently located near the station.",
+        "exampleKo": "역 근처에 편리하게 위치해 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 21,
+        "word": "decorate",
+        "meaning": "장식하다",
+        "targetScore": 650,
+        "exampleEn": "Decorate the hall.",
+        "exampleKo": "홀을 장식하세요."
+    },
+    {
+        "day": 18,
+        "no": 22,
+        "word": "information",
+        "meaning": "정보",
+        "targetScore": 650,
+        "exampleEn": "Ask for information.",
+        "exampleKo": "정보를 요청하세요."
+    },
+    {
+        "day": 18,
+        "no": 23,
+        "word": "retain",
+        "meaning": "유지하다, 보유하다",
+        "targetScore": 650,
+        "exampleEn": "Retain the receipt.",
+        "exampleKo": "영수증을 보관하세요."
+    },
+    {
+        "day": 18,
+        "no": 24,
+        "word": "atmosphere",
+        "meaning": "분위기",
+        "targetScore": 650,
+        "exampleEn": "Relaxed atmosphere.",
+        "exampleKo": "편안한 분위기."
+    },
+    {
+        "day": 18,
+        "no": 25,
+        "word": "cuisine",
+        "meaning": "요리",
+        "targetScore": 650,
+        "exampleEn": "French cuisine.",
+        "exampleKo": "프랑스 요리."
+    },
+    {
+        "day": 18,
+        "no": 26,
+        "word": "sequence",
+        "meaning": "순서",
+        "targetScore": 650,
+        "exampleEn": "In numerical sequence.",
+        "exampleKo": "번호 순서대로."
+    },
+    {
+        "day": 18,
+        "no": 27,
+        "word": "extensive",
+        "meaning": "광범위한",
+        "targetScore": 650,
+        "exampleEn": "Extensive renovations.",
+        "exampleKo": "대규모 보수 공사."
+    },
+    {
+        "day": 18,
+        "no": 28,
+        "word": "prior",
+        "meaning": "이전의",
+        "targetScore": 650,
+        "exampleEn": "Prior notice is required.",
+        "exampleKo": "사전 통지가 필요합니다."
+    },
+    {
+        "day": 18,
+        "no": 29,
+        "word": "book",
+        "meaning": "예약하다",
+        "targetScore": 650,
+        "exampleEn": "Book a table.",
+        "exampleKo": "테이블을 예약하세요."
+    },
+    {
+        "day": 18,
+        "no": 30,
+        "word": "amenity",
+        "meaning": "편의 시설",
+        "targetScore": 650,
+        "exampleEn": "Hotel amenities.",
+        "exampleKo": "호텔 편의 시설."
+    },
+    {
+        "day": 18,
+        "no": 31,
+        "word": "belongings",
+        "meaning": "소지품",
+        "targetScore": 650,
+        "exampleEn": "Take your belongings.",
+        "exampleKo": "소지품을 챙기세요."
+    },
+    {
+        "day": 18,
+        "no": 32,
+        "word": "entirely",
+        "meaning": "완전히",
+        "targetScore": 650,
+        "exampleEn": "I entirely agree.",
+        "exampleKo": "전적으로 동의합니다."
+    },
+    {
+        "day": 18,
+        "no": 33,
+        "word": "ease",
+        "meaning": "완화하다; 쉬움, 편안함",
+        "targetScore": 650,
+        "exampleEn": "Ease the tension.",
+        "exampleKo": "긴장을 완화하세요."
+    },
+    {
+        "day": 18,
+        "no": 34,
+        "word": "ingredient",
+        "meaning": "재료, 성분",
+        "targetScore": 650,
+        "exampleEn": "Fresh ingredients.",
+        "exampleKo": "신선한 재료."
+    },
+    {
+        "day": 18,
+        "no": 35,
+        "word": "sip",
+        "meaning": "홀짝이다",
+        "targetScore": 650,
+        "exampleEn": "Sip your tea.",
+        "exampleKo": "차를 홀짝이세요."
+    },
+    {
+        "day": 18,
+        "no": 36,
+        "word": "stir",
+        "meaning": "휘젓다",
+        "targetScore": 650,
+        "exampleEn": "Stir the soup.",
+        "exampleKo": "수프를 저으세요."
+    },
+    {
+        "day": 18,
+        "no": 37,
+        "word": "choice",
+        "meaning": "선택",
+        "targetScore": 650,
+        "exampleEn": "Make a choice.",
+        "exampleKo": "선택하세요."
+    },
+    {
+        "day": 18,
+        "no": 38,
+        "word": "complication",
+        "meaning": "복잡한 문제",
+        "targetScore": 650,
+        "exampleEn": "Avoid complications.",
+        "exampleKo": "복잡한 문제를 피하세요."
+    },
+    {
+        "day": 18,
+        "no": 39,
+        "word": "freshness",
+        "meaning": "신선함",
+        "targetScore": 650,
+        "exampleEn": "Guarantee freshness.",
+        "exampleKo": "신선함을 보장합니다."
+    },
+    {
+        "day": 18,
+        "no": 40,
+        "word": "occupancy",
+        "meaning": "(호텔 등의) 이용률",
+        "targetScore": 650,
+        "exampleEn": "High occupancy rate.",
+        "exampleKo": "높은 객실 이용률."
+    }
+]

@@ -1,0 +1,614 @@
+[
+  {
+    "day": 2,
+    "no": 69,
+    "word": "against the law",
+    "meaning": "법에 위반되는",
+    "targetScore": 800,
+    "exampleEn": "Driving without a license is against the law.",
+    "exampleKo": "면허 없이 운전하는 것은 법에 위반됩니다."
+  },
+  {
+    "day": 2,
+    "no": 70,
+    "word": "by all means",
+    "meaning": "반드시, 무슨 일이 있어도, 물론이지",
+    "targetScore": 800,
+    "exampleEn": "We must finish this project by all means.",
+    "exampleKo": "우리는 무슨 일이 있어도 이 프로젝트를 끝내야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 71,
+    "word": "by mistake",
+    "meaning": "실수로",
+    "targetScore": 800,
+    "exampleEn": "I deleted the file by mistake.",
+    "exampleKo": "저는 실수로 그 파일을 삭제했습니다."
+  },
+  {
+    "day": 2,
+    "no": 72,
+    "word": "come to an end",
+    "meaning": "끝나다",
+    "targetScore": 800,
+    "exampleEn": "The contract will come to an end next month.",
+    "exampleKo": "계약은 다음 달에 끝날 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 73,
+    "word": "company regulations",
+    "meaning": "회사 규정",
+    "targetScore": 800,
+    "exampleEn": "Please familiarize yourself with the company regulations.",
+    "exampleKo": "회사 규정을 숙지해 주십시오."
+  },
+  {
+    "day": 2,
+    "no": 74,
+    "word": "give directions",
+    "meaning": "일을 지시하다, 방향을 알려주다",
+    "targetScore": 800,
+    "exampleEn": "The manager gave directions on how to proceed.",
+    "exampleKo": "매니저는 진행 방법에 대해 지시를 내렸습니다."
+  },
+  {
+    "day": 2,
+    "no": 75,
+    "word": "hold up",
+    "meaning": "견디다, 떠받치다",
+    "targetScore": 800,
+    "exampleEn": "The pillars hold up the roof.",
+    "exampleKo": "기둥들이 지붕을 떠받치고 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 76,
+    "word": "if I'm not mistaken",
+    "meaning": "제 기억이 옳다면",
+    "targetScore": 800,
+    "exampleEn": "If I'm not mistaken, the meeting is at 2 PM.",
+    "exampleKo": "제 기억이 옳다면, 회의는 오후 2시입니다."
+  },
+  {
+    "day": 2,
+    "no": 77,
+    "word": "in progress",
+    "meaning": "진행 중인",
+    "targetScore": 800,
+    "exampleEn": "Construction is currently in progress.",
+    "exampleKo": "공사가 현재 진행 중입니다."
+  },
+  {
+    "day": 2,
+    "no": 78,
+    "word": "keep in mind",
+    "meaning": "명심하다",
+    "targetScore": 800,
+    "exampleEn": "Please keep in mind that the deadline is tomorrow.",
+    "exampleKo": "마감일이 내일이라는 것을 명심하십시오."
+  },
+  {
+    "day": 2,
+    "no": 79,
+    "word": "legal counsel",
+    "meaning": "법률 상담",
+    "targetScore": 800,
+    "exampleEn": "The company sought legal counsel regarding the lawsuit.",
+    "exampleKo": "그 회사는 소송에 관해 법률 상담을 구했습니다."
+  },
+  {
+    "day": 2,
+    "no": 80,
+    "word": "self-defense",
+    "meaning": "자기방어, 정당방위",
+    "targetScore": 800,
+    "exampleEn": "He acted in self-defense.",
+    "exampleKo": "그는 정당방위로 행동했습니다."
+  },
+  {
+    "day": 2,
+    "no": 81,
+    "word": "suspect",
+    "meaning": "용의자, 의심하다",
+    "targetScore": 800,
+    "exampleEn": "The police questioned the suspect.",
+    "exampleKo": "경찰은 용의자를 심문했습니다."
+  },
+  {
+    "day": 2,
+    "no": 82,
+    "word": "take one's advice",
+    "meaning": "~의 충고를 따르다",
+    "targetScore": 800,
+    "exampleEn": "You should take his advice seriously.",
+    "exampleKo": "당신은 그의 충고를 진지하게 받아들이는 것이 좋습니다."
+  },
+  {
+    "day": 2,
+    "no": 83,
+    "word": "to one's advantage",
+    "meaning": "~에게 유리하게",
+    "targetScore": 800,
+    "exampleEn": "The new tax law works to our advantage.",
+    "exampleKo": "새로운 세법은 우리에게 유리하게 작용합니다."
+  },
+  {
+    "day": 2,
+    "no": 84,
+    "word": "under control",
+    "meaning": "관리하에 있는",
+    "targetScore": 800,
+    "exampleEn": "The situation is now under control.",
+    "exampleKo": "상황은 이제 통제되고 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 85,
+    "word": "under the supervision of",
+    "meaning": "~의 감독하에",
+    "targetScore": 800,
+    "exampleEn": "The project was completed under the supervision of the director.",
+    "exampleKo": "그 프로젝트는 이사의 감독하에 완료되었습니다."
+  },
+  {
+    "day": 2,
+    "no": 86,
+    "word": "abuse",
+    "meaning": "남용, 남용하다",
+    "targetScore": 800,
+    "exampleEn": "The abuse of power will not be tolerated.",
+    "exampleKo": "권력 남용은 용납되지 않을 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 87,
+    "word": "alert",
+    "meaning": "경고하다, 주의하는",
+    "targetScore": 800,
+    "exampleEn": "Security guards must remain alert at all times.",
+    "exampleKo": "보안 요원들은 항상 주의를 기울여야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 88,
+    "word": "assessment",
+    "meaning": "평가",
+    "targetScore": 800,
+    "exampleEn": "The committee conducted an assessment of the risks.",
+    "exampleKo": "위원회는 위험 평가를 수행했습니다."
+  },
+  {
+    "day": 2,
+    "no": 89,
+    "word": "at all times",
+    "meaning": "항상, 언제나",
+    "targetScore": 800,
+    "exampleEn": "Badges must be worn at all times.",
+    "exampleKo": "배지는 항상 착용해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 90,
+    "word": "authorization",
+    "meaning": "권한 부여, 위임",
+    "targetScore": 800,
+    "exampleEn": "You need authorization to access this area.",
+    "exampleKo": "이 구역에 접근하려면 권한 부여가 필요합니다."
+  },
+  {
+    "day": 2,
+    "no": 91,
+    "word": "concerning",
+    "meaning": "~에 관하여",
+    "targetScore": 800,
+    "exampleEn": "I have some questions concerning the new policy.",
+    "exampleKo": "새로운 정책에 관해 몇 가지 질문이 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 92,
+    "word": "consideration",
+    "meaning": "고려, 숙고",
+    "targetScore": 800,
+    "exampleEn": "Please take my proposal into consideration.",
+    "exampleKo": "제 제안을 고려해 주십시오."
+  },
+  {
+    "day": 2,
+    "no": 93,
+    "word": "defensive",
+    "meaning": "방어적인",
+    "targetScore": 800,
+    "exampleEn": "He became defensive when asked about the mistake.",
+    "exampleKo": "그는 실수에 대해 질문을 받자 방어적인 태도를 보였습니다."
+  },
+  {
+    "day": 2,
+    "no": 94,
+    "word": "depiction",
+    "meaning": "묘사, 서술",
+    "targetScore": 800,
+    "exampleEn": "The book provides a realistic depiction of office life.",
+    "exampleKo": "그 책은 직장 생활에 대한 현실적인 묘사를 제공합니다."
+  },
+  {
+    "day": 2,
+    "no": 95,
+    "word": "disobedient",
+    "meaning": "반항하는, 거역하는",
+    "targetScore": 800,
+    "exampleEn": "The disobedient employee was given a warning.",
+    "exampleKo": "반항적인 직원에게 경고가 주어졌습니다."
+  },
+  {
+    "day": 2,
+    "no": 96,
+    "word": "endure",
+    "meaning": "견디다, 참다",
+    "targetScore": 800,
+    "exampleEn": "We cannot endure these difficult conditions any longer.",
+    "exampleKo": "우리는 더 이상 이런 어려운 상황을 견딜 수 없습니다."
+  },
+  {
+    "day": 2,
+    "no": 97,
+    "word": "exemplary",
+    "meaning": "모범적인, 대표적인",
+    "targetScore": 800,
+    "exampleEn": "She received an award for her exemplary service.",
+    "exampleKo": "그녀는 모범적인 복무로 상을 받았습니다."
+  },
+  {
+    "day": 2,
+    "no": 98,
+    "word": "ignore",
+    "meaning": "무시하다",
+    "targetScore": 800,
+    "exampleEn": "Do not ignore the safety warnings.",
+    "exampleKo": "안전 경고를 무시하지 마십시오."
+  },
+  {
+    "day": 2,
+    "no": 99,
+    "word": "illegal",
+    "meaning": "불법의",
+    "targetScore": 800,
+    "exampleEn": "It is illegal to park here.",
+    "exampleKo": "여기에 주차하는 것은 불법입니다."
+  },
+  {
+    "day": 2,
+    "no": 100,
+    "word": "in accordance with",
+    "meaning": "~에 따라서, ~과 일치하여",
+    "targetScore": 800,
+    "exampleEn": "The product was manufactured in accordance with safety standards.",
+    "exampleKo": "그 제품은 안전 기준에 따라 제조되었습니다."
+  },
+  {
+    "day": 2,
+    "no": 101,
+    "word": "indecisive",
+    "meaning": "결말이 안 난, 우유부단한",
+    "targetScore": 800,
+    "exampleEn": "The manager was indecisive about the hiring.",
+    "exampleKo": "매니저는 채용에 대해 우유부단했습니다."
+  },
+  {
+    "day": 2,
+    "no": 102,
+    "word": "justly",
+    "meaning": "정당하게, 당연히",
+    "targetScore": 800,
+    "exampleEn": "He was justly punished for his crimes.",
+    "exampleKo": "그는 자신의 범죄에 대해 정당하게 처벌받았습니다."
+  },
+  {
+    "day": 2,
+    "no": 103,
+    "word": "obey",
+    "meaning": "복종하다",
+    "targetScore": 800,
+    "exampleEn": "Soldiers must obey orders.",
+    "exampleKo": "군인은 명령에 복종해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 104,
+    "word": "observance",
+    "meaning": "준수",
+    "targetScore": 800,
+    "exampleEn": "The observance of these rules is mandatory.",
+    "exampleKo": "이 규칙들의 준수는 의무적입니다."
+  },
+  {
+    "day": 2,
+    "no": 105,
+    "word": "on-site",
+    "meaning": "현장의, 현지의, 현장에서, 현지에서",
+    "targetScore": 800,
+    "exampleEn": "We provide on-site training for new employees.",
+    "exampleKo": "우리는 신입 사원을 위해 현장 교육을 제공합니다."
+  },
+  {
+    "day": 2,
+    "no": 106,
+    "word": "penalty",
+    "meaning": "벌금",
+    "targetScore": 800,
+    "exampleEn": "There is a severe penalty for late payments.",
+    "exampleKo": "연체 시 엄격한 벌금이 부과됩니다."
+  },
+  {
+    "day": 2,
+    "no": 107,
+    "word": "pointed",
+    "meaning": "(말·표현 등이) 예리한, 날카로운, 적절한",
+    "targetScore": 800,
+    "exampleEn": "He made some pointed remarks about the management.",
+    "exampleKo": "그는 경영진에 대해 몇 가지 날카로운 지적을 했습니다."
+  },
+  {
+    "day": 2,
+    "no": 108,
+    "word": "precious",
+    "meaning": "귀중한",
+    "targetScore": 800,
+    "exampleEn": "Time is a precious resource.",
+    "exampleKo": "시간은 귀중한 자원입니다."
+  },
+  {
+    "day": 2,
+    "no": 109,
+    "word": "principle",
+    "meaning": "원리,원칙",
+    "targetScore": 800,
+    "exampleEn": "We adhere to the principle of equal opportunity.",
+    "exampleKo": "우리는 기회균등의 원칙을 고수합니다."
+  },
+  {
+    "day": 2,
+    "no": 110,
+    "word": "punishment",
+    "meaning": "형벌, 처벌",
+    "targetScore": 800,
+    "exampleEn": "The punishment should fit the crime.",
+    "exampleKo": "처벌은 범죄에 상응해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 111,
+    "word": "regulate",
+    "meaning": "규제하다, 조절하다",
+    "targetScore": 800,
+    "exampleEn": "The government creates laws to regulate the market.",
+    "exampleKo": "정부는 시장을 규제하기 위해 법을 만듭니다."
+  },
+  {
+    "day": 2,
+    "no": 112,
+    "word": "restricted area",
+    "meaning": "제한 구역",
+    "targetScore": 800,
+    "exampleEn": "This is a restricted area.",
+    "exampleKo": "이곳은 제한 구역입니다."
+  },
+  {
+    "day": 2,
+    "no": 113,
+    "word": "restriction",
+    "meaning": "제한, 한정",
+    "targetScore": 800,
+    "exampleEn": "There are strict restrictions on imports.",
+    "exampleKo": "수입에 대한 엄격한 제한이 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 114,
+    "word": "safety inspection",
+    "meaning": "안전 점검",
+    "targetScore": 800,
+    "exampleEn": "The factory passed the safety inspection.",
+    "exampleKo": "그 공장은 안전 점검을 통과했습니다."
+  },
+  {
+    "day": 2,
+    "no": 115,
+    "word": "suppress",
+    "meaning": "억누르다, 금지하다",
+    "targetScore": 800,
+    "exampleEn": "The government tried to suppress the news.",
+    "exampleKo": "정부는 그 뉴스를 억압하려고 시도했습니다."
+  },
+  {
+    "day": 2,
+    "no": 116,
+    "word": "tensely",
+    "meaning": "긴장하여, 딱딱하게",
+    "targetScore": 800,
+    "exampleEn": "The employees waited tensely for the announcement.",
+    "exampleKo": "직원들은 발표를 긴장하며 기다렸습니다."
+  },
+  {
+    "day": 2,
+    "no": 117,
+    "word": "unauthorized",
+    "meaning": "인가받지 않은",
+    "targetScore": 800,
+    "exampleEn": "Unauthorized access is prohibited.",
+    "exampleKo": "인가받지 않은 접근은 금지되어 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 118,
+    "word": "with respect to",
+    "meaning": "~에 관해서",
+    "targetScore": 800,
+    "exampleEn": "With respect to your request, we are still reviewing it.",
+    "exampleKo": "귀하의 요청에 관해서는, 저희가 아직 검토 중입니다."
+  },
+  {
+    "day": 2,
+    "no": 119,
+    "word": "accuse",
+    "meaning": "비난하다, 고소하다",
+    "targetScore": 800,
+    "exampleEn": "He was accused of theft.",
+    "exampleKo": "그는 절도 혐의로 고소당했습니다."
+  },
+  {
+    "day": 2,
+    "no": 120,
+    "word": "assess",
+    "meaning": "평가하다",
+    "targetScore": 800,
+    "exampleEn": "We need to assess the value of the property.",
+    "exampleKo": "우리는 그 부동산의 가치를 평가해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 121,
+    "word": "attorney",
+    "meaning": "변호사",
+    "targetScore": 800,
+    "exampleEn": "You should consult an attorney before signing.",
+    "exampleKo": "서명하기 전에 변호사와 상의해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 122,
+    "word": "be absent from",
+    "meaning": "~에 결석하다",
+    "targetScore": 800,
+    "exampleEn": "He will be absent from the meeting today.",
+    "exampleKo": "그는 오늘 회의에 결석할 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 123,
+    "word": "be allowed to do",
+    "meaning": "~하도록 허락받다",
+    "targetScore": 800,
+    "exampleEn": "Guests are not allowed to smoke in the rooms.",
+    "exampleKo": "투숙객은 객실 내에서 흡연이 허용되지 않습니다."
+  },
+  {
+    "day": 2,
+    "no": 124,
+    "word": "by way of",
+    "meaning": "~의 방법으로, ~에 의해서",
+    "targetScore": 800,
+    "exampleEn": "We solved the problem by way of negotiation.",
+    "exampleKo": "우리는 협상을 통해 문제를 해결했습니다."
+  },
+  {
+    "day": 2,
+    "no": 125,
+    "word": "distrust",
+    "meaning": "의심하다, 불신",
+    "targetScore": 800,
+    "exampleEn": "His inconsistent behavior caused distrust among the team.",
+    "exampleKo": "그의 일관성 없는 행동은 팀 내 불신을 야기했습니다."
+  },
+  {
+    "day": 2,
+    "no": 126,
+    "word": "from this day onward",
+    "meaning": "오늘부터",
+    "targetScore": 800,
+    "exampleEn": "From this day onward, the new rules apply.",
+    "exampleKo": "오늘부터 새로운 규칙이 적용됩니다."
+  },
+  {
+    "day": 2,
+    "no": 127,
+    "word": "have permission to do",
+    "meaning": "~할 허가를 받다",
+    "targetScore": 800,
+    "exampleEn": "Do I have permission to leave early?",
+    "exampleKo": "제가 일찍 떠나도 될까요(허가를 받았나요)?"
+  },
+  {
+    "day": 2,
+    "no": 128,
+    "word": "in a strict way(=strictly)",
+    "meaning": "엄격하게",
+    "targetScore": 800,
+    "exampleEn": "The rules are enforced in a strict way.",
+    "exampleKo": "규칙은 엄격하게 시행됩니다."
+  },
+  {
+    "day": 2,
+    "no": 129,
+    "word": "make clear",
+    "meaning": "분명히 하다",
+    "targetScore": 800,
+    "exampleEn": "Please make clear what you expect from us.",
+    "exampleKo": "우리에게 무엇을 기대하는지 분명히 해 주세요."
+  },
+  {
+    "day": 2,
+    "no": 130,
+    "word": "ministry",
+    "meaning": "(정부의)부서",
+    "targetScore": 800,
+    "exampleEn": "The Ministry of Finance announced the new budget.",
+    "exampleKo": "재무부는 새로운 예산을 발표했습니다."
+  },
+  {
+    "day": 2,
+    "no": 131,
+    "word": "newly established",
+    "meaning": "신설된",
+    "targetScore": 800,
+    "exampleEn": "The newly established branch will open next month.",
+    "exampleKo": "신설된 지점은 다음 달에 문을 열 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 132,
+    "word": "put into effect",
+    "meaning": "~을 시행하다",
+    "targetScore": 800,
+    "exampleEn": "The changes will be put into effect immediately.",
+    "exampleKo": "변경 사항은 즉시 시행될 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 133,
+    "word": "registration confirmation",
+    "meaning": "등록 확인",
+    "targetScore": 800,
+    "exampleEn": "Please bring your registration confirmation.",
+    "exampleKo": "등록 확인서를 지참해 주십시오."
+  },
+  {
+    "day": 2,
+    "no": 134,
+    "word": "stand over",
+    "meaning": "옆에서 지켜보다",
+    "targetScore": 800,
+    "exampleEn": "Don't stand over me while I'm working.",
+    "exampleKo": "내가 일하는 동안 옆에서 지켜보지 마세요."
+  },
+  {
+    "day": 2,
+    "no": 135,
+    "word": "warn",
+    "meaning": "경고하다",
+    "targetScore": 800,
+    "exampleEn": "I must warn you about the risks.",
+    "exampleKo": "당신에게 위험에 대해 경고해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 136,
+    "word": "without respect to",
+    "meaning": "~을 고려하지 않고, ~을 무시하고",
+    "targetScore": 800,
+    "exampleEn": "We hire candidates without respect to their background.",
+    "exampleKo": "우리는 배경을 고려하지 않고 지원자를 채용합니다."
+  }
+]

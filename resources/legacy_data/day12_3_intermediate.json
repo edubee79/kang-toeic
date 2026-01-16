@@ -1,0 +1,614 @@
+[
+    {
+        "day": 12,
+        "no": 69,
+        "word": "underground",
+        "meaning": "지하의; 지하철",
+        "targetScore": 800,
+        "exampleEn": "The train runs underground.",
+        "exampleKo": "기차는 지하로 운행합니다."
+    },
+    {
+        "day": 12,
+        "no": 70,
+        "word": "accurate",
+        "meaning": "정확한",
+        "targetScore": 800,
+        "exampleEn": "The measurements must be accurate.",
+        "exampleKo": "측정은 정확해야 합니다."
+    },
+    {
+        "day": 12,
+        "no": 71,
+        "word": "adjust",
+        "meaning": "조절하다, 맞추다",
+        "targetScore": 800,
+        "exampleEn": "Adjust the seat to your height.",
+        "exampleKo": "좌석을 키에 맞게 조절하세요."
+    },
+    {
+        "day": 12,
+        "no": 72,
+        "word": "automatically",
+        "meaning": "자동으로, 기계적으로",
+        "targetScore": 800,
+        "exampleEn": "The doors open automatically.",
+        "exampleKo": "문이 자동으로 열립니다."
+    },
+    {
+        "day": 12,
+        "no": 73,
+        "word": "capability",
+        "meaning": "능력, 역량",
+        "targetScore": 800,
+        "exampleEn": "It has the capability to store data.",
+        "exampleKo": "그것은 데이터를 저장할 수 있는 능력이 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 74,
+        "word": "complicated",
+        "meaning": "복잡한",
+        "targetScore": 800,
+        "exampleEn": "The situation is complicated.",
+        "exampleKo": "상황이 복잡합니다."
+    },
+    {
+        "day": 12,
+        "no": 75,
+        "word": "component",
+        "meaning": "구성 요소",
+        "targetScore": 800,
+        "exampleEn": "Trust is a key component of friendship.",
+        "exampleKo": "신뢰는 우정의 핵심 구성 요소입니다."
+    },
+    {
+        "day": 12,
+        "no": 76,
+        "word": "crucial",
+        "meaning": "중대한, 결정적인",
+        "targetScore": 800,
+        "exampleEn": "Water is crucial for survival.",
+        "exampleKo": "물은 생존에 중대합니다."
+    },
+    {
+        "day": 12,
+        "no": 77,
+        "word": "damage",
+        "meaning": "손상, 피해",
+        "targetScore": 800,
+        "exampleEn": "The storm caused a lot of damage.",
+        "exampleKo": "폭풍은 많은 피해를 입혔습니다."
+    },
+    {
+        "day": 12,
+        "no": 78,
+        "word": "damages",
+        "meaning": "손해 배상금",
+        "targetScore": 800,
+        "exampleEn": "He sued for damages.",
+        "exampleKo": "그는 손해 배상을 청구했습니다."
+    },
+    {
+        "day": 12,
+        "no": 79,
+        "word": "deadline",
+        "meaning": "마감 기한",
+        "targetScore": 800,
+        "exampleEn": "The deadline is tomorrow.",
+        "exampleKo": "마감 기한은 내일입니다."
+    },
+    {
+        "day": 12,
+        "no": 80,
+        "word": "defect",
+        "meaning": "결함",
+        "targetScore": 800,
+        "exampleEn": "The product has a defect.",
+        "exampleKo": "그 제품에 결함이 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 81,
+        "word": "defective",
+        "meaning": "결함이 있는",
+        "targetScore": 800,
+        "exampleEn": "Return any defective items.",
+        "exampleKo": "결함이 있는 물품은 반품하세요."
+    },
+    {
+        "day": 12,
+        "no": 82,
+        "word": "delivery",
+        "meaning": "배달",
+        "targetScore": 800,
+        "exampleEn": "Delivery is free.",
+        "exampleKo": "배달은 무료입니다."
+    },
+    {
+        "day": 12,
+        "no": 83,
+        "word": "deteriorate",
+        "meaning": "악화되다, 나빠지다",
+        "targetScore": 800,
+        "exampleEn": "His health deteriorated rapidly.",
+        "exampleKo": "그의 건강이 급격히 악화되었습니다."
+    },
+    {
+        "day": 12,
+        "no": 84,
+        "word": "disruption",
+        "meaning": "중단, 혼란",
+        "targetScore": 800,
+        "exampleEn": "Sorry for the disruption.",
+        "exampleKo": "혼란을 드려 죄송합니다."
+    },
+    {
+        "day": 12,
+        "no": 85,
+        "word": "efficient",
+        "meaning": "효율적인",
+        "targetScore": 800,
+        "exampleEn": "She is very efficient at her job.",
+        "exampleKo": "그녀는 일을 매우 효율적으로 합니다."
+    },
+    {
+        "day": 12,
+        "no": 86,
+        "word": "energy",
+        "meaning": "에너지",
+        "targetScore": 800,
+        "exampleEn": "We must save energy.",
+        "exampleKo": "우리는 에너지를 절약해야 합니다."
+    },
+    {
+        "day": 12,
+        "no": 87,
+        "word": "ensure",
+        "meaning": "보장하다, 확실하게 하다",
+        "targetScore": 800,
+        "exampleEn": "Please ensure that the door is locked.",
+        "exampleKo": "문이 잠겼는지 확인해 주세요."
+    },
+    {
+        "day": 12,
+        "no": 88,
+        "word": "error",
+        "meaning": "에러, 오류",
+        "targetScore": 800,
+        "exampleEn": "There is an error in the calculation.",
+        "exampleKo": "계산에 오류가 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 89,
+        "word": "facility",
+        "meaning": "시설, 설비",
+        "targetScore": 800,
+        "exampleEn": "The hotel has excellent facilities.",
+        "exampleKo": "그 호텔은 훌륭한 시설을 갖추고 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 90,
+        "word": "fuel",
+        "meaning": "연료",
+        "targetScore": 800,
+        "exampleEn": "We are running out of fuel.",
+        "exampleKo": "연료가 떨어져 갑니다."
+    },
+    {
+        "day": 12,
+        "no": 91,
+        "word": "halt",
+        "meaning": "중단하다; 중단",
+        "targetScore": 800,
+        "exampleEn": "Work came to a halt.",
+        "exampleKo": "작업이 중단되었습니다."
+    },
+    {
+        "day": 12,
+        "no": 92,
+        "word": "imperfect",
+        "meaning": "불완전한, 결함이 있는",
+        "targetScore": 800,
+        "exampleEn": "It is an imperfect world.",
+        "exampleKo": "불완전한 세상입니다."
+    },
+    {
+        "day": 12,
+        "no": 93,
+        "word": "improvement",
+        "meaning": "개선, 향상",
+        "targetScore": 800,
+        "exampleEn": "There is room for improvement.",
+        "exampleKo": "개선의 여지가 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 94,
+        "word": "industry",
+        "meaning": "산업",
+        "targetScore": 800,
+        "exampleEn": "The steel industry is important.",
+        "exampleKo": "철강 산업은 중요합니다."
+    },
+    {
+        "day": 12,
+        "no": 95,
+        "word": "inquiry",
+        "meaning": "문의, 조사",
+        "targetScore": 800,
+        "exampleEn": "We will answer your inquiry soon.",
+        "exampleKo": "곧 문의에 답변해 드리겠습니다."
+    },
+    {
+        "day": 12,
+        "no": 96,
+        "word": "inspect",
+        "meaning": "검사하다",
+        "targetScore": 800,
+        "exampleEn": "Inspect the car before buying.",
+        "exampleKo": "사기 전에 차를 검사하세요."
+    },
+    {
+        "day": 12,
+        "no": 97,
+        "word": "inspection",
+        "meaning": "검사",
+        "targetScore": 800,
+        "exampleEn": "The building passed inspection.",
+        "exampleKo": "건물이 검사를 통과했습니다."
+    },
+    {
+        "day": 12,
+        "no": 98,
+        "word": "install",
+        "meaning": "설치하다",
+        "targetScore": 800,
+        "exampleEn": "He installed a new lock.",
+        "exampleKo": "그는 새 자물쇠를 설치했습니다."
+    },
+    {
+        "day": 12,
+        "no": 99,
+        "word": "installation",
+        "meaning": "설치",
+        "targetScore": 800,
+        "exampleEn": "Installation is included in the price.",
+        "exampleKo": "설치는 가격에 포함되어 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 100,
+        "word": "indication",
+        "meaning": "표시, 징후",
+        "targetScore": 800,
+        "exampleEn": "It gave no indication of failure.",
+        "exampleKo": "고장의 징후는 없었습니다."
+    },
+    {
+        "day": 12,
+        "no": 101,
+        "word": "labor",
+        "meaning": "노동",
+        "targetScore": 800,
+        "exampleEn": "Manual labor is hard work.",
+        "exampleKo": "육체노동은 힘든 일입니다."
+    },
+    {
+        "day": 12,
+        "no": 102,
+        "word": "maintenance",
+        "meaning": "유지 보수, 정비",
+        "targetScore": 800,
+        "exampleEn": "Regular maintenance keeps the car running well.",
+        "exampleKo": "정기적인 정비는 차를 잘 굴러가게 합니다."
+    },
+    {
+        "day": 12,
+        "no": 103,
+        "word": "manufacture",
+        "meaning": "제조하다",
+        "targetScore": 800,
+        "exampleEn": "They manufacture toys.",
+        "exampleKo": "그들은 장난감을 제조합니다."
+    },
+    {
+        "day": 12,
+        "no": 104,
+        "word": "manufacturer",
+        "meaning": "제조업체",
+        "targetScore": 800,
+        "exampleEn": "Contact the manufacturer for parts.",
+        "exampleKo": "부품은 제조업체에 문의하세요."
+    },
+    {
+        "day": 12,
+        "no": 105,
+        "word": "mechanic",
+        "meaning": "정비사",
+        "targetScore": 800,
+        "exampleEn": "He is a skilled mechanic.",
+        "exampleKo": "그는 숙련된 정비사입니다."
+    },
+    {
+        "day": 12,
+        "no": 106,
+        "word": "mechanical",
+        "meaning": "기계의",
+        "targetScore": 800,
+        "exampleEn": "He has a mechanical mind.",
+        "exampleKo": "그는 기계를 잘 다룹니다."
+    },
+    {
+        "day": 12,
+        "no": 107,
+        "word": "modern",
+        "meaning": "현대의",
+        "targetScore": 800,
+        "exampleEn": "Modern art is not for everyone.",
+        "exampleKo": "현대 미술이 모든 사람을 위한 것은 아닙니다."
+    },
+    {
+        "day": 12,
+        "no": 108,
+        "word": "operate",
+        "meaning": "작동하다, 운영하다",
+        "targetScore": 800,
+        "exampleEn": "The machine operates quietly.",
+        "exampleKo": "그 기계는 조용히 작동합니다."
+    },
+    {
+        "day": 12,
+        "no": 109,
+        "word": "operation",
+        "meaning": "작동, 운영, 수술",
+        "targetScore": 800,
+        "exampleEn": "The operation was successful.",
+        "exampleKo": "수술은 성공적이었습니다."
+    },
+    {
+        "day": 12,
+        "no": 110,
+        "word": "periodic",
+        "meaning": "주기적인",
+        "targetScore": 800,
+        "exampleEn": "Periodic checks are necessary.",
+        "exampleKo": "주기적인 점검이 필요합니다."
+    },
+    {
+        "day": 12,
+        "no": 111,
+        "word": "plant",
+        "meaning": "공장; 식물; 심다",
+        "targetScore": 800,
+        "exampleEn": "They are building a new chemical plant.",
+        "exampleKo": "그들은 새로운 화학 공장을 짓고 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 112,
+        "word": "power",
+        "meaning": "전력, 힘",
+        "targetScore": 800,
+        "exampleEn": "Knowledge is power.",
+        "exampleKo": "아는 것이 힘입니다."
+    },
+    {
+        "day": 12,
+        "no": 113,
+        "word": "precaution",
+        "meaning": "예방 조치",
+        "targetScore": 800,
+        "exampleEn": "Take precautions to avoid injury.",
+        "exampleKo": "부상을 피하기 위해 예방 조치를 취하세요."
+    },
+    {
+        "day": 12,
+        "no": 114,
+        "word": "precise",
+        "meaning": "정밀한, 정확한",
+        "targetScore": 800,
+        "exampleEn": "We need precise measurements.",
+        "exampleKo": "우리는 정밀한 측정이 필요합니다."
+    },
+    {
+        "day": 12,
+        "no": 115,
+        "word": "preparation",
+        "meaning": "준비",
+        "targetScore": 800,
+        "exampleEn": "Preparation is key.",
+        "exampleKo": "준비가 핵심입니다."
+    },
+    {
+        "day": 12,
+        "no": 116,
+        "word": "procedure",
+        "meaning": "절차",
+        "targetScore": 800,
+        "exampleEn": "It is a standard procedure.",
+        "exampleKo": "그것은 표준 절차입니다."
+    },
+    {
+        "day": 12,
+        "no": 117,
+        "word": "proceed",
+        "meaning": "진행하다, 나아가다",
+        "targetScore": 800,
+        "exampleEn": "Please proceed with your work.",
+        "exampleKo": "하던 일을 계속 진행하세요."
+    },
+    {
+        "day": 12,
+        "no": 118,
+        "word": "process",
+        "meaning": "과정, 처리하다",
+        "targetScore": 800,
+        "exampleEn": "It is a slow process.",
+        "exampleKo": "그것은 느린 과정입니다."
+    },
+    {
+        "day": 12,
+        "no": 119,
+        "word": "processing",
+        "meaning": "처리, 가공",
+        "targetScore": 800,
+        "exampleEn": "Your order is still processing.",
+        "exampleKo": "당신의 주문은 아직 처리 중입니다."
+    },
+    {
+        "day": 12,
+        "no": 120,
+        "word": "produce",
+        "meaning": "생산하다",
+        "targetScore": 800,
+        "exampleEn": "They produce high-quality goods.",
+        "exampleKo": "그들은 고품질 상품을 생산합니다."
+    },
+    {
+        "day": 12,
+        "no": 121,
+        "word": "production",
+        "meaning": "생산",
+        "targetScore": 800,
+        "exampleEn": "Production has increased.",
+        "exampleKo": "생산이 증가했습니다."
+    },
+    {
+        "day": 12,
+        "no": 122,
+        "word": "productive",
+        "meaning": "생산적인",
+        "targetScore": 800,
+        "exampleEn": "He is a productive worker.",
+        "exampleKo": "그는 생산적인 직원입니다."
+    },
+    {
+        "day": 12,
+        "no": 123,
+        "word": "productivity",
+        "meaning": "생산성",
+        "targetScore": 800,
+        "exampleEn": "We must improve productivity.",
+        "exampleKo": "우리는 생산성을 향상해야 합니다."
+    },
+    {
+        "day": 12,
+        "no": 124,
+        "word": "prohibit",
+        "meaning": "금지하다",
+        "targetScore": 800,
+        "exampleEn": "Smoking is prohibited here.",
+        "exampleKo": "여기서 흡연은 금지되어 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 125,
+        "word": "protect",
+        "meaning": "보호하다",
+        "targetScore": 800,
+        "exampleEn": "Protect your eyes from the sun.",
+        "exampleKo": "태양으로부터 눈을 보호하세요."
+    },
+    {
+        "day": 12,
+        "no": 126,
+        "word": "protective",
+        "meaning": "보호하는",
+        "targetScore": 800,
+        "exampleEn": "Wear protective clothing.",
+        "exampleKo": "보호복을 입으세요."
+    },
+    {
+        "day": 12,
+        "no": 127,
+        "word": "quality",
+        "meaning": "품질",
+        "targetScore": 800,
+        "exampleEn": "We guarantee top quality.",
+        "exampleKo": "우리는 최고 품질을 보장합니다."
+    },
+    {
+        "day": 12,
+        "no": 128,
+        "word": "quantity",
+        "meaning": "수량",
+        "targetScore": 800,
+        "exampleEn": "A large quantity of food was wasted.",
+        "exampleKo": "많은 양의 음식이 낭비되었습니다."
+    },
+    {
+        "day": 12,
+        "no": 129,
+        "word": "raw",
+        "meaning": "날것의, 가공하지 않은",
+        "targetScore": 800,
+        "exampleEn": "Eating raw meat can be dangerous.",
+        "exampleKo": "날고기를 먹는 것은 위험할 수 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 130,
+        "word": "refinery",
+        "meaning": "정유 공장, 정제소",
+        "targetScore": 800,
+        "exampleEn": "The oil refinery is near the port.",
+        "exampleKo": "정유 공장은 항구 근처에 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 131,
+        "word": "regulation",
+        "meaning": "규정, 규제",
+        "targetScore": 800,
+        "exampleEn": "Follow the safety regulations.",
+        "exampleKo": "안전 규정을 따르세요."
+    },
+    {
+        "day": 12,
+        "no": 132,
+        "word": "repair",
+        "meaning": "수리하다; 수리",
+        "targetScore": 800,
+        "exampleEn": "The car needs repair.",
+        "exampleKo": "그 차는 수리가 필요합니다."
+    },
+    {
+        "day": 12,
+        "no": 133,
+        "word": "request",
+        "meaning": "요청하다; 요청",
+        "targetScore": 800,
+        "exampleEn": "I requested a day off.",
+        "exampleKo": "나는 하루 휴가를 요청했습니다."
+    },
+    {
+        "day": 12,
+        "no": 134,
+        "word": "result",
+        "meaning": "결과; ~의 결과가 되다",
+        "targetScore": 800,
+        "exampleEn": "This is the result of hard work.",
+        "exampleKo": "이것은 노력의 결과입니다."
+    },
+    {
+        "day": 12,
+        "no": 135,
+        "word": "resume",
+        "meaning": "재개하다",
+        "targetScore": 800,
+        "exampleEn": "Talks will resume tomorrow.",
+        "exampleKo": "회담은 내일 재개될 것입니다."
+    },
+    {
+        "day": 12,
+        "no": 136,
+        "word": "safety",
+        "meaning": "안전",
+        "targetScore": 800,
+        "exampleEn": "Safety is our priority.",
+        "exampleKo": "안전이 우리의 우선순위입니다."
+    }
+]

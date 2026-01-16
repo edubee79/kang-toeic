@@ -1,0 +1,60 @@
+{
+  "passageId": 2,
+  "type": "ADVERTISEMENT",
+  "structure": {
+    "header_lines": [
+      "Keep Cool Service Contractors:",
+      "67 Main Road, Edinburgh Village",
+      "Chaguanas, Trinidad and Tobago"
+    ],
+    "salutation": null,
+    "body_paragraphs": [
+      "Keep Cool Service Contractors can bring you peace of mind. As part of an annual contract, we will service your air-conditioning system, ensuring your [135] and comfort. This includes inspecting the system, making repairs as needed, and professionally cleaning your air ducts. [136] , if necessary, we can replace your old air-conditioning system with a new, cost-efficient one.",
+      "Our workers are highly qualified licensed technicians who stay up-to-date with ongoing training. [137] . We promise you fair prices and professional work, [138] by our Keep Cool guarantee.",
+      "Call 1-868-555-0129 for a free quote today."
+    ],
+    "closing_lines": []
+  },
+  "questions": [
+    {
+      "id": 135,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) safe",
+        "(B) safely",
+        "(C) safest",
+        "(D) safety"
+      ]
+    },
+    {
+      "id": 136,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) On one hand",
+        "(B) Nonetheless",
+        "(C) Furthermore",
+        "(D) And yet"
+      ]
+    },
+    {
+      "id": 137,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) Take advantage of dozens of useful online tools.",
+        "(B) Moreover, the air conditioner you chose is very popular.",
+        "(C) Plus, they are friendly, clean, and knowledgeable.",
+        "(D) Thank you for visiting our contractor showroom."
+      ]
+    },
+    {
+      "id": 138,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) backed",
+        "(B) backs",
+        "(C) backing",
+        "(D) back"
+      ]
+    }
+  ]
+}

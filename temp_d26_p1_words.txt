@@ -1,0 +1,41 @@
+ No            Word                                       Meaning
+  1      delinquent                              (세금 등이) 연체된, 미불의
+  2         overdue                  (지불·반납 등의) 기한이 지난, 지불 기한이 넘은
+  3     regrettably                                        유감스럽게도
+  4         balance                                     잔고, 차감 잔액
+  5         deposit                                    입금하다, 예금하다
+  6   investigation                                            조사
+  7         account 계좌, 설명, 고려, (~의 이유를) 밝히다, 설명하다\n(~의 비율을) 차지하다
+  8       statement                                      명세서, 성명서
+  9          amount                                         액수, 약
+ 10      withdrawal                                       (예금의)인출
+ 11      previously                                           이전에
+ 12             due      만기가 된, 지불기일이 된, \n(금전 등이)~에게 마땅히 지급되어야 할
+ 13         receive                                      받다, 수취하다
+ 14          expect                                    예상하다, 기대하다
+ 15     certificate                                       증명서, 증서
+ 16        document                        서류, 문서, 기록하다, 문서를 작성하다
+ 17        spending                                        소비, 지출
+ 18    successfully                                         성공적으로
+ 19            bill                        ~에게 청구서를 보내다, 청구서, 계산서
+ 20        pleasure                                   즐거움, 기쁨, 영광
+ 21           study                                            연구
+ 22         summary                                        요약, 개요
+ 23       temporary                                           임시의
+ 24           lower                                   (양·가격을) 줄이다
+ 25     transaction                                        거래, 업무
+ 26          double                                      두 배로 만들다
+ 27  identification                                   신분증, 신분 증명서
+ 28 dissatisfaction                                        불만, 불평
+ 29       in common                                    공통으로, 공동으로
+ 30        interest                                    관심, 권리, 이자
+ 31          reject                                    거절하다, 거부하다
+ 32        relation                                            관계
+ 33     tentatively                                    임시로, 시험적으로
+ 34   alternatively                                그렇지 않으면, 그 대신에
+ 35       attentive                                    주의 깊은, 세심한
+ 36         convert                                    전환하다, 변환하다
+ 37         heavily                                       몹시, 심하게
+ 38            loan                                       대출, 대출금
+ 39      unexpected                                        예기치 않은
+ 40            cash                                      현금으로 바꾸다

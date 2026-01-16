@@ -1,0 +1,614 @@
+[
+  {
+    "day": 15,
+    "no": 69,
+    "word": "volume",
+    "meaning": "(소리)크기,양,책",
+    "targetScore": 800,
+    "exampleEn": "The volume of trade has increased.",
+    "exampleKo": "무역량(부피)이 증가했습니다."
+  },
+  {
+    "day": 15,
+    "no": 70,
+    "word": "close a deal",
+    "meaning": "계약을 체결하다",
+    "targetScore": 800,
+    "exampleEn": "We hope to close a deal by Friday.",
+    "exampleKo": "우리는 금요일까지 계약을 체결하기를(거래를 성사시키기를) 희망합니다."
+  },
+  {
+    "day": 15,
+    "no": 71,
+    "word": "complicate",
+    "meaning": "복잡하게 하다",
+    "targetScore": 800,
+    "exampleEn": "New regulations complicate the process.",
+    "exampleKo": "새로운 규정들이 그 과정을 복잡하게 만듭니다."
+  },
+  {
+    "day": 15,
+    "no": 72,
+    "word": "dial a number",
+    "meaning": "전화번호를 돌리다, 전화를 걸다",
+    "targetScore": 800,
+    "exampleEn": "Dial a number to reach the operator.",
+    "exampleKo": "교환원에게 연결하려면 번호를 돌리십시오(누르십시오)."
+  },
+  {
+    "day": 15,
+    "no": 73,
+    "word": "disadvantage",
+    "meaning": "불이익",
+    "targetScore": 800,
+    "exampleEn": "The high cost is a major disadvantage.",
+    "exampleKo": "높은 비용은 주요한 불리한 점(약점)입니다."
+  },
+  {
+    "day": 15,
+    "no": 74,
+    "word": "focus on",
+    "meaning": "~에 집중하다",
+    "targetScore": 800,
+    "exampleEn": "We need to focus on customer satisfaction.",
+    "exampleKo": "우리는 고객 만족에 집중해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 75,
+    "word": "for ages",
+    "meaning": "오랫동안",
+    "targetScore": 800,
+    "exampleEn": "I haven't seen him for ages.",
+    "exampleKo": "저는 그를 오랫동안 보지 못했습니다."
+  },
+  {
+    "day": 15,
+    "no": 76,
+    "word": "household",
+    "meaning": "가족, 가구 세대",
+    "targetScore": 800,
+    "exampleEn": "This brand is a household name.",
+    "exampleKo": "이 브랜드는 누구나 아는 이름(가정의 이름)입니다."
+  },
+  {
+    "day": 15,
+    "no": 77,
+    "word": "I have no idea.",
+    "meaning": "잘 모르겠어요.",
+    "targetScore": 800,
+    "exampleEn": "I have no idea where she went.",
+    "exampleKo": "그녀가 어디로 갔는지 저는 전혀 모릅니다."
+  },
+  {
+    "day": 15,
+    "no": 78,
+    "word": "lock up",
+    "meaning": "(자물쇠를 채워) 보관하다",
+    "targetScore": 800,
+    "exampleEn": "Make sure to lock up the office.",
+    "exampleKo": "사무실을 확실히 잠그십시오."
+  },
+  {
+    "day": 15,
+    "no": 79,
+    "word": "make a deposit",
+    "meaning": "계약금을 치르다, 보증금을 치르다",
+    "targetScore": 800,
+    "exampleEn": "I need to make a deposit today.",
+    "exampleKo": "저는 오늘 예금을 해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 80,
+    "word": "make a mistake",
+    "meaning": "실수하다",
+    "targetScore": 800,
+    "exampleEn": "Do not make a mistake on the form.",
+    "exampleKo": "양식에 실수를 하지 마십시오."
+  },
+  {
+    "day": 15,
+    "no": 81,
+    "word": "peak",
+    "meaning": "절정, 최고점",
+    "targetScore": 800,
+    "exampleEn": "Sales reached a peak in December.",
+    "exampleKo": "매출이 12월에 정점(최고점)에 도달했습니다."
+  },
+  {
+    "day": 15,
+    "no": 82,
+    "word": "rain check",
+    "meaning": "우천 교환권, 후일 구매권",
+    "targetScore": 800,
+    "exampleEn": "Can I get a rain check on that offer?",
+    "exampleKo": "그 제안에 대해 다음 기회로 미룰 수 있을까요(우천 교환권을 받을 수 있을까요)?"
+  },
+  {
+    "day": 15,
+    "no": 83,
+    "word": "rent out",
+    "meaning": "~을 임대하다",
+    "targetScore": 800,
+    "exampleEn": "We rent out equipment for events.",
+    "exampleKo": "우리는 행사를 위해 장비를 임대합니다."
+  },
+  {
+    "day": 15,
+    "no": 84,
+    "word": "rental agreement",
+    "meaning": "임대 계약서",
+    "targetScore": 800,
+    "exampleEn": "Please sign the rental agreement.",
+    "exampleKo": "임대 계약서에 서명해 주십시오."
+  },
+  {
+    "day": 15,
+    "no": 85,
+    "word": "rough",
+    "meaning": "힘든, 거친",
+    "targetScore": 800,
+    "exampleEn": "The road surface is very rough.",
+    "exampleKo": "도로 표면이 매우 거칩니다."
+  },
+  {
+    "day": 15,
+    "no": 86,
+    "word": "royalty",
+    "meaning": "저작권 사용료",
+    "targetScore": 800,
+    "exampleEn": "The author receives a royalty on every book sold.",
+    "exampleKo": "작가는 판매되는 모든 책에 대해 인세(사용료)를 받습니다."
+  },
+  {
+    "day": 15,
+    "no": 87,
+    "word": "run in several directions",
+    "meaning": "여러 방향으로 뻗어 있다",
+    "targetScore": 800,
+    "exampleEn": "The cracks run in several directions.",
+    "exampleKo": "균열이 여러 방향으로 뻗어 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 88,
+    "word": "scare",
+    "meaning": "겁주다",
+    "targetScore": 800,
+    "exampleEn": "The loud noise scared me.",
+    "exampleKo": "큰 소음이 저를 겁주었습니다(놀라게 했습니다)."
+  },
+  {
+    "day": 15,
+    "no": 89,
+    "word": "sign a contract",
+    "meaning": "계약서에 서명하다",
+    "targetScore": 800,
+    "exampleEn": "We are ready to sign a contract.",
+    "exampleKo": "우리는 계약서에 서명할 준비가 되었습니다."
+  },
+  {
+    "day": 15,
+    "no": 90,
+    "word": "under a contract",
+    "meaning": "계약 하에",
+    "targetScore": 800,
+    "exampleEn": "We are under a contract with the supplier.",
+    "exampleKo": "우리는 그 공급업체와 계약 하에 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 91,
+    "word": "win a contract",
+    "meaning": "계약을 따내다",
+    "targetScore": 800,
+    "exampleEn": "We worked hard to win a contract.",
+    "exampleKo": "우리는 계약을 따내기 위해 열심히 일했습니다."
+  },
+  {
+    "day": 15,
+    "no": 92,
+    "word": "agreeable",
+    "meaning": "기꺼이 동의하는, 기분 좋은",
+    "targetScore": 800,
+    "exampleEn": "We reached an agreeable solution.",
+    "exampleKo": "우리는 기꺼이 동의하는(만족스러운) 해결책에 도달했습니다."
+  },
+  {
+    "day": 15,
+    "no": 93,
+    "word": "call out",
+    "meaning": "~를 부르다",
+    "targetScore": 800,
+    "exampleEn": "Please call out the names on the list.",
+    "exampleKo": "목록에 있는 이름들을 불러 주십시오."
+  },
+  {
+    "day": 15,
+    "no": 94,
+    "word": "convincing",
+    "meaning": "설득력 있는",
+    "targetScore": 800,
+    "exampleEn": "He gave a convincing presentation.",
+    "exampleKo": "그는 설득력 있는 발표를 했습니다."
+  },
+  {
+    "day": 15,
+    "no": 95,
+    "word": "diplomatic",
+    "meaning": "외교상의",
+    "targetScore": 800,
+    "exampleEn": "The problem requires a diplomatic solution.",
+    "exampleKo": "그 문제는 외교적인 해결책을 필요로 합니다."
+  },
+  {
+    "day": 15,
+    "no": 96,
+    "word": "equality",
+    "meaning": "같음, 평등, 대등",
+    "targetScore": 800,
+    "exampleEn": "We strive for equality in the workplace.",
+    "exampleKo": "우리는 직장에서의 평등을 위해 노력합니다."
+  },
+  {
+    "day": 15,
+    "no": 97,
+    "word": "ethical",
+    "meaning": "윤리적인, 도덕에 관계된",
+    "targetScore": 800,
+    "exampleEn": "The company follows ethical business practices.",
+    "exampleKo": "그 회사는 윤리적인 경영 관행을 따릅니다."
+  },
+  {
+    "day": 15,
+    "no": 98,
+    "word": "hesitate",
+    "meaning": "망설이다, 머뭇거리다",
+    "targetScore": 800,
+    "exampleEn": "Do not hesitate to contact us.",
+    "exampleKo": "주저하지 말고(망설이지 말고) 저희에게 연락하십시오."
+  },
+  {
+    "day": 15,
+    "no": 99,
+    "word": "in contrast",
+    "meaning": "반대로",
+    "targetScore": 800,
+    "exampleEn": "In contrast, last year's sales were low.",
+    "exampleKo": "반대로, 작년 매출은 낮았습니다."
+  },
+  {
+    "day": 15,
+    "no": 100,
+    "word": "instrumental",
+    "meaning": "(어떤 일을 하는 데) 중요한",
+    "targetScore": 800,
+    "exampleEn": "He was instrumental in the project's success.",
+    "exampleKo": "그는 프로젝트의 성공에 중요한 역할을 했습니다."
+  },
+  {
+    "day": 15,
+    "no": 101,
+    "word": "lengthen",
+    "meaning": "길어지다, 늘이다",
+    "targetScore": 800,
+    "exampleEn": "We need to lengthen the table.",
+    "exampleKo": "우리는 테이블을 길게 늘여야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 102,
+    "word": "make a move",
+    "meaning": "행동을 취하다",
+    "targetScore": 800,
+    "exampleEn": "It is time to make a move.",
+    "exampleKo": "행동을 취할 때입니다."
+  },
+  {
+    "day": 15,
+    "no": 103,
+    "word": "offend",
+    "meaning": "(규칙을) 위반하다",
+    "targetScore": 800,
+    "exampleEn": "I hope I didn't offend you.",
+    "exampleKo": "당신의 기분을 상하게 하지 않았기를 바랍니다."
+  },
+  {
+    "day": 15,
+    "no": 104,
+    "word": "opposing",
+    "meaning": "대립하는, 반대하는",
+    "targetScore": 800,
+    "exampleEn": "They have opposing views on the issue.",
+    "exampleKo": "그들은 그 문제에 대해 대립하는(반대하는) 견해를 가지고 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 105,
+    "word": "origin",
+    "meaning": "시초, 기원",
+    "targetScore": 800,
+    "exampleEn": "The origin of the product is unknown.",
+    "exampleKo": "그 제품의 원산지(기원)는 알 수 없습니다."
+  },
+  {
+    "day": 15,
+    "no": 106,
+    "word": "rational",
+    "meaning": "합리적인",
+    "targetScore": 800,
+    "exampleEn": "We need a rational explanation.",
+    "exampleKo": "우리는 합리적인 설명이 필요합니다."
+  },
+  {
+    "day": 15,
+    "no": 107,
+    "word": "recognition",
+    "meaning": "인정",
+    "targetScore": 800,
+    "exampleEn": "He received recognition for his work.",
+    "exampleKo": "그는 그의 일에 대해 인정(표창)을 받았습니다."
+  },
+  {
+    "day": 15,
+    "no": 108,
+    "word": "refusal",
+    "meaning": "거절, 거부",
+    "targetScore": 800,
+    "exampleEn": "His refusal to cooperate was disappointing.",
+    "exampleKo": "협력을 거부한(거절한) 그의 태도는 실망스러웠습니다."
+  },
+  {
+    "day": 15,
+    "no": 109,
+    "word": "sarcastic",
+    "meaning": "풍자적인, 빈정거리는",
+    "targetScore": 800,
+    "exampleEn": "His tone was slightly sarcastic.",
+    "exampleKo": "그의 어조는 다소 빈정대는(풍자적인) 것이었습니다."
+  },
+  {
+    "day": 15,
+    "no": 110,
+    "word": "selected",
+    "meaning": "선택된, 선발된",
+    "targetScore": 800,
+    "exampleEn": "Only selected candidates will be interviewed.",
+    "exampleKo": "선발된(선택된) 후보자들만 인터뷰를 할 것입니다."
+  },
+  {
+    "day": 15,
+    "no": 111,
+    "word": "sort of",
+    "meaning": "다소, 얼마간, 말하자면",
+    "targetScore": 800,
+    "exampleEn": "It was sort of a strange request.",
+    "exampleKo": "그것은 다소(말하자면) 이상한 요청이었습니다."
+  },
+  {
+    "day": 15,
+    "no": 112,
+    "word": "surely",
+    "meaning": "틀림없이, 꼭",
+    "targetScore": 800,
+    "exampleEn": "You surely understand the situation.",
+    "exampleKo": "당신은 분명히(틀림없이) 상황을 이해하실 겁니다."
+  },
+  {
+    "day": 15,
+    "no": 113,
+    "word": "surprise",
+    "meaning": "놀라게 하다, 놀라운 일",
+    "targetScore": 800,
+    "exampleEn": "The news came as a surprise.",
+    "exampleKo": "그 소식은 놀라움(놀라운 일)으로 다가왔습니다."
+  },
+  {
+    "day": 15,
+    "no": 114,
+    "word": "uninterested",
+    "meaning": "흥미 없는, 무관심한",
+    "targetScore": 800,
+    "exampleEn": "He seems uninterested in the offer.",
+    "exampleKo": "그는 그 제안에 흥미가 없는(무관심한) 것 같습니다."
+  },
+  {
+    "day": 15,
+    "no": 115,
+    "word": "verbal",
+    "meaning": "말의, 구두의",
+    "targetScore": 800,
+    "exampleEn": "They made a verbal agreement.",
+    "exampleKo": "그들은 구두 합의를 했습니다."
+  },
+  {
+    "day": 15,
+    "no": 116,
+    "word": "virtual",
+    "meaning": "사실상의",
+    "targetScore": 800,
+    "exampleEn": "It is a virtual certainty.",
+    "exampleKo": "그것은 사실상의 확실함입니다."
+  },
+  {
+    "day": 15,
+    "no": 117,
+    "word": "within reason",
+    "meaning": "온당한 범위 내에서",
+    "targetScore": 800,
+    "exampleEn": "We can negotiate within reason.",
+    "exampleKo": "우리는 온당한 범위 내에서 협상할 수 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 118,
+    "word": "be in agreement",
+    "meaning": "동의하다",
+    "targetScore": 800,
+    "exampleEn": "We seem to be in agreement.",
+    "exampleKo": "우리는 동의하는 것 같습니다."
+  },
+  {
+    "day": 15,
+    "no": 119,
+    "word": "draw up a new agreement",
+    "meaning": "새 계약서를 작성하다",
+    "targetScore": 800,
+    "exampleEn": "Lawyers will draw up a new agreement.",
+    "exampleKo": "변호사들이 새 계약서를 작성할 것입니다."
+  },
+  {
+    "day": 15,
+    "no": 120,
+    "word": "enclosure",
+    "meaning": "동봉(한 것), 동봉물, 둘러쌈",
+    "targetScore": 800,
+    "exampleEn": "Please check the enclosure in the envelope.",
+    "exampleKo": "봉투 안의 동봉물을 확인해 주십시오."
+  },
+  {
+    "day": 15,
+    "no": 121,
+    "word": "generation gap",
+    "meaning": "세대 차이",
+    "targetScore": 800,
+    "exampleEn": "The generation gap causes communication issues.",
+    "exampleKo": "세대 차이는 의사소통 문제를 일으킵니다."
+  },
+  {
+    "day": 15,
+    "no": 122,
+    "word": "have difficulty (in) -ing",
+    "meaning": "~하는데 어려움을 겪다",
+    "targetScore": 800,
+    "exampleEn": "I have difficulty finding a job.",
+    "exampleKo": "저는 직업을 구하는 데 어려움을 겪고 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 123,
+    "word": "in an attempt to",
+    "meaning": "~하려는 시도로",
+    "targetScore": 800,
+    "exampleEn": "He resigned in an attempt to save face.",
+    "exampleKo": "그는 체면을 살리려는 시도로 사임했습니다."
+  },
+  {
+    "day": 15,
+    "no": 124,
+    "word": "in appreciation of",
+    "meaning": "~에 감사하여",
+    "targetScore": 800,
+    "exampleEn": "This gift is in appreciation of your help.",
+    "exampleKo": "이 선물은 당신의 도움에 감사하여 드리는 것입니다."
+  },
+  {
+    "day": 15,
+    "no": 125,
+    "word": "in print",
+    "meaning": "인쇄된",
+    "targetScore": 800,
+    "exampleEn": "The book is finally in print.",
+    "exampleKo": "그 책은 드디어 출판되었습니다(인쇄되었습니다)."
+  },
+  {
+    "day": 15,
+    "no": 126,
+    "word": "in summary",
+    "meaning": "요약하면",
+    "targetScore": 800,
+    "exampleEn": "In summary, the project was a success.",
+    "exampleKo": "요약하면, 그 프로젝트는 성공이었습니다."
+  },
+  {
+    "day": 15,
+    "no": 127,
+    "word": "lifetime employment",
+    "meaning": "종신 고용",
+    "targetScore": 800,
+    "exampleEn": "The company offers lifetime employment.",
+    "exampleKo": "그 회사는 종신 고용을 제공합니다."
+  },
+  {
+    "day": 15,
+    "no": 128,
+    "word": "low-income resident",
+    "meaning": "저소득 주민",
+    "targetScore": 800,
+    "exampleEn": "The program helps low-income resident.",
+    "exampleKo": "그 프로그램은 저소득 주민을 돕습니다."
+  },
+  {
+    "day": 15,
+    "no": 129,
+    "word": "make a bid",
+    "meaning": "입찰하다",
+    "targetScore": 800,
+    "exampleEn": "Several companies will make a bid.",
+    "exampleKo": "여러 회사들이 입찰할 것입니다."
+  },
+  {
+    "day": 15,
+    "no": 130,
+    "word": "make a contract with",
+    "meaning": "~와 계약을 맺다",
+    "targetScore": 800,
+    "exampleEn": "We make a contract with a new supplier.",
+    "exampleKo": "우리는 새로운 공급업체와 계약을 맺습니다."
+  },
+  {
+    "day": 15,
+    "no": 131,
+    "word": "on hand",
+    "meaning": "가까이에",
+    "targetScore": 800,
+    "exampleEn": "We have enough stock on hand.",
+    "exampleKo": "우리는 가까이에(수중에) 충분한 재고를 가지고 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 132,
+    "word": "replica",
+    "meaning": "복제품",
+    "targetScore": 800,
+    "exampleEn": "This is a replica of the original painting.",
+    "exampleKo": "이것은 원본 그림의 복제품입니다."
+  },
+  {
+    "day": 15,
+    "no": 133,
+    "word": "rigid",
+    "meaning": "엄격한, 완고한",
+    "targetScore": 800,
+    "exampleEn": "The rules are too rigid.",
+    "exampleKo": "규칙들이 너무 엄격합니다(완고합니다)."
+  },
+  {
+    "day": 15,
+    "no": 134,
+    "word": "security deposit",
+    "meaning": "보증금",
+    "targetScore": 800,
+    "exampleEn": "You must pay a security deposit.",
+    "exampleKo": "보증금을 지불해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 135,
+    "word": "sequential",
+    "meaning": "순차적인",
+    "targetScore": 800,
+    "exampleEn": "The files are organized in sequential order.",
+    "exampleKo": "파일들은 순차적인 순서로 정리되어 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 136,
+    "word": "successful candidate",
+    "meaning": "합격자",
+    "targetScore": 800,
+    "exampleEn": "The successful candidate will start next week.",
+    "exampleKo": "합격자(성공적인 후보자)는 다음 주에 일을 시작할 것입니다."
+  }
+]

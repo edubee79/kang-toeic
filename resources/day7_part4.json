@@ -1,0 +1,290 @@
+[
+  {
+    "day": 7,
+    "no": 137,
+    "word": "all walks of life",
+    "meaning": "모든 계층",
+    "targetScore": 900,
+    "exampleEn": "Our customers come from all walks of life.",
+    "exampleKo": "우리의 고객들은 모든 계층(직업)의 사람들입니다."
+  },
+  {
+    "day": 7,
+    "no": 138,
+    "word": "at a stretch",
+    "meaning": "계속해서",
+    "targetScore": 900,
+    "exampleEn": "He worked for ten hours at a stretch.",
+    "exampleKo": "그는 계속해서 10시간 동안 일했습니다."
+  },
+  {
+    "day": 7,
+    "no": 139,
+    "word": "back up",
+    "meaning": "지지하다, 입증하다, (교통이)정체되다",
+    "targetScore": 900,
+    "exampleEn": "Always back up your important files.",
+    "exampleKo": "항상 중요한 파일들을 백업하십시오. (지지하다/입증하다 등 다의어)"
+  },
+  {
+    "day": 7,
+    "no": 140,
+    "word": "focus group",
+    "meaning": "표적 집단",
+    "targetScore": 900,
+    "exampleEn": "We conducted a focus group to test the product.",
+    "exampleKo": "우리는 제품을 테스트하기 위해 포커스 그룹(표적 집단) 조사를 실시했습니다."
+  },
+  {
+    "day": 7,
+    "no": 141,
+    "word": "misleading",
+    "meaning": "오도하는, 그릇된 인상을 주는",
+    "targetScore": 900,
+    "exampleEn": "The advertisement was considered misleading.",
+    "exampleKo": "그 광고는 오기(오해)의 소지가 있는 것으로 간주되었습니다."
+  },
+  {
+    "day": 7,
+    "no": 142,
+    "word": "capture",
+    "meaning": "(감정·분위기 등을) 담아내다, 포착하다",
+    "targetScore": 900,
+    "exampleEn": "The new ad campaign successfully captured the market's attention.",
+    "exampleKo": "새 광고 캠페인은 시장의 관심을 성공적으로 사로잡았습니다."
+  },
+  {
+    "day": 7,
+    "no": 143,
+    "word": "consolidate",
+    "meaning": "(권력·지휘 등을) 강화하다",
+    "targetScore": 900,
+    "exampleEn": "The two companies decided to consolidate.",
+    "exampleKo": "두 회사는 합병하기로 결정했습니다. / 빚을 통합하다"
+  },
+  {
+    "day": 7,
+    "no": 144,
+    "word": "contend",
+    "meaning": "(문제에)대처하다, (곤란과) 싸우다",
+    "targetScore": 900,
+    "exampleEn": "Critics contend that the policy is unfair.",
+    "exampleKo": "비평가들은 그 정책이 불공정하다고 주장합니다."
+  },
+  {
+    "day": 7,
+    "no": 145,
+    "word": "gauge",
+    "meaning": "측정하다",
+    "targetScore": 900,
+    "exampleEn": "It is difficult to gauge the market's reaction.",
+    "exampleKo": "시장의 반응을 측정하는(알아내는) 것은 어렵습니다."
+  },
+  {
+    "day": 7,
+    "no": 146,
+    "word": "momentum",
+    "meaning": "추진력, 탄성",
+    "targetScore": 900,
+    "exampleEn": "The project is gaining momentum.",
+    "exampleKo": "그 프로젝트는 탄력을 받고 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 147,
+    "word": "recognizable",
+    "meaning": "알아볼 수 있는",
+    "targetScore": 900,
+    "exampleEn": "The brand is easily recognizable worldwide.",
+    "exampleKo": "그 브랜드는 전 세계적으로 쉽게 알아볼 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 148,
+    "word": "segment",
+    "meaning": "부분, 조각",
+    "targetScore": 900,
+    "exampleEn": "We target a specific segment of the market.",
+    "exampleKo": "우리는 시장의 특정 부분(부문)을 목표로 합니다."
+  },
+  {
+    "day": 7,
+    "no": 149,
+    "word": "telling",
+    "meaning": "효과적인, 감정을 드러내는",
+    "targetScore": 900,
+    "exampleEn": "The statistics are telling evidence of the trend.",
+    "exampleKo": "그 통계는 추세에 대한 강력한(효과적인) 증거입니다."
+  },
+  {
+    "day": 7,
+    "no": 150,
+    "word": "confiscation",
+    "meaning": "몰수, 압수",
+    "targetScore": 900,
+    "exampleEn": "Smuggling can lead to the confiscation of goods.",
+    "exampleKo": "밀수는 물품 압수로 이어질 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 151,
+    "word": "constitute",
+    "meaning": "~을 구성하다",
+    "targetScore": 900,
+    "exampleEn": "Consumer spending constitutes two-thirds of the economy.",
+    "exampleKo": "소비자 지출은 경제의 3분의 2를 구성합니다."
+  },
+  {
+    "day": 7,
+    "no": 152,
+    "word": "drive up",
+    "meaning": "(값을) 올리다",
+    "targetScore": 900,
+    "exampleEn": "High demand tends to drive up prices.",
+    "exampleKo": "높은 수요는 가격을 올리는 경향이 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 153,
+    "word": "endorsement",
+    "meaning": "(공개적인) 지지",
+    "targetScore": 900,
+    "exampleEn": "The candidate received an endorsement from the mayor.",
+    "exampleKo": "그 후보자는 시장으로부터 지지(승인)를 받았습니다. / 유명인 광고 모델"
+  },
+  {
+    "day": 7,
+    "no": 154,
+    "word": "feasibility study",
+    "meaning": "예비 조사, 타당성 조사",
+    "targetScore": 900,
+    "exampleEn": "We need a feasibility study before starting construction.",
+    "exampleKo": "공사를 시작하기 전에 타당성 조사가 필요합니다."
+  },
+  {
+    "day": 7,
+    "no": 155,
+    "word": "intervention",
+    "meaning": "간섭",
+    "targetScore": 900,
+    "exampleEn": "Government intervention prevented a crisis.",
+    "exampleKo": "정부의 개입이 위기를 막았습니다."
+  },
+  {
+    "day": 7,
+    "no": 156,
+    "word": "irretrievable",
+    "meaning": "회복할 수 없는, 돌이킬 수 없는",
+    "targetScore": 900,
+    "exampleEn": "The loss of data was irretrievable.",
+    "exampleKo": "데이터 손실은 돌이킬 수 없었습니다."
+  },
+  {
+    "day": 7,
+    "no": 157,
+    "word": "jeopardize",
+    "meaning": "위태롭게 하다, 위험에 빠뜨리다",
+    "targetScore": 900,
+    "exampleEn": "The scandal could jeopardize the merger deal.",
+    "exampleKo": "그 스캔들은 합병 거래를 위태롭게 할 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 158,
+    "word": "legible",
+    "meaning": "읽기 쉬운",
+    "targetScore": 900,
+    "exampleEn": "The handwriting must be clearly legible.",
+    "exampleKo": "글씨는 명확하게 읽을 수 있어야 합니다."
+  },
+  {
+    "day": 7,
+    "no": 159,
+    "word": "lose ground",
+    "meaning": "약세를 보이다, 세력을 잃다",
+    "targetScore": 900,
+    "exampleEn": "The company is starting to lose ground to its competitors.",
+    "exampleKo": "그 회사는 경쟁사들에게 입지를 잃기(뒤처지기) 시작했습니다."
+  },
+  {
+    "day": 7,
+    "no": 160,
+    "word": "public profile",
+    "meaning": "인지도, 대중의 관심",
+    "targetScore": 900,
+    "exampleEn": "We need to raise our public profile.",
+    "exampleKo": "우리는 대중의 관심(인지도)을 높여야 합니다."
+  },
+  {
+    "day": 7,
+    "no": 161,
+    "word": "reputable",
+    "meaning": "평판이 좋은",
+    "targetScore": 900,
+    "exampleEn": "The firm is known as a reputable supplier.",
+    "exampleKo": "그 회사는 평판이 좋은 공급업체로 알려져 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 162,
+    "word": "set forth",
+    "meaning": "(여행에) 나서다, 설명하다",
+    "targetScore": 900,
+    "exampleEn": "The contract sets forth the terms of agreement.",
+    "exampleKo": "그 계약서는 합의 조건을 제시하고(명시하고) 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 163,
+    "word": "set out",
+    "meaning": "(여행에) 나서다, 설명하다",
+    "targetScore": 900,
+    "exampleEn": "They set out to change the company culture.",
+    "exampleKo": "그들은 기업 문화를 바꾸기 시작했습니다(착수했습니다)."
+  },
+  {
+    "day": 7,
+    "no": 164,
+    "word": "setback",
+    "meaning": "방해, 퇴보",
+    "targetScore": 900,
+    "exampleEn": "The project suffered a minor setback.",
+    "exampleKo": "그 프로젝트는 사소한 차질(방해)을 겪었습니다."
+  },
+  {
+    "day": 7,
+    "no": 165,
+    "word": "take a stand against",
+    "meaning": "~에 반대하다, 맞서다",
+    "targetScore": 900,
+    "exampleEn": "We must take a stand against unfair labor practices.",
+    "exampleKo": "우리는 불공정한 노동 관행에 맞서야(반대해야) 합니다."
+  },
+  {
+    "day": 7,
+    "no": 166,
+    "word": "underlying",
+    "meaning": "근본적인",
+    "targetScore": 900,
+    "exampleEn": "We analyzed the underlying causes of the problem.",
+    "exampleKo": "우리는 문제의 근본적인 원인을 분석했습니다."
+  },
+  {
+    "day": 7,
+    "no": 167,
+    "word": "vanish",
+    "meaning": "사라지다, 없어지다",
+    "targetScore": 900,
+    "exampleEn": "The funds seemed to vanish without a trace.",
+    "exampleKo": "자금이 흔적 없이 사라진 것 같았습니다."
+  },
+  {
+    "day": 7,
+    "no": 168,
+    "word": "sightseeing",
+    "meaning": "관광",
+    "targetScore": 900,
+    "exampleEn": "We went sightseeing in London.",
+    "exampleKo": "우리는 런던에서 관광을 했습니다."
+  }
+]

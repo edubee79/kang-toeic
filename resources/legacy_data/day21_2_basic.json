@@ -1,0 +1,254 @@
+[
+    {
+        "day": 21,
+        "no": 41,
+        "word": "uncertain",
+        "meaning": "확신이 없는, 불확실한",
+        "targetScore": 650,
+        "exampleEn": "The future is uncertain.",
+        "exampleKo": "미래는 불확실합니다."
+    },
+    {
+        "day": 21,
+        "no": 42,
+        "word": "accept",
+        "meaning": "받아들이다",
+        "targetScore": 650,
+        "exampleEn": "Accept a gift.",
+        "exampleKo": "선물을 받아들이다."
+    },
+    {
+        "day": 21,
+        "no": 43,
+        "word": "advice",
+        "meaning": "조언",
+        "targetScore": 650,
+        "exampleEn": "Take my advice.",
+        "exampleKo": "내 조언을 들으세요."
+    },
+    {
+        "day": 21,
+        "no": 44,
+        "word": "advise",
+        "meaning": "조언하다",
+        "targetScore": 650,
+        "exampleEn": "I advise you to wait.",
+        "exampleKo": "기다리는 것을 조언합니다."
+    },
+    {
+        "day": 21,
+        "no": 45,
+        "word": "already",
+        "meaning": "이미, 벌써",
+        "targetScore": 650,
+        "exampleEn": "I already did it.",
+        "exampleKo": "나는 이미 그것을 했습니다."
+    },
+    {
+        "day": 21,
+        "no": 46,
+        "word": "announcement",
+        "meaning": "발표, 공고",
+        "targetScore": 650,
+        "exampleEn": "Make an announcement.",
+        "exampleKo": "발표를 하다."
+    },
+    {
+        "day": 21,
+        "no": 47,
+        "word": "attract",
+        "meaning": "끌다, 매혹하다",
+        "targetScore": 650,
+        "exampleEn": "Attract customers.",
+        "exampleKo": "고객을 끌다."
+    },
+    {
+        "day": 21,
+        "no": 48,
+        "word": "buy",
+        "meaning": "사다",
+        "targetScore": 650,
+        "exampleEn": "Buy a car.",
+        "exampleKo": "차를 사다."
+    },
+    {
+        "day": 21,
+        "no": 49,
+        "word": "cancel",
+        "meaning": "취소하다",
+        "targetScore": 650,
+        "exampleEn": "Cancel a flight.",
+        "exampleKo": "비행편을 취소하다."
+    },
+    {
+        "day": 21,
+        "no": 50,
+        "word": "competitor",
+        "meaning": "경쟁자",
+        "targetScore": 650,
+        "exampleEn": "Beat the competitor.",
+        "exampleKo": "경쟁자를 이기다."
+    },
+    {
+        "day": 21,
+        "no": 51,
+        "word": "complete",
+        "meaning": "완료하다; 완전한",
+        "targetScore": 650,
+        "exampleEn": "Complete the form.",
+        "exampleKo": "양식을 작성하다."
+    },
+    {
+        "day": 21,
+        "no": 52,
+        "word": "concern",
+        "meaning": "우려; 관계하다",
+        "targetScore": 650,
+        "exampleEn": "Express concern.",
+        "exampleKo": "우려를 표하다."
+    },
+    {
+        "day": 21,
+        "no": 53,
+        "word": "consume",
+        "meaning": "소비하다",
+        "targetScore": 650,
+        "exampleEn": "Consume energy.",
+        "exampleKo": "에너지를 소비하다."
+    },
+    {
+        "day": 21,
+        "no": 54,
+        "word": "cooperate",
+        "meaning": "협력하다",
+        "targetScore": 650,
+        "exampleEn": "Cooperate with the police.",
+        "exampleKo": "경찰에 협조하다."
+    },
+    {
+        "day": 21,
+        "no": 55,
+        "word": "create",
+        "meaning": "창조하다",
+        "targetScore": 650,
+        "exampleEn": "Create a new file.",
+        "exampleKo": "새 파일을 만들다."
+    },
+    {
+        "day": 21,
+        "no": 56,
+        "word": "current",
+        "meaning": "현재의",
+        "targetScore": 650,
+        "exampleEn": "Current situation.",
+        "exampleKo": "현재 상황."
+    },
+    {
+        "day": 21,
+        "no": 57,
+        "word": "decision",
+        "meaning": "결정",
+        "targetScore": 650,
+        "exampleEn": "Make a decision.",
+        "exampleKo": "결정을 내리다."
+    },
+    {
+        "day": 21,
+        "no": 58,
+        "word": "demand",
+        "meaning": "수요; 요구하다",
+        "targetScore": 650,
+        "exampleEn": "High demand.",
+        "exampleKo": "높은 수요."
+    },
+    {
+        "day": 21,
+        "no": 59,
+        "word": "demonstrate",
+        "meaning": "증명하다, 보여주다",
+        "targetScore": 650,
+        "exampleEn": "Demonstrate the skills.",
+        "exampleKo": "기술을 보여주다."
+    },
+    {
+        "day": 21,
+        "no": 60,
+        "word": "develop",
+        "meaning": "개발하다",
+        "targetScore": 650,
+        "exampleEn": "Develop software.",
+        "exampleKo": "소프트웨어를 개발하다."
+    },
+    {
+        "day": 21,
+        "no": 61,
+        "word": "due to",
+        "meaning": "~때문에",
+        "targetScore": 650,
+        "exampleEn": "Due to traffic.",
+        "exampleKo": "교통 체증 때문에."
+    },
+    {
+        "day": 21,
+        "no": 62,
+        "word": "effect",
+        "meaning": "효과, 영향",
+        "targetScore": 650,
+        "exampleEn": "Cause and effect.",
+        "exampleKo": "원인과 결과."
+    },
+    {
+        "day": 21,
+        "no": 63,
+        "word": "expand",
+        "meaning": "확장하다",
+        "targetScore": 650,
+        "exampleEn": "Expand the business.",
+        "exampleKo": "사업을 확장하다."
+    },
+    {
+        "day": 21,
+        "no": 64,
+        "word": "factory",
+        "meaning": "공장",
+        "targetScore": 650,
+        "exampleEn": "Shoe factory.",
+        "exampleKo": "신발 공장."
+    },
+    {
+        "day": 21,
+        "no": 65,
+        "word": "information",
+        "meaning": "정보",
+        "targetScore": 650,
+        "exampleEn": "More information.",
+        "exampleKo": "추가 정보."
+    },
+    {
+        "day": 21,
+        "no": 66,
+        "word": "inventory",
+        "meaning": "재고",
+        "targetScore": 650,
+        "exampleEn": "Check the inventory.",
+        "exampleKo": "재고를 확인하다."
+    },
+    {
+        "day": 21,
+        "no": 67,
+        "word": "invest",
+        "meaning": "투자하다",
+        "targetScore": 650,
+        "exampleEn": "Invest money.",
+        "exampleKo": "돈을 투자하다."
+    },
+    {
+        "day": 21,
+        "no": 68,
+        "word": "machine",
+        "meaning": "기계",
+        "targetScore": 650,
+        "exampleEn": "Washing machine.",
+        "exampleKo": "세탁기."
+    }
+]

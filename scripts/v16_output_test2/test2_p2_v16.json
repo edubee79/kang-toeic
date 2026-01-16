@@ -1,0 +1,57 @@
+{
+  "passageId": 2,
+  "type": "ADVERTISEMENT",
+  "structure": {
+    "header_lines": [],
+    "salutation": null,
+    "body_paragraphs": [
+      "Keep Cool Service Contractors:\n67 Main Road, Edinburgh Village\nChaguanas, Trinidad and Tobago",
+      "Keep Cool Service Contractors can bring you peace of mind. As part of an annual contract, we will\nservice your air-conditioning system, ensuring your [135] and comfort. This includes inspecting\nthe system, making repairs as needed, and professionally cleaning your air ducts. [136] , if\nnecessary, we can replace your old air-conditioning system with a new, cost-efficient one.",
+      "Our workers are highly qualified licensed technicians who stay up-to-date with ongoing training.\n[137] . We promise you fair prices and professional work, [138] by our Keep Cool guarantee.",
+      "Call 1-868-555-0129 for a free quote today."
+    ],
+    "closing_lines": []
+  },
+  "questions": [
+    {
+      "id": 135,
+      "text": "(A) safe\n(B) safely\n(C) safest\n(D) safety",
+      "options": [
+        "(A) safe",
+        "(B) safely",
+        "(C) safest",
+        "(D) safety"
+      ]
+    },
+    {
+      "id": 136,
+      "text": "(A) On one hand\n(B) Nonetheless\n(C) Furthermore\n(D) And yet",
+      "options": [
+        "(A) On one hand",
+        "(B) Nonetheless",
+        "(C) Furthermore",
+        "(D) And yet"
+      ]
+    },
+    {
+      "id": 137,
+      "text": "(A) Take advantage of dozens of useful\nonline tools.\n(B) Moreover, the air conditioner you\nchose is very popular.\n(C) Plus, they are friendly, clean, and\nknowledgeable.\n(D) Thank you for visiting our contractor\nshowroom.",
+      "options": [
+        "(A) Take advantage of dozens of useful\nonline tools.",
+        "(B) Moreover, the air conditioner you\nchose is very popular.",
+        "(C) Plus, they are friendly, clean, and\nknowledgeable.",
+        "(D) Thank you for visiting our contractor\nshowroom."
+      ]
+    },
+    {
+      "id": 138,
+      "text": "(A) backed\n(B) backs\n(C) backing\n(D) back",
+      "options": [
+        "(A) backed",
+        "(B) backs",
+        "(C) backing",
+        "(D) back"
+      ]
+    }
+  ]
+}

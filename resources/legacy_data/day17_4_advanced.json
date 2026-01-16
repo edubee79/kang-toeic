@@ -1,0 +1,290 @@
+[
+    {
+        "day": 17,
+        "no": 137,
+        "word": "trade show",
+        "meaning": "무역 박람회",
+        "targetScore": 900,
+        "exampleEn": "Visit the trade show.",
+        "exampleKo": "무역 박람회를 방문하세요."
+    },
+    {
+        "day": 17,
+        "no": 138,
+        "word": "unsettled",
+        "meaning": "미해결의, 불안정한",
+        "targetScore": 900,
+        "exampleEn": "The issue remains unsettled.",
+        "exampleKo": "그 문제는 미해결 상태로 남아 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 139,
+        "word": "adoption",
+        "meaning": "채택, 입양",
+        "targetScore": 900,
+        "exampleEn": "The adoption of new rules.",
+        "exampleKo": "새로운 규칙의 채택."
+    },
+    {
+        "day": 17,
+        "no": 140,
+        "word": "alleviate",
+        "meaning": "완화하다",
+        "targetScore": 900,
+        "exampleEn": "Alleviate the pain.",
+        "exampleKo": "고통을 완화하다."
+    },
+    {
+        "day": 17,
+        "no": 141,
+        "word": "alternative",
+        "meaning": "대안의; 대안",
+        "targetScore": 900,
+        "exampleEn": "Alternative energy sources.",
+        "exampleKo": "대체 에너지원."
+    },
+    {
+        "day": 17,
+        "no": 142,
+        "word": "atmosphere",
+        "meaning": "분위기, 대기",
+        "targetScore": 900,
+        "exampleEn": "A friendly atmosphere.",
+        "exampleKo": "친근한 분위기."
+    },
+    {
+        "day": 17,
+        "no": 143,
+        "word": "basis",
+        "meaning": "기초, 근거",
+        "targetScore": 900,
+        "exampleEn": "On a daily basis.",
+        "exampleKo": "매일."
+    },
+    {
+        "day": 17,
+        "no": 144,
+        "word": "choke",
+        "meaning": "숨이 막히다",
+        "targetScore": 900,
+        "exampleEn": "He choked on a bone.",
+        "exampleKo": "그는 뼈에 목이 막혔습니다."
+    },
+    {
+        "day": 17,
+        "no": 145,
+        "word": "civilized",
+        "meaning": "문명화된",
+        "targetScore": 900,
+        "exampleEn": "A civilized society.",
+        "exampleKo": "문명 사회."
+    },
+    {
+        "day": 17,
+        "no": 146,
+        "word": "collectively",
+        "meaning": "집단적으로",
+        "targetScore": 900,
+        "exampleEn": "They are collectively responsible.",
+        "exampleKo": "그들은 집단적으로 책임이 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 147,
+        "word": "compensate",
+        "meaning": "보상하다",
+        "targetScore": 900,
+        "exampleEn": "Nothing can compensate for the loss.",
+        "exampleKo": "어떤 것도 그 손실을 보상할 수 없습니다."
+    },
+    {
+        "day": 17,
+        "no": 148,
+        "word": "concussion",
+        "meaning": "뇌진탕",
+        "targetScore": 900,
+        "exampleEn": "He suffered a concussion.",
+        "exampleKo": "그는 뇌진탕을 겪었습니다."
+    },
+    {
+        "day": 17,
+        "no": 149,
+        "word": "condemnation",
+        "meaning": "비난",
+        "targetScore": 900,
+        "exampleEn": "Strong condemnation.",
+        "exampleKo": "강한 비난."
+    },
+    {
+        "day": 17,
+        "no": 150,
+        "word": "conspicuously",
+        "meaning": "눈에 띄게",
+        "targetScore": 900,
+        "exampleEn": "She was conspicuously absent.",
+        "exampleKo": "그녀는 눈에 띄게 결석했습니다."
+    },
+    {
+        "day": 17,
+        "no": 151,
+        "word": "contamination",
+        "meaning": "오염",
+        "targetScore": 900,
+        "exampleEn": "Water contamination.",
+        "exampleKo": "수질 오염."
+    },
+    {
+        "day": 17,
+        "no": 152,
+        "word": "controversial",
+        "meaning": "논란이 많은",
+        "targetScore": 900,
+        "exampleEn": "A controversial topic.",
+        "exampleKo": "논란이 많은 주제."
+    },
+    {
+        "day": 17,
+        "no": 153,
+        "word": "cracked",
+        "meaning": "금 간",
+        "targetScore": 900,
+        "exampleEn": "A cracked mirror.",
+        "exampleKo": "금 간 거울."
+    },
+    {
+        "day": 17,
+        "no": 154,
+        "word": "cutout",
+        "meaning": "오려낸 것, 차단기",
+        "targetScore": 900,
+        "exampleEn": "A cardboard cutout.",
+        "exampleKo": "카드보드를 오려낸 것."
+    },
+    {
+        "day": 17,
+        "no": 155,
+        "word": "demolition",
+        "meaning": "파괴, 철거",
+        "targetScore": 900,
+        "exampleEn": "Demolition of the building.",
+        "exampleKo": "건물 철거."
+    },
+    {
+        "day": 17,
+        "no": 156,
+        "word": "devastation",
+        "meaning": "황폐, 대파괴",
+        "targetScore": 900,
+        "exampleEn": "The storm caused devastation.",
+        "exampleKo": "폭풍이 대파괴를 일으켰습니다."
+    },
+    {
+        "day": 17,
+        "no": 157,
+        "word": "disastrous",
+        "meaning": "처참한",
+        "targetScore": 900,
+        "exampleEn": "A disastrous mistake.",
+        "exampleKo": "처참한 실수."
+    },
+    {
+        "day": 17,
+        "no": 158,
+        "word": "dispose",
+        "meaning": "처분하다",
+        "targetScore": 900,
+        "exampleEn": "Dispose of waste properly.",
+        "exampleKo": "폐기물을 적절히 처분하세요."
+    },
+    {
+        "day": 17,
+        "no": 159,
+        "word": "drought",
+        "meaning": "가뭄",
+        "targetScore": 900,
+        "exampleEn": "A severe drought.",
+        "exampleKo": "심한 가뭄."
+    },
+    {
+        "day": 17,
+        "no": 160,
+        "word": "ecology",
+        "meaning": "생태학",
+        "targetScore": 900,
+        "exampleEn": "Study of ecology.",
+        "exampleKo": "생태학 연구."
+    },
+    {
+        "day": 17,
+        "no": 161,
+        "word": "emission",
+        "meaning": "배출",
+        "targetScore": 900,
+        "exampleEn": "Carbon emissions.",
+        "exampleKo": "탄소 배출."
+    },
+    {
+        "day": 17,
+        "no": 162,
+        "word": "endanger",
+        "meaning": "위험에 빠뜨리다",
+        "targetScore": 900,
+        "exampleEn": "Endanger wildlife.",
+        "exampleKo": "야생 동물을 위험에 빠뜨리다."
+    },
+    {
+        "day": 17,
+        "no": 163,
+        "word": "environment",
+        "meaning": "환경",
+        "targetScore": 900,
+        "exampleEn": "Protect the environment.",
+        "exampleKo": "환경을 보호하세요."
+    },
+    {
+        "day": 17,
+        "no": 164,
+        "word": "exhaust",
+        "meaning": "배기가스; 지치게 하다",
+        "targetScore": 900,
+        "exampleEn": "Car exhaust.",
+        "exampleKo": "자동차 배기가스."
+    },
+    {
+        "day": 17,
+        "no": 165,
+        "word": "fertilizer",
+        "meaning": "비료",
+        "targetScore": 900,
+        "exampleEn": "Use organic fertilizer.",
+        "exampleKo": "유기농 비료를 사용하세요."
+    },
+    {
+        "day": 17,
+        "no": 166,
+        "word": "fume",
+        "meaning": "연기, 가스",
+        "targetScore": 900,
+        "exampleEn": "Toxic fumes.",
+        "exampleKo": "유독 가스."
+    },
+    {
+        "day": 17,
+        "no": 167,
+        "word": "furniture",
+        "meaning": "가구",
+        "targetScore": 900,
+        "exampleEn": "Antique furniture.",
+        "exampleKo": "골동품 가구."
+    },
+    {
+        "day": 17,
+        "no": 168,
+        "word": "habitat",
+        "meaning": "서식지",
+        "targetScore": 900,
+        "exampleEn": "Natural habitat.",
+        "exampleKo": "자연 서식지."
+    }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "day": 14,
+    "no": 1,
+    "word": "international",
+    "meaning": "국제적인",
+    "targetScore": 650,
+    "exampleEn": "She has international business experience.",
+    "exampleKo": "그녀는 국제적인 사업 경험을 가지고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 2,
+    "word": "attraction",
+    "meaning": "관광 명소",
+    "targetScore": 650,
+    "exampleEn": "The museum is a popular tourist attraction.",
+    "exampleKo": "그 박물관은 인기 있는 관광 명소입니다."
+  },
+  {
+    "day": 14,
+    "no": 3,
+    "word": "itinerary",
+    "meaning": "여행 일정",
+    "targetScore": 650,
+    "exampleEn": "Please check your travel itinerary.",
+    "exampleKo": "여행 일정을 확인해 주십시오."
+  },
+  {
+    "day": 14,
+    "no": 4,
+    "word": "exotic",
+    "meaning": "이국적인, 매혹적인",
+    "targetScore": 650,
+    "exampleEn": "The island is known for its exotic plants.",
+    "exampleKo": "그 섬은 이국적인 식물들로 알려져 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 5,
+    "word": "diverse",
+    "meaning": "다양한",
+    "targetScore": 650,
+    "exampleEn": "The city has a diverse culture.",
+    "exampleKo": "그 도시는 다양한 문화를 가지고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 6,
+    "word": "superb",
+    "meaning": "최고의, 뛰어난",
+    "targetScore": 650,
+    "exampleEn": "The hotel offers superb service.",
+    "exampleKo": "그 호텔은 최고의 서비스를 제공합니다."
+  },
+  {
+    "day": 14,
+    "no": 7,
+    "word": "baggage",
+    "meaning": "수화물",
+    "targetScore": 650,
+    "exampleEn": "Passengers must claim their baggage.",
+    "exampleKo": "승객들은 수하물을 찾아야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 8,
+    "word": "destination",
+    "meaning": "목적지",
+    "targetScore": 650,
+    "exampleEn": "Our final destination is Paris.",
+    "exampleKo": "우리의 최종 목적지는 파리입니다."
+  },
+  {
+    "day": 14,
+    "no": 9,
+    "word": "missing",
+    "meaning": "분실된, 없어진",
+    "targetScore": 650,
+    "exampleEn": "We are looking for the missing file.",
+    "exampleKo": "우리는 분실된(없어진) 파일을 찾고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 10,
+    "word": "locate",
+    "meaning": "(~의 위치를) 찾아내다, ~을 위치시키다",
+    "targetScore": 650,
+    "exampleEn": "We need to locate the nearest station.",
+    "exampleKo": "우리는 가장 가까운 역의 위치를 찾아야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 11,
+    "word": "approximately",
+    "meaning": "대략",
+    "targetScore": 650,
+    "exampleEn": "The flight takes approximately three hours.",
+    "exampleKo": "비행은 대략 3시간이 걸립니다."
+  },
+  {
+    "day": 14,
+    "no": 12,
+    "word": "duty",
+    "meaning": "관세, 세금, 직무, 의무",
+    "targetScore": 650,
+    "exampleEn": "It is my duty to help customers.",
+    "exampleKo": "고객을 돕는 것은 제 의무입니다."
+  },
+  {
+    "day": 14,
+    "no": 13,
+    "word": "process",
+    "meaning": "과정, 처리하다",
+    "targetScore": 650,
+    "exampleEn": "We use a new process for checking in.",
+    "exampleKo": "우리는 체크인을 위해 새로운 절차(공정)를 사용합니다."
+  },
+  {
+    "day": 14,
+    "no": 14,
+    "word": "board",
+    "meaning": "탑승하다, 이사회",
+    "targetScore": 650,
+    "exampleEn": "Passengers are now ready to board.",
+    "exampleKo": "승객들은 이제 탑승할 준비가 되었습니다."
+  },
+  {
+    "day": 14,
+    "no": 15,
+    "word": "comfortable",
+    "meaning": "편안한",
+    "targetScore": 650,
+    "exampleEn": "Please wear comfortable shoes for the tour.",
+    "exampleKo": "투어를 위해 편안한 신발을 신으십시오."
+  },
+  {
+    "day": 14,
+    "no": 16,
+    "word": "declare",
+    "meaning": "(세관에서) 신고하다",
+    "targetScore": 650,
+    "exampleEn": "You must declare all valuable items.",
+    "exampleKo": "당신은 모든 귀중품을 신고해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 17,
+    "word": "specify",
+    "meaning": "명시하다",
+    "targetScore": 650,
+    "exampleEn": "Please specify your meal preference.",
+    "exampleKo": "식사 선호 사항을 명시해 주십시오."
+  },
+  {
+    "day": 14,
+    "no": 18,
+    "word": "depart",
+    "meaning": "출발하다",
+    "targetScore": 650,
+    "exampleEn": "The train will depart at 5 PM.",
+    "exampleKo": "기차는 오후 5시에 출발할 것입니다."
+  },
+  {
+    "day": 14,
+    "no": 19,
+    "word": "emergency",
+    "meaning": "비상시, 비상사태",
+    "targetScore": 650,
+    "exampleEn": "In case of emergency, call this number.",
+    "exampleKo": "비상시에는 이 번호로 전화하십시오."
+  },
+  {
+    "day": 14,
+    "no": 20,
+    "word": "passenger",
+    "meaning": "승객",
+    "targetScore": 650,
+    "exampleEn": "Every passenger must have a ticket.",
+    "exampleKo": "모든 승객은 표를 소지해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 21,
+    "word": "outgoing",
+    "meaning": "(장소를)출발하는, 떠나는, (지위를) 떠나는",
+    "targetScore": 650,
+    "exampleEn": "All outgoing flights are delayed.",
+    "exampleKo": "모든 출발(나가는) 항공편이 지연되고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 22,
+    "word": "tightly",
+    "meaning": "단단히, 꽉",
+    "targetScore": 650,
+    "exampleEn": "The lid must be sealed tightly.",
+    "exampleKo": "뚜껑은 단단히 밀봉되어야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 23,
+    "word": "tour",
+    "meaning": "(공장·시설 등의) 견학, 짧은 여행",
+    "targetScore": 650,
+    "exampleEn": "We went on a guided tour of the city.",
+    "exampleKo": "우리는 도시 가이드 투어를 갔습니다."
+  },
+  {
+    "day": 14,
+    "no": 24,
+    "word": "carrier",
+    "meaning": "항공사, 수송기, 수송 회사",
+    "targetScore": 650,
+    "exampleEn": "The airline is a major carrier in the region.",
+    "exampleKo": "그 항공사는 그 지역의 주요 운송 업체(항공사)입니다."
+  },
+  {
+    "day": 14,
+    "no": 25,
+    "word": "customarily",
+    "meaning": "관례상, 습관적으로",
+    "targetScore": 650,
+    "exampleEn": "The office is customarily closed on Sundays.",
+    "exampleKo": "그 사무실은 관례적으로 일요일에 문을 닫습니다."
+  },
+  {
+    "day": 14,
+    "no": 26,
+    "word": "confuse",
+    "meaning": "혼란시키다",
+    "targetScore": 650,
+    "exampleEn": "Do not confuse the two products.",
+    "exampleKo": "두 제품을 혼동하지 마십시오."
+  },
+  {
+    "day": 14,
+    "no": 27,
+    "word": "arrive",
+    "meaning": "도착하다",
+    "targetScore": 650,
+    "exampleEn": "The flight is scheduled to arrive at noon.",
+    "exampleKo": "비행기는 정오에 도착할 예정입니다."
+  },
+  {
+    "day": 14,
+    "no": 28,
+    "word": "brochure",
+    "meaning": "(홍보용) 소책자, 브로셔",
+    "targetScore": 650,
+    "exampleEn": "Please read the travel brochure.",
+    "exampleKo": "여행 안내 책자를 읽어보십시오."
+  },
+  {
+    "day": 14,
+    "no": 29,
+    "word": "involve",
+    "meaning": "수반하다, 포함하다, 참여시키다",
+    "targetScore": 650,
+    "exampleEn": "The project will involve many people.",
+    "exampleKo": "그 프로젝트는 많은 사람들을 수반할(관련시킬) 것입니다."
+  },
+  {
+    "day": 14,
+    "no": 30,
+    "word": "ship",
+    "meaning": "(배나 다른 운송 수단으로)운송하다,수송하다, 선박, 배",
+    "targetScore": 650,
+    "exampleEn": "We ship orders within 24 hours.",
+    "exampleKo": "우리는 24시간 이내에 주문품을 배송합니다(배로 보냅니다)."
+  },
+  {
+    "day": 14,
+    "no": 31,
+    "word": "suitcase",
+    "meaning": "여행 가방",
+    "targetScore": 650,
+    "exampleEn": "I packed my clothes in a suitcase.",
+    "exampleKo": "저는 옷을 여행 가방에 챙겼습니다."
+  },
+  {
+    "day": 14,
+    "no": 32,
+    "word": "unavailable",
+    "meaning": "이용할 수 없는, 구할 수 없는",
+    "targetScore": 650,
+    "exampleEn": "The manager is currently unavailable.",
+    "exampleKo": "관리자는 현재 자리에 없습니다(이용할 수 없습니다)."
+  },
+  {
+    "day": 14,
+    "no": 33,
+    "word": "fill out/in",
+    "meaning": "(서류에) 기입하다, 적어 넣다",
+    "targetScore": 650,
+    "exampleEn": "Please fill out the customs declaration form.",
+    "exampleKo": "세관 신고서를 작성해 주십시오."
+  },
+  {
+    "day": 14,
+    "no": 34,
+    "word": "customs",
+    "meaning": "세관",
+    "targetScore": 650,
+    "exampleEn": "You must clear customs upon arrival.",
+    "exampleKo": "도착 즉시 세관을 통과해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 35,
+    "word": "away",
+    "meaning": "떨어져서",
+    "targetScore": 650,
+    "exampleEn": "The office is five miles away.",
+    "exampleKo": "사무실은 5마일 떨어져 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 36,
+    "word": "dramatic",
+    "meaning": "멋진, 극적인, 급격한",
+    "targetScore": 650,
+    "exampleEn": "There was a dramatic increase in sales.",
+    "exampleKo": "매출에 급격한(극적인) 증가가 있었습니다."
+  },
+  {
+    "day": 14,
+    "no": 37,
+    "word": "hospitality",
+    "meaning": "환대, 친절",
+    "targetScore": 650,
+    "exampleEn": "Thank you for your warm hospitality.",
+    "exampleKo": "따뜻한 환대(접대)에 감사드립니다."
+  },
+  {
+    "day": 14,
+    "no": 38,
+    "word": "indulge",
+    "meaning": "빠지다, 탐닉하다",
+    "targetScore": 650,
+    "exampleEn": "Guests can indulge in spa treatments.",
+    "exampleKo": "손님들은 스파 트리트먼트를 마음껏 즐길 수 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 39,
+    "word": "proximity",
+    "meaning": "가까움, 근접함",
+    "targetScore": 650,
+    "exampleEn": "The hotel is in close proximity to the airport.",
+    "exampleKo": "그 호텔은 공항에 아주 근접해 있습니다(가까운 근접성에 있습니다)."
+  },
+  {
+    "day": 14,
+    "no": 40,
+    "word": "seating",
+    "meaning": "(집합적)좌석 설비, 좌석 배열",
+    "targetScore": 650,
+    "exampleEn": "The airline offers comfortable seating.",
+    "exampleKo": "그 항공사는 편안한 좌석(좌석 설비)을 제공합니다."
+  }
+]

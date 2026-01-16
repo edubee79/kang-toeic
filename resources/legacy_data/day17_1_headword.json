@@ -1,0 +1,362 @@
+[
+    {
+        "day": 17,
+        "no": 1,
+        "word": "fragile",
+        "meaning": "깨지기 쉬운",
+        "targetScore": 650,
+        "exampleEn": "Handle with care, it's fragile.",
+        "exampleKo": "조심해서 다루세요, 깨지기 쉽습니다."
+    },
+    {
+        "day": 17,
+        "no": 2,
+        "word": "perish",
+        "meaning": "부패하다, 소멸하다",
+        "targetScore": 650,
+        "exampleEn": "Perishable goods must be refrigerated.",
+        "exampleKo": "상하기 쉬운 상품은 냉장 보관해야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 3,
+        "word": "deliver",
+        "meaning": "배달하다, (연설을) 하다",
+        "targetScore": 650,
+        "exampleEn": "The package was delivered today.",
+        "exampleKo": "소포가 오늘 배달되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 4,
+        "word": "ensure",
+        "meaning": "확실하게 하다, 보장하다",
+        "targetScore": 650,
+        "exampleEn": "Ensure that the door is locked.",
+        "exampleKo": "문이 잠겼는지 확인하세요."
+    },
+    {
+        "day": 17,
+        "no": 5,
+        "word": "courier",
+        "meaning": "택배 회사, 배달원",
+        "targetScore": 650,
+        "exampleEn": "Send it by courier.",
+        "exampleKo": "택배로 보내세요."
+    },
+    {
+        "day": 17,
+        "no": 6,
+        "word": "carton",
+        "meaning": "판지 상자",
+        "targetScore": 650,
+        "exampleEn": "A carton of milk.",
+        "exampleKo": "우유 한 팩."
+    },
+    {
+        "day": 17,
+        "no": 7,
+        "word": "address",
+        "meaning": "주소; 보내다",
+        "targetScore": 650,
+        "exampleEn": "Write your address clearly.",
+        "exampleKo": "주소를 명확하게 쓰세요."
+    },
+    {
+        "day": 17,
+        "no": 8,
+        "word": "shipment",
+        "meaning": "선적, 화물",
+        "targetScore": 650,
+        "exampleEn": "The shipment is delayed.",
+        "exampleKo": "화물이 지연되고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 9,
+        "word": "particularly",
+        "meaning": "특히",
+        "targetScore": 650,
+        "exampleEn": "I am particularly interested in art.",
+        "exampleKo": "나는 특히 예술에 관심이 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 10,
+        "word": "adequately",
+        "meaning": "적절하게, 충분히",
+        "targetScore": 650,
+        "exampleEn": "The staff is adequately trained.",
+        "exampleKo": "직원들은 적절하게 훈련받았습니다."
+    },
+    {
+        "day": 17,
+        "no": 11,
+        "word": "article",
+        "meaning": "물품; 기사",
+        "targetScore": 650,
+        "exampleEn": "Please list every article in the box.",
+        "exampleKo": "상자 안의 모든 물품을 목록에 적으세요."
+    },
+    {
+        "day": 17,
+        "no": 12,
+        "word": "efficient",
+        "meaning": "효율적인",
+        "targetScore": 650,
+        "exampleEn": "An efficient delivery system.",
+        "exampleKo": "효율적인 배달 시스템."
+    },
+    {
+        "day": 17,
+        "no": 13,
+        "word": "agency",
+        "meaning": "대행사, 기관",
+        "targetScore": 650,
+        "exampleEn": "A travel agency.",
+        "exampleKo": "여행사."
+    },
+    {
+        "day": 17,
+        "no": 14,
+        "word": "enclose",
+        "meaning": "동봉하다, 에워싸다",
+        "targetScore": 650,
+        "exampleEn": "I enclosed a check.",
+        "exampleKo": "나는 수표를 동봉했습니다."
+    },
+    {
+        "day": 17,
+        "no": 15,
+        "word": "careful",
+        "meaning": "조심스러운, 주의 깊은",
+        "targetScore": 650,
+        "exampleEn": "Be careful with the glass.",
+        "exampleKo": "유리를 조심하세요."
+    },
+    {
+        "day": 17,
+        "no": 16,
+        "word": "pick up",
+        "meaning": "~을 줍다, 찾아오다",
+        "targetScore": 650,
+        "exampleEn": "I will pick you up at 5.",
+        "exampleKo": "5시에 데리러 가겠습니다."
+    },
+    {
+        "day": 17,
+        "no": 17,
+        "word": "carry",
+        "meaning": "나르다, 지니고 있다",
+        "targetScore": 650,
+        "exampleEn": "He carried the heavy box.",
+        "exampleKo": "그는 무거운 상자를 날랐습니다."
+    },
+    {
+        "day": 17,
+        "no": 18,
+        "word": "attach",
+        "meaning": "붙이다, 첨부하다",
+        "targetScore": 650,
+        "exampleEn": "Attach a photo to the form.",
+        "exampleKo": "양식에 사진을 붙이세요."
+    },
+    {
+        "day": 17,
+        "no": 19,
+        "word": "formerly",
+        "meaning": "이전에",
+        "targetScore": 650,
+        "exampleEn": "It was formerly a palace.",
+        "exampleKo": "그곳은 이전에 궁전이었습니다."
+    },
+    {
+        "day": 17,
+        "no": 20,
+        "word": "package",
+        "meaning": "소포, 꾸러미",
+        "targetScore": 650,
+        "exampleEn": "A package arrived for you.",
+        "exampleKo": "당신에게 소포가 도착했습니다."
+    },
+    {
+        "day": 17,
+        "no": 21,
+        "word": "react",
+        "meaning": "반응하다",
+        "targetScore": 650,
+        "exampleEn": "How did he react?",
+        "exampleKo": "그는 어떻게 반응했습니까?"
+    },
+    {
+        "day": 17,
+        "no": 22,
+        "word": "content",
+        "meaning": "내용물; 만족하는",
+        "targetScore": 650,
+        "exampleEn": "The content of the letter.",
+        "exampleKo": "편지의 내용."
+    },
+    {
+        "day": 17,
+        "no": 23,
+        "word": "convenience",
+        "meaning": "편의, 편리",
+        "targetScore": 650,
+        "exampleEn": "A convenience store.",
+        "exampleKo": "편의점."
+    },
+    {
+        "day": 17,
+        "no": 24,
+        "word": "acknowledge",
+        "meaning": "인정하다; (편지 등을) 받았음을 알리다",
+        "targetScore": 650,
+        "exampleEn": "Please acknowledge receipt.",
+        "exampleKo": "수령을 확인해 주세요."
+    },
+    {
+        "day": 17,
+        "no": 25,
+        "word": "caution",
+        "meaning": "조심, 주의",
+        "targetScore": 650,
+        "exampleEn": "Proceed with caution.",
+        "exampleKo": "조심해서 진행하세요."
+    },
+    {
+        "day": 17,
+        "no": 26,
+        "word": "correspondence",
+        "meaning": "서신, 편지",
+        "targetScore": 650,
+        "exampleEn": "I handle all correspondence.",
+        "exampleKo": "나는 모든 서신을 처리합니다."
+    },
+    {
+        "day": 17,
+        "no": 27,
+        "word": "separate",
+        "meaning": "분리하다; 별개의",
+        "targetScore": 650,
+        "exampleEn": "Separate the recyclables.",
+        "exampleKo": "재활용품을 분리하세요."
+    },
+    {
+        "day": 17,
+        "no": 28,
+        "word": "remarkable",
+        "meaning": "놀라운, 주목할 만한",
+        "targetScore": 650,
+        "exampleEn": "A remarkable achievement.",
+        "exampleKo": "놀라운 성취."
+    },
+    {
+        "day": 17,
+        "no": 29,
+        "word": "handle",
+        "meaning": "다루다, 처리하다",
+        "targetScore": 650,
+        "exampleEn": "Handle with care.",
+        "exampleKo": "조심해서 다루세요."
+    },
+    {
+        "day": 17,
+        "no": 30,
+        "word": "warehouse",
+        "meaning": "창고",
+        "targetScore": 650,
+        "exampleEn": "The warehouse is full.",
+        "exampleKo": "창고가 가득 찼습니다."
+    },
+    {
+        "day": 17,
+        "no": 31,
+        "word": "impose",
+        "meaning": "부과하다, 강요하다",
+        "targetScore": 650,
+        "exampleEn": "They imposed a fine.",
+        "exampleKo": "그들은 벌금을 부과했습니다."
+    },
+    {
+        "day": 17,
+        "no": 32,
+        "word": "storage",
+        "meaning": "보관, 저장소",
+        "targetScore": 650,
+        "exampleEn": "Put it in storage.",
+        "exampleKo": "그것을 창고에 넣으세요."
+    },
+    {
+        "day": 17,
+        "no": 33,
+        "word": "detach",
+        "meaning": "분리하다, 떼어내다",
+        "targetScore": 650,
+        "exampleEn": "Detach the coupon.",
+        "exampleKo": "쿠폰을 떼어내세요."
+    },
+    {
+        "day": 17,
+        "no": 34,
+        "word": "envelope",
+        "meaning": "봉투",
+        "targetScore": 650,
+        "exampleEn": "Seal the envelope.",
+        "exampleKo": "봉투를 밀봉하세요."
+    },
+    {
+        "day": 17,
+        "no": 35,
+        "word": "exclusion",
+        "meaning": "제외, 배제",
+        "targetScore": 650,
+        "exampleEn": "To the exclusion of all else.",
+        "exampleKo": "다른 모든 것을 배제하고."
+    },
+    {
+        "day": 17,
+        "no": 36,
+        "word": "recipient",
+        "meaning": "수신자, 수령인",
+        "targetScore": 650,
+        "exampleEn": "The recipient of the award.",
+        "exampleKo": "상 수상자."
+    },
+    {
+        "day": 17,
+        "no": 37,
+        "word": "affix",
+        "meaning": "붙이다",
+        "targetScore": 650,
+        "exampleEn": "Affix a stamp.",
+        "exampleKo": "우표를 붙이세요."
+    },
+    {
+        "day": 17,
+        "no": 38,
+        "word": "incorrect",
+        "meaning": "부정확한, 틀린",
+        "targetScore": 650,
+        "exampleEn": "The address is incorrect.",
+        "exampleKo": "주소가 틀렸습니다."
+    },
+    {
+        "day": 17,
+        "no": 39,
+        "word": "oblige",
+        "meaning": "의무를 지우다, 강요하다",
+        "targetScore": 650,
+        "exampleEn": "You are obliged to report it.",
+        "exampleKo": "당신은 그것을 보고할 의무가 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 40,
+        "word": "step",
+        "meaning": "단계, 조치; 걸음",
+        "targetScore": 650,
+        "exampleEn": "Take the first step.",
+        "exampleKo": "첫 발을 내디디세요."
+    }
+]

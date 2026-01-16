@@ -1,0 +1,362 @@
+[
+  {
+    "day": 26,
+    "no": 1,
+    "word": "delinquent",
+    "meaning": "(세금 등이) 연체된, 미불의",
+    "targetScore": 650,
+    "exampleEn": "The company has a delinquent account with the supplier.",
+    "exampleKo": "그 회사는 공급업체에 연체된 계좌를 가지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 2,
+    "word": "overdue",
+    "meaning": "(지불·반납 등의) 기한이 지난, 지불 기한이 넘은",
+    "targetScore": 650,
+    "exampleEn": "Your payment is now five days overdue.",
+    "exampleKo": "귀하의 지불 기한이 현재 5일 지났습니다."
+  },
+  {
+    "day": 26,
+    "no": 3,
+    "word": "regrettably",
+    "meaning": "유감스럽게도",
+    "targetScore": 650,
+    "exampleEn": "Regrettably, we cannot approve your loan application.",
+    "exampleKo": "유감스럽게도, 우리는 귀하의 대출 신청을 승인할 수 없습니다."
+  },
+  {
+    "day": 26,
+    "no": 4,
+    "word": "balance",
+    "meaning": "잔고, 차감 잔액",
+    "targetScore": 650,
+    "exampleEn": "Please check your account balance before making a withdrawal.",
+    "exampleKo": "인출하기 전에 계좌 잔고를 확인하십시오."
+  },
+  {
+    "day": 26,
+    "no": 5,
+    "word": "deposit",
+    "meaning": "입금하다, 예금하다",
+    "targetScore": 650,
+    "exampleEn": "I would like to deposit this check into my savings account.",
+    "exampleKo": "이 수표를 제 저축 예금 계좌에 입금하고 싶습니다."
+  },
+  {
+    "day": 26,
+    "no": 6,
+    "word": "investigation",
+    "meaning": "조사",
+    "targetScore": 650,
+    "exampleEn": "The bank launched an investigation into the error.",
+    "exampleKo": "은행은 그 오류에 대한 조사를 착수했습니다."
+  },
+  {
+    "day": 26,
+    "no": 7,
+    "word": "account",
+    "meaning": "계좌, 설명, 고려, (~의 이유를) 밝히다, 설명하다, (~의 비율을) 차지하다",
+    "targetScore": 650,
+    "exampleEn": "Rent accounts for 50 percent of his monthly expenses.",
+    "exampleKo": "임대료는 그의 월 지출의 50퍼센트를 차지합니다."
+  },
+  {
+    "day": 26,
+    "no": 8,
+    "word": "statement",
+    "meaning": "명세서, 성명서",
+    "targetScore": 650,
+    "exampleEn": "Please review your monthly credit card statement.",
+    "exampleKo": "월별 신용카드 명세서를 검토해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 9,
+    "word": "amount",
+    "meaning": "액수, 약",
+    "targetScore": 650,
+    "exampleEn": "The total amount due is $500.",
+    "exampleKo": "지불해야 할 총액수는 500달러입니다."
+  },
+  {
+    "day": 26,
+    "no": 10,
+    "word": "withdrawal",
+    "meaning": "(예금의)인출",
+    "targetScore": 650,
+    "exampleEn": "You can make a withdrawal at any ATM.",
+    "exampleKo": "어느 ATM에서나 인출을 할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 11,
+    "word": "previously",
+    "meaning": "이전에",
+    "targetScore": 650,
+    "exampleEn": "She previously worked as a bank teller.",
+    "exampleKo": "그녀는 이전에 은행 창구 직원으로 일했습니다."
+  },
+  {
+    "day": 26,
+    "no": 12,
+    "word": "due",
+    "meaning": "만기가 된, 지불기일이 된, , (금전 등이)~에게 마땅히 지급되어야 할",
+    "targetScore": 650,
+    "exampleEn": "The payment is due on the 25th of the month.",
+    "exampleKo": "지불 기일은 매월 25일입니다."
+  },
+  {
+    "day": 26,
+    "no": 13,
+    "word": "receive",
+    "meaning": "받다, 수취하다",
+    "targetScore": 650,
+    "exampleEn": "Did you receive the invoice I sent yesterday?",
+    "exampleKo": "어제 제가 보낸 송장을 받으셨습니까?"
+  },
+  {
+    "day": 26,
+    "no": 14,
+    "word": "expect",
+    "meaning": "예상하다, 기대하다",
+    "targetScore": 650,
+    "exampleEn": "We expect interest rates to rise next quarter.",
+    "exampleKo": "우리는 다음 분기에 금리가 오를 것으로 예상합니다."
+  },
+  {
+    "day": 26,
+    "no": 15,
+    "word": "certificate",
+    "meaning": "증명서, 증서",
+    "targetScore": 650,
+    "exampleEn": "You will receive a certificate of deposit upon maturity.",
+    "exampleKo": "귀하는 만기 시 예금 증서를 받을 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 16,
+    "word": "document",
+    "meaning": "서류, 문서, 기록하다, 문서를 작성하다",
+    "targetScore": 650,
+    "exampleEn": "Please sign the document to open a new account.",
+    "exampleKo": "새 계좌를 개설하려면 서류에 서명해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 17,
+    "word": "spending",
+    "meaning": "소비, 지출",
+    "targetScore": 650,
+    "exampleEn": "Consumer spending has decreased significantly.",
+    "exampleKo": "소비자 지출이 상당히 감소했습니다."
+  },
+  {
+    "day": 26,
+    "no": 18,
+    "word": "successfully",
+    "meaning": "성공적으로",
+    "targetScore": 650,
+    "exampleEn": "The merger was successfully completed.",
+    "exampleKo": "합병이 성공적으로 완료되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 19,
+    "word": "bill",
+    "meaning": "~에게 청구서를 보내다, 청구서, 계산서",
+    "targetScore": 650,
+    "exampleEn": "We will bill you for the service at the end of the month.",
+    "exampleKo": "우리는 월말에 서비스에 대한 청구서를 보낼 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 20,
+    "word": "pleasure",
+    "meaning": "즐거움, 기쁨, 영광",
+    "targetScore": 650,
+    "exampleEn": "It is a pleasure to do business with you.",
+    "exampleKo": "당신과 사업을 하게 되어 기쁩니다(영광입니다)."
+  },
+  {
+    "day": 26,
+    "no": 21,
+    "word": "study",
+    "meaning": "연구",
+    "targetScore": 650,
+    "exampleEn": "The study analyzes recent market trends.",
+    "exampleKo": "그 연구는 최근 시장 동향을 분석합니다."
+  },
+  {
+    "day": 26,
+    "no": 22,
+    "word": "summary",
+    "meaning": "요약, 개요",
+    "targetScore": 650,
+    "exampleEn": "Here is a summary of your investment portfolio.",
+    "exampleKo": "여기 당신의 투자 포트폴리오에 대한 요약(개요)이 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 23,
+    "word": "temporary",
+    "meaning": "임시의",
+    "targetScore": 650,
+    "exampleEn": "This is just a temporary measure to cut costs.",
+    "exampleKo": "이것은 비용을 절감하기 위한 임시 조치일 뿐입니다."
+  },
+  {
+    "day": 26,
+    "no": 24,
+    "word": "lower",
+    "meaning": "(양·가격을) 줄이다",
+    "targetScore": 650,
+    "exampleEn": "The central bank decided to lower interest rates.",
+    "exampleKo": "중앙은행은 금리를 낮추기로 결정했습니다."
+  },
+  {
+    "day": 26,
+    "no": 25,
+    "word": "transaction",
+    "meaning": "거래, 업무",
+    "targetScore": 650,
+    "exampleEn": "The transaction was processed securely.",
+    "exampleKo": "그 거래는 안전하게 처리되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 26,
+    "word": "double",
+    "meaning": "두 배로 만들다",
+    "targetScore": 650,
+    "exampleEn": "We aim to double our profits within two years.",
+    "exampleKo": "우리는 2년 이내에 수익을 두 배로 만드는 것을 목표로 합니다."
+  },
+  {
+    "day": 26,
+    "no": 27,
+    "word": "identification",
+    "meaning": "신분증, 신분 증명서",
+    "targetScore": 650,
+    "exampleEn": "Please present valid identification.",
+    "exampleKo": "유효한 신분증을 제시해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 28,
+    "word": "dissatisfaction",
+    "meaning": "불만, 불평",
+    "targetScore": 650,
+    "exampleEn": "Customers expressed dissatisfaction with the new fees.",
+    "exampleKo": "고객들은 새로운 수수료에 대해 불만을 표했습니다."
+  },
+  {
+    "day": 26,
+    "no": 29,
+    "word": "in common",
+    "meaning": "공통으로, 공동으로",
+    "targetScore": 650,
+    "exampleEn": "The two banks have a lot in common.",
+    "exampleKo": "두 은행은 공통점이 많습니다."
+  },
+  {
+    "day": 26,
+    "no": 30,
+    "word": "interest",
+    "meaning": "관심, 권리, 이자",
+    "targetScore": 650,
+    "exampleEn": "The account earns 5% annual interest.",
+    "exampleKo": "그 계좌는 연 5%의 이자를 받습니다."
+  },
+  {
+    "day": 26,
+    "no": 31,
+    "word": "reject",
+    "meaning": "거절하다, 거부하다",
+    "targetScore": 650,
+    "exampleEn": "The bank rejected his application for a mortgage.",
+    "exampleKo": "은행은 그의 주택 담보 대출 신청을 거절했습니다."
+  },
+  {
+    "day": 26,
+    "no": 32,
+    "word": "relation",
+    "meaning": "관계",
+    "targetScore": 650,
+    "exampleEn": "We maintain good relations with our investors.",
+    "exampleKo": "우리는 투자자들과 좋은 관계를 유지하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 33,
+    "word": "tentatively",
+    "meaning": "임시로, 시험적으로",
+    "targetScore": 650,
+    "exampleEn": "The meeting is tentatively scheduled for Friday.",
+    "exampleKo": "회의는 금요일로 잠정적으로(시험적으로) 예정되어 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 34,
+    "word": "alternatively",
+    "meaning": "그렇지 않으면, 그 대신에",
+    "targetScore": 650,
+    "exampleEn": "You can pay by check, or alternatively, by wire transfer.",
+    "exampleKo": "수표로 지불하거나, 그렇지 않으면(그 대신에) 계좌 이체로 지불할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 35,
+    "word": "attentive",
+    "meaning": "주의 깊은, 세심한",
+    "targetScore": 650,
+    "exampleEn": "The staff was very attentive to our needs.",
+    "exampleKo": "직원들은 우리의 필요에 매우 주의를 기울였습니다(세심했습니다)."
+  },
+  {
+    "day": 26,
+    "no": 36,
+    "word": "convert",
+    "meaning": "전환하다, 변환하다",
+    "targetScore": 650,
+    "exampleEn": "We need to convert our assets into cash.",
+    "exampleKo": "우리는 자산을 현금으로 전환해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 37,
+    "word": "heavily",
+    "meaning": "몹시, 심하게",
+    "targetScore": 650,
+    "exampleEn": "The company borrowed heavily to finance the project.",
+    "exampleKo": "회사는 프로젝트 자금을 조달하기 위해 몹시(많은 돈을) 빌렸습니다."
+  },
+  {
+    "day": 26,
+    "no": 38,
+    "word": "loan",
+    "meaning": "대출, 대출금",
+    "targetScore": 650,
+    "exampleEn": "He applied for a small business loan.",
+    "exampleKo": "그는 소상공인 대출을 신청했습니다."
+  },
+  {
+    "day": 26,
+    "no": 39,
+    "word": "unexpected",
+    "meaning": "예기치 않은",
+    "targetScore": 650,
+    "exampleEn": "We faced unexpected expenses this month.",
+    "exampleKo": "우리는 이번 달에 예기치 않은 지출에 직면했습니다."
+  },
+  {
+    "day": 26,
+    "no": 40,
+    "word": "cash",
+    "meaning": "현금으로 바꾸다",
+    "targetScore": 650,
+    "exampleEn": "It is difficult to cash a check without ID.",
+    "exampleKo": "신분증 없이 수표를 현금으로 바꾸기는 어렵습니다."
+  }
+]

@@ -1,0 +1,1191 @@
+Day,No,Word,Meaning,Target_Score,TOEIC_Frequency,Word_Type,Difficulty
+1,1,effective,"효과적인, (법률 등이) 발효되는, 시행되는",650,10,adjective,intermediate
+1,2,target,"목표, 목표로 삼다",650,10,noun,basic
+1,3,immediately,"즉시, 곧",650,10,adverb,basic
+1,4,less,"보다 적은, 덜한",650,10,adjective,basic
+1,5,negotiation,"협상,교섭",650,5,other,intermediate
+1,6,policy,"규정, 보험 증권",650,10,noun,basic
+1,7,alliance,"동맹, 제휴",650,5,other,intermediate
+1,8,meet,(필요〮요구 등을 만족시키다),650,10,verb,basic
+1,9,check,"검사, 검사하다, 조사하다, 확인하다",650,10,verb,basic
+1,10,approval,"승인, 인가",650,10,noun,basic
+1,11,stipulation,계약 조건,650,5,other,intermediate
+1,12,affect,"~에 영향을 미치다, 불리하게 작용하다",650,10,verb,basic
+1,13,apply,"적용하다, 지원하다",650,10,verb,basic
+1,14,agreement,"계약,협정,합의",650,5,other,intermediate
+1,15,department,(조직 및 기구의) 부서,650,10,noun,basic
+1,16,identify,"알아보다, 확인하다",650,10,verb,intermediate
+1,17,efficiently,효율적으로,650,10,adverb,intermediate
+1,18,compliance,(명령 〮 법규에의) 준수,650,10,noun,intermediate
+1,19,agree,동의하다,650,10,verb,basic
+1,20,regulation,규정,650,10,noun,basic
+1,21,required,"필수의, 의무적인",650,10,adjective,basic
+1,22,cover,"포함하다, 지불하다, 덮다",650,10,verb,basic
+1,23,compromise,"타협,화해",650,5,other,intermediate
+1,24,responsible,"책임이 있는, 책임져야 할",650,10,adjective,basic
+1,25,inform,~에게 알리다,650,10,verb,basic
+1,26,file,"서류, (서류를) 정리하다, 철하다, 정식으로 제기하다",650,10,noun,basic
+1,27,permission,"허락, 허가",650,10,noun,basic
+1,28,note,"주목하다, 특별히 언급하다",650,10,verb,basic
+1,29,deadline,"마감일, 마감 시간",650,10,noun,basic
+1,30,deadlock,교착 상태,650,5,other,intermediate
+1,31,manufacturing,제조(업)의,650,9,other,basic
+1,32,raise,"높이다, 올리다, (의문을)제기하다",650,10,verb,basic
+1,33,condition,조건,650,10,noun,basic
+1,34,employment,고용,650,10,noun,basic
+1,35,extend,"연장하다, (기간을)늘리다,
+(감사의 뜻을)말하다, 베풀다",650,10,verb,basic
+1,36,notify,"~에게 통지하다, 알리다",650,10,verb,basic
+1,37,experience,"경험, 체험, 체험하다, 경험하다",650,10,noun,basic
+1,38,employee,"직원, 고용인",650,10,noun,basic
+1,39,approximately,대략,650,10,adverb,basic
+1,40,position,"일자리,직책,두다",650,10,noun,basic
+1,41,according to,~에 따라,650,10,phrase,basic
+1,42,additional,"추가의, 부가적인",650,10,adjective,basic
+1,43,professional,"전문적인,직업의,전문가",650,10,adjective,basic
+1,44,explain,설명하다,650,10,verb,basic
+1,45,announcement,"공고, 발표",650,10,noun,basic
+1,46,need,"필요, 요구, 욕구, ~할 필요가 있다",650,10,noun,basic
+1,47,submit,제출하다,650,10,verb,basic
+1,48,applicant,"지원자,신청자",650,10,noun,basic
+1,49,upcoming,"곧 있을, 다가오는",650,10,adjective,basic
+1,50,demand,"수요, 요구하다",650,10,noun,intermediate
+1,51,request,"요청, 요청하다",650,10,verb,basic
+1,52,remain,"계속 ~한 상태이다, 아직 ~해야 한다",650,10,verb,basic
+1,53,pleased,"만족해하는, 기쁜",650,10,adjective,basic
+1,54,lead,"이끌다, 지휘하다, (어떤 결과에)이르다",650,10,verb,basic
+1,55,present,"제시하다, 현재의, 참석한",650,10,verb,basic
+1,56,interview,"면접,면접을 보다",650,10,noun,basic
+1,57,very,"매우, 대단히, 아주",650,10,adverb,basic
+1,58,outstanding,"우수한, (부채 등이)미지불 된",650,10,adjective,intermediate
+1,59,issue,"(출판물의)제~호, 문제, 쟁점",650,10,noun,basic
+1,60,period,"기간, 시기",650,10,noun,basic
+1,61,manage,"~을 경영하다, 가까스로 하다",650,10,verb,basic
+1,62,requirement,"필요조건,요건",650,10,noun,basic
+1,63,industry,산업,650,10,noun,basic
+1,64,allow,"~하게하다, ~을 허락하다",650,10,verb,basic
+1,65,indicate,"보여주다, 나타내다",650,10,verb,intermediate
+1,66,proposal,"제안,계획",650,5,other,intermediate
+1,67,form,"종류, 유형, 양식",650,10,noun,basic
+1,68,satisfied,"만족하는, 만족스러워하는",650,10,adjective,basic
+1,69,hardly,거의~하지 않다,650,10,adverb,basic
+1,70,local,"지방의, 고장의",650,10,adjective,basic
+1,71,audience,"청중, 관중",650,10,noun,basic
+1,72,highly,"매우,대단히",650,10,adverb,basic
+1,73,current,"현재의, 현행의, 통용되는",650,10,adjective,basic
+1,74,appreciate,"고맙게 생각하다, 높이 평가하다, 감상하다",650,10,verb,intermediate
+1,75,effort,노력,650,10,noun,basic
+1,76,price,가격,650,10,noun,basic
+1,77,entire,전체의,650,10,adjective,basic
+1,78,promptly,"즉시, 정각에",650,10,adverb,intermediate
+1,79,customer,고객,650,10,noun,basic
+1,80,term,"조건, 임기, 기한",650,5,other,intermediate
+2,1,acknowledge,"인정하다, (편지 등의) 수령을 알리다",650,10,verb,intermediate
+2,2,convenience,"편의, 편리",650,10,noun,basic
+2,3,area,"지역, 구역",650,10,noun,basic
+2,4,involve,"수반하다, 포함하다, 참여시키다",650,10,verb,basic
+2,5,offer,"제공하다, 제공, 오퍼",650,10,noun,basic
+2,6,delivery,배달,650,10,noun,basic
+2,7,attend,"참석하다, 출석하다",650,10,verb,basic
+2,8,establish,설립하다,650,10,verb,basic
+2,9,contact,"~와 연락하다, 
+(상업적 목적으로)교섭하고 있는 사람",650,10,verb,basic
+2,10,confirm,확인하다,650,10,verb,basic
+2,11,efficiency,"효율, 능률",650,10,noun,basic
+2,12,feature,"특징, 특색, 특징으로 삼다, 특별히 포함하다",650,10,noun,basic
+2,13,improve,"향상시키다, 개선하다",650,10,verb,basic
+2,14,safety,안전,650,10,noun,basic
+2,15,organize,"준비하다, 조직하다, 정리하다",650,10,verb,basic
+2,16,provide,"공급하다, 제공하다",650,10,verb,basic
+2,17,run,"~을 운영하다, 경영하다,
+(공연, 영화 등이) 상영되다, 계속되다",650,10,verb,basic
+2,18,decision,"결정, 판단",650,10,noun,basic
+2,19,reduce,"줄이다, 감소시키다",650,10,verb,basic
+2,20,preparation,"준비, 대비",650,10,noun,basic
+2,21,cancel,취소하다,650,10,verb,basic
+2,22,arrive,도착하다,650,10,verb,basic
+2,23,discuss,"논의하다, 토론하다",650,10,verb,basic
+2,24,manufacturer,"제조 회사, 제조업자",650,10,noun,basic
+2,25,availability,"(입수)가능성, 유효성, 유용성",650,10,noun,intermediate
+2,26,response,"응답, 대답",650,10,noun,basic
+2,27,hold,"~을 수용하다, ~을 담다,
+(회의 등을)개최하다, 열다",650,10,verb,basic
+2,28,benefit,"혜택, 이익, 혜택을 보다, 이익을 얻다",650,10,noun,basic
+2,29,inventory,"재고품, 재고 목록",650,10,noun,intermediate
+2,30,order,"주문하다, 주문, 주문품",650,10,noun,basic
+2,31,quality,"품질, 질",650,10,noun,basic
+2,32,recently,최근에,650,10,adverb,basic
+2,33,development,"개발, 발전",650,10,noun,basic
+2,34,expire,(계약 등이)만료되다,650,5,other,intermediate
+2,35,inquiry,"문의, 질문",650,10,noun,intermediate
+2,36,book,예약하다,650,10,verb,basic
+2,37,handle,"취급하다, 다루다",650,10,verb,basic
+2,38,imply,"암시하다, 넌지시, 나타내다, 의미하다",650,10,verb,intermediate
+2,39,last,지속되다,650,10,verb,basic
+2,40,process,"과정, 처리하다",650,10,noun,basic
+2,41,contract,"계약(서),계약하다,수축하다",650,5,other,intermediate
+2,42,reach,"(치수·양 등이) ~에 달하다, ~에 도착하다",650,10,verb,basic
+2,43,review,"검토하다,재조사하다",650,5,other,intermediate
+2,44,cost,"비용, (비용)이 들다",650,10,noun,basic
+2,45,update,"갱신,개정,갱신하다, 최신의 것으로 하다",650,10,verb,basic
+2,46,total,"총계의, 전부의",650,10,adjective,basic
+2,47,grow,"성장하다, 성장시키다, 증가시키다",650,10,verb,basic
+2,48,supply,"공급하다, 공급, 비품, 소모품",650,10,noun,basic
+2,49,unavailable,"이용할 수 없는, 구할 수 없는",650,10,adjective,basic
+2,50,initially,"처음에,초기에",650,5,other,intermediate
+2,51,financial,"재정의, 금전상의",650,10,adjective,basic
+2,52,eventually,"결국, 마침내",650,10,adverb,basic
+2,53,recipient,수신자,650,10,noun,intermediate
+2,54,dedicate,"전념하다,헌신하다,바치다",650,5,other,intermediate
+2,55,depend on,"~에 달려 있다, ~에게 의존하다",650,10,phrase,basic
+2,56,significantly,"상당히, 두드러지게",650,10,adverb,basic
+2,57,valid,유효한,650,10,adjective,basic
+2,58,annual,매년의,650,10,adjective,basic
+2,59,signature,서명,650,5,other,intermediate
+2,60,available,"(사물이) 이용 가능한, (사람이) 시간이 있는",650,10,adjective,basic
+2,61,choice,"선택물, 선택 사항, 선택",650,10,noun,basic
+2,62,originally,"원래,처음에는",650,5,other,intermediate
+2,63,increase,"인상, 증가, 증가하다",650,10,noun,basic
+2,64,reliable,"믿을 만한, 신뢰할 수 있는",650,10,adjective,intermediate
+2,65,reservation,"예약, 지정, 보호구역",650,10,noun,basic
+2,66,recent,최근의,650,10,adjective,basic
+2,67,currently,현재,650,10,adverb,basic
+2,68,regularly,정기적으로,650,10,adverb,basic
+2,69,previously,이전에,650,10,adverb,basic
+2,70,certain,"확신하는, 확실한, 특정한",650,10,adjective,basic
+2,71,information,"정보, 자료",650,10,noun,basic
+2,72,critical,"비판적인, 중요한, 위기의",650,10,adjective,basic
+2,73,prior,"전의, 먼저의",650,10,adjective,intermediate
+2,74,likely,~할 것 같은,650,10,adjective,basic
+2,75,nearly,"거의, 대략",650,10,adverb,basic
+2,76,complimentary,"무료의, 우대의",650,10,adjective,intermediate
+2,77,various,"여러 가지의, 가지각색의",650,10,adjective,basic
+2,78,rate,요금,650,10,noun,basic
+2,79,collaborate,"협력하다,공동으로 일하다",650,5,other,intermediate
+2,80,step,"단계, 조치, 수단",650,10,noun,basic
+3,1,opportunity,기회,650,10,noun,basic
+3,2,schedule,~을 예정하다,650,10,verb,basic
+3,3,consider,고려하다,650,10,verb,basic
+3,4,adhere,"지키다, 고수하다",650,9,verb,intermediate
+3,5,management,"경영진, 경영",650,10,noun,basic
+3,6,associate,관련시키다,650,9,verb,intermediate
+3,7,conference,"회의, 회담",650,10,noun,basic
+3,8,hire,고용하다,650,9,verb,basic
+3,9,representative,"직원, 외판원, 대표자",650,10,noun,basic
+3,10,require,요구하다,650,10,verb,basic
+3,11,support,"후원, 원조, 지지, 지원하다, 후원하다, 살게하다,
+(생명·기력 등을)유지하다",650,10,verb,basic
+3,12,promote,"승진시키다, 촉진하다",650,10,verb,basic
+3,13,suggest,"제안하다, 추천하다",650,10,verb,basic
+3,14,participate,"참여하다, 참가하다",650,10,verb,basic
+3,15,occasionally,"가끔, 때때로",650,9,adverb,basic
+3,16,include,포함하다,650,10,verb,basic
+3,17,transportation,"교통 (수단), 운송 수단",650,10,noun,basic
+3,18,report,"보고하다, 출두하다, 보고서, 보도, 기록
+(직장·회의 등에 도착을) 알리다",650,10,noun,basic
+3,19,eligible,"자격이 있는,적격의",650,9,adjective,intermediate
+3,20,recommend,"권고하다, 추천하다",650,10,verb,basic
+3,21,commission,"수수료,커미션,위원회,(일 등을)의뢰하다,
+주문하다",650,5,other,intermediate
+3,22,join,~에 가입하다,650,10,verb,basic
+3,23,qualified,"자격있는,적격의",650,9,adjective,basic
+3,24,possible,"가능한, 있음 직한",650,10,adjective,basic
+3,25,official,"공무원, 관리, 공식적인",650,10,adjective,basic
+3,26,receive,"받다, 수취하다",650,10,verb,basic
+3,27,renew,(계약 등을)갱신하다,650,5,other,intermediate
+3,28,productivity,생산성,650,10,noun,basic
+3,29,revenue,수입,650,10,noun,basic
+3,30,directly,곧바로,650,9,adverb,basic
+3,31,imperative,"반드시 해야 하는,필수적인",650,5,other,intermediate
+3,32,closely,"면밀히, 엄밀히",650,9,adverb,intermediate
+3,33,clear,"말게 갠, 명백한, 분명한, 또렷하게, 완전히,
+떨어져서",650,10,adjective,basic
+3,34,necessary,필요한,650,10,adjective,basic
+3,35,recruit,(신입 사원 등을)모집하다,650,9,verb,intermediate
+3,36,comply,"준수하다, 따르다",650,9,verb,intermediate
+3,37,sale,"매출액, 매상고, (할인) 판매",650,10,noun,basic
+3,38,omit,"빠트리다,생략하다",650,5,other,intermediate
+3,39,vehicle,"차량, 운송 수단",650,10,noun,basic
+3,40,environmental,환경적인,650,10,adjective,basic
+3,41,voluntarily,자발적으로,650,9,adverb,intermediate
+3,42,conflict,"대립,충돌,갈등",650,5,other,intermediate
+3,43,authority,"권한, 당국",650,10,noun,basic
+3,44,profit,"수익, 이익",650,10,noun,basic
+3,45,fill out/in,"(서류에) 기입하다, 적어 넣다",650,10,phrase,basic
+3,46,revised,"수정된,변경한",650,5,other,intermediate
+3,47,statement,"명세서, 성명서",650,10,noun,basic
+3,48,repair,수리하다,650,10,verb,basic
+3,49,excellent,"훌륭한, 탁월한",650,9,adjective,basic
+3,50,competitor,"경쟁업체, 경쟁자",650,10,noun,basic
+3,51,increasing,증가하는,650,10,adjective,basic
+3,52,accounting,회계,650,10,noun,basic
+3,53,cooperatively,"협력하여,협조적으로",650,5,other,intermediate
+3,54,appropriate,"적당한, 적합한",650,10,adjective,basic
+3,55,performance,"실적, 성과, 공연, 연주, 연기",650,10,noun,basic
+3,56,account,"계좌, 설명, 고려, (~의 이유를) 밝히다, 설명하다
+(~의 비율을) 차지하다",650,10,noun,basic
+3,57,confidentiality,"기밀,비밀",650,5,other,intermediate
+3,58,delay,"연기하다, ~을 뒤로 미루다",650,10,verb,basic
+3,59,comprehensive,"종합적인, 포괄적인",650,10,adjective,intermediate
+3,60,significant,"상당한, 중대한, 중요한",650,10,adjective,intermediate
+3,61,reserved,"예약된, 예약한, 지정된",650,10,adjective,basic
+3,62,budget,예산,650,10,noun,basic
+3,63,specialize,"~을 전공하다,전문적으로 다루다",650,9,verb,intermediate
+3,64,responsibility,"부담, 책임, 의무",650,10,noun,intermediate
+3,65,especially,특히,650,9,adverb,basic
+3,66,expense,"비용, 지출",650,10,noun,basic
+3,67,thoroughly,"철저하게, 완전히, 대단히",650,9,adverb,intermediate
+3,68,specifically,"명확하게, 분명히, 특히, 특별히",650,9,adverb,basic
+3,69,meeting,회의,650,10,noun,basic
+3,70,due,"만기가 된, 지불기일이 된, 
+(금전 등이)~에게 마땅히 지급되어야 할",650,10,adjective,basic
+3,71,balance,"잔고, 차감 잔액",650,10,noun,basic
+3,72,fee,"요금, 수수료",650,10,noun,basic
+3,73,deposit,"입금하다, 예금하다",650,10,verb,basic
+3,74,register,등록하다,650,10,verb,basic
+3,75,recognize,"인정하다, 알아보다",650,10,verb,basic
+3,76,quarter,"사분기, 4분의1",650,10,noun,basic
+3,77,average,"평균치, 평균",650,10,noun,basic
+3,78,minutes,회의록,650,10,noun,basic
+3,79,proficient,"능숙한,능한",650,5,other,intermediate
+3,80,leave,"휴가, 떠나다, 남기다",650,10,noun,basic
+4,1,occupation,직업,650,9,noun,basic
+4,2,remind,"~에게 상기시키다, 일깨우다",650,9,verb,basic
+4,3,succeed,"성공하다, 뒤를 잇다",650,9,verb,intermediate
+4,4,restrict,"한정하다, 제한하다",650,9,verb,intermediate
+4,5,reference,"추천서,참고",650,9,noun,intermediate
+4,6,follow,"~을 따라가다, 주시하다, (분명히) 이해하다",650,9,verb,basic
+4,7,opening,"공석,결원;개장,개시",650,9,noun,basic
+4,8,location,"장소, 위치",650,10,noun,basic
+4,9,authorize,"~을 인가하다, 권한을 부여하다",650,9,verb,intermediate
+4,10,assist,"돕다, 조력하다",650,9,verb,basic
+4,11,construction,"건설, 건축",650,10,noun,basic
+4,12,appear,"나타나다, 출현하다",650,9,verb,basic
+4,13,operation,수술,650,10,noun,basic
+4,14,solution,해결책,650,10,noun,basic
+4,15,resume,이력서,650,9,noun,basic
+4,16,resume,"재개하다, 다시 시작하다",650,9,verb,intermediate
+4,17,commit,"헌신하다, 전념하다",650,9,verb,intermediate
+4,18,consultant,"고문,컨설턴트",650,9,noun,intermediate
+4,19,resource,자원,650,10,noun,basic
+4,20,direct,"~에게 길을 안내하다, 가르쳐주다",650,9,verb,basic
+4,21,postpone,"연기하다, 뒤로 미루다",650,9,verb,intermediate
+4,22,training,"교육,훈련",650,9,noun,basic
+4,23,perform,"(일〮과제 〮의무 등을) 행하다, 실행하다",650,9,verb,basic
+4,24,coordinate,조정하다,650,9,verb,intermediate
+4,25,buy,"사다, 구입하다",650,9,verb,basic
+4,26,dispute,"분쟁,논쟁",650,5,other,intermediate
+4,27,proceed,"(일을)진행하다,진척되다",650,5,other,intermediate
+4,28,option,선택권,650,5,other,intermediate
+4,29,conduct,"(업무의) 수행, (업무 등을)수행하다",650,9,verb,intermediate
+4,30,inspection,"점검, 검사",650,9,noun,intermediate
+4,31,aware,"알고 있는, 인식하고 있는",650,9,adjective,basic
+4,32,chance,"가능성, 기회",650,10,noun,basic
+4,33,dramatically,극적으로,650,9,adverb,intermediate
+4,34,revise,"(의견 및 계획을)수정하다, 변경하다",650,9,verb,intermediate
+4,35,procedure,절차,650,9,noun,intermediate
+4,36,loan,"대출, 대출금",650,10,noun,basic
+4,37,involved,"관여하는, 관계된, 연루된",650,9,adjective,basic
+4,38,largely,"주로, 대부분",650,9,adverb,basic
+4,39,expand,"확장하다, 확대하다",650,9,verb,intermediate
+4,40,essential,"필수적인, 극히 중요한, 본질적인",650,9,adjective,basic
+4,41,security,"보안,안전,보호",650,5,other,intermediate
+4,42,bill,"~에게 청구서를 보내다, 청구서, 계산서",650,10,noun,basic
+4,43,organization,단체,650,10,noun,basic
+4,44,fairly,"상당히, 꽤",650,9,adverb,basic
+4,45,arrangement,"준비, 마련, 주선",650,9,noun,basic
+4,46,accessible,"출입할 수 있는, 이용할 수 있는",650,9,adjective,intermediate
+4,47,confidential,"기밀의, 내밀한",650,9,adjective,intermediate
+4,48,interest,"관심, 권리, 이자",650,10,noun,basic
+4,49,document,"서류, 문서, 기록하다, 문서를 작성하다",650,10,noun,basic
+4,50,amount,"액수, 약",650,10,noun,basic
+4,51,relatively,상대적으로,650,9,adverb,intermediate
+4,52,managerial,관리의,650,9,adjective,intermediate
+4,53,exactly,정확히,650,9,adverb,basic
+4,54,in advance,"미리, 사전에",650,10,phrase,basic
+4,55,timely,"시기적절한, 때를 맞춘",650,9,adjective,intermediate
+4,56,assign,"배정하다, 할당하다",650,9,verb,basic
+4,57,extended,"(기간 등을)연장한, 장기간에 걸친",650,9,adjective,intermediate
+4,58,wage,"임금, 급료",650,9,noun,basic
+4,59,renovation,"수리, 개조",650,10,noun,basic
+4,60,modify,"수정하다,일부 변경하다",650,5,other,intermediate
+4,61,engage,"관여하다, 종사하다",650,9,verb,intermediate
+4,62,contain,포함하다,650,9,verb,basic
+4,63,assume,"(증거는 없으나)사실이라고 생각하다,
+(책임〮역할을) 맡다",650,9,verb,basic
+4,64,accountable,책임이 있는,650,9,adjective,intermediate
+4,65,attire,"복장, 옷차림새",650,9,noun,intermediate
+4,66,extremely,"극도로, 대단히",650,9,adverb,basic
+4,67,major,"주요한, 중대한",650,9,adjective,basic
+4,68,exclusive,"독점적인, 배타적인",650,9,adjective,intermediate
+4,69,candidate,"후보자, 지원자",650,9,noun,basic
+4,70,fulfill,"(조건을) 만족시키다, (약속 및 의무 등을) 지키다, 이행하다",650,9,verb,intermediate
+4,71,impression,인상,650,5,other,intermediate
+4,72,objection,"반대,이의",650,5,other,intermediate
+4,73,exception,예외,650,9,noun,intermediate
+4,74,degree,학위,650,9,noun,basic
+4,75,familiar,"익숙한,친숙한",650,9,adjective,basic
+4,76,prospective,"장래의,미래의",650,9,adjective,intermediate
+4,77,popular,인기 있는,650,9,adjective,basic
+4,78,code,"규범, 관례, 암호",650,9,noun,basic
+4,79,rapidly,"급속히, 빨리",650,9,adverb,basic
+4,80,define,"규정하다,정의하다",650,5,other,intermediate
+5,1,properly,"제대로, 정확하게",650,9,adverb,basic
+5,2,coming,다가오는,650,9,adjective,basic
+5,3,limited,"제한된, 한정된",650,9,adjective,basic
+5,4,bid,입찰,650,5,other,intermediate
+5,5,compatible,"호환되는, 양립할 수 있는",650,9,adjective,intermediate
+5,6,advanced,"고급의, 진보한, 앞선",650,9,adjective,intermediate
+5,7,author,"작가, 저자",650,9,noun,basic
+5,8,competition,경쟁,650,9,noun,intermediate
+5,9,subject,"~의 영향을 받기 쉬운, (동의 등을)조건으로 하는
+~에게 (~을) 받게하다",650,5,other,intermediate
+5,10,acceptable,"용인되는, 받아들일 수 있는, 훌륭한, 
+만족스러운",650,9,adjective,intermediate
+5,11,particular,특정한,650,9,adjective,basic
+5,12,away,떨어져서,650,9,adverb,basic
+5,13,increasingly,"점점, 더욱더",650,9,adverb,intermediate
+5,14,innovative,혁신적인,650,9,adjective,intermediate
+5,15,revision,"수정, 개정",650,9,noun,basic
+5,16,successful,"성공적인, 성공한",650,9,adjective,basic
+5,17,domestic,"국내의, 국산의",650,9,adjective,intermediate
+5,18,fall,(값·가치가)하락하다,650,9,verb,basic
+5,19,headquarters,본부,650,9,noun,basic
+5,20,replacement,"교체, 후임자",650,9,noun,basic
+5,21,reserve,"예약하다, 지정하다, 보존하다",650,9,verb,basic
+5,22,forward,"앞으로, (물건, 정보를)보내다",650,9,verb,basic
+5,23,utilize,"이용하다, 활용하다",650,9,verb,intermediate
+5,24,colleague,(직업상의) 동료,650,9,noun,basic
+5,25,challenging,"도전적인,힘든",650,5,other,intermediate
+5,26,manner,"방식, 태도",650,9,noun,basic
+5,27,examine,조사하다,650,9,verb,intermediate
+5,28,assignment,"일, 임무, 과제",650,9,noun,basic
+5,29,corporation,"주식회사, 법인",650,9,noun,intermediate
+5,30,analysis,분석,650,9,noun,intermediate
+5,31,separately,"개별적으로, 따로따로",650,9,adverb,basic
+5,32,grant,"(인정하여 정식으로) 수여하다, 주다,
+(연구비·장학금 등의) 보조금",650,9,verb,intermediate
+5,33,analyze,"분석하다, 분석적으로 검토하다",650,9,verb,intermediate
+5,34,settle,"해결하다,처리하다",650,5,other,intermediate
+5,35,boost,"(경기를) 부양시키다, 상승시키다",650,9,verb,intermediate
+5,36,overview,"개요, 개관",650,9,noun,basic
+5,37,operate,"(기계 등이) 작동하다, 움직이다",650,9,verb,basic
+5,38,aim,"~을 겨누다, 목표, 목적",650,9,verb,basic
+5,39,resolve,(문제 등을)해결하다,650,9,verb,intermediate
+5,40,expectation,"예상, 기대",650,9,noun,intermediate
+5,41,rest,"쉬다, 휴식을 취하다, 휴식, 나머지",650,9,noun,basic
+5,42,on behalf of,~을 대신해서,650,10,phrase,basic
+5,43,admission,입장,650,9,noun,intermediate
+5,44,provider,"공급자, 제공자",650,9,noun,basic
+5,45,place,"~을 ~한 상태에 두다, 
+(지시·주문·신청 등을) 하다",650,9,verb,basic
+5,46,advise,"조언해 주다, 충고하다",650,9,verb,basic
+5,47,impact,"영향, 충격",650,9,noun,intermediate
+5,48,accurate,정확한,650,9,adjective,intermediate
+5,49,promising,"유망한, 전망이 좋은",650,9,adjective,intermediate
+5,50,launch,(신제품을) 출시하다,650,9,verb,basic
+5,51,compensation,"보상금, 보상",650,9,noun,intermediate
+5,52,variety,"다양성, 변화, 종류, 품종",650,9,noun,basic
+5,53,officially,공식적으로,650,9,adverb,intermediate
+5,54,advertisement,광고,650,9,noun,basic
+5,55,campaign,"운동, 캠페인",650,9,noun,basic
+5,56,division,부서,650,9,noun,basic
+5,57,attendance,"출근, 출석",650,9,noun,basic
+5,58,qualify,~의 자격을 얻다,650,9,verb,intermediate
+5,59,release,"발표하다, 공개하다, 출시, 발매",650,9,noun,basic
+5,60,workshop,"워크숍, 연수",650,9,noun,basic
+5,61,invest,"투자하다, 운용하다",650,9,verb,basic
+5,62,respectively,"각각, 따로",650,9,adverb,intermediate
+5,63,introduce,"(신제품을) 발표하다, 소개하다",650,9,verb,basic
+5,64,beneficial,"유익한, 이로운",650,9,adjective,intermediate
+5,65,flexible,"융통성 있는, 유연한, 잘 구부러지는",650,9,adjective,basic
+5,66,extension,"연장, 연기, (전화의) 내선",650,9,noun,basic
+5,67,confirmation,"확인, 확증",650,5,other,intermediate
+5,68,survey,설문 조사,650,9,noun,intermediate
+5,69,initial,"처음의, 최초의",650,9,adjective,basic
+5,70,feedback,"의견, 반응",650,9,noun,basic
+5,71,coworker,"동료, 협력자",650,9,noun,basic
+5,72,terminate,"끝내다,종결시키다",650,5,other,intermediate
+5,73,attract,"끌다, 유인하다",650,9,verb,basic
+5,74,foundation,"토대,기초",650,5,other,intermediate
+5,75,prefer,"(다른 것보다)~을 더 좋아하다, 선호하다",650,9,verb,basic
+5,76,sufficiently,충분히,650,9,adverb,intermediate
+5,77,produce,생산하다,650,9,verb,basic
+5,78,satisfactory,만족스러운,650,5,other,intermediate
+5,79,seek,"구하다, 찾다",650,5,other,intermediate
+5,80,focus,"집중시키다, 집중하다",650,9,verb,basic
+6,1,majority,"대부분, 대다수",650,9,noun,basic
+6,2,observe,"관찰하다, 주시하다, (규칙 등을) 준수하다,
+지키다",650,9,verb,intermediate
+6,3,description,"(제품 등의) 설명, 해설",650,9,noun,basic
+6,4,ship,"(배나 다른 운송 수단으로)운송하다,수송하다
+선박, 배",650,9,verb,basic
+6,5,influence,"~에 영향을 주다, 영향",650,9,noun,basic
+6,6,entirely,완전히,650,9,adverb,basic
+6,7,estimate,"추정하다, 추산하다, 추정(치), 추산",650,9,verb,intermediate
+6,8,vendor,"노점상, 가판대, 판매업체",650,9,noun,intermediate
+6,9,prevent,"~을 막다, ~을 예방하다",650,9,verb,basic
+6,10,preferred,"선호되는, 우선의",650,9,adjective,basic
+6,11,replace,"~을 교체하다, 대체하다",650,9,verb,intermediate
+6,12,outgoing,"(장소를)출발하는, 떠나는, (지위를) 떠나는",650,9,adjective,basic
+6,13,board,"탑승하다, 이사회",650,9,verb,basic
+6,14,discussion,"토론, 토의",650,9,noun,basic
+6,15,measure,"대책, 조치, 수단, 측정하다",650,5,other,intermediate
+6,16,defective,결함이 있는,650,9,adjective,intermediate
+6,17,represent,~을 대표하다,650,5,other,intermediate
+6,18,charge,"요금, 청구 금액, 책임, 의무, ~을 청구하다
+(외상으로) 달아놓다",650,9,noun,basic
+6,19,equipment,"장비, 설비",650,9,noun,basic
+6,20,check in,"체크인하다, 숙박 수속을 하다",650,9,phrase,basic
+6,21,separate,"분리하다, 분류하다, 분리된, 따로 떨어진, 독립된",650,9,verb,basic
+6,22,analyst,분석가,650,9,noun,basic
+6,23,interact,"소통하다, 교류하다, 상호 작용을 하다",650,9,verb,basic
+6,24,fiscal,"회계의, 재정상의",650,9,adjective,intermediate
+6,25,advance,"진보, 전진",650,9,noun,intermediate
+6,26,payment,"지불(금액), 납입(금액)",650,5,other,intermediate
+6,27,accurately,정확하게,650,9,adverb,intermediate
+6,28,receipt,영수증,650,9,noun,basic
+6,29,prospect,"전망, 예상",650,9,noun,intermediate
+6,30,international,국제적인,650,9,adjective,basic
+6,31,temporarily,일시적으로,650,9,adverb,intermediate
+6,32,react,"반응하다, 대응하다",650,9,verb,intermediate
+6,33,accommodate,"(건물 등이)~을 수용하다, 숙박시키다,
+(조건·요구 등을) 만족시키다",650,9,verb,intermediate
+6,34,notice,"통지, 공고",650,9,noun,basic
+6,35,apologize,사과하다,650,9,verb,basic
+6,36,clientele,"(집합적)고객들, (변호사·건축가 등의)모든 의뢰인",650,5,other,intermediate
+6,37,inquire,"문의하다, 질문하다",650,9,verb,intermediate
+6,38,advantage,"이점, 강점",650,9,noun,basic
+6,39,locate,"(~의 위치를) 찾아내다, ~을 위치시키다",650,9,verb,basic
+6,40,consequence,결과,650,9,noun,intermediate
+6,41,capacity,"용량, 수용력, 역할",650,9,noun,intermediate
+6,42,compensate,보상하다,650,9,verb,intermediate
+6,43,incorrect,부정확한,650,9,adjective,basic
+6,44,conveniently,편리하게,650,9,adverb,intermediate
+6,45,component,"부품, (구성)요소",650,9,noun,intermediate
+6,46,incentive,"혜택, 장려금",650,9,noun,intermediate
+6,47,extensive,"광범위한, 넓은",650,9,adjective,intermediate
+6,48,director,"임원, 책임자",650,9,noun,basic
+6,49,bargain,"특가품, 흥정",650,5,other,intermediate
+6,50,refund,"환불하다, 환불, 환불금",650,9,noun,basic
+6,51,method,"방식, 방법",650,9,noun,basic
+6,52,retain,"유지하다, 보유하다",650,9,verb,intermediate
+6,53,completely,"전적으로, 완전히",650,9,adverb,basic
+6,54,respond,응답하다,650,9,verb,basic
+6,55,purchase,"구매하다, 구매",650,9,noun,basic
+6,56,make,"~을 하다, ~을 만들다",650,9,verb,basic
+6,57,manual,"설명서, 안내서",650,9,noun,basic
+6,58,research,"연구, 조사",650,9,noun,basic
+6,59,liable,"책임져야 할, ~하기 쉬운",650,9,adjective,advanced
+6,60,regular,"정기적인, 단골의",650,9,adjective,basic
+6,61,specify,명시하다,650,9,verb,intermediate
+6,62,distribute,"배포하다, 배급하다",650,9,verb,intermediate
+6,63,diverse,다양한,650,9,adjective,basic
+6,64,acclaim,"호평, 찬사",650,5,other,intermediate
+6,65,unable,~할 수 없는,650,5,other,intermediate
+6,66,exceed,~을 초과하다,650,9,verb,intermediate
+6,67,summarize,요약하다,650,9,verb,intermediate
+6,68,limit,"한계, 제한",650,9,noun,basic
+6,69,short,부족한,650,9,adjective,basic
+6,70,means,"방법, 수단",650,9,noun,intermediate
+6,71,affordability,감당할 수 있는 내용,650,5,other,intermediate
+6,72,substantial,상당한,650,9,adjective,intermediate
+6,73,strategy,전략,650,9,noun,intermediate
+6,74,success,"성공, 성과",650,9,noun,basic
+6,75,material,"재료, 물질",650,9,noun,basic
+6,76,adequate,"충분한, 적절한",650,9,adjective,intermediate
+6,77,frequently,"자주, 흔히",650,9,adverb,basic
+6,78,substantially,"크게, 상당히",650,9,adverb,intermediate
+6,79,stock,"재고, 주식",650,5,other,intermediate
+6,80,damaged,"손상된, 손해를 입은",650,9,adjective,basic
+7,1,give,(연설·수업 등을) 하다,650,9,verb,basic
+7,2,warehouse,"창고, 저장소",650,9,noun,intermediate
+7,3,early,"시간상 이른, 조기의",650,9,adverb,basic
+7,4,welcome,"반가운, 기꺼이 받아들여지는, 환영하다, 맞이하다",650,9,adjective,basic
+7,5,brochure,"(홍보용) 소책자, 브로셔",650,9,noun,basic
+7,6,simultaneously,동시에,650,9,adverb,intermediate
+7,7,ongoing,계속 진행 중인,650,9,adjective,basic
+7,8,announce,발표하다,650,9,verb,basic
+7,9,duty,"관세, 세금, 직무, 의무",650,9,noun,basic
+7,10,correspondence,"편지, 통신문",650,9,noun,intermediate
+7,11,power,"전력, 전기",650,9,noun,basic
+7,12,reimburse,"변제하다, 상환하다",650,9,verb,intermediate
+7,13,complaint,불평,650,9,noun,basic
+7,14,contribute,"기여하다, 공헌하다",650,9,verb,intermediate
+7,15,content,내용물,650,9,noun,basic
+7,16,notification,통지,650,9,noun,intermediate
+7,17,earn,"(금전 등을)벌다, (평판을) 받다, 얻다",650,9,verb,basic
+7,18,achieve,"달성하다, 성취하다",650,9,verb,basic
+7,19,compare,비교하다,650,9,verb,basic
+7,20,shift,"옮기다, 이동하다, 변화, 교대 근무",650,9,noun,basic
+7,21,vital,필수적인,650,9,adjective,intermediate
+7,22,usually,"보통, 일반적으로",650,9,adverb,basic
+7,23,calculate,"계산하다, 산출하다",650,9,verb,basic
+7,24,reveal,"밝히다, 누설하다",650,9,verb,intermediate
+7,25,carrier,"항공사, 수송기, 수송 회사",650,9,noun,basic
+7,26,reception,"환영회, (호텔·회사·병원 등의) 접수처",650,9,noun,basic
+7,27,exceptional,"뛰어난, 예외적인",650,9,adjective,intermediate
+7,28,rating,"등급, 평가",650,5,other,intermediate
+7,29,clearly,명확히,650,9,adverb,basic
+7,30,allocate,"할당하다, 배분하다",650,9,verb,intermediate
+7,31,satisfaction,만족,650,9,noun,basic
+7,32,select,"선발하다, 선택하다",650,9,verb,basic
+7,33,decline,"감소,하락,(초대·신청을)거절하다,감소하다,줄다",650,9,noun,intermediate
+7,34,invoice,송장,650,9,noun,intermediate
+7,35,passenger,승객,650,9,noun,basic
+7,36,acquire,"매입하다, 취득하다",650,9,verb,intermediate
+7,37,seating,"(집합적)좌석 설비, 좌석 배열",650,9,noun,basic
+7,38,finalize,"마무리 짓다, 완결하다",650,5,other,intermediate
+7,39,fragile,깨지기 쉬운,650,5,other,intermediate
+7,40,storage,"보관소, 저장소",650,9,noun,basic
+7,41,enroll,등록하다,650,9,verb,intermediate
+7,42,customs,세관,650,9,noun,basic
+7,43,easy,"쉬운, 용이한",650,9,adjective,basic
+7,44,market,시장,650,5,other,intermediate
+7,45,quote,"견적(액), 견적을 내다",650,5,other,intermediate
+7,46,encompass,"포함하다, 둘러싸다",650,5,other,intermediate
+7,47,after all,결국,650,8,phrase,basic
+7,48,grateful,"고마워하는, 감사하는",650,9,adjective,basic
+7,49,occupancy,(호텔 등의) 이용률,650,9,noun,advanced
+7,50,retail,소매,650,5,other,intermediate
+7,51,destination,목적지,650,9,noun,basic
+7,52,interested,"관련 있는, 관심이 있는",650,9,adjective,basic
+7,53,interrupt,"중단시키다, 방해하다",650,9,verb,intermediate
+7,54,enclosed,동봉된,650,9,adjective,intermediate
+7,55,discount,할인,650,9,noun,basic
+7,56,mandatory,의무적인,650,9,adjective,intermediate
+7,57,regard,"~을 -으로 간주하다, 여기다, 관심, 배려",650,9,verb,basic
+7,58,commodity,"상품, 산물",650,5,other,intermediate
+7,59,production,"생산량, 생산",650,9,noun,basic
+7,60,considerable,(정도나 양이) 상당한,650,9,adjective,intermediate
+7,61,presentation,발표,650,9,noun,basic
+7,62,accept,"수락하다, 승낙하다",650,9,verb,basic
+7,63,skilled,"숙련된, 노련한",650,9,adjective,basic
+7,64,amenity,편의 시설,650,9,noun,intermediate
+7,65,tentatively,"임시로, 시험적으로",650,9,adverb,intermediate
+7,66,projection,예상(치),650,9,noun,intermediate
+7,67,enhance,"(질 등을) 향상시키다, 높이다, 강화하다",650,9,verb,intermediate
+7,68,alternatively,"그렇지 않으면, 그 대신에",650,9,adverb,intermediate
+7,69,successfully,성공적으로,650,9,adverb,basic
+7,70,reschedule,일정을 바꾸다,650,9,verb,basic
+7,71,independent,"독립적인, 독자적인",650,9,adjective,basic
+7,72,commitment,"헌신, 전념",650,9,noun,intermediate
+7,73,informed,정보에 근거한,650,9,adjective,intermediate
+7,74,host,(대회 등을) 주최하다,650,9,verb,intermediate
+7,75,approve,"승인하다, 찬성하다",650,9,verb,intermediate
+7,76,determine,"알아내다, 결정하다, 확정하다",650,9,verb,intermediate
+7,77,existing,"기존의, 현행의",650,9,adjective,intermediate
+7,78,mention,언급하다,650,9,verb,basic
+7,79,tour,"(공장·시설 등의) 견학, 짧은 여행",650,9,noun,basic
+7,80,priority,"우선권, 우선 사항",650,9,noun,intermediate
+8,1,electronically,"컴퓨터 통신망으로, 컴퓨터로",650,8,adverb,intermediate
+8,2,emphasis,"강조, 중점",650,9,noun,intermediate
+8,3,transfer,"보내다, 전근시키다",650,9,verb,intermediate
+8,4,cash,현금으로 바꾸다,650,9,verb,basic
+8,5,head,"(~의 방향으로) 나아가다, 향하게 하다",650,9,verb,basic
+8,6,force,세력,650,9,noun,basic
+8,7,vary,"다르다, 다양하다",650,9,verb,basic
+8,8,consistent,"일치하는, 지속적인, 한결같은",650,9,adjective,intermediate
+8,9,adequately,적절히,650,5,other,intermediate
+8,10,outcome,결과,650,9,noun,basic
+8,11,drive,"(차 등을) 운전하다, 타고 가다, 조종하다",650,9,verb,basic
+8,12,arrange,"배열하다, 정돈하다",650,9,verb,basic
+8,13,suggestion,제안,650,9,noun,basic
+8,14,article,"물품, 물건, 기사, 논설",650,5,other,intermediate
+8,15,retire,"퇴직하다, 은퇴하다",650,9,verb,basic
+8,16,committee,위원회,650,9,noun,basic
+8,17,growth,"성장, 발전",650,9,noun,basic
+8,18,carton,(큰) 판지 상자,650,5,other,intermediate
+8,19,detailed,상세한,650,9,adjective,basic
+8,20,search,"찾기, 수색, 조사",650,9,verb,basic
+8,21,deficit,"적자, 부족액",650,9,noun,intermediate
+8,22,objective,"목표, 목적",650,9,noun,basic
+8,23,demanding,"요구가 많은, 힘든",650,8,adjective,intermediate
+8,24,permanently,"영구적으로, 불변으로",650,8,adverb,intermediate
+8,25,record,"기록, 경력, 이력, 기록하다",650,9,noun,basic
+8,26,drastically,"심하게, 과감하게, 철저하게",650,8,adverb,intermediate
+8,27,unexpected,예기치 않은,650,9,adjective,intermediate
+8,28,figure,"총액, 합계 수",650,9,noun,basic
+8,29,rapid,"빠른, 신속한",650,9,adjective,intermediate
+8,30,asset,자산,650,9,noun,intermediate
+8,31,improvement,향상,650,9,noun,basic
+8,32,press,"언론(계), 보도기관, 누르다",650,9,noun,basic
+8,33,employer,고용주,650,9,noun,basic
+8,34,diligent,성실한,650,8,adjective,intermediate
+8,35,result,"결과, (~의 결과로) 되다",650,9,noun,basic
+8,36,agenda,"의제, 의사일정",650,9,noun,intermediate
+8,37,propose,제안하다,650,9,verb,basic
+8,38,pass,"지나가다, 통과하다",650,9,verb,basic
+8,39,expansion,"확장, 팽창",650,9,noun,intermediate
+8,40,eliminate,제거하다,650,9,verb,intermediate
+8,41,expect,"예상하다, 기대하다",650,9,verb,basic
+8,42,temporary,임시의,650,9,adjective,intermediate
+8,43,evaluate,평가하다,650,9,verb,intermediate
+8,44,lower,(양·가격을) 줄이다,650,9,verb,basic
+8,45,preference,선호,650,9,noun,intermediate
+8,46,obtain,"획득하다, 얻다",650,9,verb,basic
+8,47,easily,쉽게,650,9,adverb,basic
+8,48,furnished,가구가 비치된,650,9,adjective,intermediate
+8,49,serve,"일하다, 근무하다",650,9,verb,basic
+8,50,reject,"거절하다, 거부하다",650,9,verb,intermediate
+8,51,in common,"공통으로, 공동으로",650,8,phrase,basic
+8,52,evident,"분명한, 명백한",650,9,adjective,intermediate
+8,53,overtime,"초과 근무, 야근",650,9,noun,intermediate
+8,54,recommendation,"추천 사항, 추천",650,9,noun,intermediate
+8,55,audit,"회계 감사, 심사",650,9,noun,intermediate
+8,56,reimbursement,"상환, 변제, 배상",650,9,noun,intermediate
+8,57,spacious,(공간이)넓은,650,9,adjective,basic
+8,58,appraisal,평가,650,9,noun,intermediate
+8,59,commute,통근하다,650,9,verb,basic
+8,60,salary,급여,650,9,noun,basic
+8,61,courier,급송 택배,650,5,other,intermediate
+8,62,constant,"지속적인, 끊임없이 계속하는",650,8,adjective,basic
+8,63,absolutely,"절대적으로, 완전히",650,8,adverb,basic
+8,64,attention,"주의, 경청",650,9,noun,basic
+8,65,purpose,"목적, 의도",650,9,noun,basic
+8,66,restore,"복구하다, 회복시키다",650,9,verb,intermediate
+8,67,award,"상, (상 등을)수여하다",650,9,noun,intermediate
+8,68,occur,"(일이) 발생하다, 생기다",650,9,verb,intermediate
+8,69,consistently,"항상, 일관되게",650,8,adverb,intermediate
+8,70,ensure,"확실하게 하다, 보장하다",650,5,other,intermediate
+8,71,shipment,"선적, (화물의) 발송, 수송품, 적하물",650,5,other,intermediate
+8,72,appoint,"임명하다, 지명하다",650,9,verb,intermediate
+8,73,secure,"확보하다, 얻어내다, 안전하게 지키다, 고정시키다",650,9,verb,basic
+8,74,particularly,특히,650,5,other,intermediate
+8,75,deliver,"배달하다, (연설을)하다",650,5,other,intermediate
+8,76,solely,전적으로,650,9,adverb,intermediate
+8,77,numerous,많은,650,9,adjective,basic
+8,78,negative,"부정적인, 비판적인",650,8,adjective,basic
+8,79,overdue,"(지불·반납 등의) 기한이 지난, 지불 기한이 넘은",650,9,adjective,basic
+8,80,percentage,"비율, 백분율",650,9,noun,basic
+9,1,pick up,"~을 찾다, (사람·물건 등을) 도중에서 태우다",650,5,other,intermediate
+9,2,careful,"조심스러운, 주의 깊은",650,5,other,intermediate
+9,3,combined,"결합된, 합동의",650,8,adjective,basic
+9,4,leadership,"리더십, 지도력",650,9,noun,intermediate
+9,5,withdrawal,(예금의)인출,650,9,noun,intermediate
+9,6,residence,"거주지, 주택",650,9,noun,basic
+9,7,accomplish,성취하다,650,8,verb,basic
+9,8,instantly,"즉각적으로, 즉시",650,8,adverb,intermediate
+9,9,distribution,"분배, 배급",650,9,noun,basic
+9,10,fare,교통 요금,650,9,noun,basic
+9,11,exclusively,"오로지, 독점적으로",650,8,adverb,intermediate
+9,12,spending,"소비, 지출",650,9,noun,basic
+9,13,remove,"해임하다, 제거하다",650,8,verb,basic
+9,14,instruct,"지시하다, 가르치다",650,8,verb,intermediate
+9,15,community,"지역 사회, 공동체",650,9,noun,basic
+9,16,advice,"조언, 충고",650,9,noun,basic
+9,17,property,재산,650,9,noun,basic
+9,18,demonstrate,"증명하다, (모형 〮실험 등으로) 설명하다",650,8,verb,intermediate
+9,19,fuel,연료,650,9,noun,basic
+9,20,convey,(용건을) 전달하다,650,8,verb,intermediate
+9,21,creative,"창조적인, 독창적인",650,8,adjective,basic
+9,22,efficient,"(기계·방법 등이) 효과적인, 능률적인",650,5,other,intermediate
+9,23,relation,관계,650,9,noun,basic
+9,24,executive,"경영의, 관리의",650,9,noun,intermediate
+9,25,pleasure,"즐거움, 기쁨, 영광",650,9,noun,basic
+9,26,necessarily,반드시,650,8,adverb,intermediate
+9,27,platform,승강장,650,9,noun,basic
+9,28,lease,임대차(계약),650,9,noun,basic
+9,29,investigation,조사,650,9,noun,intermediate
+9,30,anonymous,"익명의, 이름을 모르는",650,8,adjective,intermediate
+9,31,prohibit,금지하다,650,8,verb,intermediate
+9,32,package,"소포, 꾸러미",650,5,other,intermediate
+9,33,unstable,"불안정한, 변하기 쉬운",650,8,adjective,intermediate
+9,34,collect,"모으다, 수집하다",650,8,verb,basic
+9,35,refrain,"자제하다, 삼가다",650,8,verb,intermediate
+9,36,progress,"진행, 진척, 진전",650,9,noun,basic
+9,37,concerned,"염려하는, 걱정하는, 관련된",650,8,adjective,intermediate
+9,38,do one's utmost,전력을 다하다,650,7,phrase,intermediate
+9,39,implement,"실시하다, 실행하다",650,8,verb,intermediate
+9,40,compile,"(자료 등을) 편집하다, 모으다",650,8,verb,intermediate
+9,41,mutually,"서로, 상호간에",650,8,adverb,intermediate
+9,42,transaction,"거래, 업무",650,9,noun,intermediate
+9,43,entitle,자격을 주다,650,8,verb,intermediate
+9,44,reward,"~에 보답하다, 보상하다, 보상, 포상",650,9,noun,intermediate
+9,45,oversee,감독하다,650,8,verb,intermediate
+9,46,seasonal,"계절의, 계절적인",650,8,adjective,intermediate
+9,47,subsequent,"차후의, 그 다음의",650,8,adjective,advanced
+9,48,lack,"~이 없다,부족",650,8,verb,intermediate
+9,49,affordable,"(가격이) 알맞은, 감당할 수 있는",650,8,adjective,intermediate
+9,50,adjust,적응하다,650,8,verb,basic
+9,51,agency,"대행 회사, 대리점",650,5,other,intermediate
+9,52,summary,"요약, 개요",650,9,noun,basic
+9,53,congestion,"(교통의)체증, 혼잡",650,9,noun,intermediate
+9,54,costly,"비용이 많이 드는, 손실이 큰",650,8,adjective,intermediate
+9,55,consecutive,연속적인,650,8,adjective,intermediate
+9,56,appeal,"관심을 끌다, 매력적이다",650,8,verb,intermediate
+9,57,enclose,"~을 동봉하다,~을 둘러싸다, 에워싸다",650,5,other,intermediate
+9,58,economical,"경제적인, 절약되는",650,8,adjective,intermediate
+9,59,supervise,"감독하다, 지도하다",650,8,verb,intermediate
+9,60,transit,"교통, 수송",650,9,noun,intermediate
+9,61,shareholder,주주,650,9,noun,intermediate
+9,62,favorably,"호의적으로, 순조롭게",650,8,adverb,intermediate
+9,63,carry,"지니다, (물품을) 팔다, 가게에 놓다",650,5,other,intermediate
+9,64,formerly,이전에,650,5,other,intermediate
+9,65,informative,"유익한, 정보를 주는",650,8,adjective,basic
+9,66,participation,"참여, 참가, 가입",650,9,noun,basic
+9,67,attach,"붙이다, 접착하다, 첨부하다",650,5,other,intermediate
+9,68,monitor,"화면, 모니터, 감독하다, 감시하다, 검토하다",650,8,verb,intermediate
+9,69,enforce,"(법률을) 시행하다, 집행하다",650,8,verb,intermediate
+9,70,closure,폐쇄,650,9,noun,basic
+9,71,carefully,"주의 깊게, 신중히",650,8,adverb,basic
+9,72,undertake,(일을) 떠맡다,650,8,verb,intermediate
+9,73,steadily,"착실하게, 꾸준히",650,8,adverb,intermediate
+9,74,enable,(무엇을) 가능하게 하다,650,8,verb,basic
+9,75,draw,"끌다, 끌어당기다",650,8,verb,basic
+9,76,concentrate,"집중하다, 집중시키다",650,8,verb,basic
+9,77,study,연구,650,9,noun,basic
+9,78,identification,"신분증, 신분 증명서",650,9,noun,intermediate
+9,79,stagnant,"침체된, 불경기의",650,8,adjective,intermediate
+9,80,investment,"투자, 투자금",650,9,noun,basic
+10,1,adopt,채택하다,650,8,verb,intermediate
+10,2,examination,"진찰, 검사",650,9,noun,basic
+10,3,clarify,명확하게 하다,650,8,verb,intermediate
+10,4,decorate,장식하다,650,8,verb,intermediate
+10,5,reflect,"반영하다, 나타내다",650,8,verb,intermediate
+10,6,forecast,(날씨의) 예보,650,9,noun,intermediate
+10,7,impose,(세금 등을) 부과하다,650,8,verb,intermediate
+10,8,soar,"(물가 등이)폭등하다, 높이 치솟다",650,8,verb,intermediate
+10,9,cater,(연회 등의)음식물을 공급하다,650,8,verb,intermediate
+10,10,sample,"견본,샘플,표본,시식하다,(견본으로 질을) 시험하다",650,8,noun,basic
+10,11,legislation,"법률, 법규",650,8,noun,intermediate
+10,12,accompany,"동행하다, 동반하다",650,8,verb,intermediate
+10,13,damage,"피해, 손해, (물건을) 손상시키다",650,9,noun,basic
+10,14,confidence,"확신,자신;신임",650,8,noun,intermediate
+10,15,mark,"점수, 평점, 표시, 기념하다, 축하하다",650,9,noun,basic
+10,16,inspect,"~을 검사하다, 조사하다",650,8,verb,intermediate
+10,17,fill,"~을 채우다, (주문대로) 이행하다",650,8,verb,basic
+10,18,recovery,"회복, 쾌유",650,9,noun,basic
+10,19,ability,능력,650,9,noun,basic
+10,20,certification,"증명서,증명",650,8,noun,intermediate
+10,21,payroll,"임금 대장, 급료 명부",650,8,noun,intermediate
+10,22,duration,"지속 기간, 지속",650,9,noun,intermediate
+10,23,emission,"배기가스, 방출",650,9,noun,intermediate
+10,24,lend,빌려주다,650,8,verb,basic
+10,25,thrive,"번영하다, 성공하다",650,8,verb,intermediate
+10,26,subscribe,구독하다,650,8,verb,basic
+10,27,disclose,"공개하다, 드러내다",650,8,verb,intermediate
+10,28,refuse,거절하다,650,8,verb,basic
+10,29,obligation,"의무, 책임",650,8,noun,intermediate
+10,30,checkup,건강 진단,650,9,noun,basic
+10,31,finally,"결국, 마침내",650,5,other,intermediate
+10,32,assure,"~에게 보장하다, ~을 안심시키다, 장담하다",650,8,verb,intermediate
+10,33,confuse,혼란시키다,650,8,verb,basic
+10,34,anniversary,기념일,650,8,noun,intermediate
+10,35,compulsory,의무적인,650,5,other,intermediate
+10,36,intention,"의지, 의향",650,8,noun,intermediate
+10,37,specific,"구체적인, 명확한",650,8,adjective,intermediate
+10,38,spare,"아끼다, 할애하다, 예배의, 여분의",650,8,adjective,basic
+10,39,combine,결합시키다,650,8,verb,basic
+10,40,appropriately,적절하게,650,8,adverb,intermediate
+10,41,impressive,"굉장한, 인상적인",650,8,adjective,intermediate
+10,42,achievement,"성취,달성",650,8,noun,intermediate
+10,43,cooperate,"협력하다, 협동하다",650,8,verb,intermediate
+10,44,contractor,"계약자, 도급업자",650,9,noun,intermediate
+10,45,upgrade,"업그레이드,개량형,업그레이드하다,개선하다",650,8,verb,basic
+10,46,proficiency,"숙달, 능숙",650,8,noun,intermediate
+10,47,substitute,"대용품, 대신하다",650,8,verb,intermediate
+10,48,expertise,"전문 지식, 전문 기술",650,8,noun,intermediate
+10,49,duplicate,사본,650,8,noun,intermediate
+10,50,missing,"분실된, 없어진",650,8,adjective,basic
+10,51,comfortable,편안한,650,8,adjective,basic
+10,52,densely,"빽빽히, 밀집하여",650,5,other,intermediate
+10,53,markedly,"현저하게, 눈에 띄게",650,8,adverb,intermediate
+10,54,typically,"보통, 일반적으로",650,8,adverb,basic
+10,55,maintain,"유지하다, 관리하다",650,5,other,intermediate
+10,56,aspect,"관점, 국면",650,8,noun,intermediate
+10,57,seriously,진지하게,650,8,adverb,basic
+10,58,commercial,"상업의, 상업적인, 광고",650,8,adjective,intermediate
+10,59,develop,개발하다,650,5,other,intermediate
+10,60,directory,주소록,650,8,noun,intermediate
+10,61,personnel,"(집합적)직원, 인원, 인사과",650,8,noun,intermediate
+10,62,dramatic,"멋진, 극적인, 급격한",650,8,adjective,intermediate
+10,63,slightly,약간,650,8,adverb,basic
+10,64,steady,"꾸준한, 안정된",650,8,adjective,intermediate
+10,65,complicated,복잡한,650,8,adjective,intermediate
+10,66,exhibition,전시회,650,8,noun,intermediate
+10,67,renewal,재개발,650,5,other,intermediate
+10,68,outline,"개요, 설명하다, 약술하다",650,8,noun,intermediate
+10,69,comparable,"필적하는, 비교되는",650,8,adjective,intermediate
+10,70,interfere,"방해하다, 해치다",650,5,other,intermediate
+10,71,frequent,"빈번한, 잦은",650,8,adjective,basic
+10,72,experienced,"경험이 있는, 노련한, 능숙한",650,8,adjective,basic
+10,73,tailored,"맞춤의, 주문에 따라 맞춘",650,8,adjective,intermediate
+10,74,politely,"공손하게, 예의바르게",650,8,adverb,basic
+10,75,supervision,감독,650,8,noun,intermediate
+10,76,considerably,"상당히, 많이",650,8,adverb,intermediate
+10,77,prepare,"준비하다, 채비를 갖추다",650,5,other,intermediate
+10,78,district,"지역, 지구",650,5,other,intermediate
+10,79,capable,"~을 할 수 있는, ~할 능력이 있는",650,8,adjective,intermediate
+10,80,move,"옮기다, 움직이다, 조치, 수단, 이동, 이사",650,8,verb,basic
+11,1,processing,"가공, 처리",650,8,noun,basic
+11,2,waive,"(규칙 등을) 적용하지 않다, 
+(권리·청구 등을) 포기하다",650,8,verb,intermediate
+11,3,relocate,(공장 등을) 이전하다,650,8,verb,intermediate
+11,4,brief,"~에게 간단히 설명하다, 브리핑 하다",650,8,verb,intermediate
+11,5,relocation,"이전, 재배치",650,5,other,intermediate
+11,6,indication,"징후, 조짐",650,8,noun,intermediate
+11,7,regrettably,유감스럽게도,650,8,adverb,intermediate
+11,8,boom,"붐, 호황",650,8,noun,intermediate
+11,9,actually,"실제로, 사실은",650,5,other,intermediate
+11,10,instruction,"설명, 지시",650,8,noun,basic
+11,11,appearance,"외관, 외모",650,8,noun,intermediate
+11,12,patent,"특허, 특허권, 특허품",650,8,noun,intermediate
+11,13,narrowly,"주의 깊게, 좁게, 가까스로, 간신히, 겨우",650,8,adverb,intermediate
+11,14,exempt,"면제된, ~이 없는",650,8,adjective,intermediate
+11,15,consumption,"소비(량), 소모",650,8,noun,intermediate
+11,16,unanimously,만장일치로,650,8,adverb,intermediate
+11,17,delinquent,"(세금 등이) 연체된, 미불의",650,8,adjective,intermediate
+11,18,heavily,"몹시, 심하게",650,8,adverb,basic
+11,19,device,장치,650,8,noun,basic
+11,20,securely,"(매듭 등이) 단단하게, 튼튼하게",650,8,adverb,intermediate
+11,21,crowded,"붐비는, 복잡한",650,8,adjective,basic
+11,22,enlarge,"확장하다, 확대하다",650,5,other,intermediate
+11,23,persuasive,설득력 있는,650,8,adjective,intermediate
+11,24,renowned,"저명한, 유명한, 명성이 있는",650,8,adjective,intermediate
+11,25,clearance,"정리, 없애기, 허가",650,8,noun,intermediate
+11,26,dedicated,"(목표 등에) 전념하는, 헌신적인",650,8,adjective,intermediate
+11,27,precaution,"예방 조치, 예방책",650,8,noun,intermediate
+11,28,adjacent,인접한,650,5,other,intermediate
+11,29,install,"설치하다, 장치하다",650,5,other,intermediate
+11,30,expiration,"(기간·임기 등의) 만료, 만기",650,8,noun,intermediate
+11,31,reverse,"뒤의, 반대의",650,8,adjective,intermediate
+11,32,constructive,건설적인,650,8,adjective,intermediate
+11,33,inexperienced,"경험 없는, 미숙한",650,8,adjective,intermediate
+11,34,architect,건축가,650,5,other,intermediate
+11,35,tentative,"임시적인, 잠정적인",650,8,adjective,intermediate
+11,36,permanent,영구적인,650,5,other,intermediate
+11,37,totally,"완전히, 전적으로",650,5,other,intermediate
+11,38,indicator,"지표, 지수",650,8,noun,intermediate
+11,39,incur,"(손실을)입다, (빚을)지다",650,8,verb,advanced
+11,40,presently,현재,650,8,adverb,intermediate
+11,41,emphasize,강조하다,650,8,verb,intermediate
+11,42,suppose,"생각하다, 추측하다",650,5,other,intermediate
+11,43,inaccurate,부정확한,650,8,adjective,intermediate
+11,44,competent,"유능한, 능숙한",650,8,adjective,intermediate
+11,45,active,"적극적인, 활발한",650,8,adjective,basic
+11,46,curtail,"~을 줄이다, 삭감하다",650,8,verb,intermediate
+11,47,tend,"~하는 경향이 있다, ~하기 쉽다",650,8,verb,basic
+11,48,designated,지정된,650,8,adjective,intermediate
+11,49,contributor,"기고가, 공헌자",650,8,noun,intermediate
+11,50,persist,"(집요하게) 계속하다, 계속되다, 지속되다",650,8,verb,intermediate
+11,51,partially,"부분적으로, 일부분은",650,8,adverb,intermediate
+11,52,demonstration,"설명, 드러냄, 시연",650,8,noun,intermediate
+11,53,specification,"명세서, 설명서, 사양",650,8,noun,intermediate
+11,54,collection,"소장품, 수집물, 징수, 수금",650,8,noun,intermediate
+11,55,deduct,"공제하다, 빼다",650,8,verb,intermediate
+11,56,convince,"납득시키다, 확신시키다",650,8,verb,intermediate
+11,57,arise,"(문제 등이) 발생하다, 일어나다",650,8,verb,intermediate
+11,58,absence,"부재, 결근, 결석",650,8,noun,intermediate
+11,59,comparison,비교,650,8,noun,intermediate
+11,60,anticipate,"예상하다, 기대하다",650,8,verb,intermediate
+11,61,emerge,"부상하다, 나타나다",650,8,verb,intermediate
+11,62,subscription,(정기 발행물의)구독,650,8,noun,intermediate
+11,63,ease,"완화시키다, 쉬움, 용이함",650,8,verb,intermediate
+11,64,warranty,"(품질 등의) 보증, 보증서",650,8,noun,intermediate
+11,65,amend,수정하다,650,8,verb,intermediate
+11,66,installment,할부,650,8,noun,intermediate
+11,67,undergo,"겪다, 거치다, 경험하다",650,8,verb,intermediate
+11,68,respondent,응답자,650,8,noun,intermediate
+11,69,merge,"합병하다, 병합하다",650,8,verb,intermediate
+11,70,expert,"전문가, 전문가의, 전문적인",650,8,noun,basic
+11,71,encourage,"장려하다, 북돋아주다",650,8,verb,intermediate
+11,72,comment,"논평하다, 언급하다",650,8,verb,basic
+11,73,implication,"영향, 밀접한 관계",650,8,noun,intermediate
+11,74,initiate,"(사업 등을) 착수하다, 시작하다",650,8,verb,intermediate
+11,75,prosperity,번영,650,8,noun,intermediate
+11,76,subscriber,"가입자, 구독자",650,8,noun,intermediate
+11,77,evidence,증거,650,8,noun,basic
+11,78,surpass,"~을 능가하다, 넘어서다",650,8,verb,intermediate
+11,79,edition,(간행물의) 판,650,8,noun,intermediate
+11,80,predict,예측하다,650,8,verb,intermediate
+12,1,coordination,조정,650,8,noun,intermediate
+12,2,face,"표면, 외관, (문제 등에) 직면하다, 향하다, 마주보다",650,7,verb,basic
+12,3,proximity,"가까움, 근접함",650,8,noun,intermediate
+12,4,convert,"전환하다, 변환하다",650,8,verb,intermediate
+12,5,delegate,"(권한 등을) 위임하다, 대표",650,7,verb,intermediate
+12,6,emergency,"비상시, 비상사태",650,8,noun,basic
+12,7,bulk,대량의,650,8,noun,intermediate
+12,8,designate,"지명하다, 지정하다",650,8,verb,intermediate
+12,9,refreshments,"다과, 가벼운 음식물",650,8,noun,intermediate
+12,10,matter,"중요하다, 문제되다, 문제, 일",650,7,verb,basic
+12,11,congratulate,축하하다,650,8,verb,intermediate
+12,12,publicize,"공표하다, 광고하다, 선전하다",650,7,verb,intermediate
+12,13,suitcase,여행 가방,650,8,noun,basic
+12,14,baggage,수화물,650,8,noun,basic
+12,15,selection,"선택된 것, 정선품",650,8,noun,basic
+12,16,belongings,"소지품, 소유물",650,8,noun,intermediate
+12,17,reorganize,"재편성하다, 재조직하다",650,8,verb,intermediate
+12,18,disturb,방해하다,650,8,verb,basic
+12,19,detect,"간파하다, 탐지하다",650,7,verb,intermediate
+12,20,atmosphere,"분위기, 환경",650,8,noun,intermediate
+12,21,sponsor,"후원하다, 후원자",650,8,verb,basic
+12,22,like,좋아하다,650,7,verb,basic
+12,23,caution,"주의, 조심",650,8,noun,intermediate
+12,24,attraction,관광 명소,650,8,noun,basic
+12,25,double,두 배로 만들다,650,8,verb,basic
+12,26,speak,이야기하다,650,7,verb,basic
+12,27,sequence,"순서, 차례",650,8,noun,intermediate
+12,28,container,"용기, 그릇",650,8,noun,basic
+12,29,acquaint,"~에게 숙지시키다, 잘 알게 하다",650,7,verb,intermediate
+12,30,related,관련된,650,5,other,intermediate
+12,31,aggressively,적극적으로,650,7,adverb,intermediate
+12,32,dismiss,"해임하다, 해고하다",650,8,verb,intermediate
+12,33,lax,"(행동 등이)느슨한, 규율에 못 미치는",650,7,adjective,intermediate
+12,34,live,(라디오 · TV가) 생방송인,650,7,adjective,basic
+12,35,attitude,"태도, 마음가짐",650,8,noun,basic
+12,36,envelope,봉투,650,8,noun,basic
+12,37,ingredient,"재료, 성분",650,8,noun,intermediate
+12,38,obstruct,"(전망 등을) 가리다, 차단하다; (도로 등을) 막다",650,8,verb,intermediate
+12,39,prescribe,(약을) 처방하다,650,8,verb,intermediate
+12,40,conserve,"보존하다, 유지하다",650,8,verb,intermediate
+12,41,reaction,반응,650,5,other,intermediate
+12,42,capability,"능력, 역량",650,8,noun,intermediate
+12,43,chemical,화학 제품,650,8,noun,basic
+12,44,respectful,"정중한, 존중하는",650,7,adjective,basic
+12,45,consult,"상의하다, 상담하다",650,8,verb,basic
+12,46,transform,"바꾸다, 변모시키다",650,7,verb,intermediate
+12,47,divert,"우회시키다, 다른 곳으로 돌리다",650,8,verb,intermediate
+12,48,formal,격식을 갖춘,650,7,adjective,basic
+12,49,severely,"엄격하게, 심하게",650,7,adverb,intermediate
+12,50,beverage,음료,650,8,noun,intermediate
+12,51,unoccupied,"(집 등이) 비어있는, 사람이 살지 않는",650,8,adjective,intermediate
+12,52,prominently,"눈에 잘 띄게, 두드러지게",650,7,adverb,intermediate
+12,53,evaluation,평가,650,8,noun,intermediate
+12,54,lucrative,"수익성 있는, 돈벌이가 되는",650,8,adjective,intermediate
+12,55,excessive,"지나친, 과도한",650,8,adjective,intermediate
+12,56,dietary,"식이 요법의, 규정식의",650,5,other,intermediate
+12,57,edge,"우위, 유리함, 가장자리, 끝",650,8,noun,intermediate
+12,58,consist,"구성되다, 이루어지다",650,5,other,intermediate
+12,59,utility,"공공시설, 공공요금",650,5,other,intermediate
+12,60,simple,단순한,650,5,other,intermediate
+12,61,lecture,"강의, 강연",650,8,noun,basic
+12,62,expenditure,"지출, 비용",650,8,noun,intermediate
+12,63,ideal,이상적인,650,8,adjective,intermediate
+12,64,proceeds,수익금,650,8,noun,intermediate
+12,65,marginal,"약간의, 주변의",650,7,adjective,intermediate
+12,66,impressed,"인상 깊게 생각하는, 감명을 받은",650,7,adjective,intermediate
+12,67,sophisticated,"(기계가)정교한, 복잡한, 세련된",650,7,adjective,intermediate
+12,68,dental,치과의,650,5,other,intermediate
+12,69,consensus,"여론, 일치된 의견",650,8,noun,intermediate
+12,70,phase,단계,650,8,noun,intermediate
+12,71,skillfully,"능숙하게, 솜씨있게",650,7,adverb,intermediate
+12,72,tightly,"단단히, 꽉",650,7,adverb,basic
+12,73,cautious,"조심하는, 신중한",650,8,adjective,intermediate
+12,74,transmit,전염시키다,650,5,other,intermediate
+12,75,continually,계속해서,650,8,adverb,intermediate
+12,76,advisable,"바람직한, 합당한",650,7,adjective,intermediate
+12,77,measurement,"측정, 측량, 치수",650,8,noun,intermediate
+12,78,accustomed,익숙한,650,7,adjective,intermediate
+12,79,periodically,주기적으로,650,5,other,intermediate
+12,80,realistically,현실적으로,650,7,adverb,intermediate
+13,1,revolutionary,혁명적인,650,7,adjective,intermediate
+13,2,recycling,재활용,650,8,noun,intermediate
+13,3,relieve,완화시키다,650,5,other,intermediate
+13,4,accomplished,"숙련된, 노련한",650,7,adjective,advanced
+13,5,physician,내과 의사,650,8,noun,intermediate
+13,6,confident,"확신하는, 자신 있는",650,7,adjective,intermediate
+13,7,brisk,"활발한, 호황의",650,7,adjective,intermediate
+13,8,reluctantly,"마지못해, 꺼려하여",650,6,adverb,intermediate
+13,9,premium,보험료,650,5,other,intermediate
+13,10,reliant,"의존하는, 의지하는",650,7,adjective,intermediate
+13,11,health,"건강, (사회·기관의) 번영, 안녕",650,5,other,intermediate
+13,12,disaster,재난,650,8,noun,basic
+13,13,deficient,"부족한, 불충분한",650,7,adjective,advanced
+13,14,deprivation,"박탈, 상실",650,5,other,intermediate
+13,15,exposure,노출,650,5,other,intermediate
+13,16,accidentally,"뜻하지 않게, 우연히",650,6,adverb,basic
+13,17,contemporary,"동시대의, 현대의, 당대의",650,7,adjective,intermediate
+13,18,banquet,"연회, 만찬",650,7,noun,intermediate
+13,19,combination,"결합, 연합",650,5,other,intermediate
+13,20,manuscript,원고,650,7,noun,intermediate
+13,21,authentic,"진정한, 진짜의, 진품의",650,7,adjective,intermediate
+13,22,donation,"기증, 기부",650,7,noun,intermediate
+13,23,courteous,예의 바른,650,7,adjective,intermediate
+13,24,customarily,"관례상, 습관적으로",650,6,adverb,intermediate
+13,25,attentively,"주의 깊게, 조심스럽게",650,6,adverb,intermediate
+13,26,conscious,"알고 있는, 자각하고 있는",650,5,other,intermediate
+13,27,impede,"저해하다, 방해하다",650,7,verb,advanced
+13,28,evenly,"고르게, 균등하게",650,6,adverb,intermediate
+13,29,leak,"누출, 누출량, (물·빛이) 새게 하다",650,8,noun,basic
+13,30,alter,"(성질·형상을) 고치다, 바꾸다",650,7,verb,intermediate
+13,31,remarkable,"현저한, 두드러진",650,7,adjective,intermediate
+13,32,foresee,"예견하다, 예감하다",650,7,verb,intermediate
+13,33,diagnosis,진단,650,8,noun,intermediate
+13,34,assert,"단언하다, 주장하다",650,7,verb,intermediate
+13,35,contrary,반대,650,7,noun,intermediate
+13,36,illustrate,"분명히 보여 주다, 설명하다",650,7,verb,intermediate
+13,37,intersection,"교차로, 교차 지점",650,8,noun,intermediate
+13,38,oblige,"어쩔 수 없이 ~하게 하다, ~에게 강요하다",650,7,verb,intermediate
+13,39,consent,"동의, 허락",650,8,noun,intermediate
+13,40,envision,"(장래의 일 등을) 계획하다, 상상하다",650,7,verb,intermediate
+13,41,pharmaceutical,"제약의, 약학의",650,5,other,intermediate
+13,42,redeemable,"(현금·상품과)교환할 수 있는, 환급할 수 있는",650,7,adjective,intermediate
+13,43,economize,"절약하다, 아끼다",650,7,verb,intermediate
+13,44,apparently,"보기에 ~한 듯한, 외관상으로는",650,6,adverb,intermediate
+13,45,fund-raising,모금,650,7,noun,intermediate
+13,46,insert,삽입하다,650,7,verb,intermediate
+13,47,devise,"고안하다, 발명하다",650,7,verb,intermediate
+13,48,inherently,본질적으로,650,7,adverb,intermediate
+13,49,reliability,"신뢰도, 믿음직함",650,8,noun,intermediate
+13,50,bonus,"상여금, 보너스",650,8,noun,basic
+13,51,outlook,전망,650,8,noun,intermediate
+13,52,detach,"분리하다, 떼다",650,7,verb,intermediate
+13,53,applaud,"~에게 박수를 보내다, 칭찬하다",650,7,verb,intermediate
+13,54,declare,(세관에서) 신고하다,650,7,verb,intermediate
+13,55,automate,자동화하다,650,7,verb,intermediate
+13,56,honor,"존경, 명예",650,8,noun,basic
+13,57,appreciation,감사,650,8,noun,intermediate
+13,58,malfunction,"오작동, 기능 불량",650,8,noun,intermediate
+13,59,assemble,"(부품·기계 등을)조립하다, (사람을)모으다",650,7,verb,intermediate
+13,60,renovate,"(낡은 건물·가구 등을)개조하다, 수리하다, 
+보수하다",650,7,verb,intermediate
+13,61,detour,우회,650,8,noun,basic
+13,62,trust,"신뢰, 신임, 믿다, 신뢰하다",650,8,noun,basic
+13,63,nomination,"임명, 지명",650,8,noun,intermediate
+13,64,waste,"쓰레기, 폐기물",650,8,noun,basic
+13,65,portfolio,"포트폴리오, 투자 자산 구성",650,8,noun,intermediate
+13,66,trim,"(깎아) 다듬다, 없애다, 삭감하다",650,7,verb,intermediate
+13,67,dissatisfaction,"불만, 불평",650,8,noun,intermediate
+13,68,stability,"안정, 안정성",650,8,noun,intermediate
+13,69,superb,"최고의, 뛰어난",650,7,adjective,intermediate
+13,70,certificate,"증명서, 증서",650,8,noun,intermediate
+13,71,disregard,"소홀히 하다, 무시하다",650,7,verb,intermediate
+13,72,browse,"훑어보다, 둘러보다",650,7,verb,intermediate
+13,73,explore,"조사하다, 탐구하다",650,7,verb,intermediate
+13,74,drastic,"과감한, 급격한",650,7,adjective,intermediate
+13,75,whole,"전체의, 온전한",650,7,adjective,basic
+13,76,disappoint,실망시키다,650,7,verb,basic
+13,77,accomplishment,"성과, 업적",650,8,noun,intermediate
+13,78,misplace,"잃어버리다, 위치를 잘못 잡다",650,7,verb,intermediate
+13,79,resignation,"사임, 사직, 사직서",650,8,noun,intermediate
+13,80,coverage,"(보험의) 보상 범위, (신문 등의) 보도, 취재 범위",650,5,other,intermediate
+14,1,hospitality,"환대, 친절",650,7,noun,intermediate
+14,2,itinerary,여행 일정,650,7,noun,intermediate
+14,3,convene,"(회원 등이) 모이다, (회의가) 개최되다",650,7,verb,advanced
+14,4,union,노동조합,650,7,noun,intermediate
+14,5,defer,"연기하다, 미루다",650,7,verb,intermediate
+14,6,object,반대하다,650,7,verb,intermediate
+14,7,chef,주방장,650,7,noun,basic
+14,8,differ,"의견을 달리하다, 다르다",650,7,verb,intermediate
+14,9,assumption,"추정, 산정",650,7,noun,intermediate
+14,10,inspector,"조사관, 감독관",650,7,noun,intermediate
+14,11,deserve,"~할 만하다, ~할 가치가 있다",650,6,verb,intermediate
+14,12,gap,격차,650,7,noun,basic
+14,13,praise,칭찬,650,7,noun,intermediate
+14,14,wane,"감소, 쇠퇴",650,6,verb,advanced
+14,15,abstract,"추상적인, 막연한",650,6,adjective,intermediate
+14,16,encouragement,격려,650,7,noun,intermediate
+14,17,tow,(차를) 견인하다,650,7,verb,intermediate
+14,18,apprehensive,"걱정하는,염려하는",650,6,adjective,advanced
+14,19,insurance,보험,650,5,other,intermediate
+14,20,distract,"(주의를) 산만하게 하다, 빗기게 하다",650,7,verb,intermediate
+14,21,intensify,"강화하다, 증대하다, 강렬하게 만들다",650,6,verb,intermediate
+14,22,inflation,"물가 상승, 인플레이션, 통화 팽창",650,7,noun,intermediate
+14,23,flavor,"맛, 풍미",650,7,noun,basic
+14,24,fine,벌금,650,7,noun,intermediate
+14,25,complication,복잡한 문제,650,7,noun,intermediate
+14,26,induce,유발하다,650,5,other,intermediate
+14,27,adjourn,(회의 등을) 휴회하다,650,7,verb,advanced
+14,28,abolish,(제도 및 법률 등을) 폐지하다,650,6,verb,intermediate
+14,29,dealer,"판매업자, 상인",650,7,noun,basic
+14,30,freshness,신선함,650,7,noun,intermediate
+14,31,dedication,헌신,650,7,noun,intermediate
+14,32,gratitude,"고마움, 감사",650,7,noun,intermediate
+14,33,advocate,옹호자,650,7,noun,intermediate
+14,34,acquisition,"인수, 구입한 것",650,7,noun,intermediate
+14,35,entry,"(경기 등의) 참가자, 출품물",650,7,noun,intermediate
+14,36,discharge,방출하다,650,7,verb,intermediate
+14,37,alleviate,완화하다,650,7,verb,intermediate
+14,38,function,"행사, 연회",650,7,noun,intermediate
+14,39,contaminate,오염시키다,650,7,verb,intermediate
+14,40,abandon,"그만두다, 버리다",650,7,verb,intermediate
+14,41,depression,불황,650,7,noun,intermediate
+14,42,labor,"노동, 일하다, 노동하다",650,7,noun,basic
+14,43,yield,"(이윤을) 가져오다, 산출하다",650,7,verb,intermediate
+14,44,radically,"완전히, 철저히",650,6,adverb,intermediate
+14,45,treatment,"대우, 처우",650,7,noun,intermediate
+14,46,preserve,"보존하다, 보호하다",650,7,verb,intermediate
+14,47,commence,시작되다,650,7,verb,intermediate
+14,48,divide,"분배하다, 나누다",650,6,verb,basic
+14,49,cuisine,(독특한)요리,650,7,noun,intermediate
+14,50,intensively,집중적으로,650,6,adverb,intermediate
+14,51,exclusion,"제외, 배제",650,7,noun,intermediate
+14,52,deplete,고갈시키다,650,7,verb,intermediate
+14,53,mounting,"증가하는, 오르는",650,6,adjective,intermediate
+14,54,understanding,이해심 있는,650,7,adjective,basic
+14,55,dense,"빽빽한, 밀집한",650,7,adjective,intermediate
+14,56,prominent,"유명한, 두드러진",650,7,adjective,intermediate
+14,57,attentive,"주의 깊은, 세심한",650,7,adjective,intermediate
+14,58,dispose,"처분하다, 처리하다",650,7,verb,intermediate
+14,59,foreseeable,예견할 수 있는,650,7,adjective,intermediate
+14,60,deliberation,"토의, 심의",650,7,noun,intermediate
+14,61,nutrition,영양,650,5,other,intermediate
+14,62,incidental,부수적인,650,7,adjective,intermediate
+14,63,inaccessible,"접근이 불가능한, 이용이 불가능한",650,7,adjective,intermediate
+14,64,insight,"식견, 통찰력",650,7,noun,intermediate
+14,65,unanimous,"만장일치의, 동의하는",650,7,adjective,advanced
+14,66,coincidentally,"우연히, 일치하게, 동시 발생적으로",650,6,adverb,intermediate
+14,67,prevention,예방,650,5,other,intermediate
+14,68,disturbing,"충격적인, 불안감을 주는, 방해하는",650,6,adjective,intermediate
+14,69,prevalent,"유행하고 있는, 널리 퍼진",650,7,adjective,intermediate
+14,70,probable,"개연성이 높은, 유망한",650,6,adjective,intermediate
+14,71,equip,"갖추다, 설비하다",650,7,verb,intermediate
+15,1,indulge,"빠지다, 탐닉하다",650,4,verb,advanced
+15,2,purify,정화시키다,650,6,verb,intermediate
+15,3,speculation,추측,650,7,noun,intermediate
+15,4,pleasing,"즐거운, 기분 좋은, 만족스러운",650,6,adjective,intermediate
+15,5,desire,"욕구, 갈망, 원하다, 바라다",650,6,noun,intermediate
+15,6,stir,"휘젓다, 뒤섞다",650,5,verb,intermediate
+15,7,cleanliness,청결,650,7,noun,intermediate
+15,8,attribute,(원인을)~의 덕분으로 돌리다,650,6,verb,intermediate
+15,9,inflict,"(고통·피해를)입히다, 가하다",650,6,verb,advanced
+15,10,infuriate,"화나게 하다, 격분시키다",650,3,verb,advanced
+15,11,sip,"음미하며, 마시다, 홀짝거리다",650,5,verb,intermediate
+15,12,procrastinate,"미루다, 꾸물거리다",650,4,verb,advanced
+15,13,antique,골동품,650,6,noun,intermediate
+15,14,collision,충돌,650,6,noun,intermediate
+15,15,argumentative,"논쟁적인, 논쟁을 좋아하는",650,5,adjective,intermediate
+15,16,exotic,"이국적인, 매혹적인",650,6,adjective,intermediate
+15,17,alumni,"동창생들, 졸업생들",650,6,noun,intermediate
+15,18,depreciation,"가치 하락, 화폐의 구매력 저하",650,6,noun,advanced
+15,19,fatigue,피로,650,7,noun,intermediate
+15,20,bond,채권,650,7,noun,intermediate
+15,21,entrepreneur,사업가,650,7,noun,intermediate
+15,22,shorten,"단축하다, 짧게 하다",650,6,verb,basic
+15,23,fortunate,운 좋은,650,6,adjective,basic
+15,24,excited,"신이 난, 들뜬",650,6,adjective,basic
+15,25,mastermind,"(계획 등의)입안자, 지도자",650,5,noun,advanced
+15,26,affix,(우표 등을) 붙이다,650,6,verb,intermediate
+15,27,habit,"습관, 버릇",650,6,noun,basic
+15,28,remainder,나머지,650,6,noun,intermediate
+15,29,drape,(방 등을 커튼 등으로)장식하다,650,6,verb,intermediate
+15,30,biography,"약력, 전기",650,6,noun,intermediate
+15,31,dwindle,"줄어들다, 감소되다",650,6,verb,advanced
+15,32,commentary,"해설, 설명",650,6,noun,intermediate
+15,33,maneuver,"이동시키다, 움직이다",650,6,verb,advanced
+15,34,endangered,멸종 위기에 처한,650,6,adjective,intermediate
+15,35,encouraging,"고무적인, 힘을 북돋아 주는",650,6,adjective,intermediate
+15,36,auction,경매,650,6,noun,intermediate
+15,37,improbable,"사실이라고 생각할 수 없는, 일어날 것 같지 않은",650,6,adjective,intermediate
+15,38,fabric,"섬유, 천",650,6,noun,intermediate
+15,39,symptom,증상,650,7,noun,intermediate
+15,40,adversity,"역경, 불운",650,6,noun,advanced
+15,41,assent,"찬성하다, 승인, 동의",650,4,verb,advanced
+15,42,reflective,반영하는,650,6,adjective,intermediate
+15,43,defy,"저항하다, (설명 · 묘사 등이) 거의 불가능하다",650,5,verb,advanced
+15,44,refute,"부인하다, 반박하다",650,6,verb,advanced
+15,45,independence,독립성,650,6,noun,intermediate
+15,46,unprecedented,전례 없는,650,6,adjective,advanced
+15,47,automotive,자동차의,650,6,adjective,intermediate
+15,48,exploit,"착취하다, 부당하게 이용하다",650,6,verb,advanced
+15,49,extinction,멸종,650,6,noun,intermediate
+15,50,aid,원조,650,7,noun,intermediate
+15,51,pollutant,오염 물질,650,7,noun,intermediate
+15,52,improvise,"(연주 · 연설 등을) 즉흥적으로 하다, 즉석에서 만들다",650,4,verb,intermediate
+15,53,inspiration,영감,650,6,noun,intermediate
+15,54,monopoly,"(상품의)독점, 전매",650,5,noun,advanced
+15,55,celebrity,"유명 인사, 명사",650,6,noun,intermediate
+15,56,drought,가뭄,650,5,noun,intermediate
+15,57,elegant,"우아한, 고상한",650,6,adjective,intermediate
+15,58,innate,타고난,650,5,adjective,intermediate

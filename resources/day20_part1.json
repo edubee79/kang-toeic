@@ -1,0 +1,362 @@
+[
+  {
+    "day": 20,
+    "no": 1,
+    "word": "audit",
+    "meaning": "회계 감사, 심사",
+    "targetScore": 650,
+    "exampleEn": "The government appointed an independent firm to conduct the audit.",
+    "exampleKo": "정부는 회계 감사를 수행하기 위해 독립적인 회사를 임명했습니다."
+  },
+  {
+    "day": 20,
+    "no": 2,
+    "word": "accounting",
+    "meaning": "회계",
+    "targetScore": 650,
+    "exampleEn": "Correct accounting practices are essential for business success.",
+    "exampleKo": "올바른 회계 관행은 사업 성공에 필수적입니다."
+  },
+  {
+    "day": 20,
+    "no": 3,
+    "word": "budget",
+    "meaning": "예산",
+    "targetScore": 650,
+    "exampleEn": "We have a limited budget for marketing this quarter.",
+    "exampleKo": "우리는 이번 분기 마케팅 예산이 한정되어 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 4,
+    "word": "financial",
+    "meaning": "재정의, 금전상의",
+    "targetScore": 650,
+    "exampleEn": "The company is facing severe financial difficulties.",
+    "exampleKo": "그 회사는 심각한 재정적 어려움에 직면해 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 5,
+    "word": "curtail",
+    "meaning": "~을 줄이다, 삭감하다",
+    "targetScore": 650,
+    "exampleEn": "We must curtail spending to meet the new budget guidelines.",
+    "exampleKo": "우리는 새 예산 지침을 맞추기 위해 지출을 줄여야 합니다."
+  },
+  {
+    "day": 20,
+    "no": 6,
+    "word": "deficit",
+    "meaning": "적자, 부족액",
+    "targetScore": 650,
+    "exampleEn": "The trade deficit has narrowed significantly this year.",
+    "exampleKo": "올해 무역 적자가 상당히 줄어들었습니다."
+  },
+  {
+    "day": 20,
+    "no": 7,
+    "word": "recently",
+    "meaning": "최근에",
+    "targetScore": 650,
+    "exampleEn": "The regulations have recently been updated.",
+    "exampleKo": "규정이 최근에 갱신되었습니다."
+  },
+  {
+    "day": 20,
+    "no": 8,
+    "word": "substantially",
+    "meaning": "크게, 상당히",
+    "targetScore": 650,
+    "exampleEn": "Profits have increased substantially over the last year.",
+    "exampleKo": "지난해 이익이 상당히 증가했습니다."
+  },
+  {
+    "day": 20,
+    "no": 9,
+    "word": "committee",
+    "meaning": "위원회",
+    "targetScore": 650,
+    "exampleEn": "The steering committee will meet tomorrow to discuss the issue.",
+    "exampleKo": "운영 위원회는 그 문제를 논의하기 위해 내일 모일 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 10,
+    "word": "frequently",
+    "meaning": "자주, 흔히",
+    "targetScore": 650,
+    "exampleEn": "Customers frequently ask about our return policy.",
+    "exampleKo": "고객들은 자주 우리의 반품 정책에 대해 묻습니다."
+  },
+  {
+    "day": 20,
+    "no": 11,
+    "word": "capability",
+    "meaning": "능력, 역량",
+    "targetScore": 650,
+    "exampleEn": "The new software has the capability to process data faster.",
+    "exampleKo": "새 소프트웨어는 데이터를 더 빠르게 처리할 수 있는 능력이 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 12,
+    "word": "proceeds",
+    "meaning": "수익금",
+    "targetScore": 650,
+    "exampleEn": "All proceeds from the auction will go to charity.",
+    "exampleKo": "경매의 모든 수익금은 자선 단체에 기부될 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 13,
+    "word": "reimburse",
+    "meaning": "변제하다, 상환하다",
+    "targetScore": 650,
+    "exampleEn": "The company will reimburse you for travel expenses.",
+    "exampleKo": "회사는 당신에게 출장 경비를 변제해(상환해) 줄 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 14,
+    "word": "considerably",
+    "meaning": "상당히, 많이",
+    "targetScore": 650,
+    "exampleEn": "The market has changed considerably since then.",
+    "exampleKo": "그 이후로 시장은 상당히 변했습니다."
+  },
+  {
+    "day": 20,
+    "no": 15,
+    "word": "adequate",
+    "meaning": "충분한, 적절한",
+    "targetScore": 650,
+    "exampleEn": "The funds are not adequate to cover the costs.",
+    "exampleKo": "자금이 비용을 충당하기에 충분하지(적절하지) 않습니다."
+  },
+  {
+    "day": 20,
+    "no": 16,
+    "word": "total",
+    "meaning": "총계의, 전부의",
+    "targetScore": 650,
+    "exampleEn": "The total cost of the project is estimated at $1 million.",
+    "exampleKo": "그 프로젝트의 총 비용은 100만 달러로 추정됩니다."
+  },
+  {
+    "day": 20,
+    "no": 17,
+    "word": "allocate",
+    "meaning": "할당하다, 배분하다",
+    "targetScore": 650,
+    "exampleEn": "We need to allocate more resources to the R&D department.",
+    "exampleKo": "우리는 연구 개발 부서에 더 많은 자원을 할당해야 합니다."
+  },
+  {
+    "day": 20,
+    "no": 18,
+    "word": "inspector",
+    "meaning": "조사관, 감독관",
+    "targetScore": 650,
+    "exampleEn": "A safety inspector will visit the factory next week.",
+    "exampleKo": "안전 조사관이 다음 주에 공장을 방문할 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 19,
+    "word": "preferred",
+    "meaning": "선호되는, 우선의",
+    "targetScore": 650,
+    "exampleEn": "Email is our preferred method of communication.",
+    "exampleKo": "이메일은 우리가 선호하는 의사소통 방식입니다."
+  },
+  {
+    "day": 20,
+    "no": 20,
+    "word": "quarter",
+    "meaning": "사분기, 4분의1",
+    "targetScore": 650,
+    "exampleEn": "Sales figures for the first quarter were disappointing.",
+    "exampleKo": "1분기 매출 수치는 실망스러웠습니다."
+  },
+  {
+    "day": 20,
+    "no": 21,
+    "word": "interrupt",
+    "meaning": "중단시키다, 방해하다",
+    "targetScore": 650,
+    "exampleEn": "Please do not interrupt the speaker during the presentation.",
+    "exampleKo": "발표 중에 연설을 중단시키지(방해하지) 마십시오."
+  },
+  {
+    "day": 20,
+    "no": 22,
+    "word": "browse",
+    "meaning": "훑어보다, 둘러보다",
+    "targetScore": 650,
+    "exampleEn": "Feel free to browse our collection of books.",
+    "exampleKo": "자유롭게 우리의 책 컬렉션을 훑어보십시오."
+  },
+  {
+    "day": 20,
+    "no": 23,
+    "word": "prompt",
+    "meaning": "즉각적인, 신속한, 촉발하다, 유도하다",
+    "targetScore": 650,
+    "exampleEn": "The prompt response from customer service was impressive.",
+    "exampleKo": "고객 서비스의 신속한(즉각적인) 응답은 인상적이었습니다."
+  },
+  {
+    "day": 20,
+    "no": 24,
+    "word": "deduct",
+    "meaning": "공제하다, 빼다",
+    "targetScore": 650,
+    "exampleEn": "The tax will be deducted automatically from your salary.",
+    "exampleKo": "세금은 당신의 급여에서 자동으로 공제될 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 25,
+    "word": "measurement",
+    "meaning": "측정, 측량, 치수",
+    "targetScore": 650,
+    "exampleEn": "Accurate measurement is crucial in engineering.",
+    "exampleKo": "정확한 측정은 공학에서 매우 중요합니다."
+  },
+  {
+    "day": 20,
+    "no": 26,
+    "word": "shorten",
+    "meaning": "단축하다, 짧게 하다",
+    "targetScore": 650,
+    "exampleEn": "We plan to shorten the meeting to one hour.",
+    "exampleKo": "우리는 회의를 1시간으로 단축할 계획입니다."
+  },
+  {
+    "day": 20,
+    "no": 27,
+    "word": "amend",
+    "meaning": "수정하다",
+    "targetScore": 650,
+    "exampleEn": "The contract was amended to include the new clauses.",
+    "exampleKo": "계약서는 새로운 조항을 포함하도록 수정되었습니다."
+  },
+  {
+    "day": 20,
+    "no": 28,
+    "word": "calculate",
+    "meaning": "계산하다, 산출하다",
+    "targetScore": 650,
+    "exampleEn": "We need to calculate the total cost before proceeding.",
+    "exampleKo": "우리는 진행하기 전에 총 비용을 계산해야 합니다."
+  },
+  {
+    "day": 20,
+    "no": 29,
+    "word": "exempt",
+    "meaning": "면제된, ~이 없는",
+    "targetScore": 650,
+    "exampleEn": "Non-profit organizations are exempt from taxes.",
+    "exampleKo": "비영리 단체는 세금을 면제받습니다."
+  },
+  {
+    "day": 20,
+    "no": 30,
+    "word": "deficient",
+    "meaning": "부족한, 불충분한",
+    "targetScore": 650,
+    "exampleEn": "The current system is deficient in many respects.",
+    "exampleKo": "현재 시스템은 여러 면에서 부족합니다(결함이 있습니다)."
+  },
+  {
+    "day": 20,
+    "no": 31,
+    "word": "compare",
+    "meaning": "비교하다",
+    "targetScore": 650,
+    "exampleEn": "You cannot compare apples with oranges.",
+    "exampleKo": "사과와 오렌지를 비교할 수는 없습니다."
+  },
+  {
+    "day": 20,
+    "no": 32,
+    "word": "fortunate",
+    "meaning": "운 좋은",
+    "targetScore": 650,
+    "exampleEn": "We are fortunate to have such a dedicated team.",
+    "exampleKo": "우리는 그렇게 헌신적인 팀을 갖게 되어 운이 좋습니다."
+  },
+  {
+    "day": 20,
+    "no": 33,
+    "word": "expenditure",
+    "meaning": "지출, 비용",
+    "targetScore": 650,
+    "exampleEn": "We successfully reduced unnecessary expenditure.",
+    "exampleKo": "우리는 불필요한 지출을 성공적으로 줄였습니다."
+  },
+  {
+    "day": 20,
+    "no": 34,
+    "word": "accurately",
+    "meaning": "정확하게",
+    "targetScore": 650,
+    "exampleEn": "The report accurately reflects the current situation.",
+    "exampleKo": "그 보고서는 현재 상황을 정확하게 반영합니다."
+  },
+  {
+    "day": 20,
+    "no": 35,
+    "word": "worth",
+    "meaning": "~의 가치가 있는, (얼마) 어치, 가치",
+    "targetScore": 650,
+    "exampleEn": "The contract is worth millions of dollars.",
+    "exampleKo": "그 계약은 수백만 달러의 가치가 있습니다."
+  },
+  {
+    "day": 20,
+    "no": 36,
+    "word": "excess",
+    "meaning": "초과, 초과량",
+    "targetScore": 650,
+    "exampleEn": "Any excess materials should be returned to the warehouse.",
+    "exampleKo": "초과 자재는 창고로 반납되어야 합니다."
+  },
+  {
+    "day": 20,
+    "no": 37,
+    "word": "fiscal",
+    "meaning": "회계의, 재정상의",
+    "targetScore": 650,
+    "exampleEn": "The fiscal year ends on December 31st.",
+    "exampleKo": "회계 연도는 12월 31일에 끝납니다."
+  },
+  {
+    "day": 20,
+    "no": 38,
+    "word": "incidental",
+    "meaning": "부수적인",
+    "targetScore": 650,
+    "exampleEn": "You will be reimbursed for incidental expenses.",
+    "exampleKo": "당신은 부수적인 경비에 대해 변제받을 것입니다."
+  },
+  {
+    "day": 20,
+    "no": 39,
+    "word": "inflation",
+    "meaning": "물가 상승, 인플레이션, 통화 팽창",
+    "targetScore": 650,
+    "exampleEn": "High inflation affects consumer spending habits.",
+    "exampleKo": "높은 인플레이션(물가 상승)은 소비자의 지출 습관에 영향을 미칩니다."
+  },
+  {
+    "day": 20,
+    "no": 40,
+    "word": "liable",
+    "meaning": "책임져야 할, ~하기 쉬운",
+    "targetScore": 650,
+    "exampleEn": "The company is liable for any damages caused.",
+    "exampleKo": "회사는 발생한 모든 손해에 대해 책임이 있습니다."
+  }
+]

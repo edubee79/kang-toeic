@@ -1,0 +1,169 @@
+﻿No,Word,Meaning,Group
+1,resume,이력서,Left
+2,opening,"공석,결원;개장,개시",Left
+3,applicant,"지원자,신청자",Left
+4,requirement,"필요조건,요건",Left
+5,meet,(필요〮요구 등을 만족시키다),Left
+6,qualified,"자격있는,적격의",Left
+7,candidate,"후보자, 지원자",Left
+8,confidence,"확신,자신;신임",Left
+9,highly,"매우,대단히",Left
+10,professional,"전문적인,직업의,전문가",Left
+11,interview,"면접,면접을 보다",Left
+12,hire,고용하다,Left
+13,training,"교육,훈련",Left
+14,reference,"추천서,참고",Left
+15,position,"일자리,직책,두다",Left
+16,achievement,"성취,달성",Left
+17,impressed,"인상 깊게 생각하는, 감명을 받은",Left
+18,excellent,"훌륭한, 탁월한",Left
+19,eligible,"자격이 있는,적격의",Left
+20,identify,"알아보다, 확인하다",Left
+21,associate,관련시키다,Left
+22,condition,조건,Left
+23,employment,고용,Left
+24,lack,"~이 없다,부족",Left
+25,managerial,관리의,Left
+26,diligent,성실한,Left
+27,familiar,"익숙한,친숙한",Left
+28,proficiency,"숙달, 능숙",Left
+29,prospective,"장래의,미래의",Left
+30,appeal,"관심을 끌다, 매력적이다",Left
+31,specialize,"~을 전공하다,전문적으로 다루다",Left
+32,apprehensive,"걱정하는,염려하는",Left
+33,consultant,"고문,컨설턴트",Left
+34,entitle,자격을 주다,Left
+35,degree,학위,Left
+36,payroll,"임금 대장, 급료 명부",Left
+37,recruit,(신입 사원 등을)모집하다,Left
+38,certification,"증명서,증명",Left
+39,occupation,직업,Left
+40,wage,"임금, 급료",Left
+41,application form,신청서,Left
+42,career,"직업,경력",Left
+43,completion,"완료,완성",Left
+44,fair,"공정한,타당한",Left
+45,graduation,졸업,Left
+46,in fact,사실은,Left
+47,job fair,취업 박람회,Left
+48,job offer ,일자리 제안,Left
+49,list,"목록,명단,목록에 기입하다",Left
+50,newcomer,"새로 온 사람, 신입사원",Left
+51,part-time,"파트타임의, 시간제의",Left
+52,previous job,이전 직업,Left
+53,secretary,비서,Left
+54,send in,~을 제출하다,Left
+55,tidy,"단정한, 깔끔한",Left
+56,trainee,훈련받는 사람,Left
+57.0,apply for,~에 지원하다,Center
+58.0,aptitude,"재능,소질",Center
+59.0,be admitted to,~에 입장이 허용되다,Center
+60.0,be advised to do,~할 것을 권유받다,Center
+61.0,criteria,기준(criterion의 복수형),Center
+62.0,decade,10년,Center
+63.0,employ,고용하다,Center
+64.0,insufficient,불충분한,Center
+65.0,minimum,"최소한도, 최소한의",Center
+66.0,party,"단체,당사자,연회",Center
+67.0,plentiful,풍부한,Center
+68.0,profession,직업,Center
+69.0,achieve one's goal,목표를 달성하다,Center
+70.0,apprentice,"견습생, 도제",Center
+71.0,dress formally,정장을 입다,Center
+72.0,dressed in suit,정장을 입은,Center
+73.0,figure out,~을 알아내다,Center
+74.0,full time work,정규직,Center
+75.0,job opportunity,취업 기회,Center
+76.0,job search,구직,Center
+77.0,job seeker,구직자,Center
+78.0,lay out,"펼치다, 늘어놓다",Center
+79.0,letter of recommendation,추천서,Center
+80.0,pay raise,임금 인상,Center
+81.0,practical experience,실무 경험,Center
+82.0,proof of employment,재직 증명서,Center
+83.0,reapply,재신청하다,Center
+84.0,recommendation letter,추천서,Center
+85.0,reference letter,추천서,Center
+86.0,send off to,~로 보내다,Center
+87.0,set up an interview,면접 약속을 잡다,Center
+88.0,take an examination,시험을 치르다,Center
+89.0,training center,훈련소,Center
+90.0,waiting room,대기실,Center
+91.0,well-educated,"잘 교육된, 교양 있는",Center
+92.0,workstation,"작업대, (사무실의)자리",Center
+93.0,zealous,"열심인, 열광적인",Center
+94.0,cover letter,자기소개서,Center
+95.0,devoted,헌신적인,Center
+96.0,energetic,활동적인,Center
+97.0,enthusiastic,열렬한,Center
+98.0,excel,"(남을)능가하다, ~보다 낫다",Center
+99.0,exclude,"제외하다, 배제하다",Center
+100.0,fluently,유창하게,Center
+101.0,get through,"(시험 등에) 합격하다, 통과하다",Center
+102.0,match,"~에 어울리다, 조화되다",Center
+103.0,necessity,필요,Center
+104.0,qualification,"자격, 자격증",Center
+105.0,relevant,관련된,Center
+106.0,sign up for,"~에 등록하다, 신청하다",Center
+107.0,talented,"유능한, 재능이 있는",Center
+108.0,visiting,"방문, 객원의, 방문하는",Center
+109.0,workforce,"노동 인구, 직원 수",Center
+110.0,address the audience,청중에게 연설하다,Center
+111.0,be influenced by appearance,겉모습에 영향을 받다,Center
+112.0,bilingual,2개 국어를 구사하는,Center
+113.0,curriculum vitae,이력서,Right
+114.0,diploma,졸업 증서,Right
+115.0,endurance,인내력,Right
+116.0,fluency,유창함,Right
+117.0,fluent in,~에 능숙한,Right
+118.0,go with,(계획·제의 등을)받아들이다,Right
+119.0,human resources,"인적 자원, 인사 관리",Right
+120.0,improperly,부적절하게,Right
+121.0,in a positive manner,긍정적으로,Right
+122.0,in the field of,~의 분야에서,Right
+123.0,inexperience,"무경험, 미숙",Right
+124.0,lack confidence,자신감이 결여되다,Right
+125.0,make A a regular habit,A하는 습관을 들이다,Right
+126.0,make a commitment to,"~에 헌신하다, 전념하다",Right
+127.0,make a point of -ing,반드시 -하다,Right
+128.0,manpower,인력,Right
+129.0,master's degree,석사 학위,Right
+130.0,novice,"풋내기, 무경험자",Right
+131.0,paycheck,"급료, 급료 지불 수표",Right
+132.0,self-motivation,자기 동기부여,Right
+133.0,send a notification,통지서를 보내다,Right
+134.0,vacancy,"공석, 결원",Right
+135.0,wanted,"~을 구하는, ~을 모집하는",Right
+136.0,work history,"이력, 경력",Right
+137.0,credential,"신임장, 자격 증명서",Right
+138.0,firsthand,직접적인,Right
+139.0,hiring committee,고용 위원회,Right
+140.0,not to mention,~은 말할 것도 없고,Right
+141.0,on occasion,때때로,Right
+142.0,overqualified,필요이상으로 교육을 받은,Right
+143.0,screening,"심사, 선발",Right
+144.0,lag,"뒤처지다, 뒤떨어지다",Right
+145.0,on the waiting list,대기자 명단에,Right
+146.0,oriented,~을 지향하는,Right
+147.0,pertaining to,~에 관계된,Right
+148.0,questionably,의심스럽게,Right
+149.0,regularity,정기적임,Right
+150.0,replenish,"다시 채우다, 보충하다",Right
+151.0,simplicity,간단함,Right
+152.0,stellar,"뛰어난, 별의",Right
+153.0,versatile,다재다능한,Right
+154.0,adept,능숙한,Right
+155.0,against all odds,모든 역경을 딛고,Right
+156.0,command,"(언어)구사력, 명령, 지배력",Right
+157.0,commensurate,"비례한, 액수가 상응하는",Right
+158.0,computer literate,컴퓨터 사용 기술을 가진,Right
+159.0,eagerness,열의,Right
+160.0,familiarize oneself with,"~에 정통하다, 익숙하다",Right
+161.0,increment,"증가, 인상",Right
+162.0,interpersonal skills,대인관계능력,Right
+163.0,mindful,유념하는,Right
+164.0,preeminent,"우수한, 탁월한",Right
+165.0,preliminary,예비의,Right
+166.0,prerequisite,"필수조건, 필수적인",Right
+167.0,probationer,"수습직원, 견습생",Right
+168.0,sternly,"엄격하게, 단호하게",Right

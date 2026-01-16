@@ -1,0 +1,290 @@
+[
+    {
+        "day": 13,
+        "no": 137,
+        "word": "deputy",
+        "meaning": "대리인, 부~",
+        "targetScore": 900,
+        "exampleEn": "He is the deputy manager.",
+        "exampleKo": "그는 부지점장입니다."
+    },
+    {
+        "day": 13,
+        "no": 138,
+        "word": "dispose",
+        "meaning": "처리하다, 처분하다",
+        "targetScore": 900,
+        "exampleEn": "How should I dispose of this waste?",
+        "exampleKo": "이 폐기물을 어떻게 처리해야 합니까?"
+    },
+    {
+        "day": 13,
+        "no": 139,
+        "word": "eloquent",
+        "meaning": "달변의, 유창한",
+        "targetScore": 900,
+        "exampleEn": "He gave an eloquent speech.",
+        "exampleKo": "그는 유창한 연설을 했습니다."
+    },
+    {
+        "day": 13,
+        "no": 140,
+        "word": "emphatic",
+        "meaning": "단호한, 강조하는",
+        "targetScore": 900,
+        "exampleEn": "He was emphatic about his refusal.",
+        "exampleKo": "그는 거절에 대해 단호했습니다."
+    },
+    {
+        "day": 13,
+        "no": 141,
+        "word": "endorse",
+        "meaning": "지지하다; (수표에) 배서하다",
+        "targetScore": 900,
+        "exampleEn": "I endorse this candidate.",
+        "exampleKo": "나는 이 후보를 지지합니다."
+    },
+    {
+        "day": 13,
+        "no": 142,
+        "word": "exaggerate",
+        "meaning": "과장하다",
+        "targetScore": 900,
+        "exampleEn": "Don't exaggerate the facts.",
+        "exampleKo": "사실을 과장하지 마세요."
+    },
+    {
+        "day": 13,
+        "no": 143,
+        "word": "flatter",
+        "meaning": "아첨하다",
+        "targetScore": 900,
+        "exampleEn": "He tried to flatter the boss.",
+        "exampleKo": "그는 상사에게 아첨하려고 했습니다."
+    },
+    {
+        "day": 13,
+        "no": 144,
+        "word": "forcefully",
+        "meaning": "강력하게",
+        "targetScore": 900,
+        "exampleEn": "She argued forcefully.",
+        "exampleKo": "그녀는 강력하게 주장했습니다."
+    },
+    {
+        "day": 13,
+        "no": 145,
+        "word": "forthright",
+        "meaning": "솔직한, 단도직입적인",
+        "targetScore": 900,
+        "exampleEn": "He was forthright in his answering.",
+        "exampleKo": "그는 답변에 있어 솔직했습니다."
+    },
+    {
+        "day": 13,
+        "no": 146,
+        "word": "fret",
+        "meaning": "조바심내다",
+        "targetScore": 900,
+        "exampleEn": "Don't fret about it.",
+        "exampleKo": "그것에 대해 조바심내지 마세요."
+    },
+    {
+        "day": 13,
+        "no": 147,
+        "word": "gossip",
+        "meaning": "험담; 험담하다",
+        "targetScore": 900,
+        "exampleEn": "She loves to gossip.",
+        "exampleKo": "그녀는 험담하는 것을 좋아합니다."
+    },
+    {
+        "day": 13,
+        "no": 148,
+        "word": "grumble",
+        "meaning": "투덜거리다, 불평하다",
+        "targetScore": 900,
+        "exampleEn": "He grumbled about the food.",
+        "exampleKo": "그는 음식에 대해 투덜거렸습니다."
+    },
+    {
+        "day": 13,
+        "no": 149,
+        "word": "hesitate",
+        "meaning": "주저하다",
+        "targetScore": 900,
+        "exampleEn": "Don't hesitate to call.",
+        "exampleKo": "주저하지 말고 전화하세요."
+    },
+    {
+        "day": 13,
+        "no": 150,
+        "word": "impartial",
+        "meaning": "공정한, 치우치지 않는",
+        "targetScore": 900,
+        "exampleEn": "A judge must be impartial.",
+        "exampleKo": "판사는 공정해야 합니다."
+    },
+    {
+        "day": 13,
+        "no": 151,
+        "word": "implication",
+        "meaning": "함축, 암시",
+        "targetScore": 900,
+        "exampleEn": "What are the implications of this decision?",
+        "exampleKo": "이 결정의 함축적 의미는 무엇입니까?"
+    },
+    {
+        "day": 13,
+        "no": 152,
+        "word": "insecurity",
+        "meaning": "불안정, 불안",
+        "targetScore": 900,
+        "exampleEn": "Job insecurity is high.",
+        "exampleKo": "고용 불안이 높습니다."
+    },
+    {
+        "day": 13,
+        "no": 153,
+        "word": "intent",
+        "meaning": "의도; 열중하는",
+        "targetScore": 900,
+        "exampleEn": "His intent was clear.",
+        "exampleKo": "그의 의도는 분명했습니다."
+    },
+    {
+        "day": 13,
+        "no": 154,
+        "word": "keeping",
+        "meaning": "일치, 조화",
+        "targetScore": 900,
+        "exampleEn": "It is in keeping with tradition.",
+        "exampleKo": "그것은 전통과 일치합니다."
+    },
+    {
+        "day": 13,
+        "no": 155,
+        "word": "liaison",
+        "meaning": "연락, 연락 담당자",
+        "targetScore": 900,
+        "exampleEn": "He acts as a liaison.",
+        "exampleKo": "그는 연락 담당자 역할을 합니다."
+    },
+    {
+        "day": 13,
+        "no": 156,
+        "word": "likelihood",
+        "meaning": "가능성",
+        "targetScore": 900,
+        "exampleEn": "There is a strong likelihood of rain.",
+        "exampleKo": "비가 올 가능성이 높습니다."
+    },
+    {
+        "day": 13,
+        "no": 157,
+        "word": "mentor",
+        "meaning": "조언자, 멘토",
+        "targetScore": 900,
+        "exampleEn": "He was my mentor.",
+        "exampleKo": "그는 나의 멘토였습니다."
+    },
+    {
+        "day": 13,
+        "no": 158,
+        "word": "moderate",
+        "meaning": "적당한, 온건한",
+        "targetScore": 900,
+        "exampleEn": "He holds moderate views.",
+        "exampleKo": "그는 온건한 견해를 가지고 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 159,
+        "word": "objectionable",
+        "meaning": "불쾌한, 반대할 만한",
+        "targetScore": 900,
+        "exampleEn": "His behavior was objectionable.",
+        "exampleKo": "그의 행동은 불쾌했습니다."
+    },
+    {
+        "day": 13,
+        "no": 160,
+        "word": "offend",
+        "meaning": "기분 상하게 하다",
+        "targetScore": 900,
+        "exampleEn": "I didn't mean to offend you.",
+        "exampleKo": "당신을 기분 상하게 할 의도는 없었습니다."
+    },
+    {
+        "day": 13,
+        "no": 161,
+        "word": "oversight",
+        "meaning": "실수, 간과; 감독",
+        "targetScore": 900,
+        "exampleEn": "It was an unfortunate oversight.",
+        "exampleKo": "그것은 불운한 실수였습니다."
+    },
+    {
+        "day": 13,
+        "no": 162,
+        "word": "persuade",
+        "meaning": "설득하다",
+        "targetScore": 900,
+        "exampleEn": "She persuaded me to go.",
+        "exampleKo": "그녀는 나를 가도록 설득했습니다."
+    },
+    {
+        "day": 13,
+        "no": 163,
+        "word": "plausible",
+        "meaning": "그럴듯한",
+        "targetScore": 900,
+        "exampleEn": "His excuse sounded plausible.",
+        "exampleKo": "그의 변명은 그럴듯하게 들렸습니다."
+    },
+    {
+        "day": 13,
+        "no": 164,
+        "word": "posture",
+        "meaning": "자세, 태도",
+        "targetScore": 900,
+        "exampleEn": "Good posture is important.",
+        "exampleKo": "좋은 자세는 중요합니다."
+    },
+    {
+        "day": 13,
+        "no": 165,
+        "word": "proclaim",
+        "meaning": "선언하다",
+        "targetScore": 900,
+        "exampleEn": "They proclaimed independence.",
+        "exampleKo": "그들은 독립을 선언했습니다."
+    },
+    {
+        "day": 13,
+        "no": 166,
+        "word": "provoke",
+        "meaning": "유발하다, 화나게 하다",
+        "targetScore": 900,
+        "exampleEn": "His remark provoked anger.",
+        "exampleKo": "그의 발언은 분노를 유발했습니다."
+    },
+    {
+        "day": 13,
+        "no": 167,
+        "word": "scandal",
+        "meaning": "추문, 스캔들",
+        "targetScore": 900,
+        "exampleEn": "The scandal ruined his career.",
+        "exampleKo": "그 스캔들은 그의 경력을 망쳤습니다."
+    },
+    {
+        "day": 13,
+        "no": 168,
+        "word": "sternly",
+        "meaning": "엄격하게",
+        "targetScore": 900,
+        "exampleEn": "He spoke sternly to the boy.",
+        "exampleKo": "그는 소년에게 엄격하게 말했습니다."
+    }
+]

@@ -1,0 +1,614 @@
+[
+    {
+        "day": 8,
+        "no": 69,
+        "word": "advertising campaign",
+        "meaning": "광고 캠페인",
+        "targetScore": 800,
+        "exampleEn": "The advertising campaign was launched last week.",
+        "exampleKo": "광고 캠페인은 지난주에 시작되었습니다."
+    },
+    {
+        "day": 8,
+        "no": 70,
+        "word": "advisable",
+        "meaning": "바람직한, 권할 만한",
+        "targetScore": 800,
+        "exampleEn": "It is advisable to book in advance.",
+        "exampleKo": "미리 예약하는 것이 바람직합니다."
+    },
+    {
+        "day": 8,
+        "no": 71,
+        "word": "aggressive",
+        "meaning": "공격적인, 적극적인",
+        "targetScore": 800,
+        "exampleEn": "He has an aggressive sales technique.",
+        "exampleKo": "그는 공격적인 판매 기법을 가지고 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 72,
+        "word": "aim",
+        "meaning": "목표; 겨냥하다",
+        "targetScore": 800,
+        "exampleEn": "Our aim is to increase efficiency.",
+        "exampleKo": "우리의 목표는 효율성을 높이는 것입니다."
+    },
+    {
+        "day": 8,
+        "no": 73,
+        "word": "analyze",
+        "meaning": "분석하다",
+        "targetScore": 800,
+        "exampleEn": "Experts analyzed the data.",
+        "exampleKo": "전문가들이 데이터를 분석했습니다."
+    },
+    {
+        "day": 8,
+        "no": 74,
+        "word": "applicant",
+        "meaning": "지원자",
+        "targetScore": 800,
+        "exampleEn": "There were over 100 applicants for the job.",
+        "exampleKo": "그 일자리에 100명이 넘는 지원자가 있었습니다."
+    },
+    {
+        "day": 8,
+        "no": 75,
+        "word": "attract",
+        "meaning": "끌다, 매혹하다",
+        "targetScore": 800,
+        "exampleEn": "The exhibition attracted a large crowd.",
+        "exampleKo": "그 전시회는 수많은 관중을 끌어모았습니다."
+    },
+    {
+        "day": 8,
+        "no": 76,
+        "word": "attractive",
+        "meaning": "매력적인",
+        "targetScore": 800,
+        "exampleEn": "The salary package is very attractive.",
+        "exampleKo": "급여 패키지가 매우 매력적입니다."
+    },
+    {
+        "day": 8,
+        "no": 77,
+        "word": "benefit",
+        "meaning": "혜택, 이익; 유익하다",
+        "targetScore": 800,
+        "exampleEn": "This policy benefits everyone.",
+        "exampleKo": "이 정책은 모두에게 유익합니다."
+    },
+    {
+        "day": 8,
+        "no": 78,
+        "word": "campaign",
+        "meaning": "캠페인, 운동",
+        "targetScore": 800,
+        "exampleEn": "They started a campaign to save the library.",
+        "exampleKo": "그들은 도서관을 구하기 위한 캠페인을 시작했습니다."
+    },
+    {
+        "day": 8,
+        "no": 79,
+        "word": "certain",
+        "meaning": "확실한, 특정한",
+        "targetScore": 800,
+        "exampleEn": "I am certain that he will come.",
+        "exampleKo": "나는 그가 올 것이라고 확신합니다."
+    },
+    {
+        "day": 8,
+        "no": 80,
+        "word": "close",
+        "meaning": "가까운; 닫다; 끝내다",
+        "targetScore": 800,
+        "exampleEn": "They closed the deal yesterday.",
+        "exampleKo": "그들은 어제 거래를 성사시켰습니다."
+    },
+    {
+        "day": 8,
+        "no": 81,
+        "word": "closely",
+        "meaning": "면밀히, 밀접하게",
+        "targetScore": 800,
+        "exampleEn": "The two events are closely related.",
+        "exampleKo": "두 사건은 밀접하게 관련되어 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 82,
+        "word": "coincide",
+        "meaning": "일치하다, 동시에 일어나다",
+        "targetScore": 800,
+        "exampleEn": "The date coincides with my birthday.",
+        "exampleKo": "날짜가 내 생일과 겹칩니다."
+    },
+    {
+        "day": 8,
+        "no": 83,
+        "word": "coincidence",
+        "meaning": "우연의 일치",
+        "targetScore": 800,
+        "exampleEn": "What a coincidence!",
+        "exampleKo": "정말 우연의 일치군요!"
+    },
+    {
+        "day": 8,
+        "no": 84,
+        "word": "commitment",
+        "meaning": "헌신, 약속",
+        "targetScore": 800,
+        "exampleEn": "He questioned my commitment to the project.",
+        "exampleKo": "그는 프로젝트에 대한 나의 헌신을 의심했습니다."
+    },
+    {
+        "day": 8,
+        "no": 85,
+        "word": "committed",
+        "meaning": "헌신적인",
+        "targetScore": 800,
+        "exampleEn": "She is a committed teacher.",
+        "exampleKo": "그녀는 헌신적인 교사입니다."
+    },
+    {
+        "day": 8,
+        "no": 86,
+        "word": "communication",
+        "meaning": "의사소통",
+        "targetScore": 800,
+        "exampleEn": "Communication skills are essential.",
+        "exampleKo": "의사소통 기술은 필수적입니다."
+    },
+    {
+        "day": 8,
+        "no": 87,
+        "word": "competitor",
+        "meaning": "경쟁자, 경쟁 업체",
+        "targetScore": 800,
+        "exampleEn": "We are ahead of our competitors.",
+        "exampleKo": "우리는 경쟁자들보다 앞서 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 88,
+        "word": "comprehensive",
+        "meaning": "포괄적인, 종합적인",
+        "targetScore": 800,
+        "exampleEn": "This is a comprehensive guide to the city.",
+        "exampleKo": "이것은 그 도시에 대한 포괄적인 가이드입니다."
+    },
+    {
+        "day": 8,
+        "no": 89,
+        "word": "compromise",
+        "meaning": "타협하다; 타협",
+        "targetScore": 800,
+        "exampleEn": "We reached a compromise.",
+        "exampleKo": "우리는 타협에 도달했습니다."
+    },
+    {
+        "day": 8,
+        "no": 90,
+        "word": "conclusion",
+        "meaning": "결론",
+        "targetScore": 800,
+        "exampleEn": "In conclusion, I would like to say thank you.",
+        "exampleKo": "결론적으로, 감사의 말씀을 드리고 싶습니다."
+    },
+    {
+        "day": 8,
+        "no": 91,
+        "word": "confident",
+        "meaning": "자신 있는",
+        "targetScore": 800,
+        "exampleEn": "I am confident of success.",
+        "exampleKo": "나는 성공을 확신합니다."
+    },
+    {
+        "day": 8,
+        "no": 92,
+        "word": "conflict",
+        "meaning": "갈등, 충돌",
+        "targetScore": 800,
+        "exampleEn": "There is a conflict of interest.",
+        "exampleKo": "이해 상충이 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 93,
+        "word": "consequence",
+        "meaning": "결과",
+        "targetScore": 800,
+        "exampleEn": "She had to face the consequences of her actions.",
+        "exampleKo": "그녀는 자신의 행동에 대한 결과를 직면해야 했습니다."
+    },
+    {
+        "day": 8,
+        "no": 94,
+        "word": "consumer",
+        "meaning": "소비자",
+        "targetScore": 800,
+        "exampleEn": "Consumer spending has increased.",
+        "exampleKo": "소비자 지출이 증가했습니다."
+    },
+    {
+        "day": 8,
+        "no": 95,
+        "word": "continuous",
+        "meaning": "지속적인",
+        "targetScore": 800,
+        "exampleEn": "There was a continuous noise.",
+        "exampleKo": "지속적인 소음이 있었습니다."
+    },
+    {
+        "day": 8,
+        "no": 96,
+        "word": "continuously",
+        "meaning": "계속해서",
+        "targetScore": 800,
+        "exampleEn": "It rained continuously for two days.",
+        "exampleKo": "이틀 동안 계속해서 비가 왔습니다."
+    },
+    {
+        "day": 8,
+        "no": 97,
+        "word": "convenience",
+        "meaning": "편의, 편리함",
+        "targetScore": 800,
+        "exampleEn": "Please call me at your convenience.",
+        "exampleKo": "편하실 때 전화 주세요."
+    },
+    {
+        "day": 8,
+        "no": 98,
+        "word": "convenient",
+        "meaning": "편리한",
+        "targetScore": 800,
+        "exampleEn": "Is 3 PM convenient for you?",
+        "exampleKo": "오후 3시가 괜찮으신가요?"
+    },
+    {
+        "day": 8,
+        "no": 99,
+        "word": "create",
+        "meaning": "창조하다, 야기하다",
+        "targetScore": 800,
+        "exampleEn": "The new factory will create jobs.",
+        "exampleKo": "새 공장은 일자리를 창출할 것입니다."
+    },
+    {
+        "day": 8,
+        "no": 100,
+        "word": "creative",
+        "meaning": "창의적인",
+        "targetScore": 800,
+        "exampleEn": "We need a creative solution.",
+        "exampleKo": "우리는 창의적인 해결책이 필요합니다."
+    },
+    {
+        "day": 8,
+        "no": 101,
+        "word": "creativity",
+        "meaning": "창의성",
+        "targetScore": 800,
+        "exampleEn": "His creativity is endless.",
+        "exampleKo": "그의 창의성은 끝이 없습니다."
+    },
+    {
+        "day": 8,
+        "no": 102,
+        "word": "criticize",
+        "meaning": "비판하다",
+        "targetScore": 800,
+        "exampleEn": "Don't criticize what you don't understand.",
+        "exampleKo": "이해하지 못하는 것을 비판하지 마세요."
+    },
+    {
+        "day": 8,
+        "no": 103,
+        "word": "decline",
+        "meaning": "감소하다; 거절하다",
+        "targetScore": 800,
+        "exampleEn": "Sales declined this month.",
+        "exampleKo": "이번 달 매출이 감소했습니다."
+    },
+    {
+        "day": 8,
+        "no": 104,
+        "word": "deliberate",
+        "meaning": "고의적인; 심사숙고하다",
+        "targetScore": 800,
+        "exampleEn": "It was a deliberate attempt to deceive.",
+        "exampleKo": "그것은 고의적인 기만 시도였습니다."
+    },
+    {
+        "day": 8,
+        "no": 105,
+        "word": "demand",
+        "meaning": "수요; 요구하다",
+        "targetScore": 800,
+        "exampleEn": "Demand for organic food is rising.",
+        "exampleKo": "유기농 식품에 대한 수요가 증가하고 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 106,
+        "word": "demanding",
+        "meaning": "요구가 많은, 힘든",
+        "targetScore": 800,
+        "exampleEn": "She has a demanding job.",
+        "exampleKo": "그녀는 힘든 일을 하고 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 107,
+        "word": "demonstrate",
+        "meaning": "보여주다, 입증하다",
+        "targetScore": 800,
+        "exampleEn": "He demonstrated his skill.",
+        "exampleKo": "그는 자신의 기술을 보여주었습니다."
+    },
+    {
+        "day": 8,
+        "no": 108,
+        "word": "direction",
+        "meaning": "방향; 지시",
+        "targetScore": 800,
+        "exampleEn": "Follow the directions on the map.",
+        "exampleKo": "지도의 길 안내를 따르세요."
+    },
+    {
+        "day": 8,
+        "no": 109,
+        "word": "directory",
+        "meaning": "주소록, 안내 책자",
+        "targetScore": 800,
+        "exampleEn": "Look up the number in the telephone directory.",
+        "exampleKo": "전화번호부에서 번호를 찾아보세요."
+    },
+    {
+        "day": 8,
+        "no": 110,
+        "word": "discuss",
+        "meaning": "토론하다",
+        "targetScore": 800,
+        "exampleEn": "We need to discuss this matter.",
+        "exampleKo": "우리는 이 문제에 대해 토론해야 합니다."
+    },
+    {
+        "day": 8,
+        "no": 111,
+        "word": "discussion",
+        "meaning": "토론",
+        "targetScore": 800,
+        "exampleEn": "The discussion was fruitful.",
+        "exampleKo": "토론은 성과가 있었습니다."
+    },
+    {
+        "day": 8,
+        "no": 112,
+        "word": "dispersed",
+        "meaning": "흩어진, 분산된",
+        "targetScore": 800,
+        "exampleEn": "The crowd dispersed after the concert.",
+        "exampleKo": "콘서트가 끝난 후 군중들은 흩어졌습니다."
+    },
+    {
+        "day": 8,
+        "no": 113,
+        "word": "economic",
+        "meaning": "경제의",
+        "targetScore": 800,
+        "exampleEn": "The country is facing an economic crisis.",
+        "exampleKo": "그 나라는 경제 위기에 직면해 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 114,
+        "word": "economics",
+        "meaning": "경제학",
+        "targetScore": 800,
+        "exampleEn": "He studied economics at university.",
+        "exampleKo": "그는 대학에서 경제학을 공부했습니다."
+    },
+    {
+        "day": 8,
+        "no": 115,
+        "word": "economy",
+        "meaning": "경제",
+        "targetScore": 800,
+        "exampleEn": "A strong economy is important.",
+        "exampleKo": "튼튼한 경제는 중요합니다."
+    },
+    {
+        "day": 8,
+        "no": 116,
+        "word": "effective",
+        "meaning": "효과적인",
+        "targetScore": 800,
+        "exampleEn": "This medicine is very effective.",
+        "exampleKo": "이 약은 매우 효과적입니다."
+    },
+    {
+        "day": 8,
+        "no": 117,
+        "word": "effectively",
+        "meaning": "효과적으로",
+        "targetScore": 800,
+        "exampleEn": "Time must be managed effectively.",
+        "exampleKo": "시간은 효과적으로 관리되어야 합니다."
+    },
+    {
+        "day": 8,
+        "no": 118,
+        "word": "encourage",
+        "meaning": "격려하다, 장려하다",
+        "targetScore": 800,
+        "exampleEn": "We encourage innovation.",
+        "exampleKo": "우리는 혁신을 장려합니다."
+    },
+    {
+        "day": 8,
+        "no": 119,
+        "word": "encouraging",
+        "meaning": "고무적인",
+        "targetScore": 800,
+        "exampleEn": "The initial results are encouraging.",
+        "exampleKo": "초기 결과는 고무적입니다."
+    },
+    {
+        "day": 8,
+        "no": 120,
+        "word": "energy",
+        "meaning": "에너지",
+        "targetScore": 800,
+        "exampleEn": "I don't have the energy to argue.",
+        "exampleKo": "나는 말다툼할 에너지가 없습니다."
+    },
+    {
+        "day": 8,
+        "no": 121,
+        "word": "enormous",
+        "meaning": "거대한, 막대한",
+        "targetScore": 800,
+        "exampleEn": "The project requires an enormous amount of money.",
+        "exampleKo": "그 프로젝트는 막대한 양의 돈을 필요로 합니다."
+    },
+    {
+        "day": 8,
+        "no": 122,
+        "word": "evaluation",
+        "meaning": "평가",
+        "targetScore": 800,
+        "exampleEn": "The evaluation of the program is ongoing.",
+        "exampleKo": "프로그램에 대한 평가는 진행 중입니다."
+    },
+    {
+        "day": 8,
+        "no": 123,
+        "word": "expand",
+        "meaning": "확장하다",
+        "targetScore": 800,
+        "exampleEn": "Metal expands when heated.",
+        "exampleKo": "금속은 가열하면 팽창합니다."
+    },
+    {
+        "day": 8,
+        "no": 124,
+        "word": "expansion",
+        "meaning": "확장",
+        "targetScore": 800,
+        "exampleEn": "The expansion of the airport is planned.",
+        "exampleKo": "공항 확장이 계획되어 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 125,
+        "word": "expensive",
+        "meaning": "비싼",
+        "targetScore": 800,
+        "exampleEn": "It is too expensive for me.",
+        "exampleKo": "그것은 나에게 너무 비쌉니다."
+    },
+    {
+        "day": 8,
+        "no": 126,
+        "word": "extend",
+        "meaning": "연장하다, 확장하다",
+        "targetScore": 800,
+        "exampleEn": "Can you extend the deadline?",
+        "exampleKo": "마감 기한을 연장해 주실 수 있나요?"
+    },
+    {
+        "day": 8,
+        "no": 127,
+        "word": "extensive",
+        "meaning": "광범위한",
+        "targetScore": 800,
+        "exampleEn": "The fire caused extensive damage.",
+        "exampleKo": "화재는 광범위한 피해를 입혔습니다."
+    },
+    {
+        "day": 8,
+        "no": 128,
+        "word": "extremely",
+        "meaning": "극도로",
+        "targetScore": 800,
+        "exampleEn": "He is extremely intelligent.",
+        "exampleKo": "그는 극도로 지적입니다."
+    },
+    {
+        "day": 8,
+        "no": 129,
+        "word": "face",
+        "meaning": "직면하다; 얼굴",
+        "targetScore": 800,
+        "exampleEn": "We face many challenges.",
+        "exampleKo": "우리는 많은 도전에 직면해 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 130,
+        "word": "favorable",
+        "meaning": "호의적인, 유리한",
+        "targetScore": 800,
+        "exampleEn": "The weather conditions are favorable.",
+        "exampleKo": "기상 조건이 유리합니다."
+    },
+    {
+        "day": 8,
+        "no": 131,
+        "word": "favorably",
+        "meaning": "호의적으로",
+        "targetScore": 800,
+        "exampleEn": "He spoke favorably of your work.",
+        "exampleKo": "그는 당신의 일에 대해 호의적으로 말했습니다."
+    },
+    {
+        "day": 8,
+        "no": 132,
+        "word": "final",
+        "meaning": "최종적인",
+        "targetScore": 800,
+        "exampleEn": "The judge's decision is final.",
+        "exampleKo": "판사의 결정은 최종적입니다."
+    },
+    {
+        "day": 8,
+        "no": 133,
+        "word": "financial",
+        "meaning": "재정의, 금융의",
+        "targetScore": 800,
+        "exampleEn": "They offer financial advice.",
+        "exampleKo": "그들은 재정적 조언을 제공합니다."
+    },
+    {
+        "day": 8,
+        "no": 134,
+        "word": "focus",
+        "meaning": "집중하다; 초점",
+        "targetScore": 800,
+        "exampleEn": "The camera is out of focus.",
+        "exampleKo": "카메라 초점이 맞지 않습니다."
+    },
+    {
+        "day": 8,
+        "no": 135,
+        "word": "force",
+        "meaning": "힘; 강요하다",
+        "targetScore": 800,
+        "exampleEn": "The force of the impact broke the window.",
+        "exampleKo": "충격의 힘이 창문을 깨뜨렸습니다."
+    },
+    {
+        "day": 8,
+        "no": 136,
+        "word": "forward",
+        "meaning": "앞으로; 보내다",
+        "targetScore": 800,
+        "exampleEn": "Move forward to the front of the bus.",
+        "exampleKo": "버스 앞쪽으로 이동하세요."
+    }
+]

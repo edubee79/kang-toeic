@@ -1,0 +1,254 @@
+[
+  {
+    "day": 2,
+    "no": 41,
+    "word": "bend over",
+    "meaning": "몸을 앞으로 숙이다",
+    "targetScore": 650,
+    "exampleEn": "Please do not bend over the railing for your safety.",
+    "exampleKo": "안전을 위해 난간 너머로 몸을 숙이지 마십시오."
+  },
+  {
+    "day": 2,
+    "no": 42,
+    "word": "by oneself",
+    "meaning": "혼자 힘으로",
+    "targetScore": 650,
+    "exampleEn": "He completed the entire project by himself.",
+    "exampleKo": "그는 혼자 힘으로 전체 프로젝트를 완료했습니다."
+  },
+  {
+    "day": 2,
+    "no": 43,
+    "word": "date",
+    "meaning": "날짜",
+    "targetScore": 650,
+    "exampleEn": "Please check the date of the meeting on your calendar.",
+    "exampleKo": "달력에서 회의 날짜를 확인해 주십시오."
+  },
+  {
+    "day": 2,
+    "no": 44,
+    "word": "get used to",
+    "meaning": "~에 익숙해지다",
+    "targetScore": 650,
+    "exampleEn": "It takes time to get used to the new software.",
+    "exampleKo": "새로운 소프트웨어에 익숙해지는 데는 시간이 걸립니다."
+  },
+  {
+    "day": 2,
+    "no": 45,
+    "word": "if it's okay with you",
+    "meaning": "당신만 괜찮다면",
+    "targetScore": 650,
+    "exampleEn": "We can reschedule the meeting if it's okay with you.",
+    "exampleKo": "당신만 괜찮다면 회의 일정을 변경할 수 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 46,
+    "word": "in case of",
+    "meaning": "~의 경우에는",
+    "targetScore": 650,
+    "exampleEn": "In case of fire, use the emergency exit immediately.",
+    "exampleKo": "화재 발생 시, 즉시 비상구를 사용하십시오."
+  },
+  {
+    "day": 2,
+    "no": 47,
+    "word": "in rows",
+    "meaning": "줄지어, 여러 줄로",
+    "targetScore": 650,
+    "exampleEn": "The chairs were arranged in rows for the seminar.",
+    "exampleKo": "세미나를 위해 의자들은 여러 줄로 배치되었습니다."
+  },
+  {
+    "day": 2,
+    "no": 48,
+    "word": "item",
+    "meaning": "항목",
+    "targetScore": 650,
+    "exampleEn": "Please review each item on the invoice carefully.",
+    "exampleKo": "청구서의 각 항목을 주의 깊게 검토해 주십시오."
+  },
+  {
+    "day": 2,
+    "no": 49,
+    "word": "legal",
+    "meaning": "법률의, 합법적인",
+    "targetScore": 650,
+    "exampleEn": "The company seeks legal advice before signing contracts.",
+    "exampleKo": "회사는 계약을 체결하기 전에 법률 자문을 구합니다."
+  },
+  {
+    "day": 2,
+    "no": 50,
+    "word": "let go",
+    "meaning": "놓아주다",
+    "targetScore": 650,
+    "exampleEn": "The manager decided to let go of the incompetent employee.",
+    "exampleKo": "매니저는 무능한 직원을 해고하기로(놓아주기로) 결정했습니다."
+  },
+  {
+    "day": 2,
+    "no": 51,
+    "word": "ruler",
+    "meaning": "자",
+    "targetScore": 650,
+    "exampleEn": "Use a ruler to measure the dimensions precisely.",
+    "exampleKo": "치수를 정확하게 측정하기 위해 자를 사용하십시오."
+  },
+  {
+    "day": 2,
+    "no": 52,
+    "word": "stop",
+    "meaning": "멈추다",
+    "targetScore": 650,
+    "exampleEn": "Production will stop during the holiday season.",
+    "exampleKo": "생산은 휴가 시즌 동안 중단될 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 53,
+    "word": "busy",
+    "meaning": "바쁜",
+    "targetScore": 650,
+    "exampleEn": "The manager is too busy to meet with us right now.",
+    "exampleKo": "매니저는 지금 너무 바빠서 우리를 만날 수 없습니다."
+  },
+  {
+    "day": 2,
+    "no": 54,
+    "word": "curriculum",
+    "meaning": "교과 과정",
+    "targetScore": 650,
+    "exampleEn": "The school has introduced a new science curriculum.",
+    "exampleKo": "그 학교는 새로운 과학 교과 과정을 도입했습니다."
+  },
+  {
+    "day": 2,
+    "no": 55,
+    "word": "dress",
+    "meaning": "의복, 옷을 차려입다",
+    "targetScore": 650,
+    "exampleEn": "Formal dress is required for the awards ceremony.",
+    "exampleKo": "시상식에는 정장이 요구됩니다."
+  },
+  {
+    "day": 2,
+    "no": 56,
+    "word": "enough",
+    "meaning": "충분한, 필요한 만큼의 수 〮 양",
+    "targetScore": 650,
+    "exampleEn": "We have enough inventory to meet the demand.",
+    "exampleKo": "우리는 수요를 충족시킬 충분한 재고를 가지고 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 57,
+    "word": "finish",
+    "meaning": "끝내다, 완료하다",
+    "targetScore": 650,
+    "exampleEn": "Please finish the report by the end of the day.",
+    "exampleKo": "오늘 일과가 끝날 때까지 보고서를 끝내주세요."
+  },
+  {
+    "day": 2,
+    "no": 58,
+    "word": "have a problem(in) -ing",
+    "meaning": "-하는데 문제가 있다",
+    "targetScore": 650,
+    "exampleEn": "Please let us know if you have a problem accessing the file.",
+    "exampleKo": "파일에 접근하는 데 문제가 있으면 저희에게 알려주세요."
+  },
+  {
+    "day": 2,
+    "no": 59,
+    "word": "large",
+    "meaning": "큰, 넓은",
+    "targetScore": 650,
+    "exampleEn": "The conference will be held in a large hall.",
+    "exampleKo": "컨퍼런스는 큰 홀에서 열릴 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 60,
+    "word": "law firm",
+    "meaning": "법률 회사",
+    "targetScore": 650,
+    "exampleEn": "She works for a prestigious international law firm.",
+    "exampleKo": "그녀는 명망 있는 국제 법률 회사에서 일합니다."
+  },
+  {
+    "day": 2,
+    "no": 61,
+    "word": "loudly",
+    "meaning": "시끄럽게",
+    "targetScore": 650,
+    "exampleEn": "Please do not speak loudly in the library.",
+    "exampleKo": "도서관에서는 큰 소리로 말하지 마십시오."
+  },
+  {
+    "day": 2,
+    "no": 62,
+    "word": "plus",
+    "meaning": "~을 더한, ~을 더하여",
+    "targetScore": 650,
+    "exampleEn": "The salary is competitive, plus there are great benefits.",
+    "exampleKo": "급여는 경쟁력이 있으며, 게다가 훌륭한 혜택이 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 63,
+    "word": "protect",
+    "meaning": "보호하다",
+    "targetScore": 650,
+    "exampleEn": "We must take measures to protect confidential data.",
+    "exampleKo": "우리는 기밀 데이터를 보호하기 위해 조치를 취해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 64,
+    "word": "seldom",
+    "meaning": "드물게, 좀처럼~않는",
+    "targetScore": 650,
+    "exampleEn": "The CEO handles urgent matters but seldom visits the branch.",
+    "exampleKo": "CEO는 긴급한 문제를 처리하지만 지사를 방문하는 일은 드뭅니다."
+  },
+  {
+    "day": 2,
+    "no": 65,
+    "word": "theft",
+    "meaning": "절도",
+    "targetScore": 650,
+    "exampleEn": "The store installed cameras to prevent theft.",
+    "exampleKo": "그 가게는 절도를 방지하기 위해 카메라를 설치했습니다."
+  },
+  {
+    "day": 2,
+    "no": 66,
+    "word": "try",
+    "meaning": "시도하다, 노력하다",
+    "targetScore": 650,
+    "exampleEn": "We will try to implement the changes by next week.",
+    "exampleKo": "우리는 다음 주까지 변경 사항을 이행하려고 노력할 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 67,
+    "word": "witness",
+    "meaning": "목격자, 증인",
+    "targetScore": 650,
+    "exampleEn": "He was the only witness to the accident.",
+    "exampleKo": "그는 그 사고의 유일한 목격자였습니다."
+  },
+  {
+    "day": 2,
+    "no": 68,
+    "word": "write",
+    "meaning": "글씨를 쓰다, 저술하다",
+    "targetScore": 650,
+    "exampleEn": "Please write your name and signature at the bottom.",
+    "exampleKo": "하단에 이름과 서명을 써 주십시오."
+  }
+]

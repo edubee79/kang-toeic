@@ -1,0 +1,254 @@
+[
+    {
+        "day": 18,
+        "no": 41,
+        "word": "spot",
+        "meaning": "발견하다, 찾다; 장소",
+        "targetScore": 650,
+        "exampleEn": "I spotted a mistake.",
+        "exampleKo": "나는 실수를 발견했습니다."
+    },
+    {
+        "day": 18,
+        "no": 42,
+        "word": "attend",
+        "meaning": "참석하다, 출석하다",
+        "targetScore": 650,
+        "exampleEn": "Attend the conference.",
+        "exampleKo": "회의에 참석하세요."
+    },
+    {
+        "day": 18,
+        "no": 43,
+        "word": "comfortable",
+        "meaning": "편안한",
+        "targetScore": 650,
+        "exampleEn": "A comfortable chair.",
+        "exampleKo": "편안한 의자."
+    },
+    {
+        "day": 18,
+        "no": 44,
+        "word": "site",
+        "meaning": "장소, 현장",
+        "targetScore": 650,
+        "exampleEn": "Visit the construction site.",
+        "exampleKo": "건설 현장을 방문하세요."
+    },
+    {
+        "day": 18,
+        "no": 45,
+        "word": "status",
+        "meaning": "상태",
+        "targetScore": 650,
+        "exampleEn": "Project status.",
+        "exampleKo": "프로젝트 상태."
+    },
+    {
+        "day": 18,
+        "no": 46,
+        "word": "result",
+        "meaning": "결과; 결과로 생기다",
+        "targetScore": 650,
+        "exampleEn": "The results are in.",
+        "exampleKo": "결과가 나왔습니다."
+    },
+    {
+        "day": 18,
+        "no": 47,
+        "word": "achieve",
+        "meaning": "성취하다, 달성하다",
+        "targetScore": 650,
+        "exampleEn": "Achieve your goals.",
+        "exampleKo": "목표를 달성하세요."
+    },
+    {
+        "day": 18,
+        "no": 48,
+        "word": "admit",
+        "meaning": "인정하다; 입장시키다",
+        "targetScore": 650,
+        "exampleEn": "Admit one person.",
+        "exampleKo": "한 명 입장 가능."
+    },
+    {
+        "day": 18,
+        "no": 49,
+        "word": "allow",
+        "meaning": "허락하다",
+        "targetScore": 650,
+        "exampleEn": "Pets are not allowed.",
+        "exampleKo": "애완동물은 허용되지 않습니다."
+    },
+    {
+        "day": 18,
+        "no": 50,
+        "word": "banquet",
+        "meaning": "연회",
+        "targetScore": 650,
+        "exampleEn": "Banquet hall.",
+        "exampleKo": "연회장."
+    },
+    {
+        "day": 18,
+        "no": 51,
+        "word": "booking",
+        "meaning": "예약",
+        "targetScore": 650,
+        "exampleEn": "Make a booking.",
+        "exampleKo": "예약하세요."
+    },
+    {
+        "day": 18,
+        "no": 52,
+        "word": "clerk",
+        "meaning": "직원, 점원",
+        "targetScore": 650,
+        "exampleEn": "Ask the clerk.",
+        "exampleKo": "직원에게 물어보세요."
+    },
+    {
+        "day": 18,
+        "no": 53,
+        "word": "confirm",
+        "meaning": "확인하다",
+        "targetScore": 650,
+        "exampleEn": "Confirm the details.",
+        "exampleKo": "세부 사항을 확인하세요."
+    },
+    {
+        "day": 18,
+        "no": 54,
+        "word": "deadline",
+        "meaning": "마감 기한",
+        "targetScore": 650,
+        "exampleEn": "The deadline is Monday.",
+        "exampleKo": "마감 기한은 월요일입니다."
+    },
+    {
+        "day": 18,
+        "no": 55,
+        "word": "document",
+        "meaning": "문서; 기록하다",
+        "targetScore": 650,
+        "exampleEn": "Sign the document.",
+        "exampleKo": "문서에 서명하세요."
+    },
+    {
+        "day": 18,
+        "no": 56,
+        "word": "expect",
+        "meaning": "기대하다, 예상하다",
+        "targetScore": 650,
+        "exampleEn": "We expect great things.",
+        "exampleKo": "우리는 대단한 것을 기대합니다."
+    },
+    {
+        "day": 18,
+        "no": 57,
+        "word": "guest",
+        "meaning": "손님",
+        "targetScore": 650,
+        "exampleEn": "Welcome our guests.",
+        "exampleKo": "손님을 환영합니다."
+    },
+    {
+        "day": 18,
+        "no": 58,
+        "word": "history",
+        "meaning": "역사, 이력",
+        "targetScore": 650,
+        "exampleEn": "History of the company.",
+        "exampleKo": "회사의 역사."
+    },
+    {
+        "day": 18,
+        "no": 59,
+        "word": "host",
+        "meaning": "주최하다; 주인",
+        "targetScore": 650,
+        "exampleEn": "Host an event.",
+        "exampleKo": "행사를 주최하다."
+    },
+    {
+        "day": 18,
+        "no": 60,
+        "word": "impress",
+        "meaning": "깊은 인상을 주다",
+        "targetScore": 650,
+        "exampleEn": "Impress the client.",
+        "exampleKo": "고객에게 깊은 인상을 주세요."
+    },
+    {
+        "day": 18,
+        "no": 61,
+        "word": "join",
+        "meaning": "가입하다, 합류하다",
+        "targetScore": 650,
+        "exampleEn": "Join the club.",
+        "exampleKo": "클럽에 가입하세요."
+    },
+    {
+        "day": 18,
+        "no": 62,
+        "word": "list",
+        "meaning": "목록; 목록에 적다",
+        "targetScore": 650,
+        "exampleEn": "Make a list.",
+        "exampleKo": "목록을 만드세요."
+    },
+    {
+        "day": 18,
+        "no": 63,
+        "word": "notify",
+        "meaning": "통지하다",
+        "targetScore": 650,
+        "exampleEn": "Notify me if anything changes.",
+        "exampleKo": "변동 사항이 있으면 알려주세요."
+    },
+    {
+        "day": 18,
+        "no": 64,
+        "word": "participate",
+        "meaning": "참여하다",
+        "targetScore": 650,
+        "exampleEn": "Participate in the contest.",
+        "exampleKo": "대회에 참여하세요."
+    },
+    {
+        "day": 18,
+        "no": 65,
+        "word": "plan",
+        "meaning": "계획; 계획하다",
+        "targetScore": 650,
+        "exampleEn": "What is the plan?",
+        "exampleKo": "계획이 무엇입니까?"
+    },
+    {
+        "day": 18,
+        "no": 66,
+        "word": "postpone",
+        "meaning": "연기하다",
+        "targetScore": 650,
+        "exampleEn": "Postpone the meeting.",
+        "exampleKo": "회의를 연기하세요."
+    },
+    {
+        "day": 18,
+        "no": 67,
+        "word": "prevent",
+        "meaning": "막다, 예방하다",
+        "targetScore": 650,
+        "exampleEn": "Prevent accidents.",
+        "exampleKo": "사고를 예방하세요."
+    },
+    {
+        "day": 18,
+        "no": 68,
+        "word": "purpose",
+        "meaning": "목적",
+        "targetScore": 650,
+        "exampleEn": "What is the purpose?",
+        "exampleKo": "목적이 무엇입니까?"
+    }
+]

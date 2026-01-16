@@ -1,0 +1,290 @@
+[
+    {
+        "day": 18,
+        "no": 137,
+        "word": "wake-up call",
+        "meaning": "모닝콜",
+        "targetScore": 900,
+        "exampleEn": "I requested a wake-up call for 6 a.m.",
+        "exampleKo": "저는 오전 6시에 모닝콜을 요청했습니다."
+    },
+    {
+        "day": 18,
+        "no": 138,
+        "word": "batch",
+        "meaning": "무리, 집단",
+        "targetScore": 900,
+        "exampleEn": "The first batch of products will be shipped tomorrow.",
+        "exampleKo": "첫 번째 제품 무리(배치)는 내일 배송될 것입니다."
+    },
+    {
+        "day": 18,
+        "no": 139,
+        "word": "atrium",
+        "meaning": "중앙홀",
+        "targetScore": 900,
+        "exampleEn": "The hotel has a stunning glass-roofed atrium.",
+        "exampleKo": "그 호텔에는 멋진 유리 지붕의 중앙홀이 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 140,
+        "word": "garner",
+        "meaning": "얻다, 모으다",
+        "targetScore": 900,
+        "exampleEn": "The new policy garnered support from employees.",
+        "exampleKo": "새로운 정책은 직원들로부터 지지를 얻었습니다(모았습니다)."
+    },
+    {
+        "day": 18,
+        "no": 141,
+        "word": "forfeit",
+        "meaning": "(벌로써 권리·재산 등을) 몰수당하다",
+        "targetScore": 900,
+        "exampleEn": "If you cancel late, you will forfeit your deposit.",
+        "exampleKo": "늦게 취소하면 보증금을 몰수당할 것입니다."
+    },
+    {
+        "day": 18,
+        "no": 142,
+        "word": "wait on",
+        "meaning": "시중을 들다",
+        "targetScore": 900,
+        "exampleEn": "The staff is trained to wait on guests with courtesy.",
+        "exampleKo": "직원들은 예의를 갖춰 손님들의 시중을 들도록 훈련받았습니다."
+    },
+    {
+        "day": 18,
+        "no": 143,
+        "word": "batter",
+        "meaning": "반죽",
+        "targetScore": 900,
+        "exampleEn": "Mix the batter until it is smooth.",
+        "exampleKo": "반죽이 부드러워질 때까지 섞으십시오."
+    },
+    {
+        "day": 18,
+        "no": 144,
+        "word": "themed",
+        "meaning": "특정한 테마의 분위기를 살린",
+        "targetScore": 900,
+        "exampleEn": "The restaurant has a themed dining room inspired by the ocean.",
+        "exampleKo": "그 식당은 바다에서 영감을 받은 테마가 있는 식당을 갖추고 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 145,
+        "word": "parlor",
+        "meaning": "가게",
+        "targetScore": 900,
+        "exampleEn": "We visited a famous ice cream parlor.",
+        "exampleKo": "우리는 유명한 아이스크림 가게(parlor)를 방문했습니다."
+    },
+    {
+        "day": 18,
+        "no": 146,
+        "word": "grab a bite",
+        "meaning": "간단히 먹다",
+        "targetScore": 900,
+        "exampleEn": "Let's grab a bite before the meeting.",
+        "exampleKo": "회의 전에 간단히 먹읍시다."
+    },
+    {
+        "day": 18,
+        "no": 147,
+        "word": "gourmet",
+        "meaning": "미식가",
+        "targetScore": 900,
+        "exampleEn": "The shop sells gourmet chocolates.",
+        "exampleKo": "그 가게는 미식가용(고급) 초콜릿을 팝니다."
+    },
+    {
+        "day": 18,
+        "no": 148,
+        "word": "shut down",
+        "meaning": "폐점하다",
+        "targetScore": 900,
+        "exampleEn": "The factory will shut down for maintenance.",
+        "exampleKo": "공장은 유지 보수를 위해 폐점할(문을 닫을) 것입니다."
+    },
+    {
+        "day": 18,
+        "no": 149,
+        "word": "garnish",
+        "meaning": "(음식을) 장식하다",
+        "targetScore": 900,
+        "exampleEn": "Garnish the dish with fresh parsley.",
+        "exampleKo": "요리에 신선한 파슬리를 장식하십시오."
+    },
+    {
+        "day": 18,
+        "no": 150,
+        "word": "palate",
+        "meaning": "미각",
+        "targetScore": 900,
+        "exampleEn": "The menu is designed to please every palate.",
+        "exampleKo": "메뉴는 모든 미각을 만족시키도록 설계되었습니다."
+    },
+    {
+        "day": 18,
+        "no": 151,
+        "word": "thriving",
+        "meaning": "번성하는, 잘 자라는",
+        "targetScore": 900,
+        "exampleEn": "The café has a thriving business.",
+        "exampleKo": "그 카페는 사업이 번성하고 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 152,
+        "word": "cloakroom",
+        "meaning": "(식당·극장의) 휴대품 보관소",
+        "targetScore": 900,
+        "exampleEn": "Please leave your coat in the cloakroom.",
+        "exampleKo": "코트는 휴대품 보관소에 맡겨 주십시오."
+    },
+    {
+        "day": 18,
+        "no": 153,
+        "word": "room attendant",
+        "meaning": "객실 청소부",
+        "targetScore": 900,
+        "exampleEn": "The room attendant cleans the guest rooms daily.",
+        "exampleKo": "객실 청소부는 매일 객실을 청소합니다."
+    },
+    {
+        "day": 18,
+        "no": 154,
+        "word": "as a courtesy",
+        "meaning": "호의를 담아, 무료로",
+        "targetScore": 900,
+        "exampleEn": "We provide shuttle service as a courtesy to our guests.",
+        "exampleKo": "우리는 투숙객들에게 호의(무료)로 셔틀 서비스를 제공합니다."
+    },
+    {
+        "day": 18,
+        "no": 155,
+        "word": "sanitary",
+        "meaning": "위생의",
+        "targetScore": 900,
+        "exampleEn": "Strict sanitary conditions must be maintained in the kitchen.",
+        "exampleKo": "주방에서는 엄격한 위생 상태가 유지되어야 합니다."
+    },
+    {
+        "day": 18,
+        "no": 156,
+        "word": "scoop",
+        "meaning": "퍼내다, 퍼올리다",
+        "targetScore": 900,
+        "exampleEn": "Use a spoon to scoop the ice cream.",
+        "exampleKo": "아이스크림을 퍼내기 위해 숟가락을 사용하십시오."
+    },
+    {
+        "day": 18,
+        "no": 157,
+        "word": "assorted",
+        "meaning": "여러 가지 종류의, 다채로운",
+        "targetScore": 900,
+        "exampleEn": "The box contains assorted cookies.",
+        "exampleKo": "상자에는 여러 가지 종류의 쿠키가 들어 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 158,
+        "word": "pick up the check",
+        "meaning": "돈을 내다",
+        "targetScore": 900,
+        "exampleEn": "He offered to pick up the check for dinner.",
+        "exampleKo": "그는 저녁 식사 비용을 내겠다고(pick up the check) 제안했습니다."
+    },
+    {
+        "day": 18,
+        "no": 159,
+        "word": "meal pass",
+        "meaning": "식권",
+        "targetScore": 900,
+        "exampleEn": "Employees can purchase a monthly meal pass.",
+        "exampleKo": "직원들은 월간 식권을 구매할 수 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 160,
+        "word": "culinary",
+        "meaning": "요리의",
+        "targetScore": 900,
+        "exampleEn": "She is studying at a prestigious culinary school.",
+        "exampleKo": "그녀는 명문 요리 학교에서 공부하고 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 161,
+        "word": "indigenous",
+        "meaning": "지역 고유의, 토착의",
+        "targetScore": 900,
+        "exampleEn": "The restaurant serves dishes made with indigenous ingredients.",
+        "exampleKo": "그 식당은 지역 고유의(토착) 재료로 만든 요리를 제공합니다."
+    },
+    {
+        "day": 18,
+        "no": 162,
+        "word": "slurp",
+        "meaning": "소리 내어 마시다",
+        "targetScore": 900,
+        "exampleEn": "It is considered impolite to slurp your soup.",
+        "exampleKo": "수프를 소리 내어 마시는 것은 무례한 것으로 간주됩니다."
+    },
+    {
+        "day": 18,
+        "no": 163,
+        "word": "concierge",
+        "meaning": "(호텔의) 안내인",
+        "targetScore": 900,
+        "exampleEn": "The concierge can help you book theater tickets.",
+        "exampleKo": "컨시어지(안내인)가 연극 티켓 예매를 도와드릴 수 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 164,
+        "word": "sift",
+        "meaning": "체로 치다",
+        "targetScore": 900,
+        "exampleEn": "Sift the flour before adding it to the mixture.",
+        "exampleKo": "반죽에 넣기 전에 밀가루를 체로 치십시오."
+    },
+    {
+        "day": 18,
+        "no": 165,
+        "word": "corridor",
+        "meaning": "복도",
+        "targetScore": 900,
+        "exampleEn": "His room is at the end of the corridor.",
+        "exampleKo": "그의 방은 복도 끝에 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 166,
+        "word": "double occupancy",
+        "meaning": "2인실 사용",
+        "targetScore": 900,
+        "exampleEn": "The price is based on double occupancy.",
+        "exampleKo": "가격은 2인실 사용 기준입니다."
+    },
+    {
+        "day": 18,
+        "no": 167,
+        "word": "preheat",
+        "meaning": "(오븐을) 예열하다",
+        "targetScore": 900,
+        "exampleEn": "Preheat the oven to 180 degrees Celsius.",
+        "exampleKo": "오븐을 섭씨 180도로 예열하십시오."
+    },
+    {
+        "day": 18,
+        "no": 168,
+        "word": "help oneself to the food",
+        "meaning": "자유로이 먹다, 가져다 먹다",
+        "targetScore": 900,
+        "exampleEn": "Please help yourself to the food on the buffet table.",
+        "exampleKo": "뷔페 테이블에 있는 음식을 자유로이 가져다 드십시오."
+    }
+]

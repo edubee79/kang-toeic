@@ -1,0 +1,5 @@
+Passage_ID,Doc_Type,Passage_Content (Mark blanks as [Q131], [Q132]...),Question_No,Question_Instruction,Option_A,Option_B,Option_C,Option_D,Answer,Type_Tag
+P6_001,Email,"To: All Staff\nFrom: Management\n\nWe are writing to [Q131] you of the new policy. This change will be [Q132] starting next month...",131,Select the best word for blank [131],inform,information,informative,informs,a,G_VERB
+P6_001,Email,"(Repeated or Empty if same passage)",132,Select the best word for blank [132],effect,effective,effectively,effects,b,G_POS_ADJ
+P6_001,Email,"(Repeated or Empty)",133,Select the best sentence for blank [133],"However, we will delay it.","Therefore, please prepare.","It was a success.","None of the above.",b,C_SENT_INSERT
+P6_001,Email,"(Repeated or Empty)",134,Select the best word for blank [134],submit,submits,submitted,submission,a,G_VERB_TENSE

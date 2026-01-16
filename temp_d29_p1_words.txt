@@ -1,0 +1,41 @@
+ No          Word                          Meaning
+  1      conserve                       보존하다, 유지하다
+  2        chance                          가능성, 기회
+  3      forecast                         (날씨의) 예보
+  4         waste                         쓰레기, 폐기물
+  5       dispose                       처분하다, 처리하다
+  6     recycling                              재활용
+  7         clear 말게 갠, 명백한, 분명한, 또렷하게, 완전히,\n떨어져서
+  8        damage              피해, 손해, (물건을) 손상시키다
+  9   significant                    상당한, 중대한, 중요한
+ 10      solution                              해결책
+ 11         occur                   (일이) 발생하다, 생기다
+ 12         ideal                             이상적인
+ 13      preserve                       보존하다, 보호하다
+ 14           aid                               원조
+ 15     excessive                         지나친, 과도한
+ 16   intensively                            집중적으로
+ 17          vary                        다르다, 다양하다
+ 18      pleasing                즐거운, 기분 좋은, 만족스러운
+ 19          mark           점수, 평점, 표시, 기념하다, 축하하다
+ 20  inaccessible               접근이 불가능한, 이용이 불가능한
+ 21       disturb                             방해하다
+ 22     pollutant                            오염 물질
+ 23      emission                         배기가스, 방출
+ 24         dense                         빽빽한, 밀집한
+ 25 environmental                             환경적인
+ 26    consistent                 일치하는, 지속적인, 한결같은
+ 27          leak            누출, 누출량, (물·빛이) 새게 하다
+ 28  organization                               단체
+ 29   continually                             계속해서
+ 30   contaminate                            오염시키다
+ 31      disaster                               재난
+ 32     discharge                             방출하다
+ 33      resource                               자원
+ 34     prominent                        유명한, 두드러진
+ 35       deplete                            고갈시키다
+ 36        purify                            정화시키다
+ 37    endangered                        멸종 위기에 처한
+ 38    extinction                               멸종
+ 39       drought                               가뭄
+ 40       inflict                 (고통·피해를)입히다, 가하다

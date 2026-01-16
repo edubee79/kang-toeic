@@ -1,0 +1,290 @@
+[
+  {
+    "day": 27,
+    "no": 137,
+    "word": "dividend",
+    "meaning": "배당금",
+    "targetScore": 900,
+    "exampleEn": "Shareholders received a quarterly dividend.",
+    "exampleKo": "주주들은 분기별 배당금을 받았습니다."
+  },
+  {
+    "day": 27,
+    "no": 138,
+    "word": "devastate",
+    "meaning": "황폐 시키다",
+    "targetScore": 900,
+    "exampleEn": "The hurricane devastated the local economy.",
+    "exampleKo": "허리케인은 지역 경제를 황폐화시켰습니다."
+  },
+  {
+    "day": 27,
+    "no": 139,
+    "word": "deliberately",
+    "meaning": "고의로",
+    "targetScore": 900,
+    "exampleEn": "He deliberately withheld information.",
+    "exampleKo": "그는 고의로 정보를 숨겼습니다."
+  },
+  {
+    "day": 27,
+    "no": 140,
+    "word": "deflate",
+    "meaning": "(물가를) 끌어내리다",
+    "targetScore": 900,
+    "exampleEn": "The policy is intended to deflate prices.",
+    "exampleKo": "그 정책은 물가를 끌어내리도록 의도되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 141,
+    "word": "evoke",
+    "meaning": "(기억 등을) 일깨우다",
+    "targetScore": 900,
+    "exampleEn": "The photograph evokes memories of the past.",
+    "exampleKo": "그 사진은 과거의 기억을 일깨웁니다."
+  },
+  {
+    "day": 27,
+    "no": 142,
+    "word": "speculate",
+    "meaning": "추측하다",
+    "targetScore": 900,
+    "exampleEn": "Analysts speculate that the market will crash.",
+    "exampleKo": "분석가들은 시장이 붕괴할 것이라고 추측합니다."
+  },
+  {
+    "day": 27,
+    "no": 143,
+    "word": "accredit",
+    "meaning": "승인하다",
+    "targetScore": 900,
+    "exampleEn": "The program is accredited by the agency.",
+    "exampleKo": "그 프로그램은 에이전시에 의해 승인되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 144,
+    "word": "start-up cost",
+    "meaning": "착수 비용",
+    "targetScore": 900,
+    "exampleEn": "Start-up costs are higher than anticipated.",
+    "exampleKo": "착수 비용이 예상보다 높습니다."
+  },
+  {
+    "day": 27,
+    "no": 145,
+    "word": "cost estimate",
+    "meaning": "원가 견적",
+    "targetScore": 900,
+    "exampleEn": "Please provide a cost estimate for the repairs.",
+    "exampleKo": "수리 비용에 대한 원가 견적을 제공해 주십시오."
+  },
+  {
+    "day": 27,
+    "no": 146,
+    "word": "impair",
+    "meaning": "손상시키다",
+    "targetScore": 900,
+    "exampleEn": "Lack of sleep can impair your judgment.",
+    "exampleKo": "수면 부족은 판단력을 손상시킬 수 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 147,
+    "word": "fictitious",
+    "meaning": "허구의, 지어낸",
+    "targetScore": 900,
+    "exampleEn": "The characters in the book are fictitious.",
+    "exampleKo": "책의 등장인물들은 허구입니다."
+  },
+  {
+    "day": 27,
+    "no": 148,
+    "word": "unbiased",
+    "meaning": "선입견 없는, 편견 없는",
+    "targetScore": 900,
+    "exampleEn": "We need an unbiased opinion.",
+    "exampleKo": "우리는 선입견 없는 의견이 필요합니다."
+  },
+  {
+    "day": 27,
+    "no": 149,
+    "word": "property line",
+    "meaning": "토지 경계선",
+    "targetScore": 900,
+    "exampleEn": "The fence marks the property line.",
+    "exampleKo": "울타리는 토지 경계선을 표시합니다."
+  },
+  {
+    "day": 27,
+    "no": 150,
+    "word": "devalued",
+    "meaning": "평가 절하된",
+    "targetScore": 900,
+    "exampleEn": "The currency was devalued by 10%.",
+    "exampleKo": "통화가 10% 평가 절하되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 151,
+    "word": "manipulation",
+    "meaning": "조작, 시장 조작",
+    "targetScore": 900,
+    "exampleEn": "He was accused of stock market manipulation.",
+    "exampleKo": "그는 주식 시장 조작으로 기소되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 152,
+    "word": "faithfully",
+    "meaning": "충실하게; 정확히",
+    "targetScore": 900,
+    "exampleEn": "She faithfully served the company for 20 years.",
+    "exampleKo": "그녀는 20년 동안 회사에 충실하게 봉사했습니다."
+  },
+  {
+    "day": 27,
+    "no": 153,
+    "word": "overhaul",
+    "meaning": "점검, 정비",
+    "targetScore": 900,
+    "exampleEn": "The engine needs a complete overhaul.",
+    "exampleKo": "엔진은 전면적인 점검(정비)이 필요합니다."
+  },
+  {
+    "day": 27,
+    "no": 154,
+    "word": "unbeatable",
+    "meaning": "(가격·가치 등이) 더 이상 좋을 수 없는",
+    "targetScore": 900,
+    "exampleEn": "Our prices are unbeatable.",
+    "exampleKo": "우리의 가격은 더 이상 좋을 수 없습니다(타의 추종을 불허합니다)."
+  },
+  {
+    "day": 27,
+    "no": 155,
+    "word": "approximation",
+    "meaning": "근사치",
+    "targetScore": 900,
+    "exampleEn": "This figure is just an approximation.",
+    "exampleKo": "이 수치는 단지 근사치일 뿐입니다."
+  },
+  {
+    "day": 27,
+    "no": 156,
+    "word": "attainable",
+    "meaning": "이룰 수 있는",
+    "targetScore": 900,
+    "exampleEn": "The sales target is attainable.",
+    "exampleKo": "판매 목표는 달성 가능합니다(이룰 수 있습니다)."
+  },
+  {
+    "day": 27,
+    "no": 157,
+    "word": "well-balanced",
+    "meaning": "균형이 잡힌",
+    "targetScore": 900,
+    "exampleEn": "A well-balanced diet is important for health.",
+    "exampleKo": "균형 잡힌 식단은 건강에 중요합니다."
+  },
+  {
+    "day": 27,
+    "no": 158,
+    "word": "wipe off",
+    "meaning": "~을 없애다",
+    "targetScore": 900,
+    "exampleEn": "The debt was wiped off.",
+    "exampleKo": "빚이 탕감되었습니다(없어졌습니다)."
+  },
+  {
+    "day": 27,
+    "no": 159,
+    "word": "courteousness",
+    "meaning": "예의 바름, 공손함",
+    "targetScore": 900,
+    "exampleEn": "He is known for his courteousness to customers.",
+    "exampleKo": "그는 고객들에 대한 예의 바름으로 알려져 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 160,
+    "word": "in the vicinity of",
+    "meaning": "~의 부근에",
+    "targetScore": 900,
+    "exampleEn": "There are several hotels in the vicinity of the airport.",
+    "exampleKo": "공항 부근에 여러 호텔이 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 161,
+    "word": "set aside",
+    "meaning": "챙겨두다",
+    "targetScore": 900,
+    "exampleEn": "Please set aside some money for savings.",
+    "exampleKo": "저축을 위해 돈을 좀 챙겨두십시오."
+  },
+  {
+    "day": 27,
+    "no": 162,
+    "word": "disparately",
+    "meaning": "본질적으로 다르게",
+    "targetScore": 900,
+    "exampleEn": "The two cases were treated disparately.",
+    "exampleKo": "두 사건은 본질적으로 다르게 취급되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 163,
+    "word": "outweigh",
+    "meaning": "(가치∙중요성이) ~보다 크다",
+    "targetScore": 900,
+    "exampleEn": "The benefits outweigh the costs.",
+    "exampleKo": "혜택이 비용보다 큽니다(중요합니다)."
+  },
+  {
+    "day": 27,
+    "no": 164,
+    "word": "play a role in",
+    "meaning": "~에 한 몫을 하다",
+    "targetScore": 900,
+    "exampleEn": "Technology plays a huge role in modern business.",
+    "exampleKo": "기술은 현대 비즈니스에서 큰 몫을 합니다."
+  },
+  {
+    "day": 27,
+    "no": 165,
+    "word": "outlying",
+    "meaning": "외진, 변경의",
+    "targetScore": 900,
+    "exampleEn": "We deliver to outlying areas.",
+    "exampleKo": "우리는 외진(변두리) 지역으로 배달합니다."
+  },
+  {
+    "day": 27,
+    "no": 166,
+    "word": "dispatch",
+    "meaning": "(소포 등을) 발송하다",
+    "targetScore": 900,
+    "exampleEn": "Technicians were dispatched to fix the problem.",
+    "exampleKo": "문제를 해결하기 위해 기술자들이 발송되었습니다(파견되었습니다)."
+  },
+  {
+    "day": 27,
+    "no": 167,
+    "word": "untimely",
+    "meaning": "때 이른, 시기상조의",
+    "targetScore": 900,
+    "exampleEn": "His untimely death shocked the community.",
+    "exampleKo": "그의 때 이른 죽음은 지역 사회에 충격을 주었습니다."
+  },
+  {
+    "day": 27,
+    "no": 168,
+    "word": "take steps",
+    "meaning": "조치를 취하다",
+    "targetScore": 900,
+    "exampleEn": "We must take steps to reduce pollution.",
+    "exampleKo": "우리는 오염을 줄이기 위해 조치를 취해야 합니다."
+  }
+]

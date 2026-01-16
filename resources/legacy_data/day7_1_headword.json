@@ -1,0 +1,362 @@
+[
+    {
+        "day": 7,
+        "no": 1,
+        "word": "survey",
+        "meaning": "설문 조사",
+        "targetScore": 650,
+        "exampleEn": "Please complete the customer satisfaction survey.",
+        "exampleKo": "고객 만족도 설문 조사를 완료해 주세요."
+    },
+    {
+        "day": 7,
+        "no": 2,
+        "word": "analysis",
+        "meaning": "분석",
+        "targetScore": 650,
+        "exampleEn": "The analysis showed a decrease in sales.",
+        "exampleKo": "분석 결과 매출 감소가 나타났습니다."
+    },
+    {
+        "day": 7,
+        "no": 3,
+        "word": "respondent",
+        "meaning": "응답자",
+        "targetScore": 650,
+        "exampleEn": "Most respondents preferred the new design.",
+        "exampleKo": "대부분의 응답자는 새로운 디자인을 선호했습니다."
+    },
+    {
+        "day": 7,
+        "no": 4,
+        "word": "monopoly",
+        "meaning": "독점",
+        "targetScore": 650,
+        "exampleEn": "The company has a monopoly on the market.",
+        "exampleKo": "그 회사는 시장에 대한 독점권을 가지고 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 5,
+        "word": "competition",
+        "meaning": "경쟁",
+        "targetScore": 650,
+        "exampleEn": "There is fierce competition in the industry.",
+        "exampleKo": "업계에는 치열한 경쟁이 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 6,
+        "word": "consistently",
+        "meaning": "항상, 일관되게",
+        "targetScore": 650,
+        "exampleEn": "The team consistently delivers high-quality work.",
+        "exampleKo": "그 팀은 항상 높은 품질의 작업을 제공합니다."
+    },
+    {
+        "day": 7,
+        "no": 7,
+        "word": "demand",
+        "meaning": "수요, 요구",
+        "targetScore": 650,
+        "exampleEn": "There is a high demand for skilled workers.",
+        "exampleKo": "숙련된 근로자에 대한 수요가 높습니다."
+    },
+    {
+        "day": 7,
+        "no": 8,
+        "word": "do one's utmost",
+        "meaning": "전력을 다하다",
+        "targetScore": 650,
+        "exampleEn": "We will do our utmost to meet the deadline.",
+        "exampleKo": "우리는 마감 기한을 맞추기 위해 전력을 다할 것입니다."
+    },
+    {
+        "day": 7,
+        "no": 9,
+        "word": "expand",
+        "meaning": "확장하다, 넓히다",
+        "targetScore": 650,
+        "exampleEn": "They plan to expand their business overseas.",
+        "exampleKo": "그들은 사업을 해외로 확장할 계획입니다."
+    },
+    {
+        "day": 7,
+        "no": 10,
+        "word": "advanced",
+        "meaning": "고급의; 진보한",
+        "targetScore": 650,
+        "exampleEn": "This phone uses advanced technology.",
+        "exampleKo": "이 전화기는 첨단 기술을 사용합니다."
+    },
+    {
+        "day": 7,
+        "no": 11,
+        "word": "postpone",
+        "meaning": "연기하다, 미루다",
+        "targetScore": 650,
+        "exampleEn": "The meeting was postponed due to bad weather.",
+        "exampleKo": "악천후로 인해 회의가 연기되었습니다."
+    },
+    {
+        "day": 7,
+        "no": 12,
+        "word": "additional",
+        "meaning": "추가의",
+        "targetScore": 650,
+        "exampleEn": "There is an additional charge for delivery.",
+        "exampleKo": "배송에는 추가 요금이 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 13,
+        "word": "appreciate",
+        "meaning": "고맙게 생각하다; 진가를 알아보다",
+        "targetScore": 650,
+        "exampleEn": "I appreciate your help.",
+        "exampleKo": "도와주셔서 감사합니다."
+    },
+    {
+        "day": 7,
+        "no": 14,
+        "word": "demonstration",
+        "meaning": "설명; 시위",
+        "targetScore": 650,
+        "exampleEn": "He gave a demonstration of the new software.",
+        "exampleKo": "그는 새 소프트웨어에 대한 시연을 했습니다."
+    },
+    {
+        "day": 7,
+        "no": 15,
+        "word": "buy",
+        "meaning": "사다",
+        "targetScore": 650,
+        "exampleEn": "I want to buy a new car.",
+        "exampleKo": "나는 새 차를 사고 싶습니다."
+    },
+    {
+        "day": 7,
+        "no": 16,
+        "word": "examine",
+        "meaning": "조사하다",
+        "targetScore": 650,
+        "exampleEn": "The doctor examined the patient.",
+        "exampleKo": "의사가 환자를 진찰했습니다."
+    },
+    {
+        "day": 7,
+        "no": 17,
+        "word": "effective",
+        "meaning": "효과적인; 발효되는",
+        "targetScore": 650,
+        "exampleEn": "The new policy is effective immediately.",
+        "exampleKo": "새 정책은 즉시 발효됩니다."
+    },
+    {
+        "day": 7,
+        "no": 18,
+        "word": "closely",
+        "meaning": "면밀히",
+        "targetScore": 650,
+        "exampleEn": "Monitor the situation closely.",
+        "exampleKo": "상황을 면밀히 감시하세요."
+    },
+    {
+        "day": 7,
+        "no": 19,
+        "word": "reserve",
+        "meaning": "예약하다; 비축하다",
+        "targetScore": 650,
+        "exampleEn": "I'd like to reserve a table for two.",
+        "exampleKo": "두 명 자리를 예약하고 싶습니다."
+    },
+    {
+        "day": 7,
+        "no": 20,
+        "word": "cooperate",
+        "meaning": "협력하다",
+        "targetScore": 650,
+        "exampleEn": "The two companies agreed to cooperate.",
+        "exampleKo": "두 회사는 협력하기로 합의했습니다."
+    },
+    {
+        "day": 7,
+        "no": 21,
+        "word": "consecutive",
+        "meaning": "연속적인",
+        "targetScore": 650,
+        "exampleEn": "It rained for three consecutive days.",
+        "exampleKo": "3일 연속으로 비가 왔습니다."
+    },
+    {
+        "day": 7,
+        "no": 22,
+        "word": "expectation",
+        "meaning": "예상, 기대",
+        "targetScore": 650,
+        "exampleEn": "The movie exceeded my expectations.",
+        "exampleKo": "그 영화는 내 기대를 뛰어넘었습니다."
+    },
+    {
+        "day": 7,
+        "no": 23,
+        "word": "publicize",
+        "meaning": "공표하다; 광고하다",
+        "targetScore": 650,
+        "exampleEn": "They publicized the event on social media.",
+        "exampleKo": "그들은 소셜 미디어에 행사를 광고했습니다."
+    },
+    {
+        "day": 7,
+        "no": 24,
+        "word": "raise",
+        "meaning": "올리다, 높이다; (자금을) 모으다",
+        "targetScore": 650,
+        "exampleEn": "They plan to raise prices next year.",
+        "exampleKo": "그들은 내년에 가격을 인상할 계획입니다."
+    },
+    {
+        "day": 7,
+        "no": 25,
+        "word": "extremely",
+        "meaning": "극도로, 대단히",
+        "targetScore": 650,
+        "exampleEn": "It is extremely hot today.",
+        "exampleKo": "오늘은 대단히 덥습니다."
+    },
+    {
+        "day": 7,
+        "no": 26,
+        "word": "affect",
+        "meaning": "영향을 미치다",
+        "targetScore": 650,
+        "exampleEn": "The weather creates problems that affect everyone.",
+        "exampleKo": "날씨는 모든 사람에게 영향을 미치는 문제를 야기합니다."
+    },
+    {
+        "day": 7,
+        "no": 27,
+        "word": "target",
+        "meaning": "목표; 목표로 삼다",
+        "targetScore": 650,
+        "exampleEn": "Our target audience is teenagers.",
+        "exampleKo": "우리의 목표 고객은 십대들입니다."
+    },
+    {
+        "day": 7,
+        "no": 28,
+        "word": "campaign",
+        "meaning": "캠페인",
+        "targetScore": 650,
+        "exampleEn": "The marketing campaign was successful.",
+        "exampleKo": "마케팅 캠페인은 성공적이었습니다."
+    },
+    {
+        "day": 7,
+        "no": 29,
+        "word": "probable",
+        "meaning": "개연성이 높은, 유력한",
+        "targetScore": 650,
+        "exampleEn": "It is probable that he will win.",
+        "exampleKo": "그가 이길 가능성이 높습니다."
+    },
+    {
+        "day": 7,
+        "no": 30,
+        "word": "focus",
+        "meaning": "집중하다",
+        "targetScore": 650,
+        "exampleEn": "We need to focus on the main issue.",
+        "exampleKo": "우리는 주요 문제에 집중해야 합니다."
+    },
+    {
+        "day": 7,
+        "no": 31,
+        "word": "seasonal",
+        "meaning": "계절의, 계절적인",
+        "targetScore": 650,
+        "exampleEn": "They sell seasonal fruits.",
+        "exampleKo": "그들은 계절 과일을 팝니다."
+    },
+    {
+        "day": 7,
+        "no": 32,
+        "word": "impact",
+        "meaning": "영향, 충격",
+        "targetScore": 650,
+        "exampleEn": "The policy had a positive impact on the economy.",
+        "exampleKo": "그 정책은 경제에 긍정적인 영향을 미쳤습니다."
+    },
+    {
+        "day": 7,
+        "no": 33,
+        "word": "comparison",
+        "meaning": "비교",
+        "targetScore": 650,
+        "exampleEn": "There is no comparison between the two.",
+        "exampleKo": "둘 사이에는 비교가 되지 않습니다."
+    },
+    {
+        "day": 7,
+        "no": 34,
+        "word": "gap",
+        "meaning": "격차",
+        "targetScore": 650,
+        "exampleEn": "There is a gap between the rich and the poor.",
+        "exampleKo": "빈부 격차가 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 35,
+        "word": "mounting",
+        "meaning": "증가하는, 오르는",
+        "targetScore": 650,
+        "exampleEn": "There is mounting pressure to resign.",
+        "exampleKo": "사임하라는 압력이 증가하고 있습니다."
+    },
+    {
+        "day": 7,
+        "no": 36,
+        "word": "reflective",
+        "meaning": "반영하는",
+        "targetScore": 650,
+        "exampleEn": "The book is reflective of the times.",
+        "exampleKo": "그 책은 그 시대를 반영합니다."
+    },
+    {
+        "day": 7,
+        "no": 37,
+        "word": "advertisement",
+        "meaning": "광고",
+        "targetScore": 650,
+        "exampleEn": "I saw an advertisement for a new job.",
+        "exampleKo": "나는 새 일자리에 대한 광고를 보았습니다."
+    },
+    {
+        "day": 7,
+        "no": 38,
+        "word": "marginal",
+        "meaning": "약간의",
+        "targetScore": 650,
+        "exampleEn": "There was a marginal increase in sales.",
+        "exampleKo": "매출에 약간의 증가가 있었습니다."
+    },
+    {
+        "day": 7,
+        "no": 39,
+        "word": "customer",
+        "meaning": "고객",
+        "targetScore": 650,
+        "exampleEn": "The customer is always right.",
+        "exampleKo": "고객은 항상 옳습니다."
+    },
+    {
+        "day": 7,
+        "no": 40,
+        "word": "influence",
+        "meaning": "~에 영향을 주다",
+        "targetScore": 650,
+        "exampleEn": "His friends influenced his decision.",
+        "exampleKo": "그의 친구들이 그의 결정에 영향을 주었습니다."
+    }
+]

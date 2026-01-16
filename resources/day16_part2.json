@@ -1,0 +1,254 @@
+[
+  {
+    "day": 16,
+    "no": 41,
+    "word": "consignment",
+    "meaning": "위탁 판매",
+    "targetScore": 650,
+    "exampleEn": "The store agreed to sell the artist's paintings on consignment.",
+    "exampleKo": "그 가게는 화가의 그림을 위탁 판매로 팔기로 동의했습니다."
+  },
+  {
+    "day": 16,
+    "no": 42,
+    "word": "checklist",
+    "meaning": "점검표",
+    "targetScore": 650,
+    "exampleEn": "Please complete the safety checklist before operating the machine.",
+    "exampleKo": "기계를 작동하기 전에 안전 점검표를 작성해 주십시오."
+  },
+  {
+    "day": 16,
+    "no": 43,
+    "word": "client",
+    "meaning": "고객, 의뢰인",
+    "targetScore": 650,
+    "exampleEn": "Satisfying the client is our most important goal.",
+    "exampleKo": "고객(의뢰인)을 만족시키는 것이 우리의 가장 중요한 목표입니다."
+  },
+  {
+    "day": 16,
+    "no": 44,
+    "word": "communicate",
+    "meaning": "의사소통하다",
+    "targetScore": 650,
+    "exampleEn": "We use email to communicate with our international partners.",
+    "exampleKo": "우리는 해외 파트너들과 의사소통하기 위해 이메일을 사용합니다."
+  },
+  {
+    "day": 16,
+    "no": 45,
+    "word": "exchange",
+    "meaning": "교환, 교환하다",
+    "targetScore": 650,
+    "exampleEn": "You can exchange the shirt for a larger size.",
+    "exampleKo": "셔츠를 더 큰 사이즈로 교환할 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 46,
+    "word": "film studio",
+    "meaning": "영화 제작사",
+    "targetScore": 650,
+    "exampleEn": "The film studio is releasing three new movies this summer.",
+    "exampleKo": "그 영화 제작사는 올여름에 세 편의 새 영화를 개봉합니다."
+  },
+  {
+    "day": 16,
+    "no": 47,
+    "word": "journal",
+    "meaning": "신문, 잡지, 일지",
+    "targetScore": 650,
+    "exampleEn": "He writes articles for a scientific journal.",
+    "exampleKo": "그는 과학 잡지(저널)에 기사를 씁니다."
+  },
+  {
+    "day": 16,
+    "no": 48,
+    "word": "journalist",
+    "meaning": "기자",
+    "targetScore": 650,
+    "exampleEn": "The journalist interviewed the mayor about the new policy.",
+    "exampleKo": "그 기자는 새로운 정책에 대해 시장을 인터뷰했습니다."
+  },
+  {
+    "day": 16,
+    "no": 49,
+    "word": "magazine",
+    "meaning": "잡지",
+    "targetScore": 650,
+    "exampleEn": "Our advertisement will appear in a popular fashion magazine.",
+    "exampleKo": "우리 광고는 인기 있는 패션 잡지에 실릴 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 50,
+    "word": "newspaper",
+    "meaning": "신문",
+    "targetScore": 650,
+    "exampleEn": "I read about the merger in the daily newspaper.",
+    "exampleKo": "저는 일간 신문에서 그 합병에 대해 읽었습니다."
+  },
+  {
+    "day": 16,
+    "no": 51,
+    "word": "newsstand",
+    "meaning": "신문 가판대",
+    "targetScore": 650,
+    "exampleEn": "You can buy a map at the newsstand near the station.",
+    "exampleKo": "역 근처 신문 가판대에서 지도를 살 수 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 52,
+    "word": "parade",
+    "meaning": "퍼레이드, 행렬",
+    "targetScore": 650,
+    "exampleEn": "Crowds gathered to watch the holiday parade.",
+    "exampleKo": "군중들이 휴일 퍼레이드(행렬)를 보기 위해 모였습니다."
+  },
+  {
+    "day": 16,
+    "no": 53,
+    "word": "publisher",
+    "meaning": "출판사, 발행자",
+    "targetScore": 650,
+    "exampleEn": "The publisher expects the book to be a bestseller.",
+    "exampleKo": "그 출판사(발행자)는 그 책이 베스트셀러가 될 것으로 예상합니다."
+  },
+  {
+    "day": 16,
+    "no": 54,
+    "word": "reader",
+    "meaning": "독자",
+    "targetScore": 650,
+    "exampleEn": "The magazine aims to appeal to a wide range of readers.",
+    "exampleKo": "그 잡지는 폭넓은 독자들에게 어필하는 것을 목표로 합니다."
+  },
+  {
+    "day": 16,
+    "no": 55,
+    "word": "reporter",
+    "meaning": "보도 기자, 리포터",
+    "targetScore": 650,
+    "exampleEn": "A reporter from the local news station is here to see you.",
+    "exampleKo": "지역 뉴스 방송국의 보도 기자(리포터)가 당신을 만나기 위해 여기에 왔습니다."
+  },
+  {
+    "day": 16,
+    "no": 56,
+    "word": "sales trend",
+    "meaning": "판매 추세",
+    "targetScore": 650,
+    "exampleEn": "We analyze the sales trend to forecast future revenue.",
+    "exampleKo": "우리는 미래 수익을 예측하기 위해 판매 추세를 분석합니다."
+  },
+  {
+    "day": 16,
+    "no": 57,
+    "word": "comforting",
+    "meaning": "위로가 되는",
+    "targetScore": 650,
+    "exampleEn": "It is comforting to know that we have insurance coverage.",
+    "exampleKo": "보험 보장을 받고 있다는 것을 아는 것은 위로가 됩니다."
+  },
+  {
+    "day": 16,
+    "no": 58,
+    "word": "excellently",
+    "meaning": "뛰어나게",
+    "targetScore": 650,
+    "exampleEn": "The new employee performed excellently during the trial period.",
+    "exampleKo": "신입 사원은 수습 기간 동안 뛰어나게 업무를 수행했습니다."
+  },
+  {
+    "day": 16,
+    "no": 59,
+    "word": "export",
+    "meaning": "수출하다, 수출",
+    "targetScore": 650,
+    "exampleEn": "The country exports coffee beans to all over the world.",
+    "exampleKo": "그 나라는 커피 원두를 전 세계로 수출합니다."
+  },
+  {
+    "day": 16,
+    "no": 60,
+    "word": "former",
+    "meaning": "예전의",
+    "targetScore": 650,
+    "exampleEn": "The former CEO will remain on the board of directors.",
+    "exampleKo": "전(예전의) CEO는 이사회에 남을 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 61,
+    "word": "govern",
+    "meaning": "통치하다, 지배하다",
+    "targetScore": 650,
+    "exampleEn": "The rules that govern the contest are clearly stated.",
+    "exampleKo": "대회를 통치하는(지배하는) 규칙들은 명확하게 명시되어 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 62,
+    "word": "government",
+    "meaning": "정부",
+    "targetScore": 650,
+    "exampleEn": "The government is offering tax incentives for small businesses.",
+    "exampleKo": "정부는 소상공인을 위한 세금 혜택을 제공하고 있습니다."
+  },
+  {
+    "day": 16,
+    "no": 63,
+    "word": "import",
+    "meaning": "수입하다, 수입",
+    "targetScore": 650,
+    "exampleEn": "We plan to import new machinery from Germany.",
+    "exampleKo": "우리는 독일에서 새로운 기계를 수입할 계획입니다."
+  },
+  {
+    "day": 16,
+    "no": 64,
+    "word": "politician",
+    "meaning": "정치인",
+    "targetScore": 650,
+    "exampleEn": "The politician gave a speech about economic growth.",
+    "exampleKo": "그 정치인은 경제 성장에 대한 연설을 했습니다."
+  },
+  {
+    "day": 16,
+    "no": 65,
+    "word": "politics",
+    "meaning": "정치, 정치학",
+    "targetScore": 650,
+    "exampleEn": "She decided to enter politics after retiring from law.",
+    "exampleKo": "그녀는 법조계에서 은퇴한 후 정계(정치)에 입문하기로 결정했습니다."
+  },
+  {
+    "day": 16,
+    "no": 66,
+    "word": "shortly",
+    "meaning": "얼마 안되어",
+    "targetScore": 650,
+    "exampleEn": "The train will arrive shortly.",
+    "exampleKo": "기차가 곧(얼마 안되어) 도착할 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 67,
+    "word": "start",
+    "meaning": "시작하다, 시작",
+    "targetScore": 650,
+    "exampleEn": "We will start the project next month.",
+    "exampleKo": "우리는 다음 달에 프로젝트를 시작할 것입니다."
+  },
+  {
+    "day": 16,
+    "no": 68,
+    "word": "supplier",
+    "meaning": "공급자",
+    "targetScore": 650,
+    "exampleEn": "We found a reliable supplier for raw materials.",
+    "exampleKo": "우리는 원자재를 위한 신뢰할 수 있는 공급자를 찾았습니다."
+  }
+]

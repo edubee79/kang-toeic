@@ -1,0 +1,290 @@
+[
+    {
+        "day": 11,
+        "no": 137,
+        "word": "streamline",
+        "meaning": "능률적으로 하다, 간소화하다",
+        "targetScore": 900,
+        "exampleEn": "We need to streamline our production process.",
+        "exampleKo": "우리는 생산 과정을 능률적으로 만들어야 합니다."
+    },
+    {
+        "day": 11,
+        "no": 138,
+        "word": "utilize",
+        "meaning": "활용하다, 이용하다",
+        "targetScore": 900,
+        "exampleEn": "We must utilize all available resources.",
+        "exampleKo": "우리는 이용 가능한 모든 자원을 활용해야 합니다."
+    },
+    {
+        "day": 11,
+        "no": 139,
+        "word": "warrant",
+        "meaning": "보증하다; 정당화하다",
+        "targetScore": 900,
+        "exampleEn": "The situation warrants immediate action.",
+        "exampleKo": "상황이 즉각적인 조치를 정당화합니다."
+    },
+    {
+        "day": 11,
+        "no": 140,
+        "word": "advanced",
+        "meaning": "고급의, 진보한",
+        "targetScore": 900,
+        "exampleEn": "This is an course for advanced students.",
+        "exampleKo": "이것은 고급 학생들을 위한 강좌입니다."
+    },
+    {
+        "day": 11,
+        "no": 141,
+        "word": "be designed to",
+        "meaning": "~하도록 설계되다",
+        "targetScore": 900,
+        "exampleEn": "The course is designed to help beginners.",
+        "exampleKo": "그 강좌는 초보자를 돕도록 설계되었습니다."
+    },
+    {
+        "day": 11,
+        "no": 142,
+        "word": "breakthrough",
+        "meaning": "획기적인 발전, 돌파구",
+        "targetScore": 900,
+        "exampleEn": "Scientists made a major breakthrough.",
+        "exampleKo": "과학자들은 중대한 발전을 이루었습니다."
+    },
+    {
+        "day": 11,
+        "no": 143,
+        "word": "combustion",
+        "meaning": "연소",
+        "targetScore": 900,
+        "exampleEn": "The engine works by internal combustion.",
+        "exampleKo": "그 엔진은 내연 기관으로 작동합니다."
+    },
+    {
+        "day": 11,
+        "no": 144,
+        "word": "component",
+        "meaning": "부품, 구성 요소",
+        "targetScore": 900,
+        "exampleEn": "This is a key component of the system.",
+        "exampleKo": "이것은 시스템의 핵심 구성 요소입니다."
+    },
+    {
+        "day": 11,
+        "no": 145,
+        "word": "confidential",
+        "meaning": "기밀의",
+        "targetScore": 900,
+        "exampleEn": "These documents are confidential.",
+        "exampleKo": "이 문서들은 기밀입니다."
+    },
+    {
+        "day": 11,
+        "no": 146,
+        "word": "defective",
+        "meaning": "결함이 있는",
+        "targetScore": 900,
+        "exampleEn": "The goods were defective.",
+        "exampleKo": "그 상품들은 결함이 있었습니다."
+    },
+    {
+        "day": 11,
+        "no": 147,
+        "word": "digitize",
+        "meaning": "디지털화하다",
+        "targetScore": 900,
+        "exampleEn": "We are digitizing our records.",
+        "exampleKo": "우리는 기록을 디지털화하고 있습니다."
+    },
+    {
+        "day": 11,
+        "no": 148,
+        "word": "distraction",
+        "meaning": "주의 산만, 방해물",
+        "targetScore": 900,
+        "exampleEn": "I can't work with all these distractions.",
+        "exampleKo": "이런 방해물들 때문에 일할 수 없습니다."
+    },
+    {
+        "day": 11,
+        "no": 149,
+        "word": "fuel-efficiency",
+        "meaning": "연료 효율성",
+        "targetScore": 900,
+        "exampleEn": "The car has excellent fuel-efficiency.",
+        "exampleKo": "그 차는 연료 효율성이 뛰어납니다."
+    },
+    {
+        "day": 11,
+        "no": 150,
+        "word": "innovate",
+        "meaning": "혁신하다",
+        "targetScore": 900,
+        "exampleEn": "Companies must innovate to survive.",
+        "exampleKo": "기업은 살아남기 위해 혁신해야 합니다."
+    },
+    {
+        "day": 11,
+        "no": 151,
+        "word": "malfunction",
+        "meaning": "오작동; 오작동하다",
+        "targetScore": 900,
+        "exampleEn": "The computer malfunctioned.",
+        "exampleKo": "컴퓨터가 오작동했습니다."
+    },
+    {
+        "day": 11,
+        "no": 152,
+        "word": "match",
+        "meaning": "어울리다, 일치하다",
+        "targetScore": 900,
+        "exampleEn": "Her skills match the job requirements.",
+        "exampleKo": "그녀의 기술은 직업 요건과 일치합니다."
+    },
+    {
+        "day": 11,
+        "no": 153,
+        "word": "model",
+        "meaning": "모델, 모형",
+        "targetScore": 900,
+        "exampleEn": "This is a scale model of the building.",
+        "exampleKo": "이것은 그 건물의 축소 모형입니다."
+    },
+    {
+        "day": 11,
+        "no": 154,
+        "word": "obsolete",
+        "meaning": "구식의, 쓸모없는",
+        "targetScore": 900,
+        "exampleEn": "Typewriters are obsolete.",
+        "exampleKo": "타자기는 구식입니다."
+    },
+    {
+        "day": 11,
+        "no": 155,
+        "word": "patent",
+        "meaning": "특허",
+        "targetScore": 900,
+        "exampleEn": "The invention is protected by patent.",
+        "exampleKo": "그 발명품은 특허로 보호받습니다."
+    },
+    {
+        "day": 11,
+        "no": 156,
+        "word": "portable",
+        "meaning": "휴대용의",
+        "targetScore": 900,
+        "exampleEn": "It is a portable radio.",
+        "exampleKo": "그것은 휴대용 라디오입니다."
+    },
+    {
+        "day": 11,
+        "no": 157,
+        "word": "predominant",
+        "meaning": "지배적인, 우세한",
+        "targetScore": 900,
+        "exampleEn": "English is the predominant language.",
+        "exampleKo": "영어는 지배적인 언어입니다."
+    },
+    {
+        "day": 11,
+        "no": 158,
+        "word": "production",
+        "meaning": "생산",
+        "targetScore": 900,
+        "exampleEn": "Mass production lowered costs.",
+        "exampleKo": "대량 생산은 비용을 낮췄습니다."
+    },
+    {
+        "day": 11,
+        "no": 159,
+        "word": "productivity",
+        "meaning": "생산성",
+        "targetScore": 900,
+        "exampleEn": "We aim to increase productivity.",
+        "exampleKo": "우리는 생산성을 높이는 것을 목표로 합니다."
+    },
+    {
+        "day": 11,
+        "no": 160,
+        "word": "project",
+        "meaning": "예상하다, 계획하다",
+        "targetScore": 900,
+        "exampleEn": "Sales are projected to rise.",
+        "exampleKo": "매출이 증가할 것으로 예상됩니다."
+    },
+    {
+        "day": 11,
+        "no": 161,
+        "word": "prototype",
+        "meaning": "시제품, 원형",
+        "targetScore": 900,
+        "exampleEn": "They built a prototype of the car.",
+        "exampleKo": "그들은 그 차의 시제품을 만들었습니다."
+    },
+    {
+        "day": 11,
+        "no": 162,
+        "word": "raw material",
+        "meaning": "원자재",
+        "targetScore": 900,
+        "exampleEn": "We import raw materials.",
+        "exampleKo": "우리는 원자재를 수입합니다."
+    },
+    {
+        "day": 11,
+        "no": 163,
+        "word": "residue",
+        "meaning": "잔여물",
+        "targetScore": 900,
+        "exampleEn": "There was a sticky residue on the table.",
+        "exampleKo": "탁자에 끈적끈적한 잔여물이 있었습니다."
+    },
+    {
+        "day": 11,
+        "no": 164,
+        "word": "revolutionize",
+        "meaning": "혁신을 일으키다",
+        "targetScore": 900,
+        "exampleEn": "The internet revolutionized communication.",
+        "exampleKo": "인터넷은 통신에 혁신을 일으켰습니다."
+    },
+    {
+        "day": 11,
+        "no": 165,
+        "word": "specification",
+        "meaning": "사양, 명세서",
+        "targetScore": 900,
+        "exampleEn": "Check the product specifications.",
+        "exampleKo": "제품 사양을 확인하세요."
+    },
+    {
+        "day": 11,
+        "no": 166,
+        "word": "subsequently",
+        "meaning": "그 후에",
+        "targetScore": 900,
+        "exampleEn": "He subsequently denied the charge.",
+        "exampleKo": "그는 그 후에 혐의를 부인했습니다."
+    },
+    {
+        "day": 11,
+        "no": 167,
+        "word": "synthetic",
+        "meaning": "합성의",
+        "targetScore": 900,
+        "exampleEn": "Nylon is a synthetic fiber.",
+        "exampleKo": "나일론은 합성 섬유입니다."
+    },
+    {
+        "day": 11,
+        "no": 168,
+        "word": "trial",
+        "meaning": "시험, 재판",
+        "targetScore": 900,
+        "exampleEn": "The drug is undergoing clinical trials.",
+        "exampleKo": "그 약은 임상 시험 중입니다."
+    }
+]

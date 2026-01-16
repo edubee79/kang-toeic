@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 6,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "Why has the Movie Night event been rescheduled?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A projector is not available."
+          },
+          {
+            "label": "B",
+            "text": "A nearby road is being repaired."
+          },
+          {
+            "label": "C",
+            "text": "The space is double booked."
+          },
+          {
+            "label": "D",
+            "text": "The event organizer is ill."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q72",
+        "text": "When will the event be held?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Tomorrow"
+          },
+          {
+            "label": "B",
+            "text": "This weekend"
+          },
+          {
+            "label": "C",
+            "text": "In two weeks"
+          },
+          {
+            "label": "D",
+            "text": "In one month"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q73",
+        "text": "How can the listener request a refund?",
+        "options": [
+          {
+            "label": "A",
+            "text": "By mailing a ticket"
+          },
+          {
+            "label": "B",
+            "text": "By visiting an office"
+          },
+          {
+            "label": "C",
+            "text": "By completing an online form"
+          },
+          {
+            "label": "D",
+            "text": "By making a phone call"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br Hello. This is the Chesterfield Community Center. 71 We're calling to inform you about a change to our Movie Night event, originally planned for this Tuesday. Unfortunately, another event had been booked at the community center for the same day. As a result, 72 Movie Night has been rescheduled for this upcoming weekend, at nine P.M. on Saturday. If you're no longer able to attend, we're happy to refund your ticket. 73 You can request this refund by calling our office at 555-0126."
+  },
+  {
+    "testId": 6,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A park ranger"
+          },
+          {
+            "label": "B",
+            "text": "A travel agent"
+          },
+          {
+            "label": "C",
+            "text": "A landscaper"
+          },
+          {
+            "label": "D",
+            "text": "A building inspector"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q75",
+        "text": "What are the listeners asked to check for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Expired identification cards"
+          },
+          {
+            "label": "B",
+            "text": "Local construction regulations"
+          },
+          {
+            "label": "C",
+            "text": "Hazardous outdoor conditions"
+          },
+          {
+            "label": "D",
+            "text": "Sudden price increases"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q76",
+        "text": "What does the speaker distribute?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Maps"
+          },
+          {
+            "label": "B",
+            "text": "Uniforms"
+          },
+          {
+            "label": "C",
+            "text": "Visitor passes"
+          },
+          {
+            "label": "D",
+            "text": "Employee handbooks"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "W-Am 74 Welcome to Canyon River National Park. I'm Marisol, and I'll be training you in your new role as park rangers. Each of you will be assigned one area of the park. Your duties will vary, but 75 one task you need to complete every day is to check your assigned area for hazardous conditions. For example, if you come across any fallen branches blocking the trails or roadways, you need to report them right away. Now-before I show you the grounds, 76 let me give you your uniforms. Please make sure that you wear them at all times on the premises."
+  },
+  {
+    "testId": 6,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "Who is the speaker addressing?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Potential investors"
+          },
+          {
+            "label": "B",
+            "text": "Tourists"
+          },
+          {
+            "label": "C",
+            "text": "Staff members"
+          },
+          {
+            "label": "D",
+            "text": "Job applicants"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q78",
+        "text": "Why does the speaker say, \"This is only a trial period\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To correct a colleague's statement"
+          },
+          {
+            "label": "B",
+            "text": "To apologize for a meeting conflict"
+          },
+          {
+            "label": "C",
+            "text": "To express surprise about a policy"
+          },
+          {
+            "label": "D",
+            "text": "To encourage the listeners to remain productive"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q79",
+        "text": "What will the speaker do later?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Send a document"
+          },
+          {
+            "label": "B",
+            "text": "Make a phone call"
+          },
+          {
+            "label": "C",
+            "text": "Leave for a business trip"
+          },
+          {
+            "label": "D",
+            "text": "Introduce some managers"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Au Hi, everyone. 77 I'm excited to announce that we're going to try out a change to our work arrangements. Staff will be able to work from home one day a week. Whenever you do work from home, you must be reachable by phone and e-mail during our business hours. Now, I know many of you have asked for this change for a long time. 78 You should know that Human Resources will be monitoring productivity to determine whether these new work arrangements are a good idea. This is only a trial period. 79 I'll be sending you a policy document that will explain everything in detail. Check your e-mail later today."
+  },
+  {
+    "testId": 6,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "According to the speaker, what is causing traffic?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some bad weather"
+          },
+          {
+            "label": "B",
+            "text": "Some construction projects"
+          },
+          {
+            "label": "C",
+            "text": "A sporting event"
+          },
+          {
+            "label": "D",
+            "text": "A city festival"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q81",
+        "text": "Why should the listeners call the radio station?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To ask a question"
+          },
+          {
+            "label": "B",
+            "text": "To request a song"
+          },
+          {
+            "label": "C",
+            "text": "To win some tickets"
+          },
+          {
+            "label": "D",
+            "text": "To sign up as a volunteer"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q82",
+        "text": "What does the speaker say will be broadcast later?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An interview"
+          },
+          {
+            "label": "B",
+            "text": "A political debate"
+          },
+          {
+            "label": "C",
+            "text": "A comedy show"
+          },
+          {
+            "label": "D",
+            "text": "A concert"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn Welcome to the KXS Radio afternoon update. 80 The traffic is heavy this afternoon because of the season's opening game at the baseball stadium. But the good news is, 81 we're giving away tickets to next week's game! Call our radio station for a chance to win. The sixth caller will win the tickets! And 82 after today's game, we will have an exclusive interview with the coach of our city's baseball team. Stay tuned!"
+  },
+  {
+    "testId": 6,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "What is the talk mainly about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A business opening"
+          },
+          {
+            "label": "B",
+            "text": "A company anniversary"
+          },
+          {
+            "label": "C",
+            "text": "A new advertising service"
+          },
+          {
+            "label": "D",
+            "text": "A renovation project"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q84",
+        "text": "What does the speaker mean when she says, \"several local business leaders will be here tonight\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Extra staff is needed."
+          },
+          {
+            "label": "B",
+            "text": "An event will be televised."
+          },
+          {
+            "label": "C",
+            "text": "A larger venue should be reserved."
+          },
+          {
+            "label": "D",
+            "text": "Employees should provide good service."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q85",
+        "text": "What does the speaker ask some of the listeners to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Arrive early"
+          },
+          {
+            "label": "B",
+            "text": "Check a schedule"
+          },
+          {
+            "label": "C",
+            "text": "Hand out some surveys"
+          },
+          {
+            "label": "D",
+            "text": "Consult a manager about problems"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Br Good evening, everyone. 83 Tonight's event is very important for our restaurant. To prepare for our official grand opening next week, we've invited people from neighboring businesses here. 84 This is a great opportunity to get some feedback on our service and menu. Remember, several local business leaders will be here tonight. As you know, word-of-mouth recommendations are our best advertising tool. Hosts, 85 I'd like you to distribute surveys to guests after their meals. Any feedback they have for us will help make this restaurant a success."
+  },
+  {
+    "testId": 6,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Why does the speaker say, \"I couldn't find a later flight\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To refuse an invitation"
+          },
+          {
+            "label": "B",
+            "text": "To apologize for an inconvenience"
+          },
+          {
+            "label": "C",
+            "text": "To suggest canceling a trip"
+          },
+          {
+            "label": "D",
+            "text": "To ask for help"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q87",
+        "text": "Who most likely is Adriana Lopez?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A repair technician"
+          },
+          {
+            "label": "B",
+            "text": "An airline pilot"
+          },
+          {
+            "label": "C",
+            "text": "An administrative assistant"
+          },
+          {
+            "label": "D",
+            "text": "A city official"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q88",
+        "text": "What does the speaker say the listener will receive?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A client file"
+          },
+          {
+            "label": "B",
+            "text": "A list of restaurants"
+          },
+          {
+            "label": "C",
+            "text": "Some log-in credentials"
+          },
+          {
+            "label": "D",
+            "text": "Some promotional materials"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "M-Au Hi, Madoka. I'm calling you about some details of your trip to London next week. 86 Your flight is on Monday morning at... uh... four A.M. I couldn't find a later flight. 87 Adriana Lopez from the London office will meet you at the airport. She's my counterpart over there. Adriana will assist with your local itinerary and has already booked your hotel. Oh, and one last thing... since this is your first trip since joining our company, 88 you'll soon be receiving log-in credentials for a travel expense tracking application. You can download the app on your phone and load your receipts onto it."
+  },
+  {
+    "testId": 6,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What is the topic of the seminar?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Choosing an advertising strategy"
+          },
+          {
+            "label": "B",
+            "text": "Finding investors"
+          },
+          {
+            "label": "C",
+            "text": "Leading focus groups"
+          },
+          {
+            "label": "D",
+            "text": "Creating a budget"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q90",
+        "text": "What does the speaker recommend the listeners do first?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Get employee input"
+          },
+          {
+            "label": "B",
+            "text": "Hire a consultant"
+          },
+          {
+            "label": "C",
+            "text": "Revise a plan"
+          },
+          {
+            "label": "D",
+            "text": "Make a list"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q91",
+        "text": "What will most likely happen next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A video will be shown."
+          },
+          {
+            "label": "B",
+            "text": "Information packets will be distributed."
+          },
+          {
+            "label": "C",
+            "text": "Some questions will be answered."
+          },
+          {
+            "label": "D",
+            "text": "There will be a lunch break."
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "M-Cn 89 Welcome to this seminar, which focuses on one of the most challenging aspects of starting a new business-locating investors. Without start-up funds, your business may never get off the ground. 90 As a first step, I suggest compiling a list of firms that specialize in investing in your industry. But there's much more to know, of course. Maryam Farooq, founder of multiple information technology companies, has been particularly good at securing investment funding. 91 She's here to answer questions and break down how she did it."
+  },
+  {
+    "testId": 6,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "What is the purpose of the meeting?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To celebrate a recent contract"
+          },
+          {
+            "label": "B",
+            "text": "To explain a new sales strategy"
+          },
+          {
+            "label": "C",
+            "text": "To introduce a new employee"
+          },
+          {
+            "label": "D",
+            "text": "To address employee concerns"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q93",
+        "text": "What is causing a delay?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A computer is being set up."
+          },
+          {
+            "label": "B",
+            "text": "A microphone stopped working."
+          },
+          {
+            "label": "C",
+            "text": "Some additional chairs are needed."
+          },
+          {
+            "label": "D",
+            "text": "The speaker misplaced some notes."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q94",
+        "text": "What are the listeners encouraged to sign up for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A staff feedback session"
+          },
+          {
+            "label": "B",
+            "text": "A conference presentation"
+          },
+          {
+            "label": "C",
+            "text": "A health initiative"
+          },
+          {
+            "label": "D",
+            "text": "A mentoring program"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br Today's sales meeting is packed to capacity, and for good reason. 92 Gerard has delivered on his promise to craft a new strategy that'll enable us to broaden our market share in the Scandinavian region. As you'll soon see, his four-step approach is going to be critical to increasing our sales. 93 Looks like he'll need a few minutes to get his computer up and running. So while we wait, 94 let me remind you about the mentoring program that management is implementing. It provides an opportunity to guide our new employees during their transitional period. 94 We need seasoned staff to participate as mentors, so be sure to sign up!"
+  },
+  {
+    "testId": 6,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "What type of event will take place on Friday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A retirement party"
+          },
+          {
+            "label": "B",
+            "text": "A graduation celebration"
+          },
+          {
+            "label": "C",
+            "text": "A cooking competition"
+          },
+          {
+            "label": "D",
+            "text": "An award ceremony"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Which discount will be applied?",
+        "options": [
+          {
+            "label": "A",
+            "text": "10%"
+          },
+          {
+            "label": "B",
+            "text": "15%"
+          },
+          {
+            "label": "C",
+            "text": "20%"
+          },
+          {
+            "label": "D",
+            "text": "25%"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q97",
+        "text": "What does the speaker ask the listener?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Who will decorate a space"
+          },
+          {
+            "label": "B",
+            "text": "What type of gift will be purchased"
+          },
+          {
+            "label": "C",
+            "text": "If an event should be rescheduled"
+          },
+          {
+            "label": "D",
+            "text": "If an order has been placed"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Am Hey, Hassan. It's Emiko. 95I'm calling about the retirement party we're planning for Dmitry next Friday. Everyone from the accounting department is coming plus a few from sales, so 96 we'll have a total of ten people. I made the reservation at the barbecue restaurant and even found a coupon that'll save us a lot of money since we have such a big group. Uh... 97 did you place the cake order with the bakery yet? Dmitry said he loves strawberry cake, and I want his retirement party to be perfect."
+  },
+  {
+    "testId": 6,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Look at the graphic. Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "William Schmidt"
+          },
+          {
+            "label": "B",
+            "text": "Paul Cohen"
+          },
+          {
+            "label": "C",
+            "text": "Jung-Soo Park"
+          },
+          {
+            "label": "D",
+            "text": "Santiago Reyes"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q99",
+        "text": "According to the speaker, what is different about a program this year?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A list of organizations is longer."
+          },
+          {
+            "label": "B",
+            "text": "A deadline has been extended."
+          },
+          {
+            "label": "C",
+            "text": "More employees are assigned to help."
+          },
+          {
+            "label": "D",
+            "text": "An operating budget has been increased."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q100",
+        "text": "What will the speaker make available to the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A research report"
+          },
+          {
+            "label": "B",
+            "text": "A training video"
+          },
+          {
+            "label": "C",
+            "text": "A magazine article"
+          },
+          {
+            "label": "D",
+            "text": "A corporate calendar"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "M-Cn 98I want to talk about our company's charitable giving program. As you know, employees can make a donation to an approved organization, and the company will match that amount. 99This year, we've expanded our list of approved organizations from 15 to 25. We've selected organizations in the community that will benefit the most from our contributions. And 100 our company has been recognized for its philanthropy. In fact, it was featured last month in an article in the magazine Business Effect. I'll post a link to that on our Web site after this meeting."
+  }
+]

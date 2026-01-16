@@ -1,7 +1,9 @@
 'use client';
 
+import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { collection, query, orderBy, onSnapshot, getDocs } from 'firebase/firestore';
+import { collection, query, orderBy, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,10 +11,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
-import { Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare } from "lucide-react";
+import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload } from "lucide-react";
 import * as XLSX from 'xlsx';
 
-// Chart.js Setup
+import { Bar } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -22,7 +24,6 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(
     CategoryScale,
@@ -34,163 +35,200 @@ ChartJS.register(
 );
 
 export default function AdminDashboard() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [passwordInput, setPasswordInput] = useState("");
     const [students, setStudents] = useState<any[]>([]);
-    const [logs, setLogs] = useState<any[]>([]);
-    const [filterClass, setFilterClass] = useState("all");
+    const [classes, setClasses] = useState<{ name: string }[]>([]);
+    const [filterClass, setFilterClass] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [loading, setLoading] = useState(true);
     const [selectedStudent, setSelectedStudent] = useState<any>(null);
-    const [searchTerm, setSearchTerm] = useState("");
-
-    // Password Check
-    const handleLogin = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (passwordInput === "Kang1818^^") {
-            setIsAuthenticated(true);
-            localStorage.setItem("admin_auth", "true");
-        } else {
-            alert("비밀번호가 틀렸습니다.");
-        }
-    };
+    const router = useRouter();
 
     useEffect(() => {
-        const auth = localStorage.getItem("admin_auth");
-        if (auth === "true") setIsAuthenticated(true);
-    }, []);
-
-    // Data Fetching
-    useEffect(() => {
-        if (!isAuthenticated) return;
-
-        // Fetch Logs Real-time
-        const q = query(collection(db, "Manager_Results"), orderBy("timestamp", "desc"));
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-            const logsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-            setLogs(logsData);
-        });
-
-        // Fetch Students
-        const fetchStudents = async () => {
-            const snap = await getDocs(collection(db, "Winter_Users"));
-            const studentsData = snap.docs.map(doc => doc.data());
-            setStudents(studentsData);
+        const checkAdmin = () => {
+            const userData = localStorage.getItem('toeic_user');
+            if (!userData) {
+                router.replace('/login');
+                return;
+            }
+            const user = JSON.parse(userData);
+            if (user.username !== 'kangs') {
+                alert('관리자 권한이 없습니다.');
+                router.replace('/');
+                return;
+            }
+            fetchData();
         };
-        fetchStudents();
 
-        return () => unsubscribe();
-    }, [isAuthenticated]);
+        const fetchData = async () => {
+            try {
+                // Fetch Classes
+                const classesQuery = query(collection(db, "Classes"), orderBy("name"));
+                const classesSnapshot = await getDocs(classesQuery);
+                const classList: { name: string }[] = [];
+                classesSnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    if (data.name) classList.push({ name: data.name });
+                });
+                setClasses(classList);
 
-    // Computed Data
-    const filteredStudents = students.filter(s => {
-        const matchesClass = filterClass === "all" || String(s.userClass) === filterClass;
-        const matchesSearch = s.userName.includes(searchTerm) || s.userId.includes(searchTerm);
-        return matchesClass && matchesSearch;
-    });
+                // Fetch Users
+                const q = query(collection(db, "Winter_Users"), orderBy("registeredAt", "desc"));
+                const usersSnapshot = await getDocs(q);
+                const usersMap = new Map();
+                usersSnapshot.forEach(doc => {
+                    usersMap.set(doc.data().userId, { ...doc.data(), logs: [], stats: {} });
+                });
+
+                // Fetch Results
+                const resultsSnapshot = await getDocs(query(collection(db, "Manager_Results"), orderBy("timestamp", "desc")));
+
+                resultsSnapshot.forEach(doc => {
+                    const res = doc.data();
+                    if (usersMap.has(res.studentId)) {
+                        const user = usersMap.get(res.studentId);
+                        user.logs.push(res);
+                    }
+                });
+
+                // Calculate Stats
+                const studentList: any[] = [];
+                usersMap.forEach(user => {
+                    let maxShadowSet = 0;
+                    let lc2Count = 0;
+                    let grammarCount = 0;
+                    let vocaCount = user.passedVocaDays ? user.passedVocaDays.length : 0;
+
+                    user.logs.forEach((log: any) => {
+                        const unit = log.unit || "";
+                        if (unit.includes('Shadowing')) {
+                            const match = unit.match(/Set(\d+)/);
+                            if (match && parseInt(match[1]) > maxShadowSet) maxShadowSet = parseInt(match[1]);
+                        } else if (unit.includes('Part2')) lc2Count++;
+                        else if (unit.includes('Part5') || unit.includes('Unit')) grammarCount++;
+                    });
+
+                    user.stats = { maxShadowSet, lc2Count, grammarCount, vocaCount };
+                    // Only approved students
+                    if (user.status === 'approved') {
+                        studentList.push(user);
+                    }
+                });
+
+                setStudents(studentList);
+            } catch (error) {
+                console.error("Error fetching admin data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        checkAdmin();
+    }, [router]);
+
+    const handleExport = () => {
+        const wb = XLSX.utils.book_new();
+        const data = filteredStudents.map(s => ({
+            Class: s.className || 'Unknown',
+            Name: s.name || s.username || 'Unknown',
+            ID: s.userId,
+            "Shadowing Set": s.stats.maxShadowSet,
+            "Part2 Count": s.stats.lc2Count,
+            "Part5 Unit": s.stats.grammarCount,
+            "Voca Days": s.stats.vocaCount
+        }));
+        const ws = XLSX.utils.json_to_sheet(data);
+        XLSX.utils.book_append_sheet(wb, ws, "Students");
+        XLSX.writeFile(wb, "Toeic_Students_Report.xlsx");
+    };
 
     const getStudentStats = (student: any) => {
-        const studentLogs = logs.filter(l => l.studentId === student.userId || l.student === student.userName);
-
-        let maxShadowSet = 0;
-        let lc2Count = 0;
-        let grammarCount = 0;
-
-        studentLogs.forEach(log => {
-            const u = log.unit || "";
-            if (u.includes('Shadowing')) {
-                const m = u.match(/Set(\d+)/);
-                if (m && parseInt(m[1]) > maxShadowSet) maxShadowSet = parseInt(m[1]);
-            } else if (u.includes('LCpart2') || u.includes('Part2')) {
-                lc2Count++;
-            } else if (u.includes('Grammar') || u.includes('Unit')) {
-                grammarCount++;
-            }
-        });
-
-        const vocaCount = student.passedVocaDays ? student.passedVocaDays.length : 0;
-
-        return { maxShadowSet, lc2Count, grammarCount, vocaCount, logs: studentLogs };
+        return {
+            ...student.stats,
+            logs: student.logs || []
+        };
     };
 
-    // Excel Export
-    const handleExport = () => {
-        const data = filteredStudents.map(s => {
-            const stats = getStudentStats(s);
-            return {
-                Class: s.userClass,
-                Name: s.userName,
-                ID: s.userId,
-                "Part1 (Set)": stats.maxShadowSet,
-                "Part2 (Count)": stats.lc2Count,
-                "Part5 (Unit)": stats.grammarCount,
-                "Voca (Days)": stats.vocaCount
-            };
-        });
+    const filteredStudents = students.filter(student => {
+        const matchesClass = filterClass === 'all' || (student.className && student.className === filterClass);
+        const nameMatch = (student.name || '').toLowerCase().includes(searchTerm.toLowerCase());
+        const idMatch = (student.userId || '').toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesClass && (nameMatch || idMatch);
+    });
 
-        const ws = XLSX.utils.json_to_sheet(data);
-        const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Students");
-        XLSX.writeFile(wb, "WinterCamp_Report.xlsx");
-    };
-
-    // Chart Data
     const chartData = {
-        labels: ['Part 1', 'Part 2', 'Part 5', 'Voca'],
+        labels: filteredStudents.map(s => s.name || s.userId),
         datasets: [
             {
-                label: 'Average Progress (%)',
-                data: [
-                    (filteredStudents.reduce((acc, s) => acc + (getStudentStats(s).maxShadowSet / 5 * 100), 0) / (filteredStudents.length || 1)),
-                    (filteredStudents.reduce((acc, s) => acc + (Math.min(getStudentStats(s).lc2Count / 5 * 100, 100)), 0) / (filteredStudents.length || 1)),
-                    (filteredStudents.reduce((acc, s) => acc + (Math.min(getStudentStats(s).grammarCount / 10 * 100, 100)), 0) / (filteredStudents.length || 1)),
-                    (filteredStudents.reduce((acc, s) => acc + (getStudentStats(s).vocaCount / 30 * 100), 0) / (filteredStudents.length || 1)),
-                ],
-                backgroundColor: ['#6366f1', '#f43f5e', '#3b82f6', '#10b981'],
+                label: 'Voca',
+                data: filteredStudents.map(s => s.stats.vocaCount * 3.3), // Scale to 100 roughly
+                backgroundColor: 'rgba(16, 185, 129, 0.7)',
+            },
+            {
+                label: 'Grammar',
+                data: filteredStudents.map(s => s.stats.grammarCount * 10),
+                backgroundColor: 'rgba(59, 130, 246, 0.7)',
             }
         ]
     };
 
-    if (!isAuthenticated) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-slate-100">
-                <form onSubmit={handleLogin} className="p-8 bg-white rounded-2xl shadow-xl w-full max-w-sm space-y-4">
-                    <div className="flex justify-center mb-4">
-                        <div className="p-4 bg-indigo-50 rounded-full">
-                            <Shield className="w-8 h-8 text-indigo-600" />
-                        </div>
-                    </div>
-                    <h2 className="text-xl font-bold text-center text-slate-800">관리자 접근 권한 확인</h2>
-                    <Input
-                        type="password"
-                        placeholder="관리자 비밀번호"
-                        value={passwordInput}
-                        onChange={e => setPasswordInput(e.target.value)}
-                        className="text-center"
-                    />
-                    <Button type="submit" className="w-full bg-slate-900 hover:bg-slate-800">확인</Button>
-                </form>
-            </div>
-        );
-    }
+    if (loading) return <div className="p-8 text-center">Loading Admin Data...</div>;
 
     return (
-        <div className="p-6 md:p-10 space-y-8 bg-slate-50 min-h-screen text-slate-900">
+        <div className="min-h-screen bg-slate-50 p-4 md:p-8 space-y-8">
             <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                     <h1 className="text-3xl font-black text-slate-900 tracking-tighter uppercase italic">Management <span className="text-indigo-600">Pro</span></h1>
                     <p className="text-slate-500 text-xs font-bold mt-1">학생 진행 현황 실시간 관리</p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3">
+                    <Link href="/">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-slate-600 border-slate-200 hover:bg-slate-50">
+                            <Shield className="w-4 h-4" /> 홈으로 (나가기)
+                        </Button>
+                    </Link>
+                    <Link href="/admin/registrations">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-rose-600 border-rose-200 hover:bg-rose-50">
+                            <Users className="w-4 h-4" /> 가입 승인 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/questions">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-indigo-600 border-indigo-200 hover:bg-indigo-50">
+                            <Upload className="w-4 h-4" /> 문제 데이터 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/classes">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-emerald-600 border-emerald-200 hover:bg-emerald-50">
+                            <Users className="w-4 h-4" /> 반(Class) 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/schools">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-purple-600 border-purple-200 hover:bg-purple-50">
+                            <GraduationCap className="w-4 h-4" /> 학교(Univ) 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/homework">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-indigo-600 border-indigo-200 hover:bg-indigo-50">
+                            <FileText className="w-4 h-4" /> 숙제 결과 전체보기
+                        </Button>
+                    </Link>
                     <Button onClick={handleExport} variant="outline" className="gap-2 text-xs font-bold bg-white text-emerald-600 border-emerald-200 hover:bg-emerald-50">
                         <Download className="w-4 h-4" /> 엑셀 다운로드
                     </Button>
-                    <div className="flex gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-sm">
-                        {['all', '650', '780'].map(cls => (
+                    {/* Dynamic Class Filter Buttons */}
+                    <div className="flex gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-sm overflow-x-auto max-w-[400px]">
+                        <button
+                            onClick={() => setFilterClass('all')}
+                            className={`px-4 py-2 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${filterClass === 'all' ? 'bg-slate-800 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
+                        >
+                            전체
+                        </button>
+                        {classes.map(cls => (
                             <button
-                                key={cls}
-                                onClick={() => setFilterClass(cls)}
-                                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${filterClass === cls ? 'bg-slate-800 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
+                                key={cls.name}
+                                onClick={() => setFilterClass(cls.name)}
+                                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${filterClass === cls.name ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
                             >
-                                {cls === 'all' ? '전체' : `${cls}반`}
+                                {cls.name}
                             </button>
                         ))}
                     </div>
@@ -242,10 +280,10 @@ export default function AdminDashboard() {
                                             <Dialog key={student.userId}>
                                                 <DialogTrigger asChild>
                                                     <TableRow className="cursor-pointer hover:bg-slate-50" onClick={() => setSelectedStudent({ ...student, stats })}>
-                                                        <TableCell className="font-bold text-slate-500">{student.userClass}</TableCell>
+                                                        <TableCell className="font-bold text-slate-500">{student.className || '-'}</TableCell>
                                                         <TableCell>
                                                             <div className="flex flex-col">
-                                                                <span className="font-bold text-slate-900">{student.userName}</span>
+                                                                <span className="font-bold text-slate-900">{student.name || student.username}</span>
                                                                 <span className="text-[10px] text-slate-400">{student.userId}</span>
                                                             </div>
                                                         </TableCell>
@@ -266,7 +304,7 @@ export default function AdminDashboard() {
                                                 <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-xl border-none shadow-2xl rounded-[2.5rem] p-0 overflow-hidden text-slate-900">
                                                     <DialogHeader className="p-8 border-b bg-white/50">
                                                         <DialogTitle className="text-2xl font-black italic text-slate-900">
-                                                            {student.userName} <span className="text-slate-400 text-sm not-italic ml-2">({student.userClass}반 | {student.userId})</span>
+                                                            {student.name} <span className="text-slate-400 text-sm not-italic ml-2">({student.className}반 | {student.userId})</span>
                                                         </DialogTitle>
                                                     </DialogHeader>
                                                     <div className="p-8 overflow-y-auto max-h-[70vh]">
@@ -283,7 +321,7 @@ export default function AdminDashboard() {
                                                                 <div key={i} className="flex justify-between items-center p-4 bg-slate-50 rounded-2xl border border-slate-100">
                                                                     <div>
                                                                         <p className="text-xs font-black text-slate-500 uppercase">{log.unit}</p>
-                                                                        <p className="text-[10px] font-bold text-slate-400">{new Date(log.timestamp?.toDate()).toLocaleString()}</p>
+                                                                        <p className="text-[10px] font-bold text-slate-400" suppressHydrationWarning>{new Date(log.timestamp?.toDate()).toLocaleString()}</p>
                                                                     </div>
                                                                     <div className="text-right">
                                                                         <span className="text-sm font-black text-indigo-600">{log.score}</span><span className="text-[10px] text-slate-400">/{log.total}</span>
@@ -302,6 +340,6 @@ export default function AdminDashboard() {
                     </CardContent>
                 </Card>
             </div>
-        </div>
+        </div >
     );
 }

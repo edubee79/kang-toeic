@@ -1,0 +1,254 @@
+[
+  {
+    "day": 28,
+    "no": 41,
+    "word": "armchair",
+    "meaning": "안락의자",
+    "targetScore": 650,
+    "exampleEn": "He sat in the armchair and read a book.",
+    "exampleKo": "그는 안락의자에 앉아 책을 읽었습니다."
+  },
+  {
+    "day": 28,
+    "no": 42,
+    "word": "ceiling",
+    "meaning": "천장",
+    "targetScore": 650,
+    "exampleEn": "The ceiling needs to be repainted.",
+    "exampleKo": "천장은 다시 페인트칠 되어야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 43,
+    "word": "cleanup",
+    "meaning": "대청소",
+    "targetScore": 650,
+    "exampleEn": "The cleanup after the storm took three days.",
+    "exampleKo": "폭풍 후의 대청소는 3일이 걸렸습니다."
+  },
+  {
+    "day": 28,
+    "no": 44,
+    "word": "decoration",
+    "meaning": "장식, 장식물",
+    "targetScore": 650,
+    "exampleEn": "The interior decorations are very modern.",
+    "exampleKo": "실내 장식(장식물)은 매우 현대적입니다."
+  },
+  {
+    "day": 28,
+    "no": 45,
+    "word": "fence",
+    "meaning": "울타리",
+    "targetScore": 650,
+    "exampleEn": "A wooden fence surrounds the property.",
+    "exampleKo": "나무 울타리가 그 부동산을 둘러싸고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 46,
+    "word": "floor",
+    "meaning": "바닥",
+    "targetScore": 650,
+    "exampleEn": "Please be careful, the floor is wet.",
+    "exampleKo": "조심하십시오, 바닥이 젖어 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 47,
+    "word": "frame",
+    "meaning": "틀, 액자",
+    "targetScore": 650,
+    "exampleEn": "I need a frame for this picture.",
+    "exampleKo": "저는 이 사진을 위한 액자(틀)가 필요합니다."
+  },
+  {
+    "day": 28,
+    "no": 48,
+    "word": "furniture",
+    "meaning": "가구",
+    "targetScore": 650,
+    "exampleEn": "The apartment comes with new furniture.",
+    "exampleKo": "그 아파트는 새 가구가 딸려 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 49,
+    "word": "garage",
+    "meaning": "차고",
+    "targetScore": 650,
+    "exampleEn": "The house has a two-car garage.",
+    "exampleKo": "그 집에는 차 2대를 댈 수 있는 차고가 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 50,
+    "word": "heating system",
+    "meaning": "난방 시스템",
+    "targetScore": 650,
+    "exampleEn": "The heating system is very efficient.",
+    "exampleKo": "난방 시스템은 매우 효율적입니다."
+  },
+  {
+    "day": 28,
+    "no": 51,
+    "word": "lobby",
+    "meaning": "로비",
+    "targetScore": 650,
+    "exampleEn": "I will meet you in the hotel lobby.",
+    "exampleKo": "호텔 로비에서 뵙겠습니다."
+  },
+  {
+    "day": 28,
+    "no": 52,
+    "word": "remodeling",
+    "meaning": "주택 개조",
+    "targetScore": 650,
+    "exampleEn": "We are planning a remodeling of the office.",
+    "exampleKo": "우리는 사무실의 개조(리모델링)를 계획하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 53,
+    "word": "rooftop",
+    "meaning": "지붕, 옥상",
+    "targetScore": 650,
+    "exampleEn": "There is a garden on the rooftop.",
+    "exampleKo": "옥상(지붕)에 정원이 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 54,
+    "word": "rope",
+    "meaning": "밧줄, 로프",
+    "targetScore": 650,
+    "exampleEn": "Use a rope to secure the box.",
+    "exampleKo": "상자를 고정하기 위해 밧줄을 사용하십시오."
+  },
+  {
+    "day": 28,
+    "no": 55,
+    "word": "stick",
+    "meaning": "막대기, 지팡이",
+    "targetScore": 650,
+    "exampleEn": "The dog was playing with a stick.",
+    "exampleKo": "개는 막대기를 가지고 놀고 있었습니다."
+  },
+  {
+    "day": 28,
+    "no": 56,
+    "word": "tank",
+    "meaning": "(물·가스 등의) 탱크",
+    "targetScore": 650,
+    "exampleEn": "The water tank needs to be cleaned.",
+    "exampleKo": "물 탱크는 청소되어야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 57,
+    "word": "veranda",
+    "meaning": "베란다",
+    "targetScore": 650,
+    "exampleEn": "We enjoyed tea on the veranda.",
+    "exampleKo": "우리는 베란다에서 차를 즐겼습니다."
+  },
+  {
+    "day": 28,
+    "no": 58,
+    "word": "desktop",
+    "meaning": "탁상용의, 데스크톱 컴퓨터",
+    "targetScore": 650,
+    "exampleEn": "I prefer using a desktop computer for work.",
+    "exampleKo": "저는 업무용으로 데스크톱 컴퓨터를 사용하는 것을 선호합니다."
+  },
+  {
+    "day": 28,
+    "no": 59,
+    "word": "dwell",
+    "meaning": "거주하다",
+    "targetScore": 650,
+    "exampleEn": "They dwell in a small apartment in the city.",
+    "exampleKo": "그들은 도시의 작은 아파트에 거주합니다."
+  },
+  {
+    "day": 28,
+    "no": 60,
+    "word": "fireplace",
+    "meaning": "(벽)난로",
+    "targetScore": 650,
+    "exampleEn": "We gathered around the fireplace.",
+    "exampleKo": "우리는 난로(벽난로) 주위에 모였습니다."
+  },
+  {
+    "day": 28,
+    "no": 61,
+    "word": "heat",
+    "meaning": "열기, 뜨겁게 만들다",
+    "targetScore": 650,
+    "exampleEn": "The engine generates a lot of heat.",
+    "exampleKo": "엔진은 많은 열기를 발생시킵니다."
+  },
+  {
+    "day": 28,
+    "no": 62,
+    "word": "homemade",
+    "meaning": "집에서 만든",
+    "targetScore": 650,
+    "exampleEn": "She brought some homemade cookies.",
+    "exampleKo": "그녀는 집에서 만든 쿠키를 좀 가져왔습니다."
+  },
+  {
+    "day": 28,
+    "no": 63,
+    "word": "homeowner",
+    "meaning": "주택 소유자",
+    "targetScore": 650,
+    "exampleEn": "Every homeowner should have insurance.",
+    "exampleKo": "모든 주택 소유자는 보험을 들어야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 64,
+    "word": "inhabit",
+    "meaning": "거주하다",
+    "targetScore": 650,
+    "exampleEn": "Several species of birds inhabit the island.",
+    "exampleKo": "여러 종의 새들이 그 섬에 거주합니다(서식합니다)."
+  },
+  {
+    "day": 28,
+    "no": 65,
+    "word": "lighten",
+    "meaning": "밝게 하다",
+    "targetScore": 650,
+    "exampleEn": "White paint will lighten the room.",
+    "exampleKo": "흰색 페인트는 방을 밝게 할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 66,
+    "word": "neighbor",
+    "meaning": "이웃",
+    "targetScore": 650,
+    "exampleEn": "We have very friendly neighbors.",
+    "exampleKo": "우리는 매우 친절한 이웃을 두고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 67,
+    "word": "urban",
+    "meaning": "도시의",
+    "targetScore": 650,
+    "exampleEn": "Urban development is increasing rapidly.",
+    "exampleKo": "도시 발달이 빠르게 증가하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 68,
+    "word": "washing machine",
+    "meaning": "세탁기",
+    "targetScore": 650,
+    "exampleEn": "The washing machine is broken.",
+    "exampleKo": "세탁기가 고장 났습니다."
+  }
+]

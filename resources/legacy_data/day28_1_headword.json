@@ -1,0 +1,362 @@
+[
+  {
+    "day": 28,
+    "no": 1,
+    "word": "manufacture",
+    "meaning": "제조하다",
+    "targetScore": 650,
+    "exampleEn": "The company manufactures electronic components.",
+    "exampleKo": "회사는 전자 부품을 제조합니다."
+  },
+  {
+    "day": 28,
+    "no": 2,
+    "word": "production",
+    "meaning": "생산",
+    "targetScore": 650,
+    "exampleEn": "Production levels have increased significantly.",
+    "exampleKo": "생산 수준이 크게 증가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 3,
+    "word": "assembly",
+    "meaning": "조립",
+    "targetScore": 650,
+    "exampleEn": "The assembly line operates 24 hours a day.",
+    "exampleKo": "조립 라인은 하루 24시간 가동됩니다."
+  },
+  {
+    "day": 28,
+    "no": 4,
+    "word": "equipment",
+    "meaning": "장비",
+    "targetScore": 650,
+    "exampleEn": "New equipment will improve efficiency.",
+    "exampleKo": "새 장비가 효율성을 향상시킬 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 5,
+    "word": "machinery",
+    "meaning": "기계류",
+    "targetScore": 650,
+    "exampleEn": "The factory uses advanced machinery.",
+    "exampleKo": "공장은 첨단 기계류를 사용합니다."
+  },
+  {
+    "day": 28,
+    "no": 6,
+    "word": "facility",
+    "meaning": "시설",
+    "targetScore": 650,
+    "exampleEn": "The new facility will open next month.",
+    "exampleKo": "새 시설은 다음 달에 개장할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 7,
+    "word": "warehouse",
+    "meaning": "창고",
+    "targetScore": 650,
+    "exampleEn": "Products are stored in the warehouse.",
+    "exampleKo": "제품은 창고에 보관됩니다."
+  },
+  {
+    "day": 28,
+    "no": 8,
+    "word": "inventory",
+    "meaning": "재고",
+    "targetScore": 650,
+    "exampleEn": "We need to reduce inventory levels.",
+    "exampleKo": "재고 수준을 줄여야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 9,
+    "word": "supply",
+    "meaning": "공급",
+    "targetScore": 650,
+    "exampleEn": "The supply chain was disrupted.",
+    "exampleKo": "공급망이 중단되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 10,
+    "word": "demand",
+    "meaning": "수요",
+    "targetScore": 650,
+    "exampleEn": "Customer demand has increased.",
+    "exampleKo": "고객 수요가 증가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 11,
+    "word": "output",
+    "meaning": "생산량",
+    "targetScore": 650,
+    "exampleEn": "The factory's output doubled this year.",
+    "exampleKo": "공장의 생산량이 올해 두 배가 되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 12,
+    "word": "capacity",
+    "meaning": "생산 능력",
+    "targetScore": 650,
+    "exampleEn": "The plant operates at full capacity.",
+    "exampleKo": "공장은 최대 생산 능력으로 가동됩니다."
+  },
+  {
+    "day": 28,
+    "no": 13,
+    "word": "quality",
+    "meaning": "품질",
+    "targetScore": 650,
+    "exampleEn": "Quality control is our top priority.",
+    "exampleKo": "품질 관리가 우리의 최우선 순위입니다."
+  },
+  {
+    "day": 28,
+    "no": 14,
+    "word": "defect",
+    "meaning": "결함",
+    "targetScore": 650,
+    "exampleEn": "The product has a manufacturing defect.",
+    "exampleKo": "제품에 제조 결함이 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 15,
+    "word": "inspection",
+    "meaning": "검사",
+    "targetScore": 650,
+    "exampleEn": "All products undergo quality inspection.",
+    "exampleKo": "모든 제품은 품질 검사를 받습니다."
+  },
+  {
+    "day": 28,
+    "no": 16,
+    "word": "process",
+    "meaning": "공정",
+    "targetScore": 650,
+    "exampleEn": "The manufacturing process is automated.",
+    "exampleKo": "제조 공정은 자동화되어 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 17,
+    "word": "procedure",
+    "meaning": "절차",
+    "targetScore": 650,
+    "exampleEn": "Follow the safety procedures carefully.",
+    "exampleKo": "안전 절차를 주의 깊게 따르세요."
+  },
+  {
+    "day": 28,
+    "no": 18,
+    "word": "standard",
+    "meaning": "기준",
+    "targetScore": 650,
+    "exampleEn": "Products must meet industry standards.",
+    "exampleKo": "제품은 산업 기준을 충족해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 19,
+    "word": "specification",
+    "meaning": "사양",
+    "targetScore": 650,
+    "exampleEn": "Check the product specifications.",
+    "exampleKo": "제품 사양을 확인하세요."
+  },
+  {
+    "day": 28,
+    "no": 20,
+    "word": "component",
+    "meaning": "부품",
+    "targetScore": 650,
+    "exampleEn": "We source components from multiple suppliers.",
+    "exampleKo": "우리는 여러 공급업체에서 부품을 조달합니다."
+  },
+  {
+    "day": 28,
+    "no": 21,
+    "word": "material",
+    "meaning": "재료",
+    "targetScore": 650,
+    "exampleEn": "Raw materials are delivered weekly.",
+    "exampleKo": "원자재는 매주 배송됩니다."
+  },
+  {
+    "day": 28,
+    "no": 22,
+    "word": "supplier",
+    "meaning": "공급업체",
+    "targetScore": 650,
+    "exampleEn": "We work with reliable suppliers.",
+    "exampleKo": "우리는 신뢰할 수 있는 공급업체와 일합니다."
+  },
+  {
+    "day": 28,
+    "no": 23,
+    "word": "vendor",
+    "meaning": "판매업체",
+    "targetScore": 650,
+    "exampleEn": "The vendor provides excellent service.",
+    "exampleKo": "판매업체는 훌륭한 서비스를 제공합니다."
+  },
+  {
+    "day": 28,
+    "no": 24,
+    "word": "shipment",
+    "meaning": "선적",
+    "targetScore": 650,
+    "exampleEn": "The shipment will arrive tomorrow.",
+    "exampleKo": "선적품은 내일 도착할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 25,
+    "word": "delivery",
+    "meaning": "배송",
+    "targetScore": 650,
+    "exampleEn": "Delivery takes 3-5 business days.",
+    "exampleKo": "배송은 영업일 기준 3-5일이 걸립니다."
+  },
+  {
+    "day": 28,
+    "no": 26,
+    "word": "distribution",
+    "meaning": "유통",
+    "targetScore": 650,
+    "exampleEn": "The distribution network covers the entire country.",
+    "exampleKo": "유통 네트워크가 전국을 커버합니다."
+  },
+  {
+    "day": 28,
+    "no": 27,
+    "word": "packaging",
+    "meaning": "포장",
+    "targetScore": 650,
+    "exampleEn": "Eco-friendly packaging is now available.",
+    "exampleKo": "친환경 포장이 이제 가능합니다."
+  },
+  {
+    "day": 28,
+    "no": 28,
+    "word": "label",
+    "meaning": "라벨",
+    "targetScore": 650,
+    "exampleEn": "Check the product label for instructions.",
+    "exampleKo": "사용 설명서는 제품 라벨을 확인하세요."
+  },
+  {
+    "day": 28,
+    "no": 29,
+    "word": "batch",
+    "meaning": "배치",
+    "targetScore": 650,
+    "exampleEn": "This batch was produced last week.",
+    "exampleKo": "이 배치는 지난주에 생산되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 30,
+    "word": "unit",
+    "meaning": "단위",
+    "targetScore": 650,
+    "exampleEn": "The price is $10 per unit.",
+    "exampleKo": "가격은 단위당 10달러입니다."
+  },
+  {
+    "day": 28,
+    "no": 31,
+    "word": "quantity",
+    "meaning": "수량",
+    "targetScore": 650,
+    "exampleEn": "Please specify the quantity needed.",
+    "exampleKo": "필요한 수량을 명시해 주세요."
+  },
+  {
+    "day": 28,
+    "no": 32,
+    "word": "volume",
+    "meaning": "용량",
+    "targetScore": 650,
+    "exampleEn": "Production volume increased by 20%.",
+    "exampleKo": "생산량이 20% 증가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 33,
+    "word": "efficiency",
+    "meaning": "효율성",
+    "targetScore": 650,
+    "exampleEn": "The new system improves efficiency.",
+    "exampleKo": "새 시스템이 효율성을 향상시킵니다."
+  },
+  {
+    "day": 28,
+    "no": 34,
+    "word": "productivity",
+    "meaning": "생산성",
+    "targetScore": 650,
+    "exampleEn": "Worker productivity has increased.",
+    "exampleKo": "근로자 생산성이 증가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 35,
+    "word": "automation",
+    "meaning": "자동화",
+    "targetScore": 650,
+    "exampleEn": "Automation reduces labor costs.",
+    "exampleKo": "자동화는 인건비를 줄입니다."
+  },
+  {
+    "day": 28,
+    "no": 36,
+    "word": "maintenance",
+    "meaning": "유지보수",
+    "targetScore": 650,
+    "exampleEn": "Regular maintenance prevents breakdowns.",
+    "exampleKo": "정기 유지보수는 고장을 방지합니다."
+  },
+  {
+    "day": 28,
+    "no": 37,
+    "word": "repair",
+    "meaning": "수리",
+    "targetScore": 650,
+    "exampleEn": "The machine is under repair.",
+    "exampleKo": "기계가 수리 중입니다."
+  },
+  {
+    "day": 28,
+    "no": 38,
+    "word": "replacement",
+    "meaning": "교체",
+    "targetScore": 650,
+    "exampleEn": "We offer free replacement parts.",
+    "exampleKo": "무료 교체 부품을 제공합니다."
+  },
+  {
+    "day": 28,
+    "no": 39,
+    "word": "upgrade",
+    "meaning": "업그레이드",
+    "targetScore": 650,
+    "exampleEn": "The system needs an upgrade.",
+    "exampleKo": "시스템은 업그레이드가 필요합니다."
+  },
+  {
+    "day": 28,
+    "no": 40,
+    "word": "innovation",
+    "meaning": "혁신",
+    "targetScore": 650,
+    "exampleEn": "Innovation drives our success.",
+    "exampleKo": "혁신이 우리의 성공을 이끕니다."
+  }
+]

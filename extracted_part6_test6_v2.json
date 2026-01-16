@@ -1,0 +1,389 @@
+{
+  "testId": 6,
+  "passages": [
+    {
+      "id": "p6-t6-p1",
+      "type": "ADVERTISEMENT",
+      "title": "Estella Guitar Lessons: Play with the Best",
+      "content": "Whether you play acoustic guitar electric, taking lessons with an Estella Guitar teacher is the\nbest way to improve your ability. [131] With years of experience crafting playing techniques, qualified instructors can tailor lessons to focus on the skills you want to fine-tune. [132] Receive a\ncustomized learning plan to set goals and overcome the challenges that cause many players to\nget discouraged.  An Estella Guitar teacher will help boost your confidence.\n\nAt Estella Guitar, we believe that playing music is a way of expressing yourself. we will help\nyou go beyond the familiar chords and riffs to develop your own identity as a musician. [133] Ready to\nget started? [134] Visit www.estellaguitar.com/lessons to get matched with the right instructor for you!",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "is"
+            },
+            {
+              "label": "B",
+              "text": "or"
+            },
+            {
+              "label": "C",
+              "text": "likely"
+            },
+            {
+              "label": "D",
+              "text": "from"
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "our"
+            },
+            {
+              "label": "B",
+              "text": "ourselves"
+            },
+            {
+              "label": "C",
+              "text": "ours"
+            },
+            {
+              "label": "D",
+              "text": "us"
+            }
+          ]
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Contact a technician for questions about repairs."
+            },
+            {
+              "label": "B",
+              "text": "A high-quality instrument will help you to perform at your best."
+            },
+            {
+              "label": "C",
+              "text": "The best resource for you as a learner is an expert to guide your progress."
+            },
+            {
+              "label": "D",
+              "text": "It took them several years to master their instruments."
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "So far"
+            },
+            {
+              "label": "B",
+              "text": "With that in mind"
+            },
+            {
+              "label": "C",
+              "text": "On a different note"
+            },
+            {
+              "label": "D",
+              "text": "At that point"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t6-p2",
+      "type": "POLICY",
+      "title": null,
+      "content": "In-home delivery takes approximately one week after an order is shipped from our warehouse.\nThe actual time may vary based on the location of your and your availability for accepting the\nitem. [135] Vernico Furniture will work with a carrier an appointment that is convenient for you. [136] Typical hours are Monday through Friday between 8 A.M. and 5 р.м., evening appointments can often be arranged. [137] Upon arrival at your home, the item will be placed in the location you\ndesire.  Assembly is included as well.\n\n",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "garden"
+            },
+            {
+              "label": "B",
+              "text": "records"
+            },
+            {
+              "label": "C",
+              "text": "residence"
+            },
+            {
+              "label": "D",
+              "text": "organization"
+            }
+          ]
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "to schedule"
+            },
+            {
+              "label": "B",
+              "text": "is scheduling"
+            },
+            {
+              "label": "C",
+              "text": "as a schedule"
+            },
+            {
+              "label": "D",
+              "text": "that scheduled"
+            }
+          ]
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "if so"
+            },
+            {
+              "label": "B",
+              "text": "when"
+            },
+            {
+              "label": "C",
+              "text": "though"
+            },
+            {
+              "label": "D",
+              "text": "in the meantime"
+            }
+          ]
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "When buying a home, location is extremely important."
+            },
+            {
+              "label": "B",
+              "text": "Refinishing furniture is a form of art."
+            },
+            {
+              "label": "C",
+              "text": "Furnished apartments can be found online."
+            },
+            {
+              "label": "D",
+              "text": "All packing materials will be removed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t6-p3",
+      "type": "EMAIL",
+      "title": "Subject: Subscription",
+      "content": "Dear Mr. Pham,\nYour subscription to Medical Innovations Quarterly has been canceled.  May 1, you\nwill no longer receive the print edition. [139] [140]\nWe hope that you will consider once again becoming a of our publications. [141] Academe Media\npublishes many high-quality scientific journals in addition to Medical Innovations Quarterly. Should\nyou wish to subscribe to one by May 31, we can offer you a two-year subscription at the annual\nrate. Visit www.academemedia.com/shop and enter the code DOUBLE checkout. [142]\nIf you have any feedback that could help us improve our products or services, please call me\ndirectly at 212-555-0122.\n\nSincerely,\nLeena Montoya\nCustomer Service Manager, Academe Media",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Thank you for your timely order."
+            },
+            {
+              "label": "B",
+              "text": "We have processed your request."
+            },
+            {
+              "label": "C",
+              "text": "This is a payment reminder."
+            },
+            {
+              "label": "D",
+              "text": "Please contact us to update your information."
+            }
+          ]
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Starts"
+            },
+            {
+              "label": "B",
+              "text": "Started"
+            },
+            {
+              "label": "C",
+              "text": "Starter"
+            },
+            {
+              "label": "D",
+              "text": "Starting"
+            }
+          ]
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "distributor"
+            },
+            {
+              "label": "B",
+              "text": "producer"
+            },
+            {
+              "label": "C",
+              "text": "reader"
+            },
+            {
+              "label": "D",
+              "text": "teacher"
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "until"
+            },
+            {
+              "label": "B",
+              "text": "upon"
+            },
+            {
+              "label": "C",
+              "text": "without"
+            },
+            {
+              "label": "D",
+              "text": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t6-p4",
+      "type": "INFORMATION",
+      "title": null,
+      "content": "In a commercial kitchen, all refrigerators are required to have a thermometer that from\n0°F (-18°C) to 220°F (104°C). [143] To prevent the growth of bacteria, refrigerated foods must be\nstored at 41°F (5°C) or below. The head chef is responsible for checking these thermometers\nthroughout the day to ensure that the kitchen is in compliance at all times.\nAlso important to consider is Thermometers should always be located in the warmest\nspot in the refrigerator. [144] [145] This location is also appropriate because it allows the\nthermometer to be easily as soon as the door is opened. [146]",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "ranges"
+            },
+            {
+              "label": "B",
+              "text": "ranger"
+            },
+            {
+              "label": "C",
+              "text": "ranged"
+            },
+            {
+              "label": "D",
+              "text": "ranging"
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "size"
+            },
+            {
+              "label": "B",
+              "text": "safety"
+            },
+            {
+              "label": "C",
+              "text": "reliability"
+            },
+            {
+              "label": "D",
+              "text": "placement"
+            }
+          ]
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Remove them carefully."
+            },
+            {
+              "label": "B",
+              "text": "This is typically inside the door."
+            },
+            {
+              "label": "C",
+              "text": "It should be kept cool at all times."
+            },
+            {
+              "label": "D",
+              "text": "They can also be purchased in bulk."
+            }
+          ]
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "sold"
+            },
+            {
+              "label": "B",
+              "text": "seen"
+            },
+            {
+              "label": "C",
+              "text": "repaired"
+            },
+            {
+              "label": "D",
+              "text": "removed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

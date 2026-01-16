@@ -1,0 +1,290 @@
+[
+    {
+        "day": 5,
+        "no": 137,
+        "word": "astute",
+        "meaning": "기민한, 눈치 빠른",
+        "targetScore": 900,
+        "exampleEn": "He is an astute investor.",
+        "exampleKo": "그는 기민한 투자자입니다."
+    },
+    {
+        "day": 5,
+        "no": 138,
+        "word": "give way to",
+        "meaning": "~에게 양보하다; 무너지다",
+        "targetScore": 900,
+        "exampleEn": "The old bridge gave way to the flood.",
+        "exampleKo": "오래된 다리가 홍수에 무너졌습니다."
+    },
+    {
+        "day": 5,
+        "no": 139,
+        "word": "advertisement",
+        "meaning": "광고",
+        "targetScore": 900,
+        "exampleEn": "They placed an advertisement in the newspaper.",
+        "exampleKo": "그들은 신문에 광고를 냈습니다."
+    },
+    {
+        "day": 5,
+        "no": 140,
+        "word": "circumstantial",
+        "meaning": "정황적인",
+        "targetScore": 900,
+        "exampleEn": "The case was based on circumstantial evidence.",
+        "exampleKo": "그 사건은 정황 증거에 근거했습니다."
+    },
+    {
+        "day": 5,
+        "no": 141,
+        "word": "code",
+        "meaning": "규범, 관례; 암호",
+        "targetScore": 900,
+        "exampleEn": "The company has a strict dress code.",
+        "exampleKo": "그 회사는 엄격한 복장 규정이 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 142,
+        "word": "coincide",
+        "meaning": "일치하다, 동시에 일어나다",
+        "targetScore": 900,
+        "exampleEn": "My vacation coincides with yours.",
+        "exampleKo": "제 휴가가 당신의 휴가와 겹칩니다."
+    },
+    {
+        "day": 5,
+        "no": 143,
+        "word": "coincidence",
+        "meaning": "우연의 일치",
+        "targetScore": 900,
+        "exampleEn": "It was a pure coincidence that we met.",
+        "exampleKo": "우리가 만난 것은 순전히 우연의 일치였습니다."
+    },
+    {
+        "day": 5,
+        "no": 144,
+        "word": "commence",
+        "meaning": "시작하다",
+        "targetScore": 900,
+        "exampleEn": "The ceremony will commence at noon.",
+        "exampleKo": "기념식은 정오에 시작될 것입니다."
+    },
+    {
+        "day": 5,
+        "no": 145,
+        "word": "communication",
+        "meaning": "의사소통",
+        "targetScore": 900,
+        "exampleEn": "Clear communication is key to success.",
+        "exampleKo": "명확한 의사소통이 성공의 열쇠입니다."
+    },
+    {
+        "day": 5,
+        "no": 146,
+        "word": "commuter",
+        "meaning": "통근자",
+        "targetScore": 900,
+        "exampleEn": "Many commuters use public transport.",
+        "exampleKo": "많은 통근자들이 대중교통을 이용합니다."
+    },
+    {
+        "day": 5,
+        "no": 147,
+        "word": "competitor",
+        "meaning": "경쟁자",
+        "targetScore": 900,
+        "exampleEn": "Our main competitor lowered their prices.",
+        "exampleKo": "우리의 주요 경쟁자가 가격을 낮췄습니다."
+    },
+    {
+        "day": 5,
+        "no": 148,
+        "word": "confront",
+        "meaning": "직면하다",
+        "targetScore": 900,
+        "exampleEn": "We must confront the reality of the situation.",
+        "exampleKo": "우리는 상황의 현실을 직면해야 합니다."
+    },
+    {
+        "day": 5,
+        "no": 149,
+        "word": "consequence",
+        "meaning": "결과",
+        "targetScore": 900,
+        "exampleEn": "Every action has a consequence.",
+        "exampleKo": "모든 행동에는 결과가 따릅니다."
+    },
+    {
+        "day": 5,
+        "no": 150,
+        "word": "considerably",
+        "meaning": "상당히",
+        "targetScore": 900,
+        "exampleEn": "Prices have dropped considerably.",
+        "exampleKo": "가격이 상당히 떨어졌습니다."
+    },
+    {
+        "day": 5,
+        "no": 151,
+        "word": "consume",
+        "meaning": "소비하다",
+        "targetScore": 900,
+        "exampleEn": "This car consumes a lot of fuel.",
+        "exampleKo": "이 차는 연료를 많이 소비합니다."
+    },
+    {
+        "day": 5,
+        "no": 152,
+        "word": "consumer",
+        "meaning": "소비자",
+        "targetScore": 900,
+        "exampleEn": "Consumer confidence is rising.",
+        "exampleKo": "소비자 신뢰도가 상승하고 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 153,
+        "word": "cordially",
+        "meaning": "진심으로, 정중하게",
+        "targetScore": 900,
+        "exampleEn": "You are cordially invited to the party.",
+        "exampleKo": "당신을 파티에 정중히 초대합니다."
+    },
+    {
+        "day": 5,
+        "no": 154,
+        "word": "custody",
+        "meaning": "관리, 감금",
+        "targetScore": 900,
+        "exampleEn": "The suspect is in police custody.",
+        "exampleKo": "용의자는 경찰에 구금되어 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 155,
+        "word": "delegate",
+        "meaning": "대표자; 위임하다",
+        "targetScore": 900,
+        "exampleEn": "He delegated the task to his assistant.",
+        "exampleKo": "그는 업무를 조수에게 위임했습니다."
+    },
+    {
+        "day": 5,
+        "no": 156,
+        "word": "delegation",
+        "meaning": "대표단",
+        "targetScore": 900,
+        "exampleEn": "A delegation of diplomats visited the site.",
+        "exampleKo": "외교관 대표단이 현장을 방문했습니다."
+    },
+    {
+        "day": 5,
+        "no": 157,
+        "word": "delicate",
+        "meaning": "섬세한, 민감한",
+        "targetScore": 900,
+        "exampleEn": "This is a delicate matter.",
+        "exampleKo": "이것은 민감한 문제입니다."
+    },
+    {
+        "day": 5,
+        "no": 158,
+        "word": "draw A from B",
+        "meaning": "B로부터 A를 얻다/끌어내다",
+        "targetScore": 900,
+        "exampleEn": "We can draw lessons from history.",
+        "exampleKo": "우리는 역사로부터 교훈을 얻을 수 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 159,
+        "word": "fascinate",
+        "meaning": "매료시키다",
+        "targetScore": 900,
+        "exampleEn": "Astronomy fascinates me.",
+        "exampleKo": "천문학은 나를 매료시킵니다."
+    },
+    {
+        "day": 5,
+        "no": 160,
+        "word": "highly",
+        "meaning": "매우, 높이",
+        "targetScore": 900,
+        "exampleEn": "It is highly likely to rain.",
+        "exampleKo": "비가 올 가능성이 매우 높습니다."
+    },
+    {
+        "day": 5,
+        "no": 161,
+        "word": "in the process of",
+        "meaning": "~이 진행 중인",
+        "targetScore": 900,
+        "exampleEn": "We are in the process of moving.",
+        "exampleKo": "우리는 이사하는 중입니다."
+    },
+    {
+        "day": 5,
+        "no": 162,
+        "word": "manageable",
+        "meaning": "관리할 수 있는",
+        "targetScore": 900,
+        "exampleEn": "The workload is manageable.",
+        "exampleKo": "업무량은 관리할 수 있는 수준입니다."
+    },
+    {
+        "day": 5,
+        "no": 163,
+        "word": "petition",
+        "meaning": "진정서, 탄원서",
+        "targetScore": 900,
+        "exampleEn": "They signed a petition against the tax.",
+        "exampleKo": "그들은 세금 반대 탄원서에 서명했습니다."
+    },
+    {
+        "day": 5,
+        "no": 164,
+        "word": "prohibitively",
+        "meaning": "엄두를 못 낼 만큼",
+        "targetScore": 900,
+        "exampleEn": "The cost is prohibitively high.",
+        "exampleKo": "비용이 엄두를 못 낼 만큼 높습니다."
+    },
+    {
+        "day": 5,
+        "no": 165,
+        "word": "recruit",
+        "meaning": "모집하다; 신입 사원",
+        "targetScore": 900,
+        "exampleEn": "We are recruiting new staff.",
+        "exampleKo": "우리는 새 직원을 모집하고 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 166,
+        "word": "smash",
+        "meaning": "박살 내다, 충돌하다",
+        "targetScore": 900,
+        "exampleEn": "The window was smashed.",
+        "exampleKo": "창문이 박살 났습니다."
+    },
+    {
+        "day": 5,
+        "no": 167,
+        "word": "unoccupied",
+        "meaning": "비어 있는",
+        "targetScore": 900,
+        "exampleEn": "The seat next to me was unoccupied.",
+        "exampleKo": "내 옆 좌석은 비어 있었습니다."
+    },
+    {
+        "day": 5,
+        "no": 168,
+        "word": "unsettling",
+        "meaning": "불안하게 하는",
+        "targetScore": 900,
+        "exampleEn": "It was an unsettling experience.",
+        "exampleKo": "그것은 불안하게 하는 경험이었습니다."
+    }
+]

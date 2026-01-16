@@ -1,0 +1,362 @@
+[
+    {
+        "day": 13,
+        "no": 1,
+        "word": "complaint",
+        "meaning": "불평, 항의",
+        "targetScore": 650,
+        "exampleEn": "I have a complaint about the service.",
+        "exampleKo": "서비스에 대해 불평이 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 2,
+        "word": "deal",
+        "meaning": "다루다, 처리하다; 거래",
+        "targetScore": 650,
+        "exampleEn": "I will deal with this problem.",
+        "exampleKo": "제가 이 문제를 처리하겠습니다."
+    },
+    {
+        "day": 13,
+        "no": 3,
+        "word": "argumentative",
+        "meaning": "논쟁적인, 논쟁하기 좋아하는",
+        "targetScore": 650,
+        "exampleEn": "He was in an argumentative mood.",
+        "exampleKo": "그는 논쟁적인 기분이었습니다."
+    },
+    {
+        "day": 13,
+        "no": 4,
+        "word": "appropriately",
+        "meaning": "적절하게",
+        "targetScore": 650,
+        "exampleEn": "Dress appropriately for the interview.",
+        "exampleKo": "면접을 위해 적절하게 입으세요."
+    },
+    {
+        "day": 13,
+        "no": 5,
+        "word": "respond",
+        "meaning": "응답하다",
+        "targetScore": 650,
+        "exampleEn": "He didn't respond to my question.",
+        "exampleKo": "그는 내 질문에 응답하지 않았습니다."
+    },
+    {
+        "day": 13,
+        "no": 6,
+        "word": "infuriate",
+        "meaning": "화나게 하다",
+        "targetScore": 650,
+        "exampleEn": "His rudeness infuriated me.",
+        "exampleKo": "그의 무례함이 나를 화나게 했습니다."
+    },
+    {
+        "day": 13,
+        "no": 7,
+        "word": "courteous",
+        "meaning": "예의 바른",
+        "targetScore": 650,
+        "exampleEn": "The staff was very courteous.",
+        "exampleKo": "직원들은 매우 예의 발랐습니다."
+    },
+    {
+        "day": 13,
+        "no": 8,
+        "word": "satisfaction",
+        "meaning": "만족",
+        "targetScore": 650,
+        "exampleEn": "Customer satisfaction is important.",
+        "exampleKo": "고객 만족은 중요합니다."
+    },
+    {
+        "day": 13,
+        "no": 9,
+        "word": "inconvenience",
+        "meaning": "불편; 불편하게 하다",
+        "targetScore": 650,
+        "exampleEn": "We apologize for the inconvenience.",
+        "exampleKo": "불편을 드려 죄송합니다."
+    },
+    {
+        "day": 13,
+        "no": 10,
+        "word": "complete",
+        "meaning": "완료하다; 완전한",
+        "targetScore": 650,
+        "exampleEn": "Please complete the form.",
+        "exampleKo": "양식을 작성해 주세요."
+    },
+    {
+        "day": 13,
+        "no": 11,
+        "word": "specific",
+        "meaning": "구체적인, 특정한",
+        "targetScore": 650,
+        "exampleEn": "Can you be more specific?",
+        "exampleKo": "좀 더 구체적으로 말씀해 주시겠습니까?"
+    },
+    {
+        "day": 13,
+        "no": 12,
+        "word": "return",
+        "meaning": "반품하다, 돌려주다; 반환",
+        "targetScore": 650,
+        "exampleEn": "I want to return these shoes.",
+        "exampleKo": "이 신발을 반품하고 싶습니다."
+    },
+    {
+        "day": 13,
+        "no": 13,
+        "word": "replace",
+        "meaning": "~을 교체하다, 대체하다",
+        "targetScore": 650,
+        "exampleEn": "I need to replace the battery.",
+        "exampleKo": "배터리를 교체해야 합니다."
+    },
+    {
+        "day": 13,
+        "no": 14,
+        "word": "presentation",
+        "meaning": "발표, 프레젠테이션",
+        "targetScore": 650,
+        "exampleEn": "The presentation went well.",
+        "exampleKo": "발표가 잘 진행되었습니다."
+    },
+    {
+        "day": 13,
+        "no": 15,
+        "word": "evaluation",
+        "meaning": "평가",
+        "targetScore": 650,
+        "exampleEn": "The evaluation was fair.",
+        "exampleKo": "평가는 공정했습니다."
+    },
+    {
+        "day": 13,
+        "no": 16,
+        "word": "confident",
+        "meaning": "자신 있는",
+        "targetScore": 650,
+        "exampleEn": "I am confident of success.",
+        "exampleKo": "나는 성공을 확신합니다."
+    },
+    {
+        "day": 13,
+        "no": 17,
+        "word": "cause",
+        "meaning": "~을 야기하다, 원인이 되다; 원인",
+        "targetScore": 650,
+        "exampleEn": "What caused the accident?",
+        "exampleKo": "사고의 원인이 무엇입니까?"
+    },
+    {
+        "day": 13,
+        "no": 18,
+        "word": "commentary",
+        "meaning": "해설, 논평",
+        "targetScore": 650,
+        "exampleEn": "The DVD includes director's commentary.",
+        "exampleKo": "DVD에는 감독의 해설이 포함되어 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 19,
+        "word": "notification",
+        "meaning": "통지",
+        "targetScore": 650,
+        "exampleEn": "You will receive a notification.",
+        "exampleKo": "당신은 통지를 받을 것입니다."
+    },
+    {
+        "day": 13,
+        "no": 20,
+        "word": "apologize",
+        "meaning": "사과하다",
+        "targetScore": 650,
+        "exampleEn": "I apologize for being late.",
+        "exampleKo": "늦어서 죄송합니다."
+    },
+    {
+        "day": 13,
+        "no": 21,
+        "word": "interact",
+        "meaning": "소통하다, 교류하다",
+        "targetScore": 650,
+        "exampleEn": "Employees interact with customers daily.",
+        "exampleKo": "직원들은 매일 고객과 소통합니다."
+    },
+    {
+        "day": 13,
+        "no": 22,
+        "word": "certain",
+        "meaning": "확신하는; 특정한",
+        "targetScore": 650,
+        "exampleEn": "Are you certain about that?",
+        "exampleKo": "그것에 대해 확신합니까?"
+    },
+    {
+        "day": 13,
+        "no": 23,
+        "word": "commitment",
+        "meaning": "헌신, 전념",
+        "targetScore": 650,
+        "exampleEn": "We appreciate your commitment.",
+        "exampleKo": "당신의 헌신에 감사합니다."
+    },
+    {
+        "day": 13,
+        "no": 24,
+        "word": "applaud",
+        "meaning": "박수갈채를 보내다, 칭찬하다",
+        "targetScore": 650,
+        "exampleEn": "The audience applauded loudly.",
+        "exampleKo": "관중들은 크게 박수를 보냈습니다."
+    },
+    {
+        "day": 13,
+        "no": 25,
+        "word": "biography",
+        "meaning": "전기, 일대기",
+        "targetScore": 650,
+        "exampleEn": "I read a biography of Lincoln.",
+        "exampleKo": "나는 링컨 전기를 읽었습니다."
+    },
+    {
+        "day": 13,
+        "no": 26,
+        "word": "critical",
+        "meaning": "비판적인; 중요한",
+        "targetScore": 650,
+        "exampleEn": "He was critical of the plan.",
+        "exampleKo": "그는 그 계획에 비판적이었습니다."
+    },
+    {
+        "day": 13,
+        "no": 27,
+        "word": "depend",
+        "meaning": "~에 달려 있다, 의존하다",
+        "targetScore": 650,
+        "exampleEn": "You can depend on me.",
+        "exampleKo": "나를 믿어도 됩니다."
+    },
+    {
+        "day": 13,
+        "no": 28,
+        "word": "combine",
+        "meaning": "결합시키다",
+        "targetScore": 650,
+        "exampleEn": "Combine flour and sugar.",
+        "exampleKo": "밀가루와 설탕을 섞으세요."
+    },
+    {
+        "day": 13,
+        "no": 29,
+        "word": "priority",
+        "meaning": "우선순위",
+        "targetScore": 650,
+        "exampleEn": "Safety is our top priority.",
+        "exampleKo": "안전이 우리의 최우선 순위입니다."
+    },
+    {
+        "day": 13,
+        "no": 30,
+        "word": "observe",
+        "meaning": "관찰하다; (규칙을) 준수하다",
+        "targetScore": 650,
+        "exampleEn": "Please observe the speed limit.",
+        "exampleKo": "속도 제한을 준수하세요."
+    },
+    {
+        "day": 13,
+        "no": 31,
+        "word": "defective",
+        "meaning": "결함이 있는",
+        "targetScore": 650,
+        "exampleEn": "The car brakes were defective.",
+        "exampleKo": "자동차 브레이크에 결함이 있었습니다."
+    },
+    {
+        "day": 13,
+        "no": 32,
+        "word": "reflect",
+        "meaning": "반영하다, 나타내다",
+        "targetScore": 650,
+        "exampleEn": "The price reflects the quality.",
+        "exampleKo": "가격은 품질을 반영합니다."
+    },
+    {
+        "day": 13,
+        "no": 33,
+        "word": "attitude",
+        "meaning": "태도",
+        "targetScore": 650,
+        "exampleEn": "He has a positive attitude.",
+        "exampleKo": "그는 긍정적인 태도를 가지고 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 34,
+        "word": "disappoint",
+        "meaning": "실망시키다",
+        "targetScore": 650,
+        "exampleEn": "I won't disappoint you.",
+        "exampleKo": "당신을 실망시키지 않겠습니다."
+    },
+    {
+        "day": 13,
+        "no": 35,
+        "word": "inquire",
+        "meaning": "문의하다",
+        "targetScore": 650,
+        "exampleEn": "I called to inquire about the job.",
+        "exampleKo": "나는 일자리에 대해 문의하려고 전화했습니다."
+    },
+    {
+        "day": 13,
+        "no": 36,
+        "word": "insert",
+        "meaning": "삽입하다",
+        "targetScore": 650,
+        "exampleEn": "Insert the card into the slot.",
+        "exampleKo": "슬롯에 카드를 삽입하세요."
+    },
+    {
+        "day": 13,
+        "no": 37,
+        "word": "disclose",
+        "meaning": "공개하다, 드러내다",
+        "targetScore": 650,
+        "exampleEn": "He refused to disclose his income.",
+        "exampleKo": "그는 소득 공개를 거부했습니다."
+    },
+    {
+        "day": 13,
+        "no": 38,
+        "word": "guarantee",
+        "meaning": "보장하다; 보증",
+        "targetScore": 650,
+        "exampleEn": "We guarantee your satisfaction.",
+        "exampleKo": "당신의 만족을 보장합니다."
+    },
+    {
+        "day": 13,
+        "no": 39,
+        "word": "politely",
+        "meaning": "공손하게",
+        "targetScore": 650,
+        "exampleEn": "She asked politely.",
+        "exampleKo": "그녀는 공손하게 물었습니다."
+    },
+    {
+        "day": 13,
+        "no": 40,
+        "word": "seriously",
+        "meaning": "진지하게",
+        "targetScore": 650,
+        "exampleEn": "Don't take it seriously.",
+        "exampleKo": "그것을 심각하게 받아들이지 마세요."
+    }
+]

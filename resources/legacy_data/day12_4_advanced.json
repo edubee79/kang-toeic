@@ -1,0 +1,290 @@
+[
+    {
+        "day": 12,
+        "no": 137,
+        "word": "wear and tear",
+        "meaning": "마모, 손상",
+        "targetScore": 900,
+        "exampleEn": "The car shows signs of wear and tear.",
+        "exampleKo": "그 차는 마모의 흔적을 보입니다."
+    },
+    {
+        "day": 12,
+        "no": 138,
+        "word": "yield",
+        "meaning": "산출하다; 굴복하다",
+        "targetScore": 900,
+        "exampleEn": "The investment yielded a high profit.",
+        "exampleKo": "그 투자는 높은 수익을 산출했습니다."
+    },
+    {
+        "day": 12,
+        "no": 139,
+        "word": "abandon",
+        "meaning": "버리다, 포기하다",
+        "targetScore": 900,
+        "exampleEn": "They had to abandon the ship.",
+        "exampleKo": "그들은 배를 버려야 했습니다."
+    },
+    {
+        "day": 12,
+        "no": 140,
+        "word": "ambitious",
+        "meaning": "야심 찬",
+        "targetScore": 900,
+        "exampleEn": "It was an ambitious project.",
+        "exampleKo": "그것은 야심 찬 프로젝트였습니다."
+    },
+    {
+        "day": 12,
+        "no": 141,
+        "word": "assembly line",
+        "meaning": "조립 라인",
+        "targetScore": 900,
+        "exampleEn": "He works on an assembly line.",
+        "exampleKo": "그는 조립 라인에서 일합니다."
+    },
+    {
+        "day": 12,
+        "no": 142,
+        "word": "breakdown",
+        "meaning": "고장, 명세서",
+        "targetScore": 900,
+        "exampleEn": "I had a nervous breakdown.",
+        "exampleKo": "나는 신경 쇠약에 걸렸습니다."
+    },
+    {
+        "day": 12,
+        "no": 143,
+        "word": "combustible",
+        "meaning": "가연성의",
+        "targetScore": 900,
+        "exampleEn": "Wood is combustible.",
+        "exampleKo": "나무는 가연성입니다."
+    },
+    {
+        "day": 12,
+        "no": 144,
+        "word": "condense",
+        "meaning": "응축하다, 요약하다",
+        "targetScore": 900,
+        "exampleEn": "Condense the report into one page.",
+        "exampleKo": "보고서를 한 페이지로 요약하세요."
+    },
+    {
+        "day": 12,
+        "no": 145,
+        "word": "constituent",
+        "meaning": "구성 요소; 선거구민",
+        "targetScore": 900,
+        "exampleEn": "Oxygen is a constituent of air.",
+        "exampleKo": "산소는 공기의 구성 요소입니다."
+    },
+    {
+        "day": 12,
+        "no": 146,
+        "word": "deficit",
+        "meaning": "적자, 부족",
+        "targetScore": 900,
+        "exampleEn": "We must reduce the budget deficit.",
+        "exampleKo": "우리는 예산 적자를 줄여야 합니다."
+    },
+    {
+        "day": 12,
+        "no": 147,
+        "word": "deterioration",
+        "meaning": "악화, 품질 저하",
+        "targetScore": 900,
+        "exampleEn": "There has been a deterioration in relations.",
+        "exampleKo": "관계 악화가 있었습니다."
+    },
+    {
+        "day": 12,
+        "no": 148,
+        "word": "dismantle",
+        "meaning": "해체하다, 분해하다",
+        "targetScore": 900,
+        "exampleEn": "They dismantled the machine.",
+        "exampleKo": "그들은 기계를 분해했습니다."
+    },
+    {
+        "day": 12,
+        "no": 149,
+        "word": "facility",
+        "meaning": "재능, 솜씨; 시설",
+        "targetScore": 900,
+        "exampleEn": "He has a facility for languages.",
+        "exampleKo": "그는 언어에 재능이 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 150,
+        "word": "gadget",
+        "meaning": "도구, 장치",
+        "targetScore": 900,
+        "exampleEn": "This gadget is very useful.",
+        "exampleKo": "이 도구는 매우 유용합니다."
+    },
+    {
+        "day": 12,
+        "no": 151,
+        "word": "glitch",
+        "meaning": "작은 결함, 오작동",
+        "targetScore": 900,
+        "exampleEn": "There was a technical glitch.",
+        "exampleKo": "기술적 결함이 있었습니다."
+    },
+    {
+        "day": 12,
+        "no": 152,
+        "word": "goods",
+        "meaning": "상품, 물품",
+        "targetScore": 900,
+        "exampleEn": "The goods were damaged in transit.",
+        "exampleKo": "상품이 운송 중에 손상되었습니다."
+    },
+    {
+        "day": 12,
+        "no": 153,
+        "word": "interruption",
+        "meaning": "중단, 방해",
+        "targetScore": 900,
+        "exampleEn": "Sorry for the interruption.",
+        "exampleKo": "방해해서 죄송합니다."
+    },
+    {
+        "day": 12,
+        "no": 154,
+        "word": "inventory",
+        "meaning": "재고, 물품 목록",
+        "targetScore": 900,
+        "exampleEn": "We are taking inventory.",
+        "exampleKo": "우리는 재고 조사를 하고 있습니다."
+    },
+    {
+        "day": 12,
+        "no": 155,
+        "word": "labor-intensive",
+        "meaning": "노동 집약적인",
+        "targetScore": 900,
+        "exampleEn": "Farming is labor-intensive.",
+        "exampleKo": "농업은 노동 집약적입니다."
+    },
+    {
+        "day": 12,
+        "no": 156,
+        "word": "machinery",
+        "meaning": "기계류",
+        "targetScore": 900,
+        "exampleEn": "The machinery is old and rusty.",
+        "exampleKo": "그 기계류는 낡고 녹슬었습니다."
+    },
+    {
+        "day": 12,
+        "no": 157,
+        "word": "maintenance",
+        "meaning": "부양비; 유지",
+        "targetScore": 900,
+        "exampleEn": "He pays child maintenance.",
+        "exampleKo": "그는 양육비를 지불합니다."
+    },
+    {
+        "day": 12,
+        "no": 158,
+        "word": "malfunction",
+        "meaning": "오동작, 고장",
+        "targetScore": 900,
+        "exampleEn": "The crash was caused by a malfunction.",
+        "exampleKo": "충돌은 오동작으로 인해 발생했습니다."
+    },
+    {
+        "day": 12,
+        "no": 159,
+        "word": "mechanize",
+        "meaning": "기계화하다",
+        "targetScore": 900,
+        "exampleEn": "Farming has been mechanized.",
+        "exampleKo": "농업이 기계화되었습니다."
+    },
+    {
+        "day": 12,
+        "no": 160,
+        "word": "obsolete",
+        "meaning": "시대에 뒤떨어진",
+        "targetScore": 900,
+        "exampleEn": "The law is now obsolete.",
+        "exampleKo": "그 법은 이제 시대에 뒤떨어졌습니다."
+    },
+    {
+        "day": 12,
+        "no": 161,
+        "word": "outdated",
+        "meaning": "구식의",
+        "targetScore": 900,
+        "exampleEn": "His views are outdated.",
+        "exampleKo": "그의 견해는 구식입니다."
+    },
+    {
+        "day": 12,
+        "no": 162,
+        "word": "plant",
+        "meaning": "시설, 설비",
+        "targetScore": 900,
+        "exampleEn": "The company invested in new plant.",
+        "exampleKo": "회사는 새로운 설비에 투자했습니다."
+    },
+    {
+        "day": 12,
+        "no": 163,
+        "word": "precautionary",
+        "meaning": "예방의",
+        "targetScore": 900,
+        "exampleEn": "It was a precautionary measure.",
+        "exampleKo": "그것은 예방 조치였습니다."
+    },
+    {
+        "day": 12,
+        "no": 164,
+        "word": "quota",
+        "meaning": "할당량",
+        "targetScore": 900,
+        "exampleEn": "We met our production quota.",
+        "exampleKo": "우리는 생산 할당량을 채웠습니다."
+    },
+    {
+        "day": 12,
+        "no": 165,
+        "word": "raw",
+        "meaning": "가공되지 않은; 미숙한",
+        "targetScore": 900,
+        "exampleEn": "He is a raw recruit.",
+        "exampleKo": "그는 풋내기 신병입니다."
+    },
+    {
+        "day": 12,
+        "no": 166,
+        "word": "surplus",
+        "meaning": "잉여, 흑자",
+        "targetScore": 900,
+        "exampleEn": "Grain surplus caused prices to drop.",
+        "exampleKo": "곡물 잉여로 가격이 하락했습니다."
+    },
+    {
+        "day": 12,
+        "no": 167,
+        "word": "trash",
+        "meaning": "쓰레기; 부수다",
+        "targetScore": 900,
+        "exampleEn": "Take out the trash.",
+        "exampleKo": "쓰레기를 버리세요."
+    },
+    {
+        "day": 12,
+        "no": 168,
+        "word": "waste",
+        "meaning": "낭비; 폐기물",
+        "targetScore": 900,
+        "exampleEn": "Industrial waste pollutes rivers.",
+        "exampleKo": "산업 폐기물은 강을 오염시킵니다."
+    }
+]

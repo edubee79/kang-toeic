@@ -1,0 +1,362 @@
+[
+  {
+    "day": 27,
+    "no": 1,
+    "word": "investment",
+    "meaning": "투자, 투자금",
+    "targetScore": 650,
+    "exampleEn": "The company made a substantial investment in technology.",
+    "exampleKo": "회사는 기술에 상당한 투자를 했습니다."
+  },
+  {
+    "day": 27,
+    "no": 2,
+    "word": "lucrative",
+    "meaning": "수익성 있는",
+    "targetScore": 650,
+    "exampleEn": "The partnership proved to be highly lucrative.",
+    "exampleKo": "파트너십은 매우 수익성이 있는 것으로 입증되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 3,
+    "word": "inherently",
+    "meaning": "본질적으로",
+    "targetScore": 650,
+    "exampleEn": "Stock investments are inherently risky.",
+    "exampleKo": "주식 투자는 본질적으로 위험합니다."
+  },
+  {
+    "day": 27,
+    "no": 4,
+    "word": "secure",
+    "meaning": "확보하다; 안전한",
+    "targetScore": 650,
+    "exampleEn": "We need to secure additional funding.",
+    "exampleKo": "추가 자금을 확보해야 합니다."
+  },
+  {
+    "day": 27,
+    "no": 5,
+    "word": "foreseeable",
+    "meaning": "예견할 수 있는",
+    "targetScore": 650,
+    "exampleEn": "Growth will continue in the foreseeable future.",
+    "exampleKo": "성장은 예견할 수 있는 미래에 계속될 것입니다."
+  },
+  {
+    "day": 27,
+    "no": 6,
+    "word": "innate",
+    "meaning": "타고난",
+    "targetScore": 650,
+    "exampleEn": "She has an innate understanding of markets.",
+    "exampleKo": "그녀는 시장에 대한 타고난 이해력이 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 7,
+    "word": "property",
+    "meaning": "재산",
+    "targetScore": 650,
+    "exampleEn": "The company owns valuable property downtown.",
+    "exampleKo": "회사는 시내에 귀중한 재산을 소유하고 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 8,
+    "word": "on behalf of",
+    "meaning": "~을 대신해서",
+    "targetScore": 650,
+    "exampleEn": "I am speaking on behalf of the investors.",
+    "exampleKo": "투자자들을 대신해서 말씀드립니다."
+  },
+  {
+    "day": 27,
+    "no": 9,
+    "word": "lease",
+    "meaning": "임대차",
+    "targetScore": 650,
+    "exampleEn": "The lease agreement expires next year.",
+    "exampleKo": "임대 계약은 내년에 만료됩니다."
+  },
+  {
+    "day": 27,
+    "no": 10,
+    "word": "sponsor",
+    "meaning": "후원하다",
+    "targetScore": 650,
+    "exampleEn": "The bank sponsors local business events.",
+    "exampleKo": "은행은 지역 비즈니스 행사를 후원합니다."
+  },
+  {
+    "day": 27,
+    "no": 11,
+    "word": "propose",
+    "meaning": "제안하다",
+    "targetScore": 650,
+    "exampleEn": "The board proposed a merger.",
+    "exampleKo": "이사회는 합병을 제안했습니다."
+  },
+  {
+    "day": 27,
+    "no": 12,
+    "word": "support",
+    "meaning": "지원하다",
+    "targetScore": 650,
+    "exampleEn": "The government supports small businesses.",
+    "exampleKo": "정부는 중소기업을 지원합니다."
+  },
+  {
+    "day": 27,
+    "no": 13,
+    "word": "distribution",
+    "meaning": "분배",
+    "targetScore": 650,
+    "exampleEn": "Profit distribution occurs quarterly.",
+    "exampleKo": "이익 분배는 분기별로 이루어집니다."
+  },
+  {
+    "day": 27,
+    "no": 14,
+    "word": "consider",
+    "meaning": "고려하다",
+    "targetScore": 650,
+    "exampleEn": "Please consider our proposal carefully.",
+    "exampleKo": "우리 제안을 신중하게 고려해 주세요."
+  },
+  {
+    "day": 27,
+    "no": 15,
+    "word": "nearly",
+    "meaning": "거의",
+    "targetScore": 650,
+    "exampleEn": "The fund has nearly tripled in value.",
+    "exampleKo": "펀드 가치가 거의 세 배가 되었습니다."
+  },
+  {
+    "day": 27,
+    "no": 16,
+    "word": "consent",
+    "meaning": "동의",
+    "targetScore": 650,
+    "exampleEn": "Written consent is required.",
+    "exampleKo": "서면 동의가 필요합니다."
+  },
+  {
+    "day": 27,
+    "no": 17,
+    "word": "gratitude",
+    "meaning": "감사",
+    "targetScore": 650,
+    "exampleEn": "We express our gratitude to investors.",
+    "exampleKo": "투자자들에게 감사를 표합니다."
+  },
+  {
+    "day": 27,
+    "no": 18,
+    "word": "consult",
+    "meaning": "상담하다",
+    "targetScore": 650,
+    "exampleEn": "Consult a financial advisor before investing.",
+    "exampleKo": "투자하기 전에 재무 고문과 상담하세요."
+  },
+  {
+    "day": 27,
+    "no": 19,
+    "word": "advice",
+    "meaning": "조언",
+    "targetScore": 650,
+    "exampleEn": "She gave me valuable investment advice.",
+    "exampleKo": "그녀는 나에게 귀중한 투자 조언을 해주었습니다."
+  },
+  {
+    "day": 27,
+    "no": 20,
+    "word": "partially",
+    "meaning": "부분적으로",
+    "targetScore": 650,
+    "exampleEn": "The project is partially funded.",
+    "exampleKo": "프로젝트는 부분적으로 자금이 지원됩니다."
+  },
+  {
+    "day": 27,
+    "no": 21,
+    "word": "evident",
+    "meaning": "명백한",
+    "targetScore": 650,
+    "exampleEn": "The benefits are evident.",
+    "exampleKo": "이점은 명백합니다."
+  },
+  {
+    "day": 27,
+    "no": 22,
+    "word": "reliability",
+    "meaning": "신뢰도",
+    "targetScore": 650,
+    "exampleEn": "The bank is known for its reliability.",
+    "exampleKo": "은행은 신뢰도로 알려져 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 23,
+    "word": "cautious",
+    "meaning": "신중한",
+    "targetScore": 650,
+    "exampleEn": "Investors should be cautious.",
+    "exampleKo": "투자자들은 신중해야 합니다."
+  },
+  {
+    "day": 27,
+    "no": 24,
+    "word": "insight",
+    "meaning": "통찰력",
+    "targetScore": 650,
+    "exampleEn": "The report provides valuable insights.",
+    "exampleKo": "보고서는 귀중한 통찰력을 제공합니다."
+  },
+  {
+    "day": 27,
+    "no": 25,
+    "word": "portfolio",
+    "meaning": "포트폴리오",
+    "targetScore": 650,
+    "exampleEn": "Diversify your investment portfolio.",
+    "exampleKo": "투자 포트폴리오를 다각화하세요."
+  },
+  {
+    "day": 27,
+    "no": 26,
+    "word": "possible",
+    "meaning": "가능한",
+    "targetScore": 650,
+    "exampleEn": "High returns are possible.",
+    "exampleKo": "높은 수익이 가능합니다."
+  },
+  {
+    "day": 27,
+    "no": 27,
+    "word": "speculation",
+    "meaning": "투기",
+    "targetScore": 650,
+    "exampleEn": "Market speculation drove prices up.",
+    "exampleKo": "시장 투기가 가격을 올렸습니다."
+  },
+  {
+    "day": 27,
+    "no": 28,
+    "word": "solely",
+    "meaning": "전적으로",
+    "targetScore": 650,
+    "exampleEn": "The decision was based solely on data.",
+    "exampleKo": "결정은 전적으로 데이터에 기반했습니다."
+  },
+  {
+    "day": 27,
+    "no": 29,
+    "word": "entrepreneur",
+    "meaning": "사업가",
+    "targetScore": 650,
+    "exampleEn": "The entrepreneur secured funding.",
+    "exampleKo": "사업가는 자금을 확보했습니다."
+  },
+  {
+    "day": 27,
+    "no": 30,
+    "word": "eventually",
+    "meaning": "결국",
+    "targetScore": 650,
+    "exampleEn": "The investment eventually paid off.",
+    "exampleKo": "투자는 결국 성과를 거두었습니다."
+  },
+  {
+    "day": 27,
+    "no": 31,
+    "word": "shareholder",
+    "meaning": "주주",
+    "targetScore": 650,
+    "exampleEn": "Shareholders will receive dividends.",
+    "exampleKo": "주주들은 배당금을 받을 것입니다."
+  },
+  {
+    "day": 27,
+    "no": 32,
+    "word": "outlook",
+    "meaning": "전망",
+    "targetScore": 650,
+    "exampleEn": "The economic outlook is positive.",
+    "exampleKo": "경제 전망은 긍정적입니다."
+  },
+  {
+    "day": 27,
+    "no": 33,
+    "word": "stability",
+    "meaning": "안정성",
+    "targetScore": 650,
+    "exampleEn": "Financial stability is crucial.",
+    "exampleKo": "재정 안정성이 중요합니다."
+  },
+  {
+    "day": 27,
+    "no": 34,
+    "word": "bond",
+    "meaning": "채권",
+    "targetScore": 650,
+    "exampleEn": "Government bonds are safe investments.",
+    "exampleKo": "국채는 안전한 투자입니다."
+  },
+  {
+    "day": 27,
+    "no": 35,
+    "word": "depreciation",
+    "meaning": "가치 하락",
+    "targetScore": 650,
+    "exampleEn": "The currency experienced depreciation.",
+    "exampleKo": "통화는 가치 하락을 겪었습니다."
+  },
+  {
+    "day": 27,
+    "no": 36,
+    "word": "increasing",
+    "meaning": "증가하는",
+    "targetScore": 650,
+    "exampleEn": "There is increasing demand.",
+    "exampleKo": "수요가 증가하고 있습니다."
+  },
+  {
+    "day": 27,
+    "no": 37,
+    "word": "prevalent",
+    "meaning": "널리 퍼진",
+    "targetScore": 650,
+    "exampleEn": "Online trading is prevalent.",
+    "exampleKo": "온라인 거래가 널리 퍼졌습니다."
+  },
+  {
+    "day": 27,
+    "no": 38,
+    "word": "rapid",
+    "meaning": "빠른",
+    "targetScore": 650,
+    "exampleEn": "The market experienced rapid growth.",
+    "exampleKo": "시장은 빠른 성장을 경험했습니다."
+  },
+  {
+    "day": 27,
+    "no": 39,
+    "word": "unprecedented",
+    "meaning": "전례 없는",
+    "targetScore": 650,
+    "exampleEn": "The company achieved unprecedented profits.",
+    "exampleKo": "회사는 전례 없는 이익을 달성했습니다."
+  },
+  {
+    "day": 27,
+    "no": 40,
+    "word": "yield",
+    "meaning": "수익률",
+    "targetScore": 650,
+    "exampleEn": "The investment yielded 10% returns.",
+    "exampleKo": "투자는 10% 수익을 가져왔습니다."
+  }
+]

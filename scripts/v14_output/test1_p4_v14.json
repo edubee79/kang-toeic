@@ -1,0 +1,63 @@
+{
+  "testId": 1,
+  "passageId": 4,
+  "guidance": "Questions 143-146 refer to the following letter.",
+  "structure": {
+    "header_lines": [
+      "April 7",
+      "Naomi Burwell",
+      "43 Waymire Road",
+      "South Portland, ME 04109"
+    ],
+    "salutation": "Dear Ms. Burwell,",
+    "body_paragraphs": [
+      "I am Omar Ridha, the manager of Droplight Studio. [143] We offer a full range of photography services for real estate professionals like you. We take pride in composing interior and exterior shots that make a property look its best. Droplight Studio spares no effort in [144] superior digital images. [145] our professional-grade equipment, lighting, and staging techniques allow us to highlight the best features of a property. And once the photo shoot is over, every image [146] expert editing. All these services come standard in every package."
+    ],
+    "closing_lines": [
+      "Sincerely,",
+      "Omar Ridha, Droplight Studio"
+    ]
+  },
+  "questions": [
+    {
+      "id": 143,
+      "options": [
+        "(A) I would like to introduce you to our business.",
+        "(B) Great photographs can make your property stand out.",
+        "(C) We are looking forward to your visit.",
+        "(D) It was the first studio of its kind to open in this area."
+      ],
+      "is_sentence_insertion": true
+    },
+    {
+      "id": 144,
+      "options": [
+        "(A) researching",
+        "(B) creating",
+        "(C) purchasing",
+        "(D) displaying"
+      ],
+      "is_sentence_insertion": false
+    },
+    {
+      "id": 145,
+      "options": [
+        "(A) If not",
+        "(B) By comparison",
+        "(C) Otherwise",
+        "(D) Indeed"
+      ],
+      "is_sentence_insertion": false
+    },
+    {
+      "id": 146,
+      "options": [
+        "(A) receives",
+        "(B) is receiving",
+        "(C) had received",
+        "(D) had to receive"
+      ],
+      "is_sentence_insertion": false
+    }
+  ]
+}

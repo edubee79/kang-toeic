@@ -1,0 +1,614 @@
+[
+  {
+    "day": 26,
+    "no": 69,
+    "word": "thankful",
+    "meaning": "고맙게 생각하는, 감사하는",
+    "targetScore": 800,
+    "exampleEn": "We are thankful for your continued support.",
+    "exampleKo": "우리는 당신의 지속적인 지지에 대해 고맙게 생각합니다."
+  },
+  {
+    "day": 26,
+    "no": 70,
+    "word": "unnecessary",
+    "meaning": "불필요한",
+    "targetScore": 800,
+    "exampleEn": "We should avoid unnecessary expenses.",
+    "exampleKo": "우리는 불필요한 지출을 피해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 71,
+    "word": "useful",
+    "meaning": "유용한",
+    "targetScore": 800,
+    "exampleEn": "This guide contains useful information for investors.",
+    "exampleKo": "이 안내서는 투자자들을 위한 유용한 정보를 담고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 72,
+    "word": "awfully",
+    "meaning": "대단히, 정말",
+    "targetScore": 800,
+    "exampleEn": "I am awfully sorry for the mistake.",
+    "exampleKo": "실수에 대해 대단히(정말) 죄송합니다."
+  },
+  {
+    "day": 26,
+    "no": 73,
+    "word": "bank loan",
+    "meaning": "은행 대출금",
+    "targetScore": 800,
+    "exampleEn": "He took out a bank loan to start a business.",
+    "exampleKo": "그는 사업을 시작하기 위해 은행 대출금을 받았습니다."
+  },
+  {
+    "day": 26,
+    "no": 74,
+    "word": "bank teller",
+    "meaning": "은행출납원",
+    "targetScore": 800,
+    "exampleEn": "The bank teller processed the deposit.",
+    "exampleKo": "은행 출납원이 입금을 처리했습니다."
+  },
+  {
+    "day": 26,
+    "no": 75,
+    "word": "be amazed at",
+    "meaning": "~에 놀라다",
+    "targetScore": 800,
+    "exampleEn": "I was amazed at the rapid growth of the company.",
+    "exampleKo": "저는 그 회사의 빠른 성장에 놀랐습니다."
+  },
+  {
+    "day": 26,
+    "no": 76,
+    "word": "be caught in",
+    "meaning": "~에 붙잡히다, ~에 걸리다",
+    "targetScore": 800,
+    "exampleEn": "He was caught in a financial scandal.",
+    "exampleKo": "그는 금융 스캔들에 붙잡혔습니다(휘말렸습니다)."
+  },
+  {
+    "day": 26,
+    "no": 77,
+    "word": "be spread out",
+    "meaning": "펼쳐져 있다",
+    "targetScore": 800,
+    "exampleEn": "The branches are spread out across the city.",
+    "exampleKo": "지점들이 도시에 펼쳐져 있습니다(퍼져 있습니다)."
+  },
+  {
+    "day": 26,
+    "no": 78,
+    "word": "every other day",
+    "meaning": "격일로, 이틀에 한 번",
+    "targetScore": 800,
+    "exampleEn": "The board meets every other day.",
+    "exampleKo": "이사회는 격일로 모입니다."
+  },
+  {
+    "day": 26,
+    "no": 79,
+    "word": "flawed",
+    "meaning": "결함이 있는",
+    "targetScore": 800,
+    "exampleEn": "The proposed plan was flawed from the beginning.",
+    "exampleKo": "제안된 계획은 처음부터 결함이 있었습니다."
+  },
+  {
+    "day": 26,
+    "no": 80,
+    "word": "foreign currency",
+    "meaning": "외화",
+    "targetScore": 800,
+    "exampleEn": "The bank exchanges foreign currency.",
+    "exampleKo": "그 은행은 외화를 교환해 줍니다."
+  },
+  {
+    "day": 26,
+    "no": 81,
+    "word": "gaze into",
+    "meaning": "~을 뚫어지게 보다",
+    "targetScore": 800,
+    "exampleEn": "He gazed into the future of the market.",
+    "exampleKo": "그는 시장의 미래를 뚫어지게 보았습니다(응시했습니다)."
+  },
+  {
+    "day": 26,
+    "no": 82,
+    "word": "get a loan",
+    "meaning": "대출을 받다",
+    "targetScore": 800,
+    "exampleEn": "It is difficult to get a loan with bad credit.",
+    "exampleKo": "신용이 나쁘면 대출을 받기 어렵습니다."
+  },
+  {
+    "day": 26,
+    "no": 83,
+    "word": "give out",
+    "meaning": "나눠주다",
+    "targetScore": 800,
+    "exampleEn": "The bank is giving out free calendars.",
+    "exampleKo": "은행에서 무료 달력을 나눠주고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 84,
+    "word": "glance at",
+    "meaning": "~을 힐끗보다",
+    "targetScore": 800,
+    "exampleEn": "She glanced at the financial report.",
+    "exampleKo": "그녀는 재무 보고서를 힐끗 봤습니다."
+  },
+  {
+    "day": 26,
+    "no": 85,
+    "word": "go wrong with",
+    "meaning": "~이 잘못되다",
+    "targetScore": 800,
+    "exampleEn": "Something went wrong with the transaction.",
+    "exampleKo": "거래에 뭔가 잘못되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 86,
+    "word": "hang out",
+    "meaning": "시간을 보내다",
+    "targetScore": 800,
+    "exampleEn": "They often hang out at the cafe after work.",
+    "exampleKo": "그들은 종종 퇴근 후 카페에서 시간을 보냅니다."
+  },
+  {
+    "day": 26,
+    "no": 87,
+    "word": "have around",
+    "meaning": "~을 가지고 다니다",
+    "targetScore": 800,
+    "exampleEn": "I always have my checkbook around.",
+    "exampleKo": "저는 항상 수표책을 가지고 다닙니다."
+  },
+  {
+    "day": 26,
+    "no": 88,
+    "word": "if possible",
+    "meaning": "가능하다면",
+    "targetScore": 800,
+    "exampleEn": "Please settle the account if possible.",
+    "exampleKo": "가능하다면 계좌를 정리(결제)해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 89,
+    "word": "if you insist",
+    "meaning": "굳이 원하신다면",
+    "targetScore": 800,
+    "exampleEn": "I will check again if you insist.",
+    "exampleKo": "굳이 원하신다면 다시 확인해 보겠습니다."
+  },
+  {
+    "day": 26,
+    "no": 90,
+    "word": "I'll bet",
+    "meaning": "장담하건대",
+    "targetScore": 800,
+    "exampleEn": "I'll bet that stocks will rise tomorrow.",
+    "exampleKo": "내일 주식이 오를 것이라고 장담합니다."
+  },
+  {
+    "day": 26,
+    "no": 91,
+    "word": "locally",
+    "meaning": "장소상으로",
+    "targetScore": 800,
+    "exampleEn": "The business is owned locally.",
+    "exampleKo": "그 사업체는 지역에서(장소상으로) 소유되고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 92,
+    "word": "pay off",
+    "meaning": "빚을 다 갚다, 이익이 되다",
+    "targetScore": 800,
+    "exampleEn": "Hard work will eventually pay off.",
+    "exampleKo": "열심히 일하는 것은 결국 이익이 될(보상받을) 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 93,
+    "word": "perhaps",
+    "meaning": "아마, 어쩌면",
+    "targetScore": 800,
+    "exampleEn": "Perhaps we should invest in real estate.",
+    "exampleKo": "아마 우리도 부동산에 투자해야 할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 94,
+    "word": "put in",
+    "meaning": "예금하다, 투자하다",
+    "targetScore": 800,
+    "exampleEn": "He put in a lot of money into the fund.",
+    "exampleKo": "그는 펀드에 많은 돈을 투자했습니다(넣었습니다)."
+  },
+  {
+    "day": 26,
+    "no": 95,
+    "word": "savings",
+    "meaning": "저축",
+    "targetScore": 800,
+    "exampleEn": "Retirement savings are tax-deductible.",
+    "exampleKo": "은퇴 저축은 세금이 공제됩니다."
+  },
+  {
+    "day": 26,
+    "no": 96,
+    "word": "short-term deposit",
+    "meaning": "단기예금",
+    "targetScore": 800,
+    "exampleEn": "The interest rate on short-term deposits is low.",
+    "exampleKo": "단기 예금의 이자율은 낮습니다."
+  },
+  {
+    "day": 26,
+    "no": 97,
+    "word": "the following day",
+    "meaning": "그 다음날",
+    "targetScore": 800,
+    "exampleEn": "The funds will be available the following day.",
+    "exampleKo": "자금은 그 다음 날 이용 가능할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 98,
+    "word": "until the first next month",
+    "meaning": "다음달 1일까지",
+    "targetScore": 800,
+    "exampleEn": "Please delay the payment until the first next month.",
+    "exampleKo": "지불을 다음 달 1일까지 미뤄 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 99,
+    "word": "across from",
+    "meaning": "~에 바로 맞은편에",
+    "targetScore": 800,
+    "exampleEn": "The bank is across from the supermarket.",
+    "exampleKo": "은행은 슈퍼마켓 바로 맞은편에 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 100,
+    "word": "alarming",
+    "meaning": "걱정스러운, 두려움",
+    "targetScore": 800,
+    "exampleEn": "investors react with alarming speed.",
+    "exampleKo": "투자자들은 걱정스러운(놀라운) 속도로 반응합니다."
+  },
+  {
+    "day": 26,
+    "no": 101,
+    "word": "anymore",
+    "meaning": "이제는, 더 이상은",
+    "targetScore": 800,
+    "exampleEn": "We do not accept checks anymore.",
+    "exampleKo": "우리는 이제는(더 이상은) 수표를 받지 않습니다."
+  },
+  {
+    "day": 26,
+    "no": 102,
+    "word": "at a time",
+    "meaning": "한 번에, 동시에",
+    "targetScore": 800,
+    "exampleEn": "Pay off one debt at a time.",
+    "exampleKo": "한 번에 하나의 빚을 갚으십시오."
+  },
+  {
+    "day": 26,
+    "no": 103,
+    "word": "indeed",
+    "meaning": "실로, 정말",
+    "targetScore": 800,
+    "exampleEn": "It was indeed a profitable year.",
+    "exampleKo": "정말(실로) 수익이 나는 해였습니다."
+  },
+  {
+    "day": 26,
+    "no": 104,
+    "word": "otherwise",
+    "meaning": "다르게, 달리, 만약 그렇지 않으면",
+    "targetScore": 800,
+    "exampleEn": "Unless stated otherwise, the fee applies.",
+    "exampleKo": "달리 명시되지 않으면, 수수료가 적용됩니다."
+  },
+  {
+    "day": 26,
+    "no": 105,
+    "word": "owing to",
+    "meaning": "~로 인하여",
+    "targetScore": 800,
+    "exampleEn": "Profits fell owing to the recession.",
+    "exampleKo": "불경기(침체)로 인하여 수익이 떨어졌습니다."
+  },
+  {
+    "day": 26,
+    "no": 106,
+    "word": "partial",
+    "meaning": "부분적인, 편파적인",
+    "targetScore": 800,
+    "exampleEn": "We received a partial refund.",
+    "exampleKo": "우리는 부분적인 환불을 받았습니다."
+  },
+  {
+    "day": 26,
+    "no": 107,
+    "word": "pay out",
+    "meaning": "지불하다, 치르다",
+    "targetScore": 800,
+    "exampleEn": "The insurance company will pay out the claim.",
+    "exampleKo": "보험 회사는 청구액을 지불할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 108,
+    "word": "receptive",
+    "meaning": "수용하다",
+    "targetScore": 800,
+    "exampleEn": "Management is receptive to new ideas.",
+    "exampleKo": "경영진은 새로운 아이디어를 수용합니다."
+  },
+  {
+    "day": 26,
+    "no": 109,
+    "word": "simplify",
+    "meaning": "간소화하다",
+    "targetScore": 800,
+    "exampleEn": "We need to simplify the application process.",
+    "exampleKo": "우리는 신청 절차를 간소화해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 110,
+    "word": "someday",
+    "meaning": "언젠가, 머지않다",
+    "targetScore": 800,
+    "exampleEn": "Someday, I hope to own my own business.",
+    "exampleKo": "언젠가, 제 사업을 소유하기를 희망합니다."
+  },
+  {
+    "day": 26,
+    "no": 111,
+    "word": "turn down",
+    "meaning": "거절하다",
+    "targetScore": 800,
+    "exampleEn": "The bank turned down his loan request.",
+    "exampleKo": "은행(은) 그의 대출 요청을 거절했습니다."
+  },
+  {
+    "day": 26,
+    "no": 112,
+    "word": "twofold",
+    "meaning": "두 배로, 이중으로, 두 배의, 이중의",
+    "targetScore": 800,
+    "exampleEn": "Our profits increased twofold.",
+    "exampleKo": "우리의 수익이 두 배로 증가했습니다."
+  },
+  {
+    "day": 26,
+    "no": 113,
+    "word": "account payable",
+    "meaning": "지급 계정",
+    "targetScore": 800,
+    "exampleEn": "Accounts payable lists money owed to suppliers.",
+    "exampleKo": "지급 계정은 공급업체에 빚진 돈을 나열합니다."
+  },
+  {
+    "day": 26,
+    "no": 114,
+    "word": "bank account",
+    "meaning": "계좌",
+    "targetScore": 800,
+    "exampleEn": "I would like to open a bank account.",
+    "exampleKo": "은행 계좌를 개설하고 싶습니다."
+  },
+  {
+    "day": 26,
+    "no": 115,
+    "word": "be highly regarded",
+    "meaning": "높이 평가되다",
+    "targetScore": 800,
+    "exampleEn": "He is highly regarded in the financial sector.",
+    "exampleKo": "그는 금융 분야에서 높이 평가됩니다."
+  },
+  {
+    "day": 26,
+    "no": 116,
+    "word": "be of particular interest to",
+    "meaning": "~가 특별히 관심을 가질만하다",
+    "targetScore": 800,
+    "exampleEn": "This offer will be of particular interest to retirees.",
+    "exampleKo": "이 제안은 은퇴자들에게 특별히 관심을 가질 만할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 117,
+    "word": "billing information",
+    "meaning": "청구서 정보",
+    "targetScore": 800,
+    "exampleEn": "Update your billing information online.",
+    "exampleKo": "당신의 청구서 정보를 온라인으로 업데이트하십시오."
+  },
+  {
+    "day": 26,
+    "no": 118,
+    "word": "credit",
+    "meaning": "신용",
+    "targetScore": 800,
+    "exampleEn": "She has an excellent credit score.",
+    "exampleKo": "그녀는 훌륭한 신용 점수를 가지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 119,
+    "word": "creditor",
+    "meaning": "채권자",
+    "targetScore": 800,
+    "exampleEn": "The company is negotiating with its creditors.",
+    "exampleKo": "그 회사는 채권자들과 협상하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 120,
+    "word": "currency",
+    "meaning": "통화",
+    "targetScore": 800,
+    "exampleEn": "The local currency has lost value.",
+    "exampleKo": "현지 통화 가치가 떨어졌습니다."
+  },
+  {
+    "day": 26,
+    "no": 121,
+    "word": "debit card",
+    "meaning": "(은행) 직불카드",
+    "targetScore": 800,
+    "exampleEn": "You can pay with a debit card.",
+    "exampleKo": "직불 카드로 지불할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 122,
+    "word": "debt",
+    "meaning": "빚",
+    "targetScore": 800,
+    "exampleEn": "He is struggling to pay off his debt.",
+    "exampleKo": "그는 빚을 갚기 위해 고군분투하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 123,
+    "word": "expiration date",
+    "meaning": "만기일",
+    "targetScore": 800,
+    "exampleEn": "What is the expiration date of your card?",
+    "exampleKo": "카드 만기일(유효기간)이 언제입니까?"
+  },
+  {
+    "day": 26,
+    "no": 124,
+    "word": "financial history",
+    "meaning": "신용거래실적",
+    "targetScore": 800,
+    "exampleEn": "The bank checked his financial history.",
+    "exampleKo": "은행은 그의 신용 거래 실적(재정 기록)을 확인했습니다."
+  },
+  {
+    "day": 26,
+    "no": 125,
+    "word": "for the sake of",
+    "meaning": "~을 위하여",
+    "targetScore": 800,
+    "exampleEn": "We compromised for the sake of the agreement.",
+    "exampleKo": "우리는 합의를 위하여 타협했습니다."
+  },
+  {
+    "day": 26,
+    "no": 126,
+    "word": "forge",
+    "meaning": "위조하다",
+    "targetScore": 800,
+    "exampleEn": "A signature can be easily forged.",
+    "exampleKo": "서명은 쉽게 위조될 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 127,
+    "word": "forgery",
+    "meaning": "위조하다",
+    "targetScore": 800,
+    "exampleEn": "He was arrested for forgery.",
+    "exampleKo": "그는 위조죄로 체포되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 128,
+    "word": "forthcoming",
+    "meaning": "다가오는",
+    "targetScore": 800,
+    "exampleEn": "Information about the forthcoming merger is confidential.",
+    "exampleKo": "다가오는 합병에 대한 정보는 기밀입니다."
+  },
+  {
+    "day": 26,
+    "no": 129,
+    "word": "midtown",
+    "meaning": "(도심지와 시 외곽 사이의) 중간지대",
+    "targetScore": 800,
+    "exampleEn": "Our headquarters is located in midtown.",
+    "exampleKo": "우리 본사는 도심과 외곽 중간 지대(중심가)에 위치해 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 130,
+    "word": "owe",
+    "meaning": "빚지고 있다",
+    "targetScore": 800,
+    "exampleEn": "I owe the bank $5,000.",
+    "exampleKo": "저는 은행에 5,000달러를 빚지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 131,
+    "word": "paid with",
+    "meaning": "(특정한 결제수단으로) 지불된",
+    "targetScore": 800,
+    "exampleEn": "The bill was paid with a credit card.",
+    "exampleKo": "청구서는 신용 카드로 지불되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 132,
+    "word": "PIN(personal identification number)",
+    "meaning": "개인 식별 번호",
+    "targetScore": 800,
+    "exampleEn": "Please enter your personal identification number (PIN).",
+    "exampleKo": "개인 식별 번호(PIN)를 입력해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 133,
+    "word": "pop up",
+    "meaning": "불쑥 나타나다",
+    "targetScore": 800,
+    "exampleEn": "Unexpected costs can pop up at any time.",
+    "exampleKo": "예기치 않은 비용이 언제든 불쑥 나타날 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 134,
+    "word": "public holiday",
+    "meaning": "공휴일",
+    "targetScore": 800,
+    "exampleEn": "Banks are closed on public holidays.",
+    "exampleKo": "은행은 공휴일에 문을 닫습니다."
+  },
+  {
+    "day": 26,
+    "no": 135,
+    "word": "reluctant",
+    "meaning": "마음이 내키지 않는",
+    "targetScore": 800,
+    "exampleEn": "Lenders are reluctant to extend credit.",
+    "exampleKo": "대출 기관들은 신용 확대를 주저합니다(마음이 내키지 않아 합니다)."
+  },
+  {
+    "day": 26,
+    "no": 136,
+    "word": "requisition",
+    "meaning": "요구, 요구서",
+    "targetScore": 800,
+    "exampleEn": "Please submit a requisition for office supplies.",
+    "exampleKo": "사무용품에 대한 요구서(청구서)를 제출해 주십시오."
+  }
+]

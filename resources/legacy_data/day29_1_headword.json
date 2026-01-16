@@ -1,0 +1,362 @@
+[
+  {
+    "day": 29,
+    "no": 1,
+    "word": "retail",
+    "meaning": "소매",
+    "targetScore": 650,
+    "exampleEn": "The company operates 50 retail stores nationwide.",
+    "exampleKo": "회사는 전국에 50개의 소매점을 운영합니다."
+  },
+  {
+    "day": 29,
+    "no": 2,
+    "word": "wholesale",
+    "meaning": "도매",
+    "targetScore": 650,
+    "exampleEn": "We offer wholesale prices for bulk orders.",
+    "exampleKo": "대량 주문에 도매 가격을 제공합니다."
+  },
+  {
+    "day": 29,
+    "no": 3,
+    "word": "merchandise",
+    "meaning": "상품",
+    "targetScore": 650,
+    "exampleEn": "New merchandise arrives every week.",
+    "exampleKo": "새 상품이 매주 도착합니다."
+  },
+  {
+    "day": 29,
+    "no": 4,
+    "word": "inventory",
+    "meaning": "재고",
+    "targetScore": 650,
+    "exampleEn": "We need to reduce excess inventory.",
+    "exampleKo": "과잉 재고를 줄여야 합니다."
+  },
+  {
+    "day": 29,
+    "no": 5,
+    "word": "stock",
+    "meaning": "재고",
+    "targetScore": 650,
+    "exampleEn": "The item is currently out of stock.",
+    "exampleKo": "품목이 현재 재고가 없습니다."
+  },
+  {
+    "day": 29,
+    "no": 6,
+    "word": "display",
+    "meaning": "진열",
+    "targetScore": 650,
+    "exampleEn": "Products are displayed prominently at the entrance.",
+    "exampleKo": "제품은 입구에 눈에 띄게 진열되어 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 7,
+    "word": "shelf",
+    "meaning": "선반",
+    "targetScore": 650,
+    "exampleEn": "Please restock the shelves before opening.",
+    "exampleKo": "개점 전에 선반을 재입고하세요."
+  },
+  {
+    "day": 29,
+    "no": 8,
+    "word": "aisle",
+    "meaning": "통로",
+    "targetScore": 650,
+    "exampleEn": "The cleaning supplies are in aisle 5.",
+    "exampleKo": "청소 용품은 5번 통로에 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 9,
+    "word": "checkout",
+    "meaning": "계산대",
+    "targetScore": 650,
+    "exampleEn": "Please proceed to the checkout counter.",
+    "exampleKo": "계산대로 가세요."
+  },
+  {
+    "day": 29,
+    "no": 10,
+    "word": "cashier",
+    "meaning": "계산원",
+    "targetScore": 650,
+    "exampleEn": "The cashier will process your payment.",
+    "exampleKo": "계산원이 결제를 처리할 것입니다."
+  },
+  {
+    "day": 29,
+    "no": 11,
+    "word": "receipt",
+    "meaning": "영수증",
+    "targetScore": 650,
+    "exampleEn": "Keep your receipt for returns or exchanges.",
+    "exampleKo": "반품이나 교환을 위해 영수증을 보관하세요."
+  },
+  {
+    "day": 29,
+    "no": 12,
+    "word": "refund",
+    "meaning": "환불",
+    "targetScore": 650,
+    "exampleEn": "You can request a refund within 30 days.",
+    "exampleKo": "30일 이내에 환불을 요청할 수 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 13,
+    "word": "exchange",
+    "meaning": "교환",
+    "targetScore": 650,
+    "exampleEn": "We offer free exchanges for defective items.",
+    "exampleKo": "결함 있는 품목에 대해 무료 교환을 제공합니다."
+  },
+  {
+    "day": 29,
+    "no": 14,
+    "word": "discount",
+    "meaning": "할인",
+    "targetScore": 650,
+    "exampleEn": "Members receive a 10% discount.",
+    "exampleKo": "회원은 10% 할인을 받습니다."
+  },
+  {
+    "day": 29,
+    "no": 15,
+    "word": "promotion",
+    "meaning": "판촉",
+    "targetScore": 650,
+    "exampleEn": "The store is running a special promotion.",
+    "exampleKo": "매장은 특별 판촉 행사를 진행하고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 16,
+    "word": "sale",
+    "meaning": "세일",
+    "targetScore": 650,
+    "exampleEn": "The annual sale starts next week.",
+    "exampleKo": "연례 세일이 다음 주에 시작됩니다."
+  },
+  {
+    "day": 29,
+    "no": 17,
+    "word": "clearance",
+    "meaning": "재고 정리",
+    "targetScore": 650,
+    "exampleEn": "Clearance items are marked with red tags.",
+    "exampleKo": "재고 정리 품목은 빨간 태그로 표시되어 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 18,
+    "word": "bargain",
+    "meaning": "특가품",
+    "targetScore": 650,
+    "exampleEn": "Shoppers are looking for bargains.",
+    "exampleKo": "쇼핑객들은 특가품을 찾고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 19,
+    "word": "coupon",
+    "meaning": "쿠폰",
+    "targetScore": 650,
+    "exampleEn": "Use this coupon for $5 off your purchase.",
+    "exampleKo": "구매 시 5달러 할인을 위해 이 쿠폰을 사용하세요."
+  },
+  {
+    "day": 29,
+    "no": 20,
+    "word": "voucher",
+    "meaning": "상품권",
+    "targetScore": 650,
+    "exampleEn": "Gift vouchers are available at the service desk.",
+    "exampleKo": "상품권은 서비스 데스크에서 구입할 수 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 21,
+    "word": "customer",
+    "meaning": "고객",
+    "targetScore": 650,
+    "exampleEn": "Customer satisfaction is our priority.",
+    "exampleKo": "고객 만족이 우리의 우선순위입니다."
+  },
+  {
+    "day": 29,
+    "no": 22,
+    "word": "shopper",
+    "meaning": "쇼핑객",
+    "targetScore": 650,
+    "exampleEn": "The store attracts many shoppers on weekends.",
+    "exampleKo": "매장은 주말에 많은 쇼핑객을 끌어들입니다."
+  },
+  {
+    "day": 29,
+    "no": 23,
+    "word": "consumer",
+    "meaning": "소비자",
+    "targetScore": 650,
+    "exampleEn": "Consumer preferences are changing rapidly.",
+    "exampleKo": "소비자 선호도가 빠르게 변하고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 24,
+    "word": "clientele",
+    "meaning": "고객층",
+    "targetScore": 650,
+    "exampleEn": "The boutique caters to an upscale clientele.",
+    "exampleKo": "부티크는 고급 고객층을 대상으로 합니다."
+  },
+  {
+    "day": 29,
+    "no": 25,
+    "word": "purchase",
+    "meaning": "구매",
+    "targetScore": 650,
+    "exampleEn": "Thank you for your purchase.",
+    "exampleKo": "구매해 주셔서 감사합니다."
+  },
+  {
+    "day": 29,
+    "no": 26,
+    "word": "transaction",
+    "meaning": "거래",
+    "targetScore": 650,
+    "exampleEn": "All transactions are processed securely.",
+    "exampleKo": "모든 거래는 안전하게 처리됩니다."
+  },
+  {
+    "day": 29,
+    "no": 27,
+    "word": "payment",
+    "meaning": "지불",
+    "targetScore": 650,
+    "exampleEn": "We accept various payment methods.",
+    "exampleKo": "다양한 지불 방법을 받습니다."
+  },
+  {
+    "day": 29,
+    "no": 28,
+    "word": "cash",
+    "meaning": "현금",
+    "targetScore": 650,
+    "exampleEn": "Do you prefer to pay by cash or card?",
+    "exampleKo": "현금이나 카드로 지불하시겠습니까?"
+  },
+  {
+    "day": 29,
+    "no": 29,
+    "word": "credit",
+    "meaning": "신용",
+    "targetScore": 650,
+    "exampleEn": "We accept all major credit cards.",
+    "exampleKo": "모든 주요 신용카드를 받습니다."
+  },
+  {
+    "day": 29,
+    "no": 30,
+    "word": "debit",
+    "meaning": "직불",
+    "targetScore": 650,
+    "exampleEn": "You can pay with a debit card.",
+    "exampleKo": "직불카드로 지불할 수 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 31,
+    "word": "loyalty",
+    "meaning": "충성도",
+    "targetScore": 650,
+    "exampleEn": "Join our loyalty program for rewards.",
+    "exampleKo": "보상을 위해 충성도 프로그램에 가입하세요."
+  },
+  {
+    "day": 29,
+    "no": 32,
+    "word": "membership",
+    "meaning": "회원권",
+    "targetScore": 650,
+    "exampleEn": "Membership benefits include exclusive discounts.",
+    "exampleKo": "회원 혜택에는 독점 할인이 포함됩니다."
+  },
+  {
+    "day": 29,
+    "no": 33,
+    "word": "reward",
+    "meaning": "보상",
+    "targetScore": 650,
+    "exampleEn": "Earn rewards points with every purchase.",
+    "exampleKo": "구매할 때마다 보상 포인트를 적립하세요."
+  },
+  {
+    "day": 29,
+    "no": 34,
+    "word": "point",
+    "meaning": "포인트",
+    "targetScore": 650,
+    "exampleEn": "You have 500 points in your account.",
+    "exampleKo": "계정에 500포인트가 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 35,
+    "word": "redeem",
+    "meaning": "교환하다",
+    "targetScore": 650,
+    "exampleEn": "You can redeem points for gift cards.",
+    "exampleKo": "포인트를 상품권으로 교환할 수 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 36,
+    "word": "catalog",
+    "meaning": "카탈로그",
+    "targetScore": 650,
+    "exampleEn": "Browse our online catalog for more options.",
+    "exampleKo": "더 많은 옵션을 보려면 온라인 카탈로그를 찾아보세요."
+  },
+  {
+    "day": 29,
+    "no": 37,
+    "word": "brochure",
+    "meaning": "브로셔",
+    "targetScore": 650,
+    "exampleEn": "Pick up a brochure at the information desk.",
+    "exampleKo": "안내 데스크에서 브로셔를 가져가세요."
+  },
+  {
+    "day": 29,
+    "no": 38,
+    "word": "flyer",
+    "meaning": "전단지",
+    "targetScore": 650,
+    "exampleEn": "Check the flyer for this week's specials.",
+    "exampleKo": "이번 주 특가 상품은 전단지를 확인하세요."
+  },
+  {
+    "day": 29,
+    "no": 39,
+    "word": "advertisement",
+    "meaning": "광고",
+    "targetScore": 650,
+    "exampleEn": "The advertisement appeared in local newspapers.",
+    "exampleKo": "광고가 지역 신문에 실렸습니다."
+  },
+  {
+    "day": 29,
+    "no": 40,
+    "word": "campaign",
+    "meaning": "캠페인",
+    "targetScore": 650,
+    "exampleEn": "The marketing campaign was very successful.",
+    "exampleKo": "마케팅 캠페인은 매우 성공적이었습니다."
+  }
+]

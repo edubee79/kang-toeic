@@ -1,0 +1,65 @@
+{
+  "passageId": 4,
+  "type": "EMAIL",
+  "structure": {
+    "header_lines": [
+      "To: Jang-Ho Kwon <jkwon@newart.nz>",
+      "From: Kenneth Okim <k.okim@okimjewelry.nz>",
+      "Subject: Good news",
+      "Date: 30 August"
+    ],
+    "salutation": "Dear Jang-Ho,",
+    "body_paragraphs": [
+      "Thank you for the shipment last month of 80 units of your jewelry pieces. I am happy to report that they have been selling very well in my shop. My [143] love the colourful designs as well as the quality of your workmanship.",
+      "[144] I would like to increase the number of units I order from you. Would you be able to [145] my order for the September shipment?",
+      "Finally, I would like to discuss the possibility of featuring your work exclusively in my store. I believe that I could reach your target audience best and that the agreement would serve [146] both very well. I look forward to hearing from you."
+    ],
+    "closing_lines": [
+      "Best regards,",
+      "Kenneth Okim",
+      "Okim Jewelry"
+    ]
+  },
+  "questions": [
+    {
+      "id": 143,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) patients",
+        "(B) students",
+        "(C) customers",
+        "(D) teammates"
+      ]
+    },
+    {
+      "id": 144,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) If you need more time, please let me know.",
+        "(B) Unfortunately, I do not have adequate shelf space at this time.",
+        "(C) I would like to show you some of my own designs.",
+        "(D) The reasonable prices also make your pieces a great value."
+      ]
+    },
+    {
+      "id": 145,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) include",
+        "(B) double",
+        "(C) repeat",
+        "(D) insure"
+      ]
+    },
+    {
+      "id": 146,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) us",
+        "(B) you",
+        "(C) we",
+        "(D) these"
+      ]
+    }
+  ]
+}

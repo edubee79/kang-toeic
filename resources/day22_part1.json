@@ -1,0 +1,362 @@
+[
+  {
+    "day": 22,
+    "no": 1,
+    "word": "agenda",
+    "meaning": "의제, 의사일정",
+    "targetScore": 650,
+    "exampleEn": "The board discussed the items on the agenda.",
+    "exampleKo": "이사회는 의제에 있는 항목들을 논의했습니다."
+  },
+  {
+    "day": 22,
+    "no": 2,
+    "word": "convene",
+    "meaning": "(회원 등이) 모이다, (회의가) 개최되다",
+    "targetScore": 650,
+    "exampleEn": "The committee will convene next Tuesday.",
+    "exampleKo": "위원회는 다음 화요일에 모일(개최될) 것입니다."
+  },
+  {
+    "day": 22,
+    "no": 3,
+    "word": "refute",
+    "meaning": "부인하다, 반박하다",
+    "targetScore": 650,
+    "exampleEn": "He refuted the allegations against him.",
+    "exampleKo": "그는 자신에 대한 혐의를 부인했습니다(반박했습니다)."
+  },
+  {
+    "day": 22,
+    "no": 4,
+    "word": "coordination",
+    "meaning": "조정",
+    "targetScore": 650,
+    "exampleEn": "The project requires coordination between departments.",
+    "exampleKo": "그 프로젝트는 부서들 간의 조정을 필요로 합니다."
+  },
+  {
+    "day": 22,
+    "no": 5,
+    "word": "unanimous",
+    "meaning": "만장일치의, 동의하는",
+    "targetScore": 650,
+    "exampleEn": "The decision was unanimous.",
+    "exampleKo": "결정은 만장일치였습니다."
+  },
+  {
+    "day": 22,
+    "no": 6,
+    "word": "convince",
+    "meaning": "납득시키다, 확신시키다",
+    "targetScore": 650,
+    "exampleEn": "I tried to convince him to stay.",
+    "exampleKo": "저는 그에게 머물라고 설득하려고(확신시키려고) 노력했습니다."
+  },
+  {
+    "day": 22,
+    "no": 7,
+    "word": "consensus",
+    "meaning": "여론, 일치된 의견",
+    "targetScore": 650,
+    "exampleEn": "We reached a consensus on the budget.",
+    "exampleKo": "우리는 예산에 대해 합의(일치된 의견)에 도달했습니다."
+  },
+  {
+    "day": 22,
+    "no": 8,
+    "word": "defer",
+    "meaning": "연기하다, 미루다",
+    "targetScore": 650,
+    "exampleEn": "The decision was deferred until the next meeting.",
+    "exampleKo": "결정은 다음 회의까지 연기되었습니다(미루어졌습니다)."
+  },
+  {
+    "day": 22,
+    "no": 9,
+    "word": "usually",
+    "meaning": "보통, 일반적으로",
+    "targetScore": 650,
+    "exampleEn": "We usually hold meetings on Mondays.",
+    "exampleKo": "우리는 보통 월요일에 회의를 엽니다."
+  },
+  {
+    "day": 22,
+    "no": 10,
+    "word": "reschedule",
+    "meaning": "일정을 바꾸다",
+    "targetScore": 650,
+    "exampleEn": "We had to reschedule the appointment.",
+    "exampleKo": "우리는 약속 일정을 바꿔야 했습니다."
+  },
+  {
+    "day": 22,
+    "no": 11,
+    "word": "meeting",
+    "meaning": "회의",
+    "targetScore": 650,
+    "exampleEn": "The annual general meeting is held in March.",
+    "exampleKo": "연례 총회는 3월에 열립니다."
+  },
+  {
+    "day": 22,
+    "no": 12,
+    "word": "determine",
+    "meaning": "알아내다, 결정하다, 확정하다",
+    "targetScore": 650,
+    "exampleEn": "We need to determine the cause of the problem.",
+    "exampleKo": "우리는 문제의 원인을 알아내야(결정해야) 합니다."
+  },
+  {
+    "day": 22,
+    "no": 13,
+    "word": "report",
+    "meaning": "보고하다, 출두하다, 보고서, 보도, 기록, (직장·회의 등에 도착을) 알리다",
+    "targetScore": 650,
+    "exampleEn": "Please report to the main office immediately.",
+    "exampleKo": "즉시 본사로 출두해(보고해) 주십시오."
+  },
+  {
+    "day": 22,
+    "no": 14,
+    "word": "comment",
+    "meaning": "논평하다, 언급하다",
+    "targetScore": 650,
+    "exampleEn": "He declined to comment on the rumors.",
+    "exampleKo": "그는 소문에 대해 논평하기를 거부했습니다."
+  },
+  {
+    "day": 22,
+    "no": 15,
+    "word": "phase",
+    "meaning": "단계",
+    "targetScore": 650,
+    "exampleEn": "We are in the final phase of the project.",
+    "exampleKo": "우리는 프로젝트의 마지막 단계에 있습니다."
+  },
+  {
+    "day": 22,
+    "no": 16,
+    "word": "approve",
+    "meaning": "승인하다, 찬성하다",
+    "targetScore": 650,
+    "exampleEn": "The board approved the new policy.",
+    "exampleKo": "이사회는 새 정책을 승인했습니다."
+  },
+  {
+    "day": 22,
+    "no": 17,
+    "word": "enclosed",
+    "meaning": "동봉된",
+    "targetScore": 650,
+    "exampleEn": "Please find the enclosed documents.",
+    "exampleKo": "동봉된 문서들을 확인해 주십시오."
+  },
+  {
+    "day": 22,
+    "no": 18,
+    "word": "easy",
+    "meaning": "쉬운, 용이한",
+    "targetScore": 650,
+    "exampleEn": "The software is easy to use.",
+    "exampleKo": "그 소프트웨어는 사용하기 쉽습니다."
+  },
+  {
+    "day": 22,
+    "no": 19,
+    "word": "record",
+    "meaning": "기록, 경력, 이력, 기록하다",
+    "targetScore": 650,
+    "exampleEn": "The meeting was recorded for training purposes.",
+    "exampleKo": "회의는 교육 목적으로 녹음(기록)되었습니다."
+  },
+  {
+    "day": 22,
+    "no": 20,
+    "word": "suggestion",
+    "meaning": "제안",
+    "targetScore": 650,
+    "exampleEn": "We welcome any suggestions for improvement.",
+    "exampleKo": "우리는 개선을 위한 어떤 제안이든 환영합니다."
+  },
+  {
+    "day": 22,
+    "no": 21,
+    "word": "attention",
+    "meaning": "주의, 경청",
+    "targetScore": 650,
+    "exampleEn": "Thank you for your attention to this matter.",
+    "exampleKo": "이 문제에 관심을 가져 주셔서 감사합니다."
+  },
+  {
+    "day": 22,
+    "no": 22,
+    "word": "object",
+    "meaning": "반대하다",
+    "targetScore": 650,
+    "exampleEn": "No one objected to the proposal.",
+    "exampleKo": "아무도 그 제안에 반대하지 않았습니다."
+  },
+  {
+    "day": 22,
+    "no": 23,
+    "word": "coincidentally",
+    "meaning": "우연히, 일치하게, 동시 발생적으로",
+    "targetScore": 650,
+    "exampleEn": "Coincidentally, we arrived at the same time.",
+    "exampleKo": "우연히도, 우리는 동시에 도착했습니다."
+  },
+  {
+    "day": 22,
+    "no": 24,
+    "word": "crowded",
+    "meaning": "붐비는, 복잡한",
+    "targetScore": 650,
+    "exampleEn": "The room was crowded with reporters.",
+    "exampleKo": "방은 기자들로 붐볐습니다."
+  },
+  {
+    "day": 22,
+    "no": 25,
+    "word": "undergo",
+    "meaning": "겪다, 거치다, 경험하다",
+    "targetScore": 650,
+    "exampleEn": "The company is undergoing major changes.",
+    "exampleKo": "그 회사는 주요 변화들을 겪고 있습니다."
+  },
+  {
+    "day": 22,
+    "no": 26,
+    "word": "outcome",
+    "meaning": "결과",
+    "targetScore": 650,
+    "exampleEn": "We await the outcome of the negotiations.",
+    "exampleKo": "우리는 협상의 결과를 기다리고 있습니다."
+  },
+  {
+    "day": 22,
+    "no": 27,
+    "word": "narrowly",
+    "meaning": "주의 깊게, 좁게, 가까스로, 간신히, 겨우",
+    "targetScore": 650,
+    "exampleEn": "The proposal was narrowly approved.",
+    "exampleKo": "그 제안은 가까스로 승인되었습니다."
+  },
+  {
+    "day": 22,
+    "no": 28,
+    "word": "differ",
+    "meaning": "의견을 달리하다, 다르다",
+    "targetScore": 650,
+    "exampleEn": "Opinions differ on the best approach.",
+    "exampleKo": "최고의 접근 방식에 대해 의견이 다릅니다."
+  },
+  {
+    "day": 22,
+    "no": 29,
+    "word": "discuss",
+    "meaning": "논의하다, 토론하다",
+    "targetScore": 650,
+    "exampleEn": "We need to discuss the marketing strategy.",
+    "exampleKo": "우리는 마케팅 전략을 논의해야 합니다."
+  },
+  {
+    "day": 22,
+    "no": 30,
+    "word": "give",
+    "meaning": "(연설·수업 등을) 하다",
+    "targetScore": 650,
+    "exampleEn": "The CEO gave a speech at the conference.",
+    "exampleKo": "CEO는 회의에서 연설을 했습니다."
+  },
+  {
+    "day": 22,
+    "no": 31,
+    "word": "brief",
+    "meaning": "~에게 간단히 설명하다, 브리핑 하다",
+    "targetScore": 650,
+    "exampleEn": "The manager briefed the team on the new project.",
+    "exampleKo": "관리자는 팀에게 새 프로젝트에 대해 간단히 설명했습니다(브리핑했습니다)."
+  },
+  {
+    "day": 22,
+    "no": 32,
+    "word": "distract",
+    "meaning": "(주의를) 산만하게 하다, 빗기게 하다",
+    "targetScore": 650,
+    "exampleEn": "Don't let noise distract you from your work.",
+    "exampleKo": "소음이 당신의 주의를 일에서 산만하게 하지 못하게 하십시오."
+  },
+  {
+    "day": 22,
+    "no": 33,
+    "word": "emphasis",
+    "meaning": "강조, 중점",
+    "targetScore": 650,
+    "exampleEn": "The school places great emphasis on discipline.",
+    "exampleKo": "그 학교는 규율에 큰 중점(강조)을 둡니다."
+  },
+  {
+    "day": 22,
+    "no": 34,
+    "word": "press",
+    "meaning": "언론(계), 보도기관, 누르다",
+    "targetScore": 650,
+    "exampleEn": "The press was invited to the product launch.",
+    "exampleKo": "언론이 제품 출시 행사에 초대되었습니다."
+  },
+  {
+    "day": 22,
+    "no": 35,
+    "word": "organize",
+    "meaning": "준비하다, 조직하다, 정리하다",
+    "targetScore": 650,
+    "exampleEn": "She organized the files alphabetically.",
+    "exampleKo": "그녀는 파일들을 알파벳순으로 정리했습니다."
+  },
+  {
+    "day": 22,
+    "no": 36,
+    "word": "mention",
+    "meaning": "언급하다",
+    "targetScore": 650,
+    "exampleEn": "He failed to mention the deadline.",
+    "exampleKo": "그는 마감 기한을 언급하지 않았습니다."
+  },
+  {
+    "day": 22,
+    "no": 37,
+    "word": "persuasive",
+    "meaning": "설득력 있는",
+    "targetScore": 650,
+    "exampleEn": "She made a persuasive argument.",
+    "exampleKo": "그녀는 설득력 있는 주장을 했습니다."
+  },
+  {
+    "day": 22,
+    "no": 38,
+    "word": "understanding",
+    "meaning": "이해심 있는",
+    "targetScore": 650,
+    "exampleEn": "Thank you for being so understanding.",
+    "exampleKo": "그렇게 이해심을 보여 주셔서 감사합니다."
+  },
+  {
+    "day": 22,
+    "no": 39,
+    "word": "adjourn",
+    "meaning": "(회의 등을) 휴회하다",
+    "targetScore": 650,
+    "exampleEn": "The meeting was adjourned for lunch.",
+    "exampleKo": "회의는 점심 식사를 위해 휴회되었습니다."
+  },
+  {
+    "day": 22,
+    "no": 40,
+    "word": "constructive",
+    "meaning": "건설적인",
+    "targetScore": 650,
+    "exampleEn": "We appreciate your constructive feedback.",
+    "exampleKo": "우리는 당신의 건설적인 피드백에 감사드립니다."
+  }
+]

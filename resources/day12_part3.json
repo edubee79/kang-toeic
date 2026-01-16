@@ -1,0 +1,614 @@
+[
+  {
+    "day": 12,
+    "no": 69,
+    "word": "underground",
+    "meaning": "지하의, 비밀의",
+    "targetScore": 800,
+    "exampleEn": "The cables run underground.",
+    "exampleKo": "케이블은 지하로 연결되어 있습니다(흐릅니다)."
+  },
+  {
+    "day": 12,
+    "no": 70,
+    "word": "assembly",
+    "meaning": "조립, 집회",
+    "targetScore": 800,
+    "exampleEn": "The final assembly of the product is done here.",
+    "exampleKo": "제품의 최종 조립은 여기서 이루어집니다."
+  },
+  {
+    "day": 12,
+    "no": 71,
+    "word": "fasten the strap",
+    "meaning": "끈을 조이다",
+    "targetScore": 800,
+    "exampleEn": "Please fasten the strap securely.",
+    "exampleKo": "끈을 단단히 조여 주십시오."
+  },
+  {
+    "day": 12,
+    "no": 72,
+    "word": "give a hand",
+    "meaning": "돕다",
+    "targetScore": 800,
+    "exampleEn": "Can you give me a hand with this box?",
+    "exampleKo": "이 상자 옮기는 것 좀 도와주시겠습니까?"
+  },
+  {
+    "day": 12,
+    "no": 73,
+    "word": "go out of production",
+    "meaning": "생산을 중단하다",
+    "targetScore": 800,
+    "exampleEn": "The model will go out of production soon.",
+    "exampleKo": "그 모델은 곧 생산이 중단될 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 74,
+    "word": "in a moment",
+    "meaning": "순식간에, 곧",
+    "targetScore": 800,
+    "exampleEn": "I will serve you in a moment.",
+    "exampleKo": "곧(순식간에) 모시겠습니다(응대하겠습니다)."
+  },
+  {
+    "day": 12,
+    "no": 75,
+    "word": "maintenance cost",
+    "meaning": "유지비",
+    "targetScore": 800,
+    "exampleEn": "The maintenance cost is high.",
+    "exampleKo": "유지비가 높습니다."
+  },
+  {
+    "day": 12,
+    "no": 76,
+    "word": "makeup",
+    "meaning": "조립, 구성",
+    "targetScore": 800,
+    "exampleEn": "We changed the makeup of the team.",
+    "exampleKo": "우리는 팀의 구성(조립)을 변경했습니다."
+  },
+  {
+    "day": 12,
+    "no": 77,
+    "word": "much to one's surprise",
+    "meaning": "매우 놀랍게도",
+    "targetScore": 800,
+    "exampleEn": "Much to my surprise, he agreed.",
+    "exampleKo": "놀랍게도(내가 매우 놀랍게도), 그는 동의했습니다."
+  },
+  {
+    "day": 12,
+    "no": 78,
+    "word": "not only A but also B",
+    "meaning": "A뿐만 아니라 B도",
+    "targetScore": 800,
+    "exampleEn": "We sell not only electronics but also furniture.",
+    "exampleKo": "우리는 전자제품뿐만 아니라 가구도 판매합니다."
+  },
+  {
+    "day": 12,
+    "no": 79,
+    "word": "pack away",
+    "meaning": "모아두다, 저장하다",
+    "targetScore": 800,
+    "exampleEn": "Please pack away your tools after work.",
+    "exampleKo": "일이 끝나면 도구를 정리해(치워) 주십시오."
+  },
+  {
+    "day": 12,
+    "no": 80,
+    "word": "remarkably",
+    "meaning": "두드러지게",
+    "targetScore": 800,
+    "exampleEn": "The team performed remarkably well.",
+    "exampleKo": "그 팀은 놀라울 정도로 잘 해냈습니다."
+  },
+  {
+    "day": 12,
+    "no": 81,
+    "word": "scale model (= miniature)",
+    "meaning": "축소 모형",
+    "targetScore": 800,
+    "exampleEn": "They built a scale model of the bridge.",
+    "exampleKo": "그들은 그 다리의 축소 모형을 만들었습니다."
+  },
+  {
+    "day": 12,
+    "no": 82,
+    "word": "squeaking sound",
+    "meaning": "끽끽거리는 소리",
+    "targetScore": 800,
+    "exampleEn": "The machine is making a squeaking sound.",
+    "exampleKo": "기계가 삐걱거리는 소리를 내고 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 83,
+    "word": "wearable",
+    "meaning": "착용할 수 있는",
+    "targetScore": 800,
+    "exampleEn": "This device is a wearable technology.",
+    "exampleKo": "이 장치는 웨어러블(착용할 수 있는) 기술입니다."
+  },
+  {
+    "day": 12,
+    "no": 84,
+    "word": "workbench",
+    "meaning": "작업대",
+    "targetScore": 800,
+    "exampleEn": "Keep your workbench clean.",
+    "exampleKo": "작업대를 깨끗하게 유지하십시오."
+  },
+  {
+    "day": 12,
+    "no": 85,
+    "word": "adapted",
+    "meaning": "적당한, 알맞은, 개조된",
+    "targetScore": 800,
+    "exampleEn": "The novel was adapted for the screen.",
+    "exampleKo": "그 소설은 영화(스크린)를 위해 각색되었습니다."
+  },
+  {
+    "day": 12,
+    "no": 86,
+    "word": "automatically",
+    "meaning": "자동적으로",
+    "targetScore": 800,
+    "exampleEn": "The doors open automatically.",
+    "exampleKo": "문은 자동으로 열립니다."
+  },
+  {
+    "day": 12,
+    "no": 87,
+    "word": "carelessly",
+    "meaning": "부주의하게",
+    "targetScore": 800,
+    "exampleEn": "He handled the equipment carelessly.",
+    "exampleKo": "그는 장비를 부주의하게 다루었습니다."
+  },
+  {
+    "day": 12,
+    "no": 88,
+    "word": "combustible",
+    "meaning": "타기 쉬운, 흥분하기 쉬운",
+    "targetScore": 800,
+    "exampleEn": "Keep combustible materials away from fire.",
+    "exampleKo": "인화성(불붙기 쉬운) 물질을 불에서 멀리 두십시오."
+  },
+  {
+    "day": 12,
+    "no": 89,
+    "word": "fitted",
+    "meaning": "꼭 맞게 만들어진, 갖추어진",
+    "targetScore": 800,
+    "exampleEn": "The room is fitted with air conditioning.",
+    "exampleKo": "그 방에는 에어컨이 설치되어(갖춰져) 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 90,
+    "word": "priced",
+    "meaning": "값이 붙은",
+    "targetScore": 800,
+    "exampleEn": "The items are reasonably priced.",
+    "exampleKo": "물품들은 합리적인 가격이 책정되어 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 91,
+    "word": "reform",
+    "meaning": "개혁, 개혁하다",
+    "targetScore": 800,
+    "exampleEn": "We need to reform the tax system.",
+    "exampleKo": "우리는 세금 제도를 개혁해야 합니다."
+  },
+  {
+    "day": 12,
+    "no": 92,
+    "word": "representation",
+    "meaning": "묘사, 표현",
+    "targetScore": 800,
+    "exampleEn": "His representation of the facts was accurate.",
+    "exampleKo": "그의 사실 묘사(표현)는 정확했습니다."
+  },
+  {
+    "day": 12,
+    "no": 93,
+    "word": "technically",
+    "meaning": "기술적으로, 엄밀히 말하면",
+    "targetScore": 800,
+    "exampleEn": "Technically, you are correct.",
+    "exampleKo": "엄밀히 말하면(기술적으로는), 당신이 맞습니다."
+  },
+  {
+    "day": 12,
+    "no": 94,
+    "word": "technician",
+    "meaning": "기술자, 기사",
+    "targetScore": 800,
+    "exampleEn": "Call a technician if the computer breaks.",
+    "exampleKo": "컴퓨터가 고장 나면 기술자를 부르십시오."
+  },
+  {
+    "day": 12,
+    "no": 95,
+    "word": "utterly",
+    "meaning": "완전히, 철저히",
+    "targetScore": 800,
+    "exampleEn": "The project was utterly successful.",
+    "exampleKo": "그 프로젝트는 완전히(전적으로) 성공적이었습니다."
+  },
+  {
+    "day": 12,
+    "no": 96,
+    "word": "adversely",
+    "meaning": "불리하게",
+    "targetScore": 800,
+    "exampleEn": "The weather adversely affected the crop.",
+    "exampleKo": "날씨가 농작물에 불리하게(나쁘게) 영향을 미쳤습니다."
+  },
+  {
+    "day": 12,
+    "no": 97,
+    "word": "agricultural",
+    "meaning": "농업의",
+    "targetScore": 800,
+    "exampleEn": "We sell agricultural products.",
+    "exampleKo": "우리는 농산물을 판매합니다."
+  },
+  {
+    "day": 12,
+    "no": 98,
+    "word": "artificial",
+    "meaning": "인공적인",
+    "targetScore": 800,
+    "exampleEn": "This juice contains no artificial flavors.",
+    "exampleKo": "이 주스에는 인공 조미료가 들어있지 않습니다."
+  },
+  {
+    "day": 12,
+    "no": 99,
+    "word": "be irrelevant to",
+    "meaning": "~과 무관하다",
+    "targetScore": 800,
+    "exampleEn": "Age is irrelevant to the job.",
+    "exampleKo": "나이는 그 일과 무관합니다."
+  },
+  {
+    "day": 12,
+    "no": 100,
+    "word": "crude",
+    "meaning": "천연 그대로의, 미숙한",
+    "targetScore": 800,
+    "exampleEn": "The method is simple but crude.",
+    "exampleKo": "그 방법은 간단하지만 조잡합니다."
+  },
+  {
+    "day": 12,
+    "no": 101,
+    "word": "crude oil",
+    "meaning": "원유",
+    "targetScore": 800,
+    "exampleEn": "The price of crude oil increased.",
+    "exampleKo": "원유 가격이 상승했습니다."
+  },
+  {
+    "day": 12,
+    "no": 102,
+    "word": "custom-made",
+    "meaning": "주문 제작한",
+    "targetScore": 800,
+    "exampleEn": "We ordered custom-made furniture.",
+    "exampleKo": "우리는 주문 제작 가구를 주문했습니다."
+  },
+  {
+    "day": 12,
+    "no": 103,
+    "word": "downsize",
+    "meaning": "(인력·규모를) 줄이다",
+    "targetScore": 800,
+    "exampleEn": "The company plans to downsize its workforce.",
+    "exampleKo": "그 회사는 인력을 감축할(규모를 축소할) 계획입니다."
+  },
+  {
+    "day": 12,
+    "no": 104,
+    "word": "gadget",
+    "meaning": "간단한 도구",
+    "targetScore": 800,
+    "exampleEn": "He loves buying the latest gadget.",
+    "exampleKo": "그는 최신 도구(가제트) 사는 것을 좋아합니다."
+  },
+  {
+    "day": 12,
+    "no": 105,
+    "word": "gem",
+    "meaning": "보석",
+    "targetScore": 800,
+    "exampleEn": "This idea is a real gem.",
+    "exampleKo": "이 아이디어는 정말 보석 같은 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 106,
+    "word": "generator",
+    "meaning": "발전기",
+    "targetScore": 800,
+    "exampleEn": "The hospital has a backup generator.",
+    "exampleKo": "그 병원에는 예비 발전기가 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 107,
+    "word": "grease",
+    "meaning": "윤활유",
+    "targetScore": 800,
+    "exampleEn": "Apply grease to the gears.",
+    "exampleKo": "기어에 윤활유(구리스)를 바르십시오."
+  },
+  {
+    "day": 12,
+    "no": 108,
+    "word": "identically",
+    "meaning": "똑같이",
+    "targetScore": 800,
+    "exampleEn": "The two reports are identically written.",
+    "exampleKo": "두 보고서는 동일하게 작성되었습니다."
+  },
+  {
+    "day": 12,
+    "no": 109,
+    "word": "in the event of",
+    "meaning": "~의 경우에는",
+    "targetScore": 800,
+    "exampleEn": "In the event of fire, use the stairs.",
+    "exampleKo": "화재 발생 시에는(화재의 경우에는), 계단을 이용하십시오."
+  },
+  {
+    "day": 12,
+    "no": 110,
+    "word": "in the process of",
+    "meaning": "~이 진행 중인",
+    "targetScore": 800,
+    "exampleEn": "We are in the process of hiring new staff.",
+    "exampleKo": "우리는 새로운 직원을 채용하는 과정에(진행 중에) 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 111,
+    "word": "individually tailored",
+    "meaning": "개인 맞춤의",
+    "targetScore": 800,
+    "exampleEn": "The suits are individually tailored.",
+    "exampleKo": "그 양복들은 개인 맞춤으로 제작되었습니다."
+  },
+  {
+    "day": 12,
+    "no": 112,
+    "word": "integration",
+    "meaning": "통합",
+    "targetScore": 800,
+    "exampleEn": "The integration of the two systems went smoothly.",
+    "exampleKo": "두 시스템의 통합은 순조롭게 진행되었습니다."
+  },
+  {
+    "day": 12,
+    "no": 113,
+    "word": "line worker",
+    "meaning": "작업 라인 노동자",
+    "targetScore": 800,
+    "exampleEn": "He works as a line worker in the factory.",
+    "exampleKo": "그는 공장에서 생산 라인 근로자로 일합니다."
+  },
+  {
+    "day": 12,
+    "no": 114,
+    "word": "made-to-order",
+    "meaning": "맞춤 제작된",
+    "targetScore": 800,
+    "exampleEn": "We sell made-to-order curtains.",
+    "exampleKo": "우리는 주문 생산 커튼을 판매합니다."
+  },
+  {
+    "day": 12,
+    "no": 115,
+    "word": "make an arrangement",
+    "meaning": "준비하다",
+    "targetScore": 800,
+    "exampleEn": "Please make an arrangement for the meeting.",
+    "exampleKo": "회의를 위한 준비(수배)를 해 주십시오."
+  },
+  {
+    "day": 12,
+    "no": 116,
+    "word": "make an exception",
+    "meaning": "예외로 하다",
+    "targetScore": 800,
+    "exampleEn": "We cannot make an exception for you.",
+    "exampleKo": "우리는 당신을 위해 예외를 둘 수 없습니다."
+  },
+  {
+    "day": 12,
+    "no": 117,
+    "word": "make public",
+    "meaning": "발표하다",
+    "targetScore": 800,
+    "exampleEn": "The results will be made public tomorrow.",
+    "exampleKo": "결과는 내일 공표될(대중에게 공개될) 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 118,
+    "word": "market awareness",
+    "meaning": "시장 인지도",
+    "targetScore": 800,
+    "exampleEn": "We aim to increase market awareness.",
+    "exampleKo": "우리는 시장 인지도를 높이는 것을 목표로 합니다."
+  },
+  {
+    "day": 12,
+    "no": 119,
+    "word": "neatly",
+    "meaning": "깔끔하게, 단정하게",
+    "targetScore": 800,
+    "exampleEn": "Please stack the boxes neatly.",
+    "exampleKo": "상자들을 깔끔하게 쌓아 주십시오."
+  },
+  {
+    "day": 12,
+    "no": 120,
+    "word": "on call",
+    "meaning": "언제든지 사용할 수 있는, 대기하고 있는",
+    "targetScore": 800,
+    "exampleEn": "The doctor is on call tonight.",
+    "exampleKo": "그 의사는 오늘 밤 대기 중입니다."
+  },
+  {
+    "day": 12,
+    "no": 121,
+    "word": "on the edge of",
+    "meaning": "막~하려는 찰나에",
+    "targetScore": 800,
+    "exampleEn": "The company is on the edge of bankruptcy.",
+    "exampleKo": "그 회사는 파산 직전에(막~하려는 찰나에) 있습니다."
+  },
+  {
+    "day": 12,
+    "no": 122,
+    "word": "on the spot",
+    "meaning": "현장에, 즉시",
+    "targetScore": 800,
+    "exampleEn": "He was hired on the spot.",
+    "exampleKo": "그는 현장에서(즉석에서) 채용되었습니다."
+  },
+  {
+    "day": 12,
+    "no": 123,
+    "word": "outlast",
+    "meaning": "~보다 오래가다",
+    "targetScore": 800,
+    "exampleEn": "This battery will outlast the others.",
+    "exampleKo": "이 배터리는 다른 것들보다 더 오래갈 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 124,
+    "word": "output",
+    "meaning": "생산량",
+    "targetScore": 800,
+    "exampleEn": "The factory increased its daily output.",
+    "exampleKo": "공장은 일일 생산량을 늘렸습니다."
+  },
+  {
+    "day": 12,
+    "no": 125,
+    "word": "put in place",
+    "meaning": "제자리에 두다",
+    "targetScore": 800,
+    "exampleEn": "Safety measures were put in place.",
+    "exampleKo": "안전 조치가 시행되었습니다(마련되었습니다)."
+  },
+  {
+    "day": 12,
+    "no": 126,
+    "word": "query",
+    "meaning": "질문",
+    "targetScore": 800,
+    "exampleEn": "If you have a query, please contact us.",
+    "exampleKo": "질문(문의)이 있으시면 저희에게 연락해 주십시오."
+  },
+  {
+    "day": 12,
+    "no": 127,
+    "word": "ready-made",
+    "meaning": "기성품의",
+    "targetScore": 800,
+    "exampleEn": "We sell ready-made meals.",
+    "exampleKo": "우리는 조리된(기성품) 식사를 판매합니다."
+  },
+  {
+    "day": 12,
+    "no": 128,
+    "word": "reassemble",
+    "meaning": "재조립하다, 다시 모이다",
+    "targetScore": 800,
+    "exampleEn": "Technicians will reassemble the machine.",
+    "exampleKo": "기술자들이 기계를 재조립할 것입니다."
+  },
+  {
+    "day": 12,
+    "no": 129,
+    "word": "refine",
+    "meaning": "정제하다, 개선하다",
+    "targetScore": 800,
+    "exampleEn": "They refine oil into gasoline.",
+    "exampleKo": "그들은 석유를 휘발유로 정제합니다."
+  },
+  {
+    "day": 12,
+    "no": 130,
+    "word": "reproduction",
+    "meaning": "모조품, 재생",
+    "targetScore": 800,
+    "exampleEn": "This painting is a reproduction.",
+    "exampleKo": "이 그림은 복제품(재생)입니다."
+  },
+  {
+    "day": 12,
+    "no": 131,
+    "word": "sector",
+    "meaning": "부문, 구역",
+    "targetScore": 800,
+    "exampleEn": "He works in the manufacturing sector.",
+    "exampleKo": "그는 제조 부문(구역)에서 일합니다."
+  },
+  {
+    "day": 12,
+    "no": 132,
+    "word": "settle on",
+    "meaning": "~을 결정하다",
+    "targetScore": 800,
+    "exampleEn": "They settled on a date for the meeting.",
+    "exampleKo": "그들은 회의 날짜를 결정했습니다."
+  },
+  {
+    "day": 12,
+    "no": 133,
+    "word": "sort out",
+    "meaning": "~을 정리하다",
+    "targetScore": 800,
+    "exampleEn": "We need to sort out the problem.",
+    "exampleKo": "우리는 그 문제를 해결해야(정리해야) 합니다."
+  },
+  {
+    "day": 12,
+    "no": 134,
+    "word": "synthetic",
+    "meaning": "합성의",
+    "targetScore": 800,
+    "exampleEn": "This fabric is made of synthetic fibers.",
+    "exampleKo": "이 직물은 합성 섬유로 만들어졌습니다."
+  },
+  {
+    "day": 12,
+    "no": 135,
+    "word": "tailor-made",
+    "meaning": "맞춤의",
+    "targetScore": 800,
+    "exampleEn": "We offer tailor-made financial plans.",
+    "exampleKo": "우리는 맞춤형 재정 계획을 제공합니다."
+  },
+  {
+    "day": 12,
+    "no": 136,
+    "word": "upon-ing",
+    "meaning": "하자마자",
+    "targetScore": 800,
+    "exampleEn": "Upon arriving, please register at the desk.",
+    "exampleKo": "도착하자마자 데스크에서 등록해 주십시오."
+  }
+]

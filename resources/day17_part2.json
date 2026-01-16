@@ -1,0 +1,254 @@
+[
+    {
+        "day": 17,
+        "no": 41,
+        "word": "distinctive",
+        "meaning": "독특한",
+        "targetScore": 650,
+        "exampleEn": "The brand's distinctive logo is recognized worldwide.",
+        "exampleKo": "그 브랜드의 독특한 로고는 전 세계적으로 인지됩니다."
+    },
+    {
+        "day": 17,
+        "no": 42,
+        "word": "discreet",
+        "meaning": "신중한, 조심스러운, 분별력 있는",
+        "targetScore": 650,
+        "exampleEn": "The manager was discreet about the employee's personal issues.",
+        "exampleKo": "관리자는 직원의 개인적인 문제에 대해 신중했습니다."
+    },
+    {
+        "day": 17,
+        "no": 43,
+        "word": "butcher's shop",
+        "meaning": "정육점",
+        "targetScore": 650,
+        "exampleEn": "The butcher's shop offers high-quality meat cuts.",
+        "exampleKo": "그 정육점은 고품질의 고기를 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 44,
+        "word": "cargo",
+        "meaning": "화물, 짐",
+        "targetScore": 650,
+        "exampleEn": "The ship is carrying valuable cargo.",
+        "exampleKo": "그 배는 귀중한 화물을 싣고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 45,
+        "word": "clinic",
+        "meaning": "진료소, 상담소",
+        "targetScore": 650,
+        "exampleEn": "The local clinic provides free vaccinations.",
+        "exampleKo": "지역 진료소는 무료 예방 접종을 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 46,
+        "word": "crate",
+        "meaning": "나무 상자",
+        "targetScore": 650,
+        "exampleEn": "We packed the equipment in a wooden crate.",
+        "exampleKo": "우리는 장비를 나무 상자에 포장했습니다."
+    },
+    {
+        "day": 17,
+        "no": 47,
+        "word": "flow",
+        "meaning": "(공급·생산품의) 흐름, 이동, 흐르다",
+        "targetScore": 650,
+        "exampleEn": "We need to improve the flow of information between departments.",
+        "exampleKo": "우리는 부서 간 정보의 흐름을 개선해야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 48,
+        "word": "following week",
+        "meaning": "다음 주",
+        "targetScore": 650,
+        "exampleEn": "The results will be announced the following week.",
+        "exampleKo": "결과는 다음 주에 발표될 것입니다."
+    },
+    {
+        "day": 17,
+        "no": 49,
+        "word": "get a ticket",
+        "meaning": "표를 구하다",
+        "targetScore": 650,
+        "exampleEn": "I was lucky to get a ticket for the concert.",
+        "exampleKo": "나는 그 콘서트 표를 구할 수 있어서 운이 좋았습니다."
+    },
+    {
+        "day": 17,
+        "no": 50,
+        "word": "in storage",
+        "meaning": "보관 중인",
+        "targetScore": 650,
+        "exampleEn": "The seasonal items are currently in storage.",
+        "exampleKo": "계절 상품들은 현재 보관 중입니다."
+    },
+    {
+        "day": 17,
+        "no": 51,
+        "word": "load",
+        "meaning": "짐, 작업량",
+        "targetScore": 650,
+        "exampleEn": "The crane lifted the heavy load effortlessly.",
+        "exampleKo": "크레인은 무거운 짐을 힘들이지 않고 들어 올렸습니다."
+    },
+    {
+        "day": 17,
+        "no": 52,
+        "word": "mail",
+        "meaning": "우편물, 우편으로 보내다",
+        "targetScore": 650,
+        "exampleEn": "Please mail the application form to our office.",
+        "exampleKo": "신청서를 우리 사무실로 우편으로 보내 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 53,
+        "word": "museum",
+        "meaning": "박물관",
+        "targetScore": 650,
+        "exampleEn": "The museum exhibits ancient artifacts.",
+        "exampleKo": "그 박물관은 고대 유물을 전시합니다."
+    },
+    {
+        "day": 17,
+        "no": 54,
+        "word": "parcel",
+        "meaning": "소포",
+        "targetScore": 650,
+        "exampleEn": "I sent a parcel to my friend in London.",
+        "exampleKo": "나는 런던에 있는 친구에게 소포를 보냈습니다."
+    },
+    {
+        "day": 17,
+        "no": 55,
+        "word": "pick up packages",
+        "meaning": "소포를 찾아가다",
+        "targetScore": 650,
+        "exampleEn": "Customers can pick up packages at the service counter.",
+        "exampleKo": "고객들은 서비스 카운터에서 소포를 찾아갈 수 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 56,
+        "word": "pottery",
+        "meaning": "도자기",
+        "targetScore": 650,
+        "exampleEn": "The shop sells handmade pottery.",
+        "exampleKo": "그 가게는 수제 도자기를 팝니다."
+    },
+    {
+        "day": 17,
+        "no": 57,
+        "word": "public park",
+        "meaning": "공원",
+        "targetScore": 650,
+        "exampleEn": "The city plans to build a new public park.",
+        "exampleKo": "시는 새로운 공원(공공 공원)을 건설할 계획입니다."
+    },
+    {
+        "day": 17,
+        "no": 58,
+        "word": "stamp",
+        "meaning": "~에 도장을 찍다, 우표",
+        "targetScore": 650,
+        "exampleEn": "Don't forget to put a stamp on the envelope.",
+        "exampleKo": "봉투에 우표를 붙이는 것을 잊지 마십시오."
+    },
+    {
+        "day": 17,
+        "no": 59,
+        "word": "van",
+        "meaning": "대형 밴",
+        "targetScore": 650,
+        "exampleEn": "We rented a van to move the furniture.",
+        "exampleKo": "우리는 가구를 옮기기 위해 대형 밴을 빌렸습니다."
+    },
+    {
+        "day": 17,
+        "no": 60,
+        "word": "venue",
+        "meaning": "장소",
+        "targetScore": 650,
+        "exampleEn": "The hotel is a perfect venue for the conference.",
+        "exampleKo": "그 호텔은 회의를 위한 완벽한 장소입니다."
+    },
+    {
+        "day": 17,
+        "no": 61,
+        "word": "weight",
+        "meaning": "무게, 중량",
+        "targetScore": 650,
+        "exampleEn": "Shipping costs depend on the weight of the package.",
+        "exampleKo": "배송비는 소포의 무게에 따라 다릅니다."
+    },
+    {
+        "day": 17,
+        "no": 62,
+        "word": "barrier",
+        "meaning": "장애, 장벽",
+        "targetScore": 650,
+        "exampleEn": "Language can be a barrier to communication.",
+        "exampleKo": "언어는 의사소통의 장벽(장애)이 될 수 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 63,
+        "word": "base",
+        "meaning": "기반",
+        "targetScore": 650,
+        "exampleEn": "We have a strong customer base in Asia.",
+        "exampleKo": "우리는 아시아에 강력한 고객 기반을 가지고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 64,
+        "word": "due date",
+        "meaning": "만기일",
+        "targetScore": 650,
+        "exampleEn": "Please pay the bill before the due date.",
+        "exampleKo": "만기일 전에 청구서를 지불해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 65,
+        "word": "fashion",
+        "meaning": "방법, 방식",
+        "targetScore": 650,
+        "exampleEn": "The problem was solved in a timely fashion.",
+        "exampleKo": "그 문제는 시기적절한 방식(방법)으로 해결되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 66,
+        "word": "instructor",
+        "meaning": "강사",
+        "targetScore": 650,
+        "exampleEn": "The fitness instructor led the exercise class.",
+        "exampleKo": "피트니스 강사가 운동 수업을 이끌었습니다."
+    },
+    {
+        "day": 17,
+        "no": 67,
+        "word": "offload",
+        "meaning": "짐을 내리다",
+        "targetScore": 650,
+        "exampleEn": "Workers began to offload the cargo from the truck.",
+        "exampleKo": "직원들이 트럭에서 짐을 내리기 시작했습니다."
+    },
+    {
+        "day": 17,
+        "no": 68,
+        "word": "parking pass",
+        "meaning": "주차권",
+        "targetScore": 650,
+        "exampleEn": "Employees are issued a monthly parking pass.",
+        "exampleKo": "직원들에게는 월 주차권이 발급됩니다."
+    }
+]

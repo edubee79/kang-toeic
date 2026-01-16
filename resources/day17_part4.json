@@ -1,0 +1,290 @@
+[
+    {
+        "day": 17,
+        "no": 137,
+        "word": "trade show",
+        "meaning": "무역 박람회",
+        "targetScore": 900,
+        "exampleEn": "Our company will exhibit at the upcoming trade show.",
+        "exampleKo": "우리 회사는 다가오는 무역 박람회에 전시할 것입니다."
+    },
+    {
+        "day": 17,
+        "no": 138,
+        "word": "without delay",
+        "meaning": "지연되지 않고",
+        "targetScore": 900,
+        "exampleEn": "The goods must be shipped without delay.",
+        "exampleKo": "상품은 지연되지 않고 배송되어야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 139,
+        "word": "institute",
+        "meaning": "협회, 연구소",
+        "targetScore": 900,
+        "exampleEn": "The research institute published a report on climate change.",
+        "exampleKo": "그 연구소(협회)는 기후 변화에 대한 보고서를 발표했습니다."
+    },
+    {
+        "day": 17,
+        "no": 140,
+        "word": "selective",
+        "meaning": "선택적인, 까다로운",
+        "targetScore": 900,
+        "exampleEn": "The university is very selective in its admissions process.",
+        "exampleKo": "그 대학은 입학 과정에서 매우 까다롭습니다(선택적입니다)."
+    },
+    {
+        "day": 17,
+        "no": 141,
+        "word": "stow",
+        "meaning": "(짐을) 넣다, 싣다",
+        "targetScore": 900,
+        "exampleEn": "Please stow your carry-on luggage in the overhead bin.",
+        "exampleKo": "기내 수하물은 머리 위 짐칸에 넣어(실어) 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 142,
+        "word": "progression",
+        "meaning": "진행, 진전",
+        "targetScore": 900,
+        "exampleEn": "We are monitoring the progression of the project.",
+        "exampleKo": "우리는 프로젝트의 진행(진전) 상황을 모니터링하고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 143,
+        "word": "freight",
+        "meaning": "운송 화물, 화물 운송",
+        "targetScore": 900,
+        "exampleEn": "The company specializes in air freight services.",
+        "exampleKo": "그 회사는 항공 화물 운송 서비스를 전문으로 합니다."
+    },
+    {
+        "day": 17,
+        "no": 144,
+        "word": "logistics",
+        "meaning": "물류, 실행 계획",
+        "targetScore": 900,
+        "exampleEn": "Efficient logistics is key to a successful supply chain.",
+        "exampleKo": "효율적인 물류(실행 계획)는 성공적인 공급망의 핵심입니다."
+    },
+    {
+        "day": 17,
+        "no": 145,
+        "word": "loading dock",
+        "meaning": "하역장",
+        "targetScore": 900,
+        "exampleEn": "Trucks are waiting at the loading dock.",
+        "exampleKo": "트럭들이 하역장에서 대기하고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 146,
+        "word": "expatriate",
+        "meaning": "국적을 상실한 사람",
+        "targetScore": 900,
+        "exampleEn": "The company provides support for expatriate employees.",
+        "exampleKo": "그 회사는 해외 파견(국적을 상실한) 직원들을 위한 지원을 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 147,
+        "word": "alumni association",
+        "meaning": "동창회",
+        "targetScore": 900,
+        "exampleEn": "The alumni association organizes an annual reunion.",
+        "exampleKo": "동창회는 연례 동창회를 조직합니다."
+    },
+    {
+        "day": 17,
+        "no": 148,
+        "word": "reciprocal",
+        "meaning": "상호의, 서로의",
+        "targetScore": 900,
+        "exampleEn": "The two countries have a reciprocal healthcare agreement.",
+        "exampleKo": "두 나라는 상호 의료 협정을 맺고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 149,
+        "word": "decidedly",
+        "meaning": "확실히, 명백히; 단호히",
+        "targetScore": 900,
+        "exampleEn": "The new model is decidedly better than the old one.",
+        "exampleKo": "새 모델은 구형 모델보다 확실히(명백히) 더 낫습니다."
+    },
+    {
+        "day": 17,
+        "no": 150,
+        "word": "surplus",
+        "meaning": "잉여, 흑자",
+        "targetScore": 900,
+        "exampleEn": "We plan to sell our surplus inventory at a discount.",
+        "exampleKo": "우리는 잉여 재고를 할인된 가격에 판매할 계획입니다."
+    },
+    {
+        "day": 17,
+        "no": 151,
+        "word": "expedite",
+        "meaning": "신속히 처리하다, 진척시키다",
+        "targetScore": 900,
+        "exampleEn": "We will do our best to expedite your order.",
+        "exampleKo": "귀하의 주문을 신속히 처리하기 위해 최선을 다하겠습니다."
+    },
+    {
+        "day": 17,
+        "no": 152,
+        "word": "embargo",
+        "meaning": "(특정 상품의) 무역 금지, 통상 금지",
+        "targetScore": 900,
+        "exampleEn": "The government imposed an arms embargo on the country.",
+        "exampleKo": "정부는 그 나라에 무기 금수(무역 금지) 조치를 취했습니다."
+    },
+    {
+        "day": 17,
+        "no": 153,
+        "word": "oversight",
+        "meaning": "부주의; 감독",
+        "targetScore": 900,
+        "exampleEn": "The error was due to an unfortunate oversight.",
+        "exampleKo": "그 오류는 불행한 부주의(실수) 때문이었습니다."
+    },
+    {
+        "day": 17,
+        "no": 154,
+        "word": "heritage",
+        "meaning": "전통, 유산",
+        "targetScore": 900,
+        "exampleEn": "The city is proud of its cultural heritage.",
+        "exampleKo": "그 도시는 문화유산(전통)을 자랑스러워합니다."
+    },
+    {
+        "day": 17,
+        "no": 155,
+        "word": "registered mail",
+        "meaning": "등기 우편",
+        "targetScore": 900,
+        "exampleEn": "Important legal documents should be sent by registered mail.",
+        "exampleKo": "중요한 법률 문서는 등기 우편으로 발송되어야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 156,
+        "word": "province",
+        "meaning": "지방",
+        "targetScore": 900,
+        "exampleEn": "He governs a large province in the north.",
+        "exampleKo": "그는 북부의 큰 지방(주)을 통치합니다."
+    },
+    {
+        "day": 17,
+        "no": 157,
+        "word": "consulate",
+        "meaning": "영사관",
+        "targetScore": 900,
+        "exampleEn": "You can apply for a visa at the consulate.",
+        "exampleKo": "영사관에서 비자를 신청할 수 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 158,
+        "word": "import license",
+        "meaning": "수입 허가(서)",
+        "targetScore": 900,
+        "exampleEn": "Companies must obtain an import license to bring in goods.",
+        "exampleKo": "기업들은 상품을 들여오기 위해 수입 허가(서)를 취득해야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 159,
+        "word": "openly",
+        "meaning": "터놓고, 솔직하게",
+        "targetScore": 900,
+        "exampleEn": "Employees are encouraged to speak openly about their concerns.",
+        "exampleKo": "직원들은 자신의 우려 사항에 대해 터놓고(솔직하게) 말하도록 장려됩니다."
+    },
+    {
+        "day": 17,
+        "no": 160,
+        "word": "wheelbarrow",
+        "meaning": "손수레",
+        "targetScore": 900,
+        "exampleEn": "The gardener used a wheelbarrow to move the soil.",
+        "exampleKo": "정원사는 흙을 옮기기 위해 손수레를 사용했습니다."
+    },
+    {
+        "day": 17,
+        "no": 161,
+        "word": "handling",
+        "meaning": "처리; 조작",
+        "targetScore": 900,
+        "exampleEn": "The handling of hazardous materials requires special training.",
+        "exampleKo": "위험 물질의 처리(조작)에는 특별한 훈련이 필요합니다."
+    },
+    {
+        "day": 17,
+        "no": 162,
+        "word": "realtor",
+        "meaning": "부동산 중개업자",
+        "targetScore": 900,
+        "exampleEn": "The realtor showed us several properties in the area.",
+        "exampleKo": "부동산 중개업자는 우리에게 그 지역의 여러 부동산을 보여주었습니다."
+    },
+    {
+        "day": 17,
+        "no": 163,
+        "word": "intended recipient",
+        "meaning": "해당 수취인",
+        "targetScore": 900,
+        "exampleEn": "If you are not the intended recipient, please delete this email.",
+        "exampleKo": "만약 당신이 해당 수취인이 아니라면, 이 이메일을 삭제해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 164,
+        "word": "institution",
+        "meaning": "기관,(학교∙병원 등의) 시설",
+        "targetScore": 900,
+        "exampleEn": "The financial institution offers a variety of loan products.",
+        "exampleKo": "그 금융 기관(시설)은 다양한 대출 상품을 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 165,
+        "word": "classified",
+        "meaning": "기밀의",
+        "targetScore": 900,
+        "exampleEn": "The document contains classified information.",
+        "exampleKo": "그 문서는 기밀 정보를 포함하고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 166,
+        "word": "inaugurate",
+        "meaning": "정식으로 ~을 개시하다",
+        "targetScore": 900,
+        "exampleEn": "The mayor will inaugurate the new community center next week.",
+        "exampleKo": "시장은 다음 주에 새로운 커뮤니티 센터를 정식으로 개시할(개관할) 것입니다."
+    },
+    {
+        "day": 17,
+        "no": 167,
+        "word": "janitor",
+        "meaning": "(건물) 관리인",
+        "targetScore": 900,
+        "exampleEn": "The janitor cleans the office building every night.",
+        "exampleKo": "관리인(청소부)은 매일 밤 사무실 건물을 청소합니다."
+    },
+    {
+        "day": 17,
+        "no": 168,
+        "word": "bilateral",
+        "meaning": "쌍방의",
+        "targetScore": 900,
+        "exampleEn": "The two nations held bilateral talks on security.",
+        "exampleKo": "두 나라는 안보에 관한 쌍방의(양자) 회담을 가졌습니다."
+    }
+]

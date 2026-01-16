@@ -1,0 +1,60 @@
+{
+  "passageId": 2,
+  "type": "ADVERTISEMENT",
+  "structure": {
+    "header_lines": [
+      "Lovitt Real Estate",
+      "Helping Manitoba Families Find their Dream Homes"
+    ],
+    "salutation": null,
+    "body_paragraphs": [
+      "Manuel Lovitt, [135] of Lovitt Real Estate, has been selling real estate for over 17 years. Mr. Lovitt and his award-winning team [136] in homes for families in the Winnipeg, Brandon, and Dauphin areas. They know about the schools, parks, services, transportation, and activities that enhance family life in the area where you want to reside. [137].",
+      "Contact Lovitt Real Estate today and let the team guide you [138] the home of your dreams.",
+      "They will listen to your needs, negotiate on your behalf, and get you the best home for your hard-earned money.",
+      "Call 431-555-0168 to speak to an agent or visit www.lovittrealestate.ca for more information."
+    ],
+    "closing_lines": null
+  },
+  "questions": [
+    {
+      "id": 135,
+      "text": "135. (A) own\n(B) owned\n(C) owner\n(D) owning",
+      "options": [
+        "(A) own",
+        "(B) owned",
+        "(C) owner",
+        "(D) owning"
+      ]
+    },
+    {
+      "id": 136,
+      "text": "136. (A) practice\n(B) specialize\n(C) report\n(D) purchase",
+      "options": [
+        "(A) practice",
+        "(B) specialize",
+        "(C) report",
+        "(D) purchase"
+      ]
+    },
+    {
+      "id": 137,
+      "text": "137. (A) They can arrange transportation for your\nlocal elementary school.\n(B) That is because they live in the\ncommunities they serve.\n(C) They will be closed for the summer but\nwill be back soon.\n(D) Therefore, they can help you with all\nyour banking needs.",
+      "options": [
+        "(A) They can arrange transportation for your\nlocal elementary school.",
+        "(B) That is because they live in the\ncommunities they serve.",
+        "(C) They will be closed for the summer but\nwill be back soon.",
+        "(D) Therefore, they can help you with all\nyour banking needs."
+      ]
+    },
+    {
+      "id": 138,
+      "text": "138. (A) toward\n(B) fixing\n(C) because\n(D) along",
+      "options": [
+        "(A) toward",
+        "(B) fixing",
+        "(C) because",
+        "(D) along"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "testId": 4,
+  "passages": [
+    {
+      "id": "p6-t4-p1",
+      "type": "EMAIL",
+      "title": "D-Zine Pop",
+      "content": "D-Zine Pop is your source for information about the latest [131] in the world of fashion. What started as a social media experiment into a content platform with subscribers in seventeen countries worldwide. We are constantly adding features to improve our user experience and share what apparel and clothing accessories are popular right now. We also make periodic updates to our terms of service. Subscribers' [133] access to content is contingent upon consenting to these terms; therefore, we encourage you to review and accept them at dzinepop.com/privacy. Contact our customer service team at support@dzinepop.com if you have any questions. [134]",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "controversies"
+            },
+            {
+              "label": "B",
+              "text": "consumers"
+            },
+            {
+              "label": "C",
+              "text": "trends"
+            },
+            {
+              "label": "D",
+              "text": "versions"
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "evolving"
+            },
+            {
+              "label": "B",
+              "text": "evolution"
+            },
+            {
+              "label": "C",
+              "text": "will be evolving"
+            },
+            {
+              "label": "D",
+              "text": "has evolved"
+            }
+          ]
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "continue"
+            },
+            {
+              "label": "B",
+              "text": "continued"
+            },
+            {
+              "label": "C",
+              "text": "continuation"
+            },
+            {
+              "label": "D",
+              "text": "continues"
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Representatives are available 24 hours a day to assist you."
+            },
+            {
+              "label": "B",
+              "text": "The changes made to our user privacy policy are no longer effective."
+            },
+            {
+              "label": "C",
+              "text": "Fresh content is accessible through phone and desktop apps."
+            },
+            {
+              "label": "D",
+              "text": "We are no longer offering a discounted rate if you renew your subscription."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t4-p2",
+      "type": "ADVERTISEMENT",
+      "title": "Rescue your device with Phone Tune-Up",
+      "content": "Is your smartphone screen scratched or cracked? [135] Do your apps freeze or crash? The experts at Phone Tune-Up can help! We use nothing but the best quality parts to [136] your mobile phone. Let our certified technicians save you the time and expense involved in replacing your phone with a new one. When we are [137], you will think your old phone is brand new. To make an appointment, call 604-555-0198 or visit www.phonetuneup.com. Same-day service is often available [138] needed parts are in stock.",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Does your printer need frequent ink refills?"
+            },
+            {
+              "label": "B",
+              "text": "Does it take all day for your battery to recharge?"
+            },
+            {
+              "label": "C",
+              "text": "Do you want to complete a short survey?"
+            },
+            {
+              "label": "D",
+              "text": "Do you pay too much for your data plan?"
+            }
+          ]
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "remove"
+            },
+            {
+              "label": "B",
+              "text": "borrow"
+            },
+            {
+              "label": "C",
+              "text": "examine"
+            },
+            {
+              "label": "D",
+              "text": "repair"
+            }
+          ]
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "trained"
+            },
+            {
+              "label": "B",
+              "text": "available"
+            },
+            {
+              "label": "C",
+              "text": "done"
+            },
+            {
+              "label": "D",
+              "text": "dismissed"
+            }
+          ]
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "whose"
+            },
+            {
+              "label": "B",
+              "text": "must"
+            },
+            {
+              "label": "C",
+              "text": "if"
+            },
+            {
+              "label": "D",
+              "text": "of"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t4-p3",
+      "type": "PRESS RELEASE",
+      "title": "FOR IMMEDIATE RELEASE",
+      "content": "SACRAMENTO (July 28)—The Sacramento-based supermarket chain Hsing Market announced today that it is opening a branch [139] in San Jose in October. It will occupy the building that once housed the Watson Office Superstore located at 1539 West Oak Street, which closed last year.\n\nHsing Market CEO Alice Tran said, \"We are very excited to [140] open a store in San Jose. [141] When the Watson building became available, we jumped on the opportunity to move in.\"\n\nAs a neighborhood grocery store, Hsing Market prides itself on hiring applicants from the local community. Approximately 75 percent of all employees live within two miles of the store where they [142]",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "location"
+            },
+            {
+              "label": "B",
+              "text": "locate"
+            },
+            {
+              "label": "C",
+              "text": "to locate"
+            },
+            {
+              "label": "D",
+              "text": "locating"
+            }
+          ]
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "finally"
+            },
+            {
+              "label": "B",
+              "text": "instead"
+            },
+            {
+              "label": "C",
+              "text": "likewise"
+            },
+            {
+              "label": "D",
+              "text": "suddenly"
+            }
+          ]
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "The store features a variety of fresh and prepared foods."
+            },
+            {
+              "label": "B",
+              "text": "We hope that you will be able to join us at our grand-opening celebration."
+            },
+            {
+              "label": "C",
+              "text": "We have had our eyes on the city for quite some time."
+            },
+            {
+              "label": "D",
+              "text": "Our corporate headquarters will be renovated soon."
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "save"
+            },
+            {
+              "label": "B",
+              "text": "work"
+            },
+            {
+              "label": "C",
+              "text": "shop"
+            },
+            {
+              "label": "D",
+              "text": "register"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t4-p4",
+      "type": "WEB PAGE",
+      "title": "About Leafi Cloth",
+      "content": "Tropick Textiles recently expanded the [143] of fabrics available on the market. In its quest to introduce environmentally friendly alternatives to cotton and other traditional fibers, the company [144] a new fiber made from materials that are typically discarded. Tropick Textiles takes banana and pineapple leaves and combines them with bamboo fibers to create Leafi Cloth. The plants' leaves are ordinarily disposed of [145] the fruit is harvested. Tropick Textiles' process prevents many leaves from entering a landfill, converting them instead into usable material. [146]",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "range"
+            },
+            {
+              "label": "B",
+              "text": "expense"
+            },
+            {
+              "label": "C",
+              "text": "strength"
+            },
+            {
+              "label": "D",
+              "text": "appearance"
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "are developed"
+            },
+            {
+              "label": "B",
+              "text": "has developed"
+            },
+            {
+              "label": "C",
+              "text": "will develop"
+            },
+            {
+              "label": "D",
+              "text": "to develop"
+            }
+          ]
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "now"
+            },
+            {
+              "label": "B",
+              "text": "thus"
+            },
+            {
+              "label": "C",
+              "text": "even"
+            },
+            {
+              "label": "D",
+              "text": "once"
+            }
+          ]
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "The resulting durable fabric is a suitable substitute for cotton cloth."
+            },
+            {
+              "label": "B",
+              "text": "Inquiries regarding Leafi Cloth were directed to the sales department."
+            },
+            {
+              "label": "C",
+              "text": "Tropick Textiles will celebrate its one-hundredth anniversary this year."
+            },
+            {
+              "label": "D",
+              "text": "Manufacturing costs have been increasing for Tropick Textiles lately."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

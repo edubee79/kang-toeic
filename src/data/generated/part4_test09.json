@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 9,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "What does the company sell?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Racing bicycles"
+          },
+          {
+            "label": "B",
+            "text": "Motorcycle parts"
+          },
+          {
+            "label": "C",
+            "text": "Camping equipment"
+          },
+          {
+            "label": "D",
+            "text": "Electric cars"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q72",
+        "text": "What does the speaker emphasize about the products?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They are safe for the environment."
+          },
+          {
+            "label": "B",
+            "text": "They come with an extended warranty."
+          },
+          {
+            "label": "C",
+            "text": "They can be used with a mobile application."
+          },
+          {
+            "label": "D",
+            "text": "They are designed for all weather conditions."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q73",
+        "text": "What ends on Sunday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A contest"
+          },
+          {
+            "label": "B",
+            "text": "A festival"
+          },
+          {
+            "label": "C",
+            "text": "A factory tour"
+          },
+          {
+            "label": "D",
+            "text": "A special offer"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br: Are you looking to buy a new car, but you're also concerned about the environment? Then there's no better place to shop than at Henry's Car Dealership! Unlike other dealerships, we only sell electric cars. That means our vehicles produce zero direct emissions, which specifically helps improve air quality. And we have a limited-time offer for you. If you buy a car by Sunday, you will get a year of free car washes!"
+  },
+  {
+    "testId": 9,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "What does the business make?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Ice cream"
+          },
+          {
+            "label": "B",
+            "text": "Beverages"
+          },
+          {
+            "label": "C",
+            "text": "Candy"
+          },
+          {
+            "label": "D",
+            "text": "Pretzels"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q75",
+        "text": "What does the speaker say the business is known for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Its high-quality ingredients"
+          },
+          {
+            "label": "B",
+            "text": "Its clever packaging"
+          },
+          {
+            "label": "C",
+            "text": "Its unique flavors"
+          },
+          {
+            "label": "D",
+            "text": "Its handmade products"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q76",
+        "text": "What does the speaker ask the listeners to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Leave their personal items in a locker"
+          },
+          {
+            "label": "B",
+            "text": "Turn in their tickets"
+          },
+          {
+            "label": "C",
+            "text": "Divide into smaller groups"
+          },
+          {
+            "label": "D",
+            "text": "Put on some protective clothing"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn: Welcome to Soo-Min's Factory. I'm delighted to give you a tour of our facility. Today, you'll see how we manufacture some of the world's favorite candies. Unlike many candy factories, we still make our products by hand, just like we've been doing since the factory opened over 50 years ago. It's what we're known for. Now before we go in, you'll need to leave your belongings in the lockers behind me. We need to maintain a clean environment inside the factory, so it's very important that you don't take anything in with you."
+  },
+  {
+    "testId": 9,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "What is the speaker mainly discussing?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An upcoming conference"
+          },
+          {
+            "label": "B",
+            "text": "A vacation policy"
+          },
+          {
+            "label": "C",
+            "text": "Some new software"
+          },
+          {
+            "label": "D",
+            "text": "Some new equipment"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q78",
+        "text": "What does the speaker tell the listeners to take note of?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some travel arrangements will be made online."
+          },
+          {
+            "label": "B",
+            "text": "Some log-on information will remain the same."
+          },
+          {
+            "label": "C",
+            "text": "A training session will be rescheduled."
+          },
+          {
+            "label": "D",
+            "text": "A security policy will be enforced."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q79",
+        "text": "What should the listeners do tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Confirm their work schedules"
+          },
+          {
+            "label": "B",
+            "text": "Prepare a presentation"
+          },
+          {
+            "label": "C",
+            "text": "Park in a different location"
+          },
+          {
+            "label": "D",
+            "text": "Dress professionally"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br: First on the staff meeting agenda is the new time-tracking software we're implementing. All employees will start using it to record their hours beginning next month. Because it's very different from our previous software, everyone will receive access to an online training session. Note that you'll use the same log-on name and password as you used on the old system. OK, next. Remember that a photographer will be here tomorrow to take pictures for the company Web site. Please wear professional attire."
+  },
+  {
+    "testId": 9,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "Where does Ms. Thompson work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an art supply store"
+          },
+          {
+            "label": "B",
+            "text": "At a museum"
+          },
+          {
+            "label": "C",
+            "text": "At a photography studio"
+          },
+          {
+            "label": "D",
+            "text": "At a library"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q81",
+        "text": "According to the speaker, what special talent does Ms. Thompson have?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Raising money"
+          },
+          {
+            "label": "B",
+            "text": "Painting landscapes"
+          },
+          {
+            "label": "C",
+            "text": "Negotiating contracts"
+          },
+          {
+            "label": "D",
+            "text": "Taking photographs"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q82",
+        "text": "What does Ms. Thompson plan to do after she retires?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Restore paintings"
+          },
+          {
+            "label": "B",
+            "text": "Volunteer as a consultant"
+          },
+          {
+            "label": "C",
+            "text": "Relocate to France"
+          },
+          {
+            "label": "D",
+            "text": "Become an author"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "M-Au: Welcome back to Artist Hour on Freetown Public Radio. With me here in the studio is Carol Thompson, the longtime director of the Freetown Art Museum. Ms. Thompson has just announced that she'll be retiring at the end of the year, so she joins us today to talk about her career and future plans. As we'll discuss later, she has always had a particular talent for fund-raising. Over her 30-year career, she has raised a total of five million dollars for art restoration projects across the country. Ms. Thompson plans to write children's books about well-known artists when she retires. The first will be based on the life of French painter Claude Monet."
+  },
+  {
+    "testId": 9,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Journalists"
+          },
+          {
+            "label": "B",
+            "text": "Editors"
+          },
+          {
+            "label": "C",
+            "text": "Photographers"
+          },
+          {
+            "label": "D",
+            "text": "Salespeople"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q84",
+        "text": "According to the speaker, what will the listeners receive in an e-mail?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A book title"
+          },
+          {
+            "label": "B",
+            "text": "A concert ticket"
+          },
+          {
+            "label": "C",
+            "text": "A restaurant name"
+          },
+          {
+            "label": "D",
+            "text": "An account number"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q85",
+        "text": "Why does the speaker say, \"thousands of people will buy this issue\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To reassure the listeners"
+          },
+          {
+            "label": "B",
+            "text": "To correct a misunderstanding"
+          },
+          {
+            "label": "C",
+            "text": "To express surprise about a decision"
+          },
+          {
+            "label": "D",
+            "text": "To emphasize the importance of a task"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Am: OK, everyone. I want to talk about your new writing assignments. As you know, the special restaurant issue of our magazine is coming out in May. But we still have quite a few restaurants we haven't reviewed yet. So, I've assigned a different restaurant to each reporter—you can check your e-mail to find out which one you'll be reviewing. This might seem like a fun assignment, but remember, thousands of people will buy this issue."
+  },
+  {
+    "testId": 9,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Where are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "In a community center"
+          },
+          {
+            "label": "B",
+            "text": "In a medical clinic"
+          },
+          {
+            "label": "C",
+            "text": "In a university classroom"
+          },
+          {
+            "label": "D",
+            "text": "In a government office"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q87",
+        "text": "Why does the speaker say, \"many eye problems are easily treated\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To indicate that a health fair is unnecessary"
+          },
+          {
+            "label": "B",
+            "text": "To suggest hiring additional staff"
+          },
+          {
+            "label": "C",
+            "text": "To encourage the listeners to get tested"
+          },
+          {
+            "label": "D",
+            "text": "To correct a statistical error"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q88",
+        "text": "What will the listeners do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Pick up some nutritional information"
+          },
+          {
+            "label": "B",
+            "text": "Sign up for an appointment"
+          },
+          {
+            "label": "C",
+            "text": "Listen to a presentation"
+          },
+          {
+            "label": "D",
+            "text": "Watch a product demonstration"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Br: Welcome, everyone, to the Pine City Community Center. I'm Dr. Garcia, and I'm here at the community center today for the annual wellness fair. We'll be doing free vision exams all day. If you don't have time today, we'll be offering the exams at our clinic for the rest of the month. Just remember, many eye problems are easily treated. OK, so first on our agenda at nine o'clock A.M., eye specialist Dr. Yan Zhou will give a presentation in the auditorium about maintaining good eye health. Let's head over there now."
+  },
+  {
+    "testId": 9,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What is the talk mainly about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Cleaning a carpet"
+          },
+          {
+            "label": "B",
+            "text": "Installing a carpet"
+          },
+          {
+            "label": "C",
+            "text": "Designing a carpet"
+          },
+          {
+            "label": "D",
+            "text": "Choosing a carpet"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q90",
+        "text": "What does the speaker say about wool carpets?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They are difficult to find."
+          },
+          {
+            "label": "B",
+            "text": "They are expensive."
+          },
+          {
+            "label": "C",
+            "text": "They are hard to clean."
+          },
+          {
+            "label": "D",
+            "text": "They are durable."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q91",
+        "text": "What does the speaker say his company provides?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A free in-store consultation"
+          },
+          {
+            "label": "B",
+            "text": "A children's play area"
+          },
+          {
+            "label": "C",
+            "text": "Flooring design samples"
+          },
+          {
+            "label": "D",
+            "text": "One-year warranties"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "M-Cn: Hi, I'm Takumi from Logan's Flooring. Thanks for watching this video. Carpets come in various designs and materials, and selecting one can be overwhelming. Today, I'll be sharing a few tips that'll make that process easier. First, consider where you're going to put the carpet. For example, if you're carpeting a children's playroom, you probably don't want to select a wool carpet, since they're difficult to clean. Second, we recommend making sure your carpet is protected under our warranty in case of damage. At Logan's Flooring, we provide one-year warranties on all our carpets! Be sure to subscribe to this video channel for free weekly tips and ideas."
+  },
+  {
+    "testId": 9,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "Why does the speaker thank the listener?",
+        "options": [
+          {
+            "label": "A",
+            "text": "For renewing a magazine subscription"
+          },
+          {
+            "label": "B",
+            "text": "For inspecting a medical facility"
+          },
+          {
+            "label": "C",
+            "text": "For writing an article"
+          },
+          {
+            "label": "D",
+            "text": "For giving a demonstration"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q93",
+        "text": "What does the speaker imply when she says, \"this is just one of our many products\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A company is prepared for more competition."
+          },
+          {
+            "label": "B",
+            "text": "A company also sells less expensive products."
+          },
+          {
+            "label": "C",
+            "text": "A team will need to work more quickly."
+          },
+          {
+            "label": "D",
+            "text": "A supervisor will be impressed by some work."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q94",
+        "text": "Why does the speaker ask the listener to call back?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To provide an address"
+          },
+          {
+            "label": "B",
+            "text": "To confirm a deadline"
+          },
+          {
+            "label": "C",
+            "text": "To place an order"
+          },
+          {
+            "label": "D",
+            "text": "To arrange a meeting"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br: Hi. This is Barbara Chen, head of public relations at Springfield Solutions. I'm calling to thank you for your magazine article about our company. In it, you praised our newest software, Ubex, writing that it helps factories run more efficiently. But you also emphasized how expensive the software is. While Ubex is costly, let me point out that this is just one of our many products. I'd appreciate the chance to discuss the full range of our software choices, to give you a balanced view of the company. Please call me back and let me know if you'd be available to meet."
+  },
+  {
+    "testId": 9,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A tour guide"
+          },
+          {
+            "label": "B",
+            "text": "A city official"
+          },
+          {
+            "label": "C",
+            "text": "A photographer"
+          },
+          {
+            "label": "D",
+            "text": "A landscape artist"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Which picnic area does the speaker recommend?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Picnic Area 1"
+          },
+          {
+            "label": "B",
+            "text": "Picnic Area 2"
+          },
+          {
+            "label": "C",
+            "text": "Picnic Area 3"
+          },
+          {
+            "label": "D",
+            "text": "Picnic Area 4"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q97",
+        "text": "Why are some volunteers needed?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To maintain a garden"
+          },
+          {
+            "label": "B",
+            "text": "To hand out water bottles"
+          },
+          {
+            "label": "C",
+            "text": "To organize park events"
+          },
+          {
+            "label": "D",
+            "text": "To provide free tours"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "W-Am: Welcome to the grand opening of Oakfield Public Park! My fellow city council members and I are glad that everyone could join us. There are many fun activities for residents to enjoy here. See the beautiful Elm Fountain, which has a special fountain show every hour. There are also several picnic areas throughout the park. But I suggest the one between Dogwood Pond and the children's playground. It offers fantastic views of our city's skyline. Finally, for any gardeners among us, the Oakfield Parks Department needs volunteers to help care for the community garden. If you're interested, please visit the city government Web site."
+  },
+  {
+    "testId": 9,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Where do the listeners most likely work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a supermarket"
+          },
+          {
+            "label": "B",
+            "text": "At a hospital"
+          },
+          {
+            "label": "C",
+            "text": "At a community center"
+          },
+          {
+            "label": "D",
+            "text": "At a fitness club"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q99",
+        "text": "What does the speaker say is his goal?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To attract qualified job candidates"
+          },
+          {
+            "label": "B",
+            "text": "To reduce costs"
+          },
+          {
+            "label": "C",
+            "text": "To boost membership sales"
+          },
+          {
+            "label": "D",
+            "text": "To encourage healthy eating habits"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q100",
+        "text": "Look at the graphic. On which days can the speaker change his schedule?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Mondays"
+          },
+          {
+            "label": "B",
+            "text": "Wednesdays"
+          },
+          {
+            "label": "C",
+            "text": "Thursdays"
+          },
+          {
+            "label": "D",
+            "text": "Saturdays"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn: Since the hospital hired me, I've been working on making the meals we serve our patients more nutritious. But I want to promote healthy eating habits among our staff as well, because health-care professionals with healthy diets are more likely to teach their patients to make similar choices. With that goal, I'd like to schedule our first nutrition class at a time that's available to as many people as possible, so I'm asking that you complete this short survey. I do have some flexibility in the afternoons so I could move the afternoon session during the week to a later time if necessary. The weekend session cannot be moved."
+  }
+]

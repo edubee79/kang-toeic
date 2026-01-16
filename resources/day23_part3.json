@@ -1,0 +1,614 @@
+[
+  {
+    "day": 23,
+    "no": 69,
+    "word": "check out",
+    "meaning": "(책을) 대여하다, 빌리다",
+    "targetScore": 800,
+    "exampleEn": "I need to check out a book from the library.",
+    "exampleKo": "도서관에서 책을 대여해야 합니다."
+  },
+  {
+    "day": 23,
+    "no": 70,
+    "word": "child care",
+    "meaning": "육아, 보육",
+    "targetScore": 800,
+    "exampleEn": "The company provides child care services.",
+    "exampleKo": "그 회사는 육아 서비스를 제공합니다."
+  },
+  {
+    "day": 23,
+    "no": 71,
+    "word": "don't have nerve to do",
+    "meaning": "~할 용기가 없다",
+    "targetScore": 800,
+    "exampleEn": "I don't have the nerve to tell him the truth.",
+    "exampleKo": "저는 그에게 진실을 말할 용기가 없습니다."
+  },
+  {
+    "day": 23,
+    "no": 72,
+    "word": "give a raise",
+    "meaning": "임금을 인상해주다",
+    "targetScore": 800,
+    "exampleEn": "The boss decided to give him a raise.",
+    "exampleKo": "상사는 그에게 임금을 인상해 주기로 결정했습니다."
+  },
+  {
+    "day": 23,
+    "no": 73,
+    "word": "going away party",
+    "meaning": "송별회",
+    "targetScore": 800,
+    "exampleEn": "We are throwing a going away party for Sarah.",
+    "exampleKo": "우리는 사라를 위해 송별회를 열 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 74,
+    "word": "it's about time",
+    "meaning": "~할 때이다",
+    "targetScore": 800,
+    "exampleEn": "It's about time we upgraded our system.",
+    "exampleKo": "우리 시스템을 업그레이드할 때입니다."
+  },
+  {
+    "day": 23,
+    "no": 75,
+    "word": "it's no use-ing",
+    "meaning": "~해봤자 소용없다",
+    "targetScore": 800,
+    "exampleEn": "It's no use complaining about it now.",
+    "exampleKo": "이제 와서 그것에 대해 불평해 봤자 소용없습니다."
+  },
+  {
+    "day": 23,
+    "no": 76,
+    "word": "job satisfaction",
+    "meaning": "업무 만족도",
+    "targetScore": 800,
+    "exampleEn": "Employee job satisfaction is high.",
+    "exampleKo": "직원들의 업무 만족도가 높습니다."
+  },
+  {
+    "day": 23,
+    "no": 77,
+    "word": "just in case",
+    "meaning": "~할 경우를 대비해, 만일을 위해서",
+    "targetScore": 800,
+    "exampleEn": "Take an umbrella just in case it rains.",
+    "exampleKo": "비가 올 경우를 대비해 우산을 가져가십시오."
+  },
+  {
+    "day": 23,
+    "no": 78,
+    "word": "keep A up to date",
+    "meaning": "A에게 최근 소식을 계속 알려주다",
+    "targetScore": 800,
+    "exampleEn": "Please keep me up to date on the progress.",
+    "exampleKo": "진행 상황에 대해 제게 계속 알려 주십시오."
+  },
+  {
+    "day": 23,
+    "no": 79,
+    "word": "know like the back of one's hand",
+    "meaning": "A를 아주 잘 알고 있다",
+    "targetScore": 800,
+    "exampleEn": "He knows the city like the back of his hand.",
+    "exampleKo": "그는 그 도시를 아주 잘 알고 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 80,
+    "word": "miserable",
+    "meaning": "비참한, 슬픔",
+    "targetScore": 800,
+    "exampleEn": "He felt miserable after the failure.",
+    "exampleKo": "그는 실패 후에 비참함을 느꼈습니다."
+  },
+  {
+    "day": 23,
+    "no": 81,
+    "word": "paid leave",
+    "meaning": "유급 휴가",
+    "targetScore": 800,
+    "exampleEn": "Employees are entitled to 10 days of paid leave.",
+    "exampleKo": "직원들은 10일의 유급 휴가를 받을 자격이 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 82,
+    "word": "pick up one's paycheck",
+    "meaning": "급여를 수령하다",
+    "targetScore": 800,
+    "exampleEn": "You can pick up your paycheck on Friday.",
+    "exampleKo": "금요일에 급여를 수령할 수 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 83,
+    "word": "pity",
+    "meaning": "유감, 동정",
+    "targetScore": 800,
+    "exampleEn": "It's a pity that she couldn't come.",
+    "exampleKo": "그녀가 올 수 없었다니 유감입니다."
+  },
+  {
+    "day": 23,
+    "no": 84,
+    "word": "privately",
+    "meaning": "개인적으로",
+    "targetScore": 800,
+    "exampleEn": "May I speak to you privately?",
+    "exampleKo": "개인적으로 말씀 좀 드릴 수 있을까요?"
+  },
+  {
+    "day": 23,
+    "no": 85,
+    "word": "psychological",
+    "meaning": "정신적인",
+    "targetScore": 800,
+    "exampleEn": "Stress can cause psychological problems.",
+    "exampleKo": "스트레스는 정신적인 문제들을 야기할 수 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 86,
+    "word": "put in some overtime",
+    "meaning": "초과근무를 하다",
+    "targetScore": 800,
+    "exampleEn": "I had to put in some overtime last week.",
+    "exampleKo": "저는 지난주에 초과근무를 좀 해야 했습니다."
+  },
+  {
+    "day": 23,
+    "no": 87,
+    "word": "safety drill",
+    "meaning": "안전훈련",
+    "targetScore": 800,
+    "exampleEn": "We conducted a safety drill yesterday.",
+    "exampleKo": "우리는 어제 안전 훈련을 실시했습니다."
+  },
+  {
+    "day": 23,
+    "no": 88,
+    "word": "sensitivity",
+    "meaning": "감수성",
+    "targetScore": 800,
+    "exampleEn": "The job requires sensitivity to customer needs.",
+    "exampleKo": "그 일은 고객의 요구에 대한 감수성을 필요로 합니다."
+  },
+  {
+    "day": 23,
+    "no": 89,
+    "word": "show around",
+    "meaning": "안내하다, 관광 시키다",
+    "targetScore": 800,
+    "exampleEn": "He offered to show the visitors around.",
+    "exampleKo": "그는 방문객들을 안내하겠다고(관광시켜 주겠다고) 제안했습니다."
+  },
+  {
+    "day": 23,
+    "no": 90,
+    "word": "stacks of books",
+    "meaning": "서고, 서가",
+    "targetScore": 800,
+    "exampleEn": "There are stacks of books in his office.",
+    "exampleKo": "그의 사무실에는 책이 산더미처럼 쌓여(서가가) 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 91,
+    "word": "surprisingly",
+    "meaning": "놀랍게도",
+    "targetScore": 800,
+    "exampleEn": "Surprisingly, the plan worked well.",
+    "exampleKo": "놀랍게도, 그 계획은 잘 작동했습니다."
+  },
+  {
+    "day": 23,
+    "no": 92,
+    "word": "take place",
+    "meaning": "일어나다, 발생하다",
+    "targetScore": 800,
+    "exampleEn": "The event will take place in the main hall.",
+    "exampleKo": "행사는 대강당에서 열릴 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 93,
+    "word": "take some time off",
+    "meaning": "휴식을 취하다, 일을 쉬다",
+    "targetScore": 800,
+    "exampleEn": "You look tired; take some time off.",
+    "exampleKo": "피곤해 보입니다; 좀 쉬십시오."
+  },
+  {
+    "day": 23,
+    "no": 94,
+    "word": "terribly",
+    "meaning": "몹시, 형편없이",
+    "targetScore": 800,
+    "exampleEn": "I am terribly sorry for the mistake.",
+    "exampleKo": "실수에 대해 몹시 죄송합니다."
+  },
+  {
+    "day": 23,
+    "no": 95,
+    "word": "terrific",
+    "meaning": "훌륭한",
+    "targetScore": 800,
+    "exampleEn": "She did a terrific job on the presentation.",
+    "exampleKo": "그녀는 발표를 훌륭하게 해냈습니다."
+  },
+  {
+    "day": 23,
+    "no": 96,
+    "word": "the next best",
+    "meaning": "차선",
+    "targetScore": 800,
+    "exampleEn": "This is the next best option.",
+    "exampleKo": "이것이 차선책입니다."
+  },
+  {
+    "day": 23,
+    "no": 97,
+    "word": "thrilling",
+    "meaning": "짜릿한, 흥분되는",
+    "targetScore": 800,
+    "exampleEn": "The roller coaster ride was thrilling.",
+    "exampleKo": "롤러코스터 타기는 짜릿했습니다."
+  },
+  {
+    "day": 23,
+    "no": 98,
+    "word": "credit A with B(credit B to A)",
+    "meaning": "B를 A의 공으로 믿다",
+    "targetScore": 800,
+    "exampleEn": "They credit him with the success.",
+    "exampleKo": "그들은 성공을 그의 공으로 믿습니다."
+  },
+  {
+    "day": 23,
+    "no": 99,
+    "word": "intentionally",
+    "meaning": "고의로, 의도적으로",
+    "targetScore": 800,
+    "exampleEn": "I didn't do it intentionally.",
+    "exampleKo": "저는 그것을 고의로 하지 않았습니다."
+  },
+  {
+    "day": 23,
+    "no": 100,
+    "word": "meanwhile",
+    "meaning": "그동안에, 한편",
+    "targetScore": 800,
+    "exampleEn": "The doctor will be here soon; meanwhile, relax.",
+    "exampleKo": "의사가 곧 올 것입니다; 그동안에 편히 계십시오."
+  },
+  {
+    "day": 23,
+    "no": 101,
+    "word": "respectfully",
+    "meaning": "공손하게, 정중하게",
+    "targetScore": 800,
+    "exampleEn": "He respectfully declined the offer.",
+    "exampleKo": "그는 제안을 정중하게 거절했습니다."
+  },
+  {
+    "day": 23,
+    "no": 102,
+    "word": "sign up",
+    "meaning": "등록하다, 참가하다",
+    "targetScore": 800,
+    "exampleEn": "Please sign up for the newsletter.",
+    "exampleKo": "뉴스레터에 등록하십시오."
+  },
+  {
+    "day": 23,
+    "no": 103,
+    "word": "unused",
+    "meaning": "사용하지 않은",
+    "targetScore": 800,
+    "exampleEn": "Return any unused items for a refund.",
+    "exampleKo": "사용하지 않은 물품은 환불을 위해 반품하십시오."
+  },
+  {
+    "day": 23,
+    "no": 104,
+    "word": "be tired of",
+    "meaning": "~에 실증이 나다",
+    "targetScore": 800,
+    "exampleEn": "I am tired of his complaints.",
+    "exampleKo": "저는 그의 불평에 싫증이 납니다."
+  },
+  {
+    "day": 23,
+    "no": 105,
+    "word": "biannual",
+    "meaning": "연 2회의",
+    "targetScore": 800,
+    "exampleEn": "The biannual meeting is held in June and December.",
+    "exampleKo": "연 2회의 회의는 6월과 12월에 열립니다."
+  },
+  {
+    "day": 23,
+    "no": 106,
+    "word": "charitable",
+    "meaning": "자선의",
+    "targetScore": 800,
+    "exampleEn": "She donates to charitable organizations.",
+    "exampleKo": "그녀는 자선 단체에 기부합니다."
+  },
+  {
+    "day": 23,
+    "no": 107,
+    "word": "course of study",
+    "meaning": "교육과정",
+    "targetScore": 800,
+    "exampleEn": "The course of study includes practical training.",
+    "exampleKo": "교육 과정은 실습을 포함합니다."
+  },
+  {
+    "day": 23,
+    "no": 108,
+    "word": "depressed",
+    "meaning": "낙담한",
+    "targetScore": 800,
+    "exampleEn": "He felt depressed after losing his job.",
+    "exampleKo": "그는 직장을 잃은 후 낙담했습니다."
+  },
+  {
+    "day": 23,
+    "no": 109,
+    "word": "extra pay",
+    "meaning": "추가급여",
+    "targetScore": 800,
+    "exampleEn": "Employees receive extra pay for holiday work.",
+    "exampleKo": "직원들은 휴일 근무에 대해 추가 급여를 받습니다."
+  },
+  {
+    "day": 23,
+    "no": 110,
+    "word": "featured speaker",
+    "meaning": "특별 연사",
+    "targetScore": 800,
+    "exampleEn": "He is the featured speaker at the conference.",
+    "exampleKo": "그는 회의의 특별 연사입니다."
+  },
+  {
+    "day": 23,
+    "no": 111,
+    "word": "generous",
+    "meaning": "관대한",
+    "targetScore": 800,
+    "exampleEn": "The company is known for its generous benefits.",
+    "exampleKo": "그 회사는 관대한 혜택으로 알려져 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 112,
+    "word": "laugh away",
+    "meaning": "~을 웃음으로 넘기다",
+    "targetScore": 800,
+    "exampleEn": "He tried to laugh away his embarrassment.",
+    "exampleKo": "그는 당황스러움을 웃음으로 넘기려 했습니다."
+  },
+  {
+    "day": 23,
+    "no": 113,
+    "word": "merit",
+    "meaning": "장점",
+    "targetScore": 800,
+    "exampleEn": "Each plan has its own merits.",
+    "exampleKo": "각 계획은 저마다의 장점이 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 114,
+    "word": "night shift",
+    "meaning": "야간 근무",
+    "targetScore": 800,
+    "exampleEn": "I dislike working the night shift.",
+    "exampleKo": "저는 야간 근무를 하는 것을 싫어합니다."
+  },
+  {
+    "day": 23,
+    "no": 115,
+    "word": "occupational safety and health",
+    "meaning": "직장 안전 및 건강",
+    "targetScore": 800,
+    "exampleEn": "We follow occupational safety and health regulations.",
+    "exampleKo": "우리는 직장 안전 및 건강 규정을 따릅니다."
+  },
+  {
+    "day": 23,
+    "no": 116,
+    "word": "overtime allowance",
+    "meaning": "초과근무수당",
+    "targetScore": 800,
+    "exampleEn": "The overtime allowance is calculated hourly.",
+    "exampleKo": "초과근무수당은 시간당 계산됩니다."
+  },
+  {
+    "day": 23,
+    "no": 117,
+    "word": "overtime rate",
+    "meaning": "초과근무수당",
+    "targetScore": 800,
+    "exampleEn": "What is the overtime rate?",
+    "exampleKo": "초과근무수당 요율은 얼마입니까?"
+  },
+  {
+    "day": 23,
+    "no": 118,
+    "word": "paid vacation",
+    "meaning": "유급 휴가",
+    "targetScore": 800,
+    "exampleEn": "Employees get two weeks of paid vacation.",
+    "exampleKo": "직원들은 2주의 유급 휴가를 받습니다."
+  },
+  {
+    "day": 23,
+    "no": 119,
+    "word": "pay increase",
+    "meaning": "임금 인상",
+    "targetScore": 800,
+    "exampleEn": "The union demanded a pay increase.",
+    "exampleKo": "노조는 임금 인상을 요구했습니다."
+  },
+  {
+    "day": 23,
+    "no": 120,
+    "word": "pension",
+    "meaning": "연금",
+    "targetScore": 800,
+    "exampleEn": "The government provides a state pension.",
+    "exampleKo": "정부는 국가 연금을 제공합니다."
+  },
+  {
+    "day": 23,
+    "no": 121,
+    "word": "poorly paid",
+    "meaning": "박봉의",
+    "targetScore": 800,
+    "exampleEn": "The workers felt they were poorly paid.",
+    "exampleKo": "노동자들은 자신들이 박봉이라고 느꼈습니다."
+  },
+  {
+    "day": 23,
+    "no": 122,
+    "word": "preservation area",
+    "meaning": "보호구역",
+    "targetScore": 800,
+    "exampleEn": "This area is a wildlife preservation area.",
+    "exampleKo": "이 구역은 야생동물 보호구역입니다."
+  },
+  {
+    "day": 23,
+    "no": 123,
+    "word": "reference number",
+    "meaning": "조회번호",
+    "targetScore": 800,
+    "exampleEn": "Please quote the reference number.",
+    "exampleKo": "조회 번호를 인용해(말해) 주십시오."
+  },
+  {
+    "day": 23,
+    "no": 124,
+    "word": "regional allowance",
+    "meaning": "특별 근무지 수당",
+    "targetScore": 800,
+    "exampleEn": "Employees in remote areas receive a regional allowance.",
+    "exampleKo": "오지(원격지)의 직원들은 특별 근무지 수당을 받습니다."
+  },
+  {
+    "day": 23,
+    "no": 125,
+    "word": "regular working hours",
+    "meaning": "정규 근무 시간",
+    "targetScore": 800,
+    "exampleEn": "Our regular working hours are 9 to 5.",
+    "exampleKo": "우리의 정규 근무 시간은 9시부터 5시까지입니다."
+  },
+  {
+    "day": 23,
+    "no": 126,
+    "word": "retirement party",
+    "meaning": "은퇴 기념 파티",
+    "targetScore": 800,
+    "exampleEn": "We are planning a retirement party for him.",
+    "exampleKo": "우리는 그를 위해 은퇴 기념 파티를 계획하고 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 127,
+    "word": "retirement plan",
+    "meaning": "퇴직 연금 제도",
+    "targetScore": 800,
+    "exampleEn": "Does the company offer a retirement plan?",
+    "exampleKo": "회사는 퇴직 연금 제도를 제공합니까?"
+  },
+  {
+    "day": 23,
+    "no": 128,
+    "word": "salary and benefits",
+    "meaning": "급여와 복리후생",
+    "targetScore": 800,
+    "exampleEn": "The package includes competitive salary and benefits.",
+    "exampleKo": "패키지는 경쟁력 있는 급여와 복리후생을 포함합니다."
+  },
+  {
+    "day": 23,
+    "no": 129,
+    "word": "sheltered housing",
+    "meaning": "(노인·장애인)보호 시설",
+    "targetScore": 800,
+    "exampleEn": "Volunteers visit the sheltered housing weekly.",
+    "exampleKo": "자원봉사자들은 매주 보호 시설을 방문합니다."
+  },
+  {
+    "day": 23,
+    "no": 130,
+    "word": "sick leave",
+    "meaning": "병가",
+    "targetScore": 800,
+    "exampleEn": "He is on sick leave today.",
+    "exampleKo": "그는 오늘 병가 중입니다."
+  },
+  {
+    "day": 23,
+    "no": 131,
+    "word": "strong-willed",
+    "meaning": "의지가 강한, 완고한",
+    "targetScore": 800,
+    "exampleEn": "She is a strong-willed leader.",
+    "exampleKo": "그녀는 의지가 강한 리더입니다."
+  },
+  {
+    "day": 23,
+    "no": 132,
+    "word": "time-off",
+    "meaning": "결석, 휴가",
+    "targetScore": 800,
+    "exampleEn": "Employees requested more time-off.",
+    "exampleKo": "직원들은 더 많은 휴가를 요청했습니다."
+  },
+  {
+    "day": 23,
+    "no": 133,
+    "word": "welfare",
+    "meaning": "복지",
+    "targetScore": 800,
+    "exampleEn": "We are concerned about the welfare of our staff.",
+    "exampleKo": "우리는 직원들의 복지에 대해 염려합니다."
+  },
+  {
+    "day": 23,
+    "no": 134,
+    "word": "work environment",
+    "meaning": "작업환경, 근무환경",
+    "targetScore": 800,
+    "exampleEn": "We strive for a positive work environment.",
+    "exampleKo": "우리는 긍정적인 근무 환경을 위해 노력합니다."
+  },
+  {
+    "day": 23,
+    "no": 135,
+    "word": "working condition",
+    "meaning": "근무조건",
+    "targetScore": 800,
+    "exampleEn": "The working conditions need to be improved.",
+    "exampleKo": "근무 조건이 개선될 필요가 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 136,
+    "word": "distort",
+    "meaning": "왜곡하다",
+    "targetScore": 800,
+    "exampleEn": "The media distorted the politician's remarks.",
+    "exampleKo": "언론은 정치인의 발언을 왜곡했습니다."
+  }
+]

@@ -1,0 +1,362 @@
+[
+    {
+        "day": 16,
+        "no": 1,
+        "word": "completely",
+        "meaning": "전적으로, 완전히",
+        "targetScore": 650,
+        "exampleEn": "The new operating system is completely different from the previous version.",
+        "exampleKo": "새로운 운영 체제는 이전 버전과 전적으로(완전히) 다릅니다."
+    },
+    {
+        "day": 16,
+        "no": 2,
+        "word": "refuse",
+        "meaning": "거절하다",
+        "targetScore": 650,
+        "exampleEn": "The manager had to refuse the request for additional funding.",
+        "exampleKo": "관리자는 추가 자금 지원 요청을 거절해야 했습니다."
+    },
+    {
+        "day": 16,
+        "no": 3,
+        "word": "temporarily",
+        "meaning": "일시적으로",
+        "targetScore": 650,
+        "exampleEn": "The website will be temporarily unavailable due to scheduled maintenance.",
+        "exampleKo": "정기 점검으로 인해 웹사이트를 일시적으로 이용할 수 없게 될 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 4,
+        "word": "dealer",
+        "meaning": "판매업자, 상인",
+        "targetScore": 650,
+        "exampleEn": "Contact your local authorized dealer for service and repairs.",
+        "exampleKo": "서비스 및 수리에 대해서는 지역 공인 판매업자(상인)에게 문의하십시오."
+    },
+    {
+        "day": 16,
+        "no": 5,
+        "word": "bulk",
+        "meaning": "대량의",
+        "targetScore": 650,
+        "exampleEn": "Purchasing office supplies in bulk can reduce costs significantly.",
+        "exampleKo": "사무용품을 대량으로 구매하면 비용을 크게 줄일 수 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 6,
+        "word": "inventory",
+        "meaning": "재고품, 재고 목록",
+        "targetScore": 650,
+        "exampleEn": "We keep a low inventory to minimize storage costs.",
+        "exampleKo": "우리는 보관 비용을 최소화하기 위해 적은 재고품(재고 목록)을 유지합니다."
+    },
+    {
+        "day": 16,
+        "no": 7,
+        "word": "short",
+        "meaning": "부족한",
+        "targetScore": 650,
+        "exampleEn": "The project team is currently short of staff.",
+        "exampleKo": "프로젝트 팀은 현재 인력이 부족합니다."
+    },
+    {
+        "day": 16,
+        "no": 8,
+        "word": "cost",
+        "meaning": "비용, (비용)이 들다",
+        "targetScore": 650,
+        "exampleEn": "The estimated cost of the renovation is higher than expected.",
+        "exampleKo": "보수 공사의 추정 비용이 예상보다 높습니다."
+    },
+    {
+        "day": 16,
+        "no": 9,
+        "word": "selection",
+        "meaning": "선택된 것, 정선품",
+        "targetScore": 650,
+        "exampleEn": "The store offers a diverse selection of electronic goods.",
+        "exampleKo": "그 매장은 다양한 전자 제품 정선품(선택된 것)을 제공합니다."
+    },
+    {
+        "day": 16,
+        "no": 10,
+        "word": "commercial",
+        "meaning": "상업의, 상업적인, 광고",
+        "targetScore": 650,
+        "exampleEn": "The area is zoned for both residential and commercial use.",
+        "exampleKo": "그 지역은 주거 및 상업용(상업적인) 용도로 지정되어 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 11,
+        "word": "order",
+        "meaning": "주문하다, 주문, 주문품",
+        "targetScore": 650,
+        "exampleEn": "Please order the necessary parts by the end of the day.",
+        "exampleKo": "오늘 일과 전까지 필요한 부품을 주문해 주십시오."
+    },
+    {
+        "day": 16,
+        "no": 12,
+        "word": "provide",
+        "meaning": "공급하다, 제공하다",
+        "targetScore": 650,
+        "exampleEn": "The contract states that the vendor must provide technical support.",
+        "exampleKo": "계약서에는 공급업체가 기술 지원을 제공해야 한다고 명시되어 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 13,
+        "word": "contact",
+        "meaning": "~와 연락하다, \n(상업적 목적으로)교섭하고 있는 사람",
+        "targetScore": 650,
+        "exampleEn": "Do not hesitate to contact us if you have any questions.",
+        "exampleKo": "질문이 있으시면 주저하지 말고 우리에게 연락해 주십시오."
+    },
+    {
+        "day": 16,
+        "no": 14,
+        "word": "invoice",
+        "meaning": "송장",
+        "targetScore": 650,
+        "exampleEn": "An invoice will be sent to your email address shortly.",
+        "exampleKo": "곧 귀하의 이메일 주소로 송장이 발송될 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 15,
+        "word": "move",
+        "meaning": "옮기다, 움직이다, 조치, 수단, 이동, 이사",
+        "targetScore": 650,
+        "exampleEn": "We plan to move our distribution center to a central location.",
+        "exampleKo": "우리는 유통 센터를 중심지로 옮길 계획입니다."
+    },
+    {
+        "day": 16,
+        "no": 16,
+        "word": "supply",
+        "meaning": "공급하다, 공급, 비품, 소모품",
+        "targetScore": 650,
+        "exampleEn": "The manufacturer promised to supply the goods on time.",
+        "exampleKo": "제조업체는 상품을 제시간에 공급하겠다고 약속했습니다."
+    },
+    {
+        "day": 16,
+        "no": 17,
+        "word": "discount",
+        "meaning": "할인",
+        "targetScore": 650,
+        "exampleEn": "Employees are entitled to a substantial discount on company products.",
+        "exampleKo": "직원들은 자사 제품에 대해 상당한 할인을 받을 자격이 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 18,
+        "word": "distribute",
+        "meaning": "배포하다, 배급하다",
+        "targetScore": 650,
+        "exampleEn": "Volunteers helped distribute brochures at the conference.",
+        "exampleKo": "자원봉사자들이 회의에서 브로슈어를 배포하는 것을 도왔습니다."
+    },
+    {
+        "day": 16,
+        "no": 19,
+        "word": "acquisition",
+        "meaning": "인수, 구입한 것",
+        "targetScore": 650,
+        "exampleEn": "The company's latest acquisition will expand its market share.",
+        "exampleKo": "그 회사의 최근 인수는 시장 점유율을 확대할 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 20,
+        "word": "assure",
+        "meaning": "~에게 보장하다, ~을 안심시키다, 장담하다",
+        "targetScore": 650,
+        "exampleEn": "I can assure you that quality control is our top priority.",
+        "exampleKo": "품질 관리가 우리의 최우선 순위임을 귀하에게 장담할 수(보장할 수) 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 21,
+        "word": "subject",
+        "meaning": "~의 영향을 받기 쉬운, (동의 등을)조건으로 하는\n~에게 (~을) 받게하다",
+        "targetScore": 650,
+        "exampleEn": "Prices are subject to change without prior notice.",
+        "exampleKo": "가격은 사전 통지 없이 변경될 수 있습니다(영향을 받기 쉽습니다)."
+    },
+    {
+        "day": 16,
+        "no": 22,
+        "word": "seek",
+        "meaning": "구하다, 찾다",
+        "targetScore": 650,
+        "exampleEn": "The organization is seking donations for the charity event.",
+        "exampleKo": "그 단체는 자선 행사를 위한 기부금을 구하고(찾고) 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 23,
+        "word": "satisfactory",
+        "meaning": "만족스러운",
+        "targetScore": 650,
+        "exampleEn": "The candidate provided a satisfactory explanation for the gap in employment.",
+        "exampleKo": "그 지원자는 경력 공백에 대해 만족스러운 설명을 제공했습니다."
+    },
+    {
+        "day": 16,
+        "no": 24,
+        "word": "confirmation",
+        "meaning": "확인, 확증",
+        "targetScore": 650,
+        "exampleEn": "We are waiting for written confirmation of the agreement.",
+        "exampleKo": "우리는 합의에 대한 서면 확인을 기다리고 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 25,
+        "word": "unable",
+        "meaning": "~할 수 없는",
+        "targetScore": 650,
+        "exampleEn": "Due to a technical error, we are unable to access the database.",
+        "exampleKo": "기술적 오류로 인해 데이터베이스에 접근할 수 없습니다."
+    },
+    {
+        "day": 16,
+        "no": 26,
+        "word": "payment",
+        "meaning": "지불(금액), 납입(금액)",
+        "targetScore": 650,
+        "exampleEn": "Late payment may result in additional fees.",
+        "exampleKo": "지불(납입) 지연은 추가 수수료를 초래할 수 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 27,
+        "word": "measure",
+        "meaning": "대책, 조치, 수단, 측정하다",
+        "targetScore": 650,
+        "exampleEn": "Safety measures must be strictly enforced at the construction site.",
+        "exampleKo": "건설 현장에서는 안전 조치(대책)가 엄격하게 시행되어야 합니다."
+    },
+    {
+        "day": 16,
+        "no": 28,
+        "word": "bargain",
+        "meaning": "특가품, 흥정",
+        "targetScore": 650,
+        "exampleEn": "Shoppers are looking for a good bargain during the sale.",
+        "exampleKo": "쇼핑객들은 세일 기간 동안 좋은 특가품(흥정)을 찾고 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 29,
+        "word": "stock",
+        "meaning": "재고, 주식",
+        "targetScore": 650,
+        "exampleEn": "We need to replenish our stock of raw materials.",
+        "exampleKo": "우리는 원자재 재고를 보충해야 합니다."
+    },
+    {
+        "day": 16,
+        "no": 30,
+        "word": "affordability",
+        "meaning": "감당할 수 있는 내용",
+        "targetScore": 650,
+        "exampleEn": "We questioned the affordability of the proposed budget plan.",
+        "exampleKo": "우리는 제안된 예산 계획의 감당할 수 있는 내용(실현 가능성)에 의문을 제기했습니다."
+    },
+    {
+        "day": 16,
+        "no": 31,
+        "word": "clientele",
+        "meaning": "(집합적)고객들, (변호사·건축가 등의)모든 의뢰인",
+        "targetScore": 650,
+        "exampleEn": "The restaurant aims to attract a more upscale clientele.",
+        "exampleKo": "그 식당은 더 상류층 고객들(의뢰인)을 끌어들이는 것을 목표로 합니다."
+    },
+    {
+        "day": 16,
+        "no": 32,
+        "word": "acclaim",
+        "meaning": "호평, 찬사",
+        "targetScore": 650,
+        "exampleEn": "The architect received international acclaim for his innovative design.",
+        "exampleKo": "그 건축가는 혁신적인 디자인으로 국제적인 호평(찬사)을 받았습니다."
+    },
+    {
+        "day": 16,
+        "no": 33,
+        "word": "represent",
+        "meaning": "~을 대표하다",
+        "targetScore": 650,
+        "exampleEn": "The lawyer will represent the defendant in court.",
+        "exampleKo": "그 변호사는 법정에서 피고를 대표할 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 34,
+        "word": "rating",
+        "meaning": "등급, 평가",
+        "targetScore": 650,
+        "exampleEn": "The product has a high energy efficiency rating.",
+        "exampleKo": "그 제품은 높은 에너지 효율 등급(평가)을 가지고 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 35,
+        "word": "encompass",
+        "meaning": "포함하다, 둘러싸다",
+        "targetScore": 650,
+        "exampleEn": "The discussion will encompass a wide range of topics.",
+        "exampleKo": "토론은 광범위한 주제를 포함할(둘러쌀) 것입니다."
+    },
+    {
+        "day": 16,
+        "no": 36,
+        "word": "finalize",
+        "meaning": "마무리 짓다, 완결하다",
+        "targetScore": 650,
+        "exampleEn": "We need to finalize the details of the contract today.",
+        "exampleKo": "우리는 오늘 계약의 세부 사항을 마무리 지어야(완결해야) 합니다."
+    },
+    {
+        "day": 16,
+        "no": 37,
+        "word": "market",
+        "meaning": "시장",
+        "targetScore": 650,
+        "exampleEn": "Companies must adapt to changing market conditions.",
+        "exampleKo": "기업들은 변화하는 시장 상황에 적응해야 합니다."
+    },
+    {
+        "day": 16,
+        "no": 38,
+        "word": "retail",
+        "meaning": "소매",
+        "targetScore": 650,
+        "exampleEn": "The retail industry is facing significant challenges online.",
+        "exampleKo": "소매 산업은 온라인에서 중대한 도전에 직면하고 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 39,
+        "word": "commodity",
+        "meaning": "상품, 산물",
+        "targetScore": 650,
+        "exampleEn": "Gold is considered a safe commodity investment.",
+        "exampleKo": "금은 안전한 상품(산물) 투자로 간주됩니다."
+    },
+    {
+        "day": 16,
+        "no": 40,
+        "word": "quote",
+        "meaning": "견적(액), 견적을 내다",
+        "targetScore": 650,
+        "exampleEn": "The contractor provided a quote for the renovation work.",
+        "exampleKo": "계약자는 보수 공사에 대한 견적(액)을 제공했습니다."
+    }
+]

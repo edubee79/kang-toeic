@@ -1,0 +1,290 @@
+[
+    {
+        "day": 20,
+        "no": 137,
+        "word": "well in advance",
+        "meaning": "훨씬 전에, 미리",
+        "targetScore": 900,
+        "exampleEn": "Book well in advance.",
+        "exampleKo": "훨씬 전에 예약하세요."
+    },
+    {
+        "day": 20,
+        "no": 138,
+        "word": "yield",
+        "meaning": "산출하다; 이익",
+        "targetScore": 900,
+        "exampleEn": "High yield.",
+        "exampleKo": "높은 수익률."
+    },
+    {
+        "day": 20,
+        "no": 139,
+        "word": "adjacent",
+        "meaning": "인접한",
+        "targetScore": 900,
+        "exampleEn": "Adjacent buildings.",
+        "exampleKo": "인접한 건물들."
+    },
+    {
+        "day": 20,
+        "no": 140,
+        "word": "annex",
+        "meaning": "별관",
+        "targetScore": 900,
+        "exampleEn": "Built an annex.",
+        "exampleKo": "별관을 지었습니다."
+    },
+    {
+        "day": 20,
+        "no": 141,
+        "word": "appropriately",
+        "meaning": "적절하게",
+        "targetScore": 900,
+        "exampleEn": "Dress appropriately.",
+        "exampleKo": "적절하게 입으세요."
+    },
+    {
+        "day": 20,
+        "no": 142,
+        "word": "at the latest",
+        "meaning": "늦어도",
+        "targetScore": 900,
+        "exampleEn": "By Friday at the latest.",
+        "exampleKo": "늦어도 금요일까지."
+    },
+    {
+        "day": 20,
+        "no": 143,
+        "word": "bond",
+        "meaning": "채권, 유대",
+        "targetScore": 900,
+        "exampleEn": "Government bonds.",
+        "exampleKo": "국채."
+    },
+    {
+        "day": 20,
+        "no": 144,
+        "word": "bring up",
+        "meaning": "(화제를) 꺼내다",
+        "targetScore": 900,
+        "exampleEn": "Bring up a topic.",
+        "exampleKo": "주제를 꺼내다."
+    },
+    {
+        "day": 20,
+        "no": 145,
+        "word": "collaborate",
+        "meaning": "협력하다",
+        "targetScore": 900,
+        "exampleEn": "Collaborate on a project.",
+        "exampleKo": "프로젝트에 협력하다."
+    },
+    {
+        "day": 20,
+        "no": 146,
+        "word": "combine",
+        "meaning": "결합하다",
+        "targetScore": 900,
+        "exampleEn": "Combine efforts.",
+        "exampleKo": "노력을 결합하다."
+    },
+    {
+        "day": 20,
+        "no": 147,
+        "word": "commence",
+        "meaning": "시작하다",
+        "targetScore": 900,
+        "exampleEn": "The ceremony will commence.",
+        "exampleKo": "의식이 시작될 것입니다."
+    },
+    {
+        "day": 20,
+        "no": 148,
+        "word": "compulsory",
+        "meaning": "의무적인",
+        "targetScore": 900,
+        "exampleEn": "Compulsory education.",
+        "exampleKo": "의무 교육."
+    },
+    {
+        "day": 20,
+        "no": 149,
+        "word": "concentrate",
+        "meaning": "집중하다",
+        "targetScore": 900,
+        "exampleEn": "Concentrate on work.",
+        "exampleKo": "일에 집중하세요."
+    },
+    {
+        "day": 20,
+        "no": 150,
+        "word": "condense",
+        "meaning": "요약하다, 응축하다",
+        "targetScore": 900,
+        "exampleEn": "Condense the report.",
+        "exampleKo": "보고서를 요약하세요."
+    },
+    {
+        "day": 20,
+        "no": 151,
+        "word": "conform",
+        "meaning": "따르다, 일치하다",
+        "targetScore": 900,
+        "exampleEn": "Conform to standards.",
+        "exampleKo": "표준을 따르다."
+    },
+    {
+        "day": 20,
+        "no": 152,
+        "word": "consensus",
+        "meaning": "합의",
+        "targetScore": 900,
+        "exampleEn": "Reach a consensus.",
+        "exampleKo": "합의에 도달하다."
+    },
+    {
+        "day": 20,
+        "no": 153,
+        "word": "consult",
+        "meaning": "상담하다, 참고하다",
+        "targetScore": 900,
+        "exampleEn": "Consult a doctor.",
+        "exampleKo": "의사와 상담하다."
+    },
+    {
+        "day": 20,
+        "no": 154,
+        "word": "convey",
+        "meaning": "전달하다",
+        "targetScore": 900,
+        "exampleEn": "Convey a message.",
+        "exampleKo": "메시지를 전달하다."
+    },
+    {
+        "day": 20,
+        "no": 155,
+        "word": "convince",
+        "meaning": "납득시키다",
+        "targetScore": 900,
+        "exampleEn": "Convince the jury.",
+        "exampleKo": "배심원단을 납득시키다."
+    },
+    {
+        "day": 20,
+        "no": 156,
+        "word": "detailed",
+        "meaning": "상세한",
+        "targetScore": 900,
+        "exampleEn": "Detailed instructions.",
+        "exampleKo": "상세한 지침."
+    },
+    {
+        "day": 20,
+        "no": 157,
+        "word": "discrepancy",
+        "meaning": "불일치",
+        "targetScore": 900,
+        "exampleEn": "Discrepancy in figures.",
+        "exampleKo": "수치의 불일치."
+    },
+    {
+        "day": 20,
+        "no": 158,
+        "word": "distraction",
+        "meaning": "집중을 방해하는 것",
+        "targetScore": 900,
+        "exampleEn": "Avoid distractions.",
+        "exampleKo": "방해 요소를 피하세요."
+    },
+    {
+        "day": 20,
+        "no": 159,
+        "word": "draw up",
+        "meaning": "(문서를) 작성하다",
+        "targetScore": 900,
+        "exampleEn": "Draw up a contract.",
+        "exampleKo": "계약서를 작성하다."
+    },
+    {
+        "day": 20,
+        "no": 160,
+        "word": "drop out",
+        "meaning": "빠지다, 중퇴하다",
+        "targetScore": 900,
+        "exampleEn": "Drop out of school.",
+        "exampleKo": "학교를 중퇴하다."
+    },
+    {
+        "day": 20,
+        "no": 161,
+        "word": "embassy",
+        "meaning": "대사관",
+        "targetScore": 900,
+        "exampleEn": "US Embassy.",
+        "exampleKo": "미국 대사관."
+    },
+    {
+        "day": 20,
+        "no": 162,
+        "word": "gesture",
+        "meaning": "몸짓",
+        "targetScore": 900,
+        "exampleEn": "A friendly gesture.",
+        "exampleKo": "친근한 몸짓."
+    },
+    {
+        "day": 20,
+        "no": 163,
+        "word": "hack",
+        "meaning": "해킹하다, 자르다",
+        "targetScore": 900,
+        "exampleEn": "Hack into a system.",
+        "exampleKo": "시스템을 해킹하다."
+    },
+    {
+        "day": 20,
+        "no": 164,
+        "word": "hostile",
+        "meaning": "적대적인",
+        "targetScore": 900,
+        "exampleEn": "Hostile takeover.",
+        "exampleKo": "적대적 인수."
+    },
+    {
+        "day": 20,
+        "no": 165,
+        "word": "household",
+        "meaning": "가정",
+        "targetScore": 900,
+        "exampleEn": "Household income.",
+        "exampleKo": "가계 소득."
+    },
+    {
+        "day": 20,
+        "no": 166,
+        "word": "impact",
+        "meaning": "영향, 충격",
+        "targetScore": 900,
+        "exampleEn": "High impact.",
+        "exampleKo": "큰 영향."
+    },
+    {
+        "day": 20,
+        "no": 167,
+        "word": "interrupt",
+        "meaning": "가로막다, 중단시키다",
+        "targetScore": 900,
+        "exampleEn": "Sorry to interrupt.",
+        "exampleKo": "방해해서 죄송합니다."
+    },
+    {
+        "day": 20,
+        "no": 168,
+        "word": "invaluable",
+        "meaning": "매우 귀중한",
+        "targetScore": 900,
+        "exampleEn": "Invaluable advice.",
+        "exampleKo": "매우 귀중한 조언."
+    }
+]

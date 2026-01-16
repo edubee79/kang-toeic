@@ -1,0 +1,614 @@
+[
+    {
+        "day": 24,
+        "no": 69,
+        "word": "view",
+        "meaning": "견해; ~으로 여기다",
+        "targetScore": 800,
+        "exampleEn": "The board views this as a positive development.",
+        "exampleKo": "이사회는 이것을 긍정적인 발전으로 여깁니다."
+    },
+    {
+        "day": 24,
+        "no": 70,
+        "word": "accommodate",
+        "meaning": "수용하다",
+        "targetScore": 800,
+        "exampleEn": "We will accommodate your request if possible.",
+        "exampleKo": "가능하다면 귀하의 요청을 수용하겠습니다."
+    },
+    {
+        "day": 24,
+        "no": 71,
+        "word": "accomplish",
+        "meaning": "달성하다",
+        "targetScore": 800,
+        "exampleEn": "The team accomplished its objectives ahead of schedule.",
+        "exampleKo": "팀은 예정보다 앞서 목표를 달성했습니다."
+    },
+    {
+        "day": 24,
+        "no": 72,
+        "word": "accountable",
+        "meaning": "책임이 있는",
+        "targetScore": 800,
+        "exampleEn": "Managers are accountable for their team's performance.",
+        "exampleKo": "관리자들은 팀의 성과에 책임이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 73,
+        "word": "administer",
+        "meaning": "관리하다",
+        "targetScore": 800,
+        "exampleEn": "The HR department administers employee benefits.",
+        "exampleKo": "인사부는 직원 복리후생을 관리합니다."
+    },
+    {
+        "day": 24,
+        "no": 74,
+        "word": "advancement",
+        "meaning": "진보, 승진",
+        "targetScore": 800,
+        "exampleEn": "There are many opportunities for career advancement.",
+        "exampleKo": "경력 발전의 기회가 많이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 75,
+        "word": "advocate",
+        "meaning": "옹호하다",
+        "targetScore": 800,
+        "exampleEn": "She advocates for better working conditions.",
+        "exampleKo": "그녀는 더 나은 근무 조건을 옹호합니다."
+    },
+    {
+        "day": 24,
+        "no": 76,
+        "word": "allocate",
+        "meaning": "배분하다",
+        "targetScore": 800,
+        "exampleEn": "The company allocated more resources to research.",
+        "exampleKo": "회사는 연구에 더 많은 자원을 배분했습니다."
+    },
+    {
+        "day": 24,
+        "no": 77,
+        "word": "appraisal",
+        "meaning": "평가",
+        "targetScore": 800,
+        "exampleEn": "Annual performance appraisals are conducted in December.",
+        "exampleKo": "연례 성과 평가는 12월에 실시됩니다."
+    },
+    {
+        "day": 24,
+        "no": 78,
+        "word": "apprentice",
+        "meaning": "견습생",
+        "targetScore": 800,
+        "exampleEn": "The apprentice program lasts for two years.",
+        "exampleKo": "견습생 프로그램은 2년간 지속됩니다."
+    },
+    {
+        "day": 24,
+        "no": 79,
+        "word": "aptitude",
+        "meaning": "적성",
+        "targetScore": 800,
+        "exampleEn": "The aptitude test measures problem-solving skills.",
+        "exampleKo": "적성 검사는 문제 해결 능력을 측정합니다."
+    },
+    {
+        "day": 24,
+        "no": 80,
+        "word": "arbitration",
+        "meaning": "중재",
+        "targetScore": 800,
+        "exampleEn": "The dispute was resolved through arbitration.",
+        "exampleKo": "분쟁은 중재를 통해 해결되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 81,
+        "word": "aspire",
+        "meaning": "열망하다",
+        "targetScore": 800,
+        "exampleEn": "Many employees aspire to become managers.",
+        "exampleKo": "많은 직원들이 관리자가 되기를 열망합니다."
+    },
+    {
+        "day": 24,
+        "no": 82,
+        "word": "assess",
+        "meaning": "평가하다",
+        "targetScore": 800,
+        "exampleEn": "We need to assess the candidate's qualifications.",
+        "exampleKo": "우리는 후보자의 자격을 평가해야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 83,
+        "word": "attain",
+        "meaning": "달성하다",
+        "targetScore": 800,
+        "exampleEn": "She attained the position through hard work.",
+        "exampleKo": "그녀는 열심히 일해서 그 직위를 달성했습니다."
+    },
+    {
+        "day": 24,
+        "no": 84,
+        "word": "authorize",
+        "meaning": "권한을 부여하다",
+        "targetScore": 800,
+        "exampleEn": "Only the director can authorize this expenditure.",
+        "exampleKo": "이 지출은 이사만 승인할 수 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 85,
+        "word": "autonomy",
+        "meaning": "자율성",
+        "targetScore": 800,
+        "exampleEn": "Employees appreciate having more autonomy.",
+        "exampleKo": "직원들은 더 많은 자율성을 갖는 것을 높이 평가합니다."
+    },
+    {
+        "day": 24,
+        "no": 86,
+        "word": "benchmark",
+        "meaning": "기준",
+        "targetScore": 800,
+        "exampleEn": "This company sets the benchmark for customer service.",
+        "exampleKo": "이 회사는 고객 서비스의 기준을 설정합니다."
+    },
+    {
+        "day": 24,
+        "no": 87,
+        "word": "capability",
+        "meaning": "능력",
+        "targetScore": 800,
+        "exampleEn": "The software has advanced data analysis capabilities.",
+        "exampleKo": "이 소프트웨어는 고급 데이터 분석 능력을 갖추고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 88,
+        "word": "capacity",
+        "meaning": "능력, 수용력",
+        "targetScore": 800,
+        "exampleEn": "She has the capacity to handle multiple projects.",
+        "exampleKo": "그녀는 여러 프로젝트를 처리할 능력이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 89,
+        "word": "collaborate",
+        "meaning": "협력하다",
+        "targetScore": 800,
+        "exampleEn": "Our teams collaborate on international projects.",
+        "exampleKo": "우리 팀들은 국제 프로젝트에서 협력합니다."
+    },
+    {
+        "day": 24,
+        "no": 90,
+        "word": "competence",
+        "meaning": "능력",
+        "targetScore": 800,
+        "exampleEn": "Technical competence is required for this role.",
+        "exampleKo": "이 역할에는 기술적 능력이 필요합니다."
+    },
+    {
+        "day": 24,
+        "no": 91,
+        "word": "competent",
+        "meaning": "유능한",
+        "targetScore": 800,
+        "exampleEn": "We need a competent project manager.",
+        "exampleKo": "우리는 유능한 프로젝트 관리자가 필요합니다."
+    },
+    {
+        "day": 24,
+        "no": 92,
+        "word": "comply",
+        "meaning": "준수하다",
+        "targetScore": 800,
+        "exampleEn": "All employees must comply with safety regulations.",
+        "exampleKo": "모든 직원은 안전 규정을 준수해야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 93,
+        "word": "conduct",
+        "meaning": "수행하다",
+        "targetScore": 800,
+        "exampleEn": "The survey will be conducted next month.",
+        "exampleKo": "설문조사는 다음 달에 실시될 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 94,
+        "word": "coordinate",
+        "meaning": "조정하다",
+        "targetScore": 800,
+        "exampleEn": "She coordinates all marketing activities.",
+        "exampleKo": "그녀는 모든 마케팅 활동을 조정합니다."
+    },
+    {
+        "day": 24,
+        "no": 95,
+        "word": "delegate",
+        "meaning": "위임하다",
+        "targetScore": 800,
+        "exampleEn": "Good managers know how to delegate effectively.",
+        "exampleKo": "좋은 관리자는 효과적으로 위임하는 방법을 압니다."
+    },
+    {
+        "day": 24,
+        "no": 96,
+        "word": "diligent",
+        "meaning": "근면한",
+        "targetScore": 800,
+        "exampleEn": "He is a diligent and reliable employee.",
+        "exampleKo": "그는 근면하고 신뢰할 수 있는 직원입니다."
+    },
+    {
+        "day": 24,
+        "no": 97,
+        "word": "discipline",
+        "meaning": "징계; 훈련",
+        "targetScore": 800,
+        "exampleEn": "The company has strict disciplinary procedures.",
+        "exampleKo": "회사는 엄격한 징계 절차를 가지고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 98,
+        "word": "discretion",
+        "meaning": "재량",
+        "targetScore": 800,
+        "exampleEn": "Managers have discretion in hiring decisions.",
+        "exampleKo": "관리자들은 채용 결정에 재량권이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 99,
+        "word": "efficiency",
+        "meaning": "효율성",
+        "targetScore": 800,
+        "exampleEn": "The new process improved operational efficiency.",
+        "exampleKo": "새로운 프로세스가 운영 효율성을 개선했습니다."
+    },
+    {
+        "day": 24,
+        "no": 100,
+        "word": "eligible",
+        "meaning": "자격이 있는",
+        "targetScore": 800,
+        "exampleEn": "You are eligible for a bonus after one year.",
+        "exampleKo": "1년 후에 보너스를 받을 자격이 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 101,
+        "word": "endeavor",
+        "meaning": "노력하다",
+        "targetScore": 800,
+        "exampleEn": "We will endeavor to meet your expectations.",
+        "exampleKo": "우리는 귀하의 기대를 충족시키기 위해 노력할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 102,
+        "word": "enforce",
+        "meaning": "시행하다",
+        "targetScore": 800,
+        "exampleEn": "The company strictly enforces its policies.",
+        "exampleKo": "회사는 정책을 엄격히 시행합니다."
+    },
+    {
+        "day": 24,
+        "no": 103,
+        "word": "entitle",
+        "meaning": "자격을 주다",
+        "targetScore": 800,
+        "exampleEn": "This coupon entitles you to a 20% discount.",
+        "exampleKo": "이 쿠폰은 20% 할인을 받을 자격을 줍니다."
+    },
+    {
+        "day": 24,
+        "no": 104,
+        "word": "evaluate",
+        "meaning": "평가하다",
+        "targetScore": 800,
+        "exampleEn": "We evaluate employee performance annually.",
+        "exampleKo": "우리는 매년 직원 성과를 평가합니다."
+    },
+    {
+        "day": 24,
+        "no": 105,
+        "word": "execute",
+        "meaning": "실행하다",
+        "targetScore": 800,
+        "exampleEn": "The team executed the plan flawlessly.",
+        "exampleKo": "팀은 계획을 완벽하게 실행했습니다."
+    },
+    {
+        "day": 24,
+        "no": 106,
+        "word": "exempt",
+        "meaning": "면제된",
+        "targetScore": 800,
+        "exampleEn": "Part-time workers are exempt from this policy.",
+        "exampleKo": "시간제 근로자는 이 정책에서 면제됩니다."
+    },
+    {
+        "day": 24,
+        "no": 107,
+        "word": "expertise",
+        "meaning": "전문 지식",
+        "targetScore": 800,
+        "exampleEn": "We need someone with financial expertise.",
+        "exampleKo": "우리는 재무 전문 지식을 가진 사람이 필요합니다."
+    },
+    {
+        "day": 24,
+        "no": 108,
+        "word": "facilitate",
+        "meaning": "촉진하다",
+        "targetScore": 800,
+        "exampleEn": "Technology facilitates remote collaboration.",
+        "exampleKo": "기술은 원격 협업을 촉진합니다."
+    },
+    {
+        "day": 24,
+        "no": 109,
+        "word": "fulfill",
+        "meaning": "이행하다",
+        "targetScore": 800,
+        "exampleEn": "We strive to fulfill all customer orders promptly.",
+        "exampleKo": "우리는 모든 고객 주문을 신속히 이행하기 위해 노력합니다."
+    },
+    {
+        "day": 24,
+        "no": 110,
+        "word": "implement",
+        "meaning": "시행하다",
+        "targetScore": 800,
+        "exampleEn": "The company will implement new policies next month.",
+        "exampleKo": "회사는 다음 달 새로운 정책을 시행할 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 111,
+        "word": "incentive",
+        "meaning": "인센티브",
+        "targetScore": 800,
+        "exampleEn": "Sales staff receive performance-based incentives.",
+        "exampleKo": "영업 직원은 성과 기반 인센티브를 받습니다."
+    },
+    {
+        "day": 24,
+        "no": 112,
+        "word": "initiative",
+        "meaning": "주도권",
+        "targetScore": 800,
+        "exampleEn": "Employees are encouraged to take initiative.",
+        "exampleKo": "직원들은 주도권을 잡도록 권장됩니다."
+    },
+    {
+        "day": 24,
+        "no": 113,
+        "word": "integrity",
+        "meaning": "정직성",
+        "targetScore": 800,
+        "exampleEn": "The company values honesty and integrity.",
+        "exampleKo": "회사는 정직과 성실성을 중시합니다."
+    },
+    {
+        "day": 24,
+        "no": 114,
+        "word": "mentor",
+        "meaning": "멘토",
+        "targetScore": 800,
+        "exampleEn": "Each new employee is assigned a mentor.",
+        "exampleKo": "각 신입 사원에게는 멘토가 배정됩니다."
+    },
+    {
+        "day": 24,
+        "no": 115,
+        "word": "merit",
+        "meaning": "장점",
+        "targetScore": 800,
+        "exampleEn": "Promotions are based on merit, not seniority.",
+        "exampleKo": "승진은 연공서열이 아닌 능력에 기반합니다."
+    },
+    {
+        "day": 24,
+        "no": 116,
+        "word": "morale",
+        "meaning": "사기",
+        "targetScore": 800,
+        "exampleEn": "The bonus helped boost employee morale.",
+        "exampleKo": "보너스는 직원 사기를 높이는 데 도움이 되었습니다."
+    },
+    {
+        "day": 24,
+        "no": 117,
+        "word": "negotiate",
+        "meaning": "협상하다",
+        "targetScore": 800,
+        "exampleEn": "We are negotiating a new contract with suppliers.",
+        "exampleKo": "우리는 공급업체와 새로운 계약을 협상하고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 118,
+        "word": "objective",
+        "meaning": "목표",
+        "targetScore": 800,
+        "exampleEn": "Our main objective is to increase market share.",
+        "exampleKo": "우리의 주요 목표는 시장 점유율을 높이는 것입니다."
+    },
+    {
+        "day": 24,
+        "no": 119,
+        "word": "obligate",
+        "meaning": "의무를 지우다",
+        "targetScore": 800,
+        "exampleEn": "The contract obligates both parties to comply.",
+        "exampleKo": "계약은 양측 모두에게 준수 의무를 부과합니다."
+    },
+    {
+        "day": 24,
+        "no": 120,
+        "word": "oversee",
+        "meaning": "감독하다",
+        "targetScore": 800,
+        "exampleEn": "She oversees all operations in the Asia region.",
+        "exampleKo": "그녀는 아시아 지역의 모든 운영을 감독합니다."
+    },
+    {
+        "day": 24,
+        "no": 121,
+        "word": "personnel",
+        "meaning": "직원",
+        "targetScore": 800,
+        "exampleEn": "All personnel must attend the safety training.",
+        "exampleKo": "모든 직원은 안전 교육에 참석해야 합니다."
+    },
+    {
+        "day": 24,
+        "no": 122,
+        "word": "potential",
+        "meaning": "잠재력",
+        "targetScore": 800,
+        "exampleEn": "The candidate shows great potential.",
+        "exampleKo": "그 후보자는 큰 잠재력을 보여줍니다."
+    },
+    {
+        "day": 24,
+        "no": 123,
+        "word": "proficiency",
+        "meaning": "숙련도",
+        "targetScore": 800,
+        "exampleEn": "The job requires proficiency in Excel.",
+        "exampleKo": "그 직무는 엑셀 숙련도를 요구합니다."
+    },
+    {
+        "day": 24,
+        "no": 124,
+        "word": "proficient",
+        "meaning": "능숙한",
+        "targetScore": 800,
+        "exampleEn": "She is proficient in three languages.",
+        "exampleKo": "그녀는 세 가지 언어에 능숙합니다."
+    },
+    {
+        "day": 24,
+        "no": 125,
+        "word": "prospect",
+        "meaning": "전망",
+        "targetScore": 800,
+        "exampleEn": "The job offers excellent career prospects.",
+        "exampleKo": "그 직업은 훌륭한 경력 전망을 제공합니다."
+    },
+    {
+        "day": 24,
+        "no": 126,
+        "word": "protocol",
+        "meaning": "규약",
+        "targetScore": 800,
+        "exampleEn": "Please follow the established protocol.",
+        "exampleKo": "확립된 규약을 따라 주세요."
+    },
+    {
+        "day": 24,
+        "no": 127,
+        "word": "provision",
+        "meaning": "규정",
+        "targetScore": 800,
+        "exampleEn": "The contract includes provisions for overtime pay.",
+        "exampleKo": "계약에는 초과 근무 수당에 대한 규정이 포함되어 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 128,
+        "word": "recruit",
+        "meaning": "채용하다",
+        "targetScore": 800,
+        "exampleEn": "We are actively recruiting for several positions.",
+        "exampleKo": "우리는 여러 직위에 대해 적극적으로 채용하고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 129,
+        "word": "retention",
+        "meaning": "보유",
+        "targetScore": 800,
+        "exampleEn": "Employee retention is a key priority.",
+        "exampleKo": "직원 유지는 핵심 우선순위입니다."
+    },
+    {
+        "day": 24,
+        "no": 130,
+        "word": "stipulate",
+        "meaning": "규정하다",
+        "targetScore": 800,
+        "exampleEn": "The agreement stipulates a 30-day notice period.",
+        "exampleKo": "계약서는 30일의 통지 기간을 규정합니다."
+    },
+    {
+        "day": 24,
+        "no": 131,
+        "word": "subordinate",
+        "meaning": "부하",
+        "targetScore": 800,
+        "exampleEn": "Managers are responsible for training subordinates.",
+        "exampleKo": "관리자는 부하 직원 교육을 책임집니다."
+    },
+    {
+        "day": 24,
+        "no": 132,
+        "word": "tenure",
+        "meaning": "재직 기간",
+        "targetScore": 800,
+        "exampleEn": "After five years of tenure, you receive additional benefits.",
+        "exampleKo": "5년의 재직 기간 후에는 추가 혜택을 받습니다."
+    },
+    {
+        "day": 24,
+        "no": 133,
+        "word": "terminate",
+        "meaning": "종료하다",
+        "targetScore": 800,
+        "exampleEn": "The company decided to terminate the contract.",
+        "exampleKo": "회사는 계약을 종료하기로 결정했습니다."
+    },
+    {
+        "day": 24,
+        "no": 134,
+        "word": "transition",
+        "meaning": "전환",
+        "targetScore": 800,
+        "exampleEn": "The transition to the new system was smooth.",
+        "exampleKo": "새로운 시스템으로의 전환은 순조로웠습니다."
+    },
+    {
+        "day": 24,
+        "no": 135,
+        "word": "turnover",
+        "meaning": "이직률",
+        "targetScore": 800,
+        "exampleEn": "The company has a low employee turnover rate.",
+        "exampleKo": "회사는 낮은 직원 이직률을 가지고 있습니다."
+    },
+    {
+        "day": 24,
+        "no": 136,
+        "word": "underestimate",
+        "meaning": "과소평가하다",
+        "targetScore": 800,
+        "exampleEn": "Don't underestimate the importance of teamwork.",
+        "exampleKo": "팀워크의 중요성을 과소평가하지 마세요."
+    }
+]

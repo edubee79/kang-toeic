@@ -1,0 +1,254 @@
+[
+  {
+    "day": 29,
+    "no": 41,
+    "word": "migration",
+    "meaning": "이동, 이주",
+    "targetScore": 650,
+    "exampleEn": "Bird migration patterns are changing.",
+    "exampleKo": "새들의 이동(이주) 패턴이 바뀌고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 42,
+    "word": "ecology",
+    "meaning": "생태, 자연환경",
+    "targetScore": 650,
+    "exampleEn": "The ecology of the lake is fragile.",
+    "exampleKo": "그 호수의 생태는 취약합니다."
+  },
+  {
+    "day": 29,
+    "no": 43,
+    "word": "habitat",
+    "meaning": "(동·식물의)서식지",
+    "targetScore": 650,
+    "exampleEn": "We must protect the natural habitat of these animals.",
+    "exampleKo": "우리는 이 동물들의 자연 서식지를 보호해야 합니다."
+  },
+  {
+    "day": 29,
+    "no": 44,
+    "word": "cave",
+    "meaning": "동굴",
+    "targetScore": 650,
+    "exampleEn": "They explored a cave in the mountains.",
+    "exampleKo": "그들은 산에 있는 동굴을 탐험했습니다."
+  },
+  {
+    "day": 29,
+    "no": 45,
+    "word": "Celsius",
+    "meaning": "섭씨",
+    "targetScore": 650,
+    "exampleEn": "Water boils at 100 degrees Celsius.",
+    "exampleKo": "물은 섭씨 100도에서 끓습니다."
+  },
+  {
+    "day": 29,
+    "no": 46,
+    "word": "chilly",
+    "meaning": "쌀쌀한",
+    "targetScore": 650,
+    "exampleEn": "It is a bit chilly outside.",
+    "exampleKo": "밖은 약간 쌀쌀합니다."
+  },
+  {
+    "day": 29,
+    "no": 47,
+    "word": "clean up",
+    "meaning": "치우다, 청소하다",
+    "targetScore": 650,
+    "exampleEn": "Please clean up the mess.",
+    "exampleKo": "지저분한 것을 치워 주십시오."
+  },
+  {
+    "day": 29,
+    "no": 48,
+    "word": "cleaning supply",
+    "meaning": "청소 용품",
+    "targetScore": 650,
+    "exampleEn": "We need to buy more cleaning supplies.",
+    "exampleKo": "우리는 청소 용품을 더 사야 합니다."
+  },
+  {
+    "day": 29,
+    "no": 49,
+    "word": "desert",
+    "meaning": "사막",
+    "targetScore": 650,
+    "exampleEn": "Camels are well adapted to the desert.",
+    "exampleKo": "낙타는 사막에 잘 적응해 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 50,
+    "word": "dirt",
+    "meaning": "먼지",
+    "targetScore": 650,
+    "exampleEn": "There was dirt on his shoes.",
+    "exampleKo": "그의 신발에 먼지가 묻어 있었습니다."
+  },
+  {
+    "day": 29,
+    "no": 51,
+    "word": "empty a trash can",
+    "meaning": "휴지통을 비우다",
+    "targetScore": 650,
+    "exampleEn": "Someone needs to empty the trash can.",
+    "exampleKo": "누군가가 휴지통을 비워야 합니다."
+  },
+  {
+    "day": 29,
+    "no": 52,
+    "word": "factory",
+    "meaning": "공장",
+    "targetScore": 650,
+    "exampleEn": "smoke from the factory",
+    "exampleKo": "공장에서 나오는 연기"
+  },
+  {
+    "day": 29,
+    "no": 53,
+    "word": "harvest",
+    "meaning": "수확하다, 수확",
+    "targetScore": 650,
+    "exampleEn": "Farmers harvest their crops in the fall.",
+    "exampleKo": "농부들은 가을에 농작물을 수확합니다."
+  },
+  {
+    "day": 29,
+    "no": 54,
+    "word": "humid",
+    "meaning": "습한",
+    "targetScore": 650,
+    "exampleEn": "The climate here is hot and humid.",
+    "exampleKo": "이곳의 기후는 덥고 습합니다."
+  },
+  {
+    "day": 29,
+    "no": 55,
+    "word": "landscape",
+    "meaning": "풍경",
+    "targetScore": 650,
+    "exampleEn": "The landscape has changed over the years.",
+    "exampleKo": "풍경은 수년에 걸쳐 변했습니다."
+  },
+  {
+    "day": 29,
+    "no": 56,
+    "word": "point",
+    "meaning": "의견, 가리키다",
+    "targetScore": 650,
+    "exampleEn": "I see your point about the cost.",
+    "exampleKo": "비용에 대한 당신의 의견(요점)을 알겠습니다."
+  },
+  {
+    "day": 29,
+    "no": 57,
+    "word": "seed",
+    "meaning": "씨, ~에 씨를 뿌리다",
+    "targetScore": 650,
+    "exampleEn": "Farmers sow seeds in the spring.",
+    "exampleKo": "농부들은 봄에 씨를 뿌립니다."
+  },
+  {
+    "day": 29,
+    "no": 58,
+    "word": "shade",
+    "meaning": "그늘",
+    "targetScore": 650,
+    "exampleEn": "Let's sit in the shade.",
+    "exampleKo": "그늘에 앉읍시다."
+  },
+  {
+    "day": 29,
+    "no": 59,
+    "word": "sunny",
+    "meaning": "화창한",
+    "targetScore": 650,
+    "exampleEn": "It was a sunny day.",
+    "exampleKo": "화창한 날이었습니다."
+  },
+  {
+    "day": 29,
+    "no": 60,
+    "word": "sunset",
+    "meaning": "일몰",
+    "targetScore": 650,
+    "exampleEn": "We watched the sunset on the beach.",
+    "exampleKo": "우리는 해변에서 일몰을 지켜봤습니다."
+  },
+  {
+    "day": 29,
+    "no": 61,
+    "word": "wet",
+    "meaning": "젖은",
+    "targetScore": 650,
+    "exampleEn": "Be careful, the paint is still wet.",
+    "exampleKo": "조심하십시오, 페인트가 아직 젖어 있습니다(마르지 않았습니다)."
+  },
+  {
+    "day": 29,
+    "no": 62,
+    "word": "windy",
+    "meaning": "바람 부는",
+    "targetScore": 650,
+    "exampleEn": "It is too windy to play golf.",
+    "exampleKo": "골프를 치기에는 바람이 너무 많이 붑니다."
+  },
+  {
+    "day": 29,
+    "no": 63,
+    "word": "wood",
+    "meaning": "나무, 목재",
+    "targetScore": 650,
+    "exampleEn": "The table is made of solid wood.",
+    "exampleKo": "그 탁자는 견고한 나무(원목)로 만들어졌습니다."
+  },
+  {
+    "day": 29,
+    "no": 64,
+    "word": "dust",
+    "meaning": "먼지, 먼지를 털다",
+    "targetScore": 650,
+    "exampleEn": "He wiped the dust off the shelf.",
+    "exampleKo": "그는 선반에서 먼지를 닦아냈습니다."
+  },
+  {
+    "day": 29,
+    "no": 65,
+    "word": "flood",
+    "meaning": "홍수",
+    "targetScore": 650,
+    "exampleEn": "Heavy rain caused a flood in the city.",
+    "exampleKo": "폭우가 도시에 홍수를 일으켰습니다."
+  },
+  {
+    "day": 29,
+    "no": 66,
+    "word": "general",
+    "meaning": "일반적인",
+    "targetScore": 650,
+    "exampleEn": "In general, I agree with you.",
+    "exampleKo": "일반적으로, 저는 당신에게 동의합니다."
+  },
+  {
+    "day": 29,
+    "no": 67,
+    "word": "pollution",
+    "meaning": "오염, 공해",
+    "targetScore": 650,
+    "exampleEn": "Air pollution is a serious problem.",
+    "exampleKo": "대기 오염은 심각한 문제입니다."
+  },
+  {
+    "day": 29,
+    "no": 68,
+    "word": "shower",
+    "meaning": "소나기",
+    "targetScore": 650,
+    "exampleEn": "We expect a sudden shower this afternoon.",
+    "exampleKo": "우리는 오늘 오후에 갑작스러운 소나기를 예상합니다."
+  }
+]

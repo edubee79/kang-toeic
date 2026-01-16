@@ -1,0 +1,362 @@
+[
+    {
+        "day": 17,
+        "no": 1,
+        "word": "fragile",
+        "meaning": "깨지기 쉬운",
+        "targetScore": 650,
+        "exampleEn": "Please mark the box as fragile before shipping.",
+        "exampleKo": "배송 전에 상자에 깨지기 쉬움(취급 주의) 표시를 해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 2,
+        "word": "perishable",
+        "meaning": "부패하기 쉬운",
+        "targetScore": 650,
+        "exampleEn": "Perishable goods must be stored in a refrigerator.",
+        "exampleKo": "부패하기 쉬운 제품은 냉장고에 보관되어야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 3,
+        "word": "deliver",
+        "meaning": "배달하다, (연설을)하다",
+        "targetScore": 650,
+        "exampleEn": "We guarantee to deliver your order within 24 hours.",
+        "exampleKo": "우리는 귀하의 주문을 24시간 이내에 배달할 것을 보장합니다."
+    },
+    {
+        "day": 17,
+        "no": 4,
+        "word": "ensure",
+        "meaning": "확실하게 하다, 보장하다",
+        "targetScore": 650,
+        "exampleEn": "Please ensure that the address is correct.",
+        "exampleKo": "주소가 정확한지 확실하게 해(확인해) 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 5,
+        "word": "courier",
+        "meaning": "급송 택배",
+        "targetScore": 650,
+        "exampleEn": "The documents were sent by courier this morning.",
+        "exampleKo": "그 문서들은 오늘 아침 급송 택배로 발송되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 6,
+        "word": "carton",
+        "meaning": "(큰) 판지 상자",
+        "targetScore": 650,
+        "exampleEn": "The shipment contains fifty cartons of books.",
+        "exampleKo": "그 선적물에는 책 50 판지 상자가 포함되어 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 7,
+        "word": "address",
+        "meaning": "주소, (어려운 문제 등을) 처리하다, 다루다",
+        "targetScore": 650,
+        "exampleEn": "We need to address the customer's complaints immediately.",
+        "exampleKo": "우리는 고객의 불만 사항을 즉시 처리해야(다루어야) 합니다."
+    },
+    {
+        "day": 17,
+        "no": 8,
+        "word": "shipment",
+        "meaning": "선적, (화물의) 발송, 수송품, 적하물",
+        "targetScore": 650,
+        "exampleEn": "The shipment is scheduled to arrive next week.",
+        "exampleKo": "선적물(수송품)은 다음 주에 도착할 예정입니다."
+    },
+    {
+        "day": 17,
+        "no": 9,
+        "word": "particularly",
+        "meaning": "특히",
+        "targetScore": 650,
+        "exampleEn": "The new policy is particularly beneficial for small businesses.",
+        "exampleKo": "새로운 정책은 특히 소기업들에게 유익합니다."
+    },
+    {
+        "day": 17,
+        "no": 10,
+        "word": "adequately",
+        "meaning": "적절히",
+        "targetScore": 650,
+        "exampleEn": "Ensure the items are adequately packaged to prevent damage.",
+        "exampleKo": "손상을 방지하기 위해 물품들이 적절히 포장되었는지 확인하십시오."
+    },
+    {
+        "day": 17,
+        "no": 11,
+        "word": "article",
+        "meaning": "물품, 물건, 기사, 논설",
+        "targetScore": 650,
+        "exampleEn": "Restricted articles are not allowed on the plane.",
+        "exampleKo": "제한된 물품은 비행기 반입이 허용되지 않습니다."
+    },
+    {
+        "day": 17,
+        "no": 12,
+        "word": "efficient",
+        "meaning": "(기계·방법 등이) 효과적인, 능률적인",
+        "targetScore": 650,
+        "exampleEn": "We developed an efficient method for processing orders.",
+        "exampleKo": "우리는 주문 처리를 위한 효율적인(능률적인) 방법을 개발했습니다."
+    },
+    {
+        "day": 17,
+        "no": 13,
+        "word": "agency",
+        "meaning": "대행 회사, 대리점",
+        "targetScore": 650,
+        "exampleEn": "We hired an advertising agency to promote the product.",
+        "exampleKo": "우리는 제품 홍보를 위해 광고 대행 회사를 고용했습니다."
+    },
+    {
+        "day": 17,
+        "no": 14,
+        "word": "enclose",
+        "meaning": "~을 동봉하다,~을 둘러싸다, 에워싸다",
+        "targetScore": 650,
+        "exampleEn": "Please enclose a copy of your receipt with the form.",
+        "exampleKo": "양식과 함께 영수증 사본을 동봉해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 15,
+        "word": "careful",
+        "meaning": "조심스러운, 주의 깊은",
+        "targetScore": 650,
+        "exampleEn": "Be careful when handling heavy equipment.",
+        "exampleKo": "무거운 장비를 다룰 때는 조심하십시오(주의를 기울이십시오)."
+    },
+    {
+        "day": 17,
+        "no": 16,
+        "word": "pick up",
+        "meaning": "~을 찾다, (사람·물건 등을) 도중에서 태우다",
+        "targetScore": 650,
+        "exampleEn": "You can pick up your package at the front desk.",
+        "exampleKo": "안내 데스크에서 소포를 찾을 수 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 17,
+        "word": "carry",
+        "meaning": "지니다, (물품을) 팔다, 가게에 놓다",
+        "targetScore": 650,
+        "exampleEn": "All our stores carry this brand of clothing.",
+        "exampleKo": "우리의 모든 매장은 이 브랜드의 의류를 취급합니다(팝니다)."
+    },
+    {
+        "day": 17,
+        "no": 18,
+        "word": "attach",
+        "meaning": "붙이다, 접착하다, 첨부하다",
+        "targetScore": 650,
+        "exampleEn": "Please attach the label to the outside of the box.",
+        "exampleKo": "라벨을 상자 외부에 붙여(부착해) 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 19,
+        "word": "formerly",
+        "meaning": "이전에",
+        "targetScore": 650,
+        "exampleEn": "The building was formerly used as a warehouse.",
+        "exampleKo": "그 건물은 이전에 창고로 사용되었습니다."
+    },
+    {
+        "day": 17,
+        "no": 20,
+        "word": "package",
+        "meaning": "소포, 꾸러미",
+        "targetScore": 650,
+        "exampleEn": "The package arrived damaged.",
+        "exampleKo": "그 소포는 손상된 채 도착했습니다."
+    },
+    {
+        "day": 17,
+        "no": 21,
+        "word": "react",
+        "meaning": "반응하다, 대응하다",
+        "targetScore": 650,
+        "exampleEn": "The market reacted positively to the news.",
+        "exampleKo": "시장은 그 뉴스에 긍정적으로 반응했습니다."
+    },
+    {
+        "day": 17,
+        "no": 22,
+        "word": "content",
+        "meaning": "내용물",
+        "targetScore": 650,
+        "exampleEn": "Please check the content of the package upon receipt.",
+        "exampleKo": "수령 즉시 소포의 내용물을 확인해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 23,
+        "word": "convenience",
+        "meaning": "편의, 편리",
+        "targetScore": 650,
+        "exampleEn": "For your convenience, we offer online banking services.",
+        "exampleKo": "귀하의 편의를 위해 온라인 뱅킹 서비스를 제공합니다."
+    },
+    {
+        "day": 17,
+        "no": 24,
+        "word": "acknowledge",
+        "meaning": "인정하다, (편지 등의) 수령을 알리다",
+        "targetScore": 650,
+        "exampleEn": "Please acknowledge receipt of this email.",
+        "exampleKo": "이 이메일의 수령을 알려 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 25,
+        "word": "caution",
+        "meaning": "주의, 조심",
+        "targetScore": 650,
+        "exampleEn": "Use extreme caution when operating the machinery.",
+        "exampleKo": "기계를 작동할 때는 각별한 주의(조심)를 기울이십시오."
+    },
+    {
+        "day": 17,
+        "no": 26,
+        "word": "correspondence",
+        "meaning": "편지, 통신문",
+        "targetScore": 650,
+        "exampleEn": "Please direct all correspondence to the HR department.",
+        "exampleKo": "모든 통신문(편지)은 인사 부서로 보내 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 27,
+        "word": "separate",
+        "meaning": "분리하다, 분류하다, 분리된, 따로 떨어진, 독립된",
+        "targetScore": 650,
+        "exampleEn": "Ship the items in separate boxes.",
+        "exampleKo": "물품들을 분리된(별도의) 상자에 넣어 배송하십시오."
+    },
+    {
+        "day": 17,
+        "no": 28,
+        "word": "remarkable",
+        "meaning": "현저한, 두드러진",
+        "targetScore": 650,
+        "exampleEn": "The company has shown remarkable growth this year.",
+        "exampleKo": "그 회사는 올해 현저한(놀라운) 성장을 보였습니다."
+    },
+    {
+        "day": 17,
+        "no": 29,
+        "word": "handle",
+        "meaning": "취급하다, 다루다",
+        "targetScore": 650,
+        "exampleEn": "This box contains glass, so please handle with care.",
+        "exampleKo": "이 상자에는 유리가 들어 있으니 주의해서 취급해(다뤄) 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 30,
+        "word": "warehouse",
+        "meaning": "창고, 저장소",
+        "targetScore": 650,
+        "exampleEn": "The goods are stored in our main warehouse.",
+        "exampleKo": "상품들은 우리의 주 창고(저장소)에 보관되어 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 31,
+        "word": "impose",
+        "meaning": "(세금 등을) 부과하다",
+        "targetScore": 650,
+        "exampleEn": "The government plans to impose a new tax on imports.",
+        "exampleKo": "정부는 수입품에 새로운 세금을 부과할 계획입니다."
+    },
+    {
+        "day": 17,
+        "no": 32,
+        "word": "storage",
+        "meaning": "보관소, 저장소",
+        "targetScore": 650,
+        "exampleEn": "We charge a monthly fee for storage.",
+        "exampleKo": "우리는 보관(저장)에 대해 월 사용료를 청구합니다."
+    },
+    {
+        "day": 17,
+        "no": 33,
+        "word": "detach",
+        "meaning": "분리하다, 떼다",
+        "targetScore": 650,
+        "exampleEn": "Please detach the bottom portion and return it with your payment.",
+        "exampleKo": "아랫부분을 떼어서(분리해서) 지불금과 함께 반송해 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 34,
+        "word": "envelope",
+        "meaning": "봉투",
+        "targetScore": 650,
+        "exampleEn": "Do not fold the document; put it in a large envelope.",
+        "exampleKo": "문서를 접지 마십시오; 큰 봉투에 넣으십시오."
+    },
+    {
+        "day": 17,
+        "no": 35,
+        "word": "exclusion",
+        "meaning": "제외, 배제",
+        "targetScore": 650,
+        "exampleEn": "Read the policy carefully to understand any exclusions.",
+        "exampleKo": "제외(배제) 사항을 이해하기 위해 정책을 주의 깊게 읽으십시오."
+    },
+    {
+        "day": 17,
+        "no": 36,
+        "word": "recipient",
+        "meaning": "수신자",
+        "targetScore": 650,
+        "exampleEn": "The recipient must sign for the delivery.",
+        "exampleKo": "수신자가 배송물에 서명해야 합니다."
+    },
+    {
+        "day": 17,
+        "no": 37,
+        "word": "affix",
+        "meaning": "(우표 등을) 붙이다",
+        "targetScore": 650,
+        "exampleEn": "Please affix the proper postage to the envelope.",
+        "exampleKo": "봉투에 적절한 우표를 붙여 주십시오."
+    },
+    {
+        "day": 17,
+        "no": 38,
+        "word": "incorrect",
+        "meaning": "부정확한",
+        "targetScore": 650,
+        "exampleEn": "The invoice contained an incorrect address.",
+        "exampleKo": "송장에 부정확한 주소가 포함되어 있었습니다."
+    },
+    {
+        "day": 17,
+        "no": 39,
+        "word": "oblige",
+        "meaning": "어쩔 수 없이 ~하게 하다, ~에게 강요하다",
+        "targetScore": 650,
+        "exampleEn": "We are obliged to follow the regulations.",
+        "exampleKo": "우리는 규정을 따를 의무가 있습니다(어쩔 수 없이 따라야 합니다)."
+    },
+    {
+        "day": 17,
+        "no": 40,
+        "word": "step",
+        "meaning": "단계, 조치, 수단",
+        "targetScore": 650,
+        "exampleEn": "This is the first step in the negotiation process.",
+        "exampleKo": "이것은 협상 과정의 첫 번째 단계입니다."
+    }
+]

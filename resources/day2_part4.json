@@ -1,0 +1,290 @@
+[
+  {
+    "day": 2,
+    "no": 137,
+    "word": "commonplace",
+    "meaning": "평범한 일, 흔한 일, 평범한, 흔한",
+    "targetScore": 900,
+    "exampleEn": "Working overtime has become commonplace in this industry.",
+    "exampleKo": "이 업계에서는 야근이 흔한 일이 되었습니다."
+  },
+  {
+    "day": 2,
+    "no": 138,
+    "word": "protective smock",
+    "meaning": "보호 작업복",
+    "targetScore": 900,
+    "exampleEn": "All lab technicians must wear a protective smock.",
+    "exampleKo": "모든 실험실 기술자는 보호 작업복을 착용해야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 139,
+    "word": "testimony",
+    "meaning": "증언",
+    "targetScore": 900,
+    "exampleEn": "Her testimony was crucial to the case.",
+    "exampleKo": "그녀의 증언은 그 사건에 결정적이었습니다."
+  },
+  {
+    "day": 2,
+    "no": 140,
+    "word": "accordance",
+    "meaning": "일치, 조화",
+    "targetScore": 900,
+    "exampleEn": "The project was completed in accordance with the schedule.",
+    "exampleKo": "프로젝트는 일정에 따라 완료되었습니다."
+  },
+  {
+    "day": 2,
+    "no": 141,
+    "word": "crucial",
+    "meaning": "중요한",
+    "targetScore": 900,
+    "exampleEn": "It is crucial to follow the safety guidelines.",
+    "exampleKo": "안전 지침을 따르는 것은 매우 중요합니다."
+  },
+  {
+    "day": 2,
+    "no": 142,
+    "word": "deviation",
+    "meaning": "일탈, 탈선",
+    "targetScore": 900,
+    "exampleEn": "Any deviation from the plan must be reported immediately.",
+    "exampleKo": "계획에서의 어떠한 일탈도 즉시 보고되어야 합니다."
+  },
+  {
+    "day": 2,
+    "no": 143,
+    "word": "effortlessly",
+    "meaning": "힘들지 않게",
+    "targetScore": 900,
+    "exampleEn": "She effortlessly completed the difficult task.",
+    "exampleKo": "그녀는 어려운 업무를 힘들이지 않고 완료했습니다."
+  },
+  {
+    "day": 2,
+    "no": 144,
+    "word": "in observance of",
+    "meaning": "~을 기념하여",
+    "targetScore": 900,
+    "exampleEn": "The office will be closed in observance of the holiday.",
+    "exampleKo": "공휴일을 기념하여 사무실은 휴무할 것입니다."
+  },
+  {
+    "day": 2,
+    "no": 145,
+    "word": "inadvertently",
+    "meaning": "무심코, 우연히",
+    "targetScore": 900,
+    "exampleEn": "I inadvertently sent the email to the wrong person.",
+    "exampleKo": "저는 실수로(무심코) 엉뚱한 사람에게 이메일을 보냈습니다."
+  },
+  {
+    "day": 2,
+    "no": 146,
+    "word": "judicial",
+    "meaning": "사법의, 재판의",
+    "targetScore": 900,
+    "exampleEn": "The company is involved in a judicial dispute.",
+    "exampleKo": "그 회사는 사법 분쟁에 휘말려 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 147,
+    "word": "justification",
+    "meaning": "정당한 이유",
+    "targetScore": 900,
+    "exampleEn": "There is no justification for such behavior.",
+    "exampleKo": "그런 행동에는 정당한 이유가 없습니다."
+  },
+  {
+    "day": 2,
+    "no": 148,
+    "word": "keenly",
+    "meaning": "날카롭게, 예민하게",
+    "targetScore": 900,
+    "exampleEn": "The manager is keenly aware of the problems.",
+    "exampleKo": "매니저는 문제점들을 날카롭게 인식하고 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 149,
+    "word": "lawsuit",
+    "meaning": "소송, 고소",
+    "targetScore": 900,
+    "exampleEn": "The employees filed a lawsuit against the company.",
+    "exampleKo": "직원들은 회사를 상대로 소송을 제기했습니다."
+  },
+  {
+    "day": 2,
+    "no": 150,
+    "word": "mundane",
+    "meaning": "일상적인, 재미없는",
+    "targetScore": 900,
+    "exampleEn": "He wants to escape from his mundane daily routine.",
+    "exampleKo": "그는 일상적인 지루한 일과에서 벗어나고 싶어 합니다."
+  },
+  {
+    "day": 2,
+    "no": 151,
+    "word": "off-limits",
+    "meaning": "출입금지의",
+    "targetScore": 900,
+    "exampleEn": "This area is off-limits to unauthorized personnel.",
+    "exampleKo": "이 구역은 인가받지 않은 인원에게는 출입 금지입니다."
+  },
+  {
+    "day": 2,
+    "no": 152,
+    "word": "ordinance",
+    "meaning": "법령, 명령",
+    "targetScore": 900,
+    "exampleEn": "The city council passed a new ordinance.",
+    "exampleKo": "시 의회는 새로운 조례를 통과시켰습니다."
+  },
+  {
+    "day": 2,
+    "no": 153,
+    "word": "pulled",
+    "meaning": "철회된, 철수한",
+    "targetScore": 900,
+    "exampleEn": "The controversial ad was pulled from the campaign.",
+    "exampleKo": "논란이 된 광고는 캠페인에서 철회되었습니다."
+  },
+  {
+    "day": 2,
+    "no": 154,
+    "word": "reprimand",
+    "meaning": "비난하다, 질책하다",
+    "targetScore": 900,
+    "exampleEn": "He was reprimanded for his poor performance.",
+    "exampleKo": "그는 저조한 실적으로 질책을 받았습니다."
+  },
+  {
+    "day": 2,
+    "no": 155,
+    "word": "resolution",
+    "meaning": "결의(안), 결정, 해상도",
+    "targetScore": 900,
+    "exampleEn": "The committee adopted a resolution to cut costs.",
+    "exampleKo": "위원회는 비용을 절감하기 위한 결의안을 채택했습니다."
+  },
+  {
+    "day": 2,
+    "no": 156,
+    "word": "stiff",
+    "meaning": "뻣뻣한, 경직된",
+    "targetScore": 900,
+    "exampleEn": "Competition in the market is stiff.",
+    "exampleKo": "시장에서의 경쟁은 치열합니다(뻣뻣합니다)."
+  },
+  {
+    "day": 2,
+    "no": 157,
+    "word": "substantiate",
+    "meaning": "입증하다",
+    "targetScore": 900,
+    "exampleEn": "You need evidence to substantiate your claim.",
+    "exampleKo": "당신의 주장을 입증하려면 증거가 필요합니다."
+  },
+  {
+    "day": 2,
+    "no": 158,
+    "word": "trespass",
+    "meaning": "(남의 토지에) 침입하다",
+    "targetScore": 900,
+    "exampleEn": "Do not trespass on private property.",
+    "exampleKo": "사유지에 무단 침입하지 마십시오."
+  },
+  {
+    "day": 2,
+    "no": 159,
+    "word": "violate",
+    "meaning": "위반하다",
+    "targetScore": 900,
+    "exampleEn": "Companies must not violate environmental laws.",
+    "exampleKo": "기업들은 환경법을 위반해서는 안 됩니다."
+  },
+  {
+    "day": 2,
+    "no": 160,
+    "word": "at the discretion of",
+    "meaning": "~의 재량으로",
+    "targetScore": 900,
+    "exampleEn": "Bonuses are awarded at the discretion of the manager.",
+    "exampleKo": "보너스는 매니저의 재량으로 쥐어집니다."
+  },
+  {
+    "day": 2,
+    "no": 161,
+    "word": "bound",
+    "meaning": "의무가 있는, 꼭~하게 되어 있는",
+    "targetScore": 900,
+    "exampleEn": "We are legally bound to fulfill the contract.",
+    "exampleKo": "우리는 법적으로 계약을 이행할 의무가 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 162,
+    "word": "circumscribe",
+    "meaning": "~을 제한하다",
+    "targetScore": 900,
+    "exampleEn": "The regulations circumscribe the powers of the director.",
+    "exampleKo": "그 규정들은 이사의 권한을 제한합니다."
+  },
+  {
+    "day": 2,
+    "no": 163,
+    "word": "enactment",
+    "meaning": "입법, 법령",
+    "targetScore": 900,
+    "exampleEn": "The enactment of the new law was celebrated.",
+    "exampleKo": "새 법률의 제정(입법)이 축하받았습니다."
+  },
+  {
+    "day": 2,
+    "no": 164,
+    "word": "impeccable",
+    "meaning": "결점 없는",
+    "targetScore": 900,
+    "exampleEn": "His service record is impeccable.",
+    "exampleKo": "그의 복무 기록은 결점이 없습니다."
+  },
+  {
+    "day": 2,
+    "no": 165,
+    "word": "infringement",
+    "meaning": "침해",
+    "targetScore": 900,
+    "exampleEn": "Copyright infringement is a serious offense.",
+    "exampleKo": "저작권 침해는 심각한 위법 행위입니다."
+  },
+  {
+    "day": 2,
+    "no": 166,
+    "word": "legitimate",
+    "meaning": "합법적인, 적법한",
+    "targetScore": 900,
+    "exampleEn": "He has a legitimate reason for being absent.",
+    "exampleKo": "그는 결석에 대한 정당한 이유가 있습니다."
+  },
+  {
+    "day": 2,
+    "no": 167,
+    "word": "petition",
+    "meaning": "진정서, 탄원서",
+    "targetScore": 900,
+    "exampleEn": "Residents signed a petition against the construction.",
+    "exampleKo": "주민들은 공사 반대 탄원서에 서명했습니다."
+  },
+  {
+    "day": 2,
+    "no": 168,
+    "word": "when it comes to",
+    "meaning": "~에 관해서는",
+    "targetScore": 900,
+    "exampleEn": "She is an expert when it comes to marketing.",
+    "exampleKo": "마케팅에 관해서라면 그녀는 전문가입니다."
+  }
+]

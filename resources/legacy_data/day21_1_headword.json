@@ -1,0 +1,362 @@
+[
+    {
+        "day": 21,
+        "no": 1,
+        "word": "announce",
+        "meaning": "발표하다, 알리다",
+        "targetScore": 650,
+        "exampleEn": "They announced the winner.",
+        "exampleKo": "그들은 우승자를 발표했습니다."
+    },
+    {
+        "day": 21,
+        "no": 2,
+        "word": "interested",
+        "meaning": "관심이 있는",
+        "targetScore": 650,
+        "exampleEn": "I am interested in art.",
+        "exampleKo": "나는 예술에 관심이 있습니다."
+    },
+    {
+        "day": 21,
+        "no": 3,
+        "word": "active",
+        "meaning": "활발한, 적극적인",
+        "targetScore": 650,
+        "exampleEn": "He is very active.",
+        "exampleKo": "그는 매우 활동적입니다."
+    },
+    {
+        "day": 21,
+        "no": 4,
+        "word": "accept",
+        "meaning": "수락하다, 받아들이다",
+        "targetScore": 650,
+        "exampleEn": "Accept the offer.",
+        "exampleKo": "제안을 수락하세요."
+    },
+    {
+        "day": 21,
+        "no": 5,
+        "word": "foresee",
+        "meaning": "예견하다",
+        "targetScore": 650,
+        "exampleEn": "Foresee the future.",
+        "exampleKo": "미래를 예견하다."
+    },
+    {
+        "day": 21,
+        "no": 6,
+        "word": "expansion",
+        "meaning": "확장, 확대",
+        "targetScore": 650,
+        "exampleEn": "Expansion of the business.",
+        "exampleKo": "사업의 확장."
+    },
+    {
+        "day": 21,
+        "no": 7,
+        "word": "relocate",
+        "meaning": "이전하다",
+        "targetScore": 650,
+        "exampleEn": "Relocate to a new office.",
+        "exampleKo": "새 사무실로 이전하다."
+    },
+    {
+        "day": 21,
+        "no": 8,
+        "word": "competitor",
+        "meaning": "경쟁 업체, 경쟁자",
+        "targetScore": 650,
+        "exampleEn": "Our main competitor.",
+        "exampleKo": "우리의 주요 경쟁 업체."
+    },
+    {
+        "day": 21,
+        "no": 9,
+        "word": "asset",
+        "meaning": "자산",
+        "targetScore": 650,
+        "exampleEn": "A valuable asset.",
+        "exampleKo": "귀중한 자산."
+    },
+    {
+        "day": 21,
+        "no": 10,
+        "word": "contribute",
+        "meaning": "기여하다",
+        "targetScore": 650,
+        "exampleEn": "Contribute to society.",
+        "exampleKo": "사회에 기여하다."
+    },
+    {
+        "day": 21,
+        "no": 11,
+        "word": "dedicated",
+        "meaning": "헌신적인, 전념하는",
+        "targetScore": 650,
+        "exampleEn": "A dedicated teacher.",
+        "exampleKo": "헌신적인 교사."
+    },
+    {
+        "day": 21,
+        "no": 12,
+        "word": "misplace",
+        "meaning": "잘못 두다, 잃어버리다",
+        "targetScore": 650,
+        "exampleEn": "I misplaced my keys.",
+        "exampleKo": "나는 열쇠를 잘못 두었습니다."
+    },
+    {
+        "day": 21,
+        "no": 13,
+        "word": "considerable",
+        "meaning": "상당한",
+        "targetScore": 650,
+        "exampleEn": "Considerable influence.",
+        "exampleKo": "상당한 영향력."
+    },
+    {
+        "day": 21,
+        "no": 14,
+        "word": "last",
+        "meaning": "지속되다; 지난",
+        "targetScore": 650,
+        "exampleEn": "The meeting lasted an hour.",
+        "exampleKo": "회의는 한 시간 동안 지속되었습니다."
+    },
+    {
+        "day": 21,
+        "no": 15,
+        "word": "emerge",
+        "meaning": "부상하다, 나타나다",
+        "targetScore": 650,
+        "exampleEn": "Emerge as a leader.",
+        "exampleKo": "리더로 부상하다."
+    },
+    {
+        "day": 21,
+        "no": 16,
+        "word": "grow",
+        "meaning": "성장하다",
+        "targetScore": 650,
+        "exampleEn": "The company is growing.",
+        "exampleKo": "회사가 성장하고 있습니다."
+    },
+    {
+        "day": 21,
+        "no": 17,
+        "word": "select",
+        "meaning": "선발하다, 선택하다",
+        "targetScore": 650,
+        "exampleEn": "Select the best option.",
+        "exampleKo": "최상의 옵션을 선택하세요."
+    },
+    {
+        "day": 21,
+        "no": 18,
+        "word": "merge",
+        "meaning": "합병하다",
+        "targetScore": 650,
+        "exampleEn": "Merge with another company.",
+        "exampleKo": "다른 회사와 합병하다."
+    },
+    {
+        "day": 21,
+        "no": 19,
+        "word": "imply",
+        "meaning": "암시하다",
+        "targetScore": 650,
+        "exampleEn": "Silence implies consent.",
+        "exampleKo": "침묵은 동의를 암시합니다."
+    },
+    {
+        "day": 21,
+        "no": 20,
+        "word": "vital",
+        "meaning": "필수적인",
+        "targetScore": 650,
+        "exampleEn": "Vital information.",
+        "exampleKo": "필수적인 정보."
+    },
+    {
+        "day": 21,
+        "no": 21,
+        "word": "persist",
+        "meaning": "지속되다, 고집하다",
+        "targetScore": 650,
+        "exampleEn": "If symptoms persist, see a doctor.",
+        "exampleKo": "증상이 지속되면 의사의 진찰을 받으세요."
+    },
+    {
+        "day": 21,
+        "no": 22,
+        "word": "independent",
+        "meaning": "독립적인",
+        "targetScore": 650,
+        "exampleEn": "Independent state.",
+        "exampleKo": "독립 국가."
+    },
+    {
+        "day": 21,
+        "no": 23,
+        "word": "force",
+        "meaning": "세력, 힘",
+        "targetScore": 650,
+        "exampleEn": "Sales force.",
+        "exampleKo": "영업 인력."
+    },
+    {
+        "day": 21,
+        "no": 24,
+        "word": "establish",
+        "meaning": "설립하다",
+        "targetScore": 650,
+        "exampleEn": "Establish a company.",
+        "exampleKo": "회사를 설립하다."
+    },
+    {
+        "day": 21,
+        "no": 25,
+        "word": "initiate",
+        "meaning": "착수하다, 시작하다",
+        "targetScore": 650,
+        "exampleEn": "Initiate a project.",
+        "exampleKo": "프로젝트에 착수하다."
+    },
+    {
+        "day": 21,
+        "no": 26,
+        "word": "enhance",
+        "meaning": "강화하다, 높이다",
+        "targetScore": 650,
+        "exampleEn": "Enhance the quality.",
+        "exampleKo": "품질을 높이다."
+    },
+    {
+        "day": 21,
+        "no": 27,
+        "word": "renowned",
+        "meaning": "저명한, 유명한",
+        "targetScore": 650,
+        "exampleEn": "A renowned scientist.",
+        "exampleKo": "저명한 과학자."
+    },
+    {
+        "day": 21,
+        "no": 28,
+        "word": "informed",
+        "meaning": "정보에 입각한",
+        "targetScore": 650,
+        "exampleEn": "Informed decision.",
+        "exampleKo": "정보에 입각한 결정."
+    },
+    {
+        "day": 21,
+        "no": 29,
+        "word": "minutes",
+        "meaning": "회의록",
+        "targetScore": 650,
+        "exampleEn": "Take minutes.",
+        "exampleKo": "회의록을 작성하다."
+    },
+    {
+        "day": 21,
+        "no": 30,
+        "word": "waive",
+        "meaning": "(권리 등을) 포기하다, 면제하다",
+        "targetScore": 650,
+        "exampleEn": "Waive the fee.",
+        "exampleKo": "수수료를 면제하다."
+    },
+    {
+        "day": 21,
+        "no": 31,
+        "word": "reach",
+        "meaning": "도달하다, 연락하다",
+        "targetScore": 650,
+        "exampleEn": "Reach a conclusion.",
+        "exampleKo": "결론에 도달하다."
+    },
+    {
+        "day": 21,
+        "no": 32,
+        "word": "authority",
+        "meaning": "권한; 당국",
+        "targetScore": 650,
+        "exampleEn": "Under the authority of.",
+        "exampleKo": "~의 권한 하에."
+    },
+    {
+        "day": 21,
+        "no": 33,
+        "word": "acquire",
+        "meaning": "인수하다, 획득하다",
+        "targetScore": 650,
+        "exampleEn": "Acquire a company.",
+        "exampleKo": "회사를 인수하다."
+    },
+    {
+        "day": 21,
+        "no": 34,
+        "word": "surpass",
+        "meaning": "능가하다",
+        "targetScore": 650,
+        "exampleEn": "Surpass expectations.",
+        "exampleKo": "기대를 능가하다."
+    },
+    {
+        "day": 21,
+        "no": 35,
+        "word": "run",
+        "meaning": "운영하다, 달리다",
+        "targetScore": 650,
+        "exampleEn": "Run a business.",
+        "exampleKo": "사업을 운영하다."
+    },
+    {
+        "day": 21,
+        "no": 36,
+        "word": "improbable",
+        "meaning": "사실일 것 같지 않은",
+        "targetScore": 650,
+        "exampleEn": "It seems improbable.",
+        "exampleKo": "그것은 사실일 것 같지 않습니다."
+    },
+    {
+        "day": 21,
+        "no": 37,
+        "word": "edge",
+        "meaning": "우위; 가장자리",
+        "targetScore": 650,
+        "exampleEn": "Competitive edge.",
+        "exampleKo": "경쟁 우위."
+    },
+    {
+        "day": 21,
+        "no": 38,
+        "word": "simultaneously",
+        "meaning": "동시에",
+        "targetScore": 650,
+        "exampleEn": "Happen simultaneously.",
+        "exampleKo": "동시에 일어나다."
+    },
+    {
+        "day": 21,
+        "no": 39,
+        "word": "reveal",
+        "meaning": "밝히다, 드러내다",
+        "targetScore": 650,
+        "exampleEn": "Reveal the truth.",
+        "exampleKo": "진실을 밝히다."
+    },
+    {
+        "day": 21,
+        "no": 40,
+        "word": "productivity",
+        "meaning": "생산성",
+        "targetScore": 650,
+        "exampleEn": "Increase productivity.",
+        "exampleKo": "생산성을 높이다."
+    }
+]

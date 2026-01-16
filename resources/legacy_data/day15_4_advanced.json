@@ -1,0 +1,290 @@
+[
+    {
+        "day": 15,
+        "no": 137,
+        "word": "take A seriously",
+        "meaning": "A를 진지하게 받아들이다",
+        "targetScore": 900,
+        "exampleEn": "Take your work seriously.",
+        "exampleKo": "당신의 일을 진지하게 받아들이세요."
+    },
+    {
+        "day": 15,
+        "no": 138,
+        "word": "transaction",
+        "meaning": "거래",
+        "targetScore": 900,
+        "exampleEn": "The transaction was completed.",
+        "exampleKo": "거래가 완료되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 139,
+        "word": "accepting",
+        "meaning": "받아들이는, 수용하는",
+        "targetScore": 900,
+        "exampleEn": "He is accepting of others.",
+        "exampleKo": "그는 타인을 잘 받아들입니다."
+    },
+    {
+        "day": 15,
+        "no": 140,
+        "word": "amendment",
+        "meaning": "개정, 수정",
+        "targetScore": 900,
+        "exampleEn": "An amendment to the contract.",
+        "exampleKo": "계약 수정."
+    },
+    {
+        "day": 15,
+        "no": 141,
+        "word": "bind",
+        "meaning": "구속하다, 묶다",
+        "targetScore": 900,
+        "exampleEn": "The contract binds both parties.",
+        "exampleKo": "계약은 양 당사자를 구속합니다."
+    },
+    {
+        "day": 15,
+        "no": 142,
+        "word": "binding",
+        "meaning": "구속력이 있는",
+        "targetScore": 900,
+        "exampleEn": "It is a legally binding agreement.",
+        "exampleKo": "그것은 법적 구속력이 있는 합의입니다."
+    },
+    {
+        "day": 15,
+        "no": 143,
+        "word": "breach",
+        "meaning": "위반; 위반하다",
+        "targetScore": 900,
+        "exampleEn": "He sued for breach of contract.",
+        "exampleKo": "그는 계약 위반으로 고소했습니다."
+    },
+    {
+        "day": 15,
+        "no": 144,
+        "word": "clause",
+        "meaning": "조항",
+        "targetScore": 900,
+        "exampleEn": "Read the fine clause.",
+        "exampleKo": "세부 조항을 읽어보세요."
+    },
+    {
+        "day": 15,
+        "no": 145,
+        "word": "contractual",
+        "meaning": "계약상의",
+        "targetScore": 900,
+        "exampleEn": "Contractual obligations.",
+        "exampleKo": "계약상의 의무."
+    },
+    {
+        "day": 15,
+        "no": 146,
+        "word": "convention",
+        "meaning": "관습, 대회",
+        "targetScore": 900,
+        "exampleEn": "By convention, men wear suits.",
+        "exampleKo": "관습적으로 남자들은 정장을 입습니다."
+    },
+    {
+        "day": 15,
+        "no": 147,
+        "word": "discriminating",
+        "meaning": "안목이 있는, 차별하는",
+        "targetScore": 900,
+        "exampleEn": "He has discriminating taste.",
+        "exampleKo": "그는 안목이 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 148,
+        "word": "dramatic",
+        "meaning": "극적인",
+        "targetScore": 900,
+        "exampleEn": "A dramatic increase in sales.",
+        "exampleKo": "매출의 극적인 증가."
+    },
+    {
+        "day": 15,
+        "no": 149,
+        "word": "elaborate",
+        "meaning": "정교한; 상술하다",
+        "targetScore": 900,
+        "exampleEn": "He made an elaborate plan.",
+        "exampleKo": "그는 정교한 계획을 세웠습니다."
+    },
+    {
+        "day": 15,
+        "no": 150,
+        "word": "formality",
+        "meaning": "형식상의 절차",
+        "targetScore": 900,
+        "exampleEn": "It is just a formality.",
+        "exampleKo": "그것은 단지 형식적인 절차입니다."
+    },
+    {
+        "day": 15,
+        "no": 151,
+        "word": "impact",
+        "meaning": "영향, 충격",
+        "targetScore": 900,
+        "exampleEn": "The impact of the recession.",
+        "exampleKo": "불황의 영향."
+    },
+    {
+        "day": 15,
+        "no": 152,
+        "word": "in the meantime",
+        "meaning": "그동안에",
+        "targetScore": 900,
+        "exampleEn": "In the meantime, we will wait.",
+        "exampleKo": "그동안 우리는 기다릴 것입니다."
+    },
+    {
+        "day": 15,
+        "no": 153,
+        "word": "integral",
+        "meaning": "필수적인",
+        "targetScore": 900,
+        "exampleEn": "Music is an integral part of life.",
+        "exampleKo": "음악은 삶의 필수적인 부분입니다."
+    },
+    {
+        "day": 15,
+        "no": 154,
+        "word": "lease",
+        "meaning": "임대차 계약",
+        "targetScore": 900,
+        "exampleEn": "Sign the lease.",
+        "exampleKo": "임대차 계약서에 서명하세요."
+    },
+    {
+        "day": 15,
+        "no": 155,
+        "word": "liability",
+        "meaning": "책임, 부채",
+        "targetScore": 900,
+        "exampleEn": "He admitted liability.",
+        "exampleKo": "그는 책임을 인정했습니다."
+    },
+    {
+        "day": 15,
+        "no": 156,
+        "word": "limited",
+        "meaning": "제한된",
+        "targetScore": 900,
+        "exampleEn": "Limited edition.",
+        "exampleKo": "한정판."
+    },
+    {
+        "day": 15,
+        "no": 157,
+        "word": "merge",
+        "meaning": "합병하다",
+        "targetScore": 900,
+        "exampleEn": "The two banks merged.",
+        "exampleKo": "두 은행은 합병했습니다."
+    },
+    {
+        "day": 15,
+        "no": 158,
+        "word": "merger",
+        "meaning": "합병",
+        "targetScore": 900,
+        "exampleEn": "The merger was announced.",
+        "exampleKo": "합병이 발표되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 159,
+        "word": "moderately",
+        "meaning": "적당히",
+        "targetScore": 900,
+        "exampleEn": "Cook over moderately low heat.",
+        "exampleKo": "중약불에서 요리하세요."
+    },
+    {
+        "day": 15,
+        "no": 160,
+        "word": "obligate",
+        "meaning": "의무를 지우다",
+        "targetScore": 900,
+        "exampleEn": "You are obligated to pay.",
+        "exampleKo": "당신은 지불할 의무가 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 161,
+        "word": "obligatory",
+        "meaning": "의무적인",
+        "targetScore": 900,
+        "exampleEn": "Attendance is obligatory.",
+        "exampleKo": "출석은 의무입니다."
+    },
+    {
+        "day": 15,
+        "no": 162,
+        "word": "pending",
+        "meaning": "미결의; ~할 때까지",
+        "targetScore": 900,
+        "exampleEn": "Pending further investigation.",
+        "exampleKo": "추가 조사가 있을 때까지."
+    },
+    {
+        "day": 15,
+        "no": 163,
+        "word": "persuasion",
+        "meaning": "설득",
+        "targetScore": 900,
+        "exampleEn": "It took a lot of persuasion.",
+        "exampleKo": "많은 설득이 필요했습니다."
+    },
+    {
+        "day": 15,
+        "no": 164,
+        "word": "prerequisite",
+        "meaning": "전제 조건, 필수 과목",
+        "targetScore": 900,
+        "exampleEn": "A degree is a prerequisite.",
+        "exampleKo": "학위는 필수 조건입니다."
+    },
+    {
+        "day": 15,
+        "no": 165,
+        "word": "proceeding",
+        "meaning": "소송 절차, 진행",
+        "targetScore": 900,
+        "exampleEn": "Legal proceedings have started.",
+        "exampleKo": "법적 절차가 시작되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 166,
+        "word": "promising",
+        "meaning": "유망한",
+        "targetScore": 900,
+        "exampleEn": "He is a promising actor.",
+        "exampleKo": "그는 유망한 배우입니다."
+    },
+    {
+        "day": 15,
+        "no": 167,
+        "word": "settlement",
+        "meaning": "해결, 합의금",
+        "targetScore": 900,
+        "exampleEn": "They reached an out-of-court settlement.",
+        "exampleKo": "그들은 법정 밖 합의에 도달했습니다."
+    },
+    {
+        "day": 15,
+        "no": 168,
+        "word": "up-and-coming",
+        "meaning": "장래가 유망한",
+        "targetScore": 900,
+        "exampleEn": "An up-and-coming artist.",
+        "exampleKo": "장래가 유망한 예술가."
+    }
+]

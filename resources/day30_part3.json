@@ -1,0 +1,614 @@
+[
+  {
+    "day": 30,
+    "no": 69,
+    "word": "well-being",
+    "meaning": "(건강과)행복",
+    "targetScore": 800,
+    "exampleEn": "The company wellness program is designed to promote the well-being of all staff.",
+    "exampleKo": "회사 웰니스 프로그램은 모든 직원의 웰빙을 증진하기 위해 만들어졌습니다."
+  },
+  {
+    "day": 30,
+    "no": 70,
+    "word": "aging",
+    "meaning": "나이 들어가는",
+    "targetScore": 800,
+    "exampleEn": "The report addresses the challenges of providing healthcare for an aging population.",
+    "exampleKo": "그 보고서는 고령화 인구에게 의료 서비스를 제공하는 것의 과제를 다룹니다."
+  },
+  {
+    "day": 30,
+    "no": 71,
+    "word": "ankle sprain",
+    "meaning": "발목 접질림",
+    "targetScore": 800,
+    "exampleEn": "He filed an accident report after suffering an ankle sprain on the factory floor.",
+    "exampleKo": "그는 공장 바닥에서 발목 접질림을 겪은 후 사고 보고서를 제출했습니다."
+  },
+  {
+    "day": 30,
+    "no": 72,
+    "word": "back injury",
+    "meaning": "허리부상",
+    "targetScore": 800,
+    "exampleEn": "Improper lifting techniques can result in serious back injury.",
+    "exampleKo": "부적절한 들어올리기 기술은 심각한 허리 부상을 초래할 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 73,
+    "word": "be on a special diet",
+    "meaning": "특수 식이 요법 중이다",
+    "targetScore": 800,
+    "exampleEn": "The patient is on a special diet prescribed by the nutritionist.",
+    "exampleKo": "그 환자는 영양사가 처방한 특수 식이 요법 중입니다."
+  },
+  {
+    "day": 30,
+    "no": 74,
+    "word": "blood pressure",
+    "meaning": "혈압",
+    "targetScore": 800,
+    "exampleEn": "Regular monitoring of blood pressure is essential for hypertension management.",
+    "exampleKo": "혈압의 규칙적인 모니터링은 고혈압 관리에 필수적입니다."
+  },
+  {
+    "day": 30,
+    "no": 75,
+    "word": "blood supply",
+    "meaning": "혈액 공급",
+    "targetScore": 800,
+    "exampleEn": "The Red Cross is concerned about the low blood supply in the local bank.",
+    "exampleKo": "적십자는 지역 혈액 은행의 낮은 혈액 공급량에 대해 우려하고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 76,
+    "word": "buzzing",
+    "meaning": "윙윙 소리를 내는, 와글거리는",
+    "targetScore": 800,
+    "exampleEn": "There was a buzzing of excitement in the lobby before the CEO's arrival.",
+    "exampleKo": "CEO가 도착하기 전 로비에는 흥분의 웅성거림(윙윙거리는 소리)이 있었습니다."
+  },
+  {
+    "day": 30,
+    "no": 77,
+    "word": "doctor's appointment",
+    "meaning": "진료 예약",
+    "targetScore": 800,
+    "exampleEn": "I need to reschedule my doctor's appointment due to a conflicting meeting.",
+    "exampleKo": "겹치는 회의 때문에 진료 예약을 변경해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 78,
+    "word": "emergency room",
+    "meaning": "응급실",
+    "targetScore": 800,
+    "exampleEn": "Patients with life-threatening conditions are treated first in the emergency room.",
+    "exampleKo": "생명을 위협하는 상태의 환자들은 응급실에서 우선적으로 치료받습니다."
+  },
+  {
+    "day": 30,
+    "no": 79,
+    "word": "get some exercise",
+    "meaning": "운동하다",
+    "targetScore": 800,
+    "exampleEn": "Employees are encouraged to get some exercise during their lunch break.",
+    "exampleKo": "직원들은 점심시간 동안 운동을 좀 하도록 권장됩니다."
+  },
+  {
+    "day": 30,
+    "no": 80,
+    "word": "heart ailment",
+    "meaning": "심장병",
+    "targetScore": 800,
+    "exampleEn": "He retired early due to a chronic heart ailment.",
+    "exampleKo": "그는 만성 심장병 때문에 조기 은퇴했습니다."
+  },
+  {
+    "day": 30,
+    "no": 81,
+    "word": "heart attack",
+    "meaning": "심장마비",
+    "targetScore": 800,
+    "exampleEn": "Stress management is crucial for preventing a heart attack.",
+    "exampleKo": "스트레스 관리는 심장 마비를 예방하는 데 중요합니다."
+  },
+  {
+    "day": 30,
+    "no": 82,
+    "word": "heart disease",
+    "meaning": "심장질환",
+    "targetScore": 800,
+    "exampleEn": "Heart disease remains the leading cause of death in developed nations.",
+    "exampleKo": "심장 질환은 선진국에서 여전히 주요 사망 원인으로 남아 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 83,
+    "word": "injection",
+    "meaning": "주사",
+    "targetScore": 800,
+    "exampleEn": "The vaccine is administered via a single injection.",
+    "exampleKo": "그 백신은 1회 주사를 통해 투여됩니다."
+  },
+  {
+    "day": 30,
+    "no": 84,
+    "word": "insomnia",
+    "meaning": "불면증",
+    "targetScore": 800,
+    "exampleEn": "Shift workers often suffer from insomnia due to irregular hours.",
+    "exampleKo": "교대 근무자들은 불규칙한 근무 시간 때문에 종종 불면증을 겪습니다."
+  },
+  {
+    "day": 30,
+    "no": 85,
+    "word": "lean back",
+    "meaning": "뒤로 기대다",
+    "targetScore": 800,
+    "exampleEn": "The ergonomic chair allows users to lean back comfortably.",
+    "exampleKo": "인체공학적 의자는 사용자가 편안하게 뒤로 기댈 수 있게 해줍니다."
+  },
+  {
+    "day": 30,
+    "no": 86,
+    "word": "lose weight",
+    "meaning": "살이 빠지다",
+    "targetScore": 800,
+    "exampleEn": "The wellness challenge encourages employees to lose weight together.",
+    "exampleKo": "웰니스 챌린지는 직원들이 함께 살을 빼도록 장려합니다."
+  },
+  {
+    "day": 30,
+    "no": 87,
+    "word": "maternity ward",
+    "meaning": "산부인과 병동",
+    "targetScore": 800,
+    "exampleEn": "The new hospital wing includes a state-of-the-art maternity ward.",
+    "exampleKo": "새로운 병원 별관은 최첨단 산부인과 병동을 포함합니다."
+  },
+  {
+    "day": 30,
+    "no": 88,
+    "word": "patient's record",
+    "meaning": "환자의 의료 기록",
+    "targetScore": 800,
+    "exampleEn": "Strict privacy laws protect the confidentiality of every patient's record.",
+    "exampleKo": "엄격한 개인정보 보호법은 모든 환자의 의료 기록의 기밀성을 보호합니다."
+  },
+  {
+    "day": 30,
+    "no": 89,
+    "word": "physical examination",
+    "meaning": "신체검사",
+    "targetScore": 800,
+    "exampleEn": "Candidates must undergo a physical examination before employment.",
+    "exampleKo": "지원자들은 고용 전에 신체 검사를 받아야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 90,
+    "word": "physical therapy",
+    "meaning": "물리 치료",
+    "targetScore": 800,
+    "exampleEn": "Recovery from the injury required months of intensive physical therapy.",
+    "exampleKo": "부상 회복은 수개월간의 집중적인 물리 치료를 필요로 했습니다."
+  },
+  {
+    "day": 30,
+    "no": 91,
+    "word": "resist",
+    "meaning": "참다, 견디다, 저항하다",
+    "targetScore": 800,
+    "exampleEn": "The company must resist pressure to lower safety standards.",
+    "exampleKo": "회사는 안전 기준을 낮추라는 압력에 저항해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 92,
+    "word": "sneeze",
+    "meaning": "재채기 하다",
+    "targetScore": 800,
+    "exampleEn": "Cover your mouth when you sneeze to prevent spreading germs.",
+    "exampleKo": "세균 확산을 막기 위해 재채기를 할 때는 입을 가리십시오."
+  },
+  {
+    "day": 30,
+    "no": 93,
+    "word": "surgical instrument",
+    "meaning": "수술도구",
+    "targetScore": 800,
+    "exampleEn": "The sterilization of surgical instruments is strictly monitored.",
+    "exampleKo": "수술 도구의 소독은 엄격하게 모니터링됩니다."
+  },
+  {
+    "day": 30,
+    "no": 94,
+    "word": "tablet",
+    "meaning": "알약",
+    "targetScore": 800,
+    "exampleEn": "Take one tablet with water after every meal.",
+    "exampleKo": "매 식사 후 물과 함께 알약 한 개를 복용하십시오."
+  },
+  {
+    "day": 30,
+    "no": 95,
+    "word": "take effect",
+    "meaning": "효과가 나타나다",
+    "targetScore": 800,
+    "exampleEn": "The new regulations will take effect on the first of next month.",
+    "exampleKo": "새로운 규정은 다음 달 1일에 발효될(효과가 나타날) 것입니다."
+  },
+  {
+    "day": 30,
+    "no": 96,
+    "word": "take medication",
+    "meaning": "약을 복용하다",
+    "targetScore": 800,
+    "exampleEn": "Employees should not operate heavy machinery while taking medication.",
+    "exampleKo": "직원들은 약을 복용하는 동안 중장비를 조작해서는 안 됩니다."
+  },
+  {
+    "day": 30,
+    "no": 97,
+    "word": "take some medicine",
+    "meaning": "약을 먹다",
+    "targetScore": 800,
+    "exampleEn": "If symptoms persist, you should take some medicine.",
+    "exampleKo": "증상이 지속되면, 약을 좀 먹어야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 98,
+    "word": "terminal",
+    "meaning": "말기의, 불치의",
+    "targetScore": 800,
+    "exampleEn": "The insurance policy covers terminal illness care.",
+    "exampleKo": "그 보험 증권은 말기 질환(불치병) 치료를 보장합니다."
+  },
+  {
+    "day": 30,
+    "no": 99,
+    "word": "vaccination",
+    "meaning": "백신, 예방 접종",
+    "targetScore": 800,
+    "exampleEn": "Proof of vaccination is required for international travel.",
+    "exampleKo": "국제 여행을 위해서는 예방 접종 증명서가 필요합니다."
+  },
+  {
+    "day": 30,
+    "no": 100,
+    "word": "watch over",
+    "meaning": "보호하다, 지키다",
+    "targetScore": 800,
+    "exampleEn": "Security personnel watch over the facility 24 hours a day.",
+    "exampleKo": "보안 요원들이 하루 24시간 시설을 보호합니다(지킵니다)."
+  },
+  {
+    "day": 30,
+    "no": 101,
+    "word": "consequently",
+    "meaning": "그 결과, 따라서",
+    "targetScore": 800,
+    "exampleEn": "The funding was cut; consequently, the research project was halted.",
+    "exampleKo": "자금 지원이 삭감되었습니다; 그 결과, 연구 프로젝트는 중단되었습니다."
+  },
+  {
+    "day": 30,
+    "no": 102,
+    "word": "harmful",
+    "meaning": "해로운, 유해한",
+    "targetScore": 800,
+    "exampleEn": "The chemicals were found to be harmful to the environment.",
+    "exampleKo": "그 화학 물질들은 환경에 해로운 것으로 밝혀졌습니다."
+  },
+  {
+    "day": 30,
+    "no": 103,
+    "word": "maximize",
+    "meaning": "극대화하다",
+    "targetScore": 800,
+    "exampleEn": "We aim to maximize the efficiency of our production line.",
+    "exampleKo": "우리는 생산 라인의 효율성을 극대화하는 것을 목표로 합니다."
+  },
+  {
+    "day": 30,
+    "no": 104,
+    "word": "medicinal",
+    "meaning": "약용의, 치유력이 있는",
+    "targetScore": 800,
+    "exampleEn": "The botanical garden cultivates plants with medicinal value.",
+    "exampleKo": "그 식물원은 약용 가치가 있는 식물들을 재배합니다."
+  },
+  {
+    "day": 30,
+    "no": 105,
+    "word": "patiently",
+    "meaning": "끈기 있게, 참을성 있게",
+    "targetScore": 800,
+    "exampleEn": "The customer service representative listened patiently to the complaint.",
+    "exampleKo": "고객 서비스 담당자는 불만 사항을 끈기 있게 경청했습니다."
+  },
+  {
+    "day": 30,
+    "no": 106,
+    "word": "recover",
+    "meaning": "(건강이) 회복되다",
+    "targetScore": 800,
+    "exampleEn": "The market is expected to recover from the downturn slowly.",
+    "exampleKo": "시장은 침체기에서 천천히 회복될 것으로 예상됩니다."
+  },
+  {
+    "day": 30,
+    "no": 107,
+    "word": "resemble",
+    "meaning": "~을 닮다, ~과 공통점이 있다",
+    "targetScore": 800,
+    "exampleEn": "The proposed logo resembles that of a competitor.",
+    "exampleKo": "제안된 로고는 경쟁사의 것과 닮았습니다."
+  },
+  {
+    "day": 30,
+    "no": 108,
+    "word": "ultimately",
+    "meaning": "마침내, 결국",
+    "targetScore": 800,
+    "exampleEn": "Ultimately, the success of the merger depends on cultural integration.",
+    "exampleKo": "마침내(결국), 합병의 성공은 문화적 통합에 달려 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 109,
+    "word": "urgently",
+    "meaning": "급히",
+    "targetScore": 800,
+    "exampleEn": "We are urgently seeking a qualified safety inspector.",
+    "exampleKo": "우리는 자격 있는 안전 검사관을 급히 찾고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 110,
+    "word": "visualize",
+    "meaning": "시각화하다",
+    "targetScore": 800,
+    "exampleEn": "Architects use software to visualize the building design.",
+    "exampleKo": "건축가들은 건물 설계를 시각화하기 위해 소프트웨어를 사용합니다."
+  },
+  {
+    "day": 30,
+    "no": 111,
+    "word": "antibiotic",
+    "meaning": "항생제",
+    "targetScore": 800,
+    "exampleEn": "Overuse of antibiotics helps create resistant bacteria.",
+    "exampleKo": "항생제의 과용은 내성 박테리아를 만드는 데 일조합니다."
+  },
+  {
+    "day": 30,
+    "no": 112,
+    "word": "asthma",
+    "meaning": "천식",
+    "targetScore": 800,
+    "exampleEn": "Employees with asthma should avoid exposure to dust and fumes.",
+    "exampleKo": "천식이 있는 직원들은 먼지와 가스에 노출되는 것을 피해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 113,
+    "word": "athletic skill",
+    "meaning": "운동능력",
+    "targetScore": 800,
+    "exampleEn": "The scholarship is awarded based on academic and athletic skill.",
+    "exampleKo": "장학금은 학업 및 운동 능력을 바탕으로 수여됩니다."
+  },
+  {
+    "day": 30,
+    "no": 114,
+    "word": "chronic",
+    "meaning": "만성의",
+    "targetScore": 800,
+    "exampleEn": "Chronic absenteeism is grounds for disciplinary action.",
+    "exampleKo": "만성적인 결근은 징계 조치의 사유가 됩니다."
+  },
+  {
+    "day": 30,
+    "no": 115,
+    "word": "contagious",
+    "meaning": "전염성의",
+    "targetScore": 800,
+    "exampleEn": "Staff with contagious illnesses must stay home until recovered.",
+    "exampleKo": "전염성 질환이 있는 직원은 회복될 때까지 집에 머물러야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 116,
+    "word": "diabetes",
+    "meaning": "당뇨병",
+    "targetScore": 800,
+    "exampleEn": "Diabetes management is covered under the employee health plan.",
+    "exampleKo": "당뇨병 관리는 직원 건강 보험 계획에 따라 보장됩니다."
+  },
+  {
+    "day": 30,
+    "no": 117,
+    "word": "donor",
+    "meaning": "기증자",
+    "targetScore": 800,
+    "exampleEn": "The charity is seeking a generous donor for the new wing.",
+    "exampleKo": "자선 단체는 새로운 별관을 위한 관대한 기부자(기증자)를 찾고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 118,
+    "word": "dosage",
+    "meaning": "1회분 복용량",
+    "targetScore": 800,
+    "exampleEn": "Strict adherence to the prescribed dosage is required.",
+    "exampleKo": "처방된 1회분 복용량에 대한 엄격한 준수가 요구됩니다."
+  },
+  {
+    "day": 30,
+    "no": 119,
+    "word": "dose",
+    "meaning": "(약의) 1회 복용량",
+    "targetScore": 800,
+    "exampleEn": "A single dose of the vaccine provides lifelong immunity.",
+    "exampleKo": "백신의 단 1회 복용량으로 평생 면역을 제공합니다."
+  },
+  {
+    "day": 30,
+    "no": 120,
+    "word": "eradicate",
+    "meaning": "근절하다, 뿌리뽑다",
+    "targetScore": 800,
+    "exampleEn": "The global initiative aims to eradicate polio worldwide.",
+    "exampleKo": "글로벌 이니셔티브는 전 세계적으로 소아마비를 근절하는 것을 목표로 합니다."
+  },
+  {
+    "day": 30,
+    "no": 121,
+    "word": "exhale",
+    "meaning": "숨을 내쉬다",
+    "targetScore": 800,
+    "exampleEn": "Ventilation systems ensure that stale air is exhaled from the building.",
+    "exampleKo": "환기 시스템은 탁한 공기가 건물 밖으로 배출되도록(내쉬어지도록) 보장합니다."
+  },
+  {
+    "day": 30,
+    "no": 122,
+    "word": "first aid",
+    "meaning": "응급처치",
+    "targetScore": 800,
+    "exampleEn": "All supervisors are trained in basic first aid and CPR.",
+    "exampleKo": "모든 감독관들은 기본적인 응급 처치와 심폐소생술 훈련을 받습니다."
+  },
+  {
+    "day": 30,
+    "no": 123,
+    "word": "food poisoning",
+    "meaning": "식중독",
+    "targetScore": 800,
+    "exampleEn": "The cafeteria was closed following reports of food poisoning.",
+    "exampleKo": "구내식당은 식중독 보고가 있은 후 폐쇄되었습니다."
+  },
+  {
+    "day": 30,
+    "no": 124,
+    "word": "forbid",
+    "meaning": "금지하다",
+    "targetScore": 800,
+    "exampleEn": "Company policies forbid the use of personal devices in secure areas.",
+    "exampleKo": "회사 정책은 보안 구역 내 개인 기기 사용을 금지합니다."
+  },
+  {
+    "day": 30,
+    "no": 125,
+    "word": "genetic research",
+    "meaning": "유전학 연구",
+    "targetScore": 800,
+    "exampleEn": "Advances in genetic research are transforming personalized medicine.",
+    "exampleKo": "유전학 연구의 발전은 맞춤형 의학을 변화시키고 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 126,
+    "word": "germ",
+    "meaning": "세균",
+    "targetScore": 800,
+    "exampleEn": "Hand sanitizers are provided to reduce the spread of germs.",
+    "exampleKo": "세균 확산을 줄이기 위해 손 소독제가 제공됩니다."
+  },
+  {
+    "day": 30,
+    "no": 127,
+    "word": "hiccup",
+    "meaning": "딸꾹질",
+    "targetScore": 800,
+    "exampleEn": "Frequent hiccups in the supply chain delayed production.",
+    "exampleKo": "공급망의 잦은 문제들(딸꾹질들)이 생산을 지연시켰습니다."
+  },
+  {
+    "day": 30,
+    "no": 128,
+    "word": "hygiene",
+    "meaning": "위생",
+    "targetScore": 800,
+    "exampleEn": "Restaurants must comply with strict food hygiene regulations.",
+    "exampleKo": "식당들은 엄격한 식품 위생 규정을 준수해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 129,
+    "word": "immune",
+    "meaning": "면역의",
+    "targetScore": 800,
+    "exampleEn": "No industry is immune to economic fluctuations.",
+    "exampleKo": "어떤 산업도 경제 변동에 면역이 되어 있지 않습니다."
+  },
+  {
+    "day": 30,
+    "no": 130,
+    "word": "infection",
+    "meaning": "감염",
+    "targetScore": 800,
+    "exampleEn": "Computer infection by malware can result in data loss.",
+    "exampleKo": "멀웨어에 의한 컴퓨터 감염은 데이터 손실을 초래할 수 있습니다."
+  },
+  {
+    "day": 30,
+    "no": 131,
+    "word": "infectious disease",
+    "meaning": "전염병",
+    "targetScore": 800,
+    "exampleEn": "The CDC monitors outbreaks of infectious diseases.",
+    "exampleKo": "질병통제예방센터(CDC)는 전염병의 발병을 모니터링합니다."
+  },
+  {
+    "day": 30,
+    "no": 132,
+    "word": "inhale",
+    "meaning": "숨을 들이마시다",
+    "targetScore": 800,
+    "exampleEn": "Workers must wear masks so they do not inhale toxic fumes.",
+    "exampleKo": "근로자들은 유독 가스를 들이마시지 않도록 마스크를 착용해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 133,
+    "word": "overdose",
+    "meaning": "과다복용",
+    "targetScore": 800,
+    "exampleEn": "Accidental overdose is a risk with potent medications.",
+    "exampleKo": "강력한 약물의 경우 우발적인 과다 복용이 위험 요소입니다."
+  },
+  {
+    "day": 30,
+    "no": 134,
+    "word": "painkiller",
+    "meaning": "진통제",
+    "targetScore": 800,
+    "exampleEn": "The market acted as a painkiller for the struggling economy.",
+    "exampleKo": "시장은 고전하는 경제에 진통제 역할을 했습니다."
+  },
+  {
+    "day": 30,
+    "no": 135,
+    "word": "paralysis",
+    "meaning": "마비",
+    "targetScore": 800,
+    "exampleEn": "The strike caused a paralysis of the transportation network.",
+    "exampleKo": "파업은 교통망의 마비를 초래했습니다."
+  },
+  {
+    "day": 30,
+    "no": 136,
+    "word": "pulse",
+    "meaning": "맥박",
+    "targetScore": 800,
+    "exampleEn": "Investors check the pulse of the market before trading.",
+    "exampleKo": "투자자들은 거래 전에 시장의 맥박(흐름)을 확인합니다."
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "passageId": 3,
+  "type": "ARTICLE",
+  "structure": {
+    "header_lines": [],
+    "salutation": null,
+    "body_paragraphs": [
+      "Welcome to \"Distributing Your Savings.\" This slide [139] is the third of a twelve-segment educational series called \"Preparing for Retirement.\"",
+      "This series provides only [140] advice. It should not replace the guidance of your investment planner. The series has been developed as background material to help you ask key questions when [141] with your investment planner. We hope you find this information helpful.",
+      "Swainson-Gray Investments [142]"
+    ],
+    "closing_lines": []
+  },
+  "questions": [
+    {
+      "id": 139,
+      "text": "(A) presenting\n(B) presents\n(C) presentation\n(D) presented",
+      "options": [
+        "(A) presenting",
+        "(B) presents",
+        "(C) presentation",
+        "(D) presented"
+      ]
+    },
+    {
+      "id": 140,
+      "text": "(A) You are encouraged to visit our office\nfor a free portfolio review.\n(B) The series is designed to help you\nmake informed financial decisions.\n(C) Please fill out the paperwork before\nyour appointment.\n(D) Your responses will help us serve you\nbetter in the future.",
+      "options": [
+        "(A) You are encouraged to visit our office\nfor a free portfolio review.",
+        "(B) The series is designed to help you\nmake informed financial decisions.",
+        "(C) Please fill out the paperwork before\nyour appointment.",
+        "(D) Your responses will help us serve you\nbetter in the future."
+      ]
+    },
+    {
+      "id": 141,
+      "text": "(A) regional\n(B) expensive\n(C) supplemental\n(D) playful",
+      "options": [
+        "(A) regional",
+        "(B) expensive",
+        "(C) supplemental",
+        "(D) playful"
+      ]
+    },
+    {
+      "id": 142,
+      "text": "(A) consulting\n(B) prescribing\n(C) listing\n(D) following",
+      "options": [
+        "(A) consulting",
+        "(B) prescribing",
+        "(C) listing",
+        "(D) following"
+      ]
+    }
+  ]
+}

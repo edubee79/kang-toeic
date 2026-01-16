@@ -1,0 +1,614 @@
+[
+  {
+    "day": 24,
+    "no": 69,
+    "word": "view",
+    "meaning": "견해, ~이라고 여기다",
+    "targetScore": 800,
+    "exampleEn": "My view is that we should proceed with the merger.",
+    "exampleKo": "제 견해는 우리가 합병을 진행해야 한다는 것입니다."
+  },
+  {
+    "day": 24,
+    "no": 70,
+    "word": "arm in arm",
+    "meaning": "팔짱을 끼고, 제휴하여",
+    "targetScore": 800,
+    "exampleEn": "The two companies worked arm in arm to develop the product.",
+    "exampleKo": "두 회사는 제품을 개발하기 위해 제휴하여 일했습니다."
+  },
+  {
+    "day": 24,
+    "no": 71,
+    "word": "experienced employee",
+    "meaning": "경력이 있는 직원",
+    "targetScore": 800,
+    "exampleEn": "We prefer to hire experienced employees for this role.",
+    "exampleKo": "우리는 이 직무에 경력직 직원을 고용하는 것을 선호합니다."
+  },
+  {
+    "day": 24,
+    "no": 72,
+    "word": "face away from",
+    "meaning": "~으로부터 고개를 돌리다",
+    "targetScore": 800,
+    "exampleEn": "Please arrange the seats to face away from the window.",
+    "exampleKo": "좌석이 창문을 등지도록(창문으로부터 고개를 돌리도록) 배치해 주십시오."
+  },
+  {
+    "day": 24,
+    "no": 73,
+    "word": "fill in for",
+    "meaning": "~를 대신하다, ~의 일을 대신봐주다",
+    "targetScore": 800,
+    "exampleEn": "I will fill in for him while he is on vacation.",
+    "exampleKo": "그가 휴가 중인 동안 제가 그를 대신할 것입니다."
+  },
+  {
+    "day": 24,
+    "no": 74,
+    "word": "get a promotion",
+    "meaning": "승진하다",
+    "targetScore": 800,
+    "exampleEn": "She got a promotion to senior manager last week.",
+    "exampleKo": "그녀는 지난주에 수석 매니저로 승진했습니다."
+  },
+  {
+    "day": 24,
+    "no": 75,
+    "word": "give A an advance",
+    "meaning": "A에게 가불해주다",
+    "targetScore": 800,
+    "exampleEn": "The company gave him an advance on his salary.",
+    "exampleKo": "회사는 그에게 급여를 가불해 주었습니다."
+  },
+  {
+    "day": 24,
+    "no": 76,
+    "word": "kneel",
+    "meaning": "무릎을 꿇다",
+    "targetScore": 800,
+    "exampleEn": "He knelt down to inspect the damage.",
+    "exampleKo": "그는 손상을 검사하기 위해 무릎을 꿇었습니다."
+  },
+  {
+    "day": 24,
+    "no": 77,
+    "word": "language acquisition",
+    "meaning": "언어습득",
+    "targetScore": 800,
+    "exampleEn": "Early childhood is the best time for language acquisition.",
+    "exampleKo": "유아기는 언어 습득을 위한 가장 좋은 시기입니다."
+  },
+  {
+    "day": 24,
+    "no": 78,
+    "word": "move over one seat",
+    "meaning": "자리를 한 칸 옮기다",
+    "targetScore": 800,
+    "exampleEn": "Could you move over one seat so we can sit together?",
+    "exampleKo": "우리가 같이 앉을 수 있게 자리를 한 칸 옮겨 주시겠습니까?"
+  },
+  {
+    "day": 24,
+    "no": 79,
+    "word": "move up",
+    "meaning": "승진하다",
+    "targetScore": 800,
+    "exampleEn": "He moved up the corporate ladder very quickly.",
+    "exampleKo": "그는 기업의 계층 사다리를 매우 빠르게 승진해 올라갔습니다."
+  },
+  {
+    "day": 24,
+    "no": 80,
+    "word": "newly arrived",
+    "meaning": "새로 부임한",
+    "targetScore": 800,
+    "exampleEn": "The newly arrived director implemented strict rules.",
+    "exampleKo": "새로 부임한 이사는 엄격한 규칙을 시행했습니다."
+  },
+  {
+    "day": 24,
+    "no": 81,
+    "word": "obviously qualified",
+    "meaning": "명백히 자격을 갖춘",
+    "targetScore": 800,
+    "exampleEn": "She is obviously qualified for the position.",
+    "exampleKo": "그녀는 명백히 그 직위에 자격이 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 82,
+    "word": "pavilion",
+    "meaning": "전시관",
+    "targetScore": 800,
+    "exampleEn": "Our company has a booth in the main pavilion.",
+    "exampleKo": "우리 회사는 메인 전시관에 부스를 가지고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 83,
+    "word": "personnel management",
+    "meaning": "인사관리",
+    "targetScore": 800,
+    "exampleEn": "Personnel management is a key function of HR.",
+    "exampleKo": "인사 관리는 인사팀의 핵심 기능입니다."
+  },
+  {
+    "day": 24,
+    "no": 84,
+    "word": "rear",
+    "meaning": "뒤",
+    "targetScore": 800,
+    "exampleEn": "The delivery entrance is at the rear of the building.",
+    "exampleKo": "배송 출입구는 건물 뒤쪽에 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 85,
+    "word": "regional director",
+    "meaning": "지사장",
+    "targetScore": 800,
+    "exampleEn": "The regional director visits the branch quarterly.",
+    "exampleKo": "지사장은 분기별로 지점을 방문합니다."
+  },
+  {
+    "day": 24,
+    "no": 86,
+    "word": "reposition",
+    "meaning": "~의 위치를 바꾸다",
+    "targetScore": 800,
+    "exampleEn": "We need to reposition our brand in the market.",
+    "exampleKo": "우리는 시장에서 우리 브랜드의 위치를 바꿀 필요가 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 87,
+    "word": "retiree",
+    "meaning": "퇴직자",
+    "targetScore": 800,
+    "exampleEn": "Retirees are eligible for a company pension.",
+    "exampleKo": "퇴직자들은 회사 연금을 받을 자격이 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 88,
+    "word": "retirement",
+    "meaning": "은퇴, 퇴직",
+    "targetScore": 800,
+    "exampleEn": "He is saving money for his retirement.",
+    "exampleKo": "그는 은퇴를 위해 돈을 저축하고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 89,
+    "word": "senior executive",
+    "meaning": "고위간부",
+    "targetScore": 800,
+    "exampleEn": "Senior executives met to discuss the strategy.",
+    "exampleKo": "고위 간부들이 전략을 논의하기 위해 만났습니다."
+  },
+  {
+    "day": 24,
+    "no": 90,
+    "word": "spare key",
+    "meaning": "여분의 열쇠",
+    "targetScore": 800,
+    "exampleEn": "I keep a spare key in the manager's office.",
+    "exampleKo": "저는 매니저 사무실에 여분의 열쇠를 보관합니다."
+  },
+  {
+    "day": 24,
+    "no": 91,
+    "word": "take early retirement",
+    "meaning": "조기 퇴직하다",
+    "targetScore": 800,
+    "exampleEn": "Many employees accepted the offer to take early retirement.",
+    "exampleKo": "많은 직원들이 조기 퇴직 제안을 수락했습니다."
+  },
+  {
+    "day": 24,
+    "no": 92,
+    "word": "take note",
+    "meaning": "주목하다",
+    "targetScore": 800,
+    "exampleEn": "Please take note of the changes in the schedule.",
+    "exampleKo": "일정 변경 사항에 주목해 주십시오."
+  },
+  {
+    "day": 24,
+    "no": 93,
+    "word": "take one's place",
+    "meaning": "~의 자리를 차지하다",
+    "targetScore": 800,
+    "exampleEn": "He will take his father's place as CEO.",
+    "exampleKo": "그는 아버지의 자리를 대신하여 CEO가 될 것입니다."
+  },
+  {
+    "day": 24,
+    "no": 94,
+    "word": "take over",
+    "meaning": "인수하다",
+    "targetScore": 800,
+    "exampleEn": "The corporation plans to take over a smaller rival.",
+    "exampleKo": "그 기업은 더 작은 경쟁사를 인수할 계획입니다."
+  },
+  {
+    "day": 24,
+    "no": 95,
+    "word": "achiever",
+    "meaning": "크게 성공한 사람",
+    "targetScore": 800,
+    "exampleEn": "He is a high achiever in the sales department.",
+    "exampleKo": "그는 영업부에서 크게 성공한 사람(높은 성과자)입니다."
+  },
+  {
+    "day": 24,
+    "no": 96,
+    "word": "admired",
+    "meaning": "존경받는",
+    "targetScore": 800,
+    "exampleEn": "She is an admired leader in the industry.",
+    "exampleKo": "그녀는 업계에서 존경받는 리더입니다."
+  },
+  {
+    "day": 24,
+    "no": 97,
+    "word": "as a result of",
+    "meaning": "~의 결과로서",
+    "targetScore": 800,
+    "exampleEn": "Profits increased as a result of the marketing campaign.",
+    "exampleKo": "마케팅 캠페인의 결과로서 수익이 증가했습니다."
+  },
+  {
+    "day": 24,
+    "no": 98,
+    "word": "elect",
+    "meaning": "선출하다",
+    "targetScore": 800,
+    "exampleEn": "The board member elected a new chairperson.",
+    "exampleKo": "이사들은 새로운 의장을 선출했습니다."
+  },
+  {
+    "day": 24,
+    "no": 99,
+    "word": "incompetent",
+    "meaning": "무능한",
+    "targetScore": 800,
+    "exampleEn": "Incompetent employees can damage the company's reputation.",
+    "exampleKo": "무능한 직원들은 회사의 평판을 해칠 수 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 100,
+    "word": "knowledgeable",
+    "meaning": "아는 것이 많은",
+    "targetScore": 800,
+    "exampleEn": "He is very knowledgeable about international tax laws.",
+    "exampleKo": "그는 국제 세법에 대해 아는 것이 매우 많습니다."
+  },
+  {
+    "day": 24,
+    "no": 101,
+    "word": "namely",
+    "meaning": "즉, 다시 말해",
+    "targetScore": 800,
+    "exampleEn": "Two countries, namely France and Germany, signed the treaty.",
+    "exampleKo": "두 나라, 즉 프랑스와 독일이 조약에 서명했습니다."
+  },
+  {
+    "day": 24,
+    "no": 102,
+    "word": "nearby",
+    "meaning": "인근의",
+    "targetScore": 800,
+    "exampleEn": "There is a post office located nearby.",
+    "exampleKo": "인근에 우체국이 위치해 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 103,
+    "word": "nominate",
+    "meaning": "지명하다, 추천하다",
+    "targetScore": 800,
+    "exampleEn": "I would like to nominate Ms. Jones for the award.",
+    "exampleKo": "저는 존스 씨를 수상 후보로 지명하고 싶습니다."
+  },
+  {
+    "day": 24,
+    "no": 104,
+    "word": "promotion",
+    "meaning": "승진",
+    "targetScore": 800,
+    "exampleEn": "Congratulations on your promotion to vice president.",
+    "exampleKo": "부사장 승진을 축하합니다."
+  },
+  {
+    "day": 24,
+    "no": 105,
+    "word": "put in for",
+    "meaning": "~을 신청하다",
+    "targetScore": 800,
+    "exampleEn": "He put in for a transfer to the New York office.",
+    "exampleKo": "그는 뉴욕 사무소로의 전근을 신청했습니다."
+  },
+  {
+    "day": 24,
+    "no": 106,
+    "word": "recommendable",
+    "meaning": "추천할 수 있는",
+    "targetScore": 800,
+    "exampleEn": "It is recommendable to book your flight in advance.",
+    "exampleKo": "항공편을 미리 예약하는 것이 추천할 만합니다."
+  },
+  {
+    "day": 24,
+    "no": 107,
+    "word": "specially",
+    "meaning": "특별히",
+    "targetScore": 800,
+    "exampleEn": "This software is specially designed for architects.",
+    "exampleKo": "이 소프트웨어는 특별히 건축가들을 위해 설계되었습니다."
+  },
+  {
+    "day": 24,
+    "no": 108,
+    "word": "stand in for",
+    "meaning": "~의 대리를 맡다, ~를 대신하다",
+    "targetScore": 800,
+    "exampleEn": "Who will stand in for the manager while she is away?",
+    "exampleKo": "매니저가 부재중인 동안 누가 대리를 맡습니까?"
+  },
+  {
+    "day": 24,
+    "no": 109,
+    "word": "state",
+    "meaning": "상태, 진술하다",
+    "targetScore": 800,
+    "exampleEn": "Please state your name and position for the record.",
+    "exampleKo": "기록을 위해 당신의 이름과 직위를 진술해 주십시오."
+  },
+  {
+    "day": 24,
+    "no": 110,
+    "word": "tech-savvy",
+    "meaning": "최신 기술을 잘 아는",
+    "targetScore": 800,
+    "exampleEn": "We need tech-savvy staff for the digital transformation.",
+    "exampleKo": "우리는 디지털 전환을 위해 최신 기술을 잘 아는 직원이 필요합니다."
+  },
+  {
+    "day": 24,
+    "no": 111,
+    "word": "undoubtedly",
+    "meaning": "의심할 여지 없이, 틀림없이",
+    "targetScore": 800,
+    "exampleEn": "This is undoubtedly the best solution to the problem.",
+    "exampleKo": "이것이 틀림없이 그 문제에 대한 최고의 해결책입니다."
+  },
+  {
+    "day": 24,
+    "no": 112,
+    "word": "aspire to",
+    "meaning": "~을 갈망하다",
+    "targetScore": 800,
+    "exampleEn": "He aspires to become a CEO one day.",
+    "exampleKo": "그는 언젠가 CEO가 되기를 갈망합니다."
+  },
+  {
+    "day": 24,
+    "no": 113,
+    "word": "dismissal",
+    "meaning": "해고",
+    "targetScore": 800,
+    "exampleEn": "Unfair dismissal is a violation of labor laws.",
+    "exampleKo": "부당 해고는 노동법 위반입니다."
+  },
+  {
+    "day": 24,
+    "no": 114,
+    "word": "empower",
+    "meaning": "~에게 권한을 부여하다",
+    "targetScore": 800,
+    "exampleEn": "We empower employees to make their own decisions.",
+    "exampleKo": "우리는 직원들에게 스스로 결정을 내릴 권한을 부여합니다."
+  },
+  {
+    "day": 24,
+    "no": 115,
+    "word": "go forward",
+    "meaning": "앞으로 나아가다",
+    "targetScore": 800,
+    "exampleEn": "We are ready to go forward with the expansion plan.",
+    "exampleKo": "우리는 확장 계획을 앞으로 추진할(나아갈) 준비가 되었습니다."
+  },
+  {
+    "day": 24,
+    "no": 116,
+    "word": "heighten",
+    "meaning": "높이다",
+    "targetScore": 800,
+    "exampleEn": "The news heightened our concerns about the economy.",
+    "exampleKo": "그 뉴스는 경제에 대한 우리의 우려를 높였습니다."
+  },
+  {
+    "day": 24,
+    "no": 117,
+    "word": "immigrant",
+    "meaning": "이주자",
+    "targetScore": 800,
+    "exampleEn": "The company hires skilled immigrants for technical roles.",
+    "exampleKo": "그 회사는 기술직에 숙련된 이민자들을 고용합니다."
+  },
+  {
+    "day": 24,
+    "no": 118,
+    "word": "initiative",
+    "meaning": "계획, 진취성",
+    "targetScore": 800,
+    "exampleEn": "She showed great initiative in solving the customer's problem.",
+    "exampleKo": "그녀는 고객의 문제를 해결하는 데 있어 큰 진취성을 보여주었습니다."
+  },
+  {
+    "day": 24,
+    "no": 119,
+    "word": "inter department",
+    "meaning": "부서간의",
+    "targetScore": 800,
+    "exampleEn": "Inter-department communication is crucial for success.",
+    "exampleKo": "부서 간의 의사소통은 성공에 결정적입니다."
+  },
+  {
+    "day": 24,
+    "no": 120,
+    "word": "job cutback",
+    "meaning": "인력감축",
+    "targetScore": 800,
+    "exampleEn": "The recession led to job cutbacks across the industry.",
+    "exampleKo": "경기 침체는 업계 전반에 걸친 인력 감축으로 이어졌습니다."
+  },
+  {
+    "day": 24,
+    "no": 121,
+    "word": "lay off",
+    "meaning": "해고하다",
+    "targetScore": 800,
+    "exampleEn": "The factory had to lay off workers due to low demand.",
+    "exampleKo": "공장은 수요 저조로 인해 노동자들을 해고해야 했습니다."
+  },
+  {
+    "day": 24,
+    "no": 122,
+    "word": "named representative",
+    "meaning": "지명된 대표자",
+    "targetScore": 800,
+    "exampleEn": "He is the named representative of the negotiating team.",
+    "exampleKo": "그는 협상팀의 지명된 대표자입니다."
+  },
+  {
+    "day": 24,
+    "no": 123,
+    "word": "new appointment",
+    "meaning": "새로 임명함, 신임",
+    "targetScore": 800,
+    "exampleEn": "The company announced a new appointment to the board.",
+    "exampleKo": "회사는 이사회에 새로운 임명을 발표했습니다."
+  },
+  {
+    "day": 24,
+    "no": 124,
+    "word": "official title",
+    "meaning": "공식 직함",
+    "targetScore": 800,
+    "exampleEn": "What is your official title in the organization?",
+    "exampleKo": "조직 내에서 당신의 공식 직함은 무엇입니까?"
+  },
+  {
+    "day": 24,
+    "no": 125,
+    "word": "on the recommendation of",
+    "meaning": "~의 추천으로",
+    "targetScore": 800,
+    "exampleEn": "I applied for the job on the recommendation of my professor.",
+    "exampleKo": "저는 교수의 추천으로 그 일자리에 지원했습니다."
+  },
+  {
+    "day": 24,
+    "no": 126,
+    "word": "pass up",
+    "meaning": "(기회 등을) 거절하다, 포기하다",
+    "targetScore": 800,
+    "exampleEn": "I couldn't pass up such a good opportunity.",
+    "exampleKo": "저는 그렇게 좋은 기회를 거절할(포기할) 수 없었습니다."
+  },
+  {
+    "day": 24,
+    "no": 127,
+    "word": "preach",
+    "meaning": "설교하다, 충고하다",
+    "targetScore": 800,
+    "exampleEn": "He always preaches about the importance of efficiency.",
+    "exampleKo": "그는 항상 효율성의 중요성에 대해 설교합니다."
+  },
+  {
+    "day": 24,
+    "no": 128,
+    "word": "predecessor",
+    "meaning": "전임자",
+    "targetScore": 800,
+    "exampleEn": "He took over the role from his predecessor last month.",
+    "exampleKo": "그는 지난달에 전임자로부터 역할을 인계받았습니다."
+  },
+  {
+    "day": 24,
+    "no": 129,
+    "word": "provincial",
+    "meaning": "지방의",
+    "targetScore": 800,
+    "exampleEn": "The provincial government approved the budget.",
+    "exampleKo": "지방 정부는 예산을 승인했습니다."
+  },
+  {
+    "day": 24,
+    "no": 130,
+    "word": "push back",
+    "meaning": "연기하다",
+    "targetScore": 800,
+    "exampleEn": "Can we push back the meeting to 3 PM?",
+    "exampleKo": "회의를 오후 3시로 연기할 수 있습니까?"
+  },
+  {
+    "day": 24,
+    "no": 131,
+    "word": "ritual",
+    "meaning": "(정규)행사, 반드시 지키는 일",
+    "targetScore": 800,
+    "exampleEn": "Checking emails is a morning ritual for many employees.",
+    "exampleKo": "이메일 확인은 많은 직원들에게 아침의 의례적인 일(행사)입니다."
+  },
+  {
+    "day": 24,
+    "no": 132,
+    "word": "run for",
+    "meaning": "~에 입후보하다",
+    "targetScore": 800,
+    "exampleEn": "She plans to run for office in the next election.",
+    "exampleKo": "그녀는 다음 선거에서 공직에 입후보할 계획입니다."
+  },
+  {
+    "day": 24,
+    "no": 133,
+    "word": "speck",
+    "meaning": "작은 얼룩",
+    "targetScore": 800,
+    "exampleEn": "There is not a speck of dust in the laboratory.",
+    "exampleKo": "실험실에는 먼지 한 점 없습니다."
+  },
+  {
+    "day": 24,
+    "no": 134,
+    "word": "supervisory",
+    "meaning": "감독의, 관리의",
+    "targetScore": 800,
+    "exampleEn": "She holds a supervisory position in the department.",
+    "exampleKo": "그녀는 부서에서 관리직(감독 직위)을 맡고 있습니다."
+  },
+  {
+    "day": 24,
+    "no": 135,
+    "word": "turn away",
+    "meaning": "내쫓다",
+    "targetScore": 800,
+    "exampleEn": "The restaurant had to turn away customers because it was full.",
+    "exampleKo": "식당은 만석이라 손님들을 돌려보내야 했습니다."
+  },
+  {
+    "day": 24,
+    "no": 136,
+    "word": "underestimate",
+    "meaning": "과소평가하다",
+    "targetScore": 800,
+    "exampleEn": "Do not underestimate the competition.",
+    "exampleKo": "경쟁사를 과소평가하지 마십시오."
+  }
+]

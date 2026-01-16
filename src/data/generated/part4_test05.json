@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 5,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "What is most likely being advertised?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A convention center"
+          },
+          {
+            "label": "B",
+            "text": "A restaurant"
+          },
+          {
+            "label": "C",
+            "text": "A supermarket"
+          },
+          {
+            "label": "D",
+            "text": "A shipping company"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q72",
+        "text": "What is the business famous for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Its prices"
+          },
+          {
+            "label": "B",
+            "text": "Its location"
+          },
+          {
+            "label": "C",
+            "text": "Its history"
+          },
+          {
+            "label": "D",
+            "text": "Its staff"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q73",
+        "text": "What does the speaker say is on a Web site?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some catering options"
+          },
+          {
+            "label": "B",
+            "text": "Some driving directions"
+          },
+          {
+            "label": "C",
+            "text": "Current discounts"
+          },
+          {
+            "label": "D",
+            "text": "Business hours"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Are you looking for a location to host your next company event? Well, look no further than Mirelli's. 71 With our delicious food and private dining rooms, Mirelli's is the perfect place for everything from small to large business gatherings. But that's not the only reason to choose Mirelli's. 72 We're famous for our friendly waitstaff. They are always ready to help! Planning to hold an event with food at your office? No problem—we'll bring the food to you. 73 You can view our catering packages on our Web site."
+  },
+  {
+    "testId": 5,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Product developers"
+          },
+          {
+            "label": "B",
+            "text": "Investment bankers"
+          },
+          {
+            "label": "C",
+            "text": "Book publishers"
+          },
+          {
+            "label": "D",
+            "text": "Building contractors"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q75",
+        "text": "What does the speaker say is favorable about a contract?",
+        "options": [
+          {
+            "label": "A",
+            "text": "There is 24-hour service call availability."
+          },
+          {
+            "label": "B",
+            "text": "There is an extended warranty."
+          },
+          {
+            "label": "C",
+            "text": "There is an immediate payment."
+          },
+          {
+            "label": "D",
+            "text": "There is a low interest rate."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q76",
+        "text": "What does the speaker imply when he says, \"I'll send you the document later\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "He is having computer problems."
+          },
+          {
+            "label": "B",
+            "text": "He wants the listeners' opinions."
+          },
+          {
+            "label": "C",
+            "text": "He has missed a deadline."
+          },
+          {
+            "label": "D",
+            "text": "He is almost finished with some work."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "74 I have an update about the video game you've been working hard to develop. As you know, we'll be partnering with a video game publishing company to get our product on the market. 75 I just received their initial contract. And I'm pleased to say, the terms they are proposing are quite favorable—we're promised a payment as soon as we sign on. 76 Our legal team wants to make sure the programmers are happy before they negotiate some other provisions in the contract. I'll send you the document later."
+  },
+  {
+    "testId": 5,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "Where is the tour taking place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an art gallery"
+          },
+          {
+            "label": "B",
+            "text": "At a construction site"
+          },
+          {
+            "label": "C",
+            "text": "At a solar-panel factory"
+          },
+          {
+            "label": "D",
+            "text": "At a car-part warehouse"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q78",
+        "text": "What does the speaker remind the listeners to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Wear protective hats"
+          },
+          {
+            "label": "B",
+            "text": "Follow posted signs"
+          },
+          {
+            "label": "C",
+            "text": "Stay together as a group"
+          },
+          {
+            "label": "D",
+            "text": "Store personal belongings"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q79",
+        "text": "What will the listeners see first on the tour?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A map of the grounds"
+          },
+          {
+            "label": "B",
+            "text": "An informational video"
+          },
+          {
+            "label": "C",
+            "text": "Some product models"
+          },
+          {
+            "label": "D",
+            "text": "Some historic photographs"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "77 Thank you for joining me on this tour of our solar panel manufacturing plant. Here at Nature's Solar Energy, Incorporated, we believe our customers should have the chance to see the production of the solar panels that power their homes and businesses. Before we begin, I want to remind you about our main safety rule. 78 Make sure you wear the hard hats we provided and keep them on at all times. OK, 79 our first stop will be in the showroom. I'll show you the latest models of our solar panels so you understand exactly how they work."
+  },
+  {
+    "testId": 5,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "What is the focus of the episode?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Improving training programs"
+          },
+          {
+            "label": "B",
+            "text": "Changing careers"
+          },
+          {
+            "label": "C",
+            "text": "Designing Web sites"
+          },
+          {
+            "label": "D",
+            "text": "Increasing sales"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q81",
+        "text": "What does the speaker say is important?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Complying with industry regulations"
+          },
+          {
+            "label": "B",
+            "text": "Emphasizing transferable skills"
+          },
+          {
+            "label": "C",
+            "text": "Offering promotional discounts"
+          },
+          {
+            "label": "D",
+            "text": "Attending networking events"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q82",
+        "text": "Who is So-Hee Chung?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A company executive"
+          },
+          {
+            "label": "B",
+            "text": "A government official"
+          },
+          {
+            "label": "C",
+            "text": "A news reporter"
+          },
+          {
+            "label": "D",
+            "text": "A financial analyst"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Thanks for tuning in to Business World! 80 On today's episode, we'll be taking a deep dive into the topic of making a career change. Transitioning to a new industry can be challenging. 81 It's important to highlight any transferable skills you have to offer. What abilities do you currently possess that could be useful in a new role, and how can you promote them on professional networking sites? To help us explore this, 82 So-Hee Chung, chief executive officer of the popular job search app, Zantage, is joining us in the studio today. Welcome, So-Hee."
+  },
+  {
+    "testId": 5,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "What is the message mainly about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Scheduling auditions"
+          },
+          {
+            "label": "B",
+            "text": "Purchasing tickets"
+          },
+          {
+            "label": "C",
+            "text": "Designing a set"
+          },
+          {
+            "label": "D",
+            "text": "Revising a script"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q84",
+        "text": "Why does the speaker say, \"we have a large team\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To make a complaint"
+          },
+          {
+            "label": "B",
+            "text": "To provide reassurance"
+          },
+          {
+            "label": "C",
+            "text": "To express surprise"
+          },
+          {
+            "label": "D",
+            "text": "To refuse an offer"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q85",
+        "text": "Why is the speaker unable to meet tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Her car needs repairs."
+          },
+          {
+            "label": "B",
+            "text": "She is moving to a new apartment."
+          },
+          {
+            "label": "C",
+            "text": "She is going hiking."
+          },
+          {
+            "label": "D",
+            "text": "She is visiting family."
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "Hello, 83 this is Adriana Ortiz... set designer from the Summer Theater. We met last week. 83 Since you're directing the new play we're featuring, I'd like to get together to discuss some ideas I have. I've read the script and started sketching possible backgrounds we could use. 84 You mentioned being concerned about the short amount of time we have for creating a set. Well, we have a large team. And there are lots of props in storage. 85 I'm going out of town to see some relatives tomorrow, but if you're free to meet this weekend, my schedule's flexible then."
+  },
+  {
+    "testId": 5,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Board members"
+          },
+          {
+            "label": "B",
+            "text": "Government officials"
+          },
+          {
+            "label": "C",
+            "text": "Clients"
+          },
+          {
+            "label": "D",
+            "text": "Interns"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q87",
+        "text": "What did the listeners receive?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An event ticket"
+          },
+          {
+            "label": "B",
+            "text": "An information packet"
+          },
+          {
+            "label": "C",
+            "text": "A project invoice"
+          },
+          {
+            "label": "D",
+            "text": "An annual report"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q88",
+        "text": "According to the speaker, what will the listeners do in an hour?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Have lunch"
+          },
+          {
+            "label": "B",
+            "text": "Join a conference call"
+          },
+          {
+            "label": "C",
+            "text": "Get security badges"
+          },
+          {
+            "label": "D",
+            "text": "Take a building tour"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Welcome to Cornerway Industries. 86 I'm Sunita Yadav, Coordinator of the Internship Program. I'm sure you'll find your summer experience here rewarding! Before we begin the first training session, we have to take care of some administrative matters. 87 As you entered the room, you received a packet of documents. It includes information about logging into your e-mail and submitting time sheets. I'll briefly go over those procedures now. Then, 88 in an hour, you'll head to the security office to get identification badges. You'll need those to enter and exit the building."
+  },
+  {
+    "testId": 5,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What did the speaker do last month?",
+        "options": [
+          {
+            "label": "A",
+            "text": "She relocated to another building."
+          },
+          {
+            "label": "B",
+            "text": "She hired additional employees."
+          },
+          {
+            "label": "C",
+            "text": "She organized a luncheon."
+          },
+          {
+            "label": "D",
+            "text": "She attended a conference."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q90",
+        "text": "What do some customers have trouble locating?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Delivery schedules"
+          },
+          {
+            "label": "B",
+            "text": "Password requirements"
+          },
+          {
+            "label": "C",
+            "text": "Contact information"
+          },
+          {
+            "label": "D",
+            "text": "Account archives"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q91",
+        "text": "What will the speaker do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Give a demonstration"
+          },
+          {
+            "label": "B",
+            "text": "Introduce a guest"
+          },
+          {
+            "label": "C",
+            "text": "Distribute some documents"
+          },
+          {
+            "label": "D",
+            "text": "Hand out some awards"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "89 Last month, I went to a conference that allowed me the opportunity to meet other small business owners from the region and have discussions with them. A number of helpful ideas were exchanged. For example, 90 several speakers pointed out that it can be difficult for customers to navigate corporate Web sites, especially when looking for information like a phone number they can call when they need service. I've asked the IT department to redesign our Web site to make it more navigable. 91 If you'll look up here, I'll demonstrate the new layout that'll go live in a few weeks."
+  },
+  {
+    "testId": 5,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "Who is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A real-estate developer"
+          },
+          {
+            "label": "B",
+            "text": "A city official"
+          },
+          {
+            "label": "C",
+            "text": "A history professor"
+          },
+          {
+            "label": "D",
+            "text": "A television reporter"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q93",
+        "text": "What happened last year in Madison?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An international hotel convention was held."
+          },
+          {
+            "label": "B",
+            "text": "A national sports event was hosted."
+          },
+          {
+            "label": "C",
+            "text": "A documentary movie was filmed."
+          },
+          {
+            "label": "D",
+            "text": "A historic landmark was named."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q94",
+        "text": "Why does the speaker say, \"Those roads weren't designed for traffic\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To make a complaint"
+          },
+          {
+            "label": "B",
+            "text": "To show surprise"
+          },
+          {
+            "label": "C",
+            "text": "To express concern"
+          },
+          {
+            "label": "D",
+            "text": "To offer an apology"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Thank you all for coming to this town hall meeting. 92 I'm the mayor of Madison, and the first topic on our agenda is tourism. 93 We're all very excited that the documentary about our historic town center, which was filmed here last year, is a box office success! My office has already received hundreds of inquiries from travel agencies around the world asking about hotel capacity and tour buses—good news for local businesses. However, 94 some people are wondering about the damage that the influx of tourists on their streets may cause. And they do have a point. Those roads weren't designed for traffic."
+  },
+  {
+    "testId": 5,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "According to the speaker, what will happen this Friday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A delivery will arrive."
+          },
+          {
+            "label": "B",
+            "text": "A holiday sale will begin."
+          },
+          {
+            "label": "C",
+            "text": "An employee will retire."
+          },
+          {
+            "label": "D",
+            "text": "An author will visit."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Which aisle does the speaker direct the listeners to?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Aisle 1"
+          },
+          {
+            "label": "B",
+            "text": "Aisle 2"
+          },
+          {
+            "label": "C",
+            "text": "Aisle 3"
+          },
+          {
+            "label": "D",
+            "text": "Aisle 4"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q97",
+        "text": "What can the listeners win?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A gift card"
+          },
+          {
+            "label": "B",
+            "text": "A book"
+          },
+          {
+            "label": "C",
+            "text": "A free membership"
+          },
+          {
+            "label": "D",
+            "text": "A calendar"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Attention, book lovers! The Regal Reader bookstore is excited to announce the beginning of its summer author series. 95 Join us this Friday when renowned author Karima Samir will visit the store to read from her books, sign copies, and chat with customers. 96 Stop by our history aisle to find her latest book about fascinating North Africa. And 97 make sure you enter our annual drawing while you're here to win a five-dollar gift card for our café! Use it to purchase any of our freshly brewed coffees or homemade pastries."
+  },
+  {
+    "testId": 5,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Where does the speaker most likely work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a boat dock"
+          },
+          {
+            "label": "B",
+            "text": "At an auto repair shop"
+          },
+          {
+            "label": "C",
+            "text": "At a warehouse"
+          },
+          {
+            "label": "D",
+            "text": "At a job training school"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q99",
+        "text": "What will the speaker's department be doing at the end of the month?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Fixing some equipment"
+          },
+          {
+            "label": "B",
+            "text": "Attending a trade show"
+          },
+          {
+            "label": "C",
+            "text": "Interviewing job candidates"
+          },
+          {
+            "label": "D",
+            "text": "Preparing a large order"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q100",
+        "text": "Look at the graphic. Which session does the man request to attend?",
+        "options": [
+          {
+            "label": "A",
+            "text": "January 14"
+          },
+          {
+            "label": "B",
+            "text": "January 23"
+          },
+          {
+            "label": "C",
+            "text": "January 26"
+          },
+          {
+            "label": "D",
+            "text": "January 31"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Hello Ms. Kapoor. My name's Mark Giordano. 98 I'm a forklift operator in the Shipping Department. I'm calling because I'm supposed to complete the training session on refueling equipment, but I need to change my date. I signed up for the session on January twenty-third, but 99 our department just received notice that a large order will ship out at the end of the month. I'll have a lot of work to do earlier in the day all month, so 100 I can only attend the session that starts at three P.M. Could you reschedule me? Please let me know."
+  }
+]

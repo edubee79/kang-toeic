@@ -1,0 +1,290 @@
+[
+    {
+        "day": 4,
+        "no": 137,
+        "word": "seamless",
+        "meaning": "아주 매끄러운, 끊김 없는",
+        "targetScore": 900,
+        "exampleEn": "The transition to the new system was seamless.",
+        "exampleKo": "새로운 시스템으로의 전환은 아주 매끄러웠습니다."
+    },
+    {
+        "day": 4,
+        "no": 138,
+        "word": "admit",
+        "meaning": "인정하다, 허가하다",
+        "targetScore": 900,
+        "exampleEn": "The club does not admit anyone under 18.",
+        "exampleKo": "그 클럽은 18세 미만의 입장을 허가하지 않습니다."
+    },
+    {
+        "day": 4,
+        "no": 139,
+        "word": "admission",
+        "meaning": "입장, 입학",
+        "targetScore": 900,
+        "exampleEn": "Admission to the museum is free.",
+        "exampleKo": "박물관 입장은 무료입니다."
+    },
+    {
+        "day": 4,
+        "no": 140,
+        "word": "admittedly",
+        "meaning": "인정하건대",
+        "targetScore": 900,
+        "exampleEn": "Admittedly, the plan has some flaws.",
+        "exampleKo": "인정하건대, 그 계획에는 몇 가지 결함이 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 141,
+        "word": "approve",
+        "meaning": "승인하다",
+        "targetScore": 900,
+        "exampleEn": "The committee approved the budget proposal.",
+        "exampleKo": "위원회는 예산 제안서를 승인했습니다."
+    },
+    {
+        "day": 4,
+        "no": 142,
+        "word": "approval",
+        "meaning": "승인",
+        "targetScore": 900,
+        "exampleEn": "We are waiting for final approval.",
+        "exampleKo": "우리는 최종 승인을 기다리고 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 143,
+        "word": "as opposed to",
+        "meaning": "~와는 대조적으로",
+        "targetScore": 900,
+        "exampleEn": "We prefer written reports as opposed to oral ones.",
+        "exampleKo": "우리는 구두 보고와는 대조적으로 서면 보고서를 선호합니다."
+    },
+    {
+        "day": 4,
+        "no": 144,
+        "word": "assure",
+        "meaning": "장담하다, 보장하다",
+        "targetScore": 900,
+        "exampleEn": "I can assure you that everything is fine.",
+        "exampleKo": "모든 것이 괜찮다고 장담할 수 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 145,
+        "word": "assurance",
+        "meaning": "보증, 확신",
+        "targetScore": 900,
+        "exampleEn": "He gave me his assurance that he would help.",
+        "exampleKo": "그는 나를 돕겠다는 확신을 주었습니다."
+    },
+    {
+        "day": 4,
+        "no": 146,
+        "word": "assuredly",
+        "meaning": "확실히",
+        "targetScore": 900,
+        "exampleEn": "This is assuredly the best option.",
+        "exampleKo": "이것은 확실히 최고의 선택입니다."
+    },
+    {
+        "day": 4,
+        "no": 147,
+        "word": "be likely to",
+        "meaning": "~할 가능성이 높다",
+        "targetScore": 900,
+        "exampleEn": "Prices are likely to rise next month.",
+        "exampleKo": "다음 달에 가격이 오를 가능성이 높습니다."
+    },
+    {
+        "day": 4,
+        "no": 148,
+        "word": "casual",
+        "meaning": "격식 없는, 우연한",
+        "targetScore": 900,
+        "exampleEn": "The dress code is casual.",
+        "exampleKo": "복장 규정은 캐주얼입니다."
+    },
+    {
+        "day": 4,
+        "no": 149,
+        "word": "casually",
+        "meaning": "약식으로, 우연히",
+        "targetScore": 900,
+        "exampleEn": "He was dressed casually in jeans.",
+        "exampleKo": "그는 청바지를 입고 약식으로 차려입었습니다."
+    },
+    {
+        "day": 4,
+        "no": 150,
+        "word": "come to an end",
+        "meaning": "끝나다",
+        "targetScore": 900,
+        "exampleEn": "The meeting came to an end at 5 PM.",
+        "exampleKo": "회의는 오후 5시에 끝났습니다."
+    },
+    {
+        "day": 4,
+        "no": 151,
+        "word": "countermand",
+        "meaning": "취소하다, 철회하다",
+        "targetScore": 900,
+        "exampleEn": "The general countermanded the order.",
+        "exampleKo": "장군은 그 명령을 철회했습니다."
+    },
+    {
+        "day": 4,
+        "no": 152,
+        "word": "hold up",
+        "meaning": "견디다, 지연시키다",
+        "targetScore": 900,
+        "exampleEn": "The roof held up well during the storm.",
+        "exampleKo": "지붕은 폭풍우 속에서도 잘 견뎠습니다."
+    },
+    {
+        "day": 4,
+        "no": 153,
+        "word": "identify",
+        "meaning": "확인하다, 식별하다",
+        "targetScore": 900,
+        "exampleEn": "Can you identify the suspect?",
+        "exampleKo": "용의자를 식별할 수 있습니까?"
+    },
+    {
+        "day": 4,
+        "no": 154,
+        "word": "identification",
+        "meaning": "신분 증명서",
+        "targetScore": 900,
+        "exampleEn": "Please show some photo identification.",
+        "exampleKo": "사진이 부착된 신분증을 보여주세요."
+    },
+    {
+        "day": 4,
+        "no": 155,
+        "word": "identity",
+        "meaning": "신원, 정체성",
+        "targetScore": 900,
+        "exampleEn": "The identity of the donor was kept secret.",
+        "exampleKo": "기부자의 신원은 비밀로 유지되었습니다."
+    },
+    {
+        "day": 4,
+        "no": 156,
+        "word": "inform",
+        "meaning": "알리다",
+        "targetScore": 900,
+        "exampleEn": "Please inform us of your decision.",
+        "exampleKo": "당신의 결정을 우리에게 알려주세요."
+    },
+    {
+        "day": 4,
+        "no": 157,
+        "word": "information",
+        "meaning": "정보",
+        "targetScore": 900,
+        "exampleEn": "For more information, visit our website.",
+        "exampleKo": "더 많은 정보를 원하시면 우리 웹사이트를 방문하세요."
+    },
+    {
+        "day": 4,
+        "no": 158,
+        "word": "informative",
+        "meaning": "유익한",
+        "targetScore": 900,
+        "exampleEn": "The lecture was very informative.",
+        "exampleKo": "그 강의는 매우 유익했습니다."
+    },
+    {
+        "day": 4,
+        "no": 159,
+        "word": "informed",
+        "meaning": "정보를 잘 아는",
+        "targetScore": 900,
+        "exampleEn": "You need to make an informed decision.",
+        "exampleKo": "당신은 정보에 입각한 결정을 내려야 합니다."
+    },
+    {
+        "day": 4,
+        "no": 160,
+        "word": "manner",
+        "meaning": "태도, 방식",
+        "targetScore": 900,
+        "exampleEn": "His manner was polite but distant.",
+        "exampleKo": "그의 태도는 예의 바르지만 거리감이 있었습니다."
+    },
+    {
+        "day": 4,
+        "no": 161,
+        "word": "on duty",
+        "meaning": "근무 중인",
+        "targetScore": 900,
+        "exampleEn": "Who is the doctor on duty tonight?",
+        "exampleKo": "오늘 밤 근무 중인 의사는 누구입니까?"
+    },
+    {
+        "day": 4,
+        "no": 162,
+        "word": "permission",
+        "meaning": "허가",
+        "targetScore": 900,
+        "exampleEn": "You need permission to park here.",
+        "exampleKo": "여기에 주차하려면 허가가 필요합니다."
+    },
+    {
+        "day": 4,
+        "no": 163,
+        "word": "permit",
+        "meaning": "허락하다; 허가증",
+        "targetScore": 900,
+        "exampleEn": "They do not permit photography in the museum.",
+        "exampleKo": "그들은 박물관 내 촬영을 허락하지 않습니다."
+    },
+    {
+        "day": 4,
+        "no": 164,
+        "word": "permissive",
+        "meaning": "관대한",
+        "targetScore": 900,
+        "exampleEn": "Some parents are too permissive.",
+        "exampleKo": "어떤 부모들은 너무 관대합니다."
+    },
+    {
+        "day": 4,
+        "no": 165,
+        "word": "reassure",
+        "meaning": "안심시키다",
+        "targetScore": 900,
+        "exampleEn": "He reassured me that the project was on track.",
+        "exampleKo": "그는 프로젝트가 순조롭게 진행되고 있다고 나를 안심시켰습니다."
+    },
+    {
+        "day": 4,
+        "no": 166,
+        "word": "rejection",
+        "meaning": "거절",
+        "targetScore": 900,
+        "exampleEn": "He received a rejection letter from the university.",
+        "exampleKo": "그는 대학으로부터 거절 편지를 받았습니다."
+    },
+    {
+        "day": 4,
+        "no": 167,
+        "word": "repetitive",
+        "meaning": "반복적인",
+        "targetScore": 900,
+        "exampleEn": "Factory work can be repetitive and boring.",
+        "exampleKo": "공장 일은 반복적이고 지루할 수 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 168,
+        "word": "stagnant",
+        "meaning": "침체된, 고여 있는",
+        "targetScore": 900,
+        "exampleEn": "The economy has remained stagnant for years.",
+        "exampleKo": "경제는 수년 동안 침체된 상태로 남아 있습니다."
+    }
+]

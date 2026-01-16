@@ -1,0 +1,69 @@
+ No                         Word                Meaning
+ 69            across the street                길을 가로질러
+ 70            around the corner 길모퉁이에, 임박한, 매우 가까이에 있는
+ 71         be closed to traffic                왕래를 금하다
+ 72        be held up in traffic              교통체증에 걸리다
+ 73                be lined with                 줄지어 있다
+ 74                    broadcast               방송하다, 방송
+ 75                       bypass                    우회로
+ 76                      carpool          승용차 함께 타기를 하다
+ 77         come to a standstill              멈추다, 정지하다
+ 78                     commuter                    통근자
+ 79             cross the street                 길을 건너다
+ 80               direct traffic               교통정리를 하다
+ 81             driver's license                 운전 면허증
+ 82                     driveway     차도, (집, 차고까지의) 진입로
+ 83            driving direction                   주행방향
+ 84         footrest(=footstool)                    발받침
+ 85                   get a ride               차를 얻어 타다
+ 86                     get lost                  길을 잃다
+ 87                       get to                ~에 도착하다
+ 88                give A a ride                A를 태워주다
+ 89             have a flat tire           타이어에 바람이 빠지다
+ 90                    headlight                    전조등
+ 91             land at the dock               부두에 정박하다
+ 92                         lane                     차선
+ 93        lean over the railing              난간 위로 기대다
+ 94         license plate number                  차량 번호
+ 95      lock the key in the car          열쇠를 차에 두고 잠그다
+ 96                  make a stop                   정지하다
+ 97              make a transfer         (차를) 갈아타다, 바꾸다
+ 98                        march                   행진하다
+ 99                      mileage                   주행거리
+100                   navigation                 항해, 운항
+101               one-way ticket                  편도 차표
+102               parking garage                     차고
+103                      pathway                    통행로
+104       push one's way through             ~을 뚫고 지나가다
+105                    ride away                   타고가다
+106                    road sign                   도로표지
+107 roadwork(=road construction)                  도로 공사
+108                     shortcut                    지름길
+109              stop at a light             신호등에서 정지하다
+110                stop for fuel               주유소에 들르다
+111          storage compartment                 짐 싣는 곳
+112                  street sign                 도로 표지판
+113                   toll price                    통행료
+114                  traffic jam                   교통정체
+115                 walk through              ~을 통과해 걷다
+116             walking distance          걸어서 갈 수 있는 거리
+117                      walkway                     통로
+118                   windshield                 바람막이 창
+119                     creation                     창조
+120                     motivate         동기를 부여하다, 자극하다
+121                       normal                 정상, 표준
+122                        still          조용한, 정지한, 여전히
+123               traffic signal                  교통 신호
+124                     valuable               소중한, 귀중한
+125                    volunteer                  자원봉사자
+126                at full speed                  전속력으로
+127               clear A from B             A를 B에서 치우다
+128                      collide                   충돌하다
+129                    congested      (사람·교통이) 붐비는, 혼잡한
+130                    encounter  (우연히) 만나다, (문제에) 부닥치다
+131                 move forward               앞으로 나아가다
+132          principal(=primary)    주요한, 주된, (단체의)장, 교장
+133        public transportation                   대중교통
+134                standing room                     입석
+135               steering wheel                     핸들
+136           traffic congestion                   교통체증

@@ -1,0 +1,6 @@
+Word,Korean,Part_of_Speech,Target_Score,Priority,Example_Sentence,Example_Translation,Synonyms,Antonyms,Related_Words,Frequency,Source,Notes
+accomplish,성취하다,verb,650,1,"The team accomplished all project goals ahead of schedule.","팀은 모든 프로젝트 목표를 일정보다 앞서 달성했다.","achieve, complete, fulfill","fail, abandon","accomplishment, accomplished",high,hackers_modified,예문 변형
+accurate,정확한,adjective,650,1,"Please ensure all data entries are accurate before submission.","제출 전에 모든 데이터 입력이 정확한지 확인하세요.","precise, exact, correct","inaccurate, wrong","accuracy, accurately",high,hackers_modified,예문 변형
+additional,추가의,adjective,650,1,"We need additional staff to handle the increased workload.","증가한 업무량을 처리하기 위해 추가 직원이 필요합니다.","extra, further, more","fewer, less","additionally, addition",high,hackers_modified,예문 변형
+adequate,충분한,adjective,650,2,"The budget is adequate for our current needs.","예산은 현재 우리의 필요에 충분합니다.","sufficient, enough","inadequate, insufficient","adequately, adequacy",medium,hackers_modified,예문 변형
+adjust,조정하다,verb,650,1,"Please adjust your schedule to attend the meeting.","회의에 참석하도록 일정을 조정해 주세요.","modify, adapt, alter","maintain, fix","adjustment, adjustable",high,hackers_modified,예문 변형

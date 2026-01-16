@@ -1,0 +1,254 @@
+[
+    {
+        "day": 10,
+        "no": 41,
+        "word": "bakery",
+        "meaning": "제과점, 빵집",
+        "targetScore": 650,
+        "exampleEn": "I bought this cake at the bakery.",
+        "exampleKo": "나는 이 케이크를 제과점에서 샀습니다."
+    },
+    {
+        "day": 10,
+        "no": 42,
+        "word": "cash",
+        "meaning": "현금",
+        "targetScore": 650,
+        "exampleEn": "Do you accept cash?",
+        "exampleKo": "현금 받으시나요?"
+    },
+    {
+        "day": 10,
+        "no": 43,
+        "word": "chef",
+        "meaning": "주방장, 요리사",
+        "targetScore": 650,
+        "exampleEn": "The chef prepared a special meal.",
+        "exampleKo": "주방장이 특별한 식사를 준비했습니다."
+    },
+    {
+        "day": 10,
+        "no": 44,
+        "word": "code",
+        "meaning": "암호, 규정",
+        "targetScore": 650,
+        "exampleEn": "Enter the access code.",
+        "exampleKo": "접속 코드를 입력하세요."
+    },
+    {
+        "day": 10,
+        "no": 45,
+        "word": "cook",
+        "meaning": "요리하다; 요리사",
+        "targetScore": 650,
+        "exampleEn": "He loves to cook.",
+        "exampleKo": "그는 요리하는 것을 좋아합니다."
+    },
+    {
+        "day": 10,
+        "no": 46,
+        "word": "discount",
+        "meaning": "할인",
+        "targetScore": 650,
+        "exampleEn": "Is there a student discount?",
+        "exampleKo": "학생 할인이 있나요?"
+    },
+    {
+        "day": 10,
+        "no": 47,
+        "word": "expiration date",
+        "meaning": "유통 기한",
+        "targetScore": 650,
+        "exampleEn": "Check the expiration date on the milk.",
+        "exampleKo": "우유의 유통 기한을 확인하세요."
+    },
+    {
+        "day": 10,
+        "no": 48,
+        "word": "flavor",
+        "meaning": "맛, 풍미",
+        "targetScore": 650,
+        "exampleEn": "This soup has a rich flavor.",
+        "exampleKo": "이 수프는 풍미가 진합니다."
+    },
+    {
+        "day": 10,
+        "no": 49,
+        "word": "garment",
+        "meaning": "의복",
+        "targetScore": 650,
+        "exampleEn": "The store sells men's garments.",
+        "exampleKo": "그 가게는 남성 의류를 팝니다."
+    },
+    {
+        "day": 10,
+        "no": 50,
+        "word": "guideline",
+        "meaning": "지침",
+        "targetScore": 650,
+        "exampleEn": "Follow the safety guidelines.",
+        "exampleKo": "안전 지침을 따르세요."
+    },
+    {
+        "day": 10,
+        "no": 51,
+        "word": "item",
+        "meaning": "품목, 물건",
+        "targetScore": 650,
+        "exampleEn": "How many items did you buy?",
+        "exampleKo": "몇 개의 물건을 샀습니까?"
+    },
+    {
+        "day": 10,
+        "no": 52,
+        "word": "maintain",
+        "meaning": "유지하다, 관리하다",
+        "targetScore": 650,
+        "exampleEn": "We maintain high standards.",
+        "exampleKo": "우리는 높은 기준을 유지합니다."
+    },
+    {
+        "day": 10,
+        "no": 53,
+        "word": "notice",
+        "meaning": "알아차리다; 공지",
+        "targetScore": 650,
+        "exampleEn": "I didn't notice him leaving.",
+        "exampleKo": "나는 그가 떠나는 것을 알아차리지 못했습니다."
+    },
+    {
+        "day": 10,
+        "no": 54,
+        "word": "order",
+        "meaning": "주문하다; 주문, 순서",
+        "targetScore": 650,
+        "exampleEn": "Can I take your order?",
+        "exampleKo": "주문하시겠습니까?"
+    },
+    {
+        "day": 10,
+        "no": 55,
+        "word": "party",
+        "meaning": "파티; 일행; 당",
+        "targetScore": 650,
+        "exampleEn": "Table for a party of four, please.",
+        "exampleKo": "4명 일행을 위한 테이블 부탁합니다."
+    },
+    {
+        "day": 10,
+        "no": 56,
+        "word": "payment",
+        "meaning": "지불",
+        "targetScore": 650,
+        "exampleEn": "Payment is due upon receipt.",
+        "exampleKo": "지불은 수령 시 해야 합니다."
+    },
+    {
+        "day": 10,
+        "no": 57,
+        "word": "peak",
+        "meaning": "절정, 최고점",
+        "targetScore": 650,
+        "exampleEn": "Traffic is heavy during peak hours.",
+        "exampleKo": "피크 시간대에는 교통이 혼잡합니다."
+    },
+    {
+        "day": 10,
+        "no": 58,
+        "word": "profession",
+        "meaning": "직업, 전문직",
+        "targetScore": 650,
+        "exampleEn": "Teaching is a noble profession.",
+        "exampleKo": "가르치는 것은 숭고한 직업입니다."
+    },
+    {
+        "day": 10,
+        "no": 59,
+        "word": "professional",
+        "meaning": "전문적인; 전문가",
+        "targetScore": 650,
+        "exampleEn": "Seek professional advice.",
+        "exampleKo": "전문가의 조언을 구하세요."
+    },
+    {
+        "day": 10,
+        "no": 60,
+        "word": "purchase",
+        "meaning": "구매하다",
+        "targetScore": 650,
+        "exampleEn": "Proof of purchase is required for returns.",
+        "exampleKo": "반품하려면 구매 증명이 필요합니다."
+    },
+    {
+        "day": 10,
+        "no": 61,
+        "word": "ready",
+        "meaning": "준비된",
+        "targetScore": 650,
+        "exampleEn": "Are you ready to go?",
+        "exampleKo": "갈 준비 됐나요?"
+    },
+    {
+        "day": 10,
+        "no": 62,
+        "word": "receipt",
+        "meaning": "영수증",
+        "targetScore": 650,
+        "exampleEn": "Can I have a receipt?",
+        "exampleKo": "영수증 주시겠어요?"
+    },
+    {
+        "day": 10,
+        "no": 63,
+        "word": "recently",
+        "meaning": "최근에",
+        "targetScore": 650,
+        "exampleEn": "I haven't seen him recently.",
+        "exampleKo": "나는 최근에 그를 본 적이 없습니다."
+    },
+    {
+        "day": 10,
+        "no": 64,
+        "word": "recipe",
+        "meaning": "조리법",
+        "targetScore": 650,
+        "exampleEn": "Can I have the recipe for this cake?",
+        "exampleKo": "이 케이크 조리법 좀 주시겠어요?"
+    },
+    {
+        "day": 10,
+        "no": 65,
+        "word": "refund",
+        "meaning": "환불",
+        "targetScore": 650,
+        "exampleEn": "No refunds on sale items.",
+        "exampleKo": "세일 품목은 환불 불가입니다."
+    },
+    {
+        "day": 10,
+        "no": 66,
+        "word": "regularly",
+        "meaning": "정기적으로",
+        "targetScore": 650,
+        "exampleEn": "I exercise regularly.",
+        "exampleKo": "나는 정기적으로 운동합니다."
+    },
+    {
+        "day": 10,
+        "no": 67,
+        "word": "return",
+        "meaning": "반품하다; 돌아오다",
+        "targetScore": 650,
+        "exampleEn": "I want to return this shirt.",
+        "exampleKo": "이 셔츠를 반품하고 싶습니다."
+    },
+    {
+        "day": 10,
+        "no": 68,
+        "word": "wallet",
+        "meaning": "지갑",
+        "targetScore": 650,
+        "exampleEn": "I lost my wallet.",
+        "exampleKo": "나는 지갑을 잃어버렸습니다."
+    }
+]

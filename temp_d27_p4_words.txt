@@ -1,0 +1,33 @@
+ No               Word                 Meaning
+137           dividend                     배당금
+138          devastate                  황폐 시키다
+139       deliberately                     고의로
+140            deflate             (물가를) 끌어내리다
+141              evoke            (기억 등을) 일깨우다
+142          speculate                    추측하다
+143           accredit                    승인하다
+144      start-up cost                   착수 비용
+145      cost estimate                   원가 견적
+146             impair                   손상시키다
+147         fictitious                허구의, 지어낸
+148           unbiased           선입견 없는, 편견 없는
+149      property line                  토지 경계선
+150           devalued                  평가 절하된
+151       manipulation               조작, 시장 조작
+152         faithfully               충실하게; 정확히
+153           overhaul                  점검, 정비
+154         unbeatable (가격·가치 등이) 더 이상 좋을 수 없는
+155      approximation                     근사치
+156         attainable                 이룰 수 있는
+157      well-balanced                  균형이 잡힌
+158           wipe off                  ~을 없애다
+159      courteousness              예의 바름, 공손함
+160 in the vicinity of                  ~의 부근에
+161          set aside                    챙겨두다
+162        disparately               본질적으로 다르게
+163           outweigh        (가치∙중요성이) ~보다 크다
+164     play a role in              ~에 한 몫을 하다
+165           outlying                 외진, 변경의
+166           dispatch            (소포 등을) 발송하다
+167           untimely             때 이른, 시기상조의
+168         take steps                 조치를 취하다

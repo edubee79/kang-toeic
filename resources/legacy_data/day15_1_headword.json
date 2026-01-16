@@ -1,0 +1,362 @@
+[
+    {
+        "day": 15,
+        "no": 1,
+        "word": "proposal",
+        "meaning": "제안, 계획",
+        "targetScore": 650,
+        "exampleEn": "The committee accepted the proposal.",
+        "exampleKo": "위원회는 그 제안을 받아들였습니다."
+    },
+    {
+        "day": 15,
+        "no": 2,
+        "word": "alliance",
+        "meaning": "동맹, 제휴",
+        "targetScore": 650,
+        "exampleEn": "The two companies formed an alliance.",
+        "exampleKo": "두 회사는 제휴를 맺었습니다."
+    },
+    {
+        "day": 15,
+        "no": 3,
+        "word": "stipulation",
+        "meaning": "계약 조건, 조항",
+        "targetScore": 650,
+        "exampleEn": "One stipulation is that you pay in advance.",
+        "exampleKo": "한 가지 조건은 선불로 지불하는 것입니다."
+    },
+    {
+        "day": 15,
+        "no": 4,
+        "word": "term",
+        "meaning": "조건; 기간; 용어",
+        "targetScore": 650,
+        "exampleEn": "Read the terms of the contract.",
+        "exampleKo": "계약 조건을 읽어보세요."
+    },
+    {
+        "day": 15,
+        "no": 5,
+        "word": "compromise",
+        "meaning": "타협하다; 타협",
+        "targetScore": 650,
+        "exampleEn": "We reached a compromise.",
+        "exampleKo": "우리는 타협에 도달했습니다."
+    },
+    {
+        "day": 15,
+        "no": 6,
+        "word": "negotiation",
+        "meaning": "협상",
+        "targetScore": 650,
+        "exampleEn": "Negotiations are ongoing.",
+        "exampleKo": "협상이 진행 중입니다."
+    },
+    {
+        "day": 15,
+        "no": 7,
+        "word": "agreement",
+        "meaning": "계약, 합의",
+        "targetScore": 650,
+        "exampleEn": "Sign the agreement.",
+        "exampleKo": "계약서에 서명하세요."
+    },
+    {
+        "day": 15,
+        "no": 8,
+        "word": "deadlock",
+        "meaning": "교착 상태",
+        "targetScore": 650,
+        "exampleEn": "The talks ended in a deadlock.",
+        "exampleKo": "회담은 교착 상태로 끝났습니다."
+    },
+    {
+        "day": 15,
+        "no": 9,
+        "word": "review",
+        "meaning": "검토하다; 비평",
+        "targetScore": 650,
+        "exampleEn": "Please review the document.",
+        "exampleKo": "문서를 검토해 주세요."
+    },
+    {
+        "day": 15,
+        "no": 10,
+        "word": "contract",
+        "meaning": "계약(서); 계약하다",
+        "targetScore": 650,
+        "exampleEn": "We signed a contract.",
+        "exampleKo": "우리는 계약을 체결했습니다."
+    },
+    {
+        "day": 15,
+        "no": 11,
+        "word": "signature",
+        "meaning": "서명",
+        "targetScore": 650,
+        "exampleEn": "I need your signature here.",
+        "exampleKo": "여기에 서명이 필요합니다."
+    },
+    {
+        "day": 15,
+        "no": 12,
+        "word": "originally",
+        "meaning": "원래, 처음에는",
+        "targetScore": 650,
+        "exampleEn": "Originally, it was a bank.",
+        "exampleKo": "원래 그곳은 은행이었습니다."
+    },
+    {
+        "day": 15,
+        "no": 13,
+        "word": "direction",
+        "meaning": "방향, 지시",
+        "targetScore": 650,
+        "exampleEn": "Which direction should I go?",
+        "exampleKo": "어느 방향으로 가야 합니까?"
+    },
+    {
+        "day": 15,
+        "no": 14,
+        "word": "initially",
+        "meaning": "처음에",
+        "targetScore": 650,
+        "exampleEn": "Initially, I was skeptical.",
+        "exampleKo": "처음에 나는 회의적이었습니다."
+    },
+    {
+        "day": 15,
+        "no": 15,
+        "word": "expire",
+        "meaning": "만료되다",
+        "targetScore": 650,
+        "exampleEn": "My passport has expired.",
+        "exampleKo": "내 여권이 만료되었습니다."
+    },
+    {
+        "day": 15,
+        "no": 16,
+        "word": "collaborate",
+        "meaning": "협력하다",
+        "targetScore": 650,
+        "exampleEn": "We collaborated on the project.",
+        "exampleKo": "우리는 그 프로젝트에 협력했습니다."
+    },
+    {
+        "day": 15,
+        "no": 17,
+        "word": "dedicate",
+        "meaning": "전념하다, 헌신하다",
+        "targetScore": 650,
+        "exampleEn": "She dedicated her life to science.",
+        "exampleKo": "그녀는 과학에 평생을 바쳤습니다."
+    },
+    {
+        "day": 15,
+        "no": 18,
+        "word": "revised",
+        "meaning": "수정된, 개정된",
+        "targetScore": 650,
+        "exampleEn": "Here is the revised schedule.",
+        "exampleKo": "여기 수정된 일정표가 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 19,
+        "word": "imperative",
+        "meaning": "필수적인",
+        "targetScore": 650,
+        "exampleEn": "It is imperative to act now.",
+        "exampleKo": "지금 행동하는 것이 필수적입니다."
+    },
+    {
+        "day": 15,
+        "no": 20,
+        "word": "cooperatively",
+        "meaning": "협력하여",
+        "targetScore": 650,
+        "exampleEn": "They worked cooperatively.",
+        "exampleKo": "그들은 협력하여 일했습니다."
+    },
+    {
+        "day": 15,
+        "no": 21,
+        "word": "commission",
+        "meaning": "수수료; 위원회; 의뢰하다",
+        "targetScore": 650,
+        "exampleEn": "He gets a 10% commission.",
+        "exampleKo": "그는 10%의 수수료를 받습니다."
+    },
+    {
+        "day": 15,
+        "no": 22,
+        "word": "omit",
+        "meaning": "빠뜨리다, 생략하다",
+        "targetScore": 650,
+        "exampleEn": "Do not omit any details.",
+        "exampleKo": "어떤 세부 사항도 빠뜨리지 마세요."
+    },
+    {
+        "day": 15,
+        "no": 23,
+        "word": "conflict",
+        "meaning": "대립, 충돌",
+        "targetScore": 650,
+        "exampleEn": "There is a conflict of interest.",
+        "exampleKo": "이해 상충이 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 24,
+        "word": "renew",
+        "meaning": "갱신하다",
+        "targetScore": 650,
+        "exampleEn": "I need to renew my license.",
+        "exampleKo": "나는 면허를 갱신해야 합니다."
+    },
+    {
+        "day": 15,
+        "no": 25,
+        "word": "proficient",
+        "meaning": "능숙한",
+        "targetScore": 650,
+        "exampleEn": "He is proficient in English.",
+        "exampleKo": "그는 영어에 능숙합니다."
+    },
+    {
+        "day": 15,
+        "no": 26,
+        "word": "confidentiality",
+        "meaning": "기밀성",
+        "targetScore": 650,
+        "exampleEn": "We must maintain confidentiality.",
+        "exampleKo": "우리는 기밀성을 유지해야 합니다."
+    },
+    {
+        "day": 15,
+        "no": 27,
+        "word": "dispute",
+        "meaning": "분쟁; 논쟁하다",
+        "targetScore": 650,
+        "exampleEn": "They settled the dispute.",
+        "exampleKo": "그들은 분쟁을 해결했습니다."
+    },
+    {
+        "day": 15,
+        "no": 28,
+        "word": "objection",
+        "meaning": "반대, 이의",
+        "targetScore": 650,
+        "exampleEn": "I have no objection.",
+        "exampleKo": "나는 이의가 없습니다."
+    },
+    {
+        "day": 15,
+        "no": 29,
+        "word": "define",
+        "meaning": "정의하다, 규정하다",
+        "targetScore": 650,
+        "exampleEn": "Define your goals clearly.",
+        "exampleKo": "목표를 명확히 정의하세요."
+    },
+    {
+        "day": 15,
+        "no": 30,
+        "word": "impression",
+        "meaning": "인상",
+        "targetScore": 650,
+        "exampleEn": "First impressions are important.",
+        "exampleKo": "첫인상은 중요합니다."
+    },
+    {
+        "day": 15,
+        "no": 31,
+        "word": "security",
+        "meaning": "보안, 안전",
+        "targetScore": 650,
+        "exampleEn": "Security is tight.",
+        "exampleKo": "보안이 삼엄합니다."
+    },
+    {
+        "day": 15,
+        "no": 32,
+        "word": "option",
+        "meaning": "선택권",
+        "targetScore": 650,
+        "exampleEn": "You have two options.",
+        "exampleKo": "당신에게는 두 가지 선택권이 있습니다."
+    },
+    {
+        "day": 15,
+        "no": 33,
+        "word": "proceed",
+        "meaning": "진행하다",
+        "targetScore": 650,
+        "exampleEn": "Please proceed to the gate.",
+        "exampleKo": "게이트로 이동해 주세요."
+    },
+    {
+        "day": 15,
+        "no": 34,
+        "word": "modify",
+        "meaning": "수정하다, 변경하다",
+        "targetScore": 650,
+        "exampleEn": "We modified the design.",
+        "exampleKo": "우리는 디자인을 수정했습니다."
+    },
+    {
+        "day": 15,
+        "no": 35,
+        "word": "narrow",
+        "meaning": "좁히다; 좁은",
+        "targetScore": 650,
+        "exampleEn": "We narrowed down the list.",
+        "exampleKo": "우리는 목록을 좁혔습니다."
+    },
+    {
+        "day": 15,
+        "no": 36,
+        "word": "bid",
+        "meaning": "입찰; 입찰하다",
+        "targetScore": 650,
+        "exampleEn": "They made a bid for the contract.",
+        "exampleKo": "그들은 계약에 입찰했습니다."
+    },
+    {
+        "day": 15,
+        "no": 37,
+        "word": "settle",
+        "meaning": "해결하다, 정착하다",
+        "targetScore": 650,
+        "exampleEn": "Let's settle this matter.",
+        "exampleKo": "이 문제를 해결합시다."
+    },
+    {
+        "day": 15,
+        "no": 38,
+        "word": "terminate",
+        "meaning": "끝내다, 종결시키다",
+        "targetScore": 650,
+        "exampleEn": "They terminated the contract.",
+        "exampleKo": "그들은 계약을 해지했습니다."
+    },
+    {
+        "day": 15,
+        "no": 39,
+        "word": "challenging",
+        "meaning": "도전적인, 힘든",
+        "targetScore": 650,
+        "exampleEn": "It was a challenging task.",
+        "exampleKo": "그것은 힘든 일이었습니다."
+    },
+    {
+        "day": 15,
+        "no": 40,
+        "word": "foundation",
+        "meaning": "토대, 기초; 재단",
+        "targetScore": 650,
+        "exampleEn": "Trust is the foundation of a relationship.",
+        "exampleKo": "신뢰는 관계의 토대입니다."
+    }
+]

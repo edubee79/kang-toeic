@@ -1,0 +1,254 @@
+[
+    {
+        "day": 18,
+        "no": 41,
+        "word": "spot",
+        "meaning": "발견하다, 찾다, 알아채다, (특정한)장소",
+        "targetScore": 650,
+        "exampleEn": "It is not easy to spot errors in the document.",
+        "exampleKo": "문서에서 오류를 발견하는(찾는) 것은 쉽지 않습니다."
+    },
+    {
+        "day": 18,
+        "no": 42,
+        "word": "bite",
+        "meaning": "물다, 한 입",
+        "targetScore": 650,
+        "exampleEn": "She took a bite of the sandwich.",
+        "exampleKo": "그녀는 샌드위치를 한 입 베어 물었습니다."
+    },
+    {
+        "day": 18,
+        "no": 43,
+        "word": "buffet",
+        "meaning": "뷔페",
+        "targetScore": 650,
+        "exampleEn": "The hotel restaurant serves a breakfast buffet.",
+        "exampleKo": "호텔 그 식당은 아침 뷔페를 제공합니다."
+    },
+    {
+        "day": 18,
+        "no": 44,
+        "word": "cafeteria",
+        "meaning": "(회사·학교의)구내식당",
+        "targetScore": 650,
+        "exampleEn": "Employees can buy lunch at the company cafeteria.",
+        "exampleKo": "직원들은 회사 구내식당에서 점심을 살 수 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 45,
+        "word": "cereal",
+        "meaning": "시리얼",
+        "targetScore": 650,
+        "exampleEn": "I usually have cereal with milk for breakfast.",
+        "exampleKo": "저는 보통 아침으로 우유를 곁들인 시리얼을 먹습니다."
+    },
+    {
+        "day": 18,
+        "no": 46,
+        "word": "cookbook",
+        "meaning": "요리책",
+        "targetScore": 650,
+        "exampleEn": "She decided to write a cookbook of her family recipes.",
+        "exampleKo": "그녀는 가족의 요리법으로 요리책을 쓰기로 결정했습니다."
+    },
+    {
+        "day": 18,
+        "no": 47,
+        "word": "delicious",
+        "meaning": "맛있는",
+        "targetScore": 650,
+        "exampleEn": "The meal was absolutely delicious.",
+        "exampleKo": "그 식사는 정말로 맛있었습니다."
+    },
+    {
+        "day": 18,
+        "no": 48,
+        "word": "dessert",
+        "meaning": "후식",
+        "targetScore": 650,
+        "exampleEn": "Would you like to see the dessert menu?",
+        "exampleKo": "후식 메뉴를 보시겠습니까?"
+    },
+    {
+        "day": 18,
+        "no": 49,
+        "word": "dine",
+        "meaning": "식사를 하다",
+        "targetScore": 650,
+        "exampleEn": "We plan to dine out tonight.",
+        "exampleKo": "우리는 오늘 밤 외식을 할(밖에서 식사할) 계획입니다."
+    },
+    {
+        "day": 18,
+        "no": 50,
+        "word": "dining room",
+        "meaning": "식당",
+        "targetScore": 650,
+        "exampleEn": "They gathered in the dining room for dinner.",
+        "exampleKo": "그들은 저녁 식사를 위해 식당에 모였습니다."
+    },
+    {
+        "day": 18,
+        "no": 51,
+        "word": "dish",
+        "meaning": "접시, 요리",
+        "targetScore": 650,
+        "exampleEn": "This restaurant is famous for its seafood dishes.",
+        "exampleKo": "이 식당은 해산물 요리로 유명합니다."
+    },
+    {
+        "day": 18,
+        "no": 52,
+        "word": "dishwasher",
+        "meaning": "식기세척기",
+        "targetScore": 650,
+        "exampleEn": "Load the dirty plates into the dishwasher.",
+        "exampleKo": "더러운 접시들을 식기세척기에 넣으십시오."
+    },
+    {
+        "day": 18,
+        "no": 53,
+        "word": "dry dishes",
+        "meaning": "접시를 닦다",
+        "targetScore": 650,
+        "exampleEn": "I will wash, and you can dry dishes.",
+        "exampleKo": "제가 설거지를 할 테니, 당신이 접시를 닦으세요."
+    },
+    {
+        "day": 18,
+        "no": 54,
+        "word": "garlic",
+        "meaning": "마늘",
+        "targetScore": 650,
+        "exampleEn": "Garlic is a common ingredient in Italian cooking.",
+        "exampleKo": "마늘은 이탈리아 요리의 흔한 재료입니다."
+    },
+    {
+        "day": 18,
+        "no": 55,
+        "word": "meal",
+        "meaning": "식사",
+        "targetScore": 650,
+        "exampleEn": "Breakfast is the most important meal of the day.",
+        "exampleKo": "아침 식사는 하루 중 가장 중요한 식사입니다."
+    },
+    {
+        "day": 18,
+        "no": 56,
+        "word": "plate",
+        "meaning": "접시, 그릇",
+        "targetScore": 650,
+        "exampleEn": "He put some more food on his plate.",
+        "exampleKo": "그는 접시에 음식을 좀 더 담았습니다."
+    },
+    {
+        "day": 18,
+        "no": 57,
+        "word": "pot",
+        "meaning": "(깊은) 냄비",
+        "targetScore": 650,
+        "exampleEn": "Boil the water in a large pot.",
+        "exampleKo": "큰 냄비에 물을 끓이십시오."
+    },
+    {
+        "day": 18,
+        "no": 58,
+        "word": "prepare a meal",
+        "meaning": "식사 준비를 하다",
+        "targetScore": 650,
+        "exampleEn": "It takes time to prepare a healthy meal.",
+        "exampleKo": "건강한 식사 준비를 하는네는 시간이 걸립니다."
+    },
+    {
+        "day": 18,
+        "no": 59,
+        "word": "seafood",
+        "meaning": "해산물",
+        "targetScore": 650,
+        "exampleEn": "The coastal town serves excellent seafood.",
+        "exampleKo": "그 해안 마을은 훌륭한 해산물을 제공합니다."
+    },
+    {
+        "day": 18,
+        "no": 60,
+        "word": "spicy",
+        "meaning": "매운",
+        "targetScore": 650,
+        "exampleEn": "I don't like spicy food very much.",
+        "exampleKo": "저는 매운 음식을 별로 좋아하지 않습니다."
+    },
+    {
+        "day": 18,
+        "no": 61,
+        "word": "spill",
+        "meaning": "엎지르다",
+        "targetScore": 650,
+        "exampleEn": "Be careful not to spill the wine.",
+        "exampleKo": "와인을 엎지르지 않도록 조심하십시오."
+    },
+    {
+        "day": 18,
+        "no": 62,
+        "word": "tasty",
+        "meaning": "맛있는",
+        "targetScore": 650,
+        "exampleEn": "The soup was very tasty.",
+        "exampleKo": "그 수프는 매우 맛있었습니다."
+    },
+    {
+        "day": 18,
+        "no": 63,
+        "word": "whipped cream",
+        "meaning": "휘핑크림",
+        "targetScore": 650,
+        "exampleEn": "She topped the pie with whipped cream.",
+        "exampleKo": "그녀는 파이 위에 휘핑크림을 얹었습니다."
+    },
+    {
+        "day": 18,
+        "no": 64,
+        "word": "blend",
+        "meaning": "섞다, 혼합하다",
+        "targetScore": 650,
+        "exampleEn": "Blend the ingredients until smooth.",
+        "exampleKo": "부드러워질 때까지 재료들을 섞으십시오."
+    },
+    {
+        "day": 18,
+        "no": 65,
+        "word": "clean",
+        "meaning": "깨끗한, 청소하다, 깨끗하게 하다",
+        "targetScore": 650,
+        "exampleEn": "Please keep the kitchen clean.",
+        "exampleKo": "부엌을 깨끗하게 유지해 주십시오."
+    },
+    {
+        "day": 18,
+        "no": 66,
+        "word": "fresh",
+        "meaning": "신선한",
+        "targetScore": 650,
+        "exampleEn": "We only use fresh vegetables in our salads.",
+        "exampleKo": "우리는 샐러드에 신선한 채소만 사용합니다."
+    },
+    {
+        "day": 18,
+        "no": 67,
+        "word": "recipe",
+        "meaning": "요리법, 조리법",
+        "targetScore": 650,
+        "exampleEn": "Can you share your recipe for apple pie?",
+        "exampleKo": "애플파이 요리법(조리법)을 공유해 주실 수 있나요?"
+    },
+    {
+        "day": 18,
+        "no": 68,
+        "word": "spice",
+        "meaning": "양념, 향신료",
+        "targetScore": 650,
+        "exampleEn": "Add a little spice to give it more flavor.",
+        "exampleKo": "풍미를 더하기 위해 양념(향신료)을 조금 넣으십시오."
+    }
+]

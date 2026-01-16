@@ -1,0 +1,60 @@
+{
+  "passageId": 1,
+  "type": "EMAIL",
+  "structure": {
+    "header_lines": [
+      "To: All Staff\nFrom: Yoreli Costa\nDate: February 15\nSubject: Florence Shawn"
+    ],
+    "salutation": "Hi Everyone,",
+    "body_paragraphs": [
+      "I have news to share about a ------- [131] in the human resources department. After nearly twenty\nyears with Cometti Creative, Florence Shawn has decided to retire from the position of director of\nhuman resources.",
+      "Our current senior manager of human resources, Makoto Ichise, will replace Ms. Shawn when\nshe retires. Ms. Shawn ------- Mr. Ichise since he joined the company five years ago.\n[132]",
+      "Ms. Shawn's ------- day will be February 22. A retirement party will be held for her on that day\n[133]\nat 4:00 P.M. in the Terey Lobby. -------.\n[134]"
+    ],
+    "closing_lines": [
+      "Best,\nYoreli Costa\nDirector of Operations, Cometti Creative"
+    ]
+  },
+  "questions": [
+    {
+      "id": 131,
+      "text": null,
+      "options": [
+        "(A) difference",
+        "(B) strategy",
+        "(C) change",
+        "(D) practice"
+      ]
+    },
+    {
+      "id": 132,
+      "text": null,
+      "options": [
+        "(A) mentors",
+        "(B) is mentoring",
+        "(C) will mentor",
+        "(D) has been mentoring"
+      ]
+    },
+    {
+      "id": 133,
+      "text": null,
+      "options": [
+        "(A) last",
+        "(B) original",
+        "(C) flexible",
+        "(D) alternate"
+      ]
+    },
+    {
+      "id": 134,
+      "text": null,
+      "options": [
+        "(A) Cometti Creative will hire a replacement\nsoon.",
+        "(B) We hope that you can all attend to wish\nher well.",
+        "(C) Ms. Shawn was the first director of human\nresources at Cometti Creative.",
+        "(D) The first project will be the creation of a\ntalent development program."
+      ]
+    }
+  ]
+}

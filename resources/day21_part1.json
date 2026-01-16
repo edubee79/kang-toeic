@@ -1,0 +1,362 @@
+[
+  {
+    "day": 21,
+    "no": 1,
+    "word": "announce",
+    "meaning": "발표하다",
+    "targetScore": 650,
+    "exampleEn": "The company announced its quarterly earnings yesterday.",
+    "exampleKo": "회사는 어제 분기별 실적을 발표했습니다."
+  },
+  {
+    "day": 21,
+    "no": 2,
+    "word": "interested",
+    "meaning": "관련 있는, 관심이 있는",
+    "targetScore": 650,
+    "exampleEn": "We are interested in forming a partnership with you.",
+    "exampleKo": "우리는 귀하와 파트너십을 맺는 데 관심이 있습니다(관련이 있습니다)."
+  },
+  {
+    "day": 21,
+    "no": 3,
+    "word": "active",
+    "meaning": "적극적인, 활발한",
+    "targetScore": 650,
+    "exampleEn": "She is an active member of the committee.",
+    "exampleKo": "그녀는 위원회의 적극적인 회원입니다."
+  },
+  {
+    "day": 21,
+    "no": 4,
+    "word": "accept",
+    "meaning": "수락하다, 승낙하다",
+    "targetScore": 650,
+    "exampleEn": "He decided to accept the job offer.",
+    "exampleKo": "그는 일자리 제안을 수락하기로 결정했습니다."
+  },
+  {
+    "day": 21,
+    "no": 5,
+    "word": "foresee",
+    "meaning": "예견하다, 예감하다",
+    "targetScore": 650,
+    "exampleEn": "Experts foresee a bright future for the industry.",
+    "exampleKo": "전문가들은 그 산업의 밝은 미래를 예견합니다."
+  },
+  {
+    "day": 21,
+    "no": 6,
+    "word": "expansion",
+    "meaning": "확장, 팽창",
+    "targetScore": 650,
+    "exampleEn": "The expansion of the factory created many jobs.",
+    "exampleKo": "공장의 확장은 많은 일자리를 창출했습니다."
+  },
+  {
+    "day": 21,
+    "no": 7,
+    "word": "relocate",
+    "meaning": "(공장 등을) 이전하다",
+    "targetScore": 650,
+    "exampleEn": "The company plans to relocate to a larger office.",
+    "exampleKo": "그 회사는 더 큰 사무실로 이전할 계획입니다."
+  },
+  {
+    "day": 21,
+    "no": 8,
+    "word": "competitor",
+    "meaning": "경쟁업체, 경쟁자",
+    "targetScore": 650,
+    "exampleEn": "We must stay ahead of our competitors.",
+    "exampleKo": "우리는 경쟁업체들보다 앞서 있어야 합니다."
+  },
+  {
+    "day": 21,
+    "no": 9,
+    "word": "asset",
+    "meaning": "자산",
+    "targetScore": 650,
+    "exampleEn": "Our employees are our most valuable asset.",
+    "exampleKo": "우리 직원들은 우리의 가장 소중한 자산입니다."
+  },
+  {
+    "day": 21,
+    "no": 10,
+    "word": "contribute",
+    "meaning": "기여하다, 공헌하다",
+    "targetScore": 650,
+    "exampleEn": "Everyone should contribute to the discussion.",
+    "exampleKo": "모두가 토론에 기여해야 합니다."
+  },
+  {
+    "day": 21,
+    "no": 11,
+    "word": "dedicated",
+    "meaning": "(목표 등에) 전념하는, 헌신적인",
+    "targetScore": 650,
+    "exampleEn": "The team is dedicated to customer satisfaction.",
+    "exampleKo": "그 팀은 고객 만족에 전념하고 있습니다(헌신적입니다)."
+  },
+  {
+    "day": 21,
+    "no": 12,
+    "word": "misplace",
+    "meaning": "잃어버리다, 위치를 잘못 잡다",
+    "targetScore": 650,
+    "exampleEn": "I seem to have misplaced my keys.",
+    "exampleKo": "제가 열쇠를 잃어버린(위치를 잘못 잡은) 것 같습니다."
+  },
+  {
+    "day": 21,
+    "no": 13,
+    "word": "considerable",
+    "meaning": "(정도나 양이) 상당한",
+    "targetScore": 650,
+    "exampleEn": "The project required a considerable amount of time.",
+    "exampleKo": "그 프로젝트는 상당한 양의 시간을 필요로 했습니다."
+  },
+  {
+    "day": 21,
+    "no": 14,
+    "word": "last",
+    "meaning": "지속되다",
+    "targetScore": 650,
+    "exampleEn": "The meeting is expected to last for two hours.",
+    "exampleKo": "회의는 2시간 동안 지속될 것으로 예상됩니다."
+  },
+  {
+    "day": 21,
+    "no": 15,
+    "word": "emerge",
+    "meaning": "부상하다, 나타나다",
+    "targetScore": 650,
+    "exampleEn": "New markets are emerging in Asia.",
+    "exampleKo": "아시아에서 새로운 시장이 부상하고 있습니다."
+  },
+  {
+    "day": 21,
+    "no": 16,
+    "word": "grow",
+    "meaning": "성장하다, 성장시키다, 증가시키다",
+    "targetScore": 650,
+    "exampleEn": "The business continues to grow rapidly.",
+    "exampleKo": "사업은 계속해서 빠르게 성장하고 있습니다."
+  },
+  {
+    "day": 21,
+    "no": 17,
+    "word": "select",
+    "meaning": "선발하다, 선택하다",
+    "targetScore": 650,
+    "exampleEn": "A panel of judges will select the winner.",
+    "exampleKo": "심사위원단이 우승자를 선발할 것입니다."
+  },
+  {
+    "day": 21,
+    "no": 18,
+    "word": "merge",
+    "meaning": "합병하다, 병합하다",
+    "targetScore": 650,
+    "exampleEn": "The two banks agreed to merge next month.",
+    "exampleKo": "두 은행은 다음 달에 합병하기로 합의했습니다."
+  },
+  {
+    "day": 21,
+    "no": 19,
+    "word": "imply",
+    "meaning": "암시하다, 넌지시, 나타내다, 의미하다",
+    "targetScore": 650,
+    "exampleEn": "High prices imply that demand is strong.",
+    "exampleKo": "높은 가격은 수요가 강하다는 것을 암시합니다(의미합니다)."
+  },
+  {
+    "day": 21,
+    "no": 20,
+    "word": "vital",
+    "meaning": "필수적인",
+    "targetScore": 650,
+    "exampleEn": "Trust is vital for a healthy relationship.",
+    "exampleKo": "신뢰는 건강한 관계에 필수적입니다."
+  },
+  {
+    "day": 21,
+    "no": 21,
+    "word": "persist",
+    "meaning": "(집요하게) 계속하다, 계속되다, 지속되다",
+    "targetScore": 650,
+    "exampleEn": "If symptoms persist, consult a doctor.",
+    "exampleKo": "증상이 (계속) 지속되면 의사와 상담하십시오."
+  },
+  {
+    "day": 21,
+    "no": 22,
+    "word": "independent",
+    "meaning": "독립적인, 독자적인",
+    "targetScore": 650,
+    "exampleEn": "The audit was conducted by an independent firm.",
+    "exampleKo": "감사는 독립적인 회사에 의해 수행되었습니다."
+  },
+  {
+    "day": 21,
+    "no": 23,
+    "word": "force",
+    "meaning": "세력",
+    "targetScore": 650,
+    "exampleEn": "They joined forces to launch the new product.",
+    "exampleKo": "그들은 새 제품을 출시하기 위해 세력(힘)을 합쳤습니다."
+  },
+  {
+    "day": 21,
+    "no": 24,
+    "word": "establish",
+    "meaning": "설립하다",
+    "targetScore": 650,
+    "exampleEn": "The company was established in 1990.",
+    "exampleKo": "그 회사는 1990년에 설립되었습니다."
+  },
+  {
+    "day": 21,
+    "no": 25,
+    "word": "initiate",
+    "meaning": "(사업 등을) 착수하다, 시작하다",
+    "targetScore": 650,
+    "exampleEn": "We initiated a new project to reduce waste.",
+    "exampleKo": "우리는 낭비를 줄이기 위해 새 프로젝트를 착수했습니다(시작했습니다)."
+  },
+  {
+    "day": 21,
+    "no": 26,
+    "word": "enhance",
+    "meaning": "(질 등을) 향상시키다, 높이다, 강화하다",
+    "targetScore": 650,
+    "exampleEn": "This software will enhance your productivity.",
+    "exampleKo": "이 소프트웨어는 당신의 생산성을 향상시킬 것입니다."
+  },
+  {
+    "day": 21,
+    "no": 27,
+    "word": "renowned",
+    "meaning": "저명한, 유명한, 명성이 있는",
+    "targetScore": 650,
+    "exampleEn": "He is a renowned expert in his field.",
+    "exampleKo": "그는 자신의 분야에서 저명한 전문가입니다."
+  },
+  {
+    "day": 21,
+    "no": 28,
+    "word": "informed",
+    "meaning": "정보에 근거한",
+    "targetScore": 650,
+    "exampleEn": "Please keep me informed of any changes.",
+    "exampleKo": "변경 사항이 있으면 저에게 (정보를) 알려주십시오."
+  },
+  {
+    "day": 21,
+    "no": 29,
+    "word": "minutes",
+    "meaning": "회의록",
+    "targetScore": 650,
+    "exampleEn": "The secretary took the minutes of the meeting.",
+    "exampleKo": "비서가 회의의 회의록을 작성했습니다."
+  },
+  {
+    "day": 21,
+    "no": 30,
+    "word": "waive",
+    "meaning": "(규칙 등을) 적용하지 않다, , (권리·청구 등을) 포기하다",
+    "targetScore": 650,
+    "exampleEn": "The bank agreed to waive the processing fee.",
+    "exampleKo": "은행은 처리 수수료를 면제해 주기로(포기하기로) 동의했습니다."
+  },
+  {
+    "day": 21,
+    "no": 31,
+    "word": "reach",
+    "meaning": "(치수·양 등이) ~에 달하다, ~에 도착하다",
+    "targetScore": 650,
+    "exampleEn": "We hope to reach an agreement soon.",
+    "exampleKo": "우리는 곧 합의에 도달하기를 희망합니다."
+  },
+  {
+    "day": 21,
+    "no": 32,
+    "word": "authority",
+    "meaning": "권한, 당국",
+    "targetScore": 650,
+    "exampleEn": "She has the authority to sign contracts.",
+    "exampleKo": "그녀는 계약서에 서명할 권한이 있습니다."
+  },
+  {
+    "day": 21,
+    "no": 33,
+    "word": "acquire",
+    "meaning": "매입하다, 취득하다",
+    "targetScore": 650,
+    "exampleEn": "The company acquired a smaller rival.",
+    "exampleKo": "그 회사는 더 작은 경쟁사를 매입했습니다(인수했습니다)."
+  },
+  {
+    "day": 21,
+    "no": 34,
+    "word": "surpass",
+    "meaning": "~을 능가하다, 넘어서다",
+    "targetScore": 650,
+    "exampleEn": "Sales this year surpassed our expectations.",
+    "exampleKo": "올해 매출은 우리의 예상을 능가했습니다."
+  },
+  {
+    "day": 21,
+    "no": 35,
+    "word": "run",
+    "meaning": "~을 운영하다, 경영하다,, (공연, 영화 등이) 상영되다, 계속되다",
+    "targetScore": 650,
+    "exampleEn": "She runs her own consulting business.",
+    "exampleKo": "그녀는 자신의 컨설팅 사업을 운영합니다."
+  },
+  {
+    "day": 21,
+    "no": 36,
+    "word": "improbable",
+    "meaning": "사실이라고 생각할 수 없는, 일어날 것 같지 않은",
+    "targetScore": 650,
+    "exampleEn": "It is improbable that the price will drop soon.",
+    "exampleKo": "가격이 곧 떨어질 것이라는 것은 사실이라고 생각할 수 없습니다(일어날 것 같지 않습니다)."
+  },
+  {
+    "day": 21,
+    "no": 37,
+    "word": "edge",
+    "meaning": "우위, 유리함, 가장자리, 끝",
+    "targetScore": 650,
+    "exampleEn": "We have a competitive edge over our rivals.",
+    "exampleKo": "우리는 경쟁사들보다 경쟁 우위(유리함)를 가지고 있습니다."
+  },
+  {
+    "day": 21,
+    "no": 38,
+    "word": "simultaneously",
+    "meaning": "동시에",
+    "targetScore": 650,
+    "exampleEn": "The two events happened simultaneously.",
+    "exampleKo": "두 사건은 동시에 일어났습니다."
+  },
+  {
+    "day": 21,
+    "no": 39,
+    "word": "reveal",
+    "meaning": "밝히다, 누설하다",
+    "targetScore": 650,
+    "exampleEn": "The report revealed serious errors in the accounts.",
+    "exampleKo": "그 보고서는 계좌에 심각한 오류가 있음을 밝혔습니다."
+  },
+  {
+    "day": 21,
+    "no": 40,
+    "word": "productivity",
+    "meaning": "생산성",
+    "targetScore": 650,
+    "exampleEn": "We are looking for ways to boost productivity.",
+    "exampleKo": "우리는 생산성을 높일 방법을 찾고 있습니다."
+  }
+]

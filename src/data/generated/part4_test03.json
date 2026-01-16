@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 3,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "Where is the announcement most likely being made?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a train station"
+          },
+          {
+            "label": "B",
+            "text": "At a bus station"
+          },
+          {
+            "label": "C",
+            "text": "At an airport"
+          },
+          {
+            "label": "D",
+            "text": "At a ferry terminal"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q72",
+        "text": "Why is a change being made?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It will improve traffic flow."
+          },
+          {
+            "label": "B",
+            "text": "It will keep prices low."
+          },
+          {
+            "label": "C",
+            "text": "It will increase energy efficiency."
+          },
+          {
+            "label": "D",
+            "text": "It will save staff time."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q73",
+        "text": "What does the speaker recommend?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Filling out a survey"
+          },
+          {
+            "label": "B",
+            "text": "Printing some tickets"
+          },
+          {
+            "label": "C",
+            "text": "Checking online for updates"
+          },
+          {
+            "label": "D",
+            "text": "Allowing extra time"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "Attention, passengers. On Monday, some of our major bus routes will begin departing from another part of the station. All buses to Freeport, Johnstown, and Grant City will be leaving from gates 300 through 305 on the west side of the building. This change will help us to improve traffic flow. Since the new gates are a ten-minute walk from the ticket counter, we recommend allowing yourself extra time to walk there."
+  },
+  {
+    "testId": 3,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "What event is taking place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A grand opening"
+          },
+          {
+            "label": "B",
+            "text": "A focus group"
+          },
+          {
+            "label": "C",
+            "text": "A food festival"
+          },
+          {
+            "label": "D",
+            "text": "A sales workshop"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q75",
+        "text": "What does the speaker say is distinct about a coffee blend?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It is locally sourced."
+          },
+          {
+            "label": "B",
+            "text": "It is available in glass bottles."
+          },
+          {
+            "label": "C",
+            "text": "It comes in several different flavors."
+          },
+          {
+            "label": "D",
+            "text": "It contains a lot of caffeine."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q76",
+        "text": "What is the speaker offering customers?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Free delivery"
+          },
+          {
+            "label": "B",
+            "text": "Two-day shipping"
+          },
+          {
+            "label": "C",
+            "text": "A full refund"
+          },
+          {
+            "label": "D",
+            "text": "A discount"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Welcome! Thank you for attending the grand opening of my new coffee shop. We're featuring our very own signature coffee blend. This coffee is distinct from all other blends on the market, because it has more caffeine than any other coffee, thanks to our roasting process. It's not all about caffeine though—this coffee still has a rich, nutty flavor. I'm so confident of my new coffee, that if any customers believe that it's not the strongest they've ever had, I'm offering a 100 percent money-back guarantee. Enjoy!"
+  },
+  {
+    "testId": 3,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "How does each tour begin?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Refreshments are served."
+          },
+          {
+            "label": "B",
+            "text": "Safety equipment is explained."
+          },
+          {
+            "label": "C",
+            "text": "A video is shown."
+          },
+          {
+            "label": "D",
+            "text": "Maps are distributed."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q78",
+        "text": "What kind of gift do participants receive?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A discount coupon"
+          },
+          {
+            "label": "B",
+            "text": "A bag of snacks"
+          },
+          {
+            "label": "C",
+            "text": "A T-shirt"
+          },
+          {
+            "label": "D",
+            "text": "A postcard"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q79",
+        "text": "What does the speaker warn the listeners about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "How to pay for food"
+          },
+          {
+            "label": "B",
+            "text": "What clothes to wear"
+          },
+          {
+            "label": "C",
+            "text": "Where to park"
+          },
+          {
+            "label": "D",
+            "text": "Which days to visit"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "If you're looking for a unique experience for the whole family, why not try a tour of Baxter's Snack Food Factory? Each tour begins with a video about the history of Baxter's. Then, unlike most factory tours, we actually take you out on the factory floor. At the end of the tour, everyone receives a free bag of our delicious snacks. Tours are available every weekday, but if you want to see our production in action, be sure to come and visit us from Monday to Wednesday. We can't guarantee production will be running on Thursdays and Fridays!"
+  },
+  {
+    "testId": 3,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "Where does the speaker work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an architecture firm"
+          },
+          {
+            "label": "B",
+            "text": "At an accounting firm"
+          },
+          {
+            "label": "C",
+            "text": "At a roofing company"
+          },
+          {
+            "label": "D",
+            "text": "At an auto repair shop"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q81",
+        "text": "Why does the speaker say, \"an official estimate includes parts and labor\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To compare her company to another one"
+          },
+          {
+            "label": "B",
+            "text": "To correct a colleague's mistake"
+          },
+          {
+            "label": "C",
+            "text": "To complain about an expense"
+          },
+          {
+            "label": "D",
+            "text": "To ask for help with a project"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q82",
+        "text": "What does the speaker offer to do this afternoon?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Visit the listener's home"
+          },
+          {
+            "label": "B",
+            "text": "Update the listener's contact information"
+          },
+          {
+            "label": "C",
+            "text": "Consult a financial advisor"
+          },
+          {
+            "label": "D",
+            "text": "Post a job announcement"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Hello, this is Anna Messina from Messina Roofing, and I'm calling about the new roof for your house that you're remodeling. I've learned that when our representative, John, visited you last week, he only talked to you about the cost of the shingles and other materials. But an official estimate includes parts and labor. It's important that we discuss this soon. I'll be in your area this afternoon and could stop by if that's convenient for you. Please let me know when you have a chance."
+  },
+  {
+    "testId": 3,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "What is the broadcast about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Financing your company"
+          },
+          {
+            "label": "B",
+            "text": "Using social media"
+          },
+          {
+            "label": "C",
+            "text": "Recruiting staff"
+          },
+          {
+            "label": "D",
+            "text": "Getting a business license"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q84",
+        "text": "What will the speaker help the listeners with today?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Choosing a service"
+          },
+          {
+            "label": "B",
+            "text": "Lowering costs"
+          },
+          {
+            "label": "C",
+            "text": "Analyzing feedback"
+          },
+          {
+            "label": "D",
+            "text": "Setting goals"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q85",
+        "text": "What will most likely happen next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The speaker will conduct an interview."
+          },
+          {
+            "label": "B",
+            "text": "The speaker will give a weather update."
+          },
+          {
+            "label": "C",
+            "text": "An advertisement will play."
+          },
+          {
+            "label": "D",
+            "text": "A contest winner will be announced."
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Good evening, and welcome to the program. Today we're discussing using social media to promote your business. As you know, there are many challenges in this area. In fact, setting goals for your company's use of social media is one of the most difficult, so that's what I'm going to help you with today. I'll show you how creating goals based on your company's specific clientele will make it easier to adjust your social media presence. So, how do you do this? Joining me now in the studio is Li Zhao, the founder of the company Spacetime Services. I'll be speaking with Li about how she approached this task."
+  },
+  {
+    "testId": 3,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Potential investors"
+          },
+          {
+            "label": "B",
+            "text": "Marketing specialists"
+          },
+          {
+            "label": "C",
+            "text": "Quality control inspectors"
+          },
+          {
+            "label": "D",
+            "text": "Product designers"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q87",
+        "text": "According to the speaker, what is the company going to change?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The material it uses"
+          },
+          {
+            "label": "B",
+            "text": "The financing it makes available"
+          },
+          {
+            "label": "C",
+            "text": "The maintenance schedule for its equipment"
+          },
+          {
+            "label": "D",
+            "text": "The publisher for its catalog"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q88",
+        "text": "Why does the speaker say, \"but I use these products\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To reject an offer"
+          },
+          {
+            "label": "B",
+            "text": "To correct an advertisement"
+          },
+          {
+            "label": "C",
+            "text": "To provide reassurance"
+          },
+          {
+            "label": "D",
+            "text": "To explain a decision"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Hi, everyone. I've got some big news. Our company has decided to move in an interesting direction, and it's going to affect us here in the marketing department. As you know, we've had great success getting stores to carry our line of fine cotton bedding, such as sheets and blankets. Now the company has decided to switch to using bamboo cloth for these products. The fabric is soft and durable and also environmentally sustainable. Our job, of course, is to maintain and expand our markets for this new bedding. Now, you may be worried that customers won't be happy with this change, but I use these products. Let's look at some samples now."
+  },
+  {
+    "testId": 3,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "Where is the talk taking place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an awards ceremony"
+          },
+          {
+            "label": "B",
+            "text": "At an exhibit opening"
+          },
+          {
+            "label": "C",
+            "text": "At a club meeting"
+          },
+          {
+            "label": "D",
+            "text": "At a national park tour"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q90",
+        "text": "What did Kentaro Nakamura recently do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "He published a book."
+          },
+          {
+            "label": "B",
+            "text": "He started a conservation society."
+          },
+          {
+            "label": "C",
+            "text": "He won a photography contest."
+          },
+          {
+            "label": "D",
+            "text": "He conducted a research project."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q91",
+        "text": "What are the listeners invited to do after the event?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Enjoy some refreshments"
+          },
+          {
+            "label": "B",
+            "text": "Sign up to volunteer"
+          },
+          {
+            "label": "C",
+            "text": "Purchase some souvenirs"
+          },
+          {
+            "label": "D",
+            "text": "Take some maps"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Thanks for coming to this month's meeting of the Emery Bird Watching Club. I'm very excited to welcome our guest speaker, author Kentaro Nakamura. He recently led a project in the Canadian wilderness where he spent six months researching bird migration patterns. In his lecture tonight, he'll talk about the dangers of light pollution to migrating birds and what we can do to help. After the presentation, please join us in the library for some drinks and treats."
+  },
+  {
+    "testId": 3,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "What type of work do the listeners most likely do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Architectural planning"
+          },
+          {
+            "label": "B",
+            "text": "Software design"
+          },
+          {
+            "label": "C",
+            "text": "Therapy"
+          },
+          {
+            "label": "D",
+            "text": "Sales"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q93",
+        "text": "What does the speaker thank the listeners for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Finalizing a business contract"
+          },
+          {
+            "label": "B",
+            "text": "Preparing a presentation"
+          },
+          {
+            "label": "C",
+            "text": "Sharing some ideas"
+          },
+          {
+            "label": "D",
+            "text": "Meeting with some clients"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q94",
+        "text": "Why does the speaker say, \"we have a limited number of computers available\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To warn the listeners about a maintenance issue"
+          },
+          {
+            "label": "B",
+            "text": "To encourage the listeners to sign up quickly"
+          },
+          {
+            "label": "C",
+            "text": "To suggest that the listeners buy a device"
+          },
+          {
+            "label": "D",
+            "text": "To remind the listeners about budget cuts"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "I'm glad to see everyone here for today's monthly team meeting. I'm quite impressed with the number of sales this team has finalized this month. Everyone met their quota—so congratulations! I read through your responses to the online questionnaire I posted. Thanks for sharing your ideas about professional development. Many people suggested improving our ability to create more-attractive slide presentations. I agree this'll be useful when you meet with prospective clients, so I'd like to accommodate that request with an on-site training. A sign-up sheet has been posted in the employee break room. Just a heads-up that we have a limited number of computers available."
+  },
+  {
+    "testId": 3,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "What will take place this Friday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An industry award ceremony"
+          },
+          {
+            "label": "B",
+            "text": "A fund-raising dinner"
+          },
+          {
+            "label": "C",
+            "text": "A company anniversary event"
+          },
+          {
+            "label": "D",
+            "text": "A holiday celebration"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Where does the speaker want some audio equipment?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Next to table 1"
+          },
+          {
+            "label": "B",
+            "text": "Next to table 2"
+          },
+          {
+            "label": "C",
+            "text": "Next to table 3"
+          },
+          {
+            "label": "D",
+            "text": "Next to table 4"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q97",
+        "text": "What has the speaker shipped to the hotel?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some tablecloths"
+          },
+          {
+            "label": "B",
+            "text": "Some vases"
+          },
+          {
+            "label": "C",
+            "text": "Some aprons"
+          },
+          {
+            "label": "D",
+            "text": "Some glasses"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "Hello. This is Megumi from Fellmetric Limited. I'm calling about our company's anniversary dinner scheduled for this Friday at your hotel. We need audio equipment set up for the event host. Looking at the dining room layout, I think it's best to set it up next to the table by the window that is farthest away from the buffet. One last thing—I've shipped a box of our company's branded vases to the hotel. There should be enough for all the flower arrangements. Thanks."
+  },
+  {
+    "testId": 3,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Event planners"
+          },
+          {
+            "label": "B",
+            "text": "Fashion designers"
+          },
+          {
+            "label": "C",
+            "text": "Sales analysts"
+          },
+          {
+            "label": "D",
+            "text": "Store managers"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q99",
+        "text": "Look at the graphic. Which topic does the speaker start the workshop with?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Topic 1"
+          },
+          {
+            "label": "B",
+            "text": "Topic 2"
+          },
+          {
+            "label": "C",
+            "text": "Topic 3"
+          },
+          {
+            "label": "D",
+            "text": "Topic 4"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q100",
+        "text": "What does the speaker say the listeners will do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Introduce themselves"
+          },
+          {
+            "label": "B",
+            "text": "Discuss some pictures"
+          },
+          {
+            "label": "C",
+            "text": "Practice doing interviews"
+          },
+          {
+            "label": "D",
+            "text": "Try out some software"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "Here are the topics we're going to cover in today's workshop on effective store management. I know interviewing is listed first on your agenda, but let's start with something more fun—setting up displays at your clothing stores. Displays are important because they have the biggest impact on how your store looks during business hours. From signage to lighting, there are many factors to consider. I'm going to show some photographs of displays, and let's see if we can identify which are the most effective, and why."
+  }
+]

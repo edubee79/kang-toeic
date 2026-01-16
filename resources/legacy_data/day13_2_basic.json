@@ -1,0 +1,254 @@
+[
+    {
+        "day": 13,
+        "no": 41,
+        "word": "a couple of",
+        "meaning": "두 개의, 몇 개의",
+        "targetScore": 650,
+        "exampleEn": "I waited for a couple of hours.",
+        "exampleKo": "나는 몇 시간 동안 기다렸습니다."
+    },
+    {
+        "day": 13,
+        "no": 42,
+        "word": "advise",
+        "meaning": "조언하다",
+        "targetScore": 650,
+        "exampleEn": "He advised me to stay.",
+        "exampleKo": "그는 나에게 머물라고 조언했습니다."
+    },
+    {
+        "day": 13,
+        "no": 43,
+        "word": "annoyance",
+        "meaning": "짜증, 곤란",
+        "targetScore": 650,
+        "exampleEn": "He expressed his annoyance.",
+        "exampleKo": "그는 짜증을 드러냈습니다."
+    },
+    {
+        "day": 13,
+        "no": 44,
+        "word": "apology",
+        "meaning": "사과",
+        "targetScore": 650,
+        "exampleEn": "He accepted my apology.",
+        "exampleKo": "그는 나의 사과를 받아들였습니다."
+    },
+    {
+        "day": 13,
+        "no": 45,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 650,
+        "exampleEn": "Tickets are now available.",
+        "exampleKo": "티켓을 이제 구할 수 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 46,
+        "word": "aware",
+        "meaning": "알고 있는",
+        "targetScore": 650,
+        "exampleEn": "I am aware of the problem.",
+        "exampleKo": "나는 그 문제를 알고 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 47,
+        "word": "certainty",
+        "meaning": "확실함",
+        "targetScore": 650,
+        "exampleEn": "There is no certainty in life.",
+        "exampleKo": "인생에 확실한 것은 없습니다."
+    },
+    {
+        "day": 13,
+        "no": 48,
+        "word": "comfortable",
+        "meaning": "편안한",
+        "targetScore": 650,
+        "exampleEn": "The chair is very comfortable.",
+        "exampleKo": "그 의자는 매우 편안합니다."
+    },
+    {
+        "day": 13,
+        "no": 49,
+        "word": "customer",
+        "meaning": "고객",
+        "targetScore": 650,
+        "exampleEn": "We value our customers.",
+        "exampleKo": "우리는 고객을 소중히 여깁니다."
+    },
+    {
+        "day": 13,
+        "no": 50,
+        "word": "deliberately",
+        "meaning": "고의적으로",
+        "targetScore": 650,
+        "exampleEn": "He deliberately broke the vase.",
+        "exampleKo": "그는 일부러 꽃병을 깼습니다."
+    },
+    {
+        "day": 13,
+        "no": 51,
+        "word": "disappointment",
+        "meaning": "실망",
+        "targetScore": 650,
+        "exampleEn": "Her face showed disappointment.",
+        "exampleKo": "그녀의 얼굴에 실망감이 드러났습니다."
+    },
+    {
+        "day": 13,
+        "no": 52,
+        "word": "excuse",
+        "meaning": "변명; 용서하다",
+        "targetScore": 650,
+        "exampleEn": "That is no excuse.",
+        "exampleKo": "그것은 변명이 되지 않습니다."
+    },
+    {
+        "day": 13,
+        "no": 53,
+        "word": "focus",
+        "meaning": "집중하다; 초점",
+        "targetScore": 650,
+        "exampleEn": "Focus on your work.",
+        "exampleKo": "일에 집중하세요."
+    },
+    {
+        "day": 13,
+        "no": 54,
+        "word": "inform",
+        "meaning": "알리다",
+        "targetScore": 650,
+        "exampleEn": "Please inform us of any changes.",
+        "exampleKo": "변경 사항이 있으면 알려주세요."
+    },
+    {
+        "day": 13,
+        "no": 55,
+        "word": "international",
+        "meaning": "국제적인",
+        "targetScore": 650,
+        "exampleEn": "It is an international airport.",
+        "exampleKo": "그것은 국제공항입니다."
+    },
+    {
+        "day": 13,
+        "no": 56,
+        "word": "investigate",
+        "meaning": "조사하다",
+        "targetScore": 650,
+        "exampleEn": "Police are investigating the crime.",
+        "exampleKo": "경찰이 범죄를 조사하고 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 57,
+        "word": "noise",
+        "meaning": "소음",
+        "targetScore": 650,
+        "exampleEn": "The noise woke me up.",
+        "exampleKo": "소음 때문에 깼습니다."
+    },
+    {
+        "day": 13,
+        "no": 58,
+        "word": "outstanding",
+        "meaning": "뛰어난, 미해결의",
+        "targetScore": 650,
+        "exampleEn": "He did an outstanding job.",
+        "exampleKo": "그는 뛰어난 일을 했습니다."
+    },
+    {
+        "day": 13,
+        "no": 59,
+        "word": "personally",
+        "meaning": "개인적으로",
+        "targetScore": 650,
+        "exampleEn": "I personally believe it.",
+        "exampleKo": "나는 개인적으로 그것을 믿습니다."
+    },
+    {
+        "day": 13,
+        "no": 60,
+        "word": "refuse",
+        "meaning": "거절하다",
+        "targetScore": 650,
+        "exampleEn": "He refused to help.",
+        "exampleKo": "그는 돕기를 거절했습니다."
+    },
+    {
+        "day": 13,
+        "no": 61,
+        "word": "reply",
+        "meaning": "대답하다; 답장",
+        "targetScore": 650,
+        "exampleEn": "I haven't received a reply.",
+        "exampleKo": "나는 답장을 받지 못했습니다."
+    },
+    {
+        "day": 13,
+        "no": 62,
+        "word": "resolve",
+        "meaning": "해결하다",
+        "targetScore": 650,
+        "exampleEn": "We must resolve this conflict.",
+        "exampleKo": "우리는 이 갈등을 해결해야 합니다."
+    },
+    {
+        "day": 13,
+        "no": 63,
+        "word": "routine",
+        "meaning": "일상적인; 일과",
+        "targetScore": 650,
+        "exampleEn": "Exercise is part of my daily routine.",
+        "exampleKo": "운동은 내 일과의 일부입니다."
+    },
+    {
+        "day": 13,
+        "no": 64,
+        "word": "rudely",
+        "meaning": "무례하게",
+        "targetScore": 650,
+        "exampleEn": "He spoke rudely to the waiter.",
+        "exampleKo": "그는 웨이터에게 무례하게 말했습니다."
+    },
+    {
+        "day": 13,
+        "no": 65,
+        "word": "satisfied",
+        "meaning": "만족하는",
+        "targetScore": 650,
+        "exampleEn": "Are you satisfied with the result?",
+        "exampleKo": "결과에 만족합니까?"
+    },
+    {
+        "day": 13,
+        "no": 66,
+        "word": "serious",
+        "meaning": "심각한, 진지한",
+        "targetScore": 650,
+        "exampleEn": "It is a serious problem.",
+        "exampleKo": "그것은 심각한 문제입니다."
+    },
+    {
+        "day": 13,
+        "no": 67,
+        "word": "stress",
+        "meaning": "스트레스; 강조하다",
+        "targetScore": 650,
+        "exampleEn": "I am under a lot of stress.",
+        "exampleKo": "나는 스트레스를 많이 받고 있습니다."
+    },
+    {
+        "day": 13,
+        "no": 68,
+        "word": "support",
+        "meaning": "지지하다, 지원하다; 지지",
+        "targetScore": 650,
+        "exampleEn": "They support the new policy.",
+        "exampleKo": "그들은 새 정책을 지지합니다."
+    }
+]

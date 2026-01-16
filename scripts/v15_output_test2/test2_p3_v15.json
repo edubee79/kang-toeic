@@ -1,0 +1,63 @@
+{
+  "passageId": 3,
+  "type": "EMAIL",
+  "structure": {
+    "header_lines": [
+      "To: Myung-Hee Hahn",
+      "From: Dellwyn Home Store",
+      "Date: January 15",
+      "Subject: Order update"
+    ],
+    "salutation": "Dear Ms. Hahn,",
+    "body_paragraphs": [
+      "Your [131] order of a red oak dining table and six matching chairs arrived at our store this morning.",
+      "We would now like to arrange for the delivery of the [132] . Please call us at 517-555-0188 and ask [133] to Coleman Cobb, our delivery manager.",
+      "[134]."
+    ],
+    "closing_lines": [
+      "Customer Service, Dellwyn Home Store"
+    ]
+  },
+  "questions": [
+    {
+      "id": 131,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) specially",
+        "(B) specialize",
+        "(C) special",
+        "(D) specializing"
+      ]
+    },
+    {
+      "id": 132,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) furniture",
+        "(B) appliances",
+        "(C) refund",
+        "(D) tools"
+      ]
+    },
+    {
+      "id": 133,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) speak",
+        "(B) spoken",
+        "(C) is speaking",
+        "(D) to speak"
+      ]
+    },
+    {
+      "id": 134,
+      "text": "Select the best answer.",
+      "options": [
+        "(A) He can schedule a convenient time.",
+        "(B) He began working here yesterday.",
+        "(C) He can meet you at 11:00 A.м.",
+        "(D) He recently moved to Dellwyn."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "day": 9,
+    "no": 41,
+    "word": "business hours",
+    "meaning": "영업 시간",
+    "targetScore": 650,
+    "exampleEn": "Our business hours are from 9:00 AM to 6:00 PM.",
+    "exampleKo": "우리의 영업 시간은 오전 9시부터 오후 6시까지입니다."
+  },
+  {
+    "day": 9,
+    "no": 42,
+    "word": "cast",
+    "meaning": "던지다, 드리우다",
+    "targetScore": 650,
+    "exampleEn": "The building casts a shadow over the park.",
+    "exampleKo": "그 건물은 공원에 그림자를 드리웁니다. (Typos fixed: case -> cast)"
+  },
+  {
+    "day": 9,
+    "no": 43,
+    "word": "CEO(chief executive officer)",
+    "meaning": "최고 경영자",
+    "targetScore": 650,
+    "exampleEn": "The CEO announced his retirement.",
+    "exampleKo": "최고 경영자(CEO)는 은퇴를 발표했습니다."
+  },
+  {
+    "day": 9,
+    "no": 44,
+    "word": "enterprise",
+    "meaning": "기업, 사업",
+    "targetScore": 650,
+    "exampleEn": "He manages a successful commercial enterprise.",
+    "exampleKo": "그는 성공적인 상업 기업을 경영합니다."
+  },
+  {
+    "day": 9,
+    "no": 45,
+    "word": "firm",
+    "meaning": "회사",
+    "targetScore": 650,
+    "exampleEn": "She works for a prestigious law firm.",
+    "exampleKo": "그녀는 명망 있는 법률 회사에서 일합니다."
+  },
+  {
+    "day": 9,
+    "no": 46,
+    "word": "franchise",
+    "meaning": "가맹 사업, 독점 판매권",
+    "targetScore": 650,
+    "exampleEn": "They plan to open a new franchise branch.",
+    "exampleKo": "그들은 새로운 가맹점(프랜차이즈) 지점을 열 계획입니다."
+  },
+  {
+    "day": 9,
+    "no": 47,
+    "word": "nice-looking",
+    "meaning": "깔끔한",
+    "targetScore": 650,
+    "exampleEn": "The new office has a nice-looking interior.",
+    "exampleKo": "새 사무실은 멋진 인테리어를 갖추고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 48,
+    "word": "plenty",
+    "meaning": "풍부한, 충분한",
+    "targetScore": 650,
+    "exampleEn": "We have plenty of supplies in the stockroom.",
+    "exampleKo": "우리는 비품실에 충분한 비품을 가지고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 49,
+    "word": "session",
+    "meaning": "(특정 활동)시간",
+    "targetScore": 650,
+    "exampleEn": "The training session will last for two hours.",
+    "exampleKo": "교육 시간(세션)은 2시간 동안 계속될 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 50,
+    "word": "speed up",
+    "meaning": "가속화하다",
+    "targetScore": 650,
+    "exampleEn": "We need to speed up the production process.",
+    "exampleKo": "우리는 생산 공정을 가속화해야 합니다."
+  },
+  {
+    "day": 9,
+    "no": 51,
+    "word": "trading",
+    "meaning": "거래",
+    "targetScore": 650,
+    "exampleEn": "Online trading has become very popular.",
+    "exampleKo": "온라인 거래가 매우 인기를 끌고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 52,
+    "word": "beginning",
+    "meaning": "시작, 초기의",
+    "targetScore": 650,
+    "exampleEn": "At the beginning of the project, we set clear goals.",
+    "exampleKo": "프로젝트 시작(초기)에 우리는 명확한 목표를 세웠습니다."
+  },
+  {
+    "day": 9,
+    "no": 53,
+    "word": "contribution to",
+    "meaning": "~에 대한 기여",
+    "targetScore": 650,
+    "exampleEn": "He made a significant contribution to the company.",
+    "exampleKo": "그는 회사에 상당한 기여를 했습니다."
+  },
+  {
+    "day": 9,
+    "no": 54,
+    "word": "convenient",
+    "meaning": "편리한, 간편한",
+    "targetScore": 650,
+    "exampleEn": "The hotel is located in a convenient area.",
+    "exampleKo": "그 호텔은 편리한 지역에 위치해 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 55,
+    "word": "differently",
+    "meaning": "다르게, 별도로",
+    "targetScore": 650,
+    "exampleEn": "We need to approach this problem differently.",
+    "exampleKo": "우리는 이 문제에 다르게(별도로) 접근해야 합니다."
+  },
+  {
+    "day": 9,
+    "no": 56,
+    "word": "economy",
+    "meaning": "경기, 경제",
+    "targetScore": 650,
+    "exampleEn": "The global economy is recovering slowly.",
+    "exampleKo": "세계 경제가 서서히 회복되고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 57,
+    "word": "formally",
+    "meaning": "정식으로, 공식적으로",
+    "targetScore": 650,
+    "exampleEn": "The agreement was formally signed yesterday.",
+    "exampleKo": "그 합의는 어제 정식으로 서명되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 58,
+    "word": "industrial",
+    "meaning": "산업의",
+    "targetScore": 650,
+    "exampleEn": "The city has a large industrial complex.",
+    "exampleKo": "그 도시에는 대규모 산업 단지가 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 59,
+    "word": "lightly",
+    "meaning": "가볍게, 부드럽게",
+    "targetScore": 650,
+    "exampleEn": "Please pack lightly for the business trip.",
+    "exampleKo": "출장을 위해 짐을 가볍게 싸십시오."
+  },
+  {
+    "day": 9,
+    "no": 60,
+    "word": "not A but B",
+    "meaning": "A가 아니라 B다",
+    "targetScore": 650,
+    "exampleEn": "The goal is not quantity but quality.",
+    "exampleKo": "목표는 양이 아니라 질입니다(A가 아니라 B다)."
+  },
+  {
+    "day": 9,
+    "no": 61,
+    "word": "optimistic",
+    "meaning": "낙관적인",
+    "targetScore": 650,
+    "exampleEn": "We are optimistic about meeting the deadline.",
+    "exampleKo": "우리는 마감 기한 준수에 대해 낙관적입니다."
+  },
+  {
+    "day": 9,
+    "no": 62,
+    "word": "overall",
+    "meaning": "전반적인, 총체적인",
+    "targetScore": 650,
+    "exampleEn": "The overall performance of the team was excellent.",
+    "exampleKo": "팀의 전반적인 성과는 훌륭했습니다."
+  },
+  {
+    "day": 9,
+    "no": 63,
+    "word": "possibility",
+    "meaning": "가능성",
+    "targetScore": 650,
+    "exampleEn": "There is a strong possibility of a merger.",
+    "exampleKo": "합병의 강력한 가능성이 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 64,
+    "word": "private",
+    "meaning": "개인적인",
+    "targetScore": 650,
+    "exampleEn": "They held a private meeting to discuss the issue.",
+    "exampleKo": "그들은 그 문제를 논의하기 위해 개인적인(비공개) 회의를 열었습니다."
+  },
+  {
+    "day": 9,
+    "no": 65,
+    "word": "rise",
+    "meaning": "오르다, 일어서다",
+    "targetScore": 650,
+    "exampleEn": "Unemployment rates continue to rise.",
+    "exampleKo": "실업률이 계속해서 오르고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 66,
+    "word": "situation",
+    "meaning": "상황",
+    "targetScore": 650,
+    "exampleEn": "We are monitoring the market situation clearly.",
+    "exampleKo": "우리는 시장 상황을 명확히 모니터링하고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 67,
+    "word": "strengthen",
+    "meaning": "강화하다, 강력해지다",
+    "targetScore": 650,
+    "exampleEn": "The partnership will strengthen our competitive edge.",
+    "exampleKo": "파트너십은 우리의 경쟁 우위를 강화할 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 68,
+    "word": "up-and-down",
+    "meaning": "오르내리는, 기복이 있는",
+    "targetScore": 650,
+    "exampleEn": "The stock market has been up-and-down lately.",
+    "exampleKo": "주식 시장은 최근에 기복이 심했습니다(오르내렸습니다)."
+  }
+]

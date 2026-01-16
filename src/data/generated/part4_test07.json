@@ -1,0 +1,782 @@
+[
+  {
+    "testId": 7,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "Why is the speaker calling?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To explain a schedule change"
+          },
+          {
+            "label": "B",
+            "text": "To discuss an upcoming conference"
+          },
+          {
+            "label": "C",
+            "text": "To request approval for an expense"
+          },
+          {
+            "label": "D",
+            "text": "To confirm an e-mail address"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q72",
+        "text": "What does the speaker say about a job candidate?",
+        "options": [
+          {
+            "label": "A",
+            "text": "He requires additional training."
+          },
+          {
+            "label": "B",
+            "text": "He has good references."
+          },
+          {
+            "label": "C",
+            "text": "He speaks several languages."
+          },
+          {
+            "label": "D",
+            "text": "He does not live in the area."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q73",
+        "text": "What did the speaker send in an e-mail?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A résumé"
+          },
+          {
+            "label": "B",
+            "text": "A cost estimate"
+          },
+          {
+            "label": "C",
+            "text": "A meeting agenda"
+          },
+          {
+            "label": "D",
+            "text": "A tour itinerary"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "W-Am Hi, Kavi. This is Anna. I just got off the phone with a candidate for the strategy director position. 71 I'd like to bring him in for an interview, but I want to check with you about the cost. Will you approve travel expenses for him to come here? 72 He doesn't live locally-he'd be flying in from Chicago. I'd like to make these arrangements quickly, if possible. 73I just e-mailed you a cost estimate. Can you let me know what you think?"
+  },
+  {
+    "testId": 7,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "Where are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "In an airport"
+          },
+          {
+            "label": "B",
+            "text": "On a train"
+          },
+          {
+            "label": "C",
+            "text": "At a theater"
+          },
+          {
+            "label": "D",
+            "text": "On a ferry"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q75",
+        "text": "What are the listeners with e-tickets asked to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Check their seat numbers"
+          },
+          {
+            "label": "B",
+            "text": "Increase their screen's brightness"
+          },
+          {
+            "label": "C",
+            "text": "Come to the front of the line"
+          },
+          {
+            "label": "D",
+            "text": "Download a mobile application"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q76",
+        "text": "Why does the speaker say, \"you shouldn’t leave any belongings on the seat next to you\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To ask the listeners to clear space"
+          },
+          {
+            "label": "B",
+            "text": "To remind the listeners about forgotten items"
+          },
+          {
+            "label": "C",
+            "text": "To explain safety regulations"
+          },
+          {
+            "label": "D",
+            "text": "To clarify the checked baggage policy"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Au 74 Attention, passengers. The conductor will soon make his way through the train to check tickets. Please have them ready. 75 If you have an e-ticket on your smartphone, please make sure you set your screen brightness to high. The conductor will be using an electronic scanner to read the tickets, and the scanner won't be able to read your ticket code if the light on your phone's screen is too low. Also, 76this is a fully booked train, so you shouldn't leave any belongings on the seat next to you."
+  },
+  {
+    "testId": 7,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "Why is the speaker calling?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To reschedule an inspection"
+          },
+          {
+            "label": "B",
+            "text": "To request a demonstration"
+          },
+          {
+            "label": "C",
+            "text": "To book a vacation package"
+          },
+          {
+            "label": "D",
+            "text": "To change an order"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q78",
+        "text": "What has the speaker’s company recently done?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It changed its hours of operation."
+          },
+          {
+            "label": "B",
+            "text": "It hired additional staff."
+          },
+          {
+            "label": "C",
+            "text": "It moved to a new location."
+          },
+          {
+            "label": "D",
+            "text": "It started a health program."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q79",
+        "text": "What does the speaker encourage the listener to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Display some products"
+          },
+          {
+            "label": "B",
+            "text": "Offer some coupons"
+          },
+          {
+            "label": "C",
+            "text": "Create a handbook"
+          },
+          {
+            "label": "D",
+            "text": "Expedite a delivery"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "W-Br Hello, my name's Darya, and 77I heard a radio advertisement about your bicycle shop. It said that you offer bicycle repair demonstrations. Would you consider doing that at a corporate health fair? 78 My company recently launched a new health initiative, and one thing we'd like to do is encourage employees to cycle to work. We'd provide you with a booth, and you'd bring the bike and tools. 79I also encourage you to bring some cycling accessories-such as helmets and water bottles-to display."
+  },
+  {
+    "testId": 7,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "Where do the listeners most likely work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a health food store"
+          },
+          {
+            "label": "B",
+            "text": "At a restaurant"
+          },
+          {
+            "label": "C",
+            "text": "At a spice factory"
+          },
+          {
+            "label": "D",
+            "text": "At a vegetable farm"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q81",
+        "text": "What are the listeners preparing for today?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A seasonal sale"
+          },
+          {
+            "label": "B",
+            "text": "A cooking class"
+          },
+          {
+            "label": "C",
+            "text": "A baking contest"
+          },
+          {
+            "label": "D",
+            "text": "A grand opening"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q82",
+        "text": "Who is Ingrid Vogel?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A newspaper journalist"
+          },
+          {
+            "label": "B",
+            "text": "A health inspector"
+          },
+          {
+            "label": "C",
+            "text": "A famous chef"
+          },
+          {
+            "label": "D",
+            "text": "An interior decorator"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn 80 So, this meeting is for everyone-cooks, servers, hosts, cleaners-because we all need to work together as a team. Today is an important day. So, first of all, 81 thank you all for coming in extra early to help prepare for our grand opening. I appreciate it. Second thing I'd like to mention: 82 tomorrow, a journalist from the local newspaper-her name is Ingrid Vogel-has made a reservation for six o'clock. Ms. Vogel will be writing an article about her experience here and rating the food we serve, so take good care of her. A positive review in the paper will definitely be good for future business."
+  },
+  {
+    "testId": 7,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "Where is the tour taking place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an art museum"
+          },
+          {
+            "label": "B",
+            "text": "At a pottery workshop"
+          },
+          {
+            "label": "C",
+            "text": "At a clothing design studio"
+          },
+          {
+            "label": "D",
+            "text": "At a glass factory"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q84",
+        "text": "Why does the speaker say, \"we ship to customers all over the world\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To reassure the listeners about a service"
+          },
+          {
+            "label": "B",
+            "text": "To explain why a storage area is large"
+          },
+          {
+            "label": "C",
+            "text": "To emphasize the popularity of some products"
+          },
+          {
+            "label": "D",
+            "text": "To make a suggestion for a gift"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q85",
+        "text": "What does the speaker say is available to the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An event calendar"
+          },
+          {
+            "label": "B",
+            "text": "A discount on a purchase"
+          },
+          {
+            "label": "C",
+            "text": "A subscription to a newsletter"
+          },
+          {
+            "label": "D",
+            "text": "Entry in a prize drawing"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "W-Br 83 Welcome to this tour of Jenson Manufacturing. Our town is known for the glasswork that has been produced for centuries by the many factories here. In fact, decorative glass is still the town's main source of income. 84 While products from all the factories are known locally, we ship to customers all over the world. Today, you'll see our skilled artisans at work and learn about the history of their craft. After the tour, you may want to visit our gift shop, where you'll find many of the items produced here. 85 Be sure to hold on to your tour ticket. It qualifies you for ten percent off anything you buy today."
+  },
+  {
+    "testId": 7,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "What is the purpose of the speaker’s organization?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To advise businesses about mergers"
+          },
+          {
+            "label": "B",
+            "text": "To arrange travel for executives"
+          },
+          {
+            "label": "C",
+            "text": "To share resources with new business owners"
+          },
+          {
+            "label": "D",
+            "text": "To recruit volunteers for a research study"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q87",
+        "text": "What did the listeners do on March 15?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They signed some documents."
+          },
+          {
+            "label": "B",
+            "text": "They purchased some materials."
+          },
+          {
+            "label": "C",
+            "text": "They downloaded some software."
+          },
+          {
+            "label": "D",
+            "text": "They wrote some proposals."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q88",
+        "text": "What will the listeners do in a few minutes?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Congratulate a colleague"
+          },
+          {
+            "label": "B",
+            "text": "Vote on a policy change"
+          },
+          {
+            "label": "C",
+            "text": "Create an advertisement"
+          },
+          {
+            "label": "D",
+            "text": "Meet with mentors"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Am Welcome back, everyone. On behalf of the city's business development council, I'm pleased you could attend today's workshop for small business start-ups. Again, 86the council exists with the sole purpose of getting you the resources that you need to successfully launch your new business. So, this is the second workshop in a three-part series. 87 During our initial session on March fifteenth, you worked on constructing a careful and detailed business proposal. Those proposals you submitted were a good start. Today, 88 we're fortunate to have a number of seasoned business mentors who've volunteered their time to assist you with strategies for securing financing. In a few minutes, you'll meet with them in small groups."
+  },
+  {
+    "testId": 7,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What does the speaker say is a top priority?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Increasing product sales"
+          },
+          {
+            "label": "B",
+            "text": "Keeping quality employees"
+          },
+          {
+            "label": "C",
+            "text": "Improving worker efficiency"
+          },
+          {
+            "label": "D",
+            "text": "Lowering manufacturing costs"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q90",
+        "text": "Who is Helen Liu?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A company spokesperson"
+          },
+          {
+            "label": "B",
+            "text": "A human resources consultant"
+          },
+          {
+            "label": "C",
+            "text": "A digital marketing expert"
+          },
+          {
+            "label": "D",
+            "text": "A course instructor"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q91",
+        "text": "Why does the speaker say, \"this affects all of us\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To encourage participation"
+          },
+          {
+            "label": "B",
+            "text": "To congratulate a team"
+          },
+          {
+            "label": "C",
+            "text": "To discourage future errors"
+          },
+          {
+            "label": "D",
+            "text": "To apologize for a delay"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Au Now let's talk about our new initiative. 89 Retaining quality personnel is now a top priority for our company. We're hoping that competitive salaries and benefits packages will help us recruit and keep talented staff. So, 90 we recently brought in Helen Liu. Helen is a human resources consultant who'll spend the next few months helping us restructure our compensation program. 91 Currently, she's requesting staff feedback about pay and benefits. To that end, she's created a questionnaire that will be sent out later today. I know everyone's busy right now, but this affects all of us."
+  },
+  {
+    "testId": 7,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "What is the purpose of the talk?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To demonstrate a work process"
+          },
+          {
+            "label": "B",
+            "text": "To choose a job applicant"
+          },
+          {
+            "label": "C",
+            "text": "To present a marketing plan"
+          },
+          {
+            "label": "D",
+            "text": "To review some sales reports"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q93",
+        "text": "What does the speaker say about the company’s current customers?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They are unhappy with a service."
+          },
+          {
+            "label": "B",
+            "text": "They live mainly in cities."
+          },
+          {
+            "label": "C",
+            "text": "Many of them work in technology."
+          },
+          {
+            "label": "D",
+            "text": "Many of them are young."
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q94",
+        "text": "What feature of Soft-Palm 51 does the speaker emphasize?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It is easy to carry."
+          },
+          {
+            "label": "B",
+            "text": "It is less expensive than expected."
+          },
+          {
+            "label": "C",
+            "text": "It is energy efficient."
+          },
+          {
+            "label": "D",
+            "text": "It is faster than previous models."
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn 92I'm here from Tarmo Advertising to present the new marketing campaign my team and I propose for your electronic tablet device, Soft-Palm 51. 93 Let me begin with a recommendation, that you target a slightly older, more sophisticated age segment than you have in the past. Your products are already popular among younger customers, and Soft-Palm 51 is an opportunity to expand your brand to midcareer professionals. 94 With its compact, light design, Soft-Palm 51 has the portability that business travelers need. This is the key selling point."
+  },
+  {
+    "testId": 7,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "What is causing a delay?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A holiday parade"
+          },
+          {
+            "label": "B",
+            "text": "A broken traffic light"
+          },
+          {
+            "label": "C",
+            "text": "An icy road"
+          },
+          {
+            "label": "D",
+            "text": "A fallen tree"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q96",
+        "text": "What does the speaker advise the listeners to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Take an alternate route home"
+          },
+          {
+            "label": "B",
+            "text": "Take public transportation"
+          },
+          {
+            "label": "C",
+            "text": "Drive carefully"
+          },
+          {
+            "label": "D",
+            "text": "Postpone travel"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q97",
+        "text": "Look at the graphic. When will a sporting event take place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "On Monday"
+          },
+          {
+            "label": "B",
+            "text": "On Tuesday"
+          },
+          {
+            "label": "C",
+            "text": "On Wednesday"
+          },
+          {
+            "label": "D",
+            "text": "On Thursday"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Am This is the six o'clock update from NCK News with Patricia Sullivan. First, the traffic report: 95 a traffic light on Samson Road isn't working, and it's causing a lengthy delay. A maintenance crew is currently fixing the light, so repairs are expected to be done within the hour. Until then, 96 taking an alternate route home is advisable. Next in weather: right now it's rainy and cold. 97 Tomorrow's weather will be excellent; we're expecting a sunny day with no chance of rain. And that's good, because our local football team plays tomorrow at noon. Stay tuned for the seven o'clock update."
+  },
+  {
+    "testId": 7,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Librarians"
+          },
+          {
+            "label": "B",
+            "text": "Engineers"
+          },
+          {
+            "label": "C",
+            "text": "Politicians"
+          },
+          {
+            "label": "D",
+            "text": "Biologists"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q99",
+        "text": "Look at the graphic. Which lecturer is the speaker excited to hear?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Jung-Hoon Kim"
+          },
+          {
+            "label": "B",
+            "text": "Mei Na Zhang"
+          },
+          {
+            "label": "C",
+            "text": "Maryam Alaoui"
+          },
+          {
+            "label": "D",
+            "text": "Isamu Nakamura"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q100",
+        "text": "What will the listeners most likely do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Vote for a board member"
+          },
+          {
+            "label": "B",
+            "text": "Share a meal"
+          },
+          {
+            "label": "C",
+            "text": "Participate in a workshop"
+          },
+          {
+            "label": "D",
+            "text": "Pay membership fees"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "W-Br 98 Welcome to our quarterly meeting. There's a lot of engineering business to discuss. The first item is our Fall Lecture Series, which will start next month. We have an excellent lineup this year. 99 I'm especially excited about our October speaker, who will be talking about bridge design and materials. OK, the next item on the agenda is elections. 100 We need to choose a new board member, so Luisa is passing around ballots now."
+  }
+]

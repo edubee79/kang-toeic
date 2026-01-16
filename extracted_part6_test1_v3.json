@@ -1,0 +1,409 @@
+{
+  "testId": 1,
+  "passages": [
+    {
+      "id": "p6-t1-p1",
+      "guidance": "Questions 131-134 refer to the following announcement.",
+      "type": "announcement",
+      "title": null,
+      "content": "Come to the Maxley Heights Center for Horticulture and learn how to createabeautiful, eco-friendly garden for your home or business. [131]. We will teach you how to plantarain garden, which is simplyashallow sunken garden [132]. a special soil mix to filter pollutants from rainwater flowing from nearby roads and rooftops. These gardens can be landscaped with native plants and flowers. [133], rain gardens are always beneficial to the local environment. Among other things, [134] improve drainage and protect rivers and streams.\n\nTo register, visit www.maxley-horticulture.org.",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Children of all ages will enjoy the new\nexhibits."
+            },
+            {
+              "label": "B",
+              "text": "Learn about rainfall patterns across the\nregion."
+            },
+            {
+              "label": "C",
+              "text": "Build a set of simple patio furniture with\neasy-to-acquire materials."
+            },
+            {
+              "label": "D",
+              "text": "Next Saturday at 4 P.M., we are hosting a\nfree workshop for the public."
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "to use"
+            },
+            {
+              "label": "B",
+              "text": "used to"
+            },
+            {
+              "label": "C",
+              "text": "by using"
+            },
+            {
+              "label": "D",
+              "text": "that uses"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Best of all"
+            },
+            {
+              "label": "B",
+              "text": "For example"
+            },
+            {
+              "label": "C",
+              "text": "In any event"
+            },
+            {
+              "label": "D",
+              "text": "As a matter of fact"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "we"
+            },
+            {
+              "label": "B",
+              "text": "they"
+            },
+            {
+              "label": "C",
+              "text": "both"
+            },
+            {
+              "label": "D",
+              "text": "yours"
+            }
+          ],
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "id": "p6-t1-p2",
+      "guidance": "Questions 135-138 refer to the following letter.",
+      "type": "letter",
+      "title": null,
+      "content": "31 July\n\nAkwasi Dombo Fourth Avenue GA 105\nAccra, Ghana\n\nDear Mr. Dombo, Thank you for your [135] support in helping me to plan the opening gala for Tokyo's fashion week. The event wasahuge success, and I was honored to work with you. I know that our attendees follow your work closely, and they loved the designs you contributed for this event.\n\nYour designs receivedalot of [136] on social media. Shows like this will keep Tokyo on the map asapremier fashion centre. [137] I realize that the multiple delays made the planning no easy task. The auction [138] our Young Designers Award program is coming up soon and I look forward to working with you on that as well.\n\nSincerely, Asahi Ishioka Director, Japanese Guild of Fashion Designers",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "amazed"
+            },
+            {
+              "label": "B",
+              "text": "amazement"
+            },
+            {
+              "label": "C",
+              "text": "amazing"
+            },
+            {
+              "label": "D",
+              "text": "amazingly"
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "attention"
+            },
+            {
+              "label": "B",
+              "text": "proposals"
+            },
+            {
+              "label": "C",
+              "text": "innovation"
+            },
+            {
+              "label": "D",
+              "text": "criticism"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Several other events have gone\nsurprisingly well."
+            },
+            {
+              "label": "B",
+              "text": "Thank you also for your flexibility in\nplanning the event."
+            },
+            {
+              "label": "C",
+              "text": "Please stop by our office the next\ntime you are in the city."
+            },
+            {
+              "label": "D",
+              "text": "Tokyo is a top tourism destination for\nmany reasons."
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "will benefit"
+            },
+            {
+              "label": "B",
+              "text": "to benefit"
+            },
+            {
+              "label": "C",
+              "text": "has benefited"
+            },
+            {
+              "label": "D",
+              "text": "benefits"
+            }
+          ],
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "id": "p6-t1-p3",
+      "guidance": "Questions 139-142 refer to the following e-mail.",
+      "type": "email",
+      "title": null,
+      "content": "From: Patron Services <patronservices@menachinlibrary.org>\nTo: Edgar Hughes <hughese98@villachesta.com>\nSubject: Card expiration date approaching\nDate: December 3\n\nDear Mr. Hughes, Please be advised that your Mena Chin Library card will expire one month from today.\n\n[139] must be renewed if you intend to keep your membership for the coming year.\n\n[140] This can be done at the information desk at any branch location.\n\n[141] you decide to close your account, no action is necessary. Failure to complete your renewal by the [142] date will result in the expiration of your library privileges.\n\nIf you have any questions about this notice, or about general library services, you may reply directly to this e-mail.\n\nSincerely, Patron Services",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "It"
+            },
+            {
+              "label": "B",
+              "text": "You"
+            },
+            {
+              "label": "C",
+              "text": "Our"
+            },
+            {
+              "label": "D",
+              "text": "Each"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "To sign up for a card, visit your local\nlibrary branch."
+            },
+            {
+              "label": "B",
+              "text": "For questions about library membership,\nplease visit our Web site."
+            },
+            {
+              "label": "C",
+              "text": "Renewal must be completed at least one\nweek before your card expires."
+            },
+            {
+              "label": "D",
+              "text": "You may opt out of this program at any\ntime."
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Also"
+            },
+            {
+              "label": "B",
+              "text": "Should"
+            },
+            {
+              "label": "C",
+              "text": "Because"
+            },
+            {
+              "label": "D",
+              "text": "Although"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "specifically"
+            },
+            {
+              "label": "B",
+              "text": "specifics"
+            },
+            {
+              "label": "C",
+              "text": "specified"
+            },
+            {
+              "label": "D",
+              "text": "specificity"
+            }
+          ],
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "id": "p6-t1-p4",
+      "guidance": "Questions 143-146 refer to the following letter.",
+      "type": "letter",
+      "title": null,
+      "content": "April 7 Naomi Burwell\n43 Waymire Road\n\nSouth Portland, ME 04109 Dear Ms. Burwell, I am Omar Ridha, the manager of Droplight Studio. [143] We offerafull range of photography services for real estate professionals like you. We take pride in composing interior and exterior shots that makeaproperty look its best. Droplight Studio spares no effort in [144] superior digital images. [145], our professional-grade equipment, lighting, and staging techniques allow us to highlight the best features ofaproperty. And once the photo shoot is over, every image [146] expert editing. All these services come standard in every package.\n\nPlease visit our Web site to view our work as well as our pricing and scheduling information. We are happy to work with you to customize orders.\n\nSincerely, Omar Ridha, Droplight Studio",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "I would like to introduce you to our\nbusiness."
+            },
+            {
+              "label": "B",
+              "text": "Great photographs can make your\nproperty stand out."
+            },
+            {
+              "label": "C",
+              "text": "We are looking forward to your visit."
+            },
+            {
+              "label": "D",
+              "text": "It was the first studio of its kind to\nopen in this area."
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "researching"
+            },
+            {
+              "label": "B",
+              "text": "creating"
+            },
+            {
+              "label": "C",
+              "text": "purchasing"
+            },
+            {
+              "label": "D",
+              "text": "displaying"
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "If not"
+            },
+            {
+              "label": "B",
+              "text": "By comparison"
+            },
+            {
+              "label": "C",
+              "text": "Otherwise"
+            },
+            {
+              "label": "D",
+              "text": "Indeed"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "receives"
+            },
+            {
+              "label": "B",
+              "text": "is receiving"
+            },
+            {
+              "label": "C",
+              "text": "had received"
+            },
+            {
+              "label": "D",
+              "text": "had to receive"
+            }
+          ],
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

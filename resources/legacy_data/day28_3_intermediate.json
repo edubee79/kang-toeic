@@ -1,0 +1,614 @@
+[
+  {
+    "day": 28,
+    "no": 69,
+    "word": "streamline",
+    "meaning": "간소화하다",
+    "targetScore": 800,
+    "exampleEn": "The new system will streamline production processes significantly.",
+    "exampleKo": "새 시스템은 생산 공정을 크게 간소화할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 70,
+    "word": "optimize",
+    "meaning": "최적화하다",
+    "targetScore": 800,
+    "exampleEn": "We need to optimize our manufacturing workflow.",
+    "exampleKo": "제조 작업 흐름을 최적화해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 71,
+    "word": "implement",
+    "meaning": "시행하다",
+    "targetScore": 800,
+    "exampleEn": "The factory will implement new safety measures next month.",
+    "exampleKo": "공장은 다음 달 새로운 안전 조치를 시행할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 72,
+    "word": "monitor",
+    "meaning": "감시하다",
+    "targetScore": 800,
+    "exampleEn": "Technicians monitor equipment performance continuously.",
+    "exampleKo": "기술자들은 장비 성능을 지속적으로 감시합니다."
+  },
+  {
+    "day": 28,
+    "no": 73,
+    "word": "supervise",
+    "meaning": "감독하다",
+    "targetScore": 800,
+    "exampleEn": "The manager supervises all assembly line operations.",
+    "exampleKo": "관리자는 모든 조립 라인 작업을 감독합니다."
+  },
+  {
+    "day": 28,
+    "no": 74,
+    "word": "coordinate",
+    "meaning": "조정하다",
+    "targetScore": 800,
+    "exampleEn": "The logistics team coordinates shipments with suppliers.",
+    "exampleKo": "물류 팀은 공급업체와 선적을 조정합니다."
+  },
+  {
+    "day": 28,
+    "no": 75,
+    "word": "allocate",
+    "meaning": "배분하다",
+    "targetScore": 800,
+    "exampleEn": "Resources are allocated based on production priorities.",
+    "exampleKo": "자원은 생산 우선순위에 따라 배분됩니다."
+  },
+  {
+    "day": 28,
+    "no": 76,
+    "word": "utilize",
+    "meaning": "활용하다",
+    "targetScore": 800,
+    "exampleEn": "The plant utilizes renewable energy sources.",
+    "exampleKo": "공장은 재생 에너지원을 활용합니다."
+  },
+  {
+    "day": 28,
+    "no": 77,
+    "word": "minimize",
+    "meaning": "최소화하다",
+    "targetScore": 800,
+    "exampleEn": "Our goal is to minimize production waste.",
+    "exampleKo": "우리의 목표는 생산 폐기물을 최소화하는 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 78,
+    "word": "maximize",
+    "meaning": "최대화하다",
+    "targetScore": 800,
+    "exampleEn": "The company aims to maximize output while maintaining quality.",
+    "exampleKo": "회사는 품질을 유지하면서 생산량을 최대화하는 것을 목표로 합니다."
+  },
+  {
+    "day": 28,
+    "no": 79,
+    "word": "enhance",
+    "meaning": "향상시키다",
+    "targetScore": 800,
+    "exampleEn": "New technology will enhance manufacturing capabilities.",
+    "exampleKo": "새로운 기술이 제조 능력을 향상시킬 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 80,
+    "word": "refine",
+    "meaning": "개선하다",
+    "targetScore": 800,
+    "exampleEn": "Engineers continue to refine the production process.",
+    "exampleKo": "엔지니어들은 생산 공정을 계속 개선하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 81,
+    "word": "standardize",
+    "meaning": "표준화하다",
+    "targetScore": 800,
+    "exampleEn": "The company plans to standardize procedures across all facilities.",
+    "exampleKo": "회사는 모든 시설에서 절차를 표준화할 계획입니다."
+  },
+  {
+    "day": 28,
+    "no": 82,
+    "word": "automate",
+    "meaning": "자동화하다",
+    "targetScore": 800,
+    "exampleEn": "We will automate repetitive tasks to improve efficiency.",
+    "exampleKo": "효율성을 높이기 위해 반복 작업을 자동화할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 83,
+    "word": "integrate",
+    "meaning": "통합하다",
+    "targetScore": 800,
+    "exampleEn": "The new software integrates with existing systems seamlessly.",
+    "exampleKo": "새 소프트웨어는 기존 시스템과 원활하게 통합됩니다."
+  },
+  {
+    "day": 28,
+    "no": 84,
+    "word": "synchronize",
+    "meaning": "동기화하다",
+    "targetScore": 800,
+    "exampleEn": "Production schedules must be synchronized with delivery times.",
+    "exampleKo": "생산 일정은 배송 시간과 동기화되어야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 85,
+    "word": "troubleshoot",
+    "meaning": "문제를 해결하다",
+    "targetScore": 800,
+    "exampleEn": "Technicians are trained to troubleshoot equipment malfunctions.",
+    "exampleKo": "기술자들은 장비 고장 문제를 해결하도록 훈련받았습니다."
+  },
+  {
+    "day": 28,
+    "no": 86,
+    "word": "diagnose",
+    "meaning": "진단하다",
+    "targetScore": 800,
+    "exampleEn": "The system can diagnose mechanical problems automatically.",
+    "exampleKo": "시스템은 기계적 문제를 자동으로 진단할 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 87,
+    "word": "rectify",
+    "meaning": "바로잡다",
+    "targetScore": 800,
+    "exampleEn": "Immediate action was taken to rectify the defect.",
+    "exampleKo": "결함을 바로잡기 위해 즉각적인 조치가 취해졌습니다."
+  },
+  {
+    "day": 28,
+    "no": 88,
+    "word": "validate",
+    "meaning": "검증하다",
+    "targetScore": 800,
+    "exampleEn": "Quality inspectors validate each batch before shipment.",
+    "exampleKo": "품질 검사관은 선적 전에 각 배치를 검증합니다."
+  },
+  {
+    "day": 28,
+    "no": 89,
+    "word": "verify",
+    "meaning": "확인하다",
+    "targetScore": 800,
+    "exampleEn": "Please verify that all specifications are met.",
+    "exampleKo": "모든 사양이 충족되었는지 확인해 주세요."
+  },
+  {
+    "day": 28,
+    "no": 90,
+    "word": "certify",
+    "meaning": "인증하다",
+    "targetScore": 800,
+    "exampleEn": "The laboratory certifies product safety standards.",
+    "exampleKo": "연구소는 제품 안전 기준을 인증합니다."
+  },
+  {
+    "day": 28,
+    "no": 91,
+    "word": "comply",
+    "meaning": "준수하다",
+    "targetScore": 800,
+    "exampleEn": "All products must comply with international regulations.",
+    "exampleKo": "모든 제품은 국제 규정을 준수해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 92,
+    "word": "adhere",
+    "meaning": "고수하다",
+    "targetScore": 800,
+    "exampleEn": "Manufacturers must adhere to strict quality guidelines.",
+    "exampleKo": "제조업체는 엄격한 품질 지침을 고수해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 93,
+    "word": "conform",
+    "meaning": "부합하다",
+    "targetScore": 800,
+    "exampleEn": "Products must conform to industry standards.",
+    "exampleKo": "제품은 산업 표준에 부합해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 94,
+    "word": "exceed",
+    "meaning": "초과하다",
+    "targetScore": 800,
+    "exampleEn": "Our products exceed customer expectations consistently.",
+    "exampleKo": "우리 제품은 지속적으로 고객 기대를 초과합니다."
+  },
+  {
+    "day": 28,
+    "no": 95,
+    "word": "surpass",
+    "meaning": "능가하다",
+    "targetScore": 800,
+    "exampleEn": "This year's output surpassed last year's record.",
+    "exampleKo": "올해 생산량은 작년 기록을 능가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 96,
+    "word": "attain",
+    "meaning": "달성하다",
+    "targetScore": 800,
+    "exampleEn": "The factory attained its production targets ahead of schedule.",
+    "exampleKo": "공장은 예정보다 앞서 생산 목표를 달성했습니다."
+  },
+  {
+    "day": 28,
+    "no": 97,
+    "word": "achieve",
+    "meaning": "성취하다",
+    "targetScore": 800,
+    "exampleEn": "We achieved a 30% increase in productivity this quarter.",
+    "exampleKo": "이번 분기에 생산성이 30% 증가했습니다."
+  },
+  {
+    "day": 28,
+    "no": 98,
+    "word": "sustain",
+    "meaning": "유지하다",
+    "targetScore": 800,
+    "exampleEn": "The company must sustain high quality standards.",
+    "exampleKo": "회사는 높은 품질 기준을 유지해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 99,
+    "word": "maintain",
+    "meaning": "유지하다",
+    "targetScore": 800,
+    "exampleEn": "Regular maintenance helps maintain equipment reliability.",
+    "exampleKo": "정기 유지보수는 장비 신뢰성을 유지하는 데 도움이 됩니다."
+  },
+  {
+    "day": 28,
+    "no": 100,
+    "word": "preserve",
+    "meaning": "보존하다",
+    "targetScore": 800,
+    "exampleEn": "Proper storage preserves product quality.",
+    "exampleKo": "적절한 보관은 제품 품질을 보존합니다."
+  },
+  {
+    "day": 28,
+    "no": 101,
+    "word": "retain",
+    "meaning": "보유하다",
+    "targetScore": 800,
+    "exampleEn": "The material retains its strength under pressure.",
+    "exampleKo": "재료는 압력 하에서 강도를 보유합니다."
+  },
+  {
+    "day": 28,
+    "no": 102,
+    "word": "deteriorate",
+    "meaning": "악화되다",
+    "targetScore": 800,
+    "exampleEn": "Equipment performance may deteriorate without maintenance.",
+    "exampleKo": "유지보수 없이는 장비 성능이 악화될 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 103,
+    "word": "degrade",
+    "meaning": "저하되다",
+    "targetScore": 800,
+    "exampleEn": "Exposure to heat can degrade product quality.",
+    "exampleKo": "열에 노출되면 제품 품질이 저하될 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 104,
+    "word": "compromise",
+    "meaning": "손상시키다",
+    "targetScore": 800,
+    "exampleEn": "Shortcuts in production can compromise safety.",
+    "exampleKo": "생산의 지름길은 안전을 손상시킬 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 105,
+    "word": "jeopardize",
+    "meaning": "위태롭게 하다",
+    "targetScore": 800,
+    "exampleEn": "Delays could jeopardize the entire project timeline.",
+    "exampleKo": "지연은 전체 프로젝트 일정을 위태롭게 할 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 106,
+    "word": "expedite",
+    "meaning": "신속히 처리하다",
+    "targetScore": 800,
+    "exampleEn": "We will expedite urgent orders at no extra cost.",
+    "exampleKo": "긴급 주문을 추가 비용 없이 신속히 처리하겠습니다."
+  },
+  {
+    "day": 28,
+    "no": 107,
+    "word": "accelerate",
+    "meaning": "가속화하다",
+    "targetScore": 800,
+    "exampleEn": "New machinery will accelerate production rates.",
+    "exampleKo": "새 기계가 생산 속도를 가속화할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 108,
+    "word": "facilitate",
+    "meaning": "용이하게 하다",
+    "targetScore": 800,
+    "exampleEn": "Better communication facilitates smoother operations.",
+    "exampleKo": "더 나은 의사소통은 더 원활한 운영을 용이하게 합니다."
+  },
+  {
+    "day": 28,
+    "no": 109,
+    "word": "impede",
+    "meaning": "방해하다",
+    "targetScore": 800,
+    "exampleEn": "Equipment failures can impede production schedules.",
+    "exampleKo": "장비 고장은 생산 일정을 방해할 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 110,
+    "word": "hinder",
+    "meaning": "방해하다",
+    "targetScore": 800,
+    "exampleEn": "Supply chain disruptions hinder manufacturing efficiency.",
+    "exampleKo": "공급망 중단은 제조 효율성을 방해합니다."
+  },
+  {
+    "day": 28,
+    "no": 111,
+    "word": "obstruct",
+    "meaning": "막다",
+    "targetScore": 800,
+    "exampleEn": "Do not obstruct emergency exits in the facility.",
+    "exampleKo": "시설의 비상구를 막지 마세요."
+  },
+  {
+    "day": 28,
+    "no": 112,
+    "word": "disrupt",
+    "meaning": "중단시키다",
+    "targetScore": 800,
+    "exampleEn": "Power outages can disrupt manufacturing operations.",
+    "exampleKo": "정전은 제조 운영을 중단시킬 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 113,
+    "word": "interrupt",
+    "meaning": "중단하다",
+    "targetScore": 800,
+    "exampleEn": "Please do not interrupt the automated process.",
+    "exampleKo": "자동화 공정을 중단하지 마세요."
+  },
+  {
+    "day": 28,
+    "no": 114,
+    "word": "resume",
+    "meaning": "재개하다",
+    "targetScore": 800,
+    "exampleEn": "Production will resume after the maintenance period.",
+    "exampleKo": "유지보수 기간 후에 생산이 재개될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 115,
+    "word": "suspend",
+    "meaning": "중단하다",
+    "targetScore": 800,
+    "exampleEn": "Operations were suspended due to safety concerns.",
+    "exampleKo": "안전 문제로 운영이 중단되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 116,
+    "word": "halt",
+    "meaning": "중지하다",
+    "targetScore": 800,
+    "exampleEn": "The assembly line was halted for inspection.",
+    "exampleKo": "조립 라인은 검사를 위해 중지되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 117,
+    "word": "cease",
+    "meaning": "중단하다",
+    "targetScore": 800,
+    "exampleEn": "Production ceased temporarily during the upgrade.",
+    "exampleKo": "업그레이드 중에 생산이 일시적으로 중단되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 118,
+    "word": "terminate",
+    "meaning": "종료하다",
+    "targetScore": 800,
+    "exampleEn": "The contract will terminate at the end of this year.",
+    "exampleKo": "계약은 올해 말에 종료될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 119,
+    "word": "conclude",
+    "meaning": "완료하다",
+    "targetScore": 800,
+    "exampleEn": "Testing will conclude by the end of next week.",
+    "exampleKo": "테스트는 다음 주 말까지 완료될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 120,
+    "word": "finalize",
+    "meaning": "마무리하다",
+    "targetScore": 800,
+    "exampleEn": "We need to finalize the production specifications today.",
+    "exampleKo": "오늘 생산 사양을 마무리해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 121,
+    "word": "initiate",
+    "meaning": "시작하다",
+    "targetScore": 800,
+    "exampleEn": "The company will initiate a new quality program.",
+    "exampleKo": "회사는 새로운 품질 프로그램을 시작할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 122,
+    "word": "commence",
+    "meaning": "개시하다",
+    "targetScore": 800,
+    "exampleEn": "Production will commence once materials arrive.",
+    "exampleKo": "재료가 도착하면 생산이 개시될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 123,
+    "word": "undertake",
+    "meaning": "착수하다",
+    "targetScore": 800,
+    "exampleEn": "The factory will undertake a major expansion project.",
+    "exampleKo": "공장은 대규모 확장 프로젝트에 착수할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 124,
+    "word": "embark",
+    "meaning": "착수하다",
+    "targetScore": 800,
+    "exampleEn": "We are embarking on a digital transformation initiative.",
+    "exampleKo": "우리는 디지털 전환 이니셔티브에 착수하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 125,
+    "word": "proceed",
+    "meaning": "진행하다",
+    "targetScore": 800,
+    "exampleEn": "Please proceed with the next phase of production.",
+    "exampleKo": "생산의 다음 단계로 진행하세요."
+  },
+  {
+    "day": 28,
+    "no": 126,
+    "word": "advance",
+    "meaning": "진전시키다",
+    "targetScore": 800,
+    "exampleEn": "New technology will advance manufacturing capabilities.",
+    "exampleKo": "새로운 기술이 제조 능력을 진전시킬 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 127,
+    "word": "progress",
+    "meaning": "진행하다",
+    "targetScore": 800,
+    "exampleEn": "The project is progressing according to schedule.",
+    "exampleKo": "프로젝트는 일정에 따라 진행되고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 128,
+    "word": "evolve",
+    "meaning": "발전하다",
+    "targetScore": 800,
+    "exampleEn": "Manufacturing processes continue to evolve rapidly.",
+    "exampleKo": "제조 공정은 계속 빠르게 발전하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 129,
+    "word": "transform",
+    "meaning": "변형시키다",
+    "targetScore": 800,
+    "exampleEn": "Automation will transform the entire production line.",
+    "exampleKo": "자동화는 전체 생산 라인을 변형시킬 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 130,
+    "word": "revolutionize",
+    "meaning": "혁신하다",
+    "targetScore": 800,
+    "exampleEn": "This technology could revolutionize the industry.",
+    "exampleKo": "이 기술은 산업을 혁신할 수 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 131,
+    "word": "modernize",
+    "meaning": "현대화하다",
+    "targetScore": 800,
+    "exampleEn": "The company plans to modernize its facilities.",
+    "exampleKo": "회사는 시설을 현대화할 계획입니다."
+  },
+  {
+    "day": 28,
+    "no": 132,
+    "word": "renovate",
+    "meaning": "개조하다",
+    "targetScore": 800,
+    "exampleEn": "The factory will be renovated next summer.",
+    "exampleKo": "공장은 다음 여름에 개조될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 133,
+    "word": "overhaul",
+    "meaning": "정비하다",
+    "targetScore": 800,
+    "exampleEn": "Equipment requires a complete overhaul.",
+    "exampleKo": "장비는 완전한 정비가 필요합니다."
+  },
+  {
+    "day": 28,
+    "no": 134,
+    "word": "reconfigure",
+    "meaning": "재구성하다",
+    "targetScore": 800,
+    "exampleEn": "We need to reconfigure the assembly line layout.",
+    "exampleKo": "조립 라인 배치를 재구성해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 135,
+    "word": "restructure",
+    "meaning": "구조 조정하다",
+    "targetScore": 800,
+    "exampleEn": "The company will restructure its manufacturing division.",
+    "exampleKo": "회사는 제조 부문을 구조 조정할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 136,
+    "word": "reorganize",
+    "meaning": "재편성하다",
+    "targetScore": 800,
+    "exampleEn": "Management decided to reorganize production teams.",
+    "exampleKo": "경영진은 생산 팀을 재편성하기로 결정했습니다."
+  }
+]

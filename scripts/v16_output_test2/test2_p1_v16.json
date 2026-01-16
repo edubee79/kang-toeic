@@ -1,0 +1,62 @@
+{
+  "passageId": 1,
+  "type": "EMAIL",
+  "structure": {
+    "header_lines": [
+      "To: Myung-Hee Hahn",
+      "From: Dellwyn Home Store",
+      "Date: January 15",
+      "Subject: Order update"
+    ],
+    "salutation": "Dear Ms. Hahn,",
+    "body_paragraphs": [
+      "Your [131] order of a red oak dining table and six matching chairs arrived at our store this morning.",
+      "We would now like to arrange for the delivery of the [132]. Please call us at 517-555-0188 and ask [133] to Coleman Cobb, our delivery manager. [134]"
+    ],
+    "closing_lines": [
+      "Customer Service, Dellwyn Home Store"
+    ]
+  },
+  "questions": [
+    {
+      "id": 131,
+      "text": "(A) specially\n(B) specialize\n(C) special\n(D) specializing",
+      "options": [
+        "(A) specially",
+        "(B) specialize",
+        "(C) special",
+        "(D) specializing"
+      ]
+    },
+    {
+      "id": 132,
+      "text": "(A) furniture\n(B) appliances\n(C) refund\n(D) tools",
+      "options": [
+        "(A) furniture",
+        "(B) appliances",
+        "(C) refund",
+        "(D) tools"
+      ]
+    },
+    {
+      "id": 133,
+      "text": "(A) speak\n(B) spoken\n(C) is speaking\n(D) to speak",
+      "options": [
+        "(A) speak",
+        "(B) spoken",
+        "(C) is speaking",
+        "(D) to speak"
+      ]
+    },
+    {
+      "id": 134,
+      "text": "(A) He can schedule a convenient time.\n(B) He began working here yesterday.\n(C) He can meet you at 11:00 A.м.\n(D) He recently moved to Dellwyn.",
+      "options": [
+        "(A) He can schedule a convenient time.",
+        "(B) He began working here yesterday.",
+        "(C) He can meet you at 11:00 A.м.",
+        "(D) He recently moved to Dellwyn."
+      ]
+    }
+  ]
+}

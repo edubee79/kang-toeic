@@ -1,0 +1,290 @@
+[
+  {
+    "day": 14,
+    "no": 137,
+    "word": "sensation",
+    "meaning": "느낌, 감각",
+    "targetScore": 900,
+    "exampleEn": "Flying gives me a strange sensation.",
+    "exampleKo": "비행은 제게 이상한 느낌을 줍니다."
+  },
+  {
+    "day": 14,
+    "no": 138,
+    "word": "suburban train line",
+    "meaning": "교외로 나가는 열차선",
+    "targetScore": 900,
+    "exampleEn": "The suburban train line is under construction.",
+    "exampleKo": "교외로 나가는 열차선이 공사 중입니다."
+  },
+  {
+    "day": 14,
+    "no": 139,
+    "word": "voyage",
+    "meaning": "(원거리) 항해",
+    "targetScore": 900,
+    "exampleEn": "The voyage took three weeks.",
+    "exampleKo": "그 항해는 3주가 걸렸습니다."
+  },
+  {
+    "day": 14,
+    "no": 140,
+    "word": "wildlife",
+    "meaning": "야생 동물",
+    "targetScore": 900,
+    "exampleEn": "Do not feed the wildlife.",
+    "exampleKo": "야생 동물에게 먹이를 주지 마십시오."
+  },
+  {
+    "day": 14,
+    "no": 141,
+    "word": "dispense",
+    "meaning": "나누어 주다",
+    "targetScore": 900,
+    "exampleEn": "The machine dispenses tickets.",
+    "exampleKo": "그 기계는 표를 나누어 줍니다(발급합니다)."
+  },
+  {
+    "day": 14,
+    "no": 142,
+    "word": "presumable",
+    "meaning": "가정할 수 있는,있음직한",
+    "targetScore": 900,
+    "exampleEn": "The delay is presumable due to weather.",
+    "exampleKo": "지연은 날씨 때문으로 추정할 수 있습니다(있음직합니다)."
+  },
+  {
+    "day": 14,
+    "no": 143,
+    "word": "carousel",
+    "meaning": "(공항의) 회전식 수화물 컨베이어",
+    "targetScore": 900,
+    "exampleEn": "Pick up your bags at the carousel.",
+    "exampleKo": "회전식 수화물 컨베이어에서 가방을 찾으십시오."
+  },
+  {
+    "day": 14,
+    "no": 144,
+    "word": "lodging",
+    "meaning": "임시 숙소,하숙",
+    "targetScore": 900,
+    "exampleEn": "We found affordable lodging near the station.",
+    "exampleKo": "우리는 역 근처에 저렴한 임시 숙소(하숙)를 찾았습니다."
+  },
+  {
+    "day": 14,
+    "no": 145,
+    "word": "disembark",
+    "meaning": "(비행기∙배에서) 내리다",
+    "targetScore": 900,
+    "exampleEn": "Passengers must wait to disembark.",
+    "exampleKo": "승객들은 내리기(하차하기) 위해 기다려야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 146,
+    "word": "remittance",
+    "meaning": "송금",
+    "targetScore": 900,
+    "exampleEn": "Please send the remittance by Friday.",
+    "exampleKo": "금요일까지 송금을 보내주십시오."
+  },
+  {
+    "day": 14,
+    "no": 147,
+    "word": "buckle up",
+    "meaning": "안전벨트를 매다",
+    "targetScore": 900,
+    "exampleEn": "Please buckle up for safety.",
+    "exampleKo": "안전을 위해 안전벨트를 매십시오."
+  },
+  {
+    "day": 14,
+    "no": 148,
+    "word": "barge",
+    "meaning": "짐배",
+    "targetScore": 900,
+    "exampleEn": "A barge is carrying goods down the river.",
+    "exampleKo": "짐배(바지선)가 강을 따라 화물을 운반하고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 149,
+    "word": "confer",
+    "meaning": "협의하다,의논하다",
+    "targetScore": 900,
+    "exampleEn": "I need to confer with my colleagues.",
+    "exampleKo": "저는 동료들과 의논해야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 150,
+    "word": "concourse",
+    "meaning": "중앙 홀,중앙 광장",
+    "targetScore": 900,
+    "exampleEn": "Meet me in the main concourse.",
+    "exampleKo": "중앙 홀(광장)에서 만납시다."
+  },
+  {
+    "day": 14,
+    "no": 151,
+    "word": "stall",
+    "meaning": "상품 진열대",
+    "targetScore": 900,
+    "exampleEn": "Farmers sell produce at a stall.",
+    "exampleKo": "농부들은 가판대(진열대)에서 농산물을 팝니다."
+  },
+  {
+    "day": 14,
+    "no": 152,
+    "word": "airsickness",
+    "meaning": "비행기 멀미",
+    "targetScore": 900,
+    "exampleEn": "He took medicine to prevent airsickness.",
+    "exampleKo": "그는 비행기 멀미를 예방하기 위해 약을 먹었습니다."
+  },
+  {
+    "day": 14,
+    "no": 153,
+    "word": "be left unattended",
+    "meaning": "방치되다",
+    "targetScore": 900,
+    "exampleEn": "Baggage must not be left unattended.",
+    "exampleKo": "수하물은 방치되어서는 안 됩니다."
+  },
+  {
+    "day": 14,
+    "no": 154,
+    "word": "prestigious",
+    "meaning": "명성 있는",
+    "targetScore": 900,
+    "exampleEn": "We stayed at a prestigious hotel.",
+    "exampleKo": "우리는 명성 있는(일류의) 호텔에 묵었습니다."
+  },
+  {
+    "day": 14,
+    "no": 155,
+    "word": "channel",
+    "meaning": "해협; 수로",
+    "targetScore": 900,
+    "exampleEn": "The ship navigated the narrow channel.",
+    "exampleKo": "그 배는 좁은 해협을 항해했습니다."
+  },
+  {
+    "day": 14,
+    "no": 156,
+    "word": "deck",
+    "meaning": "갑판",
+    "targetScore": 900,
+    "exampleEn": "Passengers relaxed on the deck.",
+    "exampleKo": "승객들은 갑판에서 휴식을 취했습니다."
+  },
+  {
+    "day": 14,
+    "no": 157,
+    "word": "charter plane",
+    "meaning": "전세 비행기",
+    "targetScore": 900,
+    "exampleEn": "The group rented a charter plane.",
+    "exampleKo": "그 단체는 전세 비행기를 빌렸습니다."
+  },
+  {
+    "day": 14,
+    "no": 158,
+    "word": "quarantine desk",
+    "meaning": "검역대",
+    "targetScore": 900,
+    "exampleEn": "Pets must go to the quarantine desk.",
+    "exampleKo": "애완동물은 검역대로 가야 합니다."
+  },
+  {
+    "day": 14,
+    "no": 159,
+    "word": "aviation",
+    "meaning": "비행",
+    "targetScore": 900,
+    "exampleEn": "He works in the aviation industry.",
+    "exampleKo": "그는 항공 산업(비행)에 종사합니다."
+  },
+  {
+    "day": 14,
+    "no": 160,
+    "word": "allowance",
+    "meaning": "허용치; 참작,특별한 고려",
+    "targetScore": 900,
+    "exampleEn": "The baggage allowance is 20kg.",
+    "exampleKo": "수하물 허용치는 20kg입니다."
+  },
+  {
+    "day": 14,
+    "no": 161,
+    "word": "impound",
+    "meaning": "(물건을) 압수하다",
+    "targetScore": 900,
+    "exampleEn": "Police impounded the vehicle.",
+    "exampleKo": "경찰이 그 차량을 압수했습니다."
+  },
+  {
+    "day": 14,
+    "no": 162,
+    "word": "harbor",
+    "meaning": "항구",
+    "targetScore": 900,
+    "exampleEn": "Many boats are docked in the harbor.",
+    "exampleKo": "많은 배들이 항구에 정박해 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 163,
+    "word": "motion sickness",
+    "meaning": "(탈것에 의한) 멀미",
+    "targetScore": 900,
+    "exampleEn": "I get motion sickness on boats.",
+    "exampleKo": "저는 배를 타면 멀미를 합니다."
+  },
+  {
+    "day": 14,
+    "no": 164,
+    "word": "swap",
+    "meaning": "맞바꾸다,교환하다",
+    "targetScore": 900,
+    "exampleEn": "Can we swap seats?",
+    "exampleKo": "자리를 맞바꿀(교환할) 수 있습니까?"
+  },
+  {
+    "day": 14,
+    "no": 165,
+    "word": "tie the boat to",
+    "meaning": "배를 ~에 정박시키다",
+    "targetScore": 900,
+    "exampleEn": "Tie the boat to the dock.",
+    "exampleKo": "배를 부두에 묶으십시오(정박시키십시오)."
+  },
+  {
+    "day": 14,
+    "no": 166,
+    "word": "life preserver",
+    "meaning": "(구명 조끼 등의) 구명 기구",
+    "targetScore": 900,
+    "exampleEn": "Wear a life preserver on the boat.",
+    "exampleKo": "배에서는 구명 기구(조끼)를 착용하십시오."
+  },
+  {
+    "day": 14,
+    "no": 167,
+    "word": "dock",
+    "meaning": "선창,부두",
+    "targetScore": 900,
+    "exampleEn": "The ship is waiting at the dock.",
+    "exampleKo": "배가 선창(부두)에서 기다리고 있습니다."
+  },
+  {
+    "day": 14,
+    "no": 168,
+    "word": "turn up",
+    "meaning": "나타나다,찾게 되다",
+    "targetScore": 900,
+    "exampleEn": "My missing bag turned up yesterday.",
+    "exampleKo": "제 분실된 가방이 어제 나타났습니다(찾게 되었습니다)."
+  }
+]

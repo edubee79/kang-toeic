@@ -1,0 +1,64 @@
+{
+  "passageId": 3,
+  "structure": {
+    "header_lines": [
+      "*E-mail*",
+      "From: Patron Services <patronservices@menachinlibrary.org>",
+      "To: Edgar Hughes <hughese98@villachesta.com>",
+      "Subject: Card expiration date approaching",
+      "Date: December 3"
+    ],
+    "salutation": "Dear Mr. Hughes,",
+    "body_paragraphs": [
+      "Please be advised that your Mena Chin Library card will expire one month from today.",
+      "It must be renewed if you intend to keep your membership for the coming year.[139]\nThis can be done at the information desk at any branch location.[140]\nAlthough you decide to close your account, no action is necessary. Failure to complete your renewal by the date will result in the expiration of your library privileges.[141] [142]",
+      "If you have any questions about this notice, or about general library services, you may reply directly to this e-mail."
+    ],
+    "closing_lines": [
+      "Sincerely,",
+      "Patron Services"
+    ]
+  },
+  "questions": [
+    {
+      "id": 139,
+      "is_sentence_insertion": false,
+      "options": [
+        "(A) It",
+        "(B) You",
+        "(C) Our",
+        "(D) Each"
+      ]
+    },
+    {
+      "id": 140,
+      "is_sentence_insertion": true,
+      "options": [
+        "(A) To sign up for a card, visit your local\nlibrary branch.",
+        "(B) For questions about library membership,\nplease visit our Web site.",
+        "(C) Renewal must be completed at least one\nweek before your card expires.",
+        "(D) You may opt out of this program at any\ntime."
+      ]
+    },
+    {
+      "id": 141,
+      "is_sentence_insertion": false,
+      "options": [
+        "(A) Also",
+        "(B) Should",
+        "(C) Because",
+        "(D) Although"
+      ]
+    },
+    {
+      "id": 142,
+      "is_sentence_insertion": false,
+      "options": [
+        "(A) specifically",
+        "(B) specifics",
+        "(C) specified",
+        "(D) specificity"
+      ]
+    }
+  ]
+}

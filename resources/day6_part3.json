@@ -1,0 +1,614 @@
+[
+  {
+    "day": 6,
+    "no": 69,
+    "word": "menu",
+    "meaning": "메뉴, 음식, 요리",
+    "targetScore": 800,
+    "exampleEn": "The restaurant offers a varied menu to suit all tastes.",
+    "exampleKo": "그 식당은 모든 취향에 맞는 다양한 메뉴를 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 70,
+    "word": "sightseeing",
+    "meaning": "관광",
+    "targetScore": 800,
+    "exampleEn": "We went sightseeing around the historic city center.",
+    "exampleKo": "우리는 역사적인 도심 주변을 관광하러 갔습니다."
+  },
+  {
+    "day": 6,
+    "no": 71,
+    "word": "amusement park",
+    "meaning": "놀이동산",
+    "targetScore": 800,
+    "exampleEn": "The company picnic will be held at a local amusement park.",
+    "exampleKo": "회사 야유회는 지역 놀이공원에서 열릴 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 72,
+    "word": "ancient history",
+    "meaning": "고대 역사",
+    "targetScore": 800,
+    "exampleEn": "The museum specializes in artifacts from ancient history.",
+    "exampleKo": "그 박물관은 고대 역사의 공예품을 전문으로 합니다."
+  },
+  {
+    "day": 6,
+    "no": 73,
+    "word": "artifact",
+    "meaning": "공예품",
+    "targetScore": 800,
+    "exampleEn": "This pottery is a rare artifact from the Joseon Dynasty.",
+    "exampleKo": "이 도자기는 조선 시대의 희귀한 공예품입니다."
+  },
+  {
+    "day": 6,
+    "no": 74,
+    "word": "auditorium",
+    "meaning": "강당",
+    "targetScore": 800,
+    "exampleEn": "The quarterly meeting will take place in the main auditorium.",
+    "exampleKo": "분기별 회의는 대강당에서 열릴 것입니다. (Part 7 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 75,
+    "word": "be booked up",
+    "meaning": "예약이 차다, 매진되다",
+    "targetScore": 800,
+    "exampleEn": "I'm afraid the flights for that weekend are completely booked up.",
+    "exampleKo": "유감스럽게도 그 주말 항공편은 완전히 매진되었습니다. (Part 3 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 76,
+    "word": "box office",
+    "meaning": "매표소",
+    "targetScore": 800,
+    "exampleEn": "Tickets can be purchased at the box office or online.",
+    "exampleKo": "티켓은 매표소나 온라인에서 구매할 수 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 77,
+    "word": "cheerful",
+    "meaning": "쾌활한, 명랑한",
+    "targetScore": 800,
+    "exampleEn": "She always greets customers with a cheerful smile.",
+    "exampleKo": "그녀는 항상 쾌활한 미소로 고객들을 맞이합니다."
+  },
+  {
+    "day": 6,
+    "no": 78,
+    "word": "choir",
+    "meaning": "합창단",
+    "targetScore": 800,
+    "exampleEn": "The choir will perform at the charity event.",
+    "exampleKo": "합창단이 자선 행사에서 공연할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 79,
+    "word": "entertain",
+    "meaning": "즐겁게 하다, 대접하다, 환대하다",
+    "targetScore": 800,
+    "exampleEn": "We need to entertain the visiting clients tonight.",
+    "exampleKo": "우리는 오늘 밤 방문한 고객들을 접대해야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 80,
+    "word": "flower arrangement",
+    "meaning": "꽃꽃이",
+    "targetScore": 800,
+    "exampleEn": "The flower arrangement in the lobby is beautiful.",
+    "exampleKo": "로비의 꽃꽂이가 아름답습니다."
+  },
+  {
+    "day": 6,
+    "no": 81,
+    "word": "flower bed",
+    "meaning": "화단",
+    "targetScore": 800,
+    "exampleEn": "Gardener is planting tulips in the flower bed.",
+    "exampleKo": "정원사가 화단에 튤립을 심고 있습니다. (Part 1 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 82,
+    "word": "go to a film",
+    "meaning": "영화 보러 가다",
+    "targetScore": 800,
+    "exampleEn": "Would you like to go to a film with me this Friday?",
+    "exampleKo": "이번 주 금요일에 저와 함께 영화 보러 가시겠습니까?"
+  },
+  {
+    "day": 6,
+    "no": 83,
+    "word": "grip",
+    "meaning": "꽉 잡다, 움켜잡다",
+    "targetScore": 800,
+    "exampleEn": "Please keep a firm grip on the handrail for safety.",
+    "exampleKo": "안전을 위해 난간을 꽉 잡으십시오. (Part 1 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 84,
+    "word": "have a race",
+    "meaning": "경주하다",
+    "targetScore": 800,
+    "exampleEn": "The cyclists will have a race tomorrow morning.",
+    "exampleKo": "사이클 선수들은 내일 아침에 경주를 할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 85,
+    "word": "jog along the street",
+    "meaning": "길을 따라 조깅하다",
+    "targetScore": 800,
+    "exampleEn": "Residents often jog along the street near the river.",
+    "exampleKo": "주민들은 종종 강 근처 길을 따라 조깅합니다."
+  },
+  {
+    "day": 6,
+    "no": 86,
+    "word": "musical instrument",
+    "meaning": "악기",
+    "targetScore": 800,
+    "exampleEn": "Learning a musical instrument can boost creativity.",
+    "exampleKo": "악기를 배우는 것은 창의성을 높일 수 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 87,
+    "word": "oar",
+    "meaning": "노, 노를 젓다, 물장구를 치다",
+    "targetScore": 800,
+    "exampleEn": "He is holding an oar to row the boat.",
+    "exampleKo": "그는 배를 젓기 위해 노를 잡고 있습니다. (Part 1 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 88,
+    "word": "oil painting",
+    "meaning": "유화",
+    "targetScore": 800,
+    "exampleEn": "An oil painting was stolen from the gallery.",
+    "exampleKo": "유화 한 점이 갤러리에서 도난당했습니다."
+  },
+  {
+    "day": 6,
+    "no": 89,
+    "word": "outdoor",
+    "meaning": "야외의",
+    "targetScore": 800,
+    "exampleEn": "The hotel has a heated outdoor swimming pool.",
+    "exampleKo": "그 호텔에는 온수 야외 수영장이 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 90,
+    "word": "paddle",
+    "meaning": "노, 노를 젓다, 물장구를 치다",
+    "targetScore": 800,
+    "exampleEn": "They are using paddles to move the canoe.",
+    "exampleKo": "그들은 카누를 움직이기 위해 노를 사용하고 있습니다. (Part 1 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 91,
+    "word": "premiere",
+    "meaning": "특별 개봉, 초연",
+    "targetScore": 800,
+    "exampleEn": "The movie premiere will be attended by the director.",
+    "exampleKo": "영화 시사회에는 감독이 참석할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 92,
+    "word": "rake leaves",
+    "meaning": "(갈퀴로) 낙엽을 긁어모으다",
+    "targetScore": 800,
+    "exampleEn": "We need to rake leaves in the garden this weekend.",
+    "exampleKo": "우리는 이번 주말에 정원에서 낙엽을 긁어모아야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 93,
+    "word": "recreational activity",
+    "meaning": "오락 활동",
+    "targetScore": 800,
+    "exampleEn": "The community center offers various recreational activities.",
+    "exampleKo": "커뮤니티 센터는 다양한 오락 활동을 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 94,
+    "word": "right",
+    "meaning": "권리, 바른, 옳은",
+    "targetScore": 800,
+    "exampleEn": "Consumers have the right to return defective products.",
+    "exampleKo": "소비자는 결함이 있는 제품을 반품할 권리가 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 95,
+    "word": "running time",
+    "meaning": "(영화) 상영 시간",
+    "targetScore": 800,
+    "exampleEn": "The running time of the documentary is 90 minutes.",
+    "exampleKo": "그 다큐멘터리의 상영 시간은 90분입니다."
+  },
+  {
+    "day": 6,
+    "no": 96,
+    "word": "sail a boat",
+    "meaning": "보트를 타고 항해하다",
+    "targetScore": 800,
+    "exampleEn": "They plan to sail a boat across the Atlantic.",
+    "exampleKo": "그들은 보트를 타고 대서양을 횡단할 계획입니다."
+  },
+  {
+    "day": 6,
+    "no": 97,
+    "word": "slide down",
+    "meaning": "미끄러져 내려가다",
+    "targetScore": 800,
+    "exampleEn": "Children slide down the slide in the playground.",
+    "exampleKo": "아이들이 놀이터에서 미끄럼틀을 타고 내려옵니다."
+  },
+  {
+    "day": 6,
+    "no": 98,
+    "word": "splash",
+    "meaning": "(물을) 튀기다",
+    "targetScore": 800,
+    "exampleEn": "Cars splashed water on the pedestrians.",
+    "exampleKo": "자동차들이 보행자들에게 물을 튀겼습니다."
+  },
+  {
+    "day": 6,
+    "no": 99,
+    "word": "sport tournament",
+    "meaning": "운동 경기",
+    "targetScore": 800,
+    "exampleEn": "The city will host a tennis sport tournament next month.",
+    "exampleKo": "시는 다음 달에 테니스 대회를 주최할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 100,
+    "word": "stadium",
+    "meaning": "경기장",
+    "targetScore": 800,
+    "exampleEn": "The new baseball stadium has a seating capacity of 50,000.",
+    "exampleKo": "새 야구 경기장은 5만 명의 좌석 수용 능력을 갖추고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 101,
+    "word": "stay up",
+    "meaning": "(잠을 자지 않고) 일어나 있다",
+    "targetScore": 800,
+    "exampleEn": "I had to stay up all night to finish the report.",
+    "exampleKo": "저는 보고서를 끝내기 위해 밤을 새워야 했습니다."
+  },
+  {
+    "day": 6,
+    "no": 102,
+    "word": "stroll",
+    "meaning": "한가롭게 거닐다, 산책하다",
+    "targetScore": 800,
+    "exampleEn": "Couple is strolling along the beach.",
+    "exampleKo": "커플이 해변을 따라 거닐고 있습니다. (Part 1 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 103,
+    "word": "take a break",
+    "meaning": "잠깐 휴식을 취하다",
+    "targetScore": 800,
+    "exampleEn": "Let's take a break and resume the meeting in 10 minutes.",
+    "exampleKo": "잠시 휴식을 취하고 10분 후에 회의를 재개합시다."
+  },
+  {
+    "day": 6,
+    "no": 104,
+    "word": "take A for a walk",
+    "meaning": "A를 산책에 데려가다",
+    "targetScore": 800,
+    "exampleEn": "I usually take my dog for a walk in the evening.",
+    "exampleKo": "저는 보통 저녁에 개를 산책시킵니다."
+  },
+  {
+    "day": 6,
+    "no": 105,
+    "word": "take a photograph",
+    "meaning": "사진을 찍다",
+    "targetScore": 800,
+    "exampleEn": "May I take a photograph of this exhibit?",
+    "exampleKo": "이 전시품의 사진을 찍어도 되겠습니까?"
+  },
+  {
+    "day": 6,
+    "no": 106,
+    "word": "take a walk",
+    "meaning": "산책하다",
+    "targetScore": 800,
+    "exampleEn": "She decided to take a walk to clear her mind.",
+    "exampleKo": "그녀는 머리를 식히기 위해 산책하기로 했습니다."
+  },
+  {
+    "day": 6,
+    "no": 107,
+    "word": "take great pleasure",
+    "meaning": "큰 즐거움을 찾다",
+    "targetScore": 800,
+    "exampleEn": "He takes great pleasure in mentoring young employees.",
+    "exampleKo": "그는 젊은 직원들을 멘토링하는 것에서 큰 즐거움을 찾습니다."
+  },
+  {
+    "day": 6,
+    "no": 108,
+    "word": "touch up a photograph",
+    "meaning": "사진을 조금 수정하다",
+    "targetScore": 800,
+    "exampleEn": "The photographer will touch up the photograph digitally.",
+    "exampleKo": "사진작가는 사진을 디지털 방식으로 수정할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 109,
+    "word": "vacation package",
+    "meaning": "휴가 패키지, 여행 패키지",
+    "targetScore": 800,
+    "exampleEn": "The travel agency offers an all-inclusive vacation package.",
+    "exampleKo": "그 여행사는 포괄적인 휴가 패키지를 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 110,
+    "word": "wait for seats",
+    "meaning": "자리를 기다리다",
+    "targetScore": 800,
+    "exampleEn": "Customers are waiting for seats in the reception area.",
+    "exampleKo": "고객들이 접수처에서 자리를 기다리고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 111,
+    "word": "wait in line",
+    "meaning": "줄을 서서 기다리다",
+    "targetScore": 800,
+    "exampleEn": "Some people are waiting in line to buy tickets.",
+    "exampleKo": "몇몇 사람들이 표를 사기 위해 줄을 서서 기다리고 있습니다. (Part 1 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 112,
+    "word": "water the plants",
+    "meaning": "화초에 물을 주다",
+    "targetScore": 800,
+    "exampleEn": "Please water the plants while I am on vacation.",
+    "exampleKo": "제가 휴가 중인 동안 화초에 물을 주십시오."
+  },
+  {
+    "day": 6,
+    "no": 113,
+    "word": "amuse",
+    "meaning": "재미있게 하다, 즐겁게 하다",
+    "targetScore": 800,
+    "exampleEn": "The clown tried to amuse the children.",
+    "exampleKo": "광대는 아이들을 즐겁게 해주려고 노력했습니다."
+  },
+  {
+    "day": 6,
+    "no": 114,
+    "word": "artistic",
+    "meaning": "예술적인",
+    "targetScore": 800,
+    "exampleEn": "The building has great artistic value.",
+    "exampleKo": "그 건물은 큰 예술적 가치를 지니고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 115,
+    "word": "donate",
+    "meaning": "기부하다",
+    "targetScore": 800,
+    "exampleEn": "The company plans to donate a portion of profits to charity.",
+    "exampleKo": "회사는 이익의 일부를 자선 단체에 기부할 계획입니다."
+  },
+  {
+    "day": 6,
+    "no": 116,
+    "word": "even though",
+    "meaning": "비록~일지라도",
+    "targetScore": 800,
+    "exampleEn": "He attended the meeting even though he was sick.",
+    "exampleKo": "그는 아팠음에도 불구하고 회의에 참석했습니다."
+  },
+  {
+    "day": 6,
+    "no": 117,
+    "word": "exhibit",
+    "meaning": "전시회, 전시하다",
+    "targetScore": 800,
+    "exampleEn": "New products will be on exhibit at the trade fair.",
+    "exampleKo": "신제품들이 무역 박람회에 전시될 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 118,
+    "word": "free admission",
+    "meaning": "무료입장",
+    "targetScore": 800,
+    "exampleEn": "We offer free admission to children under 12.",
+    "exampleKo": "12세 미만 어린이에게는 무료입장을 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 119,
+    "word": "make oneself at home",
+    "meaning": "편히 쉬다",
+    "targetScore": 800,
+    "exampleEn": "Please make yourself at home while you wait.",
+    "exampleKo": "기다리시는 동안 편히 계십시오."
+  },
+  {
+    "day": 6,
+    "no": 120,
+    "word": "municipal",
+    "meaning": "자치 도시의, 시립의",
+    "targetScore": 800,
+    "exampleEn": "The municipal government approved the new construction project.",
+    "exampleKo": "시 정부는 새 건설 프로젝트를 승인했습니다."
+  },
+  {
+    "day": 6,
+    "no": 121,
+    "word": "owed",
+    "meaning": "(돈을) 빚지고 있는",
+    "targetScore": 800,
+    "exampleEn": "The balance owed must be paid by the end of the month.",
+    "exampleKo": "잔액은 이달 말까지 지불되어야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 122,
+    "word": "several",
+    "meaning": "몇몇의, 몇 개의",
+    "targetScore": 800,
+    "exampleEn": "Several employees have complained about the noise.",
+    "exampleKo": "몇몇 직원들이 소음에 대해 불평했습니다."
+  },
+  {
+    "day": 6,
+    "no": 123,
+    "word": "spectator",
+    "meaning": "관중",
+    "targetScore": 800,
+    "exampleEn": "Thousands of spectators gathered to watch the game.",
+    "exampleKo": "수천 명의 관중이 경기를 보기 위해 모였습니다."
+  },
+  {
+    "day": 6,
+    "no": 124,
+    "word": "usher",
+    "meaning": "(극장 등의)좌석 안내원",
+    "targetScore": 800,
+    "exampleEn": "The usher guided the guests to their seats.",
+    "exampleKo": "좌석 안내원이 손님들을 자리로 안내했습니다."
+  },
+  {
+    "day": 6,
+    "no": 125,
+    "word": "win a contest",
+    "meaning": "대회에서 이기다",
+    "targetScore": 800,
+    "exampleEn": "Our team aims to win the contest this year.",
+    "exampleKo": "우리 팀은 올해 대회에서 우승하는 것을 목표로 합니다."
+  },
+  {
+    "day": 6,
+    "no": 126,
+    "word": "admission to",
+    "meaning": "~로 입장",
+    "targetScore": 800,
+    "exampleEn": "Admission to the museum regarding students is free.",
+    "exampleKo": "학생들의 박물관 입장은 무료입니다."
+  },
+  {
+    "day": 6,
+    "no": 127,
+    "word": "contestant",
+    "meaning": "경기자, 경쟁자",
+    "targetScore": 800,
+    "exampleEn": "Each contestant must perform for five minutes.",
+    "exampleKo": "각 경쟁자는 5분 동안 공연해야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 128,
+    "word": "delight",
+    "meaning": "기쁨",
+    "targetScore": 800,
+    "exampleEn": "It is a delight to welcome you to our headquarters.",
+    "exampleKo": "저희 본사에 여러분을 모시게 되어 기쁩니다."
+  },
+  {
+    "day": 6,
+    "no": 129,
+    "word": "do one's hair",
+    "meaning": "머리 손질하다",
+    "targetScore": 800,
+    "exampleEn": "She is doing her hair in front of the mirror.",
+    "exampleKo": "그녀는 거울 앞에서 머리를 손질하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 130,
+    "word": "enjoyable",
+    "meaning": "재미있는, 즐거운",
+    "targetScore": 800,
+    "exampleEn": "We hope you have an enjoyable stay at our hotel.",
+    "exampleKo": "저희 호텔에서 즐거운 체류 되시기를 바랍니다."
+  },
+  {
+    "day": 6,
+    "no": 131,
+    "word": "group rate",
+    "meaning": "단체 요금",
+    "targetScore": 800,
+    "exampleEn": "We offer a special group rate for parties of ten or more.",
+    "exampleKo": "10인 이상의 단체에는 특별 단체 요금을 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 132,
+    "word": "head for",
+    "meaning": "~로 향하다",
+    "targetScore": 800,
+    "exampleEn": "After the meeting, we will head for the restaurant.",
+    "exampleKo": "회의 후에 우리는 식당으로 향할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 133,
+    "word": "out of order",
+    "meaning": "고장 난",
+    "targetScore": 800,
+    "exampleEn": "The elevator is currently out of order.",
+    "exampleKo": "엘리베이터는 현재 고장 중입니다. (Part 7 빈출)"
+  },
+  {
+    "day": 6,
+    "no": 134,
+    "word": "periodical",
+    "meaning": "정기 간행물, 주기적인",
+    "targetScore": 800,
+    "exampleEn": "The library subscribes to various periodicals.",
+    "exampleKo": "그 도서관은 다양한 정기 간행물을 구독합니다."
+  },
+  {
+    "day": 6,
+    "no": 135,
+    "word": "playing field",
+    "meaning": "경기장",
+    "targetScore": 800,
+    "exampleEn": "The school has a large playing field for sports.",
+    "exampleKo": "그 학교에는 스포츠를 위한 넓은 운동장이 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 136,
+    "word": "register for",
+    "meaning": "~에 등록하다",
+    "targetScore": 800,
+    "exampleEn": "You must register for the seminar by Friday.",
+    "exampleKo": "금요일까지 세미나에 등록해야 합니다."
+  }
+]

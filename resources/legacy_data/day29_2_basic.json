@@ -1,0 +1,254 @@
+[
+  {
+    "day": 29,
+    "no": 41,
+    "word": "brand",
+    "meaning": "브랜드",
+    "targetScore": 650,
+    "exampleEn": "The brand is known for quality products.",
+    "exampleKo": "브랜드는 품질 좋은 제품으로 알려져 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 42,
+    "word": "label",
+    "meaning": "상표",
+    "targetScore": 650,
+    "exampleEn": "Check the label for washing instructions.",
+    "exampleKo": "세탁 지침은 상표를 확인하세요."
+  },
+  {
+    "day": 29,
+    "no": 43,
+    "word": "trademark",
+    "meaning": "상표",
+    "targetScore": 650,
+    "exampleEn": "The logo is a registered trademark.",
+    "exampleKo": "로고는 등록 상표입니다."
+  },
+  {
+    "day": 29,
+    "no": 44,
+    "word": "packaging",
+    "meaning": "포장",
+    "targetScore": 650,
+    "exampleEn": "The packaging is eco-friendly.",
+    "exampleKo": "포장은 친환경적입니다."
+  },
+  {
+    "day": 29,
+    "no": 45,
+    "word": "container",
+    "meaning": "용기",
+    "targetScore": 650,
+    "exampleEn": "Store the product in an airtight container.",
+    "exampleKo": "제품을 밀폐 용기에 보관하세요."
+  },
+  {
+    "day": 29,
+    "no": 46,
+    "word": "warranty",
+    "meaning": "보증",
+    "targetScore": 650,
+    "exampleEn": "The product comes with a one-year warranty.",
+    "exampleKo": "제품은 1년 보증이 제공됩니다."
+  },
+  {
+    "day": 29,
+    "no": 47,
+    "word": "guarantee",
+    "meaning": "보증",
+    "targetScore": 650,
+    "exampleEn": "We guarantee your satisfaction.",
+    "exampleKo": "귀하의 만족을 보증합니다."
+  },
+  {
+    "day": 29,
+    "no": 48,
+    "word": "assortment",
+    "meaning": "구색",
+    "targetScore": 650,
+    "exampleEn": "The store offers a wide assortment of products.",
+    "exampleKo": "매장은 다양한 제품 구색을 제공합니다."
+  },
+  {
+    "day": 29,
+    "no": 49,
+    "word": "variety",
+    "meaning": "다양성",
+    "targetScore": 650,
+    "exampleEn": "We stock a variety of brands.",
+    "exampleKo": "다양한 브랜드를 재고로 보유하고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 50,
+    "word": "selection",
+    "meaning": "선택",
+    "targetScore": 650,
+    "exampleEn": "The selection of shoes is impressive.",
+    "exampleKo": "신발 선택이 인상적입니다."
+  },
+  {
+    "day": 29,
+    "no": 51,
+    "word": "range",
+    "meaning": "범위",
+    "targetScore": 650,
+    "exampleEn": "We offer a full range of services.",
+    "exampleKo": "전체 범위의 서비스를 제공합니다."
+  },
+  {
+    "day": 29,
+    "no": 52,
+    "word": "category",
+    "meaning": "범주",
+    "targetScore": 650,
+    "exampleEn": "Products are organized by category.",
+    "exampleKo": "제품은 범주별로 정리되어 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 53,
+    "word": "section",
+    "meaning": "구역",
+    "targetScore": 650,
+    "exampleEn": "The electronics section is on the second floor.",
+    "exampleKo": "전자제품 구역은 2층에 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 54,
+    "word": "department",
+    "meaning": "부서",
+    "targetScore": 650,
+    "exampleEn": "Visit the customer service department for assistance.",
+    "exampleKo": "도움을 받으려면 고객 서비스 부서를 방문하세요."
+  },
+  {
+    "day": 29,
+    "no": 55,
+    "word": "boutique",
+    "meaning": "부티크",
+    "targetScore": 650,
+    "exampleEn": "The boutique specializes in designer clothing.",
+    "exampleKo": "부티크는 디자이너 의류를 전문으로 합니다."
+  },
+  {
+    "day": 29,
+    "no": 56,
+    "word": "outlet",
+    "meaning": "아울렛",
+    "targetScore": 650,
+    "exampleEn": "Factory outlets offer discounted prices.",
+    "exampleKo": "공장 아울렛은 할인된 가격을 제공합니다."
+  },
+  {
+    "day": 29,
+    "no": 57,
+    "word": "mall",
+    "meaning": "쇼핑몰",
+    "targetScore": 650,
+    "exampleEn": "The shopping mall opens at 10 AM.",
+    "exampleKo": "쇼핑몰은 오전 10시에 엽니다."
+  },
+  {
+    "day": 29,
+    "no": 58,
+    "word": "plaza",
+    "meaning": "플라자",
+    "targetScore": 650,
+    "exampleEn": "The new plaza features many restaurants.",
+    "exampleKo": "새 플라자에는 많은 레스토랑이 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 59,
+    "word": "kiosk",
+    "meaning": "키오스크",
+    "targetScore": 650,
+    "exampleEn": "Order from the self-service kiosk.",
+    "exampleKo": "셀프 서비스 키오스크에서 주문하세요."
+  },
+  {
+    "day": 29,
+    "no": 60,
+    "word": "vendor",
+    "meaning": "판매업체",
+    "targetScore": 650,
+    "exampleEn": "Street vendors sell fresh produce.",
+    "exampleKo": "노점상들은 신선한 농산물을 판매합니다."
+  },
+  {
+    "day": 29,
+    "no": 61,
+    "word": "supplier",
+    "meaning": "공급업체",
+    "targetScore": 650,
+    "exampleEn": "We work with reliable suppliers.",
+    "exampleKo": "신뢰할 수 있는 공급업체와 일합니다."
+  },
+  {
+    "day": 29,
+    "no": 62,
+    "word": "distributor",
+    "meaning": "유통업체",
+    "targetScore": 650,
+    "exampleEn": "The distributor handles nationwide shipping.",
+    "exampleKo": "유통업체가 전국 배송을 처리합니다."
+  },
+  {
+    "day": 29,
+    "no": 63,
+    "word": "retailer",
+    "meaning": "소매업체",
+    "targetScore": 650,
+    "exampleEn": "Major retailers are offering special deals.",
+    "exampleKo": "주요 소매업체들이 특별 거래를 제공하고 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 64,
+    "word": "merchant",
+    "meaning": "상인",
+    "targetScore": 650,
+    "exampleEn": "Local merchants support the community.",
+    "exampleKo": "지역 상인들은 지역 사회를 지원합니다."
+  },
+  {
+    "day": 29,
+    "no": 65,
+    "word": "franchise",
+    "meaning": "프랜차이즈",
+    "targetScore": 650,
+    "exampleEn": "The company operates as a franchise.",
+    "exampleKo": "회사는 프랜차이즈로 운영됩니다."
+  },
+  {
+    "day": 29,
+    "no": 66,
+    "word": "chain",
+    "meaning": "체인점",
+    "targetScore": 650,
+    "exampleEn": "The chain has stores in 20 states.",
+    "exampleKo": "체인은 20개 주에 매장이 있습니다."
+  },
+  {
+    "day": 29,
+    "no": 67,
+    "word": "branch",
+    "meaning": "지점",
+    "targetScore": 650,
+    "exampleEn": "Our new branch opens next month.",
+    "exampleKo": "새 지점이 다음 달에 엽니다."
+  },
+  {
+    "day": 29,
+    "no": 68,
+    "word": "flagship",
+    "meaning": "플래그십",
+    "targetScore": 650,
+    "exampleEn": "The flagship store is in New York.",
+    "exampleKo": "플래그십 스토어는 뉴욕에 있습니다."
+  }
+]

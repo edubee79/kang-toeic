@@ -1,0 +1,614 @@
+[
+    {
+        "day": 18,
+        "no": 69,
+        "word": "taste",
+        "meaning": "맛을 보다; 맛, 취향",
+        "targetScore": 800,
+        "exampleEn": "Taste the sauce.",
+        "exampleKo": "소스 맛을 보세요."
+    },
+    {
+        "day": 18,
+        "no": 70,
+        "word": "admit",
+        "meaning": "인정하다, 허가하다",
+        "targetScore": 800,
+        "exampleEn": "He admitted his mistake.",
+        "exampleKo": "그는 실수를 인정했습니다."
+    },
+    {
+        "day": 18,
+        "no": 71,
+        "word": "advanced",
+        "meaning": "고급의, 진보된",
+        "targetScore": 800,
+        "exampleEn": "Advanced technology.",
+        "exampleKo": "진보된 기술."
+    },
+    {
+        "day": 18,
+        "no": 72,
+        "word": "alternative",
+        "meaning": "대안",
+        "targetScore": 800,
+        "exampleEn": "An alternative method.",
+        "exampleKo": "대안적인 방법."
+    },
+    {
+        "day": 18,
+        "no": 73,
+        "word": "announce",
+        "meaning": "발표하다",
+        "targetScore": 800,
+        "exampleEn": "They announced the winner.",
+        "exampleKo": "그들은 우승자를 발표했습니다."
+    },
+    {
+        "day": 18,
+        "no": 74,
+        "word": "announcement",
+        "meaning": "발표",
+        "targetScore": 800,
+        "exampleEn": "A public announcement.",
+        "exampleKo": "공공 발표."
+    },
+    {
+        "day": 18,
+        "no": 75,
+        "word": "appeal",
+        "meaning": "호소하다; 매력",
+        "targetScore": 800,
+        "exampleEn": "The movie appeals to kids.",
+        "exampleKo": "그 영화는 아이들에게 매력이 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 76,
+        "word": "apply",
+        "meaning": "지원하다, 적용하다",
+        "targetScore": 800,
+        "exampleEn": "Apply for a job.",
+        "exampleKo": "일자리에 지원하다."
+    },
+    {
+        "day": 18,
+        "no": 77,
+        "word": "appoint",
+        "meaning": "임명하다",
+        "targetScore": 800,
+        "exampleEn": "He was appointed manager.",
+        "exampleKo": "그는 매니저로 임명되었습니다."
+    },
+    {
+        "day": 18,
+        "no": 78,
+        "word": "appointment",
+        "meaning": "임명, 약속",
+        "targetScore": 800,
+        "exampleEn": "Doctor's appointment.",
+        "exampleKo": "의사 진료 예약."
+    },
+    {
+        "day": 18,
+        "no": 79,
+        "word": "arrange",
+        "meaning": "준비하다, 배열하다",
+        "targetScore": 800,
+        "exampleEn": "Arranged a meeting.",
+        "exampleKo": "회의를 준비했습니다."
+    },
+    {
+        "day": 18,
+        "no": 80,
+        "word": "arrival",
+        "meaning": "도착",
+        "targetScore": 800,
+        "exampleEn": "Upon arrival.",
+        "exampleKo": "도착하자마자."
+    },
+    {
+        "day": 18,
+        "no": 81,
+        "word": "arrive",
+        "meaning": "도착하다",
+        "targetScore": 800,
+        "exampleEn": "Arrive on time.",
+        "exampleKo": "제시간에 도착하다."
+    },
+    {
+        "day": 18,
+        "no": 82,
+        "word": "assign",
+        "meaning": "배정하다",
+        "targetScore": 800,
+        "exampleEn": "Assign tasks.",
+        "exampleKo": "업무를 배정하다."
+    },
+    {
+        "day": 18,
+        "no": 83,
+        "word": "association",
+        "meaning": "협회",
+        "targetScore": 800,
+        "exampleEn": "Trade association.",
+        "exampleKo": "무역 협회."
+    },
+    {
+        "day": 18,
+        "no": 84,
+        "word": "assure",
+        "meaning": "장담하다",
+        "targetScore": 800,
+        "exampleEn": "He assured me.",
+        "exampleKo": "그는 나에게 장담했습니다."
+    },
+    {
+        "day": 18,
+        "no": 85,
+        "word": "attendee",
+        "meaning": "참석자",
+        "targetScore": 800,
+        "exampleEn": "List of attendees.",
+        "exampleKo": "참석자 명단."
+    },
+    {
+        "day": 18,
+        "no": 86,
+        "word": "attention",
+        "meaning": "주의, 주목",
+        "targetScore": 800,
+        "exampleEn": "Pay attention.",
+        "exampleKo": "주의를 기울이세요."
+    },
+    {
+        "day": 18,
+        "no": 87,
+        "word": "audience",
+        "meaning": "청중",
+        "targetScore": 800,
+        "exampleEn": "Large audience.",
+        "exampleKo": "많은 청중."
+    },
+    {
+        "day": 18,
+        "no": 88,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 800,
+        "exampleEn": "Tickets are available.",
+        "exampleKo": "표를 구할 수 있습니다."
+    },
+    {
+        "day": 18,
+        "no": 89,
+        "word": "bake",
+        "meaning": "굽다",
+        "targetScore": 800,
+        "exampleEn": "Bake a cake.",
+        "exampleKo": "케이크를 굽다."
+    },
+    {
+        "day": 18,
+        "no": 90,
+        "word": "beverage",
+        "meaning": "마실 것",
+        "targetScore": 800,
+        "exampleEn": "Alcoholic beverages.",
+        "exampleKo": "알코올 음료."
+    },
+    {
+        "day": 18,
+        "no": 91,
+        "word": "blanket",
+        "meaning": "담요",
+        "targetScore": 800,
+        "exampleEn": "Warm blanket.",
+        "exampleKo": "따뜻한 담요."
+    },
+    {
+        "day": 18,
+        "no": 92,
+        "word": "board",
+        "meaning": "이사회; 탑승하다",
+        "targetScore": 800,
+        "exampleEn": "Board meeting.",
+        "exampleKo": "이사회 회의."
+    },
+    {
+        "day": 18,
+        "no": 93,
+        "word": "brief",
+        "meaning": "간략한",
+        "targetScore": 800,
+        "exampleEn": "Brief meeting.",
+        "exampleKo": "짧은 회의."
+    },
+    {
+        "day": 18,
+        "no": 94,
+        "word": "cancel",
+        "meaning": "취소하다",
+        "targetScore": 800,
+        "exampleEn": "Cancel the order.",
+        "exampleKo": "주문을 취소하다."
+    },
+    {
+        "day": 18,
+        "no": 95,
+        "word": "cancellation",
+        "meaning": "취소",
+        "targetScore": 800,
+        "exampleEn": "Flight cancellation.",
+        "exampleKo": "비행 취소."
+    },
+    {
+        "day": 18,
+        "no": 96,
+        "word": "candidate",
+        "meaning": "후보자",
+        "targetScore": 800,
+        "exampleEn": "Job candidate.",
+        "exampleKo": "구직자."
+    },
+    {
+        "day": 18,
+        "no": 97,
+        "word": "capacity",
+        "meaning": "수용 능력",
+        "targetScore": 800,
+        "exampleEn": "Seating capacity.",
+        "exampleKo": "좌석 수용 능력."
+    },
+    {
+        "day": 18,
+        "no": 98,
+        "word": "celebrate",
+        "meaning": "축하하다",
+        "targetScore": 800,
+        "exampleEn": "Celebrate a victory.",
+        "exampleKo": "승리를 축하하다."
+    },
+    {
+        "day": 18,
+        "no": 99,
+        "word": "ceremony",
+        "meaning": "의식, 식",
+        "targetScore": 800,
+        "exampleEn": "Graduation ceremony.",
+        "exampleKo": "졸업식."
+    },
+    {
+        "day": 18,
+        "no": 100,
+        "word": "chairperson",
+        "meaning": "의장",
+        "targetScore": 800,
+        "exampleEn": "The chairperson spoke.",
+        "exampleKo": "의장이 연설했습니다."
+    },
+    {
+        "day": 18,
+        "no": 101,
+        "word": "chef",
+        "meaning": "요리사",
+        "targetScore": 800,
+        "exampleEn": "Executive chef.",
+        "exampleKo": "수석 주방장."
+    },
+    {
+        "day": 18,
+        "no": 102,
+        "word": "choice",
+        "meaning": "선택",
+        "targetScore": 800,
+        "exampleEn": "Good choice.",
+        "exampleKo": "좋은 선택."
+    },
+    {
+        "day": 18,
+        "no": 103,
+        "word": "choose",
+        "meaning": "선택하다",
+        "targetScore": 800,
+        "exampleEn": "Choose wisely.",
+        "exampleKo": "현명하게 선택하세요."
+    },
+    {
+        "day": 18,
+        "no": 104,
+        "word": "comfortable",
+        "meaning": "편안한",
+        "targetScore": 800,
+        "exampleEn": "Comfortable shoes.",
+        "exampleKo": "편안한 신발."
+    },
+    {
+        "day": 18,
+        "no": 105,
+        "word": "committee",
+        "meaning": "위원회",
+        "targetScore": 800,
+        "exampleEn": "Committee members.",
+        "exampleKo": "위원회 위원들."
+    },
+    {
+        "day": 18,
+        "no": 106,
+        "word": "complaint",
+        "meaning": "불평",
+        "targetScore": 800,
+        "exampleEn": "Customer complaint.",
+        "exampleKo": "고객 불평."
+    },
+    {
+        "day": 18,
+        "no": 107,
+        "word": "complete",
+        "meaning": "완료하다",
+        "targetScore": 800,
+        "exampleEn": "Complete the project.",
+        "exampleKo": "프로젝트를 완료하다."
+    },
+    {
+        "day": 18,
+        "no": 108,
+        "word": "confirm",
+        "meaning": "확인하다",
+        "targetScore": 800,
+        "exampleEn": "Confirm the appointment.",
+        "exampleKo": "약속을 확인하다."
+    },
+    {
+        "day": 18,
+        "no": 109,
+        "word": "confirmation",
+        "meaning": "확인",
+        "targetScore": 800,
+        "exampleEn": "Order confirmation.",
+        "exampleKo": "주문 확인."
+    },
+    {
+        "day": 18,
+        "no": 110,
+        "word": "contact",
+        "meaning": "연락하다",
+        "targetScore": 800,
+        "exampleEn": "Contact details.",
+        "exampleKo": "연락처."
+    },
+    {
+        "day": 18,
+        "no": 111,
+        "word": "convenience",
+        "meaning": "편의",
+        "targetScore": 800,
+        "exampleEn": "At your convenience.",
+        "exampleKo": "당신이 편할 때."
+    },
+    {
+        "day": 18,
+        "no": 112,
+        "word": "convenient",
+        "meaning": "편리한",
+        "targetScore": 800,
+        "exampleEn": "Convenient location.",
+        "exampleKo": "편리한 위치."
+    },
+    {
+        "day": 18,
+        "no": 113,
+        "word": "convention",
+        "meaning": "대회, 협약",
+        "targetScore": 800,
+        "exampleEn": "Annual convention.",
+        "exampleKo": "연례 대회."
+    },
+    {
+        "day": 18,
+        "no": 114,
+        "word": "coordinator",
+        "meaning": "진행자, 조정자",
+        "targetScore": 800,
+        "exampleEn": "Event coordinator.",
+        "exampleKo": "이벤트 기획자."
+    },
+    {
+        "day": 18,
+        "no": 115,
+        "word": "crowded",
+        "meaning": "붐비는",
+        "targetScore": 800,
+        "exampleEn": "Crowded room.",
+        "exampleKo": "붐비는 방."
+    },
+    {
+        "day": 18,
+        "no": 116,
+        "word": "custom",
+        "meaning": "관습, 세관",
+        "targetScore": 800,
+        "exampleEn": "Local customs.",
+        "exampleKo": "지역 관습."
+    },
+    {
+        "day": 18,
+        "no": 117,
+        "word": "customer",
+        "meaning": "고객",
+        "targetScore": 800,
+        "exampleEn": "Loyal customer.",
+        "exampleKo": "충성 고객."
+    },
+    {
+        "day": 18,
+        "no": 118,
+        "word": "decide",
+        "meaning": "결정하다",
+        "targetScore": 800,
+        "exampleEn": "Decide quickly.",
+        "exampleKo": "빨리 결정하세요."
+    },
+    {
+        "day": 18,
+        "no": 119,
+        "word": "decision",
+        "meaning": "결정",
+        "targetScore": 800,
+        "exampleEn": "Final decision.",
+        "exampleKo": "최종 결정."
+    },
+    {
+        "day": 18,
+        "no": 120,
+        "word": "decorate",
+        "meaning": "장식하다",
+        "targetScore": 800,
+        "exampleEn": "Decorate with flowers.",
+        "exampleKo": "꽃으로 장식하다."
+    },
+    {
+        "day": 18,
+        "no": 121,
+        "word": "delay",
+        "meaning": "지연시키다",
+        "targetScore": 800,
+        "exampleEn": "Delay the start.",
+        "exampleKo": "시작을 지연시키다."
+    },
+    {
+        "day": 18,
+        "no": 122,
+        "word": "delicious",
+        "meaning": "맛있는",
+        "targetScore": 800,
+        "exampleEn": "Delicious food.",
+        "exampleKo": "맛있는 음식."
+    },
+    {
+        "day": 18,
+        "no": 123,
+        "word": "dessert",
+        "meaning": "디저트",
+        "targetScore": 800,
+        "exampleEn": "Dessert is served.",
+        "exampleKo": "디저트가 제공됩니다."
+    },
+    {
+        "day": 18,
+        "no": 124,
+        "word": "diet",
+        "meaning": "식단",
+        "targetScore": 800,
+        "exampleEn": "Healthy diet.",
+        "exampleKo": "건강한 식단."
+    },
+    {
+        "day": 18,
+        "no": 125,
+        "word": "dining",
+        "meaning": "식사",
+        "targetScore": 800,
+        "exampleEn": "Dining room.",
+        "exampleKo": "식당."
+    },
+    {
+        "day": 18,
+        "no": 126,
+        "word": "dinner",
+        "meaning": "저녁 식사",
+        "targetScore": 800,
+        "exampleEn": "Dinner party.",
+        "exampleKo": "저녁 파티."
+    },
+    {
+        "day": 18,
+        "no": 127,
+        "word": "dish",
+        "meaning": "요리, 접시",
+        "targetScore": 800,
+        "exampleEn": "Main dish.",
+        "exampleKo": "주요리."
+    },
+    {
+        "day": 18,
+        "no": 128,
+        "word": "duration",
+        "meaning": "기간",
+        "targetScore": 800,
+        "exampleEn": "Short duration.",
+        "exampleKo": "짧은 기간."
+    },
+    {
+        "day": 18,
+        "no": 129,
+        "word": "eat",
+        "meaning": "먹다",
+        "targetScore": 800,
+        "exampleEn": "Eat healthy.",
+        "exampleKo": "건강하게 먹다."
+    },
+    {
+        "day": 18,
+        "no": 130,
+        "word": "either",
+        "meaning": "(둘 중) 어느 하나",
+        "targetScore": 800,
+        "exampleEn": "Either one is fine.",
+        "exampleKo": "어느 것이든 좋습니다."
+    },
+    {
+        "day": 18,
+        "no": 131,
+        "word": "encourage",
+        "meaning": "격려하다",
+        "targetScore": 800,
+        "exampleEn": "Encourage students.",
+        "exampleKo": "학생들을 격려하다."
+    },
+    {
+        "day": 18,
+        "no": 132,
+        "word": "enjoy",
+        "meaning": "즐기다",
+        "targetScore": 800,
+        "exampleEn": "Enjoy the meal.",
+        "exampleKo": "식사를 즐기세요."
+    },
+    {
+        "day": 18,
+        "no": 133,
+        "word": "entertainment",
+        "meaning": "오락",
+        "targetScore": 800,
+        "exampleEn": "Live entertainment.",
+        "exampleKo": "라이브 엔터테인먼트."
+    },
+    {
+        "day": 18,
+        "no": 134,
+        "word": "event",
+        "meaning": "행사",
+        "targetScore": 800,
+        "exampleEn": "Special event.",
+        "exampleKo": "특별 행사."
+    },
+    {
+        "day": 18,
+        "no": 135,
+        "word": "expect",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "Expect delays.",
+        "exampleKo": "지연을 예상하다."
+    },
+    {
+        "day": 18,
+        "no": 136,
+        "word": "facility",
+        "meaning": "시설",
+        "targetScore": 800,
+        "exampleEn": "Sports facility.",
+        "exampleKo": "스포츠 시설."
+    }
+]

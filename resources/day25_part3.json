@@ -1,0 +1,614 @@
+[
+  {
+    "day": 25,
+    "no": 69,
+    "word": "across the street",
+    "meaning": "길을 가로질러",
+    "targetScore": 800,
+    "exampleEn": "The bank is just across the street.",
+    "exampleKo": "은행은 바로 길 건너편에 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 70,
+    "word": "around the corner",
+    "meaning": "길모퉁이에, 임박한, 매우 가까이에 있는",
+    "targetScore": 800,
+    "exampleEn": "The bakery is just around the corner.",
+    "exampleKo": "빵집은 바로 모퉁이를 돌면 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 71,
+    "word": "be closed to traffic",
+    "meaning": "왕래를 금하다",
+    "targetScore": 800,
+    "exampleEn": "The road will be closed to traffic for the parade.",
+    "exampleKo": "퍼레이드를 위해 도로의 왕래가 금지될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 72,
+    "word": "be held up in traffic",
+    "meaning": "교통체증에 걸리다",
+    "targetScore": 800,
+    "exampleEn": "I was held up in traffic for an hour.",
+    "exampleKo": "저는 한 시간 동안 교통 체증에 갇혀 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 73,
+    "word": "be lined with",
+    "meaning": "줄지어 있다",
+    "targetScore": 800,
+    "exampleEn": "The street is lined with trees.",
+    "exampleKo": "그 거리에는 나무들이 줄지어 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 74,
+    "word": "broadcast",
+    "meaning": "방송하다, 방송",
+    "targetScore": 800,
+    "exampleEn": "The traffic report is broadcast every hour.",
+    "exampleKo": "교통 방송은 매시간 방송됩니다."
+  },
+  {
+    "day": 25,
+    "no": 75,
+    "word": "bypass",
+    "meaning": "우회로",
+    "targetScore": 800,
+    "exampleEn": "Take the bypass to avoid the city center.",
+    "exampleKo": "도심을 피하기 위해 우회로를 이용하십시오."
+  },
+  {
+    "day": 25,
+    "no": 76,
+    "word": "carpool",
+    "meaning": "승용차 함께 타기를 하다",
+    "targetScore": 800,
+    "exampleEn": "Employees are encouraged to carpool.",
+    "exampleKo": "직원들은 승용차 함께 타기(카풀)를 하도록 장려됩니다."
+  },
+  {
+    "day": 25,
+    "no": 77,
+    "word": "come to a standstill",
+    "meaning": "멈추다, 정지하다",
+    "targetScore": 800,
+    "exampleEn": "Traffic came to a standstill during the storm.",
+    "exampleKo": "폭풍우 동안 교통이 멈추었습니다."
+  },
+  {
+    "day": 25,
+    "no": 78,
+    "word": "commuter",
+    "meaning": "통근자",
+    "targetScore": 800,
+    "exampleEn": "The train is crowded with commuters.",
+    "exampleKo": "기차는 통근자들로 붐빕니다."
+  },
+  {
+    "day": 25,
+    "no": 79,
+    "word": "cross the street",
+    "meaning": "길을 건너다",
+    "targetScore": 800,
+    "exampleEn": "Look both ways before you cross the street.",
+    "exampleKo": "길을 건너기 전에 양쪽을 다 살피십시오."
+  },
+  {
+    "day": 25,
+    "no": 80,
+    "word": "direct traffic",
+    "meaning": "교통정리를 하다",
+    "targetScore": 800,
+    "exampleEn": "Police officers were directing traffic at the intersection.",
+    "exampleKo": "경찰관들이 교차로에서 교통 정리를 하고 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 81,
+    "word": "driver's license",
+    "meaning": "운전 면허증",
+    "targetScore": 800,
+    "exampleEn": "You must show your driver's license.",
+    "exampleKo": "운전 면허증을 제시해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 82,
+    "word": "driveway",
+    "meaning": "차도, (집, 차고까지의) 진입로",
+    "targetScore": 800,
+    "exampleEn": "Don't block the driveway.",
+    "exampleKo": "진입로를 막지 마십시오."
+  },
+  {
+    "day": 25,
+    "no": 83,
+    "word": "driving direction",
+    "meaning": "주행방향",
+    "targetScore": 800,
+    "exampleEn": "Follow the driving directions on the map.",
+    "exampleKo": "지도의 주행 방향을 따르십시오."
+  },
+  {
+    "day": 25,
+    "no": 84,
+    "word": "footrest(=footstool)",
+    "meaning": "발받침",
+    "targetScore": 800,
+    "exampleEn": "This chair comes with a footrest.",
+    "exampleKo": "이 의자에는 발받침이 딸려 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 85,
+    "word": "get a ride",
+    "meaning": "차를 얻어 타다",
+    "targetScore": 800,
+    "exampleEn": "Can I get a ride to the station?",
+    "exampleKo": "역까지 차를 얻어 탈 수 있을까요?"
+  },
+  {
+    "day": 25,
+    "no": 86,
+    "word": "get lost",
+    "meaning": "길을 잃다",
+    "targetScore": 800,
+    "exampleEn": "It is easy to get lost in a new city.",
+    "exampleKo": "새로운 도시에서는 길을 잃기 쉽습니다."
+  },
+  {
+    "day": 25,
+    "no": 87,
+    "word": "get to",
+    "meaning": "~에 도착하다",
+    "targetScore": 800,
+    "exampleEn": "How long does it take to get to the airport?",
+    "exampleKo": "공항에 도착하는 데 얼마나 걸립니까?"
+  },
+  {
+    "day": 25,
+    "no": 88,
+    "word": "give A a ride",
+    "meaning": "A를 태워주다",
+    "targetScore": 800,
+    "exampleEn": "I can give you a ride home.",
+    "exampleKo": "제가 집까지 태워다 드릴 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 89,
+    "word": "have a flat tire",
+    "meaning": "타이어에 바람이 빠지다",
+    "targetScore": 800,
+    "exampleEn": "We had a flat tire on the way here.",
+    "exampleKo": "여기로 오는 길에 타이어에 바람이 빠졌습니다(펑크가 났습니다)."
+  },
+  {
+    "day": 25,
+    "no": 90,
+    "word": "headlight",
+    "meaning": "전조등",
+    "targetScore": 800,
+    "exampleEn": "Please turn on your headlights.",
+    "exampleKo": "전조등을 켜십시오."
+  },
+  {
+    "day": 25,
+    "no": 91,
+    "word": "land at the dock",
+    "meaning": "부두에 정박하다",
+    "targetScore": 800,
+    "exampleEn": "The ship landed at the dock safely.",
+    "exampleKo": "배는 부두에 안전하게 정박했습니다."
+  },
+  {
+    "day": 25,
+    "no": 92,
+    "word": "lane",
+    "meaning": "차선",
+    "targetScore": 800,
+    "exampleEn": "Stay in the right lane.",
+    "exampleKo": "오른쪽 차선을 유지하십시오."
+  },
+  {
+    "day": 25,
+    "no": 93,
+    "word": "lean over the railing",
+    "meaning": "난간 위로 기대다",
+    "targetScore": 800,
+    "exampleEn": "Do not lean over the railing.",
+    "exampleKo": "난간 위로 몸을 기대지 마십시오."
+  },
+  {
+    "day": 25,
+    "no": 94,
+    "word": "license plate number",
+    "meaning": "차량 번호",
+    "targetScore": 800,
+    "exampleEn": "I wrote down the license plate number.",
+    "exampleKo": "저는 차량 번호를 적어 두었습니다."
+  },
+  {
+    "day": 25,
+    "no": 95,
+    "word": "lock the key in the car",
+    "meaning": "열쇠를 차에 두고 잠그다",
+    "targetScore": 800,
+    "exampleEn": "I accidentally locked the key in the car.",
+    "exampleKo": "실수로 열쇠를 차에 두고 잠갔습니다."
+  },
+  {
+    "day": 25,
+    "no": 96,
+    "word": "make a stop",
+    "meaning": "정지하다",
+    "targetScore": 800,
+    "exampleEn": "The bus makes a stop at the library.",
+    "exampleKo": "버스는 도서관에서 정지합니다."
+  },
+  {
+    "day": 25,
+    "no": 97,
+    "word": "make a transfer",
+    "meaning": "(차를) 갈아타다, 바꾸다",
+    "targetScore": 800,
+    "exampleEn": "You need to make a transfer at Central Station.",
+    "exampleKo": "중앙역에서 갈아타야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 98,
+    "word": "march",
+    "meaning": "행진하다",
+    "targetScore": 800,
+    "exampleEn": "Protesters marched through the streets.",
+    "exampleKo": "시위대가 거리를 행진했습니다."
+  },
+  {
+    "day": 25,
+    "no": 99,
+    "word": "mileage",
+    "meaning": "주행거리",
+    "targetScore": 800,
+    "exampleEn": "The car has low gas mileage.",
+    "exampleKo": "그 차는 연비(마일리지)가 낮습니다."
+  },
+  {
+    "day": 25,
+    "no": 100,
+    "word": "navigation",
+    "meaning": "항해, 운항",
+    "targetScore": 800,
+    "exampleEn": "The navigation system is very accurate.",
+    "exampleKo": "내비게이션 시스템은 매우 정확합니다."
+  },
+  {
+    "day": 25,
+    "no": 101,
+    "word": "one-way ticket",
+    "meaning": "편도 차표",
+    "targetScore": 800,
+    "exampleEn": "I bought a one-way ticket to London.",
+    "exampleKo": "저는 런던행 편도 차표를 샀습니다."
+  },
+  {
+    "day": 25,
+    "no": 102,
+    "word": "parking garage",
+    "meaning": "차고",
+    "targetScore": 800,
+    "exampleEn": "Park your car in the parking garage.",
+    "exampleKo": "주차 차고(주차장)에 차를 주차하십시오."
+  },
+  {
+    "day": 25,
+    "no": 103,
+    "word": "pathway",
+    "meaning": "통행로",
+    "targetScore": 800,
+    "exampleEn": "Keep the pathway clear of obstacles.",
+    "exampleKo": "통행로에 장애물이 없게 하십시오."
+  },
+  {
+    "day": 25,
+    "no": 104,
+    "word": "push one's way through",
+    "meaning": "~을 뚫고 지나가다",
+    "targetScore": 800,
+    "exampleEn": "He pushed his way through the crowd.",
+    "exampleKo": "그는 군중을 뚫고 지나갔습니다."
+  },
+  {
+    "day": 25,
+    "no": 105,
+    "word": "ride away",
+    "meaning": "타고가다",
+    "targetScore": 800,
+    "exampleEn": "She rode away on her bicycle.",
+    "exampleKo": "그녀는 자전거를 타고 떠났습니다."
+  },
+  {
+    "day": 25,
+    "no": 106,
+    "word": "road sign",
+    "meaning": "도로표지",
+    "targetScore": 800,
+    "exampleEn": "Pay attention to the road signs.",
+    "exampleKo": "도로 표지판에 주의를 기울이십시오."
+  },
+  {
+    "day": 25,
+    "no": 107,
+    "word": "roadwork(=road construction)",
+    "meaning": "도로 공사",
+    "targetScore": 800,
+    "exampleEn": "Expect delays due to roadwork.",
+    "exampleKo": "도로 공사로 인한 지연을 예상하십시오."
+  },
+  {
+    "day": 25,
+    "no": 108,
+    "word": "shortcut",
+    "meaning": "지름길",
+    "targetScore": 800,
+    "exampleEn": "Is there a shortcut to the station?",
+    "exampleKo": "역으로 가는 지름길이 있습니까?"
+  },
+  {
+    "day": 25,
+    "no": 109,
+    "word": "stop at a light",
+    "meaning": "신호등에서 정지하다",
+    "targetScore": 800,
+    "exampleEn": "We had to stop at a light.",
+    "exampleKo": "우리는 신호등에서 정지해야 했습니다."
+  },
+  {
+    "day": 25,
+    "no": 110,
+    "word": "stop for fuel",
+    "meaning": "주유소에 들르다",
+    "targetScore": 800,
+    "exampleEn": "We need to stop for fuel immediately.",
+    "exampleKo": "우리는 즉시 주유소에 들러야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 111,
+    "word": "storage compartment",
+    "meaning": "짐 싣는 곳",
+    "targetScore": 800,
+    "exampleEn": "Place your bags in the overhead storage compartment.",
+    "exampleKo": "가방을 머리 위 짐 싣는 곳에 넣으십시오."
+  },
+  {
+    "day": 25,
+    "no": 112,
+    "word": "street sign",
+    "meaning": "도로 표지판",
+    "targetScore": 800,
+    "exampleEn": "The street sign was damaged.",
+    "exampleKo": "도로 표지판이 손상되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 113,
+    "word": "toll price",
+    "meaning": "통행료",
+    "targetScore": 800,
+    "exampleEn": "The toll price has increased.",
+    "exampleKo": "통행료가 인상되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 114,
+    "word": "traffic jam",
+    "meaning": "교통정체",
+    "targetScore": 800,
+    "exampleEn": "We were stuck in a heavy traffic jam.",
+    "exampleKo": "우리는 심한 교통 정체에 갇혔습니다."
+  },
+  {
+    "day": 25,
+    "no": 115,
+    "word": "walk through",
+    "meaning": "~을 통과해 걷다",
+    "targetScore": 800,
+    "exampleEn": "We walked through the park.",
+    "exampleKo": "우리는 공원을 통과해 걸었습니다."
+  },
+  {
+    "day": 25,
+    "no": 116,
+    "word": "walking distance",
+    "meaning": "걸어서 갈 수 있는 거리",
+    "targetScore": 800,
+    "exampleEn": "The hotel is within walking distance of the beach.",
+    "exampleKo": "호텔은 해변에서 걸어서 갈 수 있는 거리에 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 117,
+    "word": "walkway",
+    "meaning": "통로",
+    "targetScore": 800,
+    "exampleEn": "The walkway connects the two buildings.",
+    "exampleKo": "통로는 두 건물을 연결합니다."
+  },
+  {
+    "day": 25,
+    "no": 118,
+    "word": "windshield",
+    "meaning": "바람막이 창",
+    "targetScore": 800,
+    "exampleEn": "The windshield was cracked.",
+    "exampleKo": "자동차 앞유리(바람막이 창)에 금이 갔습니다."
+  },
+  {
+    "day": 25,
+    "no": 119,
+    "word": "creation",
+    "meaning": "창조",
+    "targetScore": 800,
+    "exampleEn": "The creation of new jobs is a priority.",
+    "exampleKo": "새로운 일자리의 창조가 우선순위입니다."
+  },
+  {
+    "day": 25,
+    "no": 120,
+    "word": "motivate",
+    "meaning": "동기를 부여하다, 자극하다",
+    "targetScore": 800,
+    "exampleEn": "Bonuses motivate employees to work harder.",
+    "exampleKo": "보너스는 직원들이 더 열심히 일하도록 동기를 부여합니다."
+  },
+  {
+    "day": 25,
+    "no": 121,
+    "word": "normal",
+    "meaning": "정상, 표준",
+    "targetScore": 800,
+    "exampleEn": "Traffic is heavier than normal today.",
+    "exampleKo": "오늘은 평소(정상)보다 교통이 더 혼잡합니다."
+  },
+  {
+    "day": 25,
+    "no": 122,
+    "word": "still",
+    "meaning": "조용한, 정지한, 여전히",
+    "targetScore": 800,
+    "exampleEn": "The water was perfectly still.",
+    "exampleKo": "물은 완전히 고요했습니다(정지해 있었습니다)."
+  },
+  {
+    "day": 25,
+    "no": 123,
+    "word": "traffic signal",
+    "meaning": "교통 신호",
+    "targetScore": 800,
+    "exampleEn": "Wait for the traffic signal to change.",
+    "exampleKo": "교통 신호가 바뀌기를 기다리십시오."
+  },
+  {
+    "day": 25,
+    "no": 124,
+    "word": "valuable",
+    "meaning": "소중한, 귀중한",
+    "targetScore": 800,
+    "exampleEn": "Your feedback is valuable to us.",
+    "exampleKo": "당신의 피드백은 우리에게 소중합니다."
+  },
+  {
+    "day": 25,
+    "no": 125,
+    "word": "volunteer",
+    "meaning": "자원봉사자",
+    "targetScore": 800,
+    "exampleEn": "Volunteers helped direct traffic.",
+    "exampleKo": "자원봉사자들이 교통 정리를 도왔습니다."
+  },
+  {
+    "day": 25,
+    "no": 126,
+    "word": "at full speed",
+    "meaning": "전속력으로",
+    "targetScore": 800,
+    "exampleEn": "The train was moving at full speed.",
+    "exampleKo": "기차는 전속력으로 달리고 있었습니다."
+  },
+  {
+    "day": 25,
+    "no": 127,
+    "word": "clear A from B",
+    "meaning": "A를 B에서 치우다",
+    "targetScore": 800,
+    "exampleEn": "Please clear the snow from the driveway.",
+    "exampleKo": "진입로에서 눈을 치워 주십시오."
+  },
+  {
+    "day": 25,
+    "no": 128,
+    "word": "collide",
+    "meaning": "충돌하다",
+    "targetScore": 800,
+    "exampleEn": "Two cars collided at the intersection.",
+    "exampleKo": "두 대의 차가 교차로에서 충돌했습니다."
+  },
+  {
+    "day": 25,
+    "no": 129,
+    "word": "congested",
+    "meaning": "(사람·교통이) 붐비는, 혼잡한",
+    "targetScore": 800,
+    "exampleEn": "The roads are congested during the holiday season.",
+    "exampleKo": "연휴 기간에는 도로가 붐빕니다."
+  },
+  {
+    "day": 25,
+    "no": 130,
+    "word": "encounter",
+    "meaning": "(우연히) 만나다, (문제에) 부닥치다",
+    "targetScore": 800,
+    "exampleEn": "We encountered some unexpected problems.",
+    "exampleKo": "우리는 몇 가지 예상치 못한 문제에 부닥쳤습니다."
+  },
+  {
+    "day": 25,
+    "no": 131,
+    "word": "move forward",
+    "meaning": "앞으로 나아가다",
+    "targetScore": 800,
+    "exampleEn": "The project is moving forward as planned.",
+    "exampleKo": "프로젝트는 계획대로 앞으로 나아가고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 132,
+    "word": "principal(=primary)",
+    "meaning": "주요한, 주된, (단체의)장, 교장",
+    "targetScore": 800,
+    "exampleEn": "Our principal concern is safety.",
+    "exampleKo": "우리의 주된 관심사는 안전입니다."
+  },
+  {
+    "day": 25,
+    "no": 133,
+    "word": "public transportation",
+    "meaning": "대중교통",
+    "targetScore": 800,
+    "exampleEn": "Many people rely on public transportation.",
+    "exampleKo": "많은 사람들이 대중교통에 의존합니다."
+  },
+  {
+    "day": 25,
+    "no": 134,
+    "word": "standing room",
+    "meaning": "입석",
+    "targetScore": 800,
+    "exampleEn": "The concert was standing room only.",
+    "exampleKo": "그 콘서트는 입석뿐이었습니다(매진이었습니다)."
+  },
+  {
+    "day": 25,
+    "no": 135,
+    "word": "steering wheel",
+    "meaning": "핸들",
+    "targetScore": 800,
+    "exampleEn": "Keep both hands on the steering wheel.",
+    "exampleKo": "양손을 핸들(운전대)에 두십시오."
+  },
+  {
+    "day": 25,
+    "no": 136,
+    "word": "traffic congestion",
+    "meaning": "교통체증",
+    "targetScore": 800,
+    "exampleEn": "Traffic congestion is a major issue in the city.",
+    "exampleKo": "교통 체증은 도시의 주요 문제입니다."
+  }
+]

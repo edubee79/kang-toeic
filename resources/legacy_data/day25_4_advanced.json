@@ -1,0 +1,290 @@
+[
+  {
+    "day": 25,
+    "no": 137,
+    "word": "accessible",
+    "meaning": "접근 가능한",
+    "targetScore": 900,
+    "exampleEn": "The facility is fully accessible to wheelchair users.",
+    "exampleKo": "시설은 휠체어 사용자가 완전히 접근 가능합니다."
+  },
+  {
+    "day": 25,
+    "no": 138,
+    "word": "accommodate",
+    "meaning": "수용하다",
+    "targetScore": 900,
+    "exampleEn": "The expanded terminal can accommodate twice as many passengers.",
+    "exampleKo": "확장된 터미널은 두 배 많은 승객을 수용할 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 139,
+    "word": "adhere",
+    "meaning": "준수하다",
+    "targetScore": 900,
+    "exampleEn": "All airlines must adhere to strict safety protocols.",
+    "exampleKo": "모든 항공사는 엄격한 안전 규약을 준수해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 140,
+    "word": "alleviate",
+    "meaning": "완화하다",
+    "targetScore": 900,
+    "exampleEn": "The bypass road will alleviate downtown congestion significantly.",
+    "exampleKo": "우회 도로가 도심 혼잡을 크게 완화할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 141,
+    "word": "ascertain",
+    "meaning": "확인하다",
+    "targetScore": 900,
+    "exampleEn": "Please ascertain the departure time before heading to the airport.",
+    "exampleKo": "공항으로 가기 전에 출발 시간을 확인하세요."
+  },
+  {
+    "day": 25,
+    "no": 142,
+    "word": "circumvent",
+    "meaning": "우회하다",
+    "targetScore": 900,
+    "exampleEn": "Drivers attempted to circumvent the traffic jam.",
+    "exampleKo": "운전자들은 교통 체증을 우회하려고 시도했습니다."
+  },
+  {
+    "day": 25,
+    "no": 143,
+    "word": "coalesce",
+    "meaning": "합치다",
+    "targetScore": 900,
+    "exampleEn": "Several small airlines coalesced to form a major carrier.",
+    "exampleKo": "여러 소형 항공사가 합쳐져 주요 항공사를 형성했습니다."
+  },
+  {
+    "day": 25,
+    "no": 144,
+    "word": "commend",
+    "meaning": "칭찬하다",
+    "targetScore": 900,
+    "exampleEn": "The airline was commended for its punctuality record.",
+    "exampleKo": "항공사는 정시 운항 기록으로 칭찬받았습니다."
+  },
+  {
+    "day": 25,
+    "no": 145,
+    "word": "compelling",
+    "meaning": "강력한",
+    "targetScore": 900,
+    "exampleEn": "There are compelling reasons to invest in public transportation.",
+    "exampleKo": "대중교통에 투자해야 할 강력한 이유가 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 146,
+    "word": "comprehensive",
+    "meaning": "포괄적인",
+    "targetScore": 900,
+    "exampleEn": "The city developed a comprehensive transportation plan.",
+    "exampleKo": "시는 포괄적인 교통 계획을 개발했습니다."
+  },
+  {
+    "day": 25,
+    "no": 147,
+    "word": "concurrent",
+    "meaning": "동시의",
+    "targetScore": 900,
+    "exampleEn": "Concurrent delays affected multiple flight routes.",
+    "exampleKo": "동시 지연이 여러 항공 노선에 영향을 미쳤습니다."
+  },
+  {
+    "day": 25,
+    "no": 148,
+    "word": "conducive",
+    "meaning": "도움이 되는",
+    "targetScore": 900,
+    "exampleEn": "The new layout is conducive to efficient passenger flow.",
+    "exampleKo": "새로운 배치는 효율적인 승객 흐름에 도움이 됩니다."
+  },
+  {
+    "day": 25,
+    "no": 149,
+    "word": "consolidate",
+    "meaning": "통합하다",
+    "targetScore": 900,
+    "exampleEn": "The company plans to consolidate its shipping operations.",
+    "exampleKo": "회사는 배송 운영을 통합할 계획입니다."
+  },
+  {
+    "day": 25,
+    "no": 150,
+    "word": "contingency",
+    "meaning": "비상 계획",
+    "targetScore": 900,
+    "exampleEn": "The airline has contingency plans for severe weather.",
+    "exampleKo": "항공사는 악천후에 대한 비상 계획을 가지고 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 151,
+    "word": "curtail",
+    "meaning": "단축하다",
+    "targetScore": 900,
+    "exampleEn": "Budget cuts will curtail expansion of the subway system.",
+    "exampleKo": "예산 삭감으로 지하철 시스템 확장이 단축될 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 152,
+    "word": "deem",
+    "meaning": "여기다",
+    "targetScore": 900,
+    "exampleEn": "The route was deemed unsafe during winter months.",
+    "exampleKo": "그 경로는 겨울철에 안전하지 않다고 여겨졌습니다."
+  },
+  {
+    "day": 25,
+    "no": 153,
+    "word": "deter",
+    "meaning": "단념시키다",
+    "targetScore": 900,
+    "exampleEn": "High parking fees deter people from driving downtown.",
+    "exampleKo": "높은 주차 요금이 사람들이 시내로 운전하는 것을 단념시킵니다."
+  },
+  {
+    "day": 25,
+    "no": 154,
+    "word": "deteriorate",
+    "meaning": "악화되다",
+    "targetScore": 900,
+    "exampleEn": "Infrastructure has deteriorated due to lack of maintenance.",
+    "exampleKo": "유지보수 부족으로 기반 시설이 악화되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 155,
+    "word": "discern",
+    "meaning": "식별하다",
+    "targetScore": 900,
+    "exampleEn": "It is difficult to discern the optimal route during rush hour.",
+    "exampleKo": "러시아워 동안 최적의 경로를 식별하기 어렵습니다."
+  },
+  {
+    "day": 25,
+    "no": 156,
+    "word": "disseminate",
+    "meaning": "보급하다",
+    "targetScore": 900,
+    "exampleEn": "The airport disseminates flight information through multiple channels.",
+    "exampleKo": "공항은 여러 채널을 통해 항공편 정보를 보급합니다."
+  },
+  {
+    "day": 25,
+    "no": 157,
+    "word": "divert",
+    "meaning": "우회시키다",
+    "targetScore": 900,
+    "exampleEn": "Authorities diverted traffic away from the accident site.",
+    "exampleKo": "당국은 사고 현장에서 교통을 우회시켰습니다."
+  },
+  {
+    "day": 25,
+    "no": 158,
+    "word": "elaborate",
+    "meaning": "정교한",
+    "targetScore": 900,
+    "exampleEn": "The city implemented an elaborate traffic management system.",
+    "exampleKo": "시는 정교한 교통 관리 시스템을 구현했습니다."
+  },
+  {
+    "day": 25,
+    "no": 159,
+    "word": "emanate",
+    "meaning": "나오다",
+    "targetScore": 900,
+    "exampleEn": "New regulations emanated from the transportation authority.",
+    "exampleKo": "새로운 규정이 교통 당국에서 나왔습니다."
+  },
+  {
+    "day": 25,
+    "no": 160,
+    "word": "embark",
+    "meaning": "착수하다",
+    "targetScore": 900,
+    "exampleEn": "The city embarked on an ambitious infrastructure project.",
+    "exampleKo": "시는 야심찬 기반 시설 프로젝트에 착수했습니다."
+  },
+  {
+    "day": 25,
+    "no": 161,
+    "word": "encompass",
+    "meaning": "포함하다",
+    "targetScore": 900,
+    "exampleEn": "The plan encompasses all modes of public transportation.",
+    "exampleKo": "계획은 모든 대중교통 수단을 포함합니다."
+  },
+  {
+    "day": 25,
+    "no": 162,
+    "word": "endeavor",
+    "meaning": "노력하다",
+    "targetScore": 900,
+    "exampleEn": "The airline endeavors to maintain the highest safety standards.",
+    "exampleKo": "항공사는 최고의 안전 기준을 유지하기 위해 노력합니다."
+  },
+  {
+    "day": 25,
+    "no": 163,
+    "word": "expedite",
+    "meaning": "신속히 처리하다",
+    "targetScore": 900,
+    "exampleEn": "New technology will expedite the boarding process.",
+    "exampleKo": "새로운 기술이 탑승 절차를 신속히 처리할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 164,
+    "word": "facilitate",
+    "meaning": "용이하게 하다",
+    "targetScore": 900,
+    "exampleEn": "The new terminal design facilitates smoother passenger transitions.",
+    "exampleKo": "새 터미널 디자인은 더 원활한 승객 이동을 용이하게 합니다."
+  },
+  {
+    "day": 25,
+    "no": 165,
+    "word": "feasible",
+    "meaning": "실행 가능한",
+    "targetScore": 900,
+    "exampleEn": "The proposed high-speed rail link is economically feasible.",
+    "exampleKo": "제안된 고속철도 연결은 경제적으로 실행 가능합니다."
+  },
+  {
+    "day": 25,
+    "no": 166,
+    "word": "impede",
+    "meaning": "방해하다",
+    "targetScore": 900,
+    "exampleEn": "Outdated infrastructure impedes economic development.",
+    "exampleKo": "낡은 기반 시설이 경제 발전을 방해합니다."
+  },
+  {
+    "day": 25,
+    "no": 167,
+    "word": "inadvertently",
+    "meaning": "부주의하게",
+    "targetScore": 900,
+    "exampleEn": "The passenger inadvertently boarded the wrong train.",
+    "exampleKo": "승객이 부주의하게 잘못된 기차에 탑승했습니다."
+  },
+  {
+    "day": 25,
+    "no": 168,
+    "word": "mitigate",
+    "meaning": "완화하다",
+    "targetScore": 900,
+    "exampleEn": "The new system helps mitigate traffic congestion.",
+    "exampleKo": "새 시스템은 교통 체증을 완화하는 데 도움이 됩니다."
+  }
+]

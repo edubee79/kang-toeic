@@ -1,0 +1,254 @@
+[
+    {
+        "day": 8,
+        "no": 41,
+        "word": "celebration",
+        "meaning": "축하, 기념",
+        "targetScore": 650,
+        "exampleEn": "The celebration lasted all night.",
+        "exampleKo": "축하는 밤새 계속되었습니다."
+    },
+    {
+        "day": 8,
+        "no": 42,
+        "word": "come",
+        "meaning": "오다",
+        "targetScore": 650,
+        "exampleEn": "Please come to the party.",
+        "exampleKo": "파티에 와 주세요."
+    },
+    {
+        "day": 8,
+        "no": 43,
+        "word": "event",
+        "meaning": "행사, 사건",
+        "targetScore": 650,
+        "exampleEn": "The charity event raised a lot of money.",
+        "exampleKo": "그 자선 행사는 많은 돈을 모금했습니다."
+    },
+    {
+        "day": 8,
+        "no": 44,
+        "word": "guest",
+        "meaning": "손님",
+        "targetScore": 650,
+        "exampleEn": "We have guests coming for dinner.",
+        "exampleKo": "저녁 식사에 손님들이 옵니다."
+    },
+    {
+        "day": 8,
+        "no": 45,
+        "word": "hold",
+        "meaning": "개최하다, 열다; 잡다",
+        "targetScore": 650,
+        "exampleEn": "They will hold a meeting tomorrow.",
+        "exampleKo": "그들은 내일 회의를 열 것입니다."
+    },
+    {
+        "day": 8,
+        "no": 46,
+        "word": "indicate",
+        "meaning": "나타내다",
+        "targetScore": 650,
+        "exampleEn": "Red lines indicate heavy traffic.",
+        "exampleKo": "빨간 선은 교통 체증을 나타냅니다."
+    },
+    {
+        "day": 8,
+        "no": 47,
+        "word": "influential",
+        "meaning": "영향력 있는",
+        "targetScore": 650,
+        "exampleEn": "She is an influential leader.",
+        "exampleKo": "그녀는 영향력 있는 지도자입니다."
+    },
+    {
+        "day": 8,
+        "no": 48,
+        "word": "interest",
+        "meaning": "관심, 흥미; 이자",
+        "targetScore": 650,
+        "exampleEn": "I have no interest in politics.",
+        "exampleKo": "나는 정치에 관심이 없습니다."
+    },
+    {
+        "day": 8,
+        "no": 49,
+        "word": "interested",
+        "meaning": "관심 있는",
+        "targetScore": 650,
+        "exampleEn": "Are you interested in art?",
+        "exampleKo": "예술에 관심이 있습니까?"
+    },
+    {
+        "day": 8,
+        "no": 50,
+        "word": "introduce",
+        "meaning": "소개하다",
+        "targetScore": 650,
+        "exampleEn": "Let me introduce my friend.",
+        "exampleKo": "제 친구를 소개하겠습니다."
+    },
+    {
+        "day": 8,
+        "no": 51,
+        "word": "join",
+        "meaning": "참가하다, 가입하다",
+        "targetScore": 650,
+        "exampleEn": "Will you join us for lunch?",
+        "exampleKo": "점심 식사에 함께 하시겠습니까?"
+    },
+    {
+        "day": 8,
+        "no": 52,
+        "word": "lead to",
+        "meaning": "~로 이어지다, 초래하다",
+        "targetScore": 650,
+        "exampleEn": "Hard work leads to success.",
+        "exampleKo": "노력은 성공으로 이어집니다."
+    },
+    {
+        "day": 8,
+        "no": 53,
+        "word": "listen",
+        "meaning": "듣다",
+        "targetScore": 650,
+        "exampleEn": "Listen carefully to the instructions.",
+        "exampleKo": "지시 사항을 주의 깊게 들으세요."
+    },
+    {
+        "day": 8,
+        "no": 54,
+        "word": "measure",
+        "meaning": "측정하다",
+        "targetScore": 650,
+        "exampleEn": "Measure the length of the room.",
+        "exampleKo": "방의 길이를 측정하세요."
+    },
+    {
+        "day": 8,
+        "no": 55,
+        "word": "method",
+        "meaning": "방법",
+        "targetScore": 650,
+        "exampleEn": "This is a new method of teaching.",
+        "exampleKo": "이것은 새로운 교수법입니다."
+    },
+    {
+        "day": 8,
+        "no": 56,
+        "word": "opportunity",
+        "meaning": "기회",
+        "targetScore": 650,
+        "exampleEn": "Don't miss this opportunity.",
+        "exampleKo": "이 기회를 놓치지 마세요."
+    },
+    {
+        "day": 8,
+        "no": 57,
+        "word": "participate",
+        "meaning": "참가하다",
+        "targetScore": 650,
+        "exampleEn": "She participated in the contest.",
+        "exampleKo": "그녀는 대회에 참가했습니다."
+    },
+    {
+        "day": 8,
+        "no": 58,
+        "word": "participation",
+        "meaning": "참가",
+        "targetScore": 650,
+        "exampleEn": "Participation is mandatory.",
+        "exampleKo": "참가는 의무입니다."
+    },
+    {
+        "day": 8,
+        "no": 59,
+        "word": "personally",
+        "meaning": "개인적으로, 직접",
+        "targetScore": 650,
+        "exampleEn": "I will handle this personally.",
+        "exampleKo": "이 일은 제가 직접 처리하겠습니다."
+    },
+    {
+        "day": 8,
+        "no": 60,
+        "word": "place",
+        "meaning": "장소; 놓다",
+        "targetScore": 650,
+        "exampleEn": "Place the box on the table.",
+        "exampleKo": "상자를 탁자 위에 놓으세요."
+    },
+    {
+        "day": 8,
+        "no": 61,
+        "word": "plan",
+        "meaning": "계획; 계획하다",
+        "targetScore": 650,
+        "exampleEn": "We plan to travel to Europe.",
+        "exampleKo": "우리는 유럽으로 여행 갈 계획입니다."
+    },
+    {
+        "day": 8,
+        "no": 62,
+        "word": "planning",
+        "meaning": "계획, 기획",
+        "targetScore": 650,
+        "exampleEn": "Proper planning prevents poor performance.",
+        "exampleKo": "적절한 계획은 저조한 성과를 예방합니다."
+    },
+    {
+        "day": 8,
+        "no": 63,
+        "word": "popular",
+        "meaning": "인기 있는",
+        "targetScore": 650,
+        "exampleEn": "This song is very popular.",
+        "exampleKo": "이 노래는 매우 인기가 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 64,
+        "word": "popularity",
+        "meaning": "인기",
+        "targetScore": 650,
+        "exampleEn": "The popularity of the game is growing.",
+        "exampleKo": "그 게임의 인기가 높아지고 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 65,
+        "word": "positive",
+        "meaning": "긍정적인",
+        "targetScore": 650,
+        "exampleEn": "Try to stay positive.",
+        "exampleKo": "긍정적인 태도를 유지하도록 노력하세요."
+    },
+    {
+        "day": 8,
+        "no": 66,
+        "word": "potential",
+        "meaning": "잠재적인; 잠재력",
+        "targetScore": 650,
+        "exampleEn": "He is a potential customer.",
+        "exampleKo": "그는 잠재 고객입니다."
+    },
+    {
+        "day": 8,
+        "no": 67,
+        "word": "prepare",
+        "meaning": "준비하다",
+        "targetScore": 650,
+        "exampleEn": "Prepare for the worst.",
+        "exampleKo": "최악의 상황에 대비하세요."
+    },
+    {
+        "day": 8,
+        "no": 68,
+        "word": "price",
+        "meaning": "가격",
+        "targetScore": 650,
+        "exampleEn": "The price includes tax.",
+        "exampleKo": "가격에는 세금이 포함되어 있습니다."
+    }
+]

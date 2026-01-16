@@ -1,0 +1,254 @@
+[
+  {
+    "day": 26,
+    "no": 41,
+    "word": "acquire",
+    "meaning": "인수하다, 획득하다",
+    "targetScore": 650,
+    "exampleEn": "The company plans to acquire a smaller competitor.",
+    "exampleKo": "회사는 더 작은 경쟁사를 인수할 계획입니다."
+  },
+  {
+    "day": 26,
+    "no": 42,
+    "word": "asset",
+    "meaning": "자산",
+    "targetScore": 650,
+    "exampleEn": "Real estate is considered a valuable asset.",
+    "exampleKo": "부동산은 귀중한 자산으로 간주됩니다."
+  },
+  {
+    "day": 26,
+    "no": 43,
+    "word": "capital",
+    "meaning": "자본",
+    "targetScore": 650,
+    "exampleEn": "The startup needs more capital to expand.",
+    "exampleKo": "스타트업은 확장하기 위해 더 많은 자본이 필요합니다."
+  },
+  {
+    "day": 26,
+    "no": 44,
+    "word": "collateral",
+    "meaning": "담보",
+    "targetScore": 650,
+    "exampleEn": "The bank requires collateral for the loan.",
+    "exampleKo": "은행은 대출에 담보를 요구합니다."
+  },
+  {
+    "day": 26,
+    "no": 45,
+    "word": "compound",
+    "meaning": "복리의; 합성물",
+    "targetScore": 650,
+    "exampleEn": "Compound interest can significantly increase savings.",
+    "exampleKo": "복리 이자는 저축을 크게 증가시킬 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 46,
+    "word": "credit",
+    "meaning": "신용; 대출",
+    "targetScore": 650,
+    "exampleEn": "Good credit is essential for obtaining loans.",
+    "exampleKo": "좋은 신용은 대출을 받는 데 필수적입니다."
+  },
+  {
+    "day": 26,
+    "no": 47,
+    "word": "debt",
+    "meaning": "부채",
+    "targetScore": 650,
+    "exampleEn": "The company is working to reduce its debt.",
+    "exampleKo": "회사는 부채를 줄이기 위해 노력하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 48,
+    "word": "dividend",
+    "meaning": "배당금",
+    "targetScore": 650,
+    "exampleEn": "Shareholders receive quarterly dividends.",
+    "exampleKo": "주주들은 분기별 배당금을 받습니다."
+  },
+  {
+    "day": 26,
+    "no": 49,
+    "word": "equity",
+    "meaning": "자기 자본",
+    "targetScore": 650,
+    "exampleEn": "The company has strong equity positions.",
+    "exampleKo": "회사는 강력한 자기 자본 지위를 가지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 50,
+    "word": "fiscal",
+    "meaning": "재정의",
+    "targetScore": 650,
+    "exampleEn": "The fiscal year ends in December.",
+    "exampleKo": "회계 연도는 12월에 끝납니다."
+  },
+  {
+    "day": 26,
+    "no": 51,
+    "word": "forecast",
+    "meaning": "예측하다; 예측",
+    "targetScore": 650,
+    "exampleEn": "Analysts forecast strong earnings growth.",
+    "exampleKo": "분석가들은 강력한 수익 성장을 예측합니다."
+  },
+  {
+    "day": 26,
+    "no": 52,
+    "word": "fund",
+    "meaning": "자금; 자금을 대다",
+    "targetScore": 650,
+    "exampleEn": "The project is fully funded by investors.",
+    "exampleKo": "프로젝트는 투자자들에 의해 완전히 자금이 지원됩니다."
+  },
+  {
+    "day": 26,
+    "no": 53,
+    "word": "grant",
+    "meaning": "보조금; 승인하다",
+    "targetScore": 650,
+    "exampleEn": "The government provides grants for research.",
+    "exampleKo": "정부는 연구를 위한 보조금을 제공합니다."
+  },
+  {
+    "day": 26,
+    "no": 54,
+    "word": "hedge",
+    "meaning": "헤지하다; 울타리",
+    "targetScore": 650,
+    "exampleEn": "Investors use options to hedge against risk.",
+    "exampleKo": "투자자들은 위험을 헤지하기 위해 옵션을 사용합니다."
+  },
+  {
+    "day": 26,
+    "no": 55,
+    "word": "inflate",
+    "meaning": "부풀리다",
+    "targetScore": 650,
+    "exampleEn": "Prices tend to inflate during economic booms.",
+    "exampleKo": "가격은 경제 호황기에 부풀어 오르는 경향이 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 56,
+    "word": "liability",
+    "meaning": "부채, 책임",
+    "targetScore": 650,
+    "exampleEn": "The company's liabilities exceed its assets.",
+    "exampleKo": "회사의 부채가 자산을 초과합니다."
+  },
+  {
+    "day": 26,
+    "no": 57,
+    "word": "liquid",
+    "meaning": "유동적인",
+    "targetScore": 650,
+    "exampleEn": "Cash is the most liquid asset.",
+    "exampleKo": "현금은 가장 유동적인 자산입니다."
+  },
+  {
+    "day": 26,
+    "no": 58,
+    "word": "margin",
+    "meaning": "마진, 이윤",
+    "targetScore": 650,
+    "exampleEn": "The profit margin has increased this quarter.",
+    "exampleKo": "이번 분기에 이윤이 증가했습니다."
+  },
+  {
+    "day": 26,
+    "no": 59,
+    "word": "mature",
+    "meaning": "만기가 되다; 성숙한",
+    "targetScore": 650,
+    "exampleEn": "The bond will mature in five years.",
+    "exampleKo": "채권은 5년 후에 만기가 됩니다."
+  },
+  {
+    "day": 26,
+    "no": 60,
+    "word": "merger",
+    "meaning": "합병",
+    "targetScore": 650,
+    "exampleEn": "The merger created the largest bank in the region.",
+    "exampleKo": "합병으로 지역 최대 은행이 탄생했습니다."
+  },
+  {
+    "day": 26,
+    "no": 61,
+    "word": "mortgage",
+    "meaning": "담보 대출",
+    "targetScore": 650,
+    "exampleEn": "They applied for a mortgage to buy a house.",
+    "exampleKo": "그들은 집을 사기 위해 담보 대출을 신청했습니다."
+  },
+  {
+    "day": 26,
+    "no": 62,
+    "word": "premium",
+    "meaning": "보험료; 프리미엄",
+    "targetScore": 650,
+    "exampleEn": "Insurance premiums have increased this year.",
+    "exampleKo": "보험료가 올해 인상되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 63,
+    "word": "principal",
+    "meaning": "원금; 주요한",
+    "targetScore": 650,
+    "exampleEn": "The principal amount must be repaid in full.",
+    "exampleKo": "원금은 전액 상환되어야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 64,
+    "word": "profit",
+    "meaning": "이익",
+    "targetScore": 650,
+    "exampleEn": "The company reported record profits.",
+    "exampleKo": "회사는 기록적인 이익을 보고했습니다."
+  },
+  {
+    "day": 26,
+    "no": 65,
+    "word": "revenue",
+    "meaning": "수익",
+    "targetScore": 650,
+    "exampleEn": "Annual revenue exceeded expectations.",
+    "exampleKo": "연간 수익이 예상을 초과했습니다."
+  },
+  {
+    "day": 26,
+    "no": 66,
+    "word": "stake",
+    "meaning": "지분",
+    "targetScore": 650,
+    "exampleEn": "The investor holds a 20% stake in the company.",
+    "exampleKo": "투자자는 회사의 20% 지분을 보유하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 67,
+    "word": "stock",
+    "meaning": "주식",
+    "targetScore": 650,
+    "exampleEn": "Stock prices rose sharply today.",
+    "exampleKo": "주가가 오늘 급등했습니다."
+  },
+  {
+    "day": 26,
+    "no": 68,
+    "word": "venture",
+    "meaning": "벤처; 모험하다",
+    "targetScore": 650,
+    "exampleEn": "The venture capital firm invests in startups.",
+    "exampleKo": "벤처 캐피탈 회사는 스타트업에 투자합니다."
+  }
+]

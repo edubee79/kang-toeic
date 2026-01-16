@@ -1,0 +1,254 @@
+[
+    {
+        "day": 19,
+        "no": 41,
+        "word": "beyond",
+        "meaning": "~을 넘어서, ~이상으로",
+        "targetScore": 650,
+        "exampleEn": "The results went beyond our expectations.",
+        "exampleKo": "결과는 우리의 예상을 넘어섰습니다(이상입니다)."
+    },
+    {
+        "day": 19,
+        "no": 42,
+        "word": "booklet",
+        "meaning": "소책자",
+        "targetScore": 650,
+        "exampleEn": "Please read the instruction booklet carefully.",
+        "exampleKo": "설명서 소책자를 주의 깊게 읽으십시오."
+    },
+    {
+        "day": 19,
+        "no": 43,
+        "word": "by telephone",
+        "meaning": "전화로",
+        "targetScore": 650,
+        "exampleEn": "You can make a reservation by telephone.",
+        "exampleKo": "전화로 예약할 수 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 44,
+        "word": "from now",
+        "meaning": "지금부터, 앞으로",
+        "targetScore": 650,
+        "exampleEn": "The project will be completed two weeks from now.",
+        "exampleKo": "프로젝트는 지금부터 2주 후에 완료될 것입니다."
+    },
+    {
+        "day": 19,
+        "no": 45,
+        "word": "frying pan",
+        "meaning": "프라이팬",
+        "targetScore": 650,
+        "exampleEn": "Heat the oil in a frying pan.",
+        "exampleKo": "프라이팬에 기름을 달구십시오."
+    },
+    {
+        "day": 19,
+        "no": 46,
+        "word": "go shopping",
+        "meaning": "쇼핑하다",
+        "targetScore": 650,
+        "exampleEn": "They plan to go shopping this weekend.",
+        "exampleKo": "그들은 이번 주말에 쇼핑하러 갈 계획입니다."
+    },
+    {
+        "day": 19,
+        "no": 47,
+        "word": "goods",
+        "meaning": "상품",
+        "targetScore": 650,
+        "exampleEn": "We sell a wide variety of electronic goods.",
+        "exampleKo": "우리는 다양한 전자 상품을 판매합니다."
+    },
+    {
+        "day": 19,
+        "no": 48,
+        "word": "lesson",
+        "meaning": "수업, 교훈",
+        "targetScore": 650,
+        "exampleEn": "This experience has taught me a valuable lesson.",
+        "exampleKo": "이 경험은 제게 귀중한 교훈을 가르쳐 주었습니다."
+    },
+    {
+        "day": 19,
+        "no": 49,
+        "word": "midday",
+        "meaning": "정오",
+        "targetScore": 650,
+        "exampleEn": "The sun was high in the sky at midday.",
+        "exampleKo": "정오에 해가 하늘 높이 떠 있었습니다."
+    },
+    {
+        "day": 19,
+        "no": 50,
+        "word": "miss",
+        "meaning": "놓치다, 그리워하다",
+        "targetScore": 650,
+        "exampleEn": "I don't want to miss the deadline.",
+        "exampleKo": "저는 마감 기한을 놓치고 싶지 않습니다."
+    },
+    {
+        "day": 19,
+        "no": 51,
+        "word": "rent",
+        "meaning": "임대료, 빌리다",
+        "targetScore": 650,
+        "exampleEn": "The rent for the office is reasonable.",
+        "exampleKo": "사무실 임대료는 합리적입니다."
+    },
+    {
+        "day": 19,
+        "no": 52,
+        "word": "save",
+        "meaning": "구조하다, 모으다, 저축하다",
+        "targetScore": 650,
+        "exampleEn": "We need to save money for the expansion.",
+        "exampleKo": "우리는 확장을 위해 돈을 모아야(저축해야) 합니다."
+    },
+    {
+        "day": 19,
+        "no": 53,
+        "word": "unbelievable",
+        "meaning": "믿을 수 없는",
+        "targetScore": 650,
+        "exampleEn": "The success of the product was unbelievable.",
+        "exampleKo": "그 제품의 성공은 믿을 수 없을 정도였습니다."
+    },
+    {
+        "day": 19,
+        "no": 54,
+        "word": "upset",
+        "meaning": "당황한, 당황하게 하다",
+        "targetScore": 650,
+        "exampleEn": "The customer was upset about the delay.",
+        "exampleKo": "고객은 지연에 대해 당황해했습니다(화가 났습니다)."
+    },
+    {
+        "day": 19,
+        "no": 55,
+        "word": "win",
+        "meaning": "이기다, (상품 등을)받다",
+        "targetScore": 650,
+        "exampleEn": "Our team worked hard to win the contract.",
+        "exampleKo": "우리 팀은 계약을 따내기(이기기) 위해 열심히 일했습니다."
+    },
+    {
+        "day": 19,
+        "no": 56,
+        "word": "work on",
+        "meaning": "~을 수행하다",
+        "targetScore": 650,
+        "exampleEn": "We are currently working on a new project.",
+        "exampleKo": "우리는 현재 새로운 프로젝트를 수행하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 57,
+        "word": "change",
+        "meaning": "잔돈",
+        "targetScore": 650,
+        "exampleEn": "Do you have change for a dollar?",
+        "exampleKo": "1달러짜리 잔돈(거스름돈)이 있습니까?"
+    },
+    {
+        "day": 19,
+        "no": 58,
+        "word": "decrease",
+        "meaning": "감소, 감소하다",
+        "targetScore": 650,
+        "exampleEn": "We aim to decrease production costs.",
+        "exampleKo": "우리는 생산 비용을 감소시키는 것을 목표로 합니다."
+    },
+    {
+        "day": 19,
+        "no": 59,
+        "word": "gain",
+        "meaning": "얻다",
+        "targetScore": 650,
+        "exampleEn": "You will gain valuable experience in this role.",
+        "exampleKo": "당신은 이 역할에서 귀중한 경험을 얻을 것입니다."
+    },
+    {
+        "day": 19,
+        "no": 60,
+        "word": "height",
+        "meaning": "높이",
+        "targetScore": 650,
+        "exampleEn": "The height of the building is 100 meters.",
+        "exampleKo": "그 건물의 높이는 100미터입니다."
+    },
+    {
+        "day": 19,
+        "no": 61,
+        "word": "income",
+        "meaning": "소득",
+        "targetScore": 650,
+        "exampleEn": "Her annual income has increased significantly.",
+        "exampleKo": "그녀의 연간 소득은 상당히 증가했습니다."
+    },
+    {
+        "day": 19,
+        "no": 62,
+        "word": "liquid",
+        "meaning": "액체, 액체의",
+        "targetScore": 650,
+        "exampleEn": "Store the liquid in a cool place.",
+        "exampleKo": "액체를 서늘한 곳에 보관하십시오."
+    },
+    {
+        "day": 19,
+        "no": 63,
+        "word": "loss",
+        "meaning": "손실",
+        "targetScore": 650,
+        "exampleEn": "The company reported a loss for the quarter.",
+        "exampleKo": "그 회사는 이번 분기 손실을 보고했습니다."
+    },
+    {
+        "day": 19,
+        "no": 64,
+        "word": "model",
+        "meaning": "원형, 모범, ~의 모형을 만들다",
+        "targetScore": 650,
+        "exampleEn": "This car is the latest model.",
+        "exampleKo": "이 차는 최신 모델(원형)입니다."
+    },
+    {
+        "day": 19,
+        "no": 65,
+        "word": "pace",
+        "meaning": "(일·생활 등의)속도, 페이스",
+        "targetScore": 650,
+        "exampleEn": "Work is progressing at a steady pace.",
+        "exampleKo": "일이 꾸준한 속도로 진행되고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 66,
+        "word": "range",
+        "meaning": "범위, 구역, 늘어놓다, 배치하다",
+        "targetScore": 650,
+        "exampleEn": "Our products range from toys to furniture.",
+        "exampleKo": "우리 제품의 범위는 장난감에서 가구에 이릅니다."
+    },
+    {
+        "day": 19,
+        "no": 67,
+        "word": "refrigerator",
+        "meaning": "냉장고",
+        "targetScore": 650,
+        "exampleEn": "Please put the milk in the refrigerator.",
+        "exampleKo": "우유를 냉장고에 넣어 주십시오."
+    },
+    {
+        "day": 19,
+        "no": 68,
+        "word": "rely on",
+        "meaning": "~에 의존하다",
+        "targetScore": 650,
+        "exampleEn": "We rely on customer feedback to improve our services.",
+        "exampleKo": "우리는 서비스 개선을 위해 고객 피드백에 의존합니다."
+    }
+]

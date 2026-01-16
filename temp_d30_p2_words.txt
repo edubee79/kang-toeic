@@ -1,0 +1,29 @@
+ No              Word              Meaning
+ 41       susceptible ~에 감염되기 쉬운, 영향 받기 쉬운
+ 42     uncomfortably           불쾌하게, 불편하게
+ 43          allergic      알레르기가 있는, 알레르기의
+ 44             blind                 눈이 먼
+ 45            cavity                   충치
+ 46              cold           감기, 추위, 추운
+ 47          cosmetic             미용의, 화장의
+ 48         feel sick      몸이 찌뿌드드하다, 메스껍다
+ 49           fitness                건강 상태
+ 50               gym                  체육관
+ 51 have an injection               주사를 맞다
+ 52  medical facility                 의료시설
+ 53          raincoat                   비옷
+ 54           surgery                   수술
+ 55         toothache                   치통
+ 56             treat                 치료하다
+ 57            vision                   시력
+ 58           workout                   운동
+ 59              beat          (심장·맥박이) 뛰다
+ 60             blink              눈을 깜박이다
+ 61              cure             치료, 치료하다
+ 62           disease                   질병
+ 63           healing                  치료의
+ 64          internal                  내부의
+ 65              lung                폐, 허파
+ 66             organ               (신체)기관
+ 67            remedy              치료법, 의약
+ 68       stomachache                   복통

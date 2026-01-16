@@ -1,0 +1,69 @@
+ No                     Word       Meaning
+ 69             architecture      건축물, 건축학
+ 70                   canopy        덮개, 차양
+ 71            cast a shadow     그림자를 드리우다
+ 72                   column        기둥, 원주
+ 73                courtyard            안뜰
+ 74                 cupboard            찬장
+ 75            cut the grass        잔디를 깎다
+ 76      dedication ceremony      준공식, 헌당식
+ 77                  doorway            문간
+ 78                  dresser      화장대, 서랍장
+ 79           emergency exit           비상구
+ 80                    erect    똑바로 선, 세우다
+ 81   every hour on the hour          매정시에
+ 82                   faucet          수도꼭지
+ 83               floor plan    (건물등의) 평면도
+ 84                 flooring           바닥재
+ 85               front door            정문
+ 86                  hallway            복도
+ 87                hammering         쿵쾅거리는
+ 88                 handrail     (계단 등의)난간
+ 89         home improvement       주거 개선용의
+ 90                 lamppost        가로등 기둥
+ 91   lean against the fence      울타리에 기대다
+ 92               light bulb          백열전구
+ 93             make repairs          수리하다
+ 94             make the bed     잠자리를 준비하다
+ 95               multistory      다층의, 고층의
+ 96             outdoor wall       외벽, 바깥벽
+ 97                  plug in    ~에 플러그를 꽂다
+ 98                     pole        기둥, 원주
+ 99        private residence         개인 주택
+100                 put away    집어 넣다, 치우다
+101                  rebuild          재건하다
+102             repairperson           수리공
+103                spread on     ~위에 펴 바르다
+104                staircase   (난간이 있는) 계단
+105                 stairway            계단
+106          storage cabinet       보관용 수납장
+107                switch on    ~의 스위치를 켜다
+108         turn on its side  뒤집다, 옆으로 돌리다
+109       undergo renovation     개조(보수)중이다
+110               windowsill            창턱
+111                construct          건설하다
+112                 describe 말로 설명하다, 묘사하다
+113                desirable    바람직한, 이상적인
+114                structure           구조물
+115              access road           진입로
+116    arrange the furniture      가구를 배치하다
+117 be arranged on the patio  테라스에 정돈되어 있다
+118                 built-in          붙박이의
+119                carpentry           목수일
+120               fire alarm         화재경보기
+121        fire extinguisher           소화기
+122             fitting room           탈의실
+123                  fixture        붙박이 가구
+124              homebuilder        주택건설업자
+125             housekeeping            가사
+126               housewares          가정용품
+127      housing development         주택 개발
+128                 in error      실수로, 잘못한
+129                overprice    과하게 값을 매기다
+130                reinforce       ~을 보강하다
+131                 resident       거주자, 주민
+132              restoration        복원, 복구
+133                scrubbing          문지르기
+134               skyscraper          고층빌딩
+135             space-saving        공간 절약의
+136                   tenant   (가옥 등의) 임차인

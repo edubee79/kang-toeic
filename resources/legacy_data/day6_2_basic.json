@@ -1,0 +1,254 @@
+[
+    {
+        "day": 6,
+        "no": 41,
+        "word": "fascinating",
+        "meaning": "매혹적인",
+        "targetScore": 650,
+        "exampleEn": "The museum was full of fascinating exhibits.",
+        "exampleKo": "그 박물관은 매혹적인 전시물들로 가득했습니다."
+    },
+    {
+        "day": 6,
+        "no": 42,
+        "word": "manual",
+        "meaning": "설명서; 수동의",
+        "targetScore": 650,
+        "exampleEn": "Read the instruction manual first.",
+        "exampleKo": "사용 설명서를 먼저 읽으세요."
+    },
+    {
+        "day": 6,
+        "no": 43,
+        "word": "railway",
+        "meaning": "철도",
+        "targetScore": 650,
+        "exampleEn": "The railway line connects the two cities.",
+        "exampleKo": "철도 노선이 두 도시를 연결합니다."
+    },
+    {
+        "day": 6,
+        "no": 44,
+        "word": "solely",
+        "meaning": "오로지",
+        "targetScore": 650,
+        "exampleEn": "He acts solely for his own benefit.",
+        "exampleKo": "그는 오로지 자신의 이익을 위해서만 행동합니다."
+    },
+    {
+        "day": 6,
+        "no": 45,
+        "word": "specification",
+        "meaning": "사양, 설명서",
+        "targetScore": 650,
+        "exampleEn": "The product meets all specifications.",
+        "exampleKo": "그 제품은 모든 사양을 충족합니다."
+    },
+    {
+        "day": 6,
+        "no": 46,
+        "word": "act",
+        "meaning": "행동하다; 법령",
+        "targetScore": 650,
+        "exampleEn": "Think before you act.",
+        "exampleKo": "행동하기 전에 생각하세요."
+    },
+    {
+        "day": 6,
+        "no": 47,
+        "word": "anticipate",
+        "meaning": "예상하다, 기대하다",
+        "targetScore": 650,
+        "exampleEn": "We anticipate a large turnout.",
+        "exampleKo": "우리는 많은 참가자를 예상합니다."
+    },
+    {
+        "day": 6,
+        "no": 48,
+        "word": "artist",
+        "meaning": "예술가",
+        "targetScore": 650,
+        "exampleEn": "She is a talented artist.",
+        "exampleKo": "그녀는 재능 있는 예술가입니다."
+    },
+    {
+        "day": 6,
+        "no": 49,
+        "word": "artistic",
+        "meaning": "예술적인",
+        "targetScore": 650,
+        "exampleEn": "He has an artistic temperament.",
+        "exampleKo": "그는 예술적인 기질을 가지고 있습니다."
+    },
+    {
+        "day": 6,
+        "no": 50,
+        "word": "attempt",
+        "meaning": "시도; 시도하다",
+        "targetScore": 650,
+        "exampleEn": "He made an attempt to escape.",
+        "exampleKo": "그는 탈출을 시도했습니다."
+    },
+    {
+        "day": 6,
+        "no": 51,
+        "word": "attract",
+        "meaning": "끌다, 유인하다",
+        "targetScore": 650,
+        "exampleEn": "Flowers attract bees.",
+        "exampleKo": "꽃은 벌을 유인합니다."
+    },
+    {
+        "day": 6,
+        "no": 52,
+        "word": "attraction",
+        "meaning": "명소, 매력",
+        "targetScore": 650,
+        "exampleEn": "The main attraction is the roller coaster.",
+        "exampleKo": "주요 명소는 롤러코스터입니다."
+    },
+    {
+        "day": 6,
+        "no": 53,
+        "word": "attractive",
+        "meaning": "매력적인",
+        "targetScore": 650,
+        "exampleEn": "It was an attractive offer.",
+        "exampleKo": "그것은 매력적인 제안이었습니다."
+    },
+    {
+        "day": 6,
+        "no": 54,
+        "word": "avail",
+        "meaning": "소용, 효용",
+        "targetScore": 650,
+        "exampleEn": "All his efforts were of no avail.",
+        "exampleKo": "그의 모든 노력은 허사였습니다."
+    },
+    {
+        "day": 6,
+        "no": 55,
+        "word": "available",
+        "meaning": "이용 가능한",
+        "targetScore": 650,
+        "exampleEn": "Is this room available?",
+        "exampleKo": "이 방 이용 가능한가요?"
+    },
+    {
+        "day": 6,
+        "no": 56,
+        "word": "choose",
+        "meaning": "선택하다",
+        "targetScore": 650,
+        "exampleEn": "Choose the best answer.",
+        "exampleKo": "가장 좋은 답을 선택하세요."
+    },
+    {
+        "day": 6,
+        "no": 57,
+        "word": "color",
+        "meaning": "색깔",
+        "targetScore": 650,
+        "exampleEn": "What is your favorite color?",
+        "exampleKo": "가장 좋아하는 색깔은 무엇입니까?"
+    },
+    {
+        "day": 6,
+        "no": 58,
+        "word": "confuse",
+        "meaning": "혼란스럽게 하다",
+        "targetScore": 650,
+        "exampleEn": "Do not confuse the two words.",
+        "exampleKo": "그 두 단어를 혼동하지 마세요."
+    },
+    {
+        "day": 6,
+        "no": 59,
+        "word": "confusion",
+        "meaning": "혼란",
+        "targetScore": 650,
+        "exampleEn": "There was some confusion about the time.",
+        "exampleKo": "시간에 대해 약간의 혼란이 있었습니다."
+    },
+    {
+        "day": 6,
+        "no": 60,
+        "word": "consume",
+        "meaning": "소비하다, 먹다",
+        "targetScore": 650,
+        "exampleEn": "This appliance consumes a lot of electricity.",
+        "exampleKo": "이 가전제품은 전기를 많이 소비합니다."
+    },
+    {
+        "day": 6,
+        "no": 61,
+        "word": "create",
+        "meaning": "창조하다, 만들다",
+        "targetScore": 650,
+        "exampleEn": "God created the world.",
+        "exampleKo": "신이 세상을 창조했습니다."
+    },
+    {
+        "day": 6,
+        "no": 62,
+        "word": "creative",
+        "meaning": "창의적인",
+        "targetScore": 650,
+        "exampleEn": "She is a very creative person.",
+        "exampleKo": "그녀는 매우 창의적인 사람입니다."
+    },
+    {
+        "day": 6,
+        "no": 63,
+        "word": "creativity",
+        "meaning": "창의성",
+        "targetScore": 650,
+        "exampleEn": "Art classes encourage creativity.",
+        "exampleKo": "미술 수업은 창의성을 북돋아 줍니다."
+    },
+    {
+        "day": 6,
+        "no": 64,
+        "word": "currently",
+        "meaning": "현재",
+        "targetScore": 650,
+        "exampleEn": "He is currently working on a book.",
+        "exampleKo": "그는 현재 책을 집필 중입니다."
+    },
+    {
+        "day": 6,
+        "no": 65,
+        "word": "direction",
+        "meaning": "방향",
+        "targetScore": 650,
+        "exampleEn": "Go in this direction.",
+        "exampleKo": "이 방향으로 가세요."
+    },
+    {
+        "day": 6,
+        "no": 66,
+        "word": "exhibit",
+        "meaning": "전시하다",
+        "targetScore": 650,
+        "exampleEn": "They will exhibit their paintings.",
+        "exampleKo": "그들은 그림을 전시할 것입니다."
+    },
+    {
+        "day": 6,
+        "no": 67,
+        "word": "exhibition",
+        "meaning": "전시회",
+        "targetScore": 650,
+        "exampleEn": "The exhibition opens tomorrow.",
+        "exampleKo": "전시회는 내일 열립니다."
+    },
+    {
+        "day": 6,
+        "no": 68,
+        "word": "fact",
+        "meaning": "사실",
+        "targetScore": 650,
+        "exampleEn": "Check the facts before you speak.",
+        "exampleKo": "말하기 전에 사실을 확인하세요."
+    }
+]

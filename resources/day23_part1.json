@@ -1,0 +1,362 @@
+[
+  {
+    "day": 23,
+    "no": 1,
+    "word": "host",
+    "meaning": "(대회 등을) 주최하다",
+    "targetScore": 650,
+    "exampleEn": "The city will host the international trade fair.",
+    "exampleKo": "그 도시는 국제 무역 박람회를 주최할 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 2,
+    "word": "annual",
+    "meaning": "매년의",
+    "targetScore": 650,
+    "exampleEn": "We published our annual report.",
+    "exampleKo": "우리는 연례 보고서를 출판했습니다."
+  },
+  {
+    "day": 23,
+    "no": 3,
+    "word": "purpose",
+    "meaning": "목적, 의도",
+    "targetScore": 650,
+    "exampleEn": "The purpose of the meeting is to elect a new chairman.",
+    "exampleKo": "회의의 목적은 새 의장을 선출하는 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 4,
+    "word": "enroll",
+    "meaning": "등록하다",
+    "targetScore": 650,
+    "exampleEn": "Please enroll in the training course by Friday.",
+    "exampleKo": "금요일까지 훈련 과정에 등록해 주십시오."
+  },
+  {
+    "day": 23,
+    "no": 5,
+    "word": "lecture",
+    "meaning": "강의, 강연",
+    "targetScore": 650,
+    "exampleEn": "Professor Smith gave a lecture on economics.",
+    "exampleKo": "스미스 교수는 경제학에 관해 강의를 했습니다."
+  },
+  {
+    "day": 23,
+    "no": 6,
+    "word": "participant",
+    "meaning": "참가자",
+    "targetScore": 650,
+    "exampleEn": "Every participant received a certificate.",
+    "exampleKo": "모든 참가자는 수료증을 받았습니다."
+  },
+  {
+    "day": 23,
+    "no": 7,
+    "word": "attend",
+    "meaning": "참석하다, 출석하다",
+    "targetScore": 650,
+    "exampleEn": "I will attend the board meeting tomorrow.",
+    "exampleKo": "저는 내일 이사회 회의에 참석할 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 8,
+    "word": "encourage",
+    "meaning": "장려하다, 북돋아주다",
+    "targetScore": 650,
+    "exampleEn": "The manager encouraged the staff to work hard.",
+    "exampleKo": "관리자는 직원들에게 열심히 일하도록 장려했습니다."
+  },
+  {
+    "day": 23,
+    "no": 9,
+    "word": "leave",
+    "meaning": "휴가, 떠나다, 남기다",
+    "targetScore": 650,
+    "exampleEn": "She is on maternity leave.",
+    "exampleKo": "그녀는 출산 휴가 중입니다."
+  },
+  {
+    "day": 23,
+    "no": 10,
+    "word": "recommendation",
+    "meaning": "추천 사항, 추천",
+    "targetScore": 650,
+    "exampleEn": "I followed the consultant's recommendation.",
+    "exampleKo": "저는 컨설턴트의 추천(권고)을 따랐습니다."
+  },
+  {
+    "day": 23,
+    "no": 11,
+    "word": "conference",
+    "meaning": "회의, 회담",
+    "targetScore": 650,
+    "exampleEn": "The press conference was held at the hotel.",
+    "exampleKo": "기자 회견은 호텔에서 열렸습니다."
+  },
+  {
+    "day": 23,
+    "no": 12,
+    "word": "schedule",
+    "meaning": "~을 예정하다",
+    "targetScore": 650,
+    "exampleEn": "The meeting is scheduled for 2 PM.",
+    "exampleKo": "회의는 오후 2시로 예정되어 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 13,
+    "word": "include",
+    "meaning": "포함하다",
+    "targetScore": 650,
+    "exampleEn": "The price includes tax and service charge.",
+    "exampleKo": "가격은 세금과 봉사료를 포함합니다."
+  },
+  {
+    "day": 23,
+    "no": 14,
+    "word": "result",
+    "meaning": "결과, (~의 결과로) 되다",
+    "targetScore": 650,
+    "exampleEn": "The negotiation resulted in a new contract.",
+    "exampleKo": "협상은 새 계약이라는 결과를 낳았습니다(새 계약이 되었습니다)."
+  },
+  {
+    "day": 23,
+    "no": 15,
+    "word": "register",
+    "meaning": "등록하다",
+    "targetScore": 650,
+    "exampleEn": "You must register for the conference online.",
+    "exampleKo": "당신은 회의에 온라인으로 등록해야 합니다."
+  },
+  {
+    "day": 23,
+    "no": 16,
+    "word": "require",
+    "meaning": "요구하다",
+    "targetScore": 650,
+    "exampleEn": "The job requires fluency in English.",
+    "exampleKo": "그 일은 영어 유창함을 요구합니다."
+  },
+  {
+    "day": 23,
+    "no": 17,
+    "word": "grateful",
+    "meaning": "고마워하는, 감사하는",
+    "targetScore": 650,
+    "exampleEn": "We are grateful for your support.",
+    "exampleKo": "우리는 당신의 지지에 감사합니다."
+  },
+  {
+    "day": 23,
+    "no": 18,
+    "word": "overtime",
+    "meaning": "초과 근무, 야근",
+    "targetScore": 650,
+    "exampleEn": "Employees will remain paid for overtime.",
+    "exampleKo": "직원들은 초과 근무(야근)에 대해 급여를 받을 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 19,
+    "word": "responsibility",
+    "meaning": "부담, 책임, 의무",
+    "targetScore": 650,
+    "exampleEn": "It is your responsibility to finish the project.",
+    "exampleKo": "프로젝트를 끝내는 것은 당신의 책임입니다."
+  },
+  {
+    "day": 23,
+    "no": 20,
+    "word": "assent",
+    "meaning": "찬성하다, 승인, 동의",
+    "targetScore": 650,
+    "exampleEn": "The director gave his assent to the proposal.",
+    "exampleKo": "이사는 그 제안에 찬성했습니다(승인했습니다)."
+  },
+  {
+    "day": 23,
+    "no": 21,
+    "word": "regard",
+    "meaning": "~을 -으로 간주하다, 여기다, 관심, 배려",
+    "targetScore": 650,
+    "exampleEn": "We regard him as the best candidate.",
+    "exampleKo": "우리는 그를 최고의 후보자로 간주합니다."
+  },
+  {
+    "day": 23,
+    "no": 22,
+    "word": "tentative",
+    "meaning": "임시적인, 잠정적인",
+    "targetScore": 650,
+    "exampleEn": "We have reached a tentative agreement.",
+    "exampleKo": "우리는 잠정적인 합의에 도달했습니다."
+  },
+  {
+    "day": 23,
+    "no": 23,
+    "word": "welcome",
+    "meaning": "반가운, 기꺼이 받아들여지는, 환영하다, 맞이하다",
+    "targetScore": 650,
+    "exampleEn": "Always greet customers with a welcome smile.",
+    "exampleKo": "항상 환영하는 미소로 고객을 맞이하십시오."
+  },
+  {
+    "day": 23,
+    "no": 24,
+    "word": "function",
+    "meaning": "행사, 연회",
+    "targetScore": 650,
+    "exampleEn": "The company held a function to celebrate the merger.",
+    "exampleKo": "회사는 합병을 축하하기 위해 행사를 열었습니다."
+  },
+  {
+    "day": 23,
+    "no": 25,
+    "word": "commence",
+    "meaning": "시작되다",
+    "targetScore": 650,
+    "exampleEn": "The construction will commence next month.",
+    "exampleKo": "건설은 다음 달에 시작될 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 26,
+    "word": "objective",
+    "meaning": "목표, 목적",
+    "targetScore": 650,
+    "exampleEn": "Our main objective is to increase sales.",
+    "exampleKo": "우리의 주된 목표는 매출을 늘리는 것입니다."
+  },
+  {
+    "day": 23,
+    "no": 27,
+    "word": "excited",
+    "meaning": "신이 난, 들뜬",
+    "targetScore": 650,
+    "exampleEn": "We are excited about the new product launch.",
+    "exampleKo": "우리는 새 제품 출시에 대해 들떠 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 28,
+    "word": "reimbursement",
+    "meaning": "상환, 변제, 배상",
+    "targetScore": 650,
+    "exampleEn": "You can claim reimbursement for travel expenses.",
+    "exampleKo": "당신은 출장 경비에 대해 상환을 청구할 수 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 29,
+    "word": "treatment",
+    "meaning": "대우, 처우",
+    "targetScore": 650,
+    "exampleEn": "Employees execute fair treatment.",
+    "exampleKo": "직원들은 공정한 대우를 기대합니다."
+  },
+  {
+    "day": 23,
+    "no": 30,
+    "word": "honor",
+    "meaning": "존경, 명예",
+    "targetScore": 650,
+    "exampleEn": "It is an honor to receive this award.",
+    "exampleKo": "이 상을 받게 되어 영광(명예)입니다."
+  },
+  {
+    "day": 23,
+    "no": 31,
+    "word": "emphasize",
+    "meaning": "강조하다",
+    "targetScore": 650,
+    "exampleEn": "The CEO emphasized the need for innovation.",
+    "exampleKo": "CEO는 혁신의 필요성을 강조했습니다."
+  },
+  {
+    "day": 23,
+    "no": 32,
+    "word": "entry",
+    "meaning": "(경기 등의) 참가자, 출품물",
+    "targetScore": 650,
+    "exampleEn": "The competition attracted many entries.",
+    "exampleKo": "그 대회는 많은 참가자(참가작)를 끌어들였습니다."
+  },
+  {
+    "day": 23,
+    "no": 33,
+    "word": "bonus",
+    "meaning": "상여금, 보너스",
+    "targetScore": 650,
+    "exampleEn": "Employees received a year-end bonus.",
+    "exampleKo": "직원들은 연말 보너스를 받았습니다."
+  },
+  {
+    "day": 23,
+    "no": 34,
+    "word": "salary",
+    "meaning": "급여",
+    "targetScore": 650,
+    "exampleEn": "The salary is commensurate with experience.",
+    "exampleKo": "급여는 경력에 비례합니다."
+  },
+  {
+    "day": 23,
+    "no": 35,
+    "word": "earn",
+    "meaning": "(금전 등을)벌다, (평판을) 받다, 얻다",
+    "targetScore": 650,
+    "exampleEn": "He earns a high income.",
+    "exampleKo": "그는 높은 수입을 벌어들입니다."
+  },
+  {
+    "day": 23,
+    "no": 36,
+    "word": "arise",
+    "meaning": "(문제 등이) 발생하다, 일어나다",
+    "targetScore": 650,
+    "exampleEn": "Problems may arise during the installation.",
+    "exampleKo": "설치 중에 문제들이 발생할 수 있습니다."
+  },
+  {
+    "day": 23,
+    "no": 37,
+    "word": "labor",
+    "meaning": "노동, 일하다, 노동하다",
+    "targetScore": 650,
+    "exampleEn": "The factory relies on manual labor.",
+    "exampleKo": "그 공장은 육체노동에 의존합니다."
+  },
+  {
+    "day": 23,
+    "no": 38,
+    "word": "union",
+    "meaning": "노동조합",
+    "targetScore": 650,
+    "exampleEn": "The labor union demanded higher wages.",
+    "exampleKo": "노동조합은 더 높은 임금을 요구했습니다."
+  },
+  {
+    "day": 23,
+    "no": 39,
+    "word": "existing",
+    "meaning": "기존의, 현행의",
+    "targetScore": 650,
+    "exampleEn": "We must improve existing equipment.",
+    "exampleKo": "우리는 기존 장비를 개선해야 합니다."
+  },
+  {
+    "day": 23,
+    "no": 40,
+    "word": "exploit",
+    "meaning": "착취하다, 부당하게 이용하다",
+    "targetScore": 650,
+    "exampleEn": "The company was accused of exploiting workers.",
+    "exampleKo": "그 회사는 노동자들을 착취한다는 비난을 받았습니다."
+  }
+]

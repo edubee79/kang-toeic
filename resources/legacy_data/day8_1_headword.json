@@ -1,0 +1,362 @@
+[
+    {
+        "day": 8,
+        "no": 1,
+        "word": "advertisement",
+        "meaning": "광고",
+        "targetScore": 650,
+        "exampleEn": "I saw an advertisement for a new car.",
+        "exampleKo": "나는 새 차에 대한 광고를 보았습니다."
+    },
+    {
+        "day": 8,
+        "no": 2,
+        "word": "marginal",
+        "meaning": "약간의; 주변의",
+        "targetScore": 650,
+        "exampleEn": "There was a marginal improvement in sales.",
+        "exampleKo": "매출에 약간의 개선이 있었습니다."
+    },
+    {
+        "day": 8,
+        "no": 3,
+        "word": "customer",
+        "meaning": "고객",
+        "targetScore": 650,
+        "exampleEn": "We value every customer.",
+        "exampleKo": "우리는 모든 고객을 소중히 여깁니다."
+    },
+    {
+        "day": 8,
+        "no": 4,
+        "word": "influence",
+        "meaning": "영향을 주다, 영향",
+        "targetScore": 650,
+        "exampleEn": "Do not let others influence your decision.",
+        "exampleKo": "다른 사람들이 당신의 결정에 영향을 미치게 하지 마세요."
+    },
+    {
+        "day": 8,
+        "no": 5,
+        "word": "instantly",
+        "meaning": "즉각적으로, 즉시",
+        "targetScore": 650,
+        "exampleEn": "He recognized her instantly.",
+        "exampleKo": "그는 그녀를 즉시 알아봤습니다."
+    },
+    {
+        "day": 8,
+        "no": 6,
+        "word": "creative",
+        "meaning": "창조적인, 독창적인",
+        "targetScore": 650,
+        "exampleEn": "We need creative ideas.",
+        "exampleKo": "우리는 창조적인 아이디어가 필요합니다."
+    },
+    {
+        "day": 8,
+        "no": 7,
+        "word": "aggressively",
+        "meaning": "적극적으로",
+        "targetScore": 650,
+        "exampleEn": "They marketed the product aggressively.",
+        "exampleKo": "그들은 그 제품을 적극적으로 마케팅했습니다."
+    },
+    {
+        "day": 8,
+        "no": 8,
+        "word": "aim",
+        "meaning": "~을 겨냥하다, 목표하다",
+        "targetScore": 650,
+        "exampleEn": "The campaign aims to raise awareness.",
+        "exampleKo": "그 캠페인은 인식을 높이는 것을 목표로 합니다."
+    },
+    {
+        "day": 8,
+        "no": 9,
+        "word": "strategy",
+        "meaning": "전략",
+        "targetScore": 650,
+        "exampleEn": "We need a new business strategy.",
+        "exampleKo": "우리는 새로운 사업 전략이 필요합니다."
+    },
+    {
+        "day": 8,
+        "no": 10,
+        "word": "indicate",
+        "meaning": "보여주다, 나타내다",
+        "targetScore": 650,
+        "exampleEn": "The data indicates a positive trend.",
+        "exampleKo": "데이터는 긍정적인 추세를 보여줍니다."
+    },
+    {
+        "day": 8,
+        "no": 11,
+        "word": "attract",
+        "meaning": "끌다, 유인하다",
+        "targetScore": 650,
+        "exampleEn": "The sale attracted many shoppers.",
+        "exampleKo": "할인 행사는 많은 쇼핑객을 끌어모았습니다."
+    },
+    {
+        "day": 8,
+        "no": 12,
+        "word": "experience",
+        "meaning": "경험, 체험",
+        "targetScore": 650,
+        "exampleEn": "He has 10 years of experience.",
+        "exampleKo": "그는 10년의 경력이 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 13,
+        "word": "analyze",
+        "meaning": "분석하다",
+        "targetScore": 650,
+        "exampleEn": "We need to analyze the results.",
+        "exampleKo": "우리는 결과를 분석해야 합니다."
+    },
+    {
+        "day": 8,
+        "no": 14,
+        "word": "introduce",
+        "meaning": "발표하다, 소개하다",
+        "targetScore": 650,
+        "exampleEn": "They introduced a new product line.",
+        "exampleKo": "그들은 새로운 제품 라인을 발표했습니다."
+    },
+    {
+        "day": 8,
+        "no": 15,
+        "word": "advise",
+        "meaning": "조언해주다",
+        "targetScore": 650,
+        "exampleEn": "She advised me to wait.",
+        "exampleKo": "그녀는 나에게 기다리라고 조언했습니다."
+    },
+    {
+        "day": 8,
+        "no": 16,
+        "word": "subscribe",
+        "meaning": "구독하다",
+        "targetScore": 650,
+        "exampleEn": "Subscribe to our newsletter.",
+        "exampleKo": "우리 소식지를 구독하세요."
+    },
+    {
+        "day": 8,
+        "no": 17,
+        "word": "absence",
+        "meaning": "부재, 결근",
+        "targetScore": 650,
+        "exampleEn": "In his absence, I will lead the meeting.",
+        "exampleKo": "그의 부재 시 제가 회의를 이끌 것입니다."
+    },
+    {
+        "day": 8,
+        "no": 18,
+        "word": "means",
+        "meaning": "방법, 수단",
+        "targetScore": 650,
+        "exampleEn": "We must find a means to solve this.",
+        "exampleKo": "우리는 이것을 해결할 방법을 찾아야 합니다."
+    },
+    {
+        "day": 8,
+        "no": 19,
+        "word": "prefer",
+        "meaning": "선호하다",
+        "targetScore": 650,
+        "exampleEn": "I prefer coffee to tea.",
+        "exampleKo": "나는 차보다 커피를 더 좋아합니다."
+    },
+    {
+        "day": 8,
+        "no": 20,
+        "word": "advantage",
+        "meaning": "이점, 강점",
+        "targetScore": 650,
+        "exampleEn": "Take advantage of this opportunity.",
+        "exampleKo": "이 기회를 이용하세요."
+    },
+    {
+        "day": 8,
+        "no": 21,
+        "word": "forward",
+        "meaning": "앞으로; 보내다",
+        "targetScore": 650,
+        "exampleEn": "Please forward this email to him.",
+        "exampleKo": "이 이메일을 그에게 전달해 주세요."
+    },
+    {
+        "day": 8,
+        "no": 22,
+        "word": "contemporary",
+        "meaning": "동시대의, 현대의",
+        "targetScore": 650,
+        "exampleEn": "The museum exhibits contemporary art.",
+        "exampleKo": "그 박물관은 현대 미술을 전시합니다."
+    },
+    {
+        "day": 8,
+        "no": 23,
+        "word": "discussion",
+        "meaning": "토론, 토의",
+        "targetScore": 650,
+        "exampleEn": "We had a long discussion.",
+        "exampleKo": "우리는 긴 토론을 했습니다."
+    },
+    {
+        "day": 8,
+        "no": 24,
+        "word": "initial",
+        "meaning": "처음의",
+        "targetScore": 650,
+        "exampleEn": "My initial reaction was surprise.",
+        "exampleKo": "나의 첫 반응은 놀라움이었습니다."
+    },
+    {
+        "day": 8,
+        "no": 25,
+        "word": "steadily",
+        "meaning": "착실하게, 꾸준히",
+        "targetScore": 650,
+        "exampleEn": "Prices have been rising steadily.",
+        "exampleKo": "가격이 꾸준히 오르고 있습니다."
+    },
+    {
+        "day": 8,
+        "no": 26,
+        "word": "necessarily",
+        "meaning": "반드시",
+        "targetScore": 650,
+        "exampleEn": "That is not necessarily true.",
+        "exampleKo": "그것이 반드시 사실인 것은 아닙니다."
+    },
+    {
+        "day": 8,
+        "no": 27,
+        "word": "resolve",
+        "meaning": "해결하다",
+        "targetScore": 650,
+        "exampleEn": "We need to resolve the issue quickly.",
+        "exampleKo": "우리는 문제를 신속하게 해결해야 합니다."
+    },
+    {
+        "day": 8,
+        "no": 28,
+        "word": "detect",
+        "meaning": "간파하다, 탐지하다",
+        "targetScore": 650,
+        "exampleEn": "The sensor detects smoke.",
+        "exampleKo": "센서가 연기를 감지합니다."
+    },
+    {
+        "day": 8,
+        "no": 29,
+        "word": "intensify",
+        "meaning": "강화하다, 증대하다",
+        "targetScore": 650,
+        "exampleEn": "The storm intensified overnight.",
+        "exampleKo": "밤새 폭풍이 거세졌습니다."
+    },
+    {
+        "day": 8,
+        "no": 30,
+        "word": "favorably",
+        "meaning": "호의적으로",
+        "targetScore": 650,
+        "exampleEn": "The proposal was received favorably.",
+        "exampleKo": "그 제안은 호의적으로 받아들여졌습니다."
+    },
+    {
+        "day": 8,
+        "no": 31,
+        "word": "cover",
+        "meaning": "포함하다; 지불하다; 덮다",
+        "targetScore": 650,
+        "exampleEn": "The insurance covers theft.",
+        "exampleKo": "그 보험은 도난을 보상합니다."
+    },
+    {
+        "day": 8,
+        "no": 32,
+        "word": "less",
+        "meaning": "더 적은, 덜한",
+        "targetScore": 650,
+        "exampleEn": "I have less time than you.",
+        "exampleKo": "나는 당신보다 시간이 적습니다."
+    },
+    {
+        "day": 8,
+        "no": 33,
+        "word": "majority",
+        "meaning": "대다수, 대부분",
+        "targetScore": 650,
+        "exampleEn": "The majority of students agreed.",
+        "exampleKo": "대다수의 학생들이 동의했습니다."
+    },
+    {
+        "day": 8,
+        "no": 34,
+        "word": "adopt",
+        "meaning": "채택하다",
+        "targetScore": 650,
+        "exampleEn": "We adopted a new approach.",
+        "exampleKo": "우리는 새로운 접근 방식을 채택했습니다."
+    },
+    {
+        "day": 8,
+        "no": 35,
+        "word": "largely",
+        "meaning": "주로, 대부분",
+        "targetScore": 650,
+        "exampleEn": "The success was largely due to his effort.",
+        "exampleKo": "성공은 주로 그의 노력 덕분이었습니다."
+    },
+    {
+        "day": 8,
+        "no": 36,
+        "word": "disregard",
+        "meaning": "소홀히 하다, 무시하다",
+        "targetScore": 650,
+        "exampleEn": "Do not disregard safety rules.",
+        "exampleKo": "안전 수칙을 무시하지 마세요."
+    },
+    {
+        "day": 8,
+        "no": 37,
+        "word": "effort",
+        "meaning": "노력",
+        "targetScore": 650,
+        "exampleEn": "It required a lot of effort.",
+        "exampleKo": "그것은 많은 노력을 필요로 했습니다."
+    },
+    {
+        "day": 8,
+        "no": 38,
+        "word": "incentive",
+        "meaning": "혜택, 장려금",
+        "targetScore": 650,
+        "exampleEn": "The company offers tax incentives.",
+        "exampleKo": "그 회사는 세금 혜택을 제공합니다."
+    },
+    {
+        "day": 8,
+        "no": 39,
+        "word": "need",
+        "meaning": "필요; 필요로 하다",
+        "targetScore": 650,
+        "exampleEn": "There is a need for change.",
+        "exampleKo": "변화가 필요합니다."
+    },
+    {
+        "day": 8,
+        "no": 40,
+        "word": "mastermind",
+        "meaning": "(계획 등의)입안자, 지도자",
+        "targetScore": 650,
+        "exampleEn": "He was the mastermind behind the project.",
+        "exampleKo": "그는 그 프로젝트의 입안자였습니다."
+    }
+]

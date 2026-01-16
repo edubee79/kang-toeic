@@ -1,0 +1,423 @@
+{
+  "testId": 3,
+  "title": "ETS TOEIC Vol 4 - Test 3",
+  "passages": [
+    {
+      "id": "p6-t3-p1",
+      "type": "EMAIL",
+      "guidance": "Questions 131-134 refer to the following email.",
+      "content": "To: All Staff\nFrom: Yoreli Costa\nDate: February 15\nSubject: Florence Shawn\nHi Everyone,\n\nI have news to share about a ------- [131] in the human resources department. After nearly twenty\nyears with Cometti Creative, Florence Shawn has decided to retire from the position of director of\nhuman resources.\n\nOur current senior manager of human resources, Makoto Ichise, will replace Ms. Shawn when\nshe retires. Ms. Shawn ------- Mr. Ichise since he joined the company five years ago.\n[132]\n\nMs. Shawn's ------- day will be February 22. A retirement party will be held for her on that day\n[133]\nat 4:00 P.M. in the Terey Lobby. -------.\n[134]\n\nBest,\nYoreli Costa\nDirector of Operations, Cometti Creative",
+      "questions": [
+        {
+          "id": "131",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "difference"
+            },
+            {
+              "label": "B",
+              "text": "strategy"
+            },
+            {
+              "label": "C",
+              "text": "change"
+            },
+            {
+              "label": "D",
+              "text": "practice"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "132",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "mentors"
+            },
+            {
+              "label": "B",
+              "text": "is mentoring"
+            },
+            {
+              "label": "C",
+              "text": "will mentor"
+            },
+            {
+              "label": "D",
+              "text": "has been mentoring"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "133",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "last"
+            },
+            {
+              "label": "B",
+              "text": "original"
+            },
+            {
+              "label": "C",
+              "text": "flexible"
+            },
+            {
+              "label": "D",
+              "text": "alternate"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "134",
+          "text": "Select the best answer.",
+          "options": [
+            {
+              "label": "A",
+              "text": "Cometti Creative will hire a replacement"
+            },
+            {
+              "label": "B",
+              "text": "We hope that you can all attend to wish"
+            },
+            {
+              "label": "C",
+              "text": "Ms. Shawn was the first director of human"
+            },
+            {
+              "label": "D",
+              "text": "The first project will be the creation of a"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t3-p2",
+      "type": "ADVERTISEMENT",
+      "guidance": "Questions 135-138 refer to the following advertisement.",
+      "title": "Lovitt Real Estate",
+      "content": "Lovitt Real Estate\nHelping Manitoba Families Find their Dream Homes\n\nManuel Lovitt, [135] of Lovitt Real Estate, has been selling real estate for over 17 years. Mr. Lovitt and his award-winning team [136] in homes for families in the Winnipeg, Brandon, and Dauphin areas. They know about the schools, parks, services, transportation, and activities that enhance family life in the area where you want to reside. [137].\n\nContact Lovitt Real Estate today and let the team guide you [138] the home of your dreams.\n\nThey will listen to your needs, negotiate on your behalf, and get you the best home for your hard-earned money.\n\nCall 431-555-0168 to speak to an agent or visit www.lovittrealestate.ca for more information.",
+      "questions": [
+        {
+          "id": "135",
+          "text": "135. (A) own\n(B) owned\n(C) owner\n(D) owning",
+          "options": [
+            {
+              "label": "A",
+              "text": "own"
+            },
+            {
+              "label": "B",
+              "text": "owned"
+            },
+            {
+              "label": "C",
+              "text": "owner"
+            },
+            {
+              "label": "D",
+              "text": "owning"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "136",
+          "text": "136. (A) practice\n(B) specialize\n(C) report\n(D) purchase",
+          "options": [
+            {
+              "label": "A",
+              "text": "practice"
+            },
+            {
+              "label": "B",
+              "text": "specialize"
+            },
+            {
+              "label": "C",
+              "text": "report"
+            },
+            {
+              "label": "D",
+              "text": "purchase"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "137",
+          "text": "137. (A) They can arrange transportation for your\nlocal elementary school.\n(B) That is because they live in the\ncommunities they serve.\n(C) They will be closed for the summer but\nwill be back soon.\n(D) Therefore, they can help you with all\nyour banking needs.",
+          "options": [
+            {
+              "label": "A",
+              "text": "They can arrange transportation for your"
+            },
+            {
+              "label": "B",
+              "text": "That is because they live in the"
+            },
+            {
+              "label": "C",
+              "text": "They will be closed for the summer but"
+            },
+            {
+              "label": "D",
+              "text": "Therefore, they can help you with all"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "138",
+          "text": "138. (A) toward\n(B) fixing\n(C) because\n(D) along",
+          "options": [
+            {
+              "label": "A",
+              "text": "toward"
+            },
+            {
+              "label": "B",
+              "text": "fixing"
+            },
+            {
+              "label": "C",
+              "text": "because"
+            },
+            {
+              "label": "D",
+              "text": "along"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t3-p3",
+      "type": "ARTICLE",
+      "guidance": "Questions 139-142 refer to the following article.",
+      "content": "Welcome to \"Distributing Your Savings.\" This slide [139] is the third of a twelve-segment educational series called \"Preparing for Retirement.\"\n\nThis series provides only [140] advice. It should not replace the guidance of your investment planner. The series has been developed as background material to help you ask key questions when [141] with your investment planner. We hope you find this information helpful.\n\nSwainson-Gray Investments [142]",
+      "questions": [
+        {
+          "id": "139",
+          "text": "(A) presenting\n(B) presents\n(C) presentation\n(D) presented",
+          "options": [
+            {
+              "label": "A",
+              "text": "presenting"
+            },
+            {
+              "label": "B",
+              "text": "presents"
+            },
+            {
+              "label": "C",
+              "text": "presentation"
+            },
+            {
+              "label": "D",
+              "text": "presented"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "140",
+          "text": "(A) You are encouraged to visit our office\nfor a free portfolio review.\n(B) The series is designed to help you\nmake informed financial decisions.\n(C) Please fill out the paperwork before\nyour appointment.\n(D) Your responses will help us serve you\nbetter in the future.",
+          "options": [
+            {
+              "label": "A",
+              "text": "You are encouraged to visit our office"
+            },
+            {
+              "label": "B",
+              "text": "The series is designed to help you"
+            },
+            {
+              "label": "C",
+              "text": "Please fill out the paperwork before"
+            },
+            {
+              "label": "D",
+              "text": "Your responses will help us serve you"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "141",
+          "text": "(A) regional\n(B) expensive\n(C) supplemental\n(D) playful",
+          "options": [
+            {
+              "label": "A",
+              "text": "regional"
+            },
+            {
+              "label": "B",
+              "text": "expensive"
+            },
+            {
+              "label": "C",
+              "text": "supplemental"
+            },
+            {
+              "label": "D",
+              "text": "playful"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "142",
+          "text": "(A) consulting\n(B) prescribing\n(C) listing\n(D) following",
+          "options": [
+            {
+              "label": "A",
+              "text": "consulting"
+            },
+            {
+              "label": "B",
+              "text": "prescribing"
+            },
+            {
+              "label": "C",
+              "text": "listing"
+            },
+            {
+              "label": "D",
+              "text": "following"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    },
+    {
+      "id": "p6-t3-p4",
+      "type": "EMAIL",
+      "guidance": "Questions 143-146 refer to the following email.",
+      "content": "To: Dana Paulwell\nFrom: Silas Laveau\nDate: August 22\nSubject: My input\nAttachment: Article\nDear Dr. Paulwell,\n\nThis message is in response to yesterday's staff meeting, particularly the discussion on how certain aspects of the clinic may affect our work and mission. [143]\n\nCurrently, the vending machines in the hall outside our waiting room are stocked with sugary and salty products such as soft drinks and chips. As a health care provider, we [144] beverages and snacks that show our commitment to wellness. [145] , our mission is focused on good health.\n\nI have attached an article about actions that medical centers like ours are taking to improve their hospitality stations. I hope you find it [146] It details some easy and cost-effective changes we could consider.\n\nKind regards,\nSilas Laveau",
+      "questions": [
+        {
+          "id": "143",
+          "text": "(A) I thought it went on longer than was\nnecessary.\n(B) I wish we had been informed about it\nsooner.\n(C) I would like to make a suggestion on\nthis topic.\n(D) I would be honored to lead a\nfollow-up session.",
+          "options": [
+            {
+              "label": "A",
+              "text": "I thought it went on longer than was"
+            },
+            {
+              "label": "B",
+              "text": "I wish we had been informed about it"
+            },
+            {
+              "label": "C",
+              "text": "I would like to make a suggestion on"
+            },
+            {
+              "label": "D",
+              "text": "I would be honored to lead a"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "144",
+          "text": "(A) will offer\n(B) have offered\n(C) were offering\n(D) should be offering",
+          "options": [
+            {
+              "label": "A",
+              "text": "will offer"
+            },
+            {
+              "label": "B",
+              "text": "have offered"
+            },
+            {
+              "label": "C",
+              "text": "were offering"
+            },
+            {
+              "label": "D",
+              "text": "should be offering"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "145",
+          "text": "(A) After all\n(B) By the way\n(C) In the meantime\n(D) On the other hand",
+          "options": [
+            {
+              "label": "A",
+              "text": "After all"
+            },
+            {
+              "label": "B",
+              "text": "By the way"
+            },
+            {
+              "label": "C",
+              "text": "In the meantime"
+            },
+            {
+              "label": "D",
+              "text": "On the other hand"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        },
+        {
+          "id": "146",
+          "text": "(A) useful\n(B) eventful\n(C) profitable\n(D) comfortable",
+          "options": [
+            {
+              "label": "A",
+              "text": "useful"
+            },
+            {
+              "label": "B",
+              "text": "eventful"
+            },
+            {
+              "label": "C",
+              "text": "profitable"
+            },
+            {
+              "label": "D",
+              "text": "comfortable"
+            }
+          ],
+          "correctAnswer": "A",
+          "classification": "P6_GRAMMAR"
+        }
+      ]
+    }
+  ]
+}

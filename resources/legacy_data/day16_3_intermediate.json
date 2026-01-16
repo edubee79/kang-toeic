@@ -1,0 +1,614 @@
+[
+    {
+        "day": 16,
+        "no": 69,
+        "word": "unlikely",
+        "meaning": "~할 것 같지 않은",
+        "targetScore": 800,
+        "exampleEn": "It is unlikely to rain.",
+        "exampleKo": "비가 올 것 같지 않습니다."
+    },
+    {
+        "day": 16,
+        "no": 70,
+        "word": "accommodate",
+        "meaning": "수용하다, 편의를 도모하다",
+        "targetScore": 800,
+        "exampleEn": "The hotel can accommodate 500 guests.",
+        "exampleKo": "그 호텔은 500명의 손님을 수용할 수 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 71,
+        "word": "address",
+        "meaning": "주소; 연설하다, 다루다",
+        "targetScore": 800,
+        "exampleEn": "What is your email address?",
+        "exampleKo": "이메일 주소가 무엇입니까?"
+    },
+    {
+        "day": 16,
+        "no": 72,
+        "word": "afford",
+        "meaning": "~할 여유가 있다",
+        "targetScore": 800,
+        "exampleEn": "I can't afford a new car.",
+        "exampleKo": "나는 새 차를 살 여유가 없습니다."
+    },
+    {
+        "day": 16,
+        "no": 73,
+        "word": "affordable",
+        "meaning": "가격이 알맞은",
+        "targetScore": 800,
+        "exampleEn": "Affordable housing.",
+        "exampleKo": "저렴한 주택."
+    },
+    {
+        "day": 16,
+        "no": 74,
+        "word": "allocate",
+        "meaning": "할당하다",
+        "targetScore": 800,
+        "exampleEn": "Allocate resources efficiently.",
+        "exampleKo": "자원을 효율적으로 할당하세요."
+    },
+    {
+        "day": 16,
+        "no": 75,
+        "word": "alteration",
+        "meaning": "변경, 개조",
+        "targetScore": 800,
+        "exampleEn": "Some alterations were made.",
+        "exampleKo": "몇 가지 변경이 이루어졌습니다."
+    },
+    {
+        "day": 16,
+        "no": 76,
+        "word": "alternative",
+        "meaning": "대안",
+        "targetScore": 800,
+        "exampleEn": "We have no alternative.",
+        "exampleKo": "우리는 대안이 없습니다."
+    },
+    {
+        "day": 16,
+        "no": 77,
+        "word": "announce",
+        "meaning": "발표하다",
+        "targetScore": 800,
+        "exampleEn": "They announced their engagement.",
+        "exampleKo": "그들은 약혼을 발표했습니다."
+    },
+    {
+        "day": 16,
+        "no": 78,
+        "word": "announcement",
+        "meaning": "발표, 공고",
+        "targetScore": 800,
+        "exampleEn": "Make an announcement.",
+        "exampleKo": "발표를 하세요."
+    },
+    {
+        "day": 16,
+        "no": 79,
+        "word": "appeal",
+        "meaning": "호소하다; 매력",
+        "targetScore": 800,
+        "exampleEn": "The idea appeals to me.",
+        "exampleKo": "그 아이디어는 내 마음에 듭니다."
+    },
+    {
+        "day": 16,
+        "no": 80,
+        "word": "appliance",
+        "meaning": "가전제품",
+        "targetScore": 800,
+        "exampleEn": "Kitchen appliances.",
+        "exampleKo": "부엌 가전제품."
+    },
+    {
+        "day": 16,
+        "no": 81,
+        "word": "applicable",
+        "meaning": "적용되는, 해당되는",
+        "targetScore": 800,
+        "exampleEn": "The rule is not applicable here.",
+        "exampleKo": "그 규칙은 여기에 적용되지 않습니다."
+    },
+    {
+        "day": 16,
+        "no": 82,
+        "word": "arrangement",
+        "meaning": "배열, 합의",
+        "targetScore": 800,
+        "exampleEn": "Flower arrangement.",
+        "exampleKo": "꽃꽂이."
+    },
+    {
+        "day": 16,
+        "no": 83,
+        "word": "association",
+        "meaning": "협회, 연관",
+        "targetScore": 800,
+        "exampleEn": "Alumni association.",
+        "exampleKo": "동창회."
+    },
+    {
+        "day": 16,
+        "no": 84,
+        "word": "auction",
+        "meaning": "경매",
+        "targetScore": 800,
+        "exampleEn": "Sold at auction.",
+        "exampleKo": "경매에서 팔렸습니다."
+    },
+    {
+        "day": 16,
+        "no": 85,
+        "word": "authentic",
+        "meaning": "진품인, 진짜의",
+        "targetScore": 800,
+        "exampleEn": "Authentic Italian food.",
+        "exampleKo": "정통 이탈리아 음식."
+    },
+    {
+        "day": 16,
+        "no": 86,
+        "word": "bargain",
+        "meaning": "싸게 산 물건; 흥정하다",
+        "targetScore": 800,
+        "exampleEn": "He bargained with the seller.",
+        "exampleKo": "그는 판매자와 흥정했습니다."
+    },
+    {
+        "day": 16,
+        "no": 87,
+        "word": "benefit",
+        "meaning": "이익, 혜택",
+        "targetScore": 800,
+        "exampleEn": "For the benefit of all.",
+        "exampleKo": "모두의 이익을 위하여."
+    },
+    {
+        "day": 16,
+        "no": 88,
+        "word": "catalog",
+        "meaning": "목록, 카탈로그",
+        "targetScore": 800,
+        "exampleEn": "Order from the catalog.",
+        "exampleKo": "카탈로그에서 주문하세요."
+    },
+    {
+        "day": 16,
+        "no": 89,
+        "word": "charge",
+        "meaning": "청구하다, 기소하다",
+        "targetScore": 800,
+        "exampleEn": "He was charged with theft.",
+        "exampleKo": "그는 절도 혐의로 기소되었습니다."
+    },
+    {
+        "day": 16,
+        "no": 90,
+        "word": "clearance",
+        "meaning": "정리, 승인",
+        "targetScore": 800,
+        "exampleEn": "Clearance sale.",
+        "exampleKo": "재고 정리 세일."
+    },
+    {
+        "day": 16,
+        "no": 91,
+        "word": "client",
+        "meaning": "의뢰인, 고객",
+        "targetScore": 800,
+        "exampleEn": "Meeting with a client.",
+        "exampleKo": "고객과의 만남."
+    },
+    {
+        "day": 16,
+        "no": 92,
+        "word": "collection",
+        "meaning": "수집(품)",
+        "targetScore": 800,
+        "exampleEn": "A stamp collection.",
+        "exampleKo": "우표 수집."
+    },
+    {
+        "day": 16,
+        "no": 93,
+        "word": "competitive",
+        "meaning": "경쟁력 있는, 경쟁적인",
+        "targetScore": 800,
+        "exampleEn": "Competitive prices.",
+        "exampleKo": "경쟁력 있는 가격."
+    },
+    {
+        "day": 16,
+        "no": 94,
+        "word": "complaint",
+        "meaning": "불만, 고소",
+        "targetScore": 800,
+        "exampleEn": "File a complaint.",
+        "exampleKo": "불만을 제기하세요."
+    },
+    {
+        "day": 16,
+        "no": 95,
+        "word": "confirmation",
+        "meaning": "확인서",
+        "targetScore": 800,
+        "exampleEn": "Booking confirmation.",
+        "exampleKo": "예약 확인서."
+    },
+    {
+        "day": 16,
+        "no": 96,
+        "word": "consequently",
+        "meaning": "결과적으로",
+        "targetScore": 800,
+        "exampleEn": "It rained, and consequently the game was canceled.",
+        "exampleKo": "비가 왔고, 결과적으로 경기가 취소되었습니다."
+    },
+    {
+        "day": 16,
+        "no": 97,
+        "word": "consumer",
+        "meaning": "소비자",
+        "targetScore": 800,
+        "exampleEn": "Consumer rights.",
+        "exampleKo": "소비자 권리."
+    },
+    {
+        "day": 16,
+        "no": 98,
+        "word": "contractor",
+        "meaning": "계약자, 도급업자",
+        "targetScore": 800,
+        "exampleEn": "We hired a contractor.",
+        "exampleKo": "우리는 도급업자를 고용했습니다."
+    },
+    {
+        "day": 16,
+        "no": 99,
+        "word": "convenient",
+        "meaning": "편리한",
+        "targetScore": 800,
+        "exampleEn": "It is convenient to use.",
+        "exampleKo": "사용하기 편리합니다."
+    },
+    {
+        "day": 16,
+        "no": 100,
+        "word": "coupon",
+        "meaning": "쿠폰",
+        "targetScore": 800,
+        "exampleEn": "Use this coupon.",
+        "exampleKo": "이 쿠폰을 사용하세요."
+    },
+    {
+        "day": 16,
+        "no": 101,
+        "word": "critical",
+        "meaning": "비판적인, 중요한",
+        "targetScore": 800,
+        "exampleEn": "Critical thinking.",
+        "exampleKo": "비판적 사고."
+    },
+    {
+        "day": 16,
+        "no": 102,
+        "word": "customize",
+        "meaning": "주문 제작하다",
+        "targetScore": 800,
+        "exampleEn": "Customize your car.",
+        "exampleKo": "차를 주문 제작하세요."
+    },
+    {
+        "day": 16,
+        "no": 103,
+        "word": "dealer",
+        "meaning": "딜러, 중개인",
+        "targetScore": 800,
+        "exampleEn": "An antique dealer.",
+        "exampleKo": "골동품상."
+    },
+    {
+        "day": 16,
+        "no": 104,
+        "word": "dealership",
+        "meaning": "대리점",
+        "targetScore": 800,
+        "exampleEn": "Visit our dealership.",
+        "exampleKo": "우리 대리점을 방문하세요."
+    },
+    {
+        "day": 16,
+        "no": 105,
+        "word": "demonstrate",
+        "meaning": "입증하다, 시연하다",
+        "targetScore": 800,
+        "exampleEn": "He demonstrated how it works.",
+        "exampleKo": "그는 그것이 어떻게 작동하는지 시연했습니다."
+    },
+    {
+        "day": 16,
+        "no": 106,
+        "word": "discount",
+        "meaning": "할인하다; 할인",
+        "targetScore": 800,
+        "exampleEn": "Discounted prices.",
+        "exampleKo": "할인된 가격."
+    },
+    {
+        "day": 16,
+        "no": 107,
+        "word": "distribute",
+        "meaning": "분배하다",
+        "targetScore": 800,
+        "exampleEn": "Wealth should be distributed fairly.",
+        "exampleKo": "부는 공정하게 분배되어야 합니다."
+    },
+    {
+        "day": 16,
+        "no": 108,
+        "word": "distribution",
+        "meaning": "분배, 분포",
+        "targetScore": 800,
+        "exampleEn": "Distribution of goods.",
+        "exampleKo": "상품의 분배."
+    },
+    {
+        "day": 16,
+        "no": 109,
+        "word": "distributor",
+        "meaning": "유통업자",
+        "targetScore": 800,
+        "exampleEn": "The sole distributor.",
+        "exampleKo": "독점 유통업자."
+    },
+    {
+        "day": 16,
+        "no": 110,
+        "word": "estimate",
+        "meaning": "추정치",
+        "targetScore": 800,
+        "exampleEn": "A rough estimate.",
+        "exampleKo": "대략적인 추정치."
+    },
+    {
+        "day": 16,
+        "no": 111,
+        "word": "exclusively",
+        "meaning": "오로지, 독점적으로",
+        "targetScore": 800,
+        "exampleEn": "Sold exclusively online.",
+        "exampleKo": "온라인으로만 독점 판매됩니다."
+    },
+    {
+        "day": 16,
+        "no": 112,
+        "word": "expiration",
+        "meaning": "만료",
+        "targetScore": 800,
+        "exampleEn": "Expiration date.",
+        "exampleKo": "유효 기간."
+    },
+    {
+        "day": 16,
+        "no": 113,
+        "word": "forward",
+        "meaning": "전송하다; 앞으로",
+        "targetScore": 800,
+        "exampleEn": "Forward the email.",
+        "exampleKo": "이메일을 전달하세요."
+    },
+    {
+        "day": 16,
+        "no": 114,
+        "word": "free",
+        "meaning": "무료의, 자유로운",
+        "targetScore": 800,
+        "exampleEn": "Buy one, get one free.",
+        "exampleKo": "하나 사면 하나 무료."
+    },
+    {
+        "day": 16,
+        "no": 115,
+        "word": "fulfill",
+        "meaning": "이행하다, 충족시키다",
+        "targetScore": 800,
+        "exampleEn": "Fulfill your promise.",
+        "exampleKo": "약속을 이행하세요."
+    },
+    {
+        "day": 16,
+        "no": 116,
+        "word": "grand",
+        "meaning": "웅장한",
+        "targetScore": 800,
+        "exampleEn": "Grand opening.",
+        "exampleKo": "그랜드 오픈."
+    },
+    {
+        "day": 16,
+        "no": 117,
+        "word": "guarantee",
+        "meaning": "보증하다; 품질 보증",
+        "targetScore": 800,
+        "exampleEn": "Money-back guarantee.",
+        "exampleKo": "환불 보증."
+    },
+    {
+        "day": 16,
+        "no": 118,
+        "word": "improve",
+        "meaning": "개선되다",
+        "targetScore": 800,
+        "exampleEn": "Conditions have improved.",
+        "exampleKo": "상황이 개선되었습니다."
+    },
+    {
+        "day": 16,
+        "no": 119,
+        "word": "in stock",
+        "meaning": "재고가 있는",
+        "targetScore": 800,
+        "exampleEn": "It is currently in stock.",
+        "exampleKo": "현재 재고가 있습니다."
+    },
+    {
+        "day": 16,
+        "no": 120,
+        "word": "incorrect",
+        "meaning": "부정확한",
+        "targetScore": 800,
+        "exampleEn": "Incorrect information.",
+        "exampleKo": "부정확한 정보."
+    },
+    {
+        "day": 16,
+        "no": 121,
+        "word": "instruction",
+        "meaning": "지시, 설명",
+        "targetScore": 800,
+        "exampleEn": "Follow the instructions.",
+        "exampleKo": "지시 사항을 따르세요."
+    },
+    {
+        "day": 16,
+        "no": 122,
+        "word": "inventory",
+        "meaning": "재고 조사",
+        "targetScore": 800,
+        "exampleEn": "Annual inventory.",
+        "exampleKo": "연례 재고 조사."
+    },
+    {
+        "day": 16,
+        "no": 123,
+        "word": "item",
+        "meaning": "품목, 항목",
+        "targetScore": 800,
+        "exampleEn": "Check every item.",
+        "exampleKo": "모든 항목을 확인하세요."
+    },
+    {
+        "day": 16,
+        "no": 124,
+        "word": "latest",
+        "meaning": "최신의",
+        "targetScore": 800,
+        "exampleEn": "The latest fashion.",
+        "exampleKo": "최신 유행."
+    },
+    {
+        "day": 16,
+        "no": 125,
+        "word": "limited",
+        "meaning": "한정된",
+        "targetScore": 800,
+        "exampleEn": "Limited time offer.",
+        "exampleKo": "한정 기간 제공."
+    },
+    {
+        "day": 16,
+        "no": 126,
+        "word": "manufacture",
+        "meaning": "제조",
+        "targetScore": 800,
+        "exampleEn": "Date of manufacture.",
+        "exampleKo": "제조일."
+    },
+    {
+        "day": 16,
+        "no": 127,
+        "word": "merchandise",
+        "meaning": "상품",
+        "targetScore": 800,
+        "exampleEn": "Return defective merchandise.",
+        "exampleKo": "불량 상품을 반품하세요."
+    },
+    {
+        "day": 16,
+        "no": 128,
+        "word": "method",
+        "meaning": "방식",
+        "targetScore": 800,
+        "exampleEn": "Payment method.",
+        "exampleKo": "지불 방식."
+    },
+    {
+        "day": 16,
+        "no": 129,
+        "word": "offer",
+        "meaning": "제공하다",
+        "targetScore": 800,
+        "exampleEn": "Offer applies to new customers.",
+        "exampleKo": "제공은 신규 고객에게 적용됩니다."
+    },
+    {
+        "day": 16,
+        "no": 130,
+        "word": "official",
+        "meaning": "공식적인; 공무원",
+        "targetScore": 800,
+        "exampleEn": "An official announcement.",
+        "exampleKo": "공식 발표."
+    },
+    {
+        "day": 16,
+        "no": 131,
+        "word": "operate",
+        "meaning": "운영하다",
+        "targetScore": 800,
+        "exampleEn": "Operate a business.",
+        "exampleKo": "사업을 운영하세요."
+    },
+    {
+        "day": 16,
+        "no": 132,
+        "word": "order",
+        "meaning": "주문서, 순서",
+        "targetScore": 800,
+        "exampleEn": "Place an order.",
+        "exampleKo": "주문하세요."
+    },
+    {
+        "day": 16,
+        "no": 133,
+        "word": "out of stock",
+        "meaning": "품절된",
+        "targetScore": 800,
+        "exampleEn": "The item is out of stock.",
+        "exampleKo": "그 물건은 품절되었습니다."
+    },
+    {
+        "day": 16,
+        "no": 134,
+        "word": "package",
+        "meaning": "포장하다; 소포",
+        "targetScore": 800,
+        "exampleEn": "Package the items securely.",
+        "exampleKo": "물품을 안전하게 포장하세요."
+    },
+    {
+        "day": 16,
+        "no": 135,
+        "word": "packaging",
+        "meaning": "포장",
+        "targetScore": 800,
+        "exampleEn": "Attractive packaging.",
+        "exampleKo": "매력적인 포장."
+    },
+    {
+        "day": 16,
+        "no": 136,
+        "word": "payment",
+        "meaning": "지불",
+        "targetScore": 800,
+        "exampleEn": "Payment is due.",
+        "exampleKo": "지불 기한이 되었습니다."
+    }
+]

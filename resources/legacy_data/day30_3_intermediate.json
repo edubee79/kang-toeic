@@ -1,0 +1,614 @@
+[
+  {
+    "day": 30,
+    "no": 69,
+    "word": "well-being",
+    "meaning": "(건강과)행복",
+    "targetScore": 800,
+    "exampleEn": "We need to well-being this matter.",
+    "exampleKo": "이 문제를 (건강과)행복해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 70,
+    "word": "aging",
+    "meaning": "나이 들어가는",
+    "targetScore": 800,
+    "exampleEn": "We need to aging this matter.",
+    "exampleKo": "이 문제를 나이 들어가는해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 71,
+    "word": "ankle sprain",
+    "meaning": "발목 접질림",
+    "targetScore": 800,
+    "exampleEn": "We need to ankle sprain this matter.",
+    "exampleKo": "이 문제를 발목 접질림해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 72,
+    "word": "back injury",
+    "meaning": "허리부상",
+    "targetScore": 800,
+    "exampleEn": "We need to back injury this matter.",
+    "exampleKo": "이 문제를 허리부상해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 73,
+    "word": "be on a special diet",
+    "meaning": "특수 식이 요법 중이다",
+    "targetScore": 800,
+    "exampleEn": "We need to be on a special diet this matter.",
+    "exampleKo": "이 문제를 특수 식이 요법 중이다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 74,
+    "word": "blood pressure",
+    "meaning": "혈압",
+    "targetScore": 800,
+    "exampleEn": "We need to blood pressure this matter.",
+    "exampleKo": "이 문제를 혈압해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 75,
+    "word": "blood supply",
+    "meaning": "혈액 공급",
+    "targetScore": 800,
+    "exampleEn": "We need to blood supply this matter.",
+    "exampleKo": "이 문제를 혈액 공급해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 76,
+    "word": "buzzing",
+    "meaning": "윙윙 소리를 내는, 와글거리는",
+    "targetScore": 800,
+    "exampleEn": "We need to buzzing this matter.",
+    "exampleKo": "이 문제를 윙윙 소리를 내는, 와글거리는해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 77,
+    "word": "doctor's appointment",
+    "meaning": "진료 예약",
+    "targetScore": 800,
+    "exampleEn": "We need to doctor's appointment this matter.",
+    "exampleKo": "이 문제를 진료 예약해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 78,
+    "word": "emergency room",
+    "meaning": "응급실",
+    "targetScore": 800,
+    "exampleEn": "We need to emergency room this matter.",
+    "exampleKo": "이 문제를 응급실해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 79,
+    "word": "get some exercise",
+    "meaning": "운동하다",
+    "targetScore": 800,
+    "exampleEn": "We need to get some exercise this matter.",
+    "exampleKo": "이 문제를 운동하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 80,
+    "word": "heart ailment",
+    "meaning": "심장병",
+    "targetScore": 800,
+    "exampleEn": "We need to heart ailment this matter.",
+    "exampleKo": "이 문제를 심장병해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 81,
+    "word": "heart attack",
+    "meaning": "심장마비",
+    "targetScore": 800,
+    "exampleEn": "We need to heart attack this matter.",
+    "exampleKo": "이 문제를 심장마비해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 82,
+    "word": "heart disease",
+    "meaning": "심장질환",
+    "targetScore": 800,
+    "exampleEn": "We need to heart disease this matter.",
+    "exampleKo": "이 문제를 심장질환해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 83,
+    "word": "injection",
+    "meaning": "주사",
+    "targetScore": 800,
+    "exampleEn": "We need to injection this matter.",
+    "exampleKo": "이 문제를 주사해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 84,
+    "word": "insomnia",
+    "meaning": "불면증",
+    "targetScore": 800,
+    "exampleEn": "We need to insomnia this matter.",
+    "exampleKo": "이 문제를 불면증해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 85,
+    "word": "lean back",
+    "meaning": "뒤로 기대다",
+    "targetScore": 800,
+    "exampleEn": "We need to lean back this matter.",
+    "exampleKo": "이 문제를 뒤로 기대다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 86,
+    "word": "lose weight",
+    "meaning": "살이 빠지다",
+    "targetScore": 800,
+    "exampleEn": "We need to lose weight this matter.",
+    "exampleKo": "이 문제를 살이 빠지다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 87,
+    "word": "maternity ward",
+    "meaning": "산부인과 병동",
+    "targetScore": 800,
+    "exampleEn": "We need to maternity ward this matter.",
+    "exampleKo": "이 문제를 산부인과 병동해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 88,
+    "word": "patient's record",
+    "meaning": "환자의 의료 기록",
+    "targetScore": 800,
+    "exampleEn": "We need to patient's record this matter.",
+    "exampleKo": "이 문제를 환자의 의료 기록해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 89,
+    "word": "physical examination",
+    "meaning": "신체검사",
+    "targetScore": 800,
+    "exampleEn": "We need to physical examination this matter.",
+    "exampleKo": "이 문제를 신체검사해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 90,
+    "word": "physical therapy",
+    "meaning": "물리 치료",
+    "targetScore": 800,
+    "exampleEn": "We need to physical therapy this matter.",
+    "exampleKo": "이 문제를 물리 치료해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 91,
+    "word": "resist",
+    "meaning": "참다, 견디다, 저항하다",
+    "targetScore": 800,
+    "exampleEn": "We need to resist this matter.",
+    "exampleKo": "이 문제를 참다, 견디다, 저항하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 92,
+    "word": "sneeze",
+    "meaning": "재채기 하다",
+    "targetScore": 800,
+    "exampleEn": "We need to sneeze this matter.",
+    "exampleKo": "이 문제를 재채기 하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 93,
+    "word": "surgical instrument",
+    "meaning": "수술도구",
+    "targetScore": 800,
+    "exampleEn": "We need to surgical instrument this matter.",
+    "exampleKo": "이 문제를 수술도구해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 94,
+    "word": "tablet",
+    "meaning": "알약",
+    "targetScore": 800,
+    "exampleEn": "We need to tablet this matter.",
+    "exampleKo": "이 문제를 알약해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 95,
+    "word": "take effect",
+    "meaning": "효과가 나타나다",
+    "targetScore": 800,
+    "exampleEn": "We need to take effect this matter.",
+    "exampleKo": "이 문제를 효과가 나타나다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 96,
+    "word": "take medication",
+    "meaning": "약을 복용하다",
+    "targetScore": 800,
+    "exampleEn": "We need to take medication this matter.",
+    "exampleKo": "이 문제를 약을 복용하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 97,
+    "word": "take some medicine",
+    "meaning": "약을 먹다",
+    "targetScore": 800,
+    "exampleEn": "We need to take some medicine this matter.",
+    "exampleKo": "이 문제를 약을 먹다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 98,
+    "word": "terminal",
+    "meaning": "말기의, 불치의",
+    "targetScore": 800,
+    "exampleEn": "We need to terminal this matter.",
+    "exampleKo": "이 문제를 말기의, 불치의해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 99,
+    "word": "vaccination",
+    "meaning": "백신, 예방 접종",
+    "targetScore": 800,
+    "exampleEn": "We need to vaccination this matter.",
+    "exampleKo": "이 문제를 백신, 예방 접종해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 100,
+    "word": "watch over",
+    "meaning": "보호하다, 지키다",
+    "targetScore": 800,
+    "exampleEn": "We need to watch over this matter.",
+    "exampleKo": "이 문제를 보호하다, 지키다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 101,
+    "word": "consequently",
+    "meaning": "그 결과, 따라서",
+    "targetScore": 800,
+    "exampleEn": "We need to consequently this matter.",
+    "exampleKo": "이 문제를 그 결과, 따라서해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 102,
+    "word": "harmful",
+    "meaning": "해로운, 유해한",
+    "targetScore": 800,
+    "exampleEn": "We need to harmful this matter.",
+    "exampleKo": "이 문제를 해로운, 유해한해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 103,
+    "word": "maximize",
+    "meaning": "극대화하다",
+    "targetScore": 800,
+    "exampleEn": "We need to maximize this matter.",
+    "exampleKo": "이 문제를 극대화하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 104,
+    "word": "medicinal",
+    "meaning": "약용의, 치유력이 있는",
+    "targetScore": 800,
+    "exampleEn": "We need to medicinal this matter.",
+    "exampleKo": "이 문제를 약용의, 치유력이 있는해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 105,
+    "word": "patiently",
+    "meaning": "끈기 있게, 참을성 있게",
+    "targetScore": 800,
+    "exampleEn": "We need to patiently this matter.",
+    "exampleKo": "이 문제를 끈기 있게, 참을성 있게해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 106,
+    "word": "recover",
+    "meaning": "(건강이) 회복되다",
+    "targetScore": 800,
+    "exampleEn": "We need to recover this matter.",
+    "exampleKo": "이 문제를 (건강이) 회복되다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 107,
+    "word": "resemble",
+    "meaning": "~을 닮다, ~과 공통점이 있다",
+    "targetScore": 800,
+    "exampleEn": "We need to resemble this matter.",
+    "exampleKo": "이 문제를 ~을 닮다, ~과 공통점이 있다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 108,
+    "word": "ultimately",
+    "meaning": "마침내, 결국",
+    "targetScore": 800,
+    "exampleEn": "We need to ultimately this matter.",
+    "exampleKo": "이 문제를 마침내, 결국해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 109,
+    "word": "urgently",
+    "meaning": "급히",
+    "targetScore": 800,
+    "exampleEn": "We need to urgently this matter.",
+    "exampleKo": "이 문제를 급히해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 110,
+    "word": "visualize",
+    "meaning": "시각화하다",
+    "targetScore": 800,
+    "exampleEn": "We need to visualize this matter.",
+    "exampleKo": "이 문제를 시각화하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 111,
+    "word": "antibiotic",
+    "meaning": "항생제",
+    "targetScore": 800,
+    "exampleEn": "We need to antibiotic this matter.",
+    "exampleKo": "이 문제를 항생제해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 112,
+    "word": "asthma",
+    "meaning": "천식",
+    "targetScore": 800,
+    "exampleEn": "We need to asthma this matter.",
+    "exampleKo": "이 문제를 천식해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 113,
+    "word": "athletic skill",
+    "meaning": "운동능력",
+    "targetScore": 800,
+    "exampleEn": "We need to athletic skill this matter.",
+    "exampleKo": "이 문제를 운동능력해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 114,
+    "word": "chronic",
+    "meaning": "만성의",
+    "targetScore": 800,
+    "exampleEn": "We need to chronic this matter.",
+    "exampleKo": "이 문제를 만성의해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 115,
+    "word": "contagious",
+    "meaning": "전염성의",
+    "targetScore": 800,
+    "exampleEn": "We need to contagious this matter.",
+    "exampleKo": "이 문제를 전염성의해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 116,
+    "word": "diabetes",
+    "meaning": "당뇨병",
+    "targetScore": 800,
+    "exampleEn": "We need to diabetes this matter.",
+    "exampleKo": "이 문제를 당뇨병해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 117,
+    "word": "donor",
+    "meaning": "기증자",
+    "targetScore": 800,
+    "exampleEn": "We need to donor this matter.",
+    "exampleKo": "이 문제를 기증자해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 118,
+    "word": "dosage",
+    "meaning": "1회분 복용량",
+    "targetScore": 800,
+    "exampleEn": "We need to dosage this matter.",
+    "exampleKo": "이 문제를 1회분 복용량해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 119,
+    "word": "dose",
+    "meaning": "(약의) 1회 복용량",
+    "targetScore": 800,
+    "exampleEn": "We need to dose this matter.",
+    "exampleKo": "이 문제를 (약의) 1회 복용량해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 120,
+    "word": "eradicate",
+    "meaning": "근절하다, 뿌리뽑다",
+    "targetScore": 800,
+    "exampleEn": "We need to eradicate this matter.",
+    "exampleKo": "이 문제를 근절하다, 뿌리뽑다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 121,
+    "word": "exhale",
+    "meaning": "숨을 내쉬다",
+    "targetScore": 800,
+    "exampleEn": "We need to exhale this matter.",
+    "exampleKo": "이 문제를 숨을 내쉬다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 122,
+    "word": "first aid",
+    "meaning": "응급처치",
+    "targetScore": 800,
+    "exampleEn": "We need to first aid this matter.",
+    "exampleKo": "이 문제를 응급처치해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 123,
+    "word": "food poisoning",
+    "meaning": "식중독",
+    "targetScore": 800,
+    "exampleEn": "We need to food poisoning this matter.",
+    "exampleKo": "이 문제를 식중독해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 124,
+    "word": "forbid",
+    "meaning": "금지하다",
+    "targetScore": 800,
+    "exampleEn": "We need to forbid this matter.",
+    "exampleKo": "이 문제를 금지하다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 125,
+    "word": "genetic research",
+    "meaning": "유전학 연구",
+    "targetScore": 800,
+    "exampleEn": "We need to genetic research this matter.",
+    "exampleKo": "이 문제를 유전학 연구해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 126,
+    "word": "germ",
+    "meaning": "세균",
+    "targetScore": 800,
+    "exampleEn": "We need to germ this matter.",
+    "exampleKo": "이 문제를 세균해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 127,
+    "word": "hiccup",
+    "meaning": "딸꾹질",
+    "targetScore": 800,
+    "exampleEn": "We need to hiccup this matter.",
+    "exampleKo": "이 문제를 딸꾹질해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 128,
+    "word": "hygiene",
+    "meaning": "위생",
+    "targetScore": 800,
+    "exampleEn": "We need to hygiene this matter.",
+    "exampleKo": "이 문제를 위생해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 129,
+    "word": "immune",
+    "meaning": "면역의",
+    "targetScore": 800,
+    "exampleEn": "We need to immune this matter.",
+    "exampleKo": "이 문제를 면역의해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 130,
+    "word": "infection",
+    "meaning": "감염",
+    "targetScore": 800,
+    "exampleEn": "We need to infection this matter.",
+    "exampleKo": "이 문제를 감염해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 131,
+    "word": "infectious disease",
+    "meaning": "전염병",
+    "targetScore": 800,
+    "exampleEn": "We need to infectious disease this matter.",
+    "exampleKo": "이 문제를 전염병해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 132,
+    "word": "inhale",
+    "meaning": "숨을 들이마시다",
+    "targetScore": 800,
+    "exampleEn": "We need to inhale this matter.",
+    "exampleKo": "이 문제를 숨을 들이마시다해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 133,
+    "word": "overdose",
+    "meaning": "과다복용",
+    "targetScore": 800,
+    "exampleEn": "We need to overdose this matter.",
+    "exampleKo": "이 문제를 과다복용해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 134,
+    "word": "painkiller",
+    "meaning": "진통제",
+    "targetScore": 800,
+    "exampleEn": "We need to painkiller this matter.",
+    "exampleKo": "이 문제를 진통제해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 135,
+    "word": "paralysis",
+    "meaning": "마비",
+    "targetScore": 800,
+    "exampleEn": "We need to paralysis this matter.",
+    "exampleKo": "이 문제를 마비해야 합니다."
+  },
+  {
+    "day": 30,
+    "no": 136,
+    "word": "pulse",
+    "meaning": "맥박",
+    "targetScore": 800,
+    "exampleEn": "We need to pulse this matter.",
+    "exampleKo": "이 문제를 맥박해야 합니다."
+  }
+]

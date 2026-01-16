@@ -1,0 +1,29 @@
+ No              Word      Meaning
+ 41         migration       이동, 이주
+ 42           ecology     생태, 자연환경
+ 43           habitat   (동·식물의)서식지
+ 44              cave           동굴
+ 45           Celsius           섭씨
+ 46            chilly          쌀쌀한
+ 47          clean up    치우다, 청소하다
+ 48   cleaning supply        청소 용품
+ 49            desert           사막
+ 50              dirt           먼지
+ 51 empty a trash can     휴지통을 비우다
+ 52           factory           공장
+ 53           harvest     수확하다, 수확
+ 54             humid           습한
+ 55         landscape           풍경
+ 56             point     의견, 가리키다
+ 57              seed 씨, ~에 씨를 뿌리다
+ 58             shade           그늘
+ 59             sunny          화창한
+ 60            sunset           일몰
+ 61               wet           젖은
+ 62             windy        바람 부는
+ 63              wood       나무, 목재
+ 64              dust   먼지, 먼지를 털다
+ 65             flood           홍수
+ 66           general         일반적인
+ 67         pollution       오염, 공해
+ 68            shower          소나기

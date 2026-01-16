@@ -1,0 +1,362 @@
+[
+    {
+        "day": 4,
+        "no": 1,
+        "word": "lax",
+        "meaning": "느슨한, 규율에 못 미치는",
+        "targetScore": 650,
+        "exampleEn": "The company has been lax in enforcing safety regulations.",
+        "exampleKo": "그 회사는 안전 규정을 시행하는 데 느슨했습니다."
+    },
+    {
+        "day": 4,
+        "no": 2,
+        "word": "procrastinate",
+        "meaning": "미루다, 꾸물거리다",
+        "targetScore": 650,
+        "exampleEn": "He tends to procrastinate when faced with difficult tasks.",
+        "exampleKo": "그는 어려운 과제에 직면했을 때 미루는 경향이 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 3,
+        "word": "combined",
+        "meaning": "결합된, 합동의",
+        "targetScore": 650,
+        "exampleEn": "The combined efforts of the team led to success.",
+        "exampleKo": "팀의 합동 노력은 성공으로 이어졌습니다."
+    },
+    {
+        "day": 4,
+        "no": 4,
+        "word": "accomplish",
+        "meaning": "성취하다",
+        "targetScore": 650,
+        "exampleEn": "She accomplished her goal of learning Spanish.",
+        "exampleKo": "그녀는 스페인어를 배우겠다는 목표를 성취했습니다."
+    },
+    {
+        "day": 4,
+        "no": 5,
+        "word": "voluntarily",
+        "meaning": "자발적으로",
+        "targetScore": 650,
+        "exampleEn": "He voluntarily resigned from his position.",
+        "exampleKo": "그는 자발적으로 직위에서 사임했습니다."
+    },
+    {
+        "day": 4,
+        "no": 6,
+        "word": "undertake",
+        "meaning": "떠맡다, 착수하다",
+        "targetScore": 650,
+        "exampleEn": "The company will undertake a new marketing campaign.",
+        "exampleKo": "그 회사는 새로운 마케팅 캠페인에 착수할 것입니다."
+    },
+    {
+        "day": 4,
+        "no": 7,
+        "word": "assume",
+        "meaning": "(책임,역할을)떠맡다;가정하다",
+        "targetScore": 650,
+        "exampleEn": "Mr. Lee will assume the role of director next month.",
+        "exampleKo": "이 씨는 다음 달에 이사 역할을 맡게 될 것입니다."
+    },
+    {
+        "day": 4,
+        "no": 8,
+        "word": "occasionally",
+        "meaning": "가끔, 때때로",
+        "targetScore": 650,
+        "exampleEn": "We meet for lunch occasionally.",
+        "exampleKo": "우리는 가끔 점심을 먹으러 만납니다."
+    },
+    {
+        "day": 4,
+        "no": 9,
+        "word": "employee",
+        "meaning": "직원, 고용인",
+        "targetScore": 650,
+        "exampleEn": "The company has over 500 employees.",
+        "exampleKo": "그 회사는 500명 이상의 직원을 두고 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 10,
+        "word": "assist",
+        "meaning": "돕다, 조력하다",
+        "targetScore": 650,
+        "exampleEn": "Can you assist me with this report?",
+        "exampleKo": "이 보고서 작성하는 것을 도와줄 수 있나요?"
+    },
+    {
+        "day": 4,
+        "no": 11,
+        "word": "satisfied",
+        "meaning": "만족하는",
+        "targetScore": 650,
+        "exampleEn": "Are you satisfied with the service?",
+        "exampleKo": "서비스에 만족하십니까?"
+    },
+    {
+        "day": 4,
+        "no": 12,
+        "word": "manner",
+        "meaning": "방식, 태도",
+        "targetScore": 650,
+        "exampleEn": "He dealt with the problem in a professional manner.",
+        "exampleKo": "그는 전문적인 방식으로 그 문제를 처리했습니다."
+    },
+    {
+        "day": 4,
+        "no": 13,
+        "word": "responsible",
+        "meaning": "책임이 있는, 책임져야 할",
+        "targetScore": 650,
+        "exampleEn": "Who is responsible for this mess?",
+        "exampleKo": "이 엉망진창인 상황에 대한 책임은 누구에게 있습니까?"
+    },
+    {
+        "day": 4,
+        "no": 14,
+        "word": "conduct",
+        "meaning": "(업무 등을)수행하다",
+        "targetScore": 650,
+        "exampleEn": "The researchers conducted a survey.",
+        "exampleKo": "연구원들은 설문 조사를 수행했습니다."
+    },
+    {
+        "day": 4,
+        "no": 15,
+        "word": "adjust",
+        "meaning": "적응하다",
+        "targetScore": 650,
+        "exampleEn": "It takes time to adjust to a new culture.",
+        "exampleKo": "새로운 문화에 적응하는 데는 시간이 걸립니다."
+    },
+    {
+        "day": 4,
+        "no": 16,
+        "word": "personnel",
+        "meaning": "(집합적)직원, 인원; 인사과",
+        "targetScore": 650,
+        "exampleEn": "All personnel must wear ID badges.",
+        "exampleKo": "모든 직원은 ID 배지를 착용해야 합니다."
+    },
+    {
+        "day": 4,
+        "no": 17,
+        "word": "agree",
+        "meaning": "동의하다",
+        "targetScore": 650,
+        "exampleEn": "I agree with your proposal.",
+        "exampleKo": "나는 당신의 제안에 동의합니다."
+    },
+    {
+        "day": 4,
+        "no": 18,
+        "word": "supervise",
+        "meaning": "감독하다, 지도하다",
+        "targetScore": 650,
+        "exampleEn": "She supervises a team of designers.",
+        "exampleKo": "그녀는 디자이너 팀을 감독합니다."
+    },
+    {
+        "day": 4,
+        "no": 19,
+        "word": "coworker",
+        "meaning": "동료, 협력자",
+        "targetScore": 650,
+        "exampleEn": "He gets along well with his coworkers.",
+        "exampleKo": "그는 동료들과 잘 지냅니다."
+    },
+    {
+        "day": 4,
+        "no": 20,
+        "word": "direct",
+        "meaning": "~에게 길을 가리키다",
+        "targetScore": 650,
+        "exampleEn": "Can you direct me to the nearest bank?",
+        "exampleKo": "가장 가까운 은행으로 가는 길을 알려주시겠습니까?"
+    },
+    {
+        "day": 4,
+        "no": 21,
+        "word": "confidential",
+        "meaning": "기밀의, 내밀한",
+        "targetScore": 650,
+        "exampleEn": "Keep these documents confidential.",
+        "exampleKo": "이 문서들을 기밀로 유지하십시오."
+    },
+    {
+        "day": 4,
+        "no": 22,
+        "word": "assign",
+        "meaning": "배정하다, 할당하다",
+        "targetScore": 650,
+        "exampleEn": "The manager assigned tasks to each member.",
+        "exampleKo": "매니저는 각 구성원에게 업무를 배정했습니다."
+    },
+    {
+        "day": 4,
+        "no": 23,
+        "word": "leading",
+        "meaning": "선도하는, 일류의",
+        "targetScore": 650,
+        "exampleEn": "They are a leading company in the industry.",
+        "exampleKo": "그들은 업계에서 선도적인 기업입니다."
+    },
+    {
+        "day": 4,
+        "no": 24,
+        "word": "formal",
+        "meaning": "격식을 갖춘",
+        "targetScore": 650,
+        "exampleEn": "The dinner will be a formal event.",
+        "exampleKo": "그 저녁 식사는 격식을 갖춘 행사가 될 것입니다."
+    },
+    {
+        "day": 4,
+        "no": 25,
+        "word": "remove",
+        "meaning": "해임하다, 제거하다",
+        "targetScore": 650,
+        "exampleEn": "The board voted to remove the CEO.",
+        "exampleKo": "이사회는 CEO를 해임하기로 투표했습니다."
+    },
+    {
+        "day": 4,
+        "no": 26,
+        "word": "collect",
+        "meaning": "모으다, 수집하다",
+        "targetScore": 650,
+        "exampleEn": "We are collecting donations for charity.",
+        "exampleKo": "우리는 자선을 위한 기부금을 모으고 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 27,
+        "word": "coordinate",
+        "meaning": "조정하다",
+        "targetScore": 650,
+        "exampleEn": "We need to coordinate our schedules.",
+        "exampleKo": "우리는 일정을 조정해야 합니다."
+    },
+    {
+        "day": 4,
+        "no": 28,
+        "word": "hardly",
+        "meaning": "거의 ~하지 않다",
+        "targetScore": 650,
+        "exampleEn": "I can hardly hear you.",
+        "exampleKo": "당신 말이 거의 들리지 않습니다."
+    },
+    {
+        "day": 4,
+        "no": 29,
+        "word": "abstract",
+        "meaning": "추상적인",
+        "targetScore": 650,
+        "exampleEn": "The concept is too abstract for me to understand.",
+        "exampleKo": "그 개념은 내가 이해하기에는 너무 추상적입니다."
+    },
+    {
+        "day": 4,
+        "no": 30,
+        "word": "directory",
+        "meaning": "주소록",
+        "targetScore": 650,
+        "exampleEn": "Look up his number in the telephone directory.",
+        "exampleKo": "전화번호부에서 그의 번호를 찾아보세요."
+    },
+    {
+        "day": 4,
+        "no": 31,
+        "word": "accountable",
+        "meaning": "책임이 있는",
+        "targetScore": 650,
+        "exampleEn": "Managers are accountable for their team's performance.",
+        "exampleKo": "매니저들은 팀의 성과에 대해 책임이 있습니다."
+    },
+    {
+        "day": 4,
+        "no": 32,
+        "word": "skillfully",
+        "meaning": "능숙하게, 솜씨 있게",
+        "targetScore": 650,
+        "exampleEn": "She skillfully negotiated the deal.",
+        "exampleKo": "그녀는 능숙하게 거래를 협상했습니다."
+    },
+    {
+        "day": 3,
+        "no": 33,
+        "word": "exclusive",
+        "meaning": "독점적인, 배타적인",
+        "targetScore": 650,
+        "exampleEn": "The club is exclusive to members only.",
+        "exampleKo": "그 클럽은 회원들에게만 독점적입니다."
+    },
+    {
+        "day": 4,
+        "no": 34,
+        "word": "intention",
+        "meaning": "의사, 의도",
+        "targetScore": 650,
+        "exampleEn": "I have no intention of changing my mind.",
+        "exampleKo": "나는 마음을 바꿀 의사가 없습니다."
+    },
+    {
+        "day": 4,
+        "no": 35,
+        "word": "transform",
+        "meaning": "바꾸다, 변모시키다",
+        "targetScore": 650,
+        "exampleEn": "The renovation transformed the old building.",
+        "exampleKo": "리모델링은 오래된 건물을 변모시켰습니다."
+    },
+    {
+        "day": 4,
+        "no": 36,
+        "word": "respectful",
+        "meaning": "정중한, 존중하는",
+        "targetScore": 650,
+        "exampleEn": "Be respectful to your elders.",
+        "exampleKo": "연장자에게 정중하게 행동하세요."
+    },
+    {
+        "day": 4,
+        "no": 37,
+        "word": "duplicate",
+        "meaning": "사본",
+        "targetScore": 650,
+        "exampleEn": "This is a duplicate of the original document.",
+        "exampleKo": "이것은 원본 문서의 사본입니다."
+    },
+    {
+        "day": 4,
+        "no": 38,
+        "word": "contrary",
+        "meaning": "반대",
+        "targetScore": 650,
+        "exampleEn": "On the contrary, I think it's a good idea.",
+        "exampleKo": "반대로, 나는 그것이 좋은 생각이라고 생각합니다."
+    },
+    {
+        "day": 4,
+        "no": 39,
+        "word": "disturbing",
+        "meaning": "충격적인, 불안감을 주는",
+        "targetScore": 650,
+        "exampleEn": "The news was quite disturbing.",
+        "exampleKo": "그 뉴스는 꽤 충격적이었습니다."
+    },
+    {
+        "day": 4,
+        "no": 40,
+        "word": "engage",
+        "meaning": "관여하다, 종사하다",
+        "targetScore": 650,
+        "exampleEn": "They engaged in a heated debate.",
+        "exampleKo": "그들은 격렬한 토론에 관여했습니다."
+    }
+]

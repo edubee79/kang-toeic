@@ -1,0 +1,614 @@
+[
+  {
+    "day": 11,
+    "no": 69,
+    "word": "repeat",
+    "meaning": "반복하다",
+    "targetScore": 800,
+    "exampleEn": "Please repeat the instructions.",
+    "exampleKo": "지시 사항을 반복해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 70,
+    "word": "request form",
+    "meaning": "요청 양식",
+    "targetScore": 800,
+    "exampleEn": "Please fill out the request form.",
+    "exampleKo": "요청 양식을 작성해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 71,
+    "word": "sensor",
+    "meaning": "감지 장치",
+    "targetScore": 800,
+    "exampleEn": "The sensor detects motion.",
+    "exampleKo": "그 센서(감지 장치)는 움직임을 감지합니다."
+  },
+  {
+    "day": 11,
+    "no": 72,
+    "word": "technique",
+    "meaning": "기술",
+    "targetScore": 800,
+    "exampleEn": "We use a new manufacturing technique.",
+    "exampleKo": "우리는 새로운 제조 기술을 사용합니다."
+  },
+  {
+    "day": 11,
+    "no": 73,
+    "word": "test",
+    "meaning": "검사, 시험하다",
+    "targetScore": 800,
+    "exampleEn": "Engineers will test the new engine.",
+    "exampleKo": "엔지니어들이 새 엔진을 검사(시험)할 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 74,
+    "word": "go straight to",
+    "meaning": "~으로 직행하다",
+    "targetScore": 800,
+    "exampleEn": "Please go straight to the conference room.",
+    "exampleKo": "회의실로 직행해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 75,
+    "word": "laboratory",
+    "meaning": "실험실",
+    "targetScore": 800,
+    "exampleEn": "Samples are analyzed in the laboratory.",
+    "exampleKo": "샘플들은 실험실에서 분석됩니다."
+  },
+  {
+    "day": 11,
+    "no": 76,
+    "word": "latest work",
+    "meaning": "최신 작품",
+    "targetScore": 800,
+    "exampleEn": "This is the author's latest work.",
+    "exampleKo": "이것은 그 작가의 최신 작품입니다."
+  },
+  {
+    "day": 11,
+    "no": 77,
+    "word": "lightweight",
+    "meaning": "가벼운, 경량의",
+    "targetScore": 800,
+    "exampleEn": "The new laptop is very lightweight.",
+    "exampleKo": "새 노트북은 매우 가볍습니다."
+  },
+  {
+    "day": 11,
+    "no": 78,
+    "word": "out-of-date",
+    "meaning": "시대에 뒤떨어진, 구식의",
+    "targetScore": 800,
+    "exampleEn": "This information is out-of-date.",
+    "exampleKo": "이 정보는 구식입니다(최신이 아닙니다)."
+  },
+  {
+    "day": 11,
+    "no": 79,
+    "word": "product designer",
+    "meaning": "제품 설계자",
+    "targetScore": 800,
+    "exampleEn": "He works as a product designer.",
+    "exampleKo": "그는 제품 디자이너로 일합니다."
+  },
+  {
+    "day": 11,
+    "no": 80,
+    "word": "product display",
+    "meaning": "제품 진열",
+    "targetScore": 800,
+    "exampleEn": "The product display attracts customers.",
+    "exampleKo": "제품 진열(전시)이 고객들을 끌어들입니다."
+  },
+  {
+    "day": 11,
+    "no": 81,
+    "word": "redesign",
+    "meaning": "재설계, 새 디자인",
+    "targetScore": 800,
+    "exampleEn": "We need to redesign the packaging.",
+    "exampleKo": "우리는 포장을 다시 디자인해야 합니다."
+  },
+  {
+    "day": 11,
+    "no": 82,
+    "word": "trial period",
+    "meaning": "시범 사용 기간",
+    "targetScore": 800,
+    "exampleEn": "The software has a 30-day trial period.",
+    "exampleKo": "그 소프트웨어에는 30일의 시험 사용 기간이 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 83,
+    "word": "try out",
+    "meaning": "시험해 보다",
+    "targetScore": 800,
+    "exampleEn": "You can try out the equipment before buying.",
+    "exampleKo": "구매하기 전에 장비를 시험해 볼 수 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 84,
+    "word": "unplug the equipment",
+    "meaning": "장비의 플러그를 뽑다",
+    "targetScore": 800,
+    "exampleEn": "Please unplug the equipment after use.",
+    "exampleKo": "사용 후에는 장비의 플러그를 뽑아 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 85,
+    "word": "up-to-date",
+    "meaning": "최신의",
+    "targetScore": 800,
+    "exampleEn": "Keep the records up-to-date.",
+    "exampleKo": "기록을 최신 상태로 유지하십시오."
+  },
+  {
+    "day": 11,
+    "no": 86,
+    "word": "user's guide",
+    "meaning": "사용자 설명서",
+    "targetScore": 800,
+    "exampleEn": "Please read the user's guide carefully.",
+    "exampleKo": "사용 설명서를 주의 깊게 읽어 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 87,
+    "word": "waterproof",
+    "meaning": "방수의",
+    "targetScore": 800,
+    "exampleEn": "This watch is waterproof.",
+    "exampleKo": "이 시계는 방수가 됩니다."
+  },
+  {
+    "day": 11,
+    "no": 88,
+    "word": "well-prepared",
+    "meaning": "잘 준비된",
+    "targetScore": 800,
+    "exampleEn": "The team was well-prepared for the presentation.",
+    "exampleKo": "그 팀은 발표를 위해 준비가 잘 되어 있었습니다."
+  },
+  {
+    "day": 11,
+    "no": 89,
+    "word": "with the lights on",
+    "meaning": "불을 켠 채로",
+    "targetScore": 800,
+    "exampleEn": "Do not leave the room with the lights on.",
+    "exampleKo": "전등을 켜 둔 채로 방을 비우지 마십시오."
+  },
+  {
+    "day": 11,
+    "no": 90,
+    "word": "advancement",
+    "meaning": "진보, 전진, 승진",
+    "targetScore": 800,
+    "exampleEn": "Technological advancement has changed our lives.",
+    "exampleKo": "기술적 진보는 우리의 삶을 변화시켰습니다."
+  },
+  {
+    "day": 11,
+    "no": 91,
+    "word": "appliance",
+    "meaning": "전기 제품",
+    "targetScore": 800,
+    "exampleEn": "The store sells household appliances.",
+    "exampleKo": "그 가게는 가전제품(기구)을 판매합니다."
+  },
+  {
+    "day": 11,
+    "no": 92,
+    "word": "aside from",
+    "meaning": "~을 제외하고, ~에 더하여",
+    "targetScore": 800,
+    "exampleEn": "Aside from the cost, the plan is good.",
+    "exampleKo": "비용을 제외하고는, 그 계획은 좋습니다."
+  },
+  {
+    "day": 11,
+    "no": 93,
+    "word": "certified",
+    "meaning": "공인된, 면허를 받은",
+    "targetScore": 800,
+    "exampleEn": "He is a certified accountant.",
+    "exampleKo": "그는 공인 회계사입니다."
+  },
+  {
+    "day": 11,
+    "no": 94,
+    "word": "complementary",
+    "meaning": "보완적인",
+    "targetScore": 800,
+    "exampleEn": "The two companies have complementary skills.",
+    "exampleKo": "그 두 회사는 상호 보완적인 기술을 가지고 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 95,
+    "word": "composition",
+    "meaning": "구성",
+    "targetScore": 800,
+    "exampleEn": "Analyze the chemical composition of the material.",
+    "exampleKo": "그 재료의 화학적 구성을 분석하십시오."
+  },
+  {
+    "day": 11,
+    "no": 96,
+    "word": "consist of",
+    "meaning": "~으로 이루어져 있다",
+    "targetScore": 800,
+    "exampleEn": "The committee consists of ten members.",
+    "exampleKo": "위원회는 10명의 회원으로 구성됩니다."
+  },
+  {
+    "day": 11,
+    "no": 97,
+    "word": "cooperative",
+    "meaning": "협력적인, 협동의",
+    "targetScore": 800,
+    "exampleEn": "We appreciate your cooperative attitude.",
+    "exampleKo": "우리는 귀하의 협조적인 태도에 감사드립니다."
+  },
+  {
+    "day": 11,
+    "no": 98,
+    "word": "delighted",
+    "meaning": "기뻐하는, 즐거워하는",
+    "targetScore": 800,
+    "exampleEn": "We are delighted to announce the winner.",
+    "exampleKo": "우리는 우승자를 발표하게 되어 기쁩니다."
+  },
+  {
+    "day": 11,
+    "no": 99,
+    "word": "designed",
+    "meaning": "계획적인, 고의의",
+    "targetScore": 800,
+    "exampleEn": "The program is designed to help students.",
+    "exampleKo": "그 프로그램은 학생들을 돕기 위해 설계되었습니다."
+  },
+  {
+    "day": 11,
+    "no": 100,
+    "word": "durable",
+    "meaning": "내구성 있는, 튼튼한",
+    "targetScore": 800,
+    "exampleEn": "This material is very durable.",
+    "exampleKo": "이 재료는 매우 내구성이 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 101,
+    "word": "electronics",
+    "meaning": "전자 공학, 전자 기술",
+    "targetScore": 800,
+    "exampleEn": "We sell consumer electronics.",
+    "exampleKo": "우리는 소비자 가전제품을 판매합니다."
+  },
+  {
+    "day": 11,
+    "no": 102,
+    "word": "except for",
+    "meaning": "~을 제외하고",
+    "targetScore": 800,
+    "exampleEn": "Everyone was present except for Mr. Kim.",
+    "exampleKo": "김 선생님을 제외하고는 모두가 참석했습니다."
+  },
+  {
+    "day": 11,
+    "no": 103,
+    "word": "exploration",
+    "meaning": "탐사, 탐구",
+    "targetScore": 800,
+    "exampleEn": "Space exploration is expensive.",
+    "exampleKo": "우주 탐사는 비용이 많이 듭니다."
+  },
+  {
+    "day": 11,
+    "no": 104,
+    "word": "imaginable",
+    "meaning": "상상 할 수 있는",
+    "targetScore": 800,
+    "exampleEn": "It offers every service imaginable.",
+    "exampleKo": "그것은 상상할 수 있는 모든 서비스를 제공합니다."
+  },
+  {
+    "day": 11,
+    "no": 105,
+    "word": "innovate",
+    "meaning": "혁신하다, 쇄신하다",
+    "targetScore": 800,
+    "exampleEn": "Companies must innovate to survive.",
+    "exampleKo": "기업들은 살아남기 위해 혁신해야 합니다."
+  },
+  {
+    "day": 11,
+    "no": 106,
+    "word": "interpretation",
+    "meaning": "해석, 설명",
+    "targetScore": 800,
+    "exampleEn": "His interpretation of the data was correct.",
+    "exampleKo": "그의 데이터 해석은 정확했습니다."
+  },
+  {
+    "day": 11,
+    "no": 107,
+    "word": "licensed",
+    "meaning": "인가된, 자격증을 소지한",
+    "targetScore": 800,
+    "exampleEn": "The restaurant is licensed to sell alcohol.",
+    "exampleKo": "그 식당은 주류 판매 허가를 받았습니다."
+  },
+  {
+    "day": 11,
+    "no": 108,
+    "word": "mechanical",
+    "meaning": "기계상의, 기계로 움직이는",
+    "targetScore": 800,
+    "exampleEn": "The car had a mechanical problem.",
+    "exampleKo": "그 차는 기계적인 문제가 있었습니다."
+  },
+  {
+    "day": 11,
+    "no": 109,
+    "word": "prediction",
+    "meaning": "예측",
+    "targetScore": 800,
+    "exampleEn": "The weather prediction was accurate.",
+    "exampleKo": "날씨 예측은 정확했습니다."
+  },
+  {
+    "day": 11,
+    "no": 110,
+    "word": "prototype",
+    "meaning": "모델, 본보기",
+    "targetScore": 800,
+    "exampleEn": "They built a prototype of the device.",
+    "exampleKo": "그들은 그 장치의 시제품(프로토타입)을 만들었습니다."
+  },
+  {
+    "day": 11,
+    "no": 111,
+    "word": "quantity",
+    "meaning": "수량",
+    "targetScore": 800,
+    "exampleEn": "We ordered a large quantity of paper.",
+    "exampleKo": "우리는 다량의 종이를 주문했습니다."
+  },
+  {
+    "day": 11,
+    "no": 112,
+    "word": "remnant",
+    "meaning": "나머지",
+    "targetScore": 800,
+    "exampleEn": "Remnants of the old building remain.",
+    "exampleKo": "그 오래된 건물의 잔재가 남아 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 113,
+    "word": "screen",
+    "meaning": "스크린, 심사하다",
+    "targetScore": 800,
+    "exampleEn": "The computer screen is frozen.",
+    "exampleKo": "컴퓨터 화면이 멈췄습니다."
+  },
+  {
+    "day": 11,
+    "no": 114,
+    "word": "suspend",
+    "meaning": "중지하다",
+    "targetScore": 800,
+    "exampleEn": "Production was suspended temporarily.",
+    "exampleKo": "생산이 일시적으로 중단되었습니다."
+  },
+  {
+    "day": 11,
+    "no": 115,
+    "word": "technical",
+    "meaning": "기술적인",
+    "targetScore": 800,
+    "exampleEn": "They offer technical support.",
+    "exampleKo": "그들은 기술 지원을 제공합니다."
+  },
+  {
+    "day": 11,
+    "no": 116,
+    "word": "unfavorable",
+    "meaning": "불리한, 호의적이지 않은",
+    "targetScore": 800,
+    "exampleEn": "The weather conditions were unfavorable.",
+    "exampleKo": "날씨 조건이 좋지 않았습니다(불리했습니다)."
+  },
+  {
+    "day": 11,
+    "no": 117,
+    "word": "vulnerable to",
+    "meaning": "~에 취약한",
+    "targetScore": 800,
+    "exampleEn": "The system is vulnerable to hackers.",
+    "exampleKo": "그 시스템은 해커들에게 취약합니다."
+  },
+  {
+    "day": 11,
+    "no": 118,
+    "word": "be carried out",
+    "meaning": "수행되다",
+    "targetScore": 800,
+    "exampleEn": "The inspection will be carried out tomorrow.",
+    "exampleKo": "검사는 내일 실시될 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 119,
+    "word": "be designed to do",
+    "meaning": "~하도록 고안되다",
+    "targetScore": 800,
+    "exampleEn": "The bridge is designed to withstand earthquakes.",
+    "exampleKo": "그 다리는 지진을 견디도록 설계되었습니다."
+  },
+  {
+    "day": 11,
+    "no": 120,
+    "word": "breakthrough",
+    "meaning": "(과학 등의) 비약적 발전",
+    "targetScore": 800,
+    "exampleEn": "Scientists made a major breakthrough.",
+    "exampleKo": "과학자들은 중대한 비약적 발전(돌파구)을 이루었습니다."
+  },
+  {
+    "day": 11,
+    "no": 121,
+    "word": "by the time",
+    "meaning": "그때까지",
+    "targetScore": 800,
+    "exampleEn": "By the time you arrive, we will be finished.",
+    "exampleKo": "당신이 도착할 때쯤이면, 우리는 끝났을 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 122,
+    "word": "collaboration",
+    "meaning": "공동 작업(연구)",
+    "targetScore": 800,
+    "exampleEn": "The project was a collaboration between two firms.",
+    "exampleKo": "그 프로젝트는 두 회사 간의 공동 작업(협력)이었습니다."
+  },
+  {
+    "day": 11,
+    "no": 123,
+    "word": "copyright",
+    "meaning": "저작권",
+    "targetScore": 800,
+    "exampleEn": "The book is protected by copyright.",
+    "exampleKo": "그 책은 저작권의 보호를 받습니다."
+  },
+  {
+    "day": 11,
+    "no": 124,
+    "word": "custom-built",
+    "meaning": "주문 제작된",
+    "targetScore": 800,
+    "exampleEn": "Everything in the kitchen is custom-built.",
+    "exampleKo": "부엌에 있는 모든 것은 주문 제작된 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 125,
+    "word": "customize",
+    "meaning": "주문에 응하여 만들다",
+    "targetScore": 800,
+    "exampleEn": "You can customize the settings.",
+    "exampleKo": "설정을 사용자 정의할(주문 제작할) 수 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 126,
+    "word": "disruption",
+    "meaning": "중단, 혼란",
+    "targetScore": 800,
+    "exampleEn": "The strike caused a disruption in service.",
+    "exampleKo": "파업은 서비스의 중단을 야기했습니다."
+  },
+  {
+    "day": 11,
+    "no": 127,
+    "word": "energy efficiency",
+    "meaning": "에너지 효율",
+    "targetScore": 800,
+    "exampleEn": "We are focusing on energy efficiency.",
+    "exampleKo": "우리는 에너지 효율성에 집중하고 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 128,
+    "word": "energy source",
+    "meaning": "에너지원",
+    "targetScore": 800,
+    "exampleEn": "Solar power is a renewable energy source.",
+    "exampleKo": "태양력은 재생 가능한 에너지원입니다."
+  },
+  {
+    "day": 11,
+    "no": 129,
+    "word": "expand into",
+    "meaning": "~으로 확장하다",
+    "targetScore": 800,
+    "exampleEn": "We plan to expand into new markets.",
+    "exampleKo": "우리는 새로운 시장으로 확장할 계획입니다."
+  },
+  {
+    "day": 11,
+    "no": 130,
+    "word": "fuel consumption",
+    "meaning": "연료 소비",
+    "targetScore": 800,
+    "exampleEn": "The car has low fuel consumption.",
+    "exampleKo": "그 차는 연료 소비량이 적습니다."
+  },
+  {
+    "day": 11,
+    "no": 131,
+    "word": "guidance",
+    "meaning": "안내, 지도",
+    "targetScore": 800,
+    "exampleEn": "I need your guidance on this matter.",
+    "exampleKo": "이 문제에 대해 당신의 지도(조언)가 필요합니다."
+  },
+  {
+    "day": 11,
+    "no": 132,
+    "word": "keep one's eye on",
+    "meaning": "~에서 눈을 떼지 않다, ~을 감시하다",
+    "targetScore": 800,
+    "exampleEn": "Keep your eye on the road.",
+    "exampleKo": "도로를 주시하십시오(눈을 떼지 마십시오)."
+  },
+  {
+    "day": 11,
+    "no": 133,
+    "word": "limited edition",
+    "meaning": "한정판",
+    "targetScore": 800,
+    "exampleEn": "This is a limited edition watch.",
+    "exampleKo": "이것은 한정판 시계입니다."
+  },
+  {
+    "day": 11,
+    "no": 134,
+    "word": "long-lasting",
+    "meaning": "오래 지속되는",
+    "targetScore": 800,
+    "exampleEn": "We need a long-lasting solution.",
+    "exampleKo": "우리는 오래 지속되는 해결책이 필요합니다."
+  },
+  {
+    "day": 11,
+    "no": 135,
+    "word": "plenty of",
+    "meaning": "많은",
+    "targetScore": 800,
+    "exampleEn": "There is plenty of food.",
+    "exampleKo": "음식이 많습니다(충분합니다)."
+  },
+  {
+    "day": 11,
+    "no": 136,
+    "word": "smoke detector",
+    "meaning": "화재 탐지기",
+    "targetScore": 800,
+    "exampleEn": "The smoke detector went off.",
+    "exampleKo": "화재 탐지기가 울렸습니다."
+  }
+]

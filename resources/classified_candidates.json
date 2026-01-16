@@ -1,0 +1,3841 @@
+[
+  {
+    "word": "confidence",
+    "meaning": "확신,자신;신임",
+    "line": "1,8,confidence,\"확신,자신;신임\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "achievement",
+    "meaning": "성취,달성",
+    "line": "1,16,achievement,\"성취,달성\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "impressed",
+    "meaning": "인상 깊게 생각하는, 감명을 받은",
+    "line": "1,17,impressed,\"인상 깊게 생각하는, 감명을 받은\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "excellent",
+    "meaning": "훌륭한, 탁월한",
+    "line": "1,18,excellent,\"훌륭한, 탁월한\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "associate",
+    "meaning": "관련시키다",
+    "line": "1,21,associate,관련시키다,650,1,Headword_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "managerial",
+    "meaning": "관리의",
+    "line": "1,25,managerial,관리의,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "familiar",
+    "meaning": "익숙한,친숙한",
+    "line": "1,27,familiar,\"익숙한,친숙한\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "apprehensive",
+    "meaning": "걱정하는,염려하는",
+    "line": "1,32,apprehensive,\"걱정하는,염려하는\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "application form",
+    "meaning": "신청서",
+    "line": "1,41,application form,신청서,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "career",
+    "meaning": "직업,경력",
+    "line": "1,42,career,\"직업,경력\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "completion",
+    "meaning": "완료,완성",
+    "line": "1,43,completion,\"완료,완성\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fair",
+    "meaning": "공정한,타당한",
+    "line": "1,44,fair,\"공정한,타당한\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "graduation",
+    "meaning": "졸업",
+    "line": "1,45,graduation,졸업,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "in fact",
+    "meaning": "사실은",
+    "line": "1,46,in fact,사실은,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "job fair",
+    "meaning": "취업 박람회",
+    "line": "1,47,job fair,취업 박람회,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "job offer",
+    "meaning": "일자리 제안",
+    "line": "1,48,job offer,일자리 제안,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "list",
+    "meaning": "목록,명단,목록에 기입하다",
+    "line": "1,49,list,\"목록,명단,목록에 기입하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "newcomer",
+    "meaning": "새로 온 사람, 신입사원",
+    "line": "1,50,newcomer,\"새로 온 사람, 신입사원\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "part-time",
+    "meaning": "파트타임의, 시간제의",
+    "line": "1,51,part-time,\"파트타임의, 시간제의\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "previous job",
+    "meaning": "이전 직업",
+    "line": "1,52,previous job,이전 직업,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "secretary",
+    "meaning": "비서",
+    "line": "1,53,secretary,비서,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "send in",
+    "meaning": "~을 제출하다",
+    "line": "1,54,send in,~을 제출하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "tidy",
+    "meaning": "단정한, 깔끔한",
+    "line": "1,55,tidy,\"단정한, 깔끔한\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "trainee",
+    "meaning": "훈련받는 사람",
+    "line": "1,56,trainee,훈련받는 사람,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "apply for",
+    "meaning": "~에 지원하다",
+    "line": "1,57,apply for,~에 지원하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "aptitude",
+    "meaning": "재능,소질",
+    "line": "1,58,aptitude,\"재능,소질\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "be admitted to",
+    "meaning": "~에 입장이 허용되다",
+    "line": "1,59,be admitted to,~에 입장이 허용되다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be advised to do",
+    "meaning": "~할 것을 권유받다",
+    "line": "1,60,be advised to do,~할 것을 권유받다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "criteria",
+    "meaning": "기준(criterion의 복수형)",
+    "line": "1,61,criteria,기준(criterion의 복수형),650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "decade",
+    "meaning": "10년",
+    "line": "1,62,decade,10년,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "employ",
+    "meaning": "고용하다",
+    "line": "1,63,employ,고용하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "insufficient",
+    "meaning": "불충분한",
+    "line": "1,64,insufficient,불충분한,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "minimum",
+    "meaning": "최소한도, 최소한의",
+    "line": "1,65,minimum,\"최소한도, 최소한의\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "party",
+    "meaning": "단체,당사자,연회",
+    "line": "1,66,party,\"단체,당사자,연회\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "plentiful",
+    "meaning": "풍부한",
+    "line": "1,67,plentiful,풍부한,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "profession",
+    "meaning": "직업",
+    "line": "1,68,profession,직업,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "achieve one's goal",
+    "meaning": "목표를 달성하다",
+    "line": "1,69,achieve one's goal,목표를 달성하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "apprentice",
+    "meaning": "견습생, 도제",
+    "line": "1,70,apprentice,\"견습생, 도제\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "dress formally",
+    "meaning": "정장을 입다",
+    "line": "1,71,dress formally,정장을 입다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "dressed in suit",
+    "meaning": "정장을 입은",
+    "line": "1,72,dressed in suit,정장을 입은,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "figure out",
+    "meaning": "~을 알아내다",
+    "line": "1,73,figure out,~을 알아내다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "full time work",
+    "meaning": "정규직",
+    "line": "1,74,full time work,정규직,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "job opportunity",
+    "meaning": "취업 기회",
+    "line": "1,75,job opportunity,취업 기회,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "job search",
+    "meaning": "구직",
+    "line": "1,76,job search,구직,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "job seeker",
+    "meaning": "구직자",
+    "line": "1,77,job seeker,구직자,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "lay out",
+    "meaning": "펼치다, 늘어놓다",
+    "line": "1,78,lay out,\"펼치다, 늘어놓다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "letter of recommendation",
+    "meaning": "추천서",
+    "line": "1,79,letter of recommendation,추천서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "pay raise",
+    "meaning": "임금 인상",
+    "line": "1,80,pay raise,임금 인상,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "practical experience",
+    "meaning": "실무 경험",
+    "line": "1,81,practical experience,실무 경험,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "proof of employment",
+    "meaning": "재직 증명서",
+    "line": "1,82,proof of employment,재직 증명서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "reapply",
+    "meaning": "재신청하다",
+    "line": "1,83,reapply,재신청하다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "recommendation letter",
+    "meaning": "추천서",
+    "line": "1,84,recommendation letter,추천서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "reference letter",
+    "meaning": "추천서",
+    "line": "1,85,reference letter,추천서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "send off to",
+    "meaning": "~로 보내다",
+    "line": "1,86,send off to,~로 보내다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "set up an interview",
+    "meaning": "면접 약속을 잡다",
+    "line": "1,87,set up an interview,면접 약속을 잡다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "take an examination",
+    "meaning": "시험을 치르다",
+    "line": "1,88,take an examination,시험을 치르다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "training center",
+    "meaning": "훈련소",
+    "line": "1,89,training center,훈련소,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "waiting room",
+    "meaning": "대기실",
+    "line": "1,90,waiting room,대기실,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "well-educated",
+    "meaning": "잘 교육된, 교양 있는",
+    "line": "1,91,well-educated,\"잘 교육된, 교양 있는\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "workstation",
+    "meaning": "작업대, (사무실의)자리",
+    "line": "1,92,workstation,\"작업대, (사무실의)자리\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "zealous",
+    "meaning": "열심인, 열광적인",
+    "line": "1,93,zealous,\"열심인, 열광적인\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "cover letter",
+    "meaning": "자기소개서",
+    "line": "1,94,cover letter,자기소개서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "devoted",
+    "meaning": "헌신적인",
+    "line": "1,95,devoted,헌신적인,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "energetic",
+    "meaning": "활동적인",
+    "line": "1,96,energetic,활동적인,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "enthusiastic",
+    "meaning": "열렬한",
+    "line": "1,97,enthusiastic,열렬한,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "excel",
+    "meaning": "(남을)능가하다, ~보다 낫다",
+    "line": "1,98,excel,\"(남을)능가하다, ~보다 낫다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "exclude",
+    "meaning": "제외하다, 배제하다",
+    "line": "1,99,exclude,\"제외하다, 배제하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fluently",
+    "meaning": "유창하게",
+    "line": "1,100,fluently,유창하게,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "get through",
+    "meaning": "(시험 등에) 합격하다, 통과하다",
+    "line": "1,101,get through,\"(시험 등에) 합격하다, 통과하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "match",
+    "meaning": "~에 어울리다, 조화되다",
+    "line": "1,102,match,\"~에 어울리다, 조화되다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "necessity",
+    "meaning": "필요",
+    "line": "1,103,necessity,필요,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "qualification",
+    "meaning": "자격, 자격증",
+    "line": "1,104,qualification,\"자격, 자격증\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "relevant",
+    "meaning": "관련된",
+    "line": "1,105,relevant,관련된,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "sign up for",
+    "meaning": "~에 등록하다, 신청하다",
+    "line": "1,106,sign up for,\"~에 등록하다, 신청하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "talented",
+    "meaning": "유능한, 재능이 있는",
+    "line": "1,107,talented,\"유능한, 재능이 있는\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "visiting",
+    "meaning": "방문, 객원의, 방문하는",
+    "line": "1,108,visiting,\"방문, 객원의, 방문하는\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "workforce",
+    "meaning": "노동 인구, 직원 수",
+    "line": "1,109,workforce,\"노동 인구, 직원 수\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "address the audience",
+    "meaning": "청중에게 연설하다",
+    "line": "1,110,address the audience,청중에게 연설하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be influenced by appearance",
+    "meaning": "겉모습에 영향을 받다",
+    "line": "1,111,be influenced by appearance,겉모습에 영향을 받다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "bilingual",
+    "meaning": "2개 국어를 구사하는",
+    "line": "1,112,bilingual,2개 국어를 구사하는,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "curriculum vitae",
+    "meaning": "이력서",
+    "line": "1,113,curriculum vitae,이력서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "diploma",
+    "meaning": "졸업 증서",
+    "line": "1,114,diploma,졸업 증서,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "endurance",
+    "meaning": "인내력",
+    "line": "1,115,endurance,인내력,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fluency",
+    "meaning": "유창함",
+    "line": "1,116,fluency,유창함,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "fluent in",
+    "meaning": "~에 능숙한",
+    "line": "1,117,fluent in,~에 능숙한,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "go with",
+    "meaning": "(계획·제의 등을)받아들이다",
+    "line": "1,118,go with,(계획·제의 등을)받아들이다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "human resources",
+    "meaning": "인적 자원, 인사 관리",
+    "line": "1,119,human resources,\"인적 자원, 인사 관리\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "improperly",
+    "meaning": "부적절하게",
+    "line": "1,120,improperly,부적절하게,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in a positive manner",
+    "meaning": "긍정적으로",
+    "line": "1,121,in a positive manner,긍정적으로,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in the field of",
+    "meaning": "~의 분야에서",
+    "line": "1,122,in the field of,~의 분야에서,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "inexperience",
+    "meaning": "무경험, 미숙",
+    "line": "1,123,inexperience,\"무경험, 미숙\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "lack confidence",
+    "meaning": "자신감이 결여되다",
+    "line": "1,124,lack confidence,자신감이 결여되다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make A a regular habit",
+    "meaning": "A하는 습관을 들이다",
+    "line": "1,125,make A a regular habit,A하는 습관을 들이다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a commitment to",
+    "meaning": "~에 헌신하다, 전념하다",
+    "line": "1,126,make a commitment to,\"~에 헌신하다, 전념하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a point of -ing",
+    "meaning": "반드시 -하다",
+    "line": "1,127,make a point of -ing,반드시 -하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "manpower",
+    "meaning": "인력",
+    "line": "1,128,manpower,인력,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "master's degree",
+    "meaning": "석사 학위",
+    "line": "1,129,master's degree,석사 학위,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "novice",
+    "meaning": "풋내기, 무경험자",
+    "line": "1,130,novice,\"풋내기, 무경험자\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "paycheck",
+    "meaning": "급료, 급료 지불 수표",
+    "line": "1,131,paycheck,\"급료, 급료 지불 수표\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "self-motivation",
+    "meaning": "자기 동기부여",
+    "line": "1,132,self-motivation,자기 동기부여,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "send a notification",
+    "meaning": "통지서를 보내다",
+    "line": "1,133,send a notification,통지서를 보내다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "vacancy",
+    "meaning": "공석, 결원",
+    "line": "1,134,vacancy,\"공석, 결원\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "wanted",
+    "meaning": "~을 구하는, ~을 모집하는",
+    "line": "1,135,wanted,\"~을 구하는, ~을 모집하는\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "work history",
+    "meaning": "이력, 경력",
+    "line": "1,136,work history,\"이력, 경력\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "credential",
+    "meaning": "신임장, 자격 증명서",
+    "line": "1,137,credential,\"신임장, 자격 증명서\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "firsthand",
+    "meaning": "직접적인",
+    "line": "1,138,firsthand,직접적인,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "hiring committee",
+    "meaning": "고용 위원회",
+    "line": "1,139,hiring committee,고용 위원회,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "not to mention",
+    "meaning": "~은 말할 것도 없고",
+    "line": "1,140,not to mention,~은 말할 것도 없고,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on occasion",
+    "meaning": "때때로",
+    "line": "1,141,on occasion,때때로,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "overqualified",
+    "meaning": "필요이상으로 교육을 받은",
+    "line": "1,142,overqualified,필요이상으로 교육을 받은,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "screening",
+    "meaning": "심사, 선발",
+    "line": "1,143,screening,\"심사, 선발\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "lag",
+    "meaning": "뒤처지다, 뒤떨어지다",
+    "line": "1,144,lag,\"뒤처지다, 뒤떨어지다\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on the waiting list",
+    "meaning": "대기자 명단에",
+    "line": "1,145,on the waiting list,대기자 명단에,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "oriented",
+    "meaning": "~을 지향하는",
+    "line": "1,146,oriented,~을 지향하는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "pertaining to",
+    "meaning": "~에 관계된",
+    "line": "1,147,pertaining to,~에 관계된,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "questionably",
+    "meaning": "의심스럽게",
+    "line": "1,148,questionably,의심스럽게,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "regularity",
+    "meaning": "정기적임",
+    "line": "1,149,regularity,정기적임,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "replenish",
+    "meaning": "다시 채우다, 보충하다",
+    "line": "1,150,replenish,\"다시 채우다, 보충하다\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "simplicity",
+    "meaning": "간단함",
+    "line": "1,151,simplicity,간단함,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "stellar",
+    "meaning": "뛰어난, 별의",
+    "line": "1,152,stellar,\"뛰어난, 별의\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "versatile",
+    "meaning": "다재다능한",
+    "line": "1,153,versatile,다재다능한,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "adept",
+    "meaning": "능숙한",
+    "line": "1,154,adept,능숙한,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "against all odds",
+    "meaning": "모든 역경을 딛고",
+    "line": "1,155,against all odds,모든 역경을 딛고,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "command",
+    "meaning": "(언어)구사력, 명령, 지배력",
+    "line": "1,156,command,\"(언어)구사력, 명령, 지배력\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "commensurate",
+    "meaning": "비례한, 액수가 상응하는",
+    "line": "1,157,commensurate,\"비례한, 액수가 상응하는\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "computer literate",
+    "meaning": "컴퓨터 사용 기술을 가진",
+    "line": "1,158,computer literate,컴퓨터 사용 기술을 가진,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "eagerness",
+    "meaning": "열의",
+    "line": "1,159,eagerness,열의,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "familiarize oneself with",
+    "meaning": "~에 정통하다, 익숙하다",
+    "line": "1,160,familiarize oneself with,\"~에 정통하다, 익숙하다\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "increment",
+    "meaning": "증가, 인상",
+    "line": "1,161,increment,\"증가, 인상\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "interpersonal skills",
+    "meaning": "대인관계능력",
+    "line": "1,162,interpersonal skills,대인관계능력,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "mindful",
+    "meaning": "유념하는",
+    "line": "1,163,mindful,유념하는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "preeminent",
+    "meaning": "우수한, 탁월한",
+    "line": "1,164,preeminent,\"우수한, 탁월한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "preliminary",
+    "meaning": "예비의",
+    "line": "1,165,preliminary,예비의,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "prerequisite",
+    "meaning": "필수조건, 필수적인",
+    "line": "1,166,prerequisite,\"필수조건, 필수적인\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "probationer",
+    "meaning": "수습직원, 견습생",
+    "line": "1,167,probationer,\"수습직원, 견습생\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "sternly",
+    "meaning": "엄격하게, 단호하게",
+    "line": "1,168,sternly,\"엄격하게, 단호하게\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "attire",
+    "meaning": "복장, 옷차림새",
+    "line": "2,1,attire,\"복장, 옷차림새\",650,1,Headword_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "concern",
+    "meaning": "우려, 걱정, 문제, 일",
+    "line": "2,3,concern,\"우려, 걱정, 문제, 일",
+    "themeRaw": "General"
+  },
+  {
+    "word": "관련되다,650,1,Headword_650",
+    "line": "~을 걱정스럽게 하다, 영향을 미치다, 관련되다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "refrain",
+    "meaning": "자제하다, 삼가다",
+    "line": "2,10,refrain,\"자제하다, 삼가다\",650,1,Headword_650\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "access",
+    "meaning": "이용 권한, 접근, 통로, ~에 접근하다, 도달하다",
+    "line": "2,12,access,\"이용 권한, 접근, 통로, ~에 접근하다, 도달하다\",650,1,Headword_650\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "thoroughly",
+    "meaning": "철저하게, 완전히, 대단히",
+    "line": "2,13,thoroughly,\"철저하게, 완전히, 대단히\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "revise",
+    "meaning": "(의견 및 계획을)수정하다, 변경하다",
+    "line": "2,14,revise,\"(의견 및 계획을)수정하다, 변경하다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "approach",
+    "meaning": "접근법, 처리 방법, 다가오다, 가까워지다",
+    "line": "2,15,approach,\"접근법, 처리 방법, 다가오다, 가까워지다\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "arrangement",
+    "meaning": "준비, 마련, 주선",
+    "line": "2,20,arrangement,\"준비, 마련, 주선\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "procedure",
+    "meaning": "절차",
+    "line": "2,21,procedure,절차,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "negative",
+    "meaning": "부정적인, 비판적인",
+    "line": "2,22,negative,\"부정적인, 비판적인\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "mandate",
+    "meaning": "명령하다, 지시하다, 권한, 지시, 명령",
+    "line": "2,23,mandate,\"명령하다, 지시하다, 권한, 지시, 명령\",650,1,Headword_650\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "effect",
+    "meaning": "(법률 등의)효력, 효과, 영향, 결과로서 ~을 가져오다",
+    "line": "2,24,effect,\"(법률 등의)효력, 효과, 영향, 결과로서 ~을 가져오다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "enable",
+    "meaning": "(무엇을) 가능하게 하다",
+    "line": "2,27,enable,(무엇을) 가능하게 하다,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "standard",
+    "meaning": "기준, 표준",
+    "line": "2,28,standard,\"기준, 표준\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "act",
+    "meaning": "법령, 행위, 행동,결정하다, 판결을 내리다, 행동하다",
+    "line": "2,30,act,\"법령, 행위, 행동,결정하다, 판결을 내리다, 행동하다\",650,1,Headword_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "ban",
+    "meaning": "금지, 금지하다",
+    "line": "2,32,ban,\"금지, 금지하다\",650,1,Headword_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "habit",
+    "meaning": "습관, 버릇",
+    "line": "2,38,habit,\"습관, 버릇\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "bend over",
+    "meaning": "몸을 앞으로 숙이다",
+    "line": "2,41,bend over,몸을 앞으로 숙이다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "by oneself",
+    "meaning": "혼자 힘으로",
+    "line": "2,42,by oneself,혼자 힘으로,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "date",
+    "meaning": "날짜",
+    "line": "2,43,date,날짜,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "get used to",
+    "meaning": "~에 익숙해지다",
+    "line": "2,44,get used to,~에 익숙해지다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "if it's okay with you",
+    "meaning": "당신만 괜찮다면",
+    "line": "2,45,if it's okay with you,당신만 괜찮다면,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in case of",
+    "meaning": "~의 경우에는",
+    "line": "2,46,in case of,~의 경우에는,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in rows",
+    "meaning": "줄지어, 여러 줄로",
+    "line": "2,47,in rows,\"줄지어, 여러 줄로\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "item",
+    "meaning": "항목",
+    "line": "2,48,item,항목,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "legal",
+    "meaning": "법률의, 합법적인",
+    "line": "2,49,legal,\"법률의, 합법적인\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "let go",
+    "meaning": "놓아주다",
+    "line": "2,50,let go,놓아주다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel/Welfare"
+  },
+  {
+    "word": "ruler",
+    "meaning": "자",
+    "line": "2,51,ruler,자,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "stop",
+    "meaning": "멈추다",
+    "line": "2,52,stop,멈추다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "busy",
+    "meaning": "바쁜",
+    "line": "2,53,busy,바쁜,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "curriculum",
+    "meaning": "교과 과정",
+    "line": "2,54,curriculum,교과 과정,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "dress",
+    "meaning": "의복, 옷을 차려입다",
+    "line": "2,55,dress,\"의복, 옷을 차려입다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "enough",
+    "meaning": "충분한, 필요한 만큼의 수 〮 양",
+    "line": "2,56,enough,\"충분한, 필요한 만큼의 수 〮 양\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "finish",
+    "meaning": "끝내다, 완료하다",
+    "line": "2,57,finish,\"끝내다, 완료하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "have a problem(in) -ing",
+    "meaning": "-하는데 문제가 있다",
+    "line": "2,58,have a problem(in) -ing,-하는데 문제가 있다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "large",
+    "meaning": "큰, 넓은",
+    "line": "2,59,large,\"큰, 넓은\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "law firm",
+    "meaning": "법률 회사",
+    "line": "2,60,law firm,법률 회사,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "loudly",
+    "meaning": "시끄럽게",
+    "line": "2,61,loudly,시끄럽게,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "plus",
+    "meaning": "~을 더한, ~을 더하여",
+    "line": "2,62,plus,\"~을 더한, ~을 더하여\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "protect",
+    "meaning": "보호하다",
+    "line": "2,63,protect,보호하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "seldom",
+    "meaning": "드물게, 좀처럼~않는",
+    "line": "2,64,seldom,\"드물게, 좀처럼~않는\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "theft",
+    "meaning": "절도",
+    "line": "2,65,theft,절도,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "try",
+    "meaning": "시도하다, 노력하다",
+    "line": "2,66,try,\"시도하다, 노력하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "witness",
+    "meaning": "목격자, 증인",
+    "line": "2,67,witness,\"목격자, 증인\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "write",
+    "meaning": "글씨를 쓰다, 저술하다",
+    "line": "2,68,write,\"글씨를 쓰다, 저술하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "against the law",
+    "meaning": "법에 위반되는",
+    "line": "2,69,against the law,법에 위반되는,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "by all means",
+    "meaning": "반드시, 무슨 일이 있어도, 물론이지",
+    "line": "2,70,by all means,\"반드시, 무슨 일이 있어도, 물론이지\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "by mistake",
+    "meaning": "실수로",
+    "line": "2,71,by mistake,실수로,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "come to an end",
+    "meaning": "끝나다",
+    "line": "2,72,come to an end,끝나다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "company regulations",
+    "meaning": "회사 규정",
+    "line": "2,73,company regulations,회사 규정,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "give directions",
+    "meaning": "일을 지시하다, 방향을 알려주다",
+    "line": "2,74,give directions,\"일을 지시하다, 방향을 알려주다\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "hold up",
+    "meaning": "견디다, 떠받치다",
+    "line": "2,75,hold up,\"견디다, 떠받치다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "if I'm not mistaken",
+    "meaning": "제 기억이 옳다면",
+    "line": "2,76,if I'm not mistaken,제 기억이 옳다면,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in progress",
+    "meaning": "진행 중인",
+    "line": "2,77,in progress,진행 중인,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "keep in mind",
+    "meaning": "명심하다",
+    "line": "2,78,keep in mind,명심하다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "legal counsel",
+    "meaning": "법률 상담",
+    "line": "2,79,legal counsel,법률 상담,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "self-defense",
+    "meaning": "자기방어, 정당방위",
+    "line": "2,80,self-defense,\"자기방어, 정당방위\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "suspect",
+    "meaning": "용의자, 의심하다",
+    "line": "2,81,suspect,\"용의자, 의심하다\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "take one's advice",
+    "meaning": "~의 충고를 따르다",
+    "line": "2,82,take one's advice,~의 충고를 따르다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "to one's advantage",
+    "meaning": "~에게 유리하게",
+    "line": "2,83,to one's advantage,~에게 유리하게,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "under control",
+    "meaning": "관리하에 있는",
+    "line": "2,84,under control,관리하에 있는,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "under the supervision of",
+    "meaning": "~의 감독하에",
+    "line": "2,85,under the supervision of,~의 감독하에,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "abuse",
+    "meaning": "남용, 남용하다",
+    "line": "2,86,abuse,\"남용, 남용하다\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "alert",
+    "meaning": "경고하다, 주의하는",
+    "line": "2,87,alert,\"경고하다, 주의하는\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "assessment",
+    "meaning": "평가",
+    "line": "2,88,assessment,평가,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "at all times",
+    "meaning": "항상, 언제나",
+    "line": "2,89,at all times,\"항상, 언제나\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "authorization",
+    "meaning": "권한 부여, 위임",
+    "line": "2,90,authorization,\"권한 부여, 위임\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "concerning",
+    "meaning": "~에 관하여",
+    "line": "2,91,concerning,~에 관하여,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "consideration",
+    "meaning": "고려, 숙고",
+    "line": "2,92,consideration,\"고려, 숙고\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "defensive",
+    "meaning": "방어적인",
+    "line": "2,93,defensive,방어적인,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "depiction",
+    "meaning": "묘사, 서술",
+    "line": "2,94,depiction,\"묘사, 서술\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "disobedient",
+    "meaning": "반항하는, 거역하는",
+    "line": "2,95,disobedient,\"반항하는, 거역하는\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "endure",
+    "meaning": "견디다, 참다",
+    "line": "2,96,endure,\"견디다, 참다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "exemplary",
+    "meaning": "모범적인, 대표적인",
+    "line": "2,97,exemplary,\"모범적인, 대표적인\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "ignore",
+    "meaning": "무시하다",
+    "line": "2,98,ignore,무시하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "illegal",
+    "meaning": "불법의",
+    "line": "2,99,illegal,불법의,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "in accordance with",
+    "meaning": "~에 따라서, ~과 일치하여",
+    "line": "2,100,in accordance with,\"~에 따라서, ~과 일치하여\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "indecisive",
+    "meaning": "결말이 안 난, 우유부단한",
+    "line": "2,101,indecisive,\"결말이 안 난, 우유부단한\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "justly",
+    "meaning": "정당하게, 당연히",
+    "line": "2,102,justly,\"정당하게, 당연히\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "obey",
+    "meaning": "복종하다",
+    "line": "2,103,obey,복종하다,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "observance",
+    "meaning": "준수",
+    "line": "2,104,observance,준수,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "on-site",
+    "meaning": "현장의, 현지의, 현장에서, 현지에서",
+    "line": "2,105,on-site,\"현장의, 현지의, 현장에서, 현지에서\",800,3,Intermediate_800\r",
+    "themeRaw": "Production/Manufacturing"
+  },
+  {
+    "word": "penalty",
+    "meaning": "벌금",
+    "line": "2,106,penalty,벌금,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "pointed",
+    "meaning": "(말·표현 등이) 예리한, 날카로운, 적절한",
+    "line": "2,107,pointed,\"(말·표현 등이) 예리한, 날카로운, 적절한\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "precious",
+    "meaning": "귀중한",
+    "line": "2,108,precious,귀중한,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "principle",
+    "meaning": "원리,원칙",
+    "line": "2,109,principle,\"원리,원칙\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "punishment",
+    "meaning": "형벌, 처벌",
+    "line": "2,110,punishment,\"형벌, 처벌\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "regulate",
+    "meaning": "규제하다, 조절하다",
+    "line": "2,111,regulate,\"규제하다, 조절하다\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "restricted area",
+    "meaning": "제한 구역",
+    "line": "2,112,restricted area,제한 구역,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "restriction",
+    "meaning": "제한, 한정",
+    "line": "2,113,restriction,\"제한, 한정\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "safety inspection",
+    "meaning": "안전 점검",
+    "line": "2,114,safety inspection,안전 점검,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "suppress",
+    "meaning": "억누르다, 금지하다",
+    "line": "2,115,suppress,\"억누르다, 금지하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "tensely",
+    "meaning": "긴장하여, 딱딱하게",
+    "line": "2,116,tensely,\"긴장하여, 딱딱하게\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "unauthorized",
+    "meaning": "인가받지 않은",
+    "line": "2,117,unauthorized,인가받지 않은,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "with respect to",
+    "meaning": "~에 관해서",
+    "line": "2,118,with respect to,~에 관해서,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "accuse",
+    "meaning": "비난하다, 고소하다",
+    "line": "2,119,accuse,\"비난하다, 고소하다\",800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "assess",
+    "meaning": "평가하다",
+    "line": "2,120,assess,평가하다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "attorney",
+    "meaning": "변호사",
+    "line": "2,121,attorney,변호사,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "be absent from",
+    "meaning": "~에 결석하다",
+    "line": "2,122,be absent from,~에 결석하다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel/Welfare"
+  },
+  {
+    "word": "be allowed to do",
+    "meaning": "~하도록 허락받다",
+    "line": "2,123,be allowed to do,~하도록 허락받다,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "by way of",
+    "meaning": "~의 방법으로, ~에 의해서",
+    "line": "2,124,by way of,\"~의 방법으로, ~에 의해서\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "distrust",
+    "meaning": "의심하다, 불신",
+    "line": "2,125,distrust,\"의심하다, 불신\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "from this day onward",
+    "meaning": "오늘부터",
+    "line": "2,126,from this day onward,오늘부터,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "have permission to do",
+    "meaning": "~할 허가를 받다",
+    "line": "2,127,have permission to do,~할 허가를 받다,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "in a strict way(=strictly)",
+    "meaning": "엄격하게",
+    "line": "2,128,in a strict way(=strictly),엄격하게,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "make clear",
+    "meaning": "분명히 하다",
+    "line": "2,129,make clear,분명히 하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "ministry",
+    "meaning": "(정부의)부서",
+    "line": "2,130,ministry,(정부의)부서,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "newly established",
+    "meaning": "신설된",
+    "line": "2,131,newly established,신설된,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "put into effect",
+    "meaning": "~을 시행하다",
+    "line": "2,132,put into effect,~을 시행하다,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "registration confirmation",
+    "meaning": "등록 확인",
+    "line": "2,133,registration confirmation,등록 확인,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "stand over",
+    "meaning": "옆에서 지켜보다",
+    "line": "2,134,stand over,옆에서 지켜보다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "warn",
+    "meaning": "경고하다",
+    "line": "2,135,warn,경고하다,800,3,Intermediate_800\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "without respect to",
+    "meaning": "~을 고려하지 않고, ~을 무시하고",
+    "line": "2,136,without respect to,\"~을 고려하지 않고, ~을 무시하고\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "commonplace",
+    "meaning": "평범한 일, 흔한 일, 평범한, 흔한",
+    "line": "2,137,commonplace,\"평범한 일, 흔한 일, 평범한, 흔한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "protective smock",
+    "meaning": "보호 작업복",
+    "line": "2,138,protective smock,보호 작업복,900,4,Advanced_900\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "testimony",
+    "meaning": "증언",
+    "line": "2,139,testimony,증언,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "accordance",
+    "meaning": "일치, 조화",
+    "line": "2,140,accordance,\"일치, 조화\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "crucial",
+    "meaning": "중요한",
+    "line": "2,141,crucial,중요한,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "deviation",
+    "meaning": "일탈, 탈선",
+    "line": "2,142,deviation,\"일탈, 탈선\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "effortlessly",
+    "meaning": "힘들지 않게",
+    "line": "2,143,effortlessly,힘들지 않게,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in observance of",
+    "meaning": "~을 기념하여",
+    "line": "2,144,in observance of,~을 기념하여,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "inadvertently",
+    "meaning": "무심코, 우연히",
+    "line": "2,145,inadvertently,\"무심코, 우연히\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "judicial",
+    "meaning": "사법의, 재판의",
+    "line": "2,146,judicial,\"사법의, 재판의\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "justification",
+    "meaning": "정당한 이유",
+    "line": "2,147,justification,정당한 이유,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "keenly",
+    "meaning": "날카롭게, 예민하게",
+    "line": "2,148,keenly,\"날카롭게, 예민하게\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "lawsuit",
+    "meaning": "소송, 고소",
+    "line": "2,149,lawsuit,\"소송, 고소\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "mundane",
+    "meaning": "일상적인, 재미없는",
+    "line": "2,150,mundane,\"일상적인, 재미없는\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "off-limits",
+    "meaning": "출입금지의",
+    "line": "2,151,off-limits,출입금지의,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "ordinance",
+    "meaning": "법령, 명령",
+    "line": "2,152,ordinance,\"법령, 명령\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "pulled",
+    "meaning": "철회된, 철수한",
+    "line": "2,153,pulled,\"철회된, 철수한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "reprimand",
+    "meaning": "비난하다, 질책하다",
+    "line": "2,154,reprimand,\"비난하다, 질책하다\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "resolution",
+    "meaning": "결의(안), 결정, 해상도",
+    "line": "2,155,resolution,\"결의(안), 결정, 해상도\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "stiff",
+    "meaning": "뻣뻣한, 경직된",
+    "line": "2,156,stiff,\"뻣뻣한, 경직된\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "substantiate",
+    "meaning": "입증하다",
+    "line": "2,157,substantiate,입증하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "trespass",
+    "meaning": "(남의 토지에) 침입하다",
+    "line": "2,158,trespass,(남의 토지에) 침입하다,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "violate",
+    "meaning": "위반하다",
+    "line": "2,159,violate,위반하다,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "at the discretion of",
+    "meaning": "~의 재량으로",
+    "line": "2,160,at the discretion of,~의 재량으로,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "bound",
+    "meaning": "의무가 있는, 꼭~하게 되어 있는",
+    "line": "2,161,bound,\"의무가 있는, 꼭~하게 되어 있는\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "circumscribe",
+    "meaning": "~을 제한하다",
+    "line": "2,162,circumscribe,~을 제한하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "enactment",
+    "meaning": "입법, 법령",
+    "line": "2,163,enactment,\"입법, 법령\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "impeccable",
+    "meaning": "결점 없는",
+    "line": "2,164,impeccable,결점 없는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "infringement",
+    "meaning": "침해",
+    "line": "2,165,infringement,침해,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "legitimate",
+    "meaning": "합법적인, 적법한",
+    "line": "2,166,legitimate,\"합법적인, 적법한\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "petition",
+    "meaning": "진정서, 탄원서",
+    "line": "2,167,petition,\"진정서, 탄원서\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "when it comes to",
+    "meaning": "~에 관해서는",
+    "line": "2,168,when it comes to,~에 관해서는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "accustomed",
+    "meaning": "익숙한",
+    "line": "3,1,accustomed,익숙한,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "corporation",
+    "meaning": "주식회사, 법인",
+    "line": "3,2,corporation,\"주식회사, 법인\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "demanding",
+    "meaning": "요구가 많은, 힘든",
+    "line": "3,3,demanding,\"요구가 많은, 힘든\",650,1,Headword_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "colleague",
+    "meaning": "(직업상의) 동료",
+    "line": "3,4,colleague,(직업상의) 동료,650,1,Headword_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "division",
+    "meaning": "부서",
+    "line": "3,5,division,부서,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "directly",
+    "meaning": "곧바로",
+    "line": "3,10,directly,곧바로,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "instruct",
+    "meaning": "지시하다, 가르치다",
+    "line": "3,12,instruct,\"지시하다, 가르치다\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "monitor",
+    "meaning": "화면, 모니터, 감독하다, 감시하다, 검토하다",
+    "line": "3,17,monitor,\"화면, 모니터, 감독하다, 감시하다, 검토하다\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "assignment",
+    "meaning": "일, 임무, 과제",
+    "line": "3,19,assignment,\"일, 임무, 과제\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "extension",
+    "meaning": "연장, 연기, (전화의) 내선",
+    "line": "3,22,extension,\"연장, 연기, (전화의) 내선\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "electronically",
+    "meaning": "컴퓨터 통신망으로, 컴퓨터로",
+    "line": "3,23,electronically,\"컴퓨터 통신망으로, 컴퓨터로\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "attendance",
+    "meaning": "출근, 출석",
+    "line": "3,24,attendance,\"출근, 출석\",650,1,Headword_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "delegate",
+    "meaning": "(권한 등을) 위임하다, 대표",
+    "line": "3,26,delegate,\"(권한 등을) 위임하다, 대표\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "attentively",
+    "meaning": "주의 깊게, 조심스럽게",
+    "line": "3,27,attentively,\"주의 깊게, 조심스럽게\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "supervision",
+    "meaning": "감독",
+    "line": "3,28,supervision,감독,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "revision",
+    "meaning": "수정, 개정",
+    "line": "3,31,revision,\"수정, 개정\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "acquaint",
+    "meaning": "~에게 숙지시키다, 잘 알게 하다",
+    "line": "3,33,acquaint,\"~에게 숙지시키다, 잘 알게 하다\",650,1,Headword_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "oversee",
+    "meaning": "감독하다",
+    "line": "3,38,oversee,감독하다,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "involved",
+    "meaning": "관여하는, 관계된, 연루된",
+    "line": "3,39,involved,\"관여하는, 관계된, 연루된\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "concentrate",
+    "meaning": "집중하다, 집중시키다",
+    "line": "3,40,concentrate,\"집중하다, 집중시키다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "a sheet of",
+    "meaning": "~한 장",
+    "line": "3,41,a sheet of,~한 장,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "business card",
+    "meaning": "명함",
+    "line": "3,42,business card,명함,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "cartridge",
+    "meaning": "(프린트 등의) 잉크 카트리지",
+    "line": "3,43,cartridge,(프린트 등의) 잉크 카트리지,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "daily",
+    "meaning": "매일의, 날마다, 매일",
+    "line": "3,44,daily,\"매일의, 날마다, 매일\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "edit",
+    "meaning": "편집하다, 수정하다",
+    "line": "3,45,edit,\"편집하다, 수정하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "hand",
+    "meaning": "손, 건네주다",
+    "line": "3,46,hand,\"손, 건네주다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in order to do",
+    "meaning": "~하기 위해서",
+    "line": "3,47,in order to do,~하기 위해서,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "laptop",
+    "meaning": "휴대용 컴퓨터",
+    "line": "3,48,laptop,휴대용 컴퓨터,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "name tag",
+    "meaning": "명찰, 명패",
+    "line": "3,49,name tag,\"명찰, 명패\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on vacation",
+    "meaning": "휴가 중인",
+    "line": "3,50,on vacation,휴가 중인,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "paper jam",
+    "meaning": "(복사기에서의) 종이 걸림",
+    "line": "3,51,paper jam,(복사기에서의) 종이 걸림,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "paperwork",
+    "meaning": "문서 작업",
+    "line": "3,52,paperwork,문서 작업,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "partition",
+    "meaning": "칸막이, 분할",
+    "line": "3,53,partition,\"칸막이, 분할\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "rush hour",
+    "meaning": "(출퇴근 시의)교통 혼잡 시간",
+    "line": "3,54,rush hour,(출퇴근 시의)교통 혼잡 시간,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "section",
+    "meaning": "부분, 구역",
+    "line": "3,55,section,\"부분, 구역\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "sheet",
+    "meaning": "시트, 종이",
+    "line": "3,56,sheet,\"시트, 종이\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "tabletop",
+    "meaning": "테이블 윗면",
+    "line": "3,57,tabletop,테이블 윗면,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "telephone call",
+    "meaning": "전화 통화",
+    "line": "3,58,telephone call,전화 통화,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "trash bin",
+    "meaning": "쓰레기통",
+    "line": "3,59,trash bin,쓰레기통,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "upstairs",
+    "meaning": "위층의, 위층으로, 위층에",
+    "line": "3,60,upstairs,\"위층의, 위층으로, 위층에\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "as if",
+    "meaning": "마치 ~인 듯이",
+    "line": "3,61,as if,마치 ~인 듯이,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "as well as",
+    "meaning": "~에 더하여, 게다가",
+    "line": "3,62,as well as,\"~에 더하여, 게다가\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be aware of",
+    "meaning": "~을 알고 있다",
+    "line": "3,63,be aware of,~을 알고 있다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be known as",
+    "meaning": "~으로 알려져 있다",
+    "line": "3,64,be known as,~으로 알려져 있다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be likely to",
+    "meaning": "~할 가능성이 있다",
+    "line": "3,65,be likely to,~할 가능성이 있다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "detail",
+    "meaning": "세부 사항",
+    "line": "3,66,detail,세부 사항,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "offering",
+    "meaning": "제공된 것",
+    "line": "3,67,offering,제공된 것,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on one's own",
+    "meaning": "혼자서, 혼자 힘으로",
+    "line": "3,68,on one's own,\"혼자서, 혼자 힘으로\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "adjust the mirror",
+    "meaning": "거울을 똑바로 맞추다",
+    "line": "3,69,adjust the mirror,거울을 똑바로 맞추다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "advance reservation",
+    "meaning": "사전 예약",
+    "line": "3,70,advance reservation,사전 예약,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "arrange an appointment",
+    "meaning": "약속을 잡다",
+    "line": "3,71,arrange an appointment,약속을 잡다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "bulletin board",
+    "meaning": "게시판",
+    "line": "3,72,bulletin board,게시판,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "call back",
+    "meaning": "회신 전화하다",
+    "line": "3,73,call back,회신 전화하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "confused",
+    "meaning": "혼란스러운, 당황한",
+    "line": "3,74,confused,\"혼란스러운, 당황한\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "errand",
+    "meaning": "심부름",
+    "line": "3,75,errand,심부름,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "extend an invitation",
+    "meaning": "초대하다",
+    "line": "3,76,extend an invitation,초대하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "get a permit",
+    "meaning": "허가를 받다",
+    "line": "3,77,get a permit,허가를 받다,800,3,Intermediate_800\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "hand in",
+    "meaning": "제출하다",
+    "line": "3,78,hand in,제출하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "have a day off",
+    "meaning": "하루 쉬다",
+    "line": "3,79,have a day off,하루 쉬다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "have a long day",
+    "meaning": "힘든 하루를 보내다",
+    "line": "3,80,have a long day,힘든 하루를 보내다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "head up",
+    "meaning": "이끌다, 책임지다",
+    "line": "3,81,head up,\"이끌다, 책임지다\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "in a hurry",
+    "meaning": "서둘러, 급히",
+    "line": "3,82,in a hurry,\"서둘러, 급히\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in alphabetical order",
+    "meaning": "알파벳 순으로",
+    "line": "3,83,in alphabetical order,알파벳 순으로,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in luck",
+    "meaning": "운이 좋은",
+    "line": "3,84,in luck,운이 좋은,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "leave A up to B",
+    "meaning": "A를 B에게 맡기다",
+    "line": "3,85,leave A up to B,A를 B에게 맡기다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "leave A with B",
+    "meaning": "A를 B에게 맡기다",
+    "line": "3,86,leave A with B,A를 B에게 맡기다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "listing",
+    "meaning": "목록",
+    "line": "3,87,listing,목록,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a call",
+    "meaning": "전화를 걸다",
+    "line": "3,88,make a call,전화를 걸다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a correction",
+    "meaning": "정정하다, 수정하다",
+    "line": "3,89,make a correction,\"정정하다, 수정하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a final change",
+    "meaning": "최종 수정을 하다",
+    "line": "3,90,make a final change,최종 수정을 하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a note of",
+    "meaning": "~을 적어두다",
+    "line": "3,91,make a note of,~을 적어두다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make an impression",
+    "meaning": "인상을 주다, 감동시키다",
+    "line": "3,92,make an impression,\"인상을 주다, 감동시키다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "move ahead with",
+    "meaning": "~을 순조롭게 진행시키다",
+    "line": "3,93,move ahead with,~을 순조롭게 진행시키다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "on a business trip",
+    "meaning": "출장 중인",
+    "line": "3,94,on a business trip,출장 중인,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "on a weekly basis",
+    "meaning": "주 단위로",
+    "line": "3,95,on a weekly basis,주 단위로,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on business",
+    "meaning": "업무자",
+    "line": "3,96,on business,업무자,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "on duty",
+    "meaning": "근무 중인",
+    "line": "3,97,on duty,근무 중인,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "pick up the phone",
+    "meaning": "전화를 받다",
+    "line": "3,98,pick up the phone,전화를 받다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "scrub",
+    "meaning": "문질러 씻다",
+    "line": "3,99,scrub,문질러 씻다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "seal",
+    "meaning": "인장, 봉합, 밀봉하다",
+    "line": "3,100,seal,\"인장, 봉합, 밀봉하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "speak into the microphone",
+    "meaning": "마이크에 대고 말하다",
+    "line": "3,101,speak into the microphone,마이크에 대고 말하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "speak on the phone",
+    "meaning": "통화하다",
+    "line": "3,102,speak on the phone,통화하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "stand in a line",
+    "meaning": "줄을 서 있다",
+    "line": "3,103,stand in a line,줄을 서 있다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take a message",
+    "meaning": "메시지를 남겨주다",
+    "line": "3,104,take a message,메시지를 남겨주다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take apart",
+    "meaning": "분해하다, 해체하다",
+    "line": "3,105,take apart,\"분해하다, 해체하다\",800,3,Intermediate_800\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "utility provider",
+    "meaning": "공공 설비 공급자",
+    "line": "3,106,utility provider,공공 설비 공급자,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "acquired",
+    "meaning": "획득한",
+    "line": "3,107,acquired,획득한,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "adapt",
+    "meaning": "적응하다",
+    "line": "3,108,adapt,적응하다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "administer",
+    "meaning": "관리하다",
+    "line": "3,109,administer,관리하다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "clerical",
+    "meaning": "사무원의, 서기의",
+    "line": "3,110,clerical,\"사무원의, 서기의\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "conclusive",
+    "meaning": "결정적인, 단호한",
+    "line": "3,111,conclusive,\"결정적인, 단호한\",800,3,Intermediate_800\r",
+    "themeRaw": "Research"
+  },
+  {
+    "word": "delete",
+    "meaning": "삭제하다",
+    "line": "3,112,delete,삭제하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "editorial",
+    "meaning": "편집자의, 사설의",
+    "line": "3,113,editorial,\"편집자의, 사설의\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "endless",
+    "meaning": "끝이 없는, 영원히 계속하는",
+    "line": "3,114,endless,\"끝이 없는, 영원히 계속하는\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "furthermore",
+    "meaning": "더욱이, 게다가",
+    "line": "3,115,furthermore,\"더욱이, 게다가\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in one's absence",
+    "meaning": "~의 부재시에",
+    "line": "3,116,in one's absence,~의 부재시에,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "on purpose",
+    "meaning": "고의로, 일부러",
+    "line": "3,117,on purpose,\"고의로, 일부러\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "overseas",
+    "meaning": "해외의, 해외로",
+    "line": "3,118,overseas,\"해외의, 해외로\",800,3,Intermediate_800\r",
+    "themeRaw": "Logistics"
+  },
+  {
+    "word": "perceive",
+    "meaning": "지각하다, 인지하다",
+    "line": "3,119,perceive,\"지각하다, 인지하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "reminder",
+    "meaning": "생각나게 하는 것",
+    "line": "3,120,reminder,생각나게 하는 것,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "roughly",
+    "meaning": "대략, 거의",
+    "line": "3,121,roughly,\"대략, 거의\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "strive",
+    "meaning": "분투하다",
+    "line": "3,122,strive,분투하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "translate",
+    "meaning": "번역하다, 통역하다",
+    "line": "3,123,translate,\"번역하다, 통역하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "boardroom",
+    "meaning": "회의실",
+    "line": "3,124,boardroom,회의실,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "in person",
+    "meaning": "몸소, 직접",
+    "line": "3,125,in person,\"몸소, 직접\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "including",
+    "meaning": "~을 포함하여",
+    "line": "3,126,including,~을 포함하여,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on time",
+    "meaning": "정각에",
+    "line": "3,127,on time,정각에,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "panic",
+    "meaning": "당황, 공황",
+    "line": "3,128,panic,\"당황, 공황\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "past due",
+    "meaning": "연체된, 미납된",
+    "line": "3,129,past due,\"연체된, 미납된\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "put forward",
+    "meaning": "앞당기다",
+    "line": "3,130,put forward,앞당기다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "regard A as B",
+    "meaning": "A를 B로 여기다",
+    "line": "3,131,regard A as B,A를 B로 여기다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "return one's call",
+    "meaning": "~에게 답신 전화를 하다",
+    "line": "3,132,return one's call,~에게 답신 전화를 하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "secretarial",
+    "meaning": "비서의",
+    "line": "3,133,secretarial,비서의,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take charge of",
+    "meaning": "~을 담당하다",
+    "line": "3,134,take charge of,~을 담당하다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "take on responsibility",
+    "meaning": "책임을 지다",
+    "line": "3,135,take on responsibility,책임을 지다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "throw one's effort into",
+    "meaning": "~에 온 힘을 쏟다",
+    "line": "3,136,throw one's effort into,~에 온 힘을 쏟다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "arrange item on the self",
+    "meaning": "선반에 상품을 배열하다",
+    "line": "3,137,arrange item on the self,선반에 상품을 배열하다,900,4,Advanced_900\r",
+    "themeRaw": "Logistics"
+  },
+  {
+    "word": "call in sick",
+    "meaning": "전화로 병결을 알리다",
+    "line": "3,138,call in sick,전화로 병결을 알리다,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "cover one's shift",
+    "meaning": "~대신 근무하다",
+    "line": "3,139,cover one's shift,~대신 근무하다,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "day-to-day operation",
+    "meaning": "일상업무",
+    "line": "3,140,day-to-day operation,일상업무,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "in line with",
+    "meaning": "~과 일치하여, ~에 따라",
+    "line": "3,141,in line with,\"~과 일치하여, ~에 따라\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "officiate",
+    "meaning": "식을 진행하다",
+    "line": "3,142,officiate,식을 진행하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "on hold",
+    "meaning": "보류중인, 통화대기중인",
+    "line": "3,143,on hold,\"보류중인, 통화대기중인\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "set down to work",
+    "meaning": "일에 착수하다",
+    "line": "3,144,set down to work,일에 착수하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "stay awake",
+    "meaning": "깨어 있다",
+    "line": "3,145,stay awake,깨어 있다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "strew",
+    "meaning": "흩뿌리다",
+    "line": "3,146,strew,흩뿌리다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take the place of",
+    "meaning": "~을 대신하다",
+    "line": "3,147,take the place of,~을 대신하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take turns",
+    "meaning": "교대로 하다",
+    "line": "3,148,take turns,교대로 하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "behind schedule",
+    "meaning": "일정이 늦은",
+    "line": "3,149,behind schedule,일정이 늦은,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "condense",
+    "meaning": "(표현을) 간추리다, 요약하다",
+    "line": "3,150,condense,\"(표현을) 간추리다, 요약하다\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "follow up on",
+    "meaning": "~에 대해 후속조치를 하다",
+    "line": "3,151,follow up on,~에 대해 후속조치를 하다,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "in writing",
+    "meaning": "서면으로",
+    "line": "3,152,in writing,서면으로,900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "popularize",
+    "meaning": "대중화하다",
+    "line": "3,153,popularize,대중화하다,900,4,Advanced_900\r",
+    "themeRaw": "Research"
+  },
+  {
+    "word": "productively",
+    "meaning": "생산적으로",
+    "line": "3,154,productively,생산적으로,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "sincerity",
+    "meaning": "성실, 정직",
+    "line": "3,155,sincerity,\"성실, 정직\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "utilization",
+    "meaning": "이용, 활용",
+    "line": "3,156,utilization,\"이용, 활용\",900,4,Advanced_900\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "administrative",
+    "meaning": "관리의, 행정상의",
+    "line": "3,157,administrative,\"관리의, 행정상의\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "be affiliated with",
+    "meaning": "~과 제휴하고 있다",
+    "line": "3,158,be affiliated with,~과 제휴하고 있다,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "conglomerate",
+    "meaning": "거대복합기업",
+    "line": "3,159,conglomerate,거대복합기업,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "default",
+    "meaning": "태만, 불이행",
+    "line": "3,160,default,\"태만, 불이행\",900,4,Advanced_900\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "impending",
+    "meaning": "임박한, 절박한",
+    "line": "3,161,impending,\"임박한, 절박한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "proponent",
+    "meaning": "지지자, 옹호자",
+    "line": "3,162,proponent,\"지지자, 옹호자\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "proprietor",
+    "meaning": "(상점·토지 등의) 소유자",
+    "line": "3,163,proprietor,(상점·토지 등의) 소유자,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "site inspection",
+    "meaning": "현지 시찰",
+    "line": "3,164,site inspection,현지 시찰,900,4,Advanced_900\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "subordinate",
+    "meaning": "부하직원, 하급자",
+    "line": "3,165,subordinate,\"부하직원, 하급자\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "subsidiary",
+    "meaning": "자회사",
+    "line": "3,166,subsidiary,자회사,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "take initiative",
+    "meaning": "솔선해서 하다, 주도권을 잡다",
+    "line": "3,167,take initiative,\"솔선해서 하다, 주도권을 잡다\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "telecommute",
+    "meaning": "재택근무하다",
+    "line": "3,168,telecommute,재택근무하다,900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "lax",
+    "meaning": "(행동 등이)느슨한, 규율에 못 미치는",
+    "line": "4,1,lax,\"(행동 등이)느슨한, 규율에 못 미치는\",650,1,Headword_650\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "procrastinate",
+    "meaning": "미루다, 꾸물거리다",
+    "line": "4,2,procrastinate,\"미루다, 꾸물거리다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "combined",
+    "meaning": "결합된, 합동의",
+    "line": "4,3,combined,\"결합된, 합동의\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "accomplish",
+    "meaning": "성취하다",
+    "line": "4,4,accomplish,성취하다,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "undertake",
+    "meaning": "(일을) 떠맡다",
+    "line": "4,6,undertake,(일을) 떠맡다,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "assume",
+    "meaning": "(증거는 없으나)사실이라고 생각하다,",
+    "line": "4,7,assume,\"(증거는 없으나)사실이라고 생각하다,",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "assist",
+    "meaning": "돕다, 조력하다",
+    "line": "4,10,assist,\"돕다, 조력하다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "satisfied",
+    "meaning": "만족하는, 만족스러워하는",
+    "line": "4,11,satisfied,\"만족하는, 만족스러워하는\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "adjust",
+    "meaning": "적응하다",
+    "line": "4,15,adjust,적응하다,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "supervise",
+    "meaning": "감독하다, 지도하다",
+    "line": "4,18,supervise,\"감독하다, 지도하다\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "assign",
+    "meaning": "배정하다, 할당하다",
+    "line": "4,22,assign,\"배정하다, 할당하다\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "leading",
+    "meaning": "지도, 통솔, 선도적인, 일류의, 가장 중요한, 선두적인",
+    "line": "4,23,leading,\"지도, 통솔, 선도적인, 일류의, 가장 중요한, 선두적인\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "formal",
+    "meaning": "격식을 갖춘",
+    "line": "4,24,formal,격식을 갖춘,650,1,Headword_650\r",
+    "themeRaw": "Law"
+  },
+  {
+    "word": "remove",
+    "meaning": "해임하다, 제거하다",
+    "line": "4,25,remove,\"해임하다, 제거하다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "collect",
+    "meaning": "모으다, 수집하다",
+    "line": "4,26,collect,\"모으다, 수집하다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "coordinate",
+    "meaning": "조정하다",
+    "line": "4,27,coordinate,조정하다,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "directory",
+    "meaning": "주소록",
+    "line": "4,30,directory,주소록,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "accountable",
+    "meaning": "책임이 있는",
+    "line": "4,31,accountable,책임이 있는,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "skillfully",
+    "meaning": "능숙하게, 솜씨있게",
+    "line": "4,32,skillfully,\"능숙하게, 솜씨있게\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "intention",
+    "meaning": "의지, 의향",
+    "line": "4,34,intention,\"의지, 의향\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "respectful",
+    "meaning": "정중한, 존중하는",
+    "line": "4,36,respectful,\"정중한, 존중하는\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "duplicate",
+    "meaning": "사본",
+    "line": "4,37,duplicate,사본,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "disturbing",
+    "meaning": "충격적인, 불안감을 주는, 방해하는",
+    "line": "4,39,disturbing,\"충격적인, 불안감을 주는, 방해하는\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "engage",
+    "meaning": "관여하다, 종사하다",
+    "line": "4,40,engage,\"관여하다, 종사하다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "foster",
+    "meaning": "촉진하다, 육성하다",
+    "line": "4,41,foster,\"촉진하다, 육성하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "neutrality",
+    "meaning": "중립성, 중립",
+    "line": "4,42,neutrality,\"중립성, 중립\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "widely",
+    "meaning": "널리",
+    "line": "4,43,widely,널리,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "externally",
+    "meaning": "외부에서, 외부적으로",
+    "line": "4,44,externally,\"외부에서, 외부적으로\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "bookcase",
+    "meaning": "책장, 책꽂이",
+    "line": "4,45,bookcase,\"책장, 책꽂이\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "bookshelf",
+    "meaning": "책꽂이",
+    "line": "4,46,bookshelf,책꽂이,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "case",
+    "meaning": "(특정한 상황의)경우",
+    "line": "4,47,case,(특정한 상황의)경우,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "central office",
+    "meaning": "중앙 사무실",
+    "line": "4,48,central office,중앙 사무실,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "copy machine",
+    "meaning": "복사기",
+    "line": "4,49,copy machine,복사기,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fax",
+    "meaning": "팩스",
+    "line": "4,50,fax,팩스,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "file folder",
+    "meaning": "서류철",
+    "line": "4,51,file folder,서류철,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "greet",
+    "meaning": "~에게 인사하다, ~를 환영하다",
+    "line": "4,52,greet,\"~에게 인사하다, ~를 환영하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "handwriting",
+    "meaning": "(개인의) 글씨, 필체",
+    "line": "4,53,handwriting,\"(개인의) 글씨, 필체\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "keypad",
+    "meaning": "(전화 〮계산기 등의) 소형 키보드",
+    "line": "4,54,keypad,(전화 〮계산기 등의) 소형 키보드,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "knife",
+    "meaning": "칼",
+    "line": "4,55,knife,칼,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "log on to",
+    "meaning": "~에 로그인하다",
+    "line": "4,56,log on to,~에 로그인하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "online",
+    "meaning": "인터넷에 접속된, 온라인으로",
+    "line": "4,57,online,\"인터넷에 접속된, 온라인으로\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "photocopier",
+    "meaning": "복사기",
+    "line": "4,58,photocopier,복사기,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "photocopy",
+    "meaning": "복사, 복사하다",
+    "line": "4,59,photocopy,\"복사, 복사하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "print out",
+    "meaning": "(프린터로)출력하다",
+    "line": "4,60,print out,(프린터로)출력하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "right away",
+    "meaning": "즉시, 당장",
+    "line": "4,61,right away,\"즉시, 당장\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "spell",
+    "meaning": "철자를 쓰다, 철자를 말하다",
+    "line": "4,62,spell,\"철자를 쓰다, 철자를 말하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "wrap",
+    "meaning": "싸다, 감싸다",
+    "line": "4,63,wrap,\"싸다, 감싸다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fold",
+    "meaning": "접다",
+    "line": "4,64,fold,접다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "least",
+    "meaning": "가장 작은, 가장 적은",
+    "line": "4,65,least,\"가장 작은, 가장 적은\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "paper",
+    "meaning": "서류",
+    "line": "4,66,paper,서류,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "planning",
+    "meaning": "계획, 입안",
+    "line": "4,67,planning,\"계획, 입안\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "post",
+    "meaning": "붙이다, 공고하다",
+    "line": "4,68,post,\"붙이다, 공고하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "press the button",
+    "meaning": "버튼을 누르다",
+    "line": "4,69,press the button,버튼을 누르다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "server",
+    "meaning": "서빙하는 사람, (컴퓨터의)서버",
+    "line": "4,70,server,\"서빙하는 사람, (컴퓨터의)서버\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "store opening",
+    "meaning": "개점, 개장",
+    "line": "4,71,store opening,\"개점, 개장\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "task",
+    "meaning": "일, 직무",
+    "line": "4,72,task,\"일, 직무\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be satisfied with",
+    "meaning": "~에 만족하다",
+    "line": "4,73,be satisfied with,~에 만족하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be seated",
+    "meaning": "앉다, 앉아 있다",
+    "line": "4,74,be seated,\"앉다, 앉아 있다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be surrounded by",
+    "meaning": "~에 둘러싸이다",
+    "line": "4,75,be surrounded by,~에 둘러싸이다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "business contacts",
+    "meaning": "사업상 아는 사람 또는 회사",
+    "line": "4,76,business contacts,사업상 아는 사람 또는 회사,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "chairperson",
+    "meaning": "의장",
+    "line": "4,77,chairperson,의장,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "copy editor",
+    "meaning": "원고 정리 편집자",
+    "line": "4,78,copy editor,원고 정리 편집자,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "deep end",
+    "meaning": "수심이 깊은 쪽",
+    "line": "4,79,deep end,수심이 깊은 쪽,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "double-sided",
+    "meaning": "양면의",
+    "line": "4,80,double-sided,양면의,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "drawer",
+    "meaning": "서랍",
+    "line": "4,81,drawer,서랍,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "get one's approval",
+    "meaning": "~의 승인을 받다",
+    "line": "4,82,get one's approval,~의 승인을 받다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "halfway",
+    "meaning": "중간에, 중간의",
+    "line": "4,83,halfway,\"중간에, 중간의\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "hand over",
+    "meaning": "~을 건네주다",
+    "line": "4,84,hand over,~을 건네주다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in a pile",
+    "meaning": "수북이 쌓인",
+    "line": "4,85,in a pile,수북이 쌓인,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "it could have been worse.",
+    "meaning": "이만하니 다행이다.",
+    "line": "4,86,it could have been worse.,이만하니 다행이다.,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "just in time",
+    "meaning": "겨우 시간에 맞춰",
+    "line": "4,87,just in time,겨우 시간에 맞춰,800,3,Intermediate_800\r",
+    "themeRaw": "Logistics"
+  },
+  {
+    "word": "literacy",
+    "meaning": "읽고 쓰는 능력",
+    "line": "4,88,literacy,읽고 쓰는 능력,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "litter",
+    "meaning": "쓰레기, 어지르다, 흐트러뜨리다",
+    "line": "4,89,litter,\"쓰레기, 어지르다, 흐트러뜨리다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make a selection",
+    "meaning": "선정하다",
+    "line": "4,90,make a selection,선정하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make room for",
+    "meaning": "~을 위해 공간을 마련하다",
+    "line": "4,91,make room for,~을 위해 공간을 마련하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "out of paper",
+    "meaning": "종이가 다 떨어진",
+    "line": "4,92,out of paper,종이가 다 떨어진,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "raise one's hand",
+    "meaning": "손을 들다",
+    "line": "4,93,raise one's hand,손을 들다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "report a problem",
+    "meaning": "문제점을 보고하다",
+    "line": "4,94,report a problem,문제점을 보고하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "sort",
+    "meaning": "종류, 분류하다",
+    "line": "4,95,sort,\"종류, 분류하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "stationery",
+    "meaning": "문구류",
+    "line": "4,96,stationery,문구류,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take another look",
+    "meaning": "다시 한번 보다",
+    "line": "4,97,take another look,다시 한번 보다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "take A out",
+    "meaning": "A를 꺼내다",
+    "line": "4,98,take A out,A를 꺼내다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "typewriter",
+    "meaning": "타자기",
+    "line": "4,99,typewriter,타자기,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "work in groups",
+    "meaning": "여러 명이 작업하다",
+    "line": "4,100,work in groups,여러 명이 작업하다,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "writing pad",
+    "meaning": "(한 장씩 떼어 쓰는 노트)",
+    "line": "4,101,writing pad,(한 장씩 떼어 쓰는 노트),800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "anticipation",
+    "meaning": "예상, 기대",
+    "line": "4,102,anticipation,\"예상, 기대\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "automobile",
+    "meaning": "자동차",
+    "line": "4,103,automobile,자동차,800,3,Intermediate_800\r",
+    "themeRaw": "Logistics"
+  },
+  {
+    "word": "be asked to do",
+    "meaning": "~하도록 요청받다",
+    "line": "4,104,be asked to do,~하도록 요청받다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be paid for",
+    "meaning": "~에 대해 보수를 받다",
+    "line": "4,105,be paid for,~에 대해 보수를 받다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "be qualified for",
+    "meaning": "~을 위한 자격을 갖추다",
+    "line": "4,106,be qualified for,~을 위한 자격을 갖추다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "casual",
+    "meaning": "격식을 차리지 않는, 평상복의",
+    "line": "4,107,casual,\"격식을 차리지 않는, 평상복의\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "draft",
+    "meaning": "초안을 작성하다, 초안",
+    "line": "4,108,draft,\"초안을 작성하다, 초안\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "draw on",
+    "meaning": "~을 이용하다, ~에 의지하다",
+    "line": "4,109,draw on,\"~을 이용하다, ~에 의지하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "excuse",
+    "meaning": "변명, 이유, 용서하다",
+    "line": "4,110,excuse,\"변명, 이유, 용서하다\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "head office",
+    "meaning": "(회사의) 본사",
+    "line": "4,111,head office,(회사의) 본사,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "in anticipation of",
+    "meaning": "~을 예상하고",
+    "line": "4,112,in anticipation of,~을 예상하고,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "in light of",
+    "meaning": "~을 고려하여,~에 비추어",
+    "line": "4,113,in light of,\"~을 고려하여,~에 비추어\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "instrument",
+    "meaning": "도구, 기계, 악기",
+    "line": "4,114,instrument,\"도구, 기계, 악기\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "popularly",
+    "meaning": "일반적으로",
+    "line": "4,115,popularly,일반적으로,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "regarding",
+    "meaning": "~에 관하여",
+    "line": "4,116,regarding,~에 관하여,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "routinely",
+    "meaning": "일상적으로, 정기적으로",
+    "line": "4,117,routinely,\"일상적으로, 정기적으로\",800,3,Intermediate_800\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "standing",
+    "meaning": "고정적인, 상설의",
+    "line": "4,118,standing,\"고정적인, 상설의\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "supplementary",
+    "meaning": "보충의, 추가의",
+    "line": "4,119,supplementary,\"보충의, 추가의\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "work overtime",
+    "meaning": "초과 근무를 하다",
+    "line": "4,120,work overtime,초과 근무를 하다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "workplace",
+    "meaning": "작업장",
+    "line": "4,121,workplace,작업장,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "acting",
+    "meaning": "대리의, 직무대행의, 연기",
+    "line": "4,122,acting,\"대리의, 직무대행의, 연기\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "be full of",
+    "meaning": "~으로 가득하다",
+    "line": "4,123,be full of,~으로 가득하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "convert A to B",
+    "meaning": "A를 B로 바꾸다",
+    "line": "4,124,convert A to B,A를 B로 바꾸다,800,3,Intermediate_800\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "count on",
+    "meaning": "~을 믿다, ~에 의지하다",
+    "line": "4,125,count on,\"~을 믿다, ~에 의지하다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fill with",
+    "meaning": "~으로 가득차다",
+    "line": "4,126,fill with,~으로 가득차다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "get along with",
+    "meaning": "~와 사이좋게 지내다",
+    "line": "4,127,get along with,~와 사이좋게 지내다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "go down the steps",
+    "meaning": "계단을 내려가다",
+    "line": "4,128,go down the steps,계단을 내려가다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "key to success",
+    "meaning": "성공의 길",
+    "line": "4,129,key to success,성공의 길,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "lose one's temper",
+    "meaning": "화를 내다",
+    "line": "4,130,lose one's temper,화를 내다,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "make a copy",
+    "meaning": "복사하다",
+    "line": "4,131,make a copy,복사하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "obsess about",
+    "meaning": "~에 대해 강박 관념을 갖다",
+    "line": "4,132,obsess about,~에 대해 강박 관념을 갖다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "overtime hours",
+    "meaning": "초과 근무 시간",
+    "line": "4,133,overtime hours,초과 근무 시간,800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "personal effects",
+    "meaning": "개인 소지품, 개인 소유물",
+    "line": "4,134,personal effects,\"개인 소지품, 개인 소유물\",800,3,Intermediate_800\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "reunion",
+    "meaning": "친목회",
+    "line": "4,135,reunion,친목회,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "sales representative",
+    "meaning": "영업 담당자, 판매 직원",
+    "line": "4,136,sales representative,\"영업 담당자, 판매 직원\",800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "seamless(=without trouble)",
+    "meaning": "(끊어짐이 없이) 매끄러운, 문제 없는",
+    "line": "4,137,seamless(=without trouble),\"(끊어짐이 없이) 매끄러운, 문제 없는\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "submit A to B",
+    "meaning": "A를 B에게 제출하다",
+    "line": "4,138,submit A to B,A를 B에게 제출하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "succeed in -ing",
+    "meaning": "~에 성공하다",
+    "line": "4,139,succeed in -ing,~에 성공하다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "time-consuming",
+    "meaning": "시간이 많이 걸리는",
+    "line": "4,140,time-consuming,시간이 많이 걸리는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "bookkeeping",
+    "meaning": "부기",
+    "line": "4,141,bookkeeping,부기,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "have one's hands full",
+    "meaning": "몹시 바쁘다",
+    "line": "4,142,have one's hands full,몹시 바쁘다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "make on outside call",
+    "meaning": "외부로 전화를 걸다",
+    "line": "4,143,make on outside call,외부로 전화를 걸다,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "motivation",
+    "meaning": "이유, 동기",
+    "line": "4,144,motivation,\"이유, 동기\",900,4,Advanced_900\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "newly listed",
+    "meaning": "새로 목록에 오른",
+    "line": "4,145,newly listed,새로 목록에 오른,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "prioritize",
+    "meaning": "우선적으로 처리하다",
+    "line": "4,146,prioritize,우선적으로 처리하다,900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "sit in alternate seats",
+    "meaning": "한자리 씩 건너 앉다",
+    "line": "4,147,sit in alternate seats,한자리 씩 건너 앉다,900,4,Advanced_900\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "written authorization",
+    "meaning": "서면 결재",
+    "line": "4,148,written authorization,서면 결재,900,4,Advanced_900\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "written consent",
+    "meaning": "서면 동의",
+    "line": "4,149,written consent,서면 동의,900,4,Advanced_900\r",
+    "themeRaw": "Law/Regulation"
+  },
+  {
+    "word": "acquaintance",
+    "meaning": "아는 사람, 아는 사이",
+    "line": "4,150,acquaintance,\"아는 사람, 아는 사이\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "dimension",
+    "meaning": "규모, 크기, 차원, 관점",
+    "line": "4,151,dimension,\"규모, 크기, 차원, 관점\",900,4,Advanced_900\r",
+    "themeRaw": "Production"
+  },
+  {
+    "word": "directive",
+    "meaning": "지시하는, 지배적인",
+    "line": "4,152,directive,\"지시하는, 지배적인\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "discerning",
+    "meaning": "통찰력이 있는",
+    "line": "4,153,discerning,통찰력이 있는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "elegantly",
+    "meaning": "우아하게, 고상하게",
+    "line": "4,154,elegantly,\"우아하게, 고상하게\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "expectant",
+    "meaning": "기대하고 있는",
+    "line": "4,155,expectant,기대하고 있는,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "invaluable",
+    "meaning": "매우 유용한, 귀중한",
+    "line": "4,156,invaluable,\"매우 유용한, 귀중한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "propel",
+    "meaning": "나아가게 하다, 몰아가다",
+    "line": "4,157,propel,\"나아가게 하다, 몰아가다\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "realization",
+    "meaning": "깨달음, 자각, 인식",
+    "line": "4,158,realization,\"깨달음, 자각, 인식\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "recline",
+    "meaning": "기대다, 눕다, (의자가)젖혀지다",
+    "line": "4,159,recline,\"기대다, 눕다, (의자가)젖혀지다\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "repository",
+    "meaning": "저장소",
+    "line": "4,160,repository,저장소,900,4,Advanced_900\r",
+    "themeRaw": "Logistics"
+  },
+  {
+    "word": "respective",
+    "meaning": "각각의, 저마다의",
+    "line": "4,161,respective,\"각각의, 저마다의\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "spontaneously",
+    "meaning": "자발적으로, 자연 발생적으로",
+    "line": "4,162,spontaneously,\"자발적으로, 자연 발생적으로\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "trivial",
+    "meaning": "사소한, 하찮은",
+    "line": "4,163,trivial,\"사소한, 하찮은\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "turn in",
+    "meaning": "(실적·수익 등을) 올리다, 제출하다",
+    "line": "4,164,turn in,\"(실적·수익 등을) 올리다, 제출하다\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "ambiance(=ambience)",
+    "meaning": "(장소의) 분위기",
+    "line": "4,165,ambiance(=ambience),(장소의) 분위기,900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "aspiration",
+    "meaning": "포부, 열망",
+    "line": "4,166,aspiration,\"포부, 열망\",900,4,Advanced_900\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "creditable",
+    "meaning": "훌륭한, 칭찬할만한",
+    "line": "4,167,creditable,\"훌륭한, 칭찬할만한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "eminent",
+    "meaning": "저명한, 탁월한",
+    "line": "4,168,eminent,\"저명한, 탁월한\",900,4,Advanced_900\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "timely",
+    "meaning": "시기적절한, 때를 맞춘",
+    "line": "5,2,timely,\"시기적절한, 때를 맞춘\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "realistically",
+    "meaning": "현실적으로",
+    "line": "5,3,realistically,현실적으로,650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "implement",
+    "meaning": "실시하다, 실행하다",
+    "line": "5,6,implement,\"실시하다, 실행하다\",650,1,Headword_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "contain",
+    "meaning": "포함하다",
+    "line": "5,17,contain,포함하다,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "compile",
+    "meaning": "(자료 등을) 편집하다, 모으다",
+    "line": "5,18,compile,\"(자료 등을) 편집하다, 모으다\",650,1,Headword_650\r",
+    "themeRaw": "Research"
+  },
+  {
+    "word": "matter",
+    "meaning": "중요하다, 문제되다, 문제, 일",
+    "line": "5,22,matter,\"중요하다, 문제되다, 문제, 일\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "remainder",
+    "meaning": "나머지",
+    "line": "5,25,remainder,나머지,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "divide",
+    "meaning": "분배하다, 나누다",
+    "line": "5,27,divide,\"분배하다, 나누다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "face",
+    "meaning": "표면, 외관, (문제 등에) 직면하다, 향하다, 마주보다",
+    "line": "5,31,face,\"표면, 외관, (문제 등에) 직면하다, 향하다, 마주보다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "follow",
+    "meaning": "~을 따라가다, 주시하다, (분명히) 이해하다",
+    "line": "5,32,follow,\"~을 따라가다, 주시하다, (분명히) 이해하다\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "apparently",
+    "meaning": "보기에 ~한 듯한, 외관상으로는",
+    "line": "5,34,apparently,\"보기에 ~한 듯한, 외관상으로는\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "accidentally",
+    "meaning": "뜻하지 않게, 우연히",
+    "line": "5,37,accidentally,\"뜻하지 않게, 우연히\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "advisable",
+    "meaning": "바람직한, 합당한",
+    "line": "5,38,advisable,\"바람직한, 합당한\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "concerned",
+    "meaning": "염려하는, 걱정하는, 관련된",
+    "line": "5,39,concerned,\"염려하는, 걱정하는, 관련된\",650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "speak",
+    "meaning": "이야기하다",
+    "line": "5,40,speak,이야기하다,650,1,Headword_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "briefcase",
+    "meaning": "서류 가방",
+    "line": "5,41,briefcase,서류 가방,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "business trip",
+    "meaning": "출장",
+    "line": "5,42,business trip,출장,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "come over",
+    "meaning": "방문하다, 오다",
+    "line": "5,43,come over,\"방문하다, 오다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "counter",
+    "meaning": "계산대, 반대의",
+    "line": "5,44,counter,\"계산대, 반대의\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "e-mail",
+    "meaning": "이메일, 이메일을 보내다",
+    "line": "5,45,e-mail,\"이메일, 이메일을 보내다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "filing cabinet",
+    "meaning": "서류 정리 캐비닛",
+    "line": "5,46,filing cabinet,서류 정리 캐비닛,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "folder",
+    "meaning": "서류철",
+    "line": "5,47,folder,서류철,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "headache",
+    "meaning": "두통",
+    "line": "5,48,headache,두통,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "internship",
+    "meaning": "인턴 신분, 인턴 기간",
+    "line": "5,49,internship,\"인턴 신분, 인턴 기간\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Personnel"
+  },
+  {
+    "word": "redo",
+    "meaning": "다시 하다",
+    "line": "5,50,redo,다시 하다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "routine",
+    "meaning": "판에 박힌 일, 정기적인",
+    "line": "5,51,routine,\"판에 박힌 일, 정기적인\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "table lamp",
+    "meaning": "탁상 전기스탠드",
+    "line": "5,52,table lamp,탁상 전기스탠드,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "thanks to",
+    "meaning": "~덕택에",
+    "line": "5,53,thanks to,~덕택에,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "timetable",
+    "meaning": "시간표",
+    "line": "5,54,timetable,시간표,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "window display",
+    "meaning": "쇼윈도의 상품 진열",
+    "line": "5,55,window display,쇼윈도의 상품 진열,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "chief",
+    "meaning": "주된, (직급상)최고위자인, (단체의) 최고위자",
+    "line": "5,56,chief,\"주된, (직급상)최고위자인, (단체의) 최고위자\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "conceal",
+    "meaning": "감추다",
+    "line": "5,57,conceal,감추다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "correct",
+    "meaning": "맞는, 정정하다",
+    "line": "5,58,correct,\"맞는, 정정하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "economic",
+    "meaning": "경제의",
+    "line": "5,59,economic,경제의,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "embrace",
+    "meaning": "받아들이다, 포용하다",
+    "line": "5,60,embrace,\"받아들이다, 포용하다\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "expected",
+    "meaning": "예상되는",
+    "line": "5,61,expected,예상되는,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "forum",
+    "meaning": "토론회",
+    "line": "5,62,forum,토론회,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "instead of",
+    "meaning": "~대신에",
+    "line": "5,63,instead of,~대신에,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "mission",
+    "meaning": "임무",
+    "line": "5,64,mission,임무,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "programming",
+    "meaning": "방송 편성",
+    "line": "5,65,programming,방송 편성,650,2,Basic_LCRC_650\r",
+    "themeRaw": "Research"
+  },
+  {
+    "word": "remaining",
+    "meaning": "남아 있는",
+    "line": "5,66,remaining,남아 있는,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "rush",
+    "meaning": "서두르다",
+    "line": "5,67,rush,서두르다,650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "unfortunately",
+    "meaning": "불행하게도, 유감스럽게도",
+    "line": "5,68,unfortunately,\"불행하게도, 유감스럽게도\",650,2,Basic_LCRC_650\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "archive",
+    "meaning": "기록보관소",
+    "line": "5,69,archive,기록보관소,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be unwilling to do",
+    "meaning": "~하기를 꺼리다",
+    "line": "5,70,be unwilling to do,~하기를 꺼리다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "be up late",
+    "meaning": "늦게까지 깨어있다",
+    "line": "5,71,be up late,늦게까지 깨어있다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "blackout",
+    "meaning": "정전",
+    "line": "5,72,blackout,정전,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "board meeting",
+    "meaning": "임원 회의",
+    "line": "5,73,board meeting,임원 회의,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "board of directors",
+    "meaning": "이사회",
+    "line": "5,74,board of directors,이사회,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "cross one's arms",
+    "meaning": "팔짱 끼다",
+    "line": "5,75,cross one's arms,팔짱 끼다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "depressing",
+    "meaning": "우울한",
+    "line": "5,76,depressing,우울한,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "drag",
+    "meaning": "~을 끌다",
+    "line": "5,77,drag,~을 끌다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "flod in half",
+    "meaning": "반으로 접다",
+    "line": "5,78,flod in half,반으로 접다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "fold up",
+    "meaning": "접어 개다",
+    "line": "5,79,fold up,접어 개다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "frighten",
+    "meaning": "놀라게 하다",
+    "line": "5,80,frighten,놀라게 하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "keep going",
+    "meaning": "계속 살아가다, 계속 견디다",
+    "line": "5,81,keep going,\"계속 살아가다, 계속 견디다\",800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  },
+  {
+    "word": "long-term",
+    "meaning": "장기(長期)의",
+    "line": "5,82,long-term,장기(長期)의,800,3,Intermediate_800\r",
+    "themeRaw": "Management"
+  },
+  {
+    "word": "look up to",
+    "meaning": "~를 존경하다",
+    "line": "5,83,look up to,~를 존경하다,800,3,Intermediate_800\r",
+    "themeRaw": "General"
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "day": 9,
+    "no": 137,
+    "word": "billing address",
+    "meaning": "청구서 주소",
+    "targetScore": 900,
+    "exampleEn": "Please ensure that the billing address matches the credit card statement.",
+    "exampleKo": "청구서 주소가 신용카드 명세서와 일치하는지 확인해 주십시오."
+  },
+  {
+    "day": 9,
+    "no": 138,
+    "word": "government grant",
+    "meaning": "정부 보조금",
+    "targetScore": 900,
+    "exampleEn": "The research project was funded by a government grant.",
+    "exampleKo": "그 연구 프로젝트는 정부 보조금으로 자금을 조달받았습니다."
+  },
+  {
+    "day": 9,
+    "no": 139,
+    "word": "market value",
+    "meaning": "시가, 시세",
+    "targetScore": 900,
+    "exampleEn": "The market value of the property has increased significantly.",
+    "exampleKo": "그 부동산의 시가(시장 가치)가 상당히 상승했습니다."
+  },
+  {
+    "day": 9,
+    "no": 140,
+    "word": "pull down",
+    "meaning": "~을 끌어내리다, ~을 하락시키다",
+    "targetScore": 900,
+    "exampleEn": "Oversupply tends to pull down market prices.",
+    "exampleKo": "공급 과잉은 시장 가격을 끌어내리는 경향이 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 141,
+    "word": "stationary",
+    "meaning": "움직이지 않는, 정지된",
+    "targetScore": 900,
+    "exampleEn": "The inflation rate has remained stationary for three months.",
+    "exampleKo": "인플레이션율은 3개월 동안 정지된(변동 없는) 상태를 유지했습니다."
+  },
+  {
+    "day": 9,
+    "no": 142,
+    "word": "abate",
+    "meaning": "누그러지다, 약해지다, 감소하다",
+    "targetScore": 900,
+    "exampleEn": "The storm shows no signs of abating.",
+    "exampleKo": "폭풍은 누그러질 기미를 보이지 않습니다. / Tax benefits did not abate the financial crisis. (세제 혜택도 금융 위기를 완화시키지 못했다.)"
+  },
+  {
+    "day": 9,
+    "no": 143,
+    "word": "cease",
+    "meaning": "중지하다, 그치다",
+    "targetScore": 900,
+    "exampleEn": "The factory will cease operations next month.",
+    "exampleKo": "공장은 다음 달에 운영을 중단할 것입니다."
+  },
+  {
+    "day": 9,
+    "no": 144,
+    "word": "conspicuously",
+    "meaning": "눈에 띄게, 두드러지게",
+    "targetScore": 900,
+    "exampleEn": "The warning sign was conspicuously displayed.",
+    "exampleKo": "경고 표지판은 눈에 띄게 게시되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 145,
+    "word": "deteriorate",
+    "meaning": "악화되다, 나빠지다",
+    "targetScore": 900,
+    "exampleEn": "Economic conditions continued to deteriorate.",
+    "exampleKo": "경제 상황은 계속해서 악화되었습니다."
+  },
+  {
+    "day": 9,
+    "no": 146,
+    "word": "implicitly",
+    "meaning": "암암리에, 절대적으로",
+    "targetScore": 900,
+    "exampleEn": "The contract implicitly assumes compliance with local laws.",
+    "exampleKo": "그 계약은 암암리에(내재적으로) 현지 법률 준수를 가정합니다."
+  },
+  {
+    "day": 9,
+    "no": 147,
+    "word": "leisurely",
+    "meaning": "느긋한, 여유있는, 천천히",
+    "targetScore": 900,
+    "exampleEn": "They enjoyed a leisurely lunch discussion.",
+    "exampleKo": "그들은 느긋한 점심 토론을 즐겼습니다."
+  },
+  {
+    "day": 9,
+    "no": 148,
+    "word": "menace",
+    "meaning": "위협하다",
+    "targetScore": 900,
+    "exampleEn": "Pollution poses a menace to public health.",
+    "exampleKo": "오염은 공중 보건에 위협을 가합니다."
+  },
+  {
+    "day": 9,
+    "no": 149,
+    "word": "perceptible",
+    "meaning": "상당한 정도의, 인지할 수 있는",
+    "targetScore": 900,
+    "exampleEn": "There was a perceptible change in consumer confidence.",
+    "exampleKo": "소비자 신뢰도에 인지할 수 있는 변화가 있었습니다."
+  },
+  {
+    "day": 9,
+    "no": 150,
+    "word": "placement",
+    "meaning": "놓기, 배치, 취업 알선",
+    "targetScore": 900,
+    "exampleEn": "The agency specializes in job placement for graduates.",
+    "exampleKo": "그 에이전시는 졸업생들을 위한 취업 알선을 전문으로 합니다."
+  },
+  {
+    "day": 9,
+    "no": 151,
+    "word": "remark",
+    "meaning": "주의하다, 말하다",
+    "targetScore": 900,
+    "exampleEn": "Mr. Jones remarked that sales were better than expected.",
+    "exampleKo": "Jones 씨는 매출이 예상보다 좋았다고 말했습니다(언급했습니다)."
+  },
+  {
+    "day": 9,
+    "no": 152,
+    "word": "retrieval",
+    "meaning": "복구, 만회",
+    "targetScore": 900,
+    "exampleEn": "The system allows for easy data retrieval.",
+    "exampleKo": "그 시스템은 쉬운 데이터 복구(검색)를 가능하게 합니다."
+  },
+  {
+    "day": 9,
+    "no": 153,
+    "word": "slowdown",
+    "meaning": "경기 후퇴",
+    "targetScore": 900,
+    "exampleEn": "There has been a slowdown in manufacturing activity.",
+    "exampleKo": "제조업 활동에 둔화(경기 후퇴)가 있었습니다."
+  },
+  {
+    "day": 9,
+    "no": 154,
+    "word": "solitary",
+    "meaning": "혼자의, 외로운",
+    "targetScore": 900,
+    "exampleEn": "He manages the department's solitary satellite office.",
+    "exampleKo": "그는 부서의 유일한(외딴) 위성 사무소를 관리합니다."
+  },
+  {
+    "day": 9,
+    "no": 155,
+    "word": "ailing",
+    "meaning": "병든, 괴로워하는",
+    "targetScore": 900,
+    "exampleEn": "The government announced a bailout for the ailing industry.",
+    "exampleKo": "정부는 병든(경영난을 겪는) 산업을 위한 구제 금융을 발표했습니다."
+  },
+  {
+    "day": 9,
+    "no": 156,
+    "word": "financial statement",
+    "meaning": "재무제표",
+    "targetScore": 900,
+    "exampleEn": "Please review the attached financial statement.",
+    "exampleKo": "첨부된 재무제표를 검토해 주십시오."
+  },
+  {
+    "day": 9,
+    "no": 157,
+    "word": "have a monopoly on",
+    "meaning": "~의 독점권을 갖다",
+    "targetScore": 900,
+    "exampleEn": "The company has a monopoly on the local market.",
+    "exampleKo": "그 회사는 지역 시장에 대한 독점권을 가지고 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 158,
+    "word": "in demand",
+    "meaning": "수요가 있는",
+    "targetScore": 900,
+    "exampleEn": "Experienced programmers are in high demand.",
+    "exampleKo": "경력 있는 프로그래머들은 수요가 많습니다."
+  },
+  {
+    "day": 9,
+    "no": 159,
+    "word": "multilateral",
+    "meaning": "다국간의",
+    "targetScore": 900,
+    "exampleEn": "The leaders signed a multilateral trade agreement.",
+    "exampleKo": "지도자들은 다국간 무역 협정에 서명했습니다."
+  },
+  {
+    "day": 9,
+    "no": 160,
+    "word": "nontransferable",
+    "meaning": "양도할 수 없는",
+    "targetScore": 900,
+    "exampleEn": "The tickets are non-refundable and nontransferable.",
+    "exampleKo": "티켓은 환불 불가이며 양도할 수 없습니다."
+  },
+  {
+    "day": 9,
+    "no": 161,
+    "word": "parent company",
+    "meaning": "모회사",
+    "targetScore": 900,
+    "exampleEn": "The subsidiary reports directly to the parent company.",
+    "exampleKo": "자회사는 모회사에 직접 보고합니다."
+  },
+  {
+    "day": 9,
+    "no": 162,
+    "word": "privatization",
+    "meaning": "민영화",
+    "targetScore": 900,
+    "exampleEn": "The privatization of the railway system remains controversial.",
+    "exampleKo": "철도 시스템의 민영화는 여전히 논란의 여지가 있습니다."
+  },
+  {
+    "day": 9,
+    "no": 163,
+    "word": "rebound",
+    "meaning": "회복, 다시 일어서다",
+    "targetScore": 900,
+    "exampleEn": "The economy is expected to rebound next quarter.",
+    "exampleKo": "경제는 다음 분기에 회복될(반등할) 것으로 예상됩니다."
+  },
+  {
+    "day": 9,
+    "no": 164,
+    "word": "runner-up",
+    "meaning": "2위의 경기자, 차점자",
+    "targetScore": 900,
+    "exampleEn": "The runner-up in the competition received a silver trophy.",
+    "exampleKo": "대회의 2위(차점자)는 은 트로피를 받았습니다."
+  },
+  {
+    "day": 9,
+    "no": 165,
+    "word": "secondary effect",
+    "meaning": "부차적 영향",
+    "targetScore": 900,
+    "exampleEn": "Unemployment is a secondary effect of the recession.",
+    "exampleKo": "실업은 불황의 부차적 영향입니다."
+  },
+  {
+    "day": 9,
+    "no": 166,
+    "word": "sluggish",
+    "meaning": "불경기의",
+    "targetScore": 900,
+    "exampleEn": "Sales have been sluggish due to the weak economy.",
+    "exampleKo": "약한 경제 때문에 판매가 부진했습니다(느릿했습니다)."
+  },
+  {
+    "day": 9,
+    "no": 167,
+    "word": "stagnation",
+    "meaning": "침체, 불경기",
+    "targetScore": 900,
+    "exampleEn": "The policy marks a departure from economic stagnation.",
+    "exampleKo": "그 정책은 경제 침체로부터의 탈피를 나타냅니다."
+  },
+  {
+    "day": 9,
+    "no": 168,
+    "word": "volatile",
+    "meaning": "(가격 등이) 심하게 변동하는",
+    "targetScore": 900,
+    "exampleEn": "Stock prices have been extremely volatile this week.",
+    "exampleKo": "주가는 이번 주에 극심하게 변동했습니다."
+  }
+]

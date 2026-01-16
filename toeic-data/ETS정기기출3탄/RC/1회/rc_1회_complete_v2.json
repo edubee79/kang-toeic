@@ -1,0 +1,2530 @@
+{
+  "q101": {
+    "id": "q101",
+    "question": "Mougey Fine Gifts is known for its large range of ------ goods.",
+    "options": [
+      {
+        "label": "A",
+        "text": "regional"
+      },
+      {
+        "label": "B",
+        "text": "regionally"
+      },
+      {
+        "label": "C",
+        "text": "region"
+      },
+      {
+        "label": "D",
+        "text": "regions"
+      }
+    ],
+    "answer": "A",
+    "type": "형용사 자리_명사 수식",
+    "explanation": "빈칸에는 명사 goods를 수식하는 형용사 또는 goods와 복합명사를 이루는 명사가 들어갈 수 있다. 문맥상 '지역의 제품, 지역산 제품'이라는 내용이 되어야 하므로, 형용사인 (A) regional(지역의)이 정답이다. (C) region과 (D) regions는 '지역'을 의미하기 때문에 goods와 복합명사를 이룰 수 없고, (B) regionally는 부사로 품사상 빈칸에 들어갈 수 없다.",
+    "translation": "모우기 파인 기프트는 폭넓은 지역산 제품으로 잘 알려져 있다.",
+    "vocabulary": "known for 잘 알려진, 유명한 a range of 다양한, 광범위한"
+  },
+  "q102": {
+    "id": "q102",
+    "question": "Income levels are rising in the ------ and surrounding areas.",
+    "options": [
+      {
+        "label": "A",
+        "text": "family"
+      },
+      {
+        "label": "B",
+        "text": "world"
+      },
+      {
+        "label": "C",
+        "text": "company"
+      },
+      {
+        "label": "D",
+        "text": "city"
+      }
+    ],
+    "answer": "D",
+    "type": "명사 어휘",
+    "explanation": "등위접속사 and가 빈칸과 인근 지역(surrounding areas)을 연결하고 있으므로, 빈칸에도 지역을 나타내는 단어가 들어가야 한다. 따라서 area와 성격 및 규모가 비슷한 (D) city(도시)가 정답이다.",
+    "translation": "그 도시 및 인근 지역에서 소득 수준이 증가하고 있다.",
+    "vocabulary": "income 소득, 수입 surrounding 인근의, 주위의"
+  },
+  "q103": {
+    "id": "q103",
+    "question": "Since we had a recent rate change, expect ------ next electricity bill to be slightly lower.",
+    "options": [
+      {
+        "label": "A",
+        "text": "you"
+      },
+      {
+        "label": "B",
+        "text": "yours"
+      },
+      {
+        "label": "C",
+        "text": "yourself"
+      },
+      {
+        "label": "D",
+        "text": "your"
+      }
+    ],
+    "answer": "D",
+    "type": "인칭대명사의 격_소유격",
+    "explanation": "명사구 next electricity bill을 한정 수식하는 자리이다. 형용사 next 앞에 올 수 있는 것은 소유격이므로, (D) your가 정답이다.",
+    "translation": "최근 요금 변동이 있었으니 귀하의 다음 번 전기 요금이 약간 감소할 것으로 예상하세요.",
+    "vocabulary": "recent 최근의 rate 요금 electricity bill 전기 요금 slightly 약간"
+  },
+  "q104": {
+    "id": "q104",
+    "question": "Hotel guests have a lovely view of the ocean ------ the south-facing windows.",
+    "options": [
+      {
+        "label": "A",
+        "text": "up"
+      },
+      {
+        "label": "B",
+        "text": "except"
+      },
+      {
+        "label": "C",
+        "text": "onto"
+      },
+      {
+        "label": "D",
+        "text": "through"
+      }
+    ],
+    "answer": "D",
+    "type": "전치사 어휘",
+    "explanation": "the south-facing windows와 어울리는 전치사를 선택해야 한다. 남향 창문을 통해 전망을 즐길 수 있다는 내용이 되어야 하므로, '~을 통해'라는 의미의 (D) through가 정답이다.",
+    "translation": "호텔 투숙객들은 남향 창문을 통해 멋진 바다 풍경을 볼 수 있다.",
+    "vocabulary": "view 전망, 풍경 south-facing 남향의 except ~를 제외하고"
+  },
+  "q105": {
+    "id": "q105",
+    "question": "Mr. Kim would like ------ a meeting about the Jasper account as soon as possible.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to arrange"
+      },
+      {
+        "label": "B",
+        "text": "arranging"
+      },
+      {
+        "label": "C",
+        "text": "having arranged"
+      },
+      {
+        "label": "D",
+        "text": "arrangement"
+      }
+    ],
+    "answer": "A",
+    "type": "to부정사",
+    "explanation": "동사 would like 다음에는 to부정사나 명사가 올 수 있는데, 빈칸 뒤에 명사 a meeting이 있으므로 빈칸에는 이를 목적어로 취할 수 있는 to부정사가 들어가야 한다. 따라서 (A) to arrange가 정답이다. (B) arranging과 (C) having arranged는 동명사, (D) arrangement는 명사로 구조상 빈칸에 들어갈 수 없다.",
+    "translation": "김 씨는 가능한 한 빨리 재스퍼 사 거래에 관한 회의를 잡고 싶어 한다.",
+    "vocabulary": "account 고객(사), 거래 (관계), 계정 arrange 마련하다. 주선하다. 준비하다"
+  },
+  "q106": {
+    "id": "q106",
+    "question": "The factory is ------ located near the train station.",
+    "options": [
+      {
+        "label": "A",
+        "text": "regularly"
+      },
+      {
+        "label": "B",
+        "text": "conveniently"
+      },
+      {
+        "label": "C",
+        "text": "brightly"
+      },
+      {
+        "label": "D",
+        "text": "collectively"
+      }
+    ],
+    "answer": "B",
+    "type": "부사 어휘",
+    "explanation": "공장의 입지조건(located near the train station)을 적절히 묘사하는 부사를 선택해야 한다. 따라서 '편리하게'라는 의미의 (B) conveniently가 정답이다. conveniently(편리한 위치에)/ ideally(이상적인 위치에)/strategically(전략적인 위치에) located는 빈출 표현이므로 암기해 두자.",
+    "translation": "공장은 기차역 근처의 편리한 위치에 있다.",
+    "vocabulary": "regularly 규칙적으로, 정기적으로 brightly 밝게 collectively 집합적으로, 총괄하여"
+  },
+  "q107": {
+    "id": "q107",
+    "question": "Because of transportation ------ due to winter weather, some conference participants may arrive late.",
+    "options": [
+      {
+        "label": "A",
+        "text": "are delayed"
+      },
+      {
+        "label": "B",
+        "text": "to delay"
+      },
+      {
+        "label": "C",
+        "text": "delays"
+      },
+      {
+        "label": "D",
+        "text": "had delayed"
+      }
+    ],
+    "answer": "C",
+    "type": "명사 자리_전치사의 목적어_복합명사",
+    "explanation": "transportation과 함께 복합명사를 이루어 전치사 Because of의 목적어 역할을 하는 명사 자리이다. 따라서 보기 중 명사로 쓰일 수 있는 (C) delays(지연, 연착)가 정답이다. (B) to delay는 앞에 온 명사를 수식할 수는 있지만, 빈칸 뒤에 목적어가 없으며 의미상으로도 어색하므로 오답이다. (A) are delayed와 (D) had delayed는 본동사이므로 구조상 빈칸에 들어갈 수 없다.",
+    "translation": "겨울 날씨로 인한 교통편 지연으로 회의 참가자들 중 일부가 늦게 도착할 지도 모른다.",
+    "vocabulary": "transportation 교통(편), 운송 due to ~때문에 conference 회의 participant 참가자 delay 지연시키다"
+  },
+  "q108": {
+    "id": "q108",
+    "question": "Proper maintenance of your heating equipment ensures that small issues can be fixed ------ they become big ones.",
+    "options": [
+      {
+        "label": "A",
+        "text": "as a result"
+      },
+      {
+        "label": "B",
+        "text": "in addition"
+      },
+      {
+        "label": "C",
+        "text": "although"
+      },
+      {
+        "label": "D",
+        "text": "before"
+      }
+    ],
+    "answer": "D",
+    "type": "접속사 자리_어휘",
+    "explanation": "두 개의 완전한 절을 이어주는 접속사 자리로, 보기에서 부사절 접속사인 (C) although와 (D) before 중 하나를 선택해야 한다. 문맥상 시점을 나타내는 접속사가 빈칸에 들어가서 '작은 문제들(small issues)이 커지기 전에 해결되게끔 해준다'라는 내용이 되어야 자연스럽다. 따라서 (D) before가 정답이 된다. (A) as a result와 (B) in addition은 (접속)부사로 절과 절을 연결할 수 없다.",
+    "translation": "난방기기를 적절하게 유지 관리하면 작은 문제들은 커지기 전에 분명 해결될 수 있다.",
+    "vocabulary": "proper 적절한 maintenance 유지 관리 ensure 반드시 ~하게 하다, 보장하다 as a result 결과적으로 in addition 게다가"
+  },
+  "q109": {
+    "id": "q109",
+    "question": "The information on the Web site of Croyell Decorators is ------ organized.",
+    "options": [
+      {
+        "label": "A",
+        "text": "clear"
+      },
+      {
+        "label": "B",
+        "text": "clearing"
+      },
+      {
+        "label": "C",
+        "text": "clearest"
+      },
+      {
+        "label": "D",
+        "text": "clearly"
+      }
+    ],
+    "answer": "D",
+    "type": "부사 자리_동사 수식",
+    "explanation": "be동사 is와 과거분사 organized 사이에서 동사를 수식하는 부사 자리이므로, (D) clearly(명확하게)가 정답이다. (A) clear는 형용사/동사, (B) clearing은 동명사/현재분사, (C) clearest는 형용사의 최상급으로 품사상 빈칸에 들어갈 수 없다.",
+    "translation": "크로엘 데코레이터즈의 웹사이트에 있는 정보는 명확하게 정리되어 있다.",
+    "vocabulary": "organize 정리하다. 체계화하다"
+  },
+  "q110": {
+    "id": "q110",
+    "question": "The Copley Corporation is frequently ------ as a company that employs workers from all over the world.",
+    "options": [
+      {
+        "label": "A",
+        "text": "recognized"
+      },
+      {
+        "label": "B",
+        "text": "permitted"
+      },
+      {
+        "label": "C",
+        "text": "prepared"
+      },
+      {
+        "label": "D",
+        "text": "controlled"
+      }
+    ],
+    "answer": "A",
+    "type": "동사 어휘_과거분사",
+    "explanation": "전치사 as와 어울려 쓰이는 과거분사를 선택해야 한다. 주어인 The Copley Corporation이 회사로서 받는 평가를 설명하는 문장이므로, be동사 및 as와 함께 '~로 알려져 있다, ~로 인정받다'라는 의미를 완성하는 (A) recognized가 정답이다.",
+    "translation": "코플리 사는 전 세계에서 직원들을 고용하는 회사로 흔히 알려져 있다.",
+    "vocabulary": "frequently 흔히, 자주 employ 고용하다 recognized 알려진, 인정받는 permitted 허가된 prepared 준비된 controlled 통제된"
+  },
+  "q111": {
+    "id": "q111",
+    "question": "Payments made ------ 4:00 P.M. will be processed on the following business day.",
+    "options": [
+      {
+        "label": "A",
+        "text": "later"
+      },
+      {
+        "label": "B",
+        "text": "after"
+      },
+      {
+        "label": "C",
+        "text": "than"
+      },
+      {
+        "label": "D",
+        "text": "often"
+      }
+    ],
+    "answer": "B",
+    "type": "전치사 자리_어휘",
+    "explanation": "Payments부터 4:00 P.M.까지가 주어, will be processed가 동사인 문장이다. 따라서 빈칸에는 과거분사 made와 시간 표현을 적절히 연결해주는 전치사가 들어가야 하므로, (B) after가 정답이다. 참고로, (A) later가 비교급 부사로 쓰일 경우 전치사 (C) than과 결합하여 '오후 4시보다 더 늦게'라는 의미로 쓰일 수 있으나, 각자 단독으로 빈칸에 들어갈 수는 없다.",
+    "translation": "오후 4시 이후 이뤄진 결제 건은 다음 영업일에 처리될 것이다.",
+    "vocabulary": "payment 결제 (건), 지불(금) process 처리하다 following 다음의 business day 영업일"
+  },
+  "q112": {
+    "id": "q112",
+    "question": "Greenfiddle Water Treatment hires engineers who have ------ mathematics skills.",
+    "options": [
+      {
+        "label": "A",
+        "text": "adjusted"
+      },
+      {
+        "label": "B",
+        "text": "advanced"
+      },
+      {
+        "label": "C",
+        "text": "eager"
+      },
+      {
+        "label": "D",
+        "text": "faithful"
+      }
+    ],
+    "answer": "B",
+    "type": "형용사 어휘",
+    "explanation": "고용(hires)의 대상이 되는 기술자들(engineers)이 갖추어야 할 학 실력(mathematics skills) 수준을 나타내는 형용사가 필요하다. 따라서 '고급의, 상급의'라는 의미의 (B) advanced가 정답이다.",
+    "translation": "그린피들 워터 트리트먼트는 고급 수학 실력을 갖춘 기술자를 채용한다.",
+    "vocabulary": "adjusted 조정된, 조절된 eager 열렬한, 간절히 바라는 faithful 충실한, 신의 있는"
+  },
+  "q113": {
+    "id": "q113",
+    "question": "After ------ the neighborhood, Mr. Park decided not to move his café to Thomasville.",
+    "options": [
+      {
+        "label": "A",
+        "text": "evaluation"
+      },
+      {
+        "label": "B",
+        "text": "evaluate"
+      },
+      {
+        "label": "C",
+        "text": "evaluating"
+      },
+      {
+        "label": "D",
+        "text": "evaluated"
+      }
+    ],
+    "answer": "C",
+    "type": "동명사",
+    "explanation": "명사 the neighborhood를 목적어로 취하는 동시에 전치사 After의 목적어 역할을 하는 자리이다. 따라서 빈칸에는 동명사가 들어가야 하므로, (C) evaluating이 정답이다. (A) evaluation은 명사로 After의 목적어 역할을 할 수는 있지만, the neighborhood를 목적어로 취할 수 없으므로 오답이다. (B) evaluate는 동사, (D) evaluated는 동사/과거분사로 품사상 빈칸에 들어갈 수 없다.",
+    "translation": "박 씨는 인근 지역을 평가한 후 자신의 카페를 토마스빌로 옮기지 않기로 결정했다.",
+    "vocabulary": "neighborhood 인근 (지역) evaluation 평가 evaluate 평가하다"
+  },
+  "q114": {
+    "id": "q114",
+    "question": "The average precipitation in Campos ------ the past three years has been 22.7 centimeters.",
+    "options": [
+      {
+        "label": "A",
+        "text": "on"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "to"
+      },
+      {
+        "label": "D",
+        "text": "under"
+      }
+    ],
+    "answer": "B",
+    "type": "전치사 어휘",
+    "explanation": "기간을 나타내는 명사구 the past three years를 목적어로 취하는 전치사 자리이다. 따라서 '~동안'이라는 뜻으로 현재완료 시제(has been)와 어울려 쓰이는 (B) for가 정답이다.",
+    "translation": "지난 3년간 캄포스의 평균 강수량은 22.7센티미터였다.",
+    "vocabulary": "average 평균(의) precipitation 강수량"
+  },
+  "q115": {
+    "id": "q115",
+    "question": "Improving efficiency at Perwon Manufacturing will require a ------ revision of existing processes.",
+    "options": [
+      {
+        "label": "A",
+        "text": "create"
+      },
+      {
+        "label": "B",
+        "text": "creativity"
+      },
+      {
+        "label": "C",
+        "text": "creation"
+      },
+      {
+        "label": "D",
+        "text": "creative"
+      }
+    ],
+    "answer": "D",
+    "type": "형용사 자리_명사 수식",
+    "explanation": "빈칸에는 명사 revision을 수식하는 형용사 또는 revision과 복합명사를 이루는 명사가 들어갈 수 있다. 문맥상 효율성 제고(Improving efficiency)에 필요한(require) 절차 수정 방식을 묘사하는 형용사가 필요하므로, (D) creative(창의적인)가 정답이다. (A) create는 동사로 품사상 빈칸에 들어갈 수 없고, (B) creativity는 '창의력', (C) creation은 '창작'이라는 뜻으로 revision과 복합명사를 이루기엔 어색하다.",
+    "translation": "퍼원 매뉴팩처링에서 효율성을 제고하려면 기존 절차를 창의적으로 바꾸는 일이 필요하다.",
+    "vocabulary": "improve 향상시키다 efficiency 효율성 require 필요로 하다, 요구하다 revision 수정, 변경 existing 기존의"
+  },
+  "q116": {
+    "id": "q116",
+    "question": "Conference attendees will share accommodations ------ they submit a special request for a single room.",
+    "options": [
+      {
+        "label": "A",
+        "text": "even"
+      },
+      {
+        "label": "B",
+        "text": "unless"
+      },
+      {
+        "label": "C",
+        "text": "similarly"
+      },
+      {
+        "label": "D",
+        "text": "also"
+      }
+    ],
+    "answer": "B",
+    "type": "접속사 자리",
+    "explanation": "빈칸은 두 개의 완전한 절을 이어주는 접속사 자리이다. 따라서 보기 중 부사절 접속사인 (B) unless(~하지 않는 한)가 정답이다. (A) even은 형용사/부사/동사, (C) similarly와 (D) also는 부사로 절과 절을 연결할 수 없다.",
+    "translation": "회의 참석자들은 1인실 특별 요청서를 제출하지 않는 한 숙소를 공유하게 될 것이다.",
+    "vocabulary": ""
+  },
+  "q117": {
+    "id": "q117",
+    "question": "To receive ------, please be sure the appropriate box is checked on the magazine order form.",
+    "options": [
+      {
+        "label": "A",
+        "text": "renew"
+      },
+      {
+        "label": "B",
+        "text": "renewed"
+      },
+      {
+        "label": "C",
+        "text": "renewals"
+      },
+      {
+        "label": "D",
+        "text": "to renew"
+      }
+    ],
+    "answer": "C",
+    "type": "명사 자리_to부정사의 목적어",
+    "explanation": "to부정사 To receive의 목적어 역할을 하는 명사 자리이다. 따라서 (C) renewals(갱신, 기한 연장)가 정답이다. (A) renew는 동사, (B) renewed는 동사/과거분사, (D) to renew는 to부정사로 구조상 빈칸에 들어갈 수 없다.",
+    "translation": "갱신을 하시려면 반드시 잡지 주문서의 알맞은 칸에 표시해 주십시오.",
+    "vocabulary": "appropriate 적절한, 알맞은 order form 주문서 renewal 갱신, (기한의) 연장"
+  },
+  "q118": {
+    "id": "q118",
+    "question": "Donations to the Natusi Wildlife Reserve rise when consumers feel ------ about the economy.",
+    "options": [
+      {
+        "label": "A",
+        "text": "careful"
+      },
+      {
+        "label": "B",
+        "text": "helpful"
+      },
+      {
+        "label": "C",
+        "text": "confident"
+      },
+      {
+        "label": "D",
+        "text": "durable"
+      }
+    ],
+    "answer": "C",
+    "type": "형용사 어휘",
+    "explanation": "빈칸을 포함한 절은 기부금이 증가하는(Donations ~ rise) 경우를 나타낸다. 따라서 빈칸에는 경제(economy)에 대한 소비자의 긍정적인 판단을 나타내는 형용사가 들어가야 자연스러우므로, '신뢰하는, 좋을 거라 확신하는'이라는 의미의 (C) confident가 정답이다.",
+    "translation": "소비자들이 경제상황에 대해 확신하게 되면 나두시 야생동물 보호구역으로 가는 기부금이 증가한다.",
+    "vocabulary": "donation 기부(금) reserve 보호구역 economy 경제 (상황) careful 주의하는 helpful 도움이 되는 durable 내구성이 있는"
+  },
+  "q119": {
+    "id": "q119",
+    "question": "When ------ applied, Tilda's Restorative Cream reduces the appearance of fine lines and wrinkles.",
+    "options": [
+      {
+        "label": "A",
+        "text": "consistent"
+      },
+      {
+        "label": "B",
+        "text": "consist"
+      },
+      {
+        "label": "C",
+        "text": "consistently"
+      },
+      {
+        "label": "D",
+        "text": "consisting"
+      }
+    ],
+    "answer": "C",
+    "type": "부사 자리_과거분사 수식",
+    "explanation": "부사절 접속사 When 뒤에는 완전한 절 또는 분사구문이 올 수 있는데, 주절의 주어 Tilda's Restorative Cream과 동사 apply(~을 바르다, 도포하다)의 의미로 보아 applied(도포되는)가 과거분사로 쓰였음을 알 수 있다. 따라서 빈칸에는 applied를 수식하는 부사가 들어가야 하므로, (C) consistently(지속적으로)가 정답이다. (A) consistent는 형용사, (B) consist는 동사, (D) consisting은 동명사/현재분사로 품사상 빈칸에 들어갈 수 없다.",
+    "translation": "틸다 재생크림은 지속적으로 바르면 잔주름 생성을 감소시켜 준다.",
+    "vocabulary": "restorative 복원하는 reduce 줄이다 appearance (없던 것의) 출현, 나타남 fine 가는, 촘촘한 wrinkle 주름"
+  },
+  "q120": {
+    "id": "q120",
+    "question": "The marketing director confirmed that the new software program would be ready to ------ by November 1.",
+    "options": [
+      {
+        "label": "A",
+        "text": "launch"
+      },
+      {
+        "label": "B",
+        "text": "facilitate"
+      },
+      {
+        "label": "C",
+        "text": "arise"
+      },
+      {
+        "label": "D",
+        "text": "exert"
+      }
+    ],
+    "answer": "A",
+    "type": "동사 어휘",
+    "explanation": "새 소프트웨어 프로그램(new software program)이 무엇을 할 준비가 된 것인지 설명하는 동사가 필요하다. 따라서 '출시하다'라는 뜻의 (A) launch가 정답이다. 참고로, launch는 타동사이지만 앞에 형용사 ready가 쓰였기 때문에 to be launched로 쓰일 필요가 없다. 주어인 소프트웨어 프로그램이 launch의 의미상\" 목적어 (=ready to launch the new software program)라고 보면 된다. 이와 같은 구조가 가능한 형용사로는 ready, easy, difficult, impossible 등이 있다.",
+    "translation": "마케팅 담당자는 새 소프트웨어 프로그램이 11월 1일까지 출시 준비가 될 것이라고 확인해 주었다.",
+    "vocabulary": "confirm 확인해 주다. 확정하다 facilitate 가능하게 하다 arise 발생하다. 생기다 exert 가하다, 행사하다"
+  },
+  "q131": {
+    "id": "q131",
+    "question": "",
+    "options": [
+      {
+        "label": "A",
+        "text": "serve"
+      },
+      {
+        "label": "B",
+        "text": "served"
+      },
+      {
+        "label": "C",
+        "text": "server"
+      },
+      {
+        "label": "D",
+        "text": "service"
+      }
+    ],
+    "passage": "To continue providing the highest level of ------ to our corporate tenants, we have scheduled the south lobby restrooms for maintenance this weekend, May 13 and May 14. ------ this time, the restrooms will be out of order, so tenants and their guests should instead use the facilities in the north lobby.\n\nWe ------ for any inconvenience this might cause. ------.\n\nDenville Property Management Partners",
+    "setId": "set_131_134",
+    "answer": null,
+    "type": "명사 자리_전치사의 목적어",
+    "explanation": "전치사 of의 목적어 역할을 하는 명사 자리인데, 전치사 of와 빈칸 사",
+    "translation": null,
+    "vocabulary": null
+  },
+  "q132": {
+    "id": "q132",
+    "question": "",
+    "options": [
+      {
+        "label": "A",
+        "text": "Along"
+      },
+      {
+        "label": "B",
+        "text": "During"
+      },
+      {
+        "label": "C",
+        "text": "Without"
+      },
+      {
+        "label": "D",
+        "text": "Between"
+      }
+    ],
+    "passage": "To continue providing the highest level of ------ to our corporate tenants, we have scheduled the south lobby restrooms for maintenance this weekend, May 13 and May 14. ------ this time, the restrooms will be out of order, so tenants and their guests should instead use the facilities in the north lobby.\n\nWe ------ for any inconvenience this might cause. ------.\n\nDenville Property Management Partners",
+    "setId": "set_131_134",
+    "answer": "B",
+    "type": "전치사 어휘",
+    "explanation": "빈칸의 목적어 역할을 하는 this time은 앞 문장에 언급된 '이번 주말인 5월 13일과 5월 14일(this weekend, May 13 and May 14)'을 대신한다. 따라서 빈칸에는 기간 명사와 어울려 쓰이는 전치사가 들어가야 하므로, '~ 동안'이라는 의미의 (B) During이 정답이다. 참고로, (D) Between은 'between A and B, 구조로 쓰여 '(특정 시점) 사이에'라는 뜻을 나타낼 수 있다.",
+    "translation": null,
+    "vocabulary": null
+  },
+  "q133": {
+    "id": "q133",
+    "question": "",
+    "options": [
+      {
+        "label": "A",
+        "text": "apologize"
+      },
+      {
+        "label": "B",
+        "text": "organize"
+      },
+      {
+        "label": "C",
+        "text": "realize"
+      },
+      {
+        "label": "D",
+        "text": "recognize"
+      }
+    ],
+    "passage": "To continue providing the highest level of ------ to our corporate tenants, we have scheduled the south lobby restrooms for maintenance this weekend, May 13 and May 14. ------ this time, the restrooms will be out of order, so tenants and their guests should instead use the facilities in the north lobby.\n\nWe ------ for any inconvenience this might cause. ------.\n\nDenville Property Management Partners",
+    "setId": "set_131_134",
+    "answer": "A",
+    "type": "동사 어휘",
+    "explanation": "불편함을 야기한 것(for any inconvenience)에 대해 회사에서 취하는 행위를 나타내는 동사가 들어가야 한다. 따라서 '사과하다'라는 의미의 (A) apologize가 정답이다. 참고로, (C) realize와 (D) recognize는 타동사로 구조상으로도 빈칸에 들어갈 수 없다.",
+    "translation": null,
+    "vocabulary": "organize 조직하다. 단결하다 realize 깨닫다 recognize 알아보다. 인정하다"
+  },
+  "q134": {
+    "id": "q134",
+    "question": "",
+    "options": [
+      {
+        "label": "A",
+        "text": "If you would like to join our property management team, call us today."
+      },
+      {
+        "label": "B",
+        "text": "Thank you for your patience while the main lobby is being painted."
+      },
+      {
+        "label": "C",
+        "text": "Please do not attempt to access the north lobby on these days."
+      },
+      {
+        "label": "D",
+        "text": "Questions or comments may be directed to the Management Office."
+      }
+    ],
+    "passage": "To continue providing the highest level of ------ to our corporate tenants, we have scheduled the south lobby restrooms for maintenance this weekend, May 13 and May 14. ------ this time, the restrooms will be out of order, so tenants and their guests should instead use the facilities in the north lobby.\n\nWe ------ for any inconvenience this might cause. ------.\n\nDenville Property Management Partners",
+    "setId": "set_131_134",
+    "answer": "D",
+    "type": "문맥에 맞는 문장 고르기",
+    "explanation": "빈칸 앞 문장에서 보수 공사로 인한 불편에 대해 사과(We apologize for any inconvenience this might cause)했으므로, 빈칸에는 보수 공사와 관련된 추가 설명 또는 공지를 마무리하는 문장이 들어가야 자연스럽다. 따라서 문의사항이나 의견(Questions or comments)을 보낼 곳을 언급한 (D)가 정답이다. 참고로, 첫 번째 단락에서 공사 장소는 남쪽 로비 화장실(the south lobby restrooms)이라고 밝혔고, 임차인 및 방문객이 북쪽 로비 시설을 대신 이용해야 한다(tenants and their guests should instead use the facilities in the north lobby)고 했으므로, (B)와 (C)는 정답이 될 수 없다.",
+    "translation": "(A) 저희 부동산 관리팀에 입사하고 싶으시면 오늘 전화해 주십시오.\n(B) 메인 로비에 페인트칠이 되는 동안 양해해 주시면 감사하겠습니다.\n(C) 해당 일자에는 북쪽 로비에 가지 마십시오.\n(D) 문의사항이나 의견은 관리사무실로 전달하시면 됩니다.",
+    "vocabulary": "patience 참을성, 인내력 attempt 시도하다 access 이용하다. 접근하다 direct 보내다"
+  },
+  "q135": {
+    "id": "q135",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "quickly"
+      },
+      {
+        "label": "B",
+        "text": "quicken"
+      },
+      {
+        "label": "C",
+        "text": "quickest"
+      },
+      {
+        "label": "D",
+        "text": "quickness"
+      }
+    ],
+    "passage": "I recently received a last-minute invitation to a formal dinner. I bought a suit and needed it tailored as ------ as possible. A friend suggested that I use Antonio's Tailoring Shop in downtown Auckland. When I met Antonio, he gave me his full attention ------ his shop was busy. He took the time to listen to me and carefully noted all my measurements. He then explained all the tailoring costs up front and assured me that he could have my suit ready in three days, but he had it done in two! ------\nAntonio has run his shop for over 30 years, and his experience really shows. He is a ------ tailor. I highly recommend him.\nJim Kestren, Auckland",
+    "setId": "set_135_138",
+    "answer": "A",
+    "type": "원급 부사 자리_동사 수식",
+    "explanation": "as와 as possible 사이에서 과거분사 tailored를 수식하는 원급 부사 자리이다. 따라서 (A) quickly가 정답이다. (B) quicken(재촉하다)은 동사, (C) quickest는 최상급 형용사/(비격식체) 부사, (D) quickness(빠름)는 명사로 구조상 빈칸에 들어갈 수 없다.",
+    "translation": null,
+    "vocabulary": null
+  },
+  "q136": {
+    "id": "q136",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "as far as"
+      },
+      {
+        "label": "B",
+        "text": "even though"
+      },
+      {
+        "label": "C",
+        "text": "such as"
+      },
+      {
+        "label": "D",
+        "text": "whether"
+      }
+    ],
+    "passage": "I recently received a last-minute invitation to a formal dinner. I bought a suit and needed it tailored as ------ as possible. A friend suggested that I use Antonio's Tailoring Shop in downtown Auckland. When I met Antonio, he gave me his full attention ------ his shop was busy. He took the time to listen to me and carefully noted all my measurements. He then explained all the tailoring costs up front and assured me that he could have my suit ready in three days, but he had it done in two! ------\nAntonio has run his shop for over 30 years, and his experience really shows. He is a ------ tailor. I highly recommend him.\nJim Kestren, Auckland",
+    "setId": "set_135_138",
+    "answer": "B",
+    "type": "접속사 자리_어휘",
+    "explanation": "두 개의 완전한 절을 이어주는 접속사 자리로, 보기에서 (A) as far as와 (B) even though 중 하나를 선택해야 한다. 매장이 바쁜(his shop was busy) 와중에 집중해서 응대하는 것(he gave me his full attention)은 예상 밖의 상황이라고 볼 수 있으므로, 양보/대조의 부사절 접속사 (B) even though(비록 ~일지라도)가 정답이다. (D) whether는 or (not)과 결합해야만 부사절 접속사로 쓰일 수 있고, (C) such as는 전치사이므로 빈칸에 들어가 절을 이끌 수 없다.",
+    "translation": null,
+    "vocabulary": "as far as ~하는 한 such as~와 같은 whether ~이든(아니든)"
+  },
+  "q137": {
+    "id": "q137",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Of course, the shop is busiest on Saturdays."
+      },
+      {
+        "label": "B",
+        "text": "The suit fits me perfectly too."
+      },
+      {
+        "label": "C",
+        "text": "I made another purchase."
+      },
+      {
+        "label": "D",
+        "text": "He used to sell shirts."
+      }
+    ],
+    "passage": "I recently received a last-minute invitation to a formal dinner. I bought a suit and needed it tailored as ------ as possible. A friend suggested that I use Antonio's Tailoring Shop in downtown Auckland. When I met Antonio, he gave me his full attention ------ his shop was busy. He took the time to listen to me and carefully noted all my measurements. He then explained all the tailoring costs up front and assured me that he could have my suit ready in three days, but he had it done in two! ------\nAntonio has run his shop for over 30 years, and his experience really shows. He is a ------ tailor. I highly recommend him.\nJim Kestren, Auckland",
+    "setId": "set_135_138",
+    "answer": "B",
+    "type": "문맥에 맞는 문장 고르기",
+    "explanation": "빈칸 앞 문장에서는 안토니오 씨가 수선 작업을 빠르게 완료한 것(He ~ assured me that he could have my suit ready in three days, but he had it done in two!)에 대해 칭찬했고, 뒤 문단에서는 안토니오 씨의 경력 및 능력을 언급하며 그를 추천했다. 따라서 빈칸에도 안토니오 씨를 칭찬하는 내용이나 추천하는 이유가 들어가야 자연스러우므로, 수선이 완벽하게 되었다는 것을 말해주는 (B)가 정답이다.",
+    "translation": "(A) 물론 매장은 매주 토요일에 가장 붐빕니다.\n(B) 정장이 저에게 아주 잘 맞기도 합니다.\n(C) 또 하나 구입했습니다.\n(D) 그는 예전에 셔츠를 판매하곤 했습니다.",
+    "vocabulary": "fit perfectly 꼭 맞다 purchase 구입"
+  },
+  "q138": {
+    "id": "q138",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "former"
+      },
+      {
+        "label": "B",
+        "text": "temporary"
+      },
+      {
+        "label": "C",
+        "text": "superb"
+      },
+      {
+        "label": "D",
+        "text": "best"
+      }
+    ],
+    "passage": "I recently received a last-minute invitation to a formal dinner. I bought a suit and needed it tailored as ------ as possible. A friend suggested that I use Antonio's Tailoring Shop in downtown Auckland. When I met Antonio, he gave me his full attention ------ his shop was busy. He took the time to listen to me and carefully noted all my measurements. He then explained all the tailoring costs up front and assured me that he could have my suit ready in three days, but he had it done in two! ------\nAntonio has run his shop for over 30 years, and his experience really shows. He is a ------ tailor. I highly recommend him.\nJim Kestren, Auckland",
+    "setId": "set_135_138",
+    "answer": "C",
+    "type": "형용사 어휘",
+    "explanation": "뒤에서 안토니오 씨를 강력 추천한다(I highly recommend him)고 했으므로, 추천할 만한 재단사(tailor)의 특징을 묘사하는 형용사가 필요하다. 따라서 '최상의, 대단히 훌륭한'이라는 의미의 (C) superb가 정답이다. (D) best는 형용사 good의 최상급 표현으로 빈칸에 들어가려면 앞에 정관사 the가 와야 한다.",
+    "translation": null,
+    "vocabulary": "former 이전의 temporary 임시의"
+  },
+  "q139": {
+    "id": "q139",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "In the event of bad weather, the animals will be inside."
+      },
+      {
+        "label": "B",
+        "text": "There are no exceptions to this policy."
+      },
+      {
+        "label": "C",
+        "text": "Ones younger than that can find much to enjoy."
+      },
+      {
+        "label": "D",
+        "text": "This fee includes lunch and a small souvenir."
+      }
+    ],
+    "passage": "Dear Director Yoshida,\nThank you for your school's interest in visiting our farm next month. Please note that children must be at least six years old to visit and tour the farm. ------ I have enclosed a list of the ------ activities available for our young visitors. Two of these ------ must be scheduled in advance. They are a cheese-making class and an introduction to beekeeping. Both are very popular with our visitors.\nPlease let ------ know your selection by early next week. I look forward to welcoming your group soon!\nSincerely.\nAnnabel Romero, Coordinator\nMerrytree Family Farm",
+    "setId": "set_139_142",
+    "answer": "B",
+    "type": "문맥에 맞는 문장 고르기",
+    "explanation": "빈칸 앞 문장에서는 농장 방문 및 견학이 허용되는 최소 연령 (children must be at least six years old to visit and tour the farm)을, 뒤 문장에서는 어린 방문객들이 참여할만한 활동 목록 (a list of the ~ activities available for our young visitors)을 언급했다. 따라서 빈칸에는 나이 제한이나 농장 방문에 관한 설명이 들어가야 자연스러우므로, 최소 연령 관련 방침의 예외 유무를 밝힌 (B)가 정답이다.",
+    "translation": "(A) 날씨가 좋지 않을 경우 동물은 내부에 있을 것입니다.\n(B) 본 방침에 예외는 없습니다.\n(C) 이보다 어린 아이들이 즐길 거리가 많습니다.\n(D) 해당 요금에는 점심식사 및 작은 기념품이 포함됩니다.",
+    "vocabulary": "in the event of 만약 ~하면 exception 예외 policy 정책, 방침 souvenir 기념품"
+  },
+  "q140": {
+    "id": "q140",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "legal"
+      },
+      {
+        "label": "B",
+        "text": "artistic"
+      },
+      {
+        "label": "C",
+        "text": "athletic"
+      },
+      {
+        "label": "D",
+        "text": "educational"
+      }
+    ],
+    "passage": "Dear Director Yoshida,\nThank you for your school's interest in visiting our farm next month. Please note that children must be at least six years old to visit and tour the farm. ------ I have enclosed a list of the ------ activities available for our young visitors. Two of these ------ must be scheduled in advance. They are a cheese-making class and an introduction to beekeeping. Both are very popular with our visitors.\nPlease let ------ know your selection by early next week. I look forward to welcoming your group soon!\nSincerely.\nAnnabel Romero, Coordinator\nMerrytree Family Farm",
+    "setId": "set_139_142",
+    "answer": "D",
+    "type": "형용사 어휘",
+    "explanation": "activities를 수식하는 형용사 자리로, 어린 방문객들이 참여할만한 (available for our young visitors) 활동의 성격을 나타내는 단어가 들어가야 한다. 뒤에서 치즈 만들기 수업(a cheese-making class)과 양봉 입문(an introduction to beekeeping)을 예시로 들고 있으므로, 교육용 활동임을 알 수 있다. 따라서 '교육의, 교육적인'이라는 의미의 (D) educational이 정답이다.",
+    "translation": null,
+    "vocabulary": "legal 법률에 관련된 artistic 예술의 athletic 육상의, 탄탄한"
+  },
+  "q141": {
+    "id": "q141",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "events"
+      },
+      {
+        "label": "B",
+        "text": "plays"
+      },
+      {
+        "label": "C",
+        "text": "treatments"
+      },
+      {
+        "label": "D",
+        "text": "trips"
+      }
+    ],
+    "passage": "Dear Director Yoshida,\nThank you for your school's interest in visiting our farm next month. Please note that children must be at least six years old to visit and tour the farm. ------ I have enclosed a list of the ------ activities available for our young visitors. Two of these ------ must be scheduled in advance. They are a cheese-making class and an introduction to beekeeping. Both are very popular with our visitors.\nPlease let ------ know your selection by early next week. I look forward to welcoming your group soon!\nSincerely.\nAnnabel Romero, Coordinator\nMerrytree Family Farm",
+    "setId": "set_139_142",
+    "answer": "A",
+    "type": "명사 어휘",
+    "explanation": "these가 앞에서 언급된 어린 방문객들을 위한 활동(activities)을 가리키므로, activities와 유사한 단어가 빈칸에 들어가야 한다. 따라서 '행사'라는 의미의 (A) events가 정답이다.",
+    "translation": null,
+    "vocabulary": "play 연극 treatment 치료 trip 여행"
+  },
+  "q142": {
+    "id": "q142",
+    "question": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "they"
+      },
+      {
+        "label": "B",
+        "text": "me"
+      },
+      {
+        "label": "C",
+        "text": "her"
+      },
+      {
+        "label": "D",
+        "text": "one"
+      }
+    ],
+    "passage": "Dear Director Yoshida,\nThank you for your school's interest in visiting our farm next month. Please note that children must be at least six years old to visit and tour the farm. ------ I have enclosed a list of the ------ activities available for our young visitors. Two of these ------ must be scheduled in advance. They are a cheese-making class and an introduction to beekeeping. Both are very popular with our visitors.\nPlease let ------ know your selection by early next week. I look forward to welcoming your group soon!\nSincerely.\nAnnabel Romero, Coordinator\nMerrytree Family Farm",
+    "setId": "set_139_142",
+    "answer": "B",
+    "type": "대명사 어휘",
+    "explanation": "「let+목적어+목적격 보어(know your selection)」 구조에서 let의 목적어 역할을 하는 자리이다. 최종 선택 사항을 자신에게 알려달라고 요청하는 내용이므로, (B) me가 정답이다.",
+    "translation": null,
+    "vocabulary": null
+  },
+  "q159": {
+    "id": "q159",
+    "question": "At 3:01 P.M., what does Ms. McCall most\nlikely mean when she writes, \"No problem\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She did not have any issues logging on\nto her computer."
+      },
+      {
+        "label": "B",
+        "text": "She does not think a document has\nerrors."
+      },
+      {
+        "label": "C",
+        "text": "She is willing to review a document."
+      },
+      {
+        "label": "D",
+        "text": "She has time to meet representatives\nfrom Keyes Elegant Home."
+      }
+    ],
+    "passage": "Dennis Beck (2:52 P.M.)\nHi, Corinne. I just want to be sure that you saw the document I\nsent you. It's the combined market analysis and advertising\nproposal for the Keyes Elegant Home group. We're preparing it\nfor tomorrow's presentation to the client.\n\nCorinne McCall (2:53 P.M.)\nYes. I have just downloaded it. Is this about their new line\nof tableware?\n\nDennis Beck (2:54 Ρ.Μ.)\nYes. I'd like you to read it over.\n\nCorinne McCall (3:01 P.M.)\nNo problem. Would you like me to revise anything, or do you\nwant me to just check that it is all clear?\n\nDennis Beck (3:02 P.M.)\nFeel free to add information to the section \"Advertising\nStrategies,\" since that is your area of expertise.\n\nCorinne McCall (3:03 P.M.)\nWill do. I'll get it back to you before the end of the day.",
+    "setId": "set_159_160",
+    "answer": "C",
+    "type": "의도 파악",
+    "explanation": "백 씨가 오후 2시 54분 메시지에서 자신이 보낸 문서를 읽어봐 주면 좋겠다(I'd like you to read it over)며 도움을 요청하자, 이에 대해 문제되지 않는다고 응답한 것이다. 즉, 벡 씨의 문서 검토 요청을 수락한다는 의미이므로, (C)가 정답이다.",
+    "translation": "오후 3시 1분에 맥콜 씨가 \"문제 없어요\"라고 쓸 때, 그 의도는 무엇인가?",
+    "vocabulary": "be willing to 기꺼이~하다 review 검토하다 representative 대표, 대리인"
+  },
+  "q160": {
+    "id": "q160",
+    "question": "What type of work does Ms. McCall most\nlikely do?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Marketing"
+      },
+      {
+        "label": "B",
+        "text": "Accounting"
+      },
+      {
+        "label": "C",
+        "text": "Legal consulting"
+      },
+      {
+        "label": "D",
+        "text": "Information technology services"
+      }
+    ],
+    "passage": "Dennis Beck (2:52 P.M.)\nHi, Corinne. I just want to be sure that you saw the document I\nsent you. It's the combined market analysis and advertising\nproposal for the Keyes Elegant Home group. We're preparing it\nfor tomorrow's presentation to the client.\n\nCorinne McCall (2:53 P.M.)\nYes. I have just downloaded it. Is this about their new line\nof tableware?\n\nDennis Beck (2:54 Ρ.Μ.)\nYes. I'd like you to read it over.\n\nCorinne McCall (3:01 P.M.)\nNo problem. Would you like me to revise anything, or do you\nwant me to just check that it is all clear?\n\nDennis Beck (3:02 P.M.)\nFeel free to add information to the section \"Advertising\nStrategies,\" since that is your area of expertise.\n\nCorinne McCall (3:03 P.M.)\nWill do. I'll get it back to you before the end of the day.",
+    "setId": "set_159_160",
+    "answer": "A",
+    "type": "추론/암시",
+    "explanation": "백 씨가 오후 3시 2분 메시지에서 광고 전략(Advertising Strategies)이 맥콜 씨의 전문 분야(that is your area of expertise)임을 언급했으므로, (A)가 정답이다.",
+    "translation": "맥콜 씨는 어떤 종류의 일을 하겠는가?",
+    "vocabulary": ""
+  },
+  "q161": {
+    "id": "q161",
+    "question": "What is suggested about the craft fair?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It takes place in downtown\nStaffordsville."
+      },
+      {
+        "label": "B",
+        "text": "It is being held for the first time."
+      },
+      {
+        "label": "C",
+        "text": "It specializes in locally produced crafts."
+      },
+      {
+        "label": "D",
+        "text": "It will be held outdoors."
+      }
+    ],
+    "passage": "To:\tMara Renaldo <mrenaldo@viyamail.com>\nFrom:\tLisa Yang <lyang@staffordsvillefair.org>\nDate:\tMay 28\nSubject:\tRE: Staffordsville Craft Fair\n\nDear Ms. Renaldo,\n\nThank you for your interest in selling your handcrafted items at the annual Staffordsville\nCraft Fair. Please note that all applicants must submit a $25 application fee, whether or\nnot they want to share a space with another applicant. Moreover, all applicants must\nsubmit a minimum of four photographs of their work in order to be considered as a\nvendor. ------[1]------.\n\nIn addition to photographs, we ask that you submit a rough sketch showing how you\nwould display your work. Since you propose to share a space with a friend, local potter\nJulia Berens, it would be helpful if your sketch could indicate how you are planning to use\nthe space jointly. ------[2]------\n\nAlso, because we hold the fair rain or shine, all vendors must supply their own tenting to\nprotect themselves and their wares from the possibility of rain. ------[3]------\n\nFinally, please be aware that every year we receive far more applications from jewelry\nmakers than we can accept. We hope that you will not be too discouraged if your work is\nnot accepted this year, as you are applying for the first time. ------[4]------\n\nThanks again, and best of luck with your application,\nLisa Yang",
+    "setId": "set_161_164",
+    "answer": "D",
+    "type": "추론/암시",
+    "explanation": "세 번째 단락에서 날씨에 관계없이 박람회를 열기 때문에 비가 올 경우 물품이 젖지 않도록 보호할 천막을 각자 구비해야 한다(because we hold the fair rain or shine, all vendors must supply their own tenting to protect from the possibility of rain)고 했다. 따라서 박람회가 야외에서 열린다고 추론할 수 있으므로, (D)가 정답이다.",
+    "translation": "공예박람회에 대해 암시된 것은?\n(A) 스태포즈빌 시내에서 열린다.\n(B) 최초로 열리는 것이다.\n(C) 지역에서 만든 공예품을 전문으로 한다.\n(D) 야외에서 열릴 것이다.",
+    "vocabulary": "specialize in ~를 전문으로 하다"
+  },
+  "q162": {
+    "id": "q162",
+    "question": "What is NOT mentioned as a requirement\nfor selling at the craft fair?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Sharing a space with another\nparticipant"
+      },
+      {
+        "label": "B",
+        "text": "Paying a fee to participate"
+      },
+      {
+        "label": "C",
+        "text": "Submitting images of the crafts"
+      },
+      {
+        "label": "D",
+        "text": "Providing one's own tenting"
+      }
+    ],
+    "passage": "To:\tMara Renaldo <mrenaldo@viyamail.com>\nFrom:\tLisa Yang <lyang@staffordsvillefair.org>\nDate:\tMay 28\nSubject:\tRE: Staffordsville Craft Fair\n\nDear Ms. Renaldo,\n\nThank you for your interest in selling your handcrafted items at the annual Staffordsville\nCraft Fair. Please note that all applicants must submit a $25 application fee, whether or\nnot they want to share a space with another applicant. Moreover, all applicants must\nsubmit a minimum of four photographs of their work in order to be considered as a\nvendor. ------[1]------.\n\nIn addition to photographs, we ask that you submit a rough sketch showing how you\nwould display your work. Since you propose to share a space with a friend, local potter\nJulia Berens, it would be helpful if your sketch could indicate how you are planning to use\nthe space jointly. ------[2]------\n\nAlso, because we hold the fair rain or shine, all vendors must supply their own tenting to\nprotect themselves and their wares from the possibility of rain. ------[3]------\n\nFinally, please be aware that every year we receive far more applications from jewelry\nmakers than we can accept. We hope that you will not be too discouraged if your work is\nnot accepted this year, as you are applying for the first time. ------[4]------\n\nThanks again, and best of luck with your application,\nLisa Yang",
+    "setId": "set_161_164",
+    "answer": "A",
+    "type": "사실 관계 확인",
+    "explanation": "첫 번째 단락의 '모든 신청자는 25달러의 신청비를 내야 한다(all applicants must submit a $25 application fee)'에서 (B)를, '모든 신청자는 최소 4장의 작품 사진을 제출해야 한다(all applicants must submit a minimum of four photographs of their work)'에서 (C)를, 세 번째 단락의 '모든 판매자는 각자 천막을 구비해야 한다(all vendors must supply their own tenting)'에서 (D)를 확인할 수 있다. 따라서 선택 사항(whether or not they want to share a space with another applicant)에 해당하는 (A)가 정답이다.",
+    "translation": "공예박람회 판매를 위한 조건으로 언급되지 않은 것은?\n(A) 다른 참가자와 공간 함께 쓰기\n(B) 참가비 내기\n(C) 공예품 사진 제출하기\n(D) 각자의 천막 제공하기",
+    "vocabulary": null
+  },
+  "q163": {
+    "id": "q163",
+    "question": "What does Ms. Renaldo most likely sell?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Sketches"
+      },
+      {
+        "label": "B",
+        "text": "Photographs"
+      },
+      {
+        "label": "C",
+        "text": "Pottery"
+      },
+      {
+        "label": "D",
+        "text": "Jewelry"
+      }
+    ],
+    "passage": "To:\tMara Renaldo <mrenaldo@viyamail.com>\nFrom:\tLisa Yang <lyang@staffordsvillefair.org>\nDate:\tMay 28\nSubject:\tRE: Staffordsville Craft Fair\n\nDear Ms. Renaldo,\n\nThank you for your interest in selling your handcrafted items at the annual Staffordsville\nCraft Fair. Please note that all applicants must submit a $25 application fee, whether or\nnot they want to share a space with another applicant. Moreover, all applicants must\nsubmit a minimum of four photographs of their work in order to be considered as a\nvendor. ------[1]------.\n\nIn addition to photographs, we ask that you submit a rough sketch showing how you\nwould display your work. Since you propose to share a space with a friend, local potter\nJulia Berens, it would be helpful if your sketch could indicate how you are planning to use\nthe space jointly. ------[2]------\n\nAlso, because we hold the fair rain or shine, all vendors must supply their own tenting to\nprotect themselves and their wares from the possibility of rain. ------[3]------\n\nFinally, please be aware that every year we receive far more applications from jewelry\nmakers than we can accept. We hope that you will not be too discouraged if your work is\nnot accepted this year, as you are applying for the first time. ------[4]------\n\nThanks again, and best of luck with your application,\nLisa Yang",
+    "setId": "set_161_164",
+    "answer": "D",
+    "type": "추론/암시",
+    "explanation": "네 번째 단락에서 매년 박람회에서 수용할 수 있는 것보다 훨씬 더 많은 보석 제작자들의 신청을 받고 있다(every year we receive far more applications from jewelry makers)고 한 후, 레날도 씨의 작품이 올해 뽑히지 않을 가능성(if your work is not accepted this year)을 언급했다. 따라서 레날도 씨도 보석 제작자라고 추론할 수 있으므로, (D)가 정답이다.",
+    "translation": "레날도 씨는 무엇을 판매하겠는가?\n(A) 스케치\n(B) 사진\n(C) 도자기\n(D) 보석",
+    "vocabulary": null
+  },
+  "q164": {
+    "id": "q164",
+    "question": "In which of the positions marked [1], [2], [3],\nand [4] does the following sentence best\nbelong?\n\"Make sure they clearly represent the items\nyou wish to offer for purchase at the event.\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "[1]"
+      },
+      {
+        "label": "B",
+        "text": "[2]"
+      },
+      {
+        "label": "C",
+        "text": "[3]"
+      },
+      {
+        "label": "D",
+        "text": "[4]"
+      }
+    ],
+    "passage": "To:\tMara Renaldo <mrenaldo@viyamail.com>\nFrom:\tLisa Yang <lyang@staffordsvillefair.org>\nDate:\tMay 28\nSubject:\tRE: Staffordsville Craft Fair\n\nDear Ms. Renaldo,\n\nThank you for your interest in selling your handcrafted items at the annual Staffordsville\nCraft Fair. Please note that all applicants must submit a $25 application fee, whether or\nnot they want to share a space with another applicant. Moreover, all applicants must\nsubmit a minimum of four photographs of their work in order to be considered as a\nvendor. ------[1]------.\n\nIn addition to photographs, we ask that you submit a rough sketch showing how you\nwould display your work. Since you propose to share a space with a friend, local potter\nJulia Berens, it would be helpful if your sketch could indicate how you are planning to use\nthe space jointly. ------[2]------\n\nAlso, because we hold the fair rain or shine, all vendors must supply their own tenting to\nprotect themselves and their wares from the possibility of rain. ------[3]------\n\nFinally, please be aware that every year we receive far more applications from jewelry\nmakers than we can accept. We hope that you will not be too discouraged if your work is\nnot accepted this year, as you are applying for the first time. ------[4]------\n\nThanks again, and best of luck with your application,\nLisa Yang",
+    "setId": "set_161_164",
+    "answer": "A",
+    "type": "문장 삽입",
+    "explanation": "주어진 문장의 '그것들', 즉 제품을 보여주어야 하는 것이 앞에서 먼저 언급되어야 한다. [1] 앞에서 박람회 판매자로 채택되려면 작품 사진을 제출해야 한다(all applicants must submit a minimum of four photographs of their work)고 했으므로, 이 뒤에 주어진 문장이 들어가야 자연스럽다. 따라서 (A)가 정답이다.",
+    "translation": "[1], [2], [3], [4]로 표시된 곳 중에서 다음 문장이 가장 적합한 곳은?\n\"그것들이 행사에서 판매하고자 내놓는 제품을 명확히 보여줄 수 있도록 하십시오.",
+    "vocabulary": "represent 보여주다, 제시하다"
+  },
+  "q176": {
+    "id": "q176",
+    "question": "What is NOT recommended in the article?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Using plants to decorate cubicles"
+      },
+      {
+        "label": "B",
+        "text": "Walking outdoors during breaks"
+      },
+      {
+        "label": "C",
+        "text": "Using a calming noise machine"
+      },
+      {
+        "label": "D",
+        "text": "Decorating with personal photographs."
+      }
+    ],
+    "passages": [
+      "Alberta Business Matters\nApril issue\nImprove Your Office\nEnvironment Now!\nToday's office environment, featuring\nnumerous corridors, unexciting beige or\nwhite walls, and often rows of identical,\nwindowless cubicles, might not inspire\ncomfort, beauty, and energy. However,\nthere are some easy, inexpensive ways to\nmake your office space more inviting.\nAir quality\n• Add some green plants to the décor.\nPlants offer a natural filtration system,\nincreasing oxygen levels.\nNonflowering plants should be\npreferred, as they will not scatter pollen.\n• A small, tabletop air purifier helps\nimprove stale air and removes dust.\nLight quality\n• Take breaks and go outdoors. Even just\nfive minutes before or after lunch break\nwill provide your eyes with a respite from\nartificial light sources.\n• Use desktop lamps with full-spectrum\nlightbulbs.\nInstall double-glazed windows instead of\nblinds to reduce glare while maintaining\nnatural light.\nStress relief\n• Earplugs or noise-cancelling headphones\ncan block distracting noise in an open office\nfloor plan.\nPhotographs of loved ones and places we have\nvisited for vacation are reminders of our life\naway from the office. Select a few favorite\npictures as important decorative elements.\nDear readers, if you have tips to add to this\nlist, send them in and they will be published.\nin next month's issue.",
+      "Alberta Business Matters\nLetters to the Editor\nIt may interest your readers to know about the company I work for, called Moveable, Inc.\nWe aspire to make dull offices more comfortable and convenient for workers, especially\nfor today's on-the-move employees.\nFor example, say you work two days a week at your headquarters in Edmonton, and the\nrest of the week you are in a satellite office. Our \"Can-Do Case\" ensures that your favorite\noffice supplies always travel with you. Our \"Modular Décor Kit, Kit,\" weighing just 1.75 kg,\ncontains a portable reading lamp, a miniature silk plant, and a folding photo frame with\nspace for four pictures. Look us up online and follow us on social media, as we offer new\nitems frequently!\nBest,\nMaria Testa"
+    ],
+    "setId": "set_176_180",
+    "answer": "C",
+    "type": "사실 관계 확인",
+    "explanation": "공기 질(Air quality) 항목에서 사무실 장식으로 녹색 식물을 들여 놓으라(Add some green plants to the décor)고 했고, 광질(Light quality) 항목에서는 잠시 휴식을 취하고 밖으로 나가라(Take breaks and go outdoors)고 권했다. 또한 스트레스 해소(Stress relief)를 위해 개인의 삶을 상기시켜주는 사진을 몇 장 골라보라(Photographs of loved ones and placed as important decorative elements)고 했으므로, (A), (B), (D)는 권장 사항임을 확인할 수 있다. 따라서 언급되지 않은 (C)가 정답이다.",
+    "translation": "기사에서 권장되지 않는 것은?\n(A) 식물을 이용해 작은 방 장식하기\n(B) 휴식 시간 동안 바깥에 나가서 걷기\n(C) 잔잔한 소음 기계 사용하기\n(D) 개인 사진으로 장식하기",
+    "vocabulary": null
+  },
+  "q177": {
+    "id": "q177",
+    "question": "Why are blinds mentioned?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because they are relatively expensive"
+      },
+      {
+        "label": "B",
+        "text": "Because they block natural light"
+      },
+      {
+        "label": "C",
+        "text": "Because they are hard to match to\nfurniture"
+      },
+      {
+        "label": "D",
+        "text": "Because they attract dust"
+      }
+    ],
+    "passages": [
+      "Alberta Business Matters\nApril issue\nImprove Your Office\nEnvironment Now!\nToday's office environment, featuring\nnumerous corridors, unexciting beige or\nwhite walls, and often rows of identical,\nwindowless cubicles, might not inspire\ncomfort, beauty, and energy. However,\nthere are some easy, inexpensive ways to\nmake your office space more inviting.\nAir quality\n• Add some green plants to the décor.\nPlants offer a natural filtration system,\nincreasing oxygen levels.\nNonflowering plants should be\npreferred, as they will not scatter pollen.\n• A small, tabletop air purifier helps\nimprove stale air and removes dust.\nLight quality\n• Take breaks and go outdoors. Even just\nfive minutes before or after lunch break\nwill provide your eyes with a respite from\nartificial light sources.\n• Use desktop lamps with full-spectrum\nlightbulbs.\nInstall double-glazed windows instead of\nblinds to reduce glare while maintaining\nnatural light.\nStress relief\n• Earplugs or noise-cancelling headphones\ncan block distracting noise in an open office\nfloor plan.\nPhotographs of loved ones and places we have\nvisited for vacation are reminders of our life\naway from the office. Select a few favorite\npictures as important decorative elements.\nDear readers, if you have tips to add to this\nlist, send them in and they will be published.\nin next month's issue.",
+      "Alberta Business Matters\nLetters to the Editor\nIt may interest your readers to know about the company I work for, called Moveable, Inc.\nWe aspire to make dull offices more comfortable and convenient for workers, especially\nfor today's on-the-move employees.\nFor example, say you work two days a week at your headquarters in Edmonton, and the\nrest of the week you are in a satellite office. Our \"Can-Do Case\" ensures that your favorite\noffice supplies always travel with you. Our \"Modular Décor Kit, Kit,\" weighing just 1.75 kg,\ncontains a portable reading lamp, a miniature silk plant, and a folding photo frame with\nspace for four pictures. Look us up online and follow us on social media, as we offer new\nitems frequently!\nBest,\nMaria Testa"
+    ],
+    "setId": "set_176_180",
+    "answer": "B",
+    "type": "세부 사항",
+    "explanation": "기사의 광질(Light quality) 항목에서 블라인드 대신 이중창을 설치해 자연광을 유지하면서 눈부심을 줄여보라(Install double-glazed windows instead of blinds to reduce glare while maintaining natural light)고 권장했다. 즉, 블라인드로는 자연광을 받지 못한다는 것을 설명한 것이므로, (B)가 정답이다.",
+    "translation": "블라인드를 언급한 이유는?\n(A) 상대적으로 비싸기 때문\n(B) 자연광을 차단하기 때문\n(C) 가구와 매치하기 어렵기 때문\n(D) 먼지를 끌어당기기 때문",
+    "vocabulary": "relatively 비교적, 상대적으로"
+  },
+  "q178": {
+    "id": "q178",
+    "question": "What is indicated about the magazine?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It is the only business publication in\nAlberta."
+      },
+      {
+        "label": "B",
+        "text": "Its publisher is hiring additional staff."
+      },
+      {
+        "label": "C",
+        "text": "Its editors would like to hear from\nreaders."
+      },
+      {
+        "label": "D",
+        "text": "It is sponsored by a furniture company."
+      }
+    ],
+    "passages": [
+      "Alberta Business Matters\nApril issue\nImprove Your Office\nEnvironment Now!\nToday's office environment, featuring\nnumerous corridors, unexciting beige or\nwhite walls, and often rows of identical,\nwindowless cubicles, might not inspire\ncomfort, beauty, and energy. However,\nthere are some easy, inexpensive ways to\nmake your office space more inviting.\nAir quality\n• Add some green plants to the décor.\nPlants offer a natural filtration system,\nincreasing oxygen levels.\nNonflowering plants should be\npreferred, as they will not scatter pollen.\n• A small, tabletop air purifier helps\nimprove stale air and removes dust.\nLight quality\n• Take breaks and go outdoors. Even just\nfive minutes before or after lunch break\nwill provide your eyes with a respite from\nartificial light sources.\n• Use desktop lamps with full-spectrum\nlightbulbs.\nInstall double-glazed windows instead of\nblinds to reduce glare while maintaining\nnatural light.\nStress relief\n• Earplugs or noise-cancelling headphones\ncan block distracting noise in an open office\nfloor plan.\nPhotographs of loved ones and places we have\nvisited for vacation are reminders of our life\naway from the office. Select a few favorite\npictures as important decorative elements.\nDear readers, if you have tips to add to this\nlist, send them in and they will be published.\nin next month's issue.",
+      "Alberta Business Matters\nLetters to the Editor\nIt may interest your readers to know about the company I work for, called Moveable, Inc.\nWe aspire to make dull offices more comfortable and convenient for workers, especially\nfor today's on-the-move employees.\nFor example, say you work two days a week at your headquarters in Edmonton, and the\nrest of the week you are in a satellite office. Our \"Can-Do Case\" ensures that your favorite\noffice supplies always travel with you. Our \"Modular Décor Kit, Kit,\" weighing just 1.75 kg,\ncontains a portable reading lamp, a miniature silk plant, and a folding photo frame with\nspace for four pictures. Look us up online and follow us on social media, as we offer new\nitems frequently!\nBest,\nMaria Testa"
+    ],
+    "setId": "set_176_180",
+    "answer": "C",
+    "type": "사실 관계 확인",
+    "explanation": "기사의 마지막 부분에서 독자에게 사무 환경 개선 방법 목록에 덧붙일 팀이 있다면 보내달라(if you have tips to add to this list, send them in)고 요청했으므로, (C)가 정답이다.",
+    "translation": "잡지에 대해 알 수 있는 것은?\n(A) 앨버타의 유일한 비즈니스 출판물이다.\n(B) 출판사는 직원을 추가 채용하고 있다.\n(C) 편집자들은 독자의 의견을 듣고 싶어 한다.\n(D) 가구 회사가 후원한다.",
+    "vocabulary": "publication 출판물 additional 추가의 sponsor 후원하다"
+  },
+  "q179": {
+    "id": "q179",
+    "question": "What is suggested about Ms. Testa?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She is a professional writer."
+      },
+      {
+        "label": "B",
+        "text": "She is starting a new company."
+      },
+      {
+        "label": "C",
+        "text": "She travels frequently in her work."
+      },
+      {
+        "label": "D",
+        "text": "She read the previous issue of Alberta\nBusiness Matters."
+      }
+    ],
+    "passages": [
+      "Alberta Business Matters\nApril issue\nImprove Your Office\nEnvironment Now!\nToday's office environment, featuring\nnumerous corridors, unexciting beige or\nwhite walls, and often rows of identical,\nwindowless cubicles, might not inspire\ncomfort, beauty, and energy. However,\nthere are some easy, inexpensive ways to\nmake your office space more inviting.\nAir quality\n• Add some green plants to the décor.\nPlants offer a natural filtration system,\nincreasing oxygen levels.\nNonflowering plants should be\npreferred, as they will not scatter pollen.\n• A small, tabletop air purifier helps\nimprove stale air and removes dust.\nLight quality\n• Take breaks and go outdoors. Even just\nfive minutes before or after lunch break\nwill provide your eyes with a respite from\nartificial light sources.\n• Use desktop lamps with full-spectrum\nlightbulbs.\nInstall double-glazed windows instead of\nblinds to reduce glare while maintaining\nnatural light.\nStress relief\n• Earplugs or noise-cancelling headphones\ncan block distracting noise in an open office\nfloor plan.\nPhotographs of loved ones and places we have\nvisited for vacation are reminders of our life\naway from the office. Select a few favorite\npictures as important decorative elements.\nDear readers, if you have tips to add to this\nlist, send them in and they will be published.\nin next month's issue.",
+      "Alberta Business Matters\nLetters to the Editor\nIt may interest your readers to know about the company I work for, called Moveable, Inc.\nWe aspire to make dull offices more comfortable and convenient for workers, especially\nfor today's on-the-move employees.\nFor example, say you work two days a week at your headquarters in Edmonton, and the\nrest of the week you are in a satellite office. Our \"Can-Do Case\" ensures that your favorite\noffice supplies always travel with you. Our \"Modular Décor Kit, Kit,\" weighing just 1.75 kg,\ncontains a portable reading lamp, a miniature silk plant, and a folding photo frame with\nspace for four pictures. Look us up online and follow us on social media, as we offer new\nitems frequently!\nBest,\nMaria Testa"
+    ],
+    "setId": "set_176_180",
+    "answer": null,
+    "type": "연계",
+    "explanation": null,
+    "translation": "테스타 씨에 대해 암시된 것은?\n(A) 전문 작가다.\n(B) 새로운 회사를 연다.\n(C) 출장을 자주 다닌다.\n(D) (앨버타 비즈니스 매터스> 이전 호를 읽었다.",
+    "vocabulary": null
+  },
+  "q180": {
+    "id": "q180",
+    "question": "What is suggested about Moveable, Inc.'s\nproducts?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They are packable."
+      },
+      {
+        "label": "B",
+        "text": "They are affordable."
+      },
+      {
+        "label": "C",
+        "text": "They are available for a short time."
+      },
+      {
+        "label": "D",
+        "text": "They are made from recycled materials."
+      }
+    ],
+    "passages": [
+      "Alberta Business Matters\nApril issue\nImprove Your Office\nEnvironment Now!\nToday's office environment, featuring\nnumerous corridors, unexciting beige or\nwhite walls, and often rows of identical,\nwindowless cubicles, might not inspire\ncomfort, beauty, and energy. However,\nthere are some easy, inexpensive ways to\nmake your office space more inviting.\nAir quality\n• Add some green plants to the décor.\nPlants offer a natural filtration system,\nincreasing oxygen levels.\nNonflowering plants should be\npreferred, as they will not scatter pollen.\n• A small, tabletop air purifier helps\nimprove stale air and removes dust.\nLight quality\n• Take breaks and go outdoors. Even just\nfive minutes before or after lunch break\nwill provide your eyes with a respite from\nartificial light sources.\n• Use desktop lamps with full-spectrum\nlightbulbs.\nInstall double-glazed windows instead of\nblinds to reduce glare while maintaining\nnatural light.\nStress relief\n• Earplugs or noise-cancelling headphones\ncan block distracting noise in an open office\nfloor plan.\nPhotographs of loved ones and places we have\nvisited for vacation are reminders of our life\naway from the office. Select a few favorite\npictures as important decorative elements.\nDear readers, if you have tips to add to this\nlist, send them in and they will be published.\nin next month's issue.",
+      "Alberta Business Matters\nLetters to the Editor\nIt may interest your readers to know about the company I work for, called Moveable, Inc.\nWe aspire to make dull offices more comfortable and convenient for workers, especially\nfor today's on-the-move employees.\nFor example, say you work two days a week at your headquarters in Edmonton, and the\nrest of the week you are in a satellite office. Our \"Can-Do Case\" ensures that your favorite\noffice supplies always travel with you. Our \"Modular Décor Kit, Kit,\" weighing just 1.75 kg,\ncontains a portable reading lamp, a miniature silk plant, and a folding photo frame with\nspace for four pictures. Look us up online and follow us on social media, as we offer new\nitems frequently!\nBest,\nMaria Testa"
+    ],
+    "setId": "set_176_180",
+    "answer": "A",
+    "type": "추론/암시",
+    "explanation": "편지의 두 번째 단락에서 무버블 주식회사의 '캔두 케이스(ensures that your favorite office supplies always travel with you)'와 '모듈라 데코 키트(weighing just 1.75 kg, contains a portable reading lamp ~ four pictures)'가 소개되었는데, 두 제품 모두 이동 시 휴대가 가능하다고 볼 수 있다. 따라서 (A)가 정답이다.",
+    "translation": "무버블 주식회사의 제품에 대해 암시된 것은?\n(A) 짐을 꾸리기에 쉽다.\n(B) 가격이 적당하다.\n(C) 단기간 동안 이용 가능하다.\n(D) 재활용된 원료로 만들었다.",
+    "vocabulary": "packable 짐 꾸리기 쉬운 affordable 가격이 알맞은"
+  },
+  "q181": {
+    "id": "q181",
+    "question": "How does Tour 1 differ from all the other tours?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It uses a double-decker bus."
+      },
+      {
+        "label": "B",
+        "text": "It includes multiple meals at famous restaurants."
+      },
+      {
+        "label": "C",
+        "text": "It allows participants to see London from the water."
+      },
+      {
+        "label": "D",
+        "text": "It takes the entire day."
+      }
+    ],
+    "passages": [
+      "Choose one of Lloyd Touring Company's (LTC) most popular outings to see the best that\nLondon has to offer!\nTour 1: Full-day tour of the most popular tourist sites on one of our famous red double-decker\nbuses. See the Changing of the Guard and conclude the day with a river cruise.\nTour 2: Full-day walking tour of London's best shopping areas. Explore London's famous\ndepartment stores and wander along fashionable Bond and Oxford Streets.\nTour 3: Half-day tour on a red double-decker bus, including private tour of the Tower of\nLondon and lunch at a nearby café.\nTour 4: Half-day tour of Buckingham Palace, including the Changing of the Guard. Tour\nends with a traditional fish-and-chips lunch.\nTour 5: Full-day walking tour featuring London's top highlights. Complete the day with a\nmedieval banquet.\nLTC's knowledgeable local staff members personally guide each one of our tours. Meals\nare not covered, except when noted in the tour description. Participants are responsible for\nmeeting at chosen departure destination. LTC does not provide pickup from hotels. All tours\ncan be upgraded for an additional fee to include an open-date ticket to the London Eye,\nLondon's famous observation wheel.",
+      "This was my first trip to London. I decided to see all the major tourist sites on my own,\nbut I wanted someone to help me discover the most interesting places to shop in London.\nMy LTC tour guide, Larissa, was wonderful. She is an avid shopper herself, and at the\nbeginning of the tour, she tried to get to know the participants. She was able to guide\neveryone to the shops that they were most interested in. It was such a personalized tour!\nAnd it was a bonus that Larissa also speaks French. My daughter and I were visiting\nfrom Paris, and we appreciated being able to communicate in two languages. The tour\nwas very reasonably priced, too. I would highly recommend it. The only unpleasant part\nof the tour was that was that Oxford Street was extremely crowded when we visited, and it was\ndifficult to walk around easily."
+    ],
+    "setId": "set_181_185",
+    "answer": "C",
+    "type": "세부 사항",
+    "explanation": "강 크루즈로 하루를 마무리하는 것(conclude the day with a river cruise)은 투어 1에서만 이용 가능하므로, (C)가 정답이다. 이층버스(red double-decker bus)는 투어 1과 3에서 이용 가능하고, 투어 1, 2, 5 모두 전일 투어(Full-day tour)이므로, (A)와 (D)는 정답이 될 수 없다.",
+    "translation": "투어 1은 다른 투어들과 어떻게 다른가?\n(A) 이층버스를 이용한다.\n(B) 유명 레스토랑에서의 식사가 여러 번 포함되어 있다.\n(C) 참가자들이 강에서 런던을 바라볼 수 있다.\n(D) 하루 종일 걸린다.",
+    "vocabulary": "multiple 다수의 entire 전체의"
+  },
+  "q182": {
+    "id": "q182",
+    "question": "What is included in the cost of the tours?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Transportation from hotels"
+      },
+      {
+        "label": "B",
+        "text": "A tour guide"
+      },
+      {
+        "label": "C",
+        "text": "Breakfast at a restaurant"
+      },
+      {
+        "label": "D",
+        "text": "A ticket to the London Eye"
+      }
+    ],
+    "passages": [
+      "Choose one of Lloyd Touring Company's (LTC) most popular outings to see the best that\nLondon has to offer!\nTour 1: Full-day tour of the most popular tourist sites on one of our famous red double-decker\nbuses. See the Changing of the Guard and conclude the day with a river cruise.\nTour 2: Full-day walking tour of London's best shopping areas. Explore London's famous\ndepartment stores and wander along fashionable Bond and Oxford Streets.\nTour 3: Half-day tour on a red double-decker bus, including private tour of the Tower of\nLondon and lunch at a nearby café.\nTour 4: Half-day tour of Buckingham Palace, including the Changing of the Guard. Tour\nends with a traditional fish-and-chips lunch.\nTour 5: Full-day walking tour featuring London's top highlights. Complete the day with a\nmedieval banquet.\nLTC's knowledgeable local staff members personally guide each one of our tours. Meals\nare not covered, except when noted in the tour description. Participants are responsible for\nmeeting at chosen departure destination. LTC does not provide pickup from hotels. All tours\ncan be upgraded for an additional fee to include an open-date ticket to the London Eye,\nLondon's famous observation wheel.",
+      "This was my first trip to London. I decided to see all the major tourist sites on my own,\nbut I wanted someone to help me discover the most interesting places to shop in London.\nMy LTC tour guide, Larissa, was wonderful. She is an avid shopper herself, and at the\nbeginning of the tour, she tried to get to know the participants. She was able to guide\neveryone to the shops that they were most interested in. It was such a personalized tour!\nAnd it was a bonus that Larissa also speaks French. My daughter and I were visiting\nfrom Paris, and we appreciated being able to communicate in two languages. The tour\nwas very reasonably priced, too. I would highly recommend it. The only unpleasant part\nof the tour was that was that Oxford Street was extremely crowded when we visited, and it was\ndifficult to walk around easily."
+    ],
+    "setId": "set_181_185",
+    "answer": "B",
+    "type": "사실관계 확인",
+    "explanation": "웹페이지의 마지막 단락에서 해박한 LTC 현지 직원들이 모든 투어마다 개인적으로 가이드한다(LTC's knowledgeable local staff members personally guide each one of our tours)고 한 후 별도의 추가 비용을 언급하지 않았다. 따라서 투어 가이드가 비용에 포함되어 있다고 볼 수 있으므로, (B)가 정답이다. 투어에 포함된 식사 외의 식사는 포함되지 않고(Meals are not covered, except ~ description), 호텔 픽업 서비스는 제공되지 않으며(LTC does not provide pickup from hotels), 추가 요금을 지불하면 런던아이 이용권을 포함하도록 업그레이드해준다(All tours can be upgraded for an additional fee to include an open-date ticket to the London Eye)고 했으므로, (A), (C), (D)는 정답이 될 수 없다.",
+    "translation": "투어 비용에 포함된 것은?\n(A) 호텔에서 출발하는 교통편\n(B) 투어 가이드\n(C) 음식점에서 아침식사\n(D) 런던아이 이용권",
+    "vocabulary": "transportation 교통편, 운송"
+  },
+  "q183": {
+    "id": "q183",
+    "question": "What tour did Ms. Bouton most likely take?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Tour 2"
+      },
+      {
+        "label": "B",
+        "text": "Tour 3"
+      },
+      {
+        "label": "C",
+        "text": "Tour 4"
+      },
+      {
+        "label": "D",
+        "text": "Tour 5"
+      }
+    ],
+    "passages": [
+      "Choose one of Lloyd Touring Company's (LTC) most popular outings to see the best that\nLondon has to offer!\nTour 1: Full-day tour of the most popular tourist sites on one of our famous red double-decker\nbuses. See the Changing of the Guard and conclude the day with a river cruise.\nTour 2: Full-day walking tour of London's best shopping areas. Explore London's famous\ndepartment stores and wander along fashionable Bond and Oxford Streets.\nTour 3: Half-day tour on a red double-decker bus, including private tour of the Tower of\nLondon and lunch at a nearby café.\nTour 4: Half-day tour of Buckingham Palace, including the Changing of the Guard. Tour\nends with a traditional fish-and-chips lunch.\nTour 5: Full-day walking tour featuring London's top highlights. Complete the day with a\nmedieval banquet.\nLTC's knowledgeable local staff members personally guide each one of our tours. Meals\nare not covered, except when noted in the tour description. Participants are responsible for\nmeeting at chosen departure destination. LTC does not provide pickup from hotels. All tours\ncan be upgraded for an additional fee to include an open-date ticket to the London Eye,\nLondon's famous observation wheel.",
+      "This was my first trip to London. I decided to see all the major tourist sites on my own,\nbut I wanted someone to help me discover the most interesting places to shop in London.\nMy LTC tour guide, Larissa, was wonderful. She is an avid shopper herself, and at the\nbeginning of the tour, she tried to get to know the participants. She was able to guide\neveryone to the shops that they were most interested in. It was such a personalized tour!\nAnd it was a bonus that Larissa also speaks French. My daughter and I were visiting\nfrom Paris, and we appreciated being able to communicate in two languages. The tour\nwas very reasonably priced, too. I would highly recommend it. The only unpleasant part\nof the tour was that was that Oxford Street was extremely crowded when we visited, and it was\ndifficult to walk around easily."
+    ],
+    "setId": "set_181_185",
+    "answer": "A",
+    "type": "연계",
+    "explanation": "후기의 초반부에서 부통 씨는 런던에서 쇼핑하기에 가장 좋은 곳을 찾는 데 도와줄 사람이 필요해서(I wanted someone to help me discover the most interesting places to shop in London) 투어를 이용했다고 했다. 웹페이지에 나열된 투어 종류를 보면, 런던 최고의 쇼핑 구역을 도보로 둘러보는(Full-day walking tour of London's best shopping areas) 투어 2가 부동 씨의 요구에 가장 부합한다. 따라서 (A)가 정답이다.",
+    "translation": "부통 씨는 어떤 투어를 선택했겠는가?\n(A) 투어 2\n(B) 투어 3\n(C) 투어 4\n(D) 투어 5",
+    "vocabulary": ""
+  },
+  "q184": {
+    "id": "q184",
+    "question": "What does the review suggest about Ms. Bouton?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She prefers bus tours."
+      },
+      {
+        "label": "B",
+        "text": "She speaks French."
+      },
+      {
+        "label": "C",
+        "text": "She was on a business trip."
+      },
+      {
+        "label": "D",
+        "text": "She used LTC before."
+      }
+    ],
+    "passages": [
+      "Choose one of Lloyd Touring Company's (LTC) most popular outings to see the best that\nLondon has to offer!\nTour 1: Full-day tour of the most popular tourist sites on one of our famous red double-decker\nbuses. See the Changing of the Guard and conclude the day with a river cruise.\nTour 2: Full-day walking tour of London's best shopping areas. Explore London's famous\ndepartment stores and wander along fashionable Bond and Oxford Streets.\nTour 3: Half-day tour on a red double-decker bus, including private tour of the Tower of\nLondon and lunch at a nearby café.\nTour 4: Half-day tour of Buckingham Palace, including the Changing of the Guard. Tour\nends with a traditional fish-and-chips lunch.\nTour 5: Full-day walking tour featuring London's top highlights. Complete the day with a\nmedieval banquet.\nLTC's knowledgeable local staff members personally guide each one of our tours. Meals\nare not covered, except when noted in the tour description. Participants are responsible for\nmeeting at chosen departure destination. LTC does not provide pickup from hotels. All tours\ncan be upgraded for an additional fee to include an open-date ticket to the London Eye,\nLondon's famous observation wheel.",
+      "This was my first trip to London. I decided to see all the major tourist sites on my own,\nbut I wanted someone to help me discover the most interesting places to shop in London.\nMy LTC tour guide, Larissa, was wonderful. She is an avid shopper herself, and at the\nbeginning of the tour, she tried to get to know the participants. She was able to guide\neveryone to the shops that they were most interested in. It was such a personalized tour!\nAnd it was a bonus that Larissa also speaks French. My daughter and I were visiting\nfrom Paris, and we appreciated being able to communicate in two languages. The tour\nwas very reasonably priced, too. I would highly recommend it. The only unpleasant part\nof the tour was that was that Oxford Street was extremely crowded when we visited, and it was\ndifficult to walk around easily."
+    ],
+    "setId": "set_181_185",
+    "answer": "B",
+    "type": "추론/암시",
+    "explanation": "후기의 중반부에서 부통 씨는 투어 가이드인 라리사가 프랑스어도 구사하는 건 덤으로 얻은 이득이었다(it was a bonus that Larissa also speaks French)고 한 후, 자신과 딸이 파리에서 와서 두 개 언어로 의사소통을 할 수 있는 점에 감사했다(My daughter and I were visiting from Paris, and we appreciated being able to communicate in two languages)고 했다. 따라서 부통 씨가 프랑스어를 구사한다고 추론할 수 있으므로, (B)가 정답이다.",
+    "translation": "후기에서 부통 씨에 대해 암시된 것은?\n(A) 버스 투어를 선호한다.\n(B) 프랑스어를 구사한다.\n(C) 출장 중이었다.\n(D) LTC를 전에 이용한 적이 있다.",
+    "vocabulary": "business trip 출장"
+  },
+  "q185": {
+    "id": "q185",
+    "question": "Why was Ms. Bouton disappointed with the tour?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It was expensive."
+      },
+      {
+        "label": "B",
+        "text": "It was disorganized."
+      },
+      {
+        "label": "C",
+        "text": "It was in a very crowded area."
+      },
+      {
+        "label": "D",
+        "text": "It was in an uninteresting part of the city."
+      }
+    ],
+    "passages": [
+      "Choose one of Lloyd Touring Company's (LTC) most popular outings to see the best that\nLondon has to offer!\nTour 1: Full-day tour of the most popular tourist sites on one of our famous red double-decker\nbuses. See the Changing of the Guard and conclude the day with a river cruise.\nTour 2: Full-day walking tour of London's best shopping areas. Explore London's famous\ndepartment stores and wander along fashionable Bond and Oxford Streets.\nTour 3: Half-day tour on a red double-decker bus, including private tour of the Tower of\nLondon and lunch at a nearby café.\nTour 4: Half-day tour of Buckingham Palace, including the Changing of the Guard. Tour\nends with a traditional fish-and-chips lunch.\nTour 5: Full-day walking tour featuring London's top highlights. Complete the day with a\nmedieval banquet.\nLTC's knowledgeable local staff members personally guide each one of our tours. Meals\nare not covered, except when noted in the tour description. Participants are responsible for\nmeeting at chosen departure destination. LTC does not provide pickup from hotels. All tours\ncan be upgraded for an additional fee to include an open-date ticket to the London Eye,\nLondon's famous observation wheel.",
+      "This was my first trip to London. I decided to see all the major tourist sites on my own,\nbut I wanted someone to help me discover the most interesting places to shop in London.\nMy LTC tour guide, Larissa, was wonderful. She is an avid shopper herself, and at the\nbeginning of the tour, she tried to get to know the participants. She was able to guide\neveryone to the shops that they were most interested in. It was such a personalized tour!\nAnd it was a bonus that Larissa also speaks French. My daughter and I were visiting\nfrom Paris, and we appreciated being able to communicate in two languages. The tour\nwas very reasonably priced, too. I would highly recommend it. The only unpleasant part\nof the tour was that was that Oxford Street was extremely crowded when we visited, and it was\ndifficult to walk around easily."
+    ],
+    "setId": "set_181_185",
+    "answer": "C",
+    "type": "세부 사항",
+    "explanation": "후기의 후반부에서 부동 씨가 단 한 가지 아쉬운 점(The only unpleasant part of the tour)으로 옥스포드 가에 갔을 때 너무 붐벼서 쉽게 돌아다니기 어려웠던 점(Oxford Street was extremely crowded when we visited, and it was difficult to walk around easily)을 언급했다. 따라서 (C)가 정답이다.",
+    "translation": "부통 씨가 투어에 실망한 이유는?\n(A) 비용이 높았다.\n(B) 체계가 없었다.\n(C) 매우 붐비는 장소에서 이뤄졌다.\n(D) 도시에서 흥미롭지 않은 곳에서 이뤄졌다.",
+    "vocabulary": "disorganized 체계적이지 않은"
+  },
+  "q186": {
+    "id": "q186",
+    "question": "What most likely is the topic of the seminar on June 11?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Financial consulting"
+      },
+      {
+        "label": "B",
+        "text": "Graphic design"
+      },
+      {
+        "label": "C",
+        "text": "Marketing strategies"
+      },
+      {
+        "label": "D",
+        "text": "Business writing"
+      }
+    ],
+    "passages": [
+      "To:\nFrom:\nDate:\nSubject:\nDear Mr. Morgan,\nThank you for registering for Emilio Costa's seminar on June 11 at the Rothford Business\nCenter. We are glad you took advantage of the opportunity for conference participants\nto purchase some of Emilio Costa's graphic-design books at a discounted price. The\ninformation below is a confirmation of your order. The books will be waiting for you at\nthe check-in desk on the day of the seminar. Please note that we will accept any major\ncredit card for payment. We are looking forward to seeing you on June 11.",
+      "To:\nFrom:\nDate:\nSent:\nDear Roberta,\nI'm looking forward to finishing up our brochure design for Entchen Financial\nConsultants. Before we submit our final draft, I would like to rethink how we are\npresenting our data. Have you had a chance to look through the Costa book I showed\nyou? He gives great advice on improving the clarity of financial information in\nmarketing materials. Anyway, let's talk about it at lunch tomorrow.\nBest,\nJoseph",
+      "Attention, Seminar Participants:\nUnfortunately, we do not have copies of Emilio Costa's book Branding Strategies\nin Graphic Design with us today. For those of you who have ordered it, please\ngive your mailing address to the volunteer at the check-in desk, and the book will\nbe mailed to your home at no cost to you. We will charge your credit card upon\nshipment. We are sorry for the inconvenience."
+    ],
+    "setId": "set_186_190",
+    "answer": "B",
+    "type": "추론/암시",
+    "explanation": "첫 번째 이메일의 초반부에서 모건 씨가 6월 11일에 열릴 에밀리오 코스타 세미나에 신청한 것(registering for Emilio Costa's seminar on June 11)과 에밀리오 코스타가 여러 그래픽 디자인 도서(graphic-design books)를 집필한 사람임을 확인할 수 있다. 따라서 이 세미나의 주제가 그래픽 디자인 관련이라고 추론할 수 있으므로, (B)가 정답이다.",
+    "translation": "6월 11일 세미나의 주제는 무엇이겠는가?",
+    "vocabulary": null
+  },
+  "q187": {
+    "id": "q187",
+    "question": "What is suggested about Mr. Morgan?",
+    "options": [
+      {
+        "label": "A",
+        "text": "He attended the seminar with a coworker."
+      },
+      {
+        "label": "B",
+        "text": "He gave a presentation at the seminar."
+      },
+      {
+        "label": "C",
+        "text": "He received free shipping on a book purchase."
+      },
+      {
+        "label": "D",
+        "text": "He paid for some books in advance."
+      }
+    ],
+    "passages": [
+      "To:\nFrom:\nDate:\nSubject:\nDear Mr. Morgan,\nThank you for registering for Emilio Costa's seminar on June 11 at the Rothford Business\nCenter. We are glad you took advantage of the opportunity for conference participants\nto purchase some of Emilio Costa's graphic-design books at a discounted price. The\ninformation below is a confirmation of your order. The books will be waiting for you at\nthe check-in desk on the day of the seminar. Please note that we will accept any major\ncredit card for payment. We are looking forward to seeing you on June 11.",
+      "To:\nFrom:\nDate:\nSent:\nDear Roberta,\nI'm looking forward to finishing up our brochure design for Entchen Financial\nConsultants. Before we submit our final draft, I would like to rethink how we are\npresenting our data. Have you had a chance to look through the Costa book I showed\nyou? He gives great advice on improving the clarity of financial information in\nmarketing materials. Anyway, let's talk about it at lunch tomorrow.\nBest,\nJoseph",
+      "Attention, Seminar Participants:\nUnfortunately, we do not have copies of Emilio Costa's book Branding Strategies\nin Graphic Design with us today. For those of you who have ordered it, please\ngive your mailing address to the volunteer at the check-in desk, and the book will\nbe mailed to your home at no cost to you. We will charge your credit card upon\nshipment. We are sorry for the inconvenience."
+    ],
+    "setId": "set_186_190",
+    "answer": "C",
+    "type": "연계",
+    "explanation": "첫 번째 이메일에서 모건 씨가 주문한 책들은 세미나 당일 체크인 데스크에서 찾아가면 된다고 했는데, 세미나 참석자들을 대상으로 한 공지를 보면 <그래픽 디자인에서의 브랜딩 전략> 재고가 오늘 없다 (we do not have ~ Branding Strategies in Graphic Design with us today)며 주문한 사람에게 집으로 책을 무료 배송해 주겠다 (For those of you who have ordered it, ~ the book will be mailed to your home at no cost to you)고 쓰여 있다. 첫 번째 이메일의 표에서 모건 씨도 해당 책을 주문했음을 확인할 수 있으므로, 그가 무료로 배송받았을 것으로 추론할 수 있다. 따라서 (C)가 정답이다.",
+    "translation": "모건 씨에 대해 암시된 것은?",
+    "vocabulary": "mailing address 우편주소 at no cost 무료로 charge 청구하다 inconvenience 불편, give a presentation 발표하다 free shipping 무료 배송 in advance 미리"
+  },
+  "q188": {
+    "id": "q188",
+    "question": "What is the purpose of the notice?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To explain a problem"
+      },
+      {
+        "label": "B",
+        "text": "To ask for volunteers"
+      },
+      {
+        "label": "C",
+        "text": "To request payment"
+      },
+      {
+        "label": "D",
+        "text": "To promote a book"
+      }
+    ],
+    "passages": [
+      "To:\nFrom:\nDate:\nSubject:\nDear Mr. Morgan,\nThank you for registering for Emilio Costa's seminar on June 11 at the Rothford Business\nCenter. We are glad you took advantage of the opportunity for conference participants\nto purchase some of Emilio Costa's graphic-design books at a discounted price. The\ninformation below is a confirmation of your order. The books will be waiting for you at\nthe check-in desk on the day of the seminar. Please note that we will accept any major\ncredit card for payment. We are looking forward to seeing you on June 11.",
+      "To:\nFrom:\nDate:\nSent:\nDear Roberta,\nI'm looking forward to finishing up our brochure design for Entchen Financial\nConsultants. Before we submit our final draft, I would like to rethink how we are\npresenting our data. Have you had a chance to look through the Costa book I showed\nyou? He gives great advice on improving the clarity of financial information in\nmarketing materials. Anyway, let's talk about it at lunch tomorrow.\nBest,\nJoseph",
+      "Attention, Seminar Participants:\nUnfortunately, we do not have copies of Emilio Costa's book Branding Strategies\nin Graphic Design with us today. For those of you who have ordered it, please\ngive your mailing address to the volunteer at the check-in desk, and the book will\nbe mailed to your home at no cost to you. We will charge your credit card upon\nshipment. We are sorry for the inconvenience."
+    ],
+    "setId": "set_186_190",
+    "answer": "A",
+    "type": "주제/목적",
+    "explanation": "초반부에서 에밀리오 코스타의 도서가 오늘 없다(we do not have copies of Emilio Costa's book ~ with us today)며 추후 해당 도서를 구매한 사람들에게 무료로 배송해 주겠다는 해결책을 제시하고 있다. 따라서 문제를 설명하기 위한 공지라고 볼 수 있으므로, (A)가 정답이다.",
+    "translation": "공지의 목적은?",
+    "vocabulary": "request 요청하다 promote 홍보하다"
+  },
+  "q189": {
+    "id": "q189",
+    "question": "According to the second e-mail, what does Mr. Morgan suggest changing?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The deadline for submitting a project"
+      },
+      {
+        "label": "B",
+        "text": "The content of a book review"
+      },
+      {
+        "label": "C",
+        "text": "The time of a scheduled meeting"
+      },
+      {
+        "label": "D",
+        "text": "The display of some information"
+      }
+    ],
+    "passages": [
+      "To:\nFrom:\nDate:\nSubject:\nDear Mr. Morgan,\nThank you for registering for Emilio Costa's seminar on June 11 at the Rothford Business\nCenter. We are glad you took advantage of the opportunity for conference participants\nto purchase some of Emilio Costa's graphic-design books at a discounted price. The\ninformation below is a confirmation of your order. The books will be waiting for you at\nthe check-in desk on the day of the seminar. Please note that we will accept any major\ncredit card for payment. We are looking forward to seeing you on June 11.",
+      "To:\nFrom:\nDate:\nSent:\nDear Roberta,\nI'm looking forward to finishing up our brochure design for Entchen Financial\nConsultants. Before we submit our final draft, I would like to rethink how we are\npresenting our data. Have you had a chance to look through the Costa book I showed\nyou? He gives great advice on improving the clarity of financial information in\nmarketing materials. Anyway, let's talk about it at lunch tomorrow.\nBest,\nJoseph",
+      "Attention, Seminar Participants:\nUnfortunately, we do not have copies of Emilio Costa's book Branding Strategies\nin Graphic Design with us today. For those of you who have ordered it, please\ngive your mailing address to the volunteer at the check-in desk, and the book will\nbe mailed to your home at no cost to you. We will charge your credit card upon\nshipment. We are sorry for the inconvenience."
+    ],
+    "setId": "set_186_190",
+    "answer": "D",
+    "type": "세부 사항",
+    "explanation": "두 번째 이메일의 초반부에서 모건 씨가 데이터 제시 방법을 재고하고 싶다(I would like to rethink how we are presenting our data)고 제안했으므로, (D)가 정답이다.",
+    "translation": "두 번째 이메일에 따르면, 모건 씨는 무엇을 변경하자고 제안하는가?",
+    "vocabulary": null
+  },
+  "q190": {
+    "id": "q190",
+    "question": "How much did Mr. Morgan spend on the book he showed to Ms. Tsu?",
+    "options": [
+      {
+        "label": "A",
+        "text": "$17.60"
+      },
+      {
+        "label": "B",
+        "text": "$14.40"
+      },
+      {
+        "label": "C",
+        "text": "$16.00"
+      },
+      {
+        "label": "D",
+        "text": "$22.40"
+      }
+    ],
+    "passages": [
+      "To:\nFrom:\nDate:\nSubject:\nDear Mr. Morgan,\nThank you for registering for Emilio Costa's seminar on June 11 at the Rothford Business\nCenter. We are glad you took advantage of the opportunity for conference participants\nto purchase some of Emilio Costa's graphic-design books at a discounted price. The\ninformation below is a confirmation of your order. The books will be waiting for you at\nthe check-in desk on the day of the seminar. Please note that we will accept any major\ncredit card for payment. We are looking forward to seeing you on June 11.",
+      "To:\nFrom:\nDate:\nSent:\nDear Roberta,\nI'm looking forward to finishing up our brochure design for Entchen Financial\nConsultants. Before we submit our final draft, I would like to rethink how we are\npresenting our data. Have you had a chance to look through the Costa book I showed\nyou? He gives great advice on improving the clarity of financial information in\nmarketing materials. Anyway, let's talk about it at lunch tomorrow.\nBest,\nJoseph",
+      "Attention, Seminar Participants:\nUnfortunately, we do not have copies of Emilio Costa's book Branding Strategies\nin Graphic Design with us today. For those of you who have ordered it, please\ngive your mailing address to the volunteer at the check-in desk, and the book will\nbe mailed to your home at no cost to you. We will charge your credit card upon\nshipment. We are sorry for the inconvenience."
+    ],
+    "setId": "set_186_190",
+    "answer": null,
+    "type": "연계",
+    "explanation": null,
+    "translation": "모건 씨는 추 씨에게 보여준 책에 대해 얼마를 지불했는가?",
+    "vocabulary": null
+  },
+  "q191": {
+    "id": "q191",
+    "question": "What is the purpose of the article?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To report on the benefits of mixed-use buildings"
+      },
+      {
+        "label": "B",
+        "text": "To provide an update on a project"
+      },
+      {
+        "label": "C",
+        "text": "To encourage residents to apply for jobs"
+      },
+      {
+        "label": "D",
+        "text": "To announce a change in city policy"
+      }
+    ],
+    "passages": [
+      "Clanton (12 October) The planned renovation of the historic Anton Building by Jantuni Property Developers (JPD) is facing new delays. A JPD spokesperson says their negotiations with the city regarding a package of subsidies and tax incentives are ongoing and are proving somewhat contentious. According to the renovation plan, JPD must protect the historical integrity of the Anton Building while it creates a mixed-use interior, offering both office space and lower-level retail space. However, JPD's city permit to do the project is on hold pending the current negotiations.\nThis is making city revitalization advocates increasingly anxious. Aditi Yadav comments, \"This plan to create useful space out of an empty decaying building will go a long way to restoring vibrancy to that area of the city. I sincerely hope that JPD does not back out. In creating their offer, the City Council should consider JPD's excellent record of beautifully restoring and maintaining several other historic buildings in Clanton.\"",
+      "From: anabautista@lenoiva-health.com\nTo: trowell@jantunipropertydevelopers.com\nDate: 20 February\nSubject: Lease inquiry\nDear Mr. Rowell,\nI am the owner of Lenoiva, a health-care technology company. We plan to expand our operations and we need new office space. The Anton Building is one of the locations in Clanton that we are considering. We have been informed that your restoration project of this building will be finished sometime this spring. is spring, which is good timing for us. We are particularly attracted by the easy access to public transportation services that your building offers. Do you still have spaces available av for rent? We anticipate needing a space at least 300 square metres in size. Would there be any reserved parking for our employees if we rented there? We would appreciate any information you can provide.\nThank you in advance,\nAna Bautista",
+      "One Anton Place-2nd Floor Plan (office space)\nUnit 2A\n350 m²\nT&M Accountancy\nUnit 2B\n150 m²\nAvailable\nUnit 2C\n100 m²\nAvailable\nUnit 20\n250 m²\nAvailable\nUnit 2E\n375 m²\nAvailable"
+    ],
+    "setId": "set_191_195",
+    "answer": "B",
+    "type": "주제 / 목적",
+    "explanation": "첫 번째 단락에서 잰투니 부동산 개발업체의 안톤 빌딩 보수 공사가 다시 지연된다(The planned renovation of the historic Anton Building by Jantuni Property Developers ~ is facing new delays)고 한 후, 프로젝트 지연 상황에 대한 설명을 이어가고 있다. 따라서 (B)가 정답이다.",
+    "translation": "기사의 목적은?",
+    "vocabulary": "encourage 격려하다. 권장하다 policy 정책"
+  },
+  "q192": {
+    "id": "q192",
+    "question": "What positive aspect of the Anton Building does Ms. Yadav mention?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Its cost efficiency"
+      },
+      {
+        "label": "B",
+        "text": "Its compliance with environmental standards"
+      },
+      {
+        "label": "C",
+        "text": "The anticipated quality of the renovation work"
+      },
+      {
+        "label": "D",
+        "text": "The large amount of retail space"
+      }
+    ],
+    "passages": [
+      "Clanton (12 October) The planned renovation of the historic Anton Building by Jantuni Property Developers (JPD) is facing new delays. A JPD spokesperson says their negotiations with the city regarding a package of subsidies and tax incentives are ongoing and are proving somewhat contentious. According to the renovation plan, JPD must protect the historical integrity of the Anton Building while it creates a mixed-use interior, offering both office space and lower-level retail space. However, JPD's city permit to do the project is on hold pending the current negotiations.\nThis is making city revitalization advocates increasingly anxious. Aditi Yadav comments, \"This plan to create useful space out of an empty decaying building will go a long way to restoring vibrancy to that area of the city. I sincerely hope that JPD does not back out. In creating their offer, the City Council should consider JPD's excellent record of beautifully restoring and maintaining several other historic buildings in Clanton.\"",
+      "From: anabautista@lenoiva-health.com\nTo: trowell@jantunipropertydevelopers.com\nDate: 20 February\nSubject: Lease inquiry\nDear Mr. Rowell,\nI am the owner of Lenoiva, a health-care technology company. We plan to expand our operations and we need new office space. The Anton Building is one of the locations in Clanton that we are considering. We have been informed that your restoration project of this building will be finished sometime this spring. is spring, which is good timing for us. We are particularly attracted by the easy access to public transportation services that your building offers. Do you still have spaces available av for rent? We anticipate needing a space at least 300 square metres in size. Would there be any reserved parking for our employees if we rented there? We would appreciate any information you can provide.\nThank you in advance,\nAna Bautista",
+      "One Anton Place-2nd Floor Plan (office space)\nUnit 2A\n350 m²\nT&M Accountancy\nUnit 2B\n150 m²\nAvailable\nUnit 2C\n100 m²\nAvailable\nUnit 20\n250 m²\nAvailable\nUnit 2E\n375 m²\nAvailable"
+    ],
+    "setId": "set_191_195",
+    "answer": "C",
+    "type": "사실관계 확인",
+    "explanation": "기사의 두 번째 단락에서 야다브 씨는 시 의회에서 안톤 빌딩 보수 공사 프로젝트 제안을 할 때 JPD가 클랜튼의 다른 역사적 건물 여러 곳을 아름답게 복원하고 유지한 훌륭한 기록을 고려해야 할 것(the City Council should consider JPD's excellent record of beautifully restoring and maintaining several other",
+    "translation": "야다브 씨는 안톤 빌딩의 긍정적인 측면 중 어떤 것을 언급하는가?",
+    "vocabulary": ""
+  },
+  "q193": {
+    "id": "q193",
+    "question": "What is suggested about JPD in Ms. Bautista's e-mail?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It received the approval it was seeking."
+      },
+      {
+        "label": "B",
+        "text": "It has the only available office spaces for rent in Clanton."
+      },
+      {
+        "label": "C",
+        "text": "It has moved its main office to the Anton Building."
+      },
+      {
+        "label": "D",
+        "text": "It is a relatively new company."
+      }
+    ],
+    "passages": [
+      "Clanton (12 October) The planned renovation of the historic Anton Building by Jantuni Property Developers (JPD) is facing new delays. A JPD spokesperson says their negotiations with the city regarding a package of subsidies and tax incentives are ongoing and are proving somewhat contentious. According to the renovation plan, JPD must protect the historical integrity of the Anton Building while it creates a mixed-use interior, offering both office space and lower-level retail space. However, JPD's city permit to do the project is on hold pending the current negotiations.\nThis is making city revitalization advocates increasingly anxious. Aditi Yadav comments, \"This plan to create useful space out of an empty decaying building will go a long way to restoring vibrancy to that area of the city. I sincerely hope that JPD does not back out. In creating their offer, the City Council should consider JPD's excellent record of beautifully restoring and maintaining several other historic buildings in Clanton.\"",
+      "From: anabautista@lenoiva-health.com\nTo: trowell@jantunipropertydevelopers.com\nDate: 20 February\nSubject: Lease inquiry\nDear Mr. Rowell,\nI am the owner of Lenoiva, a health-care technology company. We plan to expand our operations and we need new office space. The Anton Building is one of the locations in Clanton that we are considering. We have been informed that your restoration project of this building will be finished sometime this spring. is spring, which is good timing for us. We are particularly attracted by the easy access to public transportation services that your building offers. Do you still have spaces available av for rent? We anticipate needing a space at least 300 square metres in size. Would there be any reserved parking for our employees if we rented there? We would appreciate any information you can provide.\nThank you in advance,\nAna Bautista",
+      "One Anton Place-2nd Floor Plan (office space)\nUnit 2A\n350 m²\nT&M Accountancy\nUnit 2B\n150 m²\nAvailable\nUnit 2C\n100 m²\nAvailable\nUnit 20\n250 m²\nAvailable\nUnit 2E\n375 m²\nAvailable"
+    ],
+    "setId": "set_191_195",
+    "answer": "A",
+    "type": "연계",
+    "explanation": "2월 20일에 발송된 이메일의 중반부에서 바티스타 씨가 JPD의 안톤 빌딩 복원 프로젝트가 올 봄 즈음 완료될 예정이라는 이야기를 들었다(We have been informed that your restoration project of this building will be finished sometime this spring)고 했는데, 이전 해 10월 12일에 작성된 기사의 첫 번째 단락을 보면 JPD에게 발급될 시의 프로젝트 진행 허가서는 보류 중(JPD's city permit to do the project is on hold)이라고 되어 있다. 따라서 그 이후 JPD가 허가서 승인을 받아 프로젝트를 진행하는 중이라고 추론할 수 있으므로, (A)가 정답이다.",
+    "translation": "바티스타 씨의 이메일에서 JPD에 대해 암시된 것은? (A) 요청했던 승인을 받았다.",
+    "vocabulary": "approval 승인 available 이용 가능한 relatively 비교적, 상대적으로"
+  },
+  "q194": {
+    "id": "q194",
+    "question": "What information about the building does Ms. Bautista request from Mr. Rowell?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The distance to the nearest train station"
+      },
+      {
+        "label": "B",
+        "text": "The other occupants' types of business"
+      },
+      {
+        "label": "C",
+        "text": "The completion date of the renovation"
+      },
+      {
+        "label": "D",
+        "text": "The availability of employee parking"
+      }
+    ],
+    "passages": [
+      "Clanton (12 October) The planned renovation of the historic Anton Building by Jantuni Property Developers (JPD) is facing new delays. A JPD spokesperson says their negotiations with the city regarding a package of subsidies and tax incentives are ongoing and are proving somewhat contentious. According to the renovation plan, JPD must protect the historical integrity of the Anton Building while it creates a mixed-use interior, offering both office space and lower-level retail space. However, JPD's city permit to do the project is on hold pending the current negotiations.\nThis is making city revitalization advocates increasingly anxious. Aditi Yadav comments, \"This plan to create useful space out of an empty decaying building will go a long way to restoring vibrancy to that area of the city. I sincerely hope that JPD does not back out. In creating their offer, the City Council should consider JPD's excellent record of beautifully restoring and maintaining several other historic buildings in Clanton.\"",
+      "From: anabautista@lenoiva-health.com\nTo: trowell@jantunipropertydevelopers.com\nDate: 20 February\nSubject: Lease inquiry\nDear Mr. Rowell,\nI am the owner of Lenoiva, a health-care technology company. We plan to expand our operations and we need new office space. The Anton Building is one of the locations in Clanton that we are considering. We have been informed that your restoration project of this building will be finished sometime this spring. is spring, which is good timing for us. We are particularly attracted by the easy access to public transportation services that your building offers. Do you still have spaces available av for rent? We anticipate needing a space at least 300 square metres in size. Would there be any reserved parking for our employees if we rented there? We would appreciate any information you can provide.\nThank you in advance,\nAna Bautista",
+      "One Anton Place-2nd Floor Plan (office space)\nUnit 2A\n350 m²\nT&M Accountancy\nUnit 2B\n150 m²\nAvailable\nUnit 2C\n100 m²\nAvailable\nUnit 20\n250 m²\nAvailable\nUnit 2E\n375 m²\nAvailable"
+    ],
+    "setId": "set_191_195",
+    "answer": "D",
+    "type": "세부 사항",
+    "explanation": "이메일의 후반부에서 사무실을 임대하게 되면 직원들을 위해 따로 마련된 주차 공간이 있는지(Would there be any reserved parking for our employees if we rented there?)를 문의했으므로, (D)가 정답이다.",
+    "translation": "바티스타 씨는 로웰 씨에게 건물에 대한 어떤 정보를 요청하는가? (D) 직원 주차공간 이용 가능성",
+    "vocabulary": "occupant 사용자 completion 완료, 완공"
+  },
+  "q195": {
+    "id": "q195",
+    "question": "What space would Lenoiva most likely choose to rent?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Unit 2B"
+      },
+      {
+        "label": "B",
+        "text": "Unit 2C"
+      },
+      {
+        "label": "C",
+        "text": "Unit 2D"
+      },
+      {
+        "label": "D",
+        "text": "Unit 2E"
+      }
+    ],
+    "passages": [
+      "Clanton (12 October) The planned renovation of the historic Anton Building by Jantuni Property Developers (JPD) is facing new delays. A JPD spokesperson says their negotiations with the city regarding a package of subsidies and tax incentives are ongoing and are proving somewhat contentious. According to the renovation plan, JPD must protect the historical integrity of the Anton Building while it creates a mixed-use interior, offering both office space and lower-level retail space. However, JPD's city permit to do the project is on hold pending the current negotiations.\nThis is making city revitalization advocates increasingly anxious. Aditi Yadav comments, \"This plan to create useful space out of an empty decaying building will go a long way to restoring vibrancy to that area of the city. I sincerely hope that JPD does not back out. In creating their offer, the City Council should consider JPD's excellent record of beautifully restoring and maintaining several other historic buildings in Clanton.\"",
+      "From: anabautista@lenoiva-health.com\nTo: trowell@jantunipropertydevelopers.com\nDate: 20 February\nSubject: Lease inquiry\nDear Mr. Rowell,\nI am the owner of Lenoiva, a health-care technology company. We plan to expand our operations and we need new office space. The Anton Building is one of the locations in Clanton that we are considering. We have been informed that your restoration project of this building will be finished sometime this spring. is spring, which is good timing for us. We are particularly attracted by the easy access to public transportation services that your building offers. Do you still have spaces available av for rent? We anticipate needing a space at least 300 square metres in size. Would there be any reserved parking for our employees if we rented there? We would appreciate any information you can provide.\nThank you in advance,\nAna Bautista",
+      "One Anton Place-2nd Floor Plan (office space)\nUnit 2A\n350 m²\nT&M Accountancy\nUnit 2B\n150 m²\nAvailable\nUnit 2C\n100 m²\nAvailable\nUnit 20\n250 m²\nAvailable\nUnit 2E\n375 m²\nAvailable"
+    ],
+    "setId": "set_191_195",
+    "answer": "D",
+    "type": "연계",
+    "explanation": "이메일의 후반부에서 르노이바는 면적이 최소 300제곱미터인 공간이 필요할 것으로 예상한다(We anticipate needing a space at least 300 square metres in size)고 했는데, 배치도를 보면 이용 가능한(Available) 공간 중 300제곱미터 이상인 곳이 2E호임을 확인할 수 있다. 따라서 (D)가 정답이다.",
+    "translation": "르노이바는 어떤 공간을 임대하겠는가? (D) 2E호",
+    "vocabulary": null
+  },
+  "q196": {
+    "id": "q196",
+    "question": "What does Ms. Jefferson mention in the first e-mail?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She has used DGC's services before."
+      },
+      {
+        "label": "B",
+        "text": "She teaches a course in boating safety."
+      },
+      {
+        "label": "C",
+        "text": "She is a resident of Daneston."
+      },
+      {
+        "label": "D",
+        "text": "She owns her own kayak."
+      }
+    ],
+    "passages": [
+      "From:\nTanya Jefferson <tjeff@keysuppliers.com>\nTo:\ninfo@danestongear.com\nSubject: Request for group rental information\nDate: May 29\n\nHello Daneston Gear Company (DGC),\n\nI am the president of an activities club. This month, our 30 members intend to take a day\ntrip to Daneston to go boating on the lake. Could you please send me information\nregarding your rates and offerings? We are most interested in renting boats that seat one\nperson. Some time ago, I rented a kayak for myself from DGC, but this will be my first\ntime renting from DGC for a group.\n\nThank you,\nTanya Jefferson",
+      "From:\ninfo@danestongear.com\nTo:\nTanya Jefferson <tjeff@keysuppliers.com>\nSubject: RE: Request for group rental information\nDate: May 30\nAttachment: Price list\n\nDear Ms. Jefferson,\n\nThank you for contacting us regarding your group's anticipated visit to DGC. We look\nforward to equipping your club for its next adventure. A price list is attached to this\ne-mail. If you wish to discuss our rentals in more detail, please call me at (888) 555-1578.\nIncidentally, we recently added a rowboat option that is an excellent choice for adults who\nwish to boat with their children.\n\nI will be pleased to help you when you are ready to make your reservation.\n\nBest,\nAdam Goldstein",
+      "DGC Price list\n\nBoat type\nHourly rate Additional\n1/2 hour\nOption 1 2-person canoe\n$13\n$8\nOption 2 3-person canoe\n$15\n$8\nOption 3 1-person kayak\n$11\n$8\nOption 4 2-person kayak\n$14\n$8\nOption 5 3- or 4-person\nrowboat $13\n$9\n(3 adults or 2 adults\nand 2 small children)\nWe are open every day from April to October, 10:00 Α.Μ. to 6:30 PM.\nAll boats must be returned by 6:15 PM. on the day they are rented.\nLife jackets and paddles are included in the rental fee.\nGroups of ten or more qualify for a discount if they book at least\none week in advance."
+    ],
+    "setId": "set_196_200",
+    "answer": "A",
+    "type": "사실 관계 확인",
+    "explanation": "첫 번째 이메일의 후반부에서 제퍼슨 씨가 얼마 전에 DGC에서 자신이 탈 카약을 대여한 적이 있다(Some time ago, I rented a kayak for myself from DGC)고 했으므로, (A)가 정답이다.",
+    "translation": "제퍼슨 씨가 첫 번째 이메일에서 언급한 것은? (A) 이전에 DGC의 서비스를 이용한 적이 있다.",
+    "vocabulary": "resident 거주자"
+  },
+  "q197": {
+    "id": "q197",
+    "question": "What rental option best meets Ms. Jefferson's needs?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Option 1"
+      },
+      {
+        "label": "B",
+        "text": "Option 2"
+      },
+      {
+        "label": "C",
+        "text": "Option 3"
+      },
+      {
+        "label": "D",
+        "text": "Option 4"
+      }
+    ],
+    "passages": [
+      "From:\nTanya Jefferson <tjeff@keysuppliers.com>\nTo:\ninfo@danestongear.com\nSubject: Request for group rental information\nDate: May 29\n\nHello Daneston Gear Company (DGC),\n\nI am the president of an activities club. This month, our 30 members intend to take a day\ntrip to Daneston to go boating on the lake. Could you please send me information\nregarding your rates and offerings? We are most interested in renting boats that seat one\nperson. Some time ago, I rented a kayak for myself from DGC, but this will be my first\ntime renting from DGC for a group.\n\nThank you,\nTanya Jefferson",
+      "From:\ninfo@danestongear.com\nTo:\nTanya Jefferson <tjeff@keysuppliers.com>\nSubject: RE: Request for group rental information\nDate: May 30\nAttachment: Price list\n\nDear Ms. Jefferson,\n\nThank you for contacting us regarding your group's anticipated visit to DGC. We look\nforward to equipping your club for its next adventure. A price list is attached to this\ne-mail. If you wish to discuss our rentals in more detail, please call me at (888) 555-1578.\nIncidentally, we recently added a rowboat option that is an excellent choice for adults who\nwish to boat with their children.\n\nI will be pleased to help you when you are ready to make your reservation.\n\nBest,\nAdam Goldstein",
+      "DGC Price list\n\nBoat type\nHourly rate Additional\n1/2 hour\nOption 1 2-person canoe\n$13\n$8\nOption 2 3-person canoe\n$15\n$8\nOption 3 1-person kayak\n$11\n$8\nOption 4 2-person kayak\n$14\n$8\nOption 5 3- or 4-person\nrowboat $13\n$9\n(3 adults or 2 adults\nand 2 small children)\nWe are open every day from April to October, 10:00 Α.Μ. to 6:30 PM.\nAll boats must be returned by 6:15 PM. on the day they are rented.\nLife jackets and paddles are included in the rental fee.\nGroups of ten or more qualify for a discount if they book at least\none week in advance."
+    ],
+    "setId": "set_196_200",
+    "answer": "C",
+    "type": "연계",
+    "explanation": "첫 번째 이메일의 중반부에서 제퍼슨 씨가 1인용 보트 대여에 가장 관심이 있다(We are most interested in renting boats that seat one person)고 했는데, 가격표에 나온 선택사항 중 제퍼슨 씨의 요구에 부합하는 것은 1인용 카약(1-person kayak)뿐이다. 따라서 (C)가 정답이다.",
+    "translation": "제퍼슨 씨의 요구사항에 가장 알맞은 대여 제품은? (C) 선택사항 3번",
+    "vocabulary": "meet one's needs ~의 요구사항을 충족시키다"
+  },
+  "q198": {
+    "id": "q198",
+    "question": "What is the hourly rate of DGC's newest rental option?",
+    "options": [
+      {
+        "label": "A",
+        "text": "$11"
+      },
+      {
+        "label": "B",
+        "text": "$13"
+      },
+      {
+        "label": "C",
+        "text": "$14"
+      },
+      {
+        "label": "D",
+        "text": "$15"
+      }
+    ],
+    "passages": [
+      "From:\nTanya Jefferson <tjeff@keysuppliers.com>\nTo:\ninfo@danestongear.com\nSubject: Request for group rental information\nDate: May 29\n\nHello Daneston Gear Company (DGC),\n\nI am the president of an activities club. This month, our 30 members intend to take a day\ntrip to Daneston to go boating on the lake. Could you please send me information\nregarding your rates and offerings? We are most interested in renting boats that seat one\nperson. Some time ago, I rented a kayak for myself from DGC, but this will be my first\ntime renting from DGC for a group.\n\nThank you,\nTanya Jefferson",
+      "From:\ninfo@danestongear.com\nTo:\nTanya Jefferson <tjeff@keysuppliers.com>\nSubject: RE: Request for group rental information\nDate: May 30\nAttachment: Price list\n\nDear Ms. Jefferson,\n\nThank you for contacting us regarding your group's anticipated visit to DGC. We look\nforward to equipping your club for its next adventure. A price list is attached to this\ne-mail. If you wish to discuss our rentals in more detail, please call me at (888) 555-1578.\nIncidentally, we recently added a rowboat option that is an excellent choice for adults who\nwish to boat with their children.\n\nI will be pleased to help you when you are ready to make your reservation.\n\nBest,\nAdam Goldstein",
+      "DGC Price list\n\nBoat type\nHourly rate Additional\n1/2 hour\nOption 1 2-person canoe\n$13\n$8\nOption 2 3-person canoe\n$15\n$8\nOption 3 1-person kayak\n$11\n$8\nOption 4 2-person kayak\n$14\n$8\nOption 5 3- or 4-person\nrowboat $13\n$9\n(3 adults or 2 adults\nand 2 small children)\nWe are open every day from April to October, 10:00 Α.Μ. to 6:30 PM.\nAll boats must be returned by 6:15 PM. on the day they are rented.\nLife jackets and paddles are included in the rental fee.\nGroups of ten or more qualify for a discount if they book at least\none week in advance."
+    ],
+    "setId": "set_196_200",
+    "answer": "B",
+    "type": "연계",
+    "explanation": "두 번째 이메일의 후반부에서 DGC가 최근 자녀와 함께 보트를 타고 싶어 하는 성인들에게 안성맞춤인 노 젓는 보트를 새롭게 추가했다(we recently added a rowboat option that is an excellent choice for adults who wish to boat with their children)고 했다. 가격표를 보면 성인과 아동이 함께(2 adults and 2 small children) 이용할 수 있는 노 젓는 보트의 시간당 요금(Hourly rate)이 13달러임을 확인할 수 있다. 따라서 (B)가 정답이다.",
+    "translation": "DGC의 새로운 대여 제품에 대한 시간당 요금은? (B) 13달러",
+    "vocabulary": null
+  },
+  "q199": {
+    "id": "q199",
+    "question": "What is indicated about DGC in the price list?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It is open for business all year."
+      },
+      {
+        "label": "B",
+        "text": "It may close for the day if the weather is bad."
+      },
+      {
+        "label": "C",
+        "text": "It offers special rates for groups of ten or more."
+      },
+      {
+        "label": "D",
+        "text": "It accepts reservations on its Web site."
+      }
+    ],
+    "passages": [
+      "From:\nTanya Jefferson <tjeff@keysuppliers.com>\nTo:\ninfo@danestongear.com\nSubject: Request for group rental information\nDate: May 29\n\nHello Daneston Gear Company (DGC),\n\nI am the president of an activities club. This month, our 30 members intend to take a day\ntrip to Daneston to go boating on the lake. Could you please send me information\nregarding your rates and offerings? We are most interested in renting boats that seat one\nperson. Some time ago, I rented a kayak for myself from DGC, but this will be my first\ntime renting from DGC for a group.\n\nThank you,\nTanya Jefferson",
+      "From:\ninfo@danestongear.com\nTo:\nTanya Jefferson <tjeff@keysuppliers.com>\nSubject: RE: Request for group rental information\nDate: May 30\nAttachment: Price list\n\nDear Ms. Jefferson,\n\nThank you for contacting us regarding your group's anticipated visit to DGC. We look\nforward to equipping your club for its next adventure. A price list is attached to this\ne-mail. If you wish to discuss our rentals in more detail, please call me at (888) 555-1578.\nIncidentally, we recently added a rowboat option that is an excellent choice for adults who\nwish to boat with their children.\n\nI will be pleased to help you when you are ready to make your reservation.\n\nBest,\nAdam Goldstein",
+      "DGC Price list\n\nBoat type\nHourly rate Additional\n1/2 hour\nOption 1 2-person canoe\n$13\n$8\nOption 2 3-person canoe\n$15\n$8\nOption 3 1-person kayak\n$11\n$8\nOption 4 2-person kayak\n$14\n$8\nOption 5 3- or 4-person\nrowboat $13\n$9\n(3 adults or 2 adults\nand 2 small children)\nWe are open every day from April to October, 10:00 Α.Μ. to 6:30 PM.\nAll boats must be returned by 6:15 PM. on the day they are rented.\nLife jackets and paddles are included in the rental fee.\nGroups of ten or more qualify for a discount if they book at least\none week in advance."
+    ],
+    "setId": "set_196_200",
+    "answer": "C",
+    "type": "사실 관계 확인",
+    "explanation": "가격표 아래에 있는 설명에서 10인 이상 단체는 최소 1주일 전 예약 시 할인을 받을 수 있다(Groups of ten or more qualify for a discount if they book at least one week in advance)고 했으므로, (C)가 정답이다. 4월부터 10월까지 문을 연다(We are open every day from April to October)고 했으므로 (A)는 명백한 오답이고, (B)와 (D)는 언급되지 않았다.",
+    "translation": "가격표에서 DGC에 대해 명시된 것은? (C) 10인 이상 단체에게 특별 요금을 제공한다.",
+    "vocabulary": "accept 받아 주다"
+  },
+  "q200": {
+    "id": "q200",
+    "question": "According to the price list, what is true about all boats?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They can fit three adults."
+      },
+      {
+        "label": "B",
+        "text": "They can be rented overnight."
+      },
+      {
+        "label": "C",
+        "text": "They are suitable for small children."
+      },
+      {
+        "label": "D",
+        "text": "They are equipped with life jackets."
+      }
+    ],
+    "passages": [
+      "From:\nTanya Jefferson <tjeff@keysuppliers.com>\nTo:\ninfo@danestongear.com\nSubject: Request for group rental information\nDate: May 29\n\nHello Daneston Gear Company (DGC),\n\nI am the president of an activities club. This month, our 30 members intend to take a day\ntrip to Daneston to go boating on the lake. Could you please send me information\nregarding your rates and offerings? We are most interested in renting boats that seat one\nperson. Some time ago, I rented a kayak for myself from DGC, but this will be my first\ntime renting from DGC for a group.\n\nThank you,\nTanya Jefferson",
+      "From:\ninfo@danestongear.com\nTo:\nTanya Jefferson <tjeff@keysuppliers.com>\nSubject: RE: Request for group rental information\nDate: May 30\nAttachment: Price list\n\nDear Ms. Jefferson,\n\nThank you for contacting us regarding your group's anticipated visit to DGC. We look\nforward to equipping your club for its next adventure. A price list is attached to this\ne-mail. If you wish to discuss our rentals in more detail, please call me at (888) 555-1578.\nIncidentally, we recently added a rowboat option that is an excellent choice for adults who\nwish to boat with their children.\n\nI will be pleased to help you when you are ready to make your reservation.\n\nBest,\nAdam Goldstein",
+      "DGC Price list\n\nBoat type\nHourly rate Additional\n1/2 hour\nOption 1 2-person canoe\n$13\n$8\nOption 2 3-person canoe\n$15\n$8\nOption 3 1-person kayak\n$11\n$8\nOption 4 2-person kayak\n$14\n$8\nOption 5 3- or 4-person\nrowboat $13\n$9\n(3 adults or 2 adults\nand 2 small children)\nWe are open every day from April to October, 10:00 Α.Μ. to 6:30 PM.\nAll boats must be returned by 6:15 PM. on the day they are rented.\nLife jackets and paddles are included in the rental fee.\nGroups of ten or more qualify for a discount if they book at least\none week in advance."
+    ],
+    "setId": "set_196_200",
+    "answer": "D",
+    "type": "사실 관계 확인",
+    "explanation": "가격표 아래에 있는 설명에서 구명조끼와 노는 대여료에 포함된다(Life jackets and paddles are included in the rental fee)고 했으므로, (D)가 정답이다. 모든 보트는 대여 당일 오후 6시 15분까지 반납해야 한다(All boats must be returned by 6:15 P.M. on the day they are rented)고 했고, 성인 3인에게는 2번과 5번 옵션이, 어린 아동에게는 5번 옵션이 적합하므로, (A), (B), (C)는 정답이 될 수 없다.",
+    "translation": "가격표에 따르면, 모든 보트에 대해 사실인 것은? (D) 구명조끼를 갖추고 있다.",
+    "vocabulary": "suitable 적합한, 알맞은 be equipped with ~를 갖추다"
+  },
+  "q149": {
+    "id": "q149",
+    "question": "What are applicants for this position\nrequired to have?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Experience in video production"
+      },
+      {
+        "label": "B",
+        "text": "Certain pieces of equipment"
+      },
+      {
+        "label": "C",
+        "text": "A university degree in language studies"
+      },
+      {
+        "label": "D",
+        "text": "An office with a reception area"
+      }
+    ],
+    "passages": [
+      "Kiesel Video is seeking detail-oriented people to use our software to add text captions to a\nwide variety of video material, such as television programs, movies, and university lectures.\nWe will provide free online training. Successful applicants must possess strong language\nskills and have a computer, a headset, and high-speed Internet access.\nThe position features:\n• Flexible hours you work as much or as little as you want.\n• Choice of projects we have work in many types of content.\nGood pay our captioners earn $350 to $1,100 a week, depending on the assignment.\nApply today at www.kieselvideo.com/jobs"
+    ],
+    "setId": "set_149_150",
+    "answer": "B",
+    "type": "세부 사항",
+    "explanation": "첫 번째 단락에서 선발될 지원자는 컴퓨터, 헤드셋 등을 갖추고 있어야 한다(Successful applicants must ~ have a computer, a headset, and high-speed Internet access)고 했으므로, (B)가 정답이다. 뛰어난 언어 구사력을 갖춰야 한다(Successful applicants must possess strong language skills)고 했지만 어문학사 학위가 필수 요건은 아니므로, (C)는 정답이 될 수 없다.",
+    "translation": "해당 직책 지원자들은 무엇을 갖춰야 하는가?",
+    "vocabulary": "production 제작 equipment 장비 university degree 학사 학위"
+  },
+  "q150": {
+    "id": "q150",
+    "question": "What is true about the job?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It is a full-time position."
+      },
+      {
+        "label": "B",
+        "text": "It pays a fixed salary"
+      },
+      {
+        "label": "C",
+        "text": "It involves some foreign travel."
+      },
+      {
+        "label": "D",
+        "text": "It offers a choice of assignments."
+      }
+    ],
+    "passages": [
+      "Kiesel Video is seeking detail-oriented people to use our software to add text captions to a\nwide variety of video material, such as television programs, movies, and university lectures.\nWe will provide free online training. Successful applicants must possess strong language\nskills and have a computer, a headset, and high-speed Internet access.\nThe position features:\n• Flexible hours you work as much or as little as you want.\n• Choice of projects we have work in many types of content.\nGood pay our captioners earn $350 to $1,100 a week, depending on the assignment.\nApply today at www.kieselvideo.com/jobs"
+    ],
+    "setId": "set_149_150",
+    "answer": "D",
+    "type": "사실 관계 확인",
+    "explanation": "직책에 대해 설명한 두 번째 항목에서 프로젝트 선택권(Choice of projects)이 있다고 했으므로, (D)가 정답이다. 자막 작업자들이 주당 350달러에서 1,100달러까지 받는다(our captioners earn $350 to $1,100 a week)고 했으므로 (B)는 명백한 오답이다.",
+    "translation": "직책에 대해 사실인 것은?",
+    "vocabulary": "fixed 고정된, 변함없는 involve 수반하다"
+  },
+  "q151": {
+    "id": "q151",
+    "question": "What is true about the software testing?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It included multiple versions of\nKonserted."
+      },
+      {
+        "label": "B",
+        "text": "It was done over several days."
+      },
+      {
+        "label": "C",
+        "text": "It required participants to complete a\nsurvey."
+      },
+      {
+        "label": "D",
+        "text": "It took place at a series of concerts."
+      }
+    ],
+    "passages": [
+      "February 1\nSOFTWARE TESTING REPORT\nVersion of Software Program: Konserted 2.5\nTesting Dates: January 10-12\nNumber of Participants: 8\nSoftware Testing Overview: Participants were asked to complete a\nseries of tasks testing the functionality of the revised Konserted\ninterface. In task number 1, participants searched for a concert in\na designated area. In task number 2, participants searched for new\nfriends on the site. In task number 3, participants invited friends\nto a concert. In task number 4, participants posted concert reviews,\nphotos, and videos.\nInitial Findings: Task number 3 proved the most challenging, with\nthree participants unable to complete it in under two minutes. A\notential cause for this difficulty may be the choice of icons in the\nmenu bar. Clearer, more intuitive icons could make this task easier\nto complete for participants."
+    ],
+    "setId": "set_151_152",
+    "answer": "B",
+    "type": "사실 관계 확인",
+    "explanation": "상단의 테스트 일자(Testing Dates: January 10-12)를 보면 며칠에 걸쳐 진행되었음을 알 수 있다. 따라서 (B)가 정답이다.",
+    "translation": "소프트웨어 테스트에 대해 맞는 것은?",
+    "vocabulary": "multiple 많은, 다수의 complete a survey 설문을 작성하다 take place 일어나다. 열리다"
+  },
+  "q152": {
+    "id": "q152",
+    "question": "What action was difficult for users to\ncomplete?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Searching for an event"
+      },
+      {
+        "label": "B",
+        "text": "Searching for friends"
+      },
+      {
+        "label": "C",
+        "text": "Inviting friends to a performance"
+      },
+      {
+        "label": "D",
+        "text": "Posting reviews to a Web site"
+      }
+    ],
+    "passages": [
+      "February 1\nSOFTWARE TESTING REPORT\nVersion of Software Program: Konserted 2.5\nTesting Dates: January 10-12\nNumber of Participants: 8\nSoftware Testing Overview: Participants were asked to complete a\nseries of tasks testing the functionality of the revised Konserted\ninterface. In task number 1, participants searched for a concert in\na designated area. In task number 2, participants searched for new\nfriends on the site. In task number 3, participants invited friends\nto a concert. In task number 4, participants posted concert reviews,\nphotos, and videos.\nInitial Findings: Task number 3 proved the most challenging, with\nthree participants unable to complete it in under two minutes. A\notential cause for this difficulty may be the choice of icons in the\nmenu bar. Clearer, more intuitive icons could make this task easier\nto complete for participants."
+    ],
+    "setId": "set_151_152",
+    "answer": "C",
+    "type": "세부 사항",
+    "explanation": "초기 결과(Initial Findings)에서 3번 과제가 가장 어려운 것으로 드러났다(Task number 3 proved the most challenging)고 했는데, 소프트웨어 테스트 개요(Software Testing Overview)를 보면 3번 과제는 친구들을 콘서트로 초대하는 것(In task number 3, participants invited friends to a concert)으로 설명되어 있다. 따라서 (C)가 정답이다.",
+    "translation": "사용자들은 어떤 활동을 완료하기가 어려웠는가?",
+    "vocabulary": "performance 공연"
+  },
+  "q153": {
+    "id": "q153",
+    "question": "What is indicated about Ms. Atiyeh's previous appearance at Mutamark?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It was very well attended."
+      },
+      {
+        "label": "B",
+        "text": "It was moved to a larger venue."
+      },
+      {
+        "label": "C",
+        "text": "It featured a musical performance."
+      },
+      {
+        "label": "D",
+        "text": "It took place at the Koros Hall."
+      }
+    ],
+    "passages": [
+      "Dear Ms. Atiyeh,\n\nTo follow up on our phone conversation earlier today, I would like to extend to you a\nformal written invitation to speak at the eighth annual Mutamark conference, scheduled\nto take place this year from 17 to 20 September in Zagros. Because you drew a sizeable\ncrowd when you appeared at the conference in the past, we will be making special\narrangements for your visit this time. The Blue Room at the Debeljak Hotel holds only\n120, so this year we are also booking the Koros Hall, which has a capacity of 270. We\ncan offer you a 40-to-50-minute slot on the last day of the conference, when attendance\nshould be at its peak. Please e-mail me to confirm your acceptance and to let me know\nmore about your audiovisual requirements. We can provide overhead projection for still\nimages if you will be using them again.\n\nVery best regards,\n\nAlex Chen, Conference Planning\nMutamark Headquarters, Melbourne"
+    ],
+    "setId": "set_153_155",
+    "answer": "A",
+    "type": "사실 관계 확인",
+    "explanation": "초반부에서 아티예 씨가 예전에 회의에 나왔을 때 상당한 수의 관객을 끌었다(Because you drew a sizeable crowd when you appeared at the conference in the past)고 했으므로, (A)가 정답이다. 중반부에서 지난번과 달리 올해는 수용 인원이 270명인 코로스홀을 예약할 것(this year we are also booking the Koros Hall, which has a capacity of 270)이라고 했으므로, (B)와 (D)는 정답이 될 수 없다.",
+    "translation": "아티예 씨가 예전에 무타마크에 참석했던 일에 대해 알 수 있는 것은? (A) 참석자가 매우 많았다.",
+    "vocabulary": "appearance 나타남, 등장, 출연 well attended 참석자가 많은, 참석률이 높은 venue 장소"
+  },
+  "q154": {
+    "id": "q154",
+    "question": "How many people can the Koros Hall accommodate?",
+    "options": [
+      {
+        "label": "A",
+        "text": "40"
+      },
+      {
+        "label": "B",
+        "text": "50"
+      },
+      {
+        "label": "C",
+        "text": "120"
+      },
+      {
+        "label": "D",
+        "text": "270"
+      }
+    ],
+    "passages": [
+      "Dear Ms. Atiyeh,\n\nTo follow up on our phone conversation earlier today, I would like to extend to you a\nformal written invitation to speak at the eighth annual Mutamark conference, scheduled\nto take place this year from 17 to 20 September in Zagros. Because you drew a sizeable\ncrowd when you appeared at the conference in the past, we will be making special\narrangements for your visit this time. The Blue Room at the Debeljak Hotel holds only\n120, so this year we are also booking the Koros Hall, which has a capacity of 270. We\ncan offer you a 40-to-50-minute slot on the last day of the conference, when attendance\nshould be at its peak. Please e-mail me to confirm your acceptance and to let me know\nmore about your audiovisual requirements. We can provide overhead projection for still\nimages if you will be using them again.\n\nVery best regards,\n\nAlex Chen, Conference Planning\nMutamark Headquarters, Melbourne"
+    ],
+    "setId": "set_153_155",
+    "answer": "D",
+    "type": "세부 사항",
+    "explanation": "중반부에서 코로스홀의 수용 인원이 270명(the Koros Hall, which has a capacity of 270)이라고 했으므로, (D)가 정답이다.",
+    "translation": "코로스홀은 몇 명을 수용할 수 있는가? (D) 270명",
+    "vocabulary": ""
+  },
+  "q155": {
+    "id": "q155",
+    "question": "When will Ms. Atiyeh most likely appear at the Mutamark conference?",
+    "options": [
+      {
+        "label": "A",
+        "text": "On September 17"
+      },
+      {
+        "label": "B",
+        "text": "On September 18"
+      },
+      {
+        "label": "C",
+        "text": "On September 19"
+      },
+      {
+        "label": "D",
+        "text": "On September 20"
+      }
+    ],
+    "passages": [
+      "Dear Ms. Atiyeh,\n\nTo follow up on our phone conversation earlier today, I would like to extend to you a\nformal written invitation to speak at the eighth annual Mutamark conference, scheduled\nto take place this year from 17 to 20 September in Zagros. Because you drew a sizeable\ncrowd when you appeared at the conference in the past, we will be making special\narrangements for your visit this time. The Blue Room at the Debeljak Hotel holds only\n120, so this year we are also booking the Koros Hall, which has a capacity of 270. We\ncan offer you a 40-to-50-minute slot on the last day of the conference, when attendance\nshould be at its peak. Please e-mail me to confirm your acceptance and to let me know\nmore about your audiovisual requirements. We can provide overhead projection for still\nimages if you will be using them again.\n\nVery best regards,\n\nAlex Chen, Conference Planning\nMutamark Headquarters, Melbourne"
+    ],
+    "setId": "set_153_155",
+    "answer": "D",
+    "type": "추론/암시",
+    "explanation": "중반부에서 아티예 씨에게 회의 마지막날 40-50분 정도의 시간을 줄 수 있다(We can offer you a 40-to-50-minute slot on the last day of the conference)고 했는데, 초반부를 보면 회의가 9월 17일부터 20일까지 열릴 예정(the eighth annual Mutamark conference, scheduled to take place this year from 17 to 20 September)이라고 쓰여 있다. 따라서 아티예 씨가 마지막 날인 9월 20일 회의에서 연설할 것이라고 추론할 수 있으므로, (D)가 정답이다.",
+    "translation": "아티예 씨는 언제 무타마크 회의에 등장하겠는가? (D) 9월 20일",
+    "vocabulary": ""
+  },
+  "q156": {
+    "id": "q156",
+    "question": "What kind of business most likely is Saenger, Inc.?",
+    "options": [
+      {
+        "label": "A",
+        "text": "A construction firm"
+      },
+      {
+        "label": "B",
+        "text": "A real estate agency"
+      },
+      {
+        "label": "C",
+        "text": "A cargo-handling company"
+      },
+      {
+        "label": "D",
+        "text": "A financial services provider"
+      }
+    ],
+    "passages": [
+      "(4 Feb.) Ottawa-based Saenger, Inc., has\nbeen selected by the city of Sudbury to build\na monorail system that will connect the city's\ncommercial district to the airport.- [1]-\nFunding for the system is drawn from a\ncombination of public agencies and private.\ninvestors. [2] Ticket sales for the\nmonorail will also provide a new source of\nrevenue for the city. [3]. Construction is\nslated to begin in early June and is expected to\nbe completed within four years. [4]"
+    ],
+    "setId": "set_156_158",
+    "answer": "A",
+    "type": "추론/암시",
+    "explanation": "초반부에서 샌저 주식회사가 모노레일 시스템을 건설할 업체로 선정됐다(Saenger, Inc., has been selected to build a monorail system)고 했으므로, 건설회사임을 추론할 수 있다. 따라서 (A)가 정답이다.",
+    "translation": "샌저 주식회사는 어떤 종류의 업체이겠는가?",
+    "vocabulary": ""
+  },
+  "q157": {
+    "id": "q157",
+    "question": "What is indicated about the monorail?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It needs more funding from investors."
+      },
+      {
+        "label": "B",
+        "text": "It will take years to finish."
+      },
+      {
+        "label": "C",
+        "text": "It was proposed by airport officials."
+      },
+      {
+        "label": "D",
+        "text": "It offers discounted tickets to city residents."
+      }
+    ],
+    "passages": [
+      "(4 Feb.) Ottawa-based Saenger, Inc., has\nbeen selected by the city of Sudbury to build\na monorail system that will connect the city's\ncommercial district to the airport.- [1]-\nFunding for the system is drawn from a\ncombination of public agencies and private.\ninvestors. [2] Ticket sales for the\nmonorail will also provide a new source of\nrevenue for the city. [3]. Construction is\nslated to begin in early June and is expected to\nbe completed within four years. [4]"
+    ],
+    "setId": "set_156_158",
+    "answer": "B",
+    "type": "사실관계 확인",
+    "explanation": "후반부에서 공사는 4년 이내에 완료될 것으로 예상된다 (Construction is expected to be completed within four years)고 했으므로, (B)가 정답이다.",
+    "translation": "모노레일에 대해 알 수 있는 것은?",
+    "vocabulary": "propose 제안하다 discount 할인하다 resident 거주민"
+  },
+  "q158": {
+    "id": "q158",
+    "question": "In which of the positions marked [1], [2], [3]. and [4] does the following sentence best belong?\n\n\"Along the way, the line will stop at nine stations.\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "[1]"
+      },
+      {
+        "label": "B",
+        "text": "[2]"
+      },
+      {
+        "label": "C",
+        "text": "[3]"
+      },
+      {
+        "label": "D",
+        "text": "[4]"
+      }
+    ],
+    "passages": [
+      "(4 Feb.) Ottawa-based Saenger, Inc., has\nbeen selected by the city of Sudbury to build\na monorail system that will connect the city's\ncommercial district to the airport.- [1]-\nFunding for the system is drawn from a\ncombination of public agencies and private.\ninvestors. [2] Ticket sales for the\nmonorail will also provide a new source of\nrevenue for the city. [3]. Construction is\nslated to begin in early June and is expected to\nbe completed within four years. [4]"
+    ],
+    "setId": "set_156_158",
+    "answer": "A",
+    "type": "문장 삽입",
+    "explanation": "주어인 노선(the line)이 가리키는 대상이 앞에서 먼저 언급되어야 한다. [1] 앞에서 시의 상업지구와 공항을 연결할 모노레일 시스템 건설(to build a monorail system that will connect the city's commercial district to the airport) 소식을 전하며 우회적으로 노선을 밝혔으므로, (A)가 정답이다.",
+    "translation": "[1], [2], [3], [4]로 표시된 곳 중에서 다음 문장이 가장 적합한 곳은?\n\"길을 따라, 노선은 9개의 정류장에서 정차할 예정이다.\"",
+    "vocabulary": ""
+  },
+  "q165": {
+    "id": "q165",
+    "question": "In what industry does Sleep Soundly\nSolutions operate?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Real estate"
+      },
+      {
+        "label": "B",
+        "text": "Life insurance"
+      },
+      {
+        "label": "C",
+        "text": "Home security"
+      },
+      {
+        "label": "D",
+        "text": "Furniture moving"
+      }
+    ],
+    "passages": [
+      "SLEEP SOUNDLY SOLUTIONS\nThank you for choosing Sleep Soundly Solutions!\nThe updated control panel is linked to an integrated system that allows you to activate\nand disable all security systems in your home, including your Sleep Soundly motion\nsensor as well as your fire, smoke, and carbon monoxide detectors.\nAll Sleep Soundly residential alarm systems have been tested thoroughly to ensure the\nhighest quality and sensitivity, so you can sleep soundly in the knowledge that your\nhome is protected. We have have also developed a new smartphone application that will\nnotify you of any disturbances wherever you are. The app is available for download now.\nSleep Soundly control equipment is carefully manufactured for use with Sleep Soundly\ndetectors and and alarms. Using products manufactured by other companies may result in an\nalarm system that does not meet safety requirements for residential buildings or comply\nwith local laws."
+    ],
+    "setId": "set_165_167",
+    "answer": "C",
+    "type": "세부 사항",
+    "explanation": "첫 번째 단락에서 업데이트된 제어판이 슬립 사운들리 동작 센서를 비롯해 가정에 있는 모든 보안 시스템을 활성화, 비활성화할 수 있도록 하는 통합 시스템으로 연결된다(The updated control panel ~ allows you to activate and disable all security systems in your home, including your Sleep Soundly motion sensor)고 했으므로, 슬립 사운들리 솔루션즈가 주택 보안 관련 업체임을 알 수 있다. 따라서 (C)가 정답이다.",
+    "translation": "슬립 사운들리 솔루션즈는 어떤 업계에서 영업하고 있는가?\n(A) 부동산\n(B) 생명보험\n(C) 주택 보안\n(D) 가구 이사",
+    "vocabulary": null
+  },
+  "q166": {
+    "id": "q166",
+    "question": "What new product is being offered by Sleep\nSoundly Solutions?",
+    "options": [
+      {
+        "label": "A",
+        "text": "An outdoor motion sensor"
+      },
+      {
+        "label": "B",
+        "text": "A smartphone application"
+      },
+      {
+        "label": "C",
+        "text": "Home installation service"
+      },
+      {
+        "label": "D",
+        "text": "Fire detection equipment"
+      }
+    ],
+    "passages": [
+      "SLEEP SOUNDLY SOLUTIONS\nThank you for choosing Sleep Soundly Solutions!\nThe updated control panel is linked to an integrated system that allows you to activate\nand disable all security systems in your home, including your Sleep Soundly motion\nsensor as well as your fire, smoke, and carbon monoxide detectors.\nAll Sleep Soundly residential alarm systems have been tested thoroughly to ensure the\nhighest quality and sensitivity, so you can sleep soundly in the knowledge that your\nhome is protected. We have have also developed a new smartphone application that will\nnotify you of any disturbances wherever you are. The app is available for download now.\nSleep Soundly control equipment is carefully manufactured for use with Sleep Soundly\ndetectors and and alarms. Using products manufactured by other companies may result in an\nalarm system that does not meet safety requirements for residential buildings or comply\nwith local laws."
+    ],
+    "setId": "set_165_167",
+    "answer": "B",
+    "type": "세부 사항",
+    "explanation": "두 번째 단락에서 새로운 스마트폰 앱을 개발했다(We have also developed a new smartphone application)고 한 후, 지금 바로 다운로드 가능하다(The app is available for download now)고 덧붙였다. 따라서 (B)가 정답이다.",
+    "translation": "슬립 사운들리 솔루션즈는 어떤 신제품을 제공하고 있는가?\n(A) 옥외 동작 센서\n(B) 스마트폰 앱\n(C) 주택 설치 서비스\n(D) 화재 감지 장치",
+    "vocabulary": "installation 설치 detection 탐지, 감지"
+  },
+  "q167": {
+    "id": "q167",
+    "question": "The word \"meet\" in paragraph 3, line 3, is\nclosest in meaning to",
+    "options": [
+      {
+        "label": "A",
+        "text": "greet"
+      },
+      {
+        "label": "B",
+        "text": "touch"
+      },
+      {
+        "label": "C",
+        "text": "satisfy"
+      },
+      {
+        "label": "D",
+        "text": "experience"
+      }
+    ],
+    "passages": [
+      "SLEEP SOUNDLY SOLUTIONS\nThank you for choosing Sleep Soundly Solutions!\nThe updated control panel is linked to an integrated system that allows you to activate\nand disable all security systems in your home, including your Sleep Soundly motion\nsensor as well as your fire, smoke, and carbon monoxide detectors.\nAll Sleep Soundly residential alarm systems have been tested thoroughly to ensure the\nhighest quality and sensitivity, so you can sleep soundly in the knowledge that your\nhome is protected. We have have also developed a new smartphone application that will\nnotify you of any disturbances wherever you are. The app is available for download now.\nSleep Soundly control equipment is carefully manufactured for use with Sleep Soundly\ndetectors and and alarms. Using products manufactured by other companies may result in an\nalarm system that does not meet safety requirements for residential buildings or comply\nwith local laws."
+    ],
+    "setId": "set_165_167",
+    "answer": "C",
+    "type": "동의어 찾기",
+    "explanation": "'meet'을 포함한 부분은 '주거용 건물 안전 요건에 맞지 않는 경보 장치(an alarm system that does not meet safety requirements for residential buildings)'라는 의미로 해석되는 데, 여기서 meet은 '맞다. 충족시키다'라는 뜻으로 쓰였다. 따라서 '충족시키다, 채우다'라는 의미의 (C) satisfy가 정답이다.",
+    "translation": "세 번째 단락, 세 번째 줄에 쓰인 'meet'과 의미가 가장 가까운 단어는?\n(A) 인사하다\n(B) 만지다\n(C) 충족시키다\n(D) 경험하다",
+    "vocabulary": null
+  },
+  "q168": {
+    "id": "q168",
+    "question": "What is one purpose of the letter?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To announce a name change"
+      },
+      {
+        "label": "B",
+        "text": "To honor distinguished alumni"
+      },
+      {
+        "label": "C",
+        "text": "To suggest revisions to a curriculum"
+      },
+      {
+        "label": "D",
+        "text": "To list an individual's accomplishments"
+      }
+    ],
+    "passages": [
+      "March 29\nDr. Maritza Geerlings\nPoseidonstraat 392\nParamaribo\nSuriname\nDear Dr. Geerlings,\nI am writing to thank you for your years of service on the faculty of the Jamaican\nAgricultural Training Academy (JATA) and to let you know about some exciting\ndevelopments. As you know, JATA was originally established as a vocational school\nfor agriculture but now offers courses in a varied array of disciplines, including\ncybersecurity, electrical engineering, and health information management. Our\nstudent body, which for the first ten years consisted almost exclusively of locals, is\nnow culturally diverse, with students from across the Americas and Europe.\nToday's students work with sophisticated equipment, much of which did not exist\nin our early days.\nTo reflect these and other significant changes that JATA has undergone over time,\nthe Board of Trustees has approved a proposal by the Faculty Senate to rename\nthe institution the Caribbean Academy of Science and Technology. As a result, a\nnew institutional logo will be adopted. All students and faculty members, both\ncurrent and former, are invited to participate in a logo design contest. Information\nabout the contest will be forthcoming.\nThe renaming ceremony and the introduction of the new logo will take place at\n11 A.M. on 1 June, the twentieth anniversary of the institution. We hope you will be\nable to join us.\nSincerely,\nAudley Bartlett\nAudley Bartlett\nVice President for Academic Affairs,\nJamaican Agricultural Training Academy"
+    ],
+    "setId": "set_168_171",
+    "answer": "A",
+    "type": "주제/목적",
+    "explanation": "첫 번째 단락에서 자메이카 농업 교육 아카데미에서 일어나고 있는 몇 가지 흥미로운 상황을 알려주기 위해 편지를 쓴다(I am writing to let you know about some exciting developments)고한 후, 두 번째 단락에서 이사회가 기관 이름을 캐리비안 과학 기술 아카데미로 변경하자는 교수협의회의 제안서를 승인했다(the Board of Trustees has approved a proposal by the Faculty Senate to rename the institution the Caribbean Academy of Science and Technology)고 했다. 따라서 편지를 쓴 목적 중 하나가 명칭 변경 소식을 알리는 것이라고 볼 수 있으므로, (A)가 정답이다.",
+    "translation": "편지를 쓴 한 가지 목적은?",
+    "vocabulary": "distinguished 유명한, 성공한 alumni 졸업생들 revision 수정, 변경 individual 개인 accomplishment 성취, 업적"
+  },
+  "q169": {
+    "id": "q169",
+    "question": "The word \"established\" in paragraph 1, line\n3, is closest in meaning to",
+    "options": [
+      {
+        "label": "A",
+        "text": "affected"
+      },
+      {
+        "label": "B",
+        "text": "founded"
+      },
+      {
+        "label": "C",
+        "text": "confirmed"
+      },
+      {
+        "label": "D",
+        "text": "settled"
+      }
+    ],
+    "passages": [
+      "March 29\nDr. Maritza Geerlings\nPoseidonstraat 392\nParamaribo\nSuriname\nDear Dr. Geerlings,\nI am writing to thank you for your years of service on the faculty of the Jamaican\nAgricultural Training Academy (JATA) and to let you know about some exciting\ndevelopments. As you know, JATA was originally established as a vocational school\nfor agriculture but now offers courses in a varied array of disciplines, including\ncybersecurity, electrical engineering, and health information management. Our\nstudent body, which for the first ten years consisted almost exclusively of locals, is\nnow culturally diverse, with students from across the Americas and Europe.\nToday's students work with sophisticated equipment, much of which did not exist\nin our early days.\nTo reflect these and other significant changes that JATA has undergone over time,\nthe Board of Trustees has approved a proposal by the Faculty Senate to rename\nthe institution the Caribbean Academy of Science and Technology. As a result, a\nnew institutional logo will be adopted. All students and faculty members, both\ncurrent and former, are invited to participate in a logo design contest. Information\nabout the contest will be forthcoming.\nThe renaming ceremony and the introduction of the new logo will take place at\n11 A.M. on 1 June, the twentieth anniversary of the institution. We hope you will be\nable to join us.\nSincerely,\nAudley Bartlett\nAudley Bartlett\nVice President for Academic Affairs,\nJamaican Agricultural Training Academy"
+    ],
+    "setId": "set_168_171",
+    "answer": "B",
+    "type": "동의어 찾기",
+    "explanation": "'established'를 포함한 부분은 'JATA는 원래 농업 직업학교로 세워졌다(JATA was originally established as a vocational school for agriculture)'라는 의미로 해석되는데, 여기서 established는 '세워진, 설립된'이라는 뜻으로 쓰였다. 따라서 '설립된'이라는 의미의 (B) founded가 정답이다.",
+    "translation": "첫 번째 단락, 세 번째 줄에 쓰인 'established'와 의미가 가장 가까운 단어는?",
+    "vocabulary": ""
+  },
+  "q170": {
+    "id": "q170",
+    "question": "What is suggested about Dr. Geerlings?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She plans to attend JATA's anniversary\ncelebration."
+      },
+      {
+        "label": "B",
+        "text": "She has taught courses in cybersecurity."
+      },
+      {
+        "label": "C",
+        "text": "She can take part in JATA's logo design\ncontest."
+      },
+      {
+        "label": "D",
+        "text": "She served on JATA's Board of\nTrustees."
+      }
+    ],
+    "passages": [
+      "March 29\nDr. Maritza Geerlings\nPoseidonstraat 392\nParamaribo\nSuriname\nDear Dr. Geerlings,\nI am writing to thank you for your years of service on the faculty of the Jamaican\nAgricultural Training Academy (JATA) and to let you know about some exciting\ndevelopments. As you know, JATA was originally established as a vocational school\nfor agriculture but now offers courses in a varied array of disciplines, including\ncybersecurity, electrical engineering, and health information management. Our\nstudent body, which for the first ten years consisted almost exclusively of locals, is\nnow culturally diverse, with students from across the Americas and Europe.\nToday's students work with sophisticated equipment, much of which did not exist\nin our early days.\nTo reflect these and other significant changes that JATA has undergone over time,\nthe Board of Trustees has approved a proposal by the Faculty Senate to rename\nthe institution the Caribbean Academy of Science and Technology. As a result, a\nnew institutional logo will be adopted. All students and faculty members, both\ncurrent and former, are invited to participate in a logo design contest. Information\nabout the contest will be forthcoming.\nThe renaming ceremony and the introduction of the new logo will take place at\n11 A.M. on 1 June, the twentieth anniversary of the institution. We hope you will be\nable to join us.\nSincerely,\nAudley Bartlett\nAudley Bartlett\nVice President for Academic Affairs,\nJamaican Agricultural Training Academy"
+    ],
+    "setId": "set_168_171",
+    "answer": "C",
+    "type": "추론/암시",
+    "explanation": "첫 번째 단락에서 기어링스 박사가 자메이카 농업 교육 아카데미 교수로 재직해 왔다(your years of service on the faculty of the Jamaican Agricultural Training Academy)고 했는데, 두 번째 단락을 보면 모든 학생 및 교수진이 기관의 새 로고 디자인 경연에 참가할 수 있다(All students and faculty members ~ are invited to participate in a logo design contest)고 쓰여 있다. 따라서 기어링스 박사도 로고 디자인 경연에 참가할 자격이 있다고 추론할 수 있으므로, (C)가 정답이다.",
+    "translation": "기어링스 박사에 대해 암시된 것은?",
+    "vocabulary": "celebration 기념 행사, 기념 take part in ~에 참가하다"
+  },
+  "q171": {
+    "id": "q171",
+    "question": "What is NOT indicated about JATA in the\nletter?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Its professors live on campus."
+      },
+      {
+        "label": "B",
+        "text": "Its students have access to modern\nequipment."
+      },
+      {
+        "label": "C",
+        "text": "It will be twenty years old on June 1."
+      },
+      {
+        "label": "D",
+        "text": "It is attended by international students."
+      }
+    ],
+    "passages": [
+      "March 29\nDr. Maritza Geerlings\nPoseidonstraat 392\nParamaribo\nSuriname\nDear Dr. Geerlings,\nI am writing to thank you for your years of service on the faculty of the Jamaican\nAgricultural Training Academy (JATA) and to let you know about some exciting\ndevelopments. As you know, JATA was originally established as a vocational school\nfor agriculture but now offers courses in a varied array of disciplines, including\ncybersecurity, electrical engineering, and health information management. Our\nstudent body, which for the first ten years consisted almost exclusively of locals, is\nnow culturally diverse, with students from across the Americas and Europe.\nToday's students work with sophisticated equipment, much of which did not exist\nin our early days.\nTo reflect these and other significant changes that JATA has undergone over time,\nthe Board of Trustees has approved a proposal by the Faculty Senate to rename\nthe institution the Caribbean Academy of Science and Technology. As a result, a\nnew institutional logo will be adopted. All students and faculty members, both\ncurrent and former, are invited to participate in a logo design contest. Information\nabout the contest will be forthcoming.\nThe renaming ceremony and the introduction of the new logo will take place at\n11 A.M. on 1 June, the twentieth anniversary of the institution. We hope you will be\nable to join us.\nSincerely,\nAudley Bartlett\nAudley Bartlett\nVice President for Academic Affairs,\nJamaican Agricultural Training Academy"
+    ],
+    "setId": "set_168_171",
+    "answer": "A",
+    "type": "사실 관계 확인",
+    "explanation": "첫 번째 단락의 '요즘 학생들은 고도로 발달한 기기를 사용하며, 그 중 대다수는 초기에는 없었던 것들이다(Today's students work with sophisticated equipment, much of which did not exist in our early days)'에서 (B)를, 세 번째 단락의 '기관 20주년 기념일인 6월 1일(on 1 June, the twentieth anniversary of the institution)'에서 (C)를, 첫 번째 단락의 '이제 북·남미와 유럽 등지에서 온 학생들로 문화적 다양성을 띠고 있다(Our student body ~ is now culturally diverse, with students from across the Americas and Europe)'에서 (D)를 확인할 수 있다. 따라서 언급되지 않은 (A)가 정답이다.",
+    "translation": "편지에서 JATA에 대해 명시되지 않은 것은?",
+    "vocabulary": "have access to ~에 접근할 수 있다. attend 다니다. 참석하다"
+  },
+  "q172": {
+    "id": "q172",
+    "question": "For what type of company do the writers\nwork?",
+    "options": [
+      {
+        "label": "A",
+        "text": "A book publisher"
+      },
+      {
+        "label": "B",
+        "text": "A newspaper"
+      },
+      {
+        "label": "C",
+        "text": "A film production company"
+      },
+      {
+        "label": "D",
+        "text": "A job-placement firm"
+      }
+    ],
+    "passages": [
+      "Ashley Montaine 8:54 A.M.: How did the interview with Mr. Erickson go?\nDan Campbell 8:55 A.M.: I really enjoyed meeting him. I think he'd be a great reporter\nhere. He seems smart and organized, and his samples show that he's a great writer.\nAshley Montaine 8:57 A.M.: Brooke, can you contact Mr. Erickson to set up the next\ninterview? Is that a problem?\nDan Campbell 8:58 A.M.: I'd really like to work with him. It is very important that he\nimpress Mr. Peters.\nBrooke Randolph 8:59 A.M.: Not at all.\nAshley Montaine 9:00 A.M.: Thanks. I also see that he has a varied work history. That\nwill make him a well-rounded reporter.\nBrooke Randolph 9:02 A.M.: When would you like to meet with him again?\nDan Campbell 9:03 A.M.: Ashley, I believe you will participate in the next interview.\nNote that Mr. Peters is probably going to ask why Mr. Erickson wants to transition from\nfreelance writing to in-house news reporting. Also, Mr. Peters will want assurances that\nhe's committed and will stick around for several years.\nAshley Montaine 9:04 A.M.: Brooke, Mr. Peters and I are both free Friday morning.\nBrooke Randolph 9:06 A.M.: Great. I'll write an e-mail shortly."
+    ],
+    "setId": "set_172_175",
+    "answer": "B",
+    "type": "세부 사항",
+    "explanation": "캠벨 씨가 오전 8시 55분 메시지에서 면접자인 에릭슨 씨가 훌륭한 기자가 될 수 있을 거라고 본다(he'd be a great reporter here)며 글도 잘 쓴다고 평가했다. 따라서 채팅 참여자들이 신문사에서 일하고 있다고 볼 수 있으므로, (B)가 정답이다.",
+    "translation": "채팅 참여자들은 어떤 종류의 업체에서 일하는가?",
+    "vocabulary": ""
+  },
+  "q173": {
+    "id": "q173",
+    "question": "At 8:59 Α.M., what does Ms. Randolph most\nlikely mean when she writes, \"Not at all\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She would like to participate in an\ninterview."
+      },
+      {
+        "label": "B",
+        "text": "She does not think Mr. Erickson should\nbe hired."
+      },
+      {
+        "label": "C",
+        "text": "She feels comfortable fulfilling a\nrequest."
+      },
+      {
+        "label": "D",
+        "text": "She has not read Mr. Erickson's writing."
+      }
+    ],
+    "passages": [
+      "Ashley Montaine 8:54 A.M.: How did the interview with Mr. Erickson go?\nDan Campbell 8:55 A.M.: I really enjoyed meeting him. I think he'd be a great reporter\nhere. He seems smart and organized, and his samples show that he's a great writer.\nAshley Montaine 8:57 A.M.: Brooke, can you contact Mr. Erickson to set up the next\ninterview? Is that a problem?\nDan Campbell 8:58 A.M.: I'd really like to work with him. It is very important that he\nimpress Mr. Peters.\nBrooke Randolph 8:59 A.M.: Not at all.\nAshley Montaine 9:00 A.M.: Thanks. I also see that he has a varied work history. That\nwill make him a well-rounded reporter.\nBrooke Randolph 9:02 A.M.: When would you like to meet with him again?\nDan Campbell 9:03 A.M.: Ashley, I believe you will participate in the next interview.\nNote that Mr. Peters is probably going to ask why Mr. Erickson wants to transition from\nfreelance writing to in-house news reporting. Also, Mr. Peters will want assurances that\nhe's committed and will stick around for several years.\nAshley Montaine 9:04 A.M.: Brooke, Mr. Peters and I are both free Friday morning.\nBrooke Randolph 9:06 A.M.: Great. I'll write an e-mail shortly."
+    ],
+    "setId": "set_172_175",
+    "answer": "C",
+    "type": "의도 파악",
+    "explanation": "몬테인 씨가 오전 8시 57분 메시지에서 에릭슨 씨에게 연락해서 다음 면접을 잡아달라(can you contact Mr. Erickson to set up the next interview?)고 랜돌프 씨에게 요청한 후, 문제가 되는지(Is that a problem?) 확인했다. 이에 대해 랜돌프 씨가 '아닙니다(Not at all)'라고 응답한 것이므로, 요청을 처리하는 데 문제가 없다는 의도로 쓴 메시지라고 볼 수 있다. 따라서 (C)가 정답이다.",
+    "translation": "오전 8시 59분에 랜돌프 씨가 \"아닙니다\"라고 쓸 때, 그 의도는 무엇인가?",
+    "vocabulary": "fulfill a request 요청을 들어주다."
+  },
+  "q174": {
+    "id": "q174",
+    "question": "What is indicated about Mr. Erickson?",
+    "options": [
+      {
+        "label": "A",
+        "text": "He has never been on a job interview\nbefore."
+      },
+      {
+        "label": "B",
+        "text": "He has held many different types of\njobs."
+      },
+      {
+        "label": "C",
+        "text": "He is taking over Mr. Peters' position."
+      },
+      {
+        "label": "D",
+        "text": "He is a former colleague of\nMs. Montaine."
+      }
+    ],
+    "passages": [
+      "Ashley Montaine 8:54 A.M.: How did the interview with Mr. Erickson go?\nDan Campbell 8:55 A.M.: I really enjoyed meeting him. I think he'd be a great reporter\nhere. He seems smart and organized, and his samples show that he's a great writer.\nAshley Montaine 8:57 A.M.: Brooke, can you contact Mr. Erickson to set up the next\ninterview? Is that a problem?\nDan Campbell 8:58 A.M.: I'd really like to work with him. It is very important that he\nimpress Mr. Peters.\nBrooke Randolph 8:59 A.M.: Not at all.\nAshley Montaine 9:00 A.M.: Thanks. I also see that he has a varied work history. That\nwill make him a well-rounded reporter.\nBrooke Randolph 9:02 A.M.: When would you like to meet with him again?\nDan Campbell 9:03 A.M.: Ashley, I believe you will participate in the next interview.\nNote that Mr. Peters is probably going to ask why Mr. Erickson wants to transition from\nfreelance writing to in-house news reporting. Also, Mr. Peters will want assurances that\nhe's committed and will stick around for several years.\nAshley Montaine 9:04 A.M.: Brooke, Mr. Peters and I are both free Friday morning.\nBrooke Randolph 9:06 A.M.: Great. I'll write an e-mail shortly."
+    ],
+    "setId": "set_172_175",
+    "answer": "B",
+    "type": "사실 관계 확인",
+    "explanation": "몬테인 씨가 오전 9시 메시지에서 에릭슨 씨에게는 다양한 업무 경력도 있다(he has a varied work history)고 했으므로, (B)가 정답이다.",
+    "translation": "에릭슨 씨에 대해 명시된 것은?",
+    "vocabulary": "former 이전의 colleague 동료"
+  },
+  "q175": {
+    "id": "q175",
+    "question": "According to the discussion, what is\nimportant to Mr. Peters about a new hire?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Prior news reporting experience"
+      },
+      {
+        "label": "B",
+        "text": "Ability to begin working immediately"
+      },
+      {
+        "label": "C",
+        "text": "Communicating well with colleagues"
+      },
+      {
+        "label": "D",
+        "text": "Staying with the company over the long\nterm"
+      }
+    ],
+    "passages": [
+      "Ashley Montaine 8:54 A.M.: How did the interview with Mr. Erickson go?\nDan Campbell 8:55 A.M.: I really enjoyed meeting him. I think he'd be a great reporter\nhere. He seems smart and organized, and his samples show that he's a great writer.\nAshley Montaine 8:57 A.M.: Brooke, can you contact Mr. Erickson to set up the next\ninterview? Is that a problem?\nDan Campbell 8:58 A.M.: I'd really like to work with him. It is very important that he\nimpress Mr. Peters.\nBrooke Randolph 8:59 A.M.: Not at all.\nAshley Montaine 9:00 A.M.: Thanks. I also see that he has a varied work history. That\nwill make him a well-rounded reporter.\nBrooke Randolph 9:02 A.M.: When would you like to meet with him again?\nDan Campbell 9:03 A.M.: Ashley, I believe you will participate in the next interview.\nNote that Mr. Peters is probably going to ask why Mr. Erickson wants to transition from\nfreelance writing to in-house news reporting. Also, Mr. Peters will want assurances that\nhe's committed and will stick around for several years.\nAshley Montaine 9:04 A.M.: Brooke, Mr. Peters and I are both free Friday morning.\nBrooke Randolph 9:06 A.M.: Great. I'll write an e-mail shortly."
+    ],
+    "setId": "set_172_175",
+    "answer": "D",
+    "type": "세부 사항",
+    "explanation": "캠벨 씨가 오전 9시 3분 메시지에서 피터스 씨는 에릭슨 씨가 헌신적인 자세로 몇 년간 근무할 거라는 확약을 원한다(Mr. Peters will want assurances that he ~ will stick around for several years)고 했다. 따라서 피터스 씨가 장기 근속을 중시한다는 것을 알 수 있으므로, (D)가 정답이다.",
+    "translation": "논의에 따르면, 신입사원의 어떤 면이 피터스 씨에게 중요한가?",
+    "vocabulary": "prior 이전의 immediately 바로, 즉시 long term 장기간"
+  }
+}

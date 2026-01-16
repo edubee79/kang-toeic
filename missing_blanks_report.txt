@@ -1,0 +1,28 @@
+Total questions WITHOUT blank markers: 24
+
+Questions missing blank markers:
+
+Test 3 q121: "All associates are -- to follow the standard operating procedures outlined in the handbook."
+Test 3 q122: "This month Framley Publishing House is embarking on its expansion so far."
+Test 4 q103: "The annual report will be ready after make the necessary revisions."
+Test 4 q106: "Ms. Najjar is going to give a presentation workplace regulations at noon."
+Test 4 q107: "Mr. Telguld submitted the surveys before the monthly board meeting."
+Test 4 q109: "Ms. Okada is a new social media campaign at the request of our office manager."
+Test 4 q111: "Please log on to your online checking account the next 30 days in order to keep it active."
+Test 4 q112: "The Bradyville Inn -- live jazz music in the dining area on Friday evenings."
+Test 4 q113: "Leeann's Organic Fruit Spreads can be purchased from the company's Web site."
+Test 4 q114: "the event organizers' best efforts, they have been unable to attract enough volunteers this spring."
+Test 4 q115: "Mr. Perez as an industrial engineer at Gaberly Logistics for almost twenty years."
+Test 4 q117: "Small businesses participate in the Get Ahead program will receive marketing tools to help them attract customers."
+Test 4 q118: "Our copy editors will review the manuscript will not return it until the end of next week."
+Test 4 q120: "Orbin's Fish Company expanded to a total of 26 stores its takeover of a rival chain."
+Test 4 q121: "Ms. Cartwright told her team members that she wanted to streamline the company's assembly process."
+Test 4 q122: "Rupert's Food Service uses technology to track all of its shipments."
+Test 4 q123: "Our app includes a so that users can determine whether they are within their budget goals."
+Test 4 q124: "Το that its facilities are cleaned every day, the Selboa Company has hired more janitors."
+Test 4 q125: "During his term as a legislator, Jeremy Moran promoted public awareness of the need for infrastructure improvements."
+Test 4 q126: "Pyxie Print's business is so new that we need to explain the full range of our services to clients."
+Test 4 q128: "An Oswald Hardware associate will place an order for customers who need larger quantities than what is in stock."
+Test 4 q129: "Mia Daushvili performed with the Bayhead Orchestra on Monday evening, her virtuosic skills on the piccolo."
+Test 4 q130: "When reviewing applicants for the clerk position, Ms. Ng will consider both education and experience."
+Test 5 q107: "If you have already submitted your response, no -- action is required."

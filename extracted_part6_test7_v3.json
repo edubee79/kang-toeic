@@ -1,0 +1,409 @@
+{
+  "testId": 7,
+  "passages": [
+    {
+      "id": "p6-t7-p1",
+      "guidance": "Questions 131-134 refer to the following e-mail.",
+      "type": "email",
+      "title": null,
+      "content": "To: Naomi Richter <naomirichter@mailcurrent.com>\nFrom: Watanu Sakamoto <wsakamoto@RHNimports.com>\nDate: 23 November\nSubject: Follow-up\n\nAttachment: Logistics coordinator description Dear Ms. Richter, Thank you for coming to our office to interview for the assistant import manager position last week. We were impressed with your credentials and enthusiasm. we are moving ahead [131]\n\nwith another candidate, we would like to offer youadifferent position that just became available:\n\nlogistics coordinator.\n\nThe attached document contains the detailed job description and pay rate. This [132]\n\n[133].\n\nhas not yet been posted publicly. If you are please let me know by the end of this week.\n\n[134].\n\nSincerely, Watanu Sakamoto Human Resource Manager, RHN Imports",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Rather"
+            },
+            {
+              "label": "B",
+              "text": "Although"
+            },
+            {
+              "label": "C",
+              "text": "Similarly"
+            },
+            {
+              "label": "D",
+              "text": "Consequently"
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "There are several other internal applicants."
+            },
+            {
+              "label": "B",
+              "text": "Unfortunately, the position is no longer available."
+            },
+            {
+              "label": "C",
+              "text": "My assistant will schedule your second interview."
+            },
+            {
+              "label": "D",
+              "text": "Your experience and skill set make you a great fit."
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "opportunity"
+            },
+            {
+              "label": "B",
+              "text": "authorization"
+            },
+            {
+              "label": "C",
+              "text": "application"
+            },
+            {
+              "label": "D",
+              "text": "capacity"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "interest"
+            },
+            {
+              "label": "B",
+              "text": "interests"
+            },
+            {
+              "label": "C",
+              "text": "interested"
+            },
+            {
+              "label": "D",
+              "text": "interesting"
+            }
+          ],
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "id": "p6-t7-p2",
+      "guidance": "Questions 135-138 refer to the following notice.",
+      "type": "notice",
+      "title": null,
+      "content": "The Oakville Horticulture Clubaplant sale on Saturday, 9 September. The sale will be held [135]\n\nfrom 9:00 A.M. to 4:00P.M. at the Oakville Community Centre at 478 Hill Avenue. There will be great deals on hanging baskets, grasses, and herbs. We haveadelicious selection [136]\n\n[137]\n\nof fruits and vegetables available for purchase. Enjoy live talks and demonstrations the day. For more information, visit the Oakville Horticulture Web site:\n\n[138]\n\nwww.oakvillehorticultureclub.co.uk/events.",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "host"
+            },
+            {
+              "label": "B",
+              "text": "hosted"
+            },
+            {
+              "label": "C",
+              "text": "is hosting"
+            },
+            {
+              "label": "D",
+              "text": "has hosted"
+            }
+          ],
+          "correctAnswer": "C"
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Come early to get the best selection."
+            },
+            {
+              "label": "B",
+              "text": "Plants help make your home beautiful."
+            },
+            {
+              "label": "C",
+              "text": "Join the club for a discount on local garden tours."
+            },
+            {
+              "label": "D",
+              "text": "The community center was just renovated."
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "later"
+            },
+            {
+              "label": "B",
+              "text": "also"
+            },
+            {
+              "label": "C",
+              "text": "nearly"
+            },
+            {
+              "label": "D",
+              "text": "merely"
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "within"
+            },
+            {
+              "label": "B",
+              "text": "forward"
+            },
+            {
+              "label": "C",
+              "text": "following"
+            },
+            {
+              "label": "D",
+              "text": "throughout"
+            }
+          ],
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "id": "p6-t7-p3",
+      "guidance": "Questions 139-142 refer to the following letter.",
+      "type": "letter",
+      "title": null,
+      "content": "July 2 Dear Mr. Arakaki:\n\nI am writing to inform you of scheduled road maintenance on Briggs Avenue. Beginning on July 15, Briggs Avenue reduced to one lane from Elm Street to Bay Road. . Although [139]\n\n[140]\n\nyour is not located in this section of Briggs Avenue, traffic on most of the street will move [141]\n\nmore slowly than usual while work is being performed. You may consider advising your employees to take alternate routes to work during this time. The project is expected to be [142].\n\ncompleted on or before October 22. Thank you for your cooperation and assistance.\n\nSincerely, Amalia Villalobos Director of Transportation Enclosure",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "was"
+            },
+            {
+              "label": "B",
+              "text": "will be"
+            },
+            {
+              "label": "C",
+              "text": "can be"
+            },
+            {
+              "label": "D",
+              "text": "has been"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Briggs Avenue is only two miles away."
+            },
+            {
+              "label": "B",
+              "text": "The event will take place on Elm Street."
+            },
+            {
+              "label": "C",
+              "text": "Please refer to the enclosed map of the affected area."
+            },
+            {
+              "label": "D",
+              "text": "However, all city services will close during this time."
+            }
+          ],
+          "correctAnswer": "C"
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "mailbox"
+            },
+            {
+              "label": "B",
+              "text": "school"
+            },
+            {
+              "label": "C",
+              "text": "signage"
+            },
+            {
+              "label": "D",
+              "text": "business"
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "fortunately"
+            },
+            {
+              "label": "B",
+              "text": "instead"
+            },
+            {
+              "label": "C",
+              "text": "likewise"
+            },
+            {
+              "label": "D",
+              "text": "therefore"
+            }
+          ],
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "id": "p6-t7-p4",
+      "guidance": "Questions 143-146 refer to the following article.",
+      "type": "article",
+      "title": "Franklin Planetarium to Move Downtown",
+      "content": "(June 3)-After 48 years in its present location on Mayfield's south side, the Franklin Planetarium is moving toanew home. Construction is underway on the downtown facility, part ofacomplex that includes the new Natural History Museum. Both are expected to open to the public next [143].\n\nSeptember.\n\nThe current planetarium's main attraction is a 300-seat theater, where visitors can view projections of stars and planets on the dome above. a larger theater, the new planetarium [144].\n\nwill feature an upgraded digital projection system. Visitors will be able the night sky [145]\n\n[146].\n\nmore clearly and explore other planets and galaxies through new, interactive displays.",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "trails"
+            },
+            {
+              "label": "B",
+              "text": "buildings"
+            },
+            {
+              "label": "C",
+              "text": "campuses"
+            },
+            {
+              "label": "D",
+              "text": "performances"
+            }
+          ],
+          "correctAnswer": "B"
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "In addition to"
+            },
+            {
+              "label": "B",
+              "text": "In particular"
+            },
+            {
+              "label": "C",
+              "text": "In agreement with"
+            },
+            {
+              "label": "D",
+              "text": "For instance"
+            }
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "There are currently three other museums in the Mayfield area."
+            },
+            {
+              "label": "B",
+              "text": "Attendance at the planetarium has been up in recent years."
+            },
+            {
+              "label": "C",
+              "text": "Planning for the new planetarium began five years ago."
+            },
+            {
+              "label": "D",
+              "text": "There will be room for three short-term exhibits as well."
+            }
+          ],
+          "correctAnswer": "D"
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "to see"
+            },
+            {
+              "label": "B",
+              "text": "will see"
+            },
+            {
+              "label": "C",
+              "text": "who saw"
+            },
+            {
+              "label": "D",
+              "text": "by seeing"
+            }
+          ],
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "day": 15,
+    "no": 1,
+    "word": "proposal",
+    "meaning": "제안,계획",
+    "targetScore": 650,
+    "exampleEn": "The committee reviewed the proposal for the new building.",
+    "exampleKo": "위원회는 신축 건물에 대한 제안서를 검토했습니다."
+  },
+  {
+    "day": 15,
+    "no": 2,
+    "word": "alliance",
+    "meaning": "동맹, 제휴",
+    "targetScore": 650,
+    "exampleEn": "The two companies formed a strategic alliance.",
+    "exampleKo": "두 회사는 전략적 제휴(동맹)를 맺었습니다."
+  },
+  {
+    "day": 15,
+    "no": 3,
+    "word": "stipulation",
+    "meaning": "계약 조건",
+    "targetScore": 650,
+    "exampleEn": "One stipulation of the contract is strict secrecy.",
+    "exampleKo": "계약의 한 가지 조항(조건)은 철저한 비밀 유지입니다."
+  },
+  {
+    "day": 15,
+    "no": 4,
+    "word": "term",
+    "meaning": "조건, 임기, 기한",
+    "targetScore": 650,
+    "exampleEn": "We must discuss the terms and conditions of the deal.",
+    "exampleKo": "우리는 거래의 조건(약관)들을 논의해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 5,
+    "word": "compromise",
+    "meaning": "타협,화해",
+    "targetScore": 650,
+    "exampleEn": "Management and the union reached a compromise.",
+    "exampleKo": "경영진과 노조는 타협에 도달했습니다."
+  },
+  {
+    "day": 15,
+    "no": 6,
+    "word": "negotiation",
+    "meaning": "협상,교섭",
+    "targetScore": 650,
+    "exampleEn": "Negotiations for the merger are currently underway.",
+    "exampleKo": "합병에 대한 협상이 현재 진행 중입니다."
+  },
+  {
+    "day": 15,
+    "no": 7,
+    "word": "agreement",
+    "meaning": "계약,협정,합의",
+    "targetScore": 650,
+    "exampleEn": "Both parties signed a mutual agreement.",
+    "exampleKo": "양측은 상호 합의서(계약서)에 서명했습니다."
+  },
+  {
+    "day": 15,
+    "no": 8,
+    "word": "deadlock",
+    "meaning": "교착 상태",
+    "targetScore": 650,
+    "exampleEn": "Negotiations reached a deadlock over the salary issue.",
+    "exampleKo": "급여 문제로 협상이 교착 상태에 도달했습니다."
+  },
+  {
+    "day": 15,
+    "no": 9,
+    "word": "review",
+    "meaning": "검토하다,재조사하다",
+    "targetScore": 650,
+    "exampleEn": "The legal team will review the draft contract.",
+    "exampleKo": "법무팀이 계약서 초안을 검토할 것입니다."
+  },
+  {
+    "day": 15,
+    "no": 10,
+    "word": "contract",
+    "meaning": "계약(서),계약하다,수축하다",
+    "targetScore": 650,
+    "exampleEn": "The firm won a lucrative government contract.",
+    "exampleKo": "그 회사는 수익성 좋은 정부 계약을 따냈습니다."
+  },
+  {
+    "day": 15,
+    "no": 11,
+    "word": "signature",
+    "meaning": "서명",
+    "targetScore": 650,
+    "exampleEn": "Please put your signature at the bottom of the page.",
+    "exampleKo": "페이지 하단에 서명을 해주십시오."
+  },
+  {
+    "day": 15,
+    "no": 12,
+    "word": "originally",
+    "meaning": "원래,처음에는",
+    "targetScore": 650,
+    "exampleEn": "The policy was originally intended to reduce costs.",
+    "exampleKo": "그 정책은 원래 비용 절감을 위해 의도되었습니다."
+  },
+  {
+    "day": 15,
+    "no": 13,
+    "word": "direction",
+    "meaning": "방향,지시,감독",
+    "targetScore": 650,
+    "exampleEn": "The board gave direction on the new strategy.",
+    "exampleKo": "이사회는 새로운 전략에 대한 지침(방향)을 주었습니다."
+  },
+  {
+    "day": 15,
+    "no": 14,
+    "word": "initially",
+    "meaning": "처음에,초기에",
+    "targetScore": 650,
+    "exampleEn": "Initially, the project faced some resistance.",
+    "exampleKo": "처음에, 그 프로젝트는 약간의 저항에 직면했습니다."
+  },
+  {
+    "day": 15,
+    "no": 15,
+    "word": "expire",
+    "meaning": "(계약 등이)만료되다",
+    "targetScore": 650,
+    "exampleEn": "The warranty is set to expire next month.",
+    "exampleKo": "보증 기간이 다음 달에 만료될 예정입니다."
+  },
+  {
+    "day": 15,
+    "no": 16,
+    "word": "collaborate",
+    "meaning": "협력하다,공동으로 일하다",
+    "targetScore": 650,
+    "exampleEn": "We collaborate closely with our business partners.",
+    "exampleKo": "우리는 비즈니스 파트너들과 긴밀히 협력합니다."
+  },
+  {
+    "day": 15,
+    "no": 17,
+    "word": "dedicate",
+    "meaning": "전념하다,헌신하다,바치다",
+    "targetScore": 650,
+    "exampleEn": "The team is dedicated to providing quality service.",
+    "exampleKo": "그 팀은 양질의 서비스를 제공하는 데 헌신합니다."
+  },
+  {
+    "day": 15,
+    "no": 18,
+    "word": "revised",
+    "meaning": "수정된,변경한",
+    "targetScore": 650,
+    "exampleEn": "Please approve the revised budget proposal.",
+    "exampleKo": "수정된 예산 제안서를 승인해 주십시오."
+  },
+  {
+    "day": 15,
+    "no": 19,
+    "word": "imperative",
+    "meaning": "반드시 해야 하는,필수적인",
+    "targetScore": 650,
+    "exampleEn": "It is imperative that we meet the deadline.",
+    "exampleKo": "우리가 마감 기한을 맞추는 것은 필수적입니다."
+  },
+  {
+    "day": 15,
+    "no": 20,
+    "word": "cooperatively",
+    "meaning": "협력하여,협조적으로",
+    "targetScore": 650,
+    "exampleEn": "Departments must work cooperatively to succeed.",
+    "exampleKo": "성공하기 위해서는 부서들이 협력적으로 일해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 21,
+    "word": "commission",
+    "meaning": "수수료,커미션,위원회,(일 등을)의뢰하다,, 주문하다",
+    "targetScore": 650,
+    "exampleEn": "Sales representatives receive a 10% commission.",
+    "exampleKo": "영업 사원들은 10%의 수수료를 받습니다."
+  },
+  {
+    "day": 15,
+    "no": 22,
+    "word": "omit",
+    "meaning": "빠트리다,생략하다",
+    "targetScore": 650,
+    "exampleEn": "Please do not omit important details from the report.",
+    "exampleKo": "보고서에서 중요한 세부 사항을 빠뜨리지 마십시오."
+  },
+  {
+    "day": 15,
+    "no": 23,
+    "word": "conflict",
+    "meaning": "대립,충돌,갈등",
+    "targetScore": 650,
+    "exampleEn": "Employees should avoid any conflict of interest.",
+    "exampleKo": "직원들은 어떠한 이해 상충(충돌)도 피해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 24,
+    "word": "renew",
+    "meaning": "(계약 등을)갱신하다",
+    "targetScore": 650,
+    "exampleEn": "Tenants decided to renew their lease for another year.",
+    "exampleKo": "임차인들은 임대차 계약을 1년 더 갱신하기로 결정했습니다."
+  },
+  {
+    "day": 15,
+    "no": 25,
+    "word": "proficient",
+    "meaning": "능숙한,능한",
+    "targetScore": 650,
+    "exampleEn": "She is highly proficient in contract law.",
+    "exampleKo": "그녀는 계약법에 매우 능통합니다."
+  },
+  {
+    "day": 15,
+    "no": 26,
+    "word": "confidentiality",
+    "meaning": "기밀,비밀",
+    "targetScore": 650,
+    "exampleEn": "Strict confidentiality is maintained at all times.",
+    "exampleKo": "철저한 기밀(비밀)이 항상 유지됩니다."
+  },
+  {
+    "day": 15,
+    "no": 27,
+    "word": "dispute",
+    "meaning": "분쟁,논쟁",
+    "targetScore": 650,
+    "exampleEn": "The labor dispute was resolved peacefully.",
+    "exampleKo": "그 노사 분쟁은 평화롭게 해결되었습니다."
+  },
+  {
+    "day": 15,
+    "no": 28,
+    "word": "objection",
+    "meaning": "반대,이의",
+    "targetScore": 650,
+    "exampleEn": "No one raised an objection to the proposal.",
+    "exampleKo": "아무도 그 제안에 대해 이의를 제기하지 않았습니다."
+  },
+  {
+    "day": 15,
+    "no": 29,
+    "word": "define",
+    "meaning": "규정하다,정의하다",
+    "targetScore": 650,
+    "exampleEn": "The document clearly defines the responsibilities.",
+    "exampleKo": "그 문서는 책임 소재를 명확히 규정합니다."
+  },
+  {
+    "day": 15,
+    "no": 30,
+    "word": "impression",
+    "meaning": "인상",
+    "targetScore": 650,
+    "exampleEn": "Dress professionally to make a good impression.",
+    "exampleKo": "좋은 인상을 주기 위해 전문적으로(단정하게) 옷을 입으십시오."
+  },
+  {
+    "day": 15,
+    "no": 31,
+    "word": "security",
+    "meaning": "보안,안전,보호",
+    "targetScore": 650,
+    "exampleEn": "Security personnel check all visitors.",
+    "exampleKo": "보안 요원이 모든 방문객을 확인합니다."
+  },
+  {
+    "day": 15,
+    "no": 32,
+    "word": "option",
+    "meaning": "선택권",
+    "targetScore": 650,
+    "exampleEn": "Employees have the option to buy company stock.",
+    "exampleKo": "직원들은 자사주를 매입할 수 있는 선택권이 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 33,
+    "word": "proceed",
+    "meaning": "(일을)진행하다,진척되다",
+    "targetScore": 650,
+    "exampleEn": "We can proceed with the signing of the contract.",
+    "exampleKo": "우리는 계약 체결을 진행할 수 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 34,
+    "word": "modify",
+    "meaning": "수정하다,일부 변경하다",
+    "targetScore": 650,
+    "exampleEn": "We need to modify the terms of the agreement.",
+    "exampleKo": "우리는 합의 조건을 수정해야 합니다."
+  },
+  {
+    "day": 15,
+    "no": 35,
+    "word": "narrow",
+    "meaning": "(범위 등을)좁히다",
+    "targetScore": 650,
+    "exampleEn": "We narrowed down the list of candidates.",
+    "exampleKo": "우리는 후보자 명단을 좁혔습니다."
+  },
+  {
+    "day": 15,
+    "no": 36,
+    "word": "bid",
+    "meaning": "입찰",
+    "targetScore": 650,
+    "exampleEn": "Construction firms submitted a bid for the project.",
+    "exampleKo": "건설 회사들이 그 프로젝트에 입찰했습니다."
+  },
+  {
+    "day": 15,
+    "no": 37,
+    "word": "settle",
+    "meaning": "해결하다,처리하다",
+    "targetScore": 650,
+    "exampleEn": "They hope to settle the legal dispute quickly.",
+    "exampleKo": "그들은 법적 분쟁을 빨리 해결하기를 희망합니다."
+  },
+  {
+    "day": 15,
+    "no": 38,
+    "word": "terminate",
+    "meaning": "끝내다,종결시키다",
+    "targetScore": 650,
+    "exampleEn": "The company has the right to terminate the contract.",
+    "exampleKo": "회사는 계약을 해지할(종료할) 권리가 있습니다."
+  },
+  {
+    "day": 15,
+    "no": 39,
+    "word": "challenging",
+    "meaning": "도전적인,힘든",
+    "targetScore": 650,
+    "exampleEn": "Implementing the new system was challenging.",
+    "exampleKo": "새로운 시스템을 도입하는 것은 힘든(도전적인) 일이었습니다."
+  },
+  {
+    "day": 15,
+    "no": 40,
+    "word": "foundation",
+    "meaning": "토대,기초",
+    "targetScore": 650,
+    "exampleEn": "Good communication is the foundation of teamwork.",
+    "exampleKo": "좋은 의사소통은 팀워크의 토대(기초)입니다."
+  }
+]

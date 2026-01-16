@@ -1,0 +1,393 @@
+{
+  "testId": 8,
+  "passages": [
+    {
+      "id": "p6-t8-p1",
+      "guidance": "Questions 131-134 refer to the following e-mail.",
+      "type": "EMAIL",
+      "title": "...",
+      "content": "From: mnandy@gmantcs.com\nTo: jblaire@blaireaccounting.ca\nSubject: RE: AUTOMATIC REPLY\nDate: 9 January, 10:34 AM\n\nHello, and thank you for contacting Blaire Accounting. I will be out of the office until 31 January. I will respond to your message when I [131]. If you need [132] assistance, please contact Susan Lewis, my administrative assistant, at slewis@blaireaccounting.ca. You can [133] call her directly at 416-555-0193. [134].\n\nJean Blaire, President",
+      "questions": [
+        {
+          "id": "131",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "recover"
+            },
+            {
+              "label": "B",
+              "text": "return"
+            },
+            {
+              "label": "C",
+              "text": "begin"
+            },
+            {
+              "label": "D",
+              "text": "finish"
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "immediate"
+            },
+            {
+              "label": "B",
+              "text": "immediately"
+            },
+            {
+              "label": "C",
+              "text": "immediacy"
+            },
+            {
+              "label": "D",
+              "text": "immediacies"
+            }
+          ]
+        },
+        {
+          "id": "133",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "also"
+            },
+            {
+              "label": "B",
+              "text": "lightly"
+            },
+            {
+              "label": "C",
+              "text": "similarly"
+            },
+            {
+              "label": "D",
+              "text": "again"
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Ms. Blaire will be back in the office earlier than expected."
+            },
+            {
+              "label": "B",
+              "text": "Please come and see us if you ever find yourself in Toronto."
+            },
+            {
+              "label": "C",
+              "text": "It is essential to hire a competent payroll and tax accountant."
+            },
+            {
+              "label": "D",
+              "text": "Ms. Lewis is in the office on weekdays from 9 A.M. to 5 P.M."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t8-p2",
+      "guidance": "Questions 135-138 refer to the following notice.",
+      "type": "NOTICE",
+      "title": "Attention customers of Metro Coffee:",
+      "content": "We are excited to announce that we [135] a second Metro Coffee store! As you know, we recently expanded our offerings to include baked goods as well as coffee. As a result, our [136] has increased significantly. To keep up with demand, we decided that a second store was necessary.\n\nOur new space is substantially [137] but offers the same wide selection of items. Make sure to stop by and check out our new location today!\n\n[138]",
+      "questions": [
+        {
+          "id": "135",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "will open"
+            },
+            {
+              "label": "B",
+              "text": "can open"
+            },
+            {
+              "label": "C",
+              "text": "are opening"
+            },
+            {
+              "label": "D",
+              "text": "have opened"
+            }
+          ]
+        },
+        {
+          "id": "136",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "debt"
+            },
+            {
+              "label": "B",
+              "text": "payroll"
+            },
+            {
+              "label": "C",
+              "text": "business"
+            },
+            {
+              "label": "D",
+              "text": "investment"
+            }
+          ]
+        },
+        {
+          "id": "137",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Metro Coffee has been a part of the community for nine years."
+            },
+            {
+              "label": "B",
+              "text": "We roast our coffee beans right here on-site."
+            },
+            {
+              "label": "C",
+              "text": "Many people enjoy eating a pastry while drinking a cup of coffee."
+            },
+            {
+              "label": "D",
+              "text": "It is located two miles away in the historic district."
+            }
+          ]
+        },
+        {
+          "id": "138",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "large"
+            },
+            {
+              "label": "B",
+              "text": "larger"
+            },
+            {
+              "label": "C",
+              "text": "largely"
+            },
+            {
+              "label": "D",
+              "text": "largest"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t8-p3",
+      "guidance": "Questions 139-142 refer to the following memo.",
+      "type": "MEMO",
+      "title": "...",
+      "content": "To: All Ferrese Hotel Employees\nFrom: Sergio Prieto, Hotel Manager\nDate: Monday, July 4\nSubject: Global Shipping Partners Conference\n\nThe Ferrese Hotel will be hosting the Global Shipping Partners Conference next week, from Tuesday to Sunday. [139], management expects to see many more customers in the hotel's restaurants and gift shops. [140]. I will be hiring temporary staff to ensure that [141] can meet these increased demands. Please take the time to help them learn our [142] when they are here. Doing so will ensure that all operations run smoothly while the conference is taking place.",
+      "questions": [
+        {
+          "id": "139",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "If not"
+            },
+            {
+              "label": "B",
+              "text": "After all"
+            },
+            {
+              "label": "C",
+              "text": "Therefore"
+            },
+            {
+              "label": "D",
+              "text": "In the meantime"
+            }
+          ]
+        },
+        {
+          "id": "140",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "Restaurant renovations are almost completed."
+            },
+            {
+              "label": "B",
+              "text": "Conference registration forms have been posted online."
+            },
+            {
+              "label": "C",
+              "text": "Applications will be reviewed later this week."
+            },
+            {
+              "label": "D",
+              "text": "The business center will also be busier than usual."
+            }
+          ]
+        },
+        {
+          "id": "141",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "it"
+            },
+            {
+              "label": "B",
+              "text": "we"
+            },
+            {
+              "label": "C",
+              "text": "both"
+            },
+            {
+              "label": "D",
+              "text": "something"
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "lines"
+            },
+            {
+              "label": "B",
+              "text": "steps"
+            },
+            {
+              "label": "C",
+              "text": "names"
+            },
+            {
+              "label": "D",
+              "text": "routines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6-t8-p4",
+      "guidance": "Questions 143-146 refer to the following article.",
+      "type": "ARTICLE",
+      "title": "...",
+      "content": "DALLAS (July 28)—Zura Technology Solutions (ZTS) announced today that it has completed the [143] of an office building located at 425 Van Kirk Street here in Dallas. The building, most recently the headquarters of Brickhall Insurance, will serve as ZTS's [144] base of operations. The company's relocation from Fort Worth is expected to be complete by the end of the calendar year. [145]. \"Our decision to acquire the building reflects ZTS's ongoing commitment to the Dallas area and will enable us to better serve our customers, business partners, and stakeholders,\" said Gloria Rubirosa, ZTS's CEO. \"From our new home in Dallas, we [146] to work hard to meet the needs of each and every one of our customers around the world.”",
+      "questions": [
+        {
+          "id": "143",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "construction"
+            },
+            {
+              "label": "B",
+              "text": "cleaning"
+            },
+            {
+              "label": "C",
+              "text": "inspection"
+            },
+            {
+              "label": "D",
+              "text": "purchase"
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "voluntary"
+            },
+            {
+              "label": "B",
+              "text": "primary"
+            },
+            {
+              "label": "C",
+              "text": "short-term"
+            },
+            {
+              "label": "D",
+              "text": "occasional"
+            }
+          ]
+        },
+        {
+          "id": "145",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "ZTS's leadership team sees the move as strategic."
+            },
+            {
+              "label": "B",
+              "text": "For example, it provides a range of services to small businesses."
+            },
+            {
+              "label": "C",
+              "text": "There are only a few available sites in the Main Street District."
+            },
+            {
+              "label": "D",
+              "text": "Over 15,000 people are employed by ZTS worldwide."
+            }
+          ]
+        },
+        {
+          "id": "146",
+          "text": null,
+          "options": [
+            {
+              "label": "A",
+              "text": "continued"
+            },
+            {
+              "label": "B",
+              "text": "continuing"
+            },
+            {
+              "label": "C",
+              "text": "would have continued"
+            },
+            {
+              "label": "D",
+              "text": "will continue"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

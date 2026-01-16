@@ -1,0 +1,614 @@
+[
+  {
+    "day": 8,
+    "no": 69,
+    "word": "advertising campaign",
+    "meaning": "광고 캠페인",
+    "targetScore": 800,
+    "exampleEn": "The advertising campaign resulted in increased sales.",
+    "exampleKo": "광고 캠페인은 판매 증가라는 결과를 낳았습니다."
+  },
+  {
+    "day": 8,
+    "no": 70,
+    "word": "be anxious to do",
+    "meaning": "몹시 ~하고 싶다",
+    "targetScore": 800,
+    "exampleEn": "We are anxious to finalize the deal.",
+    "exampleKo": "우리는 거래를 마무리하고 싶어 몹시 안달하고 있습니다(몹시 ~하고 싶어합니다)."
+  },
+  {
+    "day": 8,
+    "no": 71,
+    "word": "bring on",
+    "meaning": "~을 초래하다",
+    "targetScore": 800,
+    "exampleEn": "Stress can bring on health problems.",
+    "exampleKo": "스트레스는 건강 문제를 초래할 수 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 72,
+    "word": "chase",
+    "meaning": "뒤쫓다, 추구하다",
+    "targetScore": 800,
+    "exampleEn": "Too many companies chase the same few customers.",
+    "exampleKo": "너무 많은 회사들이 소수의 같은 고객들을 뒤쫓습니다(추구합니다)."
+  },
+  {
+    "day": 8,
+    "no": 73,
+    "word": "come along",
+    "meaning": "함께 가다, 함께 오다",
+    "targetScore": 800,
+    "exampleEn": "Please come along with us to the conference.",
+    "exampleKo": "우리와 함께 컨퍼런스에 가시죠(함께 오시죠)."
+  },
+  {
+    "day": 8,
+    "no": 74,
+    "word": "come loose",
+    "meaning": "풀리다, 느슨해지다",
+    "targetScore": 800,
+    "exampleEn": "The screw has come loose.",
+    "exampleKo": "나사가 풀렸습니다."
+  },
+  {
+    "day": 8,
+    "no": 75,
+    "word": "conditional",
+    "meaning": "조건부의",
+    "targetScore": 800,
+    "exampleEn": "The offer is conditional on approval from the board.",
+    "exampleKo": "그 제안은 이사회의 승인을 조건으로 합니다."
+  },
+  {
+    "day": 8,
+    "no": 76,
+    "word": "customer survey",
+    "meaning": "고객 설문 조사",
+    "targetScore": 800,
+    "exampleEn": "We conducted a customer survey to gather feedback.",
+    "exampleKo": "우리는 피드백을 수집하기 위해 고객 설문 조사를 실시했습니다."
+  },
+  {
+    "day": 8,
+    "no": 77,
+    "word": "date back to",
+    "meaning": "(시기가)~까지 거슬러 올라가다",
+    "targetScore": 800,
+    "exampleEn": "The tradition dates back to the 19th century.",
+    "exampleKo": "그 전통은 19세기까지 거슬러 올라갑니다."
+  },
+  {
+    "day": 8,
+    "no": 78,
+    "word": "depict",
+    "meaning": "묘사하다",
+    "targetScore": 800,
+    "exampleEn": "The chart depicts the growth in revenue.",
+    "exampleKo": "그 차트는 수익 증가를 묘사합니다(보여줍니다)."
+  },
+  {
+    "day": 8,
+    "no": 79,
+    "word": "destruction",
+    "meaning": "파괴",
+    "targetScore": 800,
+    "exampleEn": "The hurricane caused widespread destruction.",
+    "exampleKo": "허리케인은 광범위한 파괴를 일으켰습니다."
+  },
+  {
+    "day": 8,
+    "no": 80,
+    "word": "enter into",
+    "meaning": "~에 들어가다, 참가하다",
+    "targetScore": 800,
+    "exampleEn": "The companies entered into a partnership.",
+    "exampleKo": "그 회사들은 파트너십에 들어갔습니다(맺었습니다)."
+  },
+  {
+    "day": 8,
+    "no": 81,
+    "word": "get back to",
+    "meaning": "~에게 답변을 전화를 하다",
+    "targetScore": 800,
+    "exampleEn": "I will get back to you with an answer shortly.",
+    "exampleKo": "곧 답변을 가지고 연락드리겠습니다(돌아가겠습니다)."
+  },
+  {
+    "day": 8,
+    "no": 82,
+    "word": "gradual",
+    "meaning": "점차적인, 단계적인",
+    "targetScore": 800,
+    "exampleEn": "There has been a gradual improvement in sales.",
+    "exampleKo": "판매에 있어 점진적인 개선이 있었습니다."
+  },
+  {
+    "day": 8,
+    "no": 83,
+    "word": "inactive",
+    "meaning": "활동하지 않는, 활발하지 않은",
+    "targetScore": 800,
+    "exampleEn": "The account has been inactive for six months.",
+    "exampleKo": "그 계정은 6개월 동안 비활동 상태였습니다."
+  },
+  {
+    "day": 8,
+    "no": 84,
+    "word": "in the meantime",
+    "meaning": "그동안에",
+    "targetScore": 800,
+    "exampleEn": "The doctor will arrive soon; in the meantime, please wait here.",
+    "exampleKo": "의사가 곧 도착할 것입니다; 그 동안 여기 기다려 주십시오."
+  },
+  {
+    "day": 8,
+    "no": 85,
+    "word": "invalid",
+    "meaning": "실효성이 없는, 무효인",
+    "targetScore": 800,
+    "exampleEn": "This coupon is invalid after December 31st.",
+    "exampleKo": "이 쿠폰은 12월 31일 이후에는 무효입니다."
+  },
+  {
+    "day": 8,
+    "no": 86,
+    "word": "look over",
+    "meaning": "~을 훑어보다, 조사하다",
+    "targetScore": 800,
+    "exampleEn": "Please look over the contract before signing.",
+    "exampleKo": "서명하기 전에 계약서를 훑어보십시오(검토하십시오)."
+  },
+  {
+    "day": 8,
+    "no": 87,
+    "word": "make up one's mind",
+    "meaning": "결정을 내리다",
+    "targetScore": 800,
+    "exampleEn": "He made up his mind to resign.",
+    "exampleKo": "그는 사임하기로 마음을 정했습니다(결심했습니다)."
+  },
+  {
+    "day": 8,
+    "no": 88,
+    "word": "meaningful",
+    "meaning": "의미 있는, 중요한",
+    "targetScore": 800,
+    "exampleEn": "We need to engage in meaningful dialogue.",
+    "exampleKo": "우리는 의미 있는 대화에 참여해야 합니다."
+  },
+  {
+    "day": 8,
+    "no": 89,
+    "word": "put a rush",
+    "meaning": "서두르다",
+    "targetScore": 800,
+    "exampleEn": "Please put a rush on this order.",
+    "exampleKo": "이 주문을 서둘러 주십시오."
+  },
+  {
+    "day": 8,
+    "no": 90,
+    "word": "put a strain on",
+    "meaning": "~에 부담을 주다",
+    "targetScore": 800,
+    "exampleEn": "The expansion put a strain on our finances.",
+    "exampleKo": "확장은 우리 재정에 부담을 주었습니다."
+  },
+  {
+    "day": 8,
+    "no": 91,
+    "word": "put up with",
+    "meaning": "~을 참다, 견디다",
+    "targetScore": 800,
+    "exampleEn": "I cannot put up with this noise any longer.",
+    "exampleKo": "저는 이 소음을 더 이상 참을 수 없습니다."
+  },
+  {
+    "day": 8,
+    "no": 92,
+    "word": "reach for",
+    "meaning": "~을 잡으려고 손을 뻗다",
+    "targetScore": 800,
+    "exampleEn": "He reached for the phone to answer the call.",
+    "exampleKo": "그는 전화를 받기 위해 전화기를 향해 손을 뻗었습니다."
+  },
+  {
+    "day": 8,
+    "no": 93,
+    "word": "stay ahead of",
+    "meaning": "~보다 앞서 있다",
+    "targetScore": 800,
+    "exampleEn": "We must innovate to stay ahead of the competition.",
+    "exampleKo": "우리는 경쟁에서 앞서 나가기 위해 혁신해야 합니다."
+  },
+  {
+    "day": 8,
+    "no": 94,
+    "word": "A as well as B",
+    "meaning": "B뿐만 아니라 A도",
+    "targetScore": 800,
+    "exampleEn": "We sell software as well as hardware.",
+    "exampleKo": "우리는 하드웨어뿐만 아니라 소프트웨어도 팝니다."
+  },
+  {
+    "day": 8,
+    "no": 95,
+    "word": "ample",
+    "meaning": "충분한, 풍부한",
+    "targetScore": 800,
+    "exampleEn": "There is ample parking space available.",
+    "exampleKo": "이용 가능한 충분한 주차 공간이 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 96,
+    "word": "a range of",
+    "meaning": "일련의",
+    "targetScore": 800,
+    "exampleEn": "We offer a range of services.",
+    "exampleKo": "우리는 다양한(일련의) 서비스를 제공합니다."
+  },
+  {
+    "day": 8,
+    "no": 97,
+    "word": "attend to a client",
+    "meaning": "고객을 상대하다",
+    "targetScore": 800,
+    "exampleEn": "She is busy attending to a client.",
+    "exampleKo": "그녀는 고객을 응대하느라(돌보느라) 바쁩니다."
+  },
+  {
+    "day": 8,
+    "no": 98,
+    "word": "confront",
+    "meaning": "직면하다, 맞서다",
+    "targetScore": 800,
+    "exampleEn": "We must confront the problem directly.",
+    "exampleKo": "우리는 문제에 직접 맞서야 합니다."
+  },
+  {
+    "day": 8,
+    "no": 99,
+    "word": "context",
+    "meaning": "문맥, (어떤 일의)정황, 배경",
+    "targetScore": 800,
+    "exampleEn": "The statement must be understood in context.",
+    "exampleKo": "그 진술은 문맥 속에서 이해되어야 합니다."
+  },
+  {
+    "day": 8,
+    "no": 100,
+    "word": "despair",
+    "meaning": "절망",
+    "targetScore": 800,
+    "exampleEn": "Do not despair; there is still hope.",
+    "exampleKo": "절망하지 마십시오; 아직 희망은 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 101,
+    "word": "disconnected",
+    "meaning": "연결이 끊긴",
+    "targetScore": 800,
+    "exampleEn": "The phone line was disconnected.",
+    "exampleKo": "전화선이 끊겼습니다."
+  },
+  {
+    "day": 8,
+    "no": 102,
+    "word": "dissatisfied",
+    "meaning": "불만인",
+    "targetScore": 800,
+    "exampleEn": "Customers were dissatisfied with the service.",
+    "exampleKo": "고객들은 서비스에 불만족했습니다."
+  },
+  {
+    "day": 8,
+    "no": 103,
+    "word": "driven",
+    "meaning": "의욕이 넘치는",
+    "targetScore": 800,
+    "exampleEn": "He is a driven and ambitious employee.",
+    "exampleKo": "그는 의욕이 넘치고(주도적인) 야심 찬 직원입니다."
+  },
+  {
+    "day": 8,
+    "no": 104,
+    "word": "dynamic",
+    "meaning": "활동적인",
+    "targetScore": 800,
+    "exampleEn": "The market is dynamic and constantly changing.",
+    "exampleKo": "시장은 역동적이며 끊임없이 변합니다."
+  },
+  {
+    "day": 8,
+    "no": 105,
+    "word": "eagerly await",
+    "meaning": "간절히 기다리다",
+    "targetScore": 800,
+    "exampleEn": "We eagerly await the results of the test.",
+    "exampleKo": "우리는 테스트 결과를 간절히 기다립니다."
+  },
+  {
+    "day": 8,
+    "no": 106,
+    "word": "enormous",
+    "meaning": "거대한",
+    "targetScore": 800,
+    "exampleEn": "The project required an enormous amount of work.",
+    "exampleKo": "그 프로젝트는 엄청난 양의 작업을 필요로 했습니다."
+  },
+  {
+    "day": 8,
+    "no": 107,
+    "word": "fall behind",
+    "meaning": "뒤처지다",
+    "targetScore": 800,
+    "exampleEn": "Do not let the project fall behind schedule.",
+    "exampleKo": "프로젝트가 일정보다 뒤처지게 하지 마십시오."
+  },
+  {
+    "day": 8,
+    "no": 108,
+    "word": "feasible",
+    "meaning": "실행 가능한",
+    "targetScore": 800,
+    "exampleEn": "It is not feasible to complete the task by tomorrow.",
+    "exampleKo": "내일까지 그 작업을 완료하는 것은 실행 불가능합니다(타당하지 않습니다)."
+  },
+  {
+    "day": 8,
+    "no": 109,
+    "word": "forwarding address",
+    "meaning": "(우편물의) 전송 주소",
+    "targetScore": 800,
+    "exampleEn": "Please provide a forwarding address.",
+    "exampleKo": "우편물을 전달받을 주소를 제공해 주십시오."
+  },
+  {
+    "day": 8,
+    "no": 110,
+    "word": "get over",
+    "meaning": "극복하다",
+    "targetScore": 800,
+    "exampleEn": "It took him a long time to get over the failure.",
+    "exampleKo": "그가 실패를 극복하는 데 오랜 시간이 걸렸습니다."
+  },
+  {
+    "day": 8,
+    "no": 111,
+    "word": "impress",
+    "meaning": "감동시키다",
+    "targetScore": 800,
+    "exampleEn": "I was impressed by his presentation.",
+    "exampleKo": "저는 그의 프레젠테이션에 감명을 받았습니다."
+  },
+  {
+    "day": 8,
+    "no": 112,
+    "word": "inadequate",
+    "meaning": "부적절한, 불충분한",
+    "targetScore": 800,
+    "exampleEn": "The current resources are inadequate for the demand.",
+    "exampleKo": "현재 자원은 수요에 비해 불충분합니다."
+  },
+  {
+    "day": 8,
+    "no": 113,
+    "word": "in a timely fashion",
+    "meaning": "적시에",
+    "targetScore": 800,
+    "exampleEn": "Current orders must be processed in a timely fashion.",
+    "exampleKo": "현재 주문들은 시기적절한 방식으로(제때에) 처리되어야 합니다."
+  },
+  {
+    "day": 8,
+    "no": 114,
+    "word": "irreplaceable",
+    "meaning": "바꿀 수 없는",
+    "targetScore": 800,
+    "exampleEn": "Ms. Kim is an irreplaceable member of the team.",
+    "exampleKo": "김 씨는 팀의 대체 불가능한 구성원입니다."
+  },
+  {
+    "day": 8,
+    "no": 115,
+    "word": "limitation",
+    "meaning": "제한, 한계",
+    "targetScore": 800,
+    "exampleEn": "There is a limitation on the number of attendees.",
+    "exampleKo": "참석자 수에 제한이 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 116,
+    "word": "massive",
+    "meaning": "대량의, 대규모의",
+    "targetScore": 800,
+    "exampleEn": "The company suffered a massive loss.",
+    "exampleKo": "그 회사는 거대한 손실을 입었습니다."
+  },
+  {
+    "day": 8,
+    "no": 117,
+    "word": "point out",
+    "meaning": "~을 지적하다",
+    "targetScore": 800,
+    "exampleEn": "The auditor pointed out several errors.",
+    "exampleKo": "감사관은 몇 가지 오류를 지적했습니다."
+  },
+  {
+    "day": 8,
+    "no": 118,
+    "word": "rave review",
+    "meaning": "호평, 극찬하는 기사",
+    "targetScore": 800,
+    "exampleEn": "The movie received rave reviews from critics.",
+    "exampleKo": "그 영화는 비평가들로부터 극찬(호평)을 받았습니다."
+  },
+  {
+    "day": 8,
+    "no": 119,
+    "word": "repeatedly",
+    "meaning": "되풀이하여, 여러 차례",
+    "targetScore": 800,
+    "exampleEn": "The machine broke down repeatedly.",
+    "exampleKo": "그 기계는 반복적으로 고장 났습니다."
+  },
+  {
+    "day": 8,
+    "no": 120,
+    "word": "strategically",
+    "meaning": "전략적으로",
+    "targetScore": 800,
+    "exampleEn": "The store is strategically located near the station.",
+    "exampleKo": "그 가게는 역 근처에 전략적으로 위치해 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 121,
+    "word": "unveil",
+    "meaning": "밝히다",
+    "targetScore": 800,
+    "exampleEn": "The company unveiled its new logo.",
+    "exampleKo": "회사는 새 로고를 공개했습니다(베일을 벗겼습니다)."
+  },
+  {
+    "day": 8,
+    "no": 122,
+    "word": "a great deal",
+    "meaning": "다량, 상당량",
+    "targetScore": 800,
+    "exampleEn": "We spent a great deal of time on this project.",
+    "exampleKo": "우리는 이 프로젝트에 많은(엄청난 양의) 시간을 썼습니다."
+  },
+  {
+    "day": 8,
+    "no": 123,
+    "word": "be sensitive to",
+    "meaning": "~에 민감하다",
+    "targetScore": 800,
+    "exampleEn": "Companies must be sensitive to consumer needs.",
+    "exampleKo": "기업들은 소비자 요구에 민감해야 합니다."
+  },
+  {
+    "day": 8,
+    "no": 124,
+    "word": "bother to do",
+    "meaning": "~하느라 애쓰다",
+    "targetScore": 800,
+    "exampleEn": "Don't bother to reply to spam emails.",
+    "exampleKo": "스팸 메일에 굳이 답장하려고 애쓰지 마십시오(귀찮게 ~하지 마십시오)."
+  },
+  {
+    "day": 8,
+    "no": 125,
+    "word": "call off",
+    "meaning": "취소하다",
+    "targetScore": 800,
+    "exampleEn": "The meeting was called off due to the storm.",
+    "exampleKo": "폭풍 때문에 회의가 취소되었습니다."
+  },
+  {
+    "day": 8,
+    "no": 126,
+    "word": "carry out market studies",
+    "meaning": "시장 조사를 수행하다",
+    "targetScore": 800,
+    "exampleEn": "We carry out market studies regularly.",
+    "exampleKo": "우리는 정기적으로 시장 조사를 수행합니다."
+  },
+  {
+    "day": 8,
+    "no": 127,
+    "word": "come across",
+    "meaning": "우연히 만나다",
+    "targetScore": 800,
+    "exampleEn": "I came across an interesting article.",
+    "exampleKo": "저는 우연히 흥미로운 기사를 발견했습니다(마주쳤습니다)."
+  },
+  {
+    "day": 8,
+    "no": 128,
+    "word": "contrive to do",
+    "meaning": "용케 ~해내다",
+    "targetScore": 800,
+    "exampleEn": "He contrived to meet the CEO.",
+    "exampleKo": "그는 CEO를 만나려고 용케 일을 꾸몄습니다(고안해 냈습니다)."
+  },
+  {
+    "day": 8,
+    "no": 129,
+    "word": "deliberate",
+    "meaning": "고의적인, 신중한, 생각이 깊은",
+    "targetScore": 800,
+    "exampleEn": "The jury began to deliberate.",
+    "exampleKo": "배심원단은 심의(숙고)하기 시작했습니다."
+  },
+  {
+    "day": 8,
+    "no": 130,
+    "word": "discounted rate",
+    "meaning": "할인율",
+    "targetScore": 800,
+    "exampleEn": "Employees can stay at the hotel at a discounted rate.",
+    "exampleKo": "직원들은 할인된 요금으로 호텔에 묵을 수 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 131,
+    "word": "have a tendency to do",
+    "meaning": "~하는 경향이 있다",
+    "targetScore": 800,
+    "exampleEn": "Prices have a tendency to rise in the summer.",
+    "exampleKo": "가격은 여름에 오르는 경향이 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 132,
+    "word": "have an opportunity to do",
+    "meaning": "~할 기회를 갖다",
+    "targetScore": 800,
+    "exampleEn": "You will have an opportunity to ask questions.",
+    "exampleKo": "질문할 기회가 있을 것입니다."
+  },
+  {
+    "day": 8,
+    "no": 133,
+    "word": "have something to do with",
+    "meaning": "~과 연관이 있다",
+    "targetScore": 800,
+    "exampleEn": "Cost has something to do with the decision.",
+    "exampleKo": "비용은 그 결정과 관련이 있습니다."
+  },
+  {
+    "day": 8,
+    "no": 134,
+    "word": "in turn",
+    "meaning": "차례로, 번갈아, 결과적으로",
+    "targetScore": 800,
+    "exampleEn": "Increased production, in turn, leads into lower prices.",
+    "exampleKo": "생산 증가는 결과적으로(차례로) 가격 인하로 이어집니다."
+  },
+  {
+    "day": 8,
+    "no": 135,
+    "word": "make no exception",
+    "meaning": "예외를 두지 않다",
+    "targetScore": 800,
+    "exampleEn": "We can make no exception to this rule.",
+    "exampleKo": "우리는 이 규칙에 예외를 둘 수 없습니다."
+  },
+  {
+    "day": 8,
+    "no": 136,
+    "word": "televise",
+    "meaning": "텔레비전으로 방송하다, 방영하다",
+    "targetScore": 800,
+    "exampleEn": "The event will be televised live.",
+    "exampleKo": "그 행사는 생중계로 방송될 것입니다."
+  }
+]

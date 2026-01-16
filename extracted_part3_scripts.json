@@ -1,0 +1,92 @@
+{
+  "conversations": [
+    {
+      "setId": "set_32_34",
+      "questionRange": "32-34",
+      "script": [
+        {
+          "speaker": "Woman",
+          "text": "Hello, I am calling to confirm the plans for the conference next week."
+        },
+        {
+          "speaker": "Man",
+          "text": "Okay, let me check that. It looks like you'll be giving the keynote address on Monday, correct?"
+        },
+        {
+          "speaker": "Woman",
+          "text": "Yes, that's right. And after that, I believe I have some meetings scheduled with a few of our colleagues. I'm not familiar with the building layout, so I'd like to pick up a building map from reception on Friday morning."
+        },
+        {
+          "speaker": "Man",
+          "text": "Certainly, I'll make sure that's arranged for you. Is there anything else I can help you with at the moment?"
+        }
+      ]
+    },
+    {
+      "setId": "set_35_37",
+      "questionRange": "35-37",
+      "script": [
+        {
+          "speaker": "Man",
+          "text": "Hey, I'm calling to talk about some articles for our company newsletter. I'm working on updating the employee handbook, but I could use some additional content."
+        },
+        {
+          "speaker": "Woman",
+          "text": "Sure, I can help with that. This year, we've focused on domestic sales, but I'd like to organize a trade show next year and really focus on some foreign markets."
+        },
+        {
+          "speaker": "Man",
+          "text": "That sounds interesting. We could write about that. Why don't you send me some details, and I'll draft something. I'll need to order some more business cards, too."
+        }
+      ]
+    },
+    {
+      "setId": "set_38_40",
+      "questionRange": "38-40",
+      "script": [
+        {
+          "speaker": "Man",
+          "text": "Welcome to Barry's Boutique. What can I help you find today?"
+        },
+        {
+          "speaker": "Woman",
+          "text": "Hi, I'm looking for a suit. I have a job interview soon, and I need something that looks professional."
+        },
+        {
+          "speaker": "Man",
+          "text": "Certainly. How about this one on display? It's one of our best-sellers."
+        },
+        {
+          "speaker": "Woman",
+          "text": "Oh, I'm not too fond of the fabric. Do you have anything else?"
+        },
+        {
+          "speaker": "Man",
+          "text": "Of course. We have many different styles. And don't forget, the price includes alterations."
+        }
+      ]
+    },
+    {
+      "setId": "set_41_43",
+      "questionRange": "41-43",
+      "script": [
+        {
+          "speaker": "Woman",
+          "text": "Hello, this is Alicia at Miller and Sons. I'm calling about that building you're constructing downtown. How is the project coming along?"
+        },
+        {
+          "speaker": "Man",
+          "text": "Hi, Alicia. Yes, it's moving along, but I am concerned about the length of the project. It's taking a bit longer than we anticipated."
+        },
+        {
+          "speaker": "Woman",
+          "text": "I understand. Well, as you know, we specialize in project management and can help keep things on track. Would you be willing to let us measure the space and provide a cost estimate?"
+        },
+        {
+          "speaker": "Man",
+          "text": "That sounds great. When can you come down?"
+        }
+      ]
+    }
+  ]
+}

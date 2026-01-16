@@ -1,0 +1,254 @@
+[
+  {
+    "day": 25,
+    "no": 41,
+    "word": "bus stop",
+    "meaning": "버스 정류장",
+    "targetScore": 650,
+    "exampleEn": "The bus stopped at the bus stop.",
+    "exampleKo": "버스가 버스 정류장에 멈췄습니다."
+  },
+  {
+    "day": 25,
+    "no": 42,
+    "word": "busy street",
+    "meaning": "붐비는 거리",
+    "targetScore": 650,
+    "exampleEn": "Be careful when crossing the busy street.",
+    "exampleKo": "붐비는 거리를 건널 때 조심하십시오."
+  },
+  {
+    "day": 25,
+    "no": 43,
+    "word": "cab",
+    "meaning": "택시",
+    "targetScore": 650,
+    "exampleEn": "I took a cab to the airport.",
+    "exampleKo": "저는 공항까지 택시를 탔습니다."
+  },
+  {
+    "day": 25,
+    "no": 44,
+    "word": "car rental",
+    "meaning": "자동차 대여",
+    "targetScore": 650,
+    "exampleEn": "We need to make a car rental reservation.",
+    "exampleKo": "우리는 자동차 대여 예약을 해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 45,
+    "word": "crosswalk",
+    "meaning": "횡단보도",
+    "targetScore": 650,
+    "exampleEn": "Pedestrians should use the crosswalk.",
+    "exampleKo": "보행자들은 횡단보도를 이용해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 46,
+    "word": "free parking",
+    "meaning": "무료 주차",
+    "targetScore": 650,
+    "exampleEn": "The hotel offers free parking for guests.",
+    "exampleKo": "그 호텔은 투숙객들에게 무료 주차를 제공합니다."
+  },
+  {
+    "day": 25,
+    "no": 47,
+    "word": "gas station",
+    "meaning": "주유소",
+    "targetScore": 650,
+    "exampleEn": "I need to stop at the gas station to refuel.",
+    "exampleKo": "주유하기 위해 주유소에 들러야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 48,
+    "word": "get off",
+    "meaning": "떠나다, 출발하다",
+    "targetScore": 650,
+    "exampleEn": "We will get off at the next station.",
+    "exampleKo": "우리는 다음 역에서 내릴 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 49,
+    "word": "hang",
+    "meaning": "걸다, 걸리다",
+    "targetScore": 650,
+    "exampleEn": "A beautiful painting hangs on the wall.",
+    "exampleKo": "아름다운 그림이 벽에 걸려 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 50,
+    "word": "heavy traffic",
+    "meaning": "교통 혼잡",
+    "targetScore": 650,
+    "exampleEn": "I was late due to heavy traffic.",
+    "exampleKo": "저는 교통 혼잡 때문에 늦었습니다."
+  },
+  {
+    "day": 25,
+    "no": 51,
+    "word": "highway",
+    "meaning": "고속도로",
+    "targetScore": 650,
+    "exampleEn": "Drivers should obey the speed limit on the highway.",
+    "exampleKo": "운전자들은 고속도로에서 속도 제한을 준수해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 52,
+    "word": "on foot",
+    "meaning": "걸어서, 도보로",
+    "targetScore": 650,
+    "exampleEn": "It takes ten minutes on foot.",
+    "exampleKo": "걸어서 10분 걸립니다."
+  },
+  {
+    "day": 25,
+    "no": 53,
+    "word": "park",
+    "meaning": "주차하다",
+    "targetScore": 650,
+    "exampleEn": "Please do not park in front of the entrance.",
+    "exampleKo": "입구 앞에 주차하지 마십시오."
+  },
+  {
+    "day": 25,
+    "no": 54,
+    "word": "path",
+    "meaning": "통행로",
+    "targetScore": 650,
+    "exampleEn": "Bicycles are not allowed on this path.",
+    "exampleKo": "이 통행로에는 자전거가 허용되지 않습니다."
+  },
+  {
+    "day": 25,
+    "no": 55,
+    "word": "subway station",
+    "meaning": "지하철역",
+    "targetScore": 650,
+    "exampleEn": "The subway station is just around the corner.",
+    "exampleKo": "지하철역은 바로 모퉁이 돌면 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 56,
+    "word": "tour bus",
+    "meaning": "관광버스",
+    "targetScore": 650,
+    "exampleEn": "The tour bus will depart at 9 AM.",
+    "exampleKo": "관광버스는 오전 9시에 출발할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 57,
+    "word": "traffic light",
+    "meaning": "교통 신호(등)",
+    "targetScore": 650,
+    "exampleEn": "Stop when the traffic light turns red.",
+    "exampleKo": "교통 신호가 빨간색으로 바뀌면 멈추십시오."
+  },
+  {
+    "day": 25,
+    "no": 58,
+    "word": "wall",
+    "meaning": "벽",
+    "targetScore": 650,
+    "exampleEn": "Don't lean against the wall.",
+    "exampleKo": "벽에 기대지 마십시오."
+  },
+  {
+    "day": 25,
+    "no": 59,
+    "word": "wash the car",
+    "meaning": "세차하다",
+    "targetScore": 650,
+    "exampleEn": "I am going to wash the car this weekend.",
+    "exampleKo": "저는 이번 주말에 세차를 할 것입니다."
+  },
+  {
+    "day": 25,
+    "no": 60,
+    "word": "wheel",
+    "meaning": "바퀴",
+    "targetScore": 650,
+    "exampleEn": "The wheel of the car was damaged.",
+    "exampleKo": "자동차 바퀴가 손상되었습니다."
+  },
+  {
+    "day": 25,
+    "no": 61,
+    "word": "access to",
+    "meaning": "~에의 접근",
+    "targetScore": 650,
+    "exampleEn": "Employees have access to the gym.",
+    "exampleKo": "직원들은 체육관에 접근할(이용할) 수 있습니다."
+  },
+  {
+    "day": 25,
+    "no": 62,
+    "word": "cite",
+    "meaning": "언급하다",
+    "targetScore": 650,
+    "exampleEn": "The report cites several sources.",
+    "exampleKo": "그 보고서는 몇 가지 출처를 언급합니다."
+  },
+  {
+    "day": 25,
+    "no": 63,
+    "word": "hood",
+    "meaning": "(자동차의)보닛, 덮개",
+    "targetScore": 650,
+    "exampleEn": "Open the hood to check the engine.",
+    "exampleKo": "엔진을 점검하기 위해 보닛을 여십시오."
+  },
+  {
+    "day": 25,
+    "no": 64,
+    "word": "inside",
+    "meaning": "~의 안에, 이내에",
+    "targetScore": 650,
+    "exampleEn": "Please wait inside the building.",
+    "exampleKo": "건물 안에서 기다려 주십시오."
+  },
+  {
+    "day": 25,
+    "no": 65,
+    "word": "route",
+    "meaning": "노선",
+    "targetScore": 650,
+    "exampleEn": "Which route is the fastest?",
+    "exampleKo": "어느 노선(경로)이 가장 빠릅니까?"
+  },
+  {
+    "day": 25,
+    "no": 66,
+    "word": "sharp",
+    "meaning": "뾰족한, 예리한",
+    "targetScore": 650,
+    "exampleEn": "There was a sharp increase in sales.",
+    "exampleKo": "매출이 급격히 증가했습니다."
+  },
+  {
+    "day": 25,
+    "no": 67,
+    "word": "solve",
+    "meaning": "해결하다",
+    "targetScore": 650,
+    "exampleEn": "We need to solve this problem immediately.",
+    "exampleKo": "우리는 이 문제를 즉시 해결해야 합니다."
+  },
+  {
+    "day": 25,
+    "no": 68,
+    "word": "stand",
+    "meaning": "서다",
+    "targetScore": 650,
+    "exampleEn": "He stood in line for tickets.",
+    "exampleKo": "그는 티켓을 사기 위해 줄을 섰습니다."
+  }
+]

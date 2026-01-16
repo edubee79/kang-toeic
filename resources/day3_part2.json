@@ -1,0 +1,254 @@
+[
+  {
+    "day": 3,
+    "no": 41,
+    "word": "a sheet of",
+    "meaning": "~한 장",
+    "targetScore": 650,
+    "exampleEn": "Please give me a sheet of paper.",
+    "exampleKo": "종이 한 장만 주세요."
+  },
+  {
+    "day": 3,
+    "no": 42,
+    "word": "business card",
+    "meaning": "명함",
+    "targetScore": 650,
+    "exampleEn": "Here is my business card.",
+    "exampleKo": "여기 제 명함입니다."
+  },
+  {
+    "day": 3,
+    "no": 43,
+    "word": "cartridge",
+    "meaning": "(프린트 등의) 잉크 카트리지",
+    "targetScore": 650,
+    "exampleEn": "The printer cartridge needs to be replaced.",
+    "exampleKo": "프린터 잉크 카트리지를 교체해야 합니다."
+  },
+  {
+    "day": 3,
+    "no": 44,
+    "word": "daily",
+    "meaning": "매일의, 날마다, 매일",
+    "targetScore": 650,
+    "exampleEn": "The cafe is open daily from 9 AM to 6 PM.",
+    "exampleKo": "그 카페는 매일 오전 9시부터 오후 6시까지 엽니다."
+  },
+  {
+    "day": 3,
+    "no": 45,
+    "word": "edit",
+    "meaning": "편집하다, 수정하다",
+    "targetScore": 650,
+    "exampleEn": "Please edit the document before printing it.",
+    "exampleKo": "인쇄하기 전에 문서를 편집해 주세요."
+  },
+  {
+    "day": 3,
+    "no": 46,
+    "word": "hand",
+    "meaning": "손, 건네주다",
+    "targetScore": 650,
+    "exampleEn": "Could you hand me that file?",
+    "exampleKo": "저 파일 좀 건네주시겠어요?"
+  },
+  {
+    "day": 3,
+    "no": 47,
+    "word": "in order to do",
+    "meaning": "~하기 위해서",
+    "targetScore": 650,
+    "exampleEn": "Please fill out the form in order to register.",
+    "exampleKo": "등록하기 위해 양식을 작성해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 48,
+    "word": "laptop",
+    "meaning": "휴대용 컴퓨터",
+    "targetScore": 650,
+    "exampleEn": "He is working on his laptop.",
+    "exampleKo": "그는 노트북 컴퓨터로 작업하고 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 49,
+    "word": "name tag",
+    "meaning": "명찰, 명패",
+    "targetScore": 650,
+    "exampleEn": "Please wear your name tag at the conference.",
+    "exampleKo": "컨퍼런스에서 명찰을 착용해 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 50,
+    "word": "on vacation",
+    "meaning": "휴가 중인",
+    "targetScore": 650,
+    "exampleEn": "The manager is currently on vacation.",
+    "exampleKo": "매니저는 현재 휴가 중입니다."
+  },
+  {
+    "day": 3,
+    "no": 51,
+    "word": "paper jam",
+    "meaning": "(복사기에서의) 종이 걸림",
+    "targetScore": 650,
+    "exampleEn": "There is a paper jam in the copier.",
+    "exampleKo": "복사기에 종이가 걸렸습니다."
+  },
+  {
+    "day": 3,
+    "no": 52,
+    "word": "paperwork",
+    "meaning": "문서 작업",
+    "targetScore": 650,
+    "exampleEn": "I have a lot of paperwork to do today.",
+    "exampleKo": "저는 오늘 처리해야 할 문서 작업이 많습니다."
+  },
+  {
+    "day": 3,
+    "no": 53,
+    "word": "partition",
+    "meaning": "칸막이, 분할",
+    "targetScore": 650,
+    "exampleEn": "We installed partitions to create private workspaces.",
+    "exampleKo": "우리는 개인 작업 공간을 만들기 위해 칸막이를 설치했습니다."
+  },
+  {
+    "day": 3,
+    "no": 54,
+    "word": "rush hour",
+    "meaning": "(출퇴근 시의)교통 혼잡 시간",
+    "targetScore": 650,
+    "exampleEn": "Traffic is heavy during rush hour.",
+    "exampleKo": "출퇴근 혼잡 시간에는 교통이 혼잡합니다."
+  },
+  {
+    "day": 3,
+    "no": 55,
+    "word": "section",
+    "meaning": "부분, 구역",
+    "targetScore": 650,
+    "exampleEn": "Please sit in the reserved section.",
+    "exampleKo": "예약된 구역에 앉아 주십시오."
+  },
+  {
+    "day": 3,
+    "no": 56,
+    "word": "sheet",
+    "meaning": "시트, 종이",
+    "targetScore": 650,
+    "exampleEn": "Please change the bed sheet.",
+    "exampleKo": "침대 시트를 교체해 주세요."
+  },
+  {
+    "day": 3,
+    "no": 57,
+    "word": "tabletop",
+    "meaning": "테이블 윗면",
+    "targetScore": 650,
+    "exampleEn": "Please clear the items off the tabletop.",
+    "exampleKo": "테이블 윗면에서 물건들을 치워 주세요."
+  },
+  {
+    "day": 3,
+    "no": 58,
+    "word": "telephone call",
+    "meaning": "전화 통화",
+    "targetScore": 650,
+    "exampleEn": "I received a telephone call from the client.",
+    "exampleKo": "저는 고객으로부터 전화 통화를 받았습니다."
+  },
+  {
+    "day": 3,
+    "no": 59,
+    "word": "trash bin",
+    "meaning": "쓰레기통",
+    "targetScore": 650,
+    "exampleEn": "Please throw the paper in the trash bin.",
+    "exampleKo": "종이는 쓰레기통에 버려 주세요."
+  },
+  {
+    "day": 3,
+    "no": 60,
+    "word": "upstairs",
+    "meaning": "위층의, 위층으로, 위층에",
+    "targetScore": 650,
+    "exampleEn": "The conference room is upstairs.",
+    "exampleKo": "회의실은 위층에 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 61,
+    "word": "as if",
+    "meaning": "마치 ~인 듯이",
+    "targetScore": 650,
+    "exampleEn": "He acts as if he knows everything.",
+    "exampleKo": "그는 마치 모든 것을 아는 것처럼 행동합니다."
+  },
+  {
+    "day": 3,
+    "no": 62,
+    "word": "as well as",
+    "meaning": "~에 더하여, 게다가",
+    "targetScore": 650,
+    "exampleEn": "She speaks French as well as English.",
+    "exampleKo": "그녀는 영어뿐만 아니라 프랑스어도 할 줄 압니다."
+  },
+  {
+    "day": 3,
+    "no": 63,
+    "word": "be aware of",
+    "meaning": "~을 알고 있다",
+    "targetScore": 650,
+    "exampleEn": "Please be aware of the safety regulations.",
+    "exampleKo": "안전 규정을 유념해 주십시오(알고 계십시오)."
+  },
+  {
+    "day": 3,
+    "no": 64,
+    "word": "be known as",
+    "meaning": "~으로 알려져 있다",
+    "targetScore": 650,
+    "exampleEn": "He is known as an expert in this field.",
+    "exampleKo": "그는 이 분야의 전문가로 알려져 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 65,
+    "word": "be likely to",
+    "meaning": "~할 가능성이 있다",
+    "targetScore": 650,
+    "exampleEn": "It is likely to rain tomorrow.",
+    "exampleKo": "내일은 비가 올 가능성이 있습니다."
+  },
+  {
+    "day": 3,
+    "no": 66,
+    "word": "detail",
+    "meaning": "세부 사항",
+    "targetScore": 650,
+    "exampleEn": "Please provide me with the details of the contract.",
+    "exampleKo": "계약의 세부 사항을 저에게 알려주세요."
+  },
+  {
+    "day": 3,
+    "no": 67,
+    "word": "offering",
+    "meaning": "제공된 것",
+    "targetScore": 650,
+    "exampleEn": "This is the latest offering from our company.",
+    "exampleKo": "이것은 우리 회사의 최신 제품(제공된 것)입니다."
+  },
+  {
+    "day": 3,
+    "no": 68,
+    "word": "on one's own",
+    "meaning": "혼자서, 혼자 힘으로",
+    "targetScore": 650,
+    "exampleEn": "I prefer to work on my own.",
+    "exampleKo": "저는 혼자사 일하는 것을 선호합니다."
+  }
+]

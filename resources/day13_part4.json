@@ -1,0 +1,290 @@
+[
+  {
+    "day": 13,
+    "no": 137,
+    "word": "deputy",
+    "meaning": "대리인",
+    "targetScore": 900,
+    "exampleEn": "The deputy manager will handle the complaint.",
+    "exampleKo": "부지배인이 불만 사항을 처리할 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 138,
+    "word": "rebate",
+    "meaning": "환불해주다",
+    "targetScore": 900,
+    "exampleEn": "You can claim a rebate on your purchase.",
+    "exampleKo": "구매에 대해 환급(리베이트)을 받으실 수 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 139,
+    "word": "testimonial",
+    "meaning": "추천장, 감사장, 후기",
+    "targetScore": 900,
+    "exampleEn": "We received a positive testimonial from a satisfied customer.",
+    "exampleKo": "우리는 만족한 고객으로부터 긍정적인 추천서(후기)를 받았습니다."
+  },
+  {
+    "day": 13,
+    "no": 140,
+    "word": "wonder",
+    "meaning": "~을 알고 싶다",
+    "targetScore": 900,
+    "exampleEn": "I wonder if the item is in stock.",
+    "exampleKo": "그 물품이 재고가 있는지 궁금합니다."
+  },
+  {
+    "day": 13,
+    "no": 141,
+    "word": "factually",
+    "meaning": "사실상",
+    "targetScore": 900,
+    "exampleEn": "The report is factually correct.",
+    "exampleKo": "그 보고서는 사실적으로 정확합니다."
+  },
+  {
+    "day": 13,
+    "no": 142,
+    "word": "compelling",
+    "meaning": "흡인력 있는, 설득력 있는",
+    "targetScore": 900,
+    "exampleEn": "He gave a compelling reason for his resignation.",
+    "exampleKo": "그는 사임에 대해 설득력 있는(강력한) 이유를 제시했습니다."
+  },
+  {
+    "day": 13,
+    "no": 143,
+    "word": "frankly",
+    "meaning": "솔직히",
+    "targetScore": 900,
+    "exampleEn": "Frankly, I am disappointed with the service.",
+    "exampleKo": "솔직히 말해서, 저는 서비스에 실망했습니다."
+  },
+  {
+    "day": 13,
+    "no": 144,
+    "word": "facilitate",
+    "meaning": "가능하게 하다, 촉진하다",
+    "targetScore": 900,
+    "exampleEn": "New software will facilitate data processing.",
+    "exampleKo": "새로운 소프트웨어는 데이터 처리를 용이하게 할(촉진할) 것입니다."
+  },
+  {
+    "day": 13,
+    "no": 145,
+    "word": "swiftly",
+    "meaning": "신속히, 빨리",
+    "targetScore": 900,
+    "exampleEn": "The staff reacted swiftly to the emergency.",
+    "exampleKo": "직원들은 비상 상황에 신속하게 반응했습니다."
+  },
+  {
+    "day": 13,
+    "no": 146,
+    "word": "intercept",
+    "meaning": "도중에 가로막다",
+    "targetScore": 900,
+    "exampleEn": "Security guards intercepted the intruder.",
+    "exampleKo": "보안 요원들이 침입자를 가로막았습니다(차단했습니다)."
+  },
+  {
+    "day": 13,
+    "no": 147,
+    "word": "distress",
+    "meaning": "근심",
+    "targetScore": 900,
+    "exampleEn": "The delay caused distress to the passengers.",
+    "exampleKo": "지연은 승객들에게 고통(괴로움)을 주었습니다."
+  },
+  {
+    "day": 13,
+    "no": 148,
+    "word": "genuine",
+    "meaning": "진짜의; 진실한",
+    "targetScore": 900,
+    "exampleEn": "This is a genuine leather product.",
+    "exampleKo": "이것은 진짜 가죽 제품입니다."
+  },
+  {
+    "day": 13,
+    "no": 149,
+    "word": "fleetingly",
+    "meaning": "아주 잠깐",
+    "targetScore": 900,
+    "exampleEn": "I saw him fleetingly in the hallway.",
+    "exampleKo": "저는 복도에서 그를 잠깐(순식간에) 보았습니다."
+  },
+  {
+    "day": 13,
+    "no": 150,
+    "word": "blemish",
+    "meaning": "흠, 결점",
+    "targetScore": 900,
+    "exampleEn": "The fruit has a small blemish on the skin.",
+    "exampleKo": "그 과일은 껍질에 작은 흠집이 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 151,
+    "word": "nourish",
+    "meaning": "~에 영양분을 주다, 장려하다",
+    "targetScore": 900,
+    "exampleEn": "Good food is needed to nourish the body.",
+    "exampleKo": "몸에 영양분을 공급하기 위해 좋은 음식이 필요합니다."
+  },
+  {
+    "day": 13,
+    "no": 152,
+    "word": "hazard",
+    "meaning": "위험",
+    "targetScore": 900,
+    "exampleEn": "Slippery floors are a safety hazard.",
+    "exampleKo": "미끄러운 바닥은 안전 위험 요소입니다."
+  },
+  {
+    "day": 13,
+    "no": 153,
+    "word": "unwavering",
+    "meaning": "확고한, 동요하지 않는",
+    "targetScore": 900,
+    "exampleEn": "She has unwavering loyalty to the company.",
+    "exampleKo": "그녀는 회사에 대해 변함없는(확고한) 충성심을 가지고 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 154,
+    "word": "vibrant",
+    "meaning": "활기에 넘치는",
+    "targetScore": 900,
+    "exampleEn": "The city has a vibrant economy.",
+    "exampleKo": "그 도시는 활기찬 경제를 가지고 있습니다."
+  },
+  {
+    "day": 13,
+    "no": 155,
+    "word": "adaptability",
+    "meaning": "적응성",
+    "targetScore": 900,
+    "exampleEn": "Adaptability is essential in this job.",
+    "exampleKo": "이 직업에서는 적응력(융통성)이 필수적입니다."
+  },
+  {
+    "day": 13,
+    "no": 156,
+    "word": "sparsely",
+    "meaning": "드문드문하게",
+    "targetScore": 900,
+    "exampleEn": "The area is sparsely populated.",
+    "exampleKo": "그 지역은 인구가 희박합니다."
+  },
+  {
+    "day": 13,
+    "no": 157,
+    "word": "casualty",
+    "meaning": "사상자, 부상자",
+    "targetScore": 900,
+    "exampleEn": "There was no casualty in the accident.",
+    "exampleKo": "그 사고에서 사상자는 없었습니다."
+  },
+  {
+    "day": 13,
+    "no": 158,
+    "word": "soak up",
+    "meaning": "(액체를) 빨아 들이다",
+    "targetScore": 900,
+    "exampleEn": "Use a towel to soak up the water.",
+    "exampleKo": "물을 흡수하기 위해 수건을 사용하십시오."
+  },
+  {
+    "day": 13,
+    "no": 159,
+    "word": "decisive",
+    "meaning": "결정적인; 확고한",
+    "targetScore": 900,
+    "exampleEn": "A decisive action is needed now.",
+    "exampleKo": "지금은 결정적인 조치가 필요합니다."
+  },
+  {
+    "day": 13,
+    "no": 160,
+    "word": "retrospective",
+    "meaning": "회고적인, 소급하는",
+    "targetScore": 900,
+    "exampleEn": "The exhibition is a retrospective of his work.",
+    "exampleKo": "그 전시회는 그의 작품에 대한 회고전입니다."
+  },
+  {
+    "day": 13,
+    "no": 161,
+    "word": "button up",
+    "meaning": "단추를 채워 잠그다",
+    "targetScore": 900,
+    "exampleEn": "Please button up your shirt.",
+    "exampleKo": "셔츠 단추를 채우십시오."
+  },
+  {
+    "day": 13,
+    "no": 162,
+    "word": "aggression",
+    "meaning": "공격성",
+    "targetScore": 900,
+    "exampleEn": "Aggression toward customers is not tolerated.",
+    "exampleKo": "고객에 대한 공격성은 용인되지 않습니다."
+  },
+  {
+    "day": 13,
+    "no": 163,
+    "word": "reinforcement",
+    "meaning": "보강, 강화",
+    "targetScore": 900,
+    "exampleEn": "The bridge needs reinforcement.",
+    "exampleKo": "그 다리는 보강이 필요합니다."
+  },
+  {
+    "day": 13,
+    "no": 164,
+    "word": "claims department",
+    "meaning": "보험 보상 부서",
+    "targetScore": 900,
+    "exampleEn": "Contact the claims department for refunds.",
+    "exampleKo": "환불을 원하시면 보상 청구 부서(클레임 부서)에 연락하십시오."
+  },
+  {
+    "day": 13,
+    "no": 165,
+    "word": "censure",
+    "meaning": "비난",
+    "targetScore": 900,
+    "exampleEn": "The manager faced censure for his actions.",
+    "exampleKo": "관리자는 그의 행동에 대해 비난(견책)을 받았습니다."
+  },
+  {
+    "day": 13,
+    "no": 166,
+    "word": "bare",
+    "meaning": "벌거벗은; 텅 빈",
+    "targetScore": 900,
+    "exampleEn": "The room was completely bare.",
+    "exampleKo": "그 방은 완전히 비어 있었습니다(벌거벗었습니다)."
+  },
+  {
+    "day": 13,
+    "no": 167,
+    "word": "mend",
+    "meaning": "수선하다",
+    "targetScore": 900,
+    "exampleEn": "It helps to mend the relationship.",
+    "exampleKo": "그것은 관계를 회복하는(고치는) 데 도움이 됩니다."
+  },
+  {
+    "day": 13,
+    "no": 168,
+    "word": "turbulence",
+    "meaning": "난기류",
+    "targetScore": 900,
+    "exampleEn": "The flight encountered severe turbulence.",
+    "exampleKo": "그 비행편은 심한 난기류를 만났습니다."
+  }
+]

@@ -1,0 +1,614 @@
+[
+  {
+    "day": 10,
+    "no": 69,
+    "word": "at the moment",
+    "meaning": "지금",
+    "targetScore": 800,
+    "exampleEn": "I am busy at the moment.",
+    "exampleKo": "저는 지금 바쁩니다."
+  },
+  {
+    "day": 10,
+    "no": 70,
+    "word": "celebrate",
+    "meaning": "축하하다",
+    "targetScore": 800,
+    "exampleEn": "We gathered to celebrate his promotion.",
+    "exampleKo": "우리는 그의 승진을 축하하기 위해 모였습니다."
+  },
+  {
+    "day": 10,
+    "no": 71,
+    "word": "decorative item",
+    "meaning": "장식품",
+    "targetScore": 800,
+    "exampleEn": "The shop sells decorative items for the home.",
+    "exampleKo": "그 가게는 가정용 장식품을 판매합니다."
+  },
+  {
+    "day": 10,
+    "no": 72,
+    "word": "discounted coupon",
+    "meaning": "할인권",
+    "targetScore": 800,
+    "exampleEn": "This discounted coupon expires next week.",
+    "exampleKo": "이 할인권(쿠폰)은 다음 주에 만료됩니다."
+  },
+  {
+    "day": 10,
+    "no": 73,
+    "word": "for sale",
+    "meaning": "팔려고 내놓은",
+    "targetScore": 800,
+    "exampleEn": "This house is not for sale.",
+    "exampleKo": "이 집은 팔려고 내놓은 것이 아닙니다."
+  },
+  {
+    "day": 10,
+    "no": 74,
+    "word": "half price",
+    "meaning": "반값",
+    "targetScore": 800,
+    "exampleEn": "Everything is half price today.",
+    "exampleKo": "오늘 모든 것이 반값입니다."
+  },
+  {
+    "day": 10,
+    "no": 75,
+    "word": "have A strapped to one's shoulder",
+    "meaning": "~의 어깨에 A를 메고 있다",
+    "targetScore": 800,
+    "exampleEn": "She had a bag strapped to her shoulder.",
+    "exampleKo": "그녀는 가방을 어깨에 메고 있었습니다."
+  },
+  {
+    "day": 10,
+    "no": 76,
+    "word": "instead",
+    "meaning": "대신에",
+    "targetScore": 800,
+    "exampleEn": "We decided to walk instead of taking a taxi.",
+    "exampleKo": "우리는 택시를 타는 대신에 걷기로 결정했습니다."
+  },
+  {
+    "day": 10,
+    "no": 77,
+    "word": "make a purchase",
+    "meaning": "구입하다",
+    "targetScore": 800,
+    "exampleEn": "You can make a purchase online.",
+    "exampleKo": "온라인으로 구입할 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 78,
+    "word": "make no difference",
+    "meaning": "상관없다, 중요하지 않다",
+    "targetScore": 800,
+    "exampleEn": "It makes no difference to me.",
+    "exampleKo": "그것은 저에게 아무런 상관이 없습니다(차이가 없습니다)."
+  },
+  {
+    "day": 10,
+    "no": 79,
+    "word": "make payment",
+    "meaning": "지불하다",
+    "targetScore": 800,
+    "exampleEn": "Please pay for your items at the counter.",
+    "exampleKo": "카운터에서 물품 값을 지불해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 80,
+    "word": "Not that I'm aware of",
+    "meaning": "내가 아는 한 아니다.",
+    "targetScore": 800,
+    "exampleEn": "Not that I know of.",
+    "exampleKo": "내가 아는 한 아닙니다."
+  },
+  {
+    "day": 10,
+    "no": 81,
+    "word": "out of town",
+    "meaning": "시내에 없는, 다른 곳으로 떠난",
+    "targetScore": 800,
+    "exampleEn": "Mr. Kim is out of town on business.",
+    "exampleKo": "김 선생님은 사업차 시내에 안 계십니다(다른 곳으로 떠나셨습니다)."
+  },
+  {
+    "day": 10,
+    "no": 82,
+    "word": "overcoat",
+    "meaning": "외투",
+    "targetScore": 800,
+    "exampleEn": "Please hang your overcoat in the closet.",
+    "exampleKo": "외투를 옷장에 걸어 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 83,
+    "word": "pay in cash",
+    "meaning": "현찰로 지불하다",
+    "targetScore": 800,
+    "exampleEn": "We prefer customers to pay in cash.",
+    "exampleKo": "우리는 고객들이 현찰로 지불하는 것을 선호합니다."
+  },
+  {
+    "day": 10,
+    "no": 84,
+    "word": "put out for display",
+    "meaning": "~을 전시해 놓다, 진열해 놓다",
+    "targetScore": 800,
+    "exampleEn": "New arrivals are put on display.",
+    "exampleKo": "신상품들이 진열(전시)되어 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 85,
+    "word": "shoelace",
+    "meaning": "신발 끈",
+    "targetScore": 800,
+    "exampleEn": "Your shoelace is untied.",
+    "exampleKo": "당신의 신발 끈이 풀렸습니다."
+  },
+  {
+    "day": 10,
+    "no": 86,
+    "word": "shopkeeper",
+    "meaning": "가게 주인",
+    "targetScore": 800,
+    "exampleEn": "The shopkeeper was very friendly.",
+    "exampleKo": "가게 주인이 매우 친절했습니다."
+  },
+  {
+    "day": 10,
+    "no": 87,
+    "word": "showroom",
+    "meaning": "진열실, 전시실",
+    "targetScore": 800,
+    "exampleEn": "The cars are displayed in the showroom.",
+    "exampleKo": "자동차들이 전시장(진열실)에 전시되어 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 88,
+    "word": "sleeve",
+    "meaning": "(옷) 소매",
+    "targetScore": 800,
+    "exampleEn": "The sleeves of this shirt are too long.",
+    "exampleKo": "이 셔츠의 소매가 너무 깁니다."
+  },
+  {
+    "day": 10,
+    "no": 89,
+    "word": "souvenir",
+    "meaning": "기념품",
+    "targetScore": 800,
+    "exampleEn": "I bought a souvenir to remember the trip.",
+    "exampleKo": "저는 여행을 기념하기 위해 기념품을 샀습니다."
+  },
+  {
+    "day": 10,
+    "no": 90,
+    "word": "stack",
+    "meaning": "더미, 쌓아 올리다",
+    "targetScore": 800,
+    "exampleEn": "Papers were stacked in a pile.",
+    "exampleKo": "서류들이 더미로 쌓여 있었습니다."
+  },
+  {
+    "day": 10,
+    "no": 91,
+    "word": "stand in line",
+    "meaning": "줄을 서다",
+    "targetScore": 800,
+    "exampleEn": "People stood in line for tickets.",
+    "exampleKo": "사람들이 티켓을 사기 위해 줄을 섰습니다."
+  },
+  {
+    "day": 10,
+    "no": 92,
+    "word": "storefront",
+    "meaning": "가게 앞 공간",
+    "targetScore": 800,
+    "exampleEn": "We met at the storefront.",
+    "exampleKo": "우리는 가게 앞 공간에서 만났습니다."
+  },
+  {
+    "day": 10,
+    "no": 93,
+    "word": "stylish",
+    "meaning": "패션 감각이 있는, 멋진",
+    "targetScore": 800,
+    "exampleEn": "She is a stylish dresser.",
+    "exampleKo": "그녀는 패션 감각이 있는(멋진) 옷차림을 하는 사람입니다."
+  },
+  {
+    "day": 10,
+    "no": 94,
+    "word": "tag",
+    "meaning": "(물건에 붙어 있는) 꼬리표",
+    "targetScore": 800,
+    "exampleEn": "The price tag is missing.",
+    "exampleKo": "가격표(꼬리표)가 없습니다."
+  },
+  {
+    "day": 10,
+    "no": 95,
+    "word": "take the order",
+    "meaning": "주문을 받다",
+    "targetScore": 800,
+    "exampleEn": "The waiter came to take an order.",
+    "exampleKo": "웨이터가 주문을 받으러 왔습니다."
+  },
+  {
+    "day": 10,
+    "no": 96,
+    "word": "try on",
+    "meaning": "(옷 따위를) 입어 보다",
+    "targetScore": 800,
+    "exampleEn": "Can I try this on?",
+    "exampleKo": "이것을 입어 봐도 될까요?"
+  },
+  {
+    "day": 10,
+    "no": 97,
+    "word": "underline",
+    "meaning": "밑줄을 긋다, 강조하다",
+    "targetScore": 800,
+    "exampleEn": "The report underlines the importance of safety.",
+    "exampleKo": "그 보고서는 안전의 중요성을 강조합니다(밑줄을 긋습니다)."
+  },
+  {
+    "day": 10,
+    "no": 98,
+    "word": "watch band",
+    "meaning": "(손목시계의) 시곗줄",
+    "targetScore": 800,
+    "exampleEn": "I need to replace my watchband.",
+    "exampleKo": "저는 시곗줄을 교체해야 합니다."
+  },
+  {
+    "day": 10,
+    "no": 99,
+    "word": "window-shopping",
+    "meaning": "아이쇼핑",
+    "targetScore": 800,
+    "exampleEn": "We went window shopping at the mall.",
+    "exampleKo": "우리는 쇼핑몰에서 아이쇼핑을 했습니다."
+  },
+  {
+    "day": 10,
+    "no": 100,
+    "word": "afford to do",
+    "meaning": "~할 수 있다, ~할 여유가 있다",
+    "targetScore": 800,
+    "exampleEn": "We cannot afford to buy a new car.",
+    "exampleKo": "우리는 새 차를 살 여유가 없습니다."
+  },
+  {
+    "day": 10,
+    "no": 101,
+    "word": "apparel",
+    "meaning": "의복, 의류",
+    "targetScore": 800,
+    "exampleEn": "The store sells apparel for men and women.",
+    "exampleKo": "그 가게는 남성 및 여성용 의류를 판매합니다."
+  },
+  {
+    "day": 10,
+    "no": 102,
+    "word": "dairy products",
+    "meaning": "유제품",
+    "targetScore": 800,
+    "exampleEn": "This section sells dairy products.",
+    "exampleKo": "이 구역은 유제품을 판매합니다."
+  },
+  {
+    "day": 10,
+    "no": 103,
+    "word": "elsewhere",
+    "meaning": "다른 장소에서는, 다른 경우에는",
+    "targetScore": 800,
+    "exampleEn": "It must be elsewhere.",
+    "exampleKo": "그것은 다른 장소에(다른 경우에는) 있음에 틀림없습니다."
+  },
+  {
+    "day": 10,
+    "no": 104,
+    "word": "gift certificate",
+    "meaning": "상품권",
+    "targetScore": 800,
+    "exampleEn": "I received a gift certificate for my birthday.",
+    "exampleKo": "저는 생일 선물로 상품권을 받았습니다."
+  },
+  {
+    "day": 10,
+    "no": 105,
+    "word": "glassware",
+    "meaning": "유리 제품",
+    "targetScore": 800,
+    "exampleEn": "Handle the glassware with care.",
+    "exampleKo": "유리 제품을 조심해서 다루십시오."
+  },
+  {
+    "day": 10,
+    "no": 106,
+    "word": "inexpensive",
+    "meaning": "비싸지 않은",
+    "targetScore": 800,
+    "exampleEn": "This restaurant is inexpensive but good.",
+    "exampleKo": "이 식당은 비싸지 않지만 훌륭합니다."
+  },
+  {
+    "day": 10,
+    "no": 107,
+    "word": "lately",
+    "meaning": "최근에",
+    "targetScore": 800,
+    "exampleEn": "Have you seen him lately?",
+    "exampleKo": "최근에 그를 본 적이 있습니까?"
+  },
+  {
+    "day": 10,
+    "no": 108,
+    "word": "latest",
+    "meaning": "최신의",
+    "targetScore": 800,
+    "exampleEn": "This is the latest model.",
+    "exampleKo": "이것은 최신 모델입니다."
+  },
+  {
+    "day": 10,
+    "no": 109,
+    "word": "luxury",
+    "meaning": "사치, 사치품, 값비싼",
+    "targetScore": 800,
+    "exampleEn": "We stayed at a luxury hotel.",
+    "exampleKo": "우리는 호화로운(사치스러운) 호텔에 묵었습니다."
+  },
+  {
+    "day": 10,
+    "no": 110,
+    "word": "outerwear",
+    "meaning": "겉옷, 외투",
+    "targetScore": 800,
+    "exampleEn": "She wore a warm outerwear.",
+    "exampleKo": "그녀는 따뜻한 겉옷(외투)을 입었습니다."
+  },
+  {
+    "day": 10,
+    "no": 111,
+    "word": "outlet",
+    "meaning": "판매 대리점, 소매점, 콘센트",
+    "targetScore": 800,
+    "exampleEn": "There is a power outlet near the desk.",
+    "exampleKo": "책상 근처에 콘센트가 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 112,
+    "word": "portable",
+    "meaning": "휴대용의",
+    "targetScore": 800,
+    "exampleEn": "This device is lightweight and portable.",
+    "exampleKo": "이 장치는 가볍고 휴대용입니다."
+  },
+  {
+    "day": 10,
+    "no": 113,
+    "word": "readership",
+    "meaning": "독자의 수",
+    "targetScore": 800,
+    "exampleEn": "The magazine has a large readership.",
+    "exampleKo": "그 잡지는 많은 독자 수를 보유하고 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 114,
+    "word": "readily",
+    "meaning": "즉시, 손쉽게",
+    "targetScore": 800,
+    "exampleEn": "Information is readily available online.",
+    "exampleKo": "정보는 온라인에서 손쉽게(즉시) 얻을 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 115,
+    "word": "refundable",
+    "meaning": "환불 가능한, 변제 가능한",
+    "targetScore": 800,
+    "exampleEn": "This ticket is fully refundable.",
+    "exampleKo": "이 티켓은 전액 환불 가능합니다."
+  },
+  {
+    "day": 10,
+    "no": 116,
+    "word": "value",
+    "meaning": "가치, 가격",
+    "targetScore": 800,
+    "exampleEn": "The value of the dollar has risen.",
+    "exampleKo": "달러의 가치(가격)가 올랐습니다."
+  },
+  {
+    "day": 10,
+    "no": 117,
+    "word": "a selection of",
+    "meaning": "~의 모음",
+    "targetScore": 800,
+    "exampleEn": "She has a large collection of stamps.",
+    "exampleKo": "그녀는 많은 우표 수집품(모음)을 가지고 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 118,
+    "word": "a variety of (= various)",
+    "meaning": "다양한",
+    "targetScore": 800,
+    "exampleEn": "We offer a variety of services.",
+    "exampleKo": "우리는 다양한 서비스를 제공합니다."
+  },
+  {
+    "day": 10,
+    "no": 119,
+    "word": "at a discounted price",
+    "meaning": "할인가로",
+    "targetScore": 800,
+    "exampleEn": "Tickets are available at a discount.",
+    "exampleKo": "티켓은 할인가로 이용 가능합니다."
+  },
+  {
+    "day": 10,
+    "no": 120,
+    "word": "by check",
+    "meaning": "수표로",
+    "targetScore": 800,
+    "exampleEn": "Can I pay by check?",
+    "exampleKo": "수표로 지불해도 될까요?"
+  },
+  {
+    "day": 10,
+    "no": 121,
+    "word": "by credit card",
+    "meaning": "신용카드로",
+    "targetScore": 800,
+    "exampleEn": "We accept payment by credit card.",
+    "exampleKo": "우리는 신용카드 결제를 받습니다."
+  },
+  {
+    "day": 10,
+    "no": 122,
+    "word": "by no means",
+    "meaning": "결코 ~이 아닌",
+    "targetScore": 800,
+    "exampleEn": "It is by no means certain.",
+    "exampleKo": "그것은 결코 확실하지 않습니다."
+  },
+  {
+    "day": 10,
+    "no": 123,
+    "word": "extra charge",
+    "meaning": "추가 비용",
+    "targetScore": 800,
+    "exampleEn": "There is no extra charge for delivery.",
+    "exampleKo": "배송에 대한 추가 비용은 없습니다."
+  },
+  {
+    "day": 10,
+    "no": 124,
+    "word": "get in line",
+    "meaning": "줄에 들어가 서다",
+    "targetScore": 800,
+    "exampleEn": "Please get in line.",
+    "exampleKo": "줄에 들어가 서 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 125,
+    "word": "give a discount",
+    "meaning": "할인하다",
+    "targetScore": 800,
+    "exampleEn": "The store gave a discount on the shoes.",
+    "exampleKo": "가게는 신발을 할인해 주었습니다."
+  },
+  {
+    "day": 10,
+    "no": 126,
+    "word": "in cash",
+    "meaning": "현금으로",
+    "targetScore": 800,
+    "exampleEn": "I would like to pay in cash.",
+    "exampleKo": "저는 현금으로 지불하고 싶습니다."
+  },
+  {
+    "day": 10,
+    "no": 127,
+    "word": "merchandise",
+    "meaning": "상품, 제품",
+    "targetScore": 800,
+    "exampleEn": "They displayed the merchandise in the window.",
+    "exampleKo": "그들은 쇼윈도에 상품(제품)을 진열했습니다."
+  },
+  {
+    "day": 10,
+    "no": 128,
+    "word": "no later than",
+    "meaning": "늦어도 ~까지",
+    "targetScore": 800,
+    "exampleEn": "Please submit the report by Friday at the latest.",
+    "exampleKo": "늦어도 금요일까지는 보고서를 제출해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 129,
+    "word": "showcase",
+    "meaning": "유리 진열장, 공개 행사",
+    "targetScore": 800,
+    "exampleEn": "The new products are in the showcase.",
+    "exampleKo": "신제품들이 유리 진열장에 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 130,
+    "word": "textile",
+    "meaning": "직물, 섬유",
+    "targetScore": 800,
+    "exampleEn": "This textile is used for clothing.",
+    "exampleKo": "이 직물(섬유)은 의류용으로 사용됩니다."
+  },
+  {
+    "day": 10,
+    "no": 131,
+    "word": "thrifty",
+    "meaning": "검소한, 검약하는",
+    "targetScore": 800,
+    "exampleEn": "He lives a thrifty life.",
+    "exampleKo": "그는 검소한(검약하는) 삶을 삽니다."
+  },
+  {
+    "day": 10,
+    "no": 132,
+    "word": "under warranty",
+    "meaning": "보증 기간 중인",
+    "targetScore": 800,
+    "exampleEn": "The car is still under warranty.",
+    "exampleKo": "그 차는 아직 보증 기간 중입니다."
+  },
+  {
+    "day": 10,
+    "no": 133,
+    "word": "valid for",
+    "meaning": "~에 유효한, ~동안 유효한",
+    "targetScore": 800,
+    "exampleEn": "This coupon is valid for one month.",
+    "exampleKo": "이 쿠폰은 한 달 동안 유효합니다."
+  },
+  {
+    "day": 10,
+    "no": 134,
+    "word": "voucher",
+    "meaning": "(현금 대용의) 상품권",
+    "targetScore": 800,
+    "exampleEn": "I used a voucher to pay for the meal.",
+    "exampleKo": "저는 식사비를 지불하기 위해 상품권을 사용했습니다."
+  },
+  {
+    "day": 10,
+    "no": 135,
+    "word": "wholesale",
+    "meaning": "도매의, 다량의",
+    "targetScore": 800,
+    "exampleEn": "We buy materials wholesale.",
+    "exampleKo": "우리는 재료를 도매로(다량으로) 구입합니다."
+  },
+  {
+    "day": 10,
+    "no": 136,
+    "word": "wrap a present",
+    "meaning": "선물을 포장하다",
+    "targetScore": 800,
+    "exampleEn": "Would you like me to wrap the gift?",
+    "exampleKo": "선물을 포장해 드릴까요?"
+  }
+]

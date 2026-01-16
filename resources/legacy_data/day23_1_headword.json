@@ -1,0 +1,362 @@
+[
+    {
+        "day": 23,
+        "no": 1,
+        "word": "host",
+        "meaning": "주최하다; 주인",
+        "targetScore": 650,
+        "exampleEn": "Host a party.",
+        "exampleKo": "파티를 주최하다."
+    },
+    {
+        "day": 23,
+        "no": 2,
+        "word": "annual",
+        "meaning": "매년의",
+        "targetScore": 650,
+        "exampleEn": "Annual report.",
+        "exampleKo": "연례 보고서."
+    },
+    {
+        "day": 23,
+        "no": 3,
+        "word": "purpose",
+        "meaning": "목적",
+        "targetScore": 650,
+        "exampleEn": "The purpose of the meeting.",
+        "exampleKo": "회의의 목적."
+    },
+    {
+        "day": 23,
+        "no": 4,
+        "word": "enroll",
+        "meaning": "등록하다",
+        "targetScore": 650,
+        "exampleEn": "Enroll in a course.",
+        "exampleKo": "과정에 등록하다."
+    },
+    {
+        "day": 23,
+        "no": 5,
+        "word": "lecture",
+        "meaning": "강의; 강의하다",
+        "targetScore": 650,
+        "exampleEn": "Attend a lecture.",
+        "exampleKo": "강의에 참석하다."
+    },
+    {
+        "day": 23,
+        "no": 6,
+        "word": "participant",
+        "meaning": "참가자",
+        "targetScore": 650,
+        "exampleEn": "Active participant.",
+        "exampleKo": "적극적인 참가자."
+    },
+    {
+        "day": 23,
+        "no": 7,
+        "word": "attend",
+        "meaning": "참석하다, 출석하다",
+        "targetScore": 650,
+        "exampleEn": "Attend the ceremony.",
+        "exampleKo": "식에 참석하다."
+    },
+    {
+        "day": 23,
+        "no": 8,
+        "word": "encourage",
+        "meaning": "장려하다, 격려하다",
+        "targetScore": 650,
+        "exampleEn": "Encourage students.",
+        "exampleKo": "학생들을 격려하다."
+    },
+    {
+        "day": 23,
+        "no": 9,
+        "word": "leave",
+        "meaning": "떠나다, 남기다; 휴가",
+        "targetScore": 650,
+        "exampleEn": "Leave a message.",
+        "exampleKo": "메시지를 남기다."
+    },
+    {
+        "day": 23,
+        "no": 10,
+        "word": "recommendation",
+        "meaning": "추천",
+        "targetScore": 650,
+        "exampleEn": "Letter of recommendation.",
+        "exampleKo": "추천서."
+    },
+    {
+        "day": 23,
+        "no": 11,
+        "word": "conference",
+        "meaning": "회의, 총회",
+        "targetScore": 650,
+        "exampleEn": "Conference room.",
+        "exampleKo": "회의실."
+    },
+    {
+        "day": 23,
+        "no": 12,
+        "word": "schedule",
+        "meaning": "일정을 잡다; 일정",
+        "targetScore": 650,
+        "exampleEn": "Schedule an appointment.",
+        "exampleKo": "약속 일정을 잡다."
+    },
+    {
+        "day": 23,
+        "no": 13,
+        "word": "include",
+        "meaning": "포함하다",
+        "targetScore": 650,
+        "exampleEn": "Include tax.",
+        "exampleKo": "세금을 포함하다."
+    },
+    {
+        "day": 23,
+        "no": 14,
+        "word": "register",
+        "meaning": "등록하다, 기재하다",
+        "targetScore": 650,
+        "exampleEn": "Register for the event.",
+        "exampleKo": "행사에 등록하다."
+    },
+    {
+        "day": 23,
+        "no": 15,
+        "word": "result",
+        "meaning": "결과; (~의 결과로) 되다",
+        "targetScore": 650,
+        "exampleEn": "Result in success.",
+        "exampleKo": "성공으로 귀결되다."
+    },
+    {
+        "day": 23,
+        "no": 16,
+        "word": "require",
+        "meaning": "요구하다",
+        "targetScore": 650,
+        "exampleEn": "Require assistance.",
+        "exampleKo": "도움을 필요로 하다."
+    },
+    {
+        "day": 23,
+        "no": 17,
+        "word": "grateful",
+        "meaning": "고마워하는",
+        "targetScore": 650,
+        "exampleEn": "I am grateful for your help.",
+        "exampleKo": "당신의 도움에 감사합니다."
+    },
+    {
+        "day": 23,
+        "no": 18,
+        "word": "overtime",
+        "meaning": "초과 근무",
+        "targetScore": 650,
+        "exampleEn": "Work overtime.",
+        "exampleKo": "초과 근무를 하다."
+    },
+    {
+        "day": 23,
+        "no": 19,
+        "word": "responsibility",
+        "meaning": "책임, 의무",
+        "targetScore": 650,
+        "exampleEn": "Take responsibility.",
+        "exampleKo": "책임을 지다."
+    },
+    {
+        "day": 23,
+        "no": 20,
+        "word": "assent",
+        "meaning": "동의하다, 찬성하다",
+        "targetScore": 650,
+        "exampleEn": "Assent to the proposal.",
+        "exampleKo": "제안에 동의하다."
+    },
+    {
+        "day": 23,
+        "no": 21,
+        "word": "fund",
+        "meaning": "자금을 대다; 자금",
+        "targetScore": 650,
+        "exampleEn": "Fund a project.",
+        "exampleKo": "프로젝트에 자금을 대다."
+    },
+    {
+        "day": 23,
+        "no": 22,
+        "word": "regard",
+        "meaning": "~을 ~으로 여기다; 관심",
+        "targetScore": 650,
+        "exampleEn": "Regard him as a friend.",
+        "exampleKo": "그를 친구로 여기다."
+    },
+    {
+        "day": 23,
+        "no": 23,
+        "word": "tentative",
+        "meaning": "잠정적인",
+        "targetScore": 650,
+        "exampleEn": "Tentative agreement.",
+        "exampleKo": "잠정 합의."
+    },
+    {
+        "day": 23,
+        "no": 24,
+        "word": "welcome",
+        "meaning": "환영하다; 반가운",
+        "targetScore": 650,
+        "exampleEn": "Welcome guests.",
+        "exampleKo": "손님을 환영하다."
+    },
+    {
+        "day": 23,
+        "no": 25,
+        "word": "function",
+        "meaning": "기능; 행사; 작동하다",
+        "targetScore": 650,
+        "exampleEn": "Social function.",
+        "exampleKo": "사교 행사."
+    },
+    {
+        "day": 23,
+        "no": 26,
+        "word": "commence",
+        "meaning": "시작하다",
+        "targetScore": 650,
+        "exampleEn": "Commence operations.",
+        "exampleKo": "운영을 시작하다."
+    },
+    {
+        "day": 23,
+        "no": 27,
+        "word": "objective",
+        "meaning": "목표, 목적; 객관적인",
+        "targetScore": 650,
+        "exampleEn": "Main objective.",
+        "exampleKo": "주요 목표."
+    },
+    {
+        "day": 23,
+        "no": 28,
+        "word": "excited",
+        "meaning": "신이 난, 흥분한",
+        "targetScore": 650,
+        "exampleEn": "Excited about the trip.",
+        "exampleKo": "여행 때문에 신이 난."
+    },
+    {
+        "day": 23,
+        "no": 29,
+        "word": "reimbursement",
+        "meaning": "상환, 변제",
+        "targetScore": 650,
+        "exampleEn": "Expense reimbursement.",
+        "exampleKo": "비용 상환."
+    },
+    {
+        "day": 23,
+        "no": 30,
+        "word": "treatment",
+        "meaning": "대우, 치료",
+        "targetScore": 650,
+        "exampleEn": "Fair treatment.",
+        "exampleKo": "공정한 대우."
+    },
+    {
+        "day": 23,
+        "no": 31,
+        "word": "honor",
+        "meaning": "존경, 명예; 존경하다",
+        "targetScore": 650,
+        "exampleEn": "Guest of honor.",
+        "exampleKo": "귀빈."
+    },
+    {
+        "day": 23,
+        "no": 32,
+        "word": "emphasize",
+        "meaning": "강조하다",
+        "targetScore": 650,
+        "exampleEn": "Emphasize the importance.",
+        "exampleKo": "중요성을 강조하다."
+    },
+    {
+        "day": 23,
+        "no": 33,
+        "word": "entry",
+        "meaning": "참가자, 출품작; 입장",
+        "targetScore": 650,
+        "exampleEn": "Winning entry.",
+        "exampleKo": "당선작."
+    },
+    {
+        "day": 23,
+        "no": 34,
+        "word": "bonus",
+        "meaning": "상여금, 보너스",
+        "targetScore": 650,
+        "exampleEn": "Year-end bonus.",
+        "exampleKo": "연말 보너스."
+    },
+    {
+        "day": 23,
+        "no": 35,
+        "word": "salary",
+        "meaning": "급여",
+        "targetScore": 650,
+        "exampleEn": "Annual salary.",
+        "exampleKo": "연봉."
+    },
+    {
+        "day": 23,
+        "no": 36,
+        "word": "absence",
+        "meaning": "부재, 결근",
+        "targetScore": 650,
+        "exampleEn": "Leave of absence.",
+        "exampleKo": "휴직."
+    },
+    {
+        "day": 23,
+        "no": 37,
+        "word": "sign",
+        "meaning": "서명하다; 징후, 표지판",
+        "targetScore": 650,
+        "exampleEn": "Sign a contract.",
+        "exampleKo": "계약서에 서명하다."
+    },
+    {
+        "day": 23,
+        "no": 38,
+        "word": "labor",
+        "meaning": "노동; 노동하다",
+        "targetScore": 650,
+        "exampleEn": "Manual labor.",
+        "exampleKo": "육체노동."
+    },
+    {
+        "day": 23,
+        "no": 39,
+        "word": "union",
+        "meaning": "동맹, 조합",
+        "targetScore": 650,
+        "exampleEn": "Labor union.",
+        "exampleKo": "노동조합."
+    },
+    {
+        "day": 23,
+        "no": 40,
+        "word": "exploit",
+        "meaning": "착취하다, 위업",
+        "targetScore": 650,
+        "exampleEn": "Exploit workers.",
+        "exampleKo": "노동자를 착취하다."
+    }
+]

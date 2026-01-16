@@ -1,0 +1,254 @@
+[
+  {
+    "day": 10,
+    "no": 41,
+    "word": "bakery",
+    "meaning": "빵집, 제과점",
+    "targetScore": 650,
+    "exampleEn": "The bakery is famous for its fresh bread.",
+    "exampleKo": "그 빵집은 신선한 빵으로 유명합니다."
+  },
+  {
+    "day": 10,
+    "no": 42,
+    "word": "best-selling",
+    "meaning": "베스트셀러의",
+    "targetScore": 650,
+    "exampleEn": "He is a best-selling author.",
+    "exampleKo": "그는 베스트셀러 작가입니다."
+  },
+  {
+    "day": 10,
+    "no": 43,
+    "word": "cashier",
+    "meaning": "(은행·상점·호텔 등의) 출납원",
+    "targetScore": 650,
+    "exampleEn": "Please pay the cashier at the front counter.",
+    "exampleKo": "앞 카운터에 있는 계산원에게 지불해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 44,
+    "word": "clothing",
+    "meaning": "의류",
+    "targetScore": 650,
+    "exampleEn": "We sell a wide range of men's clothing.",
+    "exampleKo": "우리는 다양한 남성 의류를 판매합니다."
+  },
+  {
+    "day": 10,
+    "no": 45,
+    "word": "corner",
+    "meaning": "모퉁이, 구석",
+    "targetScore": 650,
+    "exampleEn": "The shop is located around the corner.",
+    "exampleKo": "그 가게는 모퉁이 돌면 위치해 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 46,
+    "word": "costume",
+    "meaning": "복장, 의상",
+    "targetScore": 650,
+    "exampleEn": "They are wearing traditional costumes.",
+    "exampleKo": "그들은 전통 의상을 입고 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 47,
+    "word": "free",
+    "meaning": "자유로이~할 수 있는, 마음대로의",
+    "targetScore": 650,
+    "exampleEn": "Delivery is free for orders over $50.",
+    "exampleKo": "50달러 이상 주문 시 배송은 무료입니다."
+  },
+  {
+    "day": 10,
+    "no": 48,
+    "word": "label",
+    "meaning": "라벨, 꼬리표, ~에 라벨을 붙이다",
+    "targetScore": 650,
+    "exampleEn": "Please read the label carefully before washing.",
+    "exampleKo": "세탁 전에 라벨을 주의 깊게 읽어 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 49,
+    "word": "necklace",
+    "meaning": "목걸이",
+    "targetScore": 650,
+    "exampleEn": "She is trying on a necklace.",
+    "exampleKo": "그녀는 목걸이를 착용해 보고 있습니다 (Part 1 빈출)."
+  },
+  {
+    "day": 10,
+    "no": 50,
+    "word": "photography equipment",
+    "meaning": "사진 장비",
+    "targetScore": 650,
+    "exampleEn": "Photography equipment is not allowed in the museum.",
+    "exampleKo": "박물관 내에서는 촬영 장비 반입이 허용되지 않습니다."
+  },
+  {
+    "day": 10,
+    "no": 51,
+    "word": "shelf",
+    "meaning": "선반",
+    "targetScore": 650,
+    "exampleEn": "The books are arranged on the shelf.",
+    "exampleKo": "책들이 선반에 정돈되어 있습니다 (Part 1 빈출)."
+  },
+  {
+    "day": 10,
+    "no": 52,
+    "word": "shop",
+    "meaning": "상점, 물건을 사다",
+    "targetScore": 650,
+    "exampleEn": "I need to shop for some groceries.",
+    "exampleKo": "저는 식료품을 좀 사야(쇼핑해야) 합니다."
+  },
+  {
+    "day": 10,
+    "no": 53,
+    "word": "shopper",
+    "meaning": "쇼핑객",
+    "targetScore": 650,
+    "exampleEn": "The store was crowded with shoppers.",
+    "exampleKo": "그 가게는 쇼핑객들로 붐볐습니다."
+  },
+  {
+    "day": 10,
+    "no": 54,
+    "word": "size",
+    "meaning": "크기, 치수",
+    "targetScore": 650,
+    "exampleEn": "What size do you wear?",
+    "exampleKo": "어떤 치수를 입으십니까?"
+  },
+  {
+    "day": 10,
+    "no": 55,
+    "word": "sunglasses",
+    "meaning": "선글라스",
+    "targetScore": 650,
+    "exampleEn": "She is wearing sunglasses.",
+    "exampleKo": "그녀는 선글라스를 착용하고 있습니다 (Part 1 상태 묘사)."
+  },
+  {
+    "day": 10,
+    "no": 56,
+    "word": "supermarket",
+    "meaning": "슈퍼마켓",
+    "targetScore": 650,
+    "exampleEn": "The supermarket is open 24 hours a day.",
+    "exampleKo": "그 슈퍼마켓은 하루 24시간 엽니다."
+  },
+  {
+    "day": 10,
+    "no": 57,
+    "word": "unwanted",
+    "meaning": "원치 않는, 반갑지 않은",
+    "targetScore": 650,
+    "exampleEn": "Please return any unwanted items within 7 days.",
+    "exampleKo": "원하지 않는 물품은 7일 이내에 반품해 주십시오."
+  },
+  {
+    "day": 10,
+    "no": 58,
+    "word": "basis",
+    "meaning": "기초, 근거, 원칙",
+    "targetScore": 650,
+    "exampleEn": "We assess performance on a weekly basis.",
+    "exampleKo": "우리는 성과를 매주(주 단위로) 평가합니다."
+  },
+  {
+    "day": 10,
+    "no": 59,
+    "word": "brand",
+    "meaning": "상표, 브랜드",
+    "targetScore": 650,
+    "exampleEn": "This is our most popular brand.",
+    "exampleKo": "이것이 우리의 가장 인기 있는 브랜드입니다."
+  },
+  {
+    "day": 10,
+    "no": 60,
+    "word": "department store",
+    "meaning": "백화점",
+    "targetScore": 650,
+    "exampleEn": "The department store is holding a sale.",
+    "exampleKo": "그 백화점은 세일 중입니다."
+  },
+  {
+    "day": 10,
+    "no": 61,
+    "word": "discount store",
+    "meaning": "할인 점포",
+    "targetScore": 650,
+    "exampleEn": "You can find cheap items at the discount store.",
+    "exampleKo": "할인점에서 저렴한 물건을 찾을 수 있습니다."
+  },
+  {
+    "day": 10,
+    "no": 62,
+    "word": "display",
+    "meaning": "전시하다, 진열하다, 전시, 진열",
+    "targetScore": 650,
+    "exampleEn": "Merchandise is on display in the window.",
+    "exampleKo": "상품이 진열장에 전시되어 있습니다 (Part 1 빈출)."
+  },
+  {
+    "day": 10,
+    "no": 63,
+    "word": "fit",
+    "meaning": "(치수가)~에 꼭 맞다, ~에 적합하다",
+    "targetScore": 650,
+    "exampleEn": "This coat fits you perfectly.",
+    "exampleKo": "이 코트는 당신에게 딱 맞습니다."
+  },
+  {
+    "day": 10,
+    "no": 64,
+    "word": "fully",
+    "meaning": "완전히, 충분히",
+    "targetScore": 650,
+    "exampleEn": "The battery is fully charged.",
+    "exampleKo": "배터리가 완전히 충전되었습니다."
+  },
+  {
+    "day": 10,
+    "no": 65,
+    "word": "grocery",
+    "meaning": "식료품점",
+    "targetScore": 650,
+    "exampleEn": "I'm going to the grocery store.",
+    "exampleKo": "저는 식료품점에 갑니다."
+  },
+  {
+    "day": 10,
+    "no": 66,
+    "word": "keep",
+    "meaning": "보유하다, 계속하다",
+    "targetScore": 650,
+    "exampleEn": "Please keep the change.",
+    "exampleKo": "잔돈은 가지세요(됐습니다)."
+  },
+  {
+    "day": 10,
+    "no": 67,
+    "word": "store",
+    "meaning": "가게, 저장하다",
+    "targetScore": 650,
+    "exampleEn": "We store the goods in a warehouse.",
+    "exampleKo": "우리는 상품을 창고에 저장합니다."
+  },
+  {
+    "day": 10,
+    "no": 68,
+    "word": "tax",
+    "meaning": "세금",
+    "targetScore": 650,
+    "exampleEn": "The price includes tax.",
+    "exampleKo": "가격에는 세금이 포함되어 있습니다."
+  }
+]

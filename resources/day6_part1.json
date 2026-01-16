@@ -1,0 +1,362 @@
+[
+  {
+    "day": 6,
+    "no": 1,
+    "word": "rest",
+    "meaning": "쉬다, 휴식을 취하다, 휴식, 나머지",
+    "targetScore": 650,
+    "exampleEn": "Please use the break room to rest during your shift.",
+    "exampleKo": "근무 시간 중에는 휴게실을 이용하여 휴식을 취하십시오."
+  },
+  {
+    "day": 6,
+    "no": 2,
+    "word": "exhibition",
+    "meaning": "전시회",
+    "targetScore": 650,
+    "exampleEn": "The art exhibition will be held at the city museum.",
+    "exampleKo": "미술 전시회는 시립 박물관에서 열릴 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 3,
+    "word": "celebrity",
+    "meaning": "유명 인사, 명사",
+    "targetScore": 650,
+    "exampleEn": "A famous celebrity will attend the charity event.",
+    "exampleKo": "유명 인사가 자선 행사에 참석할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 4,
+    "word": "live",
+    "meaning": "(라디오 · TV가) 생방송인",
+    "targetScore": 650,
+    "exampleEn": "The concert will be broadcast live on television.",
+    "exampleKo": "그 콘서트는 텔레비전에서 생방송될 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 5,
+    "word": "improvise",
+    "meaning": "(연주 · 연설 등을) 즉흥적으로 하다, 즉석에서 만들다",
+    "targetScore": 650,
+    "exampleEn": "He had to improvise a speech when the projector failed.",
+    "exampleKo": "그는 프로젝터가 고장 났을 때 연설을 즉흥적으로 해야 했습니다."
+  },
+  {
+    "day": 6,
+    "no": 6,
+    "word": "popular",
+    "meaning": "인기 있는",
+    "targetScore": 650,
+    "exampleEn": "The new restaurant is very popular among locals.",
+    "exampleKo": "새 식당은 지역 주민들 사이에서 매우 인기가 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 7,
+    "word": "donation",
+    "meaning": "기증, 기부",
+    "targetScore": 650,
+    "exampleEn": "We would like to thank you for your generous donation.",
+    "exampleKo": "귀하의 관대한 기부에 감사드리고 싶습니다."
+  },
+  {
+    "day": 6,
+    "no": 8,
+    "word": "alumni",
+    "meaning": "동창생들, 졸업생들",
+    "targetScore": 650,
+    "exampleEn": "The university is engaging with its alumni network.",
+    "exampleKo": "그 대학은 동창회(졸업생) 네트워크와 교류하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 9,
+    "word": "present",
+    "meaning": "제시하다, 현재의, 참석한",
+    "targetScore": 650,
+    "exampleEn": "You must present a valid ID to enter the building.",
+    "exampleKo": "건물에 들어가려면 유효한 신분증을 제시해야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 10,
+    "word": "admission",
+    "meaning": "입장",
+    "targetScore": 650,
+    "exampleEn": "Admission to the museum is free for children.",
+    "exampleKo": "박물관 입장은 어린이들에게 무료입니다."
+  },
+  {
+    "day": 6,
+    "no": 11,
+    "word": "banquet",
+    "meaning": "연회, 만찬",
+    "targetScore": 650,
+    "exampleEn": "The annual awards banquet will take place next Friday.",
+    "exampleKo": "연례 시상식 연회는 다음 주 금요일에 열릴 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 12,
+    "word": "anniversary",
+    "meaning": "기념일",
+    "targetScore": 650,
+    "exampleEn": "we are celebrating our 10th anniversary this year.",
+    "exampleKo": "우리는 올해 10주년을 기념하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 13,
+    "word": "required",
+    "meaning": "필수의, 의무적인",
+    "targetScore": 650,
+    "exampleEn": "Safety training is required for all new employees.",
+    "exampleKo": "안전 교육은 모든 신입 사원들에게 필수입니다."
+  },
+  {
+    "day": 6,
+    "no": 14,
+    "word": "succeed",
+    "meaning": "성공하다, 뒤를 잇다",
+    "targetScore": 650,
+    "exampleEn": "Ms. Lee will succeed Mr. Park as the new director.",
+    "exampleKo": "이 씨가 박 씨의 뒤를 이어 새 이사가 될 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 15,
+    "word": "collection",
+    "meaning": "소장품, 수집물, 징수, 수금",
+    "targetScore": 650,
+    "exampleEn": "The museum has an impressive collection of ancient artifacts.",
+    "exampleKo": "그 박물관은 인상적인 고대 유물 소장품을 가지고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 16,
+    "word": "fund-raising",
+    "meaning": "모금",
+    "targetScore": 650,
+    "exampleEn": "The charity is holding a fund-raising event for the hospital.",
+    "exampleKo": "그 자선 단체는 병원을 위한 모금 행사를 열고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 17,
+    "word": "resume",
+    "meaning": "재개하다, 다시 시작하다",
+    "targetScore": 650,
+    "exampleEn": "Production will resume after the maintenance is completed.",
+    "exampleKo": "유지 보수가 완료된 후 생산이 재개될 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 18,
+    "word": "issue",
+    "meaning": "(출판물의)제~호, 문제, 쟁점",
+    "targetScore": 650,
+    "exampleEn": "The latest issue of the magazine features an interview with the CEO.",
+    "exampleKo": "잡지의 최신호는 CEO와의 인터뷰를 다루고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 19,
+    "word": "subscription",
+    "meaning": "(정기 발행물의)구독",
+    "targetScore": 650,
+    "exampleEn": "I would like to renew my subscription to the newsletter.",
+    "exampleKo": "뉴스레터 구독을 갱신하고 싶습니다."
+  },
+  {
+    "day": 6,
+    "no": 20,
+    "word": "appear",
+    "meaning": "나타나다, 출현하다",
+    "targetScore": 650,
+    "exampleEn": "The error appears to be caused by a software glitch.",
+    "exampleKo": "그 오류는 소프트웨어 결함으로 인해 나타난(발생한) 것으로 보입니다."
+  },
+  {
+    "day": 6,
+    "no": 21,
+    "word": "accompany",
+    "meaning": "동행하다, 동반하다",
+    "targetScore": 650,
+    "exampleEn": "Children must be accompanied by an adult.",
+    "exampleKo": "어린이는 성인을 동반해야 합니다."
+  },
+  {
+    "day": 6,
+    "no": 22,
+    "word": "edition",
+    "meaning": "(간행물의) 판",
+    "targetScore": 650,
+    "exampleEn": "This is a limited edition of the book.",
+    "exampleKo": "이것은 그 책의 한정판입니다."
+  },
+  {
+    "day": 6,
+    "no": 23,
+    "word": "specifically",
+    "meaning": "명확하게, 분명히, 특히, 특별히",
+    "targetScore": 650,
+    "exampleEn": "The instructions are specifically designed for beginners.",
+    "exampleKo": "그 지침들은 명확하게(특별히) 초보자들을 위해 설계되었습니다."
+  },
+  {
+    "day": 6,
+    "no": 24,
+    "word": "anonymous",
+    "meaning": "익명의, 이름을 모르는",
+    "targetScore": 650,
+    "exampleEn": "The donor wishes to remain anonymous.",
+    "exampleKo": "그 기부자는 익명으로 남기를 원합니다."
+  },
+  {
+    "day": 6,
+    "no": 25,
+    "word": "commit",
+    "meaning": "헌신하다, 전념하다",
+    "targetScore": 650,
+    "exampleEn": "The company is committed to providing excellent service.",
+    "exampleKo": "그 회사는 훌륭한 서비스를 제공하는 데 전념하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 26,
+    "word": "informative",
+    "meaning": "유익한, 정보를 주는",
+    "targetScore": 650,
+    "exampleEn": "The seminar was very informative and helpful.",
+    "exampleKo": "그 세미나는 매우 유익하고 도움이 되었습니다."
+  },
+  {
+    "day": 6,
+    "no": 27,
+    "word": "audience",
+    "meaning": "청중, 관중",
+    "targetScore": 650,
+    "exampleEn": "The audience applauded enthusiastically after the performance.",
+    "exampleKo": "공연 후 청중들은 열광적으로 박수를 보냈습니다."
+  },
+  {
+    "day": 6,
+    "no": 28,
+    "word": "author",
+    "meaning": "작가, 저자",
+    "targetScore": 650,
+    "exampleEn": "The author will be signing books at the library.",
+    "exampleKo": "그 작가는 도서관에서 책 사인회를 할 것입니다."
+  },
+  {
+    "day": 6,
+    "no": 29,
+    "word": "note",
+    "meaning": "주목하다, 특별히 언급하다",
+    "targetScore": 650,
+    "exampleEn": "Please note that the schedule is subject to change.",
+    "exampleKo": "일정이 변경될 수 있음을 주목해(유의해) 주십시오."
+  },
+  {
+    "day": 6,
+    "no": 30,
+    "word": "antique",
+    "meaning": "골동품",
+    "targetScore": 650,
+    "exampleEn": "This shop specializes in selling antique furniture.",
+    "exampleKo": "이 가게는 골동품 가구를 파는 것을 전문으로 합니다."
+  },
+  {
+    "day": 6,
+    "no": 31,
+    "word": "manuscript",
+    "meaning": "원고",
+    "targetScore": 650,
+    "exampleEn": "The editor is reviewing the manuscript for publication.",
+    "exampleKo": "편집자는 출판을 위해 원고를 검토하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 32,
+    "word": "beneficial",
+    "meaning": "유익한, 이로운",
+    "targetScore": 650,
+    "exampleEn": "Exercise is beneficial for your health.",
+    "exampleKo": "운동은 당신의 건강에 유익합니다."
+  },
+  {
+    "day": 6,
+    "no": 33,
+    "word": "upcoming",
+    "meaning": "곧 있을, 다가오는",
+    "targetScore": 650,
+    "exampleEn": "We are preparing for the upcoming conference.",
+    "exampleKo": "우리는 다가오는 회의를 준비하고 있습니다."
+  },
+  {
+    "day": 6,
+    "no": 34,
+    "word": "lend",
+    "meaning": "빌려주다",
+    "targetScore": 650,
+    "exampleEn": "The library lends books for a period of two weeks.",
+    "exampleKo": "도서관은 2주 동안 책을 빌려줍니다."
+  },
+  {
+    "day": 6,
+    "no": 35,
+    "word": "current",
+    "meaning": "현재의, 현행의, 통용되는",
+    "targetScore": 650,
+    "exampleEn": "The current economic situation is unstable.",
+    "exampleKo": "현재의 경제 상황은 불안정합니다."
+  },
+  {
+    "day": 6,
+    "no": 36,
+    "word": "local",
+    "meaning": "지방의, 고장의",
+    "targetScore": 650,
+    "exampleEn": "We source our ingredients from local farmers.",
+    "exampleKo": "우리는 지역 농부들로부터 재료를 공급받습니다."
+  },
+  {
+    "day": 6,
+    "no": 37,
+    "word": "variety",
+    "meaning": "다양성, 변화, 종류, 품종",
+    "targetScore": 650,
+    "exampleEn": "The store offers a wide variety of products.",
+    "exampleKo": "그 상점은 다양한 종류의 제품을 제공합니다."
+  },
+  {
+    "day": 6,
+    "no": 38,
+    "word": "advocate",
+    "meaning": "옹호자",
+    "targetScore": 650,
+    "exampleEn": "She is a strong advocate for environmental protection.",
+    "exampleKo": "그녀는 환경 보호의 강력한 옹호자입니다."
+  },
+  {
+    "day": 6,
+    "no": 39,
+    "word": "contributor",
+    "meaning": "기고가, 공헌자",
+    "targetScore": 650,
+    "exampleEn": "He is a regular contributor to the magazine.",
+    "exampleKo": "그는 그 잡지의 정기 기고가입니다."
+  },
+  {
+    "day": 6,
+    "no": 40,
+    "word": "defy",
+    "meaning": "저항하다, (설명 · 묘사 등이) 거의 불가능하다",
+    "targetScore": 650,
+    "exampleEn": "The result defied all expectations.",
+    "exampleKo": "그 결과는 모든 예상을 뒤엎었습니다(저항했습니다)."
+  }
+]

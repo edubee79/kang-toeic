@@ -1,0 +1,362 @@
+[
+  {
+    "day": 11,
+    "no": 1,
+    "word": "research",
+    "meaning": "연구, 조사",
+    "targetScore": 650,
+    "exampleEn": "The team will research the market trends.",
+    "exampleKo": "그 팀은 시장 동향을 연구할 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 2,
+    "word": "devise",
+    "meaning": "고안하다, 발명하다",
+    "targetScore": 650,
+    "exampleEn": "Engineers devised a new method.",
+    "exampleKo": "엔지니어들은 새로운 방법을 고안했습니다."
+  },
+  {
+    "day": 11,
+    "no": 3,
+    "word": "revolutionary",
+    "meaning": "혁명적인",
+    "targetScore": 650,
+    "exampleEn": "It is a revolutionary product.",
+    "exampleKo": "그것은 혁명적인 제품입니다."
+  },
+  {
+    "day": 11,
+    "no": 4,
+    "word": "innovative",
+    "meaning": "혁신적인",
+    "targetScore": 650,
+    "exampleEn": "The company launched an innovative device.",
+    "exampleKo": "그 회사는 혁신적인 장치를 출시했습니다."
+  },
+  {
+    "day": 11,
+    "no": 5,
+    "word": "feature",
+    "meaning": "특징, 특색, 특징으로 삼다, 특별히 포함하다",
+    "targetScore": 650,
+    "exampleEn": "The new model features a larger screen.",
+    "exampleKo": "새 모델은 더 큰 화면을 특징으로 합니다."
+  },
+  {
+    "day": 11,
+    "no": 6,
+    "word": "inspiration",
+    "meaning": "영감",
+    "targetScore": 650,
+    "exampleEn": "He draws inspiration from nature.",
+    "exampleKo": "그는 자연에서 영감을 얻습니다."
+  },
+  {
+    "day": 11,
+    "no": 7,
+    "word": "sufficiently",
+    "meaning": "충분히",
+    "targetScore": 650,
+    "exampleEn": "The evidence was not sufficiently convincing.",
+    "exampleKo": "증거는 충분히 설득력이 있지 않았습니다."
+  },
+  {
+    "day": 11,
+    "no": 8,
+    "word": "patent",
+    "meaning": "특허, 특허권, 특허품",
+    "targetScore": 650,
+    "exampleEn": "The company applied for a patent.",
+    "exampleKo": "그 회사는 특허를 출원했습니다."
+  },
+  {
+    "day": 11,
+    "no": 9,
+    "word": "envision",
+    "meaning": "(장래의 일 등을) 계획하다, 상상하다",
+    "targetScore": 650,
+    "exampleEn": "She envisions a bright future for the company.",
+    "exampleKo": "그녀는 회사의 밝은 미래를 구상합니다(마음속에 그립니다)."
+  },
+  {
+    "day": 11,
+    "no": 10,
+    "word": "extend",
+    "meaning": "연장하다, (기간을)늘리다,, (감사의 뜻을)말하다, 베풀다",
+    "targetScore": 650,
+    "exampleEn": "We plan to extend the deadline.",
+    "exampleKo": "우리는 마감 기한을 연장할 계획입니다."
+  },
+  {
+    "day": 11,
+    "no": 11,
+    "word": "following",
+    "meaning": "~후에, 다음의, 다음에 오는",
+    "targetScore": 650,
+    "exampleEn": "The following information is important.",
+    "exampleKo": "다음의 정보는 중요합니다."
+  },
+  {
+    "day": 11,
+    "no": 12,
+    "word": "intend",
+    "meaning": "~할 작정이다, 의도하다",
+    "targetScore": 650,
+    "exampleEn": "We intend to expand our business.",
+    "exampleKo": "우리는 사업을 확장할 작정입니다(의도입니다)."
+  },
+  {
+    "day": 11,
+    "no": 13,
+    "word": "grant",
+    "meaning": "(인정하여 정식으로) 수여하다, 주다,, (연구비·장학금 등의) 보조금",
+    "targetScore": 650,
+    "exampleEn": "The government granted the request.",
+    "exampleKo": "정부는 그 요청을 승인했습니다(수여했습니다)."
+  },
+  {
+    "day": 11,
+    "no": 14,
+    "word": "allow",
+    "meaning": "~하게하다, ~을 허락하다",
+    "targetScore": 650,
+    "exampleEn": "Smoking is not allowed in the building.",
+    "exampleKo": "건물 내에서는 흡연이 허용되지 않습니다."
+  },
+  {
+    "day": 11,
+    "no": 15,
+    "word": "inspect",
+    "meaning": "~을 검사하다, 조사하다",
+    "targetScore": 650,
+    "exampleEn": "Inspectors will inspect the factory.",
+    "exampleKo": "조사관들이 공장을 점검할 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 16,
+    "word": "improve",
+    "meaning": "향상시키다, 개선하다",
+    "targetScore": 650,
+    "exampleEn": "We aim to improve customer satisfaction.",
+    "exampleKo": "우리는 고객 만족도를 향상시키는 것을 목표로 합니다."
+  },
+  {
+    "day": 11,
+    "no": 17,
+    "word": "increasingly",
+    "meaning": "점점, 더욱더",
+    "targetScore": 650,
+    "exampleEn": "Online shopping is becoming increasingly popular.",
+    "exampleKo": "온라인 쇼핑은 점점 더 인기가 많아지고 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 18,
+    "word": "invest",
+    "meaning": "투자하다, 운용하다",
+    "targetScore": 650,
+    "exampleEn": "They decided to invest in real estate.",
+    "exampleKo": "그들은 부동산에 투자하기로 결정했습니다."
+  },
+  {
+    "day": 11,
+    "no": 19,
+    "word": "various",
+    "meaning": "여러 가지의, 가지각색의",
+    "targetScore": 650,
+    "exampleEn": "We offer various kinds of services.",
+    "exampleKo": "우리는 다양한 종류의 서비스를 제공합니다."
+  },
+  {
+    "day": 11,
+    "no": 20,
+    "word": "upgrade",
+    "meaning": "업그레이드,개량형,업그레이드하다,개선하다",
+    "targetScore": 650,
+    "exampleEn": "Please upgrade your software.",
+    "exampleKo": "소프트웨어를 업그레이드해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 21,
+    "word": "manual",
+    "meaning": "설명서, 안내서",
+    "targetScore": 650,
+    "exampleEn": "Please refer to the instruction manual.",
+    "exampleKo": "사용 설명서를 참조해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 22,
+    "word": "explore",
+    "meaning": "조사하다, 탐구하다",
+    "targetScore": 650,
+    "exampleEn": "We need to explore new markets.",
+    "exampleKo": "우리는 새로운 시장을 탐구해야(조사해야) 합니다."
+  },
+  {
+    "day": 11,
+    "no": 23,
+    "word": "response",
+    "meaning": "응답, 대답",
+    "targetScore": 650,
+    "exampleEn": "I received a quick response to my email.",
+    "exampleKo": "저는 이메일에 대한 빠른 응답을 받았습니다."
+  },
+  {
+    "day": 11,
+    "no": 24,
+    "word": "appearance",
+    "meaning": "외관, 외모",
+    "targetScore": 650,
+    "exampleEn": "The appearance of the product is important.",
+    "exampleKo": "제품의 외관은 중요합니다."
+  },
+  {
+    "day": 11,
+    "no": 25,
+    "word": "successful",
+    "meaning": "성공적인, 성공한",
+    "targetScore": 650,
+    "exampleEn": "The marketing campaign was successful.",
+    "exampleKo": "마케팅 캠페인은 성공적이었습니다."
+  },
+  {
+    "day": 11,
+    "no": 26,
+    "word": "hold",
+    "meaning": "~을 수용하다, ~을 담다,, (회의 등을)개최하다, 열다",
+    "targetScore": 650,
+    "exampleEn": "The conference will be held in Seoul.",
+    "exampleKo": "회의는 서울에서 개최될 것입니다."
+  },
+  {
+    "day": 11,
+    "no": 27,
+    "word": "advance",
+    "meaning": "진보, 전진",
+    "targetScore": 650,
+    "exampleEn": "Technology continues to advance rapidly.",
+    "exampleKo": "기술은 계속해서 빠르게 진보합니다."
+  },
+  {
+    "day": 11,
+    "no": 28,
+    "word": "reliable",
+    "meaning": "믿을 만한, 신뢰할 수 있는",
+    "targetScore": 650,
+    "exampleEn": "He is a reliable employee.",
+    "exampleKo": "그는 믿을 수 있는 직원입니다."
+  },
+  {
+    "day": 11,
+    "no": 29,
+    "word": "quality",
+    "meaning": "품질, 질",
+    "targetScore": 650,
+    "exampleEn": "We are committed to quality control.",
+    "exampleKo": "우리는 품질 관리에 전념하고 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 30,
+    "word": "domestic",
+    "meaning": "국내의, 국산의",
+    "targetScore": 650,
+    "exampleEn": "Domestic sales have increased.",
+    "exampleKo": "국내 판매가 증가했습니다."
+  },
+  {
+    "day": 11,
+    "no": 31,
+    "word": "development",
+    "meaning": "개발, 발전",
+    "targetScore": 650,
+    "exampleEn": "The project is in the development stage.",
+    "exampleKo": "그 프로젝트는 개발 단계에 있습니다."
+  },
+  {
+    "day": 11,
+    "no": 32,
+    "word": "availability",
+    "meaning": "(입수)가능성, 유효성, 유용성",
+    "targetScore": 650,
+    "exampleEn": "Please check the availability of the item.",
+    "exampleKo": "물품의 재고 유무(이용 가능성)를 확인해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 33,
+    "word": "update",
+    "meaning": "갱신,개정,갱신하다, 최신의 것으로 하다",
+    "targetScore": 650,
+    "exampleEn": "We need to update our website.",
+    "exampleKo": "우리는 웹사이트를 갱신해야 합니다."
+  },
+  {
+    "day": 11,
+    "no": 34,
+    "word": "accurate",
+    "meaning": "정확한",
+    "targetScore": 650,
+    "exampleEn": "The data must be accurate.",
+    "exampleKo": "데이터는 정확해야 합니다."
+  },
+  {
+    "day": 11,
+    "no": 35,
+    "word": "complicated",
+    "meaning": "복잡한",
+    "targetScore": 650,
+    "exampleEn": "The process is too complicated.",
+    "exampleKo": "그 과정은 너무 복잡합니다."
+  },
+  {
+    "day": 11,
+    "no": 36,
+    "word": "accomplished",
+    "meaning": "숙련된, 노련한",
+    "targetScore": 650,
+    "exampleEn": "He is an accomplished pianist.",
+    "exampleKo": "그는 기량이 뛰어난(성취한) 피아니스트입니다."
+  },
+  {
+    "day": 11,
+    "no": 37,
+    "word": "inquiry",
+    "meaning": "문의, 질문",
+    "targetScore": 650,
+    "exampleEn": "For further inquiry, please contact us.",
+    "exampleKo": "추가 질문이 있으시면 저희에게 연락해 주십시오."
+  },
+  {
+    "day": 11,
+    "no": 38,
+    "word": "indication",
+    "meaning": "징후, 조짐",
+    "targetScore": 650,
+    "exampleEn": "There is no indication of economic recovery.",
+    "exampleKo": "경제 회복의 징후가 없습니다."
+  },
+  {
+    "day": 11,
+    "no": 39,
+    "word": "manufacturer",
+    "meaning": "제조 회사, 제조업자",
+    "targetScore": 650,
+    "exampleEn": "The manufacturer offers a one-year warranty.",
+    "exampleKo": "제조업체는 1년 보증을 제공합니다."
+  },
+  {
+    "day": 11,
+    "no": 40,
+    "word": "compatible",
+    "meaning": "호환되는, 양립할 수 있는",
+    "targetScore": 650,
+    "exampleEn": "This software is compatible with your computer.",
+    "exampleKo": "이 소프트웨어는 귀하의 컴퓨터와 호환됩니다."
+  }
+]

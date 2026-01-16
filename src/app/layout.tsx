@@ -6,7 +6,7 @@ import LayoutWrapper from "@/components/layout/LayoutWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "WINTER CAMP | TOEIC",
+    title: "깡쌤토익 | TOEIC",
     description: "Real-time TOEIC Homework Manager",
     manifest: "/manifest.json",
 };
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko">
-            <body className={`${inter.className} antialiased bg-slate-900 text-white`}>
+            <body className={`${inter.className} antialiased bg-slate-900 text-white`} suppressHydrationWarning={true}>
                 <LayoutWrapper>{children}</LayoutWrapper>
             </body>
         </html>

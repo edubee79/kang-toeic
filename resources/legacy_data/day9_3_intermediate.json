@@ -1,0 +1,614 @@
+[
+    {
+        "day": 9,
+        "no": 69,
+        "word": "blueprint",
+        "meaning": "청사진, 세부 계획",
+        "targetScore": 800,
+        "exampleEn": "This is a blueprint for success.",
+        "exampleKo": "이것은 성공을 위한 청사진입니다."
+    },
+    {
+        "day": 9,
+        "no": 70,
+        "word": "boost",
+        "meaning": "신장시키다, 북돋우다",
+        "targetScore": 800,
+        "exampleEn": "We need to boost sales.",
+        "exampleKo": "우리는 매출을 신장시켜야 합니다."
+    },
+    {
+        "day": 9,
+        "no": 71,
+        "word": "collaborate",
+        "meaning": "협력하다",
+        "targetScore": 800,
+        "exampleEn": "The teams collaborated on the research.",
+        "exampleKo": "그 팀들은 연구에 협력했습니다."
+    },
+    {
+        "day": 9,
+        "no": 72,
+        "word": "collaboration",
+        "meaning": "협력",
+        "targetScore": 800,
+        "exampleEn": "The project was a result of collaboration.",
+        "exampleKo": "그 프로젝트는 협력의 결과였습니다."
+    },
+    {
+        "day": 9,
+        "no": 73,
+        "word": "consecutive",
+        "meaning": "연속적인",
+        "targetScore": 800,
+        "exampleEn": "We had five consecutive days of rain.",
+        "exampleKo": "5일 연속으로 비가 왔습니다."
+    },
+    {
+        "day": 9,
+        "no": 74,
+        "word": "consequently",
+        "meaning": "그 결과, 따라서",
+        "targetScore": 800,
+        "exampleEn": "It rained, and consequently the match was canceled.",
+        "exampleKo": "비가 왔고, 그 결과 경기가 취소되었습니다."
+    },
+    {
+        "day": 9,
+        "no": 75,
+        "word": "considerable",
+        "meaning": "상당한",
+        "targetScore": 800,
+        "exampleEn": "We spent a considerable amount of time on this.",
+        "exampleKo": "우리는 이것에 상당한 시간을 보냈습니다."
+    },
+    {
+        "day": 9,
+        "no": 76,
+        "word": "considerably",
+        "meaning": "상당히",
+        "targetScore": 800,
+        "exampleEn": "The situation has improved considerably.",
+        "exampleKo": "상황이 상당히 개선되었습니다."
+    },
+    {
+        "day": 9,
+        "no": 77,
+        "word": "contribute",
+        "meaning": "기여하다",
+        "targetScore": 800,
+        "exampleEn": "Everyone contributed to the discussion.",
+        "exampleKo": "모두가 토론에 기여했습니다."
+    },
+    {
+        "day": 9,
+        "no": 78,
+        "word": "contribution",
+        "meaning": "기여, 공헌",
+        "targetScore": 800,
+        "exampleEn": "We appreciate your contribution.",
+        "exampleKo": "당신의 공헌에 감사드립니다."
+    },
+    {
+        "day": 9,
+        "no": 79,
+        "word": "correspond",
+        "meaning": "일치하다; 서신을 주고받다",
+        "targetScore": 800,
+        "exampleEn": "Her story corresponds with the facts.",
+        "exampleKo": "그녀의 이야기는 사실과 일치합니다."
+    },
+    {
+        "day": 9,
+        "no": 80,
+        "word": "cost",
+        "meaning": "비용; 비용이 들다",
+        "targetScore": 800,
+        "exampleEn": "The cost of living is rising.",
+        "exampleKo": "생활비가 오르고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 81,
+        "word": "costly",
+        "meaning": "비싼, 손실이 큰",
+        "targetScore": 800,
+        "exampleEn": "Legal advice can be costly.",
+        "exampleKo": "법률 자문은 비용이 많이 들 수 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 82,
+        "word": "decline",
+        "meaning": "하락하다, 거절하다",
+        "targetScore": 800,
+        "exampleEn": "Support for the government continued to decline.",
+        "exampleKo": "정부에 대한 지지는 계속 하락했습니다."
+    },
+    {
+        "day": 9,
+        "no": 83,
+        "word": "decrease",
+        "meaning": "감소하다; 감소",
+        "targetScore": 800,
+        "exampleEn": "Crime has decreased in the area.",
+        "exampleKo": "그 지역의 범죄가 감소했습니다."
+    },
+    {
+        "day": 9,
+        "no": 84,
+        "word": "demonstrate",
+        "meaning": "보여주다, 입증하다",
+        "targetScore": 800,
+        "exampleEn": "The demo demonstrated the software's capabilities.",
+        "exampleKo": "데모는 소프트웨어의 기능을 보여주었습니다."
+    },
+    {
+        "day": 9,
+        "no": 85,
+        "word": "development",
+        "meaning": "개발, 발전",
+        "targetScore": 800,
+        "exampleEn": "Urban development is increasing.",
+        "exampleKo": "도시 개발이 증가하고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 86,
+        "word": "diminish",
+        "meaning": "줄어들다, 약화시키다",
+        "targetScore": 800,
+        "exampleEn": "His influence diminished over time.",
+        "exampleKo": "그의 영향력은 시간이 지남에 따라 줄어들었습니다."
+    },
+    {
+        "day": 9,
+        "no": 87,
+        "word": "distribute",
+        "meaning": "분배하다, 유통하다",
+        "targetScore": 800,
+        "exampleEn": "The company distributes products globally.",
+        "exampleKo": "그 회사는 제품을 전 세계적으로 유통합니다."
+    },
+    {
+        "day": 9,
+        "no": 88,
+        "word": "distribution",
+        "meaning": "분배, 유통",
+        "targetScore": 800,
+        "exampleEn": "The distribution network is efficient.",
+        "exampleKo": "유통 네트워크는 효율적입니다."
+    },
+    {
+        "day": 9,
+        "no": 89,
+        "word": "dominant",
+        "meaning": "지배적인, 우세한",
+        "targetScore": 800,
+        "exampleEn": "It is the dominant species in the area.",
+        "exampleKo": "그것은 그 지역의 우세종입니다."
+    },
+    {
+        "day": 9,
+        "no": 90,
+        "word": "dramatic",
+        "meaning": "극적인",
+        "targetScore": 800,
+        "exampleEn": "There was a dramatic change in the weather.",
+        "exampleKo": "날씨에 극적인 변화가 있었습니다."
+    },
+    {
+        "day": 9,
+        "no": 91,
+        "word": "dramatically",
+        "meaning": "극적으로",
+        "targetScore": 800,
+        "exampleEn": "The landscape has changed dramatically.",
+        "exampleKo": "풍경이 극적으로 변했습니다."
+    },
+    {
+        "day": 9,
+        "no": 92,
+        "word": "economize",
+        "meaning": "절약하다",
+        "targetScore": 800,
+        "exampleEn": "We need to economize on fuel.",
+        "exampleKo": "우리는 연료를 절약해야 합니다."
+    },
+    {
+        "day": 9,
+        "no": 93,
+        "word": "encourage",
+        "meaning": "장려하다",
+        "targetScore": 800,
+        "exampleEn": "We encourage creativity in the workplace.",
+        "exampleKo": "우리는 직장에서의 창의성을 장려합니다."
+    },
+    {
+        "day": 9,
+        "no": 94,
+        "word": "encouraging",
+        "meaning": "고무적인, 유망한",
+        "targetScore": 800,
+        "exampleEn": "The news is very encouraging.",
+        "exampleKo": "그 소식은 매우 고무적입니다."
+    },
+    {
+        "day": 9,
+        "no": 95,
+        "word": "evening",
+        "meaning": "저녁",
+        "targetScore": 800,
+        "exampleEn": "We went out for the evening.",
+        "exampleKo": "우리는 저녁에 외출했습니다."
+    },
+    {
+        "day": 9,
+        "no": 96,
+        "word": "evidence",
+        "meaning": "증거",
+        "targetScore": 800,
+        "exampleEn": "The police found new evidence.",
+        "exampleKo": "경찰은 새로운 증거를 발견했습니다."
+    },
+    {
+        "day": 9,
+        "no": 97,
+        "word": "evident",
+        "meaning": "분명한",
+        "targetScore": 800,
+        "exampleEn": "It was evident that she was unhappy.",
+        "exampleKo": "그녀가 불행하다는 것은 분명했습니다."
+    },
+    {
+        "day": 9,
+        "no": 98,
+        "word": "evidently",
+        "meaning": "분명히",
+        "targetScore": 800,
+        "exampleEn": "Evidently, he was mistaken.",
+        "exampleKo": "분명히 그가 잘못 알았습니다."
+    },
+    {
+        "day": 9,
+        "no": 99,
+        "word": "expect",
+        "meaning": "예상하다",
+        "targetScore": 800,
+        "exampleEn": "We expect a large turnout.",
+        "exampleKo": "우리는 많은 참가자를 예상합니다."
+    },
+    {
+        "day": 9,
+        "no": 100,
+        "word": "expectation",
+        "meaning": "예상, 기대",
+        "targetScore": 800,
+        "exampleEn": "The reality fell short of expectations.",
+        "exampleKo": "현실은 기대에 미치지 못했습니다."
+    },
+    {
+        "day": 9,
+        "no": 101,
+        "word": "figure",
+        "meaning": "수치; 인물",
+        "targetScore": 800,
+        "exampleEn": "The unemployment figures are down.",
+        "exampleKo": "실업률 수치가 내려갔습니다."
+    },
+    {
+        "day": 9,
+        "no": 102,
+        "word": "fluctuation",
+        "meaning": "변동",
+        "targetScore": 800,
+        "exampleEn": "There are minor fluctuations in temperature.",
+        "exampleKo": "기온에 약간의 변동이 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 103,
+        "word": "forecast",
+        "meaning": "예측, 예보",
+        "targetScore": 800,
+        "exampleEn": "The economic forecast is gloomy.",
+        "exampleKo": "경제 전망이 암울합니다."
+    },
+    {
+        "day": 9,
+        "no": 104,
+        "word": "imply",
+        "meaning": "암시하다",
+        "targetScore": 800,
+        "exampleEn": "Are you implying that I am lying?",
+        "exampleKo": "제가 거짓말을 하고 있다고 암시하는 건가요?"
+    },
+    {
+        "day": 9,
+        "no": 105,
+        "word": "increase",
+        "meaning": "증가하다; 증가",
+        "targetScore": 800,
+        "exampleEn": "The population has increased.",
+        "exampleKo": "인구가 증가했습니다."
+    },
+    {
+        "day": 9,
+        "no": 106,
+        "word": "increasingly",
+        "meaning": "점점 더",
+        "targetScore": 800,
+        "exampleEn": "It is becoming increasingly difficult.",
+        "exampleKo": "점점 더 어려워지고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 107,
+        "word": "indicate",
+        "meaning": "나타내다, 가리키다",
+        "targetScore": 800,
+        "exampleEn": "A red light indicates danger.",
+        "exampleKo": "빨간 불은 위험을 나타냅니다."
+    },
+    {
+        "day": 9,
+        "no": 108,
+        "word": "indication",
+        "meaning": "징후, 암시",
+        "targetScore": 800,
+        "exampleEn": "There is no indication of fraud.",
+        "exampleKo": "사기의 징후는 없습니다."
+    },
+    {
+        "day": 9,
+        "no": 109,
+        "word": "indicator",
+        "meaning": "지표",
+        "targetScore": 800,
+        "exampleEn": "This is a key economic indicator.",
+        "exampleKo": "이것은 주요 경제 지표입니다."
+    },
+    {
+        "day": 9,
+        "no": 110,
+        "word": "industrial",
+        "meaning": "산업의",
+        "targetScore": 800,
+        "exampleEn": "This is an industrial area.",
+        "exampleKo": "이곳은 산업 지역입니다."
+    },
+    {
+        "day": 9,
+        "no": 111,
+        "word": "industrious",
+        "meaning": "부지런한, 근면한",
+        "targetScore": 800,
+        "exampleEn": "He is an industrious student.",
+        "exampleKo": "그는 부지런한 학생입니다."
+    },
+    {
+        "day": 9,
+        "no": 112,
+        "word": "industry",
+        "meaning": "산업",
+        "targetScore": 800,
+        "exampleEn": "The tourism industry is growing.",
+        "exampleKo": "관광 산업이 성장하고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 113,
+        "word": "leading",
+        "meaning": "선도적인, 주요한",
+        "targetScore": 800,
+        "exampleEn": "The leading cause of death is heart disease.",
+        "exampleKo": "주요 사망 원인은 심장병입니다."
+    },
+    {
+        "day": 9,
+        "no": 114,
+        "word": "likely",
+        "meaning": "가능성 있는",
+        "targetScore": 800,
+        "exampleEn": "The most likely outcome is a draw.",
+        "exampleKo": "가장 가능성 있는 결과는 무승부입니다."
+    },
+    {
+        "day": 9,
+        "no": 115,
+        "word": "locate",
+        "meaning": "위치하다; 찾아내다",
+        "targetScore": 800,
+        "exampleEn": "Can you locate the town on the map?",
+        "exampleKo": "지도에서 그 마을을 찾을 수 있습니까?"
+    },
+    {
+        "day": 9,
+        "no": 116,
+        "word": "merge",
+        "meaning": "합병하다",
+        "targetScore": 800,
+        "exampleEn": "The two banks merged last year.",
+        "exampleKo": "두 은행은 작년에 합병했습니다."
+    },
+    {
+        "day": 9,
+        "no": 117,
+        "word": "merger",
+        "meaning": "합병",
+        "targetScore": 800,
+        "exampleEn": "The merger created the world's largest company.",
+        "exampleKo": "합병으로 세계 최대 기업이 탄생했습니다."
+    },
+    {
+        "day": 9,
+        "no": 118,
+        "word": "operation",
+        "meaning": "사업, 운영",
+        "targetScore": 800,
+        "exampleEn": "The operation was a success.",
+        "exampleKo": "작전은 성공이었습니다."
+    },
+    {
+        "day": 9,
+        "no": 119,
+        "word": "optimistic",
+        "meaning": "낙관적인",
+        "targetScore": 800,
+        "exampleEn": "I am optimistic about the future.",
+        "exampleKo": "나는 미래에 대해 낙관적입니다."
+    },
+    {
+        "day": 9,
+        "no": 120,
+        "word": "outlook",
+        "meaning": "전망",
+        "targetScore": 800,
+        "exampleEn": "The economic outlook is uncertain.",
+        "exampleKo": "경제 전망이 불확실합니다."
+    },
+    {
+        "day": 9,
+        "no": 121,
+        "word": "overall",
+        "meaning": "전체적인; 전반적으로",
+        "targetScore": 800,
+        "exampleEn": "The overall effect was impressive.",
+        "exampleKo": "전반적인 효과는 인상적이었습니다."
+    },
+    {
+        "day": 9,
+        "no": 122,
+        "word": "particular",
+        "meaning": "특정한",
+        "targetScore": 800,
+        "exampleEn": "pay attention to this particular detail.",
+        "exampleKo": "이 특정 세부 사항에 주의하십시오."
+    },
+    {
+        "day": 9,
+        "no": 123,
+        "word": "particularly",
+        "meaning": "특히",
+        "targetScore": 800,
+        "exampleEn": "The food was particularly good.",
+        "exampleKo": "음식이 특히 좋았습니다."
+    },
+    {
+        "day": 9,
+        "no": 124,
+        "word": "plan",
+        "meaning": "계획; 계획하다",
+        "targetScore": 800,
+        "exampleEn": "Everything went according to plan.",
+        "exampleKo": "모든 것이 계획대로 진행되었습니다."
+    },
+    {
+        "day": 9,
+        "no": 125,
+        "word": "potential",
+        "meaning": "잠재력; 잠재적인",
+        "targetScore": 800,
+        "exampleEn": "She has great potential.",
+        "exampleKo": "그녀는 큰 잠재력을 가지고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 126,
+        "word": "predict",
+        "meaning": "예측하다",
+        "targetScore": 800,
+        "exampleEn": "It is hard to predict the weather.",
+        "exampleKo": "날씨를 예측하기 어렵습니다."
+    },
+    {
+        "day": 9,
+        "no": 127,
+        "word": "produce",
+        "meaning": "생산하다; 농산물",
+        "targetScore": 800,
+        "exampleEn": "The factory produces cars.",
+        "exampleKo": "그 공장은 자동차를 생산합니다."
+    },
+    {
+        "day": 9,
+        "no": 128,
+        "word": "product",
+        "meaning": "제품",
+        "targetScore": 800,
+        "exampleEn": "We stand behind our product.",
+        "exampleKo": "우리는 우리 제품을 보증합니다."
+    },
+    {
+        "day": 9,
+        "no": 129,
+        "word": "production",
+        "meaning": "생산",
+        "targetScore": 800,
+        "exampleEn": "Production has stopped.",
+        "exampleKo": "생산이 중단되었습니다."
+    },
+    {
+        "day": 9,
+        "no": 130,
+        "word": "productive",
+        "meaning": "생산적인",
+        "targetScore": 800,
+        "exampleEn": "He had a productive day.",
+        "exampleKo": "그는 생산적인 하루를 보냈습니다."
+    },
+    {
+        "day": 9,
+        "no": 131,
+        "word": "projection",
+        "meaning": "예상, 투영",
+        "targetScore": 800,
+        "exampleEn": "Sales projections are optimistic.",
+        "exampleKo": "매출 예상치는 낙관적입니다."
+    },
+    {
+        "day": 9,
+        "no": 132,
+        "word": "promote",
+        "meaning": "홍보하다, 승진시키다",
+        "targetScore": 800,
+        "exampleEn": "He was promoted to manager.",
+        "exampleKo": "그는 매니저로 승진했습니다."
+    },
+    {
+        "day": 9,
+        "no": 133,
+        "word": "promotion",
+        "meaning": "승진, 홍보",
+        "targetScore": 800,
+        "exampleEn": "She got a promotion.",
+        "exampleKo": "그녀는 승진했습니다."
+    },
+    {
+        "day": 9,
+        "no": 134,
+        "word": "rapid",
+        "meaning": "빠른",
+        "targetScore": 800,
+        "exampleEn": "There was a rapid increase in sales.",
+        "exampleKo": "매출이 급증했습니다."
+    },
+    {
+        "day": 9,
+        "no": 135,
+        "word": "rapidly",
+        "meaning": "빠르게",
+        "targetScore": 800,
+        "exampleEn": "The disease is spreading rapidly.",
+        "exampleKo": "질병이 빠르게 퍼지고 있습니다."
+    },
+    {
+        "day": 9,
+        "no": 136,
+        "word": "reduce",
+        "meaning": "줄이다",
+        "targetScore": 800,
+        "exampleEn": "We need to reduce costs.",
+        "exampleKo": "우리는 비용을 줄여야 합니다."
+    }
+]

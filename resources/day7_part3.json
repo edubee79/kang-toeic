@@ -1,0 +1,614 @@
+[
+  {
+    "day": 7,
+    "no": 69,
+    "word": "appealing",
+    "meaning": "호소하는,매력적인",
+    "targetScore": 800,
+    "exampleEn": "The new packaging design is visually appealing to consumers.",
+    "exampleKo": "새로운 포장 디자인은 소비자들에게 시각적으로 매력적입니다."
+  },
+  {
+    "day": 7,
+    "no": 70,
+    "word": "at once",
+    "meaning": "즉시,동시에",
+    "targetScore": 800,
+    "exampleEn": "Please submit all required documents at once to expedite processing.",
+    "exampleKo": "처리를 신속하게 하기 위해 모든 필수 서류를 즉시(한꺼번에) 제출해 주십시오."
+  },
+  {
+    "day": 7,
+    "no": 71,
+    "word": "definite",
+    "meaning": "분명한,명확한",
+    "targetScore": 800,
+    "exampleEn": "We cannot give a definite answer until the budget is approved.",
+    "exampleKo": "예산이 승인될 때까지는 확답을 드릴 수 없습니다."
+  },
+  {
+    "day": 7,
+    "no": 72,
+    "word": "distinguish",
+    "meaning": "구별하다",
+    "targetScore": 800,
+    "exampleEn": "It is difficult to distinguish the original from the copy.",
+    "exampleKo": "원본과 사본을 구별하기 어렵습니다."
+  },
+  {
+    "day": 7,
+    "no": 73,
+    "word": "extraordinary",
+    "meaning": "이례적인,훌륭한",
+    "targetScore": 800,
+    "exampleEn": "The chef showed extraordinary culinary skills at the banquet.",
+    "exampleKo": "그 쉐프는 연회에서 이례적으로 훌륭한 요리 솜씨를 보여주었습니다."
+  },
+  {
+    "day": 7,
+    "no": 74,
+    "word": "good for",
+    "meaning": "~에 유용한,좋은",
+    "targetScore": 800,
+    "exampleEn": "This voucher is good for one complimentary meal at the cafeteria.",
+    "exampleKo": "이 상품권은 구내식당에서 무료 식사 1회에 유효합니다."
+  },
+  {
+    "day": 7,
+    "no": 75,
+    "word": "in bloom",
+    "meaning": "(꽃이)핀",
+    "targetScore": 800,
+    "exampleEn": "The landscaping is beautiful when the flowers are in bloom.",
+    "exampleKo": "꽃이 만개했을 때 조경이 아름답습니다. (Part 7 시설 묘사)"
+  },
+  {
+    "day": 7,
+    "no": 76,
+    "word": "in reference to",
+    "meaning": "~에 관하여,~과 관련하여",
+    "targetScore": 800,
+    "exampleEn": "I am writing in reference to the job opening posted on your website.",
+    "exampleKo": "귀하의 웹사이트에 게시된 채용 공고와 관련하여 이 글을 씁니다."
+  },
+  {
+    "day": 7,
+    "no": 77,
+    "word": "market stall",
+    "meaning": "시장 가판대",
+    "targetScore": 800,
+    "exampleEn": "Local vendors sell fresh produce at the market stall.",
+    "exampleKo": "지역 상인들이 시장 가판대에서 신선한 농산물을 팝니다."
+  },
+  {
+    "day": 7,
+    "no": 78,
+    "word": "mechanism",
+    "meaning": "기계 장치,메커니즘",
+    "targetScore": 800,
+    "exampleEn": "The printer's paper feed mechanism needs repair.",
+    "exampleKo": "프린터의 종이 급지 장치(메커니즘)에 수리가 필요합니다."
+  },
+  {
+    "day": 7,
+    "no": 79,
+    "word": "metropolitan area",
+    "meaning": "대도시 지역",
+    "targetScore": 800,
+    "exampleEn": "We provide delivery services throughout the metropolitan area.",
+    "exampleKo": "우리는 대도시 지역 전역에 배송 서비스를 제공합니다."
+  },
+  {
+    "day": 7,
+    "no": 80,
+    "word": "national holiday",
+    "meaning": "국경일",
+    "targetScore": 800,
+    "exampleEn": "The office will be closed on Monday in observance of a national holiday.",
+    "exampleKo": "국경일을 준수하여 월요일에 사무실 문을 닫을 것입니다."
+  },
+  {
+    "day": 7,
+    "no": 81,
+    "word": "on schedule",
+    "meaning": "예정대로,시간표대로",
+    "targetScore": 800,
+    "exampleEn": "Everything is proceeding on schedule for the product launch.",
+    "exampleKo": "제품 출시를 위해 모든 것이 예정대로 진행되고 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 82,
+    "word": "over the Internet",
+    "meaning": "인터넷을 통해",
+    "targetScore": 800,
+    "exampleEn": "Customers can conveniently pay bills over the Internet.",
+    "exampleKo": "고객들은 인터넷을 통해 편리하게 요금을 납부할 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 83,
+    "word": "preview",
+    "meaning": "예고편,시사회",
+    "targetScore": 800,
+    "exampleEn": "Journalists were invited to a preview of the new exhibition.",
+    "exampleKo": "기자들이 새 전시회의 시사회에 초대되었습니다."
+  },
+  {
+    "day": 7,
+    "no": 84,
+    "word": "public display",
+    "meaning": "공개 전시",
+    "targetScore": 800,
+    "exampleEn": "The architectural model is on public display in the lobby.",
+    "exampleKo": "건축 모형이 로비에 공개 전시되어 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 85,
+    "word": "run a campaign",
+    "meaning": "캠페인을 벌이다",
+    "targetScore": 800,
+    "exampleEn": "We will run a campaign to promote energy conservation.",
+    "exampleKo": "우리는 에너지 절약을 장려하기 위한 캠페인을 벌일 것입니다."
+  },
+  {
+    "day": 7,
+    "no": 86,
+    "word": "serve a customer",
+    "meaning": "손님을 상대하다",
+    "targetScore": 800,
+    "exampleEn": "All clerks are currently busy serving customers.",
+    "exampleKo": "모든 점원이 현재 손님을 응대하느라 바쁩니다."
+  },
+  {
+    "day": 7,
+    "no": 87,
+    "word": "spouse",
+    "meaning": "배우자",
+    "targetScore": 800,
+    "exampleEn": "The invitation extends to employees and their spouses.",
+    "exampleKo": "초대는 직원들과 그 배우자들에게까지 확대됩니다."
+  },
+  {
+    "day": 7,
+    "no": 88,
+    "word": "upside down",
+    "meaning": "거꾸로,뒤집혀",
+    "targetScore": 800,
+    "exampleEn": "Please ensure the shipping crate is not placed upside down.",
+    "exampleKo": "배송 상자가 거꾸로 놓이지 않도록 해 주십시오."
+  },
+  {
+    "day": 7,
+    "no": 89,
+    "word": "vending machine",
+    "meaning": "자동판매기",
+    "targetScore": 800,
+    "exampleEn": "Beverages are available from the vending machine in the hallway.",
+    "exampleKo": "음료는 복도에 있는 자동판매기에서 이용 가능합니다."
+  },
+  {
+    "day": 7,
+    "no": 90,
+    "word": "visible",
+    "meaning": "보이는,알아볼 수 있는",
+    "targetScore": 800,
+    "exampleEn": "ID badges must be clearly visible at all times.",
+    "exampleKo": "ID 배지는 항상 명확하게 보여야 합니다."
+  },
+  {
+    "day": 7,
+    "no": 91,
+    "word": "as opposed to",
+    "meaning": "~과는 대조적으로",
+    "targetScore": 800,
+    "exampleEn": "We focused on quality as opposed to quantity.",
+    "exampleKo": "우리는 양과는 대조적으로 질에 집중했습니다."
+  },
+  {
+    "day": 7,
+    "no": 92,
+    "word": "boldly",
+    "meaning": "대담하게",
+    "targetScore": 800,
+    "exampleEn": "The CEO boldly announced a plan to acquire the competitor.",
+    "exampleKo": "CEO는 경쟁사를 인수할 계획을 대담하게 발표했습니다."
+  },
+  {
+    "day": 7,
+    "no": 93,
+    "word": "call on",
+    "meaning": "~를 방문하다,부르다",
+    "targetScore": 800,
+    "exampleEn": "We may call on external consultants for specialized advice.",
+    "exampleKo": "우리는 전문적인 조언을 위해 외부 컨설턴트를 부를(요청할) 수도 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 94,
+    "word": "excluding",
+    "meaning": "~을 제외하고",
+    "targetScore": 800,
+    "exampleEn": "The quoted price is $200, excluding shipping charges.",
+    "exampleKo": "견적가는 배송비를 제외하고 200달러입니다."
+  },
+  {
+    "day": 7,
+    "no": 95,
+    "word": "expectancy",
+    "meaning": "기대,예상",
+    "targetScore": 800,
+    "exampleEn": "Improvements in healthcare have raised life expectancy.",
+    "exampleKo": "의료 서비스의 개선이 기대 수명을 높였습니다."
+  },
+  {
+    "day": 7,
+    "no": 96,
+    "word": "forgetfully",
+    "meaning": "깜빡 잊어서,소홀하게도",
+    "targetScore": 800,
+    "exampleEn": "He forgetfully omitted the attachment from the email.",
+    "exampleKo": "그는 깜빡 잊고 이메일에서 첨부 파일을 빠뜨렸습니다."
+  },
+  {
+    "day": 7,
+    "no": 97,
+    "word": "noteworthy",
+    "meaning": "주목할 만한",
+    "targetScore": 800,
+    "exampleEn": "There has been a noteworthy increase in online sales.",
+    "exampleKo": "온라인 판매에 있어 주목할 만한 증가가 있었습니다."
+  },
+  {
+    "day": 7,
+    "no": 98,
+    "word": "perception",
+    "meaning": "인식,지각",
+    "targetScore": 800,
+    "exampleEn": "We want to change the public perception of our brand.",
+    "exampleKo": "우리는 우리 브랜드에 대한 대중의 인식을 바꾸고 싶습니다."
+  },
+  {
+    "day": 7,
+    "no": 99,
+    "word": "potentially",
+    "meaning": "가능성 있게,잠재적으로",
+    "targetScore": 800,
+    "exampleEn": "The new regulations are potentially damaging to small businesses.",
+    "exampleKo": "새로운 규정은 소기업들에게 잠재적으로 해로울 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 100,
+    "word": "a complete line of",
+    "meaning": "~의 전 제품",
+    "targetScore": 800,
+    "exampleEn": "We stock a complete line of office supplies.",
+    "exampleKo": "우리는 사무용품 전 제품 라인을 갖추고 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 101,
+    "word": "accept the offer",
+    "meaning": "제안을 수락하다",
+    "targetScore": 800,
+    "exampleEn": "Ms. Lee was happy to accept the job offer.",
+    "exampleKo": "이 씨는 일자리 제안을 수락하게 되어 기뻐했습니다."
+  },
+  {
+    "day": 7,
+    "no": 102,
+    "word": "astonishingly",
+    "meaning": "놀랍게도",
+    "targetScore": 800,
+    "exampleEn": "The technology has advanced astonishingly fast.",
+    "exampleKo": "기술은 놀라울 정도로 빠르게 발전했습니다."
+  },
+  {
+    "day": 7,
+    "no": 103,
+    "word": "be noted for",
+    "meaning": "~으로 유명하다",
+    "targetScore": 800,
+    "exampleEn": "The hotel is noted for its exceptional service.",
+    "exampleKo": "그 호텔은 탁월한 서비스로 유명합니다."
+  },
+  {
+    "day": 7,
+    "no": 104,
+    "word": "claim",
+    "meaning": "(사실·소유권의)주장,요구,청구",
+    "targetScore": 800,
+    "exampleEn": "You must submit a claim for reimbursement within 30 days.",
+    "exampleKo": "30일 이내에 상환 청구서를 제출해야 합니다."
+  },
+  {
+    "day": 7,
+    "no": 105,
+    "word": "classified ad",
+    "meaning": "짧은 신문 광고",
+    "targetScore": 800,
+    "exampleEn": "We placed a classified ad to hire part-time staff.",
+    "exampleKo": "우리는 아르바이트 직원을 고용하기 위해 짧은 신문 광고(분류 광고)를 냈습니다."
+  },
+  {
+    "day": 7,
+    "no": 106,
+    "word": "compilation",
+    "meaning": "편집,편집물",
+    "targetScore": 800,
+    "exampleEn": "The report is a compilation of data from various sources.",
+    "exampleKo": "그 보고서는 다양한 출처의 데이터 편집물입니다."
+  },
+  {
+    "day": 7,
+    "no": 107,
+    "word": "comprehensible",
+    "meaning": "이해할 수 있는,알기 쉬운",
+    "targetScore": 800,
+    "exampleEn": "The legal terms should be made comprehensible to laypeople.",
+    "exampleKo": "법률 용어는 비전문가도 이해할 수 있게 만들어져야 합니다."
+  },
+  {
+    "day": 7,
+    "no": 108,
+    "word": "criticize",
+    "meaning": "비평하다,비난하다",
+    "targetScore": 800,
+    "exampleEn": "Industry experts criticized the hasty decision.",
+    "exampleKo": "업계 전문가들은 그 성급한 결정을 비판했습니다."
+  },
+  {
+    "day": 7,
+    "no": 109,
+    "word": "dumping",
+    "meaning": "덤핑(투매)",
+    "targetScore": 800,
+    "exampleEn": "The company was accused of illegal dumping of waste.",
+    "exampleKo": "그 회사는 불법 폐기물 투기(덤핑)로 고발당했습니다."
+  },
+  {
+    "day": 7,
+    "no": 110,
+    "word": "first priority",
+    "meaning": "최우선 사항",
+    "targetScore": 800,
+    "exampleEn": "Customer satisfaction is our first priority.",
+    "exampleKo": "고객 만족은 우리의 최우선 사항입니다."
+  },
+  {
+    "day": 7,
+    "no": 111,
+    "word": "fixed price",
+    "meaning": "정가",
+    "targetScore": 800,
+    "exampleEn": "The contract offers services at a fixed price.",
+    "exampleKo": "그 계약은 정가(고정 가격)로 서비스를 제공합니다."
+  },
+  {
+    "day": 7,
+    "no": 112,
+    "word": "have control over",
+    "meaning": "~을 제어하다",
+    "targetScore": 800,
+    "exampleEn": "Managers have control over the department budget.",
+    "exampleKo": "관리자들은 부서 예산에 대한 통제권을 가집니다."
+  },
+  {
+    "day": 7,
+    "no": 113,
+    "word": "have little chance of -ing",
+    "meaning": "~할 확률이 적다",
+    "targetScore": 800,
+    "exampleEn": "There is little chance of recovering the lost data.",
+    "exampleKo": "손실된 데이터를 복구할 확률은 거의 없습니다."
+  },
+  {
+    "day": 7,
+    "no": 114,
+    "word": "in favor of",
+    "meaning": "~에 찬성하여, ~에 이익이 되도록",
+    "targetScore": 800,
+    "exampleEn": " The board voted in favor of the merger proposal.",
+    "exampleKo": "이사회는 합병 제안에 찬성하여 투표했습니다."
+  },
+  {
+    "day": 7,
+    "no": 115,
+    "word": "keep A informed of B",
+    "meaning": "A에게 B에 대해 알려주다",
+    "targetScore": 800,
+    "exampleEn": "Please keep us informed of the project's status.",
+    "exampleKo": "프로젝트 현황에 대해 계속 알려주십시오."
+  },
+  {
+    "day": 7,
+    "no": 116,
+    "word": "make an assessment",
+    "meaning": "평가를 내리다",
+    "targetScore": 800,
+    "exampleEn": "The auditor will make an assessment of the financial records.",
+    "exampleKo": "감사관이 재무 기록에 대한 평가를 내릴 것입니다."
+  },
+  {
+    "day": 7,
+    "no": 117,
+    "word": "mediate",
+    "meaning": "중재하다",
+    "targetScore": 800,
+    "exampleEn": "The negotiator attempted to mediate the labor dispute.",
+    "exampleKo": "협상가는 노사 분쟁을 중재하려고 시도했습니다."
+  },
+  {
+    "day": 7,
+    "no": 118,
+    "word": "minimize the risk of",
+    "meaning": "~의 위험을 최소화하다",
+    "targetScore": 800,
+    "exampleEn": "We use secure servers to minimize the risk of data theft.",
+    "exampleKo": "우리는 데이터 도난 위험을 최소화하기 위해 보안 서버를 사용합니다."
+  },
+  {
+    "day": 7,
+    "no": 119,
+    "word": "modestly",
+    "meaning": "겸손하게",
+    "targetScore": 800,
+    "exampleEn": "Profits increased modestly in the third quarter.",
+    "exampleKo": "3분기에 수익이 겸손하게(소폭) 증가했습니다."
+  },
+  {
+    "day": 7,
+    "no": 120,
+    "word": "persistent",
+    "meaning": "끊임없는,계속되는",
+    "targetScore": 800,
+    "exampleEn": "We faced persistent technical problems with the server.",
+    "exampleKo": "우리는 서버와 관련된 끊임없는 기술적 문제에 직면했습니다."
+  },
+  {
+    "day": 7,
+    "no": 121,
+    "word": "publicity",
+    "meaning": "선전,(대중매체의)관심",
+    "targetScore": 800,
+    "exampleEn": "The charity event generated a lot of positive publicity.",
+    "exampleKo": "그 자선 행사는 많은 긍정적인 선전(홍보) 효과를 냈습니다."
+  },
+  {
+    "day": 7,
+    "no": 122,
+    "word": "release date",
+    "meaning": "발표 일시",
+    "targetScore": 800,
+    "exampleEn": "The official release date has been postponed.",
+    "exampleKo": "공식 발표 일시가 연기되었습니다."
+  },
+  {
+    "day": 7,
+    "no": 123,
+    "word": "stay competitive",
+    "meaning": "경쟁력을 유지하다",
+    "targetScore": 800,
+    "exampleEn": "Companies must upgrade technology to stay competitive.",
+    "exampleKo": "기업들은 경쟁력을 유지하기 위해 기술을 업그레이드해야 합니다."
+  },
+  {
+    "day": 7,
+    "no": 124,
+    "word": "striking difference",
+    "meaning": "두드러지는 차이점",
+    "targetScore": 800,
+    "exampleEn": "There is a striking difference in their management styles.",
+    "exampleKo": "그들의 경영 스타일에는 두드러지는 차이점이 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 125,
+    "word": "take a long time",
+    "meaning": "오래걸리다",
+    "targetScore": 800,
+    "exampleEn": "Customizing the software may take a long time.",
+    "exampleKo": "소프트웨어를 커스터마이징하는 것은 오래 걸릴 수 있습니다."
+  },
+  {
+    "day": 7,
+    "no": 126,
+    "word": "take action",
+    "meaning": "조치를 취하다",
+    "targetScore": 800,
+    "exampleEn": "Management agreed to take action on the complaints.",
+    "exampleKo": "경영진은 불만 사항에 대해 조치를 취하기로 동의했습니다."
+  },
+  {
+    "day": 7,
+    "no": 127,
+    "word": "trademark",
+    "meaning": "상표",
+    "targetScore": 800,
+    "exampleEn": "Please do not infringe on our registered trademark.",
+    "exampleKo": "우리의 등록 상표를 침해하지 마십시오."
+  },
+  {
+    "day": 7,
+    "no": 128,
+    "word": "turn to",
+    "meaning": "~쪽으로 향하다,~에 의지하다",
+    "targetScore": 800,
+    "exampleEn": "Small businesses often turn to banks for financing.",
+    "exampleKo": "소기업들은 자금 조달을 위해 종종 은행에 의지합니다."
+  },
+  {
+    "day": 7,
+    "no": 129,
+    "word": "unacceptable",
+    "meaning": "받아들일 수 없는",
+    "targetScore": 800,
+    "exampleEn": "Such delays are unacceptable to our clients.",
+    "exampleKo": "그러한 지연은 우리 고객들이 받아들일 수 없습니다."
+  },
+  {
+    "day": 7,
+    "no": 130,
+    "word": "verify",
+    "meaning": "증명하다",
+    "targetScore": 800,
+    "exampleEn": "Please verify the shipment details before signing.",
+    "exampleKo": "서명하기 전에 배송 세부 사항을 확인(증명)해 주십시오."
+  },
+  {
+    "day": 7,
+    "no": 131,
+    "word": "with the exception of",
+    "meaning": "~을 제외하고",
+    "targetScore": 800,
+    "exampleEn": "The store is open daily with the exception of Sunday.",
+    "exampleKo": "그 가게는 일요일을 제외하고 매일 엽니다."
+  },
+  {
+    "day": 7,
+    "no": 132,
+    "word": "without notice",
+    "meaning": "예고 없이",
+    "targetScore": 800,
+    "exampleEn": "Rates are subject to change without notice.",
+    "exampleKo": "요금은 예고 없이 변경될 수 있습니다. (빈출 고지 문구)"
+  },
+  {
+    "day": 7,
+    "no": 133,
+    "word": "a piece of equipment",
+    "meaning": "장비 하나",
+    "targetScore": 800,
+    "exampleEn": "Protective gear is an essential piece of equipment.",
+    "exampleKo": "보호 장구는 필수적인 장비 하나입니다."
+  },
+  {
+    "day": 7,
+    "no": 134,
+    "word": "randomly",
+    "meaning": "임의로,무작위로",
+    "targetScore": 800,
+    "exampleEn": "Winners will be selected randomly from all entries.",
+    "exampleKo": "당첨자는 모든 참가작 중에서 무작위로 선정될 것입니다."
+  },
+  {
+    "day": 7,
+    "no": 135,
+    "word": "suitable",
+    "meaning": "적합한,알맞은",
+    "targetScore": 800,
+    "exampleEn": "The candidate is suitable for the managerial position.",
+    "exampleKo": "그 후보자는 관리직에 적합합니다."
+  },
+  {
+    "day": 7,
+    "no": 136,
+    "word": "all-out",
+    "meaning": "총력을 다한",
+    "targetScore": 800,
+    "exampleEn": "The company made an all-out effort to meet the deadline.",
+    "exampleKo": "회사는 마감 기한을 맞추기 위해 총력을 다했습니다."
+  }
+]

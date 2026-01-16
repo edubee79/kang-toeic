@@ -1,0 +1,254 @@
+[
+    {
+        "day": 17,
+        "no": 41,
+        "word": "distinctive",
+        "meaning": "독특한, 특유의",
+        "targetScore": 650,
+        "exampleEn": "A distinctive flavor.",
+        "exampleKo": "독특한 맛."
+    },
+    {
+        "day": 17,
+        "no": 42,
+        "word": "discreet",
+        "meaning": "신중한",
+        "targetScore": 650,
+        "exampleEn": "Be discreet about it.",
+        "exampleKo": "그것에 대해 신중하세요."
+    },
+    {
+        "day": 17,
+        "no": 43,
+        "word": "impose",
+        "meaning": "부과하다",
+        "targetScore": 650,
+        "exampleEn": "Impose a tax.",
+        "exampleKo": "세금을 부과하다."
+    },
+    {
+        "day": 17,
+        "no": 44,
+        "word": "imposition",
+        "meaning": "부과, 부담",
+        "targetScore": 650,
+        "exampleEn": "It is an imposition on my time.",
+        "exampleKo": "그것은 내 시간에 대한 부담입니다."
+    },
+    {
+        "day": 17,
+        "no": 45,
+        "word": "imbalance",
+        "meaning": "불균형",
+        "targetScore": 650,
+        "exampleEn": "Trade imbalance.",
+        "exampleKo": "무역 불균형."
+    },
+    {
+        "day": 17,
+        "no": 46,
+        "word": "inventory",
+        "meaning": "재고",
+        "targetScore": 650,
+        "exampleEn": "Take inventory.",
+        "exampleKo": "재고를 조사하세요."
+    },
+    {
+        "day": 17,
+        "no": 47,
+        "word": "leak",
+        "meaning": "새다; 누출",
+        "targetScore": 650,
+        "exampleEn": "The pipe is leaking.",
+        "exampleKo": "파이프가 새고 있습니다."
+    },
+    {
+        "day": 17,
+        "no": 48,
+        "word": "mistake",
+        "meaning": "실수; 실수하다",
+        "targetScore": 650,
+        "exampleEn": "Everyone makes mistakes.",
+        "exampleKo": "누구나 실수를 합니다."
+    },
+    {
+        "day": 17,
+        "no": 49,
+        "word": "monitor",
+        "meaning": "감시하다; 모니터",
+        "targetScore": 650,
+        "exampleEn": "Monitor the situation.",
+        "exampleKo": "상황을 감시하세요."
+    },
+    {
+        "day": 17,
+        "no": 50,
+        "word": "patience",
+        "meaning": "인내심",
+        "targetScore": 650,
+        "exampleEn": "Have patience.",
+        "exampleKo": "인내심을 가지세요."
+    },
+    {
+        "day": 17,
+        "no": 51,
+        "word": "perform",
+        "meaning": "수행하다",
+        "targetScore": 650,
+        "exampleEn": "Perform a task.",
+        "exampleKo": "업무를 수행하세요."
+    },
+    {
+        "day": 17,
+        "no": 52,
+        "word": "place",
+        "meaning": "두다, 놓다",
+        "targetScore": 650,
+        "exampleEn": "Place the order now.",
+        "exampleKo": "지금 주문하세요."
+    },
+    {
+        "day": 17,
+        "no": 53,
+        "word": "postal",
+        "meaning": "우편의",
+        "targetScore": 650,
+        "exampleEn": "Postal service.",
+        "exampleKo": "우편 서비스."
+    },
+    {
+        "day": 17,
+        "no": 54,
+        "word": "praise",
+        "meaning": "칭찬하다; 칭찬",
+        "targetScore": 650,
+        "exampleEn": "He praised her work.",
+        "exampleKo": "그는 그녀의 일을 칭찬했습니다."
+    },
+    {
+        "day": 17,
+        "no": 55,
+        "word": "prepare",
+        "meaning": "준비하다",
+        "targetScore": 650,
+        "exampleEn": "Prepare for the meeting.",
+        "exampleKo": "회의를 준비하세요."
+    },
+    {
+        "day": 17,
+        "no": 56,
+        "word": "provide",
+        "meaning": "제공하다",
+        "targetScore": 650,
+        "exampleEn": "Provide assistance.",
+        "exampleKo": "도움을 제공하세요."
+    },
+    {
+        "day": 17,
+        "no": 57,
+        "word": "rack",
+        "meaning": "선반, 걸이",
+        "targetScore": 650,
+        "exampleEn": "Put it on the rack.",
+        "exampleKo": "그것을 선반에 놓으세요."
+    },
+    {
+        "day": 17,
+        "no": 58,
+        "word": "receive",
+        "meaning": "받다",
+        "targetScore": 650,
+        "exampleEn": "Did you receive my email?",
+        "exampleKo": "내 이메일을 받았습니까?"
+    },
+    {
+        "day": 17,
+        "no": 59,
+        "word": "release",
+        "meaning": "공개하다, 출시하다",
+        "targetScore": 650,
+        "exampleEn": "Release the new model.",
+        "exampleKo": "새 모델을 출시하세요."
+    },
+    {
+        "day": 17,
+        "no": 60,
+        "word": "reply",
+        "meaning": "답장하다; 답장",
+        "targetScore": 650,
+        "exampleEn": "Reply to this message.",
+        "exampleKo": "이 메시지에 답장하세요."
+    },
+    {
+        "day": 17,
+        "no": 61,
+        "word": "request",
+        "meaning": "요청하다; 요청",
+        "targetScore": 650,
+        "exampleEn": "Submit a request.",
+        "exampleKo": "요청서를 제출하세요."
+    },
+    {
+        "day": 17,
+        "no": 62,
+        "word": "respond",
+        "meaning": "응답하다",
+        "targetScore": 650,
+        "exampleEn": "Respond quickly.",
+        "exampleKo": "신속하게 응답하세요."
+    },
+    {
+        "day": 17,
+        "no": 63,
+        "word": "return",
+        "meaning": "반납하다, 돌아오다",
+        "targetScore": 650,
+        "exampleEn": "Return the book.",
+        "exampleKo": "책을 반납하세요."
+    },
+    {
+        "day": 17,
+        "no": 64,
+        "word": "safe",
+        "meaning": "안전한; 금고",
+        "targetScore": 650,
+        "exampleEn": "It is safe to eat.",
+        "exampleKo": "먹어도 안전합니다."
+    },
+    {
+        "day": 17,
+        "no": 65,
+        "word": "ship",
+        "meaning": "배; 배송하다",
+        "targetScore": 650,
+        "exampleEn": "We ship worldwide.",
+        "exampleKo": "우리는 전 세계로 배송합니다."
+    },
+    {
+        "day": 17,
+        "no": 66,
+        "word": "store",
+        "meaning": "가게; 저장하다",
+        "targetScore": 650,
+        "exampleEn": "Store in a cool place.",
+        "exampleKo": "서늘한 곳에 보관하세요."
+    },
+    {
+        "day": 17,
+        "no": 67,
+        "word": "supply",
+        "meaning": "공급품; 공급하다",
+        "targetScore": 650,
+        "exampleEn": "Office supplies.",
+        "exampleKo": "사무용품."
+    },
+    {
+        "day": 17,
+        "no": 68,
+        "word": "throw away",
+        "meaning": "버리다",
+        "targetScore": 650,
+        "exampleEn": "Throw away the trash.",
+        "exampleKo": "쓰레기를 버리세요."
+    }
+]

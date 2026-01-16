@@ -1,0 +1,362 @@
+[
+    {
+        "day": 5,
+        "no": 1,
+        "word": "sophisticated",
+        "meaning": "정교한, 복잡한",
+        "targetScore": 650,
+        "exampleEn": "The new software is very sophisticated.",
+        "exampleKo": "새로운 소프트웨어는 매우 정교합니다."
+    },
+    {
+        "day": 5,
+        "no": 2,
+        "word": "timely",
+        "meaning": "시기적절한",
+        "targetScore": 650,
+        "exampleEn": "We appreciate your timely response.",
+        "exampleKo": "당신의 시기적절한 답변에 감사드립니다."
+    },
+    {
+        "day": 5,
+        "no": 3,
+        "word": "realistically",
+        "meaning": "현실적으로",
+        "targetScore": 650,
+        "exampleEn": "Realistically, we cannot finish by Friday.",
+        "exampleKo": "현실적으로, 우리는 금요일까지 끝낼 수 없습니다."
+    },
+    {
+        "day": 5,
+        "no": 4,
+        "word": "promptly",
+        "meaning": "즉시; 정각에",
+        "targetScore": 650,
+        "exampleEn": "The meeting started promptly at 9 AM.",
+        "exampleKo": "회의는 오전 9시 정각에 시작되었습니다."
+    },
+    {
+        "day": 5,
+        "no": 5,
+        "word": "accessible",
+        "meaning": "접근 가능한, 이용 가능한",
+        "targetScore": 650,
+        "exampleEn": "The building is accessible by wheelchair.",
+        "exampleKo": "그 건물은 휠체어로 접근 가능합니다."
+    },
+    {
+        "day": 5,
+        "no": 6,
+        "word": "implement",
+        "meaning": "시행하다, 이행하다",
+        "targetScore": 650,
+        "exampleEn": "We plan to implement the new policy next month.",
+        "exampleKo": "우리는 다음 달에 새 정책을 시행할 계획입니다."
+    },
+    {
+        "day": 5,
+        "no": 7,
+        "word": "feedback",
+        "meaning": "피드백, 의견",
+        "targetScore": 650,
+        "exampleEn": "We value customer feedback.",
+        "exampleKo": "우리는 고객의 의견을 소중하게 생각합니다."
+    },
+    {
+        "day": 5,
+        "no": 8,
+        "word": "outstanding",
+        "meaning": "우수한; (부채 등이) 미지불된",
+        "targetScore": 650,
+        "exampleEn": "He received an award for outstanding performance.",
+        "exampleKo": "그는 우수한 성과로 상을 받았습니다."
+    },
+    {
+        "day": 5,
+        "no": 9,
+        "word": "inform",
+        "meaning": "알리다",
+        "targetScore": 650,
+        "exampleEn": "Please inform us if you cannot attend.",
+        "exampleKo": "참석할 수 없다면 우리에게 알려주세요."
+    },
+    {
+        "day": 5,
+        "no": 10,
+        "word": "replacement",
+        "meaning": "교체, 후임자",
+        "targetScore": 650,
+        "exampleEn": "We are looking for a replacement for Mr. Jones.",
+        "exampleKo": "우리는 존스 씨의 후임자를 찾고 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 11,
+        "word": "announcement",
+        "meaning": "발표, 공고",
+        "targetScore": 650,
+        "exampleEn": "The CEO made an announcement about the merger.",
+        "exampleKo": "CEO는 합병에 대한 발표를 했습니다."
+    },
+    {
+        "day": 5,
+        "no": 12,
+        "word": "department",
+        "meaning": "부서",
+        "targetScore": 650,
+        "exampleEn": "She works in the accounting department.",
+        "exampleKo": "그녀는 회계 부서에서 일합니다."
+    },
+    {
+        "day": 5,
+        "no": 13,
+        "word": "permanently",
+        "meaning": "영구적으로",
+        "targetScore": 650,
+        "exampleEn": "The store is closing permanently.",
+        "exampleKo": "그 가게는 영구적으로 문을 닫습니다."
+    },
+    {
+        "day": 5,
+        "no": 14,
+        "word": "fulfill",
+        "meaning": "이행하다, 충족시키다",
+        "targetScore": 650,
+        "exampleEn": "We must fulfill our contractual obligations.",
+        "exampleKo": "우리는 계약상의 의무를 이행해야 합니다."
+    },
+    {
+        "day": 5,
+        "no": 15,
+        "word": "outline",
+        "meaning": "개요; 설명하다",
+        "targetScore": 650,
+        "exampleEn": "The proposal outlines the project goals.",
+        "exampleKo": "그 제안서는 프로젝트 목표의 개요를 설명합니다."
+    },
+    {
+        "day": 5,
+        "no": 16,
+        "word": "explain",
+        "meaning": "설명하다",
+        "targetScore": 650,
+        "exampleEn": "Can you explain how this works?",
+        "exampleKo": "이것이 어떻게 작동하는지 설명해 줄 수 있나요?"
+    },
+    {
+        "day": 5,
+        "no": 17,
+        "word": "contain",
+        "meaning": "포함하다",
+        "targetScore": 650,
+        "exampleEn": "The box contains fragile items.",
+        "exampleKo": "그 상자에는 깨지기 쉬운 물건들이 들어 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 18,
+        "word": "compile",
+        "meaning": "편집하다, 수집하다",
+        "targetScore": 650,
+        "exampleEn": "We compiled a list of potential clients.",
+        "exampleKo": "우리는 잠재 고객 목록을 수집했습니다."
+    },
+    {
+        "day": 5,
+        "no": 19,
+        "word": "subsequent",
+        "meaning": "그 다음의, 차후의",
+        "targetScore": 650,
+        "exampleEn": "Subsequent events proved him right.",
+        "exampleKo": "차후의 사건들이 그가 옳았음을 증명했습니다."
+    },
+    {
+        "day": 5,
+        "no": 20,
+        "word": "overview",
+        "meaning": "개요",
+        "targetScore": 650,
+        "exampleEn": "The manager gave a brief overview of the situation.",
+        "exampleKo": "매니저는 상황에 대한 간략한 개요를 설명했습니다."
+    },
+    {
+        "day": 5,
+        "no": 21,
+        "word": "provider",
+        "meaning": "공급자",
+        "targetScore": 650,
+        "exampleEn": "They are a leading internet service provider.",
+        "exampleKo": "그들은 선도적인 인터넷 서비스 공급자입니다."
+    },
+    {
+        "day": 5,
+        "no": 22,
+        "word": "matter",
+        "meaning": "문제, 일; 중요하다",
+        "targetScore": 650,
+        "exampleEn": "We need to discuss text matter.",
+        "exampleKo": "우리는 그 문제를 논의해야 합니다."
+    },
+    {
+        "day": 5,
+        "no": 23,
+        "word": "expertise",
+        "meaning": "전문 지식",
+        "targetScore": 650,
+        "exampleEn": "He has expertise in computer programming.",
+        "exampleKo": "그는 컴퓨터 프로그래밍에 전문 지식을 가지고 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 24,
+        "word": "demonstrate",
+        "meaning": "증명하다, 설명하다",
+        "targetScore": 650,
+        "exampleEn": "The salesman demonstrated how to use the device.",
+        "exampleKo": "판매원은 장치 사용법을 설명했습니다."
+    },
+    {
+        "day": 5,
+        "no": 25,
+        "word": "remainder",
+        "meaning": "나머지",
+        "targetScore": 650,
+        "exampleEn": "I will spend the remainder of the day at home.",
+        "exampleKo": "나는 하루의 나머지를 집에서 보낼 것입니다."
+    },
+    {
+        "day": 5,
+        "no": 26,
+        "word": "essential",
+        "meaning": "필수적인",
+        "targetScore": 650,
+        "exampleEn": "Water is essential for life.",
+        "exampleKo": "물은 생명에 필수적입니다."
+    },
+    {
+        "day": 5,
+        "no": 27,
+        "word": "divide",
+        "meaning": "나누다",
+        "targetScore": 650,
+        "exampleEn": "The class was divided into groups.",
+        "exampleKo": "학급은 그룹으로 나뉘었습니다."
+    },
+    {
+        "day": 5,
+        "no": 28,
+        "word": "major",
+        "meaning": "주요한",
+        "targetScore": 650,
+        "exampleEn": "Unemployment is a major problem.",
+        "exampleKo": "실업은 주요한 문제입니다."
+    },
+    {
+        "day": 5,
+        "no": 29,
+        "word": "compliance",
+        "meaning": "준수",
+        "targetScore": 650,
+        "exampleEn": "Compliance with the rules is mandatory.",
+        "exampleKo": "규칙 준수는 의무입니다."
+    },
+    {
+        "day": 5,
+        "no": 30,
+        "word": "clarify",
+        "meaning": "명확히 하다",
+        "targetScore": 650,
+        "exampleEn": "Please clarify your last point.",
+        "exampleKo": "마지막 요점을 명확히 해주세요."
+    },
+    {
+        "day": 5,
+        "no": 31,
+        "word": "face",
+        "meaning": "직면하다; 얼굴",
+        "targetScore": 650,
+        "exampleEn": "We face many challenges ahead.",
+        "exampleKo": "우리는 앞으로 많은 도전에 직면해 있습니다."
+    },
+    {
+        "day": 5,
+        "no": 32,
+        "word": "follow",
+        "meaning": "따르다, 이해하다",
+        "targetScore": 650,
+        "exampleEn": "Follow the instructions carefully.",
+        "exampleKo": "지시 사항을 주의 깊게 따르세요."
+    },
+    {
+        "day": 5,
+        "no": 33,
+        "word": "aspect",
+        "meaning": "관점, 국면",
+        "targetScore": 650,
+        "exampleEn": "Financial aspect is the most important.",
+        "exampleKo": "재정적 측면이 가장 중요합니다."
+    },
+    {
+        "day": 5,
+        "no": 34,
+        "word": "apparently",
+        "meaning": "보기에, 듣자 하니",
+        "targetScore": 650,
+        "exampleEn": "Apparently, it's going to rain today.",
+        "exampleKo": "보아하니, 오늘 비가 올 것 같습니다."
+    },
+    {
+        "day": 5,
+        "no": 35,
+        "word": "aware",
+        "meaning": "알고 있는",
+        "targetScore": 650,
+        "exampleEn": "Are you aware of the risks?",
+        "exampleKo": "위험에 대해 알고 있습니까?"
+    },
+    {
+        "day": 5,
+        "no": 36,
+        "word": "extended",
+        "meaning": "연장된, 장기간의",
+        "targetScore": 650,
+        "exampleEn": "They offer extended warranty coverage.",
+        "exampleKo": "그들은 연장된 보증 범위를 제공합니다."
+    },
+    {
+        "day": 5,
+        "no": 37,
+        "word": "accidentally",
+        "meaning": "우연히, 실수로",
+        "targetScore": 650,
+        "exampleEn": "I accidentally deleted the file.",
+        "exampleKo": "나는 실수로 그 파일을 삭제했습니다."
+    },
+    {
+        "day": 5,
+        "no": 38,
+        "word": "advisable",
+        "meaning": "바람직한",
+        "targetScore": 650,
+        "exampleEn": "It is advisable to book in advance.",
+        "exampleKo": "미리 예약하는 것이 바람직합니다."
+    },
+    {
+        "day": 5,
+        "no": 39,
+        "word": "concerned",
+        "meaning": "염려하는; 관련된",
+        "targetScore": 650,
+        "exampleEn": "I am concerned about his health.",
+        "exampleKo": "나는 그의 건강이 염려됩니다."
+    },
+    {
+        "day": 5,
+        "no": 40,
+        "word": "speak",
+        "meaning": "말하다",
+        "targetScore": 650,
+        "exampleEn": "Can I speak to the manager?",
+        "exampleKo": "매니저와 이야기할 수 있나요?"
+    }
+]

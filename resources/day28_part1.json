@@ -1,0 +1,362 @@
+[
+  {
+    "day": 28,
+    "no": 1,
+    "word": "furnished",
+    "meaning": "가구가 비치된",
+    "targetScore": 650,
+    "exampleEn": "The apartment comes fully furnished.",
+    "exampleKo": "그 아파트는 가구가 완비되어 나옵니다."
+  },
+  {
+    "day": 28,
+    "no": 2,
+    "word": "residence",
+    "meaning": "거주지, 주택",
+    "targetScore": 650,
+    "exampleEn": "He maintains a permanent residence in London.",
+    "exampleKo": "그는 런던에 영구 거주지(주택)를 유지하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 3,
+    "word": "spacious",
+    "meaning": "(공간이)넓은",
+    "targetScore": 650,
+    "exampleEn": "The conference room is spacious enough for 50 people.",
+    "exampleKo": "회의실은 50명을 수용할 수 있을 만큼 넓습니다."
+  },
+  {
+    "day": 28,
+    "no": 4,
+    "word": "drape",
+    "meaning": "(방 등을 커튼 등으로)장식하다",
+    "targetScore": 650,
+    "exampleEn": "The windows were draped with heavy curtains.",
+    "exampleKo": "창문들은 무거운 커튼으로 장식되어 있었습니다."
+  },
+  {
+    "day": 28,
+    "no": 5,
+    "word": "unoccupied",
+    "meaning": "(집 등이) 비어있는, 사람이 살지 않는",
+    "targetScore": 650,
+    "exampleEn": "The building has been unoccupied for a year.",
+    "exampleKo": "그 건물은 1년 동안 비어 있었습니다."
+  },
+  {
+    "day": 28,
+    "no": 6,
+    "word": "renovation",
+    "meaning": "수리, 개조",
+    "targetScore": 650,
+    "exampleEn": "The hotel is undergoing extensive renovation.",
+    "exampleKo": "그 호텔은 대대적인 수리(개조)를 겪고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 7,
+    "word": "appropriate",
+    "meaning": "적당한, 적합한",
+    "targetScore": 650,
+    "exampleEn": "Please wear appropriate clothing for the site visit.",
+    "exampleKo": "현장 방문을 위해 적당한(적합한) 복장을 착용하십시오."
+  },
+  {
+    "day": 28,
+    "no": 8,
+    "word": "delay",
+    "meaning": "연기하다, ~을 뒤로 미루다",
+    "targetScore": 650,
+    "exampleEn": "Construction was delayed due to bad weather.",
+    "exampleKo": "나쁜 날씨 때문에 건설이 지연되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 9,
+    "word": "community",
+    "meaning": "지역 사회, 공동체",
+    "targetScore": 650,
+    "exampleEn": "We are committed to serving the local community.",
+    "exampleKo": "우리는 지역 사회에 봉사하는 데 전념하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 10,
+    "word": "construction",
+    "meaning": "건설, 건축",
+    "targetScore": 650,
+    "exampleEn": "The construction of the new bridge will begin soon.",
+    "exampleKo": "새 다리의 건설이 곧 시작될 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 11,
+    "word": "repair",
+    "meaning": "수리하다",
+    "targetScore": 650,
+    "exampleEn": "The landlord promised to repair the roof.",
+    "exampleKo": "집주인은 지붕을 수리하겠다고 약속했습니다."
+  },
+  {
+    "day": 28,
+    "no": 12,
+    "word": "currently",
+    "meaning": "현재",
+    "targetScore": 650,
+    "exampleEn": "The item is currently out of stock.",
+    "exampleKo": "그 물품은 현재 재고가 없습니다."
+  },
+  {
+    "day": 28,
+    "no": 13,
+    "word": "regularly",
+    "meaning": "정기적으로",
+    "targetScore": 650,
+    "exampleEn": "Fire alarms should be tested regularly.",
+    "exampleKo": "화재 경보기는 정기적으로 테스트되어야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 14,
+    "word": "arrange",
+    "meaning": "배열하다, 정돈하다",
+    "targetScore": 650,
+    "exampleEn": "Please arrange the chairs in a circle.",
+    "exampleKo": "의자들을 원형으로 배열해 주십시오."
+  },
+  {
+    "day": 28,
+    "no": 15,
+    "word": "location",
+    "meaning": "장소, 위치",
+    "targetScore": 650,
+    "exampleEn": "The store is in a prime location.",
+    "exampleKo": "그 가게는 주요 장소(위치)에 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 16,
+    "word": "restore",
+    "meaning": "복구하다, 회복시키다",
+    "targetScore": 650,
+    "exampleEn": "They are working to restore the historic building.",
+    "exampleKo": "그들은 역사적인 건물을 복구하기 위해 일하고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 17,
+    "word": "presently",
+    "meaning": "현재",
+    "targetScore": 650,
+    "exampleEn": "The manager is presently in a meeting.",
+    "exampleKo": "매니저는 현재 회의 중입니다."
+  },
+  {
+    "day": 28,
+    "no": 18,
+    "word": "numerous",
+    "meaning": "많은",
+    "targetScore": 650,
+    "exampleEn": "We have received numerous complaints.",
+    "exampleKo": "우리는 많은 불만을 접수했습니다."
+  },
+  {
+    "day": 28,
+    "no": 19,
+    "word": "abandon",
+    "meaning": "그만두다, 버리다",
+    "targetScore": 650,
+    "exampleEn": "The project was abandoned due to lack of funds.",
+    "exampleKo": "자금 부족으로 그 프로젝트는 버려졌습니다(중단되었습니다)."
+  },
+  {
+    "day": 28,
+    "no": 20,
+    "word": "contractor",
+    "meaning": "계약자, 도급업자",
+    "targetScore": 650,
+    "exampleEn": "We hired a contractor to renovate the kitchen.",
+    "exampleKo": "우리는 부엌을 개조하기 위해 도급업자(계약자)를 고용했습니다."
+  },
+  {
+    "day": 28,
+    "no": 21,
+    "word": "develop",
+    "meaning": "개발하다",
+    "targetScore": 650,
+    "exampleEn": "The company plans to develop the land.",
+    "exampleKo": "회사는 그 땅을 개발할 계획입니다."
+  },
+  {
+    "day": 28,
+    "no": 22,
+    "word": "maintain",
+    "meaning": "유지하다, 관리하다",
+    "targetScore": 650,
+    "exampleEn": "It is expensive to maintain a large house.",
+    "exampleKo": "큰 집을 유지하는 것은 비쌉니다."
+  },
+  {
+    "day": 28,
+    "no": 23,
+    "word": "densely",
+    "meaning": "빽빽히, 밀집하여",
+    "targetScore": 650,
+    "exampleEn": "The area is densely populated.",
+    "exampleKo": "그 지역은 인구가 밀집되어 있습니다(빽빽합니다)."
+  },
+  {
+    "day": 28,
+    "no": 24,
+    "word": "prepare",
+    "meaning": "준비하다, 채비를 갖추다",
+    "targetScore": 650,
+    "exampleEn": "We need to prepare for the upcoming inspection.",
+    "exampleKo": "우리는 다가오는 점검을 준비해야 합니다."
+  },
+  {
+    "day": 28,
+    "no": 25,
+    "word": "finally",
+    "meaning": "결국, 마침내",
+    "targetScore": 650,
+    "exampleEn": "The deal was finally closed yesterday.",
+    "exampleKo": "그 거래는 마침내 어제 체결되었습니다."
+  },
+  {
+    "day": 28,
+    "no": 26,
+    "word": "district",
+    "meaning": "지역, 지구",
+    "targetScore": 650,
+    "exampleEn": "The financial district is located downtown.",
+    "exampleKo": "금융 지구는 시내에 위치해 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 27,
+    "word": "renewal",
+    "meaning": "재개발",
+    "targetScore": 650,
+    "exampleEn": "The urban renewal project is underway.",
+    "exampleKo": "도시 재개발 프로젝트가 진행 중입니다."
+  },
+  {
+    "day": 28,
+    "no": 28,
+    "word": "compulsory",
+    "meaning": "의무적인",
+    "targetScore": 650,
+    "exampleEn": "Attendance at the meeting is compulsory.",
+    "exampleKo": "회의 참석은 의무적입니다."
+  },
+  {
+    "day": 28,
+    "no": 29,
+    "word": "interfere",
+    "meaning": "방해하다, 해치다",
+    "targetScore": 650,
+    "exampleEn": "Noise from the construction interfered with our work.",
+    "exampleKo": "공사 소음이 우리 일을 방해했습니다."
+  },
+  {
+    "day": 28,
+    "no": 30,
+    "word": "relocation",
+    "meaning": "이전, 재배치",
+    "targetScore": 650,
+    "exampleEn": "The company announced its relocation to a new office.",
+    "exampleKo": "회사는 새 사무실로의 이전을 발표했습니다."
+  },
+  {
+    "day": 28,
+    "no": 31,
+    "word": "totally",
+    "meaning": "완전히, 전적으로",
+    "targetScore": 650,
+    "exampleEn": "I totally agree with your proposal.",
+    "exampleKo": "저는 당신의 제안에 전적으로(완전히) 동의합니다."
+  },
+  {
+    "day": 28,
+    "no": 32,
+    "word": "actually",
+    "meaning": "실제로, 사실은",
+    "targetScore": 650,
+    "exampleEn": "The situation is actually worse than we thought.",
+    "exampleKo": "상황은 실제로 우리가 생각했던 것보다 나쁩니다."
+  },
+  {
+    "day": 28,
+    "no": 33,
+    "word": "architect",
+    "meaning": "건축가",
+    "targetScore": 650,
+    "exampleEn": "The architect designed a modern building.",
+    "exampleKo": "그 건축가는 현대적인 건물을 설계했습니다."
+  },
+  {
+    "day": 28,
+    "no": 34,
+    "word": "enlarge",
+    "meaning": "확장하다, 확대하다",
+    "targetScore": 650,
+    "exampleEn": "We plan to enlarge the parking lot.",
+    "exampleKo": "우리는 주차장을 확장할 계획입니다."
+  },
+  {
+    "day": 28,
+    "no": 35,
+    "word": "install",
+    "meaning": "설치하다, 장치하다",
+    "targetScore": 650,
+    "exampleEn": "Technicians will install the new software.",
+    "exampleKo": "기술자들이 새 소프트웨어를 설치할 것입니다."
+  },
+  {
+    "day": 28,
+    "no": 36,
+    "word": "suppose",
+    "meaning": "생각하다, 추측하다",
+    "targetScore": 650,
+    "exampleEn": "I suppose you are right.",
+    "exampleKo": "당신이 옳다고 생각합니다(추측합니다)."
+  },
+  {
+    "day": 28,
+    "no": 37,
+    "word": "permanent",
+    "meaning": "영구적인",
+    "targetScore": 650,
+    "exampleEn": "We are looking for a permanent solution.",
+    "exampleKo": "우리는 영구적인 해결책을 찾고 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 38,
+    "word": "adjacent",
+    "meaning": "인접한",
+    "targetScore": 650,
+    "exampleEn": "The cafe is adjacent to the library.",
+    "exampleKo": "그 카페는 도서관에 인접해 있습니다."
+  },
+  {
+    "day": 28,
+    "no": 39,
+    "word": "consist",
+    "meaning": "구성되다, 이루어지다",
+    "targetScore": 650,
+    "exampleEn": "The committee consists of ten members.",
+    "exampleKo": "위원회는 10명의 위원으로 구성됩니다."
+  },
+  {
+    "day": 28,
+    "no": 40,
+    "word": "utility",
+    "meaning": "공공시설, 공공요금",
+    "targetScore": 650,
+    "exampleEn": "Utility bills are included in the rent.",
+    "exampleKo": "공공요금은 임대료에 포함되어 있습니다."
+  }
+]

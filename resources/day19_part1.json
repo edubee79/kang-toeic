@@ -1,0 +1,362 @@
+[
+    {
+        "day": 19,
+        "no": 1,
+        "word": "decline",
+        "meaning": "감소,하락,(초대·신청을)거절하다,감소하다,줄다",
+        "targetScore": 650,
+        "exampleEn": "There was a sharp decline in sales last month.",
+        "exampleKo": "지난달에 매출의 급격한 하락(감소)이 있었습니다."
+    },
+    {
+        "day": 19,
+        "no": 2,
+        "word": "markedly",
+        "meaning": "현저하게, 눈에 띄게",
+        "targetScore": 650,
+        "exampleEn": "Production costs have increased markedly.",
+        "exampleKo": "생산 비용이 현저하게(눈에 띄게) 증가했습니다."
+    },
+    {
+        "day": 19,
+        "no": 3,
+        "word": "increase",
+        "meaning": "인상, 증가, 증가하다",
+        "targetScore": 650,
+        "exampleEn": "We expect an increase in demand next year.",
+        "exampleKo": "우리는 내년에 수요의 증가를 예상합니다."
+    },
+    {
+        "day": 19,
+        "no": 4,
+        "word": "revenue",
+        "meaning": "수입",
+        "targetScore": 650,
+        "exampleEn": "The company's annual revenue exceeded $1 million.",
+        "exampleKo": "그 회사의 연간 수입은 100만 달러를 초과했습니다."
+    },
+    {
+        "day": 19,
+        "no": 5,
+        "word": "projection",
+        "meaning": "예상(치)",
+        "targetScore": 650,
+        "exampleEn": "The financial projection shows strong growth.",
+        "exampleKo": "재정 예상(치)은 강한 성장을 보여줍니다."
+    },
+    {
+        "day": 19,
+        "no": 6,
+        "word": "substantial",
+        "meaning": "상당한",
+        "targetScore": 650,
+        "exampleEn": "We made a substantial investment in new technology.",
+        "exampleKo": "우리는 신기술에 상당한 투자를 했습니다."
+    },
+    {
+        "day": 19,
+        "no": 7,
+        "word": "anticipate",
+        "meaning": "예상하다, 기대하다",
+        "targetScore": 650,
+        "exampleEn": "We anticipate a 10% increase in sales.",
+        "exampleKo": "우리는 10%의 매출 증가를 예상합니다(기대합니다)."
+    },
+    {
+        "day": 19,
+        "no": 8,
+        "word": "significantly",
+        "meaning": "상당히, 두드러지게",
+        "targetScore": 650,
+        "exampleEn": "The new marketing strategy significantly improved sales.",
+        "exampleKo": "새로운 마케팅 전략은 매출을 상당히(두드러지게) 개선했습니다."
+    },
+    {
+        "day": 19,
+        "no": 9,
+        "word": "estimate",
+        "meaning": "추정하다, 추산하다, 추정(치), 추산",
+        "targetScore": 650,
+        "exampleEn": "Can you estimate the cost of the project?",
+        "exampleKo": "프로젝트 비용을 추산할(추정할) 수 있습니까?"
+    },
+    {
+        "day": 19,
+        "no": 10,
+        "word": "shift",
+        "meaning": "옮기다, 이동하다, 변화, 교대 근무",
+        "targetScore": 650,
+        "exampleEn": "There has been a shift in consumer preference.",
+        "exampleKo": "소비자 선호도에 변화(이동)가 있었습니다."
+    },
+    {
+        "day": 19,
+        "no": 11,
+        "word": "fee",
+        "meaning": "요금, 수수료",
+        "targetScore": 650,
+        "exampleEn": "There is a small fee for using the service.",
+        "exampleKo": "서비스 이용에는 소액의 요금(수수료)이 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 12,
+        "word": "production",
+        "meaning": "생산량, 생산",
+        "targetScore": 650,
+        "exampleEn": "Production has doubled since last year.",
+        "exampleKo": "작년 이후로 생산량(생산)이 두 배로 늘었습니다."
+    },
+    {
+        "day": 19,
+        "no": 13,
+        "word": "sale",
+        "meaning": "매출액, 매상고, (할인) 판매",
+        "targetScore": 650,
+        "exampleEn": "The items are on sale for half price.",
+        "exampleKo": "그 품목들은 반값에 (할인) 판매 중입니다."
+    },
+    {
+        "day": 19,
+        "no": 14,
+        "word": "impressive",
+        "meaning": "굉장한, 인상적인",
+        "targetScore": 650,
+        "exampleEn": "The quarterly results were very impressive.",
+        "exampleKo": "분기별 결과는 매우 인상적이었습니다(굉장했습니다)."
+    },
+    {
+        "day": 19,
+        "no": 15,
+        "word": "representative",
+        "meaning": "직원, 외판원, 대표자",
+        "targetScore": 650,
+        "exampleEn": "A sales representative will contact you shortly.",
+        "exampleKo": "영업 직원(외판원/대표자)이 곧 연락드릴 것입니다."
+    },
+    {
+        "day": 19,
+        "no": 16,
+        "word": "recent",
+        "meaning": "최근의",
+        "targetScore": 650,
+        "exampleEn": "Recent studies show a positive trend.",
+        "exampleKo": "최근의 연구들은 긍정적인 추세를 보여줍니다."
+    },
+    {
+        "day": 19,
+        "no": 17,
+        "word": "exceed",
+        "meaning": "~을 초과하다",
+        "targetScore": 650,
+        "exampleEn": "The final cost should not exceed the budget.",
+        "exampleKo": "최종 비용은 예산을 초과해서는 안 됩니다."
+    },
+    {
+        "day": 19,
+        "no": 18,
+        "word": "improvement",
+        "meaning": "향상",
+        "targetScore": 650,
+        "exampleEn": "There is definitely room for improvement.",
+        "exampleKo": "확실히 향상의 여지가 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 19,
+        "word": "employer",
+        "meaning": "고용주",
+        "targetScore": 650,
+        "exampleEn": "The employer provides health insurance.",
+        "exampleKo": "고용주는 건강 보험을 제공합니다."
+    },
+    {
+        "day": 19,
+        "no": 20,
+        "word": "regular",
+        "meaning": "정기적인, 단골의",
+        "targetScore": 650,
+        "exampleEn": "We hold regular meetings every Monday.",
+        "exampleKo": "우리는 매주 월요일에 정기적인 회의를 엽니다."
+    },
+    {
+        "day": 19,
+        "no": 21,
+        "word": "summarize",
+        "meaning": "요약하다",
+        "targetScore": 650,
+        "exampleEn": "Can you summarize the main points of the report?",
+        "exampleKo": "보고서의 주요 요점을 요약해 주실 수 있나요?"
+    },
+    {
+        "day": 19,
+        "no": 22,
+        "word": "typically",
+        "meaning": "보통, 일반적으로",
+        "targetScore": 650,
+        "exampleEn": "The process typically takes two weeks.",
+        "exampleKo": "그 과정은 보통(일반적으로) 2주가 걸립니다."
+    },
+    {
+        "day": 19,
+        "no": 23,
+        "word": "whole",
+        "meaning": "전체의, 온전한",
+        "targetScore": 650,
+        "exampleEn": "The whole team contributed to the success.",
+        "exampleKo": "팀 전체가 성공에 기여했습니다."
+    },
+    {
+        "day": 19,
+        "no": 24,
+        "word": "growth",
+        "meaning": "성장, 발전",
+        "targetScore": 650,
+        "exampleEn": "We are aiming for sustainable growth.",
+        "exampleKo": "우리는 지속 가능한 성장(발전)을 목표로 하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 25,
+        "word": "figure",
+        "meaning": "총액, 합계 수",
+        "targetScore": 650,
+        "exampleEn": "The sales figures for this quarter are promising.",
+        "exampleKo": "이번 분기 매출 총액(수치)은 유망합니다."
+    },
+    {
+        "day": 19,
+        "no": 26,
+        "word": "steady",
+        "meaning": "꾸준한, 안정된",
+        "targetScore": 650,
+        "exampleEn": "We need steady progress to meet the deadline.",
+        "exampleKo": "마감 기한을 맞추기 위해서는 꾸준한(안정된) 진척이 필요합니다."
+    },
+    {
+        "day": 19,
+        "no": 27,
+        "word": "frequent",
+        "meaning": "빈번한, 잦은",
+        "targetScore": 650,
+        "exampleEn": "He is a frequent visitor to the library.",
+        "exampleKo": "그는 도서관의 빈번한(잦은) 방문객입니다."
+    },
+    {
+        "day": 19,
+        "no": 28,
+        "word": "achieve",
+        "meaning": "달성하다, 성취하다",
+        "targetScore": 650,
+        "exampleEn": "We worked hard to achieve our goals.",
+        "exampleKo": "우리는 목표를 달성하기(성취하기) 위해 열심히 일했습니다."
+    },
+    {
+        "day": 19,
+        "no": 29,
+        "word": "assumption",
+        "meaning": "추정, 산정",
+        "targetScore": 650,
+        "exampleEn": "The calculation is based on the assumption that sales will increase.",
+        "exampleKo": "그 계산은 매출이 증가할 것이라는 추정(가정)에 근거합니다."
+    },
+    {
+        "day": 19,
+        "no": 30,
+        "word": "share",
+        "meaning": "공유하다, 함께 쓰다, \n(생각·경험·감정을 남과) 함께 나누다, 몫, 지분",
+        "targetScore": 650,
+        "exampleEn": "We need to increase our market share.",
+        "exampleKo": "우리는 시장 점유율(몫/지분)을 늘려야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 31,
+        "word": "encouraging",
+        "meaning": "고무적인, 힘을 북돋아 주는",
+        "targetScore": 650,
+        "exampleEn": "The initial results are very encouraging.",
+        "exampleKo": "초기 결과는 매우 고무적입니다."
+    },
+    {
+        "day": 19,
+        "no": 32,
+        "word": "incur",
+        "meaning": "(손실을)입다, (빚을)지다",
+        "targetScore": 650,
+        "exampleEn": "You may incur a fee for late payment.",
+        "exampleKo": "연체 시 요금(손실)을 입을 수 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 33,
+        "word": "slightly",
+        "meaning": "약간",
+        "targetScore": 650,
+        "exampleEn": "Sales were slightly lower than expected.",
+        "exampleKo": "매출이 예상보다 약간 낮았습니다."
+    },
+    {
+        "day": 19,
+        "no": 34,
+        "word": "profit",
+        "meaning": "수익, 이익",
+        "targetScore": 650,
+        "exampleEn": "The company made a huge profit this year.",
+        "exampleKo": "그 회사는 올해 막대한 수익(이익)을 냈습니다."
+    },
+    {
+        "day": 19,
+        "no": 35,
+        "word": "reliant",
+        "meaning": "의존하는, 의지하는",
+        "targetScore": 650,
+        "exampleEn": "The company is too reliant on a single supplier.",
+        "exampleKo": "그 회사는 단일 공급업체에 너무 의존하고 있습니다."
+    },
+    {
+        "day": 19,
+        "no": 36,
+        "word": "illustrate",
+        "meaning": "분명히 보여 주다, 설명하다",
+        "targetScore": 650,
+        "exampleEn": "The chart illustrates the growth in revenue.",
+        "exampleKo": "그 차트는 수입의 성장을 분명히 보여줍니다(설명합니다)."
+    },
+    {
+        "day": 19,
+        "no": 37,
+        "word": "inaccurate",
+        "meaning": "부정확한",
+        "targetScore": 650,
+        "exampleEn": "The report contained inaccurate data.",
+        "exampleKo": "그 보고서는 부정확한 데이터를 포함하고 있었습니다."
+    },
+    {
+        "day": 19,
+        "no": 38,
+        "word": "percentage",
+        "meaning": "비율, 백분율",
+        "targetScore": 650,
+        "exampleEn": "Only a small percentage of customers returned the product.",
+        "exampleKo": "고객 중 적은 비율(백분율)만이 제품을 반품했습니다."
+    },
+    {
+        "day": 19,
+        "no": 39,
+        "word": "reduce",
+        "meaning": "줄이다, 감소시키다",
+        "targetScore": 650,
+        "exampleEn": "We must take steps to reduce costs.",
+        "exampleKo": "우리는 비용을 줄이기(감소시키기) 위한 조치를 취해야 합니다."
+    },
+    {
+        "day": 19,
+        "no": 40,
+        "word": "tend",
+        "meaning": "~하는 경향이 있다, ~하기 쉽다",
+        "targetScore": 650,
+        "exampleEn": "Prices tend to rise during the holiday season.",
+        "exampleKo": "가격은 연휴 기간 동안 오르는 경향이 있습니다."
+    }
+]

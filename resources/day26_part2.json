@@ -1,0 +1,254 @@
+[
+  {
+    "day": 26,
+    "no": 41,
+    "word": "mortgage",
+    "meaning": "(담보) 대출",
+    "targetScore": 650,
+    "exampleEn": "He took out a mortgage to buy the house.",
+    "exampleKo": "그는 집을 사기 위해 담보 대출을 받았습니다."
+  },
+  {
+    "day": 26,
+    "no": 42,
+    "word": "payable",
+    "meaning": "지불해야 하는",
+    "targetScore": 650,
+    "exampleEn": "Accounts payable should be settled within 30 days.",
+    "exampleKo": "외상 매입금(지불해야 하는 계정)은 30일 이내에 해결되어야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 43,
+    "word": "personal",
+    "meaning": "개인의",
+    "targetScore": 650,
+    "exampleEn": "Please do not use company computers for personal use.",
+    "exampleKo": "회사 컴퓨터를 개인적인 용도로 사용하지 마십시오."
+  },
+  {
+    "day": 26,
+    "no": 44,
+    "word": "practice",
+    "meaning": "관행, 관례, 연습하다, 실습하다",
+    "targetScore": 650,
+    "exampleEn": "It is common practice to check credit scores.",
+    "exampleKo": "신용 점수를 확인하는 것은 일반적인 관행입니다."
+  },
+  {
+    "day": 26,
+    "no": 45,
+    "word": "at the earliest",
+    "meaning": "아무리 빨라도",
+    "targetScore": 650,
+    "exampleEn": "The results will be available at the earliest on Monday.",
+    "exampleKo": "결과는 아무리 빨라도 월요일에 나올 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 46,
+    "word": "at the same time",
+    "meaning": "동시에",
+    "targetScore": 650,
+    "exampleEn": "We cannot process two requests at the same time.",
+    "exampleKo": "우리는 동시에 두 개의 요청을 처리할 수 없습니다."
+  },
+  {
+    "day": 26,
+    "no": 47,
+    "word": "at this point",
+    "meaning": "이 시점에서",
+    "targetScore": 650,
+    "exampleEn": "At this point, we cannot offer a refund.",
+    "exampleKo": "이 시점에서는 환불을 제공할 수 없습니다."
+  },
+  {
+    "day": 26,
+    "no": 48,
+    "word": "audition",
+    "meaning": "심사, 오디션",
+    "targetScore": 650,
+    "exampleEn": "He passed the first round of the audition.",
+    "exampleKo": "그는 오디션의 1차 심사를 통과했습니다."
+  },
+  {
+    "day": 26,
+    "no": 49,
+    "word": "automatic payment",
+    "meaning": "자동 납부",
+    "targetScore": 650,
+    "exampleEn": "Sign up for automatic payment to avoid late fees.",
+    "exampleKo": "연체료를 피하기 위해 자동 납부를 신청하십시오."
+  },
+  {
+    "day": 26,
+    "no": 50,
+    "word": "banker",
+    "meaning": "은행원",
+    "targetScore": 650,
+    "exampleEn": "She met with a banker to discuss investment options.",
+    "exampleKo": "그녀는 투자 옵션을 논의하기 위해 은행원을 만났습니다."
+  },
+  {
+    "day": 26,
+    "no": 51,
+    "word": "banking",
+    "meaning": "은행 업무, 은행업",
+    "targetScore": 650,
+    "exampleEn": "Online banking has made managing money easier.",
+    "exampleKo": "온라인 뱅킹은 돈 관리를 더 쉽게 만들었습니다."
+  },
+  {
+    "day": 26,
+    "no": 52,
+    "word": "be used to -ing",
+    "meaning": "~에 익숙하다",
+    "targetScore": 650,
+    "exampleEn": "I am used to working with international clients.",
+    "exampleKo": "저는 해외 고객들과 일하는 것에 익숙합니다."
+  },
+  {
+    "day": 26,
+    "no": 53,
+    "word": "by the end of the year",
+    "meaning": "연말까지",
+    "targetScore": 650,
+    "exampleEn": "We expect to finish the project by the end of the year.",
+    "exampleKo": "우리는 연말까지 프로젝트를 끝낼 것으로 예상합니다."
+  },
+  {
+    "day": 26,
+    "no": 54,
+    "word": "by this time",
+    "meaning": "지금쯤",
+    "targetScore": 650,
+    "exampleEn": "You should have received the package by this time.",
+    "exampleKo": "지금쯤이면 소포를 받으셨을 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 55,
+    "word": "clerk",
+    "meaning": "사원, 점원",
+    "targetScore": 650,
+    "exampleEn": "Ask the clerk for assistance.",
+    "exampleKo": "점원(사원)에게 도움을 요청하십시오."
+  },
+  {
+    "day": 26,
+    "no": 56,
+    "word": "cozy",
+    "meaning": "아늑한",
+    "targetScore": 650,
+    "exampleEn": "The café has a cozy atmosphere.",
+    "exampleKo": "그 카페는 아늑한 분위기를 가지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 57,
+    "word": "credit card number",
+    "meaning": "신용 카드 번호",
+    "targetScore": 650,
+    "exampleEn": "Please enter your credit card number.",
+    "exampleKo": "신용 카드 번호를 입력해 주십시오."
+  },
+  {
+    "day": 26,
+    "no": 58,
+    "word": "float",
+    "meaning": "(물에) 뜨다",
+    "targetScore": 650,
+    "exampleEn": "The company decided to float shares on the market.",
+    "exampleKo": "그 회사는 시장에 주식을 상장하기로(띄우기로) 결정했습니다."
+  },
+  {
+    "day": 26,
+    "no": 59,
+    "word": "for a short time",
+    "meaning": "잠깐 동안",
+    "targetScore": 650,
+    "exampleEn": "Can I talk to you for a short time?",
+    "exampleKo": "잠깐 동안 이야기할 수 있을까요?"
+  },
+  {
+    "day": 26,
+    "no": 60,
+    "word": "gesture",
+    "meaning": "몸짓",
+    "targetScore": 650,
+    "exampleEn": "He made a gesture of agreement.",
+    "exampleKo": "그는 동의의 몸짓을 했습니다."
+  },
+  {
+    "day": 26,
+    "no": 61,
+    "word": "next to",
+    "meaning": "~옆에",
+    "targetScore": 650,
+    "exampleEn": "The bank is located next to the post office.",
+    "exampleKo": "은행은 우체국 옆에 위치해 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 62,
+    "word": "password",
+    "meaning": "비밀번호",
+    "targetScore": 650,
+    "exampleEn": "Do not share your password with anyone.",
+    "exampleKo": "비밀번호를 누구와도 공유하지 마십시오."
+  },
+  {
+    "day": 26,
+    "no": 63,
+    "word": "coin",
+    "meaning": "동전",
+    "targetScore": 650,
+    "exampleEn": "He inserted a coin into the vending machine.",
+    "exampleKo": "그는 자판기에 동전을 넣었습니다."
+  },
+  {
+    "day": 26,
+    "no": 64,
+    "word": "evening news",
+    "meaning": "저녁 뉴스",
+    "targetScore": 650,
+    "exampleEn": "I watched the report on the evening news.",
+    "exampleKo": "저는 저녁 뉴스에서 그 보도를 봤습니다."
+  },
+  {
+    "day": 26,
+    "no": 65,
+    "word": "generously",
+    "meaning": "관대하게",
+    "targetScore": 650,
+    "exampleEn": "The company donated generously to charity.",
+    "exampleKo": "그 회사는 자선 단체에 관대하게 기부했습니다."
+  },
+  {
+    "day": 26,
+    "no": 66,
+    "word": "in addition",
+    "meaning": "게다가",
+    "targetScore": 650,
+    "exampleEn": "In addition, we offer a free consultation.",
+    "exampleKo": "게다가, 우리는 무료 상담을 제공합니다."
+  },
+  {
+    "day": 26,
+    "no": 67,
+    "word": "in addition to",
+    "meaning": "~에 더하여",
+    "targetScore": 650,
+    "exampleEn": "In addition to his salary, he receives a bonus.",
+    "exampleKo": "그는 월급에 더하여 보너스를 받습니다."
+  },
+  {
+    "day": 26,
+    "no": 68,
+    "word": "in short",
+    "meaning": "요컨대",
+    "targetScore": 650,
+    "exampleEn": "In short, the proposal was rejected.",
+    "exampleKo": "요컨대, 그 제안은 거절되었습니다."
+  }
+]

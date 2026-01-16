@@ -1,0 +1,254 @@
+[
+    {
+        "day": 3,
+        "no": 41,
+        "word": "a sheet of",
+        "meaning": "~한 장",
+        "targetScore": 650,
+        "exampleEn": "Please give me a sheet of paper.",
+        "exampleKo": "종이 한 장 주세요."
+    },
+    {
+        "day": 3,
+        "no": 42,
+        "word": "business card",
+        "meaning": "명함",
+        "targetScore": 650,
+        "exampleEn": "He handed me his business card.",
+        "exampleKo": "그는 나에게 명함을 건넸습니다."
+    },
+    {
+        "day": 3,
+        "no": 43,
+        "word": "cartridge",
+        "meaning": "카트리지",
+        "targetScore": 650,
+        "exampleEn": "The printer needs a new ink cartridge.",
+        "exampleKo": "프린터에 새 잉크 카트리지가 필요합니다."
+    },
+    {
+        "day": 3,
+        "no": 44,
+        "word": "daily",
+        "meaning": "매일의",
+        "targetScore": 650,
+        "exampleEn": "Exercise is part of my daily routine.",
+        "exampleKo": "운동은 내 일과의 일부입니다."
+    },
+    {
+        "day": 3,
+        "no": 45,
+        "word": "editor",
+        "meaning": "편집자",
+        "targetScore": 650,
+        "exampleEn": "The editor reviewed the manuscript.",
+        "exampleKo": "편집자가 원고를 검토했습니다."
+    },
+    {
+        "day": 3,
+        "no": 46,
+        "word": "handwriting",
+        "meaning": "글씨(체)",
+        "targetScore": 650,
+        "exampleEn": "His handwriting is difficult to read.",
+        "exampleKo": "그의 글씨체는 읽기가 어렵습니다."
+    },
+    {
+        "day": 3,
+        "no": 47,
+        "word": "internal",
+        "meaning": "내부의",
+        "targetScore": 650,
+        "exampleEn": "This is an internal company matter.",
+        "exampleKo": "이것은 회사 내부의 문제입니다."
+    },
+    {
+        "day": 3,
+        "no": 48,
+        "word": "fix",
+        "meaning": "고치다",
+        "targetScore": 650,
+        "exampleEn": "Can you fix the broken chair?",
+        "exampleKo": "부러진 의자를 고칠 수 있나요?"
+    },
+    {
+        "day": 3,
+        "no": 49,
+        "word": "paper jam",
+        "meaning": "종이 걸림",
+        "targetScore": 650,
+        "exampleEn": "There is a paper jam in the copier.",
+        "exampleKo": "복사기에 종이가 걸렸습니다."
+    },
+    {
+        "day": 3,
+        "no": 50,
+        "word": "partition",
+        "meaning": "칸막이",
+        "targetScore": 650,
+        "exampleEn": "A partition separates the two rooms.",
+        "exampleKo": "칸막이가 두 방을 분리합니다."
+    },
+    {
+        "day": 3,
+        "no": 51,
+        "word": "postage",
+        "meaning": "우편 요금",
+        "targetScore": 650,
+        "exampleEn": "The postage for international mail has increased.",
+        "exampleKo": "국제 우편 요금이 인상되었습니다."
+    },
+    {
+        "day": 3,
+        "no": 52,
+        "word": "postal",
+        "meaning": "우편의",
+        "targetScore": 650,
+        "exampleEn": "The postal service is reliable here.",
+        "exampleKo": "이곳의 우편 서비스는 믿을 수 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 53,
+        "word": "punctur",
+        "meaning": "구멍을 내다",
+        "targetScore": 650,
+        "exampleEn": "A rough road punctured the tire.",
+        "exampleKo": "거친 도로가 타이어에 구멍을 냈습니다."
+    },
+    {
+        "day": 3,
+        "no": 54,
+        "word": "screen",
+        "meaning": "화면",
+        "targetScore": 650,
+        "exampleEn": "The computer screen went blank.",
+        "exampleKo": "컴퓨터 화면이 꺼졌습니다."
+    },
+    {
+        "day": 3,
+        "no": 55,
+        "word": "sheet",
+        "meaning": "종이 한 장, 침대 시트",
+        "targetScore": 650,
+        "exampleEn": "Change the sheets on the bed.",
+        "exampleKo": "침대 시트를 갈아주세요."
+    },
+    {
+        "day": 3,
+        "no": 56,
+        "word": "shift",
+        "meaning": "근무조; 옮기다",
+        "targetScore": 650,
+        "exampleEn": "She works the morning shift.",
+        "exampleKo": "그녀는 오전 근무조에서 일합니다."
+    },
+    {
+        "day": 3,
+        "no": 57,
+        "word": "staff lounge",
+        "meaning": "직원 휴게실",
+        "targetScore": 650,
+        "exampleEn": "We met in the staff lounge for coffee.",
+        "exampleKo": "우리는 커피를 마시러 직원 휴게실에서 만났습니다."
+    },
+    {
+        "day": 3,
+        "no": 58,
+        "word": "starred",
+        "meaning": "별표가 붙은",
+        "targetScore": 650,
+        "exampleEn": "Please complete the starred items.",
+        "exampleKo": "별표가 붙은 항목을 작성해 주세요."
+    },
+    {
+        "day": 3,
+        "no": 59,
+        "word": "strike",
+        "meaning": "파업; 치다",
+        "targetScore": 650,
+        "exampleEn": "The union voted to go on strike.",
+        "exampleKo": "노조는 파업에 들어가기로 투표했습니다."
+    },
+    {
+        "day": 3,
+        "no": 60,
+        "word": "task",
+        "meaning": "업무, 일",
+        "targetScore": 650,
+        "exampleEn": "She completed the task quickly.",
+        "exampleKo": "그녀는 업무를 빨리 끝냈습니다."
+    },
+    {
+        "day": 3,
+        "no": 61,
+        "word": "telephone",
+        "meaning": "전화; 전화하다",
+        "targetScore": 650,
+        "exampleEn": "Please answer the telephone.",
+        "exampleKo": "전화 좀 받아주세요."
+    },
+    {
+        "day": 3,
+        "no": 62,
+        "word": "typewriter",
+        "meaning": "타자기",
+        "targetScore": 650,
+        "exampleEn": "He wrote the letter on an old typewriter.",
+        "exampleKo": "그는 낡은 타자기로 그 편지를 썼습니다."
+    },
+    {
+        "day": 3,
+        "no": 63,
+        "word": "upstairs",
+        "meaning": "위층으로; 위층의",
+        "targetScore": 650,
+        "exampleEn": "Her office is upstairs.",
+        "exampleKo": "그녀의 사무실은 위층에 있습니다."
+    },
+    {
+        "day": 3,
+        "no": 64,
+        "word": "workroom",
+        "meaning": "작업실",
+        "targetScore": 650,
+        "exampleEn": "The artist spends all day in her workroom.",
+        "exampleKo": "그 예술가는 하루 종일 작업실에서 보냅니다."
+    },
+    {
+        "day": 3,
+        "no": 65,
+        "word": "container",
+        "meaning": "용기",
+        "targetScore": 650,
+        "exampleEn": "Put the leftovers in a plastic container.",
+        "exampleKo": "남은 음식은 플라스틱 용기에 넣으세요."
+    },
+    {
+        "day": 3,
+        "no": 66,
+        "word": "coordinator",
+        "meaning": "조정자",
+        "targetScore": 650,
+        "exampleEn": "She is the project coordinator.",
+        "exampleKo": "그녀는 프로젝트 조정자입니다."
+    },
+    {
+        "day": 3,
+        "no": 67,
+        "word": "directory",
+        "meaning": "인명부, 주소록",
+        "targetScore": 650,
+        "exampleEn": "Look up the address in the directory.",
+        "exampleKo": "주소록에서 주소를 찾아보세요."
+    },
+    {
+        "day": 3,
+        "no": 68,
+        "word": "duplicate",
+        "meaning": "복사하다; 사본",
+        "targetScore": 650,
+        "exampleEn": "Do not duplicate this key.",
+        "exampleKo": "이 열쇠를 복사하지 마세요."
+    }
+]

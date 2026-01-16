@@ -1,0 +1,362 @@
+[
+  {
+    "day": 1,
+    "no": 1,
+    "word": "resume",
+    "meaning": "이력서",
+    "targetScore": 650,
+    "exampleEn": "Please submit your resume by Friday.",
+    "exampleKo": "금요일까지 이력서를 제출해 주세요."
+  },
+  {
+    "day": 1,
+    "no": 2,
+    "word": "opening",
+    "meaning": "공석,결원;개장,개시",
+    "targetScore": 650,
+    "exampleEn": "There are several openings in the marketing department.",
+    "exampleKo": "마케팅 부서에 몇 개의 공석이 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 3,
+    "word": "applicant",
+    "meaning": "지원자,신청자",
+    "targetScore": 650,
+    "exampleEn": "All applicants must have at least two years of experience.",
+    "exampleKo": "모든 지원자는 최소 2년의 경력이 있어야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 4,
+    "word": "requirement",
+    "meaning": "필요조건,요건",
+    "targetScore": 650,
+    "exampleEn": "Fluency in English is a requirement for this job.",
+    "exampleKo": "영어 유창성은 이 직업의 필수 요건입니다."
+  },
+  {
+    "day": 1,
+    "no": 5,
+    "word": "meet",
+    "meaning": "(필요〮요구 등을 만족시키다)",
+    "targetScore": 650,
+    "exampleEn": "We are working hard to meet the deadline.",
+    "exampleKo": "우리는 마감 기한을 맞추기 위해 열심히 일하고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 6,
+    "word": "qualified",
+    "meaning": "자격있는,적격의",
+    "targetScore": 650,
+    "exampleEn": "She is highly qualified for the position.",
+    "exampleKo": "그녀는 그 직책에 매우 적합한 자격을 갖추고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 7,
+    "word": "candidate",
+    "meaning": "후보자, 지원자",
+    "targetScore": 650,
+    "exampleEn": "We will interview three candidates this afternoon.",
+    "exampleKo": "오늘 오후에 세 명의 후보자를 인터뷰할 것입니다."
+  },
+  {
+    "day": 1,
+    "no": 8,
+    "word": "confidence",
+    "meaning": "확신,자신;신임",
+    "targetScore": 650,
+    "exampleEn": "The CEO expressed confidence in the new strategy.",
+    "exampleKo": "CEO는 새로운 전략에 대해 확신을 표명했습니다."
+  },
+  {
+    "day": 1,
+    "no": 9,
+    "word": "highly",
+    "meaning": "매우,대단히",
+    "targetScore": 650,
+    "exampleEn": "Mr. Kim is a highly recommended consultant.",
+    "exampleKo": "김 씨는 매우 추천받는 컨설턴트입니다."
+  },
+  {
+    "day": 1,
+    "no": 10,
+    "word": "professional",
+    "meaning": "전문적인,직업의,전문가",
+    "targetScore": 650,
+    "exampleEn": "You should seek professional advice on this matter.",
+    "exampleKo": "이 문제에 대해 전문적인 조언을 구해야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 11,
+    "word": "interview",
+    "meaning": "면접,면접을 보다",
+    "targetScore": 650,
+    "exampleEn": "The job interview will be held via video conference.",
+    "exampleKo": "취업 면접은 화상 회의를 통해 진행될 것입니다."
+  },
+  {
+    "day": 1,
+    "no": 12,
+    "word": "hire",
+    "meaning": "고용하다",
+    "targetScore": 650,
+    "exampleEn": "The company plans to hire ten new employees.",
+    "exampleKo": "그 회사는 10명의 신입 사원을 고용할 계획입니다."
+  },
+  {
+    "day": 1,
+    "no": 13,
+    "word": "training",
+    "meaning": "교육,훈련",
+    "targetScore": 650,
+    "exampleEn": "New staff must attend a training session.",
+    "exampleKo": "신입 직원은 교육 세션에 참석해야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 14,
+    "word": "reference",
+    "meaning": "추천서,참고",
+    "targetScore": 650,
+    "exampleEn": "Please provide three professional references.",
+    "exampleKo": "세 명의 직업적 추천인을 제공해 주세요."
+  },
+  {
+    "day": 1,
+    "no": 15,
+    "word": "position",
+    "meaning": "일자리,직책,두다",
+    "targetScore": 650,
+    "exampleEn": "He accepted a management position at the bank.",
+    "exampleKo": "그는 은행의 관리직 제안을 수락했습니다."
+  },
+  {
+    "day": 1,
+    "no": 16,
+    "word": "achievement",
+    "meaning": "성취,달성",
+    "targetScore": 650,
+    "exampleEn": "Winning the award was a major achievement.",
+    "exampleKo": "상을 받은 것은 큰 성취였습니다."
+  },
+  {
+    "day": 1,
+    "no": 17,
+    "word": "impressed",
+    "meaning": "인상 깊게 생각하는, 감명을 받은",
+    "targetScore": 650,
+    "exampleEn": "I was impressed by his presentation skills.",
+    "exampleKo": "나는 그의 발표 능력에 감명받았습니다."
+  },
+  {
+    "day": 1,
+    "no": 18,
+    "word": "excellent",
+    "meaning": "훌륭한, 탁월한",
+    "targetScore": 650,
+    "exampleEn": "She did an excellent job on the project.",
+    "exampleKo": "그녀는 그 프로젝트에서 훌륭한 성과를 냈습니다."
+  },
+  {
+    "day": 1,
+    "no": 19,
+    "word": "eligible",
+    "meaning": "자격이 있는,적격의",
+    "targetScore": 650,
+    "exampleEn": "Only full-time employees are eligible for benefits.",
+    "exampleKo": "정규직 직원만 혜택을 받을 자격이 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 20,
+    "word": "identify",
+    "meaning": "알아보다, 확인하다",
+    "targetScore": 650,
+    "exampleEn": "Badges are used to identify employees.",
+    "exampleKo": "배지는 직원을 식별하는 데 사용됩니다."
+  },
+  {
+    "day": 1,
+    "no": 21,
+    "word": "associate",
+    "meaning": "관련시키다",
+    "targetScore": 650,
+    "exampleEn": "Many people associate the brand with quality.",
+    "exampleKo": "많은 사람들이 그 브랜드를 품질과 연관 짓습니다."
+  },
+  {
+    "day": 1,
+    "no": 22,
+    "word": "condition",
+    "meaning": "조건",
+    "targetScore": 650,
+    "exampleEn": "One of the conditions of employment is a background check.",
+    "exampleKo": "고용 조건 중 하나는 신원 조회입니다."
+  },
+  {
+    "day": 1,
+    "no": 23,
+    "word": "employment",
+    "meaning": "고용",
+    "targetScore": 650,
+    "exampleEn": "The factory provides employment for local residents.",
+    "exampleKo": "그 공장은 지역 주민들에게 일자리를 제공합니다."
+  },
+  {
+    "day": 1,
+    "no": 24,
+    "word": "lack",
+    "meaning": "~이 없다,부족",
+    "targetScore": 650,
+    "exampleEn": "The team failed due to a lack of communication.",
+    "exampleKo": "그 팀은 의사소통 부족으로 인해 실패했습니다."
+  },
+  {
+    "day": 1,
+    "no": 25,
+    "word": "managerial",
+    "meaning": "관리의",
+    "targetScore": 650,
+    "exampleEn": "He is seeking a managerial role.",
+    "exampleKo": "그는 관리직 역할을 찾고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 26,
+    "word": "diligent",
+    "meaning": "성실한",
+    "targetScore": 650,
+    "exampleEn": "A diligent worker receives good evaluations.",
+    "exampleKo": "성실한 직원은 좋은 평가를 받습니다."
+  },
+  {
+    "day": 1,
+    "no": 27,
+    "word": "familiar",
+    "meaning": "익숙한,친숙한",
+    "targetScore": 650,
+    "exampleEn": "Are you familiar with this software?",
+    "exampleKo": "이 소프트웨어에 익숙한가요?"
+  },
+  {
+    "day": 1,
+    "no": 28,
+    "word": "proficiency",
+    "meaning": "숙달, 능숙",
+    "targetScore": 650,
+    "exampleEn": "The job requires proficiency in Spanish.",
+    "exampleKo": "그 직업은 스페인어 능숙함을 요구합니다."
+  },
+  {
+    "day": 1,
+    "no": 29,
+    "word": "prospective",
+    "meaning": "장래의,미래의",
+    "targetScore": 650,
+    "exampleEn": "We sent brochures to prospective clients.",
+    "exampleKo": "우리는 잠재 고객들에게 브로셔를 보냈습니다."
+  },
+  {
+    "day": 1,
+    "no": 30,
+    "word": "appeal",
+    "meaning": "관심을 끌다, 매력적이다",
+    "targetScore": 650,
+    "exampleEn": "The design must appeal to young consumers.",
+    "exampleKo": "그 디자인은 젊은 소비자들의 관심을 끌어야 합니다."
+  },
+  {
+    "day": 1,
+    "no": 31,
+    "word": "specialize",
+    "meaning": "~을 전공하다,전문적으로 다루다",
+    "targetScore": 650,
+    "exampleEn": "We specialize in web development.",
+    "exampleKo": "우리는 웹 개발을 전문으로 합니다."
+  },
+  {
+    "day": 1,
+    "no": 32,
+    "word": "apprehensive",
+    "meaning": "걱정하는,염려하는",
+    "targetScore": 650,
+    "exampleEn": "Employees are apprehensive about the merger.",
+    "exampleKo": "직원들은 합병에 대해 걱정하고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 33,
+    "word": "consultant",
+    "meaning": "고문,컨설턴트",
+    "targetScore": 650,
+    "exampleEn": "They hired a safety consultant.",
+    "exampleKo": "그들은 안전 컨설턴트를 고용했습니다."
+  },
+  {
+    "day": 1,
+    "no": 34,
+    "word": "entitle",
+    "meaning": "자격을 주다",
+    "targetScore": 650,
+    "exampleEn": "This coupon entitles you to a discount.",
+    "exampleKo": "이 쿠폰은 당신에게 할인을 받을 자격을 줍니다."
+  },
+  {
+    "day": 1,
+    "no": 35,
+    "word": "degree",
+    "meaning": "학위",
+    "targetScore": 650,
+    "exampleEn": "She holds a master's degree in economics.",
+    "exampleKo": "그녀는 경제학 석사 학위를 가지고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 36,
+    "word": "payroll",
+    "meaning": "임금 대장, 급료 명부",
+    "targetScore": 650,
+    "exampleEn": "The payroll department processes salaries.",
+    "exampleKo": "급여 부서는 급여를 처리합니다."
+  },
+  {
+    "day": 1,
+    "no": 37,
+    "word": "recruit",
+    "meaning": "(신입 사원 등을)모집하다",
+    "targetScore": 650,
+    "exampleEn": "We are recruiting for the sales team.",
+    "exampleKo": "우리는 영업팀 인원을 모집하고 있습니다."
+  },
+  {
+    "day": 1,
+    "no": 38,
+    "word": "certification",
+    "meaning": "증명서,증명",
+    "targetScore": 650,
+    "exampleEn": "You need professional certification to practice.",
+    "exampleKo": "개업하려면 전문 자격증이 필요합니다."
+  },
+  {
+    "day": 1,
+    "no": 39,
+    "word": "occupation",
+    "meaning": "직업",
+    "targetScore": 650,
+    "exampleEn": "Please state your name and occupation.",
+    "exampleKo": "이름과 직업을 말씀해 주세요."
+  },
+  {
+    "day": 1,
+    "no": 40,
+    "word": "wage",
+    "meaning": "임금, 급료",
+    "targetScore": 650,
+    "exampleEn": "The minimum wage has increased.",
+    "exampleKo": "최저 임금이 인상되었습니다."
+  }
+]

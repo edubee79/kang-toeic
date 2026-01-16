@@ -1,0 +1,614 @@
+[
+  {
+    "day": 26,
+    "no": 69,
+    "word": "view",
+    "meaning": "견해; ~으로 여기다",
+    "targetScore": 800,
+    "exampleEn": "Investors view this as a promising opportunity.",
+    "exampleKo": "투자자들은 이것을 유망한 기회로 여깁니다."
+  },
+  {
+    "day": 26,
+    "no": 70,
+    "word": "accommodate",
+    "meaning": "수용하다",
+    "targetScore": 800,
+    "exampleEn": "The fund can accommodate additional investors.",
+    "exampleKo": "펀드는 추가 투자자를 수용할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 71,
+    "word": "allocate",
+    "meaning": "배분하다",
+    "targetScore": 800,
+    "exampleEn": "The company will allocate funds to research and development.",
+    "exampleKo": "회사는 연구 개발에 자금을 배분할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 72,
+    "word": "appreciate",
+    "meaning": "가치가 오르다",
+    "targetScore": 800,
+    "exampleEn": "The property has appreciated significantly in value.",
+    "exampleKo": "부동산 가치가 크게 상승했습니다."
+  },
+  {
+    "day": 26,
+    "no": 73,
+    "word": "assess",
+    "meaning": "평가하다",
+    "targetScore": 800,
+    "exampleEn": "Financial advisors assess investment risks carefully.",
+    "exampleKo": "재무 고문은 투자 위험을 신중하게 평가합니다."
+  },
+  {
+    "day": 26,
+    "no": 74,
+    "word": "audit",
+    "meaning": "감사하다; 감사",
+    "targetScore": 800,
+    "exampleEn": "The company undergoes an annual financial audit.",
+    "exampleKo": "회사는 연례 재무 감사를 받습니다."
+  },
+  {
+    "day": 26,
+    "no": 75,
+    "word": "authorize",
+    "meaning": "승인하다",
+    "targetScore": 800,
+    "exampleEn": "The board must authorize all major expenditures.",
+    "exampleKo": "이사회는 모든 주요 지출을 승인해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 76,
+    "word": "bankruptcy",
+    "meaning": "파산",
+    "targetScore": 800,
+    "exampleEn": "The company filed for bankruptcy protection.",
+    "exampleKo": "회사는 파산 보호를 신청했습니다."
+  },
+  {
+    "day": 26,
+    "no": 77,
+    "word": "broker",
+    "meaning": "중개인",
+    "targetScore": 800,
+    "exampleEn": "The broker arranged the transaction between parties.",
+    "exampleKo": "중개인이 당사자 간 거래를 주선했습니다."
+  },
+  {
+    "day": 26,
+    "no": 78,
+    "word": "budget",
+    "meaning": "예산",
+    "targetScore": 800,
+    "exampleEn": "We need to stay within the allocated budget.",
+    "exampleKo": "할당된 예산 내에서 유지해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 79,
+    "word": "capitalize",
+    "meaning": "자본화하다",
+    "targetScore": 800,
+    "exampleEn": "The company is well-capitalized for expansion.",
+    "exampleKo": "회사는 확장을 위해 충분한 자본을 확보했습니다."
+  },
+  {
+    "day": 26,
+    "no": 80,
+    "word": "collateral",
+    "meaning": "담보",
+    "targetScore": 800,
+    "exampleEn": "The bank requires collateral for large loans.",
+    "exampleKo": "은행은 대규모 대출에 담보를 요구합니다."
+  },
+  {
+    "day": 26,
+    "no": 81,
+    "word": "commission",
+    "meaning": "수수료",
+    "targetScore": 800,
+    "exampleEn": "Brokers earn a commission on each transaction.",
+    "exampleKo": "중개인은 각 거래에서 수수료를 받습니다."
+  },
+  {
+    "day": 26,
+    "no": 82,
+    "word": "commodity",
+    "meaning": "상품",
+    "targetScore": 800,
+    "exampleEn": "Gold is a valuable commodity in uncertain times.",
+    "exampleKo": "금은 불확실한 시기에 귀중한 상품입니다."
+  },
+  {
+    "day": 26,
+    "no": 83,
+    "word": "consolidate",
+    "meaning": "통합하다",
+    "targetScore": 800,
+    "exampleEn": "The firm plans to consolidate its debt.",
+    "exampleKo": "회사는 부채를 통합할 계획입니다."
+  },
+  {
+    "day": 26,
+    "no": 84,
+    "word": "currency",
+    "meaning": "통화",
+    "targetScore": 800,
+    "exampleEn": "Foreign currency exchange rates fluctuate daily.",
+    "exampleKo": "외환 환율은 매일 변동합니다."
+  },
+  {
+    "day": 26,
+    "no": 85,
+    "word": "default",
+    "meaning": "채무 불이행",
+    "targetScore": 800,
+    "exampleEn": "The borrower defaulted on the loan payment.",
+    "exampleKo": "차용인이 대출 상환을 불이행했습니다."
+  },
+  {
+    "day": 26,
+    "no": 86,
+    "word": "depreciate",
+    "meaning": "가치가 하락하다",
+    "targetScore": 800,
+    "exampleEn": "The currency depreciated against the dollar.",
+    "exampleKo": "통화가 달러 대비 가치가 하락했습니다."
+  },
+  {
+    "day": 26,
+    "no": 87,
+    "word": "diversify",
+    "meaning": "다각화하다",
+    "targetScore": 800,
+    "exampleEn": "Investors should diversify their portfolios.",
+    "exampleKo": "투자자들은 포트폴리오를 다각화해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 88,
+    "word": "downgrade",
+    "meaning": "등급을 낮추다",
+    "targetScore": 800,
+    "exampleEn": "The credit rating agency downgraded the company's bonds.",
+    "exampleKo": "신용 평가 기관이 회사 채권의 등급을 낮췄습니다."
+  },
+  {
+    "day": 26,
+    "no": 89,
+    "word": "endorse",
+    "meaning": "보증하다",
+    "targetScore": 800,
+    "exampleEn": "The bank endorsed the check for deposit.",
+    "exampleKo": "은행이 예금을 위해 수표를 보증했습니다."
+  },
+  {
+    "day": 26,
+    "no": 90,
+    "word": "equity",
+    "meaning": "자기 자본",
+    "targetScore": 800,
+    "exampleEn": "The company has strong equity positions.",
+    "exampleKo": "회사는 강력한 자기 자본 지위를 가지고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 91,
+    "word": "estimate",
+    "meaning": "추정하다; 추정",
+    "targetScore": 800,
+    "exampleEn": "Analysts estimate earnings will increase by 15%.",
+    "exampleKo": "분석가들은 수익이 15% 증가할 것으로 추정합니다."
+  },
+  {
+    "day": 26,
+    "no": 92,
+    "word": "evaluate",
+    "meaning": "평가하다",
+    "targetScore": 800,
+    "exampleEn": "We need to evaluate the investment opportunity carefully.",
+    "exampleKo": "투자 기회를 신중하게 평가해야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 93,
+    "word": "expenditure",
+    "meaning": "지출",
+    "targetScore": 800,
+    "exampleEn": "Capital expenditures will increase next quarter.",
+    "exampleKo": "자본 지출이 다음 분기에 증가할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 94,
+    "word": "fluctuate",
+    "meaning": "변동하다",
+    "targetScore": 800,
+    "exampleEn": "Stock prices fluctuate based on market conditions.",
+    "exampleKo": "주가는 시장 상황에 따라 변동합니다."
+  },
+  {
+    "day": 26,
+    "no": 95,
+    "word": "forecast",
+    "meaning": "예측하다",
+    "targetScore": 800,
+    "exampleEn": "Economists forecast moderate growth this year.",
+    "exampleKo": "경제학자들은 올해 완만한 성장을 예측합니다."
+  },
+  {
+    "day": 26,
+    "no": 96,
+    "word": "guarantee",
+    "meaning": "보증하다; 보증",
+    "targetScore": 800,
+    "exampleEn": "The loan is guaranteed by the government.",
+    "exampleKo": "대출은 정부가 보증합니다."
+  },
+  {
+    "day": 26,
+    "no": 97,
+    "word": "hedge",
+    "meaning": "헤지하다",
+    "targetScore": 800,
+    "exampleEn": "Investors hedge against currency risk.",
+    "exampleKo": "투자자들은 환율 위험을 헤지합니다."
+  },
+  {
+    "day": 26,
+    "no": 98,
+    "word": "incentive",
+    "meaning": "인센티브",
+    "targetScore": 800,
+    "exampleEn": "Tax incentives encourage investment in renewable energy.",
+    "exampleKo": "세금 인센티브는 재생 에너지 투자를 장려합니다."
+  },
+  {
+    "day": 26,
+    "no": 99,
+    "word": "inflation",
+    "meaning": "인플레이션",
+    "targetScore": 800,
+    "exampleEn": "Inflation erodes the purchasing power of money.",
+    "exampleKo": "인플레이션은 화폐의 구매력을 약화시킵니다."
+  },
+  {
+    "day": 26,
+    "no": 100,
+    "word": "interest",
+    "meaning": "이자",
+    "targetScore": 800,
+    "exampleEn": "Interest rates have risen significantly.",
+    "exampleKo": "금리가 크게 상승했습니다."
+  },
+  {
+    "day": 26,
+    "no": 101,
+    "word": "leverage",
+    "meaning": "레버리지",
+    "targetScore": 800,
+    "exampleEn": "The company uses leverage to maximize returns.",
+    "exampleKo": "회사는 수익을 극대화하기 위해 레버리지를 사용합니다."
+  },
+  {
+    "day": 26,
+    "no": 102,
+    "word": "liquidate",
+    "meaning": "청산하다",
+    "targetScore": 800,
+    "exampleEn": "The fund decided to liquidate its holdings.",
+    "exampleKo": "펀드는 보유 자산을 청산하기로 결정했습니다."
+  },
+  {
+    "day": 26,
+    "no": 103,
+    "word": "liquidity",
+    "meaning": "유동성",
+    "targetScore": 800,
+    "exampleEn": "The market lacks sufficient liquidity.",
+    "exampleKo": "시장에 충분한 유동성이 부족합니다."
+  },
+  {
+    "day": 26,
+    "no": 104,
+    "word": "maturity",
+    "meaning": "만기",
+    "targetScore": 800,
+    "exampleEn": "The bond reaches maturity in ten years.",
+    "exampleKo": "채권은 10년 후에 만기가 됩니다."
+  },
+  {
+    "day": 26,
+    "no": 105,
+    "word": "negotiate",
+    "meaning": "협상하다",
+    "targetScore": 800,
+    "exampleEn": "Both parties are negotiating the terms of the deal.",
+    "exampleKo": "양측이 거래 조건을 협상하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 106,
+    "word": "obligation",
+    "meaning": "의무",
+    "targetScore": 800,
+    "exampleEn": "The company has financial obligations to creditors.",
+    "exampleKo": "회사는 채권자에 대한 재정적 의무가 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 107,
+    "word": "portfolio",
+    "meaning": "포트폴리오",
+    "targetScore": 800,
+    "exampleEn": "A balanced portfolio reduces investment risk.",
+    "exampleKo": "균형 잡힌 포트폴리오는 투자 위험을 줄입니다."
+  },
+  {
+    "day": 26,
+    "no": 108,
+    "word": "principal",
+    "meaning": "원금",
+    "targetScore": 800,
+    "exampleEn": "The principal amount must be repaid by maturity.",
+    "exampleKo": "원금은 만기까지 상환되어야 합니다."
+  },
+  {
+    "day": 26,
+    "no": 109,
+    "word": "prospectus",
+    "meaning": "투자 설명서",
+    "targetScore": 800,
+    "exampleEn": "Read the prospectus before investing.",
+    "exampleKo": "투자하기 전에 투자 설명서를 읽으세요."
+  },
+  {
+    "day": 26,
+    "no": 110,
+    "word": "quota",
+    "meaning": "할당량",
+    "targetScore": 800,
+    "exampleEn": "Each investor has a quota for the offering.",
+    "exampleKo": "각 투자자는 공모에 대한 할당량이 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 111,
+    "word": "recession",
+    "meaning": "경기 침체",
+    "targetScore": 800,
+    "exampleEn": "The economy is entering a recession.",
+    "exampleKo": "경제가 침체기에 진입하고 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 112,
+    "word": "refund",
+    "meaning": "환불",
+    "targetScore": 800,
+    "exampleEn": "Investors may request a refund within 30 days.",
+    "exampleKo": "투자자는 30일 이내에 환불을 요청할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 113,
+    "word": "reimburse",
+    "meaning": "상환하다",
+    "targetScore": 800,
+    "exampleEn": "The company will reimburse all expenses.",
+    "exampleKo": "회사는 모든 비용을 상환할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 114,
+    "word": "retain",
+    "meaning": "보유하다",
+    "targetScore": 800,
+    "exampleEn": "The company retained earnings for reinvestment.",
+    "exampleKo": "회사는 재투자를 위해 이익을 보유했습니다."
+  },
+  {
+    "day": 26,
+    "no": 115,
+    "word": "securities",
+    "meaning": "증권",
+    "targetScore": 800,
+    "exampleEn": "The firm trades in government securities.",
+    "exampleKo": "회사는 국채를 거래합니다."
+  },
+  {
+    "day": 26,
+    "no": 116,
+    "word": "speculate",
+    "meaning": "투기하다",
+    "targetScore": 800,
+    "exampleEn": "Some investors speculate on commodity prices.",
+    "exampleKo": "일부 투자자들은 상품 가격에 투기합니다."
+  },
+  {
+    "day": 26,
+    "no": 117,
+    "word": "subsidy",
+    "meaning": "보조금",
+    "targetScore": 800,
+    "exampleEn": "The government provides subsidies for agriculture.",
+    "exampleKo": "정부는 농업에 보조금을 제공합니다."
+  },
+  {
+    "day": 26,
+    "no": 118,
+    "word": "surplus",
+    "meaning": "잉여",
+    "targetScore": 800,
+    "exampleEn": "The company reported a budget surplus.",
+    "exampleKo": "회사는 예산 잉여를 보고했습니다."
+  },
+  {
+    "day": 26,
+    "no": 119,
+    "word": "transaction",
+    "meaning": "거래",
+    "targetScore": 800,
+    "exampleEn": "All transactions are recorded electronically.",
+    "exampleKo": "모든 거래는 전자적으로 기록됩니다."
+  },
+  {
+    "day": 26,
+    "no": 120,
+    "word": "underwrite",
+    "meaning": "인수하다",
+    "targetScore": 800,
+    "exampleEn": "The bank will underwrite the bond issue.",
+    "exampleKo": "은행이 채권 발행을 인수할 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 121,
+    "word": "valuation",
+    "meaning": "평가",
+    "targetScore": 800,
+    "exampleEn": "The company's valuation has doubled.",
+    "exampleKo": "회사의 평가액이 두 배가 되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 122,
+    "word": "volatile",
+    "meaning": "변동성이 큰",
+    "targetScore": 800,
+    "exampleEn": "The stock market has been highly volatile.",
+    "exampleKo": "주식 시장이 매우 변동성이 컸습니다."
+  },
+  {
+    "day": 26,
+    "no": 123,
+    "word": "withdraw",
+    "meaning": "인출하다",
+    "targetScore": 800,
+    "exampleEn": "You can withdraw funds at any time.",
+    "exampleKo": "언제든지 자금을 인출할 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 124,
+    "word": "yield",
+    "meaning": "수익률",
+    "targetScore": 800,
+    "exampleEn": "The bond offers a 5% annual yield.",
+    "exampleKo": "채권은 연 5%의 수익률을 제공합니다."
+  },
+  {
+    "day": 26,
+    "no": 125,
+    "word": "accrue",
+    "meaning": "발생하다",
+    "targetScore": 800,
+    "exampleEn": "Interest accrues monthly on the account.",
+    "exampleKo": "계좌에 이자가 매월 발생합니다."
+  },
+  {
+    "day": 26,
+    "no": 126,
+    "word": "amortize",
+    "meaning": "상각하다",
+    "targetScore": 800,
+    "exampleEn": "The loan will be amortized over 20 years.",
+    "exampleKo": "대출은 20년에 걸쳐 상각될 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 127,
+    "word": "arbitrage",
+    "meaning": "차익 거래",
+    "targetScore": 800,
+    "exampleEn": "Traders profit from arbitrage opportunities.",
+    "exampleKo": "거래자들은 차익 거래 기회로 이익을 얻습니다."
+  },
+  {
+    "day": 26,
+    "no": 128,
+    "word": "collateralize",
+    "meaning": "담보로 제공하다",
+    "targetScore": 800,
+    "exampleEn": "The debt is collateralized by real estate.",
+    "exampleKo": "부채는 부동산으로 담보가 제공됩니다."
+  },
+  {
+    "day": 26,
+    "no": 129,
+    "word": "derivative",
+    "meaning": "파생 상품",
+    "targetScore": 800,
+    "exampleEn": "Derivatives can be used to manage risk.",
+    "exampleKo": "파생 상품은 위험 관리에 사용될 수 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 130,
+    "word": "disburse",
+    "meaning": "지급하다",
+    "targetScore": 800,
+    "exampleEn": "Funds will be disbursed upon approval.",
+    "exampleKo": "승인 시 자금이 지급될 것입니다."
+  },
+  {
+    "day": 26,
+    "no": 131,
+    "word": "escrow",
+    "meaning": "에스크로",
+    "targetScore": 800,
+    "exampleEn": "The payment is held in escrow until closing.",
+    "exampleKo": "지불금은 마감까지 에스크로에 보관됩니다."
+  },
+  {
+    "day": 26,
+    "no": 132,
+    "word": "fiduciary",
+    "meaning": "수탁자",
+    "targetScore": 800,
+    "exampleEn": "The advisor has a fiduciary duty to clients.",
+    "exampleKo": "고문은 고객에 대한 수탁자 의무가 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 133,
+    "word": "prospective",
+    "meaning": "장래의",
+    "targetScore": 800,
+    "exampleEn": "Prospective investors attended the presentation.",
+    "exampleKo": "잠재 투자자들이 프레젠테이션에 참석했습니다."
+  },
+  {
+    "day": 26,
+    "no": 134,
+    "word": "remittance",
+    "meaning": "송금",
+    "targetScore": 800,
+    "exampleEn": "The remittance was processed within 24 hours.",
+    "exampleKo": "송금은 24시간 이내에 처리되었습니다."
+  },
+  {
+    "day": 26,
+    "no": 135,
+    "word": "solvent",
+    "meaning": "지불 능력이 있는",
+    "targetScore": 800,
+    "exampleEn": "The company remains financially solvent.",
+    "exampleKo": "회사는 재정적으로 지불 능력이 있습니다."
+  },
+  {
+    "day": 26,
+    "no": 136,
+    "word": "syndicate",
+    "meaning": "신디케이트",
+    "targetScore": 800,
+    "exampleEn": "A syndicate of banks financed the project.",
+    "exampleKo": "은행 신디케이트가 프로젝트에 자금을 지원했습니다."
+  }
+]
