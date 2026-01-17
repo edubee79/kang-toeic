@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import { collection, doc, getDoc, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { getQuestionsByIds } from '@/data/rc_part5_tests';
+import { getQuestionsByIds } from '@/data/toeic/reading/part5/tests';
 import { Part5Runner } from '@/components/exam/Part5Runner';
 import { Loader2 } from "lucide-react";
 

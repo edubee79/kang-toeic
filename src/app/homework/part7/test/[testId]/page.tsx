@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { part7TestData, Part7Question } from '@/data/rc_part7';
+import { part7TestData, Part7Question } from '@/data/toeic/reading/part7/tests';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";

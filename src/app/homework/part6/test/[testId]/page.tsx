@@ -5,8 +5,8 @@ import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation
 import Link from 'next/link';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { part6TestData, Part6Question } from '@/data/rc_part6';
-import { getPart6ClassificationLabel } from '@/data/part6_classification_map';
+import { part6TestData, Part6Question } from '@/data/toeic/reading/part6/tests';
+import { getPart6ClassificationLabel } from '@/data/toeic/reading/part6/classification';
 // For now, reuse P5 map or just display raw if P6 specific.
 import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag, ChevronLeft } from "lucide-react";

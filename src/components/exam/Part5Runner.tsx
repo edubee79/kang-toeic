@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, Trophy, ChevronRight, BookOpen, Tag } from "lucide-react";
-import { getClassificationLabel } from '@/data/part5_classification_map';
-import { Part5TestQuestion } from '@/data/rc_part5_tests';
+import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
+import { Part5TestQuestion } from '@/data/toeic/reading/part5/tests';
 
 interface Part5RunnerProps {
     testId: string | number;

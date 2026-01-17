@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { part6TestData } from '../src/data/rc_part6';
+import { part6TestData } from '../src/data/toeic/reading/part6/tests';
 
 // Correct answers for Test 1
 const TEST1_ANSWERS: Record<string, string> = {

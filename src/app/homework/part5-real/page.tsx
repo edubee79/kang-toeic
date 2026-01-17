@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { part5TestData } from '@/data/rc_part5_tests';
+import { part5TestData } from '@/data/toeic/reading/part5/tests';
 import { ChevronRight, Trophy, BookOpen, Timer } from "lucide-react";
 
 export default function Part5RealLobbyPage() {

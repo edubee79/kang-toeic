@@ -1,4 +1,4 @@
-import { part5TestData } from '../src/data/rc_part5_tests';
+import { part5TestData } from '../src/data/toeic/reading/part5/tests';
 
 console.log('Successfully imported data.');
 console.log('Total Tests:', part5TestData.length);

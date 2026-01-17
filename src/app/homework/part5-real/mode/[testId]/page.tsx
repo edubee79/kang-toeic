@@ -5,7 +5,7 @@ import { useRouter, useParams } from 'next/navigation';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Trophy, ArrowRight, CheckCircle2, Timer, ChevronLeft } from 'lucide-react';
-import { part5TestData } from '@/data/rc_part5_tests';
+import { part5TestData } from '@/data/toeic/reading/part5/tests';
 
 export default function Part5ModeSelectionPage() {
     const router = useRouter();

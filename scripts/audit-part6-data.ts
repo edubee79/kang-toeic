@@ -1,4 +1,4 @@
-import { part6TestData } from '../src/data/rc_part6';
+import { part6TestData } from '../src/data/toeic/reading/part6/tests';
 
 function auditPart6() {
     console.log("🔍 Starting Part 6 Data Integrity Audit (Tests 1-10)...");

@@ -5,8 +5,8 @@ import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation
 import Link from 'next/link';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { part5TestData } from '@/data/rc_part5_tests';
-import { getClassificationLabel } from '@/data/part5_classification_map';
+import { part5TestData } from '@/data/toeic/reading/part5/tests';
+import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
 import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag } from "lucide-react";
 

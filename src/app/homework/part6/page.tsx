@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Clock, Trophy, Star } from 'lucide-react';
-import { part6TestData } from '@/data/rc_part6';
+import { part6TestData } from '@/data/toeic/reading/part6/tests';
 import { cn } from "@/lib/utils";
 
 export default function Part6LobbyPage() {
