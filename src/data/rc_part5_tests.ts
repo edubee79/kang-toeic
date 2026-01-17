@@ -7583,3 +7583,11 @@ export const part5TestData: Part5TestSet[] = [
         ]
     }
 ];
+// Helper to find specific questions across all sets
+export const getQuestionsByIds = (ids: string[]): Part5TestQuestion[] => {
+    const allQuestions = part5TestData.flatMap(set => set.questions);
+    // Create a map for O(1) lookup
+    const questionMap = new Map(allQuestions.map(q => [q.id, q]));
+
+    return ids.map(id => questionMap.get(id)).filter((q): q is Part5TestQuestion => !!q);
+};

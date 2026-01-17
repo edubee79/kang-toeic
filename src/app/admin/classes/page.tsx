@@ -10,43 +10,66 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, Plus, Trash2, Users, Loader2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 interface ClassType {
     id: string;
     name: string;
     description: string;
-    studentsCount?: number; // Optional: Fetch this later if needed
+    universityId: string;
+    universityName: string;
+    studentsCount?: number;
+}
+
+interface University {
+    id: string;
+    name: string;
 }
 
 export default function ClassManagementPage() {
     const [classes, setClasses] = useState<ClassType[]>([]);
+    const [universities, setUniversities] = useState<University[]>([]);
     const [loading, setLoading] = useState(true);
+
+    // Form State
     const [newClassName, setNewClassName] = useState('');
     const [newClassDesc, setNewClassDesc] = useState('');
+    const [selectedUnivId, setSelectedUnivId] = useState('');
+
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const router = useRouter();
 
     useEffect(() => {
-        fetchClasses();
+        fetchData();
     }, []);
 
-    const fetchClasses = async () => {
+    const fetchData = async () => {
         try {
             setLoading(true);
-            const q = query(collection(db, "Classes"), orderBy("name"));
-            const querySnapshot = await getDocs(q);
 
+            // Fetch Universities first
+            const univQ = query(collection(db, "Universities"), orderBy("name"));
+            const univSnap = await getDocs(univQ);
+            const univList: University[] = [];
+            univSnap.forEach(doc => univList.push({ id: doc.id, ...doc.data() } as University));
+            setUniversities(univList);
+
+            // Fetch Classes
+            const classQ = query(collection(db, "Classes"), orderBy("name"));
+            const classSnap = await getDocs(classQ);
             const classList: ClassType[] = [];
-            querySnapshot.forEach((doc) => {
+            classSnap.forEach((doc) => {
                 classList.push({ id: doc.id, ...doc.data() } as ClassType);
             });
             setClasses(classList);
+
         } catch (error) {
-            console.error("Error fetching classes:", error);
-            alert("반 목록을 불러오는데 실패했습니다.");
+            console.error("Error fetching data:", error);
+            alert("데이터를 불러오는데 실패했습니다.");
         } finally {
             setLoading(false);
         }
@@ -54,20 +77,29 @@ export default function ClassManagementPage() {
 
     const handleAddClass = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!newClassName.trim()) return;
+        if (!newClassName.trim() || !selectedUnivId) {
+            alert("반 이름과 소속 대학교는 필수입니다.");
+            return;
+        }
+
+        const univ = universities.find(u => u.id === selectedUnivId);
+        if (!univ) return;
 
         try {
             setIsSubmitting(true);
             await addDoc(collection(db, "Classes"), {
                 name: newClassName,
                 description: newClassDesc,
+                universityId: univ.id,
+                universityName: univ.name,
                 createdAt: serverTimestamp()
             });
 
             setNewClassName('');
             setNewClassDesc('');
+            setSelectedUnivId('');
             setIsDialogOpen(false);
-            fetchClasses(); // Refresh list
+            fetchData(); // Refresh list
         } catch (error) {
             console.error("Error adding class:", error);
             alert("반 추가에 실패했습니다.");
@@ -81,7 +113,7 @@ export default function ClassManagementPage() {
 
         try {
             await deleteDoc(doc(db, "Classes", id));
-            fetchClasses(); // Refresh list
+            fetchData(); // Refresh list
         } catch (error) {
             console.error("Error deleting class:", error);
             alert("반 삭제에 실패했습니다.");
@@ -115,10 +147,23 @@ export default function ClassManagementPage() {
                             <DialogHeader>
                                 <DialogTitle>새로운 반 추가</DialogTitle>
                                 <DialogDescription className="text-slate-400">
-                                    새로 개설할 반의 이름을 입력해주세요.
+                                    새로 개설할 반의 소속 대학교와 이름을 입력해주세요.
                                 </DialogDescription>
                             </DialogHeader>
                             <form onSubmit={handleAddClass} className="space-y-4 pt-4">
+                                <div className="space-y-2">
+                                    <Label>소속 대학교 (필수)</Label>
+                                    <Select value={selectedUnivId} onValueChange={setSelectedUnivId}>
+                                        <SelectTrigger className="bg-slate-950 border-slate-800">
+                                            <SelectValue placeholder="대학교 선택" />
+                                        </SelectTrigger>
+                                        <SelectContent className="bg-slate-900 border-slate-800 text-white">
+                                            {universities.map(u => (
+                                                <SelectItem key={u.id} value={u.id}>{u.name}</SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                </div>
                                 <div className="space-y-2">
                                     <Label htmlFor="name">반 이름 (필수)</Label>
                                     <Input
@@ -175,6 +220,7 @@ export default function ClassManagementPage() {
                                 <Table>
                                     <TableHeader className="bg-slate-950">
                                         <TableRow className="border-slate-800 hover:bg-slate-950">
+                                            <TableHead className="text-slate-400 font-bold w-[120px]">소속 대학</TableHead>
                                             <TableHead className="text-slate-400 font-bold">반 이름</TableHead>
                                             <TableHead className="text-slate-400 font-bold">설명</TableHead>
                                             <TableHead className="text-right text-slate-400 font-bold">관리</TableHead>
@@ -183,6 +229,15 @@ export default function ClassManagementPage() {
                                     <TableBody>
                                         {classes.map((cls) => (
                                             <TableRow key={cls.id} className="border-slate-800 hover:bg-slate-800/50">
+                                                <TableCell>
+                                                    {cls.universityName ? (
+                                                        <Badge variant="outline" className="border-indigo-500/30 text-indigo-400 bg-indigo-500/5">
+                                                            {cls.universityName}
+                                                        </Badge>
+                                                    ) : (
+                                                        <span className="text-slate-600 text-xs">-</span>
+                                                    )}
+                                                </TableCell>
                                                 <TableCell className="font-bold text-white">{cls.name}</TableCell>
                                                 <TableCell className="text-slate-400">{cls.description}</TableCell>
                                                 <TableCell className="text-right">

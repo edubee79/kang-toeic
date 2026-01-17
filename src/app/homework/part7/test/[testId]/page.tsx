@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { part7TestData, Part7Question } from '@/data/rc_part7';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -54,13 +56,36 @@ function Part7TestRunnerContent() {
         return `${m}:${s.toString().padStart(2, '0')}`;
     };
 
+    const getScore = () => {
+        return allQuestions.filter(q => selectedAnswers[q.id] === q.correctAnswer).length;
+    };
+
     const finishTest = () => {
         setIsTimerRunning(false);
         setShowCompletion(true);
-    };
 
-    const getScore = () => {
-        return allQuestions.filter(q => selectedAnswers[q.id] === q.correctAnswer).length;
+        // Save to Firebase
+        const userStr = localStorage.getItem('toeic_user');
+        if (userStr) {
+            const user = JSON.parse(userStr);
+            const score = getScore();
+            try {
+                addDoc(collection(db, "Manager_Results"), {
+                    student: user.userName || user.username || user.name,
+                    studentId: user.userId,
+                    className: user.userClass || user.className || "Unknown",
+                    unit: `RC_Part7_Test${testId}_${mode}`,
+                    score: score,
+                    total: allQuestions.length,
+                    wrongCount: allQuestions.length - score,
+                    timestamp: serverTimestamp(),
+                    timeSpent: elapsedTime,
+                    mode: mode,
+                    type: 'part7_test',
+                    detail: `Test ${testId}`
+                });
+            } catch (e) { console.error(e); }
+        }
     };
 
     if (showCompletion) {
@@ -132,6 +157,11 @@ function Part7TestRunnerContent() {
                             <div key={currentSet.id} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full overflow-hidden lg:overflow-visible">
                                 {/* Passages: 70% on Mobile, 70% on Desktop */}
                                 <div className="h-[70%] lg:h-fit lg:col-span-7 lg:sticky lg:top-0 space-y-2 lg:space-y-8 overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none">
+                                    {/* Question Range Header */}
+                                    <div className="text-slate-400 text-xs lg:text-sm font-medium px-2 lg:px-0 pt-2 lg:pt-0">
+                                        Questions {currentSet.questionRange} refer to the following {currentSet.passages.length > 1 ? `${currentSet.passages.length} passages` : currentSet.passages[0].type.toLowerCase().replace('_', ' ')}.
+                                    </div>
+
                                     {currentSet.passages.map((passage, pIdx) => (
                                         <div key={passage.id} className="space-y-4">
                                             {/* Label if multiple */}

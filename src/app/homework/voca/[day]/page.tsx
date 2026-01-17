@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { VocabularyCard } from '@/components/vocabulary/VocabularyCard';
@@ -726,6 +728,14 @@ export default function DayPage() {
                         </div>
                     </div>
 
+                    {/* Auto-save Trigger */}
+                    <SaveResultEffect
+                        testScore={testScore}
+                        total={total}
+                        day={day}
+                        userId={userId}
+                    />
+
                     <div className="space-y-4">
                         {!passed && (
                             <Button
@@ -777,5 +787,39 @@ export default function DayPage() {
         );
     }
 
+    return null;
+}
+
+// Side-effect component to handle saving
+function SaveResultEffect({ testScore, total, day, userId }: { testScore: number, total: number, day: number, userId: string | null }) {
+    useEffect(() => {
+        const save = async () => {
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr && userId) {
+                const user = JSON.parse(userStr);
+                // Only save if passed? The user said "all homework... upon completion".
+                // Even fail records might be useful, but let's stick to completing the flow.
+                // Assuming reaching 'result' screen means "completed" (pass or fail).
+                try {
+                    await addDoc(collection(db, "Manager_Results"), {
+                        student: user.userName || user.username || user.name,
+                        studentId: userId,
+                        className: user.userClass || user.className || "Unknown",
+                        unit: `Voca_Day${day}`,
+                        score: testScore,
+                        total: total,
+                        wrongCount: total - testScore,
+                        timestamp: serverTimestamp(),
+                        type: 'voca',
+                        detail: `Day ${day}`
+                    });
+                    console.log("Voca Saved");
+                } catch (e) {
+                    console.error("Failed to save voca result", e);
+                }
+            }
+        };
+        save();
+    }, []); // Run once on mount
     return null;
 }

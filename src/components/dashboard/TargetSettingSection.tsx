@@ -18,7 +18,7 @@ interface TargetSettingSectionProps {
         grammar: number;
         voca: number;
     };
-    onUpdate: () => void;
+    onUpdate: (newScore?: number) => void;
 }
 
 export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSettingSectionProps) {
@@ -42,10 +42,11 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         p5: 30, p6: 16, p7: 54
     };
 
-    // Determine Required Counts based on Score (Approx / 5)
-    // Max 100 questions per section
+    // Determine Required Counts based on Score (User Heuristic)
+    // LC: Close to simple /5 (e.g. 98 correct ~= 495)
+    // RC: "Need 3-5 more correct than the 5-point system"
     const requiredLC = Math.min(100, Math.ceil(targetLC / 5));
-    const requiredRC = Math.min(100, Math.ceil(targetRC / 5));
+    const requiredRC = Math.min(100, Math.ceil(targetRC / 5) + 4); // +4 Questions buffer for RC difficulty
 
     // Calculate current sums
     const currentLCSum = partTargets.p1 + partTargets.p2 + partTargets.p3 + partTargets.p4;
@@ -57,41 +58,125 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
 
     // AI Auto-Allocate Logic
     const handleAutoAllocate = () => {
-        // LC Strategy: P1 -> P2 -> P4 -> P3 (Difficulty adjustment)
-        let lcBudget = requiredLC;
-        const newP1 = Math.min(MAX_Q.p1, lcBudget); lcBudget -= newP1; // Easy
-        const newP2 = Math.min(MAX_Q.p2, lcBudget); lcBudget -= newP2; // Medium
-        const newP4 = Math.min(MAX_Q.p4, lcBudget); lcBudget -= newP4; // Med-Hard
-        const newP3 = Math.min(MAX_Q.p3, lcBudget); lcBudget -= newP3; // Hard
+        // Strategy 2.2: "Human Heuristic"
+        // 1. Target >= 900 => LC must be ~480-495 (Max out LC first).
+        // 2. RC requires more raw correct answers (handled by requiredRC above).
 
-        // RC Strategy: P5 -> P6 -> P7
-        let rcBudget = requiredRC;
-        const newP5 = Math.min(MAX_Q.p5, rcBudget); rcBudget -= newP5; // Grammar/Vocab (Study pays off fast)
-        const newP6 = Math.min(MAX_Q.p6, rcBudget); rcBudget -= newP6; // Context
-        const newP7 = Math.min(MAX_Q.p7, rcBudget); rcBudget -= newP7; // Reading (Time intensive)
+        // 1. Determine realistic LC/RC split
+        let newLC, newRC;
+
+        if (totalScore >= 900) {
+            // High Scorer Strategy
+            // LC should be 480-495.
+            // If Total=900, LC=480, RC=420.
+            // If Total=950, LC=490, RC=460.
+            newLC = 480 + Math.max(0, (totalScore - 900) * 0.5); // Push LC hard
+            newLC = Math.min(495, Math.ceil(newLC / 5) * 5);
+            newRC = totalScore - newLC;
+        } else {
+            // Normal Strategy (LC +50 rule)
+            newLC = Math.ceil((totalScore + 50) / 2 / 5) * 5;
+            newRC = totalScore - newLC;
+            if (newLC > 495) { newLC = 495; newRC = totalScore - 495; }
+        }
+
+        setTargetLC(newLC);
+        setTargetRC(newRC);
+
+        // 2. Allocate Part Targets (Re-calculate required based on NEW split)
+        const reqLC = Math.min(100, Math.ceil(newLC / 5));
+        const reqRC = Math.min(100, Math.ceil(newRC / 5) + 4); // Keep consistency
+
+        // Distribution Helper
+        const distribute = (budget: number, parts: { key: keyof typeof MAX_Q, cap?: number }[]) => {
+            const result: Partial<Record<keyof typeof MAX_Q, number>> = {};
+            parts.forEach(p => result[p.key] = 0);
+
+            let remaining = budget;
+
+            // Phase 1: Fill up to Soft Cap (90% or custom)
+            // If Score >= 900, Soft Cap is 100% (No buffer needed)
+            const useSoftCap = totalScore < 900;
+
+            for (const p of parts) {
+                const max = p.cap ?? MAX_Q[p.key];
+                // Exception: Part 1 is always allowed to be maxed
+                const isP1 = p.key === 'p1';
+
+                let limit = max;
+                if (useSoftCap && !isP1) {
+                    limit = Math.floor(max * 0.9);
+                }
+
+                const take = Math.min(limit, remaining);
+                result[p.key] = take;
+                remaining -= take;
+            }
+
+            // Phase 2: Overflow (if budget still remains, fill from easiest to hardest up to purely Max)
+            if (remaining > 0) {
+                for (const p of parts) {
+                    const current = result[p.key] || 0;
+                    const max = p.cap ?? MAX_Q[p.key]; // Hard max
+                    const available = max - current;
+
+                    if (available > 0) {
+                        const take = Math.min(available, remaining);
+                        result[p.key] = current + take;
+                        remaining -= take;
+                    }
+                    if (remaining === 0) break;
+                }
+            }
+
+            return result;
+        };
+
+        // LC Parts Definition (Priority Order: P1 -> P2 -> P4 -> P3)
+        const lcParts = [
+            { key: 'p1' as const },
+            { key: 'p2' as const },
+            { key: 'p4' as const },
+            { key: 'p3' as const }
+        ];
+        const lcResult = distribute(reqLC, lcParts);
+
+        // RC Parts Definition
+        // P5 Logic: < 750 => Cap 25. < 600 => Cap 20.
+        let p5Cap = MAX_Q.p5;
+        if (totalScore < 750) p5Cap = 25;
+        if (totalScore < 600) p5Cap = 20;
+
+        // Priority: P5 -> P6 -> P7
+        const rcParts = [
+            { key: 'p5' as const, cap: p5Cap },
+            { key: 'p6' as const },
+            { key: 'p7' as const }
+        ];
+        const rcResult = distribute(reqRC, rcParts);
 
         setPartTargets({
-            p1: newP1, p2: newP2, p3: newP3, p4: newP4,
-            p5: newP5, p6: newP6, p7: newP7
+            p1: lcResult.p1 || 0, p2: lcResult.p2 || 0, p3: lcResult.p3 || 0, p4: lcResult.p4 || 0,
+            p5: rcResult.p5 || 0, p6: rcResult.p6 || 0, p7: rcResult.p7 || 0
         });
     };
 
     // Use Effect to Auto-Allocate on open or when total changes significantly if not set
     // For now, let's just leave it manual or button click to avoid overriding user data annoyingly
 
-    // Auto-calculate Split when Total Changes
+    // Auto-calculate Split when Total Changes (Default simple split, AI button does advanced)
     const handleTotalChange = (val: string) => {
         const score = parseInt(val);
         if (isNaN(score)) return;
         setTotalScore(score);
 
-        // LC = RC + 50
-        // Total = 2*RC + 50 => RC = (Total - 50)/2
-        const rc = Math.floor((score - 50) / 2);
-        const lc = score - rc;
-        setTargetRC(rc);
+        // Simple default: LC = RC + 50 (similar to AI logic base)
+        let lc = Math.ceil((score + 50) / 2 / 5) * 5;
+        if (lc > 495) lc = 495;
+        let rc = score - lc;
+
         setTargetLC(lc);
-        // We do NOT auto-allocate parts here instantly to let user see the new "Required" counts first
+        setTargetRC(rc);
     };
 
     const handleSave = async () => {
@@ -103,7 +188,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                 partTargets
             });
             setIsEditing(false);
-            onUpdate();
+            onUpdate(totalScore);
         } catch (error) {
             console.error("Failed to save targets", error);
         }

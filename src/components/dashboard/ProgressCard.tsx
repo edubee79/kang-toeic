@@ -9,7 +9,7 @@ interface ProgressCardProps {
     subValue?: string;
     total?: number;
     current?: number;
-    color: 'indigo' | 'rose' | 'blue' | 'emerald';
+    color: 'indigo' | 'rose' | 'blue' | 'emerald' | 'orange' | 'amber' | 'violet' | 'cyan' | 'pink';
     icon?: LucideIcon;
     className?: string;
 }
@@ -43,6 +43,41 @@ export function ProgressCard({ title, value, subValue, total, current, color, ic
             value: 'text-emerald-400',
             bar: 'bg-emerald-400',
             shadow: 'shadow-emerald-100'
+        },
+        orange: {
+            bg: 'bg-orange-500',
+            text: 'text-orange-100',
+            value: 'text-orange-100', // Adjusted for contrast
+            bar: 'bg-orange-400',
+            shadow: 'shadow-orange-100'
+        },
+        amber: {
+            bg: 'bg-amber-500',
+            text: 'text-amber-100',
+            value: 'text-amber-100',
+            bar: 'bg-amber-400',
+            shadow: 'shadow-amber-100'
+        },
+        violet: {
+            bg: 'bg-violet-500',
+            text: 'text-violet-100',
+            value: 'text-violet-100',
+            bar: 'bg-violet-400',
+            shadow: 'shadow-violet-100'
+        },
+        cyan: {
+            bg: 'bg-cyan-500',
+            text: 'text-cyan-100',
+            value: 'text-cyan-100',
+            bar: 'bg-cyan-400',
+            shadow: 'shadow-cyan-100'
+        },
+        pink: {
+            bg: 'bg-pink-500',
+            text: 'text-pink-100',
+            value: 'text-pink-100',
+            bar: 'bg-pink-400',
+            shadow: 'shadow-pink-100'
         }
     };
 

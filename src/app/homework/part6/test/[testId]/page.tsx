@@ -66,14 +66,36 @@ function Part6TestRunnerContent() {
         return `${m}:${s.toString().padStart(2, '0')}`;
     };
 
+    const getScore = () => {
+        return allQuestions.filter(q => selectedAnswers[q.id] === q.correctAnswer).length;
+    };
+
     const finishTest = () => {
         setIsTimerRunning(false);
         setShowCompletion(true);
-        // Save to Firebase logic here
-    };
 
-    const getScore = () => {
-        return allQuestions.filter(q => selectedAnswers[q.id] === q.correctAnswer).length;
+        // Save to Firebase
+        const userStr = localStorage.getItem('toeic_user');
+        if (userStr) {
+            const user = JSON.parse(userStr);
+            const score = getScore();
+            try {
+                addDoc(collection(db, "Manager_Results"), {
+                    student: user.userName || user.username || user.name,
+                    studentId: user.userId,
+                    className: user.userClass || user.className || "Unknown",
+                    unit: `RC_Part6_Test${testId}_${mode}`,
+                    score: score,
+                    total: allQuestions.length,
+                    wrongCount: allQuestions.length - score,
+                    timestamp: serverTimestamp(),
+                    timeSpent: elapsedTime,
+                    mode: mode,
+                    type: 'part6_test',
+                    detail: `Test ${testId}`
+                });
+            } catch (e) { console.error(e); }
+        }
     };
 
     // Text Parser for Markers

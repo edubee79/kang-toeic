@@ -3,14 +3,25 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { collection, query, where, getDocs, addDoc, Timestamp, orderBy } from 'firebase/firestore'; // Added orderBy
-import { db } from '@/lib/firebase';
+import { collection, query, where, getDocs, addDoc, Timestamp, orderBy } from 'firebase/firestore';
+import { getToken } from 'firebase/messaging'; // Import here
+import { db, messaging } from '@/lib/firebase';
 import { hashPassword, validatePassword } from '@/lib/password';
-// import { getUniversities, University } from '@/services/admin-service'; // Removed
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertCircle, Loader2, CheckCircle2 } from "lucide-react";
+
+interface University {
+    id: string;
+    name: string;
+}
+
+interface ClassModel {
+    id: string;
+    name: string;
+    universityId?: string;
+}
 
 export default function SignupPage() {
     const [formData, setFormData] = useState({
@@ -18,13 +29,15 @@ export default function SignupPage() {
         email: '',
         userId: '',
         userName: '',
-        userClass: '650반', // Default fallback
+        userClass: '',
         universityId: '',
         password: '',
         confirmPassword: ''
     });
-    const [classes, setClasses] = useState<{ name: string }[]>([]);
-    const [universities, setUniversities] = useState<{ id: string, name: string }[]>([]);
+
+    const [universities, setUniversities] = useState<University[]>([]);
+    const [allClasses, setAllClasses] = useState<ClassModel[]>([]);
+    const [filteredClasses, setFilteredClasses] = useState<ClassModel[]>([]);
 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
@@ -34,54 +47,53 @@ export default function SignupPage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetch Classes
-                const qClass = query(collection(db, "Classes"), orderBy("name"));
-                const classSnapshot = await getDocs(qClass);
-                const classList: { name: string }[] = [];
-                classSnapshot.forEach((doc) => {
-                    const data = doc.data();
-                    if (data.name) classList.push({ name: data.name });
-                });
-                if (classList.length > 0) {
-                    setClasses(classList);
-                    setFormData(prev => ({ ...prev, userClass: classList[0].name }));
-                } else {
-                    setClasses([{ name: '650반' }, { name: '750반' }, { name: '850반' }]);
-                }
-
-                // Fetch Universities
+                // 1. Fetch Universities
                 const qUniv = query(collection(db, "Universities"), orderBy("name"));
                 const univSnapshot = await getDocs(qUniv);
-                const univList: { id: string, name: string }[] = [];
+                const univList: University[] = [];
                 univSnapshot.forEach((doc) => {
                     const data = doc.data();
                     if (data.name) univList.push({ id: doc.id, name: data.name });
                 });
+                setUniversities(univList);
 
-                if (univList.length > 0) {
-                    setUniversities(univList);
-                } else {
-                    // Fallback
-                    setUniversities([
-                        { id: '1', name: '영남대학교' },
-                        { id: '2', name: '계명대학교' },
-                        { id: '3', name: '대구대학교' }
-                    ]);
-                }
+                // 2. Fetch All Classes (Optimized: fetch all once, filter client side for better UX)
+                const qClass = query(collection(db, "Classes"), orderBy("name"));
+                const classSnapshot = await getDocs(qClass);
+                const classList: ClassModel[] = [];
+                classSnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    if (data.name) classList.push({ id: doc.id, name: data.name, universityId: data.universityId });
+                });
+                setAllClasses(classList);
 
             } catch (error) {
                 console.error("Error fetching form data:", error);
-                setClasses([{ name: '650반' }, { name: '750반' }, { name: '850반' }]);
-                setUniversities([
-                    { id: '1', name: '영남대학교' },
-                    { id: '2', name: '계명대학교' },
-                    { id: '3', name: '대구대학교' }
-                ]);
             }
         };
 
         fetchData();
     }, []);
+
+    // Filter classes whenever universityId changes
+    useEffect(() => {
+        if (!formData.universityId) {
+            setFilteredClasses([]);
+            setFormData(prev => ({ ...prev, userClass: '' })); // Reset class selection
+            return;
+        }
+
+        const relevantClasses = allClasses.filter(c => c.universityId === formData.universityId);
+        setFilteredClasses(relevantClasses);
+
+        // Auto-select if only one class exists
+        if (relevantClasses.length > 0) {
+            setFormData(prev => ({ ...prev, userClass: relevantClasses[0].name }));
+        } else {
+            setFormData(prev => ({ ...prev, userClass: '' }));
+        }
+
+    }, [formData.universityId, allClasses]);
 
     const handleChange = (field: string, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -90,7 +102,7 @@ export default function SignupPage() {
 
     const validateForm = (): boolean => {
         if (!formData.username || !formData.email || !formData.password ||
-            !formData.confirmPassword || !formData.universityId || !formData.userId || !formData.userName) {
+            !formData.confirmPassword || !formData.universityId || !formData.userId || !formData.userName || !formData.userClass) {
             setError('모든 필드를 입력해주세요.');
             return false;
         }
@@ -160,6 +172,47 @@ export default function SignupPage() {
                 return;
             }
 
+            // *** NOTIFICATION ALLOWANCE CHECK ***
+            let fcmToken = '';
+
+            // 1. Request Permission
+            // Check if Notification API is supported
+            if (!('Notification' in window)) {
+                // If notification not supported (e.g. very old browser), maybe let pass or block?
+                // Let's assume modern browsers for this PWA
+                console.warn("This browser does not support desktop notification");
+            } else {
+                const permission = await Notification.requestPermission();
+                if (permission !== 'granted') {
+                    setError('회원가입을 하려면 [알림 권한]을 반드시 허용해야 합니다. 브라우저 설정(주소창 자물쇠 아이콘 등)에서 알림을 허용하고 다시 시도해주세요.');
+                    setIsLoading(false);
+                    return;
+                }
+            }
+
+            // 2. Get Token if messaging is available
+            if (messaging) {
+                try {
+                    // Try to get token. If fails (e.g. no vapid key setup / localhost http), warn but maybe allow if permission granted?
+                    // User said "If not done, no signup". The previous step checks permission. 
+                    // Token generation might fail if service worker isn't registered or env issues.
+                    // Ideally we should have the VAPID key.
+                    const vapidKey = process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY;
+                    if (vapidKey) {
+                        fcmToken = await getToken(messaging, { vapidKey });
+                    } else {
+                        // Fallback without vapid key (might work in legacy, but recommended to have one)
+                        fcmToken = await getToken(messaging);
+                    }
+                } catch (tokErr) {
+                    console.warn("Token generation failed:", tokErr);
+                    // Decide strictness on token generation vs permission grant.
+                    // Permission grant is the user action. Token failure is system/network.
+                    // We will allow signup if permission was granted, even if token failed (to avoid blocking due to tech issues).
+                    // But we will log it.
+                }
+            }
+
             const hashedPassword = await hashPassword(formData.password);
             const selectedUniversity = universities.find(u => u.id === formData.universityId);
 
@@ -177,8 +230,10 @@ export default function SignupPage() {
                 userName: formData.userName,
                 universityId: formData.universityId,
                 universityName: selectedUniversity.name,
+                className: formData.userClass,
                 status: 'pending',
                 registeredAt: Timestamp.now(),
+                fcmToken: fcmToken || null,
             });
 
             setSuccess(true);
@@ -306,19 +361,23 @@ export default function SignupPage() {
 
                         <div className="space-y-2">
                             <label htmlFor="userClass" className="text-xs font-bold text-slate-500 uppercase tracking-widest pl-1">
-                                클래스
+                                클래스 {formData.universityId && <span className="text-indigo-400">({filteredClasses.length}개 반 개설됨)</span>}
                             </label>
                             <select
                                 id="userClass"
                                 name="userClass"
                                 value={formData.userClass || ''}
                                 onChange={(e) => handleChange('userClass', e.target.value)}
-                                className="w-full h-12 bg-slate-950 border border-slate-800 rounded-md px-3 text-white font-bold focus:border-indigo-500 focus:outline-none appearance-none"
+                                className="w-full h-12 bg-slate-950 border border-slate-800 rounded-md px-3 text-white font-bold focus:border-indigo-500 focus:outline-none appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
                                 required
+                                disabled={!formData.universityId}
                             >
-                                <option value="">클래스를 선택하세요</option>
-                                {classes.map((cls) => (
-                                    <option key={cls.name} value={cls.name}>{cls.name}</option>
+                                <option value="">
+                                    {!formData.universityId ? "대학교를 먼저 선택하세요" :
+                                        filteredClasses.length === 0 ? "개설된 반이 없습니다" : "클래스를 선택하세요"}
+                                </option>
+                                {filteredClasses.map((cls) => (
+                                    <option key={cls.id} value={cls.name}>{cls.name}</option>
                                 ))}
                             </select>
                         </div>
@@ -376,6 +435,9 @@ export default function SignupPage() {
                         </Button>
 
                         <div className="text-center pt-4">
+                            <div className="text-xs text-slate-500 mb-2">
+                                * 가입 시 중요한 공지사항 전달을 위해 <span className="text-indigo-400 font-bold">알림 권한 허용</span>이 필수입니다.
+                            </div>
                             <Link href="/login" className="text-sm text-slate-500 hover:text-indigo-400 transition-colors font-bold">
                                 이미 계정이 있으신가요? 로그인
                             </Link>

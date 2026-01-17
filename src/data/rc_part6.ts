@@ -31,134 +31,74 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t1-p1",
-                "type": "ARTICLE",
-                "guidance": "Questions 131-134 refer to the following announcement.",
-                "content": "Come to the Maxley Heights Center for Horticulture and learn how to create a beautiful, eco-friendly garden for your home or business. [131] We will teach you how to plant a rain garden, which is simply a shallow sunken garden [132] a special soil mix to filter pollutants from rainwater flowing from nearby roads and rooftops. These gardens can be landscaped with native plants and flowers. [133] rain gardens are always beneficial to the local environment. Among other things, [134] improve drainage and protect rivers and streams.\n\nTo register, visit www.maxley-horticulture.org.",
+                "type": "NOTICE",
+                "guidance": "Questions 131-134 refer to the following notice.",
+                "content": "NOTICE\n\nTo continue providing the highest level of ___131___ to our corporate tenants, we have scheduled the south lobby restrooms for maintenance this weekend, May 13 and May 14. ___132___ this time, the restrooms will be out of order, so tenants and their guests should instead use the facilities in the north lobby.\n\nWe ___133___ for any inconvenience this might cause. ___134___.\n\nDenville Property Management Partners",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Refer to the marked sentence in the passage.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Children of all ages will enjoy the new exhibits."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Learn about rainfall patterns across the region."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Build a set of simple patio furniture with easy-to-acquire materials."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Next Saturday at 4 P.M., we are hosting a free workshop for the public."
-                            }
+                            { "label": "A", "text": "serve" },
+                            { "label": "B", "text": "served" },
+                            { "label": "C", "text": "server" },
+                            { "label": "D", "text": "service" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "132",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "to use"
-                            },
-                            {
-                                "label": "B",
-                                "text": "used to"
-                            },
-                            {
-                                "label": "C",
-                                "text": "by using"
-                            },
-                            {
-                                "label": "D",
-                                "text": "that uses"
-                            }
+                            { "label": "A", "text": "Along" },
+                            { "label": "B", "text": "During" },
+                            { "label": "C", "text": "Without" },
+                            { "label": "D", "text": "Between" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "133",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Best of all"
-                            },
-                            {
-                                "label": "B",
-                                "text": "For example"
-                            },
-                            {
-                                "label": "C",
-                                "text": "In any event"
-                            },
-                            {
-                                "label": "D",
-                                "text": "As a matter of fact"
-                            }
+                            { "label": "A", "text": "apologize" },
+                            { "label": "B", "text": "organize" },
+                            { "label": "C", "text": "realize" },
+                            { "label": "D", "text": "recognize" }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "134",
-                        "text": "Select the best answer.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "we"
-                            },
-                            {
-                                "label": "B",
-                                "text": "they"
-                            },
-                            {
-                                "label": "C",
-                                "text": "both"
-                            },
-                            {
-                                "label": "D",
-                                "text": "yours"
-                            }
+                            { "label": "A", "text": "If you would like to join our property management team, call us today." },
+                            { "label": "B", "text": "Thank you for your patience while the main lobby is being painted." },
+                            { "label": "C", "text": "Please do not attempt to access the north lobby on these days." },
+                            { "label": "D", "text": "Questions or comments may be directed to the Management Office." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t1-p2",
-                "type": "LETTER",
-                "guidance": "Questions 135-138 refer to the following letter.",
-                "content": "31 July\nAkwasi Dombo\nFourth Avenue\nGA 105\nAccra, Ghana\n\nDear Mr. Dombo,\n\nThank you for your support in helping me to plan the opening gala for Tokyo's fashion week. The event was a huge success, and I was honored to work with you. I know that our attendees follow your work closely, and they loved the designs you contributed for this event.\n\nYour designs received a lot of  on social media. Shows like this will keep Tokyo on the map as a premier fashion centre. I realize that the multiple delays made the planning no easy task. The auction our Young Designers Award program is coming up soon and I look forward to working with you on that as well.\n\nSincerely,\nAsahi Ishioka\nDirector, Japanese Guild of Fashion Designers",
+                "type": "ARTICLE",
+                "guidance": "Questions 135-138 refer to the following customer review.",
+                "content": "I recently received a last-minute invitation to a formal dinner. I bought a suit and needed it tailored as ___135___ as possible. A friend suggested that I use Antonio's Tailoring Shop in downtown Auckland. When I met Antonio, he gave me his full attention ___136___ his shop was busy. He took the time to listen to me and carefully noted all my measurements. He then explained all the tailoring costs up front and assured me that he could have my suit ready in three days, but he had it done in two! ___137___.\n\nAntonio has run his shop for over 30 years, and his experience really shows. He is a ___138___ tailor. I highly recommend him.\n\nJim Kestren, Auckland",
                 "questions": [
                     {
                         "id": "135",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "amazed"
-                            },
-                            {
-                                "label": "B",
-                                "text": "amazement"
-                            },
-                            {
-                                "label": "C",
-                                "text": "amazing"
-                            },
-                            {
-                                "label": "D",
-                                "text": "amazingly"
-                            }
+                            { "label": "A", "text": "quickly" },
+                            { "label": "B", "text": "quicken" },
+                            { "label": "C", "text": "quickest" },
+                            { "label": "D", "text": "quickness" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
@@ -167,281 +107,149 @@ export const part6TestData: Part6TestSet[] = [
                         "id": "136",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "attention"
-                            },
-                            {
-                                "label": "B",
-                                "text": "proposals"
-                            },
-                            {
-                                "label": "C",
-                                "text": "innovation"
-                            },
-                            {
-                                "label": "D",
-                                "text": "criticism"
-                            }
+                            { "label": "A", "text": "as far as" },
+                            { "label": "B", "text": "even though" },
+                            { "label": "C", "text": "such as" },
+                            { "label": "D", "text": "whether" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "137",
-                        "text": "Refer to the marked sentence in the passage.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Several other events have gone surprisingly well."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Thank you also for your flexibility in planning the event."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Please stop by our office the next time you are in the city."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Tokyo is a top tourism destination for many reasons."
-                            }
+                            { "label": "A", "text": "Of course, the shop is busiest on Saturdays." },
+                            { "label": "B", "text": "The suit fits me perfectly too." },
+                            { "label": "C", "text": "I made another purchase." },
+                            { "label": "D", "text": "He used to sell shirts." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "138",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "will benefit"
-                            },
-                            {
-                                "label": "B",
-                                "text": "to benefit"
-                            },
-                            {
-                                "label": "C",
-                                "text": "has benefited"
-                            },
-                            {
-                                "label": "D",
-                                "text": "benefits"
-                            }
+                            { "label": "A", "text": "former" },
+                            { "label": "B", "text": "temporary" },
+                            { "label": "C", "text": "superb" },
+                            { "label": "D", "text": "best" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "C",
+                        "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t1-p3",
-                "type": "EMAIL",
-                "guidance": "Questions 139-142 refer to the following e-mail.",
-                "content": "*E-mail*\nFrom: Patron Services <patronservices@menachinlibrary.org>\nTo: Edgar Hughes <hughese98@villachesta.com>\nSubject: Card expiration date approaching\nDate: December 3\n\nDear Mr. Hughes,\n\nPlease be advised that your Mena Chin Library card will expire one month from today.\n\nIt must be renewed if you intend to keep your membership for the coming year.[139]\nThis can be done at the information desk at any branch location.[140]\nAlthough you decide to close your account, no action is necessary. Failure to complete your renewal by the date will result in the expiration of your library privileges.[141] [142]\n\nIf you have any questions about this notice, or about general library services, you may reply directly to this e-mail.\n\nSincerely,\nPatron Services",
+                "type": "LETTER",
+                "guidance": "Questions 139-142 refer to the following letter.",
+                "content": "Dear Director Yoshida,\n\nThank you for your school's interest in visiting our farm next month. Please note that children must be at least six years old to visit and tour the farm. ___139___. I have enclosed a list of the ___140___ activities available for our young visitors. Two of these ___141___ must be scheduled in advance. They are a cheese-making class and an introduction to beekeeping. Both are very popular with our visitors.\n\nPlease let ___142___ know your selection by early next week. I look forward to welcoming your group soon!\n\nSincerely,\n\nAnnabel Romero, Coordinator\nMerrytree Family Farm",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best answer.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "It"
-                            },
-                            {
-                                "label": "B",
-                                "text": "You"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Our"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Each"
-                            }
+                            { "label": "A", "text": "In the event of bad weather, the animals will be inside." },
+                            { "label": "B", "text": "There are no exceptions to this policy." },
+                            { "label": "C", "text": "Ones younger than that can find much to enjoy." },
+                            { "label": "D", "text": "This fee includes lunch and a small souvenir." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "140",
-                        "text": "Refer to the marked sentence in the passage.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "To sign up for a card, visit your local"
-                            },
-                            {
-                                "label": "B",
-                                "text": "For questions about library membership,"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Renewal must be completed at least one"
-                            },
-                            {
-                                "label": "D",
-                                "text": "You may opt out of this program at any"
-                            }
+                            { "label": "A", "text": "legal" },
+                            { "label": "B", "text": "artistic" },
+                            { "label": "C", "text": "athletic" },
+                            { "label": "D", "text": "educational" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "141",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Also"
-                            },
-                            {
-                                "label": "B",
-                                "text": "Should"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Because"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Although"
-                            }
+                            { "label": "A", "text": "events" },
+                            { "label": "B", "text": "plays" },
+                            { "label": "C", "text": "treatments" },
+                            { "label": "D", "text": "trips" }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "142",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "specifically"
-                            },
-                            {
-                                "label": "B",
-                                "text": "specifics"
-                            },
-                            {
-                                "label": "C",
-                                "text": "specified"
-                            },
-                            {
-                                "label": "D",
-                                "text": "specificity"
-                            }
+                            { "label": "A", "text": "they" },
+                            { "label": "B", "text": "me" },
+                            { "label": "C", "text": "her" },
+                            { "label": "D", "text": "one" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     }
                 ]
             },
             {
                 "id": "p6-t1-p4",
-                "type": "LETTER",
-                "guidance": "Questions 143-146 refer to the following letter.",
-                "content": "April 7\nNaomi Burwell\n43 Waymire Road\nSouth Portland, ME 04109\n\nDear Ms. Burwell,\n\nI am Omar Ridha, the manager of Droplight Studio. [143] We offer a full range of photography services for real estate professionals like you. We take pride in composing interior and exterior shots that make a property look its best. Droplight Studio spares no effort in superior digital images. [144], our professional-grade equipment, lighting, and staging techniques allow us to highlight the best features of a property. And once the photo shoot is over, every image expert editing. [146] All these services come standard in every package.\n\nSincerely,\nOmar Ridha, Droplight Studio",
+                "type": "EMAIL",
+                "guidance": "Questions 143-146 refer to the following e-mail.",
+                "content": "To: Lakshmi Aiyar\nFrom: info@healthonity.com\nDate: February 8\nSubject: Healthonity Dental\n\nDear Ms. Aiyar,\n\nWe, the dental health professionals of the Healthonity Dental Center, are ___143___ to introduce our just-opened practice. We aim to provide access to the largest team of dental specialists in the region. On our Web site, you can see a comprehensive list of the procedures we offer. ___144___. The members of our practice share a passion for helping people maintain beautiful and healthy smiles.\n\nContact our center today at 305-555-0121 ___145___ an initial evaluation. All first-time ___146___ will benefit from a 50 percent discount on the cost through the end of the month.\n\nSincerely,\n\nThe Team at Healthonity Dental Center",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Refer to the marked sentence in the passage.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "I would like to introduce you to our business."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Great photographs can make your property stand out."
-                            },
-                            {
-                                "label": "C",
-                                "text": "We are looking forward to your visit."
-                            },
-                            {
-                                "label": "D",
-                                "text": "It was the first studio of its kind to open in this area."
-                            }
+                            { "label": "A", "text": "prouder" },
+                            { "label": "B", "text": "proudly" },
+                            { "label": "C", "text": "pride" },
+                            { "label": "D", "text": "proud" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best answer.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "researching"
-                            },
-                            {
-                                "label": "B",
-                                "text": "creating"
-                            },
-                            {
-                                "label": "C",
-                                "text": "purchasing"
-                            },
-                            {
-                                "label": "D",
-                                "text": "displaying"
-                            }
+                            { "label": "A", "text": "They include general and cosmetic procedures." },
+                            { "label": "B", "text": "We have relocated from neighboring Hillsborough." },
+                            { "label": "C", "text": "The Web site is a creation of A to Z Host Builders." },
+                            { "label": "D", "text": "Several of them are surprisingly expensive." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "145",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "If not"
-                            },
-                            {
-                                "label": "B",
-                                "text": "By comparison"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Otherwise"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Indeed"
-                            }
+                            { "label": "A", "text": "scheduled" },
+                            { "label": "B", "text": "to schedule" },
+                            { "label": "C", "text": "scheduling" },
+                            { "label": "D", "text": "being scheduled" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "146",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "receives"
-                            },
-                            {
-                                "label": "B",
-                                "text": "is receiving"
-                            },
-                            {
-                                "label": "C",
-                                "text": "had received"
-                            },
-                            {
-                                "label": "D",
-                                "text": "had to receive"
-                            }
+                            { "label": "A", "text": "shoppers" },
+                            { "label": "B", "text": "residents" },
+                            { "label": "C", "text": "patients" },
+                            { "label": "D", "text": "tenants" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "C",
+                        "classification": "P6_VOCABULARY"
                     }
                 ]
             }
@@ -453,206 +261,110 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t2-p1",
-                "type": "EMAIL",
-                "guidance": "Questions 131-134 refer to the following email.",
-                "content": "To: Myung-Hee Hahn\nFrom: Dellwyn Home Store\nDate: January 15\nSubject: Order update\nDear Ms. Hahn,\n\nYour [131] order of a red oak dining table and six matching chairs arrived at our store this morning.\n\nWe would now like to arrange for the delivery of the [132]. Please call us at 517-555-0188 and ask [133] to Coleman Cobb, our delivery manager. [134]\n\nCustomer Service, Dellwyn Home Store",
+                "type": "MEMO",
+                "guidance": "Questions 131-134 refer to the following memo.",
+                "content": "To: All staff\nFrom: Bernard Villalobos, Vice President of Product Development\nDate: August 27\nSubject: Alzeret game (Product #DS8192)\n\nDue to the results from our trial customer testing, we have decided to postpone the launch of the Alzeret video game. Customer surveys indicated that the game was less ___131___ than we anticipated. Over the next few months, the game development team will introduce several ___132___ to make the product more attractive. ___133___. If the changes are successful, we hope to launch the game by next January ___134___ February.",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "(A) specially\n(B) specialize\n(C) special\n(D) specializing",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "specially"
-                            },
-                            {
-                                "label": "B",
-                                "text": "specialize"
-                            },
-                            {
-                                "label": "C",
-                                "text": "special"
-                            },
-                            {
-                                "label": "D",
-                                "text": "specializing"
-                            }
+                            { "label": "A", "text": "expensive" },
+                            { "label": "B", "text": "repetitive" },
+                            { "label": "C", "text": "appealing" },
+                            { "label": "D", "text": "surprising" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "C",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "132",
-                        "text": "(A) furniture\n(B) appliances\n(C) refund\n(D) tools",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "furniture"
-                            },
-                            {
-                                "label": "B",
-                                "text": "appliances"
-                            },
-                            {
-                                "label": "C",
-                                "text": "refund"
-                            },
-                            {
-                                "label": "D",
-                                "text": "tools"
-                            }
+                            { "label": "A", "text": "modification" },
+                            { "label": "B", "text": "modifies" },
+                            { "label": "C", "text": "modifying" },
+                            { "label": "D", "text": "modifications" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "133",
-                        "text": "(A) speak\n(B) spoken\n(C) is speaking\n(D) to speak",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "speak"
-                            },
-                            {
-                                "label": "B",
-                                "text": "spoken"
-                            },
-                            {
-                                "label": "C",
-                                "text": "is speaking"
-                            },
-                            {
-                                "label": "D",
-                                "text": "to speak"
-                            }
+                            { "label": "A", "text": "At that point, more tests will be conducted." },
+                            { "label": "B", "text": "The launch will be our biggest of the year." },
+                            { "label": "C", "text": "However, the surveys are not reliable." },
+                            { "label": "D", "text": "Team members must each sign the form." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "134",
-                        "text": "(A) He can schedule a convenient time.\n(B) He began working here yesterday.\n(C) He can meet you at 11:00 A.м.\n(D) He recently moved to Dellwyn.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "He can schedule a convenient time."
-                            },
-                            {
-                                "label": "B",
-                                "text": "He began working here yesterday."
-                            },
-                            {
-                                "label": "C",
-                                "text": "He can meet you at 11:00 A.м."
-                            },
-                            {
-                                "label": "D",
-                                "text": "He recently moved to Dellwyn."
-                            }
+                            { "label": "A", "text": "since" },
+                            { "label": "B", "text": "or" },
+                            { "label": "C", "text": "if" },
+                            { "label": "D", "text": "later" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     }
                 ]
             },
             {
                 "id": "p6-t2-p2",
-                "type": "ADVERTISEMENT",
-                "guidance": "Questions 135-138 refer to the following advertisement.",
-                "content": "Keep Cool Service Contractors can bring you peace of mind. As part of an annual contract, we will service your air-conditioning system, ensuring your [135] and comfort. This includes inspecting the system, making repairs as needed, and professionally cleaning your air ducts. [136], if necessary, we can replace your old air-conditioning system with a new, cost-efficient one.\n\nOur workers are highly qualified licensed technicians who stay up-to-date with ongoing training. [137], We promise you fair prices and professional work, [138] by our Keep Cool guarantee.\n\nCall 1-868-555-0129 for a free quote today.",
+                "type": "EMAIL",
+                "guidance": "Questions 135-138 refer to the following e-mail.",
+                "content": "To: Eva Linn, Lunchtalk Industries\nFrom: Technical Services\nDate: January 15\nSubject: Technical query\n\nDear Ms. Linn,\n\nThank you for contacting our technical department ___135___ your query. ___136___, our call got disconnected when we were trying to reboot your system from our remote location. ___137___. Therefore, please call us at your earliest convenience and refer to conversation ID #TECH12-2020A to complete the system repair. We have prioritized your inquiry and look forward to helping you ___138___ your computer to its full capabilities.\n\nSincerely,\n\nArthur Feldt\nTechnical Service Facilitator",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "------ and comfort.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "safe"
-                            },
-                            {
-                                "label": "B",
-                                "text": "safely"
-                            },
-                            {
-                                "label": "C",
-                                "text": "safest"
-                            },
-                            {
-                                "label": "D",
-                                "text": "safety"
-                            }
+                            { "label": "A", "text": "until" },
+                            { "label": "B", "text": "besides" },
+                            { "label": "C", "text": "into" },
+                            { "label": "D", "text": "with" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "136",
-                        "text": ", if necessary, we can replace your old air-conditioning system with a new, cost-efficient one.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "On one hand"
-                            },
-                            {
-                                "label": "B",
-                                "text": "Nonetheless"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Furthermore"
-                            },
-                            {
-                                "label": "D",
-                                "text": "And yet"
-                            }
+                            { "label": "A", "text": "In other words" },
+                            { "label": "B", "text": "For this reason" },
+                            { "label": "C", "text": "For example" },
+                            { "label": "D", "text": "As you know" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "137",
-                        "text": "We promise you fair prices and professional work,",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Take advantage of dozens of useful online tools."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Moreover, the air conditioner you chose is very popular."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Plus, they are friendly, clean, and knowledgeable."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Thank you for visiting our contractor showroom."
-                            }
+                            { "label": "A", "text": "We invite you to visit one of our computer repair centers in your area." },
+                            { "label": "B", "text": "Unfortunately, we do not have a phone number at which we can reach you." },
+                            { "label": "C", "text": "Thank you again for being one of our priority customers." },
+                            { "label": "D", "text": "Please submit your check for the service fee promptly." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "138",
-                        "text": "by our Keep Cool guarantee.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "backed"
-                            },
-                            {
-                                "label": "B",
-                                "text": "backs"
-                            },
-                            {
-                                "label": "C",
-                                "text": "backing"
-                            },
-                            {
-                                "label": "D",
-                                "text": "back"
-                            }
+                            { "label": "A", "text": "restore" },
+                            { "label": "B", "text": "restoring" },
+                            { "label": "C", "text": "restored" },
+                            { "label": "D", "text": "restoration" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
@@ -661,54 +373,30 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t2-p3",
-                "type": "EMAIL",
-                "guidance": "Questions 139-142 refer to the following email.",
-                "content": "To: All Customers\nFrom: asquires@lightidea.com\nDate: March 6\nSubject: Information\nDear Light Idea Customers,\n\nLight Idea is enacting a price increase on select energy-efficient products, effective April 17.\nSpecific product pricing will [139]. Please contact your sales representative for details and questions.\n\nThe last date for ordering at current prices is April 16. All orders after this date will follow the new price list [140]. Customers will be able to find this on our Web site [141].\n\nWe will continue to provide quality products and service to our valued customers. Thank you for your business [142].\n\nSincerely,\nArvin Squires\nHead of Sales, Light Idea",
+                "type": "WEB PAGE",
+                "guidance": "Questions 139-142 refer to the following Web page.",
+                "content": "For a limited time, the Uppercut Clothing Hanger Company is selling its highest quality hangers at huge discounts on wholesale orders. This special ___139___ is perfect for hotels, retailers, or anywhere hangers are used extensively. ___140___ of lacquered walnut wood, these hangers are not only durable, but also safe for the environment. ___141___ are strong enough to hold up to ten pounds. To order, visit www.uppercuthangerco.ca. Note that all orders require a 20 percent deposit. ___142___, Uppercut will cover all shipping and insurance costs.",
                 "questions": [
                     {
                         "id": "139",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "agree"
-                            },
-                            {
-                                "label": "B",
-                                "text": "vary"
-                            },
-                            {
-                                "label": "C",
-                                "text": "wait"
-                            },
-                            {
-                                "label": "D",
-                                "text": "decline"
-                            }
+                            { "label": "A", "text": "clothing" },
+                            { "label": "B", "text": "offer" },
+                            { "label": "C", "text": "decoration" },
+                            { "label": "D", "text": "performance" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "B",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "140",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "receiving"
-                            },
-                            {
-                                "label": "B",
-                                "text": "having received"
-                            },
-                            {
-                                "label": "C",
-                                "text": "received"
-                            },
-                            {
-                                "label": "D",
-                                "text": "will be received"
-                            }
+                            { "label": "A", "text": "Made" },
+                            { "label": "B", "text": "Making" },
+                            { "label": "C", "text": "To make" },
+                            { "label": "D", "text": "They made" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
@@ -717,153 +405,81 @@ export const part6TestData: Part6TestSet[] = [
                         "id": "141",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "The updated price list will be available on March 20."
-                            },
-                            {
-                                "label": "B",
-                                "text": "We apologize for this inconvenience."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Your orders will be shipped after April 17."
-                            },
-                            {
-                                "label": "D",
-                                "text": "We are increasing prices because of rising costs."
-                            }
+                            { "label": "A", "text": "Both" },
+                            { "label": "B", "text": "They" },
+                            { "label": "C", "text": "Fewer" },
+                            { "label": "D", "text": "Theirs" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best answer.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "exceptionally"
-                            },
-                            {
-                                "label": "B",
-                                "text": "exception"
-                            },
-                            {
-                                "label": "C",
-                                "text": "exceptional"
-                            },
-                            {
-                                "label": "D",
-                                "text": "exceptionalism"
-                            }
+                            { "label": "A", "text": "Our products make great gifts." },
+                            { "label": "B", "text": "While sturdy, wooden hangers are also heavy." },
+                            { "label": "C", "text": "Quality hangers are a great investment." },
+                            { "label": "D", "text": "The balance is due when the shipment is received." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t2-p4",
                 "type": "EMAIL",
-                "guidance": "Questions 143-146 refer to the following email.",
-                "content": "To: Jang-Ho Kwon <jkwon@newart.nz>\nFrom: Kenneth Okim <k.okim@okimjewelry.nz>\nSubject: Good news\nDate: 30 August\nDear Jang-Ho,\n\nThank you for the shipment last month of 80 units of your jewelry pieces. I am happy to report that they have been selling very well in my shop. My [143] love the colourful designs as well as the quality of your workmanship.\n\nI would like to increase the number of units I order from you. Would you be able to [145] my order for the September shipment?\n\nFinally, I would like to discuss the possibility of featuring your work exclusively in my store. I believe that I could reach your target audience best and that the agreement would serve [146] both very well. I look forward to hearing from you.\n\nBest regards,\nKenneth Okim\nOkim Jewelry",
+                "guidance": "Questions 143-146 refer to the following e-mail.",
+                "content": "From: mcrane@doodlemail.com\nTo: jkumar@baxterartsupplies.com\nDate: October 14\nSubject: Application\nAttachment: Résumé\n\nDear Ms. Kumar,\n\nI am writing in response to the advertisement posted in the window of Baxter Art Supplies. As a frequent visitor to your ___143___, I have found it an invaluable source of inspiration over the years. I would be ___144___ to display my artwork. I would also enjoy running workshops to help inspire your customers.\n\nI believe I would be well suited for this role because I am both enthusiastic and friendly. ___145___, I have led successful workshops at various locations in the area. I have attached a copy of my résumé, which includes more details about these workshops. ___146___. I look forward to hearing from you after you have reviewed my application and work.\n\nKind regards,\n\nMelania Crane",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Which of the following best completes the sentence?",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "patients"
-                            },
-                            {
-                                "label": "B",
-                                "text": "students"
-                            },
-                            {
-                                "label": "C",
-                                "text": "customers"
-                            },
-                            {
-                                "label": "D",
-                                "text": "teammates"
-                            }
+                            { "label": "A", "text": "school" },
+                            { "label": "B", "text": "house" },
+                            { "label": "C", "text": "store" },
+                            { "label": "D", "text": "museum" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "C",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "144",
-                        "text": "Which of the following best completes the sentence?",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "If you need more time, please let me"
-                            },
-                            {
-                                "label": "B",
-                                "text": "Unfortunately, I do not have adequate"
-                            },
-                            {
-                                "label": "C",
-                                "text": "I would like to show you some of my"
-                            },
-                            {
-                                "label": "D",
-                                "text": "The reasonable prices also make"
-                            }
+                            { "label": "A", "text": "thrilling" },
+                            { "label": "B", "text": "thrill" },
+                            { "label": "C", "text": "thrilled" },
+                            { "label": "D", "text": "thrills" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "C",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "145",
-                        "text": "Which of the following best completes the sentence?",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "include"
-                            },
-                            {
-                                "label": "B",
-                                "text": "double"
-                            },
-                            {
-                                "label": "C",
-                                "text": "repeat"
-                            },
-                            {
-                                "label": "D",
-                                "text": "insure"
-                            }
+                            { "label": "A", "text": "In addition" },
+                            { "label": "B", "text": "However" },
+                            { "label": "C", "text": "In general" },
+                            { "label": "D", "text": "Similarly" }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "146",
-                        "text": "Which of the following best completes the sentence?",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "us"
-                            },
-                            {
-                                "label": "B",
-                                "text": "you"
-                            },
-                            {
-                                "label": "C",
-                                "text": "we"
-                            },
-                            {
-                                "label": "D",
-                                "text": "these"
-                            }
+                            { "label": "A", "text": "I enjoyed the painting workshop last week." },
+                            { "label": "B", "text": "Samples of my art can be found at www.mcrane.com." },
+                            { "label": "C", "text": "I just started working with watercolors." },
+                            { "label": "D", "text": "For a price list, please contact me at 347-555-0101." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             }
@@ -875,78 +491,42 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t3-p1",
-                "type": "EMAIL",
-                "guidance": "Questions 131-134 refer to the following email.",
-                "content": "To: All Staff\nFrom: Yoreli Costa\nDate: February 15\nSubject: Florence Shawn\nHi Everyone,\n\nI have news to share about a ------- [131] in the human resources department. After nearly twenty\nyears with Cometti Creative, Florence Shawn has decided to retire from the position of director of\nhuman resources.\n\nOur current senior manager of human resources, Makoto Ichise, will replace Ms. Shawn when\nshe retires. Ms. Shawn ------- Mr. Ichise since he joined the company five years ago.\n[132]\n\nMs. Shawn's ------- day will be February 22. A retirement party will be held for her on that day\n[133]\nat 4:00 P.M. in the Terey Lobby. -------.\n[134]\n\nBest,\nYoreli Costa\nDirector of Operations, Cometti Creative",
+                "type": "INFORMATION",
+                "guidance": "Questions 131-134 refer to the following information.",
+                "content": "Thank you for shopping with Danforth Fashions online. Our quality-control team carefully inspects all products ___131___ packaging to ensure customer satisfaction. ___132___. If not, we make exchanges or returns easy. Simply contact us at service@danforthfashions.com if you need a different size, color, or pattern—or if you are dissatisfied for any reason. Your exchange ___133___ right away. To return an item for a refund, use the prepaid return shipping label included with your order and send it back to us in its original packaging unused and undamaged. We issue refunds to the original method of payment, ___134___ the return shipping fee.",
                 "questions": [
                     {
                         "id": "131",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "difference"
-                            },
-                            {
-                                "label": "B",
-                                "text": "strategy"
-                            },
-                            {
-                                "label": "C",
-                                "text": "change"
-                            },
-                            {
-                                "label": "D",
-                                "text": "practice"
-                            }
+                            { "label": "A", "text": "in case" },
+                            { "label": "B", "text": "as much as" },
+                            { "label": "C", "text": "prior to" },
+                            { "label": "D", "text": "in keeping with" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "C",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "132",
-                        "text": "Select the best answer.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "mentors"
-                            },
-                            {
-                                "label": "B",
-                                "text": "is mentoring"
-                            },
-                            {
-                                "label": "C",
-                                "text": "will mentor"
-                            },
-                            {
-                                "label": "D",
-                                "text": "has been mentoring"
-                            }
+                            { "label": "A", "text": "We hope you are entirely pleased with your purchase." },
+                            { "label": "B", "text": "We expect to be redesigning our Web site this summer." },
+                            { "label": "C", "text": "We value all of our loyal customers." },
+                            { "label": "D", "text": "We noticed that your billing address has changed." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "133",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "last"
-                            },
-                            {
-                                "label": "B",
-                                "text": "original"
-                            },
-                            {
-                                "label": "C",
-                                "text": "flexible"
-                            },
-                            {
-                                "label": "D",
-                                "text": "alternate"
-                            }
+                            { "label": "A", "text": "will be processed" },
+                            { "label": "B", "text": "was processed" },
+                            { "label": "C", "text": "is processing" },
+                            { "label": "D", "text": "to be processing" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
@@ -955,231 +535,122 @@ export const part6TestData: Part6TestSet[] = [
                         "id": "134",
                         "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Cometti Creative will hire a replacement"
-                            },
-                            {
-                                "label": "B",
-                                "text": "We hope that you can all attend to wish"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Ms. Shawn was the first director of human"
-                            },
-                            {
-                                "label": "D",
-                                "text": "The first project will be the creation of a"
-                            }
+                            { "label": "A", "text": "past" },
+                            { "label": "B", "text": "above" },
+                            { "label": "C", "text": "aboard" },
+                            { "label": "D", "text": "minus" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t3-p2",
-                "type": "ADVERTISEMENT",
-                "guidance": "Questions 135-138 refer to the following advertisement.",
-                "title": "Lovitt Real Estate",
-                "content": "Lovitt Real Estate\nHelping Manitoba Families Find their Dream Homes\n\nManuel Lovitt, [135] of Lovitt Real Estate, has been selling real estate for over 17 years. Mr. Lovitt and his award-winning team [136] in homes for families in the Winnipeg, Brandon, and Dauphin areas. They know about the schools, parks, services, transportation, and activities that enhance family life in the area where you want to reside. [137].\n\nContact Lovitt Real Estate today and let the team guide you [138] the home of your dreams.\n\nThey will listen to your needs, negotiate on your behalf, and get you the best home for your hard-earned money.\n\nCall 431-555-0168 to speak to an agent or visit www.lovittrealestate.ca for more information.",
+                "type": "NOTICE",
+                "guidance": "Questions 135-138 refer to the following notice.",
+                "content": "Attention, Alden-Agner Industries Employees:\n\nPlease remember that the switch to our new e-mail software will begin at 11:00 P.M. on Sunday, May 2. All ___135___ information in your account, including contacts and calendar events, will be moved to the new system by 4:00 A.M. on Monday, May 3. Though we are working diligently to anticipate and provide solutions for all potential issues, some employees may experience difficulty ___136___ attempting to log in to their accounts after the switch. In addition, there is a remote possibility that some information may be lost. ___137___. be sure to back up any critical e-mail files as soon as possible. ___138___. A training session will be scheduled next week to familiarize employees with key functions of the new software.",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "135. (A) own\n(B) owned\n(C) owner\n(D) owning",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "own"
-                            },
-                            {
-                                "label": "B",
-                                "text": "owned"
-                            },
-                            {
-                                "label": "C",
-                                "text": "owner"
-                            },
-                            {
-                                "label": "D",
-                                "text": "owning"
-                            }
+                            { "label": "A", "text": "existed" },
+                            { "label": "B", "text": "existence" },
+                            { "label": "C", "text": "to exist" },
+                            { "label": "D", "text": "existing" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "136",
-                        "text": "136. (A) practice\n(B) specialize\n(C) report\n(D) purchase",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "practice"
-                            },
-                            {
-                                "label": "B",
-                                "text": "specialize"
-                            },
-                            {
-                                "label": "C",
-                                "text": "report"
-                            },
-                            {
-                                "label": "D",
-                                "text": "purchase"
-                            }
+                            { "label": "A", "text": "when" },
+                            { "label": "B", "text": "plus" },
+                            { "label": "C", "text": "already" },
+                            { "label": "D", "text": "whose" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "137",
-                        "text": "137. (A) They can arrange transportation for your\nlocal elementary school.\n(B) That is because they live in the\ncommunities they serve.\n(C) They will be closed for the summer but\nwill be back soon.\n(D) Therefore, they can help you with all\nyour banking needs.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "They can arrange transportation for your"
-                            },
-                            {
-                                "label": "B",
-                                "text": "That is because they live in the"
-                            },
-                            {
-                                "label": "C",
-                                "text": "They will be closed for the summer but"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Therefore, they can help you with all"
-                            }
+                            { "label": "A", "text": "Previously" },
+                            { "label": "B", "text": "Otherwise" },
+                            { "label": "C", "text": "Even so" },
+                            { "label": "D", "text": "For this reason" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "138",
-                        "text": "138. (A) toward\n(B) fixing\n(C) because\n(D) along",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "toward"
-                            },
-                            {
-                                "label": "B",
-                                "text": "fixing"
-                            },
-                            {
-                                "label": "C",
-                                "text": "because"
-                            },
-                            {
-                                "label": "D",
-                                "text": "along"
-                            }
+                            { "label": "A", "text": "The new software will be ordered this week." },
+                            { "label": "B", "text": "The current system will be reactivated in June." },
+                            { "label": "C", "text": "If you need assistance with this, please contact the IT department." },
+                            { "label": "D", "text": "In that case, you must complete the installation yourself." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "C",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t3-p3",
-                "type": "ARTICLE",
-                "guidance": "Questions 139-142 refer to the following article.",
-                "content": "Welcome to \"Distributing Your Savings.\" This slide [139] is the third of a twelve-segment educational series called \"Preparing for Retirement.\"\n\nThis series provides only [140] advice. It should not replace the guidance of your investment planner. The series has been developed as background material to help you ask key questions when [141] with your investment planner. We hope you find this information helpful.\n\nSwainson-Gray Investments [142]",
+                "type": "EMAIL",
+                "guidance": "Questions 139-142 refer to the following e-mail.",
+                "content": "From: Hong Truong <htruong@jansenwebbfoundation.ca>\nSent: Friday, 16 November\nTo: Staff, Friends, and Stakeholders\nSubject: JWF's new budget director\n\nTo the JWF team and our community partners:\n\n___139___. I just want to let you know that Sofia Vargas ___140___ as the Jansen-Webb Foundation's new budget director. Ms. Vargas has a strong background in fiscal ___141___ within the nonprofit sector.\n\nMs. Vargas brings with her a wealth of experience in organizational finance, including most recently at The Lawton Children's Centre in Winnipeg. Ms. Vargas started her employment with us this morning, so please stop in and introduce ___142___ to her.\n\nBest,\n\nHong Truong\nCEO, Jansen-Webb Foundation",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "(A) presenting\n(B) presents\n(C) presentation\n(D) presented",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "presenting"
-                            },
-                            {
-                                "label": "B",
-                                "text": "presents"
-                            },
-                            {
-                                "label": "C",
-                                "text": "presentation"
-                            },
-                            {
-                                "label": "D",
-                                "text": "presented"
-                            }
+                            { "label": "A", "text": "This is a request to be prompt." },
+                            { "label": "B", "text": "Thanks for the generous contribution." },
+                            { "label": "C", "text": "All are welcome here." },
+                            { "label": "D", "text": "I hope that all are well." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "140",
-                        "text": "(A) You are encouraged to visit our office\nfor a free portfolio review.\n(B) The series is designed to help you\nmake informed financial decisions.\n(C) Please fill out the paperwork before\nyour appointment.\n(D) Your responses will help us serve you\nbetter in the future.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "You are encouraged to visit our office"
-                            },
-                            {
-                                "label": "B",
-                                "text": "The series is designed to help you"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Please fill out the paperwork before"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Your responses will help us serve you"
-                            }
+                            { "label": "A", "text": "is hiring" },
+                            { "label": "B", "text": "will be hired" },
+                            { "label": "C", "text": "has been hired" },
+                            { "label": "D", "text": "is being hired" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "C",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "141",
-                        "text": "(A) regional\n(B) expensive\n(C) supplemental\n(D) playful",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "regional"
-                            },
-                            {
-                                "label": "B",
-                                "text": "expensive"
-                            },
-                            {
-                                "label": "C",
-                                "text": "supplemental"
-                            },
-                            {
-                                "label": "D",
-                                "text": "playful"
-                            }
+                            { "label": "A", "text": "referral" },
+                            { "label": "B", "text": "administrator" },
+                            { "label": "C", "text": "running" },
+                            { "label": "D", "text": "management" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_GRAMMAR"
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "142",
-                        "text": "(A) consulting\n(B) prescribing\n(C) listing\n(D) following",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "consulting"
-                            },
-                            {
-                                "label": "B",
-                                "text": "prescribing"
-                            },
-                            {
-                                "label": "C",
-                                "text": "listing"
-                            },
-                            {
-                                "label": "D",
-                                "text": "following"
-                            }
+                            { "label": "A", "text": "yourself" },
+                            { "label": "B", "text": "him" },
+                            { "label": "C", "text": "them" },
+                            { "label": "D", "text": "ourselves" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
@@ -1188,104 +659,286 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t3-p4",
-                "type": "EMAIL",
-                "guidance": "Questions 143-146 refer to the following email.",
-                "content": "To: Dana Paulwell\nFrom: Silas Laveau\nDate: August 22\nSubject: My input\nAttachment: Article\nDear Dr. Paulwell,\n\nThis message is in response to yesterday's staff meeting, particularly the discussion on how certain aspects of the clinic may affect our work and mission. [143]\n\nCurrently, the vending machines in the hall outside our waiting room are stocked with sugary and salty products such as soft drinks and chips. As a health care provider, we [144] beverages and snacks that show our commitment to wellness. [145] , our mission is focused on good health.\n\nI have attached an article about actions that medical centers like ours are taking to improve their hospitality stations. I hope you find it [146] It details some easy and cost-effective changes we could consider.\n\nKind regards,\nSilas Laveau",
+                "type": "ADVERTISEMENT",
+                "guidance": "Questions 143-146 refer to the following flyer.",
+                "content": "Jamaica National Tourist Organization Offers Free Cultural Passes\n\nThe Jamaica National Tourist Organization (JAMTO) announces an exciting new program that provides free entry to a variety of cultural attractions. The program is sponsored by the JAMTO ___143___ the hotels and businesses listed on the back of this flyer. Together we ___144___ you to take advantage of some of the finest cultural and educational experiences that Jamaica has to offer. ___145___ attractions include the Caribbean National Gardens, Montego Bay Potters Gallery, Jamaican Music Experience, and many others.\n\nTo obtain your pass, visit our Web site at www.jamto.org/freepass or stop by any JAMTO office. One pass is valid for up to five people. ___146___.",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "(A) I thought it went on longer than was\nnecessary.\n(B) I wish we had been informed about it\nsooner.\n(C) I would like to make a suggestion on\nthis topic.\n(D) I would be honored to lead a\nfollow-up session.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "I thought it went on longer than was"
-                            },
-                            {
-                                "label": "B",
-                                "text": "I wish we had been informed about it"
-                            },
-                            {
-                                "label": "C",
-                                "text": "I would like to make a suggestion on"
-                            },
-                            {
-                                "label": "D",
-                                "text": "I would be honored to lead a"
-                            }
+                            { "label": "A", "text": "despite" },
+                            { "label": "B", "text": "instead of" },
+                            { "label": "C", "text": "except for" },
+                            { "label": "D", "text": "along with" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "144",
-                        "text": "(A) will offer\n(B) have offered\n(C) were offering\n(D) should be offering",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "will offer"
-                            },
-                            {
-                                "label": "B",
-                                "text": "have offered"
-                            },
-                            {
-                                "label": "C",
-                                "text": "were offering"
-                            },
-                            {
-                                "label": "D",
-                                "text": "should be offering"
-                            }
+                            { "label": "A", "text": "invite" },
+                            { "label": "B", "text": "invited" },
+                            { "label": "C", "text": "may invite" },
+                            { "label": "D", "text": "were inviting" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "145",
-                        "text": "(A) After all\n(B) By the way\n(C) In the meantime\n(D) On the other hand",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "After all"
-                            },
-                            {
-                                "label": "B",
-                                "text": "By the way"
-                            },
-                            {
-                                "label": "C",
-                                "text": "In the meantime"
-                            },
-                            {
-                                "label": "D",
-                                "text": "On the other hand"
-                            }
+                            { "label": "A", "text": "Early" },
+                            { "label": "B", "text": "Past" },
+                            { "label": "C", "text": "Affordable" },
+                            { "label": "D", "text": "Participating" }
+                        ],
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
+                    },
+                    {
+                        "id": "146",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "Thank you for your order." },
+                            { "label": "B", "text": "It can be used for three days." },
+                            { "label": "C", "text": "The bus runs only on weekdays." },
+                            { "label": "D", "text": "All major credit cards are accepted." }
+                        ],
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "testId": 4,
+        "title": "ETS TOEIC Vol 4 - Test 4",
+        "passages": [
+            {
+                "id": "p6-t4-p1",
+                "type": "EMAIL",
+                "guidance": "Questions 131-134 refer to the following e-mail.",
+                "content": "To: Multiple Recipients\nFrom: Gold Star Bank <information@goldstarbank.co.in>\nSubject: Gold Star Bank App\nDate: 15 July\n\nDear Customer:\n\nHere at Gold Star Bank, we take our customers and their needs seriously. As some of you know, we ___131___ technical difficulties with our mobile app. ___132___. The trouble started on 14 July when our system went down because of a software bug. We expect the app to be up and running ___133___ the next twenty-four hours. ___134___ banking transactions can be done at any of our branch locations, and our automated cash machines are also working.\n\nWe apologize for any inconvenience.\n\nSincerely,\n\nRavi Chadda\nVice President of Customer Relations",
+                "questions": [
+                    {
+                        "id": "131",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "to experience" },
+                            { "label": "B", "text": "experiencing" },
+                            { "label": "C", "text": "had experienced" },
+                            { "label": "D", "text": "are experiencing" }
+                        ],
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
+                    },
+                    {
+                        "id": "132",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "Our engineers are working on this problem now." },
+                            { "label": "B", "text": "The new app is easy to use, and it is available for free." },
+                            { "label": "C", "text": "We have several openings for customer service representatives." },
+                            { "label": "D", "text": "We are announcing the opening of a new Gold Star Bank location." }
                         ],
                         "correctAnswer": "A",
+                        "classification": "P6_SENTENCE_INSERTION"
+                    },
+                    {
+                        "id": "133",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "if" },
+                            { "label": "B", "text": "within" },
+                            { "label": "C", "text": "as long as" },
+                            { "label": "D", "text": "above all" }
+                        ],
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
+                    },
+                    {
+                        "id": "134",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "Unusually" },
+                            { "label": "B", "text": "Eventually" },
+                            { "label": "C", "text": "In the meantime" },
+                            { "label": "D", "text": "As an example" }
+                        ],
+                        "correctAnswer": "C",
+                        "classification": "P6_VOCABULARY"
+                    }
+                ]
+            },
+            {
+                "id": "p6-t4-p2",
+                "type": "INFORMATION",
+                "guidance": "Questions 135-138 refer to the following information.",
+                "content": "Bethenie Industries guarantees that its products will function as ___135___ for at least one year from date of purchase. ___136___. This ___137___ applies only to products sold at Bethenie Industries stores and other licensed distributors. Products that are found to be defective may be shipped to our address for repair or exchange. Please note that products that are being returned because of damage should be shipped back to us, whenever possible, in their ___138___ packaging.",
+                "questions": [
+                    {
+                        "id": "135",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "advertising" },
+                            { "label": "B", "text": "advertised" },
+                            { "label": "C", "text": "advertisement" },
+                            { "label": "D", "text": "advertises" }
+                        ],
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
+                    },
+                    {
+                        "id": "136",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "For certain products this period may be extended." },
+                            { "label": "B", "text": "Bethenie Industries stores are located in three countries." },
+                            { "label": "C", "text": "An electronic receipt was generated at that time." },
+                            { "label": "D", "text": "Product samples are available in stores." }
+                        ],
+                        "correctAnswer": "A",
+                        "classification": "P6_SENTENCE_INSERTION"
+                    },
+                    {
+                        "id": "137",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "agenda" },
+                            { "label": "B", "text": "sale" },
+                            { "label": "C", "text": "requirement" },
+                            { "label": "D", "text": "warranty" }
+                        ],
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
+                    },
+                    {
+                        "id": "138",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "originally" },
+                            { "label": "B", "text": "original" },
+                            { "label": "C", "text": "origin" },
+                            { "label": "D", "text": "originality" }
+                        ],
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
+                    }
+                ]
+            },
+            {
+                "id": "p6-t4-p3",
+                "type": "NOTICE",
+                "guidance": "Questions 139-142 refer to the following notice.",
+                "content": "Healthy Foods Market has planned some exciting renovations in the coming weeks. During this time the store will remain open, but certain departments will be temporarily unavailable. Beginning on August 3, the refrigerated and frozen-food sections of the store ___139___ to be under construction. ___140___ food from these areas will be unavailable while work is being completed. Remodeling should be finished by August 9. Store managers are confident that the ___141___ days of inconvenience will be well worth it.\n\n___142___. At this event, there will be complimentary samples of some new food choices, including an expanded selection of nutritious, ready-to-eat lunch and dinner meals.",
+                "questions": [
+                    {
+                        "id": "139",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "schedules" },
+                            { "label": "B", "text": "to be scheduled" },
+                            { "label": "C", "text": "scheduling" },
+                            { "label": "D", "text": "are scheduled" }
+                        ],
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
+                    },
+                    {
+                        "id": "140",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "However" },
+                            { "label": "B", "text": "Therefore" },
+                            { "label": "C", "text": "Besides" },
+                            { "label": "D", "text": "Likewise" }
+                        ],
+                        "correctAnswer": "B",
+                        "classification": "P6_VOCABULARY"
+                    },
+                    {
+                        "id": "141",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "few" },
+                            { "label": "B", "text": "no" },
+                            { "label": "C", "text": "less" },
+                            { "label": "D", "text": "small" }
+                        ],
+                        "correctAnswer": "A",
+                        "classification": "P6_VOCABULARY"
+                    },
+                    {
+                        "id": "142",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "The store must close for three days." },
+                            { "label": "B", "text": "Customers must park in the recently added parking area." },
+                            { "label": "C", "text": "Ice-cream products will be available during the remodeling." },
+                            { "label": "D", "text": "A special celebration will take place on August 12." }
+                        ],
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
+                    }
+                ]
+            },
+            {
+                "id": "p6-t4-p4",
+                "type": "ARTICLE",
+                "guidance": "Questions 143-146 refer to the following article.",
+                "content": "VANCOUVER (3 February)—Poalesco unveiled its annual Plant Showcase today. According to Poalesco spokesman Nacio Roja, this ___143___ offering highlights the company's latest efforts in botanical research. Many of these efforts result from customer surveys designed to gain an understanding of common challenges. ___144___. This year, the company's specialized nurseries have turned out drought-hardy breeds, such as the Goldtone Apple Tree. These varietals can withstand extended dry conditions without sustaining damage. \"Gardeners in desert ___145___ will appreciate the Goldtones in particular,\" noted Roja. \"And ___146___ might also be interested in our new Q7 rose bushes, which thrive in a similar climate.\"",
+                "questions": [
+                    {
+                        "id": "143",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "daily" },
+                            { "label": "B", "text": "weekly" },
+                            { "label": "C", "text": "monthly" },
+                            { "label": "D", "text": "yearly" }
+                        ],
+                        "correctAnswer": "D",
+                        "classification": "P6_VOCABULARY"
+                    },
+                    {
+                        "id": "144",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "The company seeks out the most profitable sectors in agriculture." },
+                            { "label": "B", "text": "The company interviews researchers from across the world." },
+                            { "label": "C", "text": "The research and development team then works to develop varietals that address these difficulties." },
+                            { "label": "D", "text": "Their extensive research produces some of the most flavorful plants on the market." }
+                        ],
+                        "correctAnswer": "C",
+                        "classification": "P6_SENTENCE_INSERTION"
+                    },
+                    {
+                        "id": "145",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "region" },
+                            { "label": "B", "text": "regions" },
+                            { "label": "C", "text": "regional" },
+                            { "label": "D", "text": "regionally" }
+                        ],
+                        "correctAnswer": "B",
                         "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "146",
-                        "text": "(A) useful\n(B) eventful\n(C) profitable\n(D) comfortable",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "useful"
-                            },
-                            {
-                                "label": "B",
-                                "text": "eventful"
-                            },
-                            {
-                                "label": "C",
-                                "text": "profitable"
-                            },
-                            {
-                                "label": "D",
-                                "text": "comfortable"
-                            }
+                            { "label": "A", "text": "he" },
+                            { "label": "B", "text": "she" },
+                            { "label": "C", "text": "we" },
+                            { "label": "D", "text": "they" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_GRAMMAR"
                     }
                 ]
@@ -1300,417 +953,223 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t5-p1",
                 "type": "ARTICLE",
                 "guidance": "Questions 131-134 refer to the following article.",
-                "title": "Grocery Chain to Host Event",
-                "content": "LEIGHTON (October 8)-Ohale Foods, one of the region's largest supermarket chains, is seeking to fill almost 100 open positions. For that reason, the company is holding a [131] event on October 20. Job opportunities exist at all fourteen of Ohale's current stores. [132] Ohale is seeking employees for its new Westside location, which is still under construction. [133] .\n\nThose who [134] the event should bring copies of their résumé to the Grand Ballroom of the Palace Suites Hotel between 10 A.M. and 7 P.M. No appointment is required.",
+                "content": "COPENHAGEN (25 May)—Odense Media announced today that initial sales of the latest version of its tablet, Virtusonic, have ___131___ the company's expectations. Company spokesperson Kerstin Vestergaard attributes the ___132___ sales to a number of factors. First, there is the tablet's high-quality case. ___133___. In addition, the Virtusonic has an adaptive screen brightness feature. This allows it to adjust automatically to less-than-ideal ___134___ conditions. Vestergaard believes that these characteristics make the Virtusonic a must-have for consumers.",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "manufacturing"
-                            },
-                            {
-                                "label": "B",
-                                "text": "hiring"
-                            },
-                            {
-                                "label": "C",
-                                "text": "political"
-                            },
-                            {
-                                "label": "D",
-                                "text": "sporting"
-                            }
+                            { "label": "A", "text": "based" },
+                            { "label": "B", "text": "surpassed" },
+                            { "label": "C", "text": "invested" },
+                            { "label": "D", "text": "progressed" }
                         ],
                         "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "132",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "If not"
-                            },
-                            {
-                                "label": "B",
-                                "text": "After all"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Additionally"
-                            },
-                            {
-                                "label": "D",
-                                "text": "For example"
-                            }
+                            { "label": "A", "text": "progress" },
+                            { "label": "B", "text": "impressing" },
+                            { "label": "C", "text": "impressive" },
+                            { "label": "D", "text": "impressed" }
                         ],
                         "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "133",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Its grand opening is scheduled for mid-November."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Most applicants had prior experience."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Its appointment of Linda Okumu as its CEO has surprised analysts."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Local competitors cannot match its prices."
-                            }
+                            { "label": "A", "text": "Customers must consider what the tablet will be used for." },
+                            { "label": "B", "text": "The Virtusonic will be available in other colors next month." },
+                            { "label": "C", "text": "Check stores for the best deals on the new device." },
+                            { "label": "D", "text": "The protective shell ensures the durability of the device." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "134",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "attending"
-                            },
-                            {
-                                "label": "B",
-                                "text": "to attend"
-                            },
-                            {
-                                "label": "C",
-                                "text": "attended"
-                            },
-                            {
-                                "label": "D",
-                                "text": "are attending"
-                            }
+                            { "label": "A", "text": "lighting" },
+                            { "label": "B", "text": "noise" },
+                            { "label": "C", "text": "temperature" },
+                            { "label": "D", "text": "wind" }
                         ],
-                        "correctAnswer": "D",
+                        "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t5-p2",
-                "type": "INSTRUCTIONS",
-                "guidance": "Questions 135-138 refer to the following instructions.",
-                "content": "Thank you for your purchase of an Ajaz Water Filter Pitcher. It is a wonderful solution for water that tastes great! To improve the effectiveness of the Ajaz Water Filter Pitcher, we [135] priming the filter before the first use.\n\nThen screw the filter clockwise into the lid of the pitcher until it fits [136] .\n\nAs you use the pitcher, remember that [137] water flow is a signal that the filter is becoming clogged and will need to be replaced soon. [138]",
+                "type": "MEMO",
+                "guidance": "Questions 135-138 refer to the following memo.",
+                "content": "To: All employees\nFrom: Marcus Sindhu, IT Director\nDate: June 1\nSubject: Web site maintenance\n\nPlease note that routine maintenance of the server will be performed this weekend, affecting the content of our company Web site. The server ___135___ down for approximately eight hours from 11 P.M. on Saturday, June 6, to 7 A.M. on Sunday, June 7. ___136___ this time, access to the Web site will be restricted, and e-mail delivery will be paused. ___137___. Once the server is back up, please take some time to explore the ___138___ features on the Web site. These include a new scheduler and a more user-friendly search tool.\n\nYour patience is greatly appreciated. Please direct any questions to me.",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "tried"
-                            },
-                            {
-                                "label": "B",
-                                "text": "recommend"
-                            },
-                            {
-                                "label": "C",
-                                "text": "consider"
-                            },
-                            {
-                                "label": "D",
-                                "text": "started"
-                            }
+                            { "label": "A", "text": "is" },
+                            { "label": "B", "text": "was" },
+                            { "label": "C", "text": "will be" },
+                            { "label": "D", "text": "had been" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "136",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Our filtration system will be redesigned within the next year."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Water use may be reduced by running your dishwasher less frequently."
-                            },
-                            {
-                                "label": "C",
-                                "text": "To do this, run cool tap water through the filter for three minutes."
-                            },
-                            {
-                                "label": "D",
-                                "text": "There are 150 liters of water in the main storage tank at all times."
-                            }
+                            { "label": "A", "text": "During" },
+                            { "label": "B", "text": "Despite" },
+                            { "label": "C", "text": "Following" },
+                            { "label": "D", "text": "Prior to" }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "A",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "137",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "extremely"
-                            },
-                            {
-                                "label": "B",
-                                "text": "highly"
-                            },
-                            {
-                                "label": "C",
-                                "text": "tightly"
-                            },
-                            {
-                                "label": "D",
-                                "text": "steadily"
-                            }
+                            { "label": "A", "text": "The work will be done during business hours." },
+                            { "label": "B", "text": "A team of seven programmers will be hard at work." },
+                            { "label": "C", "text": "All Web site operations will resume on Sunday morning." },
+                            { "label": "D", "text": "Feel free to check your e-mail as needed." }
                         ],
                         "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "138",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "diminished"
-                            },
-                            {
-                                "label": "B",
-                                "text": "diminishes"
-                            },
-                            {
-                                "label": "C",
-                                "text": "diminish"
-                            },
-                            {
-                                "label": "D",
-                                "text": "diminishable"
-                            }
+                            { "label": "A", "text": "safety" },
+                            { "label": "B", "text": "updated" },
+                            { "label": "C", "text": "portable" },
+                            { "label": "D", "text": "temporary" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t5-p3",
-                "type": "POLICY",
-                "guidance": "Questions 139-142 refer to the following policy.",
-                "title": "Returning merchandise",
-                "content": "Abney Home Products is committed to providing outstanding service, and we guarantee the [139] of all the products in our catalog. If you are not satisfied with a purchase, call our customer service line at 339-555-0177 to request a return authorization code. The service agent [140] you for the invoice number from the package insert. [141] Please be aware that Abney Home Products is not [142] for postage on merchandise returns.",
+                "type": "ARTICLE",
+                "guidance": "Questions 139-142 refer to the following article.",
+                "content": "Small Business Costs: An Overview for Beginners\n\nThere are two main kinds of costs. Variable costs are one kind; they include staff wages or the cost of supplies. ___139___ costs are considered fixed. These include such things as rent payments and property taxes.\n\nA third kind of cost is called an opportunity cost. You incur an opportunity cost whenever you make a decision to do one specific thing ___140___ choosing some alternative option. This cost refers to the lost opportunities you could have benefited from had you made a different choice. Careful consideration of potential opportunity costs is important. Ideally this should ___141___ decision making.\n\n___142___. You should consult a licensed accountant for a more complete understanding.",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "condition"
-                            },
-                            {
-                                "label": "B",
-                                "text": "object"
-                            },
-                            {
-                                "label": "C",
-                                "text": "explanation"
-                            },
-                            {
-                                "label": "D",
-                                "text": "preview"
-                            }
+                            { "label": "A", "text": "Any" },
+                            { "label": "B", "text": "Both" },
+                            { "label": "C", "text": "Other" },
+                            { "label": "D", "text": "Those" }
                         ],
                         "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "140",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "asked"
-                            },
-                            {
-                                "label": "B",
-                                "text": "is asking"
-                            },
-                            {
-                                "label": "C",
-                                "text": "has asked"
-                            },
-                            {
-                                "label": "D",
-                                "text": "will ask"
-                            }
+                            { "label": "A", "text": "except for" },
+                            { "label": "B", "text": "just as" },
+                            { "label": "C", "text": "rather than" },
+                            { "label": "D", "text": "only if" }
                         ],
-                        "correctAnswer": "D",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "141",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Our employees have software training and are skilled at resolving problems."
-                            },
-                            {
-                                "label": "B",
-                                "text": "To cancel a furniture delivery, please call within 24 hours of ordering."
-                            },
-                            {
-                                "label": "C",
-                                "text": "When you send back the product, be sure to include the authorization code."
-                            },
-                            {
-                                "label": "D",
-                                "text": "The catalog has sections for kitchen goods, lighting, appliances, and more."
-                            }
+                            { "label": "A", "text": "eliminate" },
+                            { "label": "B", "text": "influence" },
+                            { "label": "C", "text": "replace" },
+                            { "label": "D", "text": "automate" }
                         ],
                         "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "responsibly"
-                            },
-                            {
-                                "label": "B",
-                                "text": "responsible"
-                            },
-                            {
-                                "label": "C",
-                                "text": "responsibility"
-                            },
-                            {
-                                "label": "D",
-                                "text": "responsibleness"
-                            }
+                            { "label": "A", "text": "The number of employees is continuing to fluctuate." },
+                            { "label": "B", "text": "A sales manager controls employee commissions." },
+                            { "label": "C", "text": "The business used to have a larger inventory." },
+                            { "label": "D", "text": "There are other types of business costs as well." }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t5-p4",
-                "type": "MEMO",
-                "guidance": "Questions 143-146 refer to the following memo.",
-                "content": "To: All Employees\nFrom: Marina Papantonio, Safety Liaison\nDate: November 12\nSubject: Safety Training\n\nIt is time once again for our annual safety training workshop. This year, training will focus on digital safety measures, like avoiding scams and protecting against cyberattacks. Our technology experts already have installed new programs throughout our company's information system to reduce risk. [143] , we all need to understand how the programs work and what to do when a problem arises.\n\nTo accommodate [144] , several workshops will be conducted throughout the upcoming week.\n\nYou can register for any one of these [145] on our company's intranet page. Just click on the link for \"Safety Training.\" [146] . If you are unable to take part in any of the scheduled workshops for any reason, you must inform your supervisor.",
+                "type": "ARTICLE",
+                "guidance": "Questions 143-146 refer to the following article.",
+                "content": "Morlon Home Goods Set to Open\n\nTISDALE (2 April)—Morlon Home Goods will open this Friday in a 130 square meter space on Waverly Road that was formerly ___143___ by Binkley's Market. The store features home décor items, such as lamps, wall art, and small furniture from around the globe, all at affordable prices. \"Morlon has a great variety of attractive items for the modern home. Our inventory changes ___144___. Patrons like to stop in often to see what is new,\" said Naoko Sasaki, the chain's marketing director. This is the first Morlon in the local area. ___145___. A grand opening ___146___ featuring free food, giveaways, and discount coupons will be held on Saturday, 13 April from 10:00 A.M. to 6:00 P.M.",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "If so"
-                            },
-                            {
-                                "label": "B",
-                                "text": "However"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Otherwise"
-                            },
-                            {
-                                "label": "D",
-                                "text": "In that case"
-                            }
+                            { "label": "A", "text": "occupation" },
+                            { "label": "B", "text": "occupied" },
+                            { "label": "C", "text": "occupy" },
+                            { "label": "D", "text": "occupying" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "itself"
-                            },
-                            {
-                                "label": "B",
-                                "text": "his"
-                            },
-                            {
-                                "label": "C",
-                                "text": "whose"
-                            },
-                            {
-                                "label": "D",
-                                "text": "everyone"
-                            }
+                            { "label": "A", "text": "elsewhere" },
+                            { "label": "B", "text": "afterward" },
+                            { "label": "C", "text": "properly" },
+                            { "label": "D", "text": "frequently" }
                         ],
                         "correctAnswer": "D",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "145",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "sessions"
-                            },
-                            {
-                                "label": "B",
-                                "text": "positions"
-                            },
-                            {
-                                "label": "C",
-                                "text": "conferences"
-                            },
-                            {
-                                "label": "D",
-                                "text": "competitions"
-                            }
+                            { "label": "A", "text": "The company has fourteen other stores around the country." },
+                            { "label": "B", "text": "Profits increased 25 percent since last quarter." },
+                            { "label": "C", "text": "Morlon's biggest competitor is Country Home." },
+                            { "label": "D", "text": "Binkley's Market went out of business earlier this year." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "146",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Cyberattacks are on the rise."
-                            },
-                            {
-                                "label": "B",
-                                "text": "The training is held each summer."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Please make every effort to sign up."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Last year's program was canceled."
-                            }
+                            { "label": "A", "text": "celebrates" },
+                            { "label": "B", "text": "celebrating" },
+                            { "label": "C", "text": "celebrate" },
+                            { "label": "D", "text": "celebration" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             }
@@ -1722,103 +1181,54 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t6-p1",
-                "type": "ADVERTISEMENT",
-                "guidance": "Questions 131-134 refer to the following advertisement.",
-                "title": "Estella Guitar Lessons: Play with the Best",
-                "content": "Whether you play acoustic guitar electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability. [131] With years of experience crafting playing techniques, qualified instructors can tailor lessons to focus on the skills you want to fine-tune. [132] Receive a customized learning plan to set goals and overcome the challenges that cause many players to get discouraged. An Estella Guitar teacher will help boost your confidence.\n\n[133] At Estella Guitar, we believe that playing music is a way of expressing yourself. , we will help you go beyond the familiar chords and riffs to develop your own identity as a musician. [134] Ready to get started? Visit www.estellaguitar.com/lessons to get matched with the right instructor for you!",
+                "type": "LETTER",
+                "guidance": "Questions 131-134 refer to the following letter.",
+                "content": "9 October\n\nEva Archer, Owner\nArcher Café\n40 Thorpe Street\nPort Fairy VIC 3284\n\nDear Ms. Archer:\n\nAn inspection of your restaurant was conducted on 16 September by ___131___ of the Department of Health and Safety. ___132___. The purpose of the inspection was to confirm that your business is in compliance with all local regulations and that all ___133___ permits are up-to-date. The Department has determined that all regulations are being followed ___134___. Therefore, no further action is required on your part.\n\nSincerely,\n\nOliver Wu\nDepartment of Health and Safety",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "is"
-                            },
-                            {
-                                "label": "B",
-                                "text": "or"
-                            },
-                            {
-                                "label": "C",
-                                "text": "likely"
-                            },
-                            {
-                                "label": "D",
-                                "text": "from"
-                            }
+                            { "label": "A", "text": "represents" },
+                            { "label": "B", "text": "representative" },
+                            { "label": "C", "text": "representatives" },
+                            { "label": "D", "text": "representations" }
                         ],
-                        "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "132",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "our"
-                            },
-                            {
-                                "label": "B",
-                                "text": "ourselves"
-                            },
-                            {
-                                "label": "C",
-                                "text": "ours"
-                            },
-                            {
-                                "label": "D",
-                                "text": "us"
-                            }
+                            { "label": "A", "text": "Such visits are conducted once a year." },
+                            { "label": "B", "text": "The restaurant will be closed for inspection." },
+                            { "label": "C", "text": "Regulations are posted on our Web site." },
+                            { "label": "D", "text": "The department opens at 9:00 A.M." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "133",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Contact a technician for questions about repairs."
-                            },
-                            {
-                                "label": "B",
-                                "text": "A high-quality instrument will help you to perform at your best."
-                            },
-                            {
-                                "label": "C",
-                                "text": "The best resource for you as a learner is an expert to guide your progress."
-                            },
-                            {
-                                "label": "D",
-                                "text": "It took them several years to master their instruments."
-                            }
+                            { "label": "A", "text": "meaningful" },
+                            { "label": "B", "text": "fortunate" },
+                            { "label": "C", "text": "persistent" },
+                            { "label": "D", "text": "necessary" }
                         ],
-                        "correctAnswer": "C",
+                        "correctAnswer": "D",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "134",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "So far"
-                            },
-                            {
-                                "label": "B",
-                                "text": "With that in mind"
-                            },
-                            {
-                                "label": "C",
-                                "text": "On a different note"
-                            },
-                            {
-                                "label": "D",
-                                "text": "At that point"
-                            }
+                            { "label": "A", "text": "potentially" },
+                            { "label": "B", "text": "satisfactorily" },
+                            { "label": "C", "text": "inconsistently" },
+                            { "label": "D", "text": "temporarily" }
                         ],
                         "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
@@ -1827,313 +1237,169 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t6-p2",
-                "type": "POLICY",
-                "guidance": "Questions 135-138 refer to the following policy.",
-                "content": "In-home delivery takes approximately one week after an order is shipped from our warehouse.\n\nThe actual time may vary based on the location of your and your availability for accepting the item. [135] Vernico Furniture will work with a carrier an appointment that is convenient for you.\n\n[136] Typical hours are Monday through Friday between 8 A.M. and 5 р.м., evening appointments can often be arranged. [137] Upon arrival at your home, the item will be placed in the location you desire. Assembly is included as well.\n\n[138]",
+                "type": "EMAIL",
+                "guidance": "Questions 135-138 refer to the following e-mail.",
+                "content": "To: Certain Boutique <info@certainboutique.co.uk>\nFrom: Premium Thai Candles <orders@prethaican.com>\nDate: October 28\nSubject: Order status\n\nDear Customer,\n\nWe are delighted ___135___ you as a customer of Premium Thai Candles. Your wholesale order for 40 boxes of candles is being processed. ___136___.\n\nMost of your order is currently in stock and will arrive in the United Kingdom within ten days.\n\n___137___, please be advised that the rose-scented candles are on back order. They will be available three weeks from now, and we will ship them as soon as possible.\n\nWe sincerely hope that you are happy with your ___138___ order as a new customer of Premium Thai Candles.\n\nBest,\n\nSamaraya Sharma",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "garden"
-                            },
-                            {
-                                "label": "B",
-                                "text": "records"
-                            },
-                            {
-                                "label": "C",
-                                "text": "residence"
-                            },
-                            {
-                                "label": "D",
-                                "text": "organization"
-                            }
+                            { "label": "A", "text": "welcome" },
+                            { "label": "B", "text": "welcomed" },
+                            { "label": "C", "text": "will welcome" },
+                            { "label": "D", "text": "to welcome" }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "136",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "to schedule"
-                            },
-                            {
-                                "label": "B",
-                                "text": "is scheduling"
-                            },
-                            {
-                                "label": "C",
-                                "text": "as a schedule"
-                            },
-                            {
-                                "label": "D",
-                                "text": "that scheduled"
-                            }
+                            { "label": "A", "text": "Save now on this limited-time offer." },
+                            { "label": "B", "text": "Thank you for the purchase." },
+                            { "label": "C", "text": "We have other boxes, too." },
+                            { "label": "D", "text": "Our Web site is now available." }
                         ],
                         "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "137",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "if so"
-                            },
-                            {
-                                "label": "B",
-                                "text": "when"
-                            },
-                            {
-                                "label": "C",
-                                "text": "though"
-                            },
-                            {
-                                "label": "D",
-                                "text": "in the meantime"
-                            }
+                            { "label": "A", "text": "However" },
+                            { "label": "B", "text": "Given that" },
+                            { "label": "C", "text": "As you can imagine" },
+                            { "label": "D", "text": "At that point" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "138",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "When buying a home, location is extremely important."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Refinishing furniture is a form of art."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Furnished apartments can be found online."
-                            },
-                            {
-                                "label": "D",
-                                "text": "All packing materials will be removed."
-                            }
+                            { "label": "A", "text": "proper" },
+                            { "label": "B", "text": "usual" },
+                            { "label": "C", "text": "initial" },
+                            { "label": "D", "text": "rapid" }
                         ],
-                        "correctAnswer": "D",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t6-p3",
-                "type": "EMAIL",
-                "guidance": "Questions 139-142 refer to the following e-mail.",
-                "content": "From: Leena Montoya <Imontoya@academemedia.com>\nTo: Thao Pham <thaopham@amail.com>\nSubject: Subscription\nDate: April 17\n\nDear Mr. Pham, Your subscription to Medical Innovations Quarterly has been canceled.\n\nwill no longer receive the print edition.\n\n[139] May 1, you [140]\n\nWe hope that you will consider once again becoming a of our publications. Academe Media publishes many high-quality scientific journals in addition to Medical Innovations Quarterly. [141] Should you wish to subscribe to one by May 31, we can offer you a two-year subscription at the annual rate. Visit www.academemedia.com/shop and enter the code DOUBLE checkout.\n\n[142]\n\nIf you have any feedback that could help us improve our products or services, please call me directly at 212-555-0122.\n\nSincerely, Leena Montoya Customer Service Manager, Academe Media",
+                "type": "ARTICLE",
+                "guidance": "Questions 139-142 refer to the following article.",
+                "content": "GREENWAY (December 15)—The country's employment rose by over 40,000 jobs during October and November, ___139___ government statistics just released. The biggest increase was in the retail sector, with 9,000 new jobs created. The service sector came in ___140___ in overall activity with 8,400 added jobs. Professional and business services gained jobs as well. Health services and education each saw strong gains with 4,200 jobs. ___141___. By company size, medium-sized businesses of 50 to 499 employees hired the most workers. Large businesses of 500 or more employees hired 12,000 workers. \"The job market remains robust, and we ___142___ it to continue,\" said economist Keisha Hou.",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Thank you for your timely order."
-                            },
-                            {
-                                "label": "B",
-                                "text": "We have processed your request."
-                            },
-                            {
-                                "label": "C",
-                                "text": "This is a payment reminder."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Please contact us to update your information."
-                            }
+                            { "label": "A", "text": "because" },
+                            { "label": "B", "text": "whereas" },
+                            { "label": "C", "text": "according to" },
+                            { "label": "D", "text": "instead of" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "140",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Starts"
-                            },
-                            {
-                                "label": "B",
-                                "text": "Started"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Starter"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Starting"
-                            }
+                            { "label": "A", "text": "last" },
+                            { "label": "B", "text": "second" },
+                            { "label": "C", "text": "primary" },
+                            { "label": "D", "text": "best" }
                         ],
                         "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "141",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "distributor"
-                            },
-                            {
-                                "label": "B",
-                                "text": "producer"
-                            },
-                            {
-                                "label": "C",
-                                "text": "reader"
-                            },
-                            {
-                                "label": "D",
-                                "text": "teacher"
-                            }
+                            { "label": "A", "text": "Utilities stocks rose about 5 percent on average." },
+                            { "label": "B", "text": "However, a new car manufacturing plant will open next month." },
+                            { "label": "C", "text": "The only sector with zero growth was agriculture." },
+                            { "label": "D", "text": "College enrollment increased by only 4 percent." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "until"
-                            },
-                            {
-                                "label": "B",
-                                "text": "upon"
-                            },
-                            {
-                                "label": "C",
-                                "text": "without"
-                            },
-                            {
-                                "label": "D",
-                                "text": "next"
-                            }
+                            { "label": "A", "text": "expect" },
+                            { "label": "B", "text": "expecting" },
+                            { "label": "C", "text": "expected" },
+                            { "label": "D", "text": "expectant" }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             },
             {
                 "id": "p6-t6-p4",
-                "type": "INFORMATION",
-                "guidance": "Questions 143-146 refer to the following information.",
-                "content": "In a commercial kitchen, all refrigerators are required to have a thermometer that from 0°F (-18°C) to 220°F (104°C). [143] To prevent the growth of bacteria, refrigerated foods must be stored at 41°F (5°C) or below. The head chef is responsible for checking these thermometers throughout the day to ensure that the kitchen is in compliance at all times.\n\nAlso important to consider is . [144] Thermometers should always be located in the warmest spot in the refrigerator. This location is also appropriate because it allows the thermometer to be easily as soon as the door is opened.\n\n[145] [146]",
+                "type": "NOTICE",
+                "guidance": "Questions 143-146 refer to the following notice.",
+                "content": "Loffler Mobile Banking\n\nIn the coming weeks, Loffler Bank will be making upgrades to its mobile application to provide a more secure and user-friendly experience. Customers will now be able to view all their Loffler accounts simultaneously and enjoy ___143___ security through a fingerprint identification scan. ___144___, users may now customize their online dashboard to track their expenses and budgets.\n\nChanges can prove to be challenging for individuals, particularly in light of rapid technological advancement. ___145___. Therefore, should you ever need assistance ___146___ any of the features of our app, call us at 555-0133 or visit us online at www.lofflerbank.com/faq.",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "ranges"
-                            },
-                            {
-                                "label": "B",
-                                "text": "ranger"
-                            },
-                            {
-                                "label": "C",
-                                "text": "ranged"
-                            },
-                            {
-                                "label": "D",
-                                "text": "ranging"
-                            }
+                            { "label": "A", "text": "enhance" },
+                            { "label": "B", "text": "enhanced" },
+                            { "label": "C", "text": "enhancing" },
+                            { "label": "D", "text": "enhancement" }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "size"
-                            },
-                            {
-                                "label": "B",
-                                "text": "safety"
-                            },
-                            {
-                                "label": "C",
-                                "text": "reliability"
-                            },
-                            {
-                                "label": "D",
-                                "text": "placement"
-                            }
+                            { "label": "A", "text": "Additionally" },
+                            { "label": "B", "text": "Consequently" },
+                            { "label": "C", "text": "Ultimately" },
+                            { "label": "D", "text": "Conversely" }
                         ],
-                        "correctAnswer": "D",
+                        "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "145",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Remove them carefully."
-                            },
-                            {
-                                "label": "B",
-                                "text": "This is typically inside the door."
-                            },
-                            {
-                                "label": "C",
-                                "text": "It should be kept cool at all times."
-                            },
-                            {
-                                "label": "D",
-                                "text": "They can also be purchased in bulk."
-                            }
+                            { "label": "A", "text": "The new security measures aim to fix this problem." },
+                            { "label": "B", "text": "We will be monitoring this development closely." },
+                            { "label": "C", "text": "Our team members are well aware of this fact." },
+                            { "label": "D", "text": "We sincerely apologize for this mistake." }
                         ],
-                        "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "146",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "sold"
-                            },
-                            {
-                                "label": "B",
-                                "text": "seen"
-                            },
-                            {
-                                "label": "C",
-                                "text": "repaired"
-                            },
-                            {
-                                "label": "D",
-                                "text": "removed"
-                            }
+                            { "label": "A", "text": "over" },
+                            { "label": "B", "text": "for" },
+                            { "label": "C", "text": "by" },
+                            { "label": "D", "text": "with" }
                         ],
-                        "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             }
@@ -2147,419 +1413,223 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t7-p1",
                 "type": "EMAIL",
                 "guidance": "Questions 131-134 refer to the following e-mail.",
-                "title": "...",
-                "content": "From: Naomi Richter <naomirichter@mailcurrent.com>\nTo: Watanu Sakamoto <wsakamoto@RHNimports.com>\nDate: 23 November\nSubject: Follow-up\n\nAttachment: Logistics coordinator description Dear Ms. Richter, Thank you for coming to our office to interview for the assistant import manager position last week. We were impressed with your credentials and enthusiasm. we are moving ahead [131] with another candidate, we would like to offer you a different position that just became available:\n\nlogistics coordinator.\n\nThe attached document contains the detailed job description and pay rate. This [132] has not yet been posted publicly. If you are [133] please let me know by the end of this week.\n\n[134]\n\nSincerely, Watanu Sakamoto Human Resource Manager, RHN Imports",
+                "content": "To: All employees <staff@TFF.com>\nFrom: Walter C. Handy <wchandy@TFF.com>\nSubject: Sales Incentive Program\nDate: 15 November\n\nDear TFF Sales Team,\n\nI am writing to introduce you to a new, double-incentive program for the fourth quarter of this year! In addition to our standard cash bonus plan, sales associates will now have the opportunity ___131___ tickets to concerts, sporting events, and theater performances. This extra incentive is designed to help make this our greatest sales year ever. ___132___.\n\nMore ___133___ will be provided in the next few days. ___134___, if you have any questions about this program, contact the Human Resources Department.\n\nTo our continued success,\n\nWalter C. Handy, CEO",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Rather"
-                            },
-                            {
-                                "label": "B",
-                                "text": "Although"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Similarly"
-                            },
-                            {
-                                "label": "D",
-                                "text": "Consequently"
-                            }
+                            { "label": "A", "text": "to earn" },
+                            { "label": "B", "text": "earning" },
+                            { "label": "C", "text": "earner" },
+                            { "label": "D", "text": "having earned" }
+                        ],
+                        "correctAnswer": "A",
+                        "classification": "P6_GRAMMAR"
+                    },
+                    {
+                        "id": "132",
+                        "text": "Select the best sentence to complete the text.",
+                        "options": [
+                            { "label": "A", "text": "The fiscal year ends in October." },
+                            { "label": "B", "text": "I am confident that we can achieve this goal." },
+                            { "label": "C", "text": "Attendance at the event is mandatory." },
+                            { "label": "D", "text": "TFF is looking to renovate its offices next year." }
+                        ],
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
+                    },
+                    {
+                        "id": "133",
+                        "text": "Select the best answer.",
+                        "options": [
+                            { "label": "A", "text": "supplies" },
+                            { "label": "B", "text": "details" },
+                            { "label": "C", "text": "products" },
+                            { "label": "D", "text": "receipts" }
                         ],
                         "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
-                        "id": "132",
-                        "text": "Select the best word or phrase for the blank.",
+                        "id": "134",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "There are several other internal applicants."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Unfortunately, the position is no longer available."
-                            },
-                            {
-                                "label": "C",
-                                "text": "My assistant will schedule your second interview."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Your experience and skill set make you a great fit."
-                            }
+                            { "label": "A", "text": "Similarly" },
+                            { "label": "B", "text": "Therefore" },
+                            { "label": "C", "text": "Above all" },
+                            { "label": "D", "text": "In the meantime" }
                         ],
                         "correctAnswer": "D",
-                        "classification": "P6_VOCABULARY"
-                    },
-                    {
-                        "id": "133",
-                        "text": "Select the best word or phrase for the blank.",
-                        "options": [
-                            {
-                                "label": "A",
-                                "text": "opportunity"
-                            },
-                            {
-                                "label": "B",
-                                "text": "authorization"
-                            },
-                            {
-                                "label": "C",
-                                "text": "application"
-                            },
-                            {
-                                "label": "D",
-                                "text": "capacity"
-                            }
-                        ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
-                    },
-                    {
-                        "id": "134",
-                        "text": "Select the best word or phrase for the blank.",
-                        "options": [
-                            {
-                                "label": "A",
-                                "text": "interest"
-                            },
-                            {
-                                "label": "B",
-                                "text": "interests"
-                            },
-                            {
-                                "label": "C",
-                                "text": "interested"
-                            },
-                            {
-                                "label": "D",
-                                "text": "interesting"
-                            }
-                        ],
-                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t7-p2",
-                "type": "NOTICE",
-                "guidance": "Questions 135-138 refer to the following notice.",
-                "title": "...",
-                "content": "The Oakville Horticulture Club [135] a plant sale on Saturday, 9 September. The sale will be held from 9:00 A.M. to 4:00P.M. at the Oakville Community Centre at 478 Hill Avenue. There will be great deals on hanging baskets, grasses, and herbs. [136] We [137] have a delicious selection of fruits and vegetables available for purchase. Enjoy live talks and demonstrations [138] the day. For more information, visit the Oakville Horticulture Web site:\n\nwww.oakvillehorticultureclub.co.uk/events.",
+                "type": "INFORMATION",
+                "guidance": "Questions 135-138 refer to the following information.",
+                "content": "Accountarium: The quarterly magazine for accountants\n\nCall for Submissions\n\nOur fourth and final edition of the year will include a feature on accountants who have made a career shift. The financial service ___135___ that accountants gain are in demand even by those seeking to hire for positions outside of finance. ___136___, many professional accountants have been persuaded to take on other roles.\n\nIf you have made such a change in careers, we would like to hear about it. In no more than 800 words, describe your background in accounting and explain ___137___ it is useful in your new profession. Send this as an attachment to features@accountarium.com. ___138___. We regret that any submissions received after this date cannot be considered.",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "host"
-                            },
-                            {
-                                "label": "B",
-                                "text": "hosted"
-                            },
-                            {
-                                "label": "C",
-                                "text": "is hosting"
-                            },
-                            {
-                                "label": "D",
-                                "text": "has hosted"
-                            }
+                            { "label": "A", "text": "industry" },
+                            { "label": "B", "text": "skills" },
+                            { "label": "C", "text": "needs" },
+                            { "label": "D", "text": "fields" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "136",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Come early to get the best selection."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Plants help make your home beautiful."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Join the club for a discount on local garden tours."
-                            },
-                            {
-                                "label": "D",
-                                "text": "The community center was just renovated."
-                            }
+                            { "label": "A", "text": "Nevertheless" },
+                            { "label": "B", "text": "Once again" },
+                            { "label": "C", "text": "In addition" },
+                            { "label": "D", "text": "Consequently" }
                         ],
                         "correctAnswer": "D",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "137",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "later"
-                            },
-                            {
-                                "label": "B",
-                                "text": "also"
-                            },
-                            {
-                                "label": "C",
-                                "text": "nearly"
-                            },
-                            {
-                                "label": "D",
-                                "text": "merely"
-                            }
+                            { "label": "A", "text": "what" },
+                            { "label": "B", "text": "whose" },
+                            { "label": "C", "text": "how" },
+                            { "label": "D", "text": "which" }
                         ],
-                        "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "138",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "within"
-                            },
-                            {
-                                "label": "B",
-                                "text": "forward"
-                            },
-                            {
-                                "label": "C",
-                                "text": "following"
-                            },
-                            {
-                                "label": "D",
-                                "text": "throughout"
-                            }
+                            { "label": "A", "text": "The deadline for submissions is October 15." },
+                            { "label": "B", "text": "We hire accountants at all stages of their careers." },
+                            { "label": "C", "text": "This credential is widely recognized." },
+                            { "label": "D", "text": "We thank you for your response received today." }
                         ],
-                        "correctAnswer": "Although",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "A",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t7-p3",
-                "type": "LETTER",
-                "guidance": "Questions 139-142 refer to the following letter.",
-                "title": "...",
-                "content": "July 2 Dear Mr. Arakaki:\n\nI am writing to inform you of scheduled road maintenance on Briggs Avenue. Beginning on July 15, Briggs Avenue [139] reduced to one lane from Elm Street to Bay Road. [140] Although your [141] is not located in this section of Briggs Avenue, traffic on most of the street will move more slowly than usual while work is being performed. You may consider advising your employees to take alternate routes to work during this time. The project is expected to be completed on or before October 22. Thank you for your cooperation and assistance.\n\nSincerely, Amalia Villalobos Director of Transportation Enclosure",
+                "type": "ARTICLE",
+                "guidance": "Questions 139-142 refer to the following testimonial.",
+                "content": "For months, Yi Zhang, owner of Zhang Office Supplies, had been searching for a way to increase ___139___. Then, by sheer chance, he heard about an approach called Voice of the Customer (VOC). \"When I called Hsing Market Research I was really intrigued as the method was presented to me. The representative I spoke with convinced me to give ___140___ it a try.\" Mr. Zhang learned that VOC uses market research as an aid to designing targeted advertisements. Using the method, he first determined ___141___ what potential customers are concerned about and what they want when shopping for office supplies. Then he used candid quotes from the people who participated in his market research to create advertisements for his Web site. ___142___. \"Thanks to VOC,\" he says, smiling, \"my customer base has expanded like never before.\"",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "was"
-                            },
-                            {
-                                "label": "B",
-                                "text": "will be"
-                            },
-                            {
-                                "label": "C",
-                                "text": "can be"
-                            },
-                            {
-                                "label": "D",
-                                "text": "has been"
-                            }
+                            { "label": "A", "text": "production" },
+                            { "label": "B", "text": "capacity" },
+                            { "label": "C", "text": "sales" },
+                            { "label": "D", "text": "wages" }
                         ],
-                        "correctAnswer": "D",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "140",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Briggs Avenue is only two miles away."
-                            },
-                            {
-                                "label": "B",
-                                "text": "The event will take place on Elm Street."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Please refer to the enclosed map of the affected area."
-                            },
-                            {
-                                "label": "D",
-                                "text": "However, all city services will close during this time."
-                            }
+                            { "label": "A", "text": "anyone" },
+                            { "label": "B", "text": "it" },
+                            { "label": "C", "text": "mine" },
+                            { "label": "D", "text": "those" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "141",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "mailbox"
-                            },
-                            {
-                                "label": "B",
-                                "text": "school"
-                            },
-                            {
-                                "label": "C",
-                                "text": "signage"
-                            },
-                            {
-                                "label": "D",
-                                "text": "business"
-                            }
+                            { "label": "A", "text": "exactly" },
+                            { "label": "B", "text": "exact" },
+                            { "label": "C", "text": "exacting" },
+                            { "label": "D", "text": "exactness" }
                         ],
-                        "correctAnswer": "opportunity",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "A",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "fortunately"
-                            },
-                            {
-                                "label": "B",
-                                "text": "instead"
-                            },
-                            {
-                                "label": "C",
-                                "text": "likewise"
-                            },
-                            {
-                                "label": "D",
-                                "text": "therefore"
-                            }
+                            { "label": "A", "text": "He has been in business for eleven years." },
+                            { "label": "B", "text": "He also used them in direct e-mail campaigns." },
+                            { "label": "C", "text": "He also owns a local supermarket." },
+                            { "label": "D", "text": "He plans to move to a smaller building." }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t7-p4",
-                "type": "ARTICLE",
-                "guidance": "Questions 143-146 refer to the following article.",
-                "title": "Franklin Planetarium to Move Downtown",
-                "content": "(June 3)-After 48 years in its present location on Mayfield's south side, the Franklin Planetarium is moving to a new home. Construction is underway on the downtown facility, part of a complex that includes the new Natural History Museum. Both [143] are expected to open to the public next September.\n\nThe current planetarium's main attraction is a 300-seat theater, where visitors can view projections of stars and planets on the dome above. [144] a larger theater, the new planetarium will feature an upgraded digital projection system. [145] Visitors will be able [146] the night sky more clearly and explore other planets and galaxies through new, interactive displays.",
+                "type": "NOTICE",
+                "guidance": "Questions 143-146 refer to the following notice.",
+                "content": "To help reduce traffic congestion and make parking easier, Newgrange Township will provide free bus rides to and from this year's Newgrange County Fair. ___143___ will be available from Friday, June 5, to Sunday, June 7. Planned pickup locations include the Rhinesberg Elementary School on Route 38 and the Newgrange Municipal Building on Main Street.\n\nBuses going to the fair will depart from these locations hourly from 8 A.M. to 5 P.M. Buses ___144___ the fairgrounds on the half hour, from 8:30 A.M. to 7:30 P.M. Please note that children under the age of 16 must be accompanied by an adult. ___145___. \n\nThe Newgrange County Fair Committee thanks our generous sponsors for providing buses and ___146___ this year. We hope you will join us at the Newgrange County Fair!",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "trails"
-                            },
-                            {
-                                "label": "B",
-                                "text": "buildings"
-                            },
-                            {
-                                "label": "C",
-                                "text": "campuses"
-                            },
-                            {
-                                "label": "D",
-                                "text": "performances"
-                            }
+                            { "label": "A", "text": "Refreshments" },
+                            { "label": "B", "text": "Information" },
+                            { "label": "C", "text": "Transportation" },
+                            { "label": "D", "text": "Entertainment" }
                         ],
-                        "correctAnswer": "interested",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "In addition to"
-                            },
-                            {
-                                "label": "B",
-                                "text": "In particular"
-                            },
-                            {
-                                "label": "C",
-                                "text": "In agreement with"
-                            },
-                            {
-                                "label": "D",
-                                "text": "For instance"
-                            }
+                            { "label": "A", "text": "will leave" },
+                            { "label": "B", "text": "have left" },
+                            { "label": "C", "text": "leaving" },
+                            { "label": "D", "text": "left" }
                         ],
-                        "correctAnswer": "is hosting",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "A",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "145",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "There are currently three other museums in the Mayfield area."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Attendance at the planetarium has been up in recent years."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Planning for the new planetarium began five years ago."
-                            },
-                            {
-                                "label": "D",
-                                "text": "There will be room for three short-term exhibits as well."
-                            }
+                            { "label": "A", "text": "Thank you for coming to this year's auto show." },
+                            { "label": "B", "text": "There will be an increase in the cost of the service." },
+                            { "label": "C", "text": "We hope you enjoyed your stay at the hotel." },
+                            { "label": "D", "text": "No food or drinks are permitted on the buses." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "146",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "to see"
-                            },
-                            {
-                                "label": "B",
-                                "text": "will see"
-                            },
-                            {
-                                "label": "C",
-                                "text": "who saw"
-                            },
-                            {
-                                "label": "D",
-                                "text": "by seeing"
-                            }
+                            { "label": "A", "text": "driven" },
+                            { "label": "B", "text": "drivers" },
+                            { "label": "C", "text": "drivable" },
+                            { "label": "D", "text": "drive" }
                         ],
                         "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             }
@@ -2571,211 +1641,113 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t8-p1",
-                "type": "EMAIL",
-                "guidance": "Questions 131-134 refer to the following e-mail.",
-                "title": "...",
-                "content": "From: mnandy@gmantcs.com\nTo: jblaire@blaireaccounting.ca\nSubject: RE: AUTOMATIC REPLY\nDate: 9 January, 10:34 AM\n\nHello, and thank you for contacting Blaire Accounting. I will be out of the office until 31 January. I will respond to your message when I [131]. If you need [132] assistance, please contact Susan Lewis, my administrative assistant, at slewis@blaireaccounting.ca. You can [133] call her directly at 416-555-0193. [134].\n\nJean Blaire, President",
+                "type": "INFORMATION",
+                "guidance": "Questions 131-134 refer to the following information.",
+                "content": "Welcome to Dining-Ticket, the online service that delivers high-quality, delicious meals to your ___131___. To start ___132___ Dining-Ticket, simply enter your location to view your local delivery options. Next, filter the information by your desired price range, cuisine type, or by the restaurant name. Then, track your order as it is transported by a Dining-Ticket delivery person. ___133___. To enjoy your favorite restaurant fare from the ___134___ of your own home, try Dining-Ticket today!",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "recover"
-                            },
-                            {
-                                "label": "B",
-                                "text": "return"
-                            },
-                            {
-                                "label": "C",
-                                "text": "begin"
-                            },
-                            {
-                                "label": "D",
-                                "text": "finish"
-                            }
+                            { "label": "A", "text": "doorstep" },
+                            { "label": "B", "text": "station" },
+                            { "label": "C", "text": "program" },
+                            { "label": "D", "text": "market" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "132",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "immediate"
-                            },
-                            {
-                                "label": "B",
-                                "text": "immediately"
-                            },
-                            {
-                                "label": "C",
-                                "text": "immediacy"
-                            },
-                            {
-                                "label": "D",
-                                "text": "immediacies"
-                            }
+                            { "label": "A", "text": "usage" },
+                            { "label": "B", "text": "using" },
+                            { "label": "C", "text": "usable" },
+                            { "label": "D", "text": "users" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "133",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "also"
-                            },
-                            {
-                                "label": "B",
-                                "text": "lightly"
-                            },
-                            {
-                                "label": "C",
-                                "text": "similarly"
-                            },
-                            {
-                                "label": "D",
-                                "text": "again"
-                            }
+                            { "label": "A", "text": "Additional delivery staff are being recruited now." },
+                            { "label": "B", "text": "Your order will be ready for in-store pickup within one hour." },
+                            { "label": "C", "text": "Our training is thorough and fast." },
+                            { "label": "D", "text": "It's as easy as that." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "134",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Ms. Blaire will be back in the office earlier than expected."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Please come and see us if you ever find yourself in Toronto."
-                            },
-                            {
-                                "label": "C",
-                                "text": "It is essential to hire a competent payroll and tax accountant."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Ms. Lewis is in the office on weekdays from 9 A.M. to 5 P.M."
-                            }
+                            { "label": "A", "text": "comforted" },
+                            { "label": "B", "text": "comforting" },
+                            { "label": "C", "text": "comfortable" },
+                            { "label": "D", "text": "comfort" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             },
             {
                 "id": "p6-t8-p2",
-                "type": "NOTICE",
-                "guidance": "Questions 135-138 refer to the following notice.",
-                "title": "Attention customers of Metro Coffee:",
-                "content": "We are excited to announce that we [135] a second Metro Coffee store! As you know, we recently expanded our offerings to include baked goods as well as coffee. As a result, our [136] has increased significantly. To keep up with demand, we decided that a second store was necessary.\n\nOur new space is substantially [137] but offers the same wide selection of items. Make sure to stop by and check out our new location today!\n\n[138]",
+                "type": "EMAIL",
+                "guidance": "Questions 135-138 refer to the following e-mail.",
+                "content": "To: Rashida Willis <rwillis@pintaur.net>\nFrom: Customer Accounts <accounts@stauntonnaturalgas.com>\nDate: August 4\nSubject: Paperless billing\n\nDear Ms. Willis,\n\nThank you for selecting the paperless billing ___135___ for your Staunton Natural Gas account. ___136___ on August 20, you will receive your monthly statement electronically. To ensure receipt of your bill, please add our e-mail address to your list of contacts. At any time you may ___137___ to traditional paper billing by selecting it in your account settings.\n\n___138___. Your bill will still be due on the first of each month.\n\nSincerely,\n\nStaunton Natural Gas",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "will open"
-                            },
-                            {
-                                "label": "B",
-                                "text": "can open"
-                            },
-                            {
-                                "label": "C",
-                                "text": "are opening"
-                            },
-                            {
-                                "label": "D",
-                                "text": "have opened"
-                            }
+                            { "label": "A", "text": "value" },
+                            { "label": "B", "text": "degree" },
+                            { "label": "C", "text": "project" },
+                            { "label": "D", "text": "option" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "136",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "debt"
-                            },
-                            {
-                                "label": "B",
-                                "text": "payroll"
-                            },
-                            {
-                                "label": "C",
-                                "text": "business"
-                            },
-                            {
-                                "label": "D",
-                                "text": "investment"
-                            }
+                            { "label": "A", "text": "Until" },
+                            { "label": "B", "text": "Only" },
+                            { "label": "C", "text": "Beginning" },
+                            { "label": "D", "text": "Even" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "137",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Metro Coffee has been a part of the community for nine years."
-                            },
-                            {
-                                "label": "B",
-                                "text": "We roast our coffee beans right here on-site."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Many people enjoy eating a pastry while drinking a cup of coffee."
-                            },
-                            {
-                                "label": "D",
-                                "text": "It is located two miles away in the historic district."
-                            }
+                            { "label": "A", "text": "return" },
+                            { "label": "B", "text": "returnable" },
+                            { "label": "C", "text": "to return" },
+                            { "label": "D", "text": "returning" }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "138",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "large"
-                            },
-                            {
-                                "label": "B",
-                                "text": "larger"
-                            },
-                            {
-                                "label": "C",
-                                "text": "largely"
-                            },
-                            {
-                                "label": "D",
-                                "text": "largest"
-                            }
+                            { "label": "A", "text": "The account balance is now overdue." },
+                            { "label": "B", "text": "Nothing else about your billing process has changed." },
+                            { "label": "C", "text": "A company representative will contact you soon." },
+                            { "label": "D", "text": "The account will be closed on the final day of the month." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
@@ -2783,208 +1755,110 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t8-p3",
                 "type": "MEMO",
                 "guidance": "Questions 139-142 refer to the following memo.",
-                "title": "...",
-                "content": "To: All Ferrese Hotel Employees\nFrom: Sergio Prieto, Hotel Manager\nDate: Monday, July 4\nSubject: Global Shipping Partners Conference\n\nThe Ferrese Hotel will be hosting the Global Shipping Partners Conference next week, from Tuesday to Sunday. [139], management expects to see many more customers in the hotel's restaurants and gift shops. [140]. I will be hiring temporary staff to ensure that [141] can meet these increased demands. Please take the time to help them learn our [142] when they are here. Doing so will ensure that all operations run smoothly while the conference is taking place.",
+                "content": "To: Red Division Sales Team Members\nFrom: Matias Gama, Director\nSubject: Information\nDate: 22 November\nAttachment: Third-quarter results\n\nLet me commend all of you on your outstanding work this past quarter! See for yourselves in the attached report, which provides all the details. ___139___, there's always room for growth. That's why we're launching a new ___140___ program. It will be provided by an outside agency that has carefully ___141___ our needs. Although the learning modules will be offered across the organization, they are scheduled to begin in our division. ___142___. In the meantime, please carry on with your good work.",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "If not"
-                            },
-                            {
-                                "label": "B",
-                                "text": "After all"
-                            },
-                            {
-                                "label": "C",
-                                "text": "Therefore"
-                            },
-                            {
-                                "label": "D",
-                                "text": "In the meantime"
-                            }
+                            { "label": "A", "text": "Similarly" },
+                            { "label": "B", "text": "In that case" },
+                            { "label": "C", "text": "Nevertheless" },
+                            { "label": "D", "text": "Even if" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "140",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Restaurant renovations are almost completed."
-                            },
-                            {
-                                "label": "B",
-                                "text": "Conference registration forms have been posted online."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Applications will be reviewed later this week."
-                            },
-                            {
-                                "label": "D",
-                                "text": "The business center will also be busier than usual."
-                            }
+                            { "label": "A", "text": "radio" },
+                            { "label": "B", "text": "exercise" },
+                            { "label": "C", "text": "training" },
+                            { "label": "D", "text": "benefits" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "141",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "it"
-                            },
-                            {
-                                "label": "B",
-                                "text": "we"
-                            },
-                            {
-                                "label": "C",
-                                "text": "both"
-                            },
-                            {
-                                "label": "D",
-                                "text": "something"
-                            }
+                            { "label": "A", "text": "analyzed" },
+                            { "label": "B", "text": "analyzing" },
+                            { "label": "C", "text": "to analyze" },
+                            { "label": "D", "text": "been analyzed" }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "lines"
-                            },
-                            {
-                                "label": "B",
-                                "text": "steps"
-                            },
-                            {
-                                "label": "C",
-                                "text": "names"
-                            },
-                            {
-                                "label": "D",
-                                "text": "routines"
-                            }
+                            { "label": "A", "text": "This was our best quarter ever!" },
+                            { "label": "B", "text": "I will let you know the dates soon." },
+                            { "label": "C", "text": "Our clients are very pleased as well." },
+                            { "label": "D", "text": "Registration is now full." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t8-p4",
-                "type": "ARTICLE",
-                "guidance": "Questions 143-146 refer to the following article.",
-                "title": "...",
-                "content": "DALLAS (July 28)—Zura Technology Solutions (ZTS) announced today that it has completed the [143] of an office building located at 425 Van Kirk Street here in Dallas. The building, most recently the headquarters of Brickhall Insurance, will serve as ZTS's [144] base of operations. The company's relocation from Fort Worth is expected to be complete by the end of the calendar year. [145]. \"Our decision to acquire the building reflects ZTS's ongoing commitment to the Dallas area and will enable us to better serve our customers, business partners, and stakeholders,\" said Gloria Rubirosa, ZTS's CEO. \"From our new home in Dallas, we [146] to work hard to meet the needs of each and every one of our customers around the world.”",
+                "type": "EMAIL",
+                "guidance": "Questions 143-146 refer to the following e-mail.",
+                "content": "From: Joanna Markian\nTo: All management staff\nSubject: Meeting with Adacorp leadership\nDate: 11 January\n\nDear Credulux colleagues,\n\nPlease be advised that our Wednesday Board of Directors meeting will focus on the ___143___ company merger with Adacorp Ltd. We will be joined by Adacorp's CEO and several managers as well as members of both companies' legal teams. ___144___.\n\nThe purpose of this meeting is to clarify the timeline of the merger process. ___145___ with questions for our Board of Directors will be given ample time to ask them. ___146___, I would like to request that all nonurgent agenda items be saved for our management team meeting in early February.\n\nSincerely,\n\nJoanna Markian",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "construction"
-                            },
-                            {
-                                "label": "B",
-                                "text": "cleaning"
-                            },
-                            {
-                                "label": "C",
-                                "text": "inspection"
-                            },
-                            {
-                                "label": "D",
-                                "text": "purchase"
-                            }
+                            { "label": "A", "text": "selected" },
+                            { "label": "B", "text": "upcoming" },
+                            { "label": "C", "text": "occasional" },
+                            { "label": "D", "text": "assorted" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "voluntary"
-                            },
-                            {
-                                "label": "B",
-                                "text": "primary"
-                            },
-                            {
-                                "label": "C",
-                                "text": "short-term"
-                            },
-                            {
-                                "label": "D",
-                                "text": "occasional"
-                            }
+                            { "label": "A", "text": "Please plan to attend this meeting in person." },
+                            { "label": "B", "text": "Interns will report on their experience at Adacorp." },
+                            { "label": "C", "text": "Instead, we will extend the meeting by one hour." },
+                            { "label": "D", "text": "You will soon be notified of the new law." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "145",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "ZTS's leadership team sees the move as strategic."
-                            },
-                            {
-                                "label": "B",
-                                "text": "For example, it provides a range of services to small businesses."
-                            },
-                            {
-                                "label": "C",
-                                "text": "There are only a few available sites in the Main Street District."
-                            },
-                            {
-                                "label": "D",
-                                "text": "Over 15,000 people are employed by ZTS worldwide."
-                            }
+                            { "label": "A", "text": "Each other" },
+                            { "label": "B", "text": "Yours" },
+                            { "label": "C", "text": "Anyone" },
+                            { "label": "D", "text": "Whoever" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "146",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "continued"
-                            },
-                            {
-                                "label": "B",
-                                "text": "continuing"
-                            },
-                            {
-                                "label": "C",
-                                "text": "would have continued"
-                            },
-                            {
-                                "label": "D",
-                                "text": "will continue"
-                            }
+                            { "label": "A", "text": "On the contrary" },
+                            { "label": "B", "text": "For this reason" },
+                            { "label": "C", "text": "Soon after" },
+                            { "label": "D", "text": "For example" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
@@ -2997,211 +1871,113 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t9-p1",
-                "type": "ANNOUNCEMENT",
+                "type": "NOTICE",
                 "guidance": "Questions 131-134 refer to the following notice.",
-                "title": "Sky Air First Pass",
-                "content": "Thank you for flying Sky Air First with ------. We hope you enjoy your flight.\n\n131.\n\nYou can take advantage of our best prices on future flights ------ purchasing a Sky Air First Pass.\n\n132.\n\nFor a ------ annual fee, you will get special discounts, seat upgrades, and the use of our exclusive 133.\n\ntravelers' lounge. ------. Ask your flight attendant for more information and an application.\n\n134.",
+                "content": "Notice of Public Meeting\n\nThe Fallberg City Library will hold its monthly board meeting on August 19 at 6 P.M. Members of the community are encouraged to ___131___. The agenda, ___132___ available on the library's Web site, includes an information session about the proposed library building on the city's east side. Project Manager Andre Cazal will share design concepts for the building. ___133___, he will lead a discussion about how construction should be funded. There will be a period for public comment following the regular agenda items. ___134___.",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "them"
-                            },
-                            {
-                                "label": "B",
-                                "text": "theirs"
-                            },
-                            {
-                                "label": "C",
-                                "text": "us"
-                            },
-                            {
-                                "label": "D",
-                                "text": "ours"
-                            }
+                            { "label": "A", "text": "write" },
+                            { "label": "B", "text": "attend" },
+                            { "label": "C", "text": "donate" },
+                            { "label": "D", "text": "volunteer" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "132",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "at"
-                            },
-                            {
-                                "label": "B",
-                                "text": "on"
-                            },
-                            {
-                                "label": "C",
-                                "text": "by"
-                            },
-                            {
-                                "label": "D",
-                                "text": "to"
-                            }
+                            { "label": "A", "text": "be" },
+                            { "label": "B", "text": "being" },
+                            { "label": "C", "text": "which is" },
+                            { "label": "D", "text": "what can be" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "133",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "lowers"
-                            },
-                            {
-                                "label": "B",
-                                "text": "low"
-                            },
-                            {
-                                "label": "C",
-                                "text": "lowly"
-                            },
-                            {
-                                "label": "D",
-                                "text": "lowest"
-                            }
+                            { "label": "A", "text": "In addition" },
+                            { "label": "B", "text": "As a result" },
+                            { "label": "C", "text": "As mentioned" },
+                            { "label": "D", "text": "In the meantime" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "134",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "We hope you will fly Sky Air First again."
-                            },
-                            {
-                                "label": "B",
-                                "text": "You will also get priority boarding."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Please find your seat immediately."
-                            },
-                            {
-                                "label": "D",
-                                "text": "The flight delay will be minimal."
-                            }
+                            { "label": "A", "text": "New board members will be appointed in September." },
+                            { "label": "B", "text": "The main branch will remain closed until further notice." },
+                            { "label": "C", "text": "The project was canceled due to a lack of public funding." },
+                            { "label": "D", "text": "Attendees will have an opportunity to share feedback at that time." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
             {
                 "id": "p6-t9-p2",
-                "type": "ARTICLE",
-                "guidance": "Questions 135-138 refer to the following article.",
-                "title": "CJOK Radio Show Welcomes New Staff",
-                "content": "QUEENSVILLE (7 July) —Local radio station CJOK announced Katherine Dees as the new producer of the popular show Out and About in Queensville. Ms. Dees is now ------ for 135.\n\ncoordinating schedules, booking guests for the show, and managing media relations.\n\n------, the station hired sound editor Virginia Thacker and production assistant Reggie Dietrich 136.\n\nto support Ms. Dees in her new role.\n\n137.\n\nOut and About in Queensville, which has been airing for 30 years, is performed live weekly from September to May in the Orpheum Theater in downtown Queensville. The show ------ musical guests, writers, and storytellers for an hour of weekly programming.\n\n138.",
+                "type": "EMAIL",
+                "guidance": "Questions 135-138 refer to the following e-mail.",
+                "content": "To: All Sales Associates\nFrom: Dean Verdoorn\nDate: June 27\nSubject: Store improvement\n\nIt is very important to us at V and J Camping Supplies that we work together as a unit. Teamwork not only improves productivity but also leads to increased satisfaction for customers and employees. ___135___, we will be combining a team-building exercise with an in-store improvement plan that we believe will make employees, management, and customers happy.\n\nWe will be redesigning the walls in our stores to look like trees with hollow spaces ___136___ products can be displayed. These outdoor-themed shelves are actually easy-to-assemble modular wall units. Associates ___137___ the task to work cooperatively in teams to assemble them. ___138___. When it is completed, we will stock the shelves and have a fun grand reopening event for customers.\n\nMore information will be forthcoming.\n\nDean Verdoorn\nBuildings Director",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "responsive"
-                            },
-                            {
-                                "label": "B",
-                                "text": "responsibly"
-                            },
-                            {
-                                "label": "C",
-                                "text": "responding"
-                            },
-                            {
-                                "label": "D",
-                                "text": "responsible"
-                            }
+                            { "label": "A", "text": "For that reason" },
+                            { "label": "B", "text": "For instance" },
+                            { "label": "C", "text": "Unfortunately" },
+                            { "label": "D", "text": "On the other hand" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "136",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Even so"
-                            },
-                            {
-                                "label": "B",
-                                "text": "In fact"
-                            },
-                            {
-                                "label": "C",
-                                "text": "For example"
-                            },
-                            {
-                                "label": "D",
-                                "text": "In addition"
-                            }
+                            { "label": "A", "text": "for" },
+                            { "label": "B", "text": "that" },
+                            { "label": "C", "text": "whatever" },
+                            { "label": "D", "text": "where" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "137",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "CJOK was founded 60 years ago."
-                            },
-                            {
-                                "label": "B",
-                                "text": "These recent hires follow the retirement of producer Ed Evans."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Ms. Dees was born and raised in Cedarburg."
-                            },
-                            {
-                                "label": "D",
-                                "text": "CJOK has more than one popular show in its lineup."
-                            }
+                            { "label": "A", "text": "are giving" },
+                            { "label": "B", "text": "were given" },
+                            { "label": "C", "text": "have to give" },
+                            { "label": "D", "text": "will be given" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "138",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "gives"
-                            },
-                            {
-                                "label": "B",
-                                "text": "marks"
-                            },
-                            {
-                                "label": "C",
-                                "text": "features"
-                            },
-                            {
-                                "label": "D",
-                                "text": "holds"
-                            }
+                            { "label": "A", "text": "Customers have been informed." },
+                            { "label": "B", "text": "This project should take one day." },
+                            { "label": "C", "text": "An announcement will be made soon." },
+                            { "label": "D", "text": "These units are available in several colors." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
@@ -3209,208 +1985,110 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t9-p3",
                 "type": "EMAIL",
                 "guidance": "Questions 139-142 refer to the following e-mail.",
-                "title": "...",
-                "content": "To: Sandra Barga <sbarga97@hjmail.ca>\nFrom: Artie Romanche <service@northwestbags.ca>\nDate: 12 July\nSubject: Order number 71280\n\nDear Ms. Barga:\n\nWe received your recent order asking for your name to be stitched on a Klamath Kool handbag.\n\nWe are, ------, eager to complete your order. Unfortunately, our seamstress who fulfills 139.\n\npersonalisation requirements will be on leave for the next three days. We wanted to let you know that her ------ will cause a delay in shipping your bag.\n\n140.\n\nFor the wait, we would like to offer you a 10 percent discount on your current order. Or, if 141.\n\nyou prefer, you can opt for free personalisation on your next order. ------. At Northwest Bags, 142.\n\nwe strive for 100 percent customer satisfaction!\n\nSincerely, Artie Romanche Customer Service Representative, Northwest Bags",
+                "content": "To: Donald Haroway <dharoway@indomail.co.nz>\nFrom: Fix-It Plumbing\nDate: 4 August\nSubject: Service request\n\nMr. Haroway,\n\nThis e-mail serves as confirmation that Fix-It Plumbing will be able to ___139___ a gas line at your residence at 458 Heron Street. We ___140___ Bradley Burns, a certified and licensed master plumber, to do this on Monday, 10 August, between 10:00 A.M. and 11:00 A.M. It should take about an hour to put in the line. ___141___.\n\nShould you need to cancel the ___142___, please contact us right away. This is a particularly busy time of year, and our schedules are quite full.\n\nElna Dlamini\nFix-It Plumbing",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "still"
-                            },
-                            {
-                                "label": "B",
-                                "text": "besides"
-                            },
-                            {
-                                "label": "C",
-                                "text": "of course"
-                            },
-                            {
-                                "label": "D",
-                                "text": "nevertheless"
-                            }
+                            { "label": "A", "text": "fill" },
+                            { "label": "B", "text": "install" },
+                            { "label": "C", "text": "inspect" },
+                            { "label": "D", "text": "examine" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "140",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "absence"
-                            },
-                            {
-                                "label": "B",
-                                "text": "arrival"
-                            },
-                            {
-                                "label": "C",
-                                "text": "request"
-                            },
-                            {
-                                "label": "D",
-                                "text": "investigation"
-                            }
+                            { "label": "A", "text": "would have sent" },
+                            { "label": "B", "text": "were sending" },
+                            { "label": "C", "text": "sent" },
+                            { "label": "D", "text": "will send" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "141",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Compensated"
-                            },
-                            {
-                                "label": "B",
-                                "text": "To compensate"
-                            },
-                            {
-                                "label": "C",
-                                "text": "For compensating"
-                            },
-                            {
-                                "label": "D",
-                                "text": "It is compensation"
-                            }
+                            { "label": "A", "text": "Then your gas stove will be ready to use." },
+                            { "label": "B", "text": "Mr. Evans worked in your area last week." },
+                            { "label": "C", "text": "Please call us by 9:30 A.M. the day before." },
+                            { "label": "D", "text": "We do this job better than our competitors." }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "The choice is yours."
-                            },
-                            {
-                                "label": "B",
-                                "text": "We appreciate your review."
-                            },
-                            {
-                                "label": "C",
-                                "text": "The bag will look great with your initials on it."
-                            },
-                            {
-                                "label": "D",
-                                "text": "We are the only local retailer offering custom services."
-                            }
+                            { "label": "A", "text": "subscription" },
+                            { "label": "B", "text": "membership" },
+                            { "label": "C", "text": "celebration" },
+                            { "label": "D", "text": "appointment" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "D",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
             },
             {
                 "id": "p6-t9-p4",
-                "type": "ARTICLE",
-                "guidance": "Questions 143-146 refer to the following article.",
-                "title": "Sehelec Announces Wind-Solar Hybrid Project",
-                "content": "MUMBAI (15 March)-Sehelec Ltd. announced it will begin construction on a 500-megawatt wind-solar hybrid power outside of Bangalore, India. ------. Sehelec expects to begin 143.\n\noperations within 24 months, and it will sell the power to Indian energy giant Novaseon Industries.\n\n144.\n\n\"Our contract with Novaseon to provide power moves us closer to our long-term corporate 145.\n\ngoal,\" said Sumit Varma, CEO of Sehelec. \"Our objective is to achieve a capacity of 20 gigawatts within five years. Doing so will make us one of India's largest green power companies. And that, in turn, will help the country its carbon-reduction target.\" 146.",
+                "type": "EMAIL",
+                "guidance": "Questions 143-146 refer to the following e-mail.",
+                "content": "To: Store Managers\nFrom: Alain Mareau\nDate: 4 October\nSubject: Recycling Initiative\n\nHello All,\n\nAs one of Australia's top electronics retailers, we always ___143___ to maintain our standing as an industry leader. Earlier this year we began testing a new program that allowed our customers to bring their used electronic devices to our stores for recycling. In exchange they received discounts on their purchases. The initiative exceeded our expectations. ___144___.\n\nIn late November, all store managers will be sent ___145___ instructions on how to collect items and send them to our recycling partner. ___146___, we will be announcing the program to the public via social media and print ads beginning in mid-November.\n\nPlease anticipate further updates and instructions on this exciting initiative.\n\nSincerely,\n\nAlain Mareau\nVice President, Product Development",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "plant"
-                            },
-                            {
-                                "label": "B",
-                                "text": "planter"
-                            },
-                            {
-                                "label": "C",
-                                "text": "planting"
-                            },
-                            {
-                                "label": "D",
-                                "text": "planted"
-                            }
+                            { "label": "A", "text": "seek" },
+                            { "label": "B", "text": "imply" },
+                            { "label": "C", "text": "predict" },
+                            { "label": "D", "text": "remember" }
                         ],
                         "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "Windy conditions can cause damage to tall buildings."
-                            },
-                            {
-                                "label": "B",
-                                "text": "The facility will consist of a mix of solar panels and wind turbines."
-                            },
-                            {
-                                "label": "C",
-                                "text": "Electric vehicles have fewer emissions than other vehicles have."
-                            },
-                            {
-                                "label": "D",
-                                "text": "The pace of upgrades to India's power grid slowed slightly this year."
-                            }
+                            { "label": "A", "text": "Electronics recycling is helpful for the environment." },
+                            { "label": "B", "text": "Thus we are expanding this program to all our locations later this year." },
+                            { "label": "C", "text": "Several customers had unfortunately failed to retain their receipts." },
+                            { "label": "D", "text": "Businesses across the country already recycle many materials." }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "B",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "145",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "renew"
-                            },
-                            {
-                                "label": "B",
-                                "text": "renewers"
-                            },
-                            {
-                                "label": "C",
-                                "text": "renewable"
-                            },
-                            {
-                                "label": "D",
-                                "text": "to renew"
-                            }
+                            { "label": "A", "text": "detail" },
+                            { "label": "B", "text": "details" },
+                            { "label": "C", "text": "detailed" },
+                            { "label": "D", "text": "detailing" }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "146",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
-                            {
-                                "label": "A",
-                                "text": "understand"
-                            },
-                            {
-                                "label": "B",
-                                "text": "explain"
-                            },
-                            {
-                                "label": "C",
-                                "text": "block"
-                            },
-                            {
-                                "label": "D",
-                                "text": "reach"
-                            }
+                            { "label": "A", "text": "Instead" },
+                            { "label": "B", "text": "Additionally" },
+                            { "label": "C", "text": "However" },
+                            { "label": "D", "text": "For example" }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     }
                 ]
@@ -3425,12 +2103,11 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t10-p1",
                 "type": "ARTICLE",
                 "guidance": "Questions 131-134 refer to the following article.",
-                "title": "Kray Villa Museum To Celebrate Grand Opening",
-                "content": "DEERFIELD (May 2)—The official opening of the Kray Villa Museum will take place on May 29 at 10 A.M. To mark the occasion, various festivities will be held throughout the day. Visit www.krayvillamuseum.org for details.\n\nThe museum is housed in the imposing structure was home to the once-influential Kray family beginning in the late 1800s. Having laid abandoned for the last 30 years, the property was purchased 2 years ago by the Deerfield Historical Society. Subsequently, the gardens were restored to appear as they did when the first generation of Krays moved into the villa.\n\n, furnishings of the kind most likely used by the family are on display.\n\nDuring the museum's opening festivities, a live band music that was popular in the late nineteenth century.",
+                "content": "Kray Villa Museum To Celebrate Grand Opening\\n\\nDEERFIELD (May 2)—The official opening of the Kray Villa Museum will take place on May 29 at 10 A.M. To mark the occasion, various festivities will be held throughout the day. ___131___. Visit www.krayvillamuseum.org for details.\\n\\nThe museum is housed in the imposing structure ___132___ was home to the once-influential Kray family beginning in the late 1800s. Having laid abandoned for the last 30 years, the property was purchased 2 years ago by the Deerfield Historical Society. Subsequently, the gardens were restored to appear as they did when the first generation of Krays moved into the villa.\\n\\n___133___, furnishings of the kind most likely used by the family are on display.\\n\\nDuring the museum's opening festivities, a live band ___134___ music that was popular in the late nineteenth century.",
                 "questions": [
                     {
                         "id": "131",
-                        "text": "Select the best sentence for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
                             {
                                 "label": "A",
@@ -3450,11 +2127,11 @@ export const part6TestData: Part6TestSet[] = [
                             }
                         ],
                         "correctAnswer": "D",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "132",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3474,11 +2151,11 @@ export const part6TestData: Part6TestSet[] = [
                             }
                         ],
                         "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "133",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3502,7 +2179,7 @@ export const part6TestData: Part6TestSet[] = [
                     },
                     {
                         "id": "134",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3522,7 +2199,7 @@ export const part6TestData: Part6TestSet[] = [
                             }
                         ],
                         "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             },
@@ -3530,12 +2207,11 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t10-p2",
                 "type": "EMAIL",
                 "guidance": "Questions 135-138 refer to the following e-mail.",
-                "title": "...",
-                "content": "To: All employees\nFrom: Cecil Radu, Information Technology Manager\nDate: April 8\n\nRe: Network alert We are experiencing some problems with our local network. Some of the affected services include the company Web site and the payroll database. We have also received information network data becoming corrupted and files not saving properly. Therefore, to ensure that you do not lose any work, please avoid using the network this morning while my team addresses these . We anticipate that the systems will be fully functional by this afternoon.",
+                "content": "To: All employees\\nFrom: Cecil Radu, Information Technology Manager\\nDate: April 8\\nRe: Network alert\\n\\nWe are experiencing some problems with our local network. Some of the affected services include the ___135___ company Web site and the payroll database. We have also received information ___136___ network data becoming corrupted and files not saving properly. Therefore, to ensure that you do not lose any work, please avoid using the network this morning while my team addresses these ___137___. We anticipate that the systems will be fully functional by this afternoon. ___138___.",
                 "questions": [
                     {
                         "id": "135",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3554,12 +2230,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "internal"
                             }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "136",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3578,12 +2254,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "with"
                             }
                         ],
-                        "correctAnswer": "B",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "137",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3607,7 +2283,7 @@ export const part6TestData: Part6TestSet[] = [
                     },
                     {
                         "id": "138",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
                             {
                                 "label": "A",
@@ -3627,7 +2303,7 @@ export const part6TestData: Part6TestSet[] = [
                             }
                         ],
                         "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_SENTENCE_INSERTION"
                     }
                 ]
             },
@@ -3635,12 +2311,11 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t10-p3",
                 "type": "NOTICE",
                 "guidance": "Questions 139-142 refer to the following notice.",
-                "title": "...",
-                "content": "April 2 Dear TP&G Customer, Takoradi Power & Gas (TP&G) is committed to providing every customer with dependable electricity service. To this end, we need to make some improvements to our A maintenance crew will be upgrading transformers in your neighbourhood on or about 22 April, beginning at 10 A.M. , we will need to shut off the electricity to residences in your area from approximately 10 A.M. to 1 P.M. on that day. We hope that by this notice, any disruptions caused by the planned outage will be minimized.",
+                "content": "April 2\\n\\nDear TP&G Customer,\\n\\nTakoradi Power & Gas (TP&G) is committed to providing every customer with dependable electricity service. To this end, we need to make some improvements to our ___139___. A maintenance crew will be upgrading transformers in your neighbourhood on or about 22 April, beginning at 10 A.M. ___140___, we will need to shut off the electricity to residences in your area from approximately 10 A.M. to 1 P.M. on that day. ___141___. We hope that by ___142___ this notice, any disruptions caused by the planned outage will be minimized.",
                 "questions": [
                     {
                         "id": "139",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3664,7 +2339,7 @@ export const part6TestData: Part6TestSet[] = [
                     },
                     {
                         "id": "140",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3683,12 +2358,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "On the other hand"
                             }
                         ],
-                        "correctAnswer": "D",
+                        "correctAnswer": "C",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "141",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
                             {
                                 "label": "A",
@@ -3707,12 +2382,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "Here are some tips for reducing your energy bill."
                             }
                         ],
-                        "correctAnswer": "D",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "A",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "142",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3731,8 +2406,8 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "sending"
                             }
                         ],
-                        "correctAnswer": "C",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     }
                 ]
             },
@@ -3740,12 +2415,11 @@ export const part6TestData: Part6TestSet[] = [
                 "id": "p6-t10-p4",
                 "type": "EMAIL",
                 "guidance": "Questions 143-146 refer to the following e-mail.",
-                "title": "...",
-                "content": "To: hanna.kalita@netmail.co.uk\nFrom: patientoutreach@ebmp.co.uk\nDate: 12 June\nSubject: Invitation to patient portal\n\nDear Ms. Kalita, East Burberry Medical Practice has recently rolled out its patient portal, Burmed Connect. This service to help you manage your healthcare at your convenience. You are invited to create an account to access the portal. Once enrolled, you will be able to book appointments with our doctors as well as view your medical records and request prescriptions. , you can use Burmed Connect to send messages to your doctor. Only you and your doctor will be able to see any messages exchanged between the two of you.\n\nTo create an account, start by going to www.eastburberrymedicalpractice/patient-portal.co.uk. If you experience any difficulties with the process, please call 20 5550 0169.\n\nSincerely, Emma Richardson, Patient Outreach Coordinator",
+                "content": "To: hanna.kalita@netmail.co.uk\\nFrom: patientoutreach@ebmp.co.uk\\nDate: 12 June\\nSubject: Invitation to patient portal\\n\\nDear Ms. Kalita,\\n\\nEast Burberry Medical Practice has recently rolled out its patient portal, Burmed Connect. This service ___143___ to help you manage your healthcare at your convenience. You are invited to create an account to access the portal. Once enrolled, you will be able to book appointments with our doctors as well as view your medical records and request prescriptions. ___144___, you can use Burmed Connect to send messages to your doctor. Only you and your doctor will be able to see any messages exchanged between the two of you. ___145___.\\n\\nTo create an account, start by going to www.eastburberrymedicalpractice/patient-portal.co.uk. If you experience any difficulties with the ___146___ process, please call 20 5550 0169.\\n\\nSincerely,\\n\\nEmma Richardson, Patient Outreach Coordinator",
                 "questions": [
                     {
                         "id": "143",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3764,12 +2438,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "is intended"
                             }
                         ],
-                        "correctAnswer": "A",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "D",
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "144",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3788,12 +2462,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "Otherwise"
                             }
                         ],
-                        "correctAnswer": "B",
+                        "correctAnswer": "A",
                         "classification": "P6_VOCABULARY"
                     },
                     {
                         "id": "145",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best sentence to complete the text.",
                         "options": [
                             {
                                 "label": "A",
@@ -3812,12 +2486,12 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "You will be locked out of your account after a third failed attempt."
                             }
                         ],
-                        "correctAnswer": "D",
-                        "classification": "P6_VOCABULARY"
+                        "correctAnswer": "C",
+                        "classification": "P6_SENTENCE_INSERTION"
                     },
                     {
                         "id": "146",
-                        "text": "Select the best word or phrase for the blank.",
+                        "text": "Select the best answer.",
                         "options": [
                             {
                                 "label": "A",
@@ -3836,7 +2510,7 @@ export const part6TestData: Part6TestSet[] = [
                                 "text": "deletion"
                             }
                         ],
-                        "correctAnswer": "A",
+                        "correctAnswer": "B",
                         "classification": "P6_VOCABULARY"
                     }
                 ]

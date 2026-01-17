@@ -16,4 +16,16 @@ const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export { app, auth, db };
+let messaging: any = null;
+if (typeof window !== 'undefined') {
+    import('firebase/messaging').then(({ getMessaging }) => {
+        try {
+            // Check if supported first? getMessaging does it internally usually but handled in try/catch if env issues
+            messaging = getMessaging(app);
+        } catch (e) {
+            console.warn("Firebase Messaging failed to initialize", e);
+        }
+    });
+}
+
+export { app, auth, db, messaging };

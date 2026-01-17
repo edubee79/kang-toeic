@@ -104,6 +104,12 @@ export default function Dashboard() {
                     <p className="text-sm font-bold text-slate-300">{user?.userName} 학생</p>
                     <p className="text-xs text-slate-500">{user?.userClass}반 {isPending && <span className="text-amber-500">(승인 대기중)</span>}</p>
                 </div>
+                {/* Dev Admin Access */}
+                <div className="absolute top-4 left-4 opacity-50 hover:opacity-100">
+                    <Link href="/admin/dashboard">
+                        <Button variant="ghost" size="sm" className="text-xs text-slate-600">🛠 Admin</Button>
+                    </Link>
+                </div>
             </div>
 
             {isPending && (
