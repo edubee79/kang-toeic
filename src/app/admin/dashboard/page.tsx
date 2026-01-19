@@ -12,7 +12,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
-import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload } from "lucide-react";
+import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload, Trophy } from "lucide-react";
 import * as XLSX from 'xlsx';
 
 import { Bar } from 'react-chartjs-2';
@@ -36,13 +36,19 @@ ChartJS.register(
 );
 
 export default function AdminDashboard() {
+    const [stats, setStats] = useState({
+        totalStudents: 0,
+        pendingStudents: 0,
+        activeAssignments: 0,
+        todayLogs: 0
+    });
+    const router = useRouter();
     const [students, setStudents] = useState<any[]>([]);
     const [classes, setClasses] = useState<{ name: string }[]>([]);
     const [filterClass, setFilterClass] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
     const [selectedStudent, setSelectedStudent] = useState<any>(null);
-    const router = useRouter();
 
     useEffect(() => {
         const checkAdmin = () => {
@@ -51,15 +57,6 @@ export default function AdminDashboard() {
                 router.replace('/login');
                 return;
             }
-            // Temporarily disabled for development
-            /*
-            const user = JSON.parse(userData);
-            if (user.username !== 'kangs') {
-                alert('관리자 권한이 없습니다.');
-                router.replace('/');
-                return;
-            }
-            */
             fetchData();
         };
 
@@ -79,22 +76,45 @@ export default function AdminDashboard() {
                 const q = query(collection(db, "Winter_Users"), orderBy("registeredAt", "desc"));
                 const usersSnapshot = await getDocs(q);
                 const usersMap = new Map();
+
+                let pending = 0;
+                let approved = 0;
+
                 usersSnapshot.forEach(doc => {
-                    usersMap.set(doc.data().userId, { ...doc.data(), logs: [], stats: {} });
+                    const userData = doc.data();
+                    usersMap.set(userData.userId, { ...userData, logs: [], stats: {} });
+                    if (userData.status === 'pending') pending++;
+                    if (userData.status === 'approved') approved++;
                 });
 
-                // Fetch Results
+                // Fetch Assignments
+                const assignSnapshot = await getDocs(query(collection(db, "Assignments")));
+                let activeAssigns = 0;
+                assignSnapshot.forEach(doc => {
+                    if (doc.data().isActive) activeAssigns++;
+                });
+
+                // Fetch Results (Recent)
                 const resultsSnapshot = await getDocs(query(collection(db, "Manager_Results"), orderBy("timestamp", "desc")));
+
+                let todayCount = 0;
+                const todayStr = new Date().toDateString();
 
                 resultsSnapshot.forEach(doc => {
                     const res = doc.data();
                     if (usersMap.has(res.studentId)) {
                         const user = usersMap.get(res.studentId);
                         user.logs.push(res);
+
+                        // Check if log is today
+                        if (res.timestamp?.toDate) {
+                            const logDate = res.timestamp.toDate().toDateString();
+                            if (logDate === todayStr) todayCount++;
+                        }
                     }
                 });
 
-                // Calculate Stats
+                // Calculate Stats for Table
                 const studentList: any[] = [];
                 usersMap.forEach(user => {
                     let maxShadowSet = 0;
@@ -112,13 +132,20 @@ export default function AdminDashboard() {
                     });
 
                     user.stats = { maxShadowSet, lc2Count, grammarCount, vocaCount };
-                    // Only approved students
+                    // Only approved active students for the table
                     if (user.status === 'approved') {
                         studentList.push(user);
                     }
                 });
 
                 setStudents(studentList);
+                setStats({
+                    totalStudents: approved,
+                    pendingStudents: pending,
+                    activeAssignments: activeAssigns,
+                    todayLogs: todayCount
+                });
+
             } catch (error) {
                 console.error("Error fetching admin data:", error);
             } finally {
@@ -159,23 +186,7 @@ export default function AdminDashboard() {
         return matchesClass && (nameMatch || idMatch);
     });
 
-    const chartData = {
-        labels: filteredStudents.map(s => s.name || s.userId),
-        datasets: [
-            {
-                label: 'Voca',
-                data: filteredStudents.map(s => s.stats.vocaCount * 3.3), // Scale to 100 roughly
-                backgroundColor: 'rgba(16, 185, 129, 0.7)',
-            },
-            {
-                label: 'Grammar',
-                data: filteredStudents.map(s => s.stats.grammarCount * 10),
-                backgroundColor: 'rgba(59, 130, 246, 0.7)',
-            }
-        ]
-    };
-
-    if (loading) return <div className="p-8 text-center">Loading Admin Data...</div>;
+    if (loading) return <div className="p-8 text-center text-slate-500 animate-pulse font-bold">데이터 분석 중...</div>;
 
     return (
         <div className="min-h-screen bg-slate-50 p-4 md:p-8 space-y-8">
@@ -220,10 +231,19 @@ export default function AdminDashboard() {
                             <PenSquare className="w-4 h-4" /> 숙제 내기 (Assign)
                         </Button>
                     </Link>
+                    <Link href="/admin/rankings">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-yellow-600 border-yellow-200 hover:bg-yellow-50">
+                            <Trophy className="w-4 h-4" /> 랭킹 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/settings">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-amber-600 border-amber-200 hover:bg-amber-50">
+                            <Shield className="w-4 h-4" /> 접근 제어 설정
+                        </Button>
+                    </Link>
                     <Button onClick={handleExport} variant="outline" className="gap-2 text-xs font-bold bg-white text-emerald-600 border-emerald-200 hover:bg-emerald-50">
                         <Download className="w-4 h-4" /> 엑셀 다운로드
                     </Button>
-                    {/* Dynamic Class Filter Buttons */}
                     {/* Dynamic Class Filter (Dropdown) */}
                     <div className="w-[150px]">
                         <Select value={filterClass} onValueChange={setFilterClass}>
@@ -239,23 +259,70 @@ export default function AdminDashboard() {
                         </Select>
                     </div>
                 </div>
-            </header>
+            </header >
+
+            {/* Dashboard Overview Cards */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/admin/registrations" className="col-span-1">
+                    <Card className={`border-none shadow-lg transition-all hover:scale-105 cursor-pointer ${stats.pendingStudents > 0 ? 'bg-amber-500 text-white' : 'bg-white text-slate-900'}`}>
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase opacity-80 flex items-center gap-2">
+                                <Users className="w-4 h-4" /> 가입 승인 대기
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black">{stats.pendingStudents}</div>
+                            {stats.pendingStudents > 0 && <p className="text-xs font-medium mt-1 opacity-90">승인이 필요한 학생이 있습니다!</p>}
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                <div className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 flex items-center gap-2">
+                                <Users className="w-4 h-4" /> 총 수강생
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700">{stats.totalStudents}</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400">활성 계정 수</p>
+                        </CardContent>
+                    </Card>
+                </div>
+
+                <Link href="/admin/assignments" className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900 hover:bg-indigo-50 transition-colors cursor-pointer group">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 group-hover:text-indigo-500 flex items-center gap-2">
+                                <PenSquare className="w-4 h-4" /> 배포된 과제
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700 group-hover:text-indigo-600">{stats.activeAssignments}</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400 group-hover:text-indigo-400">현재 활성화된 과제 세트</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                <div className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 flex items-center gap-2">
+                                <Trophy className="w-4 h-4" /> 학습 활동 (오늘)
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700">{stats.todayLogs}</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400">오늘 완료된 학습 및 테스트</p>
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Stats Chart */}
-                <Card className="lg:col-span-1 border-none shadow-xl bg-white rounded-[2rem]">
-                    <CardHeader>
-                        <CardTitle className="text-sm font-black uppercase text-slate-400">Class Performance</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="h-64">
-                            <Bar data={chartData} options={{ responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, max: 100 } } }} />
-                        </div>
-                    </CardContent>
-                </Card>
-
                 {/* Student List */}
-                <Card className="lg:col-span-2 border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
+                <Card className="col-span-1 lg:col-span-3 border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
                     <CardHeader className="flex flex-row items-center justify-between">
                         <CardTitle className="text-sm font-black uppercase text-slate-400">Student List ({filteredStudents.length})</CardTitle>
                         <div className="relative w-48">

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { collection, query, where, getDocs, addDoc, Timestamp, orderBy } from 'firebase/firestore';
+import { collection, query, where, getDocs, addDoc, Timestamp, orderBy, doc, setDoc } from 'firebase/firestore';
 import { getToken } from 'firebase/messaging'; // Import here
 import { db, messaging } from '@/lib/firebase';
 import { hashPassword, validatePassword } from '@/lib/password';
@@ -222,7 +222,7 @@ export default function SignupPage() {
                 return;
             }
 
-            await addDoc(collection(db, "Winter_Users"), {
+            await setDoc(doc(db, "Winter_Users", formData.userId), {
                 username: formData.username,
                 email: formData.email,
                 password: hashedPassword,

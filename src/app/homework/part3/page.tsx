@@ -1,24 +1,50 @@
+'use client';
 
-"use client";
-
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card } from "@/components/ui/card";
-import { Headphones, PlayCircle, Activity } from "lucide-react";
+import { Headphones, PlayCircle, Activity, Lock } from "lucide-react";
+import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 // Mock data for tests (1 to 10)
-const tests = Array.from({ length: 10 }, (_, i) => ({
+const initialTests = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     title: `TEST ${String(i + 1).padStart(2, '0')}`,
-    isActive: true // All 10 tests are active
+    isActive: true
 }));
 
 export default function Part3LobbyPage() {
+    const [access, setAccess] = useState<FeatureAccess | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchAccess = async () => {
+            const data = await getFeatureAccess();
+            setAccess(data);
+            setLoading(false);
+        };
+        fetchAccess();
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+                <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>
+            </div>
+        );
+    }
+
+    const maxTest = access?.maxSets?.part3 || 10;
+    const tests = initialTests.map(t => ({
+        ...t,
+        isActive: t.id <= maxTest
+    }));
+
     return (
         <div className="max-w-md mx-auto space-y-8 pb-20">
             <div>
                 <h2 className="text-3xl font-black mb-2 tracking-tighter leading-tight">LC PART 3<br /><span className="text-emerald-500">SHORT CONVERSATION</span></h2>
-                <p className="text-slate-400 font-medium text-xs">짧은 대화 실전 모의고사</p>
+                <p className="text-slate-400 font-medium text-xs">짧은 대화 실전 모의고사 | 현재 {maxTest}회차 오픈</p>
             </div>
 
             <div className="space-y-4">
@@ -30,8 +56,8 @@ export default function Part3LobbyPage() {
                         <Card className={`
                 group relative p-6 rounded-[2rem] border transition-all cursor-pointer overflow-hidden
                 ${test.isActive
-                                ? 'bg-slate-800/50 border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-800'
-                                : 'bg-slate-900/50 border-transparent opacity-60 cursor-not-allowed'}
+                                ? 'bg-slate-800/80 border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-800'
+                                : 'bg-slate-900 border-slate-800 opacity-60 cursor-not-allowed'}
             `}
                         >
                             {test.isActive && (
@@ -42,9 +68,9 @@ export default function Part3LobbyPage() {
                                 <div className="flex items-center gap-4">
                                     <div className={`
                     w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg border 
-                    ${test.isActive ? 'bg-slate-900 text-emerald-500 group-hover:text-emerald-400 border-slate-800' : 'bg-slate-800 text-slate-600 border-slate-800'}
+                    ${test.isActive ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-400' : 'bg-slate-800 text-slate-600 border-slate-800'}
                   `}>
-                                        <Headphones className="w-6 h-6" />
+                                        {test.isActive ? <Headphones className="w-6 h-6" /> : <Lock className="w-6 h-6" />}
                                     </div>
                                     <div>
                                         <h3 className={`text-lg font-black italic tracking-tighter ${test.isActive ? 'text-white' : 'text-slate-500'}`}>

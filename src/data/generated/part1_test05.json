@@ -1,0 +1,161 @@
+{
+  "testId": 5,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "D",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The people are watching a presentation.",
+          "translation": "사람들이 발표를 보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some books are being placed on a cart.",
+          "translation": "책들이 카트에 놓여지고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The people are kneeling in front of a shelf.",
+          "translation": "사람들이 선반 앞에 무릎을 꿇고 있다."
+        },
+        {
+          "option": "D",
+          "text": "The people are visiting a library.",
+          "translation": "사람들이 도서관을 방문하고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The women are facing each other.",
+          "translation": "여자들이 서로 마주보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The women are walking together.",
+          "translation": "여자들이 함께 걷고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is removing an item from her purse.",
+          "translation": "여자들 중 한 명이 핸드백에서 물건을 꺼내고 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is drinking from a coffee cup.",
+          "translation": "여자들 중 한 명이 커피잔으로 마시고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "One of the men is emptying out a plastic bag.",
+          "translation": "남자들 중 한 명이 비닐봉투를 비우고 있다."
+        },
+        {
+          "option": "B",
+          "text": "They're waiting in line at a checkout counter.",
+          "translation": "사람들이 계산대에서 줄을 서서 기다리고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the men is pointing at some flowers.",
+          "translation": "남자들 중 한 명이 꽃들을 가리키고 있다."
+        },
+        {
+          "option": "D",
+          "text": "They're selecting some fruits and vegetables.",
+          "translation": "사람들이 과일과 채소를 고르고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some plants have been arranged in a row.",
+          "translation": "식물들이 일렬로 배열되어 있다."
+        },
+        {
+          "option": "B",
+          "text": "The woman is leaning against a windowsill.",
+          "translation": "여자가 창틀에 기대어 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some cabinets have been opened at a workstation.",
+          "translation": "캐비닛이 열려 있다."
+        },
+        {
+          "option": "D",
+          "text": "The woman is reading a billboard.",
+          "translation": "여자가 광고판을 읽고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "D",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A house overlooks a fishing pier.",
+          "translation": "주택이 낚시터에 내려다보인다."
+        },
+        {
+          "option": "B",
+          "text": "Ducks are swimming in a lake.",
+          "translation": "오리들이 호수에서 헤엄치고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A bridge crosses over a river.",
+          "translation": "다리가 강 위를 가로지르고 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some trees border a pond.",
+          "translation": "나무들이 연못에 접해 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "One of the women is picking up a suitcase.",
+          "translation": "여자들 중 한 명이 여행 가방을 들고 있다."
+        },
+        {
+          "option": "B",
+          "text": "Her arm.",
+          "translation": "팔."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is holding a notebook under her arm.",
+          "translation": "여자들 중 한 명이 팔에 책을 끼고 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is standing in the doorway.",
+          "translation": "여자들 중 한 명이 문틀에 서 있다."
+        }
+      ]
+    }
+  ]
+}

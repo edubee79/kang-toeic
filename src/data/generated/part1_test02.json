@@ -1,0 +1,161 @@
+{
+  "testId": 2,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "He's folding some clothes.",
+          "translation": "남자가 옷을 개고 있다."
+        },
+        {
+          "option": "B",
+          "text": "He's looking into a laundry cart.",
+          "translation": "남자가 세탁물 통을 들여다보고 있다."
+        },
+        {
+          "option": "C",
+          "text": "He's removing some clothes from hangers.",
+          "translation": "남자가 옷걸이에서 옷을 꺼내고 있다."
+        },
+        {
+          "option": "D",
+          "text": "He's standing in front of a washing machine.",
+          "translation": "남자가 세탁기 앞에 서 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The man is leaning against a doorway.",
+          "translation": "남자가 출입구에 기대어 있다."
+        },
+        {
+          "option": "B",
+          "text": "The man is opening up a package.",
+          "translation": "남자가 꾸러미를 풀고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is plugging in a printer.",
+          "translation": "여성 중 한 명이 프린터를 꽂고 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is wearing glasses.",
+          "translation": "여성 중 한 명이 안경을 쓰고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She is attaching price tags to some merchandise.",
+          "translation": "여성이 가격표를 붙이고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She is piling up some boxes.",
+          "translation": "여자가 상자를 쌓고 있다."
+        },
+        {
+          "option": "C",
+          "text": "She is holding up some fruit.",
+          "translation": "여자가 과일을 들고 있다."
+        },
+        {
+          "option": "D",
+          "text": "She is throwing away a plastic bag.",
+          "translation": "여자가 비닐봉투를 버리고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A jacket has been placed on the ground.",
+          "translation": "재킷이 땅에 놓여 있다."
+        },
+        {
+          "option": "B",
+          "text": "A man is watering some flowers.",
+          "translation": "남자가 꽃에 물을 주고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A garden has been planted outside of a building.",
+          "translation": "건물 밖에 정원이 심겨져 있다."
+        },
+        {
+          "option": "D",
+          "text": "A man is putting some tools in a toolbox.",
+          "translation": "남자가 공구 상자에 공구를 넣고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some chairs are stacked in the corner.",
+          "translation": "의자들이 구석에 쌓여 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some light fixtures are mounted on the walls.",
+          "translation": "조명 기구들이 벽에 설치되어 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some tables are covered with tablecloths.",
+          "translation": "식탁보가 식탁보 위에 덮여 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some furniture is on display in a window.",
+          "translation": "가구들이 진열장에 진열되어 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "One of the employees is walking with an empty tray.",
+          "translation": "직원들 중 한 명이 빈 쟁반을 들고 걸어가고 있다."
+        },
+        {
+          "option": "B",
+          "text": "One of the employees is taping signs to a board.",
+          "translation": "직원들 중 한 명이 게시판에 표지판을 테이프로 붙이고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the employees is carrying a pair of scissors.",
+          "translation": "직원들 중 한 명이 가위를 들고 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the employees is hanging an apron on a hook.",
+          "translation": "직원들 중 한 명이 앞치마를 고리에 걸고 있다."
+        }
+      ]
+    }
+  ]
+}

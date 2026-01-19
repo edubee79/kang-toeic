@@ -1,0 +1,161 @@
+{
+  "testId": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "He's parking a truck.",
+          "translation": "남자가 트럭을 주차하고 있다."
+        },
+        {
+          "option": "B",
+          "text": "He's lifting some furniture.",
+          "translation": "남자가 가구를 들고 있다."
+        },
+        {
+          "option": "C",
+          "text": "He's starting an engine.",
+          "translation": "남자가 엔진을 시동걸고 있다."
+        },
+        {
+          "option": "D",
+          "text": "He's driving a car.",
+          "translation": "남자가 차를 몰고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some curtains have been closed.",
+          "translation": "커튼이 닫혀 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some jackets have been laid on a chair.",
+          "translation": "재킷들이 의자에 놓여 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some people are gathered around a desk.",
+          "translation": "몇몇 사람들이 책상에 모여 있다."
+        },
+        {
+          "option": "D",
+          "text": "Someone is turning on a lamp.",
+          "translation": "누군가가 램프를 켜고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "One of the women is reaching into her bag.",
+          "translation": "여자들 중 한 명이 가방 안에 손을 넣고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The women are waiting in a line.",
+          "translation": "여자들이 줄을 서서 기다리고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The man is loading up a group.",
+          "translation": "남자가 금전 등록기를 열고 있다."
+        },
+        {
+          "option": "D",
+          "text": "The man is opening a cash register.",
+          "translation": "남자가 그룹을 태우고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The man is bending over a bicycle.",
+          "translation": "남자가 자전거 위로 몸을 굽히고 있다."
+        },
+        {
+          "option": "B",
+          "text": "A wheel has been propped against a stack of bricks.",
+          "translation": "바퀴가 벽돌 더미에 기대어 놓였다."
+        },
+        {
+          "option": "C",
+          "text": "The man is collecting some pieces of wood.",
+          "translation": "남자가 나무 조각들을 모으고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A handrail is being installed.",
+          "translation": "난간이 설치되고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "D",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "An armchair has been placed under a window.",
+          "translation": "안락 의자가 창문 아래에 놓여 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some reading materials have fallen on the floor.",
+          "translation": "종이 뭉치들이 바닥에 떨어져 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some flowers are being watered.",
+          "translation": "꽃에 물이 뿌려지고 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some picture frames are hanging on a wall.",
+          "translation": "액자들이 벽에 걸려 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She's adjusting the height of an umbrella.",
+          "translation": "여자가 파라솔 높이를 조절하고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She's inspecting the tires on a vending cart.",
+          "translation": "그녀가 판매 카트의 타이어를 점검하고 있다."
+        },
+        {
+          "option": "C",
+          "text": "There's a mobile food stand on a walkway.",
+          "translation": "보도에 이동식 음식 가판대가 있다."
+        },
+        {
+          "option": "D",
+          "text": "She's cooking utensils on the ground.",
+          "translation": "여자가 조리 기구들이 바닥에 있다."
+        }
+      ]
+    }
+  ]
+}

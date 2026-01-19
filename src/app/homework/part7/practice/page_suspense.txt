@@ -1,0 +1,7 @@
+export default function Part7PracticePage() {
+    return (
+        <React.Suspense fallback={<div className="min-h-screen bg-gray-100 flex items-center justify-center text-gray-500">Loading...</div>}>
+            <Part7PracticePageContent />
+        </React.Suspense>
+    );
+}

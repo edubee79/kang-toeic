@@ -1,10 +1,34 @@
-"use client";
+'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { part5Data } from '@/data/part5';
-import { ChevronRight, Sword } from "lucide-react";
+import { ChevronRight, Sword, Lock } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Part5LobbyPage() {
+    const [access, setAccess] = useState<FeatureAccess | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchAccess = async () => {
+            const data = await getFeatureAccess();
+            setAccess(data);
+            setLoading(false);
+        };
+        fetchAccess();
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+                <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>
+            </div>
+        );
+    }
+
+    const maxGrammar = access?.maxSets?.grammar || 10;
     const grammarUnits = Object.keys(part5Data);
 
     const UNIT_TITLES: Record<string, string> = {
@@ -32,7 +56,7 @@ export default function Part5LobbyPage() {
                         GRAMMAR MISSION
                     </h1>
                     <p className="text-slate-400 font-medium text-lg leading-relaxed max-w-2xl">
-                        Skill building drills to master TOEIC grammar points.
+                        Skill building drills to master TOEIC grammar points. | 현재 Unit {maxGrammar}까지 오픈
                         <br />
                         <span className="text-sm text-slate-500">각 유닛별로 핵심 문법을 익히고 문제를 풀어보세요.</span>
                     </p>
@@ -54,26 +78,55 @@ export default function Part5LobbyPage() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {grammarUnits.map((unitId) => (
-                            <Link
-                                href={`/homework/part5/${unitId}`}
-                                key={unitId}
-                                className="group relative bg-slate-900/50 hover:bg-indigo-900/20 border border-indigo-500/10 hover:border-indigo-500/50 rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1"
-                            >
-                                <div className="flex justify-between items-start mb-4">
-                                    <div className="w-10 h-10 rounded-xl bg-slate-950 flex items-center justify-center text-slate-500 font-black text-sm group-hover:text-indigo-400 border border-slate-800 transition-colors">
-                                        {unitId.split('_')[1]}
+                        {grammarUnits.map((unitId) => {
+                            const unitNumber = parseInt(unitId.split('_')[1]);
+                            const isLocked = unitNumber > maxGrammar;
+
+                            return (
+                                <Link
+                                    href={isLocked ? "#" : `/homework/part5/${unitId}`}
+                                    key={unitId}
+                                    onClick={(e) => {
+                                        if (isLocked) {
+                                            e.preventDefault();
+                                            alert(`현재 Unit ${maxGrammar}까지 오픈되어 있습니다.`);
+                                        }
+                                    }}
+                                    className={cn(
+                                        "group relative bg-slate-900/50 border transition-all duration-300 rounded-3xl p-6",
+                                        isLocked
+                                            ? "border-slate-800 opacity-40 grayscale cursor-not-allowed"
+                                            : "hover:bg-indigo-900/20 border-indigo-500/10 hover:border-indigo-500/50 hover:-translate-y-1"
+                                    )}
+                                >
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div className={cn(
+                                            "w-10 h-10 rounded-xl bg-slate-950 flex items-center justify-center font-black text-sm border transition-colors",
+                                            isLocked ? "text-slate-600 border-slate-800" : "text-slate-500 group-hover:text-indigo-400 border-slate-800"
+                                        )}>
+                                            {unitId.split('_')[1]}
+                                        </div>
+                                        {isLocked ? (
+                                            <Lock className="w-5 h-5 text-slate-600" />
+                                        ) : (
+                                            <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
+                                        )}
                                     </div>
-                                    <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
-                                </div>
-                                <h3 className="text-lg font-bold text-slate-200 group-hover:text-white mb-1">
-                                    {UNIT_TITLES[unitId] || unitId.replace(/Unit_\d+_/, '').replace(/_/g, ' ')}
-                                </h3>
-                                <p className="text-xs font-bold text-indigo-500/50 group-hover:text-indigo-500/80 tracking-widest uppercase">
-                                    Drill Mode
-                                </p>
-                            </Link>
-                        ))}
+                                    <h3 className={cn(
+                                        "text-lg font-bold transition-colors mb-1",
+                                        isLocked ? "text-slate-600" : "text-slate-200 group-hover:text-white"
+                                    )}>
+                                        {UNIT_TITLES[unitId] || unitId.replace(/Unit_\d+_/, '').replace(/_/g, ' ')}
+                                    </h3>
+                                    <p className={cn(
+                                        "text-xs font-bold tracking-widest uppercase",
+                                        isLocked ? "text-slate-700" : "text-indigo-500/50 group-hover:text-indigo-500/80"
+                                    )}>
+                                        {isLocked ? "Locked" : "Drill Mode"}
+                                    </p>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </section>
 

@@ -799,1574 +799,1574 @@ export const part4Data: Part4Set[] = [
     ],
     "script": "It's Akira, calling from the district manager's office. The visual merchandising team wants to make a slight change to the fall display standards that we sent you yesterday. They want to move the shirts with the vertical stripes-hang them instead of having them displayed on the shelf. We'll display some colorful accessories there instead, like scarves and ties. Also, hang all the socks on gridwall panels by the cash registers. Those sell best when people can grab them when they walk up to pay. The thicker, cold-weather socks will be shipped to you soon. You'll get an e-mail confirmation with the details when they're sent."
   }
-,
+  ,
   {
-  "testId": 2,
-  "setId": "set_71_73",
-  "questionRange": "71-73",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_71-73.mp3",
-  "questions": [
-    {
-      "id": "q71",
-      "text": "What did Starbright Corporation recently do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "It changed its company logo."
-        },
-        {
-          "label": "B",
-          "text": "It opened a new factory."
-        },
-        {
-          "label": "C",
-          "text": "It conducted a financial audit."
-        },
-        {
-          "label": "D",
-          "text": "It upgraded a product line."
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q72",
-      "text": "What type of product does Starbright Corporation make?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Footwear"
-        },
-        {
-          "label": "B",
-          "text": "Cosmetics"
-        },
-        {
-          "label": "C",
-          "text": "Housewares"
-        },
-        {
-          "label": "D",
-          "text": "Electronics"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q73",
-      "text": "What is available online?",
-      "options": [
-        {
-          "label": "A",
-          "text": "An application"
-        },
-        {
-          "label": "B",
-          "text": "A schedule"
-        },
-        {
-          "label": "C",
-          "text": "A video interview"
-        },
-        {
-          "label": "D",
-          "text": "A virtual tour"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "You're listening to radio station WKXL. Turning to local business updates, Monday marked the grand opening of Starbright Corporation's new factory. Starbright Corporation is a leading manufacturer of boots, athletic shoes, and sandals. So far, the new factory has created 800 jobs in our community, with positions ranging from assembly line workers to department managers. To hear more about the company, please visit our radio station's Web site, where my video interview with Starbright's president has been posted.",
-  "image": "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q71.png"
-},
+    "testId": 2,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "What did Starbright Corporation recently do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It changed its company logo."
+          },
+          {
+            "label": "B",
+            "text": "It opened a new factory."
+          },
+          {
+            "label": "C",
+            "text": "It conducted a financial audit."
+          },
+          {
+            "label": "D",
+            "text": "It upgraded a product line."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q72",
+        "text": "What type of product does Starbright Corporation make?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Footwear"
+          },
+          {
+            "label": "B",
+            "text": "Cosmetics"
+          },
+          {
+            "label": "C",
+            "text": "Housewares"
+          },
+          {
+            "label": "D",
+            "text": "Electronics"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q73",
+        "text": "What is available online?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An application"
+          },
+          {
+            "label": "B",
+            "text": "A schedule"
+          },
+          {
+            "label": "C",
+            "text": "A video interview"
+          },
+          {
+            "label": "D",
+            "text": "A virtual tour"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "You're listening to radio station WKXL. Turning to local business updates, Monday marked the grand opening of Starbright Corporation's new factory. Starbright Corporation is a leading manufacturer of boots, athletic shoes, and sandals. So far, the new factory has created 800 jobs in our community, with positions ranging from assembly line workers to department managers. To hear more about the company, please visit our radio station's Web site, where my video interview with Starbright's president has been posted.",
+    "image": "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q71.png"
+  },
   {
-  "testId": 2,
-  "setId": "set_74_76",
-  "questionRange": "74-76",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_74-76.mp3",
-  "questions": [
-    {
-      "id": "q74",
-      "text": "What event is taking place?",
-      "options": [
-        {
-          "label": "A",
-          "text": "An orientation session"
-        },
-        {
-          "label": "B",
-          "text": "A gallery opening"
-        },
-        {
-          "label": "C",
-          "text": "An awards ceremony"
-        },
-        {
-          "label": "D",
-          "text": "A retirement party"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q75",
-      "text": "What type of business does Mustafa Perez work for?",
-      "options": [
-        {
-          "label": "A",
-          "text": "An advertising agency"
-        },
-        {
-          "label": "B",
-          "text": "An art gallery"
-        },
-        {
-          "label": "C",
-          "text": "A newspaper publisher"
-        },
-        {
-          "label": "D",
-          "text": "A camera shop"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q76",
-      "text": "What has the speaker created for the event?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A slideshow"
-        },
-        {
-          "label": "B",
-          "text": "A T-shirt design"
-        },
-        {
-          "label": "C",
-          "text": "A Web site"
-        },
-        {
-          "label": "D",
-          "text": "A brochure"
-        }
-      ],
-      "correctAnswer": "A"
-    }
-  ],
-  "script": "Thank you all for coming to this celebration. I know I speak for everyone here at the newspaper when I say that I'm sad to see Mustafa Perez retire next week. For the past 30 years, he's been the photographer we've all relied on to capture photos that illustrate our news articles. To honor his career, I've made a slideshow of some of the most impressive photos that Mustafa has taken. Please look at the screen at the front of the room.",
-  "image": "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q74.png"
-},
+    "testId": 2,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "What event is taking place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An orientation session"
+          },
+          {
+            "label": "B",
+            "text": "A gallery opening"
+          },
+          {
+            "label": "C",
+            "text": "An awards ceremony"
+          },
+          {
+            "label": "D",
+            "text": "A retirement party"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q75",
+        "text": "What type of business does Mustafa Perez work for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An advertising agency"
+          },
+          {
+            "label": "B",
+            "text": "An art gallery"
+          },
+          {
+            "label": "C",
+            "text": "A newspaper publisher"
+          },
+          {
+            "label": "D",
+            "text": "A camera shop"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q76",
+        "text": "What has the speaker created for the event?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A slideshow"
+          },
+          {
+            "label": "B",
+            "text": "A T-shirt design"
+          },
+          {
+            "label": "C",
+            "text": "A Web site"
+          },
+          {
+            "label": "D",
+            "text": "A brochure"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Thank you all for coming to this celebration. I know I speak for everyone here at the newspaper when I say that I'm sad to see Mustafa Perez retire next week. For the past 30 years, he's been the photographer we've all relied on to capture photos that illustrate our news articles. To honor his career, I've made a slideshow of some of the most impressive photos that Mustafa has taken. Please look at the screen at the front of the room.",
+    "image": "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q74.png"
+  },
   {
-  "testId": 2,
-  "setId": "set_77_79",
-  "questionRange": "77-79",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_77-79.mp3",
-  "questions": [
-    {
-      "id": "q77",
-      "text": "What does the speaker's company produce?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Medications"
-        },
-        {
-          "label": "B",
-          "text": "Textbooks"
-        },
-        {
-          "label": "C",
-          "text": "Exercise clothing"
-        },
-        {
-          "label": "D",
-          "text": "Construction materials"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q78",
-      "text": "What are the listeners reminded to do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Recruit some staff"
-        },
-        {
-          "label": "B",
-          "text": "Enter some data"
-        },
-        {
-          "label": "C",
-          "text": "Attend some training sessions"
-        },
-        {
-          "label": "D",
-          "text": "Turn on a fan"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q79",
-      "text": "What can be found online?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A product database"
-        },
-        {
-          "label": "B",
-          "text": "An employee directory"
-        },
-        {
-          "label": "C",
-          "text": "A handbook"
-        },
-        {
-          "label": "D",
-          "text": "A contract"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "The last point on our agenda is about maintaining a safe environment while making the medications we sell here at Tamarah Pharmaceuticals. If you're working in any of the laboratories, please make sure to turn on the room's exhaust fan. It's especially important to keep the area well ventilated when working with some of the chemicals we use in our medications. We'd like to maintain our excellent safety record, so thank you in advance. The safety procedure handbook is on our internal company Web site if you need more information.",
-  "image": "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q77.png"
-},
+    "testId": 2,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "What does the speaker's company produce?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Medications"
+          },
+          {
+            "label": "B",
+            "text": "Textbooks"
+          },
+          {
+            "label": "C",
+            "text": "Exercise clothing"
+          },
+          {
+            "label": "D",
+            "text": "Construction materials"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q78",
+        "text": "What are the listeners reminded to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Recruit some staff"
+          },
+          {
+            "label": "B",
+            "text": "Enter some data"
+          },
+          {
+            "label": "C",
+            "text": "Attend some training sessions"
+          },
+          {
+            "label": "D",
+            "text": "Turn on a fan"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q79",
+        "text": "What can be found online?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A product database"
+          },
+          {
+            "label": "B",
+            "text": "An employee directory"
+          },
+          {
+            "label": "C",
+            "text": "A handbook"
+          },
+          {
+            "label": "D",
+            "text": "A contract"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "The last point on our agenda is about maintaining a safe environment while making the medications we sell here at Tamarah Pharmaceuticals. If you're working in any of the laboratories, please make sure to turn on the room's exhaust fan. It's especially important to keep the area well ventilated when working with some of the chemicals we use in our medications. We'd like to maintain our excellent safety record, so thank you in advance. The safety procedure handbook is on our internal company Web site if you need more information.",
+    "image": "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q77.png"
+  },
   {
-  "testId": 2,
-  "setId": "set_80_82",
-  "questionRange": "80-82",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_80-82.mp3",
-  "questions": [
-    {
-      "id": "q80",
-      "text": "What will the speaker do at a park?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Watch a performance"
-        },
-        {
-          "label": "B",
-          "text": "Sell fruit"
-        },
-        {
-          "label": "C",
-          "text": "Plant trees"
-        },
-        {
-          "label": "D",
-          "text": "Take photographs"
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q81",
-      "text": "Why does the speaker say, \"but it's supposed to be cloudy all day\"?",
-      "options": [
-        {
-          "label": "A",
-          "text": "To ask for help"
-        },
-        {
-          "label": "B",
-          "text": "To express frustration"
-        },
-        {
-          "label": "C",
-          "text": "To reject the listener's suggestion"
-        },
-        {
-          "label": "D",
-          "text": "To reassure the listener"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q82",
-      "text": "What does the speaker remind the listener to do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Register for a competition"
-        },
-        {
-          "label": "B",
-          "text": "Purchase some supplies"
-        },
-        {
-          "label": "C",
-          "text": "Prepare a shipment"
-        },
-        {
-          "label": "D",
-          "text": "Speak to a customer"
-        }
-      ],
-      "correctAnswer": "A"
-    }
-  ],
-  "script": "Hi, Aisha. I'm here at the park for the farmers' market-I just set out the blueberries and strawberries that I'll be selling this morning. Everything's ready to go... Though I did accidentally forget to bring the tent that we use to shade the fruit. I know you're concerned about the fruit sitting out in the sun, but it's supposed to be cloudy all day. Anyways, the real reason I called was to remind you to register us for the annual farmers' association competition. I think we have a pretty good chance of winning the award for our strawberries."
-},
+    "testId": 2,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "What will the speaker do at a park?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Watch a performance"
+          },
+          {
+            "label": "B",
+            "text": "Sell fruit"
+          },
+          {
+            "label": "C",
+            "text": "Plant trees"
+          },
+          {
+            "label": "D",
+            "text": "Take photographs"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q81",
+        "text": "Why does the speaker say, \"but it's supposed to be cloudy all day\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To ask for help"
+          },
+          {
+            "label": "B",
+            "text": "To express frustration"
+          },
+          {
+            "label": "C",
+            "text": "To reject the listener's suggestion"
+          },
+          {
+            "label": "D",
+            "text": "To reassure the listener"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q82",
+        "text": "What does the speaker remind the listener to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Register for a competition"
+          },
+          {
+            "label": "B",
+            "text": "Purchase some supplies"
+          },
+          {
+            "label": "C",
+            "text": "Prepare a shipment"
+          },
+          {
+            "label": "D",
+            "text": "Speak to a customer"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Hi, Aisha. I'm here at the park for the farmers' market-I just set out the blueberries and strawberries that I'll be selling this morning. Everything's ready to go... Though I did accidentally forget to bring the tent that we use to shade the fruit. I know you're concerned about the fruit sitting out in the sun, but it's supposed to be cloudy all day. Anyways, the real reason I called was to remind you to register us for the annual farmers' association competition. I think we have a pretty good chance of winning the award for our strawberries."
+  },
   {
-  "testId": 2,
-  "setId": "set_83_85",
-  "questionRange": "83-85",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_83-85.mp3",
-  "questions": [
-    {
-      "id": "q83",
-      "text": "Where is the announcement being made?",
-      "options": [
-        {
-          "label": "A",
-          "text": "At a technology firm"
-        },
-        {
-          "label": "B",
-          "text": "At a repair shop"
-        },
-        {
-          "label": "C",
-          "text": "At a factory"
-        },
-        {
-          "label": "D",
-          "text": "At a law office"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q84",
-      "text": "Where should the listeners go at the end of their shifts?",
-      "options": [
-        {
-          "label": "A",
-          "text": "To the company cafeteria"
-        },
-        {
-          "label": "B",
-          "text": "To the receptionist's desk"
-        },
-        {
-          "label": "C",
-          "text": "To the locker room"
-        },
-        {
-          "label": "D",
-          "text": "To the parking area"
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q85",
-      "text": "What will happen tomorrow?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Some office furniture will be delivered."
-        },
-        {
-          "label": "B",
-          "text": "New board members will be elected."
-        },
-        {
-          "label": "C",
-          "text": "A city official will conduct an inspection."
-        },
-        {
-          "label": "D",
-          "text": "Some time-reporting software will be fixed."
-        }
-      ],
-      "correctAnswer": "D"
-    }
-  ],
-  "script": "Attention, Home Furniture factory employees. The software program we use for clocking in and out isn't working. This means you cannot enter your hours electronically. Instead, when your shift's over, please write your start and end time on the form that's on the receptionist's desk. The form already includes your name and the machine you operate. I know this is a hassle, but it's only temporary-the time-reporting software will be working when you get to the factory tomorrow morning."
-},
+    "testId": 2,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "Where is the announcement being made?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a technology firm"
+          },
+          {
+            "label": "B",
+            "text": "At a repair shop"
+          },
+          {
+            "label": "C",
+            "text": "At a factory"
+          },
+          {
+            "label": "D",
+            "text": "At a law office"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q84",
+        "text": "Where should the listeners go at the end of their shifts?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To the company cafeteria"
+          },
+          {
+            "label": "B",
+            "text": "To the receptionist's desk"
+          },
+          {
+            "label": "C",
+            "text": "To the locker room"
+          },
+          {
+            "label": "D",
+            "text": "To the parking area"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q85",
+        "text": "What will happen tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some office furniture will be delivered."
+          },
+          {
+            "label": "B",
+            "text": "New board members will be elected."
+          },
+          {
+            "label": "C",
+            "text": "A city official will conduct an inspection."
+          },
+          {
+            "label": "D",
+            "text": "Some time-reporting software will be fixed."
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "Attention, Home Furniture factory employees. The software program we use for clocking in and out isn't working. This means you cannot enter your hours electronically. Instead, when your shift's over, please write your start and end time on the form that's on the receptionist's desk. The form already includes your name and the machine you operate. I know this is a hassle, but it's only temporary-the time-reporting software will be working when you get to the factory tomorrow morning."
+  },
   {
-  "testId": 2,
-  "setId": "set_86_88",
-  "questionRange": "86-88",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_86-88.mp3",
-  "questions": [
-    {
-      "id": "q86",
-      "text": "Where do the listeners work?",
-      "options": [
-        {
-          "label": "A",
-          "text": "At an employment agency"
-        },
-        {
-          "label": "B",
-          "text": "At a sports arena"
-        },
-        {
-          "label": "C",
-          "text": "At a conference center"
-        },
-        {
-          "label": "D",
-          "text": "At a medical clinic"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q87",
-      "text": "What does the speaker imply when she says, \"Ms. Jenkins has retired\"?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A role needs to be filled."
-        },
-        {
-          "label": "B",
-          "text": "An e-mail will not be answered."
-        },
-        {
-          "label": "C",
-          "text": "A marketing strategy should be revised."
-        },
-        {
-          "label": "D",
-          "text": "A process will be less efficient."
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q88",
-      "text": "What will the listeners most likely do next?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Check a schedule"
-        },
-        {
-          "label": "B",
-          "text": "Complete a registration form"
-        },
-        {
-          "label": "C",
-          "text": "Eat a meal"
-        },
-        {
-          "label": "D",
-          "text": "Brainstorm some ideas"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "The final item on our agenda is the annual community health fair. As in previous years, our clinic will have a booth at the fair, where one of our nurses will be available to answer questions and give presentations about maintaining a healthy lifestyle. In the past, Mary Jenkins has always managed our booth, but, as you may know, Ms. Jenkins has retired. I want to tell you that working at the fair is a great way to give back to the community, so feel free to get in touch with me. OK, let's end there. As promised, I brought in soup and sandwiches for everyone-the food's in the break room."
-},
+    "testId": 2,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Where do the listeners work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an employment agency"
+          },
+          {
+            "label": "B",
+            "text": "At a sports arena"
+          },
+          {
+            "label": "C",
+            "text": "At a conference center"
+          },
+          {
+            "label": "D",
+            "text": "At a medical clinic"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q87",
+        "text": "What does the speaker imply when she says, \"Ms. Jenkins has retired\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A role needs to be filled."
+          },
+          {
+            "label": "B",
+            "text": "An e-mail will not be answered."
+          },
+          {
+            "label": "C",
+            "text": "A marketing strategy should be revised."
+          },
+          {
+            "label": "D",
+            "text": "A process will be less efficient."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q88",
+        "text": "What will the listeners most likely do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Check a schedule"
+          },
+          {
+            "label": "B",
+            "text": "Complete a registration form"
+          },
+          {
+            "label": "C",
+            "text": "Eat a meal"
+          },
+          {
+            "label": "D",
+            "text": "Brainstorm some ideas"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "The final item on our agenda is the annual community health fair. As in previous years, our clinic will have a booth at the fair, where one of our nurses will be available to answer questions and give presentations about maintaining a healthy lifestyle. In the past, Mary Jenkins has always managed our booth, but, as you may know, Ms. Jenkins has retired. I want to tell you that working at the fair is a great way to give back to the community, so feel free to get in touch with me. OK, let's end there. As promised, I brought in soup and sandwiches for everyone-the food's in the break room."
+  },
   {
-  "testId": 2,
-  "setId": "set_89_91",
-  "questionRange": "89-91",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_89-91.mp3",
-  "questions": [
-    {
-      "id": "q89",
-      "text": "What is scheduled for Friday?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A job fair"
-        },
-        {
-          "label": "B",
-          "text": "A wellness workshop"
-        },
-        {
-          "label": "C",
-          "text": "A client meeting"
-        },
-        {
-          "label": "D",
-          "text": "An employee luncheon"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q90",
-      "text": "Why does the speaker say, \"the advertising business is very competitive\"?",
-      "options": [
-        {
-          "label": "A",
-          "text": "To explain a decision to retire"
-        },
-        {
-          "label": "B",
-          "text": "To justify an employee's promotion"
-        },
-        {
-          "label": "C",
-          "text": "To question the listener's abilities"
-        },
-        {
-          "label": "D",
-          "text": "To express confidence in an approach"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q91",
-      "text": "What does the speaker say about Isabel?",
-      "options": [
-        {
-          "label": "A",
-          "text": "She has recently joined the company."
-        },
-        {
-          "label": "B",
-          "text": "She can recommend some activities."
-        },
-        {
-          "label": "C",
-          "text": "She will approve expense reports."
-        },
-        {
-          "label": "D",
-          "text": "She used to work on the NVC Industries account."
-        }
-      ],
-      "correctAnswer": "B"
-    }
-  ],
-  "script": "Good morning, Martina. I'm calling about our biggest client, NVC Industries. A couple things... First, thank you for sending me your slides for the advertising pitch you'll be delivering to them at the meeting on Friday. I know you expressed some hesitation about your particular approach... you have concerns that it might be a bit too bold. Well, always remember that the advertising business is very competitive. Second, Isabel can make some recommendations about what to do while you're in Barcelona for the meeting with NVC Industries. Make sure you see her before you travel there."
-},
+    "testId": 2,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What is scheduled for Friday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A job fair"
+          },
+          {
+            "label": "B",
+            "text": "A wellness workshop"
+          },
+          {
+            "label": "C",
+            "text": "A client meeting"
+          },
+          {
+            "label": "D",
+            "text": "An employee luncheon"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q90",
+        "text": "Why does the speaker say, \"the advertising business is very competitive\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To explain a decision to retire"
+          },
+          {
+            "label": "B",
+            "text": "To justify an employee's promotion"
+          },
+          {
+            "label": "C",
+            "text": "To question the listener's abilities"
+          },
+          {
+            "label": "D",
+            "text": "To express confidence in an approach"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q91",
+        "text": "What does the speaker say about Isabel?",
+        "options": [
+          {
+            "label": "A",
+            "text": "She has recently joined the company."
+          },
+          {
+            "label": "B",
+            "text": "She can recommend some activities."
+          },
+          {
+            "label": "C",
+            "text": "She will approve expense reports."
+          },
+          {
+            "label": "D",
+            "text": "She used to work on the NVC Industries account."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "Good morning, Martina. I'm calling about our biggest client, NVC Industries. A couple things... First, thank you for sending me your slides for the advertising pitch you'll be delivering to them at the meeting on Friday. I know you expressed some hesitation about your particular approach... you have concerns that it might be a bit too bold. Well, always remember that the advertising business is very competitive. Second, Isabel can make some recommendations about what to do while you're in Barcelona for the meeting with NVC Industries. Make sure you see her before you travel there."
+  },
   {
-  "testId": 2,
-  "setId": "set_92_94",
-  "questionRange": "92-94",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_92-94.mp3",
-  "questions": [
-    {
-      "id": "q92",
-      "text": "What type of business does the speaker most likely work for?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A television studio"
-        },
-        {
-          "label": "B",
-          "text": "A hardware store"
-        },
-        {
-          "label": "C",
-          "text": "A publishing company"
-        },
-        {
-          "label": "D",
-          "text": "A grocery store"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q93",
-      "text": "What is the speaker concerned about?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A business has lost customers."
-        },
-        {
-          "label": "B",
-          "text": "An advertising plan has not been effective."
-        },
-        {
-          "label": "C",
-          "text": "A stockroom is overcrowded."
-        },
-        {
-          "label": "D",
-          "text": "A Web site is not working."
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q94",
-      "text": "What does the speaker plan to do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Transfer to another location"
-        },
-        {
-          "label": "B",
-          "text": "Offer discounts online"
-        },
-        {
-          "label": "C",
-          "text": "Hire more employees"
-        },
-        {
-          "label": "D",
-          "text": "Add videos to a Web site"
-        }
-      ],
-      "correctAnswer": "D"
-    }
-  ],
-  "script": "Hi, everyone. Now, our goal has been to encourage our customers to try out the line of health drinks and energy bars we've recently started stocking at our store locations. And to do this, we've been sending out weekly newsletters by e-mail to our customers. Unfortunately, our analytics show that only ten percent of those e-mails are even opened. So, I'd like to try another strategy. I'd like to put together a team to create some videos about our groceries, and we can pick a few to post to our Web site. Maybe some with testimonials from satisfied customers? Anyway, please send me an e-mail if you're interested in helping with this project."
-},
+    "testId": 2,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "What type of business does the speaker most likely work for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A television studio"
+          },
+          {
+            "label": "B",
+            "text": "A hardware store"
+          },
+          {
+            "label": "C",
+            "text": "A publishing company"
+          },
+          {
+            "label": "D",
+            "text": "A grocery store"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q93",
+        "text": "What is the speaker concerned about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A business has lost customers."
+          },
+          {
+            "label": "B",
+            "text": "An advertising plan has not been effective."
+          },
+          {
+            "label": "C",
+            "text": "A stockroom is overcrowded."
+          },
+          {
+            "label": "D",
+            "text": "A Web site is not working."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q94",
+        "text": "What does the speaker plan to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Transfer to another location"
+          },
+          {
+            "label": "B",
+            "text": "Offer discounts online"
+          },
+          {
+            "label": "C",
+            "text": "Hire more employees"
+          },
+          {
+            "label": "D",
+            "text": "Add videos to a Web site"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "Hi, everyone. Now, our goal has been to encourage our customers to try out the line of health drinks and energy bars we've recently started stocking at our store locations. And to do this, we've been sending out weekly newsletters by e-mail to our customers. Unfortunately, our analytics show that only ten percent of those e-mails are even opened. So, I'd like to try another strategy. I'd like to put together a team to create some videos about our groceries, and we can pick a few to post to our Web site. Maybe some with testimonials from satisfied customers? Anyway, please send me an e-mail if you're interested in helping with this project."
+  },
   {
-  "testId": 2,
-  "setId": "set_95_97",
-  "questionRange": "95-97",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_95-97.mp3",
-  "questions": [
-    {
-      "id": "q95",
-      "text": "Who most likely is the speaker?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A car salesperson"
-        },
-        {
-          "label": "B",
-          "text": "An auto mechanic"
-        },
-        {
-          "label": "C",
-          "text": "A car rental agent"
-        },
-        {
-          "label": "D",
-          "text": "A vehicle inspector"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q96",
-      "text": "Look at the graphic. Which fee must be paid in cash?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Filing"
-        },
-        {
-          "label": "B",
-          "text": "Contract processing"
-        },
-        {
-          "label": "C",
-          "text": "Vehicle title"
-        },
-        {
-          "label": "D",
-          "text": "Vehicle registration"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q97",
-      "text": "What service does the speaker remind the listener about?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Shuttle service"
-        },
-        {
-          "label": "B",
-          "text": "Maintenance reminders"
-        },
-        {
-          "label": "C",
-          "text": "Free car washes"
-        },
-        {
-          "label": "D",
-          "text": "Replacement keys"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "Hello, Mr. Harris. This is Nadia calling. I've been getting the paperwork ready for the vehicle you're purchasing from us. When you come over to the dealership to pick up your car, you'll need to pay several fees. Please remember that the one hundred dollar fee must be paid in cash. The other fees can be paid with your credit card. The car title will take a few days to process, and then will be mailed to your home address. And don't forget to take advantage of our free monthly car wash-just use the service code provided on your contract."
-},
+    "testId": 2,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A car salesperson"
+          },
+          {
+            "label": "B",
+            "text": "An auto mechanic"
+          },
+          {
+            "label": "C",
+            "text": "A car rental agent"
+          },
+          {
+            "label": "D",
+            "text": "A vehicle inspector"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Which fee must be paid in cash?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Filing"
+          },
+          {
+            "label": "B",
+            "text": "Contract processing"
+          },
+          {
+            "label": "C",
+            "text": "Vehicle title"
+          },
+          {
+            "label": "D",
+            "text": "Vehicle registration"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q97",
+        "text": "What service does the speaker remind the listener about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Shuttle service"
+          },
+          {
+            "label": "B",
+            "text": "Maintenance reminders"
+          },
+          {
+            "label": "C",
+            "text": "Free car washes"
+          },
+          {
+            "label": "D",
+            "text": "Replacement keys"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Hello, Mr. Harris. This is Nadia calling. I've been getting the paperwork ready for the vehicle you're purchasing from us. When you come over to the dealership to pick up your car, you'll need to pay several fees. Please remember that the one hundred dollar fee must be paid in cash. The other fees can be paid with your credit card. The car title will take a few days to process, and then will be mailed to your home address. And don't forget to take advantage of our free monthly car wash-just use the service code provided on your contract."
+  },
   {
-  "testId": 2,
-  "setId": "set_98_100",
-  "questionRange": "98-100",
-  "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_98-100.mp3",
-  "questions": [
-    {
-      "id": "q98",
-      "text": "Who most likely is the speaker?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A jazz singer"
-        },
-        {
-          "label": "B",
-          "text": "A music teacher"
-        },
-        {
-          "label": "C",
-          "text": "A shop manager"
-        },
-        {
-          "label": "D",
-          "text": "A radio host"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q99",
-      "text": "What event will take place in September?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A music festival"
-        },
-        {
-          "label": "B",
-          "text": "A press conference"
-        },
-        {
-          "label": "C",
-          "text": "A charity dinner"
-        },
-        {
-          "label": "D",
-          "text": "A talent contest"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q100",
-      "text": "Look at the graphic. Which type of instrument does the speaker focus on?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Keyboards"
-        },
-        {
-          "label": "B",
-          "text": "Pianos"
-        },
-        {
-          "label": "C",
-          "text": "Drums"
-        },
-        {
-          "label": "D",
-          "text": "Guitars"
-        }
-      ],
-      "correctAnswer": "B"
-    }
-  ],
-  "script": "At this staff meeting, I'd like to talk about some changes we'll be implementing here at Helgen's Music Shop. First, to attract more customers, we're going to host a small talent contest in September. I've recruited several local musicians to be the judges. Second, take a look at this chart from our annual sales report. Now, I'm not worried about the drums. But look at this instrument-we only sell twenty of them per year. That isn't very many, and they take a lot of time and effort to maintain. So, after careful consideration, I've decided we're going to stop selling them."
-}
-,
+    "testId": 2,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A jazz singer"
+          },
+          {
+            "label": "B",
+            "text": "A music teacher"
+          },
+          {
+            "label": "C",
+            "text": "A shop manager"
+          },
+          {
+            "label": "D",
+            "text": "A radio host"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q99",
+        "text": "What event will take place in September?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A music festival"
+          },
+          {
+            "label": "B",
+            "text": "A press conference"
+          },
+          {
+            "label": "C",
+            "text": "A charity dinner"
+          },
+          {
+            "label": "D",
+            "text": "A talent contest"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q100",
+        "text": "Look at the graphic. Which type of instrument does the speaker focus on?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Keyboards"
+          },
+          {
+            "label": "B",
+            "text": "Pianos"
+          },
+          {
+            "label": "C",
+            "text": "Drums"
+          },
+          {
+            "label": "D",
+            "text": "Guitars"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "At this staff meeting, I'd like to talk about some changes we'll be implementing here at Helgen's Music Shop. First, to attract more customers, we're going to host a small talent contest in September. I've recruited several local musicians to be the judges. Second, take a look at this chart from our annual sales report. Now, I'm not worried about the drums. But look at this instrument-we only sell twenty of them per year. That isn't very many, and they take a lot of time and effort to maintain. So, after careful consideration, I've decided we're going to stop selling them."
+  }
+  ,
   {
-  "testId": 3,
-  "setId": "set_71_73",
-  "questionRange": "71-73",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_71-73.mp3",
-  "questions": [
-    {
-      "id": "q71",
-      "text": "What did Starbright Corporation recently do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "It changed its company logo."
-        },
-        {
-          "label": "B",
-          "text": "It opened a new factory."
-        },
-        {
-          "label": "C",
-          "text": "It conducted a financial audit."
-        },
-        {
-          "label": "D",
-          "text": "It upgraded a product line."
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q72",
-      "text": "What type of product does Starbright Corporation make?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Footwear"
-        },
-        {
-          "label": "B",
-          "text": "Cosmetics"
-        },
-        {
-          "label": "C",
-          "text": "Housewares"
-        },
-        {
-          "label": "D",
-          "text": "Electronics"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q73",
-      "text": "What is available online?",
-      "options": [
-        {
-          "label": "A",
-          "text": "An application"
-        },
-        {
-          "label": "B",
-          "text": "A schedule"
-        },
-        {
-          "label": "C",
-          "text": "A video interview"
-        },
-        {
-          "label": "D",
-          "text": "A virtual tour"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "You're listening to radio station WKXL. Turning to local business updates, Monday marked the grand opening of Starbright Corporation's new factory. Starbright Corporation is a leading manufacturer of boots, athletic shoes, and sandals. So far, the new factory has created 800 jobs in our community, with positions ranging from assembly line workers to department managers. To hear more about the company, please visit our radio station's Web site, where my video interview with Starbright's president has been posted.",
-  "image": "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q71.png"
-},
+    "testId": 3,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "What did Starbright Corporation recently do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "It changed its company logo."
+          },
+          {
+            "label": "B",
+            "text": "It opened a new factory."
+          },
+          {
+            "label": "C",
+            "text": "It conducted a financial audit."
+          },
+          {
+            "label": "D",
+            "text": "It upgraded a product line."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q72",
+        "text": "What type of product does Starbright Corporation make?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Footwear"
+          },
+          {
+            "label": "B",
+            "text": "Cosmetics"
+          },
+          {
+            "label": "C",
+            "text": "Housewares"
+          },
+          {
+            "label": "D",
+            "text": "Electronics"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q73",
+        "text": "What is available online?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An application"
+          },
+          {
+            "label": "B",
+            "text": "A schedule"
+          },
+          {
+            "label": "C",
+            "text": "A video interview"
+          },
+          {
+            "label": "D",
+            "text": "A virtual tour"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "You're listening to radio station WKXL. Turning to local business updates, Monday marked the grand opening of Starbright Corporation's new factory. Starbright Corporation is a leading manufacturer of boots, athletic shoes, and sandals. So far, the new factory has created 800 jobs in our community, with positions ranging from assembly line workers to department managers. To hear more about the company, please visit our radio station's Web site, where my video interview with Starbright's president has been posted.",
+    "image": "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q71.png"
+  },
   {
-  "testId": 3,
-  "setId": "set_74_76",
-  "questionRange": "74-76",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_74-76.mp3",
-  "questions": [
-    {
-      "id": "q74",
-      "text": "What event is taking place?",
-      "options": [
-        {
-          "label": "A",
-          "text": "An orientation session"
-        },
-        {
-          "label": "B",
-          "text": "A gallery opening"
-        },
-        {
-          "label": "C",
-          "text": "An awards ceremony"
-        },
-        {
-          "label": "D",
-          "text": "A retirement party"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q75",
-      "text": "What type of business does Mustafa Perez work for?",
-      "options": [
-        {
-          "label": "A",
-          "text": "An advertising agency"
-        },
-        {
-          "label": "B",
-          "text": "An art gallery"
-        },
-        {
-          "label": "C",
-          "text": "A newspaper publisher"
-        },
-        {
-          "label": "D",
-          "text": "A camera shop"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q76",
-      "text": "What has the speaker created for the event?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A slideshow"
-        },
-        {
-          "label": "B",
-          "text": "A T-shirt design"
-        },
-        {
-          "label": "C",
-          "text": "A Web site"
-        },
-        {
-          "label": "D",
-          "text": "A brochure"
-        }
-      ],
-      "correctAnswer": "A"
-    }
-  ],
-  "script": "Thank you all for coming to this celebration. I know I speak for everyone here at the newspaper when I say that I'm sad to see Mustafa Perez retire next week. For the past 30 years, he's been the photographer we've all relied on to capture photos that illustrate our news articles. To honor his career, I've made a slideshow of some of the most impressive photos that Mustafa has taken. Please look at the screen at the front of the room.",
-  "image": "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q74.png"
-},
+    "testId": 3,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "What event is taking place?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An orientation session"
+          },
+          {
+            "label": "B",
+            "text": "A gallery opening"
+          },
+          {
+            "label": "C",
+            "text": "An awards ceremony"
+          },
+          {
+            "label": "D",
+            "text": "A retirement party"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q75",
+        "text": "What type of business does Mustafa Perez work for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An advertising agency"
+          },
+          {
+            "label": "B",
+            "text": "An art gallery"
+          },
+          {
+            "label": "C",
+            "text": "A newspaper publisher"
+          },
+          {
+            "label": "D",
+            "text": "A camera shop"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q76",
+        "text": "What has the speaker created for the event?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A slideshow"
+          },
+          {
+            "label": "B",
+            "text": "A T-shirt design"
+          },
+          {
+            "label": "C",
+            "text": "A Web site"
+          },
+          {
+            "label": "D",
+            "text": "A brochure"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Thank you all for coming to this celebration. I know I speak for everyone here at the newspaper when I say that I'm sad to see Mustafa Perez retire next week. For the past 30 years, he's been the photographer we've all relied on to capture photos that illustrate our news articles. To honor his career, I've made a slideshow of some of the most impressive photos that Mustafa has taken. Please look at the screen at the front of the room.",
+    "image": "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q74.png"
+  },
   {
-  "testId": 3,
-  "setId": "set_77_79",
-  "questionRange": "77-79",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_77-79.mp3",
-  "questions": [
-    {
-      "id": "q77",
-      "text": "What does the speaker's company produce?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Medications"
-        },
-        {
-          "label": "B",
-          "text": "Textbooks"
-        },
-        {
-          "label": "C",
-          "text": "Exercise clothing"
-        },
-        {
-          "label": "D",
-          "text": "Construction materials"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q78",
-      "text": "What are the listeners reminded to do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Recruit some staff"
-        },
-        {
-          "label": "B",
-          "text": "Enter some data"
-        },
-        {
-          "label": "C",
-          "text": "Attend some training sessions"
-        },
-        {
-          "label": "D",
-          "text": "Turn on a fan"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q79",
-      "text": "What can be found online?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A product database"
-        },
-        {
-          "label": "B",
-          "text": "An employee directory"
-        },
-        {
-          "label": "C",
-          "text": "A handbook"
-        },
-        {
-          "label": "D",
-          "text": "A contract"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "The last point on our agenda is about maintaining a safe environment while making the medications we sell here at Tamarah Pharmaceuticals. If you're working in any of the laboratories, please make sure to turn on the room's exhaust fan. It's especially important to keep the area well ventilated when working with some of the chemicals we use in our medications. We'd like to maintain our excellent safety record, so thank you in advance. The safety procedure handbook is on our internal company Web site if you need more information.",
-  "image": "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q77.png"
-},
+    "testId": 3,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "What does the speaker's company produce?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Medications"
+          },
+          {
+            "label": "B",
+            "text": "Textbooks"
+          },
+          {
+            "label": "C",
+            "text": "Exercise clothing"
+          },
+          {
+            "label": "D",
+            "text": "Construction materials"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q78",
+        "text": "What are the listeners reminded to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Recruit some staff"
+          },
+          {
+            "label": "B",
+            "text": "Enter some data"
+          },
+          {
+            "label": "C",
+            "text": "Attend some training sessions"
+          },
+          {
+            "label": "D",
+            "text": "Turn on a fan"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q79",
+        "text": "What can be found online?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A product database"
+          },
+          {
+            "label": "B",
+            "text": "An employee directory"
+          },
+          {
+            "label": "C",
+            "text": "A handbook"
+          },
+          {
+            "label": "D",
+            "text": "A contract"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "The last point on our agenda is about maintaining a safe environment while making the medications we sell here at Tamarah Pharmaceuticals. If you're working in any of the laboratories, please make sure to turn on the room's exhaust fan. It's especially important to keep the area well ventilated when working with some of the chemicals we use in our medications. We'd like to maintain our excellent safety record, so thank you in advance. The safety procedure handbook is on our internal company Web site if you need more information.",
+    "image": "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q77.png"
+  },
   {
-  "testId": 3,
-  "setId": "set_80_82",
-  "questionRange": "80-82",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_80-82.mp3",
-  "questions": [
-    {
-      "id": "q80",
-      "text": "What will the speaker do at a park?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Watch a performance"
-        },
-        {
-          "label": "B",
-          "text": "Sell fruit"
-        },
-        {
-          "label": "C",
-          "text": "Plant trees"
-        },
-        {
-          "label": "D",
-          "text": "Take photographs"
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q81",
-      "text": "Why does the speaker say, \"but it's supposed to be cloudy all day\"?",
-      "options": [
-        {
-          "label": "A",
-          "text": "To ask for help"
-        },
-        {
-          "label": "B",
-          "text": "To express frustration"
-        },
-        {
-          "label": "C",
-          "text": "To reject the listener's suggestion"
-        },
-        {
-          "label": "D",
-          "text": "To reassure the listener"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q82",
-      "text": "What does the speaker remind the listener to do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Register for a competition"
-        },
-        {
-          "label": "B",
-          "text": "Purchase some supplies"
-        },
-        {
-          "label": "C",
-          "text": "Prepare a shipment"
-        },
-        {
-          "label": "D",
-          "text": "Speak to a customer"
-        }
-      ],
-      "correctAnswer": "A"
-    }
-  ],
-  "script": "Hi, Aisha. I'm here at the park for the farmers' market-I just set out the blueberries and strawberries that I'll be selling this morning. Everything's ready to go... Though I did accidentally forget to bring the tent that we use to shade the fruit. I know you're concerned about the fruit sitting out in the sun, but it's supposed to be cloudy all day. Anyways, the real reason I called was to remind you to register us for the annual farmers' association competition. I think we have a pretty good chance of winning the award for our strawberries."
-},
+    "testId": 3,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "What will the speaker do at a park?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Watch a performance"
+          },
+          {
+            "label": "B",
+            "text": "Sell fruit"
+          },
+          {
+            "label": "C",
+            "text": "Plant trees"
+          },
+          {
+            "label": "D",
+            "text": "Take photographs"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q81",
+        "text": "Why does the speaker say, \"but it's supposed to be cloudy all day\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To ask for help"
+          },
+          {
+            "label": "B",
+            "text": "To express frustration"
+          },
+          {
+            "label": "C",
+            "text": "To reject the listener's suggestion"
+          },
+          {
+            "label": "D",
+            "text": "To reassure the listener"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q82",
+        "text": "What does the speaker remind the listener to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Register for a competition"
+          },
+          {
+            "label": "B",
+            "text": "Purchase some supplies"
+          },
+          {
+            "label": "C",
+            "text": "Prepare a shipment"
+          },
+          {
+            "label": "D",
+            "text": "Speak to a customer"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "Hi, Aisha. I'm here at the park for the farmers' market-I just set out the blueberries and strawberries that I'll be selling this morning. Everything's ready to go... Though I did accidentally forget to bring the tent that we use to shade the fruit. I know you're concerned about the fruit sitting out in the sun, but it's supposed to be cloudy all day. Anyways, the real reason I called was to remind you to register us for the annual farmers' association competition. I think we have a pretty good chance of winning the award for our strawberries."
+  },
   {
-  "testId": 3,
-  "setId": "set_83_85",
-  "questionRange": "83-85",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_83-85.mp3",
-  "questions": [
-    {
-      "id": "q83",
-      "text": "Where is the announcement being made?",
-      "options": [
-        {
-          "label": "A",
-          "text": "At a technology firm"
-        },
-        {
-          "label": "B",
-          "text": "At a repair shop"
-        },
-        {
-          "label": "C",
-          "text": "At a factory"
-        },
-        {
-          "label": "D",
-          "text": "At a law office"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q84",
-      "text": "Where should the listeners go at the end of their shifts?",
-      "options": [
-        {
-          "label": "A",
-          "text": "To the company cafeteria"
-        },
-        {
-          "label": "B",
-          "text": "To the receptionist's desk"
-        },
-        {
-          "label": "C",
-          "text": "To the locker room"
-        },
-        {
-          "label": "D",
-          "text": "To the parking area"
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q85",
-      "text": "What will happen tomorrow?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Some office furniture will be delivered."
-        },
-        {
-          "label": "B",
-          "text": "New board members will be elected."
-        },
-        {
-          "label": "C",
-          "text": "A city official will conduct an inspection."
-        },
-        {
-          "label": "D",
-          "text": "Some time-reporting software will be fixed."
-        }
-      ],
-      "correctAnswer": "D"
-    }
-  ],
-  "script": "Attention, Home Furniture factory employees. The software program we use for clocking in and out isn't working. This means you cannot enter your hours electronically. Instead, when your shift's over, please write your start and end time on the form that's on the receptionist's desk. The form already includes your name and the machine you operate. I know this is a hassle, but it's only temporary-the time-reporting software will be working when you get to the factory tomorrow morning."
-},
+    "testId": 3,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "Where is the announcement being made?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a technology firm"
+          },
+          {
+            "label": "B",
+            "text": "At a repair shop"
+          },
+          {
+            "label": "C",
+            "text": "At a factory"
+          },
+          {
+            "label": "D",
+            "text": "At a law office"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q84",
+        "text": "Where should the listeners go at the end of their shifts?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To the company cafeteria"
+          },
+          {
+            "label": "B",
+            "text": "To the receptionist's desk"
+          },
+          {
+            "label": "C",
+            "text": "To the locker room"
+          },
+          {
+            "label": "D",
+            "text": "To the parking area"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q85",
+        "text": "What will happen tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some office furniture will be delivered."
+          },
+          {
+            "label": "B",
+            "text": "New board members will be elected."
+          },
+          {
+            "label": "C",
+            "text": "A city official will conduct an inspection."
+          },
+          {
+            "label": "D",
+            "text": "Some time-reporting software will be fixed."
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "Attention, Home Furniture factory employees. The software program we use for clocking in and out isn't working. This means you cannot enter your hours electronically. Instead, when your shift's over, please write your start and end time on the form that's on the receptionist's desk. The form already includes your name and the machine you operate. I know this is a hassle, but it's only temporary-the time-reporting software will be working when you get to the factory tomorrow morning."
+  },
   {
-  "testId": 3,
-  "setId": "set_86_88",
-  "questionRange": "86-88",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_86-88.mp3",
-  "questions": [
-    {
-      "id": "q86",
-      "text": "Where do the listeners work?",
-      "options": [
-        {
-          "label": "A",
-          "text": "At an employment agency"
-        },
-        {
-          "label": "B",
-          "text": "At a sports arena"
-        },
-        {
-          "label": "C",
-          "text": "At a conference center"
-        },
-        {
-          "label": "D",
-          "text": "At a medical clinic"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q87",
-      "text": "What does the speaker imply when she says, \"Ms. Jenkins has retired\"?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A role needs to be filled."
-        },
-        {
-          "label": "B",
-          "text": "An e-mail will not be answered."
-        },
-        {
-          "label": "C",
-          "text": "A marketing strategy should be revised."
-        },
-        {
-          "label": "D",
-          "text": "A process will be less efficient."
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q88",
-      "text": "What will the listeners most likely do next?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Check a schedule"
-        },
-        {
-          "label": "B",
-          "text": "Complete a registration form"
-        },
-        {
-          "label": "C",
-          "text": "Eat a meal"
-        },
-        {
-          "label": "D",
-          "text": "Brainstorm some ideas"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "The final item on our agenda is the annual community health fair. As in previous years, our clinic will have a booth at the fair, where one of our nurses will be available to answer questions and give presentations about maintaining a healthy lifestyle. In the past, Mary Jenkins has always managed our booth, but, as you may know, Ms. Jenkins has retired. I want to tell you that working at the fair is a great way to give back to the community, so feel free to get in touch with me. OK, let's end there. As promised, I brought in soup and sandwiches for everyone-the food's in the break room."
-},
+    "testId": 3,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Where do the listeners work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an employment agency"
+          },
+          {
+            "label": "B",
+            "text": "At a sports arena"
+          },
+          {
+            "label": "C",
+            "text": "At a conference center"
+          },
+          {
+            "label": "D",
+            "text": "At a medical clinic"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q87",
+        "text": "What does the speaker imply when she says, \"Ms. Jenkins has retired\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A role needs to be filled."
+          },
+          {
+            "label": "B",
+            "text": "An e-mail will not be answered."
+          },
+          {
+            "label": "C",
+            "text": "A marketing strategy should be revised."
+          },
+          {
+            "label": "D",
+            "text": "A process will be less efficient."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q88",
+        "text": "What will the listeners most likely do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Check a schedule"
+          },
+          {
+            "label": "B",
+            "text": "Complete a registration form"
+          },
+          {
+            "label": "C",
+            "text": "Eat a meal"
+          },
+          {
+            "label": "D",
+            "text": "Brainstorm some ideas"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "The final item on our agenda is the annual community health fair. As in previous years, our clinic will have a booth at the fair, where one of our nurses will be available to answer questions and give presentations about maintaining a healthy lifestyle. In the past, Mary Jenkins has always managed our booth, but, as you may know, Ms. Jenkins has retired. I want to tell you that working at the fair is a great way to give back to the community, so feel free to get in touch with me. OK, let's end there. As promised, I brought in soup and sandwiches for everyone-the food's in the break room."
+  },
   {
-  "testId": 3,
-  "setId": "set_89_91",
-  "questionRange": "89-91",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_89-91.mp3",
-  "questions": [
-    {
-      "id": "q89",
-      "text": "What is scheduled for Friday?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A job fair"
-        },
-        {
-          "label": "B",
-          "text": "A wellness workshop"
-        },
-        {
-          "label": "C",
-          "text": "A client meeting"
-        },
-        {
-          "label": "D",
-          "text": "An employee luncheon"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q90",
-      "text": "Why does the speaker say, \"the advertising business is very competitive\"?",
-      "options": [
-        {
-          "label": "A",
-          "text": "To explain a decision to retire"
-        },
-        {
-          "label": "B",
-          "text": "To justify an employee's promotion"
-        },
-        {
-          "label": "C",
-          "text": "To question the listener's abilities"
-        },
-        {
-          "label": "D",
-          "text": "To express confidence in an approach"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q91",
-      "text": "What does the speaker say about Isabel?",
-      "options": [
-        {
-          "label": "A",
-          "text": "She has recently joined the company."
-        },
-        {
-          "label": "B",
-          "text": "She can recommend some activities."
-        },
-        {
-          "label": "C",
-          "text": "She will approve expense reports."
-        },
-        {
-          "label": "D",
-          "text": "She used to work on the NVC Industries account."
-        }
-      ],
-      "correctAnswer": "B"
-    }
-  ],
-  "script": "Good morning, Martina. I'm calling about our biggest client, NVC Industries. A couple things... First, thank you for sending me your slides for the advertising pitch you'll be delivering to them at the meeting on Friday. I know you expressed some hesitation about your particular approach... you have concerns that it might be a bit too bold. Well, always remember that the advertising business is very competitive. Second, Isabel can make some recommendations about what to do while you're in Barcelona for the meeting with NVC Industries. Make sure you see her before you travel there."
-},
+    "testId": 3,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What is scheduled for Friday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A job fair"
+          },
+          {
+            "label": "B",
+            "text": "A wellness workshop"
+          },
+          {
+            "label": "C",
+            "text": "A client meeting"
+          },
+          {
+            "label": "D",
+            "text": "An employee luncheon"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q90",
+        "text": "Why does the speaker say, \"the advertising business is very competitive\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To explain a decision to retire"
+          },
+          {
+            "label": "B",
+            "text": "To justify an employee's promotion"
+          },
+          {
+            "label": "C",
+            "text": "To question the listener's abilities"
+          },
+          {
+            "label": "D",
+            "text": "To express confidence in an approach"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q91",
+        "text": "What does the speaker say about Isabel?",
+        "options": [
+          {
+            "label": "A",
+            "text": "She has recently joined the company."
+          },
+          {
+            "label": "B",
+            "text": "She can recommend some activities."
+          },
+          {
+            "label": "C",
+            "text": "She will approve expense reports."
+          },
+          {
+            "label": "D",
+            "text": "She used to work on the NVC Industries account."
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "Good morning, Martina. I'm calling about our biggest client, NVC Industries. A couple things... First, thank you for sending me your slides for the advertising pitch you'll be delivering to them at the meeting on Friday. I know you expressed some hesitation about your particular approach... you have concerns that it might be a bit too bold. Well, always remember that the advertising business is very competitive. Second, Isabel can make some recommendations about what to do while you're in Barcelona for the meeting with NVC Industries. Make sure you see her before you travel there."
+  },
   {
-  "testId": 3,
-  "setId": "set_92_94",
-  "questionRange": "92-94",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_92-94.mp3",
-  "questions": [
-    {
-      "id": "q92",
-      "text": "What type of business does the speaker most likely work for?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A television studio"
-        },
-        {
-          "label": "B",
-          "text": "A hardware store"
-        },
-        {
-          "label": "C",
-          "text": "A publishing company"
-        },
-        {
-          "label": "D",
-          "text": "A grocery store"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q93",
-      "text": "What is the speaker concerned about?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A business has lost customers."
-        },
-        {
-          "label": "B",
-          "text": "An advertising plan has not been effective."
-        },
-        {
-          "label": "C",
-          "text": "A stockroom is overcrowded."
-        },
-        {
-          "label": "D",
-          "text": "A Web site is not working."
-        }
-      ],
-      "correctAnswer": "B"
-    },
-    {
-      "id": "q94",
-      "text": "What does the speaker plan to do?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Transfer to another location"
-        },
-        {
-          "label": "B",
-          "text": "Offer discounts online"
-        },
-        {
-          "label": "C",
-          "text": "Hire more employees"
-        },
-        {
-          "label": "D",
-          "text": "Add videos to a Web site"
-        }
-      ],
-      "correctAnswer": "D"
-    }
-  ],
-  "script": "Hi, everyone. Now, our goal has been to encourage our customers to try out the line of health drinks and energy bars we've recently started stocking at our store locations. And to do this, we've been sending out weekly newsletters by e-mail to our customers. Unfortunately, our analytics show that only ten percent of those e-mails are even opened. So, I'd like to try another strategy. I'd like to put together a team to create some videos about our groceries, and we can pick a few to post to our Web site. Maybe some with testimonials from satisfied customers? Anyway, please send me an e-mail if you're interested in helping with this project."
-},
+    "testId": 3,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "What type of business does the speaker most likely work for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A television studio"
+          },
+          {
+            "label": "B",
+            "text": "A hardware store"
+          },
+          {
+            "label": "C",
+            "text": "A publishing company"
+          },
+          {
+            "label": "D",
+            "text": "A grocery store"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q93",
+        "text": "What is the speaker concerned about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A business has lost customers."
+          },
+          {
+            "label": "B",
+            "text": "An advertising plan has not been effective."
+          },
+          {
+            "label": "C",
+            "text": "A stockroom is overcrowded."
+          },
+          {
+            "label": "D",
+            "text": "A Web site is not working."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q94",
+        "text": "What does the speaker plan to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Transfer to another location"
+          },
+          {
+            "label": "B",
+            "text": "Offer discounts online"
+          },
+          {
+            "label": "C",
+            "text": "Hire more employees"
+          },
+          {
+            "label": "D",
+            "text": "Add videos to a Web site"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "Hi, everyone. Now, our goal has been to encourage our customers to try out the line of health drinks and energy bars we've recently started stocking at our store locations. And to do this, we've been sending out weekly newsletters by e-mail to our customers. Unfortunately, our analytics show that only ten percent of those e-mails are even opened. So, I'd like to try another strategy. I'd like to put together a team to create some videos about our groceries, and we can pick a few to post to our Web site. Maybe some with testimonials from satisfied customers? Anyway, please send me an e-mail if you're interested in helping with this project."
+  },
   {
-  "testId": 3,
-  "setId": "set_95_97",
-  "questionRange": "95-97",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_95-97.mp3",
-  "questions": [
-    {
-      "id": "q95",
-      "text": "Who most likely is the speaker?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A car salesperson"
-        },
-        {
-          "label": "B",
-          "text": "An auto mechanic"
-        },
-        {
-          "label": "C",
-          "text": "A car rental agent"
-        },
-        {
-          "label": "D",
-          "text": "A vehicle inspector"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "id": "q96",
-      "text": "Look at the graphic. Which fee must be paid in cash?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Filing"
-        },
-        {
-          "label": "B",
-          "text": "Contract processing"
-        },
-        {
-          "label": "C",
-          "text": "Vehicle title"
-        },
-        {
-          "label": "D",
-          "text": "Vehicle registration"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q97",
-      "text": "What service does the speaker remind the listener about?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Shuttle service"
-        },
-        {
-          "label": "B",
-          "text": "Maintenance reminders"
-        },
-        {
-          "label": "C",
-          "text": "Free car washes"
-        },
-        {
-          "label": "D",
-          "text": "Replacement keys"
-        }
-      ],
-      "correctAnswer": "C"
-    }
-  ],
-  "script": "Hello, Mr. Harris. This is Nadia calling. I've been getting the paperwork ready for the vehicle you're purchasing from us. When you come over to the dealership to pick up your car, you'll need to pay several fees. Please remember that the one hundred dollar fee must be paid in cash. The other fees can be paid with your credit card. The car title will take a few days to process, and then will be mailed to your home address. And don't forget to take advantage of our free monthly car wash-just use the service code provided on your contract."
-},
+    "testId": 3,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A car salesperson"
+          },
+          {
+            "label": "B",
+            "text": "An auto mechanic"
+          },
+          {
+            "label": "C",
+            "text": "A car rental agent"
+          },
+          {
+            "label": "D",
+            "text": "A vehicle inspector"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Which fee must be paid in cash?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Filing"
+          },
+          {
+            "label": "B",
+            "text": "Contract processing"
+          },
+          {
+            "label": "C",
+            "text": "Vehicle title"
+          },
+          {
+            "label": "D",
+            "text": "Vehicle registration"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q97",
+        "text": "What service does the speaker remind the listener about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Shuttle service"
+          },
+          {
+            "label": "B",
+            "text": "Maintenance reminders"
+          },
+          {
+            "label": "C",
+            "text": "Free car washes"
+          },
+          {
+            "label": "D",
+            "text": "Replacement keys"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "Hello, Mr. Harris. This is Nadia calling. I've been getting the paperwork ready for the vehicle you're purchasing from us. When you come over to the dealership to pick up your car, you'll need to pay several fees. Please remember that the one hundred dollar fee must be paid in cash. The other fees can be paid with your credit card. The car title will take a few days to process, and then will be mailed to your home address. And don't forget to take advantage of our free monthly car wash-just use the service code provided on your contract."
+  },
   {
-  "testId": 3,
-  "setId": "set_98_100",
-  "questionRange": "98-100",
-  "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_98-100.mp3",
-  "questions": [
-    {
-      "id": "q98",
-      "text": "Who most likely is the speaker?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A jazz singer"
-        },
-        {
-          "label": "B",
-          "text": "A music teacher"
-        },
-        {
-          "label": "C",
-          "text": "A shop manager"
-        },
-        {
-          "label": "D",
-          "text": "A radio host"
-        }
-      ],
-      "correctAnswer": "C"
-    },
-    {
-      "id": "q99",
-      "text": "What event will take place in September?",
-      "options": [
-        {
-          "label": "A",
-          "text": "A music festival"
-        },
-        {
-          "label": "B",
-          "text": "A press conference"
-        },
-        {
-          "label": "C",
-          "text": "A charity dinner"
-        },
-        {
-          "label": "D",
-          "text": "A talent contest"
-        }
-      ],
-      "correctAnswer": "D"
-    },
-    {
-      "id": "q100",
-      "text": "Look at the graphic. Which type of instrument does the speaker focus on?",
-      "options": [
-        {
-          "label": "A",
-          "text": "Keyboards"
-        },
-        {
-          "label": "B",
-          "text": "Pianos"
-        },
-        {
-          "label": "C",
-          "text": "Drums"
-        },
-        {
-          "label": "D",
-          "text": "Guitars"
-        }
-      ],
-      "correctAnswer": "B"
-    }
-  ],
-  "script": "At this staff meeting, I'd like to talk about some changes we'll be implementing here at Helgen's Music Shop. First, to attract more customers, we're going to host a small talent contest in September. I've recruited several local musicians to be the judges. Second, take a look at this chart from our annual sales report. Now, I'm not worried about the drums. But look at this instrument-we only sell twenty of them per year. That isn't very many, and they take a lot of time and effort to maintain. So, after careful consideration, I've decided we're going to stop selling them."
-},
+    "testId": 3,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A jazz singer"
+          },
+          {
+            "label": "B",
+            "text": "A music teacher"
+          },
+          {
+            "label": "C",
+            "text": "A shop manager"
+          },
+          {
+            "label": "D",
+            "text": "A radio host"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q99",
+        "text": "What event will take place in September?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A music festival"
+          },
+          {
+            "label": "B",
+            "text": "A press conference"
+          },
+          {
+            "label": "C",
+            "text": "A charity dinner"
+          },
+          {
+            "label": "D",
+            "text": "A talent contest"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q100",
+        "text": "Look at the graphic. Which type of instrument does the speaker focus on?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Keyboards"
+          },
+          {
+            "label": "B",
+            "text": "Pianos"
+          },
+          {
+            "label": "C",
+            "text": "Drums"
+          },
+          {
+            "label": "D",
+            "text": "Guitars"
+          }
+        ],
+        "correctAnswer": "B"
+      }
+    ],
+    "script": "At this staff meeting, I'd like to talk about some changes we'll be implementing here at Helgen's Music Shop. First, to attract more customers, we're going to host a small talent contest in September. I've recruited several local musicians to be the judges. Second, take a look at this chart from our annual sales report. Now, I'm not worried about the drums. But look at this instrument-we only sell twenty of them per year. That isn't very many, and they take a lot of time and effort to maintain. So, after careful consideration, I've decided we're going to stop selling them."
+  },
   {
     "testId": 3,
     "setId": "set_71_73",
@@ -8606,6 +8606,788 @@ export const part4Data: Part4Set[] = [
       }
     ],
     "script": "M-Cn 98Our first topic is an update on the data analytic software we installed last week to identify problems with our plastic molding machines. As I'm sure you're aware, 100we've missed our production targets for the last two quarters. That means we're spending too much time assembling our products. As you can see on this chart, 99the data show that one of our machines is running a very slow production cycle at an average of six minutes, twenty-two seconds per cycle. We've already flagged it for repair by a technician. By next week, that machine should be at normal output. 100We're very optimistic about the impact the new analytic software will have on next quarter's targets."
-  }
+  },
 
+  {
+    "testId": 9,
+    "setId": "set_71_73",
+    "questionRange": "71-73",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_71-73.mp3",
+    "questions": [
+      {
+        "id": "q71",
+        "text": "What does the company sell?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Racing bicycles"
+          },
+          {
+            "label": "B",
+            "text": "Motorcycle parts"
+          },
+          {
+            "label": "C",
+            "text": "Camping equipment"
+          },
+          {
+            "label": "D",
+            "text": "Electric cars"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q72",
+        "text": "What does the speaker emphasize about the products?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They are safe for the environment."
+          },
+          {
+            "label": "B",
+            "text": "They come with an extended warranty."
+          },
+          {
+            "label": "C",
+            "text": "They can be used with a mobile application."
+          },
+          {
+            "label": "D",
+            "text": "They are designed for all weather conditions."
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q73",
+        "text": "What ends on Sunday?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A contest"
+          },
+          {
+            "label": "B",
+            "text": "A festival"
+          },
+          {
+            "label": "C",
+            "text": "A factory tour"
+          },
+          {
+            "label": "D",
+            "text": "A special offer"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br: Are you looking to buy a new car, but you're also concerned about the environment? Then there's no better place to shop than at Henry's Car Dealership! Unlike other dealerships, we only sell electric cars. That means our vehicles produce zero direct emissions, which specifically helps improve air quality. And we have a limited-time offer for you. If you buy a car by Sunday, you will get a year of free car washes!"
+  },
+  {
+    "testId": 9,
+    "setId": "set_74_76",
+    "questionRange": "74-76",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_74-76.mp3",
+    "questions": [
+      {
+        "id": "q74",
+        "text": "What does the business make?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Ice cream"
+          },
+          {
+            "label": "B",
+            "text": "Beverages"
+          },
+          {
+            "label": "C",
+            "text": "Candy"
+          },
+          {
+            "label": "D",
+            "text": "Pretzels"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q75",
+        "text": "What does the speaker say the business is known for?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Its high-quality ingredients"
+          },
+          {
+            "label": "B",
+            "text": "Its clever packaging"
+          },
+          {
+            "label": "C",
+            "text": "Its unique flavors"
+          },
+          {
+            "label": "D",
+            "text": "Its handmade products"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q76",
+        "text": "What does the speaker ask the listeners to do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Leave their personal items in a locker"
+          },
+          {
+            "label": "B",
+            "text": "Turn in their tickets"
+          },
+          {
+            "label": "C",
+            "text": "Divide into smaller groups"
+          },
+          {
+            "label": "D",
+            "text": "Put on some protective clothing"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn: Welcome to Soo-Min's Factory. I'm delighted to give you a tour of our facility. Today, you'll see how we manufacture some of the world's favorite candies. Unlike many candy factories, we still make our products by hand, just like we've been doing since the factory opened over 50 years ago. It's what we're known for. Now before we go in, you'll need to leave your belongings in the lockers behind me. We need to maintain a clean environment inside the factory, so it's very important that you don't take anything in with you."
+  },
+  {
+    "testId": 9,
+    "setId": "set_77_79",
+    "questionRange": "77-79",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_77-79.mp3",
+    "questions": [
+      {
+        "id": "q77",
+        "text": "What is the speaker mainly discussing?",
+        "options": [
+          {
+            "label": "A",
+            "text": "An upcoming conference"
+          },
+          {
+            "label": "B",
+            "text": "A vacation policy"
+          },
+          {
+            "label": "C",
+            "text": "Some new software"
+          },
+          {
+            "label": "D",
+            "text": "Some new equipment"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q78",
+        "text": "What does the speaker tell the listeners to take note of?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Some travel arrangements will be made online."
+          },
+          {
+            "label": "B",
+            "text": "Some log-on information will remain the same."
+          },
+          {
+            "label": "C",
+            "text": "A training session will be rescheduled."
+          },
+          {
+            "label": "D",
+            "text": "A security policy will be enforced."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q79",
+        "text": "What should the listeners do tomorrow?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Confirm their work schedules"
+          },
+          {
+            "label": "B",
+            "text": "Prepare a presentation"
+          },
+          {
+            "label": "C",
+            "text": "Park in a different location"
+          },
+          {
+            "label": "D",
+            "text": "Dress professionally"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br: First on the staff meeting agenda is the new time-tracking software we're implementing. All employees will start using it to record their hours beginning next month. Because it's very different from our previous software, everyone will receive access to an online training session. Note that you'll use the same log-on name and password as you used on the old system. OK, next. Remember that a photographer will be here tomorrow to take pictures for the company Web site. Please wear professional attire."
+  },
+  {
+    "testId": 9,
+    "setId": "set_80_82",
+    "questionRange": "80-82",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_80-82.mp3",
+    "questions": [
+      {
+        "id": "q80",
+        "text": "Where does Ms. Thompson work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At an art supply store"
+          },
+          {
+            "label": "B",
+            "text": "At a museum"
+          },
+          {
+            "label": "C",
+            "text": "At a photography studio"
+          },
+          {
+            "label": "D",
+            "text": "At a library"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q81",
+        "text": "According to the speaker, what special talent does Ms. Thompson have?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Raising money"
+          },
+          {
+            "label": "B",
+            "text": "Painting landscapes"
+          },
+          {
+            "label": "C",
+            "text": "Negotiating contracts"
+          },
+          {
+            "label": "D",
+            "text": "Taking photographs"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q82",
+        "text": "What does Ms. Thompson plan to do after she retires?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Restore paintings"
+          },
+          {
+            "label": "B",
+            "text": "Volunteer as a consultant"
+          },
+          {
+            "label": "C",
+            "text": "Relocate to France"
+          },
+          {
+            "label": "D",
+            "text": "Become an author"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "M-Au: Welcome back to Artist Hour on Freetown Public Radio. With me here in the studio is Carol Thompson, the longtime director of the Freetown Art Museum. Ms. Thompson has just announced that she'll be retiring at the end of the year, so she joins us today to talk about her career and future plans. As we'll discuss later, she has always had a particular talent for fund-raising. Over her 30-year career, she has raised a total of five million dollars for art restoration projects across the country. Ms. Thompson plans to write children's books about well-known artists when she retires. The first will be based on the life of French painter Claude Monet."
+  },
+  {
+    "testId": 9,
+    "setId": "set_83_85",
+    "questionRange": "83-85",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_83-85.mp3",
+    "questions": [
+      {
+        "id": "q83",
+        "text": "Who most likely are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Journalists"
+          },
+          {
+            "label": "B",
+            "text": "Editors"
+          },
+          {
+            "label": "C",
+            "text": "Photographers"
+          },
+          {
+            "label": "D",
+            "text": "Salespeople"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q84",
+        "text": "According to the speaker, what will the listeners receive in an e-mail?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A book title"
+          },
+          {
+            "label": "B",
+            "text": "A concert ticket"
+          },
+          {
+            "label": "C",
+            "text": "A restaurant name"
+          },
+          {
+            "label": "D",
+            "text": "An account number"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q85",
+        "text": "Why does the speaker say, \"thousands of people will buy this issue\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To reassure the listeners"
+          },
+          {
+            "label": "B",
+            "text": "To correct a misunderstanding"
+          },
+          {
+            "label": "C",
+            "text": "To express surprise about a decision"
+          },
+          {
+            "label": "D",
+            "text": "To emphasize the importance of a task"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Am: OK, everyone. I want to talk about your new writing assignments. As you know, the special restaurant issue of our magazine is coming out in May. But we still have quite a few restaurants we haven't reviewed yet. So, I've assigned a different restaurant to each reporter—you can check your e-mail to find out which one you'll be reviewing. This might seem like a fun assignment, but remember, thousands of people will buy this issue."
+  },
+  {
+    "testId": 9,
+    "setId": "set_86_88",
+    "questionRange": "86-88",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_86-88.mp3",
+    "questions": [
+      {
+        "id": "q86",
+        "text": "Where are the listeners?",
+        "options": [
+          {
+            "label": "A",
+            "text": "In a community center"
+          },
+          {
+            "label": "B",
+            "text": "In a medical clinic"
+          },
+          {
+            "label": "C",
+            "text": "In a university classroom"
+          },
+          {
+            "label": "D",
+            "text": "In a government office"
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "q87",
+        "text": "Why does the speaker say, \"many eye problems are easily treated\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To indicate that a health fair is unnecessary"
+          },
+          {
+            "label": "B",
+            "text": "To suggest hiring additional staff"
+          },
+          {
+            "label": "C",
+            "text": "To encourage the listeners to get tested"
+          },
+          {
+            "label": "D",
+            "text": "To correct a statistical error"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q88",
+        "text": "What will the listeners do next?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Pick up some nutritional information"
+          },
+          {
+            "label": "B",
+            "text": "Sign up for an appointment"
+          },
+          {
+            "label": "C",
+            "text": "Listen to a presentation"
+          },
+          {
+            "label": "D",
+            "text": "Watch a product demonstration"
+          }
+        ],
+        "correctAnswer": "C"
+      }
+    ],
+    "script": "W-Br: Welcome, everyone, to the Pine City Community Center. I'm Dr. Garcia, and I'm here at the community center today for the annual wellness fair. We'll be doing free vision exams all day. If you don't have time today, we'll be offering the exams at our clinic for the rest of the month. Just remember, many eye problems are easily treated. OK, so first on our agenda at nine o'clock A.M., eye specialist Dr. Yan Zhou will give a presentation in the auditorium about maintaining good eye health. Let's head over there now."
+  },
+  {
+    "testId": 9,
+    "setId": "set_89_91",
+    "questionRange": "89-91",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_89-91.mp3",
+    "questions": [
+      {
+        "id": "q89",
+        "text": "What is the talk mainly about?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Cleaning a carpet"
+          },
+          {
+            "label": "B",
+            "text": "Installing a carpet"
+          },
+          {
+            "label": "C",
+            "text": "Designing a carpet"
+          },
+          {
+            "label": "D",
+            "text": "Choosing a carpet"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q90",
+        "text": "What does the speaker say about wool carpets?",
+        "options": [
+          {
+            "label": "A",
+            "text": "They are difficult to find."
+          },
+          {
+            "label": "B",
+            "text": "They are expensive."
+          },
+          {
+            "label": "C",
+            "text": "They are hard to clean."
+          },
+          {
+            "label": "D",
+            "text": "They are durable."
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q91",
+        "text": "What does the speaker say his company provides?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A free in-store consultation"
+          },
+          {
+            "label": "B",
+            "text": "A children's play area"
+          },
+          {
+            "label": "C",
+            "text": "Flooring design samples"
+          },
+          {
+            "label": "D",
+            "text": "One-year warranties"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "M-Cn: Hi, I'm Takumi from Logan's Flooring. Thanks for watching this video. Carpets come in various designs and materials, and selecting one can be overwhelming. Today, I'll be sharing a few tips that'll make that process easier. First, consider where you're going to put the carpet. For example, if you're carpeting a children's playroom, you probably don't want to select a wool carpet, since they're difficult to clean. Second, we recommend making sure your carpet is protected under our warranty in case of damage. At Logan's Flooring, we provide one-year warranties on all our carpets! Be sure to subscribe to this video channel for free weekly tips and ideas."
+  },
+  {
+    "testId": 9,
+    "setId": "set_92_94",
+    "questionRange": "92-94",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_92-94.mp3",
+    "questions": [
+      {
+        "id": "q92",
+        "text": "Why does the speaker thank the listener?",
+        "options": [
+          {
+            "label": "A",
+            "text": "For renewing a magazine subscription"
+          },
+          {
+            "label": "B",
+            "text": "For inspecting a medical facility"
+          },
+          {
+            "label": "C",
+            "text": "For writing an article"
+          },
+          {
+            "label": "D",
+            "text": "For giving a demonstration"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q93",
+        "text": "What does the speaker imply when she says, \"this is just one of our many products\"?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A company is prepared for more competition."
+          },
+          {
+            "label": "B",
+            "text": "A company also sells less expensive products."
+          },
+          {
+            "label": "C",
+            "text": "A team will need to work more quickly."
+          },
+          {
+            "label": "D",
+            "text": "A supervisor will be impressed by some work."
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q94",
+        "text": "Why does the speaker ask the listener to call back?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To provide an address"
+          },
+          {
+            "label": "B",
+            "text": "To confirm a deadline"
+          },
+          {
+            "label": "C",
+            "text": "To place an order"
+          },
+          {
+            "label": "D",
+            "text": "To arrange a meeting"
+          }
+        ],
+        "correctAnswer": "D"
+      }
+    ],
+    "script": "W-Br: Hi. This is Barbara Chen, head of public relations at Springfield Solutions. I'm calling to thank you for your magazine article about our company. In it, you praised our newest software, Ubex, writing that it helps factories run more efficiently. But you also emphasized how expensive the software is. While Ubex is costly, let me point out that this is just one of our many products. I'd appreciate the chance to discuss the full range of our software choices, to give you a balanced view of the company. Please call me back and let me know if you'd be available to meet."
+  },
+  {
+    "testId": 9,
+    "setId": "set_95_97",
+    "questionRange": "95-97",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_95-97.mp3",
+    "questions": [
+      {
+        "id": "q95",
+        "text": "Who most likely is the speaker?",
+        "options": [
+          {
+            "label": "A",
+            "text": "A tour guide"
+          },
+          {
+            "label": "B",
+            "text": "A city official"
+          },
+          {
+            "label": "C",
+            "text": "A photographer"
+          },
+          {
+            "label": "D",
+            "text": "A landscape artist"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q96",
+        "text": "Look at the graphic. Which picnic area does the speaker recommend?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Picnic Area 1"
+          },
+          {
+            "label": "B",
+            "text": "Picnic Area 2"
+          },
+          {
+            "label": "C",
+            "text": "Picnic Area 3"
+          },
+          {
+            "label": "D",
+            "text": "Picnic Area 4"
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "q97",
+        "text": "Why are some volunteers needed?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To maintain a garden"
+          },
+          {
+            "label": "B",
+            "text": "To hand out water bottles"
+          },
+          {
+            "label": "C",
+            "text": "To organize park events"
+          },
+          {
+            "label": "D",
+            "text": "To provide free tours"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "W-Am: Welcome to the grand opening of Oakfield Public Park! My fellow city council members and I are glad that everyone could join us. There are many fun activities for residents to enjoy here. See the beautiful Elm Fountain, which has a special fountain show every hour. There are also several picnic areas throughout the park. But I suggest the one between Dogwood Pond and the children's playground. It offers fantastic views of our city's skyline. Finally, for any gardeners among us, the Oakfield Parks Department needs volunteers to help care for the community garden. If you're interested, please visit the city government Web site.",
+    "image": "/images/ETS_TOEIC_3/Test_09/Part_04/p4_q95.png"
+  },
+  {
+    "testId": 9,
+    "setId": "set_98_100",
+    "questionRange": "98-100",
+    "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_98-100.mp3",
+    "questions": [
+      {
+        "id": "q98",
+        "text": "Where do the listeners most likely work?",
+        "options": [
+          {
+            "label": "A",
+            "text": "At a supermarket"
+          },
+          {
+            "label": "B",
+            "text": "At a hospital"
+          },
+          {
+            "label": "C",
+            "text": "At a community center"
+          },
+          {
+            "label": "D",
+            "text": "At a fitness club"
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "q99",
+        "text": "What does the speaker say is his goal?",
+        "options": [
+          {
+            "label": "A",
+            "text": "To attract qualified job candidates"
+          },
+          {
+            "label": "B",
+            "text": "To reduce costs"
+          },
+          {
+            "label": "C",
+            "text": "To boost membership sales"
+          },
+          {
+            "label": "D",
+            "text": "To encourage healthy eating habits"
+          }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": "q100",
+        "text": "Look at the graphic. On which days can the speaker change his schedule?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Mondays"
+          },
+          {
+            "label": "B",
+            "text": "Wednesdays"
+          },
+          {
+            "label": "C",
+            "text": "Thursdays"
+          },
+          {
+            "label": "D",
+            "text": "Saturdays"
+          }
+        ],
+        "correctAnswer": "A"
+      }
+    ],
+    "script": "M-Cn: Since the hospital hired me, I've been working on making the meals we serve our patients more nutritious. But I want to promote healthy eating habits among our staff as well, because health-care professionals with healthy diets are more likely to teach their patients to make similar choices. With that goal, I'd like to schedule our first nutrition class at a time that's available to as many people as possible, so I'm asking that you complete this short survey. I do have some flexibility in the afternoons so I could move the afternoon session during the week to a later time if necessary. The weekend session cannot be moved.",
+    "image": "/images/ETS_TOEIC_3/Test_09/Part_04/p4_q98.png"
+  }
 ];

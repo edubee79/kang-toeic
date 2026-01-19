@@ -330,8 +330,8 @@ export default function Part2ShadowingPage() {
         const user = JSON.parse(userStr);
         try {
             await addDoc(collection(db, "Manager_Results"), {
-                student: user.userName,
-                studentId: user.userId,
+                student: user.userName || user.name || "Unknown",
+                studentId: user.userId || user.uid || "Guest",
                 unit: `Shadowing_LC_Part2_test${testId}`,
                 score: questions.length, // Just completion count for now
                 total: questions.length,

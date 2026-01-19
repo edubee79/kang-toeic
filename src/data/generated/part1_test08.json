@@ -1,0 +1,161 @@
+{
+  "testId": 8,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The people are decorating a wall.",
+          "translation": "사람들이 벽을 장식하고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The man is using a napkin.",
+          "translation": "남자가 냅킨을 사용하고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is serving food.",
+          "translation": "여자들 중 한 명이 음식을 옮겨주고 있다."
+        },
+        {
+          "option": "D",
+          "text": "The people are looking at some menus.",
+          "translation": "사람들이 메뉴를 보고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The woman is standing on a stool.",
+          "translation": "여자가 의자 위에 서있다."
+        },
+        {
+          "option": "B",
+          "text": "The woman is replacing a lightbulb.",
+          "translation": "여자가 전구를 교체하고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The woman is installing a bookshelf.",
+          "translation": "여자가 책장을 설치하고 있다."
+        },
+        {
+          "option": "D",
+          "text": "The woman is climbing a staircase.",
+          "translation": "여자가 계단을 오르고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some people are planting some trees.",
+          "translation": "사람들이 나무를 심고 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some people are strolling on a path.",
+          "translation": "사람들이 산책로를 걷고 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some people are getting on a train.",
+          "translation": "사람들이 기차를 타고 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some people are jogging on a beach.",
+          "translation": "사람들이 해변에서 조깅을 하고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The men are facing each other.",
+          "translation": "사람들이 서로 마주보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The men are crossing a street.",
+          "translation": "사람들이 길을 건너고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The men have stopped on a walkway.",
+          "translation": "사람들이 보도에 멈춰 서있다."
+        },
+        {
+          "option": "D",
+          "text": "The men have left their suitcases open.",
+          "translation": "사람들이 여행 가방을 열어 놓고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some leaves have been swept into a pile.",
+          "translation": "나뭇잎이 더미로 쓸려 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some furniture has been stacked near a fence.",
+          "translation": "가구가 울타리 근처에 쌓여 있다."
+        },
+        {
+          "option": "C",
+          "text": "An umbrella has fallen on the ground.",
+          "translation": "우산이 땅에 떨어져 있다."
+        },
+        {
+          "option": "D",
+          "text": "A bicycle has been chained to a pole.",
+          "translation": "자전거가 기둥에 묶여 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A man is walking into a garden area.",
+          "translation": "남자가 정원으로 걸어 들어가고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The entrance to a building has been blocked by boxes.",
+          "translation": "건물 입구가 상자들로 막혀 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some notices have been posted to a bulletin board.",
+          "translation": "공고문들이 게시판에 붙어 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is refilling a copy machine with paper.",
+          "translation": "여자들 중 한 명이 복사기에 종이를 다시 채우고 있다."
+        }
+      ]
+    }
+  ]
+}

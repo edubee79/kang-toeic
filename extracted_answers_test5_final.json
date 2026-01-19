@@ -1,0 +1,95 @@
+{
+  "testId": 5,
+  "answers": [
+    {
+      "questionId": "131",
+      "correctAnswer": "B",
+      "explanation": "주어인 초기 판매량(initial sales)과 목적어인 회사의 기대치(the company's expectations)의 관계를 나타내는 동사가 필요하다. 따라서 '뛰어넘다. 능가하다'라는 의미의 타동사 (B) surpassed가 정답이다. exceed one's expectations라고 표현할 수 있다는 것도 알아두자.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "C",
+      "explanation": "정관사 the와 명사 sales 사이에서 sales를 수식하는 형용사 자리이다. 예상을 뛰어넘는 판매량, 즉 판매 결과에 대해 평가하는 단어가 들어가야 자연스러우므로, '인상적인'이라는 의미의 (C) impressive가 정답이다. 현재분사 (B) impressing은 '감동시키는', 과거분사 (D) impressed는 '감동받은'이라는 뜻이므로 sales를 수식하기에 적절하지 않다. (A) impress는 동사로 품사상 빈칸에 들어갈 수 없다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "D",
+      "explanation": "인상적인 판매량의 요인(factors)으로 빈칸 앞 문장에서는 태블릿의 고품질 케이스(the tablet's high-quality case)를, 뒤 문장에서는 화면 밝기 자동 조정 기능(an adaptive screen brightness feature)을 언급했다. 따라서 빈칸에는 케이스에 대해 부연 설명을 하거나 또 다른 성공 요인을 제시하는 문장이 들어가야 자연스러우므로, (D)가 정답이다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "A",
+      "explanation": "해당 문장은 앞서 언급된 화면 자동 밝기 조정 기능(an adaptive screen brightness feature)에 대해 추가로 설명하고 있다. 화면 자동 밝기 조정 기능이란 환경에 따라 화면 밝기가 변하는 것을 말하는데, 안구 보호를 위해 어두운 곳에서는 어두워지고 밝은 곳에서는 밝아지는 기능이다. 빈칸이 포함된 부분(less-than-ideal conditions)은 그 기능이 자동으로 실행되는 특정 환경을 나타내고 있으므로, 밝기(brightness)와 관련된 명사가 빈칸에 들어가야 한다. 따라서 '조명, 밝기'라는 의미의 (A) lighting이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "C",
+      "explanation": "앞 문장에서 정기 서버 관리가 이번 주말에 실시될 예정(will be performed)이라고 했고, 서버가 다운되는 시기(from 11 P.M. on Saturday, June 6, to 7 A.M. on Sunday, June 7)가 이메일 날짜(Date: June 1)를 기준으로 미래임을 알 수 있다. 따라서 빈칸에도 미래 시제가 쓰여야 자연스러우므로, (C) will be가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "A",
+      "explanation": "빈칸이 목적어로 취하는 this time은 앞 문장에서 언급된 서버 다운 시간(eight hours from 11 P.M. on Saturday to 7 A.M. on Sunday, June 7)을 가리킨다. 빈칸 뒤에서 웹사이트 접속 및 이메일 전송이 중단될 거라고 안내했는데, 이는 서버가 다운되는 동안 발생할 일이라고 볼 수 있다. 따라서 '~ 동안'이라는 의미로 기간을 나타내는 (A) During이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "137",
+      "correctAnswer": "C",
+      "explanation": "빈칸 앞 문장에서는 서버 다운 시 제한 및 중단되는 것(access to the Web site will be restricted, and e-mail delivery will be paused)을 안내했는데, 뒤 문장에서는 서버가 복구되고 나면(Once the server is back up) 해야 할 일을 당부했다. 따라서 빈칸에는 추가로 제한되는 기능이나 웹사이트의 재개와 관련된 문장이 들어가야 자연스러우므로, 재개 시점을 안내한 (C)가 정답이다. 작업은 주말에 진행되며 이메일 전송이 중단된다고 했으므로 (A)와 (D)는 명백한 오답이다. 또한 웹사이트 이용이 불가능할 거라고 안내하다가 프로그래머들이 열심히 작업할 거라고 설명하는 것은 어색하므로, (B)는 정답이 될 수 없다. 앞뒤에 나온 단서(7 AM. on Sunday~Sunday",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "C",
+      "explanation": "앞 문장에서 두 가지의 주요 비용이 있다(There are two main kinds of costs)고 한 후, 주요 비용 중 하나(one kind)로 변동 비용(Variable costs)을 제시했다. 빈칸이 수식하는 비용은 고정된 것으로 간주된다(are considered fixed)고 했으므로, 앞서 언급된 변동 비용과는 반대되는 개념임을 알 수 있다. 따라서 '다른'이라는 의미의 (C) Other가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "C",
+      "explanation": "다른 대안을 선택하는 것(choosing some alternative option)과 어떤 특정한 일을 하기로 결정하는 것(you make a decision to do one specific thing)은 양자택일의 대상이므로, '~ 대신'이라는 의미의 (C) rather than이 정답이다. 참고로, rather than은 상관접속사처럼 쓰여 뒤에 동사원형이 올 수도 있다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "B",
+      "explanation": "빈칸의 주어인 this는 앞 문장의 Careful consideration of potential opportunity costs를 가리킨다. 앞에서 잠재적 기회 비용을 고려하는 게 중요하다고 했으므로, 해당 문장은 이 과정을 거친 후 의사 결정을 하라고 권장하는 내용이 되어야 자연스럽다. 즉, 이 과정이 의사 결정에 영향을 주어야 한다는 취지이므로, (B) influence(영향을 미치다)가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "D",
+      "explanation": "빈칸 앞에서 세 가지 소기업 비용(Small Business Costs)을 설명했고, 뒤 문장에서는 더 완전한 이해를 위해서는 면허를 소지한 회계사에게 자문을 구하라(You should consult a licensed accountant for a more complete understanding)고 조언했다. 따라서 빈칸에는 회계사에게 자문을 구해 배울만한 비용 관련 언급이 들어가야 자연스러우므로, (D)가 정답이다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "A",
+      "explanation": "주격 관계대명사 that이 이끄는 절에서 be동사 was와 함께 동사구를 이루는 자리이다. 뒤에 전치사 by가 있으므로 선행사인 a",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "D",
+      "explanation": "앞 문장에서 매장에 다양한 물건이 있다고 했고, 뒤 문장에서는 고객들이 신상품을 보러 종종 들르고 싶어 한다(Patrons like to stop in often to see what is new)고 했다. 따라서 해당 문장은 고객의 주기적인 방문을 유도하기 위해 신상품을 계속 업데이트한다는 맥락이 되어야 한다. 즉, 물품 목록이 자주 바뀐다는 내용이 되어야 자연스러우므로, '자주, 빈번하게'라는 의미의 (D) frequently가 정답이다. 자동사 change는 변화 속도(rapidly, gradually 등), 빈도(frequently, often 등), 정도(dramatically, completely 등)를 나타내는 부사와 자주 쓰인다는 것도 알아두면 좋다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞 문장에서는 지역 내 첫 번째 몰런 매장(This is the first Morlon in the local area)이라며 신규 매장의 의의를 설명했고, 뒤 문장에서는 개업(A grand opening)과 관련된 일정을 안내했다. 따라서 빈칸에도 몰런 매장과 관련된 내용이 들어가야 자연스러우므로, 전국에 있는 매장의 개수를 언급한 (A)가 정답이다. 수익(Profits), 경쟁사(competitor), 신규 매장 공간의 이전 임대 업체(Binkley's Market)에 대한 내용은 문맥상 어색하다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "D",
+      "explanation": "A grand opening ~ discount coupons까지가 주어, will be held가 동사인 문징이다. 구조상 빈칸에는 opening과 복합영사를 이루어 주어 역할을 하는 명사나 featuring을 수식하는 부사가 들어갈 수 있다. 따라서 보기 중 명사인 (D) celebration(축하 행사)이 정답이다. grand opening celebration은 '개업 축하 행사'라는 의미가 되며, 분사구 featuring 이하의 수식을 받는다. (A) celebrates와 (C) celebrate는 동사, (B) celebrating은 동명사/현재분사로 구조상 빈칸에 들어갈 수 없다.",
+      "classification": "P6_GRAMMAR"
+    }
+  ]
+}

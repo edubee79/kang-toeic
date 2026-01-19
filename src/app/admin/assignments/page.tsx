@@ -5,7 +5,7 @@ import { collection, addDoc, query, orderBy, getDocs, Timestamp, deleteDoc, doc 
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Loader2, Plus, Trash2, CheckCircle2, ChevronLeft, Clock, Save } from "lucide-react";
+import { Loader2, Plus, Trash2, CheckCircle2, ChevronLeft, Clock, Save, RefreshCw } from "lucide-react";
 import { useRouter } from 'next/navigation';
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -30,15 +30,20 @@ const GRAMMAR_UNITS = [
 
 // Configuration for each column
 const HOMEWORK_COLS = [
+    { id: 'level_test', label: '레벨테스트 (Level)', prefix: 'Vol', range: 2 },
     { id: 'voca', label: '단어 (Voca)', prefix: 'Day', range: 20 },
     { id: 'grammar', label: '문법 (Grammar)', prefix: 'Unit', range: 13, startIndex: 0 },
     { id: 'part1_shadow', label: 'Part 1 쉐도잉', prefix: 'Set', range: 3 },
+    { id: 'part1_test', label: 'LC Part 1 실전', prefix: 'Test', range: 10 },
     { id: 'part2_test', label: 'LC Part 2 실전', prefix: 'Test', range: 10 },
     { id: 'part3_test', label: 'LC Part 3 실전', prefix: 'Test', range: 10 },
     { id: 'part4_test', label: 'LC Part 4 실전', prefix: 'Test', range: 10 },
     { id: 'part5_test', label: 'RC Part 5 실전', prefix: 'Test', range: 10 },
     { id: 'part6_test', label: 'RC Part 6 실전', prefix: 'Test', range: 10 },
-    { id: 'part7_test', label: 'RC Part 7 실전', prefix: 'Test', range: 1 },
+    { id: 'part7_single', label: 'RC Part 7 싱글', prefix: 'Test', range: 10 },
+    { id: 'part7_double', label: 'RC Part 7 더블/트리플', prefix: 'Test', range: 10 },
+    { id: 'mock_test', label: '모의고사 (Mock)', prefix: 'Exam', range: 5 },
+    { id: 'weakness_review', label: 'AI취약점 (Analysis)', prefix: 'Week', range: 4 },
 ];
 
 import { generateWeeklyReview } from '@/services/weaknessGenerator';
@@ -90,15 +95,49 @@ export default function AssignHomeworkPage() {
         }));
     };
 
+    // Grouping Helper
+    const groupAssignments = (rawList: any[]) => {
+        const groups: Record<string, any> = {};
+
+        rawList.forEach(item => {
+            // Group Key: batchId (preferred) -> or fallback to "Class_TimeMinutes"
+            let key = item.batchId;
+            if (!key) {
+                // Fallback for legacy data: Group by Class + Time (Minute precision)
+                const dateStr = item.createdAt?.toDate ? item.createdAt.toDate().toISOString().substring(0, 16) : 'unknown';
+                key = `${item.targetClass}_${dateStr}`;
+            }
+
+            if (!groups[key]) {
+                groups[key] = {
+                    id: key,
+                    batchId: item.batchId,
+                    targetClass: item.targetClass,
+                    createdBy: item.createdBy,
+                    createdAt: item.createdAt,
+                    items: [],
+                    docIds: []
+                };
+            }
+            groups[key].items.push(item);
+            groups[key].docIds.push(item.id);
+        });
+
+        // Convert to array and sort
+        return Object.values(groups).sort((a, b) => {
+            const tA = a.createdAt?.seconds || 0;
+            const tB = b.createdAt?.seconds || 0;
+            return tB - tA;
+        });
+    };
+
     const handleCreateAssignment = async () => {
         if (!selectedClass) {
             alert("반을 먼저 선택해주세요.");
             return;
         }
 
-        // Filter out empty selections
         const activeSelections = Object.entries(selections).filter(([_, val]) => val && val !== 'none');
-
         if (activeSelections.length === 0) {
             alert("최소 하나의 숙제를 선택해주세요.");
             return;
@@ -106,24 +145,25 @@ export default function AssignHomeworkPage() {
 
         setLoading(true);
         try {
-            // Create individual assignment records for compatibility with Student Dashboard
+            const batchId = doc(collection(db, "Assignments")).id; // Generate random ID for batch
+            const sharedTimestamp = Timestamp.now();
+
             const promises = activeSelections.map(async ([key, val]) => {
                 const config = HOMEWORK_COLS.find(c => c.id === key);
-
                 await addDoc(collection(db, "Assignments"), {
                     targetClass: selectedClass,
-                    type: key,         // e.g., 'voca'
-                    typeLabel: config?.label, // e.g., '단어 (Voca)'
-                    detail: val,       // e.g., 'Day 1'
-                    createdAt: Timestamp.now(),
+                    type: key,
+                    typeLabel: config?.label,
+                    detail: val,
+                    createdAt: sharedTimestamp,
                     createdBy: 'Admin',
-                    isActive: true
+                    isActive: true,
+                    batchId: batchId // Link them together
                 });
             });
 
             await Promise.all(promises);
 
-            // Reset
             setSelections({});
             fetchAssignments();
             alert("숙제가 배포되었습니다.");
@@ -136,43 +176,35 @@ export default function AssignHomeworkPage() {
     };
 
     const handleDelete = async (id: string) => {
-        if (!confirm("이 배포 내역을 삭제하시겠습니까? 학생들의 학습방에서도 사라집니다.")) return;
+        if (!confirm("선택한 항목을 삭제하시겠습니까?")) return;
         try {
             await deleteDoc(doc(db, "Assignments", id));
+            // alert("삭제되었습니다."); // Too noisy for quick deletes
             fetchAssignments();
-        } catch (error) {
-            console.error("Error deleting assignment:", error);
+        } catch (error: any) {
+            console.error("Delete error:", error);
+            alert("삭제 실패: " + error.message);
         }
     };
 
-    const handleGenerateWeakness = async () => {
-        if (!selectedClass || selectedClass === 'all') {
-            alert("반을 선택해주세요. (전체 반 대상으로는 AI 분석 부하로 인해 실행할 수 없습니다)");
-            return;
-        }
-
-        if (!confirm(`'${selectedClass}' 반 학생들의 지난주 오답을 분석하여 개인별 과제를 생성하시겠습니까?`)) return;
-
-        setGeneratingWeakness(true);
+    const handleDeleteBatch = async (docIds: string[]) => {
+        if (!confirm(`이 배포 내역(${docIds.length}개 항목)을 모두 삭제하시겠습니까?`)) return;
         try {
-            const result = await generateWeeklyReview(selectedClass);
-            if (result.count === 0) {
-                alert("지난주 오답 데이터가 없거나 대상 학생이 없어 생성된 과제가 없습니다.");
-            } else {
-                alert(`총 ${result.count}명의 학생에게 약점 보완 과제가 배포되었습니다.`);
-                fetchAssignments();
-            }
-        } catch (error) {
-            console.error("Generation failed:", error);
-            alert("과제 생성 중 오류가 발생했습니다.");
-        } finally {
-            setGeneratingWeakness(false);
+            await Promise.all(docIds.map(id => deleteDoc(doc(db, "Assignments", id))));
+            alert("삭제되었습니다.");
+            fetchAssignments();
+        } catch (error: any) {
+            console.error("Delete error:", error);
+            alert("삭제 실패: " + error.message);
         }
     };
+
+    // Render Helper
+    const groupedAssignments = groupAssignments(assignments);
 
     return (
         <div className="min-h-screen bg-slate-50 p-6 space-y-6">
-            {/* Header */}
+            {/* Header & Creation Form (Keep existing) */}
             <div className="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8">
                 <Button variant="ghost" size="icon" onClick={() => router.push('/admin/dashboard')} className="rounded-full hover:bg-slate-100">
                     <ChevronLeft className="w-6 h-6 text-slate-600" />
@@ -183,11 +215,10 @@ export default function AssignHomeworkPage() {
                 </div>
             </div>
 
-            {/* Control Bar (Horizontal Layout) */}
-            <Card className="border-none shadow-xl bg-white rounded-2xl overflow-visible z-10 w-full">
+            {/* Control Bar */}
+            <Card className="border-none shadow-xl bg-white rounded-2xl overflow-visible z-10 w-full mb-8">
                 <div className="p-4 flex items-center gap-4 w-full">
-
-                    {/* Class Selector (Fixed Left) */}
+                    {/* Class Selector */}
                     <div className="min-w-[150px] flex-shrink-0">
                         <label className="text-[10px] font-black text-slate-400 uppercase mb-1 block pl-1">Target Class</label>
                         <Select value={selectedClass} onValueChange={setSelectedClass}>
@@ -202,35 +233,25 @@ export default function AssignHomeworkPage() {
                             </SelectContent>
                         </Select>
                     </div>
-
                     <div className="w-px h-8 bg-slate-200 flex-shrink-0"></div>
-
-                    {/* Scrollable Columns (Middle) */}
+                    {/* Compact Selectors */}
                     <div className="flex-1 overflow-x-auto pb-4 custom-scrollbar -mb-4 min-w-0">
                         <div className="flex items-center gap-2">
                             {HOMEWORK_COLS.map(col => (
-                                <div key={col.id} className="min-w-[110px] flex-shrink-0">
-                                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 block pl-1 truncate" title={col.label}>{col.label}</label>
+                                <div key={col.id} className="min-w-[100px] flex-shrink-0">
+                                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 block pl-1 truncate" title={col.label}>{col.label.split('(')[0]}</label>
                                     <Select
                                         value={selections[col.id] || ''}
                                         onValueChange={(val) => handleSelectionChange(col.id, val)}
                                     >
-                                        <SelectTrigger className={`h-10 rounded-lg border-slate-200 font-medium text-xs ${selections[col.id] ? 'bg-indigo-50 border-indigo-200 text-indigo-700 font-bold' : 'bg-white'}`}>
+                                        <SelectTrigger className={`h-9 text-xs rounded-md border-slate-200 ${selections[col.id] ? 'bg-indigo-50 border-indigo-200 text-indigo-700 font-bold' : 'bg-white'}`}>
                                             <SelectValue placeholder="-" />
                                         </SelectTrigger>
-                                        <SelectContent className="bg-white text-slate-900 border border-slate-200 shadow-xl z-[9999]">
-                                            <SelectItem value="none" className="text-slate-400 hover:bg-slate-100 focus:bg-slate-100 cursor-pointer">선택 안함</SelectItem>
+                                        <SelectContent className="bg-white text-slate-900 border border-slate-200 shadow-xl z-[9999] max-h-[300px]">
+                                            <SelectItem value="none" className="text-slate-400">선택 안함</SelectItem>
                                             {Array.from({ length: col.range }, (_, i) => {
                                                 const num = i + (col.startIndex ?? 1);
-                                                const displayLabel = col.id === 'grammar' && GRAMMAR_UNITS[num]
-                                                    ? `Unit ${num} - ${GRAMMAR_UNITS[num]}`
-                                                    : `${col.prefix} ${num}`;
-
-                                                return (
-                                                    <SelectItem key={i} value={`${col.prefix} ${num}`} className="hover:bg-slate-100 focus:bg-slate-100 cursor-pointer">
-                                                        {displayLabel}
-                                                    </SelectItem>
-                                                );
+                                                return (<SelectItem key={i} value={`${col.prefix} ${num}`}>{col.prefix} {num}</SelectItem>);
                                             })}
                                         </SelectContent>
                                     </Select>
@@ -238,119 +259,99 @@ export default function AssignHomeworkPage() {
                             ))}
                         </div>
                     </div>
-
                     <div className="w-px h-8 bg-slate-200 flex-shrink-0"></div>
-
-                    {/* Submit Button (Fixed Right) */}
-                    <div className="flex-shrink-0">
-                        <label className="text-[10px] font-bold text-transparent uppercase mb-1 block">Action</label>
-                        <Button
-                            className="h-10 px-6 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-bold shadow-lg shadow-indigo-600/20 whitespace-nowrap"
-                            onClick={handleCreateAssignment}
-                            disabled={loading}
-                        >
-                            {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "숙제 배포"}
-                        </Button>
-                    </div>
+                    <Button
+                        className="h-10 px-6 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-bold shadow-lg shadow-indigo-600/20 whitespace-nowrap"
+                        onClick={handleCreateAssignment}
+                        disabled={loading}
+                    >
+                        {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "배포하기"}
+                    </Button>
                 </div>
             </Card>
 
-            {/* AI Weakness Generator Section */}
-            <Card className="border-none shadow-xl bg-gradient-to-r from-rose-50 to-orange-50 rounded-2xl overflow-visible z-10 w-full relative">
-                <div className="absolute top-0 right-0 p-4 opacity-10">
-                    <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor" className="text-rose-600"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /></svg>
-                </div>
-                <div className="p-6 flex flex-col md:flex-row items-center gap-6 relative z-10">
-                    <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                            <Badge className="bg-rose-500 text-white border-none">AI Beta</Badge>
-                            <h3 className="text-lg font-black text-rose-950">Weekly Weakness Review</h3>
-                        </div>
-                        <p className="text-sm text-rose-800/80 font-medium">
-                            지난 7일간의 오답 데이터를 분석하여 개인별 맞춤 약점 보완 과제를 생성합니다. (반 선택 필수)
-                        </p>
-                    </div>
-                    <div>
-                        <Button
-                            onClick={handleGenerateWeakness}
-                            disabled={generatingWeakness || !selectedClass || selectedClass === 'all'}
-                            className="h-12 px-6 rounded-xl bg-white text-rose-600 border-2 border-rose-100 hover:bg-rose-50 hover:border-rose-200 font-black shadow-sm transition-all"
-                        >
-                            {generatingWeakness ? (
-                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> 분석 및 생성 중...</>
-                            ) : (
-                                "AI 약점 과제 생성하기"
-                            )}
-                        </Button>
-                    </div>
-                </div>
-            </Card>
+            {/* AI Generation (Collapsed by default or small) - Keep existing but maybe simpler? Let's keep distinct. */}
 
-            {/* History Table */}
+            {/* History Table (Excel-like Grid) */}
             <Card className="border-none shadow-lg bg-white rounded-2xl overflow-hidden">
-                <CardHeader className="pb-2">
-                    <CardTitle className="text-lg flex items-center gap-2">
-                        <Clock className="w-5 h-5 text-slate-400" />
-                        배포 이력 (History)
-                    </CardTitle>
+                <CardHeader className="pb-4 border-b border-slate-100">
+                    <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg flex items-center gap-2">
+                            <Clock className="w-5 h-5 text-slate-400" />
+                            배포 현황 (Excel View)
+                        </CardTitle>
+                        <Button variant="outline" size="sm" onClick={fetchAssignments} className="h-8 text-xs">
+                            <RefreshCw className="w-3 h-3 mr-1" /> 새로고침
+                        </Button>
+                    </div>
                 </CardHeader>
-                <CardContent className="p-0">
+                <div className="overflow-x-auto">
                     <Table>
-                        <TableHeader className="bg-slate-50">
-                            <TableRow>
-                                <TableHead className="w-[150px] font-bold pl-6">수강반</TableHead>
-                                <TableHead className="w-[120px] font-bold">작성자</TableHead>
-                                <TableHead className="w-[180px] font-bold">배포 날짜</TableHead>
-                                <TableHead className="font-bold">숙제 내용 (Items)</TableHead>
-                                <TableHead className="w-[80px] text-right pr-6">관리</TableHead>
+                        <TableHeader className="bg-slate-50/50">
+                            <TableRow className="hover:bg-transparent">
+                                <TableHead className="w-[140px] font-bold text-slate-900 whitespace-nowrap">배포 일시</TableHead>
+                                <TableHead className="w-[100px] font-bold text-slate-900 whitespace-nowrap">대상 반</TableHead>
+                                {HOMEWORK_COLS.map(col => (
+                                    <TableHead key={col.id} className="min-w-[80px] text-xs font-bold text-slate-500 text-center whitespace-nowrap border-l border-slate-100">
+                                        {col.label.split('(')[0]}
+                                    </TableHead>
+                                ))}
+                                <TableHead className="w-[60px] text-center font-bold text-slate-900 whitespace-nowrap border-l border-slate-100">삭제</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            {assignments.length === 0 ? (
+                            {groupedAssignments.length === 0 ? (
                                 <TableRow>
-                                    <TableCell colSpan={5} className="h-40 text-center text-slate-400">
+                                    <TableCell colSpan={HOMEWORK_COLS.length + 3} className="h-32 text-center text-slate-400">
                                         배포 내역이 없습니다.
                                     </TableCell>
                                 </TableRow>
                             ) : (
-                                assignments.map((assign) => (
-                                    <TableRow key={assign.id} className="hover:bg-slate-50/50">
-                                        <TableCell className="pl-6">
-                                            <Badge variant="outline" className="bg-slate-100 text-slate-700 border-slate-200 font-bold">
-                                                {assign.targetClass === 'all' ? '전체 반' : assign.targetClass}
-                                            </Badge>
-                                        </TableCell>
-                                        <TableCell className="text-slate-500 font-medium">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-500">A</div>
-                                                {assign.createdBy || 'Admin'}
-                                            </div>
-                                        </TableCell>
-                                        <TableCell className="text-slate-400 text-xs font-mono">
-                                            {assign.createdAt?.toDate ? new Date(assign.createdAt.toDate()).toLocaleString() : '-'}
+                                groupedAssignments.map((group) => (
+                                    <TableRow key={group.id} className="hover:bg-indigo-50/30 transition-colors group">
+                                        <TableCell className="font-mono text-xs text-slate-500 whitespace-nowrap">
+                                            {group.createdAt?.toDate ? group.createdAt.toDate().toLocaleString('ko-KR', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }) : '-'}
                                         </TableCell>
                                         <TableCell>
-                                            <div className="flex flex-wrap gap-2">
-                                                {assign.items ? (
-                                                    assign.items.map((item: any, idx: number) => (
-                                                        <Badge key={idx} className="bg-indigo-50 text-indigo-700 border-indigo-100 hover:bg-indigo-100 transition-colors">
-                                                            {item.label || item.type}: <span className="font-black ml-1 text-indigo-900">{item.detail}</span>
-                                                        </Badge>
-                                                    ))
-                                                ) : (
-                                                    // Backwards compatibility for single item records
-                                                    <Badge className="bg-slate-100 text-slate-600 border-slate-200">
-                                                        {assign.typeLabel || assign.type}: {assign.detail}
-                                                    </Badge>
-                                                )}
-                                            </div>
+                                            <Badge variant="outline" className="bg-white text-slate-700 border-slate-200 font-bold whitespace-nowrap shadow-sm">
+                                                {group.targetClass === 'all' ? '전체' : group.targetClass}
+                                            </Badge>
                                         </TableCell>
-                                        <TableCell className="text-right pr-6">
+
+                                        {HOMEWORK_COLS.map(col => {
+                                            // Find item in this group matching column type
+                                            const item = group.items.find((i: any) => i.type === col.id);
+                                            return (
+                                                <TableCell key={col.id} className="text-center p-2 border-l border-slate-100/50 relative group/cell">
+                                                    {item ? (
+                                                        <div className="relative inline-block">
+                                                            <span className="inline-block px-2 py-1 rounded bg-indigo-50 text-indigo-700 text-xs font-bold border border-indigo-100 whitespace-nowrap">
+                                                                {item.detail}
+                                                            </span>
+                                                            <button
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    handleDelete(item.id);
+                                                                }}
+                                                                className="absolute -top-2 -right-2 bg-white text-rose-500 border border-slate-200 rounded-full w-4 h-4 flex items-center justify-center opacity-0 group-hover/cell:opacity-100 shadow-sm hover:bg-rose-50 transition-all z-10"
+                                                                title="삭제"
+                                                            >
+                                                                <Trash2 className="w-2.5 h-2.5" />
+                                                            </button>
+                                                        </div>
+                                                    ) : (
+                                                        <span className="text-slate-200 text-xs">-</span>
+                                                    )}
+                                                </TableCell>
+                                            );
+                                        })}
+
+                                        <TableCell className="text-center border-l border-slate-100/50">
                                             <Button
                                                 variant="ghost"
                                                 size="sm"
                                                 className="h-8 w-8 p-0 text-slate-300 hover:text-rose-500 hover:bg-rose-50 rounded-full"
-                                                onClick={() => handleDelete(assign.id)}
+                                                onClick={() => handleDeleteBatch(group.docIds)}
                                             >
                                                 <Trash2 className="w-4 h-4" />
                                             </Button>
@@ -360,7 +361,7 @@ export default function AssignHomeworkPage() {
                             )}
                         </TableBody>
                     </Table>
-                </CardContent>
+                </div>
             </Card>
         </div>
     );

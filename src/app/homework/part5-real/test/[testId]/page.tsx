@@ -131,8 +131,8 @@ function Part5TestRunnerContent() {
                 });
 
                 await addDoc(collection(db, "Manager_Results"), {
-                    student: user.userName || user.username || user.name,
-                    studentId: user.userId,
+                    student: user.userName || user.username || user.name || "Unknown",
+                    studentId: user.userId || user.uid || "Guest",
                     className: user.userClass || user.className || "Unknown",
                     unit: `RC_Part5_Test${testId}_${mode}`,
                     score: score,
@@ -178,10 +178,10 @@ function Part5TestRunnerContent() {
                     {isDrillMode ? <BookOpen className="w-12 h-12" /> : <Trophy className="w-12 h-12" />}
                 </div>
                 <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tight">
-                    {isDrillMode ? "Training Complete" : "Mission Complete"}
+                    {isDrillMode ? "훈련 완료" : "학습 완료"}
                 </h2>
                 <p className={cn("font-bold tracking-widest text-xs uppercase mb-8", isDrillMode ? "text-indigo-500" : "text-amber-500")}>
-                    Part 5 • Test {testId} • {isDrillMode ? "Drill Mode" : `Attempt ${history.attempts}`}
+                    Part 5 • Test {testId} • {isDrillMode ? "Drill Mode" : `시도 횟수: ${history.attempts}회`}
                 </p>
 
                 <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm mb-8">
@@ -192,14 +192,14 @@ function Part5TestRunnerContent() {
                 </div>
 
                 <div className="space-y-3 w-full max-w-xs">
-                    <button onClick={() => { setShowCompletion(false); setReviewMode(true); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700">
-                        Review Answers
+                    <button onClick={() => { setShowCompletion(false); setReviewMode(true); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
+                        틀린문제 확인
                     </button>
-                    <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
-                        Retake Test
+                    <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
+                        다시 풀기
                     </button>
                     <Link href="/homework/part5-real" className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold">
-                        Back to Lobby
+                        목록으로 돌아가기
                     </Link>
                 </div>
             </div>
@@ -222,7 +222,7 @@ function Part5TestRunnerContent() {
                             <ChevronRight className="w-6 h-6 rotate-180" />
                         </Button>
                         <span className={cn("text-[10px] font-black tracking-widest uppercase block mb-0.5", isDrillMode ? "text-indigo-500" : "text-amber-500")}>
-                            {reviewMode ? 'REVIEW MODE' : (isDrillMode ? 'DRILL MODE' : `TEST ${testId}`)}
+                            {reviewMode ? '오답 확인' : (isDrillMode ? '훈련 모드' : `TEST ${testId}`)}
                         </span>
                     </div>
 
@@ -240,7 +240,7 @@ function Part5TestRunnerContent() {
             </div>
 
             <div className="max-w-3xl mx-auto px-4 md:px-4 py-4 md:py-8 space-y-4 md:space-y-6">
-                {testSet.questions.map((q, idx) => {
+                {testSet.questions.filter(q => !reviewMode || selectedAnswers[q.id] !== q.correctAnswer).map((q, idx) => {
                     const isSelected = !!selectedAnswers[q.id];
                     const isCorrect = selectedAnswers[q.id] === q.correctAnswer;
 
@@ -374,7 +374,7 @@ function Part5TestRunnerContent() {
                                     : (Object.keys(selectedAnswers).length > 0 ? "bg-amber-500 text-slate-900 shadow-amber-500/20" : "bg-slate-800 text-slate-500")
                             )}
                         >
-                            <span>{isDrillMode ? (Object.keys(selectedAnswers).length === testSet.questions.length ? "Finish Training" : `${Object.keys(selectedAnswers).length} / ${testSet.questions.length}`) : "Submit Answers"}</span>
+                            <span>{isDrillMode ? (Object.keys(selectedAnswers).length === testSet.questions.length ? "훈련 종료" : `${Object.keys(selectedAnswers).length} / ${testSet.questions.length}`) : "답안 제출"}</span>
                             {(!isDrillMode || Object.keys(selectedAnswers).length === testSet.questions.length) && <ChevronRight className="w-5 h-5" />}
                         </button>
                     </div>

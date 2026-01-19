@@ -13,10 +13,14 @@ import { Zap, Lock, Unlock, AlertCircle, TrendingUp } from 'lucide-react';
 interface TargetSettingSectionProps {
     user: UserProfile;
     currentStats: {
-        shadowing: number;
-        lc2: number;
-        grammar: number;
-        voca: number;
+        p1: number;
+        p2: number;
+        p3: number;
+        p4: number;
+        p5: number;
+        p6: number;
+        p7_single: number;
+        p7_double: number;
     };
     onUpdate: (newScore?: number) => void;
 }
@@ -33,13 +37,38 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
     // 3. Part Targets State
     const [partTargets, setPartTargets] = useState(user.partTargets || {
         p1: 0, p2: 0, p3: 0, p4: 0,
-        p5: 0, p6: 0, p7: 0
+        p5: 0, p6: 0, p7_single: 0, p7_double: 0
     });
+
+    // Validates and Syncs state when user prop updates
+    useEffect(() => {
+        if (user) {
+            setTotalScore(user.targetScore || 850);
+            setTargetLC(user.targetLC || 450);
+            setTargetRC(user.targetRC || 400);
+
+            // Legacy Migration Support
+            const rawTargets = user.partTargets as any;
+            if (rawTargets) {
+                if (rawTargets.p7 !== undefined && rawTargets.p7_single === undefined) {
+                    // Split old p7 roughly half-half if migrating (or just 0)
+                    // Better to just set 0 and let user fix
+                    setPartTargets({
+                        p1: rawTargets.p1, p2: rawTargets.p2, p3: rawTargets.p3, p4: rawTargets.p4,
+                        p5: rawTargets.p5, p6: rawTargets.p6,
+                        p7_single: 0, p7_double: 0
+                    });
+                } else {
+                    setPartTargets(user.partTargets!);
+                }
+            }
+        }
+    }, [user]);
 
     // Max questions per part
     const MAX_Q = {
         p1: 6, p2: 25, p3: 39, p4: 30,
-        p5: 30, p6: 16, p7: 54
+        p5: 30, p6: 16, p7_single: 29, p7_double: 25
     };
 
     // Determine Required Counts based on Score (User Heuristic)
@@ -50,7 +79,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
 
     // Calculate current sums
     const currentLCSum = partTargets.p1 + partTargets.p2 + partTargets.p3 + partTargets.p4;
-    const currentRCSum = partTargets.p5 + partTargets.p6 + partTargets.p7;
+    const currentRCSum = partTargets.p5 + partTargets.p6 + partTargets.p7_single + partTargets.p7_double;
 
     // Remaining Points
     const remainingLC = requiredLC - currentLCSum;
@@ -147,17 +176,19 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         if (totalScore < 750) p5Cap = 25;
         if (totalScore < 600) p5Cap = 20;
 
-        // Priority: P5 -> P6 -> P7
+        // Priority: P5 -> P6 -> P7 Single -> P7 Double
         const rcParts = [
             { key: 'p5' as const, cap: p5Cap },
             { key: 'p6' as const },
-            { key: 'p7' as const }
+            { key: 'p7_single' as const },
+            { key: 'p7_double' as const }
         ];
         const rcResult = distribute(reqRC, rcParts);
 
         setPartTargets({
             p1: lcResult.p1 || 0, p2: lcResult.p2 || 0, p3: lcResult.p3 || 0, p4: lcResult.p4 || 0,
-            p5: rcResult.p5 || 0, p6: rcResult.p6 || 0, p7: rcResult.p7 || 0
+            p5: rcResult.p5 || 0, p6: rcResult.p6 || 0,
+            p7_single: rcResult.p7_single || 0, p7_double: rcResult.p7_double || 0
         });
     };
 
@@ -206,11 +237,14 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         // Comparison View Logic
         const getPartCurrent = (part: string) => {
             switch (part) {
-                // Mapping Real Stats
-                case 'p2': return currentStats.lc2; // Part 2 Practice
-                case 'p5': return currentStats.grammar; // Grammar units approximation
-                // Placeholders for now
-                case 'p1': return null;
+                case 'p1': return currentStats.p1;
+                case 'p2': return currentStats.p2;
+                case 'p3': return currentStats.p3;
+                case 'p4': return currentStats.p4;
+                case 'p5': return currentStats.p5;
+                case 'p6': return currentStats.p6;
+                case 'p7_single': return currentStats.p7_single;
+                case 'p7_double': return currentStats.p7_double;
                 default: return null;
             }
         };
@@ -268,7 +302,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         {/* RC Column */}
                         <div className="space-y-3">
                             <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
-                            {['p5', 'p6', 'p7'].map((p) => {
+                            {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
                                 const key = p as keyof typeof partTargets;
                                 const goal = partTargets[key];
                                 const current = getPartCurrent(p);
@@ -276,7 +310,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
 
                                 return (
                                     <div key={p} className="flex justify-between items-center text-sm">
-                                        <span className="text-slate-400 font-bold w-8 uppercase">{p}</span>
+                                        <span className="text-slate-400 font-bold w-16 uppercase">{p.replace('p7_', 'P7 ')}</span>
                                         <div className="flex-1 flex justify-between px-3 bg-slate-800/50 rounded py-1 mx-2">
                                             <span className="text-slate-500 text-xs">목표 <span className="text-white font-bold text-sm">{goal}</span></span>
                                             {current !== null ? (
@@ -387,9 +421,6 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         {['p1', 'p2', 'p3', 'p4'].map((p) => {
                             const key = p as keyof typeof MAX_Q;
                             const currentVal = partTargets[key];
-                            // Smart Limit: Can only go up to (Current + Remaining)
-                            // But also capped by MAX_Q[key] (Total questions in that part)
-                            // If remaining is negative, max is currentVal (can't increase, only decrease to fix)
                             const smartMax = Math.min(MAX_Q[key], remainingLC >= 0 ? currentVal + remainingLC : currentVal);
 
                             return (
@@ -435,7 +466,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                             </div>
                         </div>
 
-                        {['p5', 'p6', 'p7'].map((p) => {
+                        {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
                             const key = p as keyof typeof MAX_Q;
                             const currentVal = partTargets[key];
                             const smartMax = Math.min(MAX_Q[key], remainingRC >= 0 ? currentVal + remainingRC : currentVal);
@@ -443,7 +474,9 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                             return (
                                 <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
                                     <div className="flex justify-between text-xs mb-2">
-                                        <span className="text-slate-300 font-bold uppercase">{p} ({MAX_Q[key]}문항)</span>
+                                        <span className="text-slate-300 font-bold uppercase">
+                                            {p === 'p7_single' ? 'Part 7 Single' : p === 'p7_double' ? 'Part 7 Double/Triple' : p} ({MAX_Q[key]}문항)
+                                        </span>
                                         <span className={cn("font-bold", currentVal === MAX_Q[key] ? "text-emerald-400" : "text-white")}>
                                             {currentVal}개
                                         </span>
@@ -472,3 +505,4 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         </Card>
     );
 }
+

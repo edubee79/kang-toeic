@@ -73,6 +73,78 @@
       "originalFilePath": "F:\\수업\\ets\\2.ets 정기기출1탄\\LC\\1회-LC\\cropped_q1_cropped_q06_1회-LC_5.jpg"
     },
     {
+      "id": "q1",
+      "boundingBox": [
+        0,
+        0,
+        999,
+        999
+      ],
+      "correctAnswer": "UNKNOWN",
+      "scripts": [],
+      "originalFilePath": "public\\images\\ETS_TOEIC_3\\Test_01\\Part_01\\cropped_q1_p1_q01.png"
+    },
+    {
+      "id": "q1",
+      "boundingBox": [
+        0,
+        0,
+        999,
+        999
+      ],
+      "correctAnswer": "UNKNOWN",
+      "scripts": [],
+      "originalFilePath": "public\\images\\ETS_TOEIC_3\\Test_01\\Part_01\\cropped_q1_p1_q02.png"
+    },
+    {
+      "id": "q1",
+      "boundingBox": [
+        0,
+        0,
+        999,
+        999
+      ],
+      "correctAnswer": "UNKNOWN",
+      "scripts": [],
+      "originalFilePath": "public\\images\\ETS_TOEIC_3\\Test_01\\Part_01\\cropped_q1_p1_q03.png"
+    },
+    {
+      "id": "q1",
+      "boundingBox": [
+        0,
+        0,
+        999,
+        999
+      ],
+      "correctAnswer": "UNKNOWN",
+      "scripts": [],
+      "originalFilePath": "public\\images\\ETS_TOEIC_3\\Test_01\\Part_01\\cropped_q1_p1_q04.png"
+    },
+    {
+      "id": "q1",
+      "boundingBox": [
+        0,
+        0,
+        999,
+        999
+      ],
+      "correctAnswer": "UNKNOWN",
+      "scripts": [],
+      "originalFilePath": "public\\images\\ETS_TOEIC_3\\Test_01\\Part_01\\cropped_q1_p1_q05.png"
+    },
+    {
+      "id": "q1",
+      "boundingBox": [
+        0,
+        0,
+        999,
+        999
+      ],
+      "correctAnswer": "UNKNOWN",
+      "scripts": [],
+      "originalFilePath": "public\\images\\ETS_TOEIC_3\\Test_01\\Part_01\\cropped_q1_p1_q06.png"
+    },
+    {
       "id": "q2",
       "boundingBox": [
         521,

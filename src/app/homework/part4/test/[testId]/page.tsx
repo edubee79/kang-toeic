@@ -3,9 +3,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { part4Data } from '@/data/part4';
+import { part4Data, Part4Set, Part4Question } from '@/data/part4';
 import { cn } from "@/lib/utils";
 import { Headphones, PlayCircle, Activity, Trophy, RotateCcw } from "lucide-react";
+import { TouchDictionary } from '@/components/common/TouchDictionary';
 
 
 export default function Part4TestRunnerPage() {
@@ -20,11 +21,23 @@ export default function Part4TestRunnerPage() {
     // Filter sets for this Test ID
     const testSets = part4Data.filter(s => s.testId === testId);
 
+    const stopWords = new Set([
+        'a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+        'to', 'of', 'in', 'for', 'with', 'on', 'at', 'by', 'from', 'up', 'down',
+        'about', 'into', 'over', 'after', 'does', 'do', 'did', 'will', 'would',
+        'can', 'could', 'should', 'have', 'has', 'had', 'it', 'its', 'they',
+        'them', 'their', 'he', 'him', 'his', 'she', 'her', 'hers', 'you', 'your',
+        'we', 'our', 'likely', 'most', 'best', 'probably'
+    ]);
+
     // State
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
     const [showCompletion, setShowCompletion] = useState(false);
     const [reviewMode, setReviewMode] = useState(false);
+    const [reviewSets, setReviewSets] = useState<any[]>([]);
+    const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
+    const [wrongQueue, setWrongQueue] = useState<any[]>([]);
 
     const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
 
@@ -36,9 +49,11 @@ export default function Part4TestRunnerPage() {
 
     // Refs for Audio
     const audioRef = useRef<HTMLAudioElement>(null);
+    const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     // Derive current set
-    const currentSet = testSets[currentIndex];
+    const activeSets = reviewMode ? reviewSets : testSets;
+    const currentSet = activeSets[currentIndex];
 
     // 1. Audio Cleanup on Unmount
     useEffect(() => {
@@ -110,21 +125,13 @@ export default function Part4TestRunnerPage() {
 
     // Audio Play Control
     useEffect(() => {
-        if (skimmingState === 'done' && !reviewMode && audioRef.current && !showCompletion && !showStartModal) {
+        if (skimmingState === 'done' && audioRef.current && !showCompletion && !showStartModal) {
             audioRef.current.play().catch(e => console.log("Auto-play blocked", e));
         }
     }, [skimmingState, reviewMode, currentSet, showCompletion, showStartModal]);
 
     // Smarter Highlighting Helper (Part 4 - Indigo Theme)
     const getHighlightedText = (text: string) => {
-        const stopWords = new Set([
-            'a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
-            'to', 'of', 'in', 'for', 'with', 'on', 'at', 'by', 'from', 'up', 'down',
-            'about', 'into', 'over', 'after', 'does', 'do', 'did', 'will', 'would',
-            'can', 'could', 'should', 'have', 'has', 'had', 'it', 'its', 'they',
-            'them', 'their', 'he', 'him', 'his', 'she', 'her', 'hers', 'you', 'your',
-            'we', 'our', 'likely', 'most', 'best', 'probably'
-        ]);
 
         return text.replace(/\b(\w+)\b/g, (match) => {
             const lower = match.toLowerCase();
@@ -190,20 +197,54 @@ export default function Part4TestRunnerPage() {
 
     // Handlers
     const handleSelect = (questionId: string, optionLabel: string) => {
-        if (reviewMode) return;
+        if (reviewMode) {
+            if (revealedQuestions.has(questionId)) return;
+            setSelectedAnswers(prev => ({
+                ...prev,
+                [questionId]: optionLabel
+            }));
+            const nextRevealed = new Set(revealedQuestions);
+            nextRevealed.add(questionId);
+            setRevealedQuestions(nextRevealed);
+
+            // Auto scroll to next question in review mode
+            scrollToNext(questionId);
+            return;
+        }
 
         setSelectedAnswers(prev => ({
             ...prev,
             [questionId]: optionLabel
         }));
+
+        // Auto scroll to next question in test mode
+        scrollToNext(questionId);
     };
 
-    const isSetComplete = currentSet.questions.every(q => selectedAnswers[q.id]);
+    const scrollToNext = (currentId: string) => {
+        const questions = activeSets[currentIndex].questions;
+        const currentIndexInSet = questions.findIndex((q: Part4Question) => q.id === currentId);
+
+        if (currentIndexInSet !== -1 && currentIndexInSet < questions.length - 1) {
+            const nextId = questions[currentIndexInSet + 1].id;
+            // Short delay to allow state update/animation if needed
+            setTimeout(() => {
+                const nextEl = questionRefs.current[nextId];
+                if (nextEl) {
+                    const yOffset = -120; // Leave some space at the top
+                    const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    };
+
+    const isSetComplete = currentSet?.questions.every((q: Part4Question) => selectedAnswers[q.id]);
 
     const handleNext = () => {
         if (!isSetComplete && !reviewMode) return;
 
-        if (currentIndex < testSets.length - 1) {
+        if (currentIndex < activeSets.length - 1) {
             setCurrentIndex(prev => prev + 1);
             window.scrollTo(0, 0);
         } else {
@@ -229,6 +270,16 @@ export default function Part4TestRunnerPage() {
         const score = calculateScore();
         setShowCompletion(true);
 
+        const wrongOnes: Part4Question[] = [];
+        testSets.forEach((set: Part4Set) => {
+            set.questions.forEach((q: Part4Question) => {
+                if (selectedAnswers[q.id] !== q.correctAnswer) {
+                    wrongOnes.push(q);
+                }
+            });
+        });
+        setWrongQueue(wrongOnes);
+
         const newHistory = { ...history, lastScore: score };
         setHistory(newHistory);
         localStorage.setItem(`part4_history_test_${testId}`, JSON.stringify(newHistory));
@@ -251,8 +302,8 @@ export default function Part4TestRunnerPage() {
 
     const calculateScore = () => {
         let score = 0;
-        testSets.forEach(set => {
-            set.questions.forEach(q => {
+        testSets.forEach((set: Part4Set) => {
+            set.questions.forEach((q: Part4Question) => {
                 if (selectedAnswers[q.id] === q.correctAnswer) {
                     score++;
                 }
@@ -262,7 +313,7 @@ export default function Part4TestRunnerPage() {
     };
 
     if (showCompletion) {
-        const totalQuestions = testSets.reduce((acc, set) => acc + set.questions.length, 0);
+        const totalQuestions = testSets.reduce((acc, set: Part4Set) => acc + set.questions.length, 0);
 
         return (
             <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
@@ -282,6 +333,19 @@ export default function Part4TestRunnerPage() {
                     <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] mt-2">Correct Answers</p>
                 </div>
 
+                {wrongQueue.length > 0 && (
+                    <div className="bg-slate-900 border border-slate-800 p-6 rounded-3xl mb-8 w-full max-w-sm text-left">
+                        <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-4">Wrong Questions</p>
+                        <div className="flex flex-wrap gap-2">
+                            {wrongQueue.map((q: Part4Question) => (
+                                <div key={q.id} className="px-3 py-1.5 bg-rose-500/10 border border-rose-500/20 rounded-xl">
+                                    <span className="text-[10px] font-black text-rose-500">Q{q.id.replace('q', '')}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 <div className="flex flex-col gap-3 w-full max-w-xs">
                     <button
                         onClick={handleRetake}
@@ -290,7 +354,26 @@ export default function Part4TestRunnerPage() {
                         <span>Retake Test (Attempt {history.attempts + 1})</span>
                     </button>
                     <button
-                        onClick={() => { setShowCompletion(false); setReviewMode(true); setCurrentIndex(0); }}
+                        onClick={() => {
+                            const filteredSets = testSets
+                                .map((set: Part4Set) => ({
+                                    ...set,
+                                    questions: set.questions.filter(q => selectedAnswers[q.id] !== q.correctAnswer)
+                                }))
+                                .filter(set => set.questions.length > 0);
+
+                            setReviewSets(filteredSets);
+                            setRevealedQuestions(new Set());
+
+                            // Reset selected answers for wrong ones so they can re-solve
+                            const newAnswers = { ...selectedAnswers };
+                            filteredSets.forEach(s => s.questions.forEach(q => delete newAnswers[q.id]));
+                            setSelectedAnswers(newAnswers);
+
+                            setShowCompletion(false);
+                            setReviewMode(true);
+                            setCurrentIndex(0);
+                        }}
                         className="h-14 bg-slate-800 text-white rounded-2xl font-bold hover:bg-slate-700 transition-colors"
                     >
                         Review Incorrect Answers
@@ -330,7 +413,7 @@ export default function Part4TestRunnerPage() {
                             {reviewMode ? 'REVIEW MODE' : `PART 4 • ATTEMPT ${history.attempts}`}
                         </span>
                         <span className="text-sm font-bold text-white">
-                            Set {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {testSets.length} <span className="text-slate-500 text-xs ml-1">(Q{currentSet.questionRange})</span>
+                            {reviewMode ? 'Reviewing' : 'Set'} {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {activeSets.length} <span className="text-slate-500 text-xs ml-1">({reviewMode ? 'Incorrect Only' : `Q${currentSet.questionRange}`})</span>
                         </span>
                     </div>
 
@@ -391,10 +474,11 @@ export default function Part4TestRunnerPage() {
                 )}
 
                 <div className="space-y-2 md:space-y-10">
-                    {currentSet.questions.map((q, index) => {
+                    {activeSets[currentIndex].questions.map((q: Part4Question, index: number) => {
                         return (
                             <div
                                 key={q.id}
+                                ref={(el) => { questionRefs.current[q.id] = el; }}
                                 style={{ animationDelay: `${index * 100}ms` }}
                                 className={cn(
                                     "animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-backwards",
@@ -410,53 +494,66 @@ export default function Part4TestRunnerPage() {
                                         {q.id.replace('q', '')}
                                     </div>
                                     <div className="flex-1 space-y-4">
-                                        <h3
-                                            className={cn(
-                                                "text-base font-bold leading-snug transition-colors",
-                                                "text-slate-100"
+                                        <div className={cn(
+                                            "text-base font-bold leading-snug transition-colors text-slate-100"
+                                        )}>
+                                            {reviewMode ? (
+                                                <TouchDictionary
+                                                    text={q.text}
+                                                    highlightKeywords={skimmingEnabled && isGuidedSkimming}
+                                                    stopWords={stopWords}
+                                                />
+                                            ) : (
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: (skimmingEnabled && isGuidedSkimming) ? getHighlightedText(q.text) : q.text
+                                                    }}
+                                                />
                                             )}
-                                            dangerouslySetInnerHTML={{
-                                                __html: (skimmingEnabled && isGuidedSkimming)
-                                                    ? getHighlightedText(q.text)
-                                                    : q.text
-                                            }}
-                                        />
+                                        </div>
 
                                         <div className="grid grid-cols-1 gap-2.5">
                                             {q.options.map((opt) => {
                                                 const isSelected = selectedAnswers[q.id] === opt.label;
-                                                const isCorrect = reviewMode && opt.label === q.correctAnswer;
-                                                const isIncorrect = reviewMode && isSelected && opt.label !== q.correctAnswer;
+                                                const isCorrect = revealedQuestions.has(q.id) && opt.label === q.correctAnswer;
+                                                const isIncorrect = revealedQuestions.has(q.id) && isSelected && opt.label !== q.correctAnswer;
 
                                                 return (
                                                     <button
                                                         key={opt.label}
                                                         onClick={() => handleSelect(q.id, opt.label)}
-                                                        disabled={reviewMode || skimmingState === 'active'}
+                                                        disabled={(!reviewMode && skimmingState === 'active') || revealedQuestions.has(q.id)}
                                                         className={cn(
                                                             "text-left px-5 py-4 rounded-2xl transition-all duration-200 border relative overflow-hidden group",
-                                                            isSelected && !reviewMode
+                                                            isSelected && !revealedQuestions.has(q.id)
                                                                 ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.1)]'
-                                                                : isCorrect
+                                                                : revealedQuestions.has(q.id) && opt.label === q.correctAnswer
                                                                     ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400'
-                                                                    : isIncorrect
+                                                                    : revealedQuestions.has(q.id) && isSelected && opt.label !== q.correctAnswer
                                                                         ? 'border-rose-500 bg-rose-500/10 text-rose-400'
                                                                         : 'border-slate-800 bg-slate-900/40 text-slate-500 hover:bg-slate-800 hover:text-slate-200 hover:border-slate-700',
-                                                            reviewMode ? 'cursor-default' : '',
+                                                            revealedQuestions.has(q.id) ? 'cursor-default' : '',
                                                             skimmingState === 'active' && "cursor-wait"
                                                         )}
                                                     >
                                                         <span className={`font-black mr-3 text-xs ${isSelected || isCorrect ? 'text-indigo-500' : 'text-slate-700 group-hover:text-slate-500'}`}>{opt.label}</span>
-                                                        <span
-                                                            className="text-base font-bold tracking-tight"
-                                                            dangerouslySetInnerHTML={{
-                                                                __html: (skimmingEnabled && isGuidedSkimming)
-                                                                    ? getHighlightedText(opt.text)
-                                                                    : opt.text
-                                                            }}
-                                                        />
+                                                        <div className="flex-1 text-base font-bold tracking-tight">
+                                                            {reviewMode ? (
+                                                                <TouchDictionary
+                                                                    text={opt.text}
+                                                                    highlightKeywords={skimmingEnabled && isGuidedSkimming}
+                                                                    stopWords={stopWords}
+                                                                />
+                                                            ) : (
+                                                                <span
+                                                                    dangerouslySetInnerHTML={{
+                                                                        __html: (skimmingEnabled && isGuidedSkimming) ? getHighlightedText(opt.text) : opt.text
+                                                                    }}
+                                                                />
+                                                            )}
+                                                        </div>
 
-                                                        {isCorrect && (
+                                                        {revealedQuestions.has(q.id) && opt.label === q.correctAnswer && (
                                                             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-black text-emerald-500 uppercase tracking-tighter bg-emerald-500/10 px-2 py-0.5 rounded">Correct</span>
                                                         )}
                                                     </button>
@@ -464,9 +561,16 @@ export default function Part4TestRunnerPage() {
                                             })}
                                         </div>
 
-                                        {reviewMode && currentSet.script && (
-                                            <div className="mt-6 p-5 bg-slate-900/60 border border-slate-800 rounded-3xl text-sm italic text-slate-400 leading-relaxed font-serif">
-                                                {typeof currentSet.script === 'string' ? currentSet.script : currentSet.script.map(s => `${s.speaker}: ${s.text}`).join('\n')}
+                                        {revealedQuestions.has(q.id) && currentSet.script && (
+                                            <div className="mt-6 p-5 bg-slate-900/60 border border-slate-800 rounded-3xl text-sm italic text-slate-400 leading-relaxed font-serif text-left">
+                                                {typeof currentSet.script === 'string'
+                                                    ? <TouchDictionary text={currentSet.script} />
+                                                    : currentSet.script.map((s: { speaker: string; text: string }, si: number) => (
+                                                        <div key={si} className="mb-2">
+                                                            <span className="font-bold text-slate-300 not-italic">{s.speaker}:</span> <TouchDictionary text={s.text} />
+                                                        </div>
+                                                    ))
+                                                }
                                             </div>
                                         )}
                                     </div>
@@ -491,7 +595,7 @@ export default function Part4TestRunnerPage() {
                         `}
                     >
                         {reviewMode
-                            ? (currentIndex === testSets.length - 1 ? <span>Complete Review 🏁</span> : <span>Next talk →</span>)
+                            ? (currentIndex === activeSets.length - 1 ? <span>Complete Review 🏁</span> : <span>Next talk →</span>)
                             : (!isSetComplete
                                 ? <span>Select All Answers</span>
                                 : (currentIndex === testSets.length - 1 ? <span>Finish Test 🎉</span> : <span>Next Talk →</span>)

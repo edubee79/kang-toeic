@@ -1,0 +1,101 @@
+{
+  "testId": 3,
+  "answers": [
+    {
+      "questionId": "17",
+      "correctAnswer": "D",
+      "explanation": "앞 문장에서 새 소프트웨어로 전환 시 일부 정보가 손실될(some information may be lost) 가능성이 있다는 문제점을 언급했고, 빈 칸 뒤에서는 중요한 이메일 파일은 가급적 빨리 백업하라(be sure to back up any critical e-mail files as soon as possible)며 당 부했다. 즉 앞에서 설명한 문제점이 백업을 하라고 당부하는 이유가 되므로, '그러니까)'라는 의미의 (D) For this reason이 정답이다.",
+      "classification": "P6_GRAMMAR_CONJUNCTION"
+    },
+    {
+      "questionId": "131",
+      "correctAnswer": "C",
+      "explanation": "빈칸은 명사 packaging을 목적어로 취해 앞에 온 절(Our quality- control team carefully inspects all products)을 수식해 주는 전치사 자리이다. 제품 검수(inspects all products)는 포장(packaging) 전에 이루어지는 것이므로, '~전에, ~에 앞서'라는 의미의 (C) prior to가 정답이다. (A) in case는 뒤에 절이 와야 하고, (B) as much as는 '~만큼 많이', (D) in keeping with는 '~와 일치하여'라는 뜻으로 빈칸에 적절하지 않다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞 문장에서 고객 만족 보장을 위해 모든 제품을 꼼꼼하게 검수하고 있다(Our quality-control team carefully inspects all products to ensure customer satisfaction)고 했고, 뒤 문 장에서는 '그렇지 못한 경우 편리하게 교환 또는 환불이 가능하다(If not, we make exchanges or returns easy)'라고 했다. 따라서 빈칸에도 제품에 대한 고객 만족도와 관련된 내용이 들어가야 자연스러우므로, (A)가 정답이다. 참고로, 뒤 문장의 If not은 '만족하지 못했을 경우(=If you are not entirely pleased with your purchase)'를 나타낸다.",
+      "classification": "P6_SENTENCE_SELECTION"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "A",
+      "explanation": "주어 Your exchange의 동사 자리로, 보기에서 (A) will be processed, (B) was processed, (C) is processing 중 하나 를 선택해야 한다. 교환(exchange)은 처리되는 대상이며, 회사 에 연락할 시 이루어질 조치이므로, 수동태 미래동사인 (A) will be processed가 정답이 된다.",
+      "classification": "P6_GRAMMAR_TENSE"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "D",
+      "explanation": "명사구 the return shipping fee를 목적어로 취하는 전치사 자 리로, 환불 배송비(the return shipping fee)와 환불되는 금액 (refunds)의 관계를 나타내는 단어가 들어가야 한다. 따라서 '~을 제 외한, ~을 뻔'이라는 의미의 (D) minus가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "D",
+      "explanation": "빈칸이 한정사 All과 명사 information 사이에 있으므로, 빈칸에는 information을 수식하는 형용사 또는 information과 복합명사를 이루는 명사가 들어갈 수 있다. 문맥상 '현재 계정에 있는 정보'라는 내용이 되어야 자연스러우므로, '기존의, 현재의'라는 뜻의 현재분사형 형용사 (D) existing이 정답이다.",
+      "classification": "P6_GRAMMAR_WORD_FORM"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "A",
+      "explanation": "계정에 로그인 하려는 시도를 할(attempting to log in to their accounts) 때 어려움을 겪을지도 모른다는 내용이 되어야 자연스럽 다. 따라서 절에서 축약된 분사구문과 쓰일 수 있는 (A) when(~할 때)이 정답이다. (B) plus는 전치사로 쓰여 빈칸에 들어갈 수 있지만, 어려움을 겪는 것과 로그인을 시도하는 것은 유사한 내용이 아니므로 문맥상 적절하지 않다. attempting이 명사 difficulty를 수식해주는 현재분사가 아니므로 부사인 (C) already는 빈칸에 들어갈 수 없다. 소유격 관계대명사 (D) whose 다음에는 '명사+동사가 와야 한다.",
+      "classification": "P6_GRAMMAR_CONJUNCTION"
+    },
+    {
+      "questionId": "138",
+      "correctAnswer": "C",
+      "explanation": "C",
+      "classification": "P6_SENTENCE_SELECTION"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "D",
+      "explanation": "빈칸이 이메일의 첫 문장이고, 뒤에서는 바르가스 씨의 채용 소식을 전하고 싶다고만(I just want to let you know that ~) 쓰여 있다. 따라서 빈칸에는 수신인들에게 전하는 인사말이 들어가야 자연스러우므로, 안부(I hope that all are well)를 전하는 (D)가 정답이다. 이메일의 수신인 모두가 새로 채용된 사람들은 아니므로 (C)는 적절하지 않다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "C",
+      "explanation": "that절의 주어 Sofia Vargas의 동사 자리이다. 바르가스 씨는 채용되는 대상이며, 두 번째 단락에서 그녀가 오늘 아침에 근무를 시작했다(Ms. Vargas started her employment with us this morning)고 했으므로, 채용이 이미 이루어졌음을 알 수 있다. 따라서 현재완료 수동태 동사인 (C) has been hired가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "D",
+      "explanation": "전치사 in의 목적어 역할을 하는 자리로, 형용사 fiscal과 어울려 쓰이는 명사를 선택해야 한다. 강력(background)은 특정 업계나 분야에서 쌓는 것이므로, fiscal과 함께 '재정 관리 (분야)'라는 의미를 완성하는 (D) management(관리, 운영)가 정답이다. (C) running도 '운영, 경영'이라는 뜻으로 쓰일 수 있지만, 분야가 아닌 운영되는 방식이나 행위를 가리키며 smooth(순조로운), day-to-day(그날그날의)와 같은 형용사와 어울려 쓰인다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "A",
+      "explanation": "명령문의 동사 introduce의 목적어 역할을 하는 자리이다. 바르가스 씨에게 소개할 대상은 명령문의 생략된 주어인 you와 동일한 사람이 되어야 자연스럽다. 따라서 2인칭 재귀대명사 (A) yourself가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "D",
+      "explanation": "후원의 주체로 나열된 the JAMTO와 the hotels and businesses\r\n를 적절히 연결해 주는 전치사를 선택해야 한다. 따라서 '~와 함께,\r\n~에 덧붙여'라는 의미의 (D) along with가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "A",
+      "explanation": "전단 전반에서 현재시제를 사용하여 신규 프로그램에 대해 설명한 후,\r\n빈칸이 포함된 문장에서 이 프로그램의 이용을 권장하고 있다. 즉, 글\r\n을 쓰는 동시에 초대하는 행위를 하고 있으므로, 빈칸에도 현재시제가\r\n쓰여야 자연스럽다. 따라서 (A) invite가 정답이다. (C) may invite\r\n는 가능성을 시사하므로, 실제로 초대하는 표현으로는 적절하지 않다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "D",
+      "explanation": "문장의 주어인 attractions를 적절히 묘사하는 형용사를 선택해야 한\r\n다. 동사 include 뒤에 나열된 다양한 명소가 무료 입장권 제공 프로\r\n그램을 통해 방문할 수 있는 곳이라고 볼 수 있다. 따라서 빈칸에 포함\r\n된 부분은 '참여하는 명소' 또는 '이용 가능한 명소'라는 의미가 되어야\r\n자연스러우므로, (D) Participating이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞에서 입장권을 받는 방법(To obtain your pass, visit our\r\nWeb site ~ or stop by any JAMTO office) 및 유효인원(One\r\npass is valid for up to five people)에 대해 안내했으므로, 빈칸\r\n에는 입장권과 관련된 추가 설명이나 전체 내용을 마무리하는 문장\r\n이 들어가야 자연스럽다. 따라서 보기 중 입장권의 유효기간을 언급한\r\n(B)가 정답이다. 첫 번째 단락에서 무료 입장(free entry)임을 밝혔\r\n으므로, 지불 방법을 언급한 (D)는 정답이 될 수 없다.",
+      "classification": "P6_TEXTUAL"
+    }
+  ]
+}

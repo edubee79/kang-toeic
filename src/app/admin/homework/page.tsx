@@ -1,356 +1,604 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, query, orderBy, getDocs, where } from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, Search, Calendar, ChevronLeft, Filter, Download, User as UserIcon } from "lucide-react";
-import { useRouter } from 'next/navigation';
-import { cn } from "@/lib/utils";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import * as XLSX from 'xlsx';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Progress } from "@/components/ui/progress";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/ui/dialog";
+import { Loader2, Download, Search, ChevronRight, CheckCircle2, XCircle, AlertCircle, ArrowLeft, Trash2, LayoutDashboard, Grid } from "lucide-react";
+import Link from 'next/link';
+import { format } from 'date-fns';
 
-interface StudentStats {
-    user: any;
-    voca: number;
-    shadowing: number;
-    lc2: number;
-    grammar: number;
-    lastActive: any;
-    logs: any[];
+interface Student {
+    id: string; // Document ID (usually same as userId but let's be safe)
+    userId: string;
+    userName: string;
+    className: string;
 }
 
-export default function HomeworkResults() {
-    const router = useRouter();
-    const [loading, setLoading] = useState(true);
+interface Assignment {
+    id: string;
+    type: string;
+    typeLabel?: string;
+    detail: string;
+    createdAt: any;
+}
+
+interface Result {
+    studentId: string;
+    type: string;
+    detail: string; // unit
+    score: number;
+    total?: number;
+    timestamp: any;
+}
+
+interface StudentStats {
+    totalCompleted: number;
+    totalRate: number;
+    recentRate: number; // Last 5
+    missedCount: number;
+    status: 'good' | 'warning' | 'danger';
+}
+
+export default function HomeworkResultsPage() {
+    const [loading, setLoading] = useState(false);
     const [classes, setClasses] = useState<{ name: string }[]>([]);
-    const [selectedClass, setSelectedClass] = useState<string>('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [studentStats, setStudentStats] = useState<StudentStats[]>([]);
-    const [filteredStats, setFilteredStats] = useState<StudentStats[]>([]);
+    const [selectedClass, setSelectedClass] = useState<string>('');
+    const [currentView, setCurrentView] = useState<'dashboard' | 'matrix'>('dashboard');
+    const [sortBy, setSortBy] = useState<'userName' | 'recentRate' | 'totalRate' | 'missedCount'>('userName');
+    const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+
+    // Data State
+    const [students, setStudents] = useState<Student[]>([]);
+    const [assignments, setAssignments] = useState<Assignment[]>([]);
+    const [resultsMap, setResultsMap] = useState<Record<string, Result>>({}); // key: studentId_type_detail
+
+    // Delete Dialog
+    const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+    const [userToDelete, setUserToDelete] = useState<Student | null>(null);
+    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        fetchData();
+        fetchClasses();
     }, []);
 
-    useEffect(() => {
-        filterData();
-    }, [selectedClass, searchTerm, studentStats]);
-
-    const fetchData = async () => {
-        setLoading(true);
+    const fetchClasses = async () => {
         try {
-            // 1. Fetch Classes
-            const classesQuery = query(collection(db, "Classes"), orderBy("name"));
-            const classesSnapshot = await getDocs(classesQuery);
-            const classList: { name: string }[] = [];
-            classesSnapshot.forEach((doc) => {
+            const q = query(collection(db, "Classes"), orderBy("name"));
+            const snapshot = await getDocs(q);
+            const list: { name: string }[] = [];
+            snapshot.forEach(doc => {
                 const data = doc.data();
-                if (data.name) classList.push({ name: data.name });
+                if (data.name) list.push({ name: data.name });
             });
-            setClasses(classList);
+            setClasses(list);
+        } catch (error) {
+            console.error("Error fetching classes:", error);
+        }
+    };
 
-            // 2. Fetch All Students (Approved)
-            // Note: For scalability, we might want to query by class if selected, but for now fetching all active students is fine for < 1000 users.
-            const usersQuery = query(collection(db, "Winter_Users")); //, where("status", "==", "approved"));
-            const usersSnapshot = await getDocs(usersQuery);
-            const usersMap = new Map();
+    const fetchClassData = async (className: string) => {
+        // Ensure className is valid
+        if (!className) {
+            console.error("fetchClassData called with invalid className:", className);
+            return;
+        }
 
-            usersSnapshot.forEach(doc => {
+        setLoading(true);
+        setSelectedClass(className);
+
+        try {
+
+            // 1. Fetch Students
+            const qStudents = query(
+                collection(db, "Winter_Users"),
+                where("className", "==", className)
+                // Removed orderBy("userName") to avoid creating a Composite Index manually
+            );
+            const snapStudents = await getDocs(qStudents);
+            const studentList: Student[] = [];
+            snapStudents.forEach(doc => {
                 const data = doc.data();
-                // if (data.status === 'approved') {
-                usersMap.set(data.userId, {
-                    ...data,
-                    logs: [],
-                    lastActive: null
+                studentList.push({
+                    id: doc.id,
+                    userId: data.userId,
+                    userName: data.userName,
+                    className: data.className
                 });
-                // }
             });
 
-            // 3. Fetch All Results (Optimized: Fetch recent or all? Let's fetch all for accurate aggregated stats for now)
-            // Warning: This could get heavy. Ideally we should store aggregated stats on the user document.
-            // For now, consistent with Dashboard logic.
-            const resultsSnapshot = await getDocs(query(collection(db, "Manager_Results"), orderBy("timestamp", "asc")));
+            // Client-side Sort
+            studentList.sort((a, b) => a.userName.localeCompare(b.userName));
 
-            resultsSnapshot.forEach(doc => {
-                const res = doc.data();
-                if (usersMap.has(res.studentId)) {
-                    const user = usersMap.get(res.studentId);
-                    user.logs.push(res);
-                    // Update last active
-                    if (!user.lastActive || (res.timestamp && res.timestamp > user.lastActive)) {
-                        user.lastActive = res.timestamp;
+            setStudents(studentList);
+
+            // 2. Fetch Assignments (Targeted to this class OR all)
+            // Note: Simple query for now, might need more complex filtering later
+            const qAssignments = query(
+                collection(db, "Assignments"),
+                orderBy("createdAt", "desc")
+                // We can filter by targetClass client-side or assume admins want to see recent 20 assignments
+            );
+            const snapAssignments = await getDocs(qAssignments);
+            const assignList: Assignment[] = [];
+
+            // Limit details for matrix view mainly, but need all for stats ideally?
+            // User context: "Home work monitor... overall vs recent"
+            // Let's fetch reasonably recent ones, distinct by type/detail?
+            // For now, let's keep fetching "DESC" and take top 20 for matrix, 
+            // but use maybe top 5 for recent stats.
+
+            let count = 0;
+            snapAssignments.forEach(doc => {
+                const data = doc.data();
+                // Filter: Include if targetClass is 'all', matches class, or is a weakness review for someone in this class
+                // For simplicity in matrix, let's show class-wide assignments mainly
+                if (data.targetClass === className || data.targetClass === 'all' || !data.targetClass) {
+                    if (count < 30) { // Fetch up to 30 recent assignments
+                        assignList.push({
+                            id: doc.id,
+                            type: data.type,
+                            typeLabel: data.typeLabel,
+                            detail: data.detail,
+                            createdAt: data.createdAt
+                        });
+                        count++;
                     }
                 }
             });
+            // Reverse to show oldest -> newest left to right? Or Newest first?
+            // Usually Matrix shows newest on right or left. Let's keep desc order (Newest Left)
+            setAssignments(assignList);
 
-            // 4. Calculate Stats
-            const statsList: StudentStats[] = [];
-            usersMap.forEach(user => {
-                let maxShadowSet = 0;
-                let lc2Count = 0;
-                let grammarCount = 0;
-                // Voca count from user profile mostly, or calculate from logs if needed.
-                // Dashboard used user.passedVocaDays. Let's use that if available.
-                const vocaCount = user.passedVocaDays ? user.passedVocaDays.length : 0;
+            // 3. Fetch Results
+            const qResults = query(
+                collection(db, "Manager_Results"),
+                where("className", "==", className)
+            );
+            const snapResults = await getDocs(qResults);
+            const rMap: Record<string, Result> = {};
 
-                user.logs.forEach((log: any) => {
-                    const unit = log.unit || "";
-                    if (unit.includes('Shadowing')) {
-                        const match = unit.match(/Set(\d+)/);
-                        if (match && parseInt(match[1]) > maxShadowSet) maxShadowSet = parseInt(match[1]);
-                    } else if (unit.includes('Part2') || unit.includes('LCpart2')) {
-                        lc2Count++; // Or parse set number if meaningful
-                    } else if (unit.includes('Part5') || unit.includes('Grammar')) {
-                        grammarCount++;
-                    }
-                });
-
-                statsList.push({
-                    user: user,
-                    voca: vocaCount,
-                    shadowing: maxShadowSet,
-                    lc2: lc2Count,
-                    grammar: grammarCount,
-                    lastActive: user.lastActive,
-                    logs: user.logs
-                });
-            });
-
-            // Sort by class then name
-            statsList.sort((a, b) => {
-                if (a.user.className !== b.user.className) {
-                    return (a.user.className || 'ZZZ').localeCompare(b.user.className || 'ZZZ');
+            snapResults.forEach(doc => {
+                const data = doc.data();
+                // Key: studentId + type + detail
+                const key = `${data.studentId}_${data.type}_${data.detail}`;
+                // If duplicate, keep latest? Firestore doesn't prevent dupes.
+                // Let's assume existing logic is okay, or take highest score.
+                if (!rMap[key] || rMap[key].timestamp < data.timestamp) {
+                    rMap[key] = {
+                        studentId: data.studentId,
+                        type: data.type,
+                        detail: data.unit || data.detail, // unit/detail naming inconsistency handling
+                        score: data.score,
+                        total: data.total,
+                        timestamp: data.timestamp
+                    };
                 }
-                return (a.user.userName || '').localeCompare(b.user.userName || '');
             });
-
-            setStudentStats(statsList);
+            setResultsMap(rMap);
 
         } catch (error) {
-            console.error("Error fetching admin data:", error);
+            console.error("Error fetching class data:", error);
         } finally {
             setLoading(false);
         }
     };
 
-    const filterData = () => {
-        let filtered = studentStats;
+    // --- Stats Calculation ---
+    const calculateStats = (student: Student): StudentStats => {
+        let completed = 0;
+        let recentCompleted = 0;
 
-        if (selectedClass !== 'all') {
-            filtered = filtered.filter(s => s.user.className === selectedClass);
-        }
+        // Use all fetched assignments (up to 30) for Total Rate
+        assignments.forEach(assign => {
+            const key = `${student.id}_${assign.type}_${assign.detail}`;
+            if (resultsMap[key]) {
+                completed++;
+            }
+        });
 
-        if (searchTerm) {
-            const term = searchTerm.toLowerCase();
-            filtered = filtered.filter(s =>
-                s.user.userName?.toLowerCase().includes(term) ||
-                s.user.userId?.toLowerCase().includes(term)
-            );
-        }
+        // Use ONLY top 5 recent assignments for Recent Rate
+        const recentAssignments = assignments.slice(0, 5);
+        recentAssignments.forEach(assign => {
+            const key = `${student.id}_${assign.type}_${assign.detail}`;
+            if (resultsMap[key]) {
+                recentCompleted++;
+            }
+        });
 
-        setFilteredStats(filtered);
+        const totalRate = assignments.length > 0 ? (completed / assignments.length) * 100 : 0;
+        const recentRate = recentAssignments.length > 0 ? (recentCompleted / recentAssignments.length) * 100 : 0;
+        const missedCount = assignments.length - completed;
+
+        let status: 'good' | 'warning' | 'danger' = 'good';
+        if (recentRate < 50) status = 'danger';
+        else if (recentRate < 80) status = 'warning';
+
+        return { totalCompleted: completed, totalRate, recentRate, missedCount, status };
     };
 
-    const handleExport = () => {
-        const wb = XLSX.utils.book_new();
-        const data = filteredStats.map(s => ({
-            Class: s.user.className || 'Unknown',
-            Name: s.user.userName || s.user.username,
-            ID: s.user.userId,
-            Status: s.user.status,
-            "Voca (Days)": s.voca,
-            "Part 1 (Sets)": s.shadowing,
-            "Part 2 (Sets)": s.lc2,
-            "Part 5 (Units)": s.grammar,
-            "Last Active": s.lastActive ? new Date(s.lastActive.toDate()).toLocaleString() : '-'
-        }));
+    const studentsWithStats = students.map(s => ({ ...s, stats: calculateStats(s) }));
 
-        const ws = XLSX.utils.json_to_sheet(data);
-        XLSX.utils.book_append_sheet(wb, ws, "Class_Report");
-        XLSX.writeFile(wb, `Homework_Report_${selectedClass}_${new Date().toISOString().slice(0, 10)}.xlsx`);
+    const handleSort = (field: typeof sortBy) => {
+        if (sortBy === field) {
+            setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+        } else {
+            setSortBy(field);
+            setSortOrder(field === 'userName' ? 'asc' : 'desc'); // Default to desc for rates/counts
+        }
     };
 
-    const formatDate = (timestamp: any) => {
-        if (!timestamp) return '-';
+    const sortedStudents = [...studentsWithStats].sort((a, b) => {
+        let valA: any, valB: any;
+        if (fieldIsStat(sortBy)) {
+            valA = a.stats[sortBy];
+            valB = b.stats[sortBy];
+        } else {
+            valA = a[sortBy];
+            valB = b[sortBy];
+        }
+
+        if (valA < valB) return sortOrder === 'asc' ? -1 : 1;
+        if (valA > valB) return sortOrder === 'asc' ? 1 : -1;
+        return 0;
+    });
+
+    function fieldIsStat(field: string): field is keyof StudentStats {
+        return ['recentRate', 'totalRate', 'missedCount'].includes(field);
+    }
+
+    const SortIcon = ({ field }: { field: typeof sortBy }) => {
+        if (sortBy !== field) return <AlertCircle className="w-3 h-3 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity ml-1" />;
+        return sortOrder === 'asc' ?
+            <AlertCircle className="w-3 h-3 text-indigo-400 ml-1 rotate-180" /> :
+            <AlertCircle className="w-3 h-3 text-indigo-400 ml-1" />;
+    };
+
+    // --- Delete Logic ---
+    const confirmDelete = (student: Student) => {
+        setUserToDelete(student);
+        setDeleteDialogOpen(true);
+    };
+
+    const handleDeleteUser = async () => {
+        if (!userToDelete) return;
+        setIsDeleting(true);
         try {
-            return new Date(timestamp.toDate()).toLocaleString('ko-KR', {
-                month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'
+            await deleteDoc(doc(db, "Winter_Users", userToDelete.id));
+            // Optimization: Remove locally instead of refetching all
+            setStudents(prev => prev.filter(s => s.id !== userToDelete.id));
+            setDeleteDialogOpen(false);
+            setUserToDelete(null);
+        } catch (error) {
+            console.error("Error deleting user:", error);
+            alert("삭제 중 오류가 발생했습니다.");
+        } finally {
+            setIsDeleting(false);
+        }
+    };
+
+    const handleSendPush = () => {
+        // Placeholder
+        alert("푸시 알림 기능 준비 중입니다.");
+    };
+
+    const handleExcelExport = () => {
+        import('xlsx').then(XLSX => {
+            const wb = XLSX.utils.book_new();
+
+            const data = studentsWithStats.map(student => {
+                const row: any = {
+                    '이름': student.userName,
+                    'ID': student.userId,
+                    '최근 달성률': `${Math.round(student.stats.recentRate)}%`,
+                    '전체 달성률': `${Math.round(student.stats.totalRate)}%`,
+                    '미제출': student.stats.missedCount,
+                };
+
+                assignments.forEach(assign => {
+                    const key = `${student.id}_${assign.type}_${assign.detail}`;
+                    const customKey = `${assign.detail}`;
+                    if (resultsMap[key]) {
+                        row[customKey] = resultsMap[key].score >= 0 ? resultsMap[key].score : 'Pass';
+                    } else {
+                        row[customKey] = '-';
+                    }
+                });
+                return row;
             });
-        } catch (e) { return '-'; }
+
+            const ws = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(wb, ws, "성적표");
+            XLSX.writeFile(wb, `Homework_Results_${selectedClass || 'All'}_${format(new Date(), 'yyyyMMdd')}.xlsx`);
+        });
+    };
+
+    const StatusBadge = ({ status }: { status: string }) => {
+        if (status === 'danger') return <Badge className="bg-rose-500 hover:bg-rose-600">위험 (Danger)</Badge>;
+        if (status === 'warning') return <Badge className="bg-amber-500 hover:bg-amber-600 text-black">경고 (Warning)</Badge>;
+        return <Badge className="bg-emerald-500 hover:bg-emerald-600">양호 (Good)</Badge>;
+    };
+
+    const getScoreCell = (studentId: string, assign: Assignment) => {
+        const key = `${studentId}_${assign.type}_${assign.detail}`;
+        const result = resultsMap[key];
+
+        if (!result) return <div className="text-slate-700 text-xs">-</div>;
+
+        let colorClass = "text-emerald-400";
+        if (assign.type === 'voca' && result.score < 80) colorClass = "text-rose-400";
+
+        return (
+            <div className={`font-bold ${colorClass}`}>
+                {result.score >= 0 ? result.score : <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
+            </div>
+        );
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 p-8 space-y-6">
-            {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
-                <div className="flex items-center gap-4">
-                    <Button variant="ghost" size="icon" onClick={() => router.back()} className="rounded-full hover:bg-slate-100">
-                        <ChevronLeft className="w-6 h-6 text-slate-600" />
-                    </Button>
-                    <div>
-                        <h1 className="text-3xl font-black text-slate-900 tracking-tighter">HOMEWORK MONITOR</h1>
-                        <p className="text-slate-500 font-bold text-sm mt-1">반별 숙제 진행 현황 상세 조회</p>
+        <div className="min-h-screen bg-slate-950 text-white p-6">
+            <div className="max-w-[1600px] mx-auto space-y-6">
+                {/* Header & Controls */}
+                <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6 border-b border-slate-800 pb-6">
+                    <div className="flex items-center gap-4">
+                        <Link href="/admin/dashboard">
+                            <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white">
+                                <ArrowLeft className="w-6 h-6" />
+                            </Button>
+                        </Link>
+                        <div>
+                            <h1 className="text-3xl font-black italic tracking-tighter flex items-center gap-2">
+                                <CheckCircle2 className="text-indigo-500 w-8 h-8" />
+                                HOMEWORK MONITOR
+                            </h1>
+                            <p className="text-slate-400 mt-1">실시간 과제 제출 현황 및 학생 관리 관제 센터</p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-3 bg-slate-900/50 p-2 rounded-xl border border-slate-800/50 backdrop-blur-sm">
+                        <Select value={selectedClass} onValueChange={fetchClassData}>
+                            <SelectTrigger className="w-[240px] h-12 bg-slate-950 border-slate-700 text-lg font-bold">
+                                <SelectValue placeholder="반 선택 (Select Class)" />
+                            </SelectTrigger>
+                            <SelectContent className="bg-slate-900 border-slate-700 text-white">
+                                {classes.map((cls) => (
+                                    <SelectItem key={cls.name} value={cls.name}>{cls.name}</SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
+
+                        <div className="w-[1px] bg-slate-700 h-12 mx-2"></div>
+
+                        <Button variant="outline" className="h-12 px-6 border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800" onClick={handleExcelExport}>
+                            <Download className="w-4 h-4 mr-2" /> 엑셀 다운로드
+                        </Button>
+                        <Button className="h-12 px-6 bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/20" onClick={handleSendPush}>
+                            📲 푸시 발송
+                        </Button>
                     </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-3">
-                    <div className="relative w-64">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                        <Input
-                            placeholder="이름 또는 ID 검색..."
-                            value={searchTerm}
-                            onChange={e => setSearchTerm(e.target.value)}
-                            className="pl-10 bg-slate-50 border-slate-200 focus:bg-white transition-all rounded-xl font-bold text-slate-600"
-                        />
-                    </div>
+                <Tabs value={currentView} onValueChange={(v) => setCurrentView(v as any)} className="w-full">
+                    <TabsList className="bg-slate-900 border border-slate-800 w-full justify-start h-14 p-1">
+                        <TabsTrigger value="dashboard" className="h-12 px-8 text-base font-bold data-[state=active]:bg-indigo-600 data-[state=active]:text-white transition-all">
+                            <LayoutDashboard className="w-5 h-5 mr-2" /> 종합 관제 (Overall Monitor)
+                        </TabsTrigger>
+                        <TabsTrigger value="matrix" className="h-12 px-8 text-base font-bold data-[state=active]:bg-slate-800 data-[state=active]:text-white transition-all">
+                            <Grid className="w-5 h-5 mr-2" /> 상세 내역 (Detail Matrix)
+                        </TabsTrigger>
+                    </TabsList>
 
-                    <Button onClick={handleExport} variant="outline" className="gap-2 border-slate-200 text-slate-600 hover:bg-slate-50 rounded-xl font-bold">
-                        <Download className="w-4 h-4" /> 엑셀 저장
-                    </Button>
-                </div>
-            </div>
+                    {/* Dashboard Tab */}
+                    <TabsContent value="dashboard" className="space-y-4 mt-6">
+                        <Card className="bg-slate-900 border-slate-800">
+                            <CardHeader className="flex flex-row items-center justify-between">
+                                <div>
+                                    <CardTitle>종합 학습 현황</CardTitle>
+                                    <CardDescription>최근 5개 과제 기준 달성률 및 위험군 분석</CardDescription>
+                                </div>
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="bg-rose-500/10 border-rose-500/30 text-rose-500 hover:bg-rose-500 hover:text-white transition-all font-bold"
+                                    onClick={() => {
+                                        setSortBy('totalRate');
+                                        setSortOrder('asc');
+                                    }}
+                                >
+                                    ⚠️ 숙제 미달 위험군 우선순위 정렬
+                                </Button>
+                            </CardHeader>
+                            <CardContent>
+                                {loading && <div className="py-8 text-center text-slate-500"><Loader2 className="w-8 h-8 animate-spin mx-auto mb-2" />데이터 분석 중...</div>}
+                                {!loading && selectedClass && studentsWithStats.length === 0 && <div className="py-12 text-center text-slate-500">학생 데이터가 없습니다.</div>}
 
-            {/* Class Filters */}
-            <Card className="border-none shadow-sm bg-white rounded-2xl overflow-hidden">
-                <div className="p-4 flex items-center gap-2 overflow-x-auto no-scrollbar">
-                    <Filter className="w-5 h-5 text-slate-400 mr-2 flex-shrink-0" />
-                    <button
-                        onClick={() => setSelectedClass('all')}
-                        className={cn(
-                            "px-5 py-2.5 rounded-xl text-sm font-bold whitespace-nowrap transition-all",
-                            selectedClass === 'all'
-                                ? "bg-slate-900 text-white shadow-lg shadow-slate-900/20"
-                                : "bg-slate-50 text-slate-500 hover:bg-slate-100"
-                        )}
-                    >
-                        전체 보기
-                    </button>
-                    <div className="w-px h-6 bg-slate-200 mx-2 flex-shrink-0" />
-                    {classes.map((cls) => (
-                        <button
-                            key={cls.name}
-                            onClick={() => setSelectedClass(cls.name)}
-                            className={cn(
-                                "px-5 py-2.5 rounded-xl text-sm font-bold whitespace-nowrap transition-all",
-                                selectedClass === cls.name
-                                    ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
-                                    : "bg-slate-50 text-slate-500 hover:bg-slate-100"
-                            )}
-                        >
-                            {cls.name}
-                        </button>
-                    ))}
-                </div>
-            </Card>
-
-            {/* Main Table */}
-            <Card className="border-none shadow-xl bg-white rounded-3xl overflow-hidden min-h-[500px]">
-                {loading ? (
-                    <div className="flex flex-col items-center justify-center h-[500px] gap-4">
-                        <Loader2 className="w-10 h-10 animate-spin text-indigo-500" />
-                        <p className="text-slate-400 font-bold animate-pulse">데이터를 분석하고 있습니다...</p>
-                    </div>
-                ) : (
-                    <div className="overflow-x-auto">
-                        <Table>
-                            <TableHeader className="bg-slate-50/50">
-                                <TableRow className="hover:bg-transparent border-slate-100">
-                                    <TableHead className="w-[100px] font-black text-slate-400 text-xs uppercase tracking-wider pl-6">Class</TableHead>
-                                    <TableHead className="w-[200px] font-black text-slate-400 text-xs uppercase tracking-wider">Student Info</TableHead>
-                                    <TableHead className="font-black text-emerald-500 text-xs uppercase tracking-wider text-center">Voca (Day)</TableHead>
-                                    <TableHead className="font-black text-indigo-500 text-xs uppercase tracking-wider text-center">Shadowing</TableHead>
-                                    <TableHead className="font-black text-rose-500 text-xs uppercase tracking-wider text-center">Part 2</TableHead>
-                                    <TableHead className="font-black text-blue-500 text-xs uppercase tracking-wider text-center">Part 5</TableHead>
-                                    <TableHead className="font-black text-slate-400 text-xs uppercase tracking-wider text-right pr-6">Last Active</TableHead>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {filteredStats.length === 0 ? (
-                                    <TableRow>
-                                        <TableCell colSpan={7} className="h-[400px] text-center text-slate-400 font-medium">
-                                            해당하는 학생 데이터가 없습니다.
-                                        </TableCell>
-                                    </TableRow>
-                                ) : (
-                                    filteredStats.map((stat) => (
-                                        <TableRow
-                                            key={stat.user.userId}
-                                            className="group hover:bg-slate-50/80 transition-colors border-slate-100 cursor-pointer"
-                                            onClick={() => router.push(`/admin/results/${stat.user.id || stat.user.userId}`)}
-                                        >
-                                            <TableCell className="pl-6">
-                                                <Badge variant="outline" className="bg-slate-100 text-slate-600 border-slate-200 font-bold">
-                                                    {stat.user.className || '미배정'}
-                                                </Badge>
-                                            </TableCell>
-                                            <TableCell>
-                                                <div className="flex items-center gap-3">
-                                                    <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 font-bold text-xs uppercase">
-                                                        {stat.user.userName?.slice(0, 1) || <UserIcon className="w-4 h-4" />}
+                                {!loading && studentsWithStats.length > 0 && (
+                                    <Table>
+                                        <TableHeader className="bg-slate-950">
+                                            <TableRow className="border-slate-800">
+                                                <TableHead
+                                                    className="w-[150px] cursor-pointer hover:text-indigo-400 group transition-colors"
+                                                    onClick={() => handleSort('userName')}
+                                                >
+                                                    <div className="flex items-center">
+                                                        학생 정보
+                                                        <SortIcon field="userName" />
                                                     </div>
-                                                    <div>
-                                                        <p className="font-bold text-slate-900">{stat.user.userName}</p>
-                                                        <p className="text-xs text-slate-400 font-mono">{stat.user.userId}</p>
+                                                </TableHead>
+                                                <TableHead className="w-[120px]">상태 (Risk)</TableHead>
+                                                <TableHead
+                                                    className="cursor-pointer hover:text-indigo-400 group transition-colors"
+                                                    onClick={() => handleSort('recentRate')}
+                                                >
+                                                    <div className="flex items-center">
+                                                        <div className="flex flex-col">
+                                                            <span>최근 과제 진행률</span>
+                                                            <span className="text-[10px] font-normal text-slate-400">Latest 5 Assignments</span>
+                                                        </div>
+                                                        <SortIcon field="recentRate" />
                                                     </div>
-                                                </div>
-                                            </TableCell>
-                                            <TableCell className="text-center">
-                                                <div className="inline-flex flex-col items-center">
-                                                    <span className="text-lg font-black text-emerald-600">{stat.voca}</span>
-                                                    <span className="text-[10px] text-emerald-400 font-bold uppercase">Days</span>
-                                                </div>
-                                            </TableCell>
-                                            <TableCell className="text-center">
-                                                {stat.shadowing > 0 ? (
-                                                    <div className="inline-flex flex-col items-center">
-                                                        <span className="text-lg font-black text-indigo-600">Set {stat.shadowing}</span>
-                                                        <span className="text-[10px] text-indigo-400 font-bold uppercase">Max</span>
+                                                </TableHead>
+                                                <TableHead
+                                                    className="cursor-pointer hover:text-indigo-400 group transition-colors"
+                                                    onClick={() => handleSort('totalRate')}
+                                                >
+                                                    <div className="flex items-center">
+                                                        <div className="flex flex-col">
+                                                            <span>전체 과제 진행률</span>
+                                                            <span className="text-[10px] font-normal text-slate-400">Total Progress ({assignments.length})</span>
+                                                        </div>
+                                                        <SortIcon field="totalRate" />
                                                     </div>
-                                                ) : <span className="text-slate-300">-</span>}
-                                            </TableCell>
-                                            <TableCell className="text-center">
-                                                {stat.lc2 > 0 ? (
-                                                    <div className="inline-flex flex-col items-center">
-                                                        <span className="text-lg font-black text-rose-600">{stat.lc2}</span>
-                                                        <span className="text-[10px] text-rose-400 font-bold uppercase">Sets</span>
+                                                </TableHead>
+                                                <TableHead
+                                                    className="w-[100px] text-center cursor-pointer hover:text-indigo-400 group transition-colors"
+                                                    onClick={() => handleSort('missedCount')}
+                                                >
+                                                    <div className="flex items-center justify-center">
+                                                        미제출
+                                                        <SortIcon field="missedCount" />
                                                     </div>
-                                                ) : <span className="text-slate-300">-</span>}
-                                            </TableCell>
-                                            <TableCell className="text-center">
-                                                {stat.grammar > 0 ? (
-                                                    <div className="inline-flex flex-col items-center">
-                                                        <span className="text-lg font-black text-blue-600">{stat.grammar}</span>
-                                                        <span className="text-[10px] text-blue-400 font-bold uppercase">Units</span>
-                                                    </div>
-                                                ) : <span className="text-slate-300">-</span>}
-                                            </TableCell>
-                                            <TableCell className="text-right pr-6">
-                                                <span className={cn(
-                                                    "text-xs font-bold",
-                                                    stat.lastActive ? "text-slate-500" : "text-slate-300"
-                                                )}>
-                                                    {formatDate(stat.lastActive)}
-                                                </span>
-                                            </TableCell>
-                                        </TableRow>
-                                    ))
+                                                </TableHead>
+                                                <TableHead className="w-[100px] text-right">관리</TableHead>
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody>
+                                            {sortedStudents.map(student => (
+                                                <TableRow key={student.id} className="border-slate-800 hover:bg-slate-800/50">
+                                                    <TableCell>
+                                                        <Link href={`/admin/results/${student.id}`} className="group">
+                                                            <div className="font-bold text-base group-hover:text-indigo-400 group-hover:underline decoration-indigo-500/50 underline-offset-4 transition-colors">
+                                                                {student.userName}
+                                                            </div>
+                                                            <div className="text-xs text-slate-500 group-hover:text-indigo-500/70">{student.userId}</div>
+                                                        </Link>
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        <StatusBadge status={student.stats.status} />
+                                                    </TableCell>
+                                                    <TableCell className="w-[30%]">
+                                                        <div className="flex items-center gap-3">
+                                                            <Progress value={student.stats.recentRate} className={`h-3 w-full ${student.stats.recentRate < 50 ? 'bg-rose-950' : 'bg-slate-950'}`} indicatorClassName={student.stats.recentRate < 50 ? 'bg-rose-500' : student.stats.recentRate < 80 ? 'bg-amber-500' : 'bg-emerald-500'} />
+                                                            <span className={`font-mono font-bold w-12 text-right ${student.stats.recentRate < 50 ? 'text-rose-500' : 'text-slate-200'}`}>{Math.round(student.stats.recentRate)}%</span>
+                                                        </div>
+                                                    </TableCell>
+                                                    <TableCell className="w-[30%]">
+                                                        <div className="flex items-center gap-3">
+                                                            <Progress value={student.stats.totalRate} className="h-3 w-full bg-slate-950" indicatorClassName="bg-indigo-500" />
+                                                            <span className="font-mono font-bold w-12 text-right text-slate-400">{Math.round(student.stats.totalRate)}%</span>
+                                                        </div>
+                                                    </TableCell>
+                                                    <TableCell className="text-center">
+                                                        {student.stats.missedCount > 0 ? (
+                                                            <Badge variant="outline" className="border-rose-500/30 text-rose-500">{student.stats.missedCount}건</Badge>
+                                                        ) : (
+                                                            <Badge variant="outline" className="border-emerald-500/30 text-emerald-500 text-xs">완료</Badge>
+                                                        )}
+                                                    </TableCell>
+                                                    <TableCell className="text-right">
+                                                        <Button variant="ghost" size="sm" className="text-slate-500 hover:text-rose-500 hover:bg-rose-500/10" onClick={() => confirmDelete(student)}>
+                                                            <Trash2 className="w-4 h-4" />
+                                                        </Button>
+                                                    </TableCell>
+                                                </TableRow>
+                                            ))}
+                                        </TableBody>
+                                    </Table>
                                 )}
-                            </TableBody>
-                        </Table>
-                    </div>
-                )}
-            </Card>
+                            </CardContent>
+                        </Card>
+                    </TabsContent>
+
+                    {/* Matrix Tab (Existing View) */}
+                    <TabsContent value="matrix" className="mt-6">
+                        <Card className="bg-slate-900 border-slate-800 overflow-hidden">
+                            <CardHeader>
+                                <CardTitle className="flex justify-between">
+                                    <span>상세 제출 내역</span>
+                                    {assignments.length > 20 && <span className="text-sm text-amber-500 font-normal">* 최근 30개 과제만 표시됩니다.</span>}
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-0 overflow-x-auto">
+                                {!loading && students.length > 0 && (
+                                    <Table>
+                                        <TableHeader className="bg-slate-950">
+                                            <TableRow className="border-slate-800 hover:bg-slate-950">
+                                                <TableHead className="w-[120px] font-bold text-white bg-slate-950 sticky left-0 z-20">이름</TableHead>
+                                                {assignments.map(assign => (
+                                                    <TableHead key={assign.id} className="text-center min-w-[80px] p-2">
+                                                        <div className="text-[10px] text-slate-500">{format(assign.createdAt.toDate(), 'MM/dd')}</div>
+                                                        <div className="font-bold text-xs text-slate-200 truncate max-w-[80px]" title={assign.detail}>{assign.detail}</div>
+                                                    </TableHead>
+                                                ))}
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody>
+                                            {sortedStudents.map(student => (
+                                                <TableRow key={student.id} className="border-slate-800 hover:bg-slate-800/30">
+                                                    <TableCell className="font-bold text-white bg-slate-900 sticky left-0 z-10 border-r border-slate-800">
+                                                        <Link href={`/admin/results/${student.id}`} className="hover:text-indigo-400 hover:underline decoration-indigo-500/50 underline-offset-4">
+                                                            {student.userName}
+                                                        </Link>
+                                                    </TableCell>
+                                                    {assignments.map(assign => (
+                                                        <TableCell key={assign.id} className="text-center p-2 border-r border-slate-800/50">
+                                                            {getScoreCell(student.id, assign)}
+                                                        </TableCell>
+                                                    ))}
+                                                </TableRow>
+                                            ))}
+                                        </TableBody>
+                                    </Table>
+                                )}
+                            </CardContent>
+                        </Card>
+                    </TabsContent>
+                </Tabs>
+
+                {/* Delete Confirmation Dialog */}
+                <Dialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+                    <DialogContent className="bg-slate-900 border-rose-500/20 text-white">
+                        <DialogHeader>
+                            <DialogTitle className="text-rose-500 flex items-center gap-2">
+                                <Trash2 className="w-5 h-5" />
+                                학생 삭제 확인
+                            </DialogTitle>
+                            <DialogDescription className="text-slate-300">
+                                <strong>{userToDelete?.userName}</strong> 학생을 영구적으로 삭제하시겠습니까?
+                                <br />
+                                <span className="text-xs text-rose-400 mt-2 block">
+                                    * 이 작업은 되돌릴 수 없으며, 모든 성적 및 계정 정보가 삭제됩니다.
+                                </span>
+                            </DialogDescription>
+                        </DialogHeader>
+                        <DialogFooter>
+                            <Button variant="ghost" onClick={() => setDeleteDialogOpen(false)}>취소</Button>
+                            <Button
+                                onClick={handleDeleteUser}
+                                className="bg-rose-600 hover:bg-rose-500"
+                                disabled={isDeleting}
+                            >
+                                {isDeleting ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Trash2 className="w-4 h-4 mr-2" />}
+                                영구 삭제
+                            </Button>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
+            </div>
         </div>
     );
 }

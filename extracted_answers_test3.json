@@ -1,0 +1,117 @@
+{
+  "testId": 3,
+  "answers": [
+    {
+      "questionId": "131",
+      "correctAnswer": "A",
+      "translation": "지명된 회의의 의제에 회사에서의 2년을 끝마친 폴 콜린스의 연설이 있다고 나와있다.",
+      "explanation": "빈칸 앞 문장의 내용에서 회사에서의 2년을 끝마친 폴 콜린스의 연설이 있다고 했으므로, 빈칸에는 연설의 종류를 나타내는 명사인 (A) 'introduction'이 적절하다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "D",
+      "translation": "최근 파트너십 관계가 종료되었기 때문에, 과거 5년간 일했던 현재 위치에 대체자를 찾고 있다.",
+      "explanation": "since 뒤에 완전한 절이 왔으므로 접속사 자리가 필요하다. 과거 5년간 일했던 현재 위치에 대체자를 찾고 있다는 의미가 되어야 하므로 (D) has been working이 알맞다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "C",
+      "translation": "그녀는 2월 22일에 떠날 예정이지만 회사가 그녀를 위해 마지막 날짜를 처리할 것이라고 썼습니다.",
+      "explanation": "뒤 문장에는 2월 22일에 떠날 예정이지만, 회사가 그녀를 위해 마지막 날짜를 처리할 것이라고 했으므로, 회사의 유연성을 나타내는 형용사인 (C) alternative가 적절하다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "(B)",
+      "translation": "어쩌면 모든 훌륭한 이력서에 연락을 취할 것입니다.",
+      "explanation": "빈칸 앞에는 코리 퍼레이터를 임명한다고 했다. (B) 어쩌면 모든 훌륭한 이력서에 연락을 취할 것입니다.",
+      "classification": "P6_SENTENCE_INSERT"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "A",
+      "translation": "매뉴얼 플롯킨이 제작한 집으로 판매될 여러 부동산을 알 수 있습니다.",
+      "explanation": "빈칸 앞에는 수동의 의미인 Manuel Plottkin 소유가 있고, 뒤에 회사 이름이 있으므로, 직접 '소유자'라는 뜻이 되어야 하므로 (A) owner가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "C",
+      "translation": "몇몇 사람들은 그들을 직접 방문하지 않고 온라인으로 소통하기를 원합니다.",
+      "explanation": "빈칸 뒤에는 온라인으로 소통하기를 원한다고 했으므로 전자적인 방식으로 정보를 보여주는 (C) report가 적절하다.",
+      "classification": "P6_CONNECTING_WORD"
+    },
+    {
+      "questionId": "137",
+      "correctAnswer": "(A)",
+      "translation": "그것은 지역 사회 학교를 위한 교통편을 제공합니다.",
+      "explanation": "빈칸 앞에는 그의 직업, 서비스, 교육, 및 활동 등을 칭찬한다고 했으므로 지역 학교를 위한 교통편을 제공할 것 같다는 내용인 (A)가 적절하다.",
+      "classification": "P6_SENTENCE_INSERT"
+    },
+    {
+      "questionId": "138",
+      "correctAnswer": "A",
+      "translation": "본 시리즈는 이익을 분배함으로써 자금의 일부를 할당합니다.",
+      "explanation": "동사 distribute는 ‘분배하다’라는 의미로, 자금의 일부를 할당한다는 문맥에 적절하다. (B) maximize는 ‘최대화하다’, (C) segment는 ‘분할하다’, (D) invest는 ‘투자하다’라는 의미이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "A",
+      "translation": "배경 자료 목록을 확인하십시오.",
+      "explanation": "(A)가 주어진 문맥에 가장 적절하다. 강연의 앞부분의 슬라이드와 함께 제공될 ‘슬라이드 발표’라는 강의 복잡성을 덜어줄 수 있는 (C) presentation보다 더 적합하다. (B) presentation은 자료 목록 앞에 올 수 없으며, (D)는 강의에 적절하지 않다.",
+      "classification": "P6_SENTENCE_INSERT"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "B",
+      "translation": "저는 이 프로젝트에 대한 제안을 받기 시작했습니다.",
+      "explanation": "빈칸 앞 문장에서 의뢰 받은 일과 슬라이드 발표라는 표현을 통해, 발표 슬라이드는 제안을 받기 시작했다는 (B)가 적절하다. (This series provides only supplemental advice2)했으므로, 부가적인 조언을 제공한다는 진술이 맥락에 맞다.",
+      "classification": "P6_SENTENCE_INSERT"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "A",
+      "translation": "행사 운영에 참여한 자원 봉사자에게 제공되는 식사를 상환해 드립니다.",
+      "explanation": "문맥상 ‘상환하다’라는 의미의 동사 reimburse가 적절하다. (B) supplement는 ‘보충하다’, (C) donate는 ‘기부하다’, (D) play는 ‘(역할을) 하다’라는 의미이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "A",
+      "translation": "해고, 이사, 퇴사, when 등의 부재 사유가 들어갈 확률이 높다.",
+      "explanation": "문맥상 ‘상담’이라는 의미의 명사 consulting이 적절하다. (B) list는 ‘목록’, (C) rate는 ‘비율’, (D) follow는 ‘~을 따르다’라는 의미이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "B",
+      "translation": "그것에 대해 더 일찍 알게 되었다면 좋았을 것입니다.",
+      "explanation": "뒷 문장에 의료 서비스 제공과 관련해서 겪었던 어려움에 대한 후회스러운 내용이 이어지므로, 유감스러운 감정을 나타내는 (B)가 문맥상 적절하다.",
+      "classification": "P6_SENTENCE_INSERT"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "D",
+      "translation": "should be offering이 정답입니다.",
+      "explanation": "문맥상 ‘제공해야 한다’라는 의미의 should be offering이 적절하다. (A) offer는 ‘제공하다’, (B) offered는 ‘제공되었다’, (C) offering은 ‘제공’이라는 의미이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "A",
+      "translation": "문맥상 적절한 접속 부사로 After 등이 적절합니다.",
+      "explanation": "문맥상 인과관계를 나타내는 접속부사 After가 적절하다. (B) On the way는 ‘~로 가는 중에’, (C) On the other hand는 ‘반면에’라는 의미이다.",
+      "classification": "P6_CONNECTING_WORD"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "D",
+      "translation": "comfortable의 문맥적 의미로 적절합니다.",
+      "explanation": "문맥상 ‘편안한’이라는 의미의 형용사 comfortable이 적절하다. (A) detail은 ‘세부 사항’, (B) eventful는 ‘다사다난한’, (C) profitable은 ‘수익성이 있는’이라는 의미이다.",
+      "classification": "P6_VOCABULARY"
+    }
+  ]
+}

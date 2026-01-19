@@ -10,10 +10,14 @@ import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { Mic2, Headphones, BookOpen, PenSquare, ArrowRight, Shield, Lock, Target, TrendingUp, AlertTriangle, Zap } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { cn } from "@/lib/utils";
+
+import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Dashboard() {
     const [user, setUser] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+    const [featureAccess, setFeatureAccess] = useState<FeatureAccess | null>(null);
     const [stats, setStats] = useState({
         shadowing: 0,
         lc2: 0,
@@ -30,10 +34,22 @@ export default function Dashboard() {
         }
         const parsedUser = JSON.parse(userData);
         setUser(parsedUser);
-        fetchStats(parsedUser.userId);
+
+        const initData = async () => {
+            if (parsedUser.userId) {
+                await fetchStats(parsedUser.userId);
+            }
+            const access = await getFeatureAccess();
+            setFeatureAccess(access);
+            setLoading(false);
+        };
+
+        initData();
     }, [router]);
 
     const fetchStats = async (userId: string) => {
+        if (!userId) return;
+
         try {
             const q = query(
                 collection(db, "Manager_Results"),
@@ -61,13 +77,6 @@ export default function Dashboard() {
                 }
             });
 
-            // Voca data is usually in user object directly in the legacy app
-            // For now, re-reading user from local storage logic (it was passedVocaDays.length)
-            // Wait, in fetchRealtimeReport (index.html), voca came from user object.
-            // We need to re-fetch user doc to get latest voca? Or just use what we have?
-            // index.html said: const vocaCount = user.passedVocaDays ? user.passedVocaDays.length : 0;
-            // We already parsedUser.
-
             const userData = JSON.parse(localStorage.getItem('toeic_user') || '{}');
             const vocaCount = userData.passedVocaDays ? userData.passedVocaDays.length : 0;
 
@@ -79,14 +88,50 @@ export default function Dashboard() {
             });
         } catch (error) {
             console.error("Error fetching stats:", error);
-        } finally {
-            setLoading(false);
         }
     };
 
     if (loading) {
         return <div className="min-h-screen flex items-center justify-center text-slate-500 font-bold animate-pulse">데이터 로딩 중...</div>;
     }
+
+    const renderPracticeCard = (id: keyof FeatureAccess, href: string, title: string, subtitle: string, color: string) => {
+        const isLocked = featureAccess && !featureAccess[id];
+
+        const cardContent = (
+            <Card className={cn(
+                "group h-full bg-slate-800 border-slate-700 transition-all cursor-pointer overflow-hidden relative p-6",
+                isLocked ? "opacity-50 grayscale cursor-not-allowed" : `hover:border-${color}-500/50 hover:bg-slate-800/80`
+            )}>
+                <div className={cn(
+                    "absolute right-0 top-0 w-24 h-24 rounded-full blur-2xl transition-all",
+                    `bg-${color}-500/10 group-hover:bg-${color}-500/20`
+                )}></div>
+                <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-1">
+                        <p className={cn("font-bold text-xs uppercase tracking-widest", `text-${color}-400`)}>{id.replace('_', ' ').toUpperCase()}</p>
+                        {isLocked && <Lock className="w-4 h-4 text-slate-500" />}
+                    </div>
+                    <h4 className="text-xl font-black text-white mb-4">{title}</h4>
+                    <div className="flex justify-between items-center text-xs text-slate-500 font-medium">
+                        <span>{subtitle}</span>
+                        {!isLocked && <ArrowRight className={cn("w-5 h-5 transition-colors", `text-slate-600 group-hover:text-${color}-400`)} />}
+                        {isLocked && <span className="bg-slate-900/50 px-2 py-0.5 rounded text-[10px] text-slate-600 border border-slate-700 italic">Locked by Admin</span>}
+                    </div>
+                </div>
+            </Card>
+        );
+
+        if (isLocked) {
+            return <div key={id}>{cardContent}</div>;
+        }
+
+        return (
+            <Link href={href} key={id}>
+                {cardContent}
+            </Link>
+        );
+    };
 
     const isPending = user?.status === 'pending';
 
@@ -154,29 +199,48 @@ export default function Dashboard() {
 
             <h3 className="text-xl font-black text-slate-500 mb-4 border-b border-slate-800 pb-2">기초 학습 & 과제</h3>
 
-            <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 ${isPending ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 ${isPending ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
                 <Link href="/homework/voca">
-                    <Card className="group bg-slate-800 border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
+                    <Card className="group bg-slate-800 border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6 h-full">
                         <div className="absolute right-0 top-0 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
-                        <div className="relative z-10 flex justify-between items-center">
+                        <div className="relative z-10 flex flex-col justify-between h-full">
                             <div>
                                 <p className="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">Vocabulary</p>
                                 <h4 className="text-2xl font-black text-white italic">보카 (단어장)</h4>
                             </div>
-                            <ArrowRight className="text-slate-600 group-hover:text-emerald-400 w-6 h-6 transition-colors" />
+                            <div className="flex justify-end mt-4">
+                                <ArrowRight className="text-slate-600 group-hover:text-emerald-400 w-6 h-6 transition-colors" />
+                            </div>
                         </div>
                     </Card>
                 </Link>
 
                 <Link href="/homework/part5">
-                    <Card className="group bg-slate-800 border-slate-700 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
+                    <Card className="group bg-slate-800 border-slate-700 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6 h-full">
                         <div className="absolute right-0 top-0 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
-                        <div className="relative z-10 flex justify-between items-center">
+                        <div className="relative z-10 flex flex-col justify-between h-full">
                             <div>
                                 <p className="text-blue-400 font-bold text-xs uppercase tracking-widest mb-1">Part 5 수업 숙제</p>
                                 <h4 className="text-2xl font-black text-white italic">문법 미션 (Grammar)</h4>
                             </div>
-                            <ArrowRight className="text-slate-600 group-hover:text-blue-400 w-6 h-6 transition-colors" />
+                            <div className="flex justify-end mt-4">
+                                <ArrowRight className="text-slate-600 group-hover:text-blue-400 w-6 h-6 transition-colors" />
+                            </div>
+                        </div>
+                    </Card>
+                </Link>
+
+                <Link href="/homework/part1">
+                    <Card className="group bg-slate-800 border-slate-700 hover:border-violet-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6 h-full">
+                        <div className="absolute right-0 top-0 w-24 h-24 bg-violet-500/10 rounded-full blur-2xl group-hover:bg-violet-500/20 transition-all"></div>
+                        <div className="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <p className="text-violet-400 font-bold text-xs uppercase tracking-widest mb-1">Dictation</p>
+                                <h4 className="text-2xl font-black text-white italic">쉐도잉 연습법</h4>
+                            </div>
+                            <div className="flex justify-end mt-4">
+                                <ArrowRight className="text-slate-600 group-hover:text-violet-400 w-6 h-6 transition-colors" />
+                            </div>
                         </div>
                     </Card>
                 </Link>
@@ -185,97 +249,14 @@ export default function Dashboard() {
             <h3 className="text-xl font-black text-slate-500 mt-8 mb-4 border-b border-slate-800 pb-2">파트별 실전 훈련</h3>
 
             <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ${isPending ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
-                {/* Part 1 */}
-                <Link href="/homework/part1">
-                    <Card className="group h-full bg-slate-800 border-slate-700 hover:border-indigo-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
-                        <div className="absolute right-0 top-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-all"></div>
-                        <div className="relative z-10">
-                            <p className="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-1">Part 1</p>
-                            <h4 className="text-xl font-black text-white mb-4">사진 묘사 (쉐도잉)</h4>
-                            <div className="flex justify-end">
-                                <ArrowRight className="text-slate-600 group-hover:text-indigo-400 w-6 h-6 transition-colors" />
-                            </div>
-                        </div>
-                    </Card>
-                </Link>
-
-                {/* Part 2 */}
-                <Link href="/homework/part2">
-                    <Card className="group h-full bg-slate-800 border-slate-700 hover:border-rose-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
-                        <div className="absolute right-0 top-0 w-24 h-24 bg-rose-500/10 rounded-full blur-2xl group-hover:bg-rose-500/20 transition-all"></div>
-                        <div className="relative z-10">
-                            <p className="text-rose-400 font-bold text-xs uppercase tracking-widest mb-1">Part 2</p>
-                            <h4 className="text-xl font-black text-white mb-4">질의 응답 (청취)</h4>
-                            <div className="flex justify-end">
-                                <ArrowRight className="text-slate-600 group-hover:text-rose-400 w-6 h-6 transition-colors" />
-                            </div>
-                        </div>
-                    </Card>
-                </Link>
-
-                {/* Part 3 */}
-                <Link href="/homework/part3">
-                    <Card className="group h-full bg-slate-800 border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
-                        <div className="absolute right-0 top-0 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
-                        <div className="relative z-10">
-                            <p className="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">Part 3</p>
-                            <h4 className="text-xl font-black text-white mb-4">짧은 대화 (실전)</h4>
-                            <div className="flex justify-end">
-                                <ArrowRight className="text-slate-600 group-hover:text-emerald-400 w-6 h-6 transition-colors" />
-                            </div>
-                        </div>
-                    </Card>
-                </Link>
-
-                {/* Part 4 */}
-                <Link href="/homework/part4">
-                    <Card className="group h-full bg-slate-800 border-slate-700 hover:border-amber-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
-                        <div className="absolute right-0 top-0 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all"></div>
-                        <div className="relative z-10">
-                            <p className="text-amber-400 font-bold text-xs uppercase tracking-widest mb-1">Part 4</p>
-                            <h4 className="text-xl font-black text-white mb-4">설명문 (실전)</h4>
-                            <div className="flex justify-end">
-                                <ArrowRight className="text-slate-600 group-hover:text-amber-400 w-6 h-6 transition-colors" />
-                            </div>
-                        </div>
-                    </Card>
-                </Link>
-
-                {/* Part 5 */}
-                <Link href="/part5">
-                    <Card className="group h-full bg-slate-800 border-slate-700 hover:border-violet-500/50 hover:bg-slate-800/80 transition-all cursor-pointer overflow-hidden relative p-6">
-                        <div className="absolute right-0 top-0 w-24 h-24 bg-violet-500/10 rounded-full blur-2xl group-hover:bg-violet-500/20 transition-all"></div>
-                        <div className="relative z-10">
-                            <p className="text-violet-400 font-bold text-xs uppercase tracking-widest mb-1">Part 5</p>
-                            <h4 className="text-xl font-black text-white mb-4">단문 빈칸 (실전)</h4>
-                            <div className="flex justify-end">
-                                <ArrowRight className="text-slate-600 group-hover:text-violet-400 w-6 h-6 transition-colors" />
-                            </div>
-                        </div>
-                    </Card>
-                </Link>
-
-                {/* Part 6 (Disabled) */}
-                <Card className="bg-slate-900/50 border-slate-800 relative p-6 opacity-60">
-                    <div className="relative z-10">
-                        <p className="text-slate-600 font-bold text-xs uppercase tracking-widest mb-1">Part 6</p>
-                        <h4 className="text-xl font-black text-slate-500 mb-4">장문 빈칸 (준비중)</h4>
-                        <div className="flex justify-end">
-                            <Lock className="text-slate-700 w-6 h-6" />
-                        </div>
-                    </div>
-                </Card>
-
-                {/* Part 7 (Disabled) */}
-                <Card className="bg-slate-900/50 border-slate-800 relative p-6 opacity-60">
-                    <div className="relative z-10">
-                        <p className="text-slate-600 font-bold text-xs uppercase tracking-widest mb-1">Part 7</p>
-                        <h4 className="text-xl font-black text-slate-500 mb-4">독해 (준비중)</h4>
-                        <div className="flex justify-end">
-                            <Lock className="text-slate-700 w-6 h-6" />
-                        </div>
-                    </div>
-                </Card>
+                {renderPracticeCard('part1', '/homework/part1-real', '사진 묘사 (실전)', 'Part 1 Real Test', 'indigo')}
+                {renderPracticeCard('part2', '/homework/part2', '질의 응답 (청취)', 'Part 2 Listening', 'rose')}
+                {renderPracticeCard('part3', '/homework/part3', '짧은 대화 (실전)', 'Part 3 Practical', 'emerald')}
+                {renderPracticeCard('part4', '/homework/part4', '설명문 (실전)', 'Part 4 Practical', 'amber')}
+                {renderPracticeCard('part5', '/part5', '단문 빈칸 (실전)', 'Part 5 Practical', 'violet')}
+                {renderPracticeCard('part6', '/homework/part6', '장문 빈칸 (실전)', 'Part 6 Practical', 'cyan')}
+                {renderPracticeCard('part7', '/homework/part7', '독해 - 단일지문', 'Part 7 Single', 'orange')}
+                {renderPracticeCard('part7_double', '/homework/part7-double', '독해 - 이중지문', 'Part 7 Double/Triple', 'pink')}
             </div>
         </div>
     );

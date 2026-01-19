@@ -1,0 +1,119 @@
+{
+  "testId": 2,
+  "answers": [
+    {
+      "questionId": "131",
+      "correctAnswer": "C",
+      "explanation": "주어인 the game을 적절히 묘사하는 형용사를 선택해야 한다.\n앞 문장에서 고객 시범 테스트 결과 비디오 게임 출시를 연기하기\n(to postpone the launch)로 결정했다고 했으므로, 빈칸을 포\n함한 부분은 부정적인 결과를 나타내야 문맥상 자연스럽다. 따라\n서 less와 함께 '덜 매력적인, 덜 흥미로운'이라는 의미를 완성하는\n(C) appealing이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "D",
+      "explanation": "동사구 will introduce의 목적어 역할을 하는 명사 자리로, 빈칸을\n수식하는 several과 수가 일치하는 복수명사가 들어가야 한다. 따라서 (D) modifications(수정, 변경)가 정답이다. (B) modifies는 동\n사, (C) modifying은 동명사/현재분사로 품사상 빈칸에 들어갈 수\n없다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞 문장에서 게임 개발팀이 몇 가지 수정을 시도할 예정\n(the game development team will introduce several\nmodifications)이라고 했고, 뒤에서는 이 작업이 성공적일 경우를\n가정하고 있다. 따라서 빈칸에도 수정 작업과 관련된 내용이 들어가야\n자연스러우므로, 수정 후 결과를 알아보는 단계, 즉 추가 테스트 단계를 언급한 (A)가 정답이다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "B",
+      "explanation": "전치사 by의 목적어 역할을 하는 next January와 February는 게\n임 출시(launch) 일정으로 제시된 선택 사항이다. 따라서 '또는, 혹은'\n이라는 의미의 등위접속사 (B) or가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "D",
+      "explanation": "빈칸 뒤 명사구 your query를 목적어로 취하는 전치사 자리이다. 문의 사항(query)은 기술 부서에 연락하는 사유이므로, '~와 함께, ~\n을 가지고'라는 의미의 (D) with가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "D",
+      "explanation": "빈칸 앞 문장에서 연락 주어 감사하다(Thank you for contacting\nour technical department)고 했는데, 뒤에서는 원격 지원 중 전\n화가 끊어졌다(our call got disconnected)며 함께 알고 있는 문제\n를 언급했다. 따라서 '아시다시피'라는 의미의 (D) As you know가\n정답이다. 앞서 한 말을 바꿔 말하거나, 이유에 따른 결과를 설명하거\n나, 예시를 든 것이 아니므로 (A), (B), (C)는 오답이다.",
+      "classification": "P6_ADVERB_CONNECTOR"
+    },
+    {
+      "questionId": "137",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞 문장에서 전화가 끊어졌다(our call got disconnected)\n는 문제점을 언급했는데, 뒤 문장에서 인과관계를 연결해 주는\nTherefore로 시작한 후, 가급적 빨리 전화를 달라(please call us\nat your earliest convenience)고 요청하고 있다. 따라서 빈칸에는\n직접 전화하지 않고 린 씨에게 전화를 요청하는 사유가 들어가야 자연\n스러우므로, (B)가 정답이다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "138",
+      "correctAnswer": "A",
+      "explanation": "빈칸은 'helping+목적어(you)+목적격 보어'의 구조에서 you의 행\n위를 보충 설명하는 목적격 보어에 해당하며, your computer를 목\n적어로 취한다. 준사역동사 help는 to부정사 또는 원현부정사(동사원\n형)를 목적격 보어로 취하므로, (A) restore가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "B",
+      "explanation": "This special은 앞서 언급된 파격 할인(at huge\ndiscounts on wholesale orders)을 가리킨다. 따라서 빈칸에도\n유사한 의미의 명사가 들어가야 자연스러우므로, '할인 혜택'이라는\n뜻으로 쓰일 수 있는 (B) offer가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "A",
+      "explanation": "빈칸은 전치사구 of lacquered walnut wood와 함께 콤마 뒤에 오\n는 절을 수식한다. 따라서 빈칸에는 부사 역할을 할 수 있는 to부정\n사나 분사가 들어갈 수 있는데, 타동사 make 뒤에 of가 오려면 수\n동태로 쓰여야 하므로, 과거분사 (A) Made가 정답이다. Be made\n이는 '~로 만들어지다'라는 뜻을 나타내며, 분사구문으로 쓰일 경우\nBeing made of에서 Being은 보통 생략된다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "B",
+      "explanation": "앞 문장에서 옷걸이(these hangers)의 장점(not only durable,\nbut also safe for the environment)을 언급했는데, 빈칸을 포\n함한 문장에서도 또 다른 장점(strong enough to hold up to\nten pounds)을 추가로 기술하고 있다. 따라서 빈칸에는 these\nhangers를 대신하는 대명사가 들어가야 하므로, (B) They가 정답\n이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "D",
+      "explanation": "빈칸 앞 문장에서는 고객이 주문 시 지불해야 하는 보증금(all\norders require a 20 percent deposit)을, 뒤 문장에서는 어\n퍼컷에서 부담하는 배송비와 보험료(Uppercut will cover all\nshipping and insurance costs)를 언급했다. 따라서 빈칸에도 주\n문 관련 비용에 대한 설명이 들어가야 자연스러우므로, 잔금 지불 시\n점을 안내한 (D)가 정답이다. deposit과 연관된 단어인 balance가\n결정적인 힌트가 된다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "C",
+      "explanation": "수신자인 쿠마르 씨의 이메일 주소로 미루어 보아, 앞 문장에서 언급\n된 박스터 미술용품점(Baxter Art Supplies)이 그녀의 가게임을 알\n수 있다. 따라서 미술용품점을 가리키는 단어가 빈칸에 들어가야 하므\n로, (C) store가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "C",
+      "explanation": "주어인 를 보충 설명하는 주격 보어 자리로, 문맥상 사람이 느끼는\n감정을 나타내는 형용사가 들어가야 자연스럽다. 따라서 과거분사\n(C) thrilled(신이 난, 흥분된)가 정답이다. (A) thrilling은 감정을\n유발하는 대상(a thrilling experience)을 묘사할 때 쓰인다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "A",
+      "explanation": "앞 문장에서는 자신이 역할에 잘 맞는 이유(I would be well\nsuited for this role because I am both enthusiastic and\nfriendly)를, 빈칸 뒤에서는 역할과 관련된 자신의 경험(I have led",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞 문장에서는 이력서를 첨부했다(I have attached a copy of\nmy résumé)고만 했는데, 뒤 문장에서는 지원서와 작품을 검토해 보\n고(after you have reviewed my application and work) 연락\n을 주면 좋겠다고 했다. 따라서 앞 문장에서는 언급되지 않았던 작품\n(work)과 관련된 내용이 빈칸에 들어가야 하므로, 작품 견본을 볼 수\n있는 방법을 설명한 (B)가 정답이다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "147",
+      "correctAnswer": "B",
+      "explanation": "상단을 보면 표지판이 있는 장소(HERE)에서 현재 상업용 건물\n(Walker Booksellers) 공사 작업이 진행 중(Work in progress:\nCommercial)임을 알 수 있다. 따라서 표지판이 상업용 건설 현장에\n있다고 추론할 수 있으므로, (B)가 정답이다.",
+      "classification": "P6_INFERENCE"
+    },
+    {
+      "questionId": "148",
+      "correctAnswer": "D",
+      "explanation": "하단에서 작업 현장에서 발생한 문제는 919-555-0134로 전화\n해 알려달라(To report a problem at this work site, call\n919-555-0134)고 요청하고 있으므로, (D)가 정답이다.",
+      "classification": "P6_DETAILS"
+    },
+    {
+      "questionId": "149",
+      "correctAnswer": "B",
+      "explanation": "첫 번째 문장에서 8월 1일 토요일에 더럼타운 교향악단이 카도나 문\n화센터에서 교육적인 공연을 무료로 제공한다(the Durhamtown.\nSymphony Orchestra will be giving a free educational\nperformance)고 한 후, 공연 관련 추가 설명을 이어가고 있다. 따라\n서 행사를 홍보하기 위한 글이라고 볼 수 있으므로, (B)가 정답이다.",
+      "classification": "P6_MAIN_PURPOSE"
+    }
+  ]
+}

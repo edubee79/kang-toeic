@@ -19,6 +19,7 @@ export interface User {
     universityId: string;    // universities 컬렉션 참조
     universityName: string;  // 대학명 (비정규화)
     userClass?: string;      // 수강반
+    className?: string;      // 수강반 (Alias for easier access)
 
     // 학습 데이터
     passedVocaDays?: number[];

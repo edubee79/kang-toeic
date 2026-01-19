@@ -1,0 +1,161 @@
+{
+  "testId": 7,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She's plugging in a fan.",
+          "translation": "여자가 선풍기에 플러그를 꽂고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She's packing up some equipment.",
+          "translation": "여자가 장비를 챙기고 있다."
+        },
+        {
+          "option": "C",
+          "text": "She's bending down to tie her shoe.",
+          "translation": "여자가 신발 끈을 묶으려고 숙이고 있다."
+        },
+        {
+          "option": "D",
+          "text": "She's entering a storeroom.",
+          "translation": "여자가 창고로 들어가고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "B",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "They're carrying trays of food.",
+          "translation": "사람들이 음식 쟁반을 나르고 있다."
+        },
+        {
+          "option": "B",
+          "text": "They're walking into a building.",
+          "translation": "사람들이 건물 안으로 걸어가고 있다."
+        },
+        {
+          "option": "C",
+          "text": "They're approaching a sign in a parking area.",
+          "translation": "사람들이 주차 구역의 표지판에 다가가고 있다."
+        },
+        {
+          "option": "D",
+          "text": "They're opening the doors of a vehicle.",
+          "translation": "사람들이 차량의 문을 열고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "B",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "They're carrying a ladder.",
+          "translation": "사람들이 사다리를 나르고 있다."
+        },
+        {
+          "option": "B",
+          "text": "They're putting away some rope.",
+          "translation": "사람들이 밧줄을 치우고 있다."
+        },
+        {
+          "option": "C",
+          "text": "They're installing a roof on a house.",
+          "translation": "사람들이 지붕을 시공하고 있다."
+        },
+        {
+          "option": "D",
+          "text": "They're organizing boxes of materials.",
+          "translation": "사람들이 자재 상자를 정리하고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "C",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A stool has been set in a corner.",
+          "translation": "스툴이 모퉁이에 놓여져 있다."
+        },
+        {
+          "option": "B",
+          "text": "A woman is reaching for a light switch.",
+          "translation": "여자가 전등 스위치로 손을 뻗고 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some binders have been lined up on a shelf.",
+          "translation": "바인더들이 선반에 정렬되어 있다."
+        },
+        {
+          "option": "D",
+          "text": "A woman is connecting a monitor to a keyboard.",
+          "translation": "여자가 모니터를 키보드에 연결하고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some pillows have been placed on a bed.",
+          "translation": "베개들이 침대에 놓여 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some lamps are hanging from the ceiling.",
+          "translation": "램프들이 천장에서 매달려 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some bed linens are piled on the floor.",
+          "translation": "침대 시트가 바닥에 쌓여 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some chairs are next to a nightstand.",
+          "translation": "의자들이 탁자 옆에 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "There are some passengers boarding a boat.",
+          "translation": "승객들이 배에 타고 있다."
+        },
+        {
+          "option": "B",
+          "text": "There's a deck overlooking a lake.",
+          "translation": "데크가 호수를 내려다보고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A motorboat is passing under a bridge.",
+          "translation": "모터보트가 다리 밑으로 지나가고 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some people are diving off a pier.",
+          "translation": "몇몇 사람들이 부두에서 다이빙하고 있다."
+        }
+      ]
+    }
+  ]
+}

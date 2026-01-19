@@ -802,8 +802,8 @@ function SaveResultEffect({ testScore, total, day, userId }: { testScore: number
                 // Assuming reaching 'result' screen means "completed" (pass or fail).
                 try {
                     await addDoc(collection(db, "Manager_Results"), {
-                        student: user.userName || user.username || user.name,
-                        studentId: userId,
+                        student: user.userName || user.username || user.name || "Unknown",
+                        studentId: userId || user.userId || user.uid || "Guest",
                         className: user.userClass || user.className || "Unknown",
                         unit: `Voca_Day${day}`,
                         score: testScore,

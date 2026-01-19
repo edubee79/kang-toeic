@@ -312,8 +312,8 @@ export default function ShadowingPractice() {
         const unitName = `Shadowing_Unit01_Set${setId}`;
         try {
             await addDoc(collection(db, "Manager_Results"), {
-                student: user.userName,
-                studentId: user.userId,
+                student: user.userName || user.name || "Unknown",
+                studentId: user.userId || user.uid || "Guest",
                 unit: unitName,
                 score: finalScore,
                 total: 20,

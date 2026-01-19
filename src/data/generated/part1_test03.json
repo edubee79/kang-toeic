@@ -1,0 +1,161 @@
+{
+  "testId": 3,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "He's leaning over a container.",
+          "translation": "남자가 용기를 기울이고 있다."
+        },
+        {
+          "option": "B",
+          "text": "He's digging in a garden.",
+          "translation": "남자가 정원을 파고 있다."
+        },
+        {
+          "option": "C",
+          "text": "He's removing some floor tiles.",
+          "translation": "남자가 바닥 타일을 제거하고 있다."
+        },
+        {
+          "option": "D",
+          "text": "He's trimming some trees.",
+          "translation": "남자가 가지를 치고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A customer is picking up some clothing at a dry cleaner's.",
+          "translation": "손님이 세탁소에서 옷을 찾고 있다."
+        },
+        {
+          "option": "B",
+          "text": "A customer is trying on a jacket.",
+          "translation": "손님이 재킷을 입어보고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A customer is handing a worker some cash.",
+          "translation": "손님이 직원에게 현금을 건내고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A worker is typing on a computer.",
+          "translation": "직원이 컴퓨터로 타자를 치고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She's paying for her meal.",
+          "translation": "여자가 식사를 계산하고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She's pouring a beverage.",
+          "translation": "여자가 음료를 따르고 있다."
+        },
+        {
+          "option": "C",
+          "text": "She's facing a refrigerated display case.",
+          "translation": "여자가 냉장 진열장을 마주보고 있다."
+        },
+        {
+          "option": "D",
+          "text": "She's ordering her lunch from a server.",
+          "translation": "여자가 서버에게 점심을 주문하고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "He's putting vegetables into a bag.",
+          "translation": "남자가 봉투에 야채를 넣고 있다."
+        },
+        {
+          "option": "B",
+          "text": "He's setting up a tent.",
+          "translation": "남자가 텐트를 치고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The rear door of a van are open.",
+          "translation": "승합차 뒷문이 열려 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some boxes have been stored inside a vehicle.",
+          "translation": "상자들이 차 안에 보관되어 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "B",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The speaker is positioned next to a podium.",
+          "translation": "강연대가 연단 옆에 위치해 있다."
+        },
+        {
+          "option": "B",
+          "text": "The man is drawing a graph on a presentation board.",
+          "translation": "남자가 발표용 보드에 그래프를 그리고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is watching a video.",
+          "translation": "여자들 중 한 명이 동영상을 보고 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is adjusting her glasses.",
+          "translation": "여자들 중 한 명이 안경을 고쳐 쓰고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some chairs have been arranged on a balcony.",
+          "translation": "의자들이 발코니에 정돈되어 있다."
+        },
+        {
+          "option": "B",
+          "text": "A clock has been propped up on a shelf.",
+          "translation": "시계가 선반 위에 받쳐져 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some plants have been laid out on a bench.",
+          "translation": "화분 몇 개가 벤치 위에 놓여 있다."
+        },
+        {
+          "option": "D",
+          "text": "A light fixture is hanging above a dining area.",
+          "translation": "조명이 식탁 공간 위에 걸려 있다."
+        }
+      ]
+    }
+  ]
+}

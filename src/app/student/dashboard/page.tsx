@@ -13,7 +13,9 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { getUserProfile, updateTargetScore } from '@/services/userService';
+import { getWeaknessAnalysis, AnalysisResult } from '@/services/analysisService';
 import { TargetSettingSection } from '@/components/dashboard/TargetSettingSection';
+import { ClassInfoCard } from '@/components/dashboard/ClassInfoCard';
 import { Clock } from 'lucide-react';
 
 // Homework Configuration for Progress display
@@ -35,6 +37,7 @@ export default function StudentDashboard() {
     const [loading, setLoading] = useState(true);
     const [stats, setStats] = useState<Record<string, number>>({});
     const [recentActivity, setRecentActivity] = useState<any[]>([]);
+    const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
 
     // Target Score State
     const [targetScore, setTargetScore] = useState<number>(850); // Default fallback
@@ -44,6 +47,7 @@ export default function StudentDashboard() {
     // Assignments State
     const [assignments, setAssignments] = useState<any[]>([]);
     const [completedMap, setCompletedMap] = useState<Record<string, boolean>>({});
+    const [partScores, setPartScores] = useState<Record<string, number>>({});
 
     useEffect(() => {
         const userData = localStorage.getItem('toeic_user');
@@ -51,12 +55,32 @@ export default function StudentDashboard() {
             router.push('/login');
             return;
         }
-        const parsedUser = JSON.parse(userData);
-        setUser(parsedUser);
-        fetchStats(parsedUser.userId);
-        fetchTargetScore(parsedUser.userId);
-        fetchAssignments(parsedUser.className, parsedUser.userId);
+
+        try {
+            const parsedUser = JSON.parse(userData);
+
+            // Validate userId exists
+            if (!parsedUser || !parsedUser.userId) {
+                console.warn("Invalid user session: missing userId");
+                router.push('/login');
+                return;
+            }
+
+            setUser(parsedUser);
+            fetchStats(parsedUser.userId);
+            fetchTargetScore(parsedUser.userId);
+            fetchAssignments(parsedUser.className, parsedUser.userId);
+            fetchAnalysis(parsedUser.userId);
+        } catch (e) {
+            console.error("Failed to parse user session", e);
+            router.push('/login');
+        }
     }, [router]);
+
+    const fetchAnalysis = async (userId: string) => {
+        const result = await getWeaknessAnalysis(userId);
+        setAnalysis(result);
+    };
 
     const fetchAssignments = async (className: string, userId: string) => {
         try {
@@ -113,8 +137,12 @@ export default function StudentDashboard() {
     const fetchTargetScore = async (userId: string) => {
         try {
             const profile = await getUserProfile(userId);
-            if (profile && profile.targetScore) {
-                setTargetScore(profile.targetScore);
+            if (profile) {
+                if (profile.targetScore) {
+                    setTargetScore(profile.targetScore);
+                }
+                // Sync full profile data to user state so detailed targets are visible
+                setUser((prev: any) => ({ ...prev, ...profile }));
             }
         } catch (error) {
             console.error("Failed to load target score", error);
@@ -145,21 +173,51 @@ export default function StudentDashboard() {
                 voca: new Set(),
                 grammar: new Set(),
                 part1_shadow: new Set(),
+                part1_test: new Set(),
                 part2_test: new Set(),
                 part3_test: new Set(),
                 part4_test: new Set(),
                 part5_test: new Set(),
                 part6_test: new Set(),
+                part7_single: new Set(),
+                part7_double: new Set(),
                 part7_test: new Set(),
             };
+
+            // Score Aggregation (Total Correct / Count)
+            const scoreSums: Record<string, number> = {};
+            const scoreCounts: Record<string, number> = {};
 
             querySnapshot.forEach((doc) => {
                 const data = doc.data();
                 const type = data.type || mapLegacyType(data.unit || "");
                 const detail = data.detail || data.unit || "Unknown";
 
+                // 1. Count Completion
                 if (uniqueCounts[type]) {
                     uniqueCounts[type].add(detail);
+                }
+
+                // 2. Aggregate Scores (Estimate Correct Count)
+                // Assuming data.score is percentage or we calculate from incorrectQuestions
+                // For now, let's look for 'correctCount' or derive from 'score' (percentage) * 'totalQuestions'
+                // Fallback: If score is 0-100, and we know max questions for part...
+                // Let's use a standard map for Part Max Questions
+                const PART_MAX: Record<string, number> = {
+                    part1_test: 6, part2_test: 25, part3_test: 39, part4_test: 30,
+                    part5_test: 30, part6_test: 16,
+                    part7_test: 54, part7_single: 29, part7_double: 25
+                };
+
+                if (PART_MAX[type] && typeof data.score === 'number') {
+                    // Estimate correct count from percentage score if necessary, or use raw if available
+                    // Usually score is raw? Or 100 based? data.score usually 0-100 in this system?
+                    // Let's assume data.score is PERCENTAGE based on previous contexts (e.g. 80 means 80%)
+                    // So correct = (score / 100) * MAX
+                    const estimatedCorrect = Math.round((data.score / 100) * PART_MAX[type]);
+
+                    scoreSums[type] = (scoreSums[type] || 0) + estimatedCorrect;
+                    scoreCounts[type] = (scoreCounts[type] || 0) + 1;
                 }
             });
 
@@ -174,6 +232,20 @@ export default function StudentDashboard() {
             Object.keys(uniqueCounts).forEach(k => {
                 finalStats[k] = uniqueCounts[k].size;
             });
+
+            // Calculate Averages
+            const finalScores: Record<string, number> = {};
+            Object.keys(scoreSums).forEach(k => {
+                finalScores[k] = Math.round(scoreSums[k] / scoreCounts[k]);
+            });
+            // Aggregate Part 7 (Single + Double) -> P7 Total
+            const p7Single = finalScores['part7_single'] || 0;
+            const p7Double = finalScores['part7_double'] || 0;
+            if (!finalScores['part7_test'] && (p7Single || p7Double)) {
+                finalScores['part7_test'] = p7Single + p7Double;
+            }
+
+            setPartScores(finalScores);
 
             setStats(finalStats);
         } catch (error) {
@@ -195,15 +267,20 @@ export default function StudentDashboard() {
     const getHomeworkLink = (type: string, detail: string, id: string) => {
         // Map homework type to URL
         switch (type) {
+            case 'level_test': return `/homework/level-test`;
             case 'voca': return `/homework/voca`;
+            case 'grammar': return `/homework/grammar`;
             case 'part1_shadow': return `/homework/part1`;
-            case 'part1_test': return `/homework/part1`;
+            case 'part1_test': return `/homework/part1-real`; // New
             case 'part2_test': return `/homework/part2`;
             case 'part3_test': return `/homework/part3`;
             case 'part4_test': return `/homework/part4`;
             case 'part5_test': return `/homework/part5-real`;
             case 'part6_test': return `/homework/part6`;
-            case 'part7_test': return `/homework/part7`;
+            case 'part7_single': return `/homework/part7`;
+            case 'part7_double': return `/homework/part7-double`;
+            case 'part7_test': return `/homework/part7`; // Legacy
+            case 'mock_test': return `/homework/mock-exam`;
             case 'weakness_review': return `/homework/weakness/${id}`;
             default: return '/';
         }
@@ -211,9 +288,12 @@ export default function StudentDashboard() {
 
     const getHomeworkIcon = (type: string = '') => {
         if (!type) return Headphones;
+        if (type === 'level_test') return Target;
+        if (type === 'mock_test') return PenSquare;
         if (type.includes('voca')) return BookOpen;
         if (type.includes('part1')) return Mic2;
         if (type.includes('part5')) return PenSquare;
+        if (type.includes('part7')) return BookOpen;
         if (type === 'weakness_review') return Zap;
         return Headphones;
     }
@@ -241,21 +321,7 @@ export default function StudentDashboard() {
 
                 {/* Class Info / Rank Badge */}
                 {user && (
-                    <div className="hidden md:flex items-center gap-4 bg-slate-800/50 px-4 py-2 rounded-xl border border-slate-700/50">
-                        <div className="text-right">
-                            <p className="text-xs text-indigo-400 font-bold uppercase tracking-wider">My Class</p>
-                            <p className="text-white font-bold">{user.className || "스파르타 750+ 목표반"}</p>
-                        </div>
-                        <div className="h-8 w-px bg-slate-700"></div>
-                        <div className="text-left">
-                            <div className="flex items-center gap-1.5">
-                                <TrendingUp className="w-4 h-4 text-emerald-400" />
-                                <span className="text-white font-bold">15등</span>
-                                <span className="text-slate-500 text-xs">/ 120명</span>
-                            </div>
-                            <p className="text-xs text-emerald-500 font-medium">상위 12% 🔥</p>
-                        </div>
-                    </div>
+                    <ClassInfoCard user={user} />
                 )}
             </div>
 
@@ -372,25 +438,32 @@ export default function StudentDashboard() {
 
                             {/* 2. Top Weakness Tag Analysis (Dynamic) */}
                             {(() => {
-                                // Aggregate incorrect tags from recent history
-                                // In a real app, this would be done by a backend function or complex query.
-                                // Here we mock it or try to derive it if we had the full history loaded.
-                                // Since we only loaded stats counts, we can't do exact tag analysis CLIENT-SIDE without fetching full history.
-                                // FOR NOW: I will simulate the tag analysis assuming the backend/store had provided it, 
-                                // or if not available, show a placeholder that encourages taking a test.
+                                if (!analysis?.topWeakness) {
+                                    return (
+                                        <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
+                                            <div className="flex justify-between items-center mb-2">
+                                                <span className="text-amber-400 font-bold text-sm">약점 태그 분석 중...</span>
+                                                <span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">-</span>
+                                            </div>
+                                            <p className="text-xs text-slate-400 leading-relaxed">
+                                                Part 5 실전 테스트를 완료하면 약점 태그가 표시됩니다.
+                                            </p>
+                                        </div>
+                                    );
+                                }
 
-                                // TODO: Load actual 'Manager_Results' detailed list in a separate useEffect for analysis.
-                                // For this demo step, I will stick to a realistic static example that represents what IT WILL LOOK LIKE
-                                // once the backend aggregation is connected, as requested by the user flow.
+                                const { label, percentage, message, code } = analysis.topWeakness;
 
                                 return (
                                     <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
                                         <div className="flex justify-between items-center mb-2">
-                                            <span className="text-amber-400 font-bold text-sm">약점 태그: 전치사</span>
-                                            <span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">정답률 42%</span>
+                                            <span className="text-amber-400 font-bold text-sm">약점: {label}</span>
+                                            <span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">
+                                                오답률 {percentage}%
+                                            </span>
                                         </div>
                                         <p className="text-xs text-slate-400 leading-relaxed">
-                                            최근 <b>전치사(Prepositions)</b> 유형에서 오답이 빈번합니다. 시간 전치사(in/at/on) 구분을 복습하세요.
+                                            {message}
                                         </p>
                                     </div>
                                 );
@@ -400,23 +473,55 @@ export default function StudentDashboard() {
                             <div className="bg-slate-800 border border-slate-700 rounded-lg p-4">
                                 <div className="flex justify-between items-center mb-2">
                                     <span className="text-indigo-400 font-bold text-sm">LC 청취 습관</span>
-                                    <Badge variant="outline" className="text-[10px] text-slate-400">Good</Badge>
+                                    <Badge variant="outline" className={cn(
+                                        "text-[10px]",
+                                        analysis?.lcHabit.status === 'Excellent' ? "text-emerald-400 border-emerald-500/50" :
+                                            analysis?.lcHabit.status === 'Needs Improvement' ? "text-rose-400 border-rose-500/50" :
+                                                "text-indigo-400 border-indigo-500/50"
+                                    )}>{analysis?.lcHabit.status || 'Loading...'}</Badge>
                                 </div>
                                 <p className="text-xs text-slate-400 leading-relaxed">
-                                    LC 학습 빈도가 안정적입니다. 이제 <b>Part 3/4 쉐도잉</b> 비중을 높여보세요.
+                                    {analysis?.lcHabit.message || "LC 학습 이력을 분석하고 있습니다."}
                                 </p>
                             </div>
                         </div>
 
-                        <div className="mt-4 pt-4 border-t border-slate-800/50 flex items-center justify-between">
-                            <p className="text-xs text-slate-500">
-                                * 매주 월요일, 지난주 학습 데이터를 기반으로 새로운 약점 과제가 생성됩니다.
-                            </p>
-                            <Button variant="ghost" className="text-xs text-rose-400 hover:text-white hover:bg-rose-500/20 h-8">
-                                <Zap className="w-3 h-3 mr-1" />
-                                약점 보완 문제 풀기 (Weekly)
-                            </Button>
-                        </div>
+                        {/* 4. Action Button */}
+                        {(() => {
+                            // Find the most recent 'weakness_review' assignment
+                            const weaknessAssignment = assignments.find(a => a.type === 'weakness_review');
+                            const isCompleted = weaknessAssignment ? completedMap[`weakness_review_${weaknessAssignment.detail}`] : false;
+
+                            return (
+                                <div className="mt-4 pt-4 border-t border-slate-800/50 flex items-center justify-between">
+                                    <p className="text-xs text-slate-500">
+                                        * 매주 월요일, 지난주 학습 데이터를 기반으로 새로운 약점 과제가 생성됩니다.
+                                    </p>
+                                    <Button
+                                        variant="ghost"
+                                        className={cn(
+                                            "text-xs h-8 transition-all font-bold",
+                                            weaknessAssignment && !isCompleted
+                                                ? "bg-rose-500 text-white hover:bg-rose-600 shadow-md shadow-rose-500/20 animate-pulse"
+                                                : "text-rose-400 hover:bg-rose-500/10"
+                                        )}
+                                        onClick={() => {
+                                            if (weaknessAssignment) {
+                                                router.push(`/homework/weakness/${weaknessAssignment.id}`);
+                                            } else {
+                                                alert("아직 생성된 약점 보완 과제가 없습니다. (매주 월요일 생성)");
+                                            }
+                                        }}
+                                    >
+                                        <Zap className="w-3 h-3 mr-1" />
+                                        {weaknessAssignment
+                                            ? (isCompleted ? "약점 과제 완료 (Review)" : "약점 보완 문제 풀기 (Start)")
+                                            : "약점 과제 대기 중"
+                                        }
+                                    </Button>
+                                </div>
+                            );
+                        })()}
                     </div>
                 </Card>
             </div>
@@ -428,14 +533,24 @@ export default function StudentDashboard() {
                     <TargetSettingSection
                         user={user}
                         currentStats={{
-                            shadowing: stats['part1_shadow'] || 0,
-                            lc2: stats['part2_test'] || 0,
-                            grammar: stats['grammar'] || 0,
-                            voca: stats['voca'] || 0
+                            p1: partScores['part1_test'] || 0,
+                            p2: partScores['part2_test'] || 0,
+                            p3: partScores['part3_test'] || 0,
+                            p4: partScores['part4_test'] || 0,
+                            p5: partScores['part5_test'] || 0,
+                            p6: partScores['part6_test'] || 0,
+                            p7_single: partScores['part7_single'] || 0,
+                            p7_double: partScores['part7_double'] || 0
                         }}
-                        onUpdate={(newScore) => {
+                        onUpdate={async (newScore) => {
                             if (newScore) setTargetScore(newScore);
-                            if (user) fetchTargetScore(user.userId);
+                            if (user) {
+                                // Refresh full profile to update targets
+                                const updatedProfile = await getUserProfile(user.userId);
+                                if (updatedProfile) {
+                                    setUser({ ...user, ...updatedProfile });
+                                }
+                            }
                         }}
                     />
                 )}

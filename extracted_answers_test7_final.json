@@ -1,0 +1,101 @@
+{
+  "testId": 7,
+  "answers": [
+    {
+      "questionId": "131",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞 문장에서는 글을 이메일로 보내달라고 했고, 뒤 문장에서는 '이 날짜' 이후 수신된 제출물은 고려 대상이 될 수 없다 (any submissions received after this date cannot be considered)고 했다. 따라서 빈칸에 제출 마감 기한이 언제인지 언급되어야 하므로, (A)가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞 문장에서 추가 인센티브 제도는 올해를 사상 최대 판매를 기록한 해로 만들기 위해(to help make this our greatest sales year ever) 고안된 것이라고 했으므로, 빈칸에도 이러한 취지와 관련된 내용이 이어져야 문맥상 자연스럽다. 따라서 해당 목표를 달성할 수 있으리라 확신한다고 말한 (B)가 정답이다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "B",
+      "explanation": "빈칸은 동사 will be provided의 주어 역할을 하는 명사 자리이다. 앞서 언급된 인센티브 제도에 대해 더 자세한 내용을 알려주겠다고 하는 것이 가장 자연스러우므로, '세부 내용'이라는 의미의 (B) details 가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "D",
+      "explanation": "앞 문장에서는 며칠 후 더 자세한 내용을 알려주겠다(More details will be provided in the next few days)고 했고, 빈칸 뒤에서는 그때까지 질문이 있을 경우 문의할 곳(if you have any questions about this program, contact the Human Resources Department)을 제시하고 있다. 따라서 '그동안에'라는 의미의 (D) In the meantime이 빈칸에 들어가야 자연스럽다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "B",
+      "explanation": "빈칸은 that accountants gain의 수식을 받는 자리로, 회계사들이 획득한 것을 나타낸다. 따라서 (B) skills(역량, 기술)가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "D",
+      "explanation": "앞 문장에서는 회계사들의 역량이 재무 이외의 분야에서 채용하고자 하는 이들에게도 수요가 높다(The financial service skills that accountants gain are in demand even by those seeking to hire for positions outside of finance)고 했고, 빈칸 뒤에서는 많은 전문 회계사들이 다른 역할을 맡으라는 권유를 받고 있다(many professional accountants have been persuaded to take on other roles)고 했다. 뒤 문장이 필연적인 결과를 나타내므로, (D) Consequently(따라서)가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "137",
+      "correctAnswer": "C",
+      "explanation": "빈칸은 완전한 절(it is useful in your new profession)을 이끌어 동사 explain의 목적어 역할을 한다. 문맥상 그것(it=your background in accounting)이 새 직업에 어떻게 유용한지에 대해 글을 써달라는 내용이 되어야 자연스러우며, 완전한 절을 이끄는 명사절 접속사가 필요하다. 따라서 (C) how가 정답이다. 참고로, (A) what, (B) whose, (D) which가 의문형용사로서 명사절 접속사 역할을 할 경우, 바로 뒤에는 대명사가 아닌 일반 명사가 와야 한다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "138",
+      "correctAnswer": "A",
+      "explanation": "제출 마감 기한은 10월 15일입니다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "C",
+      "explanation": "빈칸은 to increase의 목적어 자리로, 장 씨가 증대시키고자 한 것을 나타낸다. 뒤에서 효과적인 광고 방법에 대한 조언을 받아 고객층이 늘었다고 했으므로, 장 씨가 매출을 증대시킬 방법을 모색한 것임을 알 수 있다. 따라서 (C) sales가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "B",
+      "explanation": "give의 목적어 자리로, 한번 시도(a try)를 해볼 만한 대상이 들어가야 한다. 문맥상 상담원이 '고객의 소리'라는 접근법(approach, method)을 시도해보라고 했다는 내용이 되어야 자연스러우므로, (B) it이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "A",
+      "explanation": "he가 주어, determined가 동사, 명사절인 what potential customers are concerned about when shopping for office supplies가 목적어인 완전한 문장이므로, 빈칸에는 문장 구성에 영향을 미치지 않는 부사가 들어가야 한다. 따라서 (A) exactly(정확히)가 정답이다. exactly는 종종 의문사와 결합해 이를 강조하는 역할을 한다(eg. exactly what/when/where), (B) exact는 형용사/동사, (C) exacting은 형용사/현재분사, (D) exactness는 명사로 구조상 빈칸에 들어갈 수 없다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞 문장에서 웹사이트 광고에 사람들의 솔직한 말을 인용했(he used candid quotes from the people ~ to create advertisements for his Web site)고 했고, 뒤에서는 '고객의 소리(VOC)'라는 이 방식 덕분에 고객층이 늘어났다고 했다. 따라서 빈칸에도 해당 방식과 관련된 내용이 들어가야 자연스러우므로, 다이렉트 이메일 광고에서도 그것들(=candid quotes from the people)을 활용했다고 한 (B)가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "C",
+      "explanation": "빈칸 앞 문장에서 언급된 무료 버스(free bus rides)의 이용 가능 기간을 설명한 문장이다. 따라서 '교통편, 차량'이라는 의미의 (C) Transportation이 빈칸에 들어가야 자연스럽다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "A",
+      "explanation": "빈칸은 주어 Buses의 동사 자리로, the fairgrounds를 목적으로 취한다. 앞으로 열릴 지역 박람회에서 새롭게 제공되는 무료 버스의 출발 시간을 설명하는 문장인데, 바로 앞 문장에서 미래시제(will depart)가 쓰였으므로, 빈칸에도 미래시제가 들어가야 자연스럽다. 따라서 (A) will leave가 정답이다. (B) have left와 (D) left는 시제가 맞지 않으며, 동명사/현재분사인 (C) leaving은 본동사 자리에 들어갈 수 없으므로 오답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "D",
+      "explanation": "빈칸 앞 문장에서 16세 미만 어린이는 반드시 성인과 동행해야 한다(children under the age of 16 must be accompanied by an adult)며 버스 이용 시 주의할 사항을 고지했으므로, 빈칸에도 이와 비슷한 내용이 들어가야 문맥상 자연스럽다. 따라서 버스 내 음식이나 음료 섭취가 불가하다고 한 (D)가 정답이다.",
+      "classification": "P6_SENTENCEINSERTION"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "B",
+      "explanation": "앞에 나온 buses와 함께 동명사 providing의 목적어 역할을 하는 명사 자리이다. 후원사들이 박람회를 위해 버스와 함께 제공할 만한 것은 '기사들'이므로, (B) drivers가 정답이다. (D) drive도 명사로 쓰일 수 있지만, '자동차 여행, 충동, 추진력' 등을 뜻하므로 문맥상 어색하다.",
+      "classification": "P6_VOCABULARY"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
     const pathname = usePathname();
 
     // Pages that should NOT have sidebar
-    const noSidebarPages = ['/login', '/signup', '/admin'];
+    const noSidebarPages = ['/login', '/signup', '/admin', '/real-original'];
     const shouldShowSidebar = !noSidebarPages.some(page => pathname.startsWith(page));
 
     // If no sidebar needed, just render children
@@ -31,10 +31,11 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
 
                 <main className={cn(
-                    "flex-1 w-full mx-auto max-w-7xl md:p-10",
-                    pathname.startsWith('/homework/') && pathname.split('/').filter(Boolean).length >= 3
+                    "flex-1 w-full mx-auto",
+                    pathname === '/homework/part7/practice' || pathname.startsWith('/mock-test/full/') ? "max-w-none p-0" : "max-w-7xl md:p-10 p-6",
+                    pathname.startsWith('/homework/') && pathname !== '/homework/part7/practice' && pathname.split('/').filter(Boolean).length >= 3
                         ? "p-0"
-                        : "p-6"
+                        : ""
                 )}>
                     {children}
                 </main>

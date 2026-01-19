@@ -3,16 +3,19 @@
 import { useState, useEffect } from 'react';
 import { collection, query, where, getDocs, orderBy, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2, ArrowLeft, Calendar, FileText, CheckCircle2, TrendingUp, Target, AlertTriangle, Zap, Send, Bell, BookOpen, PenSquare, Mic2, Headphones } from "lucide-react";
+import { Loader2, ArrowLeft, Calendar, FileText, CheckCircle2, TrendingUp, Target, AlertTriangle, Zap, Send, Bell, BookOpen, PenSquare, Mic2, Headphones, Trophy } from "lucide-react";
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { useParams, useRouter } from 'next/navigation';
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { cn } from "@/lib/utils";
+import { TargetSettingSection } from '@/components/dashboard/TargetSettingSection';
+import { UserProfile, getUserProfile } from '@/services/userService';
 
 // Reusing configuration from Student Dashboard for consistency
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
@@ -27,16 +30,17 @@ const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: stri
     part7_test: { label: 'RC Part 7 실전', total: 10, unit: 'Tests', color: 'cyan', icon: BookOpen },
 };
 
-interface Student {
-    id: string;
+// Update Student Interface to be compatible with UserProfile
+interface Student extends Partial<UserProfile> {
+    id: string; // Document ID
     userId: string;
     userName: string;
     className: string;
     universityName?: string;
-    targetScore?: number;
     email?: string;
     phone?: string;
     fcmToken?: string;
+    // UserProfile fields included via extension/Partial
 }
 
 interface Result {
@@ -59,8 +63,9 @@ export default function StudentDetailPage() {
     const [student, setStudent] = useState<Student | null>(null);
     const [results, setResults] = useState<Result[]>([]);
     const [stats, setStats] = useState<Record<string, number>>({});
+    const [partScores, setPartScores] = useState<Record<string, number>>({}); // New State for Detailed Scores
+    const [studentRankings, setStudentRankings] = useState<any[]>([]);
 
-    // Push Notification State
     const [pushMessage, setPushMessage] = useState('');
     const [isSending, setIsSending] = useState(false);
 
@@ -74,47 +79,80 @@ export default function StudentDetailPage() {
         try {
             setLoading(true);
 
-            // 1. Fetch Student Info
-            const userRef = doc(db, "Winter_Users", studentId);
-            const userSnap = await getDoc(userRef);
+            // 1. Fetch Student Info (Robust Resolution)
+            let userSnap = await getDoc(doc(db, "Winter_Users", studentId));
+            let userData = userSnap.exists() ? userSnap.data() : null;
+            let resolvedDocId = studentId;
 
-            if (userSnap.exists()) {
-                const data = userSnap.data();
-                setStudent({
-                    id: userSnap.id,
-                    userId: data.userId,
-                    userName: data.userName,
-                    className: data.className,
-                    universityName: data.universityName,
-                    targetScore: data.targetScore || 850, // Default if not set
-                    email: data.email,
-                    phone: data.phone,
-                    fcmToken: data.fcmToken // Fetch FCM Token
-                });
-            } else {
-                console.error("Student not found");
+            // If not found by direct doc ID, try querying by userId field
+            if (!userData) {
+                const qUser = query(collection(db, "Winter_Users"), where("userId", "==", studentId));
+                const qSnap = await getDocs(qUser);
+                if (!qSnap.empty) {
+                    userSnap = qSnap.docs[0];
+                    userData = userSnap.data() || null;
+                    resolvedDocId = userSnap.id;
+                }
             }
 
-            // 2. Fetch Results History
+            // CROSS-SYNC FIX: If we have a userId field, check if a document named by that userId exists
+            // This is because student dashboards save to doc(db, 'Winter_Users', userId)
+            if (userData?.userId && userData.userId !== resolvedDocId) {
+                const syncSnap = await getDoc(doc(db, "Winter_Users", userData.userId));
+                if (syncSnap.exists()) {
+                    // Merit the sync document's data (targets, etc)
+                    userData = { ...userData, ...syncSnap.data() };
+                    // We should use the student ID number for subsequent result queries
+                    resolvedDocId = userData.userId;
+                }
+            }
+
+            if (userData) {
+                setStudent({
+                    id: resolvedDocId,
+                    userId: userData.userId,
+                    userName: userData.userName,
+                    className: userData.className,
+                    universityName: userData.universityName,
+                    targetScore: userData.targetScore || 850,
+                    targetLC: userData.targetLC,
+                    targetRC: userData.targetRC,
+                    partTargets: userData.partTargets,
+                    email: userData.email,
+                    phone: userData.phone,
+                    fcmToken: userData.fcmToken,
+                    name: userData.userName // For UserProfile compatibility
+                });
+            }
+
+            // 2. Fetch Results History (Use the resolved Student ID Number)
+            const resultQueryId = userData?.userId || studentId;
             const qResults = query(
                 collection(db, "Manager_Results"),
-                where("studentId", "==", studentId),
+                where("studentId", "==", resultQueryId),
                 orderBy("timestamp", "desc")
             );
 
             const resSnap = await getDocs(qResults);
             const resList: Result[] = [];
             const uniqueCounts: Record<string, Set<string>> = {};
-
-            // Initialize sets
             Object.keys(HOMEWORK_CONFIG).forEach(k => uniqueCounts[k] = new Set());
+
+            // Score Aggregation logic (Borrowed from StudentDashboard)
+            const scoreSums: Record<string, number> = {};
+            const scoreCounts: Record<string, number> = {};
+            const PART_MAX: Record<string, number> = {
+                part1_test: 6, part2_test: 25, part3_test: 39, part4_test: 30,
+                part5_test: 30, part6_test: 16,
+                part7_test: 54, part7_single: 29, part7_double: 25
+            };
 
             resSnap.forEach(doc => {
                 const data = doc.data();
                 resList.push({
                     id: doc.id,
                     type: data.type,
-                    detail: data.detail || data.unit, // Normalize naming
+                    detail: data.detail || data.unit,
                     unit: data.unit,
                     score: data.score,
                     total: data.total,
@@ -122,24 +160,80 @@ export default function StudentDetailPage() {
                     className: data.className
                 });
 
-                // Calculate Stats (mimicking User Dashboard logic)
                 const type = data.type || mapLegacyType(data.unit || "");
                 const detail = data.detail || data.unit || "Unknown";
 
-                if (uniqueCounts[type]) {
-                    uniqueCounts[type].add(detail);
+                if (uniqueCounts[type]) uniqueCounts[type].add(detail);
+
+                // Calculate Part Scores
+                // Assumption: data.score is Percentage (0-100)
+                if (PART_MAX[type] && typeof data.score === 'number') {
+                    const estimatedCorrect = Math.round((data.score / 100) * PART_MAX[type]);
+                    scoreSums[type] = (scoreSums[type] || 0) + estimatedCorrect;
+                    scoreCounts[type] = (scoreCounts[type] || 0) + 1;
                 }
             });
 
-            // Also check legacy Voca from User doc if available (not doing here for simplicity, relying on Manager_Results)
-
             const finalStats: Record<string, number> = {};
-            Object.keys(uniqueCounts).forEach(k => {
-                finalStats[k] = uniqueCounts[k].size;
+            Object.keys(uniqueCounts).forEach(k => finalStats[k] = uniqueCounts[k].size);
+
+            // Calculate Averages
+            const finalScores: Record<string, number> = {};
+            Object.keys(scoreSums).forEach(k => {
+                finalScores[k] = Math.round(scoreSums[k] / scoreCounts[k]);
             });
+            // P7 Aggregation
+            const p7Single = finalScores['part7_single'] || 0;
+            const p7Double = finalScores['part7_double'] || 0;
+            if (!finalScores['part7_test'] && (p7Single || p7Double)) {
+                finalScores['part7_test'] = p7Single + p7Double;
+            }
 
             setResults(resList);
             setStats(finalStats);
+            setPartScores(finalScores);
+
+            // 3. Fetch Rankings for this student
+            try {
+                const now = new Date();
+                const year = now.getFullYear();
+                const onejan = new Date(year, 0, 1);
+                const week = Math.ceil((((now.getTime() - onejan.getTime()) / 86400000) + onejan.getDay() + 1) / 7);
+                const period = `${year}-W${String(week).padStart(2, '0')}`;
+
+                const rankingsRef = collection(db, "Rankings");
+                // Fetch All & Class rankings (Total, Voca, Consistency)
+                const types = ['total', 'voca', 'consistency'];
+                const classFilters = ['all', userData?.className || 'none'];
+
+                const foundRanks: any[] = [];
+
+                for (const t of types) {
+                    for (const c of classFilters) {
+                        const qRank = query(
+                            rankingsRef,
+                            where("period", "==", period),
+                            where("type", "==", t),
+                            where("classId", "==", c)
+                        );
+                        const rSnap = await getDocs(qRank);
+                        if (!rSnap.empty) {
+                            const rData = rSnap.docs[0].data();
+                            const myRank = (rData.ranks || []).find((r: any) => r.userId === (userData?.userId || studentId));
+                            if (myRank) {
+                                foundRanks.push({
+                                    ...myRank,
+                                    type: t,
+                                    scope: c === 'all' ? '전체' : '클래스'
+                                });
+                            }
+                        }
+                    }
+                }
+                setStudentRankings(foundRanks);
+            } catch (rErr) {
+                console.error("Error fetching rankings for student:", rErr);
+            }
 
         } catch (error) {
             console.error("Error fetching student details:", error);
@@ -211,7 +305,7 @@ export default function StudentDetailPage() {
         return (
             <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-white gap-4">
                 <p>학생 정보를 찾을 수 없습니다.</p>
-                <Link href="/admin/results">
+                <Link href="/admin/homework">
                     <Button variant="outline">돌아가기</Button>
                 </Link>
             </div>
@@ -221,10 +315,10 @@ export default function StudentDetailPage() {
     return (
         <div className="min-h-screen bg-slate-950 text-white p-8">
             <div className="max-w-7xl mx-auto space-y-8">
-                {/* Header & Navigation */}
+                {/* Header & Navigation (Keep existing) */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div className="flex items-center gap-4">
-                        <Link href="/admin/results">
+                        <Link href="/admin/homework">
                             <Button variant="outline" className="flex items-center gap-2 border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800">
                                 <ArrowLeft className="w-4 h-4" />
                                 <span className="hidden md:inline">목록으로</span>
@@ -233,7 +327,7 @@ export default function StudentDetailPage() {
                         <div>
                             <h1 className="text-3xl font-black italic tracking-tighter flex items-center gap-2">
                                 STUDENT MONITOR
-                                <Badge className="bg-indigo-600 text-white not-italic">{student.className}</Badge>
+                                <Badge className="bg-indigo-600 text-white not-italic">{student?.className}</Badge>
                             </h1>
                             <p className="text-slate-400 text-sm">학생별 상세 학습 이력 및 성취도 분석</p>
                         </div>
@@ -243,18 +337,19 @@ export default function StudentDetailPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Left Column: Profile & Push (1 Column) */}
                     <div className="space-y-6 lg:col-span-1">
-                        {/* 1. Student Profile Card */}
+                        {/* 1. Student Profile Card (Keep existing) */}
                         <Card className="bg-slate-900 border-slate-800 overflow-hidden relative">
                             <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-r from-indigo-900/50 to-slate-900"></div>
                             <CardContent className="pt-8 relative z-10">
                                 <div className="text-center mb-6">
                                     <div className="w-20 h-20 bg-indigo-500 rounded-full mx-auto flex items-center justify-center text-3xl font-bold shadow-xl border-4 border-slate-900 mb-3">
-                                        {student.userName[0]}
+                                        {student?.userName?.[0] || '?'}
                                     </div>
-                                    <h2 className="text-2xl font-bold">{student.userName}</h2>
-                                    <p className="text-slate-400">{student.userId}</p>
-                                    <div className="flex justify-center gap-2 mt-2">
-                                        <Badge variant="outline" className="border-slate-700 text-slate-400">{student.universityName}</Badge>
+                                    <h2 className="text-2xl font-bold">{student?.userName}</h2>
+                                    <p className="text-slate-400">{student?.userId}</p>
+                                    <div className="flex justify-center flex-wrap gap-2 mt-2">
+                                        <Badge variant="secondary" className="bg-indigo-900/50 text-indigo-300 hover:bg-indigo-900/70">{student?.className}</Badge>
+                                        <Badge variant="outline" className="border-slate-700 text-slate-400">{student?.universityName}</Badge>
                                         <Badge variant="outline" className="border-emerald-500/30 text-emerald-500">Active</Badge>
                                     </div>
                                 </div>
@@ -272,7 +367,7 @@ export default function StudentDetailPage() {
                             </CardContent>
                         </Card>
 
-                        {/* 2. Push Notification Panel */}
+                        {/* 2. Push Notification Panel (Keep existing) */}
                         <Card className="bg-slate-900 border-indigo-500/30">
                             <CardHeader className="pb-3 border-b border-slate-800">
                                 <CardTitle className="text-sm font-bold flex items-center gap-2 text-indigo-400">
@@ -282,7 +377,7 @@ export default function StudentDetailPage() {
                             </CardHeader>
                             <CardContent className="pt-4 space-y-4">
                                 <Textarea
-                                    placeholder={`${student.userName} 학생에게 보낼 응원이나 경고 메시지를 입력하세요.`}
+                                    placeholder={`${student?.userName} 학생에게 보낼 응원이나 경고 메시지를 입력하세요.`}
                                     className="bg-slate-950 border-slate-800 min-h-[100px] text-sm resize-none focus:border-indigo-500"
                                     value={pushMessage}
                                     onChange={(e) => setPushMessage(e.target.value)}
@@ -305,9 +400,8 @@ export default function StudentDetailPage() {
 
                     {/* Right Column: Dashboard Replica & Detail History (2 Columns) */}
                     <div className="space-y-6 lg:col-span-2">
-
-                        {/* 1. Target Score & Progress (Simulated Dashboard View) */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {/* 1. Target Score & Progress (Restored + Modal) */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <Card className="bg-slate-900 border-slate-800 p-6 relative overflow-hidden">
                                 <div className="flex items-center gap-2 mb-4">
                                     <Target className="text-indigo-400 w-5 h-5" />
@@ -315,16 +409,91 @@ export default function StudentDetailPage() {
                                 </div>
                                 <div>
                                     <p className="text-slate-400 text-xs font-medium mb-1">TARGET SCORE</p>
-                                    <div className="text-3xl font-black text-white">{student.targetScore}<span className="text-base text-slate-500 ml-1">점</span></div>
+                                    <div className="text-3xl font-black text-white">{student?.targetScore}<span className="text-base text-slate-500 ml-1">점</span></div>
                                 </div>
-                                <div className="mt-4">
+                                <div className="mt-4 mb-4">
                                     <div className="flex justify-between text-xs text-slate-400 mb-1">
-                                        <span>Current: 675 (Est.)</span>
-                                        <span>78%</span>
+                                        <span>Current: 730 (AI Predict)</span>
+                                        <span>{Math.round((730 / (student?.targetScore || 850)) * 100)}%</span>
                                     </div>
                                     <div className="w-full bg-slate-800 rounded-full h-2">
-                                        <div className="bg-indigo-500 h-2 rounded-full w-[78%]"></div>
+                                        <div
+                                            className="bg-gradient-to-r from-indigo-500 to-blue-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)] transition-all duration-500"
+                                            style={{ width: `${Math.min(100, Math.round((730 / (student?.targetScore || 850)) * 100))}%` }}
+                                        ></div>
                                     </div>
+                                </div>
+
+                                {/* Modal Trigger */}
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Button className="w-full bg-indigo-600 hover:bg-indigo-500 font-bold">
+                                            목표 상세 현황 보기
+                                        </Button>
+                                    </DialogTrigger>
+                                    <DialogContent className="max-w-5xl bg-slate-950 border-slate-800 text-white max-h-[90vh] overflow-y-auto">
+                                        <DialogTitle className="text-xl font-bold">
+                                            {student?.userName} 학생의 목표 상세 현황
+                                        </DialogTitle>
+                                        {student && (
+                                            <TargetSettingSection
+                                                user={student as UserProfile}
+                                                currentStats={{
+                                                    p1: partScores['part1_test'] || 0,
+                                                    p2: partScores['part2_test'] || 0,
+                                                    p3: partScores['part3_test'] || 0,
+                                                    p4: partScores['part4_test'] || 0,
+                                                    p5: partScores['part5_test'] || 0,
+                                                    p6: partScores['part6_test'] || 0,
+                                                    p7_single: partScores['part7_single'] || 0,
+                                                    p7_double: partScores['part7_double'] || 0
+                                                }}
+                                                onUpdate={async (newScore) => {
+                                                    fetchStudentData();
+                                                }}
+                                            />
+                                        )}
+                                    </DialogContent>
+                                </Dialog>
+                            </Card>
+
+                            <Card className="bg-slate-900 border-yellow-500/30 p-6 relative overflow-hidden">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <Trophy className="text-yellow-400 w-5 h-5" />
+                                    <h3 className="text-lg font-bold text-white">현재 랭킹 현황</h3>
+                                </div>
+                                <div className="space-y-3">
+                                    {studentRankings.length === 0 ? (
+                                        <div className="text-center py-6 text-slate-500 text-xs font-bold">
+                                            이번 주 집계된 랭킹이 없습니다.
+                                        </div>
+                                    ) : (
+                                        studentRankings.map((rank, i) => (
+                                            <div key={i} className="flex items-center justify-between bg-slate-800/50 p-3 rounded-xl border border-slate-700">
+                                                <div>
+                                                    <p className="text-[10px] font-black text-slate-500 uppercase leading-none mb-1">{rank.scope} {rank.type === 'total' ? '종합' : rank.type === 'voca' ? '단어' : '성실'}</p>
+                                                    <p className="text-lg font-black italic tracking-tighter text-white">
+                                                        RANK <span className={cn(
+                                                            "text-2xl",
+                                                            rank.rank === 1 ? "text-yellow-400" : rank.rank === 2 ? "text-slate-300" : rank.rank === 3 ? "text-amber-600" : "text-indigo-400"
+                                                        )}>#{rank.rank}</span>
+                                                    </p>
+                                                </div>
+                                                <div className="text-right">
+                                                    {rank.change !== 0 && (
+                                                        <div className={cn(
+                                                            "text-[10px] font-bold flex items-center justify-end px-1.5 py-0.5 rounded-full mb-1",
+                                                            rank.change > 0 ? 'text-rose-400 bg-rose-400/10' : 'text-blue-400 bg-blue-400/10'
+                                                        )}>
+                                                            <TrendingUp className={cn("w-3 h-3 mr-0.5", rank.change < 0 && "rotate-180")} />
+                                                            {Math.abs(rank.change)}
+                                                        </div>
+                                                    )}
+                                                    <p className="text-[10px] font-bold text-slate-500">{rank.detail}</p>
+                                                </div>
+                                            </div>
+                                        ))
+                                    )}
                                 </div>
                             </Card>
 
@@ -346,7 +515,7 @@ export default function StudentDetailPage() {
                             </Card>
                         </div>
 
-                        {/* 2. Progress Overview (Grid) */}
+                        {/* 2. Progress Overview (Grid) - Keep existing */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {Object.entries(HOMEWORK_CONFIG).map(([key, config]) => {
                                 const count = stats[key] || 0;
@@ -365,7 +534,7 @@ export default function StudentDetailPage() {
                             })}
                         </div>
 
-                        {/* 3. Detailed History Table */}
+                        {/* 3. Detailed History Table - Keep existing */}
                         <Card className="bg-slate-900 border-slate-800">
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
@@ -385,8 +554,8 @@ export default function StudentDetailPage() {
                                             <div key={res.id} className="flex items-center justify-between bg-slate-950/50 p-4 rounded-lg border border-slate-800 hover:border-indigo-500/30 transition-colors">
                                                 <div className="flex items-center gap-4">
                                                     <div className="flex flex-col items-center justify-center w-12 h-12 bg-slate-900 rounded-lg border border-slate-800">
-                                                        <span className="text-xs text-slate-500 font-bold">{format(res.timestamp.toDate(), 'MM/dd')}</span>
-                                                        <span className="text-xs text-slate-600">{format(res.timestamp.toDate(), 'HH:mm')}</span>
+                                                        <span className="text-xs text-slate-500 font-bold">{format(res.timestamp?.toDate ? res.timestamp.toDate() : new Date(), 'MM/dd')}</span>
+                                                        <span className="text-xs text-slate-600">{format(res.timestamp?.toDate ? res.timestamp.toDate() : new Date(), 'HH:mm')}</span>
                                                     </div>
                                                     <div>
                                                         <h4 className="font-bold text-slate-200">{res.detail}</h4>

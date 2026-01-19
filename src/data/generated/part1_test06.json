@@ -1,0 +1,161 @@
+{
+  "testId": 6,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She's looking out a window.",
+          "translation": "여자가 창밖을 내다보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She's taking an item out of a refrigerator.",
+          "translation": "여자가 냉장고에서 물건을 꺼내고 있다."
+        },
+        {
+          "option": "C",
+          "text": "She's grabbing a handful of carrots.",
+          "translation": "여자가 당근을 한 웅큼 움켜쥐고 있다."
+        },
+        {
+          "option": "D",
+          "text": "She's putting some items in a bag.",
+          "translation": "여자가 가방에 물건들을 넣고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "D",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "One of the women is tying her shoe.",
+          "translation": "여자들 중 한 명이 신발끈을 묶고 있다."
+        },
+        {
+          "option": "B",
+          "text": "One of the women is wearing a hat.",
+          "translation": "여자들 중 한 명이 모자를 쓰고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is standing near a park bench.",
+          "translation": "여자들 중 한 명이 공원 벤치 근처에 서 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is carrying a computer up some stairs.",
+          "translation": "여자들 중 한 명이 컴퓨터를 들고 계단을 오르고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The man is setting a clock.",
+          "translation": "남자가 시계를 맞추고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The man is reaching for a box.",
+          "translation": "남자가 상자를 잡으려고 하고 있다."
+        },
+        {
+          "option": "C",
+          "text": "The man is posting some information.",
+          "translation": "남자가 정보를 게시하고 있다."
+        },
+        {
+          "option": "D",
+          "text": "The man is handing some food to the woman.",
+          "translation": "남자가 여자에게 음식을 건네고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "D",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "He's twisting some wires.",
+          "translation": "남자가 전선을 꼬고 있다."
+        },
+        {
+          "option": "B",
+          "text": "He's pruning a bush next to a building.",
+          "translation": "남자가 건물 옆에 있는 관목 가지를 치고 있다."
+        },
+        {
+          "option": "C",
+          "text": "He's lifting a block.",
+          "translation": "남자가 블록을 들어올리고 있다."
+        },
+        {
+          "option": "D",
+          "text": "He's spreading cement with a shovel.",
+          "translation": "남자가 삽으로 시멘트를 펴고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The women are facing a desk.",
+          "translation": "여자들이 책상을 마주보고 있다."
+        },
+        {
+          "option": "B",
+          "text": "One of the women is holding a jacket.",
+          "translation": "여자들 중 한 명이 재킷을 들고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A drawer has been left open.",
+          "translation": "서랍이 열려 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some folders have been placed on top of a file cabinet.",
+          "translation": "폴더들이 캐비넷 위에 놓여 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some cups have been emptied.",
+          "translation": "컵들이 비워져 있다."
+        },
+        {
+          "option": "B",
+          "text": "A fruit basket has been emptied.",
+          "translation": "과일 바구니가 비워져 있다."
+        },
+        {
+          "option": "C",
+          "text": "Some coffee has spilled on the counter.",
+          "translation": "커피가 조리대 위에 엎질러져 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some cups are being filled with water.",
+          "translation": "컵들이 물로 채워지고 있다."
+        }
+      ]
+    }
+  ]
+}

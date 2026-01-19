@@ -1,0 +1,161 @@
+{
+  "testId": 9,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "He's untying a cloth apron.",
+          "translation": "남자가 앞치마를 풀고 있다."
+        },
+        {
+          "option": "B",
+          "text": "He's setting a plastic bin on a shelf.",
+          "translation": "남자가 선반에 플라스틱 통을 놓고 있다."
+        },
+        {
+          "option": "C",
+          "text": "He's using a knife to slice some food.",
+          "translation": "남자가 칼로 음식을 썰고 있다."
+        },
+        {
+          "option": "D",
+          "text": "He's putting some groceries in a drawer.",
+          "translation": "남자가 식료품을 서랍에 넣고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She's fixing her sunglasses.",
+          "translation": "여자가 선글라스를 매만지고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She's sitting on a bench.",
+          "translation": "여자가 벤치에 앉아 있다."
+        },
+        {
+          "option": "C",
+          "text": "She's reaching into a handbag.",
+          "translation": "여자가 핸드백에 손을 넣고 있다."
+        },
+        {
+          "option": "D",
+          "text": "She's talking on the phone.",
+          "translation": "여자가 통화를 하고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "B",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "One of the women is leaning over a trash can.",
+          "translation": "여자들 중 한 명이 쓰레기통 위로 몸을 숙이고 있다."
+        },
+        {
+          "option": "B",
+          "text": "One of the women is looking at a post on a bulletin board.",
+          "translation": "여자들 중 한 명이 게시판에 있는 게시물을 보고 있다."
+        },
+        {
+          "option": "C",
+          "text": "One of the women is standing next to an entrance.",
+          "translation": "여자들 중 한 명이 입구 옆에 서 있다."
+        },
+        {
+          "option": "D",
+          "text": "One of the women is counting money from a machine.",
+          "translation": "여자들 중 한 명이 기계에서 돈을 세고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A car has been parked beside a building.",
+          "translation": "차가 건물 옆에 주차되어 있다."
+        },
+        {
+          "option": "B",
+          "text": "A door has been propped open.",
+          "translation": "문이 열려 받쳐져 있다."
+        },
+        {
+          "option": "C",
+          "text": "There's a sign posted on a fence.",
+          "translation": "울타리에 표지판이 붙어 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some plants have been arranged in a row.",
+          "translation": "화초 몇 개가 일렬로 배열되어 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some light fixtures are being installed.",
+          "translation": "조명 설비가 설치되고 있다."
+        },
+        {
+          "option": "B",
+          "text": "A display case is being wiped.",
+          "translation": "진열장을 닦고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A server is distributing menus.",
+          "translation": "종업원이 메뉴를 나눠주고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A server is taking an order.",
+          "translation": "종업원이 주문을 받고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A vehicle is covered in snow.",
+          "translation": "차량이 눈으로 덮여 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some equipment is leaning against a truck.",
+          "translation": "장비 몇 개가 트럭에 기대어 있다."
+        },
+        {
+          "option": "C",
+          "text": "He's driving a vehicle through some snow.",
+          "translation": "남자가 눈밭을 뚫고 차를 몰고 있다."
+        },
+        {
+          "option": "D",
+          "text": "He's closing the back of a truck.",
+          "translation": "남자가 트럭 뒷부분을 닫고 있다."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "text": "To ensure the seamless integration of the new software, all employees are required to attend a mandatory training session _______ by Mr. Thompson from the IT department.",
+    "options": [
+      {
+        "label": "A",
+        "text": "lead"
+      },
+      {
+        "label": "B",
+        "text": "leading"
+      },
+      {
+        "label": "C",
+        "text": "to lead"
+      },
+      {
+        "label": "D",
+        "text": "led"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "정답은 (D) led 입니다. 빈칸은 수동태 문장에서 과거 분사 역할을 해야 합니다. 'training session'이 'Thompson 씨에 의해 이끌어지는' 것이므로 과거 분사 'led'가 적절합니다. (A) lead는 동사 원형이므로 부적절합니다. (B) leading은 현재 분사로, training session이 직접 이끄는 주체라는 의미가 되어 부적절합니다. (C) to lead는 'to 부정사'로, 명사(training session)를 직접 수식하기 어렵습니다.",
+    "translation": "새로운 소프트웨어의 원활한 통합을 보장하기 위해, 모든 직원은 IT 부서의 Thompson 씨가 이끄는 필수 교육 세션에 참석해야 합니다.",
+    "generatedAt": "2026-01-19T23:10:35.398Z",
+    "checkStatus": "pending"
+  },
+  {
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "text": "_______ the recent surge in raw material costs, the management team is actively exploring alternative sourcing options to maintain profitability.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Given"
+      },
+      {
+        "label": "B",
+        "text": "Although"
+      },
+      {
+        "label": "C",
+        "text": "Despite"
+      },
+      {
+        "label": "D",
+        "text": "However"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "정답은 (A) Given 입니다. 'Given'은 전치사로 사용되어 '~을 고려하면' 또는 '~을 감안하면' 이라는 의미를 나타냅니다. 문맥상 원자재 비용의 급등을 고려하여 경영진이 수익성 유지를 위해 대체 소싱 옵션을 적극적으로 모색하고 있다는 의미가 되어 가장 적절합니다. (B) Although는 접속사로 문장과 문장을 연결해야 하므로 부적절합니다. (C) Despite는 전치사이지만, 반대되는 내용이 와야 적절하므로 문맥상 부적절합니다. (D) However는 부사로, 문장과 문장을 연결하기 위해서는 접속사가 필요하므로 부적절합니다.",
+    "translation": "최근 원자재 비용 급등을 감안하여 경영진은 수익성 유지를 위해 대체 소싱 옵션을 적극적으로 모색하고 있습니다.",
+    "generatedAt": "2026-01-19T23:10:35.399Z",
+    "checkStatus": "pending"
+  },
+  {
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "text": "Ms. Rodriguez requested a detailed report outlining the project's progress, _______ including a breakdown of expenses and a timeline for completion.",
+    "options": [
+      {
+        "label": "A",
+        "text": "particularly"
+      },
+      {
+        "label": "B",
+        "text": "particulate"
+      },
+      {
+        "label": "C",
+        "text": "particular"
+      },
+      {
+        "label": "D",
+        "text": "participate"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "정답은 (A) particularly 입니다. 빈칸은 동명사 'including'을 수식하는 부사 자리입니다. 'particularly'는 '특히'라는 의미로, 프로젝트 진행 상황을 상세하게 설명하는 보고서를 요청했으며, 특히 지출 내역과 완료 일정에 대한 분석을 포함해야 한다는 의미가 되어 가장 적절합니다. (B) particulate는 '미립자'라는 의미의 형용사, (C) particular는 '특정한'이라는 의미의 형용사, (D) participate는 '참여하다'라는 의미의 동사이므로 문맥상 부적절합니다.",
+    "translation": "Rodriguez 씨는 프로젝트 진행 상황, 특히 지출 내역과 완료 일정에 대한 분석을 포함한 상세 보고서를 요청했습니다.",
+    "generatedAt": "2026-01-19T23:10:35.399Z",
+    "checkStatus": "pending"
+  }
+]

@@ -6,12 +6,14 @@ import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getUserTargetScore, getUserProgress, getDueReviews } from '@/services/vocabularyService';
-import { BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target } from 'lucide-react';
+import { BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target, Lock } from 'lucide-react';
+import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function VocabularyDashboard() {
     const [loading, setLoading] = useState(true);
     const [userId, setUserId] = useState<string | null>(null);
     const [targetScore, setTargetScore] = useState<650 | 800 | 900 | null>(null);
+    const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [progress, setProgress] = useState({
         totalWords: 0,
         unknown: 0,
@@ -34,6 +36,10 @@ export default function VocabularyDashboard() {
             setUserId(user.userId);
 
             try {
+                // Fetch Access Control
+                const accessData = await getFeatureAccess();
+                setAccess(accessData);
+
                 // Extract target score from userClass (e.g., "800반" → 800)
                 const classMatch = user.userClass?.match(/(\d+)반/);
                 const score = classMatch ? parseInt(classMatch[1]) : 800; // Default to 800
@@ -59,6 +65,22 @@ export default function VocabularyDashboard() {
             </div>
         );
     }
+
+    // Handle global lock
+    if (access && access.voca === false) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                <div className="w-20 h-20 bg-rose-500/10 rounded-full flex items-center justify-center text-rose-500 mb-6">
+                    <Lock className="w-10 h-10" />
+                </div>
+                <h2 className="text-2xl font-black text-white mb-2 italic tracking-tighter uppercase">Access Denied</h2>
+                <p className="text-slate-400 text-sm font-medium">관리자의 요청에 의해 단어장 접근이 잠시 중단되었습니다.</p>
+                <Button onClick={() => router.push('/')} className="mt-8 bg-slate-800 hover:bg-slate-700 text-white px-8">메인으로</Button>
+            </div>
+        );
+    }
+
+    const maxDay = access?.maxSets?.voca || 30; // Default to 30 if not set
 
     // Generate Day 1-30
     // Generate Day 1-15 (User requested to hide 16-30 for now)
@@ -91,7 +113,7 @@ export default function VocabularyDashboard() {
                     <span className="text-indigo-500">MASTER</span>
                 </h2>
                 <p className="text-slate-400 font-medium text-xs">
-                    {targetScore}점 목표 | 매일 꾸준히, 15일 완성
+                    {targetScore}점 목표 | 매일 꾸준히, 현재 Day {maxDay}까지 오픈
                 </p>
             </div>
 
@@ -134,17 +156,33 @@ export default function VocabularyDashboard() {
                     // TODO: Get actual completion status from Firestore
                     const isPassed = false; // Placeholder
                     const theme = DAY_THEMES[day] || "테마 준비중";
+                    const isLocked = day > maxDay;
 
                     return (
-                        <Link key={day} href={`/homework/voca/${day}`}>
+                        <Link
+                            key={day}
+                            href={isLocked ? "#" : `/homework/voca/${day}`}
+                            onClick={(e) => {
+                                if (isLocked) {
+                                    e.preventDefault();
+                                    alert(`Day ${maxDay}번까지만 현재 오픈되어 있습니다.`);
+                                }
+                            }}
+                        >
                             <Card className={`
                 group relative p-4 rounded-3xl border transition-all cursor-pointer overflow-hidden flex flex-col items-center justify-center gap-1 h-32
-                ${isPassed
-                                    ? 'bg-indigo-500/10 border-indigo-500/50 hover:bg-indigo-500/20'
-                                    : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/30'
+                ${isLocked
+                                    ? 'bg-slate-900/50 border-slate-800/50 opacity-40 grayscale'
+                                    : isPassed
+                                        ? 'bg-indigo-500/10 border-indigo-500/50 hover:bg-indigo-500/20'
+                                        : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/30'
                                 }
               `}>
-                                {isPassed ? (
+                                {isLocked ? (
+                                    <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">
+                                        <Lock className="w-3 h-3" />
+                                    </div>
+                                ) : isPassed ? (
                                     <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center text-slate-900 shadow-lg shadow-indigo-500/20">
                                         <CheckCircle className="w-4 h-4" />
                                     </div>
@@ -155,13 +193,15 @@ export default function VocabularyDashboard() {
                                 )}
 
                                 <div className="text-center mt-2">
-                                    <span className={`font-black text-2xl italic tracking-tighter block mb-1 ${isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
+                                    <span className={`font-black text-2xl italic tracking-tighter block mb-1 ${isLocked ? 'text-slate-600' : isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
                                         }`}>
                                         DAY {String(day).padStart(2, '0')}
                                     </span>
-                                    <span className="text-xs text-slate-500 font-bold bg-slate-900/50 px-2 py-1 rounded-full border border-slate-800 group-hover:border-indigo-500/30 group-hover:text-indigo-400 transition-colors">
-                                        {theme}
-                                    </span>
+                                    {!isLocked && (
+                                        <span className="text-xs text-slate-500 font-bold bg-slate-900/50 px-2 py-1 rounded-full border border-slate-800 group-hover:border-indigo-500/30 group-hover:text-indigo-400 transition-colors">
+                                            {theme}
+                                        </span>
+                                    )}
                                 </div>
                             </Card>
                         </Link>

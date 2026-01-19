@@ -6,7 +6,7 @@ import { doc, getDoc, collection, addDoc, serverTimestamp } from 'firebase/fires
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
-import { Loader2, X, Trophy, BookOpen, AlertCircle, CheckCircle2, ChevronRight } from "lucide-react";
+import { Loader2, X, Trophy, BookOpen, AlertCircle, CheckCircle2, ChevronRight, Timer } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Question {
@@ -42,10 +42,25 @@ export default function Part5Quiz() {
     const [score, setScore] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+    const [elapsedTime, setElapsedTime] = useState(0);
+    const [isTimerRunning, setIsTimerRunning] = useState(true);
 
-    // Data Import
+    const formatTime = (seconds: number) => {
+        const m = Math.floor(seconds / 60);
+        const s = seconds % 60;
+        return `${m}:${s.toString().padStart(2, '0')}`;
+    };
 
-    // Fetch Questions (Firestore -> Local Fallback)
+    // Timer Effect
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+        if (isTimerRunning) {
+            interval = setInterval(() => setElapsedTime(prev => prev + 1), 1000);
+        }
+        return () => clearInterval(interval);
+    }, [isTimerRunning]);
+
+    // Fetch Questions
     useEffect(() => {
         const fetchQuestions = async () => {
             if (!unitId) return;
@@ -64,12 +79,10 @@ export default function Part5Quiz() {
                 }
 
                 // 2. Fallback to Local Data if Firestore fails or empty
-                console.log("Firestore data found (or empty), checking local fallback...");
                 const { part5Data } = await import('@/data/part5');
                 const localData = part5Data[unitId];
 
                 if (localData && localData.length > 0) {
-                    // console.log("Using Local Fallback Data for", unitId);
                     setQuestions(localData);
                 } else {
                     alert("해당 유닛의 문제가 없습니다.");
@@ -77,7 +90,6 @@ export default function Part5Quiz() {
                 }
             } catch (error) {
                 console.error("Error fetching questions, trying fallback:", error);
-                // Fallback on error too
                 try {
                     const { part5Data } = await import('@/data/part5');
                     const localData = part5Data[unitId];
@@ -128,15 +140,16 @@ export default function Part5Quiz() {
 
     const finishQuiz = async (finalLogs: Log[], finalScore: number) => {
         setIsFinished(true);
+        setIsTimerRunning(false);
         setSubmitting(true);
 
         const userStr = localStorage.getItem('toeic_user');
         let studentName = "Unknown", studentId = "Unknown", studentClass = "Unknown";
         if (userStr) {
             const user = JSON.parse(userStr);
-            studentName = user.userName;
-            studentId = user.userId;
-            studentClass = user.userClass;
+            studentName = user.userName || user.name || "Unknown";
+            studentId = user.userId || user.uid || "Unknown";
+            studentClass = user.userClass || "Unknown";
         }
 
         try {
@@ -152,17 +165,18 @@ export default function Part5Quiz() {
             });
         } catch (error) {
             console.error("Error saving results:", error);
-            alert("결과 저장 중 오류가 발생했지만, 학습 기록은 남았습니다.");
         } finally {
             setSubmitting(false);
         }
     };
 
     if (loading) {
-        return <div className="min-h-screen flex flex-col items-center justify-center text-slate-500 gap-4">
-            <Loader2 className="w-10 h-10 animate-spin text-indigo-500" />
-            <p className="font-bold text-sm tracking-widest animate-pulse">LOADING UNIT DATA...</p>
-        </div>;
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center text-slate-500 gap-4">
+                <Loader2 className="w-10 h-10 animate-spin text-indigo-500" />
+                <p className="font-bold text-sm tracking-widest animate-pulse">LOADING UNIT DATA...</p>
+            </div>
+        );
     }
 
     // Result Screen
@@ -175,6 +189,10 @@ export default function Part5Quiz() {
                     </div>
                     <h2 className="text-4xl font-black mb-2 tracking-tighter uppercase text-white">Mission Complete</h2>
                     <p className="text-slate-400 font-bold italic text-xl">SCORE: <span className="text-indigo-400">{score}</span> / {questions.length}</p>
+                    <div className="text-slate-500 font-bold flex items-center justify-center gap-2 mt-4 grayscale opacity-70">
+                        <Timer className="w-4 h-4" />
+                        <span>소요 시간: {formatTime(elapsedTime)}</span>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-12">
@@ -240,6 +258,8 @@ export default function Part5Quiz() {
     // Quiz Screen
     const currentQ = questions[currentIndex];
     const progress = ((currentIndex) / questions.length) * 100;
+
+    if (!currentQ) return null;
 
     return (
         <div className="w-full max-w-2xl mx-auto min-h-[80vh] flex flex-col pt-4 pb-20 px-0 md:px-4">

@@ -1,18 +1,42 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Clock, Trophy, Star } from 'lucide-react';
+import { ArrowLeft, BookOpen, Clock, Trophy, Star, Lock } from 'lucide-react';
 import { part6TestData } from '@/data/toeic/reading/part6/tests';
 import { cn } from "@/lib/utils";
+import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Part6LobbyPage() {
+    const [access, setAccess] = useState<FeatureAccess | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchAccess = async () => {
+            const data = await getFeatureAccess();
+            setAccess(data);
+            setLoading(false);
+        };
+        fetchAccess();
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+                <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>
+            </div>
+        );
+    }
+
+    const maxTest = access?.maxSets?.part6 || 10;
+
     return (
         <div className="min-h-screen bg-slate-950 px-6 py-12 pb-32">
-            <div className="max-w-2xl mx-auto space-y-12">
+            <div className="max-w-5xl mx-auto space-y-12">
                 {/* Header */}
                 <div className="space-y-6">
                     <Link
-                        href="/homework"
+                        href="/"
                         className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
@@ -20,11 +44,11 @@ export default function Part6LobbyPage() {
                     </Link>
 
                     <div>
-                        <h1 className="text-4xl font-black text-white italic tracking-tighter mb-2">
+                        <h1 className="text-4xl font-black text-white italic tracking-tighter mb-2 uppercase">
                             RC Part 6
                         </h1>
                         <p className="text-slate-400 font-medium text-lg">
-                            Text Completion (장문 공란 메우기)
+                            Text Completion (장문 공란 메우기) | 현재 {maxTest}회차 오픈
                         </p>
                     </div>
 
@@ -33,13 +57,17 @@ export default function Part6LobbyPage() {
                             <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 shrink-0">
                                 <BookOpen className="w-6 h-6" />
                             </div>
-                            <div>
+                            <div className="flex-1">
                                 <h3 className="text-white font-bold text-lg mb-1">About Part 6</h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">
+                                <p className="text-slate-400 text-sm leading-relaxed mb-3">
                                     Part 6 consists of 4 incomplete texts. Each text has 4 questions.
                                     You must select the best answer to complete the text.
                                     This part tests your understanding of grammar, vocabulary, and context.
                                 </p>
+                                <div className="flex items-center gap-2 text-indigo-400">
+                                    <Clock className="w-4 h-4" />
+                                    <span className="text-sm font-bold">권장풀이시간 MAX 8분</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -56,46 +84,61 @@ export default function Part6LobbyPage() {
                         </h2>
                     </div>
 
-                    <div className="grid gap-4">
-                        {part6TestData.map((test) => (
-                            <div
-                                key={test.testId}
-                                className="group relative bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-3xl p-6 transition-all duration-300"
-                            >
-                                <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
-                                    <div className="space-y-1">
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-xs font-black text-indigo-500 uppercase tracking-widest bg-indigo-500/10 px-2 py-0.5 rounded-full">
-                                                Test {test.testId}
-                                            </span>
-                                            <span className="text-xs font-bold text-slate-500">
-                                                {test.passages.length} Passages • {test.passages.reduce((acc, p) => acc + p.questions.length, 0)} Questions
-                                            </span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {part6TestData.map((test) => {
+                            const isLocked = test.testId > maxTest;
+                            return (
+                                <div
+                                    key={test.testId}
+                                    className={cn(
+                                        "group relative bg-slate-900 border transition-all duration-300 rounded-3xl p-6",
+                                        isLocked
+                                            ? "border-slate-800 opacity-60"
+                                            : "bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50"
+                                    )}
+                                >
+                                    <div className="flex flex-col gap-4">
+                                        <div className="space-y-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-xs font-bold text-slate-500">
+                                                    {isLocked ? "Locked" : `${test.passages.length} Passages • ${test.passages.reduce((acc, p) => acc + p.questions.length, 0)} Questions`}
+                                                </span>
+                                            </div>
+                                            <h3 className={cn(
+                                                "text-xl font-bold transition-colors",
+                                                isLocked ? "text-slate-500" : "text-white group-hover:text-indigo-400"
+                                            )}>
+                                            </h3>
+                                            {!isLocked && (
+                                                <div className="flex items-center gap-2 text-slate-500 text-xs font-bold mt-2">
+                                                    <Clock className="w-3.5 h-3.5" />
+                                                    <span>권장풀이시간 MAX 8분</span>
+                                                </div>
+                                            )}
                                         </div>
-                                        <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
-                                            {test.title}
-                                        </h3>
-                                    </div>
 
-                                    <div className="flex gap-3 w-full sm:w-auto">
                                         <Link
-                                            href={`/homework/part6/test/${test.testId}?mode=drill`}
-                                            className="flex-1 sm:flex-none h-12 px-6 rounded-2xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white font-bold flex items-center justify-center gap-2 transition-all border border-slate-700 hover:border-indigo-500"
+                                            href={isLocked ? "#" : `/homework/part6/test/${test.testId}?mode=real`}
+                                            onClick={(e) => {
+                                                if (isLocked) {
+                                                    e.preventDefault();
+                                                    alert(`${maxTest}회차까지만 현재 오픈되어 있습니다.`);
+                                                }
+                                            }}
+                                            className={cn(
+                                                "w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg",
+                                                isLocked
+                                                    ? "bg-slate-800 text-slate-600 shadow-none cursor-not-allowed"
+                                                    : "bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/20"
+                                            )}
                                         >
-                                            <Trophy className="w-4 h-4" />
-                                            <span>Drill</span>
-                                        </Link>
-                                        <Link
-                                            href={`/homework/part6/test/${test.testId}?mode=real`}
-                                            className="flex-1 sm:flex-none h-12 px-6 rounded-2xl bg-slate-100 hover:bg-white text-slate-900 font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-white/5"
-                                        >
-                                            <Clock className="w-4 h-4" />
-                                            <span>Start</span>
+                                            {isLocked ? <Lock className="w-4 h-4" /> : <Clock className="w-4 h-4" />}
+                                            <span>{isLocked ? "Locked" : "Start"}</span>
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>

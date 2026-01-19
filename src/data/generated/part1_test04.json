@@ -1,0 +1,161 @@
+{
+  "testId": 4,
+  "questions": [
+    {
+      "id": "q1",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "She's kneeling in front of a chalkboard.",
+          "translation": "여자가 칠판 앞에 무릎을 꿇고 있다."
+        },
+        {
+          "option": "B",
+          "text": "She's sweeping a tile floor.",
+          "translation": "여자가 타일 바닥을 쓸고 있다."
+        },
+        {
+          "option": "C",
+          "text": "She's signing a receipt.",
+          "translation": "여자가 영수증에 서명하고 있다."
+        },
+        {
+          "option": "D",
+          "text": "She's clearing off a countertop.",
+          "translation": "여자가 조리대를 치우고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "A man is polishing the floor.",
+          "translation": "남자가 바닥을 닦고 있다."
+        },
+        {
+          "option": "B",
+          "text": "A man is unzipping a suitcase.",
+          "translation": "남자가 여행 가방을 지퍼를 열고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A man is picking up a cushion.",
+          "translation": "남자가 쿠션을 줍고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A man is drinking from a bottle.",
+          "translation": "남자가 병으로 마시고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "correctAnswer": "B",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "An announcer is setting down a microphone.",
+          "translation": "아나운서가 마이크를 내려놓고 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some workers are constructing a platform.",
+          "translation": "몇몇 사람들이 발판을 만들고 있다."
+        },
+        {
+          "option": "C",
+          "text": "There are some performers on a stage.",
+          "translation": "무대 위에 몇몇 공연자들이 있다."
+        },
+        {
+          "option": "D",
+          "text": "Some musicians are unpacking their equipment.",
+          "translation": "몇몇 음악가들이 장비를 꺼내고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The woman is hanging up some posters.",
+          "translation": "여자가 포스터를 걸고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The women is writing on a document.",
+          "translation": "여자가 서류에 글을 쓰고 있다."
+        },
+        {
+          "option": "C",
+          "text": "A laptop is being put away.",
+          "translation": "랩탑이 치워지고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A flowerpot is being stored on a shelf.",
+          "translation": "화분이 선반에 보관되고 있다."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "The presenter is closing a window.",
+          "translation": "발표자가 창을 닫고 있다."
+        },
+        {
+          "option": "B",
+          "text": "The audience is standing behind a podium.",
+          "translation": "청중이 연단 뒤에 서 있다."
+        },
+        {
+          "option": "C",
+          "text": "The audience is seated in a circle.",
+          "translation": "청중이 둥글게 앉아 있다."
+        },
+        {
+          "option": "D",
+          "text": "The audience is seated.",
+          "translation": "청중이 앉아 있다."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "correctAnswer": "A",
+      "scripts": [
+        {
+          "option": "A",
+          "text": "Some passengers are waiting on the walkway.",
+          "translation": "몇몇 승객들이 보도에서 기다리고 있다."
+        },
+        {
+          "option": "B",
+          "text": "Some bicycles are mounted on a bus.",
+          "translation": "몇몇 자전거들이 버스에 탑재되어 있다."
+        },
+        {
+          "option": "C",
+          "text": "A bus is being driven down a road.",
+          "translation": "버스가 도로를 따라 운행되고 있다."
+        },
+        {
+          "option": "D",
+          "text": "A garage door has been opened.",
+          "translation": "차고 문이 열려 있다."
+        }
+      ]
+    }
+  ]
+}

@@ -35,6 +35,7 @@ export default function Part2Test() {
     const [progress, setProgress] = useState(0);
     const [useTTS, setUseTTS] = useState(false);
     const [optionStatus, setOptionStatus] = useState<Record<number, 'eliminated' | 'uncertain'>>({}); // Track X/Triangle status
+    const [notification, setNotification] = useState<string | null>(null);
 
     // Refs
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -131,6 +132,10 @@ export default function Part2Test() {
             })
             .catch(e => {
                 if (myId !== playbackId.current) return;
+
+                // Ignore play interruption errors (expected when skipping/answering fast)
+                if (e.name === 'AbortError' || e.message.includes('interrupted')) return;
+
                 console.error("Audio error:", e);
                 handleAudioError(myId);
             });
@@ -141,6 +146,10 @@ export default function Part2Test() {
         if (originId !== playbackId.current) return;
 
         console.log("Audio file not found, switching to TTS");
+        if (!useTTS) {
+            setNotification("오디오 파일이 없어 AI 음성으로 재생합니다.");
+            setTimeout(() => setNotification(null), 3000);
+        }
         setUseTTS(true);
 
         // Immediate switch
@@ -349,15 +358,15 @@ export default function Part2Test() {
             const user = JSON.parse(userStr);
             try {
                 await addDoc(collection(db, "Manager_Results"), {
-                    student: user.userName,
-                    studentId: user.userId,
+                    student: user.userName || user.name || "Unknown",
+                    studentId: user.userId || user.uid || "Guest",
                     unit: `LC_Part2_Test${testId}`,
                     score: score,
                     total: questions.length,
                     wrongCount: wrongQueue.length,
                     timestamp: serverTimestamp()
                 });
-                alert("학습 결과가 저장되었습니다.");
+                // alert("학습 결과가 저장되었습니다.");
             } catch (e) {
                 console.error("Save error:", e);
             }
@@ -372,28 +381,28 @@ export default function Part2Test() {
             <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
                 <div className="max-w-md w-full space-y-8 text-center">
                     <div>
-                        <h2 className="text-3xl font-black text-white mb-2 tracking-tighter">MISSION COMPLETE</h2>
+                        <h2 className="text-3xl font-black text-white mb-2 tracking-tighter">학습 완료</h2>
                         <p className="text-slate-400 font-medium">
-                            {wrongQueue.length === 0 ? "Perfect Score! 🎉" : "틀린 문제를 확인하고 복습하세요."}
+                            {wrongQueue.length === 0 ? "만점입니다! 완벽해요! 🎉" : "틀린 문제를 확인하고 복습하세요."}
                         </p>
                     </div>
 
                     <div className="bg-slate-900/50 rounded-3xl p-8 border border-slate-800">
                         <div className="flex items-center justify-center gap-4 mb-6">
                             <div className="text-center">
-                                <p className="text-sm font-bold text-slate-500 uppercase">Score</p>
+                                <p className="text-sm font-bold text-slate-500 uppercase">점수</p>
                                 <p className="text-4xl font-black text-white">{questions.length - wrongQueue.length}</p>
                             </div>
                             <div className="w-px h-12 bg-slate-700"></div>
                             <div className="text-center">
-                                <p className="text-sm font-bold text-slate-500 uppercase">Wrong</p>
+                                <p className="text-sm font-bold text-slate-500 uppercase">오답</p>
                                 <p className="text-4xl font-black text-rose-500">{wrongQueue.length}</p>
                             </div>
                         </div>
 
                         {wrongQueue.length > 0 && (
                             <div className="text-left">
-                                <p className="text-xs font-bold text-slate-500 uppercase mb-3">Wrong Questions</p>
+                                <p className="text-xs font-bold text-slate-500 uppercase mb-3">틀린 문제</p>
                                 <div className="flex flex-wrap gap-2">
                                     {wrongQueue.map(q => (
                                         <div key={q.id} className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-500/10 border border-rose-500/20 rounded-lg">
@@ -434,15 +443,21 @@ export default function Part2Test() {
                 className="hidden"
             />
 
-            <div className="py-4 md:p-6 flex justify-between items-end max-w-3xl mx-auto px-4 md:px-6">
+            <div className="py-4 md:p-6 flex justify-between items-end max-w-3xl mx-auto px-4 md:px-6 relative">
+                {notification && (
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full bg-slate-800 text-amber-500 px-4 py-2 rounded-full shadow-lg border border-amber-500/20 text-xs font-bold whitespace-nowrap z-50 animate-in fade-in slide-in-from-bottom-2">
+                        <AlertTriangle className="w-3 h-3 inline mr-1.5" />
+                        {notification}
+                    </div>
+                )}
                 <div>
                     <div className="flex items-center gap-2 mb-1">
                         <span className={cn("px-2 py-0.5 rounded text-[10px] font-black uppercase text-white", isReviewMode ? "bg-rose-500" : "bg-emerald-600")}>
-                            {isReviewMode ? "Review Mode" : `Test ${testId}`}
+                            {isReviewMode ? "오답 확인" : `Test ${testId}`}
                         </span>
                         {currentQuestion?.questionType === 'Indirect' && (
                             <span className="px-2 py-0.5 rounded text-[10px] font-black uppercase text-amber-500 bg-amber-500/10 border border-amber-500/20 flex items-center gap-1">
-                                <AlertTriangle className="w-3 h-3" /> Indirect Answer
+                                <AlertTriangle className="w-3 h-3" /> 우회적 답변
                             </span>
                         )}
                     </div>
@@ -485,7 +500,7 @@ export default function Part2Test() {
                         {isPlaying ? <Volume2 className="w-8 h-8 md:w-10 md:h-10 animate-bounce" /> : <Play className="w-8 h-8 md:w-10 md:h-10 ml-1" />}
                     </button>
                     <p className="mt-6 text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
-                        {isPlaying ? (useTTS ? "AI Speaking..." : "Listening...") : "Listen Carefully"}
+                        {isPlaying ? (useTTS ? "AI 음성 재생 중..." : "재생 중...") : "집중해서 들어주세요"}
                     </p>
                 </div>
 

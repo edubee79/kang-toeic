@@ -1,0 +1,101 @@
+{
+  "testId": 9,
+  "answers": [
+    {
+      "questionId": "131",
+      "correctAnswer": "A",
+      "explanation": "Full Korean explanation text in a single line",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "C",
+      "explanation": "빈칸이 포함된 부분은 문장 중간에 삽입되어 앞에 나온 사물명사 agenda를 보충 설명하는 역할을 한다. 따라서 '주격 관계대명사 +be동사로 구성된 (C) which is가 정답이다. 참고로, (B) being을 현재분사로 본다고 하더라도, '의사 일정을 웹사이트에서 볼 수 있다는 것은 부가적인 정보일 뿐, '일정에 설명회가 포함된 것'과는 관계가 없기 때문에 분사구문이 성립될 수 없다. (D) what can be는 앞에 선행사가 올 수 없으므로 오답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞뒤로 프로젝트 매니저인 안드레 카잘이 회의에서 할 일(share design concepts for the building, lead a discussion about how construction should be funded)을 열거하고 있다. 따라서 내용을 덧붙일 때 쓰이는 접속부사가 필요하므로, '게다가, 아울러'라는 의미의 (A) In addition이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "D",
+      "explanation": "빈칸 앞 문장에서 대중의 의견을 듣는 시간이 마련될 것(There will be a period for public comment)이라고 했으므로, 이에 대해 부연 설명을 하거나 공지를 마무리하는 문장이 이어져야 자연스럽다. 따라서 그때 참석자들이 의견을 제시할 수 있다고 한 (D)가 정답이다. 참고로, 여기서 at that time은 앞 문장의 a period for public comment를 가리킨다.",
+      "classification": "P6_READING_COMPREHENSION"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞 문장에서는 팀워크의 이점(Teamwork not only improves productivity but also leads to increased satisfaction for customers and employees)을 설명했고, 빈칸 뒤에서는 매장 내 개선 계획과 팀워크 조성 훈련을 결합하려고 한다(we will be combining a team-building exercise with an in-store improvement plan)며 팀워크를 강화할 계획을 발표했다. 즉, 계획을 실행하기 위해 팀워크의 이점을 명분으로 내세운 것이므로, '그러한 이유로'라는 의미의 (A) For that reason이 빈칸에 들어가야 자연스럽다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "D",
+      "explanation": "빈칸은 완전한 절(products can be displayed)을 이끌어 장소 명사인 spaces를 수식하는 역할을 한다. 따라서 관계부사 (D) where이 정답이다. 참고로, (A) for는 접속사로 쓰일 경우 이유를 나타내며 앞에 콤마가 와야 한다. (B) that이 빈칸에 들어가려면 that이 이끄는 완전한 절과 앞에 나오는 명사가 동격 관계가 되어야 하는데, 해당 문장에서는 성립되지 않는다. 복합관계대명사인 (C) whatever(~하는 것은 무엇이든지, 어떤 ~일지라도)는 명사절을 이끌어 문장의 주어/목적어 역할을 하거나 부사절을 이끌어 콤마 앞에 오는 주절을 수식한다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "137",
+      "correctAnswer": "D",
+      "explanation": "빈칸은 주어 Associates의 동사 자리이다. 만일 the task가 동사의 직접목적어라고 한다면 이 뒤에 수령 대상(전치사 to+사람)이 와야 하는데, 여기서는 task를 수식하는 to부정사가 왔다. 따라서 주어인 영업 사원들이 특정 임무를 받는 대상이라고 보는 것이 타당하므로, 보기에서 수동태인 (B) were given과 (D) will be given 중 하나를 선택해야 한다. 해당 임무는 앞으로 있을 활동에서 주어지는 것이므로, 미래시제인 (D) will be given이 정답이 된다. give는 4형식 동사로 쓰일 경우 뒤에 간접목적어 및 직접목적어가 순서대로 오는데, 수동태로 바뀌면서 간접목적어가 주어 자리에 가면 직접목적어는 동사 뒤에 그대로 남겨져 해당 문장과 같은 구조가 된다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "138",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞 문장에서 영업사원들에게 팀별로 서로 협력하여 선반을 조립하는 임무가 주어질 것(Associates will be given the task to work cooperatively in teams to assemble them)이라고 했고, 뒤 문장에서는 해당 작업이 완료된 후(When it is completed) 하게 될 일을 나열했다. 따라서 빈칸에도 조립을 위한 협력 작업과 관련된 내용이 들어가야 자연스러우므로, 작업 소요 시간을 예상한 (B)가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "B",
+      "explanation": "뒤 문장에서 배관을 넣는 데 1시간 정도 소요된다(It should take about an hour to put in the line)고 했으므로, 가스관(a gas line)이 설치될 예정이라고 보는 것이 타당하다. 따라서 (B) install이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "D",
+      "explanation": "주격 인칭대명사 We의 동사 자리로, 전치사구 on Monday, 10 August의 수식을 받는다. 이메일을 보낸 날짜(Date: 4 August)를 기준으로 8월 10일은 미래이며, 앞 문장에서도 미래시제(will be able to)가 쓰였으므로, (D) will send가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "A",
+      "explanation": "앞 문장에서 작업 예정일에 배관을 넣는 데 1시간 정도 소요될 것(It should take about an hour to put in the line)이라고 했으므로, 빈칸에는 해당 작업에 대한 추가 내용이 들어가야 자연스럽다. 따라서 순서상 설치 이후 가능한 일을 설명한 (A)가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "D",
+      "explanation": "첫 번째 단락에서 8월 10일 월요일 오전 10시에서 11시 사이에 작업을 수행할 수 있도록 번즈 씨를 보낼 예정(We will send Bradley Burns~ to do this on Monday, 10 August, between 10:00 A.M. and 11:00 A.M.)이라고 했으므로, 취소(cancel)할 만한 대상은 예정된 작업이라고 볼 수 있다. 따라서 '약속, 예약'이라는 의미의 (D) appointment가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "A",
+      "explanation": "빈칸의 목적어 역할을 하는 to maintain our standing as an industry leader와 어울리는 동사를 선택해야 한다. 업계 선두라는 지위를 유지하는 것은 업체가 추구하는 목표라고 볼 수 있으므로, '추구하다, ~하려고 하다'라는 의미의 (A) seek가 정답이다. (D) remember는 to부정사와 쓰일 경우 '~할 것을 기억하다'라는 뜻을 나타내므로 빈칸에 적절치 않다. (B) imply(암시하다)와 (C) predict(예측하다)는 to부정사를 목적어로 취하지 않으므로, 구조상으로도 불가능하다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞에서는 올해 시험하기 시작한 신규 프로그램이 기대를 넘어섰다(The initiative exceeded our expectations)고 했고, 뒤에서는 모든 매장 관리자들에게 관련 내용을 안내하고 대중에게 해당 프로그램을 발표하겠다고 했다. 따라서 빈칸에도 해당 프로그램과 관련된 내용이 들어가야 자연스러우므로, 시험 성공에 따른(Thus) 결정을 밝힌 (B)가 정답이다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "C",
+      "explanation": "빈칸은 명사 instructions를 수식하는 형용사 자리로, 문맥상 '상세한(=상세히 설명된) 지시사항'이라는 내용이 되어야 자연스럽다. 따라서 (C) detailed가 정답이다. 현재분사로 쓰일 수 있는 (D) detailing은 영사를 뒤에서 수식해야 하며, 목적어를 취해야 한다. 참고로, send는 4형식 동사로 쓰일 경우 뒤에 간접목적어 및 직접목적어가 순서대로 오는데, 수동태로 바뀌면서 간접목적어가 주어 자리에 가면 직접목적어는 동사 뒤에 그대로 남겨져 해당 문장과 같은 구조가 된다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞뒤로 신규 프로그램의 확장과 관련된 11월 일정(all store managers will be sent detailed instructions ~ we will be announcing the program to the public)을 안내하고 있다. 따라서 연관 있는 내용을 덧붙일 때 쓰이는 접속부사가 빈칸에 들어가야 자연스러우므로, '게다가, 또한'이라는 의미의 (B) Additionally가 정답이다.",
+      "classification": "P6_ADVERB"
+    }
+  ]
+}

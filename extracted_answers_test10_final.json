@@ -1,0 +1,125 @@
+{
+  "testId": 10,
+  "answers": [
+    {
+      "questionId": "131",
+      "correctAnswer": "D",
+      "explanation": "다가오는 휴가 시즌(the upcoming holiday season)은 임시직 매장 직원을 구하는 이유이므로, '~을 위해'라는 의미의 (D) for가 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "132",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞뒤 문장에서 임시직 매장 직원의 직무(greeting customers and answering questions/shelve, clean, and organize merchandise)를 설명하고 있으므로, 빈칸에도 관련 업무에 대한 내용이 들어가야 자연스럽다. 따라서 (A)가 정답이다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "133",
+      "correctAnswer": "A",
+      "explanation": "형용사 friendly와 함께 명사 candidates를 수식하는 형용사 자리이므로, (A) energetic(활동적인, 활기찬)이 정답이다. (B) energy와 (D) energizer는 명사, (C) energize는 동사로 품사상 빈칸에 들어갈 수 없다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "134",
+      "correctAnswer": "C",
+      "explanation": "앞 문장에서 일자리에 지원하고 싶으면 온라인 구직 지원서를 작성하라(To apply, please fill out an online job application)고 했으므로, 해당 문장의 10월 21일은 지원 일정과 관련된 날짜라고 보아야 한다. 따라서 '기한'이라는 의미의 (C) deadline이 빈칸에 들어가야 자연스럽다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "135",
+      "correctAnswer": "C",
+      "explanation": "빈칸이 포함된 부분은 소박한 마음이 각종 시설을 갖춘 항구가 되는 데(The unassuming town ~ is set to become a fully equipped port) 영향을 미친 요인을 나타낸다. 뒤 문장에서 정부가 최근 이 지역을 업무지구로 지정했다(The government has recently designated the area as a business district)고 했으므로, 경제와 관련된 부분의 증가(increase)로 인한 것임을 알 수 있다. 따라서 '투자'라는 의미의 (C) investment가 정답이다. 참고로, 마지막 문장에서 필요 자금이 이미 확보된 게 있다(with the needed finances already secured)고 했으므로 투자가 증가했음을 한번 더 확인할 수 있다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "136",
+      "correctAnswer": "A",
+      "explanation": "주어 This와 동사 attract의 수가 일치하지 않으므로, 빈칸이 This의 동사 자리임을 알 수 있다. 따라서 빈칸에는 This와 수가 일치하면서 attract와 to부정사를 이루는 to가 포함된 본동사가 들어가야 한다. 앞 문장 전체를 대신하는 This는 신규 업체들을 유치하고 경제 성장에 박차를 가하기 위해 '의도된 것이므로, 수동태 동사인 (A) is meant to가 정답이 된다. (B) means to는 능동태로 '~할 셈이다'라는 뜻을 나타내므로 적절하지 않고, 준동사인 (C) meaning to와 for가 포함된 (D) is meant for는 구조상 빈칸에 들어갈 수 없다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "137",
+      "correctAnswer": "D",
+      "explanation": "앞 문장에서 마리나 인터내셔널 해운이라는 회사가 키콜레 항구에 거점을 열 계획을 발표했다(One firm, Marina International Shipping, has already announced plans to open a hub there)고 했으므로, 빈칸에는 유사한 사례나 이 회사와 관련된 내용이 들어가야 자연스럽다. 따라서 회사가 항구에 거점을 연 의의를 설명한 (D)가 정답이다.",
+      "classification": "P6_SENTENCE"
+    },
+    {
+      "questionId": "138",
+      "correctAnswer": "A",
+      "explanation": "빈칸 앞 문장에서는 많은 공무원들이 최근 해당 계획에 반대 의사를 표시했다(A number of government officials have recently expressed opposition to the plan)고 했는데, 빈칸 뒤에서는 프로젝트가 추진될 것이 확실해 보인다(with the needed finances already secured, it seems certain that the project will move forward)며 대조되는 결과를 예측했다. 따라서 '그렇기는 하지만, 그렇더라도'라는 의미의 (A) Nonetheless가 정답이다. 참고로, (C) In case는 접속사, (D) Equally as는 부사에 접속사/전치사가 결합한 형태이므로 구조상으로도 빈칸에 들어갈 수 없다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "139",
+      "correctAnswer": "D",
+      "explanation": "not only와 함께 상관접속사를 이루어 두 명사구 fantastic food, rides, and games와 exciting shows를 연결하는 자리이다. 따라서 (D) but also가 정답이다. 'not only A but (also) B'는 'A뿐만 아니라 B도'라는 의미로 쓰인다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "140",
+      "correctAnswer": "C",
+      "explanation": "빈칸은 패밀리 유원지 축제에서 놓치지 말아야(not to miss) 할 대상으로, 바로 뒤 문장에 나오는 크레이지 카우보이 기차를 가리킨다. 따라서 '명물'이라는 의미의 (C) attraction이 정답이다.",
+      "classification": "P6_VOCABULARY"
+    },
+    {
+      "questionId": "141",
+      "correctAnswer": "C",
+      "explanation": "해당 단락은 축제에서 열리는 공연과 관련된 내용을 설명하고 있다. 바로 앞 문장에서 기본 입장권 소지자는 공연 입장을 위해 추가 요금을 지불해야 한다(all basic admission ticket holders will need to pay additional fees to gain entrance to shows)며 입장료에 대해 언급했으므로, 공연 시간 및 가격 확인 방법을 안내한 (C)가 빈칸에 들어가야 자연스럽다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "142",
+      "correctAnswer": "A",
+      "explanation": "주어 We의 동사 자리로, 명사구 a VIP Family Fun pass를 목적으로 취한다. 따라서 능동태 동사 중 하나를 선택해야 하는데, 표에 대한 일반적인 사항을 설명하는 문장이므로 현재 동사인 (A) offer가 정답이 된다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "143",
+      "correctAnswer": "D",
+      "explanation": "앞 문장에서 바즈파 씨에게 알릴 중요한 소식이 있다(We have some important news to share with you)고 했으므로, 업계에서 철수하기로 한 것(to retire and close the company)이 이미 결정된 사항임을 알 수 있다. 따라서 현재완료시제 동시인 (D) have decided가 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "144",
+      "correctAnswer": "B",
+      "explanation": "빈칸 앞 문장에서 회사를 닫기로 결정했다(We have decided to ~ close the company)고 했는데, 뒤 문장에서는 서비스 중단을 겪지 않도록 하겠다(make sure that you do not experience any disruption to your service)며 결정과는 상반되는 조치를 언급했다. 따라서 '그러나, 하지만'이라는 의미의 (B) However이 정답이다.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "145",
+      "correctAnswer": "their",
+      "explanation": "앞 문장에서 콘도 난방 공조가 6월 1일부터 서비스 제공을 시작할 수 있도록 처리했다(we have arranged for Kondo's Heating and Air to begin providing service to you effective on 1 June)고 했으므로, 빈칸에는 콘도 난방 공조를 가리키는 소유격 대명사가 들어가야 한다. 회사는 3인칭 단수 it, 혹은 복수 대명사 they로 대신할 수",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "146",
+      "correctAnswer": "C",
+      "explanation": "빈칸 앞 부분에서 콘도 난방 공조가 바즈파 씨에게 서비스 제공을 시작할 수 있도록 처리했다(we have arranged for Kondo's Heating and Air to begin providing service to you)고 한 후, 회사에 대한 설명을 덧붙이며 바즈파 씨를 안심시켰다. 뒤 문장에서는 문의사항이 있으면 언제든 전화하라(If you have any questions, please do not hesitate to call)고 했으므로, 빈칸에도 콘도 난방 공조를 주선해준 것과 관련된 내용이 들어가야 자연스럽다. 따라서 그 쪽에서 곧 편지를 받을 거라고 한 (C)가 정답이다.",
+      "classification": "P6_SENTENCE_INSERTION"
+    },
+    {
+      "questionId": "147",
+      "correctAnswer": "D",
+      "explanation": "보딘 씨가 오후 1시 7분 메시지에서 자신의 다음 작업(Which order should I work on next?)을 물어봤는데, 이에 대해 로젠 씨가 첸 씨 부부의 식탁 의자를 토요일까지 해주기로 약속했다(I promised the Chens their dining chairs by Saturday)고 응답했다. 보딘 씨의 1시 24분 메시지를 보면 그가 다음에 첸 씨 부부의 주문을 작업할 것임(I'll get started on the Chens' order now)을 확인할 수 있으므로, (D)가 정답이다.",
+      "classification": "P6_INFERENCE"
+    },
+    {
+      "questionId": "148",
+      "correctAnswer": "B",
+      "explanation": "로젠 씨가 오후 1시 14분 메시지에서 6월 14일 메트로폴리탄 디자인쇼가 7월 7일로 연기됐다(the Metropolitan Design Show on June 14 has been postponed to July 7)는 소식을 전했는데, 이에 대해 보딘 씨가 '저는 못 가겠군요(I can't make it)'라고 응답한 것이다. 1시 24분 메시지에서 가족 약속이 있어 못 간다는 것을 다시 한번 드러냈으므로, (B)가 정답이다.",
+      "classification": "P6_INTENTION_INFERENCE"
+    },
+    {
+      "questionId": "149",
+      "correctAnswer": "B",
+      "explanation": "귀하의 현재 기본 회원 자격으로는 조리법 저장이 하루당 5개로 제한됩니다. 매일 조리법을 무제한으로 저장하고 쇼핑 목록을 자동 생성하며 매주 식단을 작성하고 영양 데이터를 추적하는 자유를 누리고 싶다면, 한 달 요금 2.99달러만으로 프리미엄 회원이 되어 보십시오.",
+      "classification": "P6_GRAMMAR"
+    },
+    {
+      "questionId": "150",
+      "correctAnswer": "C",
+      "explanation": "많은 사용자들은 이 적은 비용이 유익하게 쓰인다고 생각합니다. 프리미엄 기능은 시간을 절약해주고 더욱 건강한 식단을 선택하게 해주니까요. 저희 “PM 커뮤니티” 웹페이지를 방문하셔서 프리미엄 회원들의 실제 추천 글을 살펴보세요.",
+      "classification": "P6_VOCABULARY"
+    }
+  ]
+}

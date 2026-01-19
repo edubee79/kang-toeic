@@ -7582,7 +7582,8 @@ export const part5TestData: Part5TestSet[] = [
             }
         ]
     }
-];
+]
+    ;
 // Helper to find specific questions across all sets
 export const getQuestionsByIds = (ids: string[]): Part5TestQuestion[] => {
     const allQuestions = part5TestData.flatMap(set => set.questions);
@@ -7590,4 +7591,28 @@ export const getQuestionsByIds = (ids: string[]): Part5TestQuestion[] => {
     const questionMap = new Map(allQuestions.map(q => [q.id, q]));
 
     return ids.map(id => questionMap.get(id)).filter((q): q is Part5TestQuestion => !!q);
+};
+
+// Get all Part 5 questions from all tests
+export const getAllPart5Questions = (): Part5TestQuestion[] => {
+    return part5TestData.flatMap(set => set.questions);
+};
+
+// Find similar questions based on classification
+export const findSimilarQuestions = (
+    classification: string,
+    excludeIds: string[],
+    count: number = 3
+): Part5TestQuestion[] => {
+    const allQuestions = getAllPart5Questions();
+
+    // Filter questions with same classification, excluding specified IDs
+    const similarQuestions = allQuestions.filter(q =>
+        q.classification === classification &&
+        !excludeIds.includes(q.id)
+    );
+
+    // Shuffle and return requested count
+    const shuffled = similarQuestions.sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
 };
