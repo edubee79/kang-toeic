@@ -11,6 +11,7 @@ import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function VocabularyDashboard() {
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
     const [userId, setUserId] = useState<string | null>(null);
     const [targetScore, setTargetScore] = useState<650 | 800 | 900 | null>(null);
     const [access, setAccess] = useState<FeatureAccess | null>(null);
@@ -25,6 +26,7 @@ export default function VocabularyDashboard() {
     const router = useRouter();
 
     useEffect(() => {
+        setIsMounted(true);
         const init = async () => {
             const userData = localStorage.getItem('toeic_user');
             if (!userData) {
@@ -58,7 +60,7 @@ export default function VocabularyDashboard() {
         init();
     }, [router]);
 
-    if (loading) {
+    if (!isMounted || loading) {
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center">
                 <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>

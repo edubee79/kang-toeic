@@ -18,6 +18,7 @@ import {
     CheckCircle,
     X,
     ArrowLeft,
+    ArrowRight,
     Brain,
     Target,
     Clock,
@@ -467,32 +468,37 @@ export default function DayPage() {
                         <VocabularyCard
                             word={currentWord}
                             showBack={showBack}
-                            onFlip={() => { }}
-                            clickable={false}
+                            onFlip={() => {
+                                const nextState = !showBack;
+                                setShowBack(nextState);
+                                if (nextState) {
+                                    speak(currentWord.word);
+                                }
+                            }}
+                            clickable={true}
                         />
 
-                        {/* 2차 모르는 단어 (Study Together) */}
-                        {showBack && (
-                            <StudyTogetherCard
-                                word={currentWord}
-                                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-                            />
-                        )}
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4 mb-8">
-                        <Button
-                            onClick={handleLearnRepeat}
-                            variant="outline"
-                            className="h-20 rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-amber-500 font-black text-xl italic hover:bg-amber-500/10 transition-all"
-                        >
-                            <RefreshCw className="w-6 h-6 mr-2" /> 몰라요
-                        </Button>
+                    <div className="mb-8">
                         <Button
                             onClick={handleLearnMemorized}
-                            className="h-20 rounded-3xl bg-indigo-600 text-white font-black text-xl italic hover:bg-indigo-500 transition-all"
+                            className={cn(
+                                "w-full h-20 rounded-3xl text-white font-black text-xl italic transition-all shadow-xl active:scale-95",
+                                showBack
+                                    ? "bg-indigo-600 hover:bg-indigo-500 shadow-indigo-600/20"
+                                    : "bg-emerald-600 hover:bg-emerald-500 shadow-emerald-600/20"
+                            )}
                         >
-                            <CheckCircle className="w-6 h-6 mr-2" /> 진짜 외웠어요
+                            {showBack ? (
+                                <>
+                                    <ArrowRight className="w-6 h-6 mr-2" /> 다음 단어 (Next)
+                                </>
+                            ) : (
+                                <>
+                                    <CheckCircle className="w-6 h-6 mr-2" /> 진짜 외웠어요
+                                </>
+                            )}
                         </Button>
                     </div>
                 </div>
