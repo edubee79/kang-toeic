@@ -11,8 +11,10 @@ const tests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function Part2Lobby() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
@@ -21,7 +23,7 @@ export default function Part2Lobby() {
         fetchAccess();
     }, []);
 
-    if (loading) {
+    if (!isMounted || loading) {
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center">
                 <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>

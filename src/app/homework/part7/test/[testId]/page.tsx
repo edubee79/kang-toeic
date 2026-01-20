@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { part7TestData, Part7Question } from '@/data/toeic/reading/part7/tests';
@@ -35,6 +35,7 @@ function Part7TestRunnerContent() {
     const passageContainerRef = React.useRef<HTMLDivElement>(null);
     const questionContainerRef = React.useRef<HTMLDivElement>(null);
     const mainContainerRef = React.useRef<HTMLDivElement>(null);
+    const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     // Scroll to top on set change
     useEffect(() => {
@@ -44,8 +45,10 @@ function Part7TestRunnerContent() {
     }, [currentSetIndex, reviewMode]);
 
     const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         if (!testSet) return;
 
         // Load Progress (Real Mode only)
@@ -91,6 +94,7 @@ function Part7TestRunnerContent() {
         return () => clearInterval(interval);
     }, [isTimerRunning, showCompletion, reviewMode]);
 
+    if (!isMounted) return null;
     if (!testSet) return notFound();
 
     // Handlers
@@ -99,6 +103,36 @@ function Part7TestRunnerContent() {
         if (isDrillMode && selectedAnswers[questionId]) return;
 
         setSelectedAnswers(prev => ({ ...prev, [questionId]: optionLabel }));
+
+        // Auto-scroll to next question
+        scrollToNext(questionId);
+    };
+
+    const scrollToNext = (currentId: string) => {
+        const questionsInSet = currentSet.questions;
+        const currentIndexInSet = questionsInSet.findIndex(q => q.id === currentId);
+
+        if (currentIndexInSet !== -1 && currentIndexInSet < questionsInSet.length - 1) {
+            const nextId = questionsInSet[currentIndexInSet + 1].id;
+            setTimeout(() => {
+                const nextEl = questionRefs.current[nextId];
+                if (nextEl) {
+                    if (window.innerWidth < 1024) { // lg breakpoint
+                        const container = questionContainerRef.current;
+                        if (container) {
+                            const containerTop = container.getBoundingClientRect().top;
+                            const elementTop = nextEl.getBoundingClientRect().top;
+                            const scrollPos = elementTop - containerTop + container.scrollTop;
+                            container.scrollTo({ top: scrollPos - 10, behavior: 'smooth' });
+                        }
+                    } else {
+                        const yOffset = -100;
+                        const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                }
+            }, 100);
+        }
     };
 
     const formatTime = (seconds: number) => {
@@ -341,6 +375,7 @@ function Part7TestRunnerContent() {
                                             return (
                                                 <div
                                                     key={q.id}
+                                                    ref={(el) => { questionRefs.current[q.id] = el; }}
                                                     className={cn(
                                                         "bg-slate-900 border rounded-none lg:rounded-xl p-1 lg:p-4 transition-all font-sans",
                                                         isRevealed && isCorrect && "border-emerald-500/30 bg-emerald-500/5",

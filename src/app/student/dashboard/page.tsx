@@ -6,7 +6,7 @@ import { collection, query, where, getDocs, orderBy, limit } from 'firebase/fire
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
-import { Mic2, Headphones, BookOpen, PenSquare, Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, Calendar, CheckCircle2 } from "lucide-react";
+import { Mic2, Headphones, BookOpen, PenSquare, Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, Calendar, CheckCircle2, BarChart2, ChevronRight } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -35,6 +35,7 @@ export default function StudentDashboard() {
     const router = useRouter();
     const [user, setUser] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
     const [stats, setStats] = useState<Record<string, number>>({});
     const [recentActivity, setRecentActivity] = useState<any[]>([]);
     const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
@@ -50,6 +51,7 @@ export default function StudentDashboard() {
     const [partScores, setPartScores] = useState<Record<string, number>>({});
 
     useEffect(() => {
+        setIsMounted(true);
         const userData = localStorage.getItem('toeic_user');
         if (!userData) {
             router.push('/login');
@@ -209,15 +211,27 @@ export default function StudentDashboard() {
                     part7_test: 54, part7_single: 29, part7_double: 25
                 };
 
-                if (PART_MAX[type] && typeof data.score === 'number') {
-                    // Estimate correct count from percentage score if necessary, or use raw if available
-                    // Usually score is raw? Or 100 based? data.score usually 0-100 in this system?
-                    // Let's assume data.score is PERCENTAGE based on previous contexts (e.g. 80 means 80%)
-                    // So correct = (score / 100) * MAX
-                    const estimatedCorrect = Math.round((data.score / 100) * PART_MAX[type]);
+                if (typeof data.score === 'number') {
+                    let correctCount: number | undefined;
 
-                    scoreSums[type] = (scoreSums[type] || 0) + estimatedCorrect;
-                    scoreCounts[type] = (scoreCounts[type] || 0) + 1;
+                    // 1. If 'total' field exists, use it to determine if score is raw or percentage
+                    if (data.total) {
+                        if (data.score <= data.total) {
+                            correctCount = data.score; // Raw score
+                        } else {
+                            correctCount = Math.round((data.score / 100) * data.total); // Percentage
+                        }
+                    }
+                    // 2. Legacy/Fallback Logic using PART_MAX
+                    else if (PART_MAX[type]) {
+                        // Usually legacy data saved percentage as 'score'
+                        correctCount = Math.round((data.score / 100) * PART_MAX[type]);
+                    }
+
+                    if (correctCount !== undefined) {
+                        scoreSums[type] = (scoreSums[type] || 0) + correctCount;
+                        scoreCounts[type] = (scoreCounts[type] || 0) + 1;
+                    }
                 }
             });
 
@@ -298,7 +312,7 @@ export default function StudentDashboard() {
         return Headphones;
     }
 
-    if (loading) {
+    if (!isMounted || (loading && !user)) {
         return <div className="min-h-screen flex items-center justify-center text-slate-500 font-bold animate-pulse">데이터 로딩 중...</div>;
     }
 
@@ -406,9 +420,30 @@ export default function StudentDashboard() {
                 <Card className="lg:col-span-3 bg-slate-900 border-rose-500/30 p-6 relative overflow-hidden">
                     <div className="absolute right-0 top-0 w-48 h-48 bg-rose-500/5 rounded-full blur-2xl"></div>
                     <div className="relative z-10">
-                        <div className="flex items-center gap-2 mb-6">
-                            <AlertTriangle className="text-rose-400 w-5 h-5" />
-                            <h3 className="text-lg font-bold text-white">AI 취약점 분석 (Gap Analysis)</h3>
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="flex items-center gap-2">
+                                <AlertTriangle className="text-rose-400 w-5 h-5" />
+                                <h3 className="text-lg font-bold text-white">AI 취약점 분석 (Gap Analysis)</h3>
+                            </div>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => router.push('/weakness/dashboard')}
+                                className={cn(
+                                    "text-xs gap-1.5 font-bold transition-all duration-500 rounded-full px-4 h-9 shadow-lg",
+                                    Object.values(completedMap).filter(v => v).length > 0
+                                        ? "bg-indigo-600 text-white border-indigo-400 hover:bg-indigo-500 shadow-indigo-600/40 animate-pulse"
+                                        : "bg-slate-800 text-indigo-400 border-indigo-500/30 hover:bg-slate-700 hover:text-indigo-300"
+                                )}
+                            >
+                                <BarChart2 className="w-4 h-4" />
+                                취약점 상세 리포트 보기
+                                {Object.values(completedMap).filter(v => v).length > 0 && (
+                                    <Badge className="ml-1 bg-white text-indigo-600 hover:bg-white px-1.5 py-0 h-4 text-[10px] font-black border-none animate-bounce">
+                                        UP!
+                                    </Badge>
+                                )}
+                            </Button>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -495,7 +530,7 @@ export default function StudentDashboard() {
                             return (
                                 <div className="mt-4 pt-4 border-t border-slate-800/50 flex items-center justify-between">
                                     <p className="text-xs text-slate-500">
-                                        * 매주 월요일, 지난주 학습 데이터를 기반으로 새로운 약점 과제가 생성됩니다.
+                                        * 매주 금요일, 이번주 학습 데이터를 기반으로 새로운 약점 과제가 생성됩니다.
                                     </p>
                                     <Button
                                         variant="ghost"
@@ -509,7 +544,7 @@ export default function StudentDashboard() {
                                             if (weaknessAssignment) {
                                                 router.push(`/homework/weakness/${weaknessAssignment.id}`);
                                             } else {
-                                                alert("아직 생성된 약점 보완 과제가 없습니다. (매주 월요일 생성)");
+                                                alert("아직 생성된 약점 보완 과제가 없습니다. (매주 금요일 생성)");
                                             }
                                         }}
                                     >

@@ -10,8 +10,10 @@ import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 export default function Part6LobbyPage() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
@@ -19,6 +21,8 @@ export default function Part6LobbyPage() {
         };
         fetchAccess();
     }, []);
+
+    if (!isMounted) return null;
 
     if (loading) {
         return (

@@ -17,6 +17,7 @@ import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 export default function Dashboard() {
     const [user, setUser] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
     const [featureAccess, setFeatureAccess] = useState<FeatureAccess | null>(null);
     const [stats, setStats] = useState({
         shadowing: 0,
@@ -25,8 +26,10 @@ export default function Dashboard() {
         voca: 0
     });
     const router = useRouter();
+    const isPending = user?.status === 'pending';
 
     useEffect(() => {
+        setIsMounted(true);
         const userData = localStorage.getItem('toeic_user');
         if (!userData) {
             router.push('/login');
@@ -91,7 +94,7 @@ export default function Dashboard() {
         }
     };
 
-    if (loading) {
+    if (!isMounted || loading) {
         return <div className="min-h-screen flex items-center justify-center text-slate-500 font-bold animate-pulse">데이터 로딩 중...</div>;
     }
 
@@ -133,7 +136,6 @@ export default function Dashboard() {
         );
     };
 
-    const isPending = user?.status === 'pending';
 
     return (
         <div className="space-y-8">
@@ -146,8 +148,8 @@ export default function Dashboard() {
                     <p className="text-slate-400 font-medium text-xs mt-2">실시간 학습 데이터가 동기화됩니다.</p>
                 </div>
                 <div className="text-right">
-                    <p className="text-sm font-bold text-slate-300">{user?.userName} 학생</p>
-                    <p className="text-xs text-slate-500">{user?.userClass}반 {isPending && <span className="text-amber-500">(승인 대기중)</span>}</p>
+                    <p className="text-sm font-bold text-slate-300">{user?.name || user?.username} 학생</p>
+                    <p className="text-xs text-slate-500">{user?.className || user?.userClass || '배정 전'}반 {isPending && <span className="text-amber-500">(승인 대기중)</span>}</p>
                 </div>
                 {/* Dev Admin Access */}
                 <div className="absolute top-4 left-4 opacity-50 hover:opacity-100">
@@ -253,7 +255,7 @@ export default function Dashboard() {
                 {renderPracticeCard('part2', '/homework/part2', '질의 응답 (청취)', 'Part 2 Listening', 'rose')}
                 {renderPracticeCard('part3', '/homework/part3', '짧은 대화 (실전)', 'Part 3 Practical', 'emerald')}
                 {renderPracticeCard('part4', '/homework/part4', '설명문 (실전)', 'Part 4 Practical', 'amber')}
-                {renderPracticeCard('part5', '/part5', '단문 빈칸 (실전)', 'Part 5 Practical', 'violet')}
+                {renderPracticeCard('part5', '/homework/part5-real', '단문 빈칸 (실전)', 'Part 5 Practical', 'violet')}
                 {renderPracticeCard('part6', '/homework/part6', '장문 빈칸 (실전)', 'Part 6 Practical', 'cyan')}
                 {renderPracticeCard('part7', '/homework/part7', '독해 - 단일지문', 'Part 7 Single', 'orange')}
                 {renderPracticeCard('part7_double', '/homework/part7-double', '독해 - 이중지문', 'Part 7 Double/Triple', 'pink')}

@@ -153,7 +153,7 @@ export default function TestPage() {
     const timerProgress = (timeLeft / 3) * 100;
 
     return (
-        <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+        <div className="min-h-screen bg-slate-950 p-2 md:p-8">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="mb-4 md:mb-8 text-center md:text-left">
@@ -199,9 +199,12 @@ export default function TestPage() {
                     </div>
                 )}
 
-                {/* Question */}
-                <div className="bg-transparent md:bg-gradient-to-br md:from-violet-900 md:via-slate-900 md:to-slate-900 border-none md:border md:border-violet-500/30 p-2 md:p-8 mb-6 text-center">
-                    <h2 className="text-4xl font-black text-white">
+                <div className="bg-transparent md:bg-gradient-to-br md:from-violet-900 md:via-slate-900 md:to-slate-900 border-none md:border md:border-violet-500/30 p-2 md:p-8 mb-4 flex items-center justify-center min-h-[120px] md:min-h-0 text-center">
+                    <h2 className={cn(
+                        "font-black text-white px-4 break-words",
+                        currentWord.word.length > 15 ? "text-2xl md:text-4xl" :
+                            currentWord.word.length > 10 ? "text-3xl md:text-5xl" : "text-4xl md:text-6xl"
+                    )}>
                         {currentWord.word}
                     </h2>
                 </div>

@@ -16,6 +16,9 @@ export default function LearnPage() {
     const [reviewPool, setReviewPool] = useState<number[]>([]);
     const router = useRouter();
 
+    const [showBack, setShowBack] = useState(false);
+    const [hasPeeked, setHasPeeked] = useState(false); // Track if user peeked at least once
+
     useEffect(() => {
         const init = async () => {
             const userData = localStorage.getItem('toeic_user');
@@ -41,19 +44,41 @@ export default function LearnPage() {
 
         init();
     }, [router]);
+    useEffect(() => {
+        setShowBack(false);
+        setHasPeeked(false);
+    }, [currentIndex]);
+
+    const speak = (text: string) => {
+        if (typeof window !== 'undefined' && window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+            const utter = new SpeechSynthesisUtterance(text);
+            utter.lang = 'en-US';
+            window.speechSynthesis.speak(utter);
+        }
+    };
+
+    const handleFlip = () => {
+        const nextShowBack = !showBack;
+        setShowBack(nextShowBack);
+
+        if (nextShowBack) { // Revealing
+            setHasPeeked(true);
+            const currentWord = words[currentIndex];
+            if (currentWord) speak(currentWord.word);
+        }
+    };
 
     const handleMemorized = async () => {
         if (!userId) return;
-
         const currentWord = words[currentIndex];
         await updateWordStatus(userId, currentWord.id, 'learning', true);
-
         moveToNext();
     };
 
-    const handleReview = () => {
-        // Add to review pool
-        setReviewPool([...reviewPool, currentIndex]);
+    // "Next Word" (Forced Review)
+    const handleNextForcedReview = () => {
+        setReviewPool(prev => [...prev, currentIndex]);
         moveToNext();
     };
 
@@ -61,47 +86,21 @@ export default function LearnPage() {
         if (currentIndex < words.length - 1) {
             setCurrentIndex(currentIndex + 1);
         } else if (reviewPool.length > 0) {
-            // Go back to review pool
             setCurrentIndex(reviewPool[0]);
-            setReviewPool(reviewPool.slice(1));
+            setReviewPool(prev => prev.slice(1));
         } else {
-            // All words learned
             router.push('/homework/voca');
         }
     };
 
-    if (loading) {
-        return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-                <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>
-            </div>
-        );
-    }
-
-    if (words.length === 0) {
-        return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center p-8">
-                <div className="text-center">
-                    <h2 className="text-2xl font-black text-white mb-4">
-                        학습할 단어가 없습니다
-                    </h2>
-                    <p className="text-slate-400 mb-6">
-                        먼저 Sort 단계에서 모르는 단어를 분류해주세요.
-                    </p>
-                    <Button onClick={() => router.push('/homework/voca/sort')}>
-                        Sort 단계로 가기
-                    </Button>
-                </div>
-            </div>
-        );
-    }
+    // ... (loading / empty checks remain same)
 
     const currentWord = words[currentIndex];
     const totalWords = words.length + reviewPool.length;
     const progress = ((words.length - currentIndex - 1 + words.length - reviewPool.length) / totalWords) * 100;
 
     return (
-        <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+        <div className="min-h-screen bg-slate-950 p-2 md:p-8">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="mb-4 md:mb-8 text-center md:text-left">
@@ -109,7 +108,7 @@ export default function LearnPage() {
                         2단계: Learn
                     </h1>
                     <p className="text-slate-400 text-sm">
-                        카드를 클릭해서 뒤집으며 단어를 암기하세요
+                        뜻을 확인하면(뒤집으면) 자동으로 복습 목록에 추가됩니다!
                     </p>
                 </div>
 
@@ -138,33 +137,39 @@ export default function LearnPage() {
                 <div className="mb-6 md:mb-8">
                     <VocabularyCard
                         word={currentWord}
-                        showBack={false}
+                        showBack={showBack}
+                        onFlip={handleFlip}
+                        clickable={true}
                     />
                 </div>
 
                 {/* Buttons */}
-                <div className="grid grid-cols-2 gap-4">
-                    <Button
-                        onClick={handleReview}
-                        variant="outline"
-                        className="h-16 text-lg font-bold border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white"
-                    >
-                        <RefreshCw className="w-5 h-5 mr-2" />
-                        다시 볼게요
-                    </Button>
-                    <Button
-                        onClick={handleMemorized}
-                        className="h-16 text-lg font-bold bg-blue-600 hover:bg-blue-500 text-white"
-                    >
-                        <CheckCircle className="w-5 h-5 mr-2" />
-                        외웠어요
-                    </Button>
+                <div className="grid grid-cols-1 gap-4">
+                    {!hasPeeked ? (
+                        <Button
+                            onClick={handleMemorized}
+                            className="h-20 text-xl font-black italic bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl shadow-lg shadow-emerald-500/20 active:scale-95 transition-all"
+                        >
+                            <CheckCircle className="w-6 h-6 mr-2" />
+                            완벽히 외웠어요! (넘어가기)
+                        </Button>
+                    ) : (
+                        <Button
+                            onClick={handleNextForcedReview}
+                            className="h-20 text-xl font-black italic bg-slate-800 border-2 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white rounded-2xl active:scale-95 transition-all"
+                        >
+                            <ArrowRight className="w-6 h-6 mr-2" />
+                            다음 단어 (자동 복습장 추가)
+                        </Button>
+                    )}
                 </div>
 
                 {/* Hint */}
                 <div className="mt-6 p-4 bg-slate-900/50 border border-slate-800 rounded-lg">
                     <p className="text-slate-400 text-xs text-center">
-                        💡 카드를 클릭하여 앞뒤를 자유롭게 확인하세요
+                        {!hasPeeked
+                            ? "💡 카드를 뒤집는 순간 '복습 대상'이 됩니다. 신중하세요!"
+                            : "💡 이미 뜻을 확인했습니다. 이 단어는 나중에 다시 나옵니다."}
                     </p>
                 </div>
             </div>

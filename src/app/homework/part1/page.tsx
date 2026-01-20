@@ -11,8 +11,10 @@ const sets = Array.from({ length: 10 }, (_, i) => i + 1);
 export default function ShadowingLobby() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
@@ -21,7 +23,7 @@ export default function ShadowingLobby() {
         fetchAccess();
     }, []);
 
-    if (loading) {
+    if (!isMounted || loading) {
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center">
                 <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>

@@ -111,7 +111,7 @@ export default function SortPage() {
     const progress = ((currentIndex + 1) / words.length) * 100;
 
     return (
-        <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+        <div className="min-h-screen bg-slate-950 p-2 md:p-8">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">

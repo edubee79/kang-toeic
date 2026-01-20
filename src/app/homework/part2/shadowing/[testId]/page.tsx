@@ -300,9 +300,11 @@ export default function Part2ShadowingPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [step, setStep] = useState<'question' | 'A' | 'B' | 'C'>('question');
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         if (!testId) return;
         const data = part2Data[testId];
         if (!data) {
@@ -342,7 +344,7 @@ export default function Part2ShadowingPage() {
         }
     };
 
-    if (loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
+    if (!isMounted || loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
 
     if (isFinished) {
         return (

@@ -43,6 +43,7 @@ export default function Part3TestRunnerPage() {
     const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
 
     const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
+    const [isMounted, setIsMounted] = useState(false);
 
     // Additional State for Skimming
     const [skimmingEnabled, setSkimmingEnabled] = useState(isGuidedSkimming); // Default true for 1-3
@@ -60,6 +61,7 @@ export default function Part3TestRunnerPage() {
 
     // 1. Audio Cleanup on Unmount
     useEffect(() => {
+        setIsMounted(true);
         return () => {
             if (audioRef.current) {
                 audioRef.current.pause();
@@ -165,6 +167,8 @@ export default function Part3TestRunnerPage() {
     };
 
 
+    if (!isMounted) return null;
+
     if (!testSets.length) {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white">
@@ -247,7 +251,7 @@ export default function Part3TestRunnerPage() {
             setTimeout(() => {
                 const nextEl = questionRefs.current[nextId];
                 if (nextEl) {
-                    const yOffset = -120; // Leave some space at the top
+                    const yOffset = -100; // Adjusted offset for better visibility
                     const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                 }
@@ -262,7 +266,7 @@ export default function Part3TestRunnerPage() {
 
         if (currentIndex < activeSets.length - 1) {
             setCurrentIndex(prev => prev + 1);
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'instant' }); // Snap to top for new set
         } else {
             if (reviewMode) {
                 setShowCompletion(true);

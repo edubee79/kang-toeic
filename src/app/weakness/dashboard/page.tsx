@@ -23,8 +23,10 @@ export default function WeaknessDashboardPage() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [report, setReport] = useState<WeaknessReport | null>(null);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const fetchWeakness = async () => {
             const userStr = localStorage.getItem('toeic_user');
             if (!userStr) {
@@ -32,13 +34,14 @@ export default function WeaknessDashboardPage() {
                 return;
             }
             const user = JSON.parse(userStr);
-            // Use userId from local storage
             const data = await WeaknessService.analyzeUserWeakness(user.userId || user.uid);
             setReport(data);
             setLoading(false);
         };
         fetchWeakness();
     }, [router]);
+
+    if (!isMounted) return null;
 
     if (loading) {
         return (
@@ -99,7 +102,7 @@ export default function WeaknessDashboardPage() {
                     />
                     <MetricCard
                         title="분석된 문제 수"
-                        value={Object.values(report.partBreakdown).reduce((a, b) => a, 0) > 0 ? "학습 중" : "데이터 수집 중"}
+                        value={Object.values(report.partBreakdown).reduce((a, b) => a + b, 0) > 0 ? `${Object.values(report.partBreakdown).reduce((a, b) => a + b, 0)}개` : "학습 중"}
                         icon={<Target className="w-5 h-5 text-amber-500" />}
                         subtext="지속적인 업데이트 중"
                     />

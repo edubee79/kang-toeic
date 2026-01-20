@@ -7,11 +7,19 @@ import Link from 'next/link';
 import { part3Data } from '@/data/part3';
 
 export default function Part3DetailPage() {
+    const [isMounted, setIsMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const params = useParams();
     const router = useRouter();
     const setId = params.setId as string;
 
     const set = part3Data.find(s => s.setId === setId);
+
+    if (!isMounted) return null;
 
     if (!set) {
         notFound();
@@ -75,8 +83,8 @@ export default function Part3DetailPage() {
                                                     key={opt.label}
                                                     onClick={() => handleSelect(q.id, opt.label)}
                                                     className={`text-left px-4 py-3 rounded-xl transition-all duration-200 border-2 ${isSelected
-                                                            ? 'border-blue-500 bg-blue-50 text-blue-700'
-                                                            : 'border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700'
+                                                        ? 'border-blue-500 bg-blue-50 text-blue-700'
+                                                        : 'border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700'
                                                         }`}
                                                 >
                                                     <span className="font-bold mr-2">{opt.label}.</span>

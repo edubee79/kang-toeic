@@ -38,10 +38,14 @@ function Part6TestRunnerContent() {
 
     // Refs for scrolling
     const mainScrollRef = useRef<HTMLDivElement>(null);
+    const questionContainerRef = useRef<HTMLDivElement>(null);
+    const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         if (!testSet) return;
 
         // Load Progress (Real Mode only)
@@ -92,6 +96,7 @@ function Part6TestRunnerContent() {
         mainScrollRef.current?.scrollTo(0, 0);
     }, [currentPassageIndex]);
 
+    if (!isMounted) return null;
     if (!testSet) return notFound();
 
     // Handlers
@@ -101,6 +106,38 @@ function Part6TestRunnerContent() {
 
         setSelectedAnswers(prev => ({ ...prev, [questionId]: optionLabel }));
         setActiveQuestionId(questionId);
+
+        // Auto-scroll to next question
+        scrollToNext(questionId);
+    };
+
+    const scrollToNext = (currentId: string) => {
+        const questionsInPassage = passage.questions;
+        const currentIndexInPassage = questionsInPassage.findIndex(q => q.id === currentId);
+
+        if (currentIndexInPassage !== -1 && currentIndexInPassage < questionsInPassage.length - 1) {
+            const nextId = questionsInPassage[currentIndexInPassage + 1].id;
+            setTimeout(() => {
+                const nextEl = questionRefs.current[nextId];
+                if (nextEl) {
+                    // Check if we are on mobile (using container scroll) or desktop (window/main scroll)
+                    if (window.innerWidth < 1024) { // lg breakpoint
+                        const container = questionContainerRef.current;
+                        if (container) {
+                            const containerTop = container.getBoundingClientRect().top;
+                            const elementTop = nextEl.getBoundingClientRect().top;
+                            const scrollPos = elementTop - containerTop + container.scrollTop;
+                            container.scrollTo({ top: scrollPos - 10, behavior: 'smooth' });
+                        }
+                    } else {
+                        // On desktop, questions might be side-by-side or below
+                        const yOffset = -100;
+                        const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                }
+            }, 100);
+        }
     };
 
     const formatTime = (seconds: number) => {
@@ -366,12 +403,14 @@ function Part6TestRunnerContent() {
                             )}
                         </div>
 
-                        {/* Questions: 30% on Mobile, 30% on Desktop */}
                         <div className="flex flex-col h-[30%] lg:h-auto lg:col-span-3">
-                            <div className={cn(
-                                "flex-1 overflow-y-auto lg:overflow-visible bg-slate-900/50 lg:bg-transparent p-0 lg:p-0",
-                                "space-y-0.5 lg:space-y-3"
-                            )}>
+                            <div
+                                ref={questionContainerRef}
+                                className={cn(
+                                    "flex-1 overflow-y-auto lg:overflow-visible bg-slate-900/50 lg:bg-transparent p-0 lg:p-0",
+                                    "space-y-0.5 lg:space-y-3"
+                                )}
+                            >
                                 {/* Questions */}
                                 <div className="space-y-0.5 lg:space-y-3 p-1 lg:p-0 pb-0">
                                     {passage.questions
@@ -385,6 +424,7 @@ function Part6TestRunnerContent() {
                                                 <div
                                                     key={q.id}
                                                     id={`q-card-${q.id}`}
+                                                    ref={(el) => { questionRefs.current[q.id] = el; }}
                                                     className={cn(
                                                         "bg-slate-900 border rounded-none lg:rounded-xl p-1 lg:p-4 transition-all scroll-mt-0 lg:scroll-mt-24 font-sans",
                                                         isActive ? "border-indigo-500 shadow-none lg:shadow-lg lg:shadow-indigo-500/10 bg-indigo-500/5" : "border-slate-800",

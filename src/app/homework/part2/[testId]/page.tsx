@@ -28,6 +28,7 @@ export default function Part2Test() {
 
     // UI States
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [showResult, setShowResult] = useState(false);
@@ -44,6 +45,7 @@ export default function Part2Test() {
 
     // Initialize
     useEffect(() => {
+        setIsMounted(true);
         if (!testId) return;
         const data = part2Data[testId];
         if (!data) {
@@ -374,7 +376,7 @@ export default function Part2Test() {
         router.push('/homework/part2');
     };
 
-    if (loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
+    if (!isMounted || loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
 
     if (isReportMode) {
         return (

@@ -151,15 +151,17 @@ function Part7PracticePageContent() {
             if (currentQuestionIndex < data.questions.length - 1) {
                 setTimeout(() => {
                     const nextQuestionId = data.questions[currentQuestionIndex + 1].id;
-                    const nextQuestionElement = document.getElementById(`question-${nextQuestionId}`);
-                    if (nextQuestionElement) {
-                        nextQuestionElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start',
-                            inline: 'nearest'
-                        });
+                    const nextEl = document.getElementById(`question-${nextQuestionId}`);
+                    if (nextEl) {
+                        const container = rightBottomRef.current;
+                        if (container) {
+                            const containerTop = container.getBoundingClientRect().top;
+                            const elementTop = nextEl.getBoundingClientRect().top;
+                            const scrollPos = elementTop - containerTop + container.scrollTop;
+                            container.scrollTo({ top: scrollPos - 10, behavior: 'smooth' });
+                        }
                     }
-                }, 300);
+                }, 100);
             }
 
             // Check if all questions in the current set are answered

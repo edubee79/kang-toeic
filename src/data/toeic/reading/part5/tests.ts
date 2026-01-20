@@ -41,7 +41,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "himself"
                     }
                 ],
-                "classification": "P5_PRONOUN",
+                "classification": "P5_PR_CASE",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "센다이 회사의 전 최고 경영자인 켄 나카타가 자신의 경력에 대해 말했다.",
@@ -95,7 +95,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "free"
                     }
                 ],
-                "classification": "P5_VOCAB_ADJ",
+                "classification": "P5_VOC_ADJ",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "오크레스트 과수원의 소매점에서 신선하고 맛있는 사과 사이다 도넛을 12개당 6파운드에 구입할 수 있다.",
@@ -122,7 +122,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "curtains"
                     }
                 ],
-                "classification": "P5_VOCAB_NOUN",
+                "classification": "P5_VOC_NOUN",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "잔 플로어링은 영국에서 가장 다양한 종류의 타일을 보유하고 있다.",
@@ -176,7 +176,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "before"
                     }
                 ],
-                "classification": "P5_PREP",
+                "classification": "P5_PREP_PHRA",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "본사를 방문하기 전에 회사의 복장 규정을 확인하는 것이 현명하다.",
@@ -257,7 +257,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "while"
                     }
                 ],
-                "classification": "P5_PREP",
+                "classification": "P5_PREP_PHRA",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "마케팅 연합 콘퍼런스의 등록은 현재 9월 30일까지 가능합니다.",
@@ -284,7 +284,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "assorted"
                     }
                 ],
-                "classification": "P5_VOCAB_ADJ",
+                "classification": "P5_VOC_ADJ",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "이번 분기에는 홈 엔터테인먼트 산업의 성장이 제한적이었다.",
@@ -338,7 +338,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "travel"
                     }
                 ],
-                "classification": "P5_VOCAB_VERB",
+                "classification": "P5_VOC_VERB",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "말튼 시 의회는 시내 도로에 주차하는 것을 금지할 권한이 없다.",
@@ -365,7 +365,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "leaning"
                     }
                 ],
-                "classification": "P5_VOCAB_VERB",
+                "classification": "P5_VOC_VERB",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "프로젝트 어스 그룹은 운송 관련 온실가스 배출을 줄일 방법을 찾고 있다.",
@@ -446,7 +446,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "between"
                     }
                 ],
-                "classification": "P5_PREP",
+                "classification": "P5_PREP_PHRA",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "레후아 베케이션 클럽 회원들은 제휴 호텔에서 8월 한 달 동안 두 배의 포인트를 받게 될 것입니다.",
@@ -473,7 +473,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "soon"
                     }
                 ],
-                "classification": "P5_VOCAB_ADV",
+                "classification": "P5_VOC_ADV",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "첫 드레스 리허설에 사용될 만큼 빨리 의상을 받지 못했다.",
@@ -527,7 +527,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "collectively"
                     }
                 ],
-                "classification": "P5_VOCAB_ADV",
+                "classification": "P5_VOC_ADV",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "데이비스 가의 북행 차선은 시의 교량 보강 프로젝트로 인해 일시적으로 폐쇄될 예정이다.",
@@ -554,7 +554,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "against"
                     }
                 ],
-                "classification": "P5_PREP",
+                "classification": "P5_PREP_PHRA",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "항공사 직원은 놓친 연결편부터 분실 수하물에 이르기까지 다양한 승객 문제를 처리해야 한다.",
@@ -635,7 +635,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "were needing"
                     }
                 ],
-                "classification": "P5_VERB_AGREEMENT",
+                "classification": "P5_V_AGREE",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "아직 소방 안전 교육을 받아야 하는 사람은 이달 말까지 받아야 한다.",
@@ -662,7 +662,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "closely"
                     }
                 ],
-                "classification": "P5_VOCAB_ADV",
+                "classification": "P5_VOC_ADV",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "신생 기술은 한때는 상상조차 할 수 없던 방식으로 해운 산업을 이미 탈바꿈하기 시작했다.",
@@ -689,7 +689,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "standards"
                     }
                 ],
-                "classification": "P5_VOCAB_NOUN",
+                "classification": "P5_VOC_NOUN",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "회사 안내서에는 직원들이 매일 충족해야 하는 높은 기준들이 설명되어 있다.",
@@ -716,7 +716,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "some"
                     }
                 ],
-                "classification": "P5_PRONOUN",
+                "classification": "P5_PR_CASE",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "이사진 중 일부가 중복되는 일정이 있어서 이사회 회의는 전원 참석 가능한 날짜로 변경될 것입니다.",
@@ -743,7 +743,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "performed"
                     }
                 ],
-                "classification": "P5_VOCAB_VERB",
+                "classification": "P5_VOC_VERB",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "그 프로젝트는 회사 전체에 걸쳐 여러 팀의 협업을 필요로 했다.",
@@ -770,7 +770,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "will be approved"
                     }
                 ],
-                "classification": "P5_VERB_VOICE",
+                "classification": "P5_V_VOICE",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "전 씨의 승인을 받기 전까지는 매장 쿠폰 책자를 인쇄소에 보낼 수 없다.",
@@ -797,7 +797,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "According to"
                     }
                 ],
-                "classification": "P5_PREP",
+                "classification": "P5_PREP_PHRA",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "버디골드 운송 서비스의 폐업을 고려하여, 우리는 새로운 운송 회사를 찾고 있다.",
@@ -824,7 +824,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "potential"
                     }
                 ],
-                "classification": "P5_VOCAB_ADJ",
+                "classification": "P5_VOC_ADJ",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "유니스 은행의 안내 책자에 제공되는 추가 정보는 신청자가 대출 조건을 이해하는 데 도움이 된다.",

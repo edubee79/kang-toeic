@@ -271,9 +271,11 @@ export default function ShadowingPractice() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [correctCount, setCorrectCount] = useState(0);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         if (!setId) return;
         // Extract 20 sentences for the set
         const dayData = shadowingData[day] || [];
@@ -324,7 +326,7 @@ export default function ShadowingPractice() {
         }
     };
 
-    if (loading) return <div className="flex h-screen items-center justify-center"><Loader2 className="animate-spin" /></div>;
+    if (!isMounted || loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin" /></div>;
 
     return (
         <div className="min-h-screen bg-slate-950">

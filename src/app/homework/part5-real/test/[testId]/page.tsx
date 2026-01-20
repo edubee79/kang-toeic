@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -27,6 +27,9 @@ function Part5TestRunnerContent() {
     const [reviewMode, setReviewMode] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
+
+    // Refs for scrolling
+    const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
 
@@ -92,7 +95,25 @@ function Part5TestRunnerContent() {
 
         setSelectedAnswers(prev => ({ ...prev, [questionId]: optionLabel }));
 
-        // Auto-save drill results incrementally? Maybe later.
+        // Auto-scroll to next question
+        scrollToNext(questionId);
+    };
+
+    const scrollToNext = (currentId: string) => {
+        const questions = testSet.questions;
+        const currentIndexInSet = questions.findIndex(q => q.id === currentId);
+
+        if (currentIndexInSet !== -1 && currentIndexInSet < questions.length - 1) {
+            const nextId = questions[currentIndexInSet + 1].id;
+            setTimeout(() => {
+                const nextEl = questionRefs.current[nextId];
+                if (nextEl) {
+                    const yOffset = -100; // Leave space for sticky header
+                    const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            }, 100);
+        }
     };
 
     const formatTime = (seconds: number) => {
@@ -248,12 +269,17 @@ function Part5TestRunnerContent() {
                     const isRevealed = reviewMode || (isDrillMode && isSelected);
 
                     return (
-                        <div key={q.id} id={`q-${q.id}`} className={cn(
-                            "p-6 transition-all duration-300 bg-slate-900/40 border border-slate-800 rounded-3xl",
-                            isRevealed
-                                ? (isCorrect ? "bg-emerald-500/5 border-emerald-500/20" : "bg-rose-500/5 border-rose-500/20")
-                                : "hover:border-slate-700"
-                        )}>
+                        <div
+                            key={q.id}
+                            id={`q-${q.id}`}
+                            ref={(el) => { questionRefs.current[q.id] = el; }}
+                            className={cn(
+                                "p-6 transition-all duration-300 bg-slate-900/40 border border-slate-800 rounded-3xl",
+                                isRevealed
+                                    ? (isCorrect ? "bg-emerald-500/5 border-emerald-500/20" : "bg-rose-500/5 border-rose-500/20")
+                                    : "hover:border-slate-700"
+                            )}
+                        >
                             <div className="flex gap-3 md:gap-4">
                                 <div className={cn(
                                     "flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-lg md:rounded-xl flex items-center justify-center font-black text-[10px] md:text-xs border",

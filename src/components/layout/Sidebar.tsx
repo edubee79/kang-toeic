@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, Home, Shield, BookOpen, Mic2, Headphones, LogOut, PenSquare, CheckSquare, FileText, Monitor, Target, Lock } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
@@ -36,11 +36,9 @@ const menuItems = [
 function NavContent({
     pathname,
     setOpen,
-    handleLogout
 }: {
     pathname: string;
     setOpen?: (v: boolean) => void;
-    handleLogout: () => void;
 }) {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
 
@@ -126,45 +124,20 @@ function NavContent({
                 })}
             </nav>
 
-            <div className="mt-auto pt-6 border-t border-slate-800/40 space-y-2">
-                <Link
-                    href="/admin/dashboard"
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-white/[0.03] text-sm font-bold transition-all"
-                >
-                    <Shield className="w-4 h-4" />
-                    관리자 메뉴
-                </Link>
-                <button
-                    onClick={handleLogout}
-                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-rose-400 hover:bg-rose-500/10 text-sm font-bold transition-all"
-                >
-                    <LogOut className="w-4 h-4" />
-                    로그아웃
-                </button>
-            </div>
         </div>
     );
 }
-
 export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boolean) => void }) {
     const pathname = usePathname();
-    const router = useRouter();
-
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            router.push("/login");
-        } catch (error) {
-            console.error("Logout failed", error);
-        }
-    };
 
     // Mobile Sheet View
     if (setOpen) {
         return (
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetContent side="left" className="p-0 border-r-slate-800 w-80 bg-slate-900 border-none">
-                    <NavContent pathname={pathname} setOpen={setOpen} handleLogout={handleLogout} />
+                    <SheetTitle className="sr-only">Kangs Toeic Menu</SheetTitle>
+                    <SheetDescription className="sr-only">Navigation for students</SheetDescription>
+                    <NavContent pathname={pathname} setOpen={setOpen} />
                 </SheetContent>
             </Sheet>
         )
@@ -173,18 +146,39 @@ export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boole
     // Desktop Side View
     return (
         <div className="hidden md:block w-72 h-screen fixed left-0 top-0">
-            <NavContent pathname={pathname} handleLogout={handleLogout} />
+            <NavContent pathname={pathname} />
         </div>
     );
 }
 
-export function Navbar({ onMenuClick }: { onMenuClick: () => void }) {
+export function Navbar({ onMenuClick, onLogout }: { onMenuClick: () => void; onLogout: () => void }) {
     return (
-        <nav className="md:hidden p-6 flex justify-between items-center bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
-            <h1 className="font-black text-xl italic tracking-tighter text-indigo-400">깡쌤토익</h1>
-            <Button variant="ghost" size="icon" className="text-white" onClick={onMenuClick}>
-                <Menu className="w-6 h-6" />
-            </Button>
+        <nav className="p-4 md:p-6 flex justify-between items-center bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+            <div className="flex items-center gap-4">
+                <h1 className="font-black text-xl italic tracking-tighter text-indigo-400">깡쌤토익</h1>
+                <div className="hidden md:flex items-center gap-2 ml-4">
+                    <Link href="/admin/dashboard">
+                        <Button variant="ghost" size="sm" className="text-slate-500 hover:text-indigo-400 font-bold gap-2">
+                            <Shield className="w-4 h-4" />
+                            ADMIN
+                        </Button>
+                    </Link>
+                </div>
+            </div>
+            <div className="flex items-center gap-2">
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"
+                    onClick={onLogout}
+                    title="로그아웃"
+                >
+                    <LogOut className="w-5 h-5" />
+                </Button>
+                <Button variant="ghost" size="icon" className="text-white md:hidden" onClick={onMenuClick}>
+                    <Menu className="w-6 h-6" />
+                </Button>
+            </div>
         </nav>
     );
 }

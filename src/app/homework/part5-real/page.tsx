@@ -9,8 +9,10 @@ import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 export default function Part5RealLobbyPage() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
@@ -19,7 +21,7 @@ export default function Part5RealLobbyPage() {
         fetchAccess();
     }, []);
 
-    if (loading) {
+    if (!isMounted || loading) {
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center">
                 <div className="text-slate-400 font-bold animate-pulse">로딩 중...</div>
