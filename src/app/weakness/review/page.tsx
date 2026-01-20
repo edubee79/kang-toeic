@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, XCircle, ArrowRight, BookOpen, AlertCircle, Volume2 } from 'lucide-react';
 import { part2Data } from '@/data/part2';
-import { TAG_ALIASES } from '@/data/toeic/reading/part5/classification';
+import { TAG_ALIASES } from '../../../data/toeic/reading/part5/classification';
 import { doc, getDoc, setDoc, deleteDoc, collection, query, where, getDocs, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
