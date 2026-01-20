@@ -1,0 +1,10 @@
+# Ignore local build logs and temporary files
+build_log.txt
+build_error.log
+*.json
+scripts/
+docs/
+brain/
+!firebase-messaging-sw.js
+node_modules
+.next

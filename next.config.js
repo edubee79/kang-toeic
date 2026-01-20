@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */ // Force Restart 3
 const nextConfig = {
     reactStrictMode: true,
     eslint: {
