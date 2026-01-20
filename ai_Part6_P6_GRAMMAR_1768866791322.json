@@ -1,0 +1,179 @@
+[
+  {
+    "passage": "To: All Marketing Team Members\nFrom: David Lee, Marketing Director\nDate: July 12\nSubject: Upcoming Product Launch\n\nAs you know, we are launching our new line of organic skincare products next month. To ensure a successful launch, we need to finalize our marketing strategy. First, let's (1) ______ a meeting to discuss the campaign's key messages and target audience. I propose we meet next Tuesday at 10:00 AM in the conference room.\n\nSecond, we need to allocate our budget effectively. Please submit your budget proposals for your respective departments by Friday. The finance team will then (2) ______ all proposals and create a consolidated budget for the entire campaign. This will help us stay on track and within our financial limits.\n\nThird, it's crucial that we (3) ______ with the sales team to ensure a smooth transition from marketing to sales. Their input is invaluable, and their participation will be essential for the success of this launch. Let’s schedule a joint meeting with the sales team the following week.\n\nFinally, remember to review the product specifications (4) ______ carefully before developing any marketing materials. Any inconsistencies could lead to confusion and damage our brand reputation. Please let me know if you have any questions.\n\nThank you for your hard work and dedication. I'm confident that this launch will be a great success.",
+    "questions": [
+      {
+        "text": "(1)",
+        "options": [
+          "schedule",
+          "scheduled",
+          "scheduling",
+          "to schedule"
+        ],
+        "correctAnswer": "schedule",
+        "explanation": "The correct answer is 'schedule'. The sentence uses 'let's', which is a contraction of 'let us'. After 'let us', we use the base form of the verb.  'Let's schedule' means 'Let us schedule'.",
+        "translation": "정답은 'schedule'입니다. 문장은 'let us'의 축약형인 'let's'를 사용합니다. 'let us' 다음에는 동사의 원형을 사용합니다. 'Let's schedule'은 'Let us schedule'을 의미합니다."
+      },
+      {
+        "text": "(2)",
+        "options": [
+          "review",
+          "reviewed",
+          "reviewing",
+          "will review"
+        ],
+        "correctAnswer": "will review",
+        "explanation": "The correct answer is 'will review'. The sentence is talking about a future action (the finance team reviewing the proposals), so we need to use the future tense. 'Will review' indicates a future action.",
+        "translation": "정답은 'will review'입니다. 문장은 미래의 행동(재무팀이 제안서를 검토하는 것)에 대해 이야기하고 있으므로 미래 시제를 사용해야 합니다. 'Will review'는 미래의 행동을 나타냅니다."
+      },
+      {
+        "text": "(3)",
+        "options": [
+          "coordinate",
+          "coordinated",
+          "coordinating",
+          "coordination"
+        ],
+        "correctAnswer": "coordinate",
+        "explanation": "The correct answer is 'coordinate'. 'It is crucial that' is followed by a subject and a base form of the verb (without 'to'). This is a subjunctive mood construction.  'It is crucial that we coordinate'.",
+        "translation": "정답은 'coordinate'입니다. 'It is crucial that' 다음에는 주어와 동사 원형이 옵니다 ('to' 없이). 이것은 가정법 구문입니다. 'It is crucial that we coordinate'."
+      },
+      {
+        "text": "(4)",
+        "options": [
+          "of product",
+          "for products",
+          "of the product",
+          "for the product"
+        ],
+        "correctAnswer": "of the product",
+        "explanation": "The correct answer is 'of the product'. 'Product specifications' refers to the detailed characteristics of the specific product line being launched.  'The' specifies which product specifications they are talking about.",
+        "translation": "정답은 'of the product'입니다. 'Product specifications'는 출시되는 특정 제품 라인의 상세한 특성을 의미합니다. 'The'는 어떤 제품 사양에 대해 이야기하고 있는지 명시합니다."
+      }
+    ],
+    "part": "Part 6",
+    "tags": [
+      "P6_GRAMMAR",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:53:11.321Z"
+  },
+  {
+    "passage": "To: Project Team\nFrom: Sarah Chen, Project Manager\nDate: August 2\nSubject: Project Update and Next Steps\n\nGood morning, everyone.\n\nI'm writing to provide an update on the Henderson project. As you know, we are in the final stages of development. The software testing team has completed their initial round of testing, and we have identified a few minor bugs. These bugs (1) ______ currently being addressed by the development team.\n\nWe are also working on finalizing the user documentation. I need everyone to (2) ______ their sections of the documentation by the end of this week. Please ensure that your writing is clear, concise, and easy to understand.\n\nRegarding the upcoming presentation to the client, I would like to schedule a practice run for next Monday. This will give us a chance to rehearse our presentation and (3) ______ any potential issues. Please come prepared to present your respective sections.\n\nFinally, I want to remind everyone about the importance of meeting deadlines. We are on a tight schedule, and any delays could (4) ______ the project. Thank you for your continued hard work and dedication.\n\nBest regards,\nSarah Chen",
+    "questions": [
+      {
+        "text": "(1)",
+        "options": [
+          "are",
+          "is",
+          "were",
+          "was"
+        ],
+        "correctAnswer": "are",
+        "explanation": "The correct answer is 'are'. The subject 'These bugs' is plural, so we need to use the plural form of the verb 'to be'. 'These bugs are currently being addressed' indicates the bugs are currently being fixed.",
+        "translation": "정답은 'are'입니다. 주어 'These bugs'는 복수이므로 동사 'to be'의 복수형을 사용해야 합니다. 'These bugs are currently being addressed'는 버그가 현재 수정되고 있음을 나타냅니다."
+      },
+      {
+        "text": "(2)",
+        "options": [
+          "submit",
+          "submits",
+          "submitting",
+          "to submit"
+        ],
+        "correctAnswer": "submit",
+        "explanation": "The correct answer is 'submit'. The sentence uses 'I need everyone to'. After 'I need someone to', we use the base form of the verb. 'I need everyone to submit' means I require everyone to submit.",
+        "translation": "정답은 'submit'입니다. 문장은 'I need everyone to'를 사용합니다. 'I need someone to' 다음에 동사의 원형을 사용합니다. 'I need everyone to submit'은 모든 사람이 제출해야 함을 의미합니다."
+      },
+      {
+        "text": "(3)",
+        "options": [
+          "identifying",
+          "identify",
+          "identified",
+          "identification"
+        ],
+        "correctAnswer": "identify",
+        "explanation": "The correct answer is 'identify'. The sentence uses 'to rehearse our presentation and'. The conjunction 'and' connects two parallel structures. 'To rehearse' is in the infinitive form, so we need another infinitive form. 'Identify' is the infinitive form of the verb.",
+        "translation": "정답은 'identify'입니다. 문장은 'to rehearse our presentation and'를 사용합니다. 접속사 'and'는 두 개의 병렬 구조를 연결합니다. 'To rehearse'는 부정사 형태이므로 다른 부정사 형태가 필요합니다. 'Identify'는 동사의 부정사 형태입니다."
+      },
+      {
+        "text": "(4)",
+        "options": [
+          "affect",
+          "effect",
+          "affected",
+          "effected"
+        ],
+        "correctAnswer": "affect",
+        "explanation": "The correct answer is 'affect'. 'Affect' is a verb that means to have an influence on something. 'Effect' is a noun that means a result or consequence. In this context, we need a verb to show the impact of the delays on the project.",
+        "translation": "정답은 'affect'입니다. 'Affect'는 무언가에 영향을 미친다는 의미의 동사입니다. 'Effect'는 결과 또는 영향이라는 의미의 명사입니다. 이 문맥에서는 지연이 프로젝트에 미치는 영향을 보여주기 위해 동사가 필요합니다."
+      }
+    ],
+    "part": "Part 6",
+    "tags": [
+      "P6_GRAMMAR",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:53:11.322Z"
+  },
+  {
+    "passage": "To: Regional Managers\nFrom: Human Resources Department\nDate: September 5\nSubject: New Employee Onboarding Process\n\nDear Regional Managers,\n\nWe are pleased to announce the implementation of a revised employee onboarding process. This new process (1) ______ designed to provide new hires with a more comprehensive and engaging introduction to our company culture and operations.\n\nTo ensure that all new employees receive the necessary training and support, we have developed a detailed onboarding checklist. Please ensure that your team members follow this checklist carefully when onboarding new hires. The checklist (2) ______ be available on the company intranet by the end of the week.\n\nWe are also introducing a new mentorship program. Each new employee will be paired with an experienced employee who (3) ______ provide guidance and support during their first few months with the company. We believe this program will help new hires feel more welcome and integrated into our team.\n\nFinally, we are asking all regional managers to (4) ______ feedback on the new onboarding process after they have used it for a few months. Your feedback will be invaluable in helping us to improve the process further. Thank you for your cooperation.\n\nSincerely,\nHuman Resources Department",
+    "questions": [
+      {
+        "text": "(1)",
+        "options": [
+          "was",
+          "is",
+          "were",
+          "are"
+        ],
+        "correctAnswer": "is",
+        "explanation": "The correct answer is 'is'. The sentence describes the purpose of the new process. Since it's a newly implemented and current process, using the present tense 'is designed' is the most appropriate way to describe its current intended purpose.",
+        "translation": "정답은 'is'입니다. 이 문장은 새로운 프로세스의 목적을 설명합니다. 새로 구현되었고 현재 진행 중인 프로세스이므로 현재 의도된 목적을 설명하는 데 현재 시제 'is designed'를 사용하는 것이 가장 적절합니다."
+      },
+      {
+        "text": "(2)",
+        "options": [
+          "will",
+          "shall",
+          "should",
+          "can"
+        ],
+        "correctAnswer": "will",
+        "explanation": "The correct answer is 'will'. The sentence is about a future event (the checklist being available). 'Will be available' indicates a definite future event.",
+        "translation": "정답은 'will'입니다. 이 문장은 미래의 사건(체크리스트가 사용 가능하게 되는 것)에 관한 것입니다. 'Will be available'은 확실한 미래의 사건을 나타냅니다."
+      },
+      {
+        "text": "(3)",
+        "options": [
+          "will",
+          "would",
+          "should",
+          "can"
+        ],
+        "correctAnswer": "will",
+        "explanation": "The correct answer is 'will'. This refers to the mentor's future action of providing guidance. 'Will provide' indicates a planned or expected future action.",
+        "translation": "정답은 'will'입니다. 이것은 멘토가 지침을 제공하는 미래의 행동을 나타냅니다. 'Will provide'는 계획되거나 예상되는 미래의 행동을 나타냅니다."
+      },
+      {
+        "text": "(4)",
+        "options": [
+          "provide",
+          "provides",
+          "provided",
+          "providing"
+        ],
+        "correctAnswer": "provide",
+        "explanation": "The correct answer is 'provide'. The sentence uses 'are asking all regional managers to'. After 'to' we use the base form of the verb. 'Are asking to provide' means asking to give feedback.",
+        "translation": "정답은 'provide'입니다. 문장은 'are asking all regional managers to'를 사용합니다. 'to' 다음에는 동사의 원형을 사용합니다. 'Are asking to provide'는 피드백을 제공하도록 요청함을 의미합니다."
+      }
+    ],
+    "part": "Part 6",
+    "tags": [
+      "P6_GRAMMAR",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:53:11.322Z"
+  }
+]

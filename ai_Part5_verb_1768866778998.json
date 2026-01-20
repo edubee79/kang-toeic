@@ -1,0 +1,302 @@
+[
+  {
+    "text": "The human resources department is currently ______ applications for the new marketing position.",
+    "options": [
+      {
+        "label": "A",
+        "text": "review"
+      },
+      {
+        "label": "B",
+        "text": "reviewing"
+      },
+      {
+        "label": "C",
+        "text": "reviewed"
+      },
+      {
+        "label": "D",
+        "text": "to review"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The correct answer is (B) 'reviewing'. The sentence requires a present continuous tense verb ('is reviewing') to describe an action happening now. (A) 'review' is the base form and doesn't fit the 'is' auxiliary. (C) 'reviewed' is past participle/simple past and doesn't fit. (D) 'to review' is an infinitive and doesn't fit in this context.",
+    "translation": "인사부는 현재 새로운 마케팅 직책에 대한 지원서를 검토하고 있습니다. 정답은 (B) 'reviewing'입니다. 문장은 현재 진행 중인 동작을 묘사하기 위해 현재 진행 시제 동사('is reviewing')를 필요로 합니다. (A) 'review'는 기본형이며 'is' 조동사에 맞지 않습니다. (C) 'reviewed'는 과거 분사/단순 과거이며 맞지 않습니다. (D) 'to review'는 부정사이며 이 문맥에 맞지 않습니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.997Z"
+  },
+  {
+    "text": "Before the meeting, please ______ all the relevant documents to ensure a productive discussion.",
+    "options": [
+      {
+        "label": "A",
+        "text": "read"
+      },
+      {
+        "label": "B",
+        "text": "reading"
+      },
+      {
+        "label": "C",
+        "text": "reads"
+      },
+      {
+        "label": "D",
+        "text": "will read"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'read'. This sentence requires the base form of the verb to form an imperative sentence.  'Please read' is a polite request. (B) 'reading' needs an auxiliary verb. (C) 'reads' is the third-person singular and doesn't fit. (D) 'will read' implies a future action, but the context suggests a necessary action *before* the meeting.",
+    "translation": "회의 전에 생산적인 토론을 위해 모든 관련 문서를 읽어주세요. 정답은 (A) 'read'입니다. 이 문장은 명령문을 형성하기 위해 동사의 기본 형태를 필요로 합니다. 'Please read'는 정중한 요청입니다. (B) 'reading'은 조동사가 필요합니다. (C) 'reads'는 3인칭 단수이며 맞지 않습니다. (D) 'will read'는 미래의 행동을 암시하지만, 문맥은 회의 *전에* 필요한 행동을 나타냅니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "The company hopes to ______ its profits significantly by implementing new marketing strategies.",
+    "options": [
+      {
+        "label": "A",
+        "text": "increase"
+      },
+      {
+        "label": "B",
+        "text": "increased"
+      },
+      {
+        "label": "C",
+        "text": "increasing"
+      },
+      {
+        "label": "D",
+        "text": "increases"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'increase'. The verb follows 'to' which requires the infinitive form of the verb. 'To increase' is the infinitive. (B) 'increased' is past participle/simple past. (C) 'increasing' is the gerund/present participle. (D) 'increases' is third-person singular present tense.",
+    "translation": "회사는 새로운 마케팅 전략을 구현하여 이익을 크게 늘리기를 희망합니다. 정답은 (A) 'increase'입니다. 동사는 'to' 다음에 오므로 동사의 부정사 형태가 필요합니다. 'To increase'는 부정사입니다. (B) 'increased'는 과거 분사/단순 과거입니다. (C) 'increasing'은 동명사/현재 분사입니다. (D) 'increases'는 3인칭 단수 현재 시제입니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "If you ______ any issues with the software, please contact the IT department immediately.",
+    "options": [
+      {
+        "label": "A",
+        "text": "experience"
+      },
+      {
+        "label": "B",
+        "text": "experienced"
+      },
+      {
+        "label": "C",
+        "text": "experiencing"
+      },
+      {
+        "label": "D",
+        "text": "will experience"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'experience'. This is a conditional sentence (If + simple present, then...). The 'if' clause requires the simple present tense.  (B) 'experienced' is simple past and doesn't fit the conditional structure. (C) 'experiencing' is present participle and needs an auxiliary verb. (D) 'will experience' implies future, which doesn't fit the usual structure of a Type 1 conditional.",
+    "translation": "소프트웨어에 문제가 발생하면 즉시 IT 부서에 문의하십시오. 정답은 (A) 'experience'입니다. 이것은 조건문입니다 (If + 단순 현재, then...). 'if'절은 단순 현재 시제를 필요로 합니다. (B) 'experienced'는 단순 과거이며 조건문 구조에 맞지 않습니다. (C) 'experiencing'은 현재 분사이며 조동사가 필요합니다. (D) 'will experience'는 미래를 암시하며, Type 1 조건문의 일반적인 구조에 맞지 않습니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "The manager ______ to meet with all team members individually next week.",
+    "options": [
+      {
+        "label": "A",
+        "text": "plans"
+      },
+      {
+        "label": "B",
+        "text": "planning"
+      },
+      {
+        "label": "C",
+        "text": "plan"
+      },
+      {
+        "label": "D",
+        "text": "planned"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'plans'. The subject is 'The manager', which is singular. Thus, the verb requires the third-person singular present tense. (B) 'planning' needs an auxiliary verb. (C) 'plan' is the base form, which doesn't agree with the singular subject. (D) 'planned' is past tense, but the time marker 'next week' indicates future time (with present tense indicating the plan).",
+    "translation": "관리자는 다음 주에 모든 팀 구성원을 개별적으로 만날 계획입니다. 정답은 (A) 'plans'입니다. 주어는 'The manager'로 단수입니다. 따라서 동사는 3인칭 단수 현재 시제가 필요합니다. (B) 'planning'은 조동사가 필요합니다. (C) 'plan'은 기본형이며 단수 주어와 일치하지 않습니다. (D) 'planned'는 과거 시제이지만, 시간 표시 'next week'는 미래 시간을 나타냅니다 (현재 시제는 계획을 나타냄).",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "All employees are required to ______ to the new company policies.",
+    "options": [
+      {
+        "label": "A",
+        "text": "adhere"
+      },
+      {
+        "label": "B",
+        "text": "adhering"
+      },
+      {
+        "label": "C",
+        "text": "adhered"
+      },
+      {
+        "label": "D",
+        "text": "adheres"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'adhere'. The phrase 'are required to' requires the infinitive form of the verb. 'To adhere' is the infinitive. (B) 'adhering' is the present participle/gerund and doesn't fit. (C) 'adhered' is simple past/past participle. (D) 'adheres' is the third-person singular present tense and doesn't fit.",
+    "translation": "모든 직원은 새로운 회사 정책을 준수해야 합니다. 정답은 (A) 'adhere'입니다. 'are required to' 구문은 동사의 부정사 형태를 필요로 합니다. 'To adhere'는 부정사입니다. (B) 'adhering'은 현재 분사/동명사이며 맞지 않습니다. (C) 'adhered'는 단순 과거/과거 분사입니다. (D) 'adheres'는 3인칭 단수 현재 시제이며 맞지 않습니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "The marketing team ______ a successful campaign last quarter, resulting in a significant increase in sales.",
+    "options": [
+      {
+        "label": "A",
+        "text": "implement"
+      },
+      {
+        "label": "B",
+        "text": "implementing"
+      },
+      {
+        "label": "C",
+        "text": "implemented"
+      },
+      {
+        "label": "D",
+        "text": "implements"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The correct answer is (C) 'implemented'. The phrase 'last quarter' indicates a past action, so the verb needs to be in the simple past tense. (A) 'implement' is the base form and doesn't fit. (B) 'implementing' requires an auxiliary verb. (D) 'implements' is the third-person singular present and indicates a regular action, not a one-time past event.",
+    "translation": "마케팅 팀은 지난 분기에 성공적인 캠페인을 시행하여 매출이 크게 증가했습니다. 정답은 (C) 'implemented'입니다. 'last quarter' 구문은 과거의 행동을 나타내므로 동사는 단순 과거 시제여야 합니다. (A) 'implement'는 기본형이며 맞지 않습니다. (B) 'implementing'은 조동사가 필요합니다. (D) 'implements'는 3인칭 단수 현재 시제이며 정기적인 행동을 나타내고 일회성 과거 사건을 나타내지 않습니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "The supervisor asked the employee to ______ the report by Friday afternoon.",
+    "options": [
+      {
+        "label": "A",
+        "text": "finish"
+      },
+      {
+        "label": "B",
+        "text": "finished"
+      },
+      {
+        "label": "C",
+        "text": "finishing"
+      },
+      {
+        "label": "D",
+        "text": "finishes"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'finish'. 'To' requires the infinitive form of the verb. 'To finish' is the infinitive. (B) 'finished' is simple past/past participle. (C) 'finishing' is present participle/gerund. (D) 'finishes' is third-person singular present tense.",
+    "translation": "감독관은 직원에게 금요일 오후까지 보고서를 끝내라고 요청했습니다. 정답은 (A) 'finish'입니다. 'To'는 동사의 부정사 형태를 필요로 합니다. 'To finish'는 부정사입니다. (B) 'finished'는 단순 과거/과거 분사입니다. (C) 'finishing'은 현재 분사/동명사입니다. (D) 'finishes'는 3인칭 단수 현재 시제입니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "The company is looking for candidates who are able to ______ effectively under pressure.",
+    "options": [
+      {
+        "label": "A",
+        "text": "perform"
+      },
+      {
+        "label": "B",
+        "text": "performed"
+      },
+      {
+        "label": "C",
+        "text": "performing"
+      },
+      {
+        "label": "D",
+        "text": "performs"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'perform'. After 'able to', the base form of the verb is required. (B) 'performed' is past simple/past participle. (C) 'performing' is present participle, requires an auxiliary. (D) 'performs' is third-person singular present, does not follow 'to'.",
+    "translation": "회사는 압박 속에서도 효과적으로 수행할 수 있는 후보자를 찾고 있습니다. 정답은 (A) 'perform'입니다. 'able to' 다음에는 동사의 기본 형태가 필요합니다. (B) 'performed'는 단순 과거/과거 분사입니다. (C) 'performing'은 현재 분사이며 조동사가 필요합니다. (D) 'performs'는 3인칭 단수 현재이며 'to' 다음에 올 수 없습니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  },
+  {
+    "text": "The new software system will ______ the process of data analysis, making it more efficient.",
+    "options": [
+      {
+        "label": "A",
+        "text": "simplify"
+      },
+      {
+        "label": "B",
+        "text": "simplified"
+      },
+      {
+        "label": "C",
+        "text": "simplifying"
+      },
+      {
+        "label": "D",
+        "text": "simplifies"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The correct answer is (A) 'simplify'. After 'will' we need the base form of the verb. The modal verb 'will' is followed by the infinitive without 'to'. (B) 'simplified' is past simple/past participle. (C) 'simplifying' requires an auxiliary verb. (D) 'simplifies' is third-person singular present.",
+    "translation": "새로운 소프트웨어 시스템은 데이터 분석 프로세스를 단순화하여 더욱 효율적으로 만들 것입니다. 정답은 (A) 'simplify'입니다. 'will' 다음에는 동사의 기본 형태가 필요합니다. 조동사 'will' 다음에는 'to'가 없는 부정사가 옵니다. (B) 'simplified'는 단순 과거/과거 분사입니다. (C) 'simplifying'은 조동사가 필요합니다. (D) 'simplifies'는 3인칭 단수 현재입니다.",
+    "part": "Part 5",
+    "tags": [
+      "verb",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:58.998Z"
+  }
+]

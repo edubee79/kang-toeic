@@ -22,23 +22,30 @@ async function enrichBatch(words: VocabWord[]): Promise<VocabWord[]> {
 
     const prompt = `
     You are a linguistics expert specializing in TOEIC. For the following vocabulary words, provide:
-    1. **Synonyms**: 1-2 common synonyms with their Korean meaning in parentheses (e.g., "utilize (이용하다)").
-    2. **Antonyms**: 1 common, precise antonym with its Korean meaning in parentheses (e.g., "withdraw (철회하다)"). Ensure the antonym is a direct opposite in the business context.
-    3. **Confusables**: 1 similar looking/sounding word often confused, with its Korean meaning (e.g., "effect (효과)").
-    4. **Example**: A short, business-context sentence using the target word.
-    5. **ExampleKo**: Korean translation of the example sentence.
+    1. **Synonyms**: 1-2 **High-Frequency TOEIC** synonyms. Format: "synonym (Korean meaning)".
+       - CRITICAL: Only include words that appear frequently in TOEIC Part 5/7.
+       - EXCLUDE: Archaic or obscure words. If no simple/common synonym exists, leave empty.
+    2. **Expansions**: 1-2 common **Derivational Forms** (words sharing the same root but different parts of speech).
+       - **CRITICAL**: Must share the SAME ROOT.
+       - **STRICTLY FORBIDDEN**: Rhyming words (e.g., retail -> detail) or unrelated look-alikes.
+       - E.g., for "compete", provide "competitive (경쟁력 있는)", "competition (경쟁)".
+       - E.g., for "predict", provide "predictable (예측 가능한)".
+       - If no valid derivational form exists (e.g. for simple nouns like 'desk'), leave empty.
+    3. **Example**: A short, business-context sentence using the target word.
+    4. **ExampleKo**: Korean translation of the example sentence.
 
     Return ONLY a JSON array with objects:
     [
       { 
         "word": "target_word", 
         "synonyms": ["utilize (이용하다)"], 
-        "antonyms": ["withdraw (철회하다)"], 
-        "similar": ["comply (따르다)"],
+        "similar": ["noticeable (눈에 띄는)"], 
         "example": "The manager hired a new applicant.",
         "exampleKo": "매니저는 새로운 지원자를 채용했다."
       }
     ]
+
+    * Note: The field 'similar' is used for Expansions (Derivational Forms).
 
     Words to enrich:
     ${words.map(w => `${w.word} (${w.meaning})`).join(", ")}
@@ -74,15 +81,10 @@ async function main() {
     const rawData = fs.readFileSync(filePath, 'utf-8');
     let allWords: VocabWord[] = JSON.parse(rawData);
 
-    // Filter words that need update (check if synonyms lack Korean translation, i.e., no parenthesis)
-    // Also include words with missing examples just in case
-    const targets = allWords.filter(w =>
-        !w.synonyms ||
-        w.synonyms.length === 0 ||
-        !w.synonyms[0].includes('(') ||
-        !w.example
-    );
-    console.log(`Found ${targets.length} words to re-enrich (adding Korean meanings).`);
+    // Filter words to re-process (targeting words that might have bad expansions/similar data)
+    // For now, let's target ALL words to clean up the dataset completely.
+    const targets = allWords;
+    console.log(`Found ${targets.length} words to re-enrich (Cleaning up Expansions).`);
 
     const BATCH_SIZE = 30; // 30 words per call
     let processedCount = 0;

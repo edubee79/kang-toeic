@@ -1,0 +1,872 @@
+[
+  {
+    "part": "Part 5",
+    "text": "The sudden _______ in the cost of raw materials has forced the company to revise its annual budget.",
+    "options": [
+      {
+        "label": "B",
+        "text": "increasingly"
+      },
+      {
+        "label": "D",
+        "text": "increaseable"
+      },
+      {
+        "label": "C",
+        "text": "increased"
+      },
+      {
+        "label": "A",
+        "text": "increase"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 정관사(The)와 형용사(sudden)의 수식을 받는 '주어' 자리이므로 명사 increase가 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:08.226Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Regular maintenance of the manufacturing equipment _______ the likelihood of unexpected production delays.",
+    "options": [
+      {
+        "label": "C",
+        "text": "reducedly"
+      },
+      {
+        "label": "D",
+        "text": "reducing"
+      },
+      {
+        "label": "A",
+        "text": "reduction"
+      },
+      {
+        "label": "B",
+        "text": "reduces"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 주어(Regular maintenance)에 대응하는 '동사' 자리입니다. 문맥상 일반적인 사실을 나타내므로 현재형 단수 동사 reduces가 적절합니다.",
+    "tags": [
+      "P5_V_AGREE",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:08.907Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The board of directors found the proposed expansion plan _______ and decided to grant full approval.",
+    "options": [
+      {
+        "label": "D",
+        "text": "persuasively"
+      },
+      {
+        "label": "C",
+        "text": "persuasive"
+      },
+      {
+        "label": "B",
+        "text": "persuasion"
+      },
+      {
+        "label": "A",
+        "text": "persuade"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 5형식 동사 found + 목적어 + '목적격 보어' 자리입니다. 목적어인 plan을 설명하는 형용사 persuasive(설득력 있는)가 정답입니다.",
+    "tags": [
+      "P5_POS_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:09.655Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Frequent _______ between the marketing and sales departments is essential for achieving revenue targets.",
+    "options": [
+      {
+        "label": "C",
+        "text": "collaborative"
+      },
+      {
+        "label": "B",
+        "text": "collaboration"
+      },
+      {
+        "label": "D",
+        "text": "collaboratively"
+      },
+      {
+        "label": "A",
+        "text": "collaborate"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 형용사 Frequent의 수식을 받는 주어(명사) 자리입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:10.450Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The revised safety manual _______ explains the procedures for handling hazardous chemicals.",
+    "options": [
+      {
+        "label": "D",
+        "text": "clearing"
+      },
+      {
+        "label": "C",
+        "text": "clearly"
+      },
+      {
+        "label": "A",
+        "text": "clear"
+      },
+      {
+        "label": "B",
+        "text": "clarity"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 동사 explains를 수식하는 '부사' 자리입니다.",
+    "tags": [
+      "P5_POS_ADV",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:11.177Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The newly appointed CEO _______ to improve the company's environmental sustainability record.",
+    "options": [
+      {
+        "label": "C",
+        "text": "aiming"
+      },
+      {
+        "label": "D",
+        "text": "aimedly"
+      },
+      {
+        "label": "B",
+        "text": "aims"
+      },
+      {
+        "label": "A",
+        "text": "aim"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 주어(The newly appointed CEO)가 단수이므로 수 일치에 따라 단수 동사 aims가 정답입니다.",
+    "tags": [
+      "P5_V_AGREE",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:11.915Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The financial advisor provided a detailed _______ of the risks associated with the new investment fund.",
+    "options": [
+      {
+        "label": "A",
+        "text": "analyze"
+      },
+      {
+        "label": "C",
+        "text": "analytic"
+      },
+      {
+        "label": "D",
+        "text": "analyzing"
+      },
+      {
+        "label": "B",
+        "text": "analysis"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 타동사(provided)의 '목적어' 자리이며 형용사 detailed의 수식을 받는 명사 analysis가 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:12.672Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Applicants must possess _______ communication skills to be considered for the public relations position.",
+    "options": [
+      {
+        "label": "D",
+        "text": "except"
+      },
+      {
+        "label": "C",
+        "text": "exceptionally"
+      },
+      {
+        "label": "A",
+        "text": "exception"
+      },
+      {
+        "label": "B",
+        "text": "exceptional"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 명사(communication skills)를 수식하는 '형용사' 자리입니다.",
+    "tags": [
+      "P5_POS_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:13.353Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The legal department _______ that all contracts be reviewed by an external counsel before signing.",
+    "options": [
+      {
+        "label": "D",
+        "text": "requiredly"
+      },
+      {
+        "label": "B",
+        "text": "requires"
+      },
+      {
+        "label": "C",
+        "text": "requiring"
+      },
+      {
+        "label": "A",
+        "text": "requirement"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 문장의 본동사 자리입니다. 주어가 3인칭 단수(department)이므로 requires가 적절합니다.",
+    "tags": [
+      "P5_V_AGREE",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:14.158Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Technological advancements have made it _______ for employees to collaborate from remote locations.",
+    "options": [
+      {
+        "label": "B",
+        "text": "possible"
+      },
+      {
+        "label": "D",
+        "text": "possession"
+      },
+      {
+        "label": "A",
+        "text": "possibility"
+      },
+      {
+        "label": "C",
+        "text": "possibly"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 5형식 가목적어(it) 진목적어(to collaborate...) 구문에서 목적격 보어 자리이므로 형용사 possible이 정답입니다.",
+    "tags": [
+      "P5_VOC_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:14.859Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Sales representatives are expected to interact _______ with potential clients at the trade show.",
+    "options": [
+      {
+        "label": "A",
+        "text": "professional"
+      },
+      {
+        "label": "C",
+        "text": "professionally"
+      },
+      {
+        "label": "B",
+        "text": "profession"
+      },
+      {
+        "label": "D",
+        "text": "professionalism"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 자동사 interact를 수식하는 부사 자리입니다.",
+    "tags": [
+      "P5_POS_ADV",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:15.558Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "A high level of _______ is required for anyone wishing to join the research and development team.",
+    "options": [
+      {
+        "label": "A",
+        "text": "creative"
+      },
+      {
+        "label": "C",
+        "text": "creativity"
+      },
+      {
+        "label": "B",
+        "text": "creatively"
+      },
+      {
+        "label": "D",
+        "text": "create"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 전치사 of의 목적어인 명사 자리입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:16.268Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The company's _______ strategy focuses on expanding its presence in the emerging Asian markets.",
+    "options": [
+      {
+        "label": "B",
+        "text": "currently"
+      },
+      {
+        "label": "A",
+        "text": "current"
+      },
+      {
+        "label": "D",
+        "text": "currentness"
+      },
+      {
+        "label": "C",
+        "text": "currency"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 명사 strategy를 수식하는 형용사 자리입니다.",
+    "tags": [
+      "P5_POS_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:17.070Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The auditor found that the financial statements _______ accurate in all material respects.",
+    "options": [
+      {
+        "label": "A",
+        "text": "was"
+      },
+      {
+        "label": "B",
+        "text": "were"
+      },
+      {
+        "label": "D",
+        "text": "to be"
+      },
+      {
+        "label": "C",
+        "text": "being"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 접속사 that절 내의 동사 자리입니다. 주어(statements)가 복수이므로 were가 정답입니다.",
+    "tags": [
+      "P5_V_AGREE",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:17.780Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Strong _______ in the local community has helped the store maintain its customer base.",
+    "options": [
+      {
+        "label": "A",
+        "text": "presence"
+      },
+      {
+        "label": "C",
+        "text": "presently"
+      },
+      {
+        "label": "B",
+        "text": "present"
+      },
+      {
+        "label": "D",
+        "text": "presentational"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 주어 자리이며 형용사 Strong의 수식을 받는 명사 presence(존재감/영향력)가 적절합니다.",
+    "tags": [
+      "P5_VOC_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:18.466Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The software was _______ designed to be user-friendly for people with limited technical skills.",
+    "options": [
+      {
+        "label": "D",
+        "text": "specify"
+      },
+      {
+        "label": "C",
+        "text": "specification"
+      },
+      {
+        "label": "B",
+        "text": "specifically"
+      },
+      {
+        "label": "A",
+        "text": "specific"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 과거분사(designed)를 수식하는 부사 자리입니다.",
+    "tags": [
+      "P5_POS_ADV",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:19.157Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Keep the confidential documents _______ in a secure cabinet at all times.",
+    "options": [
+      {
+        "label": "C",
+        "text": "stored"
+      },
+      {
+        "label": "B",
+        "text": "storage"
+      },
+      {
+        "label": "A",
+        "text": "store"
+      },
+      {
+        "label": "D",
+        "text": "storingly"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 5형식 동사 Keep + 목적어 + 목적격 보어 자리입니다. 문서가 '보관되는' 것이므로 과거분사 형용사 stored가 정답입니다.",
+    "tags": [
+      "P5_VOC_VERB",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:19.841Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The price of the luxury sedan _______ significantly depending on the optional features selected.",
+    "options": [
+      {
+        "label": "B",
+        "text": "varies"
+      },
+      {
+        "label": "A",
+        "text": "vary"
+      },
+      {
+        "label": "C",
+        "text": "variation"
+      },
+      {
+        "label": "D",
+        "text": "various"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 주어(The price)에 대응하는 동사 자리입니다. 주어가 단수이므로 단수 동사 varies가 정답입니다.",
+    "tags": [
+      "P5_V_AGREE",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:20.776Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The marketing director believes that a _______ campaign will boost brand awareness among young adults.",
+    "options": [
+      {
+        "label": "D",
+        "text": "persuasively"
+      },
+      {
+        "label": "C",
+        "text": "persuasive"
+      },
+      {
+        "label": "A",
+        "text": "persuade"
+      },
+      {
+        "label": "B",
+        "text": "persuasion"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 명사 campaign을 수식하는 형용사 자리입니다.",
+    "tags": [
+      "P5_POS_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:21.539Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The _______ of the new production line has been postponed until the next fiscal year.",
+    "options": [
+      {
+        "label": "C",
+        "text": "implemented"
+      },
+      {
+        "label": "A",
+        "text": "implement"
+      },
+      {
+        "label": "D",
+        "text": "implementing"
+      },
+      {
+        "label": "B",
+        "text": "implementation"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] 정관사(The)의 수식을 받는 문장의 주어(명사) 자리입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:22.227Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The board of directors is expected to reach a final _______ by the end of the day.",
+    "options": [
+      {
+        "label": "D",
+        "text": "decisive"
+      },
+      {
+        "label": "A",
+        "text": "decide"
+      },
+      {
+        "label": "B",
+        "text": "decisively"
+      },
+      {
+        "label": "C",
+        "text": "decision"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해석] 이사회는 오늘 말까지 최종 결정을 내릴 것으로 예상됩니다. [해설] 관사(a)와 형용사(final)의 수식을 받는 명사 decision이 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:22.979Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The recent _______ in oil prices has affected the transportation industry significantly.",
+    "options": [
+      {
+        "label": "A",
+        "text": "fluctuate"
+      },
+      {
+        "label": "C",
+        "text": "fluctuating"
+      },
+      {
+        "label": "D",
+        "text": "fluctuated"
+      },
+      {
+        "label": "B",
+        "text": "fluctuation"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해석] 최근의 유가 변동은 운송 산업에 상당한 영향을 미쳤습니다. [해설] 형용사 recent 뒤에서 주어 역할을 하는 명사 fluctuation이 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:24.129Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "_______ applicant who meets the qualifications will be invited for an interview.",
+    "options": [
+      {
+        "label": "B",
+        "text": "Every"
+      },
+      {
+        "label": "A",
+        "text": "All"
+      },
+      {
+        "label": "C",
+        "text": "Several"
+      },
+      {
+        "label": "D",
+        "text": "Many"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해석] 자격 요건을 갖춘 모든 지원자는 면접에 초대될 것입니다. [해설] 단수 가산명사(applicant)를 수식하는 수량 형용사 Every가 정답입니다.",
+    "tags": [
+      "P5_VOC_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:25.057Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The manager has received _______ complaints regarding the new office layout.",
+    "options": [
+      {
+        "label": "D",
+        "text": "anybody"
+      },
+      {
+        "label": "B",
+        "text": "numerous"
+      },
+      {
+        "label": "C",
+        "text": "each"
+      },
+      {
+        "label": "A",
+        "text": "much"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해석] 매니저는 새로운 사무실 배치에 관한 수많은 불만을 접수했습니다. [해설] 복수 가산명사(complaints)를 수식하는 형용사 numerous가 정답입니다.",
+    "tags": [
+      "P5_POS_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:25.831Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "Please submit your travel expense _______ to the accounting department by Friday.",
+    "options": [
+      {
+        "label": "C",
+        "text": "reportedly"
+      },
+      {
+        "label": "B",
+        "text": "reported"
+      },
+      {
+        "label": "D",
+        "text": "reporting"
+      },
+      {
+        "label": "A",
+        "text": "reports"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해석] 금요일까지 여행 경비 보고서를 회계 부서에 제출해 주십시오. [해설] travel expense와 어울려 '경비 보고서'라는 의미를 만드는 복합명사 reports가 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:26.637Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "We are seeking a highly motivated _______ to lead our sales team in Europe.",
+    "options": [
+      {
+        "label": "A",
+        "text": "professional"
+      },
+      {
+        "label": "D",
+        "text": "professionally"
+      },
+      {
+        "label": "B",
+        "text": "profession"
+      },
+      {
+        "label": "C",
+        "text": "professionalism"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해석] 우리는 유럽 영업팀을 이끌 매우 의욕적인 전문가를 찾고 있습니다. [해설] 문맥상 팀을 이끌 '사람' 명사 professional(전문가)이 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:30.094Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The unexpected _______ of the flight caused a major inconvenience for the passengers.",
+    "options": [
+      {
+        "label": "B",
+        "text": "cancelled"
+      },
+      {
+        "label": "D",
+        "text": "cancelling"
+      },
+      {
+        "label": "C",
+        "text": "cancellation"
+      },
+      {
+        "label": "A",
+        "text": "cancel"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해석] 예기치 못한 비행 취소는 승객들에게 큰 불편을 초래했습니다. [해설] 관사(The)와 형용사(unexpected)의 수식을 받는 명사 cancellation이 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:30.856Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The library offers _______ resources for students conducting historical research.",
+    "options": [
+      {
+        "label": "B",
+        "text": "each"
+      },
+      {
+        "label": "C",
+        "text": "various"
+      },
+      {
+        "label": "D",
+        "text": "one"
+      },
+      {
+        "label": "A",
+        "text": "a little"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해석] 도서관은 역사 연구를 수행하는 학생들을 위해 다양한 자료를 제공합니다. [해설] 복수 명사 resources를 수식하는 형용사 various가 적절합니다.",
+    "tags": [
+      "P5_POS_ADJ",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:31.606Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The company’s _______ department is located on the third floor of the main building.",
+    "options": [
+      {
+        "label": "B",
+        "text": "personal"
+      },
+      {
+        "label": "C",
+        "text": "personnel"
+      },
+      {
+        "label": "A",
+        "text": "person"
+      },
+      {
+        "label": "D",
+        "text": "personify"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해석] 회사의 인사과는 본관 3층에 위치해 있습니다. [해설] personnel department(인사과)는 자주 쓰이는 복합명사입니다.",
+    "tags": [
+      "P5_VOC_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:32.314Z"
+  },
+  {
+    "part": "Part 5",
+    "text": "The lead _______ of the research project will present the findings at the seminar.",
+    "options": [
+      {
+        "label": "B",
+        "text": "analyst"
+      },
+      {
+        "label": "C",
+        "text": "analyze"
+      },
+      {
+        "label": "A",
+        "text": "analysis"
+      },
+      {
+        "label": "D",
+        "text": "analytical"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해석] 연구 프로젝트의 수석 분석가는 세미나에서 결과를 발표할 것입니다. [해설] 발표를 수행하는 주체인 '사람' 명사 analyst가 정답입니다.",
+    "tags": [
+      "P5_POS_NOUN",
+      "Legacy_Retagged"
+    ],
+    "generatedAt": "2026-01-20T00:13:33.008Z"
+  }
+]

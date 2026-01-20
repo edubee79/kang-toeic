@@ -1,0 +1,152 @@
+[
+  {
+    "text": "___ the recent surge in raw material costs, Genson Manufacturing has managed to maintain its profit margins through innovative supply chain management.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because"
+      },
+      {
+        "label": "B",
+        "text": "Despite"
+      },
+      {
+        "label": "C",
+        "text": "Due to"
+      },
+      {
+        "label": "D",
+        "text": "Since"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "정답은 (B) Despite 입니다. 'Despite'는 전치사로, 명사구('the recent surge in raw material costs') 앞에 와서 '원자재 가격 급등에도 불구하고'라는 의미를 나타냅니다. (A) 'Because'와 (D) 'Since'는 접속사로 뒤에 주어+동사가 와야 하므로 오답입니다. (C) 'Due to'도 전치사구이지만, 문맥상 '원자재 가격 급등 때문에'라는 의미가 되어 문장 전체의 의미가 어색해집니다. 혁신적인 공급망 관리를 통해 이윤을 유지했다는 내용과 대조되는 상황을 나타내야 하므로 'Despite'가 적절합니다.",
+    "translation": "최근 원자재 가격 급등에도 불구하고, 젠슨 제조는 혁신적인 공급망 관리를 통해 이윤 마진을 유지할 수 있었습니다.",
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T10:17:48.914Z"
+  },
+  {
+    "text": "The updated software will be installed on all company laptops ___ the IT department's scheduled maintenance window this weekend.",
+    "options": [
+      {
+        "label": "A",
+        "text": "during"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "정답은 (A) during 입니다. 'during'은 특정 사건이나 기간을 나타내는 명사 앞에 사용되어 '~동안에'라는 의미를 나타냅니다. 여기서는 'IT 부서의 예정된 유지보수 시간 동안'이라는 의미가 되어 문맥상 적절합니다. (B) 'for'는 기간을 나타내는 명사 앞에 사용되지만, 여기서는 특정 사건을 나타내는 명사구가 왔으므로 적절하지 않습니다. (C) 'until'은 '~까지'라는 의미로, 소프트웨어 설치가 유지보수 시간 '까지' 이루어진다는 의미가 되어 어색합니다. (D) 'by'는 완료 시점을 나타내므로, 유지보수 시간 '까지' 설치가 완료되어야 한다는 의미가 되어 문맥상 부적절합니다.",
+    "translation": "업데이트된 소프트웨어는 이번 주말 IT 부서의 예정된 유지보수 시간 동안 모든 회사 노트북에 설치될 예정입니다.",
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T10:17:48.915Z"
+  },
+  {
+    "text": "___ recent economic downturn, the company has decided to postpone all non-essential capital expenditures until the next fiscal year.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because of"
+      },
+      {
+        "label": "B",
+        "text": "Since"
+      },
+      {
+        "label": "C",
+        "text": "Although"
+      },
+      {
+        "label": "D",
+        "text": "Despite of"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "정답은 (A) Because of 입니다. 'Because of'는 전치사구로, 뒤에 명사구('recent economic downturn')가 와서 '최근 경제 불황 때문에'라는 이유를 나타냅니다. (B) 'Since'는 접속사로 뒤에 주어+동사가 와야 하므로 오답입니다. (C) 'Although' 또한 접속사로 뒤에 주어+동사가 와야 하며, 의미상 경제 불황에도 불구하고 투자를 연기했다는 내용이 되어 어색합니다. (D) 'Despite of'는 틀린 표현이며 'Despite'가 맞는 표현입니다.",
+    "translation": "최근 경제 불황 때문에, 회사는 내년 회계 연도까지 모든 불필요한 자본 지출을 연기하기로 결정했습니다.",
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T10:17:48.915Z"
+  },
+  {
+    "text": "The regional sales target must be achieved ___ the end of the current quarter to qualify for the bonus incentive.",
+    "options": [
+      {
+        "label": "A",
+        "text": "until"
+      },
+      {
+        "label": "B",
+        "text": "within"
+      },
+      {
+        "label": "C",
+        "text": "by"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "정답은 (C) by 입니다. 'by'는 특정 시점 '까지' 완료되어야 함을 나타내는 전치사입니다. 여기서는 '현재 분기 말까지' 목표를 달성해야 보너스 인센티브를 받을 수 있다는 의미가 되어 문맥상 적절합니다. (A) 'until'은 특정 시점 '까지' 계속되는 상태를 나타내므로, 목표 달성이 분기 말 '까지' 계속된다는 의미가 되어 어색합니다. (B) 'within'은 특정 기간 '이내에' 완료되어야 함을 나타내므로, 분기 말 '이내에' 목표를 달성해야 한다는 의미가 되어 약간 어색합니다. (D) 'during'은 특정 기간 '동안에' 발생함을 나타내므로, 목표 달성이 분기 '동안에' 발생해야 한다는 의미가 되어 부적절합니다.",
+    "translation": "보너스 인센티브를 받으려면 지역 판매 목표를 현재 분기 말까지 달성해야 합니다.",
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T10:17:48.915Z"
+  },
+  {
+    "text": "___ the numerous challenges faced during the project's development, the team successfully delivered the software on time and within budget.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Due to"
+      },
+      {
+        "label": "B",
+        "text": "Despite"
+      },
+      {
+        "label": "C",
+        "text": "Because"
+      },
+      {
+        "label": "D",
+        "text": "Since"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "정답은 (B) Despite 입니다. 'Despite'는 전치사로, 명사구('the numerous challenges faced during the project's development') 앞에 와서 '프로젝트 개발 중 직면한 수많은 어려움에도 불구하고'라는 의미를 나타냅니다. (A) 'Due to'는 '~때문에'라는 원인/결과 관계를 나타내므로 문맥상 적절하지 않습니다. (C) 'Because'와 (D) 'Since'는 접속사로 뒤에 주어+동사가 와야 하므로 오답입니다. 프로젝트의 어려움에도 불구하고 성공적으로 완료했다는 대조적인 상황을 나타내야 하므로 'Despite'가 적절합니다.",
+    "translation": "프로젝트 개발 중 직면한 수많은 어려움에도 불구하고, 팀은 소프트웨어를 제 시간에 예산 내에서 성공적으로 제공했습니다.",
+    "part": "Part 5",
+    "tags": [
+      "P5_PREP",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T10:17:48.915Z"
+  }
+]

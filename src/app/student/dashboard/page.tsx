@@ -283,17 +283,46 @@ export default function StudentDashboard() {
         switch (type) {
             case 'level_test': return `/homework/level-test`;
             case 'voca': return `/homework/voca`;
-            case 'grammar': return `/homework/grammar`;
+            case 'grammar': {
+                // detail might be "Unit 1" or "Unit 1: Noun"
+                const match = detail.match(/(\d+)/);
+                if (match) {
+                    const unitNum = match[1].padStart(2, '0');
+                    // Find actual key like Unit_01_Noun
+                    const units = [
+                        "Unit_00_Structure", "Unit_01_Noun", "Unit_02_Pronoun", "Unit_03_Adjective",
+                        "Unit_04_Adverb", "Unit_05_Preposition", "Unit_06_Verb", "Unit_07_To_Infinitive",
+                        "Unit_08_Gerund", "Unit_09_Participle", "Unit_10_Adverb_Conjunctions",
+                        "Unit_11_Relative_Clauses", "Unit_12_Noun_Clauses"
+                    ];
+                    const target = units.find(u => u.includes(`Unit_${unitNum}`));
+                    return target ? `/homework/part5/${target}` : `/homework/part5`;
+                }
+                return `/homework/part5`;
+            }
             case 'part1_shadow': return `/homework/part1`;
-            case 'part1_test': return `/homework/part1-real`; // New
+            case 'part1_test': return `/homework/part1-real`;
             case 'part2_test': return `/homework/part2`;
             case 'part3_test': return `/homework/part3`;
             case 'part4_test': return `/homework/part4`;
-            case 'part5_test': return `/homework/part5-real`;
-            case 'part6_test': return `/homework/part6`;
-            case 'part7_single': return `/homework/part7`;
-            case 'part7_double': return `/homework/part7-double`;
-            case 'part7_test': return `/homework/part7`; // Legacy
+            case 'part5_test': {
+                // If detail is "Test 1" or similar, extract the number
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part5-real/test/${match[1]}` : `/homework/part5-real`;
+            }
+            case 'part6_test': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part6/test/${match[1]}` : `/homework/part6`;
+            }
+            case 'part7_test':
+            case 'part7_single': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part7/test/${match[1]}` : `/homework/part7`;
+            }
+            case 'part7_double': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part7-double/test/${match[1]}` : `/homework/part7-double`;
+            }
             case 'mock_test': return `/homework/mock-exam`;
             case 'weakness_review': return `/homework/weakness/${id}`;
             default: return '/';
@@ -528,32 +557,39 @@ export default function StudentDashboard() {
                             const isCompleted = weaknessAssignment ? completedMap[`weakness_review_${weaknessAssignment.detail}`] : false;
 
                             return (
-                                <div className="mt-4 pt-4 border-t border-slate-800/50 flex items-center justify-between">
-                                    <p className="text-xs text-slate-500">
+                                <div className="mt-4 pt-4 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                    <p className="text-[10px] sm:text-xs text-slate-500 max-w-[200px] sm:max-w-none">
                                         * 매주 금요일, 이번주 학습 데이터를 기반으로 새로운 약점 과제가 생성됩니다.
                                     </p>
-                                    <Button
-                                        variant="ghost"
-                                        className={cn(
-                                            "text-xs h-8 transition-all font-bold",
-                                            weaknessAssignment && !isCompleted
-                                                ? "bg-rose-500 text-white hover:bg-rose-600 shadow-md shadow-rose-500/20 animate-pulse"
-                                                : "text-rose-400 hover:bg-rose-500/10"
-                                        )}
-                                        onClick={() => {
-                                            if (weaknessAssignment) {
-                                                router.push(`/homework/weakness/${weaknessAssignment.id}`);
-                                            } else {
-                                                alert("아직 생성된 약점 보완 과제가 없습니다. (매주 금요일 생성)");
+                                    <div className="flex gap-2 w-full sm:w-auto">
+                                        <Button
+                                            variant="ghost"
+                                            className={cn(
+                                                "text-xs h-9 flex-1 sm:flex-initial transition-all font-bold px-4",
+                                                weaknessAssignment && !isCompleted
+                                                    ? "bg-rose-500 text-white hover:bg-rose-600 shadow-md shadow-rose-500/20 animate-pulse"
+                                                    : "text-rose-400 border border-rose-500/20 hover:bg-rose-500/10"
+                                            )}
+                                            onClick={() => {
+                                                if (weaknessAssignment) {
+                                                    router.push(`/homework/weakness/${weaknessAssignment.id}`);
+                                                } else {
+                                                    // Direct drill if no assignment
+                                                    if (analysis?.topWeakness?.code && analysis.topWeakness.code !== 'NONE') {
+                                                        router.push(`/weakness/review?tag=${analysis.topWeakness.code}&part=Part5`);
+                                                    } else {
+                                                        alert("아직 생성된 약점 보완 과제가 없습니다. 먼저 실전 테스트를 1회 이상 완료해주세요.");
+                                                    }
+                                                }
+                                            }}
+                                        >
+                                            <Zap className="w-3 h-3 mr-1" />
+                                            {weaknessAssignment
+                                                ? (isCompleted ? "약점 과제 완료 (Review)" : "약점 보완 문제 풀기 (Start)")
+                                                : "AI 맞춤 드릴 시작"
                                             }
-                                        }}
-                                    >
-                                        <Zap className="w-3 h-3 mr-1" />
-                                        {weaknessAssignment
-                                            ? (isCompleted ? "약점 과제 완료 (Review)" : "약점 보완 문제 풀기 (Start)")
-                                            : "약점 과제 대기 중"
-                                        }
-                                    </Button>
+                                        </Button>
+                                    </div>
                                 </div>
                             );
                         })()}

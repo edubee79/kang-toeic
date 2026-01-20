@@ -1,0 +1,302 @@
+[
+  {
+    "text": "The company's new marketing ______ has led to a significant increase in sales.",
+    "options": [
+      {
+        "label": "A",
+        "text": "strategy"
+      },
+      {
+        "label": "B",
+        "text": "strategic"
+      },
+      {
+        "label": "C",
+        "text": "strategically"
+      },
+      {
+        "label": "D",
+        "text": "strategize"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The sentence requires a noun to function as the subject of the verb 'has led.' 'Strategy' is a noun that fits the context, meaning a plan of action designed to achieve a long-term or overall aim.",
+    "translation": "그 회사의 새로운 마케팅 전략은 매출의 상당한 증가로 이어졌습니다. 'Strategy'는 'has led'의 주어 역할을 할 명사가 필요하기 때문에 정답입니다. 'Strategy'는 장기적인 목표를 달성하기 위한 행동 계획을 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "All employees are encouraged to submit their ______ for improving workplace efficiency to the management team.",
+    "options": [
+      {
+        "label": "A",
+        "text": "suggest"
+      },
+      {
+        "label": "B",
+        "text": "suggesting"
+      },
+      {
+        "label": "C",
+        "text": "suggestions"
+      },
+      {
+        "label": "D",
+        "text": "suggested"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The sentence needs a plural noun as the object of 'their.' 'Suggestions' is the correct plural noun, meaning ideas or plans put forward for consideration.",
+    "translation": "모든 직원은 작업장 효율성 향상을 위한 제안을 경영진에게 제출하도록 권장됩니다. 'Their'의 목적어로 복수 명사가 필요하므로 'Suggestions'가 정답입니다. 'Suggestions'는 고려를 위해 제시된 아이디어나 계획을 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "Due to the unexpected ______ in raw material prices, the company's profit margin has decreased slightly.",
+    "options": [
+      {
+        "label": "A",
+        "text": "rise"
+      },
+      {
+        "label": "B",
+        "text": "rising"
+      },
+      {
+        "label": "C",
+        "text": "risen"
+      },
+      {
+        "label": "D",
+        "text": "rose"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A noun is required to modify 'in raw material prices'. 'Rise' is the correct noun, meaning an increase.",
+    "translation": "예상치 못한 원자재 가격 상승으로 인해 회사의 이윤폭이 소폭 감소했습니다. 'in raw material prices'를 수식하기 위해 명사가 필요하므로 'Rise'가 정답입니다. 'Rise'는 증가를 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The human resources department is responsible for employee ______ and development programs.",
+    "options": [
+      {
+        "label": "A",
+        "text": "train"
+      },
+      {
+        "label": "B",
+        "text": "training"
+      },
+      {
+        "label": "C",
+        "text": "trained"
+      },
+      {
+        "label": "D",
+        "text": "trains"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Employee' needs a noun to describe which activity HR does. 'Training' is the correct noun in this context, meaning the action of teaching a person a particular skill or type of behavior.",
+    "translation": "인사 부서는 직원 교육 및 개발 프로그램을 담당합니다. 'Employee' 다음에 명사가 필요하며, 이 맥락에서 'Training'이 적절한 명사입니다. 'Training'은 특정 기술이나 행동 유형을 가르치는 행위를 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The CEO emphasized the ______ of teamwork in achieving the company's goals.",
+    "options": [
+      {
+        "label": "A",
+        "text": "important"
+      },
+      {
+        "label": "B",
+        "text": "importantly"
+      },
+      {
+        "label": "C",
+        "text": "importance"
+      },
+      {
+        "label": "D",
+        "text": "import"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The sentence requires a noun to be the object of the verb 'emphasized'. 'Importance' is the correct noun, meaning the state or fact of being of great significance or value.",
+    "translation": "CEO는 회사의 목표 달성에 있어 팀워크의 중요성을 강조했습니다. 'emphasized'의 목적어로 명사가 필요하므로 'Importance'가 정답입니다. 'Importance'는 큰 의미나 가치를 지니는 상태 또는 사실을 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The conference provided a great ______ for networking with industry professionals.",
+    "options": [
+      {
+        "label": "A",
+        "text": "opportunity"
+      },
+      {
+        "label": "B",
+        "text": "opportunistic"
+      },
+      {
+        "label": "C",
+        "text": "opportunely"
+      },
+      {
+        "label": "D",
+        "text": "opportunities"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The sentence structure requires a singular noun to follow 'a great'. 'Opportunity' is the correct noun, meaning a set of circumstances that makes it possible to do something.",
+    "translation": "그 컨퍼런스는 업계 전문가들과 네트워킹 할 수 있는 좋은 기회를 제공했습니다. 'a great' 다음에 단수 명사가 필요하므로 'Opportunity'가 정답입니다. 'Opportunity'는 무언가를 할 수 있게 만드는 일련의 상황을 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The project manager requested a detailed ______ of the proposed budget before the meeting.",
+    "options": [
+      {
+        "label": "A",
+        "text": "analysis"
+      },
+      {
+        "label": "B",
+        "text": "analyze"
+      },
+      {
+        "label": "C",
+        "text": "analyzing"
+      },
+      {
+        "label": "D",
+        "text": "analyzed"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A noun is needed to complete the phrase 'a detailed ______'. 'Analysis' fits best as it is a detailed examination of the elements or structure of something.",
+    "translation": "프로젝트 관리자는 회의 전에 제안된 예산에 대한 자세한 분석을 요청했습니다. 'a detailed ______' 구문을 완성하기 위해 명사가 필요합니다. 'Analysis'는 무언가의 요소 또는 구조에 대한 자세한 검토이므로 가장 적합합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The company received positive ______ for its innovative approach to customer service.",
+    "options": [
+      {
+        "label": "A",
+        "text": "feedback"
+      },
+      {
+        "label": "B",
+        "text": "feedbacks"
+      },
+      {
+        "label": "C",
+        "text": "feed"
+      },
+      {
+        "label": "D",
+        "text": "fed"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The sentence requires a noun to be the object of 'received'. 'Feedback' is an uncountable noun and the correct choice, meaning information about reactions to a product, a person's performance of a task, etc. which is used as a basis for improvement.",
+    "translation": "회사는 고객 서비스에 대한 혁신적인 접근 방식으로 긍정적인 피드백을 받았습니다. 'received'의 목적어로 명사가 필요합니다. 'Feedback'은 불가산 명사이며 정답입니다. 제품, 사람의 업무 수행 등에 대한 반응에 대한 정보로 개선의 기초로 사용됩니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The new software update includes several ______ to improve system security.",
+    "options": [
+      {
+        "label": "A",
+        "text": "modify"
+      },
+      {
+        "label": "B",
+        "text": "modifies"
+      },
+      {
+        "label": "C",
+        "text": "modification"
+      },
+      {
+        "label": "D",
+        "text": "modifications"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "The sentence needs a plural noun after 'several'. 'Modifications' is the correct plural noun, meaning changes made to something.",
+    "translation": "새로운 소프트웨어 업데이트에는 시스템 보안을 개선하기 위한 몇 가지 수정 사항이 포함되어 있습니다. 'several' 다음에 복수 명사가 필요하므로 'Modifications'가 정답입니다. 'Modifications'는 무언가에 가해진 변경 사항을 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  },
+  {
+    "text": "The board of directors will make a final ______ regarding the proposed merger next week.",
+    "options": [
+      {
+        "label": "A",
+        "text": "decide"
+      },
+      {
+        "label": "B",
+        "text": "deciding"
+      },
+      {
+        "label": "C",
+        "text": "decision"
+      },
+      {
+        "label": "D",
+        "text": "decided"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The sentence needs a noun to complete the phrase 'a final ______'. 'Decision' is the correct noun, meaning a conclusion or resolution reached after consideration.",
+    "translation": "이사회는 다음 주에 제안된 합병에 대한 최종 결정을 내릴 것입니다. 'a final ______' 구문을 완성하기 위해 명사가 필요합니다. 'Decision'은 고려 후 도달한 결론 또는 해결을 의미합니다.",
+    "part": "Part 5",
+    "tags": [
+      "noun",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:52:52.605Z"
+  }
+]

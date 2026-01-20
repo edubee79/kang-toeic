@@ -116,6 +116,13 @@ export default function WeaknessReviewPage() {
                     targetQuestions = targetQuestions
                         .sort(() => Math.random() - 0.5)
                         .slice(0, 10);
+
+                    // If still empty, try to fetch ANY Part 5 questions as ultimate fallback
+                    if (targetQuestions.length === 0) {
+                        const q3 = query(collection(db, 'ai_weakness_questions'), where('part', '==', 5), limit(10));
+                        const snap3 = await getDocs(q3);
+                        targetQuestions = snap3.docs.map(d => d.data() as ReviewQuestion);
+                    }
                 }
 
                 setQuestions(targetQuestions);
@@ -238,7 +245,7 @@ export default function WeaknessReviewPage() {
                 </div>
 
                 {/* Question Card */}
-                <Card className="bg-white p-8 rounded-2xl shadow-xl border-none min-h-[400px] flex flex-col">
+                <Card className="bg-white p-5 md:p-8 rounded-2xl shadow-xl border-none min-h-[400px] flex flex-col">
                     <div className="flex-1">
                         {/* Passage Context if provided (Part 6, 7) */}
                         {currentQ.passageContext && (

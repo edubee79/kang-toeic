@@ -1,0 +1,4 @@
+[Upload Error] 2026-01-20T09:20:22.214Z: __dirname is not defined
+Stack: ReferenceError: __dirname is not defined
+    at uploadQuestions (file:///C:/Users/user/.gemini/antigravity/scratch/kangs-toeic-next/scripts/upload-ai-questions.ts:71:32)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)

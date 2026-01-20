@@ -1,0 +1,61 @@
+[
+  {
+    "passage": "To: All Staff\nFrom: Human Resources Department\nDate: October 26\nSubject: Upcoming Workshop: Effective Time Management\n\nWe are pleased to announce an upcoming workshop focused on enhancing your time management skills. In today's fast-paced work environment, efficient time management is crucial for productivity and job satisfaction. This workshop aims to equip you with practical strategies and techniques to prioritize tasks, minimize distractions, and maximize your overall effectiveness.\n\nThe workshop will be held on November 15, from 9:00 AM to 12:00 PM in the main conference room. A light breakfast will be (1) ______ before the session begins. During the workshop, you will learn how to effectively use various time management tools and techniques, including the Pomodoro Technique and Eisenhower Matrix. You will also have the opportunity to participate in interactive exercises and group discussions. Our experienced facilitator, Ms. Emily Carter, will guide you through the session and (2) ______ personalized advice based on your specific needs. Spaces are limited, so we encourage you to register as soon as possible. To register, please visit the company intranet and complete the registration form by November 8. Late registrations may not be (3) ______. We believe that this workshop will significantly benefit your professional development and contribute to a more efficient and productive work environment. We look forward to seeing you there!\n\nIf you have any questions, please do not hesitate to contact the Human Resources Department. We are committed to (4) ______ you in achieving your professional goals.\n\nSincerely,\nHuman Resources Department",
+    "questions": [
+      {
+        "text": "(1)",
+        "options": [
+          "serve",
+          "serving",
+          "served",
+          "to serve"
+        ],
+        "correctAnswer": "served",
+        "explanation": "The correct answer is 'served'. The sentence requires a passive voice construction, 'will be served', indicating that breakfast will be provided to the staff. 'Serve' is the base form of the verb, 'serving' is the present participle, and 'to serve' is the infinitive; none of these fit grammatically in this context. 'Served' is the past participle, which is needed to form the passive voice.",
+        "translation": "정답은 'served'입니다. 문장은 수동태 구조인 'will be served'를 필요로 하며, 이는 아침 식사가 직원들에게 제공될 것임을 나타냅니다. 'Serve'는 동사의 기본형이고, 'serving'은 현재 분사이며, 'to serve'는 부정사입니다. 이들은 모두 이 문맥에서 문법적으로 맞지 않습니다. 'Served'는 과거 분사이며, 수동태를 형성하는 데 필요합니다."
+      },
+      {
+        "text": "(2)",
+        "options": [
+          "provide",
+          "provided",
+          "providing",
+          "to provide"
+        ],
+        "correctAnswer": "provide",
+        "explanation": "The correct answer is 'provide'. The phrase 'will... provide' requires the base form of the verb. Ms. Carter 'will provide' advice. 'Provided' is past tense/past participle. 'Providing' is a gerund/present participle. 'To provide' is the infinitive. The structure of the sentence (will + verb) necessitates the base form of the verb.",
+        "translation": "정답은 'provide'입니다. 'will... provide' 구문은 동사의 기본형을 필요로 합니다. 카터 씨는 'will provide' 조언을 제공할 것입니다. 'Provided'는 과거 시제/과거 분사입니다. 'Providing'은 동명사/현재 분사입니다. 'To provide'는 부정사입니다. 문장의 구조 (will + 동사)는 동사의 기본형을 필요로 합니다."
+      },
+      {
+        "text": "(3)",
+        "options": [
+          "accepted",
+          "accept",
+          "accepting",
+          "acceptance"
+        ],
+        "correctAnswer": "accepted",
+        "explanation": "The correct answer is 'accepted'. The sentence means that late registrations 'may not be accepted'. This requires a passive voice construction (may not be + past participle). The other options are incorrect because they are the base form, present participle, and a noun, respectively.",
+        "translation": "정답은 'accepted'입니다. 이 문장은 늦은 등록은 'may not be accepted' (받아들여지지 않을 수 있습니다)를 의미합니다. 이것은 수동태 구조 (may not be + 과거 분사)를 필요로 합니다. 다른 옵션은 각각 기본형, 현재 분사, 명사이므로 옳지 않습니다."
+      },
+      {
+        "text": "(4)",
+        "options": [
+          "assist",
+          "assisting",
+          "assisted",
+          "assistance"
+        ],
+        "correctAnswer": "assisting",
+        "explanation": "The correct answer is 'assisting'. The sentence 'We are committed to assisting you' follows the structure 'be committed to + gerund' (verb-ing). This is a common idiom in English. 'Assist' is the base form of the verb. 'Assisted' is the past tense/past participle. 'Assistance' is a noun.",
+        "translation": "정답은 'assisting'입니다. 'We are committed to assisting you' 문장은 'be committed to + 동명사' (verb-ing) 구조를 따릅니다. 이것은 영어에서 흔한 관용구입니다. 'Assist'는 동사의 기본형입니다. 'Assisted'는 과거 시제/과거 분사입니다. 'Assistance'는 명사입니다."
+      }
+    ],
+    "part": "Part 6",
+    "tags": [
+      "P6_VERB",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-19T23:50:37.943Z"
+  }
+]
