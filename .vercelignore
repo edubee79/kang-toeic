@@ -1,10 +1,31 @@
 # Ignore local build logs and temporary files
 build_log.txt
 build_error.log
-*.json
+
+# DO NOT ignore package.json and package-lock.json
+!package.json
+!package-lock.json
+
+# Ignore AI generated pools and other temp data
+ai_generated_*.json
+ai_Part*.json
+extracted_*.json
+temp_*.json
+rc_*.json
+retagged_*.json
+universal_results.json
+standard_*.json
+
+# Ignore folders
 scripts/
 docs/
 brain/
+experiments/
+mock-test-templates/
+
+# Keep essential files
 !firebase-messaging-sw.js
+
+# standard ignores
 node_modules
 .next
