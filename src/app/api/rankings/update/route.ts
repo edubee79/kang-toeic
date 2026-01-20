@@ -19,7 +19,6 @@ export async function POST(request: Request) {
         const result = await updateRankings(targetPeriod, className || 'all');
 
         return NextResponse.json({
-            success: true,
             period: targetPeriod,
             ...result
         });
