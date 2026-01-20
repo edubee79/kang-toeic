@@ -249,13 +249,13 @@ export default function Part1TestRunner() {
                         />
                     </div>
 
-                    {/* Audio Player */}
-                    <div className="bg-slate-900 rounded-2xl p-4 border border-slate-800 flex items-center gap-4">
+                    {/* Audio Player (Desktop) */}
+                    <div className="hidden md:flex bg-slate-900 rounded-2xl p-4 border border-slate-800 items-center gap-4">
                         <Button
                             onClick={handlePlay}
                             className={cn(
                                 "w-12 h-12 rounded-full flex-shrink-0",
-                                isPlaying ? "bg-amber-500 hover:bg-amber-600 text-slate-900" : "bg-indigo-600 hover:bg-indigo-500 text-white"
+                                "bg-indigo-600 hover:bg-indigo-500 text-white"
                             )}
                         >
                             {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-1" />}
@@ -270,81 +270,127 @@ export default function Part1TestRunner() {
 
                 {/* Right: Question & Options */}
                 <div className="flex-1 flex flex-col justify-center space-y-8">
-                    <div>
-                        <span className="text-indigo-500 font-black text-xs uppercase tracking-widest bg-indigo-500/10 px-2 py-1 rounded">Question {currentQIndex + 1}</span>
-                        <h2 className="text-2xl font-bold text-white mt-4 mb-2">Select the best description</h2>
-                        <p className="text-slate-400 text-sm">Listen to the four statements.</p>
-                    </div>
+                    {/* Right: Question & Options (Desktop/Mobile split) */}
+                    <div className="flex-1 flex flex-col justify-center space-y-4 md:space-y-8">
 
-                    <div className="space-y-3">
-                        {['A', 'B', 'C', 'D'].map((opt) => {
-                            const isSelected = selectedAnswers[currentQ.id] === opt;
-                            const isCorrect = currentQ.correctAnswer === opt;
+                        {/* Header Text (Hidden on Mobile to save space) */}
+                        <div className="hidden md:block">
+                            <span className="text-indigo-500 font-black text-xs uppercase tracking-widest bg-indigo-500/10 px-2 py-1 rounded">Question {currentQIndex + 1}</span>
+                            <h2 className="text-2xl font-bold text-white mt-4 mb-2">Select the best description</h2>
+                            <p className="text-slate-400 text-sm">Listen to the four statements.</p>
+                        </div>
 
-                            let buttonClass = "bg-slate-900 border-slate-800 text-slate-400 hover:bg-slate-800 hover:border-slate-700 hover:text-white";
-                            let iconClass = "bg-slate-800 border-slate-600 text-slate-500 group-hover:border-slate-500 group-hover:text-slate-400";
+                        {/* Mobile: Compact Header */}
+                        <div className="md:hidden flex items-center justify-between mb-2">
+                            <span className="text-indigo-500 font-black text-xs uppercase tracking-widest bg-indigo-500/10 px-2 py-1 rounded">Q {currentQIndex + 1}</span>
+                            <div className="text-xs text-slate-500 flex items-center gap-1">
+                                {isPlaying ? <span className="text-emerald-500 font-bold animate-pulse">Playing...</span> : <span>Wait 3s auto-start</span>}
+                            </div>
+                        </div>
 
-                            if (reviewMode) {
-                                if (isCorrect) {
-                                    buttonClass = "bg-emerald-900/20 border-emerald-500 text-emerald-400";
-                                    iconClass = "bg-emerald-500 border-emerald-500 text-slate-900";
-                                } else if (isSelected && !isCorrect) {
-                                    buttonClass = "bg-rose-900/20 border-rose-500 text-rose-400";
-                                    iconClass = "bg-rose-500 border-rose-500 text-white";
-                                }
-                            } else {
-                                if (isSelected) {
-                                    buttonClass = "bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-500/20 scale-[1.02]";
-                                    iconClass = "bg-white text-indigo-600 border-white";
-                                }
-                            }
+                        {/* Options Area */}
+                        <div className="space-y-3">
+                            {/* 1. Mobile Compact Row (A B C D) - Circular Buttons */}
+                            <div className="flex justify-center gap-4 md:hidden py-4">
+                                {['A', 'B', 'C', 'D'].map((opt) => {
+                                    const isSelected = selectedAnswers[currentQ.id] === opt;
+                                    const isCorrect = currentQ.correctAnswer === opt;
 
-                            return (
-                                <button
-                                    key={opt}
-                                    onClick={() => handleSelect(opt)}
-                                    className={cn(
-                                        "w-full p-6 rounded-2xl border text-left flex items-start gap-4 transition-all duration-200 group",
-                                        buttonClass
-                                    )}
-                                >
-                                    <span className={cn(
-                                        "w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border flex-shrink-0 mt-0.5",
-                                        iconClass
-                                    )}>
-                                        {opt}
-                                    </span>
-                                    <div className="flex-1">
-                                        <span className="font-bold text-lg block mb-1">Option {opt}</span>
-                                        {reviewMode && currentQ.script && (
-                                            <div className="text-sm opacity-90">
-                                                <p className="font-medium text-white/90">{currentQ.script[opt as keyof typeof currentQ.script]}</p>
-                                                <p className="text-xs mt-1 opacity-70">{(currentQ.script as any)[`translation_${opt}`]}</p>
+                                    let bgClass = "bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-700";
+                                    if (reviewMode) {
+                                        if (isCorrect) bgClass = "bg-emerald-500 text-slate-900 border-emerald-500";
+                                        else if (isSelected) bgClass = "bg-rose-500 text-white border-rose-500";
+                                    } else {
+                                        if (isSelected) bgClass = "bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/50 scale-110 ring-2 ring-indigo-400 ring-offset-2 ring-offset-slate-900";
+                                    }
+
+                                    return (
+                                        <button
+                                            key={opt}
+                                            onClick={() => handleSelect(opt)}
+                                            className={cn(
+                                                "w-14 h-14 rounded-full border-2 flex items-center justify-center text-xl font-black transition-all active:scale-95 shadow-lg",
+                                                bgClass
+                                            )}
+                                        >
+                                            {opt}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
+                            {/* 2. Desktop Vertical List (Full Detail) */}
+                            <div className="hidden md:block space-y-3">
+                                {['A', 'B', 'C', 'D'].map((opt) => {
+                                    const isSelected = selectedAnswers[currentQ.id] === opt;
+                                    const isCorrect = currentQ.correctAnswer === opt;
+
+                                    let buttonClass = "bg-slate-900 border-slate-800 text-slate-400 hover:bg-slate-800 hover:border-slate-700 hover:text-white";
+                                    let iconClass = "bg-slate-800 border-slate-600 text-slate-500 group-hover:border-slate-500 group-hover:text-slate-400";
+
+                                    if (reviewMode) {
+                                        if (isCorrect) {
+                                            buttonClass = "bg-emerald-900/20 border-emerald-500 text-emerald-400";
+                                            iconClass = "bg-emerald-500 border-emerald-500 text-slate-900";
+                                        } else if (isSelected && !isCorrect) {
+                                            buttonClass = "bg-rose-900/20 border-rose-500 text-rose-400";
+                                            iconClass = "bg-rose-500 border-rose-500 text-white";
+                                        }
+                                    } else {
+                                        if (isSelected) {
+                                            buttonClass = "bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-500/20 scale-[1.02]";
+                                            iconClass = "bg-white text-indigo-600 border-white";
+                                        }
+                                    }
+
+                                    return (
+                                        <button
+                                            key={opt}
+                                            onClick={() => handleSelect(opt)}
+                                            className={cn(
+                                                "w-full p-6 rounded-2xl border text-left flex items-start gap-4 transition-all duration-200 group",
+                                                buttonClass
+                                            )}
+                                        >
+                                            <span className={cn(
+                                                "w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border flex-shrink-0 mt-0.5",
+                                                iconClass
+                                            )}>
+                                                {opt}
+                                            </span>
+                                            <div className="flex-1">
+                                                <span className="font-bold text-lg block mb-1">Option {opt}</span>
+                                                {reviewMode && currentQ.script && (
+                                                    <div className="text-sm opacity-90">
+                                                        <p className="font-medium text-white/90">{currentQ.script[opt as keyof typeof currentQ.script]}</p>
+                                                        <p className="text-xs mt-1 opacity-70">{(currentQ.script as any)[`translation_${opt}`]}</p>
+                                                    </div>
+                                                )}
                                             </div>
-                                        )}
-                                    </div>
-                                </button>
-                            );
-                        })}
-                    </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
 
-                    <div className="flex justify-between pt-8 border-t border-slate-800/50">
-                        <Button
-                            variant="ghost"
-                            disabled={currentQIndex === 0}
-                            onClick={handlePrev}
-                            className="text-slate-500 hover:text-white"
-                        >
-                            Previous
-                        </Button>
-                        <Button
-                            onClick={handleNext}
-                            disabled={!selectedAnswers[currentQ.id]}
-                            className="bg-white text-slate-900 hover:bg-slate-200 font-bold px-8"
-                        >
-                            {currentQIndex === testSet.questions.length - 1 ? "Finish Test" : "Next Question"}
-                            <ChevronRight className="w-4 h-4 ml-2" />
-                        </Button>
+                        <div className="flex justify-between pt-4 md:pt-8 border-t border-slate-800/50">
+                            <Button
+                                variant="ghost"
+                                disabled={currentQIndex === 0}
+                                onClick={handlePrev}
+                                className="text-slate-500 hover:text-white"
+                            >
+                                Previous
+                            </Button>
+                            <Button
+                                onClick={handleNext}
+                                disabled={!selectedAnswers[currentQ.id]}
+                                className="bg-white text-slate-900 hover:bg-slate-200 font-bold px-8"
+                            >
+                                {currentQIndex === testSet.questions.length - 1 ? "Finish Test" : "Next"}
+                                <ChevronRight className="w-4 h-4 ml-2" />
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>

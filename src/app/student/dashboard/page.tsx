@@ -49,6 +49,7 @@ export default function StudentDashboard() {
     const [assignments, setAssignments] = useState<any[]>([]);
     const [completedMap, setCompletedMap] = useState<Record<string, boolean>>({});
     const [partScores, setPartScores] = useState<Record<string, number>>({});
+    const [currentScore, setCurrentScore] = useState<number>(0);
 
     useEffect(() => {
         setIsMounted(true);
@@ -253,14 +254,20 @@ export default function StudentDashboard() {
                 finalScores[k] = Math.round(scoreSums[k] / scoreCounts[k]);
             });
             // Aggregate Part 7 (Single + Double) -> P7 Total
-            const p7Single = finalScores['part7_single'] || 0;
-            const p7Double = finalScores['part7_double'] || 0;
-            if (!finalScores['part7_test'] && (p7Single || p7Double)) {
-                finalScores['part7_test'] = p7Single + p7Double;
+            const p7S = finalScores['part7_single'] || 0;
+            const p7D = finalScores['part7_double'] || 0;
+            if (!finalScores['part7_test'] && (p7S || p7D)) {
+                finalScores['part7_test'] = p7S + p7D;
             }
 
-            setPartScores(finalScores);
+            // Calculate Estimated Total Score
+            const lcCorrect = (finalScores['part1_test'] || 0) + (finalScores['part2_test'] || 0) + (finalScores['part3_test'] || 0) + (finalScores['part4_test'] || 0);
+            const rcCorrect = (finalScores['part5_test'] || 0) + (finalScores['part6_test'] || 0) + (finalScores['part7_test'] || 0);
+            const totalCorrect = lcCorrect + rcCorrect;
+            const estScore = totalCorrect > 0 ? Math.round((totalCorrect / 200) * 990) : 0;
 
+            setCurrentScore(estScore);
+            setPartScores(finalScores);
             setStats(finalStats);
         } catch (error) {
             console.error("Error fetching stats:", error);
@@ -650,24 +657,27 @@ export default function StudentDashboard() {
                             <div>
                                 <p className="text-slate-400 text-xs font-medium mb-1">TARGET SCORE</p>
                                 <div className="text-3xl font-black text-white">{targetScore}<span className="text-base text-slate-500 ml-1">점</span></div>
-                                <div className="mt-2 text-xs text-slate-500">목표까지 <span className="text-indigo-400 font-bold">+{Math.max(0, targetScore - 730)}점</span> 남았습니다.</div>
+                                <div className="mt-2 text-xs text-slate-500">목표까지 <span className="text-indigo-400 font-bold">+{Math.max(0, targetScore - currentScore)}점</span> 남았습니다.</div>
                             </div>
                             <div>
                                 <p className="text-slate-400 text-xs font-medium mb-1">AI PREDICTION</p>
-                                <div className="text-3xl font-black text-indigo-400">730<span className="text-base text-indigo-500/50 ml-1">점</span></div>
+                                <div className="text-3xl font-black text-indigo-400">{currentScore}<span className="text-base text-indigo-500/50 ml-1">점</span></div>
                                 <div className="mt-2 text-xs text-slate-500 flex items-center gap-1">
                                     <TrendingUp className="w-3 h-3 text-emerald-500" />
-                                    <span className="text-emerald-500 font-bold">지난달 대비 +45점</span> 상승
+                                    <span className="text-emerald-500 font-bold">최근 학습 결과 반영</span>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-6">
                             <div className="flex justify-between text-xs text-slate-400 mb-1">
                                 <span>진행률</span>
-                                <span>85%</span>
+                                <span>{Math.round((currentScore / targetScore) * 100)}%</span>
                             </div>
                             <div className="w-full bg-slate-800 rounded-full h-2">
-                                <div className="bg-gradient-to-r from-indigo-500 to-blue-500 h-2 rounded-full w-[85%] shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
+                                <div
+                                    className="bg-gradient-to-r from-indigo-500 to-blue-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)] transition-all duration-500"
+                                    style={{ width: `${Math.min(100, Math.round((currentScore / targetScore) * 100))}%` }}
+                                ></div>
                             </div>
                         </div>
                     </div>

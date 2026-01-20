@@ -95,11 +95,8 @@ function SentenceCard({
 
         utter.onend = () => {
             setIsPlaying(false);
-            // In shadowing logic, we usually hide text first, then reveal when they listen
-            // or keep it hidden. Let's follow "Blur until played" or custom logic.
-            // Requirement: Blur first, listen, then maybe reveal?
-            // Actually user wants: Listen -> Speak -> If Correct -> Next
-            setIsBlur(false);
+            // Fix: Do NOT unblur here. Keep blurred until user speaks correctly.
+            // setIsBlur(false); 
         };
 
         synth.current.speak(utter);

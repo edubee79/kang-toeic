@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, query, where, getDocs, orderBy, doc, getDoc } from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy, doc, getDoc, updateDoc, Timestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -16,6 +16,7 @@ import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { cn } from "@/lib/utils";
 import { TargetSettingSection } from '@/components/dashboard/TargetSettingSection';
 import { UserProfile, getUserProfile } from '@/services/userService';
+import { getWeaknessAnalysis, AnalysisResult } from '@/services/analysisService';
 
 // Reusing configuration from Student Dashboard for consistency
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
@@ -40,6 +41,7 @@ interface Student extends Partial<UserProfile> {
     email?: string;
     phone?: string;
     fcmToken?: string;
+    currentScore?: number;
     // UserProfile fields included via extension/Partial
 }
 
@@ -65,6 +67,7 @@ export default function StudentDetailPage() {
     const [stats, setStats] = useState<Record<string, number>>({});
     const [partScores, setPartScores] = useState<Record<string, number>>({}); // New State for Detailed Scores
     const [studentRankings, setStudentRankings] = useState<any[]>([]);
+    const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
 
     const [pushMessage, setPushMessage] = useState('');
     const [isSending, setIsSending] = useState(false);
@@ -100,33 +103,51 @@ export default function StudentDetailPage() {
             if (userData?.userId && userData.userId !== resolvedDocId) {
                 const syncSnap = await getDoc(doc(db, "Winter_Users", userData.userId));
                 if (syncSnap.exists()) {
+                    const syncData = syncSnap.data();
                     // Merit the sync document's data (targets, etc)
-                    userData = { ...userData, ...syncSnap.data() };
+                    userData = { ...userData, ...syncData };
                     // We should use the student ID number for subsequent result queries
                     resolvedDocId = userData.userId;
+
+                    // BACK-SYNC: Update the primary document (abcxyz) with the latest data from userId doc
+                    // This fixes stale data in the Admin List/Monitor
+                    try {
+                        await updateDoc(doc(db, "Winter_Users", studentId), {
+                            targetScore: syncData.targetScore || userData.targetScore,
+                            targetLC: syncData.targetLC || userData.targetLC,
+                            targetRC: syncData.targetRC || userData.targetRC,
+                            partTargets: syncData.partTargets || userData.partTargets,
+                            lastSyncedAt: Timestamp.now()
+                        });
+                    } catch (syncErr) {
+                        console.warn("Back-sync to primary doc failed:", syncErr);
+                    }
                 }
             }
 
-            if (userData) {
-                setStudent({
-                    id: resolvedDocId,
-                    userId: userData.userId,
-                    userName: userData.userName,
-                    className: userData.className,
-                    universityName: userData.universityName,
-                    targetScore: userData.targetScore || 850,
-                    targetLC: userData.targetLC,
-                    targetRC: userData.targetRC,
-                    partTargets: userData.partTargets,
-                    email: userData.email,
-                    phone: userData.phone,
-                    fcmToken: userData.fcmToken,
-                    name: userData.userName // For UserProfile compatibility
-                });
-            }
+            // Store values to be used after results are processed
+            const studentBase = userData ? {
+                id: resolvedDocId,
+                userId: userData.userId,
+                userName: userData.userName,
+                className: userData.className || "Unknown",
+                universityName: userData.universityName,
+                targetScore: userData.targetScore || 850,
+                targetLC: userData.targetLC,
+                targetRC: userData.targetRC,
+                partTargets: userData.partTargets,
+                email: userData.email,
+                phone: userData.phone,
+                fcmToken: userData.fcmToken,
+                name: userData.userName,
+                passedVocaDays: userData.passedVocaDays || [],
+            } : null;
 
             // 2. Fetch Results History (Use the resolved Student ID Number)
             const resultQueryId = userData?.userId || studentId;
+
+            // Trigger Analysis in parallel
+            getWeaknessAnalysis(resultQueryId).then(setAnalysis).catch(e => console.error("Admin Analysis Error:", e));
             const qResults = query(
                 collection(db, "Manager_Results"),
                 where("studentId", "==", resultQueryId),
@@ -166,13 +187,38 @@ export default function StudentDetailPage() {
                 if (uniqueCounts[type]) uniqueCounts[type].add(detail);
 
                 // Calculate Part Scores
-                // Assumption: data.score is Percentage (0-100)
-                if (PART_MAX[type] && typeof data.score === 'number') {
-                    const estimatedCorrect = Math.round((data.score / 100) * PART_MAX[type]);
-                    scoreSums[type] = (scoreSums[type] || 0) + estimatedCorrect;
-                    scoreCounts[type] = (scoreCounts[type] || 0) + 1;
+                // IMPROVED Logic: Unify with StudentDashboard (handle raw vs percentage correctly)
+                const maxQ = PART_MAX[type];
+                if (maxQ && typeof data.score === 'number') {
+                    let correctCount: number | undefined;
+
+                    if (data.total) { // If total is recorded (modern)
+                        // If score is 16 and total is 30, it's raw. 16 <= 30.
+                        // If score is 80 and total is 30, it's percentage. 80 > 30.
+                        if (data.score <= data.total) {
+                            correctCount = data.score;
+                        } else {
+                            correctCount = Math.round((data.score / 100) * data.total);
+                        }
+                    } else { // Fallback to PART_MAX if total missing
+                        if (data.score <= maxQ) {
+                            correctCount = data.score;
+                        } else {
+                            correctCount = Math.round((data.score / 100) * maxQ);
+                        }
+                    }
+
+                    if (correctCount !== undefined) {
+                        scoreSums[type] = (scoreSums[type] || 0) + correctCount;
+                        scoreCounts[type] = (scoreCounts[type] || 0) + 1;
+                    }
                 }
             });
+
+            // Voca Progress Sync from Profile (Legacy/Manual items)
+            if (studentBase?.passedVocaDays) {
+                studentBase.passedVocaDays.forEach((d: string) => uniqueCounts.voca.add(`Day ${d}`));
+            }
 
             const finalStats: Record<string, number> = {};
             Object.keys(uniqueCounts).forEach(k => finalStats[k] = uniqueCounts[k].size);
@@ -191,6 +237,19 @@ export default function StudentDetailPage() {
 
             setResults(resList);
             setStats(finalStats);
+            // Finalize Student Data with Estimated Score
+            if (studentBase) {
+                const lcCorrect = (finalScores['part1_test'] || 0) + (finalScores['part2_test'] || 0) + (finalScores['part3_test'] || 0) + (finalScores['part4_test'] || 0);
+                const rcCorrect = (finalScores['part5_test'] || 0) + (finalScores['part6_test'] || 0) + (finalScores['part7_test'] || 0);
+                const totalCorrect = lcCorrect + rcCorrect;
+                const estScore = totalCorrect > 0 ? Math.round((totalCorrect / 200) * 990) : 0;
+
+                setStudent({
+                    ...studentBase,
+                    currentScore: estScore
+                });
+            }
+
             setPartScores(finalScores);
 
             // 3. Fetch Rankings for this student
@@ -413,13 +472,13 @@ export default function StudentDetailPage() {
                                 </div>
                                 <div className="mt-4 mb-4">
                                     <div className="flex justify-between text-xs text-slate-400 mb-1">
-                                        <span>Current: 730 (AI Predict)</span>
-                                        <span>{Math.round((730 / (student?.targetScore || 850)) * 100)}%</span>
+                                        <span>Current: {student?.currentScore || 0} (Predict)</span>
+                                        <span>{Math.round(((student?.currentScore || 0) / (student?.targetScore || 850)) * 100)}%</span>
                                     </div>
                                     <div className="w-full bg-slate-800 rounded-full h-2">
                                         <div
                                             className="bg-gradient-to-r from-indigo-500 to-blue-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)] transition-all duration-500"
-                                            style={{ width: `${Math.min(100, Math.round((730 / (student?.targetScore || 850)) * 100))}%` }}
+                                            style={{ width: `${Math.min(100, Math.round(((student?.currentScore || 0) / (student?.targetScore || 850)) * 100))}%` }}
                                         ></div>
                                     </div>
                                 </div>
@@ -503,14 +562,34 @@ export default function StudentDetailPage() {
                                     <h3 className="text-lg font-bold text-white">취약점 분석</h3>
                                 </div>
                                 <div className="space-y-3">
-                                    <div className="bg-rose-500/10 border border-rose-500/20 rounded-md p-3">
-                                        <span className="text-rose-400 font-bold text-xs block mb-1">어휘력(Voca) 부족</span>
-                                        <p className="text-xs text-slate-400">학습 진행률이 40% 미만입니다.</p>
-                                    </div>
-                                    <div className="bg-amber-500/10 border border-amber-500/20 rounded-md p-3">
-                                        <span className="text-amber-400 font-bold text-xs block mb-1">약점 태그: 가정법</span>
-                                        <p className="text-xs text-slate-400">Part 5 오답률 상위 태그입니다.</p>
-                                    </div>
+                                    {analysis?.topWeakness && analysis.topWeakness.code !== 'NONE' ? (
+                                        <>
+                                            <div className="bg-rose-500/10 border border-rose-500/20 rounded-xl p-4">
+                                                <div className="flex items-center gap-2 mb-2">
+                                                    <Badge variant="outline" className="bg-rose-500 text-white border-none text-[10px] h-5">TOP WEAKNESS</Badge>
+                                                    <span className="text-rose-400 font-bold text-sm">{analysis.topWeakness.label}</span>
+                                                </div>
+                                                <p className="text-xs text-slate-400 leading-relaxed">{analysis.topWeakness.message}</p>
+                                                <div className="mt-3 flex items-center justify-between text-[10px] font-bold">
+                                                    <span className="text-slate-500">오답 비중</span>
+                                                    <span className="text-rose-400">{analysis.topWeakness.percentage}%</span>
+                                                </div>
+                                            </div>
+
+                                            <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-xl p-4">
+                                                <span className="text-indigo-400 font-bold text-sm block mb-1 uppercase tracking-wider text-[10px]">LC 학습 습관</span>
+                                                <p className="text-xs text-slate-400 leading-relaxed">{analysis.lcHabit.message}</p>
+                                                <div className="mt-2 flex items-center gap-1">
+                                                    <Badge variant="outline" className="border-indigo-500/30 text-indigo-400 text-[10px]">{analysis.lcHabit.status}</Badge>
+                                                </div>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="text-center py-10 bg-slate-950/50 rounded-xl border border-dashed border-slate-800">
+                                            <Loader2 className="w-5 h-5 animate-spin mx-auto text-slate-700 mb-2" />
+                                            <p className="text-xs text-slate-600 font-medium font-bold">분석 데이터 생성 중...</p>
+                                        </div>
+                                    )}
                                 </div>
                             </Card>
                         </div>
