@@ -301,10 +301,22 @@ export default function StudentDashboard() {
                 return `/homework/part5`;
             }
             case 'part1_shadow': return `/homework/part1`;
-            case 'part1_test': return `/homework/part1-real`;
-            case 'part2_test': return `/homework/part2`;
-            case 'part3_test': return `/homework/part3`;
-            case 'part4_test': return `/homework/part4`;
+            case 'part1_test': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part1-real/test/${match[1]}` : `/homework/part1-real`;
+            }
+            case 'part2_test': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part2/${match[1]}` : `/homework/part2`;
+            }
+            case 'part3_test': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part3/test/${match[1]}` : `/homework/part3`;
+            }
+            case 'part4_test': {
+                const match = detail.match(/(\d+)/);
+                return match ? `/homework/part4/test/${match[1]}` : `/homework/part4`;
+            }
             case 'part5_test': {
                 // If detail is "Test 1" or similar, extract the number
                 const match = detail.match(/(\d+)/);
@@ -321,7 +333,7 @@ export default function StudentDashboard() {
             }
             case 'part7_double': {
                 const match = detail.match(/(\d+)/);
-                return match ? `/homework/part7-double/test/${match[1]}` : `/homework/part7-double`;
+                return match ? `/homework/part7/practice?test=${match[1]}` : `/homework/part7-double`;
             }
             case 'mock_test': return `/homework/mock-exam`;
             case 'weakness_review': return `/homework/weakness/${id}`;
