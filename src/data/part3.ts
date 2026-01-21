@@ -4,6 +4,7 @@ export interface Part3Question {
   text: string;
   options: { label: string; text: string }[];
   correctAnswer: string;
+  questionType?: string;
 }
 
 export interface Part3Set {
@@ -15,16 +16,19 @@ export interface Part3Set {
   questions: Part3Question[];
   script?: { speaker: string; text: string }[] | string;
   hasScript?: boolean;
+  contextType?: string;
 }
 
 export const part3Data: Part3Set[] = [
   {
     "setId": "set_32_34",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "32-34",
     "questions": [
       {
         "id": "q32",
         "text": "What is the woman preparing for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -48,6 +52,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "Who most likely is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -71,6 +76,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the woman want to pick up on Friday morning?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -124,11 +130,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_35_37",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "35-37",
     "questions": [
       {
         "id": "q35",
         "text": "What task is the man responsible for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -152,6 +160,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What does the woman want to do next year?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -175,6 +184,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What does the man ask the woman to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -220,11 +230,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_38_40",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "38-40",
     "questions": [
       {
         "id": "q38",
         "text": "What does the woman need a suit for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -248,6 +260,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What does the woman dislike about a suit on display?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -271,6 +284,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What does the man say that the price includes?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -328,11 +342,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_41_43",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "41-43",
     "questions": [
       {
         "id": "q41",
         "text": "What kind of a business does the man most likely work for?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -356,6 +372,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the woman say she is concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -379,6 +396,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What does the woman agree to let the man do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -428,11 +446,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_44_46",
+    "contextType": "D3. 건물 / 시설 유지보수",
     "questionRange": "44-46",
     "questions": [
       {
         "id": "q44",
         "text": "Who most likely is Axel Schmidt?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -456,6 +476,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "What renovation does the woman mention?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -479,6 +500,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What does the woman encourage the man to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -524,11 +546,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_47_49",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "47-49",
     "questions": [
       {
         "id": "q47",
         "text": "What does the speakers' company most likely sell?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -552,6 +576,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "Why is the woman surprised?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -575,6 +600,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "Why does the woman say, \"The slides are available on our company intranet\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -624,11 +650,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_50_52",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "50-52",
     "questions": [
       {
         "id": "q50",
         "text": "According to the woman, what will happen at the end of November?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -652,6 +680,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What does the man want to know?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -675,6 +704,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What does the woman say the company will pay for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -716,11 +746,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_53_55",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "53-55",
     "questions": [
       {
         "id": "q53",
         "text": "What industry do the speakers work in?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -744,6 +776,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What does the woman say a project will do for a city?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -767,6 +800,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What does Gerhard say needs to be done?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -816,11 +850,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_56_58",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "56-58",
     "questions": [
       {
         "id": "q56",
         "text": "What does the woman imply when she says, \"I don't have much to do\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -844,6 +880,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "What does the man notice about some medication?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -867,6 +904,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What does the man suggest doing in the future?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -916,11 +954,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_59_61",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "59-61",
     "questions": [
       {
         "id": "q59",
         "text": "Who most likely is the woman?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -944,6 +984,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What kind of document are the speakers discussing?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -967,6 +1008,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "Why must the document be revised by the end of the month?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1016,11 +1058,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_62_64",
+    "contextType": "B1. 불만 / 문제 제기",
     "questionRange": "62-64",
     "questions": [
       {
         "id": "q62",
         "text": "Look at the graphic. How much did the man's company charge for its service?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -1044,6 +1088,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Why does the man apologize?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1067,6 +1112,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What does the woman like about a venue?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1113,11 +1159,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_65_67",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "65-67",
     "questions": [
       {
         "id": "q65",
         "text": "Why is the man surprised?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1141,6 +1189,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. In which section does the woman have seats?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -1164,6 +1213,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What is the woman doing this weekend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1214,11 +1264,13 @@ export const part3Data: Part3Set[] = [
   },
   {
     "setId": "set_68_70",
+    "contextType": "D3. 건물 / 시설 유지보수",
     "questionRange": "68-70",
     "questions": [
       {
         "id": "q68",
         "text": "Who most likely is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -1242,6 +1294,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. Which name needs to be changed?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -1265,6 +1318,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What does the woman say she is going to do tomorrow?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1325,12 +1379,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_32_34",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "Why does the man want to buy Ms. Jefferson some flowers?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1354,6 +1410,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "According to the woman, where is Greenwood Flower Shop?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1377,6 +1434,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the man say he will do before he leaves the office?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1416,12 +1474,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_35_37",
+    "contextType": "C2. 호텔 / 숙박",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "What did the man just do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1445,6 +1505,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What does the man remind the woman to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1468,6 +1529,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What does the woman ask the man about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1511,12 +1573,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_38_40",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "What industry do the speakers most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1540,6 +1604,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What does the man suggest doing?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1563,6 +1628,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What is the woman concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1602,12 +1668,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_41_43",
+    "contextType": "D2. IT / 시스템 오류",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "What problem is being discussed?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1631,6 +1699,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "Who most likely is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -1654,6 +1723,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What are the women most likely planning to do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1705,12 +1775,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_44_46",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "Where does the woman work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -1734,6 +1806,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Why is the man unable to make a reservation for next Thursday?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1757,6 +1830,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What will the man most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1812,12 +1886,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_47_49",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "Who is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -1841,6 +1917,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "Why does the woman say, \"The issue is already being printed\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -1864,6 +1941,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What does the woman ask the man to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1915,12 +1993,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_50_52",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "What kind of business do the speakers most likely work for?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -1944,6 +2024,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What problem do the women mention?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -1967,6 +2048,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What does the man recommend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2010,12 +2092,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_53_55",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "What has the woman volunteered to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2039,6 +2123,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What does the man ask the woman to sign?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2062,6 +2147,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What will the woman most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2109,12 +2195,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_56_58",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Where most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -2138,6 +2226,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "Why does the woman say, \"they don't have as many clients, though\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2161,6 +2250,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What will happen later today?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2216,12 +2306,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_59_61",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Which industry do the speakers most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2245,6 +2337,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the man say he is concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2268,6 +2361,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "What does the man agree to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2319,12 +2413,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_62_64",
+    "contextType": "C1. 항공 / 교통",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "What does the woman remind the man about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2348,6 +2444,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Which exit will the speakers take?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -2371,6 +2468,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What will the man ask his coworkers to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2423,12 +2521,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_65_67",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "Where does the conversation most likely take place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -2452,6 +2552,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. Which bin will the man use?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -2475,6 +2576,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What does the woman suggest?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2515,12 +2617,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 2,
     "setId": "set_68_70",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "What type of event are the speakers organizing?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2544,6 +2648,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. What time does the man think the music should begin?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -2567,6 +2672,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What information does the man suggest adding to the invitation?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2616,12 +2722,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_32_34",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "Why is the woman seeking a temporary position?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2645,6 +2753,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "What skill does the woman have?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2668,6 +2777,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "Why does the man tell the woman to come in on Wednesday?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2715,12 +2825,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_35_37",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "Why does the man ask Rosa to go to Montreal?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2744,6 +2856,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What does the woman ask permission to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2767,6 +2880,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What will the man most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2806,12 +2920,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_38_40",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "Who is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -2835,6 +2951,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "Why does the man apologize?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2858,6 +2975,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "Why is Ms. Yamamoto asked to fill out a form?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -2913,12 +3031,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_41_43",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "Who will the woman give a presentation to?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -2942,6 +3062,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the woman ask the man about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -2965,6 +3086,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What will the man do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3020,12 +3142,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_44_46",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "What is the man concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3049,6 +3173,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Who is Stefan Vogel?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -3072,6 +3197,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What will the speakers do this afternoon?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3123,12 +3249,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_47_49",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "Where do the speakers work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -3152,6 +3280,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What does the man mean when he says, \"And the rooms are so close together\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -3175,6 +3304,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What does the woman hope to do before June?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3218,12 +3348,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_50_52",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "What type of product are the speakers discussing?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -3247,6 +3379,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What is the woman frustrated by?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3270,6 +3403,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "Why does the man say, \"The school year is starting in three months\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -3313,12 +3447,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_53_55",
+    "contextType": "B1. 불만 / 문제 제기",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "What does the women's company sell?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3342,6 +3478,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "Why is the man visiting the company?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -3365,6 +3502,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What does the man ask the women to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3412,12 +3550,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_56_58",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "What is the woman renovating?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3441,6 +3581,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "What service does the man's company provide?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3464,6 +3605,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "According to the man, how is a cost determined?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3511,12 +3653,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_59_61",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Where does the woman work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -3540,6 +3684,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "Who does the woman say she has hired?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -3563,6 +3708,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "What problem does the man mention?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3610,12 +3756,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_62_64",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "Why is the woman calling?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -3639,6 +3787,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Which drawer will the man probably check next?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -3662,6 +3811,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What does the man say about some processes?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3706,12 +3856,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_65_67",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "Where do the speakers work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -3735,6 +3887,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. How much extra money will the man receive in his next paycheck?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -3758,6 +3911,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What does the man say he will do with the extra money?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3802,12 +3956,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 3,
     "setId": "set_68_70",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "What is the woman planning a celebration for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3831,6 +3987,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. Which day is the man attending a music festival?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -3854,6 +4011,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What does the woman say she will do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3903,12 +4061,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_32_34",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "What is the woman preparing for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3932,6 +4092,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "What does the man say he can do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3955,6 +4116,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the woman ask about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -3998,12 +4160,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_35_37",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "What most likely is the woman's profession?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4027,6 +4191,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "Why is the man calling?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4050,6 +4215,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "According to the woman, what might cause a problem?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4109,12 +4275,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_38_40",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "What kind of event is taking place?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4138,6 +4306,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "According to the man, what did a client request?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4161,6 +4330,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What will Fatima do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4212,12 +4382,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_41_43",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "Where is the conversation most likely taking place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -4241,6 +4413,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the woman ask the man to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4264,6 +4437,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What information does the woman give the man?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4315,12 +4489,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_44_46",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "What field do the speakers most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4344,6 +4520,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Why does the man say, \"It won't take that long\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4367,6 +4544,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What does the woman say she will do after work?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4414,12 +4592,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_47_49",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "According to the woman, what do the results of a survey indicate about a company?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4443,6 +4623,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What does the man say he did recently?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4466,6 +4647,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What does the woman suggest?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4509,12 +4691,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_50_52",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "What type of event did the woman attend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4538,6 +4722,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What does the woman imply when she says, \"That'll be quite challenging\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4561,6 +4746,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What does the woman say she will do now?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4620,12 +4806,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_53_55",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "Why is the man calling the Springfield Community Center?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4649,6 +4837,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What does the woman warn the man about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4672,6 +4861,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What does the man ask about using?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4727,12 +4917,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_56_58",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Who most likely is the woman?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -4756,6 +4948,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "Why will the woman visit the man's business this afternoon?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -4779,6 +4972,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What does the man recommend that the woman bring?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4826,12 +5020,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_59_61",
+    "contextType": "A5. 교육 / 트레이닝",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Who most likely are the program participants?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -4855,6 +5051,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the man ask about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4878,6 +5075,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "How should the participants communicate a request?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4921,12 +5119,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_62_64",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "What kind of products does the woman's store sell?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -4950,6 +5150,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Which model will the man buy?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -4973,6 +5174,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What is the man concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5029,12 +5231,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_65_67",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "What type of business is the woman calling?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5058,6 +5262,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "What does the man say his company is known for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5081,6 +5286,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "Look at the graphic. What time will the delivery be made?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -5133,12 +5339,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 4,
     "setId": "set_68_70",
+    "contextType": "C3. 일정 변경 / 취소",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "Why does the man want to change an appointment?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -5162,6 +5370,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. Who will the man see on Friday?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -5185,6 +5394,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What will the man most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -5242,12 +5452,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_32_34",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "Who most likely is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -5271,6 +5483,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "What is the man concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5294,6 +5507,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the woman give the man?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5345,12 +5559,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_35_37",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "What will be constructed at an airport?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5374,6 +5590,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What is the residents' biggest concern?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5397,6 +5614,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "Why has a new meeting location been chosen?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -5440,12 +5658,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_38_40",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "Who most likely is the woman?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -5469,6 +5689,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What did the man order for the woman?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5492,6 +5713,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What does the man suggest the woman do?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -5539,12 +5761,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_41_43",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "What will the man do next week?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5568,6 +5792,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the man want the woman to recommend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5591,6 +5816,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What does the man say he will do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5638,12 +5864,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_44_46",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "What does the woman want to discuss?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5667,6 +5895,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Why does the man say, \"The report's only half a page long\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -5690,6 +5919,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What does the woman remind the man about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5741,12 +5971,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_47_49",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "What city department does the man work in?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5770,6 +6002,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "Why is the woman calling?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -5793,6 +6026,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What does the man tell the woman to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5840,12 +6074,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_50_52",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "What did the woman recently review?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5869,6 +6105,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What does the woman ask the man about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5892,6 +6129,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What information will the man provide this afternoon?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5935,12 +6173,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_53_55",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "What project are the speakers working on?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5964,6 +6204,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What problem does the man mention?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -5987,6 +6228,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What will the man do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6042,12 +6284,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_56_58",
+    "contextType": "A5. 교육 / 트레이닝",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Where does the conversation most likely take place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -6071,6 +6315,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "What did the man have a problem with this morning?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6094,6 +6339,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What will the speakers most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -6141,12 +6387,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_59_61",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "What field do the speakers most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -6170,6 +6418,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the woman mean when she says, \"I've presented at that conference before\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -6193,6 +6442,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "What do the speakers agree to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6244,12 +6494,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_62_64",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "Look at the graphic. Which dish pattern is the man interested in?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -6273,6 +6525,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "According to the man, what will happen in May?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6296,6 +6549,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What problem does the woman mention?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6348,12 +6602,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_65_67",
+    "contextType": "C3. 일정 변경 / 취소",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "What type of business is the woman calling?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6377,6 +6633,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. What number will be updated?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -6400,6 +6657,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What will the man most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -6460,12 +6718,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 5,
     "setId": "set_68_70",
+    "contextType": "D1. 사무기기 고장",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "What does the man ask the woman for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6489,6 +6749,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "What is the man doing tomorrow?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6512,6 +6773,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "Look at the graphic. Which brand did the man buy?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -6561,12 +6823,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_32_34",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "What kind of business does the man own?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6590,6 +6854,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "What does the man want to know?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6613,6 +6878,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the woman ask the man to provide?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6660,12 +6926,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_35_37",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "Where most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -6689,6 +6957,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What type of entertainment are the speakers discussing?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -6712,6 +6981,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What does the woman say is convenient?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6759,12 +7029,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_38_40",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "What industry does the woman most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -6788,6 +7060,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What does the man say he is concerned about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6811,6 +7084,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What will the speakers do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6854,12 +7128,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_41_43",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "What product are the speakers discussing?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -6883,6 +7159,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What complaint did customers have about the product?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -6906,6 +7183,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What does the man suggest doing?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -6953,12 +7231,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_44_46",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "What is the topic of the conversation?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -6982,6 +7262,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Where does the man say he used to work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -7005,6 +7286,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "Who will the speakers meet with next?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -7060,12 +7342,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_47_49",
+    "contextType": "B1. 불만 / 문제 제기",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "What problem does the woman have?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7089,6 +7373,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What did the woman pay extra for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7112,6 +7397,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What does the man suggest the woman do?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7155,12 +7441,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_50_52",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "Who is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -7184,6 +7472,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What reason does the woman give for making a change?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7207,6 +7496,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What does the man ask the woman to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7254,12 +7544,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_53_55",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "What are the speakers preparing for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7283,6 +7575,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What does the woman say she needs to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7306,6 +7599,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "Why does the woman say, \"The office supply store has a sale\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7357,12 +7651,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_56_58",
+    "contextType": "A5. 교육 / 트레이닝",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Which department do the speakers most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7386,6 +7682,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "Why are the women surprised?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7409,6 +7706,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What complaint does the man have about a previous training?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7456,12 +7754,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_59_61",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Why does the woman want to move out of her current apartment?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7485,6 +7785,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the man mean when he says, \"I should be able to lease that unit pretty quickly\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7508,6 +7809,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "What will the woman most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7559,12 +7861,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_62_64",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "Why does the man ask the woman to work an extra shift?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7588,6 +7892,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Which book is needed for an upcoming event?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -7611,6 +7916,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "Why does the man expect an event to be crowded?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -7667,12 +7973,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_65_67",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "What did the East Lake Band recently do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7696,6 +8004,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. Where do the speakers plan to sit?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -7719,6 +8028,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What does the man offer to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7771,12 +8081,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 6,
     "setId": "set_68_70",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "What does the man plan to do during his meeting?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7800,6 +8112,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. Which one of the woman's meetings will be changed?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -7823,6 +8136,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What does the woman say she would like to improve?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7868,12 +8182,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_32_34",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "Where most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -7897,6 +8213,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "What did the woman do in advance?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7920,6 +8237,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the woman say she will do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -7971,12 +8289,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_35_37",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "Where most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8000,6 +8320,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What does the woman say will happen soon?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8023,6 +8344,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What does the man imply when he says, \"They're selling quickly\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -8078,12 +8400,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_38_40",
+    "contextType": "B1. 불만 / 문제 제기",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "Where does the man most likely work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8107,6 +8431,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What problem does the woman have?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8130,6 +8455,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What will the man borrow from one of his coworkers?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8177,12 +8503,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_41_43",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "Where do the women work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8206,6 +8534,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What is the man's job?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8229,6 +8558,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What does Insook plan to do in the afternoon?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8284,12 +8614,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_44_46",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "Why is the man calling?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -8313,6 +8645,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "What does the woman suggest the man do soon?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -8336,6 +8669,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What does the man say he will do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8379,12 +8713,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_47_49",
+    "contextType": "D1. 사무기기 고장",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "Why was the man late to work?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -8408,6 +8744,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What is scheduled to be delivered today?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8431,6 +8768,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What business will the man call?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8486,12 +8824,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_50_52",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "Who most likely is the woman?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8515,6 +8855,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What is a benefit of a new material?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8538,6 +8879,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What will the speakers do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8589,12 +8931,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_53_55",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "What type of event are the speakers discussing?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -8618,6 +8962,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What does the woman say attendees will receive?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8641,6 +8986,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What do the speakers need to do soon?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8688,12 +9034,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_56_58",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Who most likely is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8717,6 +9065,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "What does the woman imply when she says, \"Our clients are interested in environmentally friendly products\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -8740,6 +9089,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What does the man say will take place on Friday?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8783,12 +9133,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_59_61",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Who is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -8812,6 +9164,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the woman say happened last week?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8835,6 +9188,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "What does the man recommend doing?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8890,12 +9244,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_62_64",
+    "contextType": "D2. IT / 시스템 오류",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "What problem are the speakers mainly discussing?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -8919,6 +9275,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Whose e-mail does the woman mention?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -8942,6 +9299,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What event will happen this weekend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -8982,12 +9340,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_65_67",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "What does the man say the store has recently done?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9011,6 +9371,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. Which item will the store order?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -9034,6 +9395,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What does the man say he will do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9082,12 +9444,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 7,
     "setId": "set_68_70",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "Who most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9111,6 +9475,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. Which building does the man say he likes?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -9134,6 +9499,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What does the woman ask the man to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9179,12 +9545,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_32_34",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "Where are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9208,6 +9576,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "What type of pass does the woman qualify for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9231,6 +9600,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What will the man check?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9282,12 +9652,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_35_37",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "What type of business does the woman work for?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9311,6 +9683,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What does the man ask the woman to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9334,6 +9707,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What does the woman say a business has recently done?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9381,12 +9755,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_38_40",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "Why is a street blocked off?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9410,6 +9786,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What most likely is the woman's profession?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9433,6 +9810,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What does the man suggest the woman do?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9476,12 +9854,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_41_43",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "Where do the speakers work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9505,6 +9885,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the woman ask the man to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9528,6 +9909,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What does the woman imply when she says, \"we open at seven\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9575,12 +9957,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_44_46",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "Who most likely is the woman?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9604,6 +9988,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Why is the woman worried she might not be offered a job?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9627,6 +10012,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What does the woman say she will do on Thursday?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9678,12 +10064,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_47_49",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "Where does the conversation take place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9707,6 +10095,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What is the purpose of the man's visit?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -9730,6 +10119,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "According to Margaret, what can be found by the entrance?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9781,12 +10171,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_50_52",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "Where does the man most likely work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -9810,6 +10202,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "Why was the woman unavailable for two weeks?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9833,6 +10226,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What does the man recommend doing?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9884,12 +10278,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_53_55",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "According to the speakers, what has recently been completed?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -9913,6 +10309,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What do the women suggest doing?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9936,6 +10333,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "Why will Priyanka post a public notice?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -9975,12 +10373,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_56_58",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Where do the speakers most likely work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10004,6 +10404,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "What does the man say about some new machinery?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10027,6 +10428,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What does the woman ask the man to prepare?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10078,12 +10480,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_59_61",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Why did the man miss a conference?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10107,6 +10511,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the man recommend the woman do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10130,6 +10535,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "What does the woman mean when she says, \"I ran out of handouts\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10185,12 +10591,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_62_64",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "What will the speakers ask about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10214,6 +10622,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "What do the speakers want to prepare for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10237,6 +10646,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "Look at the graphic. What platform will speakers go to?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -10281,12 +10691,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_65_67",
+    "contextType": "C3. 일정 변경 / 취소",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "Who most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10310,6 +10722,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "What will the man do after he leaves?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10333,6 +10746,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "Look at the graphic. Where will the woman put up a sign?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -10385,12 +10799,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 8,
     "setId": "set_68_70",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "Who recommended that the woman subscribe to the Portsville Times?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10414,6 +10830,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. Which subscription option does the man recommend?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -10437,6 +10854,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What will the man most likely do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10494,12 +10912,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_32_34",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "Where does the man work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10523,6 +10943,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "Why is the woman calling?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10546,6 +10967,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the man ask for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10593,12 +11015,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_35_37",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "Where does the conversation most likely take place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10622,6 +11046,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "Why is the man visiting?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10645,6 +11070,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "Why does the woman suggest that the man hurry?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10684,12 +11110,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_38_40",
+    "contextType": "A5. 교육 / 트레이닝",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "Who is Chris Suzuki?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10713,6 +11141,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "Where is the conversation most likely taking place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -10736,6 +11165,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What will the woman probably do next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10787,12 +11217,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_41_43",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "What will most likely be celebrated on Friday?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10816,6 +11248,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the man offer to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10839,6 +11272,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What does the woman say she is looking forward to?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10894,12 +11328,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_44_46",
+    "contextType": "B1. 불만 / 문제 제기",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "What was the problem with the man's previous floor mat?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10923,6 +11359,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "What does the woman invite the man to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -10946,6 +11383,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "According to the woman, why is a manufacturer proud of its floor mats?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -10989,12 +11427,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_47_49",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "What industry do the speakers most likely work in?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11018,6 +11458,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What does the man mean when he says, \"we just switched to a new software program\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11041,6 +11482,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "Why does the woman congratulate the man?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11092,12 +11534,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_50_52",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "What do the women want to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11121,6 +11565,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What does the man say was recently introduced?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11144,6 +11589,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What does the man suggest the women do?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11203,12 +11649,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_53_55",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "Where are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -11232,6 +11680,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What kind of products does the man's company make?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11255,6 +11704,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "What does the man suggest doing?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11298,12 +11748,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_56_58",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Who most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -11327,6 +11779,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "Why is the man concerned?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11350,6 +11803,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "Why does the woman say, \"they're hosting a big press conference at noon\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11393,12 +11847,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_59_61",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Where do the speakers most likely work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -11422,6 +11878,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What do the speakers agree to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11445,6 +11902,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "Who does the man say he will contact?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -11484,12 +11942,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_62_64",
+    "contextType": "A1. 회의 / 일정 조정",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "What is the woman planning?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11513,6 +11973,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Which room will the woman most likely reserve?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -11536,6 +11997,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What does the man say he will provide?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11592,12 +12054,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_65_67",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "Who most likely is the woman?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -11621,6 +12085,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. Which airport does the man point out?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -11644,6 +12109,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What does the man recommend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11704,12 +12170,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 9,
     "setId": "set_68_70",
+    "contextType": "B2. 주문 / 배송",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "What event is taking place next month?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11733,6 +12201,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Look at the graphic. How much will the selected item cost?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -11756,6 +12225,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "What will the man do next?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11805,12 +12275,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_32_34",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "32-34",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_32-34.mp3",
     "questions": [
       {
         "id": "q32",
         "text": "What is the conversation mainly about?",
+        "questionType": "GIST",
         "options": [
           {
             "label": "A",
@@ -11834,6 +12306,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q33",
         "text": "Why has the man been busy?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11857,6 +12330,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q34",
         "text": "What does the woman suggest that the man do soon?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -11912,12 +12386,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_35_37",
+    "contextType": "A3. 인사 / 휴가 / 근무",
     "questionRange": "35-37",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_35-37.mp3",
     "questions": [
       {
         "id": "q35",
         "text": "Where is the conversation taking place?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -11941,6 +12417,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q36",
         "text": "What does the woman ask about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -11964,6 +12441,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q37",
         "text": "What does the man remind the woman to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12015,12 +12493,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_38_40",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "38-40",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_38-40.mp3",
     "questions": [
       {
         "id": "q38",
         "text": "Where do the women work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -12044,6 +12524,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q39",
         "text": "What are the women worried about?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12067,6 +12548,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q40",
         "text": "What does the man recommend?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12118,12 +12600,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_41_43",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "41-43",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_41-43.mp3",
     "questions": [
       {
         "id": "q41",
         "text": "What kind of products do the speakers sell?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12147,6 +12631,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q42",
         "text": "What does the woman mean when she says, \"He's probably waiting outside\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12170,6 +12655,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q43",
         "text": "What do the staff sometimes forget to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12217,12 +12703,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_44_46",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "44-46",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_44-46.mp3",
     "questions": [
       {
         "id": "q44",
         "text": "Who most likely are the men?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -12246,6 +12734,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q45",
         "text": "Why are the men frustrated?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12269,6 +12758,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q46",
         "text": "What does the woman want the men to review?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12320,12 +12810,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_47_49",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "47-49",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_47-49.mp3",
     "questions": [
       {
         "id": "q47",
         "text": "What does the man want to do?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12349,6 +12841,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q48",
         "text": "What problem does the woman mention about a project?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12372,6 +12865,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q49",
         "text": "What does the woman suggest the man do?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12415,12 +12909,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_50_52",
+    "contextType": "A5. 교육 / 트레이닝",
     "questionRange": "50-52",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_50-52.mp3",
     "questions": [
       {
         "id": "q50",
         "text": "What industry does the woman work in?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12444,6 +12940,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q51",
         "text": "What did the woman do recently?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12467,6 +12964,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q52",
         "text": "What will the woman most likely discuss next?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12506,12 +13004,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_53_55",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "53-55",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_53-55.mp3",
     "questions": [
       {
         "id": "q53",
         "text": "What kind of business do the speakers most likely own?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12535,6 +13035,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q54",
         "text": "What does the man want to order?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12558,6 +13059,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q55",
         "text": "Why does the woman say, \"I just checked the account balance an hour ago\"?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12613,12 +13115,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_56_58",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "56-58",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_56-58.mp3",
     "questions": [
       {
         "id": "q56",
         "text": "Who most likely is the man?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -12642,6 +13146,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q57",
         "text": "What does the woman say she will do soon?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12665,6 +13170,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q58",
         "text": "What does the woman ask for?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12724,12 +13230,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_59_61",
+    "contextType": "B4. 문의 / 안내",
     "questionRange": "59-61",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_59-61.mp3",
     "questions": [
       {
         "id": "q59",
         "text": "Where most likely are the speakers?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -12753,6 +13261,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q60",
         "text": "What does the man mention about the Lansing Bridge?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12776,6 +13285,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q61",
         "text": "How can the listeners find out more information?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12819,12 +13329,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_62_64",
+    "contextType": "C3. 일정 변경 / 취소",
     "questionRange": "62-64",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_62-64.mp3",
     "questions": [
       {
         "id": "q62",
         "text": "Why is the man calling?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -12848,6 +13360,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q63",
         "text": "Look at the graphic. Which class are the speakers discussing?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -12871,6 +13384,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q64",
         "text": "What does the man plan to do in Chicago?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -12915,12 +13429,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_65_67",
+    "contextType": "A4. 재무 / 비용 / 승인",
     "questionRange": "65-67",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_65-67.mp3",
     "questions": [
       {
         "id": "q65",
         "text": "Where do the speakers most likely work?",
+        "questionType": "WHO_LOC",
         "options": [
           {
             "label": "A",
@@ -12944,6 +13460,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q66",
         "text": "Look at the graphic. Where do the speakers plan to start advertising job openings?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",
@@ -12967,6 +13484,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q67",
         "text": "What does the man say he will do later today?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -13015,12 +13533,14 @@ export const part3Data: Part3Set[] = [
   {
     "testId": 10,
     "setId": "set_68_70",
+    "contextType": "A2. 프로젝트 / 업무 진행",
     "questionRange": "68-70",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 3_68-70.mp3",
     "questions": [
       {
         "id": "q68",
         "text": "What is the woman having difficulty deciding on?",
+        "questionType": "DETAIL",
         "options": [
           {
             "label": "A",
@@ -13044,6 +13564,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q69",
         "text": "Why was the company's logo redesigned?",
+        "questionType": "INFERENCE",
         "options": [
           {
             "label": "A",
@@ -13067,6 +13588,7 @@ export const part3Data: Part3Set[] = [
       {
         "id": "q70",
         "text": "Look at the graphic. Where will the company's logo be placed?",
+        "questionType": "VISUAL",
         "options": [
           {
             "label": "A",

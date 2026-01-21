@@ -7,6 +7,7 @@ export interface Part5TestQuestion {
     explanation?: string;
     classification?: string; // e.g. G_POS, V_NOUN, etc.
     testId?: number;
+    audio?: string;
 }
 
 export interface Part5TestSet {

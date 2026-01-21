@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { part4Data, Part4Set, Part4Question } from '@/data/part4';
 import { cn } from "@/lib/utils";
 import { Headphones, PlayCircle, Activity, Trophy, RotateCcw } from "lucide-react";
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { TouchDictionary } from '@/components/common/TouchDictionary';
 
 
@@ -115,15 +117,23 @@ export default function Part4TestRunnerPage() {
         }
     }, [skimmingState, timeLeft]);
 
-    // Effect: Reset Skimming on New Set
+    // Effect: Reset Skimming on toggle or initial load (BUT NOT on index change, which is handled manually)
     useEffect(() => {
+        // Only trigger if skimming mode CHANGED, or on mount
+        // We do NOT include currentIndex here to avoid race conditions
         if (skimmingEnabled && !reviewMode && !showCompletion) {
-            setSkimmingState('active');
-            setTimeLeft(20);
+            // If we are sitting on 'done', and enabled toggles on, reset to active
+            // (This covers the start modal case)
+            if (skimmingState === 'idle' || skimmingState === 'done') {
+                setSkimmingState('active');
+                setTimeLeft(20);
+            }
         } else {
+            // If disabled, ensure done
             setSkimmingState('done');
         }
-    }, [currentIndex, skimmingEnabled, reviewMode, showCompletion]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [skimmingEnabled, reviewMode, showCompletion]); // Removed currentIndex
 
     // Audio Play Control
     useEffect(() => {
@@ -249,6 +259,16 @@ export default function Part4TestRunnerPage() {
         if (!isSetComplete && !reviewMode) return;
 
         if (currentIndex < activeSets.length - 1) {
+            // FIX: Reset skimming state synchronously BEFORE index change
+            // This prevents the Audio Play effect from seeing 'done' + 'new set' and auto-playing
+            if (skimmingEnabled && !reviewMode) {
+                setSkimmingState('active');
+                setTimeLeft(20);
+            } else {
+                // If skimming disabled, we can set to done (or keep done)
+                setSkimmingState('done');
+            }
+
             setCurrentIndex(prev => prev + 1);
             window.scrollTo({ top: 0, behavior: 'instant' }); // Snap to top for new set
         } else {
@@ -270,22 +290,50 @@ export default function Part4TestRunnerPage() {
         }
     };
 
-    const finishTest = () => {
+    const finishTest = async () => {
         const score = calculateScore();
+
+        const newHistory = { ...history, lastScore: score };
+        setHistory(newHistory);
         setShowCompletion(true);
 
         const wrongOnes: Part4Question[] = [];
+        const incorrectQuestions: any[] = [];
         testSets.forEach((set: Part4Set) => {
             set.questions.forEach((q: Part4Question) => {
                 if (selectedAnswers[q.id] !== q.correctAnswer) {
                     wrongOnes.push(q);
+                    incorrectQuestions.push({
+                        id: `P4_T${testId}_${q.id.replace('q', '')}`,
+                        classification: q.questionType || 'Unknown',
+                        contextType: set.contextType || 'Unknown'
+                    });
                 }
             });
         });
         setWrongQueue(wrongOnes);
 
-        const newHistory = { ...history, lastScore: score };
-        setHistory(newHistory);
+        const userStr = localStorage.getItem('toeic_user');
+        if (userStr) {
+            const user = JSON.parse(userStr);
+            try {
+                await addDoc(collection(db, "Manager_Results"), {
+                    student: user.userName || user.username || user.name || "Unknown",
+                    studentId: user.userId || user.uid || "Guest",
+                    className: user.userClass || user.className || "Unknown",
+                    unit: `LC_Part4_Test${testId}`,
+                    score: score,
+                    total: testSets.reduce((acc, set: Part4Set) => acc + set.questions.length, 0),
+                    wrongCount: incorrectQuestions.length,
+                    incorrectQuestions: incorrectQuestions,
+                    timestamp: serverTimestamp()
+                });
+                console.log("Score saved to Firebase");
+            } catch (e) {
+                console.error("Save error:", e);
+            }
+        }
+
         localStorage.setItem(`part4_history_test_${testId}`, JSON.stringify(newHistory));
 
         console.log(`Sending Part 4 score (Attempt ${history.attempts})...`, { score, answers: selectedAnswers });
@@ -414,7 +462,24 @@ export default function Part4TestRunnerPage() {
 
                     <div className="flex-1 text-center">
                         <span className="text-[10px] font-black tracking-widest text-indigo-500 uppercase block mb-0.5">
-                            {reviewMode ? 'REVIEW MODE' : `PART 4 • ATTEMPT ${history.attempts}`}
+                            {!reviewMode && (
+                                <button
+                                    onClick={() => {
+                                        // Save Progress & Exit
+                                        if (Object.keys(selectedAnswers).length > 0) {
+                                            localStorage.setItem(`part4_progress_test_${testId}`, JSON.stringify({
+                                                currentIndex,
+                                                selectedAnswers
+                                            }));
+                                        }
+                                        router.push('/homework/part4');
+                                    }}
+                                    className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-indigo-900/30 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-900/50 transition-colors cursor-pointer active:scale-95"
+                                >
+                                    <span className="text-[9px]">SAVE & EXIT</span>
+                                </button>
+                            )}
+                            <span className="block">{reviewMode ? 'REVIEW MODE' : `PART 4 • ATTEMPT ${history.attempts}`}</span>
                         </span>
                         <span className="text-sm font-bold text-white">
                             {reviewMode ? 'Reviewing' : 'Set'} {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {activeSets.length} <span className="text-slate-500 text-xs ml-1">({reviewMode ? 'Incorrect Only' : `Q${currentSet.questionRange}`})</span>

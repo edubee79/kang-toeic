@@ -2,6 +2,7 @@
 import { db } from '@/lib/firebase';
 import { collection, query, where, getDocs, addDoc, serverTimestamp, Timestamp } from 'firebase/firestore';
 import { getQuestionsByIds, findSimilarQuestions } from '@/data/toeic/reading/part5/tests';
+import { findSimilarPart2Questions } from '@/data/part2';
 
 export const generateWeeklyReview = async (className: string) => {
     try {
@@ -69,26 +70,44 @@ export const generateWeeklyReview = async (className: string) => {
             const enhancedQuestionIds: string[] = [];
             const processedClassifications = new Set<string>();
 
-            // Get original questions to check classifications
-            const originalQuestions = getQuestionsByIds(wrongIds.slice(0, 10)); // Limit to 10 original
+            // 1. Process RC Part 5 (Non P2 IDs)
+            const rcWrongIds = wrongIds.filter(id => !id.startsWith('P2_'));
+            if (rcWrongIds.length > 0) {
+                const originalRC = getQuestionsByIds(rcWrongIds.slice(0, 5)); // Take 5 RC wrongs
+                originalRC.forEach(originalQ => {
+                    enhancedQuestionIds.push(originalQ.id); // Add original
+                    if (originalQ.classification && !processedClassifications.has(originalQ.classification)) {
+                        processedClassifications.add(originalQ.classification);
+                        const similar = findSimilarQuestions(originalQ.classification, wrongIds, 2);
+                        similar.forEach(sq => enhancedQuestionIds.push(sq.id));
+                    }
+                });
+            }
 
-            originalQuestions.forEach(originalQ => {
-                // Add original question (30% of review)
-                enhancedQuestionIds.push(originalQ.id);
+            // 2. Process LC Part 2 (P2_ IDs)
+            const lc2WrongIds = wrongIds.filter(id => id.startsWith('P2_'));
+            if (lc2WrongIds.length > 0) {
+                // For Part 2, we group by classification from the result itself (via studentWeaknessMap)
+                const lc2ProcessedTags = new Set<string>();
+                lc2WrongIds.slice(0, 5).forEach(id => {
+                    enhancedQuestionIds.push(id); // Add original
 
-                // Find similar questions (70% of review)
-                if (originalQ.classification && !processedClassifications.has(originalQ.classification)) {
-                    processedClassifications.add(originalQ.classification);
+                    // Look up the classification for this ID from the map we built earlier
+                    let foundTag = "";
+                    for (const [tag, ids] of data.incorrectByClassification.entries()) {
+                        if (ids.includes(id)) {
+                            foundTag = tag;
+                            break;
+                        }
+                    }
 
-                    const similarQuestions = findSimilarQuestions(
-                        originalQ.classification,
-                        wrongIds, // Exclude all wrong questions
-                        2 // Add 2 similar questions per classification
-                    );
-
-                    similarQuestions.forEach(sq => enhancedQuestionIds.push(sq.id));
-                }
-            });
+                    if (foundTag && !lc2ProcessedTags.has(foundTag)) {
+                        lc2ProcessedTags.add(foundTag);
+                        const similarL2 = findSimilarPart2Questions(foundTag, wrongIds, 2);
+                        similarL2.forEach(sid => enhancedQuestionIds.push(sid));
+                    }
+                });
+            }
 
             // Cap at 30 questions total
             const selectedIds = enhancedQuestionIds.slice(0, 30);
@@ -104,7 +123,7 @@ export const generateWeeklyReview = async (className: string) => {
                 createdAt: serverTimestamp(),
                 status: 'active',
                 questionsCount: selectedIds.length,
-                description: `지난주 오답 ${originalQuestions.length}문항 + 유사 유형 ${selectedIds.length - originalQuestions.length}문항을 복습하세요.`
+                description: `지난주 오답(LC/RC) ${wrongIds.slice(0, 10).length}문항 + 유사 유형을 포함한 총 ${selectedIds.length}문항 복습 과제입니다.`
             });
             createdCount++;
         }

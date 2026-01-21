@@ -9,6 +9,7 @@ import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, ChevronLeft, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
 
 function Part7TestRunnerContent() {
     const params = useParams();
@@ -59,6 +60,7 @@ function Part7TestRunnerContent() {
                     const parsed = JSON.parse(savedProgress);
                     if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
                     if (parsed.elapsedTime) setElapsedTime(parsed.elapsedTime);
+                    if (parsed.currentSetIndex !== undefined) setCurrentSetIndex(parsed.currentSetIndex);
                 } catch (e) {
                     console.error("Failed to load progress", e);
                 }
@@ -155,15 +157,21 @@ function Part7TestRunnerContent() {
         if (userStr) {
             const user = JSON.parse(userStr);
             try {
-                // Identify Incorrect Questions
-                const incorrects: { id: string, classification: string }[] = [];
-                allQuestions.forEach(q => {
-                    if (selectedAnswers[q.id] !== q.correctAnswer) {
-                        incorrects.push({
-                            id: q.id.toString(),
-                            classification: q.classification || 'Unknown'
-                        });
-                    }
+                // Identify Incorrect Questions by iterating through sets and passages
+                const incorrects: { id: string, classification: string, contentType?: string }[] = [];
+                testSet?.sets.forEach(set => {
+                    // Collect and standardize types for all passages in the set
+                    const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
+
+                    set.questions.forEach(q => {
+                        if (selectedAnswers[q.id] !== q.correctAnswer) {
+                            incorrects.push({
+                                id: `P7_T${testId}_Q${q.id}`,
+                                classification: q.classification || 'Unknown',
+                                contentType: passageTypes
+                            });
+                        }
+                    });
                 });
 
                 await addDoc(collection(db, "Manager_Results"), {
@@ -286,6 +294,25 @@ function Part7TestRunnerContent() {
                     <div className="text-slate-400 text-[11px] lg:text-sm hidden lg:block">{testSet.title}</div>
                 </div>
                 <div className="flex items-center gap-1 lg:gap-4">
+                    {!reviewMode && !isDrillMode && (
+                        <Button
+                            variant="ghost"
+                            className="h-8 lg:h-8 text-[10px] lg:text-xs px-2 lg:px-3 text-indigo-400 hover:text-white hover:bg-indigo-900/50 border border-indigo-500/30 font-bold"
+                            onClick={() => {
+                                // Save Progress & Exit
+                                if (Object.keys(selectedAnswers).length > 0) {
+                                    localStorage.setItem(`part7_progress_test_${testId}`, JSON.stringify({
+                                        selectedAnswers,
+                                        elapsedTime,
+                                        currentSetIndex
+                                    }));
+                                }
+                                router.push('/homework/part7');
+                            }}
+                        >
+                            <span className="hidden lg:inline mr-1">💾</span> 중단하고 나가기
+                        </Button>
+                    )}
                     <div className="font-mono text-slate-400 text-[10px] lg:text-base">{formatTime(elapsedTime)}</div>
                     {!reviewMode && (
                         <Button

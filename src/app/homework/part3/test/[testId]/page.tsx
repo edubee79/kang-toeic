@@ -121,16 +121,19 @@ export default function Part3TestRunnerPage() {
         }
     }, [skimmingState, timeLeft]);
 
-    // Effect: Reset Skimming on New Set
+    // Effect: Reset Skimming on toggle or initial load (BUT NOT on index change)
     useEffect(() => {
-        // When index changes (new set)
+        // Only trigger if skimming mode CHANGED, or on mount
         if (skimmingEnabled && !reviewMode && !showCompletion) {
-            setSkimmingState('active');
-            setTimeLeft(20); // 20 seconds skimming time
+            if (skimmingState === 'idle' || skimmingState === 'done') {
+                setSkimmingState('active');
+                setTimeLeft(20);
+            }
         } else {
             setSkimmingState('done');
         }
-    }, [currentIndex, skimmingEnabled, reviewMode, showCompletion]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [skimmingEnabled, reviewMode, showCompletion]); // Removed currentIndex
 
     // Audio Play Control
     useEffect(() => {
@@ -265,6 +268,14 @@ export default function Part3TestRunnerPage() {
         if (!isSetComplete && !reviewMode) return;
 
         if (currentIndex < activeSets.length - 1) {
+            // FIX: Reset skimming state synchronously BEFORE index change
+            if (skimmingEnabled && !reviewMode) {
+                setSkimmingState('active');
+                setTimeLeft(20);
+            } else {
+                setSkimmingState('done');
+            }
+
             setCurrentIndex(prev => prev + 1);
             window.scrollTo({ top: 0, behavior: 'instant' }); // Snap to top for new set
         } else {
@@ -288,6 +299,9 @@ export default function Part3TestRunnerPage() {
 
     const finishTest = async () => {
         const score = calculateScore();
+
+        const newHistory = { ...history, lastScore: score };
+        setHistory(newHistory);
         setShowCompletion(true);
 
         const wrongOnes: any[] = [];
@@ -300,17 +314,32 @@ export default function Part3TestRunnerPage() {
         });
         setWrongQueue(wrongOnes);
 
+        const incorrectQuestions: any[] = [];
+        testSets.forEach((set: Part3Set) => {
+            set.questions.forEach((q: Part3Question) => {
+                if (selectedAnswers[q.id] !== q.correctAnswer) {
+                    incorrectQuestions.push({
+                        id: `P3_T${testId}_${q.id.replace('q', '')}`,
+                        classification: q.questionType || 'Unknown',
+                        contextType: set.contextType || 'Unknown'
+                    });
+                }
+            });
+        });
+
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);
             try {
                 await addDoc(collection(db, "Manager_Results"), {
-                    student: user.userName || user.name || "Unknown",
+                    student: user.userName || user.username || user.name || "Unknown",
                     studentId: user.userId || user.uid || "Guest",
+                    className: user.userClass || user.className || "Unknown",
                     unit: `LC_Part3_Test${testId}`,
                     score: score,
                     total: testSets.reduce((acc, set: Part3Set) => acc + set.questions.length, 0),
-                    wrongCount: wrongOnes.length,
+                    wrongCount: incorrectQuestions.length,
+                    incorrectQuestions: incorrectQuestions,
                     timestamp: serverTimestamp()
                 });
                 console.log("Score saved to Firebase");
@@ -319,8 +348,6 @@ export default function Part3TestRunnerPage() {
             }
         }
 
-        const newHistory = { ...history, lastScore: score };
-        setHistory(newHistory);
         localStorage.setItem(`part3_history_test_${testId}`, JSON.stringify(newHistory));
         localStorage.removeItem(`part3_progress_test_${testId}`);
     };
@@ -465,7 +492,24 @@ export default function Part3TestRunnerPage() {
 
                     <div className="flex-1 text-center">
                         <span className="text-[10px] font-black tracking-widest text-emerald-500 uppercase block mb-0.5">
-                            {reviewMode ? 'REVIEW MODE' : `TEST ${testId} • ATTEMPT ${history.attempts}`}
+                            {!reviewMode && (
+                                <button
+                                    onClick={() => {
+                                        // Save Progress & Exit
+                                        if (Object.keys(selectedAnswers).length > 0) {
+                                            localStorage.setItem(`part3_progress_test_${testId}`, JSON.stringify({
+                                                currentIndex,
+                                                selectedAnswers
+                                            }));
+                                        }
+                                        router.push('/homework/part3');
+                                    }}
+                                    className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
+                                >
+                                    <span className="text-[9px]">SAVE & EXIT</span>
+                                </button>
+                            )}
+                            <span className="block">{reviewMode ? 'REVIEW MODE' : `TEST ${testId} • ATTEMPT ${history.attempts}`}</span>
                         </span>
                         <span className="text-sm font-bold text-white">
                             {reviewMode ? 'Reviewing' : 'Set'} {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {activeSets.length} <span className="text-slate-500 text-xs ml-1">({reviewMode ? 'Incorrect Only' : `Q${currentSet.questionRange}`})</span>

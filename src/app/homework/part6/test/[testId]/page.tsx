@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TouchDictionary } from '@/components/common/TouchDictionary';
+import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
 
 function Part6TestRunnerContent() {
     const params = useParams();
@@ -56,6 +57,7 @@ function Part6TestRunnerContent() {
                     const parsed = JSON.parse(savedProgress);
                     if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
                     if (parsed.elapsedTime) setElapsedTime(parsed.elapsedTime);
+                    if (parsed.currentPassageIndex !== undefined) setCurrentPassageIndex(parsed.currentPassageIndex);
                 } catch (e) {
                     console.error("Failed to load progress", e);
                 }
@@ -160,15 +162,18 @@ function Part6TestRunnerContent() {
         if (userStr) {
             const user = JSON.parse(userStr);
             try {
-                // Identify Incorrect Questions
-                const incorrects: { id: string, classification: string }[] = [];
-                allQuestions.forEach(q => {
-                    if (selectedAnswers[q.id] !== q.correctAnswer) {
-                        incorrects.push({
-                            id: q.id.toString(),
-                            classification: q.classification || 'Unknown'
-                        });
-                    }
+                // Identify Incorrect Questions by iterating through passages to get their types
+                const incorrects: { id: string, classification: string, contentType?: string }[] = [];
+                testSet?.passages.forEach(passage => {
+                    passage.questions.forEach(q => {
+                        if (selectedAnswers[q.id] !== q.correctAnswer) {
+                            incorrects.push({
+                                id: `P6_T${testId}_Q${q.id}`,
+                                classification: q.classification || 'Unknown',
+                                contentType: getStandardizedPassageType(passage.type)
+                            });
+                        }
+                    });
                 });
 
                 await addDoc(collection(db, "Manager_Results"), {
@@ -337,6 +342,25 @@ function Part6TestRunnerContent() {
                     <div className="text-slate-400 text-[11px] lg:text-sm hidden lg:block">{testSet.title}</div>
                 </div>
                 <div className="flex items-center gap-1 lg:gap-4">
+                    {!reviewMode && !isDrillMode && (
+                        <Button
+                            variant="ghost"
+                            className="h-8 lg:h-8 text-[10px] lg:text-xs px-2 lg:px-3 text-indigo-400 hover:text-white hover:bg-indigo-900/50 border border-indigo-500/30 font-bold"
+                            onClick={() => {
+                                // Save Progress & Exit
+                                if (Object.keys(selectedAnswers).length > 0) {
+                                    localStorage.setItem(`part6_progress_test_${testId}`, JSON.stringify({
+                                        selectedAnswers,
+                                        elapsedTime,
+                                        currentPassageIndex
+                                    }));
+                                }
+                                router.push('/homework/part6');
+                            }}
+                        >
+                            <span className="hidden lg:inline mr-1">💾</span> 중단하고 나가기
+                        </Button>
+                    )}
                     <div className="font-mono text-slate-400 text-[10px] lg:text-base">{formatTime(elapsedTime)}</div>
                     {!reviewMode && (
                         <Button

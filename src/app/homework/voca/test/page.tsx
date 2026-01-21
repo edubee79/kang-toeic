@@ -32,12 +32,37 @@ export default function TestPage() {
             const user = JSON.parse(userData);
             setUserId(user.userId);
 
+            setUserId(user.userId);
             try {
-                const wordsData = await getWordsForLearning(user.userId);
-                // Take 50% of learning words for test
-                const testWords = wordsData.slice(0, Math.ceil(wordsData.length * 0.5));
-                setWords(testWords);
-                setTimerActive(true);
+                // Check local storage first
+                const saved = localStorage.getItem('voca_test_progress');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.words && parsed.words.length > 0) {
+                        setWords(parsed.words);
+                        if (parsed.currentIndex) setCurrentIndex(parsed.currentIndex);
+                        if (parsed.results) setResults(parsed.results);
+                        setTimerActive(true);
+                        // Clean up after loading to avoid stale resume loop if completed? 
+                        // Or keep it until explicit finish.
+                        localStorage.removeItem('voca_test_progress'); // Remove auto-resume on fresh load to prevent loop, unless we want strict resume. User wants resume. Maybe we should not remove?
+                        // Actually, if we remove it here, refresh will lose it. 
+                        // But if we finish test, we should remove it.
+                        // Let's decide: Only remove on Finish.
+                    } else {
+                        // Load fresh
+                        const wordsData = await getWordsForLearning(user.userId);
+                        const testWords = wordsData.slice(0, Math.ceil(wordsData.length * 0.5));
+                        setWords(testWords);
+                        setTimerActive(true);
+                    }
+                } else {
+                    // Load fresh
+                    const wordsData = await getWordsForLearning(user.userId);
+                    const testWords = wordsData.slice(0, Math.ceil(wordsData.length * 0.5));
+                    setWords(testWords);
+                    setTimerActive(true);
+                }
             } catch (error) {
                 console.error('Error loading words:', error);
             } finally {
@@ -156,13 +181,43 @@ export default function TestPage() {
         <div className="min-h-screen bg-slate-950 p-2 md:p-8">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
-                <div className="mb-4 md:mb-8 text-center md:text-left">
-                    <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
-                        3단계: Test
-                    </h1>
-                    <p className="text-slate-400 text-sm">
-                        3초 안에 정답을 선택하세요
-                    </p>
+                <div className="mb-4 md:mb-8 text-center md:text-left flex justify-between items-start">
+                    <div>
+                        <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
+                            3단계: Test
+                        </h1>
+                        <p className="text-slate-400 text-sm">
+                            3초 안에 정답을 선택하세요
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-2 scale-90 origin-top-right">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-slate-500 hover:text-white"
+                            onClick={() => router.back()}
+                        >
+                            ✕ Exit
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="text-xs border-violet-500/30 text-violet-400 hover:bg-violet-950 hover:text-white"
+                            onClick={() => {
+                                // Save & Exit
+                                if (words.length > 0) {
+                                    localStorage.setItem(`voca_test_progress`, JSON.stringify({
+                                        words,
+                                        currentIndex,
+                                        results
+                                    }));
+                                }
+                                router.push('/homework/voca');
+                            }}
+                        >
+                            💾 Save & Exit
+                        </Button>
+                    </div>
                 </div>
 
                 {/* Progress */}

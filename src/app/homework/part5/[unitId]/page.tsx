@@ -255,6 +255,24 @@ export default function Part5Quiz() {
         );
     }
 
+    // Load Progress
+    useEffect(() => {
+        const savedProgress = localStorage.getItem(`grammar_mission_${unitId}`);
+        if (savedProgress) {
+            try {
+                const parsed = JSON.parse(savedProgress);
+                if (parsed.logs) setLogs(parsed.logs);
+                if (parsed.score !== undefined) setScore(parsed.score);
+                if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
+                if (parsed.elapsedTime !== undefined) setElapsedTime(parsed.elapsedTime);
+            } catch (e) {
+                console.error("Failed to load progress", e);
+            }
+        }
+    }, [unitId]);
+
+    // ... (rest of code)
+
     // Quiz Screen
     const currentQ = questions[currentIndex];
     const progress = ((currentIndex) / questions.length) * 100;
@@ -263,6 +281,38 @@ export default function Part5Quiz() {
 
     return (
         <div className="w-full max-w-2xl mx-auto min-h-[80vh] flex flex-col pt-4 pb-20 px-0 md:px-4">
+            {/* Header with Exit Buttons */}
+            <div className="flex justify-between items-center mb-4 px-4 md:px-0">
+                <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => router.back()}
+                    className="text-slate-500 hover:text-slate-300 -ml-2"
+                >
+                    ✕ Exit
+                </Button>
+
+                <Button
+                    size="sm"
+                    variant="outline"
+                    className="text-xs border-indigo-500/30 text-indigo-400 hover:bg-indigo-950 hover:text-white"
+                    onClick={() => {
+                        // Save & Exit
+                        if (currentIndex > 0) {
+                            localStorage.setItem(`grammar_mission_${unitId}`, JSON.stringify({
+                                logs,
+                                score,
+                                currentIndex,
+                                elapsedTime
+                            }));
+                        }
+                        router.push('/homework/part5');
+                    }}
+                >
+                    💾 Save & Exit
+                </Button>
+            </div>
+
             <div className="w-full bg-slate-800 h-1.5 rounded-full mb-8 overflow-hidden">
                 <div
                     className="bg-indigo-500 h-full transition-all duration-500 ease-out"

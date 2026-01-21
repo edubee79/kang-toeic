@@ -39,6 +39,21 @@ export default function Part1TestRunner() {
         }
     }, [testId, router]);
 
+    // Load Progress on Mount
+    useEffect(() => {
+        const savedProgress = localStorage.getItem(`part1_progress_vol_${testId}`);
+        if (savedProgress) {
+            try {
+                const parsed = JSON.parse(savedProgress);
+                if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
+                if (parsed.currentQIndex !== undefined) setCurrentQIndex(parsed.currentQIndex);
+                if (parsed.elapsedTime) setElapsedTime(parsed.elapsedTime);
+            } catch (e) {
+                console.error("Failed to load progress", e);
+            }
+        }
+    }, [testId]);
+
     // Timer
     useEffect(() => {
         let interval: NodeJS.Timeout;
@@ -225,14 +240,45 @@ export default function Part1TestRunner() {
 
     const currentQ = testSet.questions[currentQIndex];
 
+    // Load Progress on Mount
+
+
+    // Save Progress automatically on state change (optional, but requested behavior is 'Save & Exit')
+    // We will stick to explicit Save & Exit for stability, or auto-save?
+    // User asked "save and exit button". Let's do explicit save there.
+
+    // ... (existing code)
+
     return (
         <div className="min-h-screen bg-slate-950 flex flex-col">
             {/* Header */}
             <div className="h-16 border-b border-slate-800 flex items-center justify-between px-4 bg-slate-900/50 backdrop-blur">
-                <Button variant="ghost" size="sm" onClick={() => router.back()} className="text-slate-400">
-                    <ArrowLeft className="w-4 h-4 mr-2" /> Exit
-                </Button>
-                <span className="text-white font-bold">Part 1 Real Test</span>
+                <div className="flex items-center gap-2">
+                    <Button variant="ghost" size="sm" onClick={() => router.back()} className="text-slate-400">
+                        <ArrowLeft className="w-4 h-4 mr-2" /> Exit
+                    </Button>
+                    {!reviewMode && !isFinished && (
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="text-xs border-indigo-500/30 text-indigo-400 hover:bg-indigo-950 hover:text-white"
+                            onClick={() => {
+                                // Save & Exit
+                                if (Object.keys(selectedAnswers).length > 0) {
+                                    localStorage.setItem(`part1_progress_vol_${testId}`, JSON.stringify({
+                                        selectedAnswers,
+                                        currentQIndex,
+                                        elapsedTime
+                                    }));
+                                }
+                                router.push('/homework/part1-real');
+                            }}
+                        >
+                            Save & Exit
+                        </Button>
+                    )}
+                </div>
+                <span className="text-white font-bold hidden md:block">Part 1 Real Test</span>
                 <div className="w-20"></div>
             </div>
 

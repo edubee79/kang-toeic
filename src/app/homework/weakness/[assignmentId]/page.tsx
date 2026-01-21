@@ -6,6 +6,7 @@ import { notFound, useParams, useRouter } from 'next/navigation';
 import { collection, doc, getDoc, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { getQuestionsByIds } from '@/data/toeic/reading/part5/tests';
+import { getPart2QuestionByUniqueId } from '@/data/part2';
 import { Part5Runner } from '@/components/exam/Part5Runner';
 import { Loader2 } from "lucide-react";
 
@@ -29,7 +30,30 @@ export default function WeaknessReviewPage() {
                     setAssignment(data);
 
                     if (data.questionIds && Array.isArray(data.questionIds)) {
-                        const loadedQuestions = getQuestionsByIds(data.questionIds);
+                        const loadedQuestions = data.questionIds.map((id: string) => {
+                            if (id.startsWith('P2_')) {
+                                const q = getPart2QuestionByUniqueId(id);
+                                if (q) {
+                                    // Adapt Part 2 to the common interface used by the runner
+                                    return {
+                                        id: id,
+                                        text: "(Audio Question)",
+                                        options: q.options.map((opt, idx) => ({
+                                            label: String.fromCharCode(65 + idx),
+                                            text: opt
+                                        })),
+                                        correctAnswer: String.fromCharCode(65 + q.correct),
+                                        audio: `/audio/ETS_TOEIC_3/Test_${q.testId.toString().padStart(2, '0')}/TEST ${q.testId.toString().padStart(2, '0')}_PART 2_${q.id.toString()}.mp3`,
+                                        type: 'LC_PART2',
+                                        classification: q.questionType
+                                    };
+                                }
+                                return null;
+                            } else {
+                                const qs = getQuestionsByIds([id]);
+                                return qs.length > 0 ? { ...qs[0], type: 'RC_PART5' } : null;
+                            }
+                        }).filter(Boolean);
                         setQuestions(loadedQuestions);
                     }
                 } else {

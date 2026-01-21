@@ -290,3 +290,45 @@ export const part2Data: Part2TestData = {
         { id: 31, script: "Where can we buy a microwave oven for the office kitchen?", options: ["Yes, I really like cooking.", "My office is located near the kitchen.", "There's one in the storage area."], correct: 2, questionType: "Where" }
     ]
 };
+/**
+ * Utility functions for Weakness Analysis and AI Recommendations
+ */
+
+export const getPart2QuestionByUniqueId = (uniqueId: string): (Part2Question & { testId: number }) | null => {
+    // Format: P2_T1_Q7
+    const match = uniqueId.match(/P2_T(\d+)_Q(\d+)/);
+    if (!match) return null;
+
+    const testId = parseInt(match[1]);
+    const questionId = parseInt(match[2]);
+
+    const testQuestions = part2Data[testId];
+    if (!testQuestions) return null;
+
+    const question = testQuestions.find(q => q.id === questionId);
+    return question ? { ...question, testId } : null;
+};
+
+export const findSimilarPart2Questions = (
+    type: string,
+    excludeIds: string[],
+    limit: number = 3
+): string[] => {
+    const similarIds: string[] = [];
+    const excludeSet = new Set(excludeIds);
+
+    // Iterate through all tests to find matching types
+    for (const [testIdStr, questions] of Object.entries(part2Data)) {
+        const testId = parseInt(testIdStr);
+        for (const q of questions) {
+            const uid = `P2_T${testId}_Q${q.id}`;
+            if (q.questionType === type && !excludeSet.has(uid)) {
+                similarIds.push(uid);
+            }
+            if (similarIds.length >= limit) break;
+        }
+        if (similarIds.length >= limit) break;
+    }
+
+    return similarIds;
+};

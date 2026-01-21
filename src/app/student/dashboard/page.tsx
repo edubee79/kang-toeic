@@ -468,10 +468,10 @@ export default function StudentDashboard() {
                 <Card className="lg:col-span-3 bg-slate-900 border-rose-500/30 p-6 relative overflow-hidden">
                     <div className="absolute right-0 top-0 w-48 h-48 bg-rose-500/5 rounded-full blur-2xl"></div>
                     <div className="relative z-10">
-                        <div className="flex items-center justify-between mb-6">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4 sm:gap-0">
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="text-rose-400 w-5 h-5" />
-                                <h3 className="text-lg font-bold text-white">AI 취약점 분석 (Gap Analysis)</h3>
+                                <h3 className="text-lg font-bold text-white">AI 약점 정밀 분석 및 솔루션 (Diagnosis & Solution)</h3>
                             </div>
                             <Button
                                 variant="outline"
@@ -479,13 +479,13 @@ export default function StudentDashboard() {
                                 onClick={() => router.push('/weakness/dashboard')}
                                 className={cn(
                                     "text-xs gap-1.5 font-bold transition-all duration-500 rounded-full px-4 h-9 shadow-lg",
-                                    Object.values(completedMap).filter(v => v).length > 0
+                                    Object.values(completedMap).filter(v => v).length > 0 && false // Disable forced pulse on top button
                                         ? "bg-indigo-600 text-white border-indigo-400 hover:bg-indigo-500 shadow-indigo-600/40 animate-pulse"
-                                        : "bg-slate-800 text-indigo-400 border-indigo-500/30 hover:bg-slate-700 hover:text-indigo-300"
+                                        : "bg-slate-800 text-white border-indigo-500/30 hover:bg-slate-700 hover:text-indigo-300"
                                 )}
                             >
                                 <BarChart2 className="w-4 h-4" />
-                                취약점 상세 리포트 보기
+                                분석 리포트 & 트레이닝 이동
                                 {Object.values(completedMap).filter(v => v).length > 0 && (
                                     <Badge className="ml-1 bg-white text-indigo-600 hover:bg-white px-1.5 py-0 h-4 text-[10px] font-black border-none animate-bounce">
                                         UP!
@@ -569,11 +569,14 @@ export default function StudentDashboard() {
                             </div>
                         </div>
 
-                        {/* 4. Action Button */}
+                        {/* 4. Action Button (Assignment Only) */}
                         {(() => {
                             // Find the most recent 'weakness_review' assignment
                             const weaknessAssignment = assignments.find(a => a.type === 'weakness_review');
                             const isCompleted = weaknessAssignment ? completedMap[`weakness_review_${weaknessAssignment.detail}`] : false;
+
+                            // If no assignment, hide this section
+                            if (!weaknessAssignment) return null;
 
                             return (
                                 <div className="mt-4 pt-4 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -585,28 +588,16 @@ export default function StudentDashboard() {
                                             variant="ghost"
                                             className={cn(
                                                 "text-xs h-9 flex-1 sm:flex-initial transition-all font-bold px-4",
-                                                weaknessAssignment && !isCompleted
-                                                    ? "bg-rose-500 text-white hover:bg-rose-600 shadow-md shadow-rose-500/20 animate-pulse"
-                                                    : "text-rose-400 border border-rose-500/20 hover:bg-rose-500/10"
+                                                !isCompleted
+                                                    ? "bg-gradient-to-r from-rose-500 to-amber-500 text-white hover:from-rose-600 hover:to-amber-600 shadow-lg shadow-rose-500/30 animate-pulse border-none"
+                                                    : "bg-slate-800 text-emerald-500 border border-emerald-500/30 hover:bg-slate-700"
                                             )}
                                             onClick={() => {
-                                                if (weaknessAssignment) {
-                                                    router.push(`/homework/weakness/${weaknessAssignment.id}`);
-                                                } else {
-                                                    // Direct drill if no assignment
-                                                    if (analysis?.topWeakness?.code && analysis.topWeakness.code !== 'NONE') {
-                                                        router.push(`/weakness/review?tag=${analysis.topWeakness.code}&part=Part5`);
-                                                    } else {
-                                                        alert("아직 생성된 약점 보완 과제가 없습니다. 먼저 실전 테스트를 1회 이상 완료해주세요.");
-                                                    }
-                                                }
+                                                router.push(`/homework/weakness/${weaknessAssignment.id}`);
                                             }}
                                         >
-                                            <Zap className="w-3 h-3 mr-1" />
-                                            {weaknessAssignment
-                                                ? (isCompleted ? "약점 과제 완료 (Review)" : "약점 보완 문제 풀기 (Start)")
-                                                : "AI 맞춤 드릴 시작"
-                                            }
+                                            <Zap className={cn("w-3 h-3 mr-1", isCompleted && "text-emerald-500")} />
+                                            {isCompleted ? "약점 과제 다시보기 (완료됨)" : "NEW! 약점 보완 과제 시작하기"}
                                         </Button>
                                     </div>
                                 </div>

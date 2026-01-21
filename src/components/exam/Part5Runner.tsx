@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { Timer, CheckCircle2, XCircle, Trophy, ChevronRight, BookOpen, Tag } from "lucide-react";
+import { Timer, CheckCircle2, XCircle, Trophy, ChevronRight, BookOpen, Tag, Play, Volume2 } from "lucide-react";
 import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
 import { Part5TestQuestion } from '@/data/toeic/reading/part5/tests';
 
@@ -35,6 +35,8 @@ export function Part5Runner({
     const [reviewMode, setReviewMode] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
+    const [currentlyPlaying, setCurrentlyPlaying] = useState<string | null>(null);
+    const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
     // Initial Load
     useEffect(() => {
@@ -83,6 +85,19 @@ export function Part5Runner({
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
         return `${m}:${s.toString().padStart(2, '0')}`;
+    };
+
+    const handlePlayAudio = (id: string, url: string) => {
+        if (currentlyPlaying === id) {
+            audioRef.current?.pause();
+            setCurrentlyPlaying(null);
+        } else {
+            if (audioRef.current) {
+                audioRef.current.src = url;
+                audioRef.current.play();
+                setCurrentlyPlaying(id);
+            }
+        }
     };
 
     const calculateScore = () => {
@@ -206,29 +221,57 @@ export function Part5Runner({
                                 </div>
 
                                 <div className="flex-1 space-y-4 md:space-y-6">
-                                    <p className="text-base md:text-lg font-medium text-slate-200 leading-relaxed">
-                                        {q.text.split(/_____/).map((part, i, arr) => (
-                                            <React.Fragment key={i}>
-                                                {part}
-                                                {i < arr.length - 1 && (
-                                                    <span className={cn(
-                                                        "inline-block min-w-[2.5rem] md:min-w-[3rem] border-b-2 mx-1 text-center font-bold px-1 transition-colors",
-                                                        selectedAnswers[q.id]
-                                                            ? (isRevealed
-                                                                ? (isCorrect ? "text-emerald-400 border-emerald-500" : "text-rose-400 border-rose-500")
-                                                                : "text-amber-400 border-amber-500/50"
-                                                            )
-                                                            : "border-slate-600 text-transparent"
-                                                    )}>
-                                                        {selectedAnswers[q.id]
-                                                            ? q.options.find(o => o.label === selectedAnswers[q.id])?.text
-                                                            : ""
-                                                        }
-                                                    </span>
-                                                )}
-                                            </React.Fragment>
-                                        ))}
-                                    </p>
+                                    {/* Question Text or Audio Player */}
+                                    {q.audio ? (
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-4 p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                                                <button
+                                                    onClick={() => handlePlayAudio(q.id, q.audio!)}
+                                                    className={cn(
+                                                        "w-12 h-12 rounded-full flex items-center justify-center transition-all",
+                                                        currentlyPlaying === q.id
+                                                            ? "bg-emerald-500 text-slate-900 animate-pulse"
+                                                            : "bg-emerald-600/20 text-emerald-500 hover:bg-emerald-600/40"
+                                                    )}
+                                                >
+                                                    {currentlyPlaying === q.id ? <Volume2 className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                                                </button>
+                                                <div>
+                                                    <p className="text-sm font-black text-slate-300 uppercase tracking-widest">Listening Question</p>
+                                                    <p className="text-xs text-slate-500">정답을 듣고 A, B, C 중 선택하세요.</p>
+                                                </div>
+                                            </div>
+                                            {isRevealed && q.text && q.text !== "(Audio Question)" && (
+                                                <p className="text-base font-medium text-slate-400 italic">
+                                                    Script: {q.text}
+                                                </p>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <p className="text-base md:text-lg font-medium text-slate-200 leading-relaxed">
+                                            {q.text.split(/_____/).map((part, i, arr) => (
+                                                <React.Fragment key={i}>
+                                                    {part}
+                                                    {i < arr.length - 1 && (
+                                                        <span className={cn(
+                                                            "inline-block min-w-[2.5rem] md:min-w-[3rem] border-b-2 mx-1 text-center font-bold px-1 transition-colors",
+                                                            selectedAnswers[q.id]
+                                                                ? (isRevealed
+                                                                    ? (isCorrect ? "text-emerald-400 border-emerald-500" : "text-rose-400 border-rose-500")
+                                                                    : "text-amber-400 border-amber-500/50"
+                                                                )
+                                                                : "border-slate-600 text-transparent"
+                                                        )}>
+                                                            {selectedAnswers[q.id]
+                                                                ? q.options.find(o => o.label === selectedAnswers[q.id])?.text
+                                                                : ""
+                                                            }
+                                                        </span>
+                                                    )}
+                                                </React.Fragment>
+                                            ))}
+                                        </p>
+                                    )}
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                                         {q.options.map((opt) => (
@@ -318,6 +361,12 @@ export function Part5Runner({
                     </button>
                 </div>
             )}
+
+            <audio
+                ref={audioRef}
+                onEnded={() => setCurrentlyPlaying(null)}
+                className="hidden"
+            />
         </div>
     );
 }

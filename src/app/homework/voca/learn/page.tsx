@@ -30,11 +30,28 @@ export default function LearnPage() {
             const user = JSON.parse(userData);
             setUserId(user.userId);
 
+            setUserId(user.userId);
             try {
-                const wordsData = await getWordsForLearning(user.userId);
-                // Shuffle words (Fisher-Yates)
-                const shuffled = [...wordsData].sort(() => Math.random() - 0.5);
-                setWords(shuffled);
+                // Check saved progress
+                const saved = localStorage.getItem('voca_learn_progress');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.words && parsed.words.length > 0) {
+                        setWords(parsed.words);
+                        if (parsed.currentIndex) setCurrentIndex(parsed.currentIndex);
+                        if (parsed.reviewPool) setReviewPool(parsed.reviewPool);
+                    } else {
+                        // fallback
+                        const wordsData = await getWordsForLearning(user.userId);
+                        const shuffled = [...wordsData].sort(() => Math.random() - 0.5);
+                        setWords(shuffled);
+                    }
+                } else {
+                    const wordsData = await getWordsForLearning(user.userId);
+                    // Shuffle words (Fisher-Yates)
+                    const shuffled = [...wordsData].sort(() => Math.random() - 0.5);
+                    setWords(shuffled);
+                }
             } catch (error) {
                 console.error('Error loading words:', error);
             } finally {
@@ -103,13 +120,43 @@ export default function LearnPage() {
         <div className="min-h-screen bg-slate-950 p-2 md:p-8">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
-                <div className="mb-4 md:mb-8 text-center md:text-left">
-                    <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
-                        2단계: Learn
-                    </h1>
-                    <p className="text-slate-400 text-sm">
-                        뜻을 확인하면(뒤집으면) 자동으로 복습 목록에 추가됩니다!
-                    </p>
+                <div className="mb-4 md:mb-8 text-center md:text-left flex justify-between items-start">
+                    <div>
+                        <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
+                            2단계: Learn
+                        </h1>
+                        <p className="text-slate-400 text-sm">
+                            뜻을 확인하면(뒤집으면) 자동으로 복습 목록에 추가됩니다!
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-2 scale-90 origin-top-right">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-slate-500 hover:text-white"
+                            onClick={() => router.back()}
+                        >
+                            ✕ Exit
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="text-xs border-blue-500/30 text-blue-400 hover:bg-blue-950 hover:text-white"
+                            onClick={() => {
+                                // Save & Exit
+                                if (words.length > 0) {
+                                    localStorage.setItem(`voca_learn_progress`, JSON.stringify({
+                                        words,
+                                        currentIndex,
+                                        reviewPool
+                                    }));
+                                }
+                                router.push('/homework/voca');
+                            }}
+                        >
+                            💾 Save & Exit
+                        </Button>
+                    </div>
                 </div>
 
                 {/* Progress */}

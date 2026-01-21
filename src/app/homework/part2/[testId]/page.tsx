@@ -53,8 +53,30 @@ export default function Part2Test() {
             router.push('/homework/part2');
             return;
         }
-        setQuestions(data);
-        setMainQueue(data);
+        // Check for saved progress
+        const saved = localStorage.getItem(`part2_progress_test_${testId}`);
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                if (parsed.mainQueue && parsed.mainQueue.length > 0) {
+                    setQuestions(parsed.mainQueue); // Restore original question set (if shuffle was used)
+                    setMainQueue(parsed.mainQueue);
+                } else {
+                    setQuestions(data);
+                    setMainQueue(data);
+                }
+
+                if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
+                if (parsed.wrongQueue) setWrongQueue(parsed.wrongQueue);
+            } catch (e) {
+                console.error("Failed to restore LC progress", e);
+                setQuestions(data);
+                setMainQueue(data);
+            }
+        } else {
+            setQuestions(data);
+            setMainQueue(data);
+        }
         setLoading(false);
 
         if (typeof window !== 'undefined') {
@@ -336,6 +358,7 @@ export default function Part2Test() {
                 if (currentIndex < mainQueue.length - 1) {
                     setCurrentIndex(prev => prev + 1);
                 } else {
+                    finishAll(false); // Immediate save without navigation
                     showReport();
                 }
             }
@@ -353,9 +376,16 @@ export default function Part2Test() {
         setIsReportMode(false);
     };
 
-    const finishAll = async () => {
+    const finishAll = async (navigate = true) => {
         const score = questions.length - wrongQueue.length;
         const userStr = localStorage.getItem('toeic_user');
+
+        // Create detailed incorrect questions data with unique IDs (e.g., P2_T1_Q7)
+        const incorrectQuestions = wrongQueue.map(q => ({
+            id: `P2_T${testId}_${q.id}`, // Unique ID across all tests
+            classification: q.questionType || 'Unknown'
+        }));
+
         if (userStr) {
             const user = JSON.parse(userStr);
             try {
@@ -366,14 +396,14 @@ export default function Part2Test() {
                     score: score,
                     total: questions.length,
                     wrongCount: wrongQueue.length,
+                    incorrectQuestions: incorrectQuestions, // Added for weakness analysis
                     timestamp: serverTimestamp()
                 });
-                // alert("학습 결과가 저장되었습니다.");
             } catch (e) {
                 console.error("Save error:", e);
             }
         }
-        router.push('/homework/part2');
+        if (navigate) router.push('/homework/part2');
     };
 
     if (!isMounted || loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
@@ -425,7 +455,7 @@ export default function Part2Test() {
                                 <RotateCcw className="mr-2 w-5 h-5" /> 틀린 문제 재학습
                             </Button>
                         )}
-                        <Button onClick={finishAll} variant="outline" className="w-full h-14 border-slate-700 bg-transparent text-slate-400 hover:bg-slate-800 hover:text-white text-lg font-bold rounded-2xl">
+                        <Button onClick={() => finishAll()} variant="outline" className="w-full h-14 border-slate-700 bg-transparent text-slate-400 hover:bg-slate-800 hover:text-white text-lg font-bold rounded-2xl">
                             <CheckCircle className="mr-2 w-5 h-5" /> 학습 종료
                         </Button>
                     </div>
@@ -454,9 +484,39 @@ export default function Part2Test() {
                 )}
                 <div>
                     <div className="flex items-center gap-2 mb-1">
+                        <button
+                            onClick={() => router.push('/homework/part2')}
+                            className="bg-slate-800 p-1 rounded-md text-slate-400 hover:text-white mr-1"
+                        >
+                            <X className="w-4 h-4" />
+                        </button>
+
                         <span className={cn("px-2 py-0.5 rounded text-[10px] font-black uppercase text-white", isReviewMode ? "bg-rose-500" : "bg-emerald-600")}>
                             {isReviewMode ? "오답 확인" : `Test ${testId}`}
                         </span>
+
+                        {!isReviewMode && !isReportMode && (
+                            <button
+                                onClick={() => {
+                                    // Save Progress & Exit
+                                    if (currentIndex > 0 || Object.keys(wrongQueue).length > 0) {
+                                        localStorage.setItem(`part2_progress_test_${testId}`, JSON.stringify({
+                                            currentIndex,
+                                            wrongQueue,
+                                            // mainQueue might be shuffled? if so save it too. 
+                                            // currently mainQueue is static from data, so just index is enough unless shuffle added later.
+                                            // saving mainQueue is safer if we add shuffle.
+                                            mainQueue
+                                        }));
+                                    }
+                                    router.push('/homework/part2');
+                                }}
+                                className="px-2 py-0.5 rounded text-[10px] font-bold uppercase text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 flex items-center gap-1 ml-1"
+                            >
+                                💾 저장 후 나가기
+                            </button>
+                        )}
+
                         {currentQuestion?.questionType === 'Indirect' && (
                             <span className="px-2 py-0.5 rounded text-[10px] font-black uppercase text-amber-500 bg-amber-500/10 border border-amber-500/20 flex items-center gap-1">
                                 <AlertTriangle className="w-3 h-3" /> 우회적 답변

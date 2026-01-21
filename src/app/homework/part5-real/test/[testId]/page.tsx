@@ -42,7 +42,34 @@ function Part5TestRunnerContent() {
             if (savedProgress) {
                 try {
                     const parsed = JSON.parse(savedProgress);
-                    if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
+                    if (parsed.selectedAnswers) {
+                        setSelectedAnswers(parsed.selectedAnswers);
+
+                        // Scroll to the first UNANSWERED question or the last one
+                        // Find the highest index answered
+                        const answeredIds = Object.keys(parsed.selectedAnswers);
+                        if (answeredIds.length > 0 && testSet && testSet.questions) {
+                            const lastAnsweredId = answeredIds[answeredIds.length - 1]; // Assumption: keys inserted in order? Not guaranteed.
+                            // Better: Find index in array
+                            let maxIndex = -1;
+                            testSet.questions.forEach((q, idx) => {
+                                if (parsed.selectedAnswers[q.id]) maxIndex = idx;
+                            });
+
+                            if (maxIndex !== -1 && maxIndex < testSet.questions.length - 1) {
+                                // Scroll into view of the NEXT question (maxIndex + 1)
+                                const nextQ = testSet.questions[maxIndex + 1];
+                                setTimeout(() => {
+                                    const el = document.getElementById(`q-${nextQ.id}`);
+                                    if (el) {
+                                        const yOffset = -100;
+                                        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                        window.scrollTo({ top: y, behavior: 'smooth' });
+                                    }
+                                }, 500); // 500ms delay to ensure render
+                            }
+                        }
+                    }
                     if (parsed.elapsedTime) setElapsedTime(parsed.elapsedTime);
                 } catch (e) {
                     console.error("Failed to load progress", e);
@@ -253,9 +280,30 @@ function Part5TestRunnerContent() {
                         </span>
                     </div>
 
-                    <div className={cn("flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800", (reviewMode || isDrillMode) && "opacity-50")}>
-                        <Timer className="w-4 h-4 text-slate-400" />
-                        <span className="text-sm font-mono text-slate-200">{formatTime(elapsedTime)}</span>
+                    <div className={cn("flex items-center gap-2", (reviewMode || isDrillMode) && "opacity-50")}>
+                        {/* Save & Exit Button for Real Mode */}
+                        {!reviewMode && !isDrillMode && (
+                            <button
+                                onClick={() => {
+                                    // Explicit Save
+                                    if (Object.keys(selectedAnswers).length > 0) {
+                                        localStorage.setItem(`part5_progress_test_${testId}`, JSON.stringify({
+                                            selectedAnswers,
+                                            elapsedTime
+                                        }));
+                                    }
+                                    router.push('/homework/part5-real');
+                                }}
+                                className="mr-2 px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/50 text-xs font-bold hover:bg-indigo-600 hover:text-white transition-all"
+                            >
+                                중단하고 나가기
+                            </button>
+                        )}
+
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                            <Timer className="w-4 h-4 text-slate-400" />
+                            <span className="text-sm font-mono text-slate-200">{formatTime(elapsedTime)}</span>
+                        </div>
                     </div>
                 </div>
             </div>

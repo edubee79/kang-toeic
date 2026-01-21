@@ -42,3 +42,29 @@ next-env.d.ts
 
 # TOEIC source materials (local only, not for Git)
 toeic-data/
+
+# Temporary Extraction & AI Files (Do NOT commit)
+ai_Part*.json
+extracted_*.json
+temp_*.json
+temp_*.txt
+temp_*.csv
+final_part5_database.json
+universal_results.json
+rc_answers_extracted.json
+rc_extracted_results.json
+retagged_part5_*.json
+
+# Logs & Debug Output
+*.log
+*.txt
+!README.md
+!task.md
+!walkthrough.md
+!docs/*.txt
+audit_output*
+tsc_output*
+build_error*
+
+# Python Scripts (Extraction Helpers)
+extract_*.py

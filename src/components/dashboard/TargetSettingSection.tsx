@@ -269,8 +269,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         </Button>
                     </div>
 
-                    {/* Comparison Grid */}
-                    <div className="grid grid-cols-2 gap-8">
+                    {/* Comparison Grid */}                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* LC Column */}
                         <div className="space-y-3">
                             <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
@@ -281,17 +280,24 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                                 const gap = current !== null ? current - goal : null;
 
                                 return (
-                                    <div key={p} className="flex justify-between items-center text-sm">
-                                        <span className="text-slate-400 font-bold w-8 uppercase">{p}</span>
-                                        <div className="flex-1 flex justify-between px-3 bg-slate-800/50 rounded py-1 mx-2">
-                                            <span className="text-slate-500 text-xs">목표 <span className="text-white font-bold text-sm">{goal}</span></span>
-                                            {current !== null ? (
-                                                <span className="text-slate-500 text-xs">현재 <span className={cn("font-bold text-sm", gap && gap < 0 ? "text-rose-400" : "text-emerald-400")}>{current}</span></span>
-                                            ) : (
-                                                <span className="text-slate-700 text-xs">-</span>
-                                            )}
+                                    <div key={p} className="flex items-center text-sm gap-2">
+                                        <span className="text-slate-400 font-bold w-8 text-center uppercase flex-shrink-0">{p}</span>
+                                        <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
+                                            <div className="flex flex-col items-center">
+                                                <span className="text-slate-500 text-[10px]">목표</span>
+                                                <span className="text-white font-bold text-base">{goal}</span>
+                                            </div>
+                                            <div className="w-px h-6 bg-slate-700/50 mx-2"></div>
+                                            <div className="flex flex-col items-center">
+                                                <span className="text-slate-500 text-[10px]">현재</span>
+                                                {current !== null ? (
+                                                    <span className={cn("font-bold text-base", gap && gap < 0 ? "text-rose-400" : "text-emerald-400")}>{current}</span>
+                                                ) : (
+                                                    <span className="text-slate-700 text-sm">-</span>
+                                                )}
+                                            </div>
                                         </div>
-                                        <span className={cn("text-xs w-8 text-right font-bold", gap && gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                        <span className={cn("text-sm w-10 text-right font-black flex-shrink-0", gap && gap < 0 ? "text-rose-500" : "text-slate-600")}>
                                             {gap !== null ? (gap > 0 ? `+${gap}` : gap) : '-'}
                                         </span>
                                     </div>
@@ -309,17 +315,24 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                                 const gap = current !== null ? current - goal : null;
 
                                 return (
-                                    <div key={p} className="flex justify-between items-center text-sm">
-                                        <span className="text-slate-400 font-bold w-16 uppercase">{p.replace('p7_', 'P7 ')}</span>
-                                        <div className="flex-1 flex justify-between px-3 bg-slate-800/50 rounded py-1 mx-2">
-                                            <span className="text-slate-500 text-xs">목표 <span className="text-white font-bold text-sm">{goal}</span></span>
-                                            {current !== null ? (
-                                                <span className="text-slate-500 text-xs">현재 <span className={cn("font-bold text-sm", gap && gap < 0 ? "text-rose-400" : "text-emerald-400")}>{current}</span></span>
-                                            ) : (
-                                                <span className="text-slate-700 text-xs">-</span>
-                                            )}
+                                    <div key={p} className="flex items-center text-sm gap-2">
+                                        <span className="text-slate-400 font-bold w-16 uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7_', 'P7 ').replace('single', 'S').replace('double', 'D')}</span>
+                                        <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
+                                            <div className="flex flex-col items-center">
+                                                <span className="text-slate-500 text-[10px]">목표</span>
+                                                <span className="text-white font-bold text-base">{goal}</span>
+                                            </div>
+                                            <div className="w-px h-6 bg-slate-700/50 mx-2"></div>
+                                            <div className="flex flex-col items-center">
+                                                <span className="text-slate-500 text-[10px]">현재</span>
+                                                {current !== null ? (
+                                                    <span className={cn("font-bold text-base", gap && gap < 0 ? "text-rose-400" : "text-emerald-400")}>{current}</span>
+                                                ) : (
+                                                    <span className="text-slate-700 text-sm">-</span>
+                                                )}
+                                            </div>
                                         </div>
-                                        <span className={cn("text-xs w-8 text-right font-bold", gap && gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                        <span className={cn("text-sm w-10 text-right font-black flex-shrink-0", gap && gap < 0 ? "text-rose-500" : "text-slate-600")}>
                                             {gap !== null ? (gap > 0 ? `+${gap}` : gap) : '-'}
                                         </span>
                                     </div>

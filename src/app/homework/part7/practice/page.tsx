@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
 
 // Map of available test data
 const testDataMap: Record<number, PracticeSet[]> = {
@@ -206,15 +207,21 @@ function Part7PracticePageContent() {
         if (userStr) {
             const user = JSON.parse(userStr);
             try {
-                // Identify Incorrect Questions
-                const incorrects: { id: string, classification: string }[] = [];
-                allQuestions.forEach(q => {
-                    if (answers[q.id] !== q.answer) {
-                        incorrects.push({
-                            id: q.id.toString(),
-                            classification: "Double/Triple" // detailed classification not available in current interface types?
-                        });
-                    }
+                // Identify Incorrect Questions by iterating through sets and passages
+                const incorrects: { id: string, classification: string, contentType?: string }[] = [];
+                testData.forEach(set => {
+                    // Collect and standardize types for all passages in the set
+                    const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
+
+                    set.questions.forEach(q => {
+                        if (answers[q.id] !== q.answer) {
+                            incorrects.push({
+                                id: `P7_T${testId}_Q${q.id}`,
+                                classification: "Double/Triple",
+                                contentType: passageTypes
+                            });
+                        }
+                    });
                 });
 
                 await addDoc(collection(db, "Manager_Results"), {
