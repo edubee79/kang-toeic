@@ -39,7 +39,7 @@ function SentenceCard({
     const [transcript, setTranscript] = useState("");
     const [attemptCount, setAttemptCount] = useState(0);
     const [feedback, setFeedback] = useState("");
-
+    const [hasListened, setHasListened] = useState(false);
     const synth = useRef<SpeechSynthesis | null>(null);
     const recognition = useRef<any>(null);
 
@@ -67,7 +67,13 @@ function SentenceCard({
                     setIsListening(false);
                     console.error("Speech error:", event.error);
                     if (event.error === 'no-speech') {
-                        setFeedback("음성이 감지되지 않았습니다.");
+                        setFeedback("음성이 감지되지 않았습니다. 다시 시도해주세요.");
+                    } else if (event.error === 'not-allowed') {
+                        setFeedback("마이크 권한이 거부되었습니다. 설정에서 허용해주세요.");
+                    } else if (event.error === 'network') {
+                        setFeedback("네트워크 연결을 확인해주세요.");
+                    } else {
+                        setFeedback(`인식 에러: ${event.error}`);
                     }
                 };
             }
@@ -95,6 +101,7 @@ function SentenceCard({
 
         utter.onend = () => {
             setIsPlaying(false);
+            setHasListened(true);
             // Fix: Do NOT unblur here. Keep blurred until user speaks correctly.
             // setIsBlur(false); 
         };
@@ -104,16 +111,22 @@ function SentenceCard({
 
     const startListening = () => {
         if (!recognition.current) {
-            alert("이 브라우저는 음성 인식을 지원하지 않습니다. 크롬을 사용해주세요.");
+            alert("이 브라우저는 음성 인식을 지원하지 않습니다. 크롬 또는 사파리(iOS)를 사용해주세요.");
             return;
         }
         setIsListening(true);
         setTranscript("");
         setFeedback("듣고 있습니다...");
+
+        try {
+            recognition.current.stop();
+        } catch (e) { }
+
         try {
             recognition.current.start();
         } catch (e) {
             console.error(e);
+            setFeedback("인식 시작 실패 (마이크 권한 확인)");
             setIsListening(false);
         }
     };
@@ -173,7 +186,7 @@ function SentenceCard({
                 <div>
                     <h2 className="text-xl md:text-2xl font-black italic flex items-center gap-2 text-white">
                         Listen & Repeat
-                        <span className="text-[10px] bg-indigo-500 text-white px-2 py-0.5 rounded-full not-italic">v3.1</span>
+                        <span className="text-[10px] bg-indigo-500 text-white px-2 py-0.5 rounded-full not-italic">v3.2</span>
                     </h2>
                     <p className="text-indigo-500 text-[10px] font-black uppercase tracking-widest mt-1">
                         Sentence {index + 1}
@@ -222,19 +235,19 @@ function SentenceCard({
                 <div className="flex gap-3">
                     <Button
                         onClick={startListening}
-                        disabled={isBlur || isListening || isPlaying}
+                        disabled={!hasListened || isListening || isPlaying}
                         className={cn(
                             "flex-1 h-24 rounded-[2rem] text-xl font-black transition-all shadow-lg flex flex-col gap-2",
                             isListening ? "bg-rose-500 hover:bg-rose-600 text-white scale-95 ring-4 ring-rose-500/30" :
-                                (isBlur ? "bg-slate-800 text-slate-600" : "bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/30")
+                                (!hasListened ? "bg-slate-800 text-slate-600" : "bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/30")
                         )}
                     >
                         <Mic className={cn("w-6 h-6", isListening && "animate-pulse")} />
                         <span className="text-sm uppercase tracking-widest opacity-80 font-bold">
-                            {isBlur ? "Listen First" : (isListening ? "Listening..." : "Tap & Speak")}
+                            {!hasListened ? "Listen First" : (isListening ? "Listening..." : "Tap & Speak")}
                         </span>
                     </Button>
-                    {!isBlur && (
+                    {hasListened && (
                         <Button
                             onClick={() => onNext(false)} // SKIP (Fail)
                             className="w-20 h-24 rounded-[2rem] bg-slate-100 hover:bg-slate-200 text-slate-400 hover:text-indigo-500 border-none transition-colors flex flex-col gap-2 items-center justify-center group"
