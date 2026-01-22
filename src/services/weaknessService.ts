@@ -66,9 +66,29 @@ export const WeaknessService = {
             const userSnap = await getDoc(userRef);
 
             if (!userSnap.exists()) {
-                console.warn(`User ${userId} not found in Winter_Users collection`);
-                throw new Error('User not found');
+                console.warn(`User ${userId} not found in Winter_Users collection. Returning default report.`);
+                const defaultStats = { target: 0, average: 0, latest: 0, gap: 0, totalQuestions: 0 };
+                const parts = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7_single', 'p7_double'];
+                const targetStats = parts.reduce((acc, part) => ({ ...acc, [part]: defaultStats }), {});
+
+                return {
+                    userId,
+                    totalAccuracy: 0,
+                    weakestTags: [],
+                    partBreakdown: {},
+                    targetStats: targetStats as Record<string, PartStats>,
+                    priorityPart: 'p1',
+                    analysisMessage: '사용자 데이터가 없습니다.',
+                    targetScore: 850,
+                    targetLCScore: 450,
+                    targetRCScore: 400,
+                    totalTargetLC: 450,
+                    totalTargetRC: 400,
+                    currentTotalLC: 0,
+                    currentTotalRC: 0
+                };
             }
+
 
             const userData = userSnap.data();
 
