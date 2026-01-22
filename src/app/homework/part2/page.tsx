@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Card } from "@/components/ui/card";
 import { Headphones, PlayCircle, Activity, Mic2, Lock } from "lucide-react";
@@ -9,19 +10,31 @@ import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 const tests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 export default function Part2Lobby() {
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         setIsMounted(true);
+
+        const testParam = searchParams.get('test');
+        if (testParam) {
+            const testId = parseInt(testParam);
+            if (!isNaN(testId) && testId >= 1 && testId <= 10) {
+                router.push(`/homework/part2/${testId}`);
+                return;
+            }
+        }
+
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
             setLoading(false);
         };
         fetchAccess();
-    }, []);
+    }, [router, searchParams]);
 
     if (!isMounted || loading) {
         return (

@@ -1,0 +1,872 @@
+[
+  {
+    "part": 5,
+    "text": "Caridell Science Museum trustees are expected to be--------- --of all the museum’s operations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "aware"
+      },
+      {
+        "label": "B",
+        "text": "current"
+      },
+      {
+        "label": "C",
+        "text": "serious"
+      },
+      {
+        "label": "D",
+        "text": "alert"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "a5",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'be aware of' (~을 알고 있다) 형용사 숙어 문제입니다. trustees가 박물관 운영 전반을 '알고 있어야' 한다는 의미가 자연스럽습니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "With the completion of its airport, Honokai Island’s tourism-- ---------has improved dramatically.",
+    "options": [
+      {
+        "label": "A",
+        "text": "economical"
+      },
+      {
+        "label": "B",
+        "text": "economic"
+      },
+      {
+        "label": "C",
+        "text": "economize"
+      },
+      {
+        "label": "D",
+        "text": "economy"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "n1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'Honokai Island’s tourism economy' (관광 경제) 복합 명사 문제입니다. (B) economic은 형용사로 뒤에 명사가 필요합니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The software for tracking orders has been ------------ successful as it has greatly decreased time spent on the task.",
+    "options": [
+      {
+        "label": "A",
+        "text": "haltingly"
+      },
+      {
+        "label": "B",
+        "text": "intimately"
+      },
+      {
+        "label": "C",
+        "text": "permissibly"
+      },
+      {
+        "label": "D",
+        "text": "markedly"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "av1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 동사(has been successful)를 수식하는 부사 자리로, '현저하게, 눈에 띄게'라는 의미의 markedly가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Lately the community sports program has had a surplus of volunteers,-------------are students.",
+    "options": [
+      {
+        "label": "A",
+        "text": "inasmuch as"
+      },
+      {
+        "label": "B",
+        "text": "the reason being"
+      },
+      {
+        "label": "C",
+        "text": "because of them"
+      },
+      {
+        "label": "D",
+        "text": "most of whom"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "ac3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] '수량 표현 + of whom' 관계대명사 문제입니다. 앞의 volunteers를 선행사로 받아 '그들 중 대부분'이라는 의미를 만듭니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The use of high-quality yet---------- machine parts led to a decrease in costs for Mr. Kim’s factory.",
+    "options": [
+      {
+        "label": "A",
+        "text": "inexpensive"
+      },
+      {
+        "label": "B",
+        "text": "unhappy"
+      },
+      {
+        "label": "C",
+        "text": "incomplete"
+      },
+      {
+        "label": "D",
+        "text": "undecided"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "a1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 명사(machine parts)를 수식하는 형용사 자리로, yet(그러나 여전히)과 연결되어 '고품질이지만 저렴한'이라는 대조적 의미의 inexpensive가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Ms. Ling is not here today, but she---------- attends every library board meeting.",
+    "options": [
+      {
+        "label": "A",
+        "text": "previously"
+      },
+      {
+        "label": "B",
+        "text": "typically"
+      },
+      {
+        "label": "C",
+        "text": "almost"
+      },
+      {
+        "label": "D",
+        "text": "well"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] '보통, 전형적으로'라는 의미의 부사 typically가 매 회의에 참석한다는 반복적 습관과 잘 어울립니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Investing in---------properties as possible can be risky but is often lucrative.",
+    "options": [
+      {
+        "label": "A",
+        "text": "as much"
+      },
+      {
+        "label": "B",
+        "text": "as many"
+      },
+      {
+        "label": "C",
+        "text": "so much"
+      },
+      {
+        "label": "D",
+        "text": "so many"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "com1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'as many + 복수명사 + as possible' 구문입니다. properties가 복수이므로 many를 사용합니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Please inform Ms. Montgomery of any _______ to your office supplies order before 2:00 p.m.",
+    "options": [
+      {
+        "label": "A",
+        "text": "announcements"
+      },
+      {
+        "label": "B",
+        "text": "conversions"
+      },
+      {
+        "label": "C",
+        "text": "adjustments"
+      },
+      {
+        "label": "D",
+        "text": "commitments"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "n1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 주문에 대한 '조정, 수정'이라는 의미의 adjustments가 문맥상 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The songs on Sophia Vestra’s new album are-------- the most innovative musical arrangements of her career.",
+    "options": [
+      {
+        "label": "A",
+        "text": "beside"
+      },
+      {
+        "label": "B",
+        "text": "over"
+      },
+      {
+        "label": "C",
+        "text": "among"
+      },
+      {
+        "label": "D",
+        "text": "upon"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "pr1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'among + 최상급 + 복수명사' (가장 ~한 것들 중 하나) 구문입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Panjan Air, an airline--------- in Singapore, is offering budget flights to Bangkok and Jakarta.",
+    "options": [
+      {
+        "label": "A",
+        "text": "stored"
+      },
+      {
+        "label": "B",
+        "text": "stayed"
+      },
+      {
+        "label": "C",
+        "text": "based"
+      },
+      {
+        "label": "D",
+        "text": "moved"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "pa1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'airline based in Singapore' (싱가포르에 본사를 둔 항공사) 형태로 명사를 뒤에서 수식하는 과거분사 문제입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The-------- meadowlands surrounding the museum are designated as wildlife habitat.",
+    "options": [
+      {
+        "label": "A",
+        "text": "ethical"
+      },
+      {
+        "label": "B",
+        "text": "vast"
+      },
+      {
+        "label": "C",
+        "text": "absolute"
+      },
+      {
+        "label": "D",
+        "text": "economic"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "a1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 명사(meadowlands)를 수식하는 형용사 자리로 '광활한'이라는 의미의 vast가 어울립니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "-------of Mitesh Sandu’s international performances was filmed for the documentary.",
+    "options": [
+      {
+        "label": "A",
+        "text": "All"
+      },
+      {
+        "label": "B",
+        "text": "Others"
+      },
+      {
+        "label": "C",
+        "text": "Their own"
+      },
+      {
+        "label": "D",
+        "text": "Each one"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "p3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 단수 취급하는 'Each one of ~' 구문으로, 동사(was filmed)와 수 일치가 일치하는 형태입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Based on new data, Min-Soo Trucking’s proposal to expand its business to Southeast Asia would be only---------- successful.",
+    "options": [
+      {
+        "label": "A",
+        "text": "conspicuously"
+      },
+      {
+        "label": "B",
+        "text": "marginally"
+      },
+      {
+        "label": "C",
+        "text": "regrettably"
+      },
+      {
+        "label": "D",
+        "text": "intriguingly"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'marginally successful' (미미하게/약간 성공적인)이라는 의미로 쓰였습니다. (B) marginally가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The project meeting has been rescheduled ------- tomorrow because of the bad weather.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "out"
+      },
+      {
+        "label": "D",
+        "text": "for"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "pr1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'reschedule A for B' (A를 B로 일정을 변경하다)의 수동태 형태입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Smooth Tek’s newest software makes it much--------- for business owners to create newsletters.",
+    "options": [
+      {
+        "label": "A",
+        "text": "easy"
+      },
+      {
+        "label": "B",
+        "text": "easily"
+      },
+      {
+        "label": "C",
+        "text": "easier"
+      },
+      {
+        "label": "D",
+        "text": "ease"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "com1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 비교급 강조 부사 'much'와 함께 쓰여 '훨씬 더 쉬운'이라는 의미의 easier가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The National Overview is the fourth-------------- distributed newspaper in the northeastern region.",
+    "options": [
+      {
+        "label": "A",
+        "text": "wide"
+      },
+      {
+        "label": "B",
+        "text": "widen"
+      },
+      {
+        "label": "C",
+        "text": "most widely"
+      },
+      {
+        "label": "D",
+        "text": "more widely"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "com3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'fourth most widely distributed' (네 번째로 가장 널리 배포되는) 최상급 구조 부사 문제입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The employee satisfaction survey results are---------to differ among departments.",
+    "options": [
+      {
+        "label": "A",
+        "text": "important"
+      },
+      {
+        "label": "B",
+        "text": "likely"
+      },
+      {
+        "label": "C",
+        "text": "probable"
+      },
+      {
+        "label": "D",
+        "text": "recent"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "a5",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'be likely to' (~할 가능성이 있다) 구문으로 설문 결과가 부서마다 다를 가능성이 있다는 문맥입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Please review the repair estimate carefully ------- it has been received from the maintenance department.",
+    "options": [
+      {
+        "label": "A",
+        "text": "then"
+      },
+      {
+        "label": "B",
+        "text": "while"
+      },
+      {
+        "label": "C",
+        "text": "ever since"
+      },
+      {
+        "label": "D",
+        "text": "as soon as"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "c3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'as soon as' (~하자마자) 시간 접속사 문제입니다. 감수 부서에서 도착하자마자 확인하라는 지시입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "------- of the marketing assistant include coordinating focus groups and writing detailed reports.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Promotions"
+      },
+      {
+        "label": "B",
+        "text": "Offerings"
+      },
+      {
+        "label": "C",
+        "text": "Productions"
+      },
+      {
+        "label": "D",
+        "text": "Responsibilities"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "n1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 동사(include)의 주어 자리이며 '책임, 업무'를 뜻하는 Responsibilities가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The lawyers report that the merger was successfully concluded------------ last-minute negotiations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "as well as"
+      },
+      {
+        "label": "B",
+        "text": "overall"
+      },
+      {
+        "label": "C",
+        "text": "thanks to"
+      },
+      {
+        "label": "D",
+        "text": "even if"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "pr2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] '~ 덕분에'라는 의미의 전치사구 thanks to가 문맥상 합병이 성공적으로 마무리된 이유를 설명합니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "------- in the news, the Honorable Cynthia Rengle is now making headlines with her proposal to drastically reduce local taxes.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Less"
+      },
+      {
+        "label": "B",
+        "text": "Enough"
+      },
+      {
+        "label": "C",
+        "text": "Apart"
+      },
+      {
+        "label": "D",
+        "text": "Seldom"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "inv1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 부정 부사 Seldom이 문두로 나와 강조된 형태입니다. '뉴스에 좀처럼 나오지 않던 ~가 헤드라인을 장식하고 있다'는 문맥입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Despite being the audience’s least favorite film at the Star Film Festival, Lost Dog --------won the critics’ award for best animation.",
+    "options": [
+      {
+        "label": "A",
+        "text": "furthermore"
+      },
+      {
+        "label": "B",
+        "text": "without"
+      },
+      {
+        "label": "C",
+        "text": "nevertheless"
+      },
+      {
+        "label": "D",
+        "text": "neither"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "av3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] '그럼에도 불구하고'라는 의미의 nevertheless가 최악의 평가와 평론가상 수상이라는 대조적 상황을 연결합니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Ms. Mills has correctly predicted that sales would increase-- --------- as the company's radio advertisement continues to air.",
+    "options": [
+      {
+        "label": "A",
+        "text": "arguably"
+      },
+      {
+        "label": "B",
+        "text": "reportedly"
+      },
+      {
+        "label": "C",
+        "text": "productively"
+      },
+      {
+        "label": "D",
+        "text": "incrementally"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "av1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 동사(increase)를 수식하여 '점진적으로'라는 의미를 나타내는 부사 incrementally가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The Physical Therapy Association is committed to keeping costs-------- for its certification programs.",
+    "options": [
+      {
+        "label": "A",
+        "text": "affordable"
+      },
+      {
+        "label": "B",
+        "text": "permitted"
+      },
+      {
+        "label": "C",
+        "text": "cutting"
+      },
+      {
+        "label": "D",
+        "text": "necessary"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "a1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'keep + 목적어 + 목적격 보어(형용사)' 구조입니다. 비용을 '저렴하게(affordable)' 유지한다는 의미입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "To remain on schedule, editors must submit all------- to the book to the authors by Friday.",
+    "options": [
+      {
+        "label": "A",
+        "text": "ideas"
+      },
+      {
+        "label": "B",
+        "text": "essays"
+      },
+      {
+        "label": "C",
+        "text": "revisions"
+      },
+      {
+        "label": "D",
+        "text": "suggestions"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "n1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 책에 대한 '수정, 개정'을 의미하는 revisions가 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The award-winning film Underwater Secrets promotes awareness--------ocean pollution and its effects on our planet.",
+    "options": [
+      {
+        "label": "A",
+        "text": "of"
+      },
+      {
+        "label": "B",
+        "text": "to"
+      },
+      {
+        "label": "C",
+        "text": "from"
+      },
+      {
+        "label": "D",
+        "text": "with"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'awareness of' (~에 대한 인식) 명사+전치사 연어 문제입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "BYF Company specializes in-------- promotional items to help companies advertise their brand.",
+    "options": [
+      {
+        "label": "A",
+        "text": "personally"
+      },
+      {
+        "label": "B",
+        "text": "personalized"
+      },
+      {
+        "label": "C",
+        "text": "personality"
+      },
+      {
+        "label": "D",
+        "text": "personalizes"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pa1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'personalized promotional items' (개인 맞춤형 홍보물) 형태로 명사를 수식하는 분사 형용사 문제입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Mr. Singh took notes on--------the focus group discussed during the morning session.",
+    "options": [
+      {
+        "label": "A",
+        "text": "each"
+      },
+      {
+        "label": "B",
+        "text": "several"
+      },
+      {
+        "label": "C",
+        "text": "another"
+      },
+      {
+        "label": "D",
+        "text": "everything"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "p3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'everything the focus group discussed' (포커스 그룹이 논의한 모든 것)로 everything 뒤에 목적격 관계대명사가 생략된 구조입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Last year, Tadaka Computer Solutions ranked third------- in regional earnings.",
+    "options": [
+      {
+        "label": "A",
+        "text": "together"
+      },
+      {
+        "label": "B",
+        "text": "overall"
+      },
+      {
+        "label": "C",
+        "text": "consecutively"
+      },
+      {
+        "label": "D",
+        "text": "generally"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'ranked third overall' (종합 3위)이라는 의미로 쓰이는 부사 overall이 정답입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The timeline for the pathway lighting project was extended to--------input from the environmental commission.",
+    "options": [
+      {
+        "label": "A",
+        "text": "use up"
+      },
+      {
+        "label": "B",
+        "text": "believe in"
+      },
+      {
+        "label": "C",
+        "text": "make into"
+      },
+      {
+        "label": "D",
+        "text": "allow for"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc4",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'allow for' (~을 감안하다, 고려하다) 구동사 문제입니다. 환경 위원회의 의견을 반영하기 위해 일정을 연장했다는 문맥입니다.",
+    "source": "actual-test-07",
+    "createdAt": "2026-01-21T19:30:00.000Z"
+  }
+]

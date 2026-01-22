@@ -1,0 +1,872 @@
+[
+  {
+    "part": 5,
+    "text": "_______ newspapers reported the bankruptcy of Needleman Corp., the company’s accountants were trying to find a way to stay in business.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Given that"
+      },
+      {
+        "label": "B",
+        "text": "As a result of"
+      },
+      {
+        "label": "C",
+        "text": "As for"
+      },
+      {
+        "label": "D",
+        "text": "Even as"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "c3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'Even as'는 '~하는 바로 그 때에'라는 의미로 두 동작이 동시에 일어남을 나타내는 접속사입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Most applicants to Shim Accounting Services have completed a-------internship at the company headquarters.",
+    "options": [
+      {
+        "label": "A",
+        "text": "clear"
+      },
+      {
+        "label": "B",
+        "text": "present"
+      },
+      {
+        "label": "C",
+        "text": "taken"
+      },
+      {
+        "label": "D",
+        "text": "paid"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "a1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'paid internship'은 '유급 인턴십'이라는 의미의 관용적 표현입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Hoffmann’s modular homes are fully -......-before being shipped from the manufacturing plant to ensure the accuracy of their fabrication.",
+    "options": [
+      {
+        "label": "A",
+        "text": "established"
+      },
+      {
+        "label": "B",
+        "text": "ordered"
+      },
+      {
+        "label": "C",
+        "text": "satisfied"
+      },
+      {
+        "label": "D",
+        "text": "assembled"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "v2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 조립식 주택(modular homes)은 배송되기 전에 '조립(assembled)'된다는 문맥이 적절합니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The tablet computer shuts off--------it has a fully charged battery, so the computer should be returned to the dealer.",
+    "options": [
+      {
+        "label": "A",
+        "text": "so that"
+      },
+      {
+        "label": "B",
+        "text": "as though"
+      },
+      {
+        "label": "C",
+        "text": "even if"
+      },
+      {
+        "label": "D",
+        "text": "at least"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "c3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 배터리가 완충된 상태 '일지라도(even if)' 컴퓨터가 꺼진다는 양보의 문맥이 적절합니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "-------a small festival celebrating the town's heritage, the Clarytown Celebration has become one of the biggest annual events in the area.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Origin"
+      },
+      {
+        "label": "B",
+        "text": "Originate"
+      },
+      {
+        "label": "C",
+        "text": "Originated"
+      },
+      {
+        "label": "D",
+        "text": "Originally"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "av3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 문장 맨 앞에서 분사구문처럼 쓰여 '원래는 ~였지만'이라는 의미를 나타내는 부사 Originally가 정답입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The building inspection has been postponed until next week-- -----that the electrical work can be completed.",
+    "options": [
+      {
+        "label": "A",
+        "text": "also"
+      },
+      {
+        "label": "B",
+        "text": "when"
+      },
+      {
+        "label": "C",
+        "text": "than"
+      },
+      {
+        "label": "D",
+        "text": "so"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "c3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'so that' (~하기 위해서) 구문에서 so만 빈칸으로 나온 형태입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The cafeteria in Morris Hall offers------- breakfast and lunch for Arai and Ramos associates.",
+    "options": [
+      {
+        "label": "A",
+        "text": "complimentary"
+      },
+      {
+        "label": "B",
+        "text": "accountable"
+      },
+      {
+        "label": "C",
+        "text": "replaced"
+      },
+      {
+        "label": "D",
+        "text": "secured"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "a1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'complimentary breakfast'는 '무료 조식'을 뜻하는 토익 빈출 표현입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Based on our records, your furniture and personal belongings were--------to your new home address three days ago.",
+    "options": [
+      {
+        "label": "A",
+        "text": "arrived"
+      },
+      {
+        "label": "B",
+        "text": "exchanged"
+      },
+      {
+        "label": "C",
+        "text": "stored"
+      },
+      {
+        "label": "D",
+        "text": "shipped"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "v2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 가구와 개인 소지품이 새로운 주소로 '배송되었다(shipped)'는 문맥이 적절합니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The chairman arrived in time -......- the opening ceremony of the new furniture showroom in Sacramento.",
+    "options": [
+      {
+        "label": "A",
+        "text": "still"
+      },
+      {
+        "label": "B",
+        "text": "here"
+      },
+      {
+        "label": "C",
+        "text": "for"
+      },
+      {
+        "label": "D",
+        "text": "while"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "pr1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'in time for'는 '~에 시간 맞춰 제때에'라는 의미의 전치사 구문입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Burger Factory’s menu items may vary --------due to the availability of ingredients and necessary supplies.",
+    "options": [
+      {
+        "label": "A",
+        "text": "regional"
+      },
+      {
+        "label": "B",
+        "text": "regionally"
+      },
+      {
+        "label": "C",
+        "text": "region"
+      },
+      {
+        "label": "D",
+        "text": "regionalize"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 동사 vary를 수식하여 '지역적으로 다양하다'라는 의미를 만드는 부사 regionally가 정답입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Replacement keys for your automobile may be ordered directly from our dealership --------you can demonstrate proof of ownership.",
+    "options": [
+      {
+        "label": "A",
+        "text": "provided that"
+      },
+      {
+        "label": "B",
+        "text": "as though"
+      },
+      {
+        "label": "C",
+        "text": "in fact"
+      },
+      {
+        "label": "D",
+        "text": "owing to"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "c3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'provided that'은 '만약 ~라면(=if)'의 의미를 가진 접속사입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The elevator that is--------the fire exit will be unavailable tomorrow between 1 P.M. and 4 P.M.",
+    "options": [
+      {
+        "label": "A",
+        "text": "close"
+      },
+      {
+        "label": "B",
+        "text": "next"
+      },
+      {
+        "label": "C",
+        "text": "from"
+      },
+      {
+        "label": "D",
+        "text": "near"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "pr1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'near the fire exit'은 '비상구 근처에'라는 의미로 장소의 전치사 near가 적절합니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Tachibana Pharmaceuticals’ new method of -------chemical solutions will increase efficiency in the laboratory.",
+    "options": [
+      {
+        "label": "A",
+        "text": "combine"
+      },
+      {
+        "label": "B",
+        "text": "combinations"
+      },
+      {
+        "label": "C",
+        "text": "combining"
+      },
+      {
+        "label": "D",
+        "text": "combines"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "g1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 전치사 of의 목적어 자리이며 뒤에 목적어(chemical solutions)를 취하므로 동명사 combining이 정답입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "It is nearly impossible for people with severe hip problems to carry heavy objects ------ injuring themselves.",
+    "options": [
+      {
+        "label": "A",
+        "text": "without"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "except"
+      },
+      {
+        "label": "D",
+        "text": "unless"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'without -ing'는 '~하지 않고'라는 의미로, 부상 없이 무거운 물건을 드는 것이 불가능하다는 문맥입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Chae Media, Inc. plans to-------the renovation of its publishing house in Seoul.",
+    "options": [
+      {
+        "label": "A",
+        "text": "send away for"
+      },
+      {
+        "label": "B",
+        "text": "move forward with"
+      },
+      {
+        "label": "C",
+        "text": "take back from"
+      },
+      {
+        "label": "D",
+        "text": "watch out for"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "voc4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'move forward with'는 '~을 진행시키다'라는 의미의 구동사입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Your Viral Buster antivirus program will --------on May 20, so please renew your subscription to protect your computer from threats.",
+    "options": [
+      {
+        "label": "A",
+        "text": "expire"
+      },
+      {
+        "label": "B",
+        "text": "install"
+      },
+      {
+        "label": "C",
+        "text": "combine"
+      },
+      {
+        "label": "D",
+        "text": "implement"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 프로그램의 구독 등이 '만료되다'라는 의미의 expire가 정답입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "-------Ms. Park appreciated the job offer from Seon Advisory Group, she declined the opportunity because she would have to relocate.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Now that"
+      },
+      {
+        "label": "B",
+        "text": "Only if"
+      },
+      {
+        "label": "C",
+        "text": "While"
+      },
+      {
+        "label": "D",
+        "text": "Whether"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "c3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'While' (~이지만, ~인 반면에)은 양보의 의미를 나타내는 접속사로 제안은 고맙지만 거절했다는 문맥에 적절합니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Although the project was Ms. Darwin’s idea, the credit belongs--------to her staff members because of their considerable efforts.",
+    "options": [
+      {
+        "label": "A",
+        "text": "mostly"
+      },
+      {
+        "label": "B",
+        "text": "nearly"
+      },
+      {
+        "label": "C",
+        "text": "swiftly"
+      },
+      {
+        "label": "D",
+        "text": "intently"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "av2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'mostly' (주로, 대부분)는 부사로서 공로가 주로 직원들에게 돌아간다는 의미를 만듭니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The marketing team at Bescura Cars has created a series of-- -----humorous commercials, designed to appeal to younger consumers.",
+    "options": [
+      {
+        "label": "A",
+        "text": "economically"
+      },
+      {
+        "label": "B",
+        "text": "exactly"
+      },
+      {
+        "label": "C",
+        "text": "deliberately"
+      },
+      {
+        "label": "D",
+        "text": "patiently"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "av2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'deliberately humorous'는 '의도적으로 유머러스한'이라는 의미의 부사+형용사 조합입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The new non-fat yogurt made by Nutri Plus received positive reviews--------sampled by a group of consumers.",
+    "options": [
+      {
+        "label": "A",
+        "text": "when"
+      },
+      {
+        "label": "B",
+        "text": "who"
+      },
+      {
+        "label": "C",
+        "text": "only"
+      },
+      {
+        "label": "D",
+        "text": "which"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "c5",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'when sampled' (샘플링되었을 때)는 접속사 when 뒤에 '주어+be동사'가 생략된 분사구문입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Bilto miniature model planes contain hundreds of small parts and must be assembled with-------.",
+    "options": [
+      {
+        "label": "A",
+        "text": "contact"
+      },
+      {
+        "label": "B",
+        "text": "level"
+      },
+      {
+        "label": "C",
+        "text": "care"
+      },
+      {
+        "label": "D",
+        "text": "amount"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'with care'는 '조심스럽게, 주의 깊게'라는 의미의 전치사구입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Our summer trip to Mt. Everest last year was quite exhausting, but it was-------- worth it.",
+    "options": [
+      {
+        "label": "A",
+        "text": "whatever"
+      },
+      {
+        "label": "B",
+        "text": "furthermore"
+      },
+      {
+        "label": "C",
+        "text": "nevertheless"
+      },
+      {
+        "label": "D",
+        "text": "likewise"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "av3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'nevertheless' (그럼에도 불구하고)는 앞의 힘든 상황과 뒤의 가치 있는 상황을 연결하는 부사입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Participation this year was the largest------- in the history of the Securitas conference.",
+    "options": [
+      {
+        "label": "A",
+        "text": "totally"
+      },
+      {
+        "label": "B",
+        "text": "ever"
+      },
+      {
+        "label": "C",
+        "text": "soon"
+      },
+      {
+        "label": "D",
+        "text": "hardly"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'largest ever'는 '역대 최대 규모'를 뜻하는 관용적 표현입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Strong strategic-thinking-------and sharp marketing instincts are important qualities for a successful product manager.",
+    "options": [
+      {
+        "label": "A",
+        "text": "skills"
+      },
+      {
+        "label": "B",
+        "text": "findings"
+      },
+      {
+        "label": "C",
+        "text": "realities"
+      },
+      {
+        "label": "D",
+        "text": "approximations"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "n1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'strategic-thinking skills'는 '전략적 사고 기술'이라는 복합 명사입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "It took some time for the manager to choose--------office space to rent, as he had to consult his head office first.",
+    "options": [
+      {
+        "label": "A",
+        "text": "where"
+      },
+      {
+        "label": "B",
+        "text": "which"
+      },
+      {
+        "label": "C",
+        "text": "how"
+      },
+      {
+        "label": "D",
+        "text": "when"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "ac1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'choose which office space' (어떤 사무실 공간을 고를지)로 의문 형용사 which가 명사구를 이끕니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The training seminar with Mr. Davidson will begin on time, so everyone is advised to be ------",
+    "options": [
+      {
+        "label": "A",
+        "text": "sudden"
+      },
+      {
+        "label": "B",
+        "text": "punctual"
+      },
+      {
+        "label": "C",
+        "text": "superior"
+      },
+      {
+        "label": "D",
+        "text": "immediate"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "a2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 정해진 시간에 시작하므로 '시간을 엄수하는(punctual)' 상태여야 한다는 문맥입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "All the reference books and novels that Alicia plans to sell at the book fair are ____",
+    "options": [
+      {
+        "label": "A",
+        "text": "himself"
+      },
+      {
+        "label": "B",
+        "text": "his"
+      },
+      {
+        "label": "C",
+        "text": "he"
+      },
+      {
+        "label": "D",
+        "text": "him"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "p1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'are his' (그의 것이다)로 소유 대명사 his가 보어 자리에 쓰였습니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Passengers are reminded to follow travel safety guidelines while--------the cruise ship to avoid accidents.",
+    "options": [
+      {
+        "label": "A",
+        "text": "across"
+      },
+      {
+        "label": "B",
+        "text": "into"
+      },
+      {
+        "label": "C",
+        "text": "aboard"
+      },
+      {
+        "label": "D",
+        "text": "through"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "pr1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'while aboard' (탑승 중에)는 전치사 aboard가 cruise ship과 결합하여 장소 상태를 나타냅니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Terre Haute’s L50 washing machine works more--------than other brands, making it suitable for nighttime laundry.",
+    "options": [
+      {
+        "label": "A",
+        "text": "quieter"
+      },
+      {
+        "label": "B",
+        "text": "quietest"
+      },
+      {
+        "label": "C",
+        "text": "quietly"
+      },
+      {
+        "label": "D",
+        "text": "quietness"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "av1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 동사 works를 수식하며 비교급 more와 함께 쓰인 부사 quietly가 정답입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The financial figures released by Tsai and Wu International---- ---only to expenses from the month of July.",
+    "options": [
+      {
+        "label": "A",
+        "text": "organize"
+      },
+      {
+        "label": "B",
+        "text": "ponder"
+      },
+      {
+        "label": "C",
+        "text": "correspond"
+      },
+      {
+        "label": "D",
+        "text": "subscribe"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'correspond to'는 '~에 부합하다, ~에 해당하다'라는 의미의 동사 구문입니다.",
+    "source": "actual-test-02",
+    "createdAt": "2026-01-21T19:21:00.000Z"
+  }
+]

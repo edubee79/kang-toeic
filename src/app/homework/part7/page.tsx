@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Clock, Trophy, Lock } from 'lucide-react';
 import { part7TestData } from '@/data/toeic/reading/part7/tests';
@@ -8,6 +9,8 @@ import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Part7LobbyPage() {
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [testHistory, setTestHistory] = useState<Record<number, { attempts?: number; lastScore?: number }>>({});
@@ -15,6 +18,16 @@ export default function Part7LobbyPage() {
 
     useEffect(() => {
         setIsMounted(true);
+
+        const testParam = searchParams.get('test');
+        if (testParam) {
+            const testId = parseInt(testParam);
+            if (!isNaN(testId) && testId >= 1 && testId <= 10) {
+                router.push(`/homework/part7/test/${testId}?mode=real`);
+                return;
+            }
+        }
+
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
@@ -32,7 +45,7 @@ export default function Part7LobbyPage() {
             setLoading(false);
         };
         fetchAccess();
-    }, []);
+    }, [router, searchParams]);
 
     if (!isMounted) return null;
 

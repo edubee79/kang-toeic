@@ -7583,6 +7583,1640 @@ export const part5TestData: Part5TestSet[] = [
             }
         ]
     }
+,
+{
+    "testId": 11,
+    "title": "고급반 실전문제풀이 11회",
+    "questions": [
+        {
+            "id": "q1101",
+            "text": "Caridell Science Museum trustees are expected to be--------- --of all the museum’s operations.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "aware"
+                },
+                {
+                    "label": "B",
+                    "text": "current"
+                },
+                {
+                    "label": "C",
+                    "text": "serious"
+                },
+                {
+                    "label": "D",
+                    "text": "alert"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "a5",
+            "testId": 11,
+            "translation": "Caridell 과학 박물관의 이사들은 박물관의 모든 운영 사항을 인지하고 있어야 한다.",
+            "explanation": "be aware of(~을 알고 있다)는 숙어 표현으로, 이사들이 박물관 운영 전반을 '알고 있어야' 한다는 의미가 자연스럽습니다."
+        },
+        {
+            "id": "q1102",
+            "text": "With the completion of its airport, Honokai Island’s tourism-- ---------has improved dramatically.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "economical"
+                },
+                {
+                    "label": "B",
+                    "text": "economic"
+                },
+                {
+                    "label": "C",
+                    "text": "economize"
+                },
+                {
+                    "label": "D",
+                    "text": "economy"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "n1",
+            "testId": 11,
+            "translation": "공항 완공과 함께, Honokai 섬의 관광 경제는 비약적으로 발전했다.",
+            "explanation": "tourism economy(관광 경제)는 복합 명사로 사용됩니다. economic은 형용사로 뒤에 명사가 필요하므로, 명사인 economy가 정답입니다."
+        },
+        {
+            "id": "q1103",
+            "text": "The software for tracking orders has been ------------ successful as it has greatly decreased time spent on the task.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "haltingly"
+                },
+                {
+                    "label": "B",
+                    "text": "intimately"
+                },
+                {
+                    "label": "C",
+                    "text": "permissibly"
+                },
+                {
+                    "label": "D",
+                    "text": "markedly"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "av1",
+            "testId": 11,
+            "translation": "주문 추적 소프트웨어는 업무 소요 시간을 대폭 단축함에 따라 눈에 띄게 성공적으로 안착했다.",
+            "explanation": "형용사 successful을 수식하는 부사 자리로, '눈에 띄게, 현저하게'라는 의미의 markedly가 문맥상 적절합니다."
+        },
+        {
+            "id": "q1104",
+            "text": "Lately the community sports program has had a surplus of volunteers,-------------are students.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "inasmuch as"
+                },
+                {
+                    "label": "B",
+                    "text": "the reason being"
+                },
+                {
+                    "label": "C",
+                    "text": "because of them"
+                },
+                {
+                    "label": "D",
+                    "text": "most of whom"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "ac3",
+            "testId": 11,
+            "translation": "최근 지역 사회 스포츠 프로그램에 자원봉사자가 넘쳐나고 있으며, 이들 대부분은 학생들이다.",
+            "explanation": "앞의 volunteers를 선행사로 받는 계속적 용법의 관계대명사이며, 수량 표현과 함께 쓰이는 'most of whom'이 정답입니다."
+        },
+        {
+            "id": "q1105",
+            "text": "The use of high-quality yet---------- machine parts led to a decrease in costs for Mr. Kim’s factory.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "inexpensive"
+                },
+                {
+                    "label": "B",
+                    "text": "unhappy"
+                },
+                {
+                    "label": "C",
+                    "text": "incomplete"
+                },
+                {
+                    "label": "D",
+                    "text": "undecided"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "a1",
+            "testId": 11,
+            "translation": "고품질이면서도 저렴한 기계 부품의 사용은 Kim 씨 공장의 비용 절감을 이끌어냈다.",
+            "explanation": "yet(하지만 여전히)과 연결되어 high-quality와 대조되면서도 긍정적인 맥락(비용 절감)을 완성하는 inexpensive(비싸지 않은)가 정답입니다."
+        },
+        {
+            "id": "q1106",
+            "text": "Ms. Ling is not here today, but she---------- attends every library board meeting.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "previously"
+                },
+                {
+                    "label": "B",
+                    "text": "typically"
+                },
+                {
+                    "label": "C",
+                    "text": "almost"
+                },
+                {
+                    "label": "D",
+                    "text": "well"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "av3",
+            "testId": 11,
+            "translation": "Ling 씨는 오늘 여기 없지만, 그녀는 보통 모든 도서관 이사회 회의에 참석한다.",
+            "explanation": "빈도나 습관을 나타내는 부사 typically(보통, 전형적으로)가 문맥상 어울립니다."
+        },
+        {
+            "id": "q1107",
+            "text": "Investing in---------properties as possible can be risky but is often lucrative.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "as much"
+                },
+                {
+                    "label": "B",
+                    "text": "as many"
+                },
+                {
+                    "label": "C",
+                    "text": "so much"
+                },
+                {
+                    "label": "D",
+                    "text": "so many"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "com1",
+            "testId": 11,
+            "translation": "가능한 한 많은 부동산에 투자하는 것은 위험할 수 있지만 종종 수익성이 높다.",
+            "explanation": "가산 복수 명사인 properties를 수식하므로 as many가 정답입니다. (as many as possible: 가능한 한 많은)"
+        },
+        {
+            "id": "q1108",
+            "text": "Please inform Ms. Montgomery of any _______ to your office supplies order before 2:00 p.m.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "announcements"
+                },
+                {
+                    "label": "B",
+                    "text": "conversions"
+                },
+                {
+                    "label": "C",
+                    "text": "adjustments"
+                },
+                {
+                    "label": "D",
+                    "text": "commitments"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "n1",
+            "testId": 11,
+            "translation": "오후 2시 이전에 사무용품 주문에 대한 수정 사항이 있으면 Montgomery 씨에게 알려주시기 바랍니다.",
+            "explanation": "주문 내용에 대한 '수정, 조정'을 의미하는 adjustments가 적절합니다."
+        },
+        {
+            "id": "q1109",
+            "text": "The songs on Sophia Vestra’s new album are-------- the most innovative musical arrangements of her career.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "beside"
+                },
+                {
+                    "label": "B",
+                    "text": "over"
+                },
+                {
+                    "label": "C",
+                    "text": "among"
+                },
+                {
+                    "label": "D",
+                    "text": "upon"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "pr1",
+            "testId": 11,
+            "translation": "Sophia Vestra의 새 앨범 수록곡들은 그녀의 경력에서 가장 혁신적인 음악적 편곡 중 하나로 꼽힌다.",
+            "explanation": "여러 개 중 하나임을 나타내는 'among + 최상급 + 복수명사' 구문입니다."
+        },
+        {
+            "id": "q1110",
+            "text": "Panjan Air, an airline--------- in Singapore, is offering budget flights to Bangkok and Jakarta.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "stored"
+                },
+                {
+                    "label": "B",
+                    "text": "stayed"
+                },
+                {
+                    "label": "C",
+                    "text": "based"
+                },
+                {
+                    "label": "D",
+                    "text": "moved"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "pa1",
+            "testId": 11,
+            "translation": "싱가포르에 본사를 둔 항공사인 Panjan Air는 방콕과 자카르타행 저가 항공편을 제공하고 있다.",
+            "explanation": "based in(~에 근거지를 둔)은 특정 지역에 본사나 기반을 둔 회사를 설명할 때 쓰이는 어휘입니다."
+        },
+        {
+            "id": "q1111",
+            "text": "The-------- meadowlands surrounding the museum are designated as wildlife habitat.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "ethical"
+                },
+                {
+                    "label": "B",
+                    "text": "vast"
+                },
+                {
+                    "label": "C",
+                    "text": "absolute"
+                },
+                {
+                    "label": "D",
+                    "text": "economic"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "a1",
+            "testId": 11,
+            "translation": "박물관을 둘러싼 광활한 초지는 야생동물 서식지로 지정되어 있다.",
+            "explanation": "초지(meadowlands)의 광대함을 묘사하기에 적절한 형용사는 vast(광활한)입니다."
+        },
+        {
+            "id": "q1112",
+            "text": "-------of Mitesh Sandu’s international performances was filmed for the documentary.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "All"
+                },
+                {
+                    "label": "B",
+                    "text": "Others"
+                },
+                {
+                    "label": "C",
+                    "text": "Their own"
+                },
+                {
+                    "label": "D",
+                    "text": "Each one"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "p3",
+            "testId": 11,
+            "translation": "Mitesh Sandu의 국제 공연들 각각이 다큐멘터리를 위해 촬영되었다.",
+            "explanation": "동사가 단수형(was)이므로 단수 취급하는 Each one이 정답입니다. All은 복수 취급(were)이 어울립니다."
+        },
+        {
+            "id": "q1113",
+            "text": "Based on new data, Min-Soo Trucking’s proposal to expand its business to Southeast Asia would be only---------- successful.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "conspicuously"
+                },
+                {
+                    "label": "B",
+                    "text": "marginally"
+                },
+                {
+                    "label": "C",
+                    "text": "regrettably"
+                },
+                {
+                    "label": "D",
+                    "text": "intriguingly"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "av1",
+            "testId": 11,
+            "translation": "새로운 데이터에 따르면, Min-Soo Trucking의 동남아시아 사업 확장 제안은 미미한 성공만 거둘 것으로 보인다.",
+            "explanation": "only와 어울려 '미미하게, 겨우'라는 의미를 나타내는 부사 marginally가 적절합니다."
+        },
+        {
+            "id": "q1114",
+            "text": "The project meeting has been rescheduled ------- tomorrow because of the bad weather.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "in"
+                },
+                {
+                    "label": "B",
+                    "text": "by"
+                },
+                {
+                    "label": "C",
+                    "text": "out"
+                },
+                {
+                    "label": "D",
+                    "text": "for"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "pr1",
+            "testId": 11,
+            "translation": "악천후로 인해 프로젝트 회의 일정이 내일로 변경되었다.",
+            "explanation": "reschedule A for B(A를 B로 일정을 변경하다)의 구문에서 전치사 for가 쓰입니다."
+        },
+        {
+            "id": "q1115",
+            "text": "Smooth Tek’s newest software makes it much--------- for business owners to create newsletters.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "easy"
+                },
+                {
+                    "label": "B",
+                    "text": "easily"
+                },
+                {
+                    "label": "C",
+                    "text": "easier"
+                },
+                {
+                    "label": "D",
+                    "text": "ease"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "com1",
+            "testId": 11,
+            "translation": "Smooth Tek의 최신 소프트웨어는 사업주들이 뉴스레터를 만드는 것을 훨씬 더 쉽게 해준다.",
+            "explanation": "비교급 강조 부사 much와 함께 쓰일 비교급 형용사 easier가 정답입니다."
+        },
+        {
+            "id": "q1116",
+            "text": "The National Overview is the fourth-------------- distributed newspaper in the northeastern region.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "wide"
+                },
+                {
+                    "label": "B",
+                    "text": "widen"
+                },
+                {
+                    "label": "C",
+                    "text": "most widely"
+                },
+                {
+                    "label": "D",
+                    "text": "more widely"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "com3",
+            "testId": 11,
+            "translation": "National Overview는 북동부 지역에서 네 번째로 널리 배포되는 신문이다.",
+            "explanation": "서수(fourth)와 함께 쓰이며 과거분사 distributed를 수식하는 최상급 부사 표현 most widely가 정답입니다."
+        },
+        {
+            "id": "q1117",
+            "text": "The employee satisfaction survey  results are---------to differ among departments.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "important"
+                },
+                {
+                    "label": "B",
+                    "text": "likely"
+                },
+                {
+                    "label": "C",
+                    "text": "probable"
+                },
+                {
+                    "label": "D",
+                    "text": "recent"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "a5",
+            "testId": 11,
+            "translation": "직원 만족도 조사 결과는 부서마다 다를 가능성이 높다.",
+            "explanation": "be likely to(~할 가능성이 있다)는 빈출 구문입니다. probable은 가주어 it과 주로 쓰입니다."
+        },
+        {
+            "id": "q1118",
+            "text": "Please review the repair estimate carefully ------- it has been received from the maintenance department.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "then"
+                },
+                {
+                    "label": "B",
+                    "text": "while"
+                },
+                {
+                    "label": "C",
+                    "text": "ever since"
+                },
+                {
+                    "label": "D",
+                    "text": "as soon as"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "c3",
+            "testId": 11,
+            "translation": "관리 부서로부터 수리 견적서를 받는 대로 주의 깊게 검토해 주시기 바랍니다.",
+            "explanation": "as soon as(~하자마자)는 시간의 접속사로 문맥상 가장 적절합니다."
+        },
+        {
+            "id": "q1119",
+            "text": "------- of the marketing assistant include coordinating focus groups and writing detailed reports.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "Promotions"
+                },
+                {
+                    "label": "B",
+                    "text": "Offerings"
+                },
+                {
+                    "label": "C",
+                    "text": "Productions"
+                },
+                {
+                    "label": "D",
+                    "text": "Responsibilities"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "n1",
+            "testId": 11,
+            "translation": "마케팅 조수의 업무 책임에는 포커스 그룹 조정 및 상세 보고서 작성이 포함된다.",
+            "explanation": "뒤에 나열된 업무 내용들을 포괄할 수 있는 주어 명사는 Responsibilities(책무, 업무)입니다."
+        },
+        {
+            "id": "q1120",
+            "text": "The lawyers report that the merger was successfully concluded------------ last-minute negotiations.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "as well as"
+                },
+                {
+                    "label": "B",
+                    "text": "overall"
+                },
+                {
+                    "label": "C",
+                    "text": "thanks to"
+                },
+                {
+                    "label": "D",
+                    "text": "even if"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "pr2",
+            "testId": 11,
+            "translation": "변호사들은 막판 협상 덕분에 합병이 성공적으로 마무리되었다고 보고했다.",
+            "explanation": "합병 성공의 이유를 나타내는 전치사구 thanks to(~ 덕분에)가 적절합니다."
+        },
+        {
+            "id": "q1121",
+            "text": "------- in the news, the Honorable Cynthia Rengle is now making headlines with her proposal to drastically reduce local taxes.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "Less"
+                },
+                {
+                    "label": "B",
+                    "text": "Enough"
+                },
+                {
+                    "label": "C",
+                    "text": "Apart"
+                },
+                {
+                    "label": "D",
+                    "text": "Seldom"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "inv1",
+            "testId": 11,
+            "translation": "뉴스에 좀처럼 나오지 않던 Cynthia Rengle 의원이 이제 지방세 대폭 감면 제안으로 헤드라인을 장식하고 있다.",
+            "explanation": "부정 부사 Seldom이 문두로 나와 강조된 형태입니다. 문맥상 '좀처럼 ~않는'의 의미가 필요합니다."
+        },
+        {
+            "id": "q1122",
+            "text": "Despite being the audience’s least favorite film at the Star Film Festival, Lost Dog --------won the critics’ award for best animation.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "furthermore"
+                },
+                {
+                    "label": "B",
+                    "text": "without"
+                },
+                {
+                    "label": "C",
+                    "text": "nevertheless"
+                },
+                {
+                    "label": "D",
+                    "text": "neither"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "av3",
+            "testId": 11,
+            "translation": "Star 영화제에서 관객들에게 가장 인기 없는 영화였음에도 불구하고, Lost Dog은 평론가들이 뽑은 최우수 애니메이션상을 받았다.",
+            "explanation": "앞의 역접 상황(Despite ~)을 이어받아 '그럼에도 불구하고' 상을 받았음을 나타내는 부사 nevertheless가 정답입니다."
+        },
+        {
+            "id": "q1123",
+            "text": "Ms. Mills has correctly predicted that sales would increase-- --------- as the company's radio advertisement continues to air.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "arguably"
+                },
+                {
+                    "label": "B",
+                    "text": "reportedly"
+                },
+                {
+                    "label": "C",
+                    "text": "productively"
+                },
+                {
+                    "label": "D",
+                    "text": "incrementally"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "av1",
+            "testId": 11,
+            "translation": "Mills 씨는 회사의 라디오 광고가 계속 방송됨에 따라 매출이 점진적으로 증가할 것이라고 정확히 예측했다.",
+            "explanation": "매출이 서서히 늘어남을 나타내는 부사 incrementally(점진적으로)가 문맥상 어울립니다."
+        },
+        {
+            "id": "q1124",
+            "text": "The Physical Therapy Association is committed to keeping costs-------- for its certification programs.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "affordable"
+                },
+                {
+                    "label": "B",
+                    "text": "permitted"
+                },
+                {
+                    "label": "C",
+                    "text": "cutting"
+                },
+                {
+                    "label": "D",
+                    "text": "necessary"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "a1",
+            "testId": 11,
+            "translation": "물리치료 협회는 자격 인증 프로그램의 비용을 저렴하게 유지하기 위해 노력하고 있다.",
+            "explanation": "keep + 목적어 + 목적격 보어(형용사) 구조입니다. 비용이 '감당할 만한(저렴한)' 상태를 유지한다는 의미의 affordable이 적절합니다."
+        },
+        {
+            "id": "q1125",
+            "text": "To remain on schedule, editors must submit all------- to the book to the authors by Friday.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "ideas"
+                },
+                {
+                    "label": "B",
+                    "text": "essays"
+                },
+                {
+                    "label": "C",
+                    "text": "revisions"
+                },
+                {
+                    "label": "D",
+                    "text": "suggestions"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "n1",
+            "testId": 11,
+            "translation": "일정을 지키기 위해, 편집자들은 금요일까지 도서의 모든 수정 사항을 저자들에게 제출해야 한다.",
+            "explanation": "원고나 도서에 대한 '개정, 수정 사항'을 뜻하는 revisions가 문맥상 자연스럽습니다."
+        },
+        {
+            "id": "q1126",
+            "text": "The award-winning film Underwater Secrets promotes awareness--------ocean pollution and its effects on our planet.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "of"
+                },
+                {
+                    "label": "B",
+                    "text": "to"
+                },
+                {
+                    "label": "C",
+                    "text": "from"
+                },
+                {
+                    "label": "D",
+                    "text": "with"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "pr5",
+            "testId": 11,
+            "translation": "수상작인 영화 Underwater Secrets는 해양 오염과 그것이 지구에 미치는 영향에 대한 인식을 고취한다.",
+            "explanation": "awareness of(~에 대한 인식)는 명사-전치사 결합 표현입니다."
+        },
+        {
+            "id": "q1127",
+            "text": "BYF Company specializes in-------- promotional items to help companies advertise their brand.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "personally"
+                },
+                {
+                    "label": "B",
+                    "text": "personalized"
+                },
+                {
+                    "label": "C",
+                    "text": "personality"
+                },
+                {
+                    "label": "D",
+                    "text": "personalizes"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "pa1",
+            "testId": 11,
+            "translation": "BYF 사는 기업들이 브랜드를 광고할 수 있도록 돕는 개인 맞춤형 홍보물 제작을 전문으로 한다.",
+            "explanation": "명사 items를 수식하는 형용사 역할의 과거분사 personalized(개인 맞춤화된)가 정답입니다."
+        },
+        {
+            "id": "q1128",
+            "text": "Mr. Singh took notes on--------the focus group discussed during the morning session.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "each"
+                },
+                {
+                    "label": "B",
+                    "text": "several"
+                },
+                {
+                    "label": "C",
+                    "text": "another"
+                },
+                {
+                    "label": "D",
+                    "text": "everything"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "p3",
+            "testId": 11,
+            "translation": "Singh 씨는 오전 세션 동안 포커스 그룹이 논의한 모든 내용을 필기했다.",
+            "explanation": "뒤에 오는 관계대명사절(목적격 관계대명사 생략)의 수식을 받을 수 있는 대명사 everything이 정답입니다."
+        },
+        {
+            "id": "q1129",
+            "text": "Last year, Tadaka Computer Solutions ranked third------- in regional earnings.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "together"
+                },
+                {
+                    "label": "B",
+                    "text": "overall"
+                },
+                {
+                    "label": "C",
+                    "text": "consecutively"
+                },
+                {
+                    "label": "D",
+                    "text": "generally"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "av3",
+            "testId": 11,
+            "translation": "작년에 Tadaka Computer Solutions는 지역 수익 부문에서 종합 3위를 차지했다.",
+            "explanation": "여러 지표를 합산한 '전반적인, 종합적인' 순위를 나타내는 부사 overall이 적절합니다."
+        },
+        {
+            "id": "q1130",
+            "text": "The timeline for the pathway lighting project was extended to--------input from the environmental commission.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "use up"
+                },
+                {
+                    "label": "B",
+                    "text": "believe in"
+                },
+                {
+                    "label": "C",
+                    "text": "make into"
+                },
+                {
+                    "label": "D",
+                    "text": "allow for"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "voc4",
+            "testId": 11,
+            "translation": "산책로 조명 프로젝트의 기한이 환경 위원회의 의견을 수렴하기 위해 연장되었다.",
+            "explanation": "allow for(~을 감안하다, 고려하다)는 문맥상 위원회의 피드백을 반영할 시간을 번다는 의미와 가장 잘 어울립니다."
+        }
+    ]
+}
+,
+{
+    "testId": 12,
+    "title": "고급반 실전문제풀이 12회",
+    "questions": [
+        {
+            "id": "q1201",
+            "text": "Please congratulate Alan Schmit,-------- of the Leadership Award in Nursing at Knoll Hospital.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "won"
+                },
+                {
+                    "label": "B",
+                    "text": "wins"
+                },
+                {
+                    "label": "C",
+                    "text": "winning"
+                },
+                {
+                    "label": "D",
+                    "text": "winner"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "n1",
+            "testId": 12,
+            "translation": "Knoll 병원에서 수여하는 간호 부문 리더십 상의 수상자인 Alan Schmit 씨를 축하해 주십시오.",
+            "explanation": "빈칸은 동격의 콤마 뒤에서 Alan Schmit을 설명하는 명사 자리입니다. '수상자'라는 의미의 명사 (D) winner가 정답입니다."
+        },
+        {
+            "id": "q1202",
+            "text": "The------- of videos to electronic press releases can help companies showcase their products.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "content"
+                },
+                {
+                    "label": "B",
+                    "text": "addition"
+                },
+                {
+                    "label": "C",
+                    "text": "pictures"
+                },
+                {
+                    "label": "D",
+                    "text": "promotion"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "n1",
+            "testId": 12,
+            "translation": "전자 보도 자료에 비디오를 추가하는 것은 기업들이 제품을 선보이는 데 도움이 될 수 있다.",
+            "explanation": "전자 보도 자료에 비디오를 '추가'한다는 의미가 되어야 자연스러우므로 (B) addition이 정답입니다. addition A to B는 'B에 A를 추가함'이라는 의미로 자주 쓰입니다."
+        },
+        {
+            "id": "q1203",
+            "text": "When leaving the auditorium, please exit -------- the doors on the lower level.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "except"
+                },
+                {
+                    "label": "B",
+                    "text": "inside"
+                },
+                {
+                    "label": "C",
+                    "text": "without"
+                },
+                {
+                    "label": "D",
+                    "text": "through"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "pr1",
+            "testId": 12,
+            "translation": "강당을 나갈 때, 아래층에 있는 문을 통해서 나가 주시기 바랍니다.",
+            "explanation": "문을 '통과하여' 나간다는 의미가 되어야 하므로 장소의 통과를 나타내는 전치사 (D) through가 정답입니다."
+        },
+        {
+            "id": "q1204",
+            "text": "The Ford Group’s proposed advertising campaign is by far the most-------- we have seen so far.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "innovate"
+                },
+                {
+                    "label": "B",
+                    "text": "innovative"
+                },
+                {
+                    "label": "C",
+                    "text": "innovations"
+                },
+                {
+                    "label": "D",
+                    "text": "innovatively"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "a1",
+            "testId": 12,
+            "translation": "Ford Group이 제안한 광고 캠페인은 우리가 지금까지 본 것 중 단연코 가장 혁신적이다.",
+            "explanation": "비교급/최상급(the most)의 수식을 받아 보어 역할을 할 수 있는 형용사 자리입니다. 따라서 (B) innovative가 정답입니다."
+        },
+        {
+            "id": "q1205",
+            "text": "------ receiving the engineering award, Ms. Kwon made a point of thanking longtime mentors.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "Onto"
+                },
+                {
+                    "label": "B",
+                    "text": "Unlike"
+                },
+                {
+                    "label": "C",
+                    "text": "About"
+                },
+                {
+                    "label": "D",
+                    "text": "Upon"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "pr5",
+            "testId": 12,
+            "translation": "공학상을 받자마자, Kwon 씨는 오랜 멘토들에게 반드시 감사를 표했다.",
+            "explanation": "Upon/On -ing는 '~하자마자'라는 의미의 관용 표현입니다. 상을 '받자마자' 감사를 표했다는 문맥이 적절하므로 (D) Upon이 정답입니다."
+        },
+        {
+            "id": "q1206",
+            "text": "Please read the list of--------qualifications to ensure that you have the necessary education and experience for the position.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "slight"
+                },
+                {
+                    "label": "B",
+                    "text": "equal"
+                },
+                {
+                    "label": "C",
+                    "text": "obliged"
+                },
+                {
+                    "label": "D",
+                    "text": "essential"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "a1",
+            "testId": 12,
+            "translation": "해당 직책에 필요한 교육과 경험을 갖추었는지 확인하기 위해 필수 자격 요건 목록을 읽어 보시기 바랍니다.",
+            "explanation": "빈칸은 명사 qualifications를 수식하는 형용사 자리입니다. 문맥상 '필수적인' 자격을 의미하는 (D) essential이 가장 적절합니다."
+        },
+        {
+            "id": "q1207",
+            "text": "The actors held an additional rehearsal -------- perfect their performance in the final scene.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "considerably"
+                },
+                {
+                    "label": "B",
+                    "text": "in order to"
+                },
+                {
+                    "label": "C",
+                    "text": "nevertheless"
+                },
+                {
+                    "label": "D",
+                    "text": "as a result of"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "c3",
+            "testId": 12,
+            "translation": "배우들은 마지막 장면의 연기를 완벽하게 하기 위해 추가 리허설을 가졌다.",
+            "explanation": "빈칸 뒤의 동사 원형 perfect와 결합하여 목적(~하기 위해서)을 나타낼 수 있는 표현은 (B) in order to입니다."
+        },
+        {
+            "id": "q1208",
+            "text": "RZT Technology will double the size of its Toronto laboratory to--------the organization’s rapid growth.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "assign"
+                },
+                {
+                    "label": "B",
+                    "text": "investigate"
+                },
+                {
+                    "label": "C",
+                    "text": "experience"
+                },
+                {
+                    "label": "D",
+                    "text": "accommodate"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "v1",
+            "testId": 12,
+            "translation": "RZT Technology는 조직의 급격한 성장을 수용하기 위해 토론토 실험실의 규모를 두 배로 늘릴 것이다.",
+            "explanation": "조직의 성장에 맞추어 공간이나 인원 등을 '수용하다, 맞추다'라는 의미의 (D) accommodate가 정답입니다."
+        },
+        {
+            "id": "q1209",
+            "text": "The Williamsport Hotel is an ideal venue for the conference because of its-------- to the airport.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "achievement"
+                },
+                {
+                    "label": "B",
+                    "text": "proximity"
+                },
+                {
+                    "label": "C",
+                    "text": "competence"
+                },
+                {
+                    "label": "D",
+                    "text": "exception"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "n1",
+            "testId": 12,
+            "translation": "Williamsport 호텔은 공항과의 인접성 때문에 컨퍼런스를 위한 이상적인 장소이다.",
+            "explanation": "공항과 '가깝다'는 의미의 명사 proximity(인접성)가 정답입니다. 보통 proximity to의 형태로 쓰입니다."
+        },
+        {
+            "id": "q1210",
+            "text": "------ poorly the high-speed printer may be functioning, it is still making copies that are adequate for our purposes.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "Rather"
+                },
+                {
+                    "label": "B",
+                    "text": "Seldom"
+                },
+                {
+                    "label": "C",
+                    "text": "However"
+                },
+                {
+                    "label": "D",
+                    "text": "Thoroughly"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "c5",
+            "testId": 12,
+            "translation": "고속 프린터가 아무리 제대로 작동하지 않더라도, 여전히 우리 목적에 충분한 복사본을 만들어내고 있다.",
+            "explanation": "복합관계부사 However는 'However + 형용사/부사 + 주어 + 동사'의 어순으로 '아무리 ~할지라도'라는 양보의 의미를 나타냅니다."
+        },
+        {
+            "id": "q1211",
+            "text": "Staff at the Bismarck Hotel were-------- helpful to us during our stay.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "quite"
+                },
+                {
+                    "label": "B",
+                    "text": "enough"
+                },
+                {
+                    "label": "C",
+                    "text": "far"
+                },
+                {
+                    "label": "D",
+                    "text": "early"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "av1",
+            "testId": 12,
+            "translation": "Bismarck 호텔 직원들은 우리가 머무는 동안 우리에게 아주 도움이 되었다.",
+            "explanation": "형용사 helpful을 수식하여 '매우, 꽤'라는 의미를 더하는 부사 (A) quite가 정답입니다. enough는 형용사 뒤에서 수식합니다."
+        },
+        {
+            "id": "q1212",
+            "text": "Management announced that all salespeople would be receiving a bonus this year,------- in time for summer vacations.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "just"
+                },
+                {
+                    "label": "B",
+                    "text": "as"
+                },
+                {
+                    "label": "C",
+                    "text": "only"
+                },
+                {
+                    "label": "D",
+                    "text": "by"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "av3",
+            "testId": 12,
+            "translation": "경영진은 모든 영업 사원들이 올해 보너스를 받을 것이라고 발표했는데, 여름 휴가에 딱 맞춰 지급될 예정이다.",
+            "explanation": "특정 시점에 '딱 맞춰'라는 의미를 강조하는 부사 (A) just가 전치사구 in time for를 수식하기에 가장 적절합니다."
+        },
+        {
+            "id": "q1213",
+            "text": "All produce transported by Gocargo Trucking is refrigerated ------- upon pickup to prevent spoilage.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "lately"
+                },
+                {
+                    "label": "B",
+                    "text": "promptly"
+                },
+                {
+                    "label": "C",
+                    "text": "potentially"
+                },
+                {
+                    "label": "D",
+                    "text": "clearly"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "av1",
+            "testId": 12,
+            "translation": "Gocargo Trucking에 의해 운송되는 모든 농산물은 부패를 방지하기 위해 픽업 즉시 냉장 보관된다.",
+            "explanation": "수동태 동사구 is refrigerated를 수식하며 '즉시, 지체 없이'라는 의미를 가진 (B) promptly가 가장 적절합니다."
+        },
+        {
+            "id": "q1214",
+            "text": "Of all the truck models available today, it can be difficult to figure out------- would best suit your company’s needs.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "when"
+                },
+                {
+                    "label": "B",
+                    "text": "why"
+                },
+                {
+                    "label": "C",
+                    "text": "which"
+                },
+                {
+                    "label": "D",
+                    "text": "where"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "ac3",
+            "testId": 12,
+            "translation": "오늘날 이용 가능한 모든 트럭 모델 중에서, 어느 것이 귀사의 필요에 가장 적합한지 파악하는 것은 어려울 수 있다.",
+            "explanation": "정해진 범위(Of all the truck models) 내에서 '어느 것'을 선택하는 의미이므로 의문 대명사 (C) which가 정답입니다."
+        },
+        {
+            "id": "q1215",
+            "text": "At Derwin Securities, trainees alternate ------ attending information sessions and working closely with assigned mentors.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "along"
+                },
+                {
+                    "label": "B",
+                    "text": "against"
+                },
+                {
+                    "label": "C",
+                    "text": "between"
+                },
+                {
+                    "label": "D",
+                    "text": "near"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "pr1",
+            "testId": 12,
+            "translation": "Derwin Securities에서, 교육생들은 정보 세션 참석과 지정된 멘토와의 긴밀한 업무를 번갈아 가며 수행한다.",
+            "explanation": "두 가지 활동(A and B) 사이를 번갈아 한다는 의미이므로 전치사 (C) between이 적절합니다. alternate between A and B는 'A와 B를 번갈아 하다'라는 표현입니다."
+        },
+        {
+            "id": "q1216",
+            "text": "Belinda McKay fans who are-------- to the author’s formal writing style will be surprised by her latest biography.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "fortunate"
+                },
+                {
+                    "label": "B",
+                    "text": "readable"
+                },
+                {
+                    "label": "C",
+                    "text": "comparable"
+                },
+                {
+                    "label": "D",
+                    "text": "accustomed"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "a5",
+            "testId": 12,
+            "translation": "Belinda McKay의 격식 있는 집필 스타일에 익숙한 팬들은 그녀의 최신 전기에 놀랄 것이다.",
+            "explanation": "be accustomed to(~에 익숙하다)는 숙어 표현입니다. 문맥상 저자의 스타일에 '익숙한' 팬들이 상반된 최신작에 놀랄 것이라는 의미가 자연스럽습니다."
+        },
+        {
+            "id": "q1217",
+            "text": "We congratulate all Riverside employees, whose--------effort has resulted in a 20 percent reduction in waste disposal costs.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "collect"
+                },
+                {
+                    "label": "B",
+                    "text": "collective"
+                },
+                {
+                    "label": "C",
+                    "text": "collects"
+                },
+                {
+                    "label": "D",
+                    "text": "collector"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "a1",
+            "testId": 12,
+            "translation": "모든 Riverside 직원들을 축하합니다. 그들의 공동의 노력으로 폐기물 처리 비용이 20% 절감되었습니다.",
+            "explanation": "빈칸은 명사 effort를 수식하는 형용사 자리입니다. '단합된, 공동의'라는 뜻의 (B) collective가 정답입니다."
+        },
+        {
+            "id": "q1218",
+            "text": "The staff must------- as much market-research data as possible before planning the advertising campaign.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "equip"
+                },
+                {
+                    "label": "B",
+                    "text": "compile"
+                },
+                {
+                    "label": "C",
+                    "text": "endorse"
+                },
+                {
+                    "label": "D",
+                    "text": "compose"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "v1",
+            "testId": 12,
+            "translation": "직원들은 광고 캠페인을 계획하기 전에 가능한 한 많은 시장 조사 자료를 수집해야 한다.",
+            "explanation": "여러 곳의 자료를 모아 '수집하다, 편집하다'라는 의미의 (B) compile이 정답입니다."
+        },
+        {
+            "id": "q1219",
+            "text": "Customers can wait in the reception area --------our mechanics complete the car repairs.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "whether"
+                },
+                {
+                    "label": "B",
+                    "text": "except"
+                },
+                {
+                    "label": "C",
+                    "text": "while"
+                },
+                {
+                    "label": "D",
+                    "text": "during"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "c3",
+            "testId": 12,
+            "translation": "고객들은 정비사들이 자동차 수리를 완료하는 동안 접수처에서 기다릴 수 있다.",
+            "explanation": "뒤에 주어(our mechanics)와 동사(complete)를 갖춘 절이 오므로 접속사가 필요합니다. '~하는 동안'이라는 의미의 접속사는 (C) while입니다. during은 전치사입니다."
+        },
+        {
+            "id": "q1220",
+            "text": "To receive an electronic reminder when payment is due, set up an online account ------- Albright Bank.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "of"
+                },
+                {
+                    "label": "B",
+                    "text": "about"
+                },
+                {
+                    "label": "C",
+                    "text": "over"
+                },
+                {
+                    "label": "D",
+                    "text": "with"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "pr1",
+            "testId": 12,
+            "translation": "결제일이 되었을 때 전자 알림을 받으려면, Albright Bank에 온라인 계좌를 개설하십시오.",
+            "explanation": "특정 은행에 계좌를 가지고 있거나 개설할 때 전치사 with를 사용하여 an account with a bank라고 표현합니다."
+        },
+        {
+            "id": "q1221",
+            "text": "All identifying information has been----------- from this letter of complaint so that it can be used for training purposes.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "produced"
+                },
+                {
+                    "label": "B",
+                    "text": "extended"
+                },
+                {
+                    "label": "C",
+                    "text": "removed"
+                },
+                {
+                    "label": "D",
+                    "text": "resolved"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "pa1",
+            "testId": 12,
+            "translation": "교육용으로 사용할 수 있도록 이 불만 제기 편지에서 모든 신원 정보가 삭제되었습니다.",
+            "explanation": "문맥상 신원 정보를 '삭제하다, 제거하다'라는 의미가 되어야 하므로 (C) removed가 정답입니다."
+        },
+        {
+            "id": "q1222",
+            "text": "Table reservations for--------- greater than ten must be made at least one day in advance.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "plates"
+                },
+                {
+                    "label": "B",
+                    "text": "meals"
+                },
+                {
+                    "label": "C",
+                    "text": "sizes"
+                },
+                {
+                    "label": "D",
+                    "text": "parties"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "n1",
+            "testId": 12,
+            "translation": "10명 이상의 일행에 대한 테이블 예약은 최소 하루 전에 이루어져야 한다.",
+            "explanation": "party는 '정당'이나 '파티' 외에도 '일행, 단체'라는 뜻이 있습니다. 문맥상 10인 이상의 단체를 의미하는 (D) parties가 정답입니다."
+        },
+        {
+            "id": "q1223",
+            "text": "Online shoppers who experience long waits for their orders tend--------- the business low ratings.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "have given"
+                },
+                {
+                    "label": "B",
+                    "text": "gave"
+                },
+                {
+                    "label": "C",
+                    "text": "to give"
+                },
+                {
+                    "label": "D",
+                    "text": "giving"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "g_inf",
+            "testId": 12,
+            "translation": "주문 후 오래 기다려야 하는 온라인 쇼핑객들은 해당 업체에 낮은 평점을 주는 경향이 있다.",
+            "explanation": "tend는 to 부정사를 목적어로 취하는 동사입니다 (tend to do: ~하는 경향이 있다). 따라서 (C) to give가 정답입니다."
+        },
+        {
+            "id": "q1224",
+            "text": "Dr. Yuina Hashimoto recently added another doctor to her practice,---------- allowing more patients to be seen.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "that"
+                },
+                {
+                    "label": "B",
+                    "text": "thus"
+                },
+                {
+                    "label": "C",
+                    "text": "which"
+                },
+                {
+                    "label": "D",
+                    "text": "so that"
+                }
+            ],
+            "correctAnswer": "B",
+            "classification": "av3",
+            "testId": 12,
+            "translation": "Yuina Hashimoto 박사는 최근 진료소에 의사를 한 명 더 추가했고, 그리하여 더 많은 환자들이 진료를 받을 수 있게 되었다.",
+            "explanation": "앞선 상황에 대한 결과로 '그리하여, 따라서'라는 의미를 더하며 현재분사 구문을 이끄는 부사 (B) thus가 가장 적절합니다."
+        },
+        {
+            "id": "q1225",
+            "text": "Aki Katsuro’s latest novel is his most exciting-------- and is sure to make Radin Books’ best-seller list.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "just"
+                },
+                {
+                    "label": "B",
+                    "text": "later"
+                },
+                {
+                    "label": "C",
+                    "text": "yet"
+                },
+                {
+                    "label": "D",
+                    "text": "very"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "av3",
+            "testId": 12,
+            "translation": "Aki Katsuro의 최신 소설은 그의 작품 중 지금까지 가장 흥미진진하며, Radin Books의 베스트셀러 리스트에 오를 것이 확실하다.",
+            "explanation": "최상급 형용사 뒤에서 '지금까지 중 가장 ~한'이라는 의미를 강조하는 부사 (C) yet이 정답입니다."
+        },
+        {
+            "id": "q1226",
+            "text": "This free mobile app provides---------- calendar updates, so salespeople will never miss an appointment.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "casual"
+                },
+                {
+                    "label": "B",
+                    "text": "equal"
+                },
+                {
+                    "label": "C",
+                    "text": "continual"
+                },
+                {
+                    "label": "D",
+                    "text": "eventual"
+                }
+            ],
+            "correctAnswer": "C",
+            "classification": "a1",
+            "testId": 12,
+            "translation": "이 무료 모바일 앱은 지속적인 캘린더 업데이트를 제공하여, 영업 사원들이 약속을 놓치지 않게 해준다.",
+            "explanation": "약속을 놓치지 않으려면 업데이트가 '지속적인, 빈번한' 상태여야 하므로 (C) continual이 가장 적절합니다."
+        },
+        {
+            "id": "q1227",
+            "text": "Most senior managers approved the architect's proposal for the office layout, although-------- expressed concerns about the cost.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "one"
+                },
+                {
+                    "label": "B",
+                    "text": "one another"
+                },
+                {
+                    "label": "C",
+                    "text": "each other"
+                },
+                {
+                    "label": "D",
+                    "text": "other"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "p3",
+            "testId": 12,
+            "translation": "비용에 대해 우려를 표한 관리자도 한 명 있었지만, 대부분의 고위급 관리자들은 사무실 배치에 대한 건축가의 제안을 승인했다.",
+            "explanation": "앞서 언급된 'senior managers' 중 한 명을 지칭하는 대명사 (A) one이 주어 자리로 적절합니다. although 뒤에 단수 동사 expressed와 호응합니다."
+        },
+        {
+            "id": "q1228",
+            "text": "Wrazen Associates--------- a summary with a list of recommendations as a routine part of any audit.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "realizes"
+                },
+                {
+                    "label": "B",
+                    "text": "induces"
+                },
+                {
+                    "label": "C",
+                    "text": "causes"
+                },
+                {
+                    "label": "D",
+                    "text": "issues"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "v1",
+            "testId": 12,
+            "translation": "Wrazen Associates는 모든 회계 감사의 정기적인 절차로서 권고 사항 목록이 포함된 요약본을 발행한다.",
+            "explanation": "문서나 보고서 등을 '발행하다, 발급하다'라는 의미의 동사 (D) issues가 정답입니다."
+        },
+        {
+            "id": "q1229",
+            "text": "Sinee’s Catering is always-------- to deliver outstanding food to your special events.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "ready"
+                },
+                {
+                    "label": "B",
+                    "text": "skillful"
+                },
+                {
+                    "label": "C",
+                    "text": "complete"
+                },
+                {
+                    "label": "D",
+                    "text": "delicious"
+                }
+            ],
+            "correctAnswer": "A",
+            "classification": "a5",
+            "testId": 12,
+            "translation": "Sinee’s Catering은 여러분의 특별한 행사에 뛰어난 음식을 제공할 준비가 항상 되어 있습니다.",
+            "explanation": "be ready to do(~할 준비가 되어 있다)는 표현입니다. 업체가 서비스를 제공할 준비가 되었다는 문맥이 가장 자연스럽습니다."
+        },
+        {
+            "id": "q1230",
+            "text": "At Sloat Publishing, interns are assigned to a------- of positions with increasing responsibility.",
+            "options": [
+                {
+                    "label": "A",
+                    "text": "frequency"
+                },
+                {
+                    "label": "B",
+                    "text": "length"
+                },
+                {
+                    "label": "C",
+                    "text": "shortage"
+                },
+                {
+                    "label": "D",
+                    "text": "series"
+                }
+            ],
+            "correctAnswer": "D",
+            "classification": "n1",
+            "testId": 12,
+            "translation": "Sloat Publishing에서 인턴들은 점차 책임이 막중해지는 일련의 직책들에 배치된다.",
+            "explanation": "a series of는 '일련의, 연속적인'이라는 뜻의 표현입니다. 여러 직책을 단계적으로 거친다는 문맥이므로 (D) series가 정답입니다."
+        }
+    ]
+}
 ]
     ;
 // Helper to find specific questions across all sets

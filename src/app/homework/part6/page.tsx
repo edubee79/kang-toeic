@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Clock, Trophy, Star, Lock } from 'lucide-react';
 import { part6TestData } from '@/data/toeic/reading/part6/tests';
@@ -8,19 +9,31 @@ import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Part6LobbyPage() {
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         setIsMounted(true);
+
+        const testParam = searchParams.get('test');
+        if (testParam) {
+            const testId = parseInt(testParam);
+            if (!isNaN(testId) && testId >= 1 && testId <= 10) {
+                router.push(`/homework/part6/test/${testId}?mode=real`);
+                return;
+            }
+        }
+
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
             setLoading(false);
         };
         fetchAccess();
-    }, []);
+    }, [router, searchParams]);
 
     if (!isMounted) return null;
 

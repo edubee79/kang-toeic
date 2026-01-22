@@ -152,7 +152,15 @@ function Part7TestRunnerContent() {
         const score = getScore();
         setShowCompletion(true);
 
-        // Save to Firebase
+        // ✅ Drill mode: Save locally only, do NOT save to Firebase
+        if (isDrillMode) {
+            const newHistory = { ...history, lastScore: score };
+            setHistory(newHistory);
+            localStorage.setItem(`part7_history_test_${testId}`, JSON.stringify(newHistory));
+            return; // Skip Firebase save
+        }
+
+        // Save to Firebase (Real Mode only)
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);

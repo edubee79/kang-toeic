@@ -1,0 +1,843 @@
+[
+  {
+    "part": 5,
+    "text": "Suburban residents are-------in favor of expanding Highway 589 to relieve traffic congestion.",
+    "options": [
+      {
+        "label": "A",
+        "text": "overwhelm"
+      },
+      {
+        "label": "B",
+        "text": "overwhelmingly"
+      },
+      {
+        "label": "C",
+        "text": "overwhelming"
+      },
+      {
+        "label": "D",
+        "text": "overwhelms"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'overwhelmingly in favor of'는 '압도적으로 ~에 찬성하는'이라는 의미의 관용구입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The Acep XT300 scanner shuts down automatically when------ --for a long time, which lowers electricity costs.",
+    "options": [
+      {
+        "label": "A",
+        "text": "inactive"
+      },
+      {
+        "label": "B",
+        "text": "was inactive"
+      },
+      {
+        "label": "C",
+        "text": "is inactive"
+      },
+      {
+        "label": "D",
+        "text": "has been inactive"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "a1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 접속사 when 뒤에 주어+be동사가 생략된 형태입니다. '오랫동안 작동하지 않을(inactive) 때'라는 의미이므로 형용사 inactive가 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "By the time Chairperson Bates retired, Mulford Asset Management LLC-------- operating its satellite offices in New York and San Diego.",
+    "options": [
+      {
+        "label": "A",
+        "text": "having begun"
+      },
+      {
+        "label": "B",
+        "text": "begins"
+      },
+      {
+        "label": "C",
+        "text": "had begun"
+      },
+      {
+        "label": "D",
+        "text": "has begun"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "v4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'By the time + 과거(retired)'가 오면 주절에는 과거완료(had begun)를 사용합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Tickets to the museum’s special exhibit may be ordered in advance on the Web site------- purchased upon arrival.",
+    "options": [
+      {
+        "label": "A",
+        "text": "or"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "where"
+      },
+      {
+        "label": "D",
+        "text": "since"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "c1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 웹사이트에서 주문하거나(ordered) 또는 도착 시 구매할(purchased) 수 있다는 선택의 문맥이므로 or가 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The CEO expressed concern about potentially-------- operations at the Chicago facility, as it will slow down the company’s production of metal sheets.",
+    "options": [
+      {
+        "label": "A",
+        "text": "suspend"
+      },
+      {
+        "label": "B",
+        "text": "suspending"
+      },
+      {
+        "label": "C",
+        "text": "suspended"
+      },
+      {
+        "label": "D",
+        "text": "suspension"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "g1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 전치사 'about'의 목적어 자리이며, 뒤에 명사(operations)를 목적어로 취하므로 동명사 suspending이 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Mr. Goldwin seems to be the most--------of all the applicants for the project manager position.",
+    "options": [
+      {
+        "label": "A",
+        "text": "qualifies"
+      },
+      {
+        "label": "B",
+        "text": "qualifying"
+      },
+      {
+        "label": "C",
+        "text": "qualified"
+      },
+      {
+        "label": "D",
+        "text": "qualifier"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "pa1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] '가장 적격인, 자격을 갖춘'이라는 의미로 사람을 수식하는 형용사 형태인 qualified가 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Business travel is-------for Shawton Associates by Young-Pyo Kim at Wright Air Transit.",
+    "options": [
+      {
+        "label": "A",
+        "text": "equipped"
+      },
+      {
+        "label": "B",
+        "text": "attributed"
+      },
+      {
+        "label": "C",
+        "text": "coordinated"
+      },
+      {
+        "label": "D",
+        "text": "concurred"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "v2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 주어(출장)가 누구에 의해 '조정되다'라는 의미의 수동태 문맥이므로 coordinated가 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Among the team members in the sales department, Ava Patel has -------- herself by securing contracts with three key clients.",
+    "options": [
+      {
+        "label": "A",
+        "text": "distinguished"
+      },
+      {
+        "label": "B",
+        "text": "adapted"
+      },
+      {
+        "label": "C",
+        "text": "identified"
+      },
+      {
+        "label": "D",
+        "text": "surrounded"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "voc4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'distinguish oneself'는 '두각을 나타내다'라는 의미의 관용구입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Vollmer Airlines’s board approved the extension of the company’s voluntary retirement scheme by--------three months.",
+    "options": [
+      {
+        "label": "A",
+        "text": "the other"
+      },
+      {
+        "label": "B",
+        "text": "another"
+      },
+      {
+        "label": "C",
+        "text": "several"
+      },
+      {
+        "label": "D",
+        "text": "often"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "a4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'another + 숫자 + 기간'은 '추가로 ~만큼 더'라는 의미입니다. ('the other'는 남은 하나, 'several'은 뒤에 복수명사)",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Having spoken Italian for 20 years, Mr. Adessi had difficulty-- ------exclusively in English with his international business partners.",
+    "options": [
+      {
+        "label": "A",
+        "text": "communicate"
+      },
+      {
+        "label": "B",
+        "text": "communication"
+      },
+      {
+        "label": "C",
+        "text": "communicating"
+      },
+      {
+        "label": "D",
+        "text": "communicated"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "g5",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'have difficulty (in) -ing' 구문입니다. '~하는 데 어려움을 겪다'라는 의미입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "With the recent surge in electronic sales, industry analysts are anticipating that the device-to-person-------will soon surpass earlier predictions.",
+    "options": [
+      {
+        "label": "A",
+        "text": "division"
+      },
+      {
+        "label": "B",
+        "text": "fraction"
+      },
+      {
+        "label": "C",
+        "text": "part"
+      },
+      {
+        "label": "D",
+        "text": "ratio"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'device-to-person ratio'는 '1인당 기기 보급 비율'을 의미하는 비즈니스 용어입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Mr. Cooper first won the Salesman of the Year award and----- -surpassed the all-time annual sales record at CarMax.",
+    "options": [
+      {
+        "label": "A",
+        "text": "reluctantly"
+      },
+      {
+        "label": "B",
+        "text": "subsequently"
+      },
+      {
+        "label": "C",
+        "text": "orderly"
+      },
+      {
+        "label": "D",
+        "text": "irregularly"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 상을 받은 '후에' 이어서 기록을 깼다는 시간적 순서를 나타내는 부사 subsequently가 적절합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Evergreen Solutions has expanded strategically into several--- -----markets in Southeast Asia, such as Vietnam and Indonesia.",
+    "options": [
+      {
+        "label": "A",
+        "text": "emerged"
+      },
+      {
+        "label": "B",
+        "text": "emerging"
+      },
+      {
+        "label": "C",
+        "text": "emerge"
+      },
+      {
+        "label": "D",
+        "text": "emerges"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pa1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'emerging markets'는 '신흥 시장'을 뜻하는 토익 빈출 복합 형용사구입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "A partial ceiling collapse occurred in the manufacturing plant- -------which Mr. Weld has worked for the past 15 years.",
+    "options": [
+      {
+        "label": "A",
+        "text": "from"
+      },
+      {
+        "label": "B",
+        "text": "down"
+      },
+      {
+        "label": "C",
+        "text": "in"
+      },
+      {
+        "label": "D",
+        "text": "as"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "ac1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 선행사가 장소(plant)이고, 그 공장 '안에서' 일해온 것이므로 'in which'가 적절합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "A visa application must be submitted to the Embassy of the United States of America at least six months--------the scheduled travel date.",
+    "options": [
+      {
+        "label": "A",
+        "text": "provided that"
+      },
+      {
+        "label": "B",
+        "text": "in advance of"
+      },
+      {
+        "label": "C",
+        "text": "in compliance with"
+      },
+      {
+        "label": "D",
+        "text": "subsequent to"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'in advance of'는 '~보다 앞서서'라는 의미의 복합 전치사입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Workers must--------safety regulations inside the factory to avoid accidents that may cause serious injuries.",
+    "options": [
+      {
+        "label": "A",
+        "text": "comply"
+      },
+      {
+        "label": "B",
+        "text": "devote"
+      },
+      {
+        "label": "C",
+        "text": "observe"
+      },
+      {
+        "label": "D",
+        "text": "adhere"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'observe regulations'는 '규정을 준수하다'라는 의미입니다. (comply, adhere는 전치사와 함께 쓰임)",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Sacrificing.........interests, Ms. Porter resigned as a curator for the Courtney Gallery to become a fulltime housewife.",
+    "options": [
+      {
+        "label": "A",
+        "text": "she"
+      },
+      {
+        "label": "B",
+        "text": "herself"
+      },
+      {
+        "label": "C",
+        "text": "hers"
+      },
+      {
+        "label": "D",
+        "text": "her own"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "a2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'her own interests'는 '그녀 자신의 이익'을 뜻하며, own이 her와 interests 사이에서 강조의 역할을 합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "--------is known about the famous author Mr. Odenath, as he is a notorious recluse.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Few"
+      },
+      {
+        "label": "B",
+        "text": "Nobody"
+      },
+      {
+        "label": "C",
+        "text": "Little"
+      },
+      {
+        "label": "D",
+        "text": "Who"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "p6",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 불가산 명사(지식/정보)를 대신하여 부정적 의미('거의 알려지지 않았다')를 나타내는 대명사 Little이 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Computers on the south side of the room connect to the printer located on the far wall--------the window.",
+    "options": [
+      {
+        "label": "A",
+        "text": "into"
+      },
+      {
+        "label": "B",
+        "text": "opposite"
+      },
+      {
+        "label": "C",
+        "text": "across"
+      },
+      {
+        "label": "D",
+        "text": "throughout"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'opposite the window'는 '창문 맞은편에'라는 의미의 전치사 구문입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Grandma’s Kitchen has opened a third restaurant-------- repeated customer requests for a downtown location.",
+    "options": [
+      {
+        "label": "A",
+        "text": "on behalf of"
+      },
+      {
+        "label": "B",
+        "text": "with regard to"
+      },
+      {
+        "label": "C",
+        "text": "as a result"
+      },
+      {
+        "label": "D",
+        "text": "in response to"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "pr2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'in response to'는 '~에 응하여, 보답하여'라는 의미의 복합 전치사입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The doctor’s writing on the prescription was so illegible that the pharmacist couldn’t read it,--------provide the customer with her medication.",
+    "options": [
+      {
+        "label": "A",
+        "text": "so much"
+      },
+      {
+        "label": "B",
+        "text": "much less"
+      },
+      {
+        "label": "C",
+        "text": "no less than"
+      },
+      {
+        "label": "D",
+        "text": "more or less"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "c4",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'much less'는 '하물며 ~은 더욱 아니다'라는 의미로, 읽지도 못하는데 하물며 약을 조제해줄 리 없다는 문맥입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Flights at Heathrow Airport have been canceled for three------ --days because of the strong winds and heavy rains brought by the storm.",
+    "options": [
+      {
+        "label": "A",
+        "text": "deliberate"
+      },
+      {
+        "label": "B",
+        "text": "alternative"
+      },
+      {
+        "label": "C",
+        "text": "consecutive"
+      },
+      {
+        "label": "D",
+        "text": "intentional"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "a1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'consecutive days'는 '연속되는 날들'을 의미합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Ms. Owens finally brought her laptop to a technician as it had been buzzing------for a few days.",
+    "options": [
+      {
+        "label": "A",
+        "text": "eventually"
+      },
+      {
+        "label": "B",
+        "text": "continuously"
+      },
+      {
+        "label": "C",
+        "text": "specifically"
+      },
+      {
+        "label": "D",
+        "text": "unanimously"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 동사(buzzing)를 수식하여 '지속적으로, 끊임없이'라는 의미를 나타내는 부사 continuously가 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "In order to resolve the company’s solvency issues, both the accounting and sales departments were required to work-------- each other.",
+    "options": [
+      {
+        "label": "A",
+        "text": "cooperating"
+      },
+      {
+        "label": "B",
+        "text": "alongside"
+      },
+      {
+        "label": "C",
+        "text": "jointly"
+      },
+      {
+        "label": "D",
+        "text": "together"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr4",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'alongside each other'는 '서로 나란히, 협력하여'라는 의미로 두 부서가 함께 일해야 한다는 뜻입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Two Bros Moving provides free quotes, but the actual cost may be higher-------- movers discover that your items exceed the weight originally estimated.",
+    "options": [
+      {
+        "label": "A",
+        "text": "through"
+      },
+      {
+        "label": "B",
+        "text": "should"
+      },
+      {
+        "label": "C",
+        "text": "in fact"
+      },
+      {
+        "label": "D",
+        "text": "whichever"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "inv1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 조건절의 if가 생략되면서 조동사 should가 문두로 나간 도치 구문입니다. (If movers should discover...)",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "A new free-trade agreement signed by Malaysia and China will--------the economic relationship between two countries.",
+    "options": [
+      {
+        "label": "A",
+        "text": "administer"
+      },
+      {
+        "label": "B",
+        "text": "solidify"
+      },
+      {
+        "label": "C",
+        "text": "undertake"
+      },
+      {
+        "label": "D",
+        "text": "convince"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "voc1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 관계를 '공고히 하다'라는 의미의 동사 solidify가 문맥상 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Ever since his promotion, Mr. Rogers has had------free time as he has been adapting to his new responsibilities.",
+    "options": [
+      {
+        "label": "A",
+        "text": "none"
+      },
+      {
+        "label": "B",
+        "text": "few"
+      },
+      {
+        "label": "C",
+        "text": "neither"
+      },
+      {
+        "label": "D",
+        "text": "little"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "a4",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 불가산 명사인 time을 수식하면서 문맥상 '거의 없는'이라는 부정적 의미를 나타내는 little이 적절합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Artist Emily Baker was........to find a receptive audience when she exhibited her latest work at Morel Gallery last week.",
+    "options": [
+      {
+        "label": "A",
+        "text": "appointed"
+      },
+      {
+        "label": "B",
+        "text": "pleased"
+      },
+      {
+        "label": "C",
+        "text": "elected"
+      },
+      {
+        "label": "D",
+        "text": "allowed"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "a2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'be pleased to-inf'는 '~하게 되어 기쁘다'라는 감정 형용사 구문입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Having employees evaluate------helps managers determine which staff members understand their own strengths and weaknesses at work.",
+    "options": [
+      {
+        "label": "A",
+        "text": "their"
+      },
+      {
+        "label": "B",
+        "text": "theirs"
+      },
+      {
+        "label": "C",
+        "text": "them"
+      },
+      {
+        "label": "D",
+        "text": "themselves"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "p4",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'evaluate themselves'는 '그들 스스로를 평가하다'라는 의미로, 주어인 employees가 동작의 대상이기도 하므로 재귀대명사가 정답입니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z"
+  }
+]

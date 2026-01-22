@@ -181,23 +181,7 @@ function SentenceCard({
     };
 
     return (
-        <div className="max-w-3xl mx-auto min-h-screen pb-20 pt-2 md:pt-6 px-4 md:px-6">
-            <div className="flex justify-between items-end mb-4 md:mb-6 px-4 md:px-0">
-                <div>
-                    <h2 className="text-xl md:text-2xl font-black italic flex items-center gap-2 text-white">
-                        Listen & Repeat
-                        <span className="text-[10px] bg-indigo-500 text-white px-2 py-0.5 rounded-full not-italic">v3.2</span>
-                    </h2>
-                    <p className="text-indigo-500 text-[10px] font-black uppercase tracking-widest mt-1">
-                        Sentence {index + 1}
-                    </p>
-                </div>
-                <div className="text-right">
-                    <span className="text-indigo-400 font-black text-xl md:text-2xl">{index + 1}</span>
-                    <span className="text-slate-500 font-bold"> / {total}</span>
-                </div>
-            </div>
-
+        <div className="max-w-3xl mx-auto pb-20 pt-2 md:pt-4 px-4 md:px-6">
             <div className="bg-white rounded-[2.5rem] p-6 md:p-8 min-h-[240px] md:min-h-[280px] flex items-center justify-center relative overflow-hidden shadow-2xl mb-6 md:mb-8">
                 <div className={cn("transition-all duration-700 text-center", isBlur ? "blur-sm opacity-50" : "blur-0 opacity-100")}>
                     <p className="text-slate-900 font-black text-2xl leading-tight italic tracking-tight mb-4 ">{data.en}</p>
@@ -287,6 +271,19 @@ export default function ShadowingPractice() {
     useEffect(() => {
         setIsMounted(true);
         if (!setId) return;
+
+        // Load Progress
+        const saved = localStorage.getItem(`shadowing_progress_set_${setId}`);
+        let initialIndex = 0;
+        let initialScore = 0;
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                if (parsed.currentIndex !== undefined) initialIndex = parsed.currentIndex;
+                if (parsed.correctCount !== undefined) initialScore = parsed.correctCount;
+            } catch (e) { console.error(e); }
+        }
+
         // Extract 20 sentences for the set
         const dayData = shadowingData[day] || [];
         const startIdx = (setId - 1) * 20;
@@ -299,6 +296,8 @@ export default function ShadowingPractice() {
             return;
         }
         setSentences(subset);
+        setCurrentIndex(initialIndex);
+        setCorrectCount(initialScore);
         setLoading(false);
     }, [setId, router]);
 
@@ -331,6 +330,7 @@ export default function ShadowingPractice() {
                 total: 20,
                 timestamp: serverTimestamp()
             });
+            localStorage.removeItem(`shadowing_progress_set_${setId}`);
         } catch (error) {
             console.error(error);
         }
@@ -340,6 +340,51 @@ export default function ShadowingPractice() {
 
     return (
         <div className="min-h-screen bg-slate-950">
+            {!isFinished && (
+                <div className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-2xl mb-4">
+                    <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+                        <button
+                            onClick={() => router.push('/homework/part1')}
+                            className="text-slate-400 hover:text-white text-sm font-medium flex items-center gap-1 transition-colors"
+                        >
+                            ✕ Exit
+                        </button>
+
+                        <div className="flex-1 text-center">
+                            <div className="flex flex-col items-center">
+                                <button
+                                    onClick={() => {
+                                        localStorage.setItem(`shadowing_progress_set_${setId}`, JSON.stringify({
+                                            currentIndex,
+                                            correctCount
+                                        }));
+                                        router.push('/homework/part1');
+                                    }}
+                                    className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
+                                >
+                                    <span className="text-[9px] font-black uppercase tracking-widest">SAVE & EXIT</span>
+                                </button>
+                                <span className="text-[10px] font-black tracking-widest text-indigo-500 uppercase block mb-0.5">
+                                    Listen & Repeat <span className="text-[8px] bg-indigo-500/50 text-white px-1.5 py-0.5 rounded-full not-italic ml-1 opacity-70">v3.2</span>
+                                </span>
+                            </div>
+                            <span className="text-sm font-bold text-white">
+                                Sentence {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {sentences.length}
+                            </span>
+                        </div>
+
+                        <div className="w-auto">
+                            <button
+                                onClick={() => router.refresh()}
+                                className="text-[10px] font-bold text-slate-500 hover:text-rose-500 transition-colors"
+                            >
+                                ↺ Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {isFinished ? (
                 <div className="max-w-md mx-auto min-h-[80vh] flex flex-col items-center justify-center text-center p-6">
                     <div className="w-24 h-24 bg-indigo-500/20 rounded-full flex items-center justify-center mb-6 text-indigo-500 shadow-2xl">

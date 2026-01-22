@@ -1,216 +1,141 @@
-# TOEIC 문제 유형 분류 (Pattern Classification)
+# TOEIC Pattern Classification Master Guide (Hyper-Detailed v3.0)
 
-본 문서는 TOEIC 학습 시스템의 각 파트별 문제 분류 기준(Pattern ID)을 정리한 문서입니다.
-
-## 📝 용어 정의 (Term Definitions)
-
-분석 시스템에서 사용하는 데이터 필드의 의미는 다음과 같습니다.
-
-1. **Context Type (지문 상황 유형)**: 지문(대화/담화) 전체의 배경이나 상황을 정의합니다. (Part 3, 4 적용)
-   - 예: "A1. 회의 / 일정 조정", "B2. 주문 / 배송" 등
-2. **Question Type (문제 유형)**: 개별 문제가 묻는 의도나 방식을 정의합니다. (Part 2, 3, 4 적용)
-   - 예: "DETAIL", "ACTION_NEXT", "WHO_LOC" 등
-3. **Classification (문항 분류)**: 문항의 핵심 지식 포인트나 문법/어휘적 성격을 정의합니다. (Part 5, 6, 7 적용)
-   - 예: "P5_PR_CASE", "P6_GRAMMAR", "P7_PURPOSE" 등
+본 문서는 TOEIC Part 5의 모든 문항을 100% 논리적으로 분류하기 위한 최종 지침입니다. AI는 아래 정의된 **'Trigger(트리거)'**와 **'Restriction(제한 사항)'**을 엄격히 준수하여 판단해야 합니다.
 
 ---
 
-## � 파트별 태그 적용 요약표 (Summary Table)
+## [I] Part 5 Grammar Master Rules (n1 ~ inv5)
 
-작업 시 데이터 필드에 입력해야 할 태그 체계 요약입니다.
+### 1. Noun (명사: n1-n5)
+- **n1: Position/Form**
+  - **Trigger:** 보기가 어근이 같은 형태 변형(`proposal, propose, proposing`).
+  - **Restriction:** 빈칸이 `The/A/An` 뒤, 전치사 뒤, `of` 앞, 또는 타동사의 목적어 자리.
+- **n2: Countability/Agreement**
+  - **Trigger:** 보기가 가산/불가산 또는 단/복수 대립.
+  - **Restriction:** 빈칸 앞 힌트(`Every, Each, All, Many, Much`)와 명사의 수를 대조.
+- **n3: Compound Noun**
+  - **Trigger:** 보기에 명사가 있고, 빈칸 앞/뒤에 이미 다른 명사가 존재.
+  - **Restriction:** `contract ____`, `expiration ____` 처럼 두 단어가 합쳐져 의미가 완성되어야 함.
+- **n4: Person vs. General/Thing**
+  - **Trigger:** 보기에 사람(-er, -ist, -ant)과 사물/행위(-ion, -ment) 명사가 동시 존재.
+  - **Restriction:** 주어의 자격/능력 여부나, 동사가 사람에게만 해당하는 동작인지 확인.
+- **n5: Special Noun Forms**
+  - **Trigger:** 명사처럼 안 생긴 명사(-al, -tive, -ing).
+  - **Restriction:** `proposal, alternative, openings, objective` 등 문법적으로 명사 자리임이 확실한데 형태가 특수한 경우.
 
-| 파트 | 분류 레벨 | 태그 종류 (Field) | 주요 태그 예시 | 분석 포인트 |
-| :--- | :--- | :--- | :--- | :--- |
-| **Part 2** | 문항별 | **Question Type** | Who, When, Why, YesNo, Indirect 등 | 의문사 파악 및 우회 응답 대응력 |
-| **Part 3** | 지문별 | **Context Type** | **A~D 시리즈** (A1. 회의, B2. 배송 등) | 대화 상황(배경) 인지 능력 |
-| | 문항별 | **Question Type** | DETAIL, ACTION_NEXT, WHY_REASON 등 | 구체적 정보 및 발화 의도 파악 |
-| **Part 4** | 지문별 | **Context Type** | **A~F 시리즈** (A2. 일정변경, D1. 광고 등) | 1인 담화 상황(상업/공공) 인지 |
-| | 문항별 | **Question Type** | DETAIL, WHO_LOC, WHY_REASON 등 | 핵심 근거 및 장소/대상 추론 |
-| **Part 5** | 문항별 | **Classification** | P5_VB_TENSE, P5_POS_ADJ, P5_VOC_NOUN 등 | 문법 지식 포인트 및 어휘력 |
-| **Part 6** | 지문별 | **Passage Type** | P1_EMAIL, P2_NOTICE, P4_WEB 등 | 문맥 파악 및 지문 종류별 독해 |
-| | 문항별 | **Classification** | P6_GRAMMAR, P6_VOCABULARY, P6_SENTENCE 등 | 글의 흐름과 문장 삽입 능력 |
-| **Part 7** | 지문별 | **Passage Type** | P1_EMAIL, P3_ARTICLE, P5_RECEIPT, P7_TEXT 등 | 정보 검색 속도 및 연계 지문 독해 |
-| | 문항별 | **Classification** | P7_PURPOSE, P7_INFERENCE, P7_INSERTION 등 | 문제 의도(목적/추론/불일치) 분석 |
+### 2. Pronoun (대명사: p1-p6)
+- **p1: Pronoun Case**
+  - **Trigger:** 보기가 주/소유/목적/소유대명사(`we/our/us/ours`).
+  - **Restriction:** 문장 내 성분(주어, 목적어, 전치사 뒤) 판단.
+- **p2: Indefinite Pronoun**
+  - **Trigger:** `one, another, others, the other`.
+  - **Restriction:** 앞에서 언급된 대상의 수와 나머지(Remaining) 개념의 유무 확인.
+- **p3: Demonstrative**
+  - **Trigger:** `this, that, these, those`.
+  - **Restriction:** `those`가 사람(`those who`)을 뜻하는지, `that`이 앞의 단수 명사를 의미상 받는지 확인.
+- **p4: Reflexive Pronoun**
+  - **Trigger:** `-self, -selves`.
+  - **Restriction:** 1. 주어=목적어 일치, 2. 강조(전치사 없이 부사적 사용), 3. 관용구(`by oneself`).
 
----
+### 3. Adjective (형용사: a1-a6)
+- **a1: Modifying Noun**
+  - **Trigger:** 보기에 형색부 혼합(`successive, succession, successfully`).
+  - **Restriction:** 빈칸 뒤에 명사가 있고, 그 명사를 수식하는 한정사/수식어 자리.
+- **a2: Adjective as Complement**
+  - **Trigger:** 2형식(`be, remain, stay, become`) 또는 5형식(`make, find, keep`) 동사 존재.
+  - **Restriction:** 주어나 목적어의 상태를 설명하는 필수 성분 자리.
+- **a3: Participial Adjective (감정/성질)**
+  - **Trigger:** `-ed` vs `-ing` 대립.
+  - **Restriction:** 수식 받는 대상이 감정을 느끼면 `-ed`, 유발하면 `-ing`.
+- **a4: Quantity Agreement**
+  - **Trigger:** `many, much, few, little, each`.
+  - **Restriction:** 수식 받는 명사의 가산성(Countability)과 수(Number) 일치.
+- **a5: Special Adjective (Idiom)**
+  - **Trigger:** 특정 전치사나 to부정사와 짝꿍.
+  - **Restriction:** `be eligible to/for`, `be compatible with` 등 관용적 결합력.
 
-## �💡 Part 3 & 4의 데이터 구조 특징
+### 4. Adverb (부사: av1-av3)
+- **av1: Position**
+  - **Trigger:** 보기에 부사가 포함됨.
+  - **Restriction:** 1. [조동사-본동사 사이], 2. [be동사-p.p./-ing 사이], 3. [완전한 문장 앞/뒤].
+- **av2: Function (수식)**
+  - **Trigger:** 빈칸 뒤에 형용사나 다른 부사가 존재.
+  - **Restriction:** `____ high-quality`, `____ soon` 등 수식 대상이 명확함.
+- **av3: Adverb Vocab/Rules**
+  - **Trigger:** 보기가 뜻이 다른 부사 모음.
+  - **Restriction:** 수치 수식(`approximately`), 접속 부사(`however`), 빈도/시점(`recently`).
 
-Part 3와 Part 4의 개별 문항은 **두 가지 정보**를 동시에 가집니다.
+### 5. Verb (동사: v1-v8)
+- **v1: SV Agreement (수/태/시 중 '수')**
+  - **Trigger:** 보기가 동사의 단수/복수형.
+  - **Restriction:** 주어의 수를 확인하여 가장 먼저 소거되는 근거가 '수'일 때.
+- **v2: Active/Passive Voice (수/태/시 중 '태')**
+  - **Trigger:** `inspect, inspected, be inspected`.
+  - **Restriction:** 빈칸 뒤에 목적어(명사) 유무 + 해석상 주어가 동작을 하는지 당하는지 판단.
+- **v4: Tense (수/태/시 중 '시')**
+  - **Trigger:** 보기가 시제만 대립.
+  - **Restriction:** 문장 내 시점 부사(`next week, since, so far`)와 일치.
+- **v5: Subjunctive Clause (제안/요청)**
+  - **Trigger:** `suggest, recommend, mandate, essential` + `that`절.
+  - **Restriction:** `that`절 내 주어와 상관없이 동사원형(`should` 생략) 원칙.
 
-- **Set 레벨 (Context Type)**: 하나의 지문(3문제 묶음)이 가지는 대표 상황.
-- **Question 레벨 (Question Type)**: 그 지문에 딸린 3개의 문제가 각각 무엇을 묻는지에 대한 유형.
+### 6~8. 준동사 (i, g, pa)
+- **i: Infinitive (to부정사)**
+  - **Trigger:** `to + 원형`. 
+  - **Restriction:** 1. `want, decide`등의 목적어, 2. `in order to` 목적 용법, 3. `ability to` 등 명사 수식.
+- **g: Gerund (동명사)**
+  - **Trigger:** `-ing` 형태가 주어/목적어 자리.
+  - **Restriction:** 전치사 뒤(`upon receiving`), 특정 동사(`suggest, consider`)의 목적어.
+- **pa: Participle (분사)**
+  - **Trigger:** 보기에 `-ing` 와 `p.p.` 가 동사 변형과 혼용.
+  - **Restriction:** 분사구문(`____ checking the list, he found...`) 또는 명사 뒤 수식(`The items ____ last week`).
 
----
+### 9~10. 관계사 및 접속사 (nc, ac, c)
+- **nc: Noun Clause (명사절)**
+  - **Trigger:** `that` vs `what` vs `whether`.
+  - **Restriction:** 타동사의 목적어 자리에서 뒤 문장이 완벽한지(`that`), 불완전한지(`what`) 판단.
+- **ac: Adjective Clause (관계사)**
+  - **Trigger:** `who, which, whom, whose`.
+  - **Restriction:** 1. 선행사 유무, 2. 뒤 문장의 격 성분(주어 유무 등) 판단.
+- **c: Conjunction (접속사/전치사 구분)**
+  - **Trigger:** 보기에 접속사(`because`)와 전치사(`because of`) 혼재.
+  - **Restriction:** 빈칸 뒤에 [주어+동사]가 오는지 [명사만] 오는지 판단.
 
-## Part 2 질의응답 (Question Type)
-- **Who**: 누가 (인물, 직책, 부서)
-- **When**: 언제 (시간, 날짜, 기간)
-- **Where**: 어디서 (장소, 위치, 방향)
-- **Why**: 왜 (이유, 목적)
-- **How**: 어떻게 (방법, 상태, 수량, 가격)
-- **What**: 무엇 (구체적 정보)
-- **YesNo**: 일반 의문문
-- **Choice**: 선택 의문문
-- **Statement**: 평서문
-- **Tag**: 부가 의문문
-- **Negative**: 부정 의문문
-- **Indirect**: 간접 의문문
-
----
-
-## Part 3 (Conversation)
-대화 지문의 상황(Context)과 개별 문제의 유형에 따라 분류됩니다.
-
-### Part 3 지문 상황 유형 (Context Type)
-
-#### A. 회사 내부 업무
-- **A1**: 회의 / 일정 조정
-- **A2**: 프로젝트 / 업무 진행
-- **A3**: 인사 / 휴가 / 근무
-- **A4**: 재무 / 비용 / 승인
-- **A5**: 교육 / 트레이닝
-
-#### B. 고객 / 외부 응대
-- **B1**: 불만 / 문제 제기
-- **B2**: 주문 / 배송
-- **B3**: 환불 / 교환
-- **B4**: 문의 / 안내
-
-#### C. 여행 / 예약
-- **C1**: 항공 / 교통
-- **C2**: 호텔 / 숙박
-- **C3**: 일정 변경 / 취소
-
-#### D. 시설 / 시스템 문제
-- **D1**: 사무기기 고장
-- **D2**: IT / 시스템 오류
-- **D3**: 건물 / 시설 유지보수
-
-### Part 3 문제 유형 (Question Type)
-- **DETAIL**: 구체적 정보 파악
-- **WHO_LOC**: 화자 및 장소 추론
-- **WHAT_WHICH**: 주제 및 목적 파악
-- **WHEN_TIME**: 시점 및 기간 파악
-- **WHY_REASON**: 이유 및 근거 파악
-- **HOW_METHOD**: 수단 및 방법 파악
-- **ACTION_NEXT**: 향후 행동 및 요청
-- **IMPLY_MEANING**: 화자의 의도 파악 (따옴표 문제)
-- **GRAPHIC**: 시각 자료 연계 문제
-
----
-
-## Part 4 (Talk)
-담화 지문의 상황(Context)과 개별 문제의 유형에 따라 분류됩니다.
-
-### Part 4 지문 상황 유형 (Context Type)
-
-#### A. 공지·안내 (Announcements & Notices)
-- **A1 (announcement_general)**: 일반 공지, 변경 안내
-- **A2 (announcement_schedule_change)**: 일정 변경, 연기, 취소
-- **A3 (announcement_facility)**: 시설 이용, 폐쇄, 수리
-- **A4 (announcement_policy)**: 규정, 정책, 절차 변경
-- **A5 (announcement_emergency)**: 긴급, 안전, 경고
-- 👉 *약점 포인트: 이유·대상·시점*
-
-#### B. 회사·업무 내부 방송 (Internal Company Talk)
-- **B1 (company_internal_update)**: 내부 현황 보고
-- **B2 (company_management_message)**: 관리자 메시지
-- **B3 (company_training)**: 교육·워크숍
-- **B4 (company_procedure)**: 업무 절차 설명
-- 👉 *약점 포인트: 누가 / 왜 / 무엇을 하라고?*
-
-#### C. 안내·서비스 설명 (Service Information)
-- **C1 (service_information)**: 서비스 사용법
-- **C2 (customer_instruction)**: 고객 행동 지시
-- **C3 (membership_benefits)**: 혜택·조건 설명
-- **C4 (technical_support)**: 기술·시스템 안내
-- 👉 *약점 포인트: 조건 / 제한 / 대상*
-
-#### D. 광고·홍보 (Advertisements & Promotions)
-- **D1 (advertisement_product)**: 제품 광고
-- **D2 (advertisement_event)**: 행사·이벤트
-- **D3 (advertisement_discount)**: 할인·프로모션
-- **D4 (advertisement_service)**: 서비스 홍보
-- 👉 *약점 포인트: 목적 / 혜택 / 행동 유도*
-
-#### E. 교통·여행·시설 (Transportation & Public Info)
-- **E1 (transportation_schedule)**: 교통 시간
-- **E2 (transportation_delay)**: 지연·변경
-- **E3 (travel_information)**: 여행 안내
-- **E4 (facility_information)**: 공공시설 정보
-- 👉 *약점 포인트: 시간 / 대체 수단 / 이유*
-
-#### F. 이벤트·문화·지역 정보
-- **F1 (event_information)**: 전시·공연
-- **F2 (community_announcement)**: 지역 사회 공지
-- **F3 (public_service)**: 공공 서비스
-
-### Part 4 문제 유형 (Question Type)
-- Part 3와 동일한 기준을 사용합니다. (DETAIL, WHO_LOC 등)
+### 11~15. 특수 구문 (pr, com, s, inv)
+- **pr: Preposition (전치사)**
+  - **Trigger:** 보기가 전치사 모음.
+  - **Restriction:** 시간, 장소 물리적 의미 vs 관용적 숙어(`in addition to`).
+- **com: Comparison (비교)**
+  - **Trigger:** `-er, -est, more, most`.
+  - **Restriction:** `than`이 보이면 비교급, 앞쪽 `the`가 보이면 최상급, `as` 사이는 원급.
+- **s: Subjunctive (가정법)**
+  - **Trigger:** `If`절 유무.
+  - **Restriction:** `If`절 시제와 주절 `would/could/should + have p.p.` 등의 시제 짝궁 맞추기.
+- **inv: Inversion (도치)**
+  - **Trigger:** 주어-동사 순서가 바뀜.
+  - **Restriction:** 1. 부정어(`Never, Hardly`), 2. `Only`, 3. `Should` 가정법 생략 도치.
 
 ---
 
-## Part 5 (Grammar & Vocabulary)
-- **P5_PR_CASE**: 인칭대명사
-- **P5_POS_ADJ / ADV / NOUN**: 품사 자리
-- **P5_VB_TENSE / VOICE / CONCORD / FORM**: 동사 (시제, 태, 수일치, 준동사)
-- **P5_CONJ_PREP / SUB / REL**: 연결어 (전치사, 접속사, 관계사)
-- **P5_VOC_NOUN / VERB / ADJ / ADV**: 어휘
+## [II] Part 5 Vocabulary Master Rules (voc1 ~ voc4)
+
+| ID | Pattern Name | 상세 제한 사항 (AI 판단 기준) |
+| :--- | :--- | :--- |
+| **voc1** | Simple Meaning | 해석을 통해 사전적 정의가 가장 문맥에 자연스러운 것 선택. (Structure Clue 없음) |
+| **voc2** | Collocation | 고착화된 짝궁 관계 (`strong background`, `meet the requirements`, `highly competitive`). |
+| **voc3** | Contextual Nuance | 두 단어가 비슷해 보이나 직무/상황별 전문 용어 차이 (`refer` vs `consult`, `award` vs `reward`). |
+| **voc4** | Idiomatic Phrase | 3단어 이상의 고정 덩어리 (`in a timely manner`, `make an effort to`). |
 
 ---
 
-## Part 6 (Text Completion)
-- **P6_GRAMMAR**: 문법
-- **P6_VOCABULARY**: 어휘
-- **P6_SENTENCE_INSERTION**: 문장 삽입
+## [III] AI 분류 가이드 프롬프트 (Antigravity 전용)
 
----
+AI는 위 규칙을 바탕으로 다음과 같은 알고리즘을 수행해야 합니다.
 
-## Part 7 (Reading Comprehension)
-- **P7_PURPOSE**: 목적
-- **P7_DETAIL**: 세부 내용
-- **P7_NEGATIVE**: 불일치 (NOT true)
-- **P7_INFERENCE**: 추론
-- **P7_VOCABULARY**: 동의어
-- **P7_INSERTION**: 문장 삽입 위치
-- **P7_GRAPHIC**: 시각 자료
-- **P7_LOCATION**: 정보 위치
-
----
-
-### RC Part 6 & 7 지문 종류 (Passage Type)
-
-학생들이 어떤 종류의 글에서 오답이 발생하는지 분석하기 위해 아래와 같이 분류합니다.
-
-#### P1. 서신 (Correspondence)
-- **P1_EMAIL**: 이메일
-- **P1_LETTER**: 편지
-
-#### P2. 공적인 글 (Official Documents)
-- **P2_NOTICE**: 공지 / 안내
-- **P2_MEMO**: 메모 / 사내 메시지
-- **P2_ANNOUNCEMENT**: 발표 / 성명서 (Press Release 포함)
-
-#### P3. 정보 전달 (Informative / Media)
-- **P3_ARTICLE**: 기사
-- **P3_REPORT**: 보고서 / 리뷰
-
-#### P4. 홍보 및 웹 (Marketing / Web)
-- **P4_AD**: 광고 (Web Ad 포함)
-- **P4_WEB**: 웹페이지 / 소개글
-
-#### P5. 비즈니스 양식 (Forms & Records)
-- **P5_FORM**: 양식 (설문, 지원서 등)
-- **P5_RECEIPT**: 영수증 / 송장
-- **P5_SCHEDULE**: 일정표 / 프로그램
-
-#### P6. 규정 및 지침 (Rules & Instructions)
-- **P6_POLICY**: 규정 / 방침
-- **P6_INSTRUCTION**: 지침 / 매뉴얼
-
-#### P7. 대화문 (Conversations)
-- **P7_TEXT**: 문자 메시지 / 채팅 대화
-
-#### P8. 도표 및 시각자료 (Graphics)
-- **P8_CHART**: 도표 / 차트 / 그래프 / 이미지
+1.  **보기 구조 분석:** 보기가 '형태 변형'인가 '의미 대립'인가? -> Grammar vs Vocabulary.
+2.  **문장 스캔:** 빈칸 앞뒤 3단어 이내에 결정적 Clue(관사, 전치사, 수량표현, 2/5형식 동사)가 있는가?
+3.  **패턴 거르기:** 
+    - `the` 뒤라면 `n1`.
+    - `than`이 있다면 `com`.
+    - 동사 자리인데 `-ing`가 보인다면 `v2/v4`.
+4.  **최종 검증:** "이 문제를 틀린 학생은 어떤 지식이 부족한가?" 라는 질문에 대해 "형용사의 비교급 개념 부족"이라고 답할 수 있다면 `com`으로 확정.

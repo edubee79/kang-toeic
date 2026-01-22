@@ -106,6 +106,7 @@ export default function LearnPage() {
             setCurrentIndex(reviewPool[0]);
             setReviewPool(prev => prev.slice(1));
         } else {
+            localStorage.removeItem('voca_learn_progress');
             router.push('/homework/voca');
         }
     };
@@ -117,52 +118,61 @@ export default function LearnPage() {
     const progress = ((words.length - currentIndex - 1 + words.length - reviewPool.length) / totalWords) * 100;
 
     return (
-        <div className="min-h-screen bg-slate-950 p-2 md:p-8">
-            <div className="max-w-2xl mx-auto">
-                {/* Header */}
-                <div className="mb-4 md:mb-8 text-center md:text-left flex justify-between items-start">
-                    <div>
-                        <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
-                            2단계: Learn
-                        </h1>
-                        <p className="text-slate-400 text-sm">
-                            뜻을 확인하면(뒤집으면) 자동으로 복습 목록에 추가됩니다!
-                        </p>
+        <div className="min-h-screen bg-slate-950 flex flex-col">
+            {/* Sticky Header */}
+            <div className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-2xl">
+                <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+                    <button
+                        onClick={() => router.back()}
+                        className="text-slate-400 hover:text-white text-sm font-medium flex items-center gap-1 transition-colors"
+                    >
+                        ✕ Exit
+                    </button>
+
+                    <div className="flex-1 text-center">
+                        <div className="flex flex-col items-center">
+                            <button
+                                onClick={() => {
+                                    if (words.length > 0) {
+                                        localStorage.setItem(`voca_learn_progress`, JSON.stringify({
+                                            words,
+                                            currentIndex,
+                                            reviewPool
+                                        }));
+                                    }
+                                    router.push('/homework/voca');
+                                }}
+                                className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
+                            >
+                                <span className="text-[9px] font-black uppercase tracking-widest">SAVE & EXIT</span>
+                            </button>
+                            <h1 className="text-xs font-black text-indigo-500 uppercase tracking-widest mb-0.5">
+                                Step 2: Learn
+                            </h1>
+                        </div>
+                        <span className="text-xs font-bold text-white">
+                            Word {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {words.length}
+                        </span>
                     </div>
-                    <div className="flex flex-col gap-2 scale-90 origin-top-right">
-                        <Button
-                            variant="ghost"
-                            size="sm"
-                            className="text-slate-500 hover:text-white"
-                            onClick={() => router.back()}
-                        >
-                            ✕ Exit
-                        </Button>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="text-xs border-blue-500/30 text-blue-400 hover:bg-blue-950 hover:text-white"
-                            onClick={() => {
-                                // Save & Exit
-                                if (words.length > 0) {
-                                    localStorage.setItem(`voca_learn_progress`, JSON.stringify({
-                                        words,
-                                        currentIndex,
-                                        reviewPool
-                                    }));
-                                }
-                                router.push('/homework/voca');
-                            }}
-                        >
-                            💾 Save & Exit
-                        </Button>
+
+                    <div className="w-12 md:w-auto">
+                        {/* Placeholder for symmetry */}
                     </div>
+                </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto w-full p-4 md:p-8 flex-1">
+                {/* Info Text */}
+                <div className="mb-6 text-center">
+                    <p className="text-slate-400 text-xs font-medium bg-slate-900/50 py-2 px-4 rounded-full border border-white/5 inline-block">
+                        뜻을 확인하면(뒤집으면) 자동으로 복습 목록에 추가됩니다!
+                    </p>
                 </div>
 
                 {/* Progress */}
                 <div className="mb-6 px-2 md:px-0">
-                    <div className="flex justify-between text-sm mb-2">
-                        <span className="text-slate-400">진행률</span>
+                    <div className="flex justify-between text-[10px] uppercase font-black tracking-widest mb-2">
+                        <span className="text-slate-500">Processing...</span>
                         <span className="text-white font-bold">
                             {currentIndex + 1} / {words.length}
                             {reviewPool.length > 0 && (

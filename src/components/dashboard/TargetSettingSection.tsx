@@ -116,46 +116,37 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         const reqLC = Math.min(100, Math.ceil(newLC / 5));
         const reqRC = Math.min(100, Math.ceil(newRC / 5) + 4); // Keep consistency
 
-        // Distribution Helper
+        // ✅ IMPROVED: Proportional Distribution (More Balanced)
         const distribute = (budget: number, parts: { key: keyof typeof MAX_Q, cap?: number }[]) => {
             const result: Partial<Record<keyof typeof MAX_Q, number>> = {};
-            parts.forEach(p => result[p.key] = 0);
 
-            let remaining = budget;
+            // Calculate total capacity and proportions
+            const totalCapacity = parts.reduce((sum, p) => sum + (p.cap ?? MAX_Q[p.key]), 0);
 
-            // Phase 1: Fill up to Soft Cap (90% or custom)
-            // If Score >= 900, Soft Cap is 100% (No buffer needed)
-            const useSoftCap = totalScore < 900;
-
-            for (const p of parts) {
+            // First pass: Proportional allocation
+            let allocated = 0;
+            parts.forEach(p => {
                 const max = p.cap ?? MAX_Q[p.key];
-                // Exception: Part 1 is always allowed to be maxed
-                const isP1 = p.key === 'p1';
+                const proportion = max / totalCapacity;
+                const target = Math.floor(budget * proportion);
+                result[p.key] = Math.min(target, max);
+                allocated += result[p.key]!;
+            });
 
-                let limit = max;
-                if (useSoftCap && !isP1) {
-                    limit = Math.floor(max * 0.9);
-                }
-
-                const take = Math.min(limit, remaining);
-                result[p.key] = take;
-                remaining -= take;
-            }
-
-            // Phase 2: Overflow (if budget still remains, fill from easiest to hardest up to purely Max)
-            if (remaining > 0) {
+            // Second pass: Distribute remainder evenly
+            let remaining = budget - allocated;
+            let idx = 0;
+            while (remaining > 0 && idx < parts.length * 2) { // Max 2 rounds
                 for (const p of parts) {
+                    if (remaining <= 0) break;
                     const current = result[p.key] || 0;
-                    const max = p.cap ?? MAX_Q[p.key]; // Hard max
-                    const available = max - current;
-
-                    if (available > 0) {
-                        const take = Math.min(available, remaining);
-                        result[p.key] = current + take;
-                        remaining -= take;
+                    const max = p.cap ?? MAX_Q[p.key];
+                    if (current < max) {
+                        result[p.key] = current + 1;
+                        remaining--;
                     }
-                    if (remaining === 0) break;
                 }
+                idx++;
             }
 
             return result;
@@ -191,7 +182,6 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
             p7_single: rcResult.p7_single || 0, p7_double: rcResult.p7_double || 0
         });
     };
-
     // Use Effect to Auto-Allocate on open or when total changes significantly if not set
     // For now, let's just leave it manual or button click to avoid overriding user data annoyingly
 
@@ -269,7 +259,8 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         </Button>
                     </div>
 
-                    {/* Comparison Grid */}                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* Comparison Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* LC Column */}
                         <div className="space-y-3">
                             <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
@@ -518,4 +509,3 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         </Card>
     );
 }
-

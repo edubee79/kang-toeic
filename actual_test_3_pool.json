@@ -1,0 +1,872 @@
+[
+  {
+    "part": 5,
+    "text": "All Benoit employees must follow the policies and procedures set------in the new-hire orientation manual.",
+    "options": [
+      {
+        "label": "A",
+        "text": "over"
+      },
+      {
+        "label": "B",
+        "text": "away"
+      },
+      {
+        "label": "C",
+        "text": "along"
+      },
+      {
+        "label": "D",
+        "text": "forth"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'set forth'는 '(규칙 등을) 제시하다, 발표하다'라는 의미의 구동사입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Renovations on the top floor of the Melaka Building are set to- ------after the elevators are installed in early August.",
+    "options": [
+      {
+        "label": "A",
+        "text": "expire"
+      },
+      {
+        "label": "B",
+        "text": "construct"
+      },
+      {
+        "label": "C",
+        "text": "commence"
+      },
+      {
+        "label": "D",
+        "text": "arrange"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 주어인 리모델링 공사(Renovations)가 8월 초에 '시작될(commence)' 것이라는 문맥이 적절합니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Amulet Media’s writing workshop was concluded with a........- dinner attended by the participants, guest speakers, and organizers of the event.",
+    "options": [
+      {
+        "label": "A",
+        "text": "durable"
+      },
+      {
+        "label": "B",
+        "text": "definite"
+      },
+      {
+        "label": "C",
+        "text": "casual"
+      },
+      {
+        "label": "D",
+        "text": "grateful"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'casual dinner'는 '격식을 차리지 않는 저녁 식사'를 의미합니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "After Dr. Scott’s talk on pain management, participants were encouraged to ask questions--------to the topic.",
+    "options": [
+      {
+        "label": "A",
+        "text": "relevant"
+      },
+      {
+        "label": "B",
+        "text": "relevantly"
+      },
+      {
+        "label": "C",
+        "text": "relevance"
+      },
+      {
+        "label": "D",
+        "text": "relevancy"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "a5",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'relevant to'는 '~와 관련된'이라는 의미의 형용사 구문입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Last year, Entertainment Azusa, Inc., and Sohn Multimedia decided that-------their expertise and resources would increase profits for both organizations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "combining"
+      },
+      {
+        "label": "B",
+        "text": "combined"
+      },
+      {
+        "label": "C",
+        "text": "combines"
+      },
+      {
+        "label": "D",
+        "text": "combine"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "g1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 접속사 that절 내에서 주어 역할을 하는 동명사 combining이 정답입니다. 전문성과 자원을 '결합하는 것'이 이익을 증가시킨다는 문맥입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Nuts from Quintana Orchards can be a------- source of vitamins and minerals for a nutritious diet.",
+    "options": [
+      {
+        "label": "A",
+        "text": "long"
+      },
+      {
+        "label": "B",
+        "text": "various"
+      },
+      {
+        "label": "C",
+        "text": "rich"
+      },
+      {
+        "label": "D",
+        "text": "careful"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'rich source of ~'는 '~의 풍부한 원천'이라는 의미의 연어(Collocation) 표현입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The local government of Philadelphia will provide scholarships--------for qualified immigrants in the city.",
+    "options": [
+      {
+        "label": "A",
+        "text": "exclusively"
+      },
+      {
+        "label": "B",
+        "text": "exclusive"
+      },
+      {
+        "label": "C",
+        "text": "exclusion"
+      },
+      {
+        "label": "D",
+        "text": "exclude"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "av1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 타동사(provide)와 전치사(for) 사이에서 부충 설명을 하는 부사 exclusively(독점적으로, 오로지)가 적절합니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "For the duration of Ms. Dernal's leave, her corporate and private accounts will be overseen by Jian Wu and David Dembo --- ---.",
+    "options": [
+      {
+        "label": "A",
+        "text": "respectively"
+      },
+      {
+        "label": "B",
+        "text": "almost"
+      },
+      {
+        "label": "C",
+        "text": "likewise"
+      },
+      {
+        "label": "D",
+        "text": "even"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "av3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 두 명의 담당자가 각각의 계좌를 관리한다는 의미이므로 '각각'을 뜻하는 respectively가 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Before the laboratory carts can be used to transport------- materials, technicians must wipe all exposed surfaces with a disinfectant cloth.",
+    "options": [
+      {
+        "label": "A",
+        "text": "vague"
+      },
+      {
+        "label": "B",
+        "text": "passive"
+      },
+      {
+        "label": "C",
+        "text": "sensitive"
+      },
+      {
+        "label": "D",
+        "text": "demonstrative"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'sensitive materials'는 '(취급에 주의가 필요한) 민감한 물질'을 의미합니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "All visitors must enter the arena through Gate 3 unless instructed--------by the receiving marshals.",
+    "options": [
+      {
+        "label": "A",
+        "text": "otherwise"
+      },
+      {
+        "label": "B",
+        "text": "furthermore"
+      },
+      {
+        "label": "C",
+        "text": "consequently"
+      },
+      {
+        "label": "D",
+        "text": "indeed"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "av3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'unless instructed otherwise'는 '달리 지시받지 않는 한'이라는 의미의 관용적 표현입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Hotel Adriatico offers plenty of information for guests eager--- -----the ancient city of Machu Picchu in Peru.",
+    "options": [
+      {
+        "label": "A",
+        "text": "will explore"
+      },
+      {
+        "label": "B",
+        "text": "to explore"
+      },
+      {
+        "label": "C",
+        "text": "exploring"
+      },
+      {
+        "label": "D",
+        "text": "to be explored"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "i1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'be eager to-inf'는 '~하기를 갈망하다'라는 의미로, 형용사 eager를 수식하는 to explore가 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Kitchenware producers can--------key markets in Asia directly by participating in this year’s TCB International Trade Show.",
+    "options": [
+      {
+        "label": "A",
+        "text": "proceed"
+      },
+      {
+        "label": "B",
+        "text": "access"
+      },
+      {
+        "label": "C",
+        "text": "march"
+      },
+      {
+        "label": "D",
+        "text": "emphasize"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'access key markets'는 '주요 시장에 진출하다/접근하다'라는 의미입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "------for fuel products is determined mainly based on oil production costs and the level of demand in the global market.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Having priced"
+      },
+      {
+        "label": "B",
+        "text": "To price"
+      },
+      {
+        "label": "C",
+        "text": "Pricing"
+      },
+      {
+        "label": "D",
+        "text": "Priced"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "g1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 문장의 주어 자리이며 '가격을 책정하는 것'이라는 의미의 동명사 Pricing이 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Cars may park along Main St. as long as their engines are turned off, but municipal by-laws don’t allow them to--------even for short periods of time.",
+    "options": [
+      {
+        "label": "A",
+        "text": "abolish"
+      },
+      {
+        "label": "B",
+        "text": "signify"
+      },
+      {
+        "label": "C",
+        "text": "idle"
+      },
+      {
+        "label": "D",
+        "text": "void"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'idle'은 '(엔진 등이) 공전하다, 빈둥거리다'라는 의미로, 정차 중 엔진을 켜두는 행위를 금지한다는 문맥입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Mr. Brightman regularly plays golf at a country club--------to Hans Corporate Center, where he works.",
+    "options": [
+      {
+        "label": "A",
+        "text": "closed"
+      },
+      {
+        "label": "B",
+        "text": "closing"
+      },
+      {
+        "label": "C",
+        "text": "closely"
+      },
+      {
+        "label": "D",
+        "text": "close"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "a5",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'close to'는 '~에 가까운'이라는 의미의 형용사 구문입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The Economy Channel invites financial analysts to its business programs to provide market-------for television viewers.",
+    "options": [
+      {
+        "label": "A",
+        "text": "shares"
+      },
+      {
+        "label": "B",
+        "text": "reforms"
+      },
+      {
+        "label": "C",
+        "text": "earnings"
+      },
+      {
+        "label": "D",
+        "text": "forecasts"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc2",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'market forecasts'는 '시장 전망'이라는 의미의 복합 명사입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Even though most young professionals in the country have stable jobs, ——— get married because of the high cost of raising a family.",
+    "options": [
+      {
+        "label": "A",
+        "text": "many"
+      },
+      {
+        "label": "B",
+        "text": "more"
+      },
+      {
+        "label": "C",
+        "text": "few"
+      },
+      {
+        "label": "D",
+        "text": "whose"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "a4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 문맥상 '직장은 안정적이지만 (결혼 비용 때문에) 결혼하는 사람은 거의 없다'는 부정적 의미가 와야 하므로 few가 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Please inform Mr. Maxwell that he has been shortlisted for the senior copywriter position he--------last week.",
+    "options": [
+      {
+        "label": "A",
+        "text": "interviewed"
+      },
+      {
+        "label": "B",
+        "text": "took over"
+      },
+      {
+        "label": "C",
+        "text": "applied for"
+      },
+      {
+        "label": "D",
+        "text": "accepted"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "voc4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'apply for'는 '~에 지원하다'라는 의미의 구동사입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The disclosure that Jefferson Industries will be closing-------- no surprise to employees who have been suffering from layoffs and budget cuts.",
+    "options": [
+      {
+        "label": "A",
+        "text": "makes of"
+      },
+      {
+        "label": "B",
+        "text": "reaches for"
+      },
+      {
+        "label": "C",
+        "text": "turns away"
+      },
+      {
+        "label": "D",
+        "text": "comes as"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc4",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 'come as a surprise'는 '놀라움으로 다가오다, 놀라운 일이다'라는 의미의 표현입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Because of the strong competition in the airline industry, most passenger carriers now offer--------flights to various destinations around the world.",
+    "options": [
+      {
+        "label": "A",
+        "text": "budgeting"
+      },
+      {
+        "label": "B",
+        "text": "budget"
+      },
+      {
+        "label": "C",
+        "text": "to budget"
+      },
+      {
+        "label": "D",
+        "text": "budgetary"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "n3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'budget flights'는 '저가 항공편'을 뜻하는 복합 명사입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "SOC Publishing Technologies has appointed Stockholm Enterprises as the main ......... of its latest line of heavy printing machines.",
+    "options": [
+      {
+        "label": "A",
+        "text": "distribution"
+      },
+      {
+        "label": "B",
+        "text": "distributing"
+      },
+      {
+        "label": "C",
+        "text": "distributor"
+      },
+      {
+        "label": "D",
+        "text": "distributed"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "n4",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 관사(the)와 형용사(main)의 수식을 받는 명사 자리이며, 문맥상 '유통업자(사람)'를 뜻하는 distributor가 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "After the success of the “Tweet for a Ticket” program, the Azdec Theater continues to develop creative--------to encourage youth to attend the theater.",
+    "options": [
+      {
+        "label": "A",
+        "text": "explanations"
+      },
+      {
+        "label": "B",
+        "text": "limitations"
+      },
+      {
+        "label": "C",
+        "text": "analyses"
+      },
+      {
+        "label": "D",
+        "text": "initiatives"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'creative initiatives'는 '창의적인 계획/주도권'이라는 의미입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Glam & Fab Cosmetics will release new beauty products comprising additions to its --------collection of mineral makeup.",
+    "options": [
+      {
+        "label": "A",
+        "text": "existing"
+      },
+      {
+        "label": "B",
+        "text": "exist"
+      },
+      {
+        "label": "C",
+        "text": "existed"
+      },
+      {
+        "label": "D",
+        "text": "existence"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pa1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 명사(collection)를 수식하는 형용사 역할의 현재분사 existing(기존의)이 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Ms. Kennedy has a successful track record of developing------ --marketing strategies for pharmaceutical companies.",
+    "options": [
+      {
+        "label": "A",
+        "text": "effected"
+      },
+      {
+        "label": "B",
+        "text": "effecting"
+      },
+      {
+        "label": "C",
+        "text": "effectively"
+      },
+      {
+        "label": "D",
+        "text": "effective"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "a1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'effective marketing strategies'는 '효과적인 마케팅 전략'이라는 의미입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Glideline Technologies-------in archiving records and retrieving lost data.",
+    "options": [
+      {
+        "label": "A",
+        "text": "consists"
+      },
+      {
+        "label": "B",
+        "text": "interests"
+      },
+      {
+        "label": "C",
+        "text": "inspects"
+      },
+      {
+        "label": "D",
+        "text": "specializes"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'specialize in'은 '~을 전문으로 하다'라는 의미의 자동사 구문입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The Italian art film Seashore has been --------by several award-giving bodies in Europe for its unique plot and unpredictable ending.",
+    "options": [
+      {
+        "label": "A",
+        "text": "detected"
+      },
+      {
+        "label": "B",
+        "text": "proposed"
+      },
+      {
+        "label": "C",
+        "text": "intended"
+      },
+      {
+        "label": "D",
+        "text": "commended"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "voc1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'be commended for'는 '~로 칭찬받다, 추천받다'라는 의미입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Germany’s most popular home furniture store, Bolkia, is finally expanding into Asia after conducting a year-long-------- study on the market.",
+    "options": [
+      {
+        "label": "A",
+        "text": "visibility"
+      },
+      {
+        "label": "B",
+        "text": "feasibility"
+      },
+      {
+        "label": "C",
+        "text": "ability"
+      },
+      {
+        "label": "D",
+        "text": "durability"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "voc2",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'feasibility study'는 '타당성 조사'라는 의미의 비즈니스 용어입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "------desiring to book time off during August must contact HR with their anticipated vacation days prior to June 30.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Whoever"
+      },
+      {
+        "label": "B",
+        "text": "Much"
+      },
+      {
+        "label": "C",
+        "text": "Anyone"
+      },
+      {
+        "label": "D",
+        "text": "Another"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "p3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'Anyone desiring to ~'는 '~하기를 원하는 누구든지'라는 의미로, 분사구의 수식을 받는 대명사 Anyone이 적절합니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Tomorrow’s session will train participants on -------to prepare containers for overseas shipments.",
+    "options": [
+      {
+        "label": "A",
+        "text": "what"
+      },
+      {
+        "label": "B",
+        "text": "how"
+      },
+      {
+        "label": "C",
+        "text": "that"
+      },
+      {
+        "label": "D",
+        "text": "then"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "nc3",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 'how to-inf'는 '~하는 방법'이라는 의미의 명사구 구조입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Aside from being a popular tourist spot, Jamaica is also,------- -, the home of excellent cooks and delectable cuisine.",
+    "options": [
+      {
+        "label": "A",
+        "text": "remarkable"
+      },
+      {
+        "label": "B",
+        "text": "remarked"
+      },
+      {
+        "label": "C",
+        "text": "remark"
+      },
+      {
+        "label": "D",
+        "text": "remarkably"
+      }
+    ],
+    "correctAnswer": "D",
+    "classification": "av1",
+    "difficulty": 850,
+    "translation": "",
+    "explanation": "[해설] 문장 중간에서 '놀랍게도'라는 의미로 삽입된 부사 remarkably가 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z"
+  }
+]

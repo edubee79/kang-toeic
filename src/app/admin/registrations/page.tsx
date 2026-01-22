@@ -180,18 +180,23 @@ export default function RegistrationsPage() {
     // --- Actions ---
 
     const handleApprove = async (userId: string, userDocId: string) => {
-        if (!confirm("승인하시겠습니까?")) return;
+        console.log('🔵 Approve button clicked:', { userId, userDocId });
+
         try {
             const userRef = doc(db, "Winter_Users", userDocId);
+            console.log('🔵 Updating user:', userRef.path);
+
             await updateDoc(userRef, {
                 status: 'approved',
                 approvedAt: Timestamp.now(),
                 approvedBy: 'admin',
             });
+
+            console.log('✅ User approved successfully');
             fetchRegistrations();
         } catch (error) {
-            console.error("Error approving user:", error);
-            alert('승인 중 오류가 발생했습니다.');
+            console.error("❌ Error approving user:", error);
+            alert('승인 중 오류가 발생했습니다: ' + error);
         }
     };
 

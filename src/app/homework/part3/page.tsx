@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Card } from "@/components/ui/card";
 import { Headphones, PlayCircle, Activity, Lock } from "lucide-react";
@@ -14,19 +15,31 @@ const initialTests = Array.from({ length: 10 }, (_, i) => ({
 }));
 
 export default function Part3LobbyPage() {
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         setIsMounted(true);
+
+        const testParam = searchParams.get('test');
+        if (testParam) {
+            const testId = parseInt(testParam);
+            if (!isNaN(testId) && testId >= 1 && testId <= 10) {
+                router.push(`/homework/part3/test/${testId}`);
+                return;
+            }
+        }
+
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
             setLoading(false);
         };
         fetchAccess();
-    }, []);
+    }, [router, searchParams]);
 
     if (!isMounted || loading) {
         return (

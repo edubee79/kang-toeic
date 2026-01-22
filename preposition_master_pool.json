@@ -1,0 +1,1682 @@
+[
+  {
+    "part": 5,
+    "text": "After reviewing the feedback collected from participants following last quarter’s workshop, the training coordinator adjusted the session format ___ employee preferences identified in the survey.",
+    "options": [
+      {
+        "label": "A",
+        "text": "according to"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "All maintenance requests submitted by tenants will be processed ___ the order in which they are received, unless an urgent safety issue is reported.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The accounting department requires that all invoices be submitted ___ five business days after the service has been completed to avoid delays in payment.",
+    "options": [
+      {
+        "label": "A",
+        "text": "within"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "until"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr1",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr1 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Due to an unexpected increase in material costs earlier this year, the company adjusted its pricing strategy ___ maintain profitability without reducing product quality.",
+    "options": [
+      {
+        "label": "A",
+        "text": "for"
+      },
+      {
+        "label": "B",
+        "text": "to"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Employees are advised to save their work frequently ___ the possibility of temporary system disruptions during the scheduled software upgrade.",
+    "options": [
+      {
+        "label": "A",
+        "text": "because"
+      },
+      {
+        "label": "B",
+        "text": "due to"
+      },
+      {
+        "label": "C",
+        "text": "although"
+      },
+      {
+        "label": "D",
+        "text": "while"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr2",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr2 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The marketing campaign was launched nationwide ___ extensive market research conducted over a six-month period.",
+    "options": [
+      {
+        "label": "A",
+        "text": "following"
+      },
+      {
+        "label": "B",
+        "text": "during"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "All visitors must check in at the reception desk ___ arrival and present a valid form of identification.",
+    "options": [
+      {
+        "label": "A",
+        "text": "at"
+      },
+      {
+        "label": "B",
+        "text": "on"
+      },
+      {
+        "label": "C",
+        "text": "by"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The revised policy applies to all employees ___ those working on short-term contractual assignments.",
+    "options": [
+      {
+        "label": "A",
+        "text": "including"
+      },
+      {
+        "label": "B",
+        "text": "except"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "without"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr3",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr3 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The conference room will remain unavailable ___ further notice due to ongoing renovation work.",
+    "options": [
+      {
+        "label": "A",
+        "text": "until"
+      },
+      {
+        "label": "B",
+        "text": "during"
+      },
+      {
+        "label": "C",
+        "text": "by"
+      },
+      {
+        "label": "D",
+        "text": "within"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The final report was prepared ___ consultation with multiple department heads to ensure accuracy and consistency.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in"
+      },
+      {
+        "label": "B",
+        "text": "with"
+      },
+      {
+        "label": "C",
+        "text": "by"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Customer support representatives must respond to inquiries ___ 24 hours, regardless of the communication channel used.",
+    "options": [
+      {
+        "label": "A",
+        "text": "within"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "until"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr1",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr1 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The project timeline was extended ___ delays caused by supply chain disruptions earlier this month.",
+    "options": [
+      {
+        "label": "A",
+        "text": "because"
+      },
+      {
+        "label": "B",
+        "text": "because of"
+      },
+      {
+        "label": "C",
+        "text": "although"
+      },
+      {
+        "label": "D",
+        "text": "so"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr2",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr2 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Employees are eligible for performance bonuses ___ compliance with the company’s evaluation criteria.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in accordance with"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The shipment was delivered on time ___ severe weather conditions that affected several regional distribution centers.",
+    "options": [
+      {
+        "label": "A",
+        "text": "despite"
+      },
+      {
+        "label": "B",
+        "text": "because of"
+      },
+      {
+        "label": "C",
+        "text": "due"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr2",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr2 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The training materials are accessible online ___ employees who are unable to attend the in-person sessions.",
+    "options": [
+      {
+        "label": "A",
+        "text": "for"
+      },
+      {
+        "label": "B",
+        "text": "to"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The updated software version was released ___ address several security vulnerabilities identified during internal testing.",
+    "options": [
+      {
+        "label": "A",
+        "text": "for"
+      },
+      {
+        "label": "B",
+        "text": "to"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "All candidates must submit their applications ___ the deadline stated in the job posting.",
+    "options": [
+      {
+        "label": "A",
+        "text": "by"
+      },
+      {
+        "label": "B",
+        "text": "until"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "within"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The manager approved the request ___ a detailed explanation provided by the project team.",
+    "options": [
+      {
+        "label": "A",
+        "text": "based on"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company issued a public apology ___ customer complaints regarding billing errors.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in response to"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "although"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The meeting agenda was distributed in advance ___ allow participants sufficient time to prepare.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Employees should refrain from sharing confidential information ___ authorization from their supervisors.",
+    "options": [
+      {
+        "label": "A",
+        "text": "without"
+      },
+      {
+        "label": "B",
+        "text": "except"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The survey results varied significantly ___ departments, reflecting differences in workload and responsibilities.",
+    "options": [
+      {
+        "label": "A",
+        "text": "among"
+      },
+      {
+        "label": "B",
+        "text": "between"
+      },
+      {
+        "label": "C",
+        "text": "within"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The office will be closed ___ national holidays observed by the company.",
+    "options": [
+      {
+        "label": "A",
+        "text": "on"
+      },
+      {
+        "label": "B",
+        "text": "at"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The new policy was implemented ___ the recommendation of external legal advisors.",
+    "options": [
+      {
+        "label": "A",
+        "text": "at"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "for"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The equipment must be inspected regularly ___ ensure compliance with safety regulations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company relocated its headquarters ___ closer proximity to key business partners.",
+    "options": [
+      {
+        "label": "A",
+        "text": "for"
+      },
+      {
+        "label": "B",
+        "text": "to"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The revised contract includes additional clauses ___ protect the interests of both parties.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Employees may request flexible working hours ___ approval from their department managers.",
+    "options": [
+      {
+        "label": "A",
+        "text": "with"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "without"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr1",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr1 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The annual budget was finalized ___ careful consideration of projected expenses.",
+    "options": [
+      {
+        "label": "A",
+        "text": "after"
+      },
+      {
+        "label": "B",
+        "text": "during"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The orientation session will provide new hires ___ an overview of company policies and procedures.",
+    "options": [
+      {
+        "label": "A",
+        "text": "with"
+      },
+      {
+        "label": "B",
+        "text": "to"
+      },
+      {
+        "label": "C",
+        "text": "for"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 700,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "After evaluating several potential vendors and reviewing their long-term service agreements, the procurement team selected a supplier ___ its ability to meet both quality standards and delivery deadlines.",
+    "options": [
+      {
+        "label": "A",
+        "text": "based on"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "due"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company postponed the product launch ___ concerns raised by regulatory authorities regarding labeling requirements.",
+    "options": [
+      {
+        "label": "A",
+        "text": "because of"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "although"
+      },
+      {
+        "label": "D",
+        "text": "so"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr2",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr2 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "All financial statements must be prepared ___ generally accepted accounting principles to ensure regulatory compliance.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in accordance with"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The executive committee approved the merger ___ the potential risks identified during the initial assessment phase.",
+    "options": [
+      {
+        "label": "A",
+        "text": "despite"
+      },
+      {
+        "label": "B",
+        "text": "because of"
+      },
+      {
+        "label": "C",
+        "text": "due"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The revised workflow was introduced ___ an effort to streamline operations and reduce processing time.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "to"
+      },
+      {
+        "label": "D",
+        "text": "with"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Customer data is stored securely ___ prevent unauthorized access and ensure confidentiality.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The consultant submitted a comprehensive report ___ several months of data analysis and on-site observations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "following"
+      },
+      {
+        "label": "B",
+        "text": "during"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The policy revision applies to all departments ___ those operating under independent regional regulations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "except for"
+      },
+      {
+        "label": "B",
+        "text": "despite"
+      },
+      {
+        "label": "C",
+        "text": "including"
+      },
+      {
+        "label": "D",
+        "text": "without"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr3",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr3 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The training session was rescheduled ___ accommodate employees who were unable to attend the original date.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The organization responded promptly ___ media inquiries regarding the recent restructuring announcement.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The final decision was made ___ consultation with legal counsel and senior management.",
+    "options": [
+      {
+        "label": "A",
+        "text": "after"
+      },
+      {
+        "label": "B",
+        "text": "during"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The software update was deployed company-wide ___ minimize disruptions to daily operations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The audit revealed discrepancies ___ multiple financial records maintained across different departments.",
+    "options": [
+      {
+        "label": "A",
+        "text": "among"
+      },
+      {
+        "label": "B",
+        "text": "between"
+      },
+      {
+        "label": "C",
+        "text": "within"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company refrained from issuing a statement ___ complete information was available.",
+    "options": [
+      {
+        "label": "A",
+        "text": "until"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "within"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr3",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr3 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Employees are required to complete annual training sessions ___ compliance with industry safety standards.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "to"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The project proceeded as scheduled ___ minor technical issues encountered during the initial phase.",
+    "options": [
+      {
+        "label": "A",
+        "text": "despite"
+      },
+      {
+        "label": "B",
+        "text": "because of"
+      },
+      {
+        "label": "C",
+        "text": "due"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr2",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr2 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The report was distributed internally ___ senior managers and department heads only.",
+    "options": [
+      {
+        "label": "A",
+        "text": "among"
+      },
+      {
+        "label": "B",
+        "text": "between"
+      },
+      {
+        "label": "C",
+        "text": "within"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The relocation decision was made ___ careful evaluation of long-term operational costs.",
+    "options": [
+      {
+        "label": "A",
+        "text": "after"
+      },
+      {
+        "label": "B",
+        "text": "during"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company implemented stricter security protocols ___ recent incidents involving data breaches.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in response to"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "although"
+      },
+      {
+        "label": "D",
+        "text": "so"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The contract remains valid ___ termination is requested by either party in writing.",
+    "options": [
+      {
+        "label": "A",
+        "text": "until"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "within"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr3",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr3 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The marketing team adjusted its strategy ___ feedback received from focus group participants.",
+    "options": [
+      {
+        "label": "A",
+        "text": "based on"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company operates facilities ___ multiple countries across the Asia-Pacific region.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in"
+      },
+      {
+        "label": "B",
+        "text": "at"
+      },
+      {
+        "label": "C",
+        "text": "on"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The proposal was revised ___ address concerns raised during the board meeting.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The office renovation was completed ___ schedule and within the approved budget.",
+    "options": [
+      {
+        "label": "A",
+        "text": "on"
+      },
+      {
+        "label": "B",
+        "text": "at"
+      },
+      {
+        "label": "C",
+        "text": "during"
+      },
+      {
+        "label": "D",
+        "text": "by"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The agreement was signed ___ mutual consent of both parties involved.",
+    "options": [
+      {
+        "label": "A",
+        "text": "with"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "for"
+      },
+      {
+        "label": "D",
+        "text": "to"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "Employees must log their working hours accurately ___ payroll processing requirements.",
+    "options": [
+      {
+        "label": "A",
+        "text": "in accordance with"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "despite"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The company expanded its services ___ meet increasing customer demand in urban areas.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The internal memo was circulated ___ inform staff of upcoming organizational changes.",
+    "options": [
+      {
+        "label": "A",
+        "text": "to"
+      },
+      {
+        "label": "B",
+        "text": "for"
+      },
+      {
+        "label": "C",
+        "text": "with"
+      },
+      {
+        "label": "D",
+        "text": "in"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The conference was canceled ___ unforeseen circumstances beyond the organizers’ control.",
+    "options": [
+      {
+        "label": "A",
+        "text": "due to"
+      },
+      {
+        "label": "B",
+        "text": "because"
+      },
+      {
+        "label": "C",
+        "text": "although"
+      },
+      {
+        "label": "D",
+        "text": "during"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr2",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr2 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  },
+  {
+    "part": 5,
+    "text": "The system will undergo maintenance ___ the weekend to minimize disruptions to regular business operations.",
+    "options": [
+      {
+        "label": "A",
+        "text": "during"
+      },
+      {
+        "label": "B",
+        "text": "by"
+      },
+      {
+        "label": "C",
+        "text": "until"
+      },
+      {
+        "label": "D",
+        "text": "within"
+      }
+    ],
+    "correctAnswer": "A",
+    "classification": "pr5",
+    "difficulty": 850,
+    "explanation": "[AI 분석] 본 문제는 전치사 pr5 유형을 측정합니다.",
+    "source": "grok-preposition-master",
+    "createdAt": "2026-01-21T19:15:00.000Z"
+  }
+]

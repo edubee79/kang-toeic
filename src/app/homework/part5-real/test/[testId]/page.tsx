@@ -162,7 +162,15 @@ function Part5TestRunnerContent() {
         const score = calculateScore();
         setShowCompletion(true);
 
-        // Save to Firebase (Manager Results)
+        // ✅ Drill mode: Save locally only, do NOT save to Firebase
+        if (isDrillMode) {
+            const newHistory = { ...history, lastScore: score };
+            setHistory(newHistory);
+            localStorage.setItem(`part5_history_test_${testId}`, JSON.stringify(newHistory));
+            return; // Skip Firebase save
+        }
+
+        // Save to Firebase (Real Mode only)
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);

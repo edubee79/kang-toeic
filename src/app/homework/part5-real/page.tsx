@@ -1,25 +1,39 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { part5TestData } from '@/data/toeic/reading/part5/tests';
 import { ChevronRight, Trophy, BookOpen, Timer, Lock } from "lucide-react";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Part5RealLobbyPage() {
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         setIsMounted(true);
+
+        // Check for test parameter and auto-redirect
+        const testParam = searchParams.get('test');
+        if (testParam) {
+            const testId = parseInt(testParam);
+            if (!isNaN(testId) && testId >= 1 && testId <= 10) {
+                router.push(`/homework/part5-real/mode/${testId}`);
+                return;
+            }
+        }
+
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
             setLoading(false);
         };
         fetchAccess();
-    }, []);
+    }, [router, searchParams]);
 
     if (!isMounted || loading) {
         return (

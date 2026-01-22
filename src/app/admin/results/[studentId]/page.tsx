@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 import { TargetSettingSection } from '@/components/dashboard/TargetSettingSection';
 import { UserProfile, getUserProfile } from '@/services/userService';
 import { getWeaknessAnalysis, AnalysisResult } from '@/services/analysisService';
+import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
 
 // Reusing configuration from Student Dashboard for consistency
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
@@ -68,6 +69,7 @@ export default function StudentDetailPage() {
     const [partScores, setPartScores] = useState<Record<string, number>>({}); // New State for Detailed Scores
     const [studentRankings, setStudentRankings] = useState<any[]>([]);
     const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
+    const [weaknessReport, setWeaknessReport] = useState<WeaknessReport | null>(null);
 
     const [pushMessage, setPushMessage] = useState('');
     const [isSending, setIsSending] = useState(false);
@@ -148,6 +150,7 @@ export default function StudentDetailPage() {
 
             // Trigger Analysis in parallel
             getWeaknessAnalysis(resultQueryId).then(setAnalysis).catch(e => console.error("Admin Analysis Error:", e));
+            WeaknessService.analyzeUserWeakness(resultQueryId).then(setWeaknessReport).catch(e => console.error("Admin Weakness Report Error:", e));
             const qResults = query(
                 collection(db, "Manager_Results"),
                 where("studentId", "==", resultQueryId),
@@ -494,23 +497,91 @@ export default function StudentDetailPage() {
                                         <DialogTitle className="text-xl font-bold">
                                             {student?.userName} 학생의 목표 상세 현황
                                         </DialogTitle>
-                                        {student && (
-                                            <TargetSettingSection
-                                                user={student as UserProfile}
-                                                currentStats={{
-                                                    p1: partScores['part1_test'] || 0,
-                                                    p2: partScores['part2_test'] || 0,
-                                                    p3: partScores['part3_test'] || 0,
-                                                    p4: partScores['part4_test'] || 0,
-                                                    p5: partScores['part5_test'] || 0,
-                                                    p6: partScores['part6_test'] || 0,
-                                                    p7_single: partScores['part7_single'] || 0,
-                                                    p7_double: partScores['part7_double'] || 0
-                                                }}
-                                                onUpdate={async (newScore) => {
-                                                    fetchStudentData();
-                                                }}
-                                            />
+                                        {weaknessReport && (
+                                            <div className="mt-4">
+                                                <Card className="bg-slate-900 border-indigo-500/30 p-6 relative overflow-hidden text-inter">
+                                                    <div className="absolute right-0 top-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl"></div>
+                                                    <div className="relative z-10">
+                                                        <div className="mb-6">
+                                                            <p className="text-slate-400 text-sm">
+                                                                목표: <span className="text-white font-bold">{weaknessReport.targetScore}점</span>
+                                                                (LC {weaknessReport.targetLCScore} / RC {weaknessReport.targetRCScore})
+                                                            </p>
+                                                        </div>
+
+                                                        {/* Comparison Grid */}
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                                            {/* LC Column */}
+                                                            <div className="space-y-3">
+                                                                <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
+                                                                {['p1', 'p2', 'p3', 'p4'].map((p) => {
+                                                                    const goal = weaknessReport.targetStats[p].target;
+                                                                    const current = weaknessReport.targetStats[p].average;
+                                                                    const latest = weaknessReport.targetStats[p].latest;
+                                                                    const gap = latest - goal;
+
+                                                                    return (
+                                                                        <div key={p} className="flex items-center text-sm gap-2 font-inter">
+                                                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p}</span>
+                                                                            <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
+                                                                                <div className="flex flex-col items-center min-w-[32px]">
+                                                                                    <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
+                                                                                    <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}</span>
+                                                                                </div>
+                                                                                <div className="flex flex-col items-center min-w-[32px]">
+                                                                                    <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
+                                                                                    <span className="text-white font-bold text-sm tracking-tight">{current}</span>
+                                                                                </div>
+                                                                                <div className="flex flex-col items-center min-w-[32px]">
+                                                                                    <span className="text-slate-500 text-[9px] mb-0.5">최근</span>
+                                                                                    <span className={cn("font-bold text-sm tracking-tight", latest >= goal ? "text-emerald-400" : "text-rose-400")}>{latest}</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <span className={cn("text-[11px] w-10 text-right font-black flex-shrink-0 font-inter", gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                                                                {gap !== 0 ? (gap > 0 ? `+${gap}` : gap) : '-'}
+                                                                            </span>
+                                                                        </div>
+                                                                    )
+                                                                })}
+                                                            </div>
+
+                                                            {/* RC Column */}
+                                                            <div className="space-y-3">
+                                                                <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
+                                                                {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
+                                                                    const goal = weaknessReport.targetStats[p].target;
+                                                                    const current = weaknessReport.targetStats[p].average;
+                                                                    const latest = weaknessReport.targetStats[p].latest;
+                                                                    const gap = latest - goal;
+
+                                                                    return (
+                                                                        <div key={p} className="flex items-center text-sm gap-2 font-inter">
+                                                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7_', 'P7 ').replace('single', 'S').replace('double', 'D')}</span>
+                                                                            <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
+                                                                                <div className="flex flex-col items-center min-w-[32px]">
+                                                                                    <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
+                                                                                    <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}</span>
+                                                                                </div>
+                                                                                <div className="flex flex-col items-center min-w-[32px]">
+                                                                                    <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
+                                                                                    <span className="text-white font-bold text-sm tracking-tight">{current}</span>
+                                                                                </div>
+                                                                                <div className="flex flex-col items-center min-w-[32px]">
+                                                                                    <span className="text-slate-500 text-[9px] mb-0.5">최근</span>
+                                                                                    <span className={cn("font-bold text-sm tracking-tight", latest >= goal ? "text-emerald-400" : "text-rose-400")}>{latest}</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <span className={cn("text-[11px] w-10 text-right font-black flex-shrink-0 font-inter", gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                                                                {gap !== 0 ? (gap > 0 ? `+${gap}` : gap) : '-'}
+                                                                            </span>
+                                                                        </div>
+                                                                    )
+                                                                })}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </Card>
+                                            </div>
                                         )}
                                     </DialogContent>
                                 </Dialog>

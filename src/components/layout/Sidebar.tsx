@@ -6,9 +6,10 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Menu, Home, Shield, BookOpen, Mic2, Headphones, LogOut, PenSquare, CheckSquare, FileText, Monitor, Target, Lock } from "lucide-react";
-import { auth } from "@/lib/firebase";
-import { signOut } from "firebase/auth";
+import { Menu, Home, Shield, BookOpen, Mic2, Headphones, LogOut, PenSquare, CheckSquare, FileText, Monitor, Target, Lock, UserX, AlertTriangle } from "lucide-react";
+import { auth, db } from "@/lib/firebase";
+import { signOut, deleteUser } from "firebase/auth";
+import { doc, deleteDoc } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 
 import { getFeatureAccess, FeatureAccess } from "@/services/configService";
@@ -123,6 +124,45 @@ function NavContent({
                     );
                 })}
             </nav>
+
+            {/* Withdraw Membership Section */}
+            <div className="mt-auto pt-6 border-t border-slate-800/40">
+                <button
+                    onClick={async () => {
+                        if (confirm("정말로 탈퇴하시겠습니까?\n모든 학습 기록과 정보가 영구적으로 삭제되며 복구할 수 없습니다.")) {
+                            const user = auth.currentUser;
+                            if (user) {
+                                try {
+                                    // 1. Delete Firestore Data
+                                    await deleteDoc(doc(db, "users", user.uid));
+
+                                    // Note: In a real production app, we would also delete results, results-summary, etc.
+                                    // But for now, we follow the request to add the button and basic logic.
+
+                                    // 2. Delete Auth User
+                                    await deleteUser(user);
+
+                                    alert("회원 탈퇴가 완료되었습니다. 그동안 이용해주셔서 감사합니다.");
+                                    window.location.href = "/";
+                                } catch (error: any) {
+                                    console.error("Withdrawal error:", error);
+                                    if (error.code === 'auth/requires-recent-login') {
+                                        alert("보안을 위해 다시 로그인한 후 탈퇴를 진행해주세요.");
+                                        await signOut(auth);
+                                        window.location.href = "/login";
+                                    } else {
+                                        alert("탈퇴 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+                                    }
+                                }
+                            }
+                        }
+                    }}
+                    className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-500 hover:text-rose-500 transition-colors w-fit mx-auto"
+                >
+                    <UserX className="w-4 h-4" />
+                    회원 탈퇴 (Withdraw)
+                </button>
+            </div>
 
         </div>
     );

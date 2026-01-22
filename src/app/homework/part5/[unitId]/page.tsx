@@ -167,6 +167,7 @@ export default function Part5Quiz() {
             console.error("Error saving results:", error);
         } finally {
             setSubmitting(false);
+            localStorage.removeItem(`grammar_mission_${unitId}`);
         }
     };
 
@@ -280,97 +281,114 @@ export default function Part5Quiz() {
     if (!currentQ) return null;
 
     return (
-        <div className="w-full max-w-2xl mx-auto min-h-[80vh] flex flex-col pt-4 pb-20 px-0 md:px-4">
-            {/* Header with Exit Buttons */}
-            <div className="flex justify-between items-center mb-4 px-4 md:px-0">
-                <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => router.back()}
-                    className="text-slate-500 hover:text-slate-300 -ml-2"
-                >
-                    ✕ Exit
-                </Button>
+        <div className="min-h-screen bg-slate-950 flex flex-col">
+            {/* Sticky Header */}
+            <div className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-2xl">
+                <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+                    <button
+                        onClick={() => router.back()}
+                        className="text-slate-400 hover:text-white text-sm font-medium flex items-center gap-1 transition-colors"
+                    >
+                        ✕ Exit
+                    </button>
 
-                <Button
-                    size="sm"
-                    variant="outline"
-                    className="text-xs border-indigo-500/30 text-indigo-400 hover:bg-indigo-950 hover:text-white"
-                    onClick={() => {
-                        // Save & Exit
-                        if (currentIndex > 0) {
-                            localStorage.setItem(`grammar_mission_${unitId}`, JSON.stringify({
-                                logs,
-                                score,
-                                currentIndex,
-                                elapsedTime
-                            }));
-                        }
-                        router.push('/homework/part5');
-                    }}
-                >
-                    💾 Save & Exit
-                </Button>
+                    <div className="flex-1 text-center">
+                        <div className="flex flex-col items-center">
+                            <button
+                                onClick={() => {
+                                    if (currentIndex > 0) {
+                                        localStorage.setItem(`grammar_mission_${unitId}`, JSON.stringify({
+                                            logs,
+                                            score,
+                                            currentIndex,
+                                            elapsedTime
+                                        }));
+                                    }
+                                    router.push('/homework/part5');
+                                }}
+                                className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
+                            >
+                                <span className="text-[9px] font-black uppercase tracking-widest">SAVE & EXIT</span>
+                            </button>
+                            <h1 className="text-[10px] font-black text-indigo-500 uppercase tracking-widest mb-0.5">
+                                Grammar Mission
+                            </h1>
+                        </div>
+                        <span className="text-sm font-bold text-white">
+                            Question {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {questions.length}
+                        </span>
+                    </div>
+
+                    <div className="w-16 text-right">
+                        <div className="text-[10px] font-bold text-slate-500 flex items-center justify-end gap-1">
+                            <Timer className="w-3 h-3" />
+                            <span>{formatTime(elapsedTime)}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="w-full bg-slate-800 h-1.5 rounded-full mb-8 overflow-hidden">
-                <div
-                    className="bg-indigo-500 h-full transition-all duration-500 ease-out"
-                    style={{ width: `${progress}%` }}
-                ></div>
-            </div>
+            <div className="w-full max-w-2xl mx-auto pt-4 pb-20 px-4">
 
-            <div className="flex-1 px-4 md:px-0">
-                <div className="mb-8 pl-1 relative">
-                    <span className="absolute -left-4 -top-6 text-[8rem] font-black text-slate-800/20 italic -z-10 leading-none select-none">
-                        {String(currentIndex + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-indigo-500 font-black text-5xl italic tracking-tighter leading-none">
-                        {String(currentIndex + 1).padStart(2, '0')}
-                    </span>
-                    <p className="text-lg font-bold mt-6 leading-relaxed text-slate-200 min-h-[100px]">
-                        {currentQ.question}
+                <div className="w-full bg-slate-800 h-1.5 rounded-full mb-8 overflow-hidden">
+                    <div
+                        className="bg-indigo-500 h-full transition-all duration-500 ease-out"
+                        style={{ width: `${progress}%` }}
+                    ></div>
+                </div>
+
+                <div className="flex-1 px-4 md:px-0">
+                    <div className="mb-8 pl-1 relative">
+                        <span className="absolute -left-4 -top-6 text-[8rem] font-black text-slate-800/20 italic -z-10 leading-none select-none">
+                            {String(currentIndex + 1).padStart(2, '0')}
+                        </span>
+                        <span className="text-indigo-500 font-black text-5xl italic tracking-tighter leading-none">
+                            {String(currentIndex + 1).padStart(2, '0')}
+                        </span>
+                        <p className="text-lg font-bold mt-6 leading-relaxed text-slate-200 min-h-[100px]">
+                            {currentQ.question}
+                        </p>
+                    </div>
+
+                    <div className="grid gap-3">
+                        {['a', 'b', 'c', 'd'].map(key => (
+                            <button
+                                key={key}
+                                onClick={() => handleAnswer(key)}
+                                className="w-full p-5 bg-slate-800 border border-slate-700 rounded-2xl text-left font-bold hover:bg-slate-700 active:scale-[0.98] transition-all flex items-center group shadow-lg"
+                            >
+                                <span className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center mr-4 text-xs text-indigo-400 font-black border border-slate-700 group-hover:border-indigo-500 shrink-0 transition-colors uppercase">
+                                    {key}
+                                </span>
+                                <span className="text-slate-200 text-sm">{currentQ.options[key]}</span>
+                                <ChevronRight className="ml-auto w-4 h-4 text-slate-600 group-hover:text-white opacity-0 group-hover:opacity-100 transition-all" />
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mt-8 text-center">
+                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                        {(function () {
+                            const UNIT_TITLES: Record<string, string> = {
+                                "Unit_00_Structure": "문장 구조와 5형식",
+                                "Unit_01_Noun": "명사 (Noun)",
+                                "Unit_02_Pronoun": "대명사 (Pronoun)",
+                                "Unit_03_Adjective": "형용사 (Adjective)",
+                                "Unit_04_Adverb": "부사 (Adverb)",
+                                "Unit_05_Preposition": "전치사 (Preposition)",
+                                "Unit_06_Verb": "동사의 시제와 태",
+                                "Unit_07_To_Infinitive": "To 부정사",
+                                "Unit_08_Gerund": "동명사 (Gerund)",
+                                "Unit_09_Participle": "분사 (Participle)",
+                                "Unit_10_Adverb_Conjunctions": "부사절 접속사",
+                                "Unit_11_Relative_Clauses": "관계대명사",
+                                "Unit_12_Noun_Clauses": "명사절 접속사"
+                            };
+                            return UNIT_TITLES[unitId] || unitId.replace(/_/g, ' ');
+                        })()}
                     </p>
                 </div>
-
-                <div className="grid gap-3">
-                    {['a', 'b', 'c', 'd'].map(key => (
-                        <button
-                            key={key}
-                            onClick={() => handleAnswer(key)}
-                            className="w-full p-5 bg-slate-800 border border-slate-700 rounded-2xl text-left font-bold hover:bg-slate-700 active:scale-[0.98] transition-all flex items-center group shadow-lg"
-                        >
-                            <span className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center mr-4 text-xs text-indigo-400 font-black border border-slate-700 group-hover:border-indigo-500 shrink-0 transition-colors uppercase">
-                                {key}
-                            </span>
-                            <span className="text-slate-200 text-sm">{currentQ.options[key]}</span>
-                            <ChevronRight className="ml-auto w-4 h-4 text-slate-600 group-hover:text-white opacity-0 group-hover:opacity-100 transition-all" />
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            <div className="mt-8 text-center">
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-                    {(function () {
-                        const UNIT_TITLES: Record<string, string> = {
-                            "Unit_00_Structure": "문장 구조와 5형식",
-                            "Unit_01_Noun": "명사 (Noun)",
-                            "Unit_02_Pronoun": "대명사 (Pronoun)",
-                            "Unit_03_Adjective": "형용사 (Adjective)",
-                            "Unit_04_Adverb": "부사 (Adverb)",
-                            "Unit_05_Preposition": "전치사 (Preposition)",
-                            "Unit_06_Verb": "동사의 시제와 태",
-                            "Unit_07_To_Infinitive": "To 부정사",
-                            "Unit_08_Gerund": "동명사 (Gerund)",
-                            "Unit_09_Participle": "분사 (Participle)",
-                            "Unit_10_Adverb_Conjunctions": "부사절 접속사",
-                            "Unit_11_Relative_Clauses": "관계대명사",
-                            "Unit_12_Noun_Clauses": "명사절 접속사"
-                        };
-                        return UNIT_TITLES[unitId] || unitId.replace(/_/g, ' ');
-                    })()}
-                </p>
             </div>
         </div>
     );
