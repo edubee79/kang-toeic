@@ -48,6 +48,8 @@ const HOMEWORK_COLS = [
 
 import { generateWeeklyReview } from '@/services/weaknessGenerator';
 
+import { isAdmin } from '@/lib/adminAuth';
+
 export default function AssignHomeworkPage() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
@@ -60,8 +62,22 @@ export default function AssignHomeworkPage() {
     const [selections, setSelections] = useState<{ [key: string]: string }>({});
 
     useEffect(() => {
-        fetchClasses();
-        fetchAssignments();
+        const checkAdmin = () => {
+            const userData = localStorage.getItem('toeic_user');
+            if (!userData) {
+                router.replace('/login');
+                return;
+            }
+            const user = JSON.parse(userData);
+            if (!isAdmin(user.username)) {
+                alert("관리자 권한이 없습니다.");
+                router.replace('/');
+                return;
+            }
+            fetchClasses();
+            fetchAssignments();
+        };
+        checkAdmin();
     }, []);
 
     const fetchClasses = async () => {

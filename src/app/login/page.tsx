@@ -84,13 +84,7 @@ export default function LoginPage() {
         }
     };
 
-    // DEBUG: Emergency bypass
-    const handleGuestLogin = () => {
-        const dummyUser = { username: 'Guest', role: 'student', status: 'approved', name: '게스트' };
-        localStorage.setItem('toeic_user', JSON.stringify(dummyUser));
-        window.dispatchEvent(new Event('storage'));
-        router.push('/');
-    };
+
 
     return (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
@@ -164,12 +158,6 @@ export default function LoginPage() {
                             회원가입
                         </Link>
                     </p>
-                    <button
-                        onClick={handleGuestLogin}
-                        className="mt-4 text-[10px] text-slate-700 hover:text-slate-500 underline"
-                    >
-                        Dev: Bypass Login
-                    </button>
                 </CardFooter>
             </Card>
         </div>

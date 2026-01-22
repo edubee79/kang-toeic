@@ -53,14 +53,14 @@ function NavContent({
 
     return (
         <div className="flex flex-col h-full bg-[#0B0F1A] text-white p-6 border-r border-indigo-500/10 shadow-[4px_0_24px_rgba(0,0,0,0.5)]">
-            <div className="mb-10 flex items-center gap-3 px-2">
+            <Link href="/" className="mb-10 flex items-center gap-3 px-2 hover:opacity-80 transition-opacity">
                 <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
                     <Target className="w-5 h-5 text-white" />
                 </div>
                 <h1 className="text-xl font-black italic tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-200">
                     KANGS TOEIC
                 </h1>
-            </div>
+            </Link>
 
             <nav className="flex-1 space-y-2 overflow-y-auto max-md:no-scrollbar pr-1">
                 {menuItems.map((item: any, index) => {

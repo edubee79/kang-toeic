@@ -45,6 +45,22 @@ export default function Part5Quiz() {
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
 
+    // Load Progress
+    useEffect(() => {
+        const savedProgress = localStorage.getItem(`grammar_mission_${unitId}`);
+        if (savedProgress) {
+            try {
+                const parsed = JSON.parse(savedProgress);
+                if (parsed.logs) setLogs(parsed.logs);
+                if (parsed.score !== undefined) setScore(parsed.score);
+                if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
+                if (parsed.elapsedTime !== undefined) setElapsedTime(parsed.elapsedTime);
+            } catch (e) {
+                console.error("Failed to load progress", e);
+            }
+        }
+    }, [unitId]);
+
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
@@ -256,21 +272,7 @@ export default function Part5Quiz() {
         );
     }
 
-    // Load Progress
-    useEffect(() => {
-        const savedProgress = localStorage.getItem(`grammar_mission_${unitId}`);
-        if (savedProgress) {
-            try {
-                const parsed = JSON.parse(savedProgress);
-                if (parsed.logs) setLogs(parsed.logs);
-                if (parsed.score !== undefined) setScore(parsed.score);
-                if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
-                if (parsed.elapsedTime !== undefined) setElapsedTime(parsed.elapsedTime);
-            } catch (e) {
-                console.error("Failed to load progress", e);
-            }
-        }
-    }, [unitId]);
+
 
     // ... (rest of code)
 

@@ -13,6 +13,7 @@ import { Card } from '@/components/ui/card';
 import { cn } from "@/lib/utils";
 
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { isAdmin } from '@/lib/adminAuth';
 
 export default function Dashboard() {
     const [user, setUser] = useState<any>(null);
@@ -152,11 +153,13 @@ export default function Dashboard() {
                     <p className="text-xs text-slate-500">{user?.className || user?.userClass || '배정 전'}반 {isPending && <span className="text-amber-500">(승인 대기중)</span>}</p>
                 </div>
                 {/* Dev Admin Access */}
-                <div className="absolute top-4 left-4 opacity-50 hover:opacity-100">
-                    <Link href="/admin/dashboard">
-                        <Button variant="ghost" size="sm" className="text-xs text-slate-600">🛠 Admin</Button>
-                    </Link>
-                </div>
+                {isAdmin(user?.username) && (
+                    <div className="absolute top-4 left-4 opacity-50 hover:opacity-100">
+                        <Link href="/admin/dashboard">
+                            <Button variant="ghost" size="sm" className="text-xs text-slate-600">🛠 Admin</Button>
+                        </Link>
+                    </div>
+                )}
             </div>
 
             {isPending && (

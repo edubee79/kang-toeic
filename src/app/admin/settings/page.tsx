@@ -10,6 +10,8 @@ import { Loader2, ArrowLeft, Shield, Save, Lock, Zap, BookOpen, PenSquare, Chevr
 import Link from 'next/link';
 import { getFeatureAccess, setFeatureAccess, FeatureAccess } from '@/services/configService';
 
+import { isAdmin } from '@/lib/adminAuth';
+
 export default function AdminSettingsPage() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -30,7 +32,21 @@ export default function AdminSettingsPage() {
     });
 
     useEffect(() => {
-        fetchSettings();
+        const checkAdmin = () => {
+            const userData = localStorage.getItem('toeic_user');
+            if (!userData) {
+                router.replace('/login');
+                return;
+            }
+            const user = JSON.parse(userData);
+            if (!isAdmin(user.username)) {
+                alert("관리자 권한이 없습니다.");
+                router.replace('/');
+                return;
+            }
+            fetchSettings();
+        };
+        checkAdmin();
     }, []);
 
     const fetchSettings = async () => {

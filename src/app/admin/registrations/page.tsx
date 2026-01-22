@@ -38,7 +38,11 @@ import { CheckCircle2, XCircle, Upload, Search, Loader2, ArrowLeft, Trash2, Filt
 import { parseExcelFile, validateExcelData, type ExcelRow } from '@/lib/excel';
 import type { User } from '@/types/user';
 
+import { useRouter } from 'next/navigation';
+import { isAdmin } from '@/lib/adminAuth';
+
 export default function RegistrationsPage() {
+    const router = useRouter();
     const [registrations, setRegistrations] = useState<User[]>([]);
     const [filteredRegistrations, setFilteredRegistrations] = useState<User[]>([]);
     const [classes, setClasses] = useState<{ name: string }[]>([]); // New: Classes state
@@ -68,7 +72,21 @@ export default function RegistrationsPage() {
     const [uploadResult, setUploadResult] = useState<{ matched: number; unmatched: number } | null>(null);
 
     useEffect(() => {
-        fetchInitialData();
+        const checkAdmin = () => {
+            const userData = localStorage.getItem('toeic_user');
+            if (!userData) {
+                router.replace('/login');
+                return;
+            }
+            const user = JSON.parse(userData);
+            if (!isAdmin(user.username)) {
+                alert("관리자 권한이 없습니다.");
+                router.replace('/');
+                return;
+            }
+            fetchInitialData();
+        };
+        checkAdmin();
     }, []);
 
     useEffect(() => {

@@ -35,6 +35,8 @@ ChartJS.register(
     Legend
 );
 
+import { isAdmin } from '@/lib/adminAuth';
+
 export default function AdminDashboard() {
     const [stats, setStats] = useState({
         totalStudents: 0,
@@ -55,6 +57,12 @@ export default function AdminDashboard() {
             const userData = localStorage.getItem('toeic_user');
             if (!userData) {
                 router.replace('/login');
+                return;
+            }
+            const user = JSON.parse(userData);
+            if (!isAdmin(user.username)) {
+                alert("관리자 권한이 없습니다.");
+                router.replace('/');
                 return;
             }
             fetchData();
