@@ -48,6 +48,7 @@ export default function MockTest_LC_Set10({ onFinishLC }: Props) {
     // Audio Control (Starting once at the beginning) - User requested no pausing
     const startExam = () => {
         if (audioRef.current) {
+            audioRef.current.currentTime = 5; // Skip intro (YBM etc.)
             audioRef.current.play();
             setIsPlaying(true);
         }
