@@ -12,7 +12,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
-import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload, Trophy } from "lucide-react";
+import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload, Trophy, BarChart3 } from "lucide-react";
 import * as XLSX from 'xlsx';
 
 import { Bar } from 'react-chartjs-2';
@@ -323,6 +323,20 @@ export default function AdminDashboard() {
                         <CardContent>
                             <div className="text-4xl font-black text-slate-700 group-hover:text-rose-600">RESET</div>
                             <p className="text-xs font-medium mt-1 text-slate-400 group-hover:text-rose-400">재응시 초기화 및 기록 삭제</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                <Link href="/admin/mock-report" className="col-span-1">
+                    <Card className="border-none shadow-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors cursor-pointer group">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-indigo-200 group-hover:text-white flex items-center gap-2">
+                                <BarChart3 className="w-4 h-4" /> 모의고사 성적
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black group-hover:scale-105 transition-transform">REPORT</div>
+                            <p className="text-xs font-medium mt-1 text-indigo-200">반별 성적 일람 및 석차 확인</p>
                         </CardContent>
                     </Card>
                 </Link>

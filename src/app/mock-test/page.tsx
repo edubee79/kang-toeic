@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Clock, HelpCircle, AlertCircle, Monitor, PlayCircle, Lock, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { db } from '@/lib/firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 
 interface TestAttempt {
     status: 'completed' | 'started' | 'none';
@@ -24,25 +26,44 @@ export default function MockTestLobby() {
 
     useEffect(() => {
         const init = async () => {
-            // Check screen size
-            const checkScreen = () => {
-                setIsMobile(window.innerWidth < 1024);
-            };
-            checkScreen();
-            window.addEventListener('resize', checkScreen);
+            try {
+                // Check screen size
+                const checkScreen = () => {
+                    setIsMobile(window.innerWidth < 1024);
+                };
+                checkScreen();
+                const resizeListener = () => checkScreen();
+                window.addEventListener('resize', resizeListener);
 
-            // Load attempts
-            const savedAttempts = localStorage.getItem('mock_test_attempts');
-            if (savedAttempts) {
-                setAttempts(JSON.parse(savedAttempts));
+                // 1. Fetch Access Control First
+                const accessData = await getFeatureAccess();
+                setAccess(accessData);
+
+                // 2. Fetch DB Attempts
+                const userStr = localStorage.getItem('toeic_user');
+                if (userStr) {
+                    const user = JSON.parse(userStr);
+                    const userId = user.userId || user.uid;
+
+                    const attemptsRef = collection(db, "MockTestAttempts");
+                    const q = query(attemptsRef, where("userId", "==", userId));
+                    const snapshot = await getDocs(q);
+
+                    const dbAttempts: Record<string, TestAttempt> = {};
+                    snapshot.forEach(doc => {
+                        const data = doc.data();
+                        dbAttempts[`full-${data.testId}`] = {
+                            status: data.status === 'in_progress' ? 'started' : 'completed',
+                            date: data.date
+                        };
+                    });
+                    setAttempts(dbAttempts);
+                }
+            } catch (error) {
+                console.error("Initialization error:", error);
+            } finally {
+                setLoading(false);
             }
-
-            // Fetch Access Control
-            const accessData = await getFeatureAccess();
-            setAccess(accessData);
-            setLoading(false);
-
-            return () => window.removeEventListener('resize', checkScreen);
         };
         init();
     }, []);
@@ -208,16 +229,23 @@ export default function MockTestLobby() {
                                                             Locked (Range Exceeded)
                                                         </Button>
                                                     ) : isCompleted ? (
-                                                        <Button
-                                                            onClick={() => handleStartTest('full', test.id)}
-                                                            className="w-full h-14 bg-emerald-600/10 hover:bg-emerald-600 text-emerald-500 hover:text-white border border-emerald-600/30 rounded-2xl font-black italic tracking-widest uppercase transition-all"
-                                                        >
-                                                            Retake Test
-                                                        </Button>
+                                                        <div className="flex flex-col gap-2">
+                                                            <Button
+                                                                onClick={() => router.push(`/mock-test/full/${test.id}/result`)}
+                                                                className="w-full h-14 bg-emerald-600/10 hover:bg-emerald-600 text-emerald-500 hover:text-white border border-emerald-600/30 rounded-2xl font-black italic tracking-widest uppercase transition-all"
+                                                            >
+                                                                View Results
+                                                            </Button>
+                                                            <p className="text-[10px] text-center text-slate-500 font-bold">이미 응시 완료한 시험입니다.</p>
+                                                        </div>
                                                     ) : isStarted ? (
-                                                        <Button disabled className="w-full h-14 bg-slate-800/50 text-slate-600 border border-slate-700/50 rounded-2xl font-black italic tracking-widest uppercase">
-                                                            Locked (Attempted)
-                                                        </Button>
+                                                        <div className="flex flex-col gap-2">
+                                                            <Button disabled className="w-full h-14 bg-amber-500/10 text-amber-500 border border-amber-500/30 rounded-2xl font-black italic tracking-widest uppercase">
+                                                                <Lock className="w-5 h-5 mr-3" />
+                                                                Attempted (Locked)
+                                                            </Button>
+                                                            <p className="text-[10px] text-center text-amber-500 font-bold">이미 시작한 기록이 있습니다. 재응시 불가.</p>
+                                                        </div>
                                                     ) : (
                                                         <Button
                                                             onClick={() => handleStartTest('full', test.id)}

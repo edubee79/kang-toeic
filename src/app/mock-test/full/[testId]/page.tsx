@@ -366,13 +366,60 @@ export default function MockTestRunner() {
                         savedAttempts[`full-${testId}`] = attempt;
                         localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-                        // 2. Mark Attempt as Completed in DB
+                        // 2. Mark Attempt as Completed in DB with Total Score
                         if (attemptId) {
                             try {
+                                let totalCorrect = 0;
+                                let totalQs = 0;
+                                const partScores: Record<string, { correct: number, total: number }> = {
+                                    p1: { correct: 0, total: 0 },
+                                    p2: { correct: 0, total: 0 },
+                                    p3: { correct: 0, total: 0 },
+                                    p4: { correct: 0, total: 0 },
+                                    p5: { correct: 0, total: 0 },
+                                    p6: { correct: 0, total: 0 },
+                                    p7: { correct: 0, total: 0 },
+                                };
+
+                                const userStr = localStorage.getItem('toeic_user');
+                                if (userStr) {
+                                    let correctAnswers = {};
+                                    if (testId === 9) correctAnswers = getCorrectAnswersForTest9();
+                                    else if (testId === 10) correctAnswers = getCorrectAnswersForTest10();
+
+                                    if (Object.keys(correctAnswers).length > 0) {
+                                        Object.entries(correctAnswers).forEach(([qId, correct]) => {
+                                            totalQs++;
+                                            const uAns = finalAnswers[qId];
+                                            const isCorrect = uAns === correct;
+                                            if (isCorrect) totalCorrect++;
+
+                                            // Determine Part
+                                            const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+                                            let part = "";
+                                            if (qId.startsWith('p1_')) part = "p1";
+                                            else if (qId.startsWith('p2_')) part = "p2";
+                                            else if (qNum >= 32 && qNum <= 70) part = "p3";
+                                            else if (qNum >= 71 && qNum <= 100) part = "p4";
+                                            else if (qNum >= 101 && qNum <= 130) part = "p5";
+                                            else if (qNum >= 131 && qNum <= 146) part = "p6";
+                                            else if (qNum >= 147 && qNum <= 200) part = "p7";
+
+                                            if (part && partScores[part]) {
+                                                partScores[part].total++;
+                                                if (isCorrect) partScores[part].correct++;
+                                            }
+                                        });
+                                    }
+                                }
+
                                 const attemptRef = doc(db, 'MockTestAttempts', attemptId);
                                 await updateDoc(attemptRef, {
                                     status: 'completed',
-                                    completedAt: serverTimestamp()
+                                    completedAt: serverTimestamp(),
+                                    totalScore: totalCorrect,
+                                    totalQuestions: totalQs,
+                                    partScores: partScores // Save detailed breakdown
                                 });
                             } catch (e) {
                                 console.error("Failed to update status to completed", e);

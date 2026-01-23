@@ -27,6 +27,8 @@ interface MockTestAttempt {
     status: 'in_progress' | 'completed';
     date: string;
     studentName: string;
+    totalScore?: number;
+    totalQuestions?: number;
 }
 
 export default function MockTestResetPage() {
@@ -192,10 +194,12 @@ export default function MockTestResetPage() {
                                 <SelectTrigger className="w-[120px] bg-slate-950 border-slate-800">
                                     <SelectValue placeholder="반 선택" />
                                 </SelectTrigger>
-                                <SelectContent className="bg-slate-900 border-slate-800 text-white">
-                                    <SelectItem value="all">전체 반</SelectItem>
+                                <SelectContent className="bg-slate-900 border-slate-800">
+                                    <SelectItem value="all" className="text-white focus:bg-slate-800 focus:text-white">전체 반</SelectItem>
                                     {classes.map((cls) => (
-                                        <SelectItem key={cls.name} value={cls.name}>{cls.name}</SelectItem>
+                                        <SelectItem key={cls.name} value={cls.name} className="text-white focus:bg-slate-800 focus:text-white">
+                                            {cls.name}
+                                        </SelectItem>
                                     ))}
                                 </SelectContent>
                             </Select>
@@ -265,6 +269,7 @@ export default function MockTestResetPage() {
                                         <TableRow className="border-slate-800">
                                             <TableHead>시험명</TableHead>
                                             <TableHead>상태</TableHead>
+                                            <TableHead>성적</TableHead>
                                             <TableHead>시작 시간</TableHead>
                                             <TableHead className="text-right">관리</TableHead>
                                         </TableRow>
@@ -280,6 +285,16 @@ export default function MockTestResetPage() {
                                                         <Badge className="bg-emerald-500/10 text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/20">완료됨</Badge>
                                                     ) : (
                                                         <Badge className="bg-yellow-500/10 text-yellow-500 border-yellow-500/20 hover:bg-yellow-500/20">진행중</Badge>
+                                                    )}
+                                                </TableCell>
+                                                <TableCell>
+                                                    {attempt.status === 'completed' && attempt.totalQuestions ? (
+                                                        <div className="flex flex-col">
+                                                            <span className="text-indigo-400 font-bold">{attempt.totalScore} / {attempt.totalQuestions}</span>
+                                                            <span className="text-[10px] text-slate-500">{Math.round((attempt.totalScore! / attempt.totalQuestions!) * 100)}%</span>
+                                                        </div>
+                                                    ) : (
+                                                        <span className="text-slate-600">-</span>
                                                     )}
                                                 </TableCell>
                                                 <TableCell className="text-slate-400 text-sm">
