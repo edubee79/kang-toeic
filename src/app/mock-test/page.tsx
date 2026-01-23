@@ -54,7 +54,9 @@ export default function MockTestLobby() {
         }
 
         const maxMock = access?.maxSets?.mockTest || 10;
-        if (parseInt(testId) > maxMock) {
+        const realTestIndex = testId === '9' ? 1 : (testId === '10' ? 2 : parseInt(testId));
+
+        if (realTestIndex > maxMock) {
             alert(`현재 ${maxMock}회차까지만 오픈되어 있습니다.`);
             return;
         }
@@ -127,7 +129,8 @@ export default function MockTestLobby() {
                                 const status = attempts[`full-${test.id}`]?.status || 'none';
                                 const isCompleted = status === 'completed';
                                 const isStarted = status === 'started';
-                                const isLocked = parseInt(test.id) > maxMock;
+                                const realTestIndex = test.id === '9' ? 1 : 2;
+                                const isLocked = realTestIndex > maxMock;
 
                                 return (
                                     <div

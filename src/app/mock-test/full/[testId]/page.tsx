@@ -8,6 +8,14 @@ import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Clock, CheckCircle2, AlertTriangle, ChevronLeft, ChevronRight, Volume2 } from 'lucide-react';
 import { useParams } from 'next/navigation';
+import MockTest_LC_Set9 from '@/components/exam/mock/MockTest_LC_Set9';
+import MockTest_RC_Set9 from '@/components/exam/mock/MockTest_RC_Set9';
+import MockTest_LC_Set10 from '@/components/exam/mock/MockTest_LC_Set10';
+import MockTest_RC_Set10 from '@/components/exam/mock/MockTest_RC_Set10';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
+import { getCorrectAnswersForTest9, getCorrectAnswersForTest10 } from '@/lib/mock/scoring';
+
 
 export default function MockTestRunner() {
     const params = useParams();
@@ -26,14 +34,68 @@ export default function MockTestRunner() {
 
     const testData = mockTests[testId];
 
+    const [attemptId, setAttemptId] = useState<string | null>(null);
+
     useEffect(() => {
         if (!testData) {
             alert('Test data not found!');
             router.push('/mock-test');
             return;
         }
-        setStatus('lc');
-    }, [testData, router]);
+
+        const checkAndStartAttempt = async () => {
+            const userStr = localStorage.getItem('toeic_user');
+            if (!userStr) {
+                alert("로그인이 필요합니다.");
+                router.push('/data-management/users'); // Or login page
+                return;
+            }
+            const user = JSON.parse(userStr);
+            const userId = user.userId || user.uid;
+
+            // 1. Check existing attempts
+            const attemptsRef = collection(db, 'MockTestAttempts');
+            const q = query(attemptsRef, where('userId', '==', userId), where('testId', '==', testId));
+            const snapshot = await getDocs(q);
+
+            if (!snapshot.empty) {
+                // Check if any allowRetake is true? Currently strict mode.
+                const attempt = snapshot.docs[0].data();
+                if (!attempt.allowRetake) {
+                    alert("이미 응시한 내역이 있습니다. 재응시가 불가능합니다.\n관리자에게 문의해주세요.");
+                    router.push('/mock-test');
+                    return;
+                } else {
+                    // If retake allowed, maybe verify if we should delete old one or just create new?
+                    // For now, if allowRetake is true, we assume it's like a new start.
+                    // But simpler: if allowRetake is true, we delete the old doc and start fresh?
+                    // Or just proceed. Let's start fresh by ignoring old doc, but actually creating a NEW one is better for history.
+                    // For this strict implementation: simple check.
+                }
+            }
+
+            // 2. Create new 'in_progress' attempt
+            try {
+                const docRef = await addDoc(attemptsRef, {
+                    userId,
+                    studentName: user.userName || user.name || "Unknown",
+                    testId,
+                    testTitle: testData.title,
+                    status: 'in_progress',
+                    date: new Date().toISOString(), // String format for UI
+                    timestamp: serverTimestamp(),  // Firestore timestamp for sorting
+                    allowRetake: false
+                });
+                setAttemptId(docRef.id);
+                setStatus('lc');
+            } catch (e) {
+                console.error("Error creating attempt:", e);
+                alert("시험 시작 중 오류가 발생했습니다.");
+            }
+        };
+
+        checkAndStartAttempt();
+    }, [testData, router, testId]);
 
     // Timer logic ... (same as before)
     useEffect(() => {
@@ -169,8 +231,239 @@ export default function MockTestRunner() {
 
     if (status === 'loading') return <div className="p-10 text-center">Loading Test...</div>;
 
-    // Render logic based on Part
-    // ... (Complex rendering logic to be added for split screen)
+    // Special Handling for Premium Mock Test #9
+    if (testId === 9) {
+        if (status === 'lc') {
+            return (
+                <MockTest_LC_Set9
+                    onFinishLC={(lcAnswers) => {
+                        setAnswers(prev => ({ ...prev, ...lcAnswers }));
+                        setStatus('rc');
+                    }}
+                />
+            );
+        }
+        if (status === 'rc') {
+            return (
+                <MockTest_RC_Set9
+                    initialAnswers={answers}
+                    onFinishExam={async (rcAnswers) => {
+                        const finalAnswers = { ...answers, ...rcAnswers };
+                        setAnswers(finalAnswers);
+
+                        // 1. Save to LocalStorage (Immediate UI)
+                        const attempt = {
+                            status: 'completed',
+                            date: new Date().toISOString(),
+                            answers: finalAnswers,
+                            testId
+                        };
+                        const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                        savedAttempts[`full-${testId}`] = attempt;
+                        localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+
+                        // 2. Sync to Firebase for Dashboard (Manager_Results)
+                        const userStr = localStorage.getItem('toeic_user');
+                        if (userStr && testId === 9) {
+                            const user = JSON.parse(userStr);
+                            const correctAnswers = getCorrectAnswersForTest9();
+
+                            // Group IDs by Part for separate recording
+                            const partMappings: Record<string, { type: string, label: string }> = {
+                                'p1': { type: 'part1_test', label: '실전 모의고사' },
+                                'p2': { type: 'part2_test', label: '실전 모의고사' },
+                                'q32-q70': { type: 'part3_test', label: '실전 모의고사' },
+                                'q71-q100': { type: 'part4_test', label: '실전 모의고사' },
+                                'q101-q130': { type: 'part5_test', label: '실전 모의고사' },
+                                'q131-q146': { type: 'part6_test', label: '실전 모의고사' },
+                                'q147-q175': { type: 'part7_single', label: '실전 모의고사' },
+                                'q176-q200': { type: 'part7_double', label: '실전 모의고사' }
+                            };
+
+                            // Save each part to Manager_Results
+                            const savePromises = Object.entries(partMappings).map(async ([partRange, config]) => {
+                                let correctCount = 0;
+                                let totalCount = 0;
+                                const incorrectQs: any[] = [];
+
+                                Object.entries(correctAnswers).forEach(([qId, correct]) => {
+                                    // Logic to check if qId belongs to this partRange
+                                    let belongs = false;
+                                    const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+
+                                    if (partRange === 'p1' && qId.startsWith('p1_')) belongs = true;
+                                    else if (partRange === 'p2' && qId.startsWith('p2_')) belongs = true;
+                                    else if (partRange === 'q32-q70' && qNum >= 32 && qNum <= 70) belongs = true;
+                                    else if (partRange === 'q71-q100' && qNum >= 71 && qNum <= 100) belongs = true;
+                                    else if (partRange === 'q101-q130' && qNum >= 101 && qNum <= 130) belongs = true;
+                                    else if (partRange === 'q131-q146' && qNum >= 131 && qNum <= 146) belongs = true;
+                                    else if (partRange === 'q147-q175' && qNum >= 147 && qNum <= 175) belongs = true;
+                                    else if (partRange === 'q176-q200' && qNum >= 176 && qNum <= 200) belongs = true;
+
+                                    if (belongs) {
+                                        const userAns = finalAnswers[qId];
+                                        totalCount++;
+                                        if (userAns === correct) correctCount++;
+                                        else {
+                                            incorrectQs.push({ id: qId, classification: 'Unknown' });
+                                        }
+                                    }
+                                });
+
+                                if (totalCount > 0) {
+                                    return addDoc(collection(db, "Manager_Results"), {
+                                        student: user.userName || user.name || "Unknown",
+                                        studentId: user.userId || user.uid,
+                                        unit: `제${testId === 9 ? 1 : testId}회 실전 모의고사 (${config.type})`,
+                                        type: config.type,
+                                        score: correctCount,
+                                        total: totalCount,
+                                        wrongCount: totalCount - correctCount,
+                                        incorrectQuestions: incorrectQs,
+                                        timestamp: serverTimestamp()
+                                    });
+                                }
+                            });
+
+                            await Promise.all(savePromises);
+                        }
+
+                        router.push(`/mock-test/full/${testId}/result`);
+                    }}
+                />
+            );
+        }
+    }
+
+    // Special Handling for Premium Mock Test #10 (Mock Test 2)
+    if (testId === 10) {
+        if (status === 'lc') {
+            return (
+                <MockTest_LC_Set10
+                    onFinishLC={(lcAnswers) => {
+                        setAnswers(prev => ({ ...prev, ...lcAnswers }));
+                        setStatus('rc');
+                    }}
+                />
+            );
+        }
+        if (status === 'rc') {
+            return (
+                <MockTest_RC_Set10
+                    initialAnswers={answers}
+                    onFinishExam={async (rcAnswers) => {
+                        const finalAnswers = { ...answers, ...rcAnswers };
+                        setAnswers(finalAnswers);
+
+                        // 1. Save to LocalStorage (Immediate UI)
+                        const attempt = {
+                            status: 'completed',
+                            date: new Date().toISOString(),
+                            answers: finalAnswers,
+                            testId
+                        };
+                        const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                        savedAttempts[`full-${testId}`] = attempt;
+                        localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+
+                        // 2. Mark Attempt as Completed in DB
+                        if (attemptId) {
+                            try {
+                                const attemptRef = doc(db, 'MockTestAttempts', attemptId);
+                                await updateDoc(attemptRef, {
+                                    status: 'completed',
+                                    completedAt: serverTimestamp()
+                                });
+                            } catch (e) {
+                                console.error("Failed to update status to completed", e);
+                            }
+                        }
+
+                        // 3. Sync to Firebase for Dashboard (Manager_Results)
+                        const userStr = localStorage.getItem('toeic_user');
+                        if (userStr) {
+                            const user = JSON.parse(userStr);
+
+                            // Determine correct answers and labels based on testId
+                            let correctAnswers = {};
+                            let testLabel = "";
+
+                            if (testId === 9) {
+                                correctAnswers = getCorrectAnswersForTest9();
+                                testLabel = "제1회 실전 모의고사";
+                            } else if (testId === 10) {
+                                correctAnswers = getCorrectAnswersForTest10();
+                                testLabel = "제2회 실전 모의고사";
+                            }
+
+                            if (Object.keys(correctAnswers).length > 0) {
+                                // Group IDs by Part for separate recording
+                                const partMappings: Record<string, { type: string, label: string }> = {
+                                    'p1': { type: 'part1_test', label: '실전 모의고사' },
+                                    'p2': { type: 'part2_test', label: '실전 모의고사' },
+                                    'q32-q70': { type: 'part3_test', label: '실전 모의고사' },
+                                    'q71-q100': { type: 'part4_test', label: '실전 모의고사' },
+                                    'q101-q130': { type: 'part5_test', label: '실전 모의고사' },
+                                    'q131-q146': { type: 'part6_test', label: '실전 모의고사' },
+                                    'q147-q175': { type: 'part7_single', label: '실전 모의고사' },
+                                    'q176-q200': { type: 'part7_double', label: '실전 모의고사' }
+                                };
+
+                                // Save each part to Manager_Results
+                                const savePromises = Object.entries(partMappings).map(async ([partRange, config]) => {
+                                    let correctCount = 0;
+                                    let totalCount = 0;
+                                    const incorrectQs: any[] = [];
+
+                                    Object.entries(correctAnswers).forEach(([qId, correct]) => {
+                                        // Logic to check if qId belongs to this partRange
+                                        let belongs = false;
+                                        const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+
+                                        if (partRange === 'p1' && qId.startsWith('p1_')) belongs = true;
+                                        else if (partRange === 'p2' && qId.startsWith('p2_')) belongs = true;
+                                        else if (partRange === 'q32-q70' && qNum >= 32 && qNum <= 70) belongs = true;
+                                        else if (partRange === 'q71-q100' && qNum >= 71 && qNum <= 100) belongs = true;
+                                        else if (partRange === 'q101-q130' && qNum >= 101 && qNum <= 130) belongs = true;
+                                        else if (partRange === 'q131-q146' && qNum >= 131 && qNum <= 146) belongs = true;
+                                        else if (partRange === 'q147-q175' && qNum >= 147 && qNum <= 175) belongs = true;
+                                        else if (partRange === 'q176-q200' && qNum >= 176 && qNum <= 200) belongs = true;
+
+                                        if (belongs) {
+                                            const userAns = finalAnswers[qId];
+                                            totalCount++;
+                                            if (userAns === correct) correctCount++;
+                                            else {
+                                                incorrectQs.push({ id: qId, classification: 'Unknown' });
+                                            }
+                                        }
+                                    });
+
+                                    if (totalCount > 0) {
+                                        return addDoc(collection(db, "Manager_Results"), {
+                                            student: user.userName || user.name || "Unknown",
+                                            studentId: user.userId || user.uid,
+                                            unit: `${testLabel} (${config.type})`,
+                                            type: config.type,
+                                            score: correctCount,
+                                            total: totalCount,
+                                            wrongCount: totalCount - correctCount,
+                                            incorrectQuestions: incorrectQs,
+                                            timestamp: serverTimestamp()
+                                        });
+                                    }
+                                });
+
+                                await Promise.all(savePromises);
+                            }
+                        }
+
+                        router.push(`/mock-test/full/${testId}/result`);
+                    }}
+                />
+            );
+        }
+    }
 
     return (
         <div className="flex flex-col h-screen bg-slate-50 overflow-hidden">

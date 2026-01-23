@@ -313,6 +313,20 @@ export default function AdminDashboard() {
                     </Card>
                 </Link>
 
+                <Link href="/admin/mock-reset" className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900 hover:bg-rose-50 transition-colors cursor-pointer group">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 group-hover:text-rose-500 flex items-center gap-2">
+                                <Shield className="w-4 h-4" /> 모의고사 관리
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700 group-hover:text-rose-600">RESET</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400 group-hover:text-rose-400">재응시 초기화 및 기록 삭제</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
                 <div className="col-span-1">
                     <Card className="border-none shadow-lg bg-white text-slate-900">
                         <CardHeader className="pb-2">

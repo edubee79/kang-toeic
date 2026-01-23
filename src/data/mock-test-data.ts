@@ -50,11 +50,11 @@ const test9Part7Data = realPart7Test9 ? realPart7Test9.sets.filter(s => {
 // Constructing Mock Test 9 (Label: Full Mock Test 1)
 export const mockTest9: MockTest = {
     id: 9,
-    title: "제9회 실전 모의고사",
+    title: "제1회 실전 모의고사",
     parts: [
         {
             partId: 1,
-            data: part1Data
+            data: part1Data // Placeholder using P1 mock data
         },
         {
             partId: 2,
@@ -83,6 +83,62 @@ export const mockTest9: MockTest = {
     ]
 };
 
+// Transform Part 5 Test 10 Data
+const realTest10 = part5TestData.find(t => t.testId === 10);
+const test10Part5Data = realTest10 ? realTest10.questions.map(q => ({
+    id: parseInt(q.id.replace('q', '')),
+    text: q.text,
+    options: q.options.map(o => `(${o.label}) ${o.text}`)
+})) : [];
+
+// Transform Part 6 Test 10 Data
+const realPart6Test10 = part6TestData.find(t => t.testId === 10);
+const test10Part6Data = realPart6Test10 ? realPart6Test10.passages : [];
+
+// Transform Part 7 Test 10 Data
+const realPart7Test10 = part7TestData.find(t => t.testId === 10);
+const test10Part7Data = realPart7Test10 ? realPart7Test10.sets.filter(s => {
+    const firstQ = parseInt(s.questions[0].id);
+    return firstQ >= 147 && firstQ <= 175;
+}) : [];
+
+// Constructing Mock Test 10 (Label: Full Mock Test 2)
+export const mockTest10: MockTest = {
+    id: 10,
+    title: "제2회 실전 모의고사",
+    parts: [
+        {
+            partId: 1,
+            data: part1Data // Placeholder using P1 mock data
+        },
+        {
+            partId: 2,
+            data: [] // Placeholder
+        },
+        {
+            partId: 3,
+            data: part3Data.filter(p => p.testId === 10)
+        },
+        {
+            partId: 4,
+            data: part4Data.filter(p => p.testId === 10)
+        },
+        {
+            partId: 5,
+            data: test10Part5Data
+        },
+        {
+            partId: 6,
+            data: test10Part6Data
+        },
+        {
+            partId: 7,
+            data: test10Part7Data
+        }
+    ]
+};
+
 export const mockTests: Record<number, MockTest> = {
-    9: mockTest9
+    9: mockTest9,
+    10: mockTest10
 };
