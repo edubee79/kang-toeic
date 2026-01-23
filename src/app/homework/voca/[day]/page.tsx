@@ -66,6 +66,26 @@ export default function DayPage() {
     const [listeningFeedback, setListeningFeedback] = useState<'correct' | 'incorrect' | null>(null);
     const [selectedListeningOption, setSelectedListeningOption] = useState<string | null>(null);
 
+    // Save Logic
+    const handleSaveAndExit = useCallback(() => {
+        if (!userId) return;
+        const progress = {
+            mode,
+            currentIndex,
+            allWords,
+            learningQueue,
+            testQueue,
+            listeningQueue,
+            results,
+            testScore,
+            subStep,
+            showBack,
+            timestamp: Date.now()
+        };
+        localStorage.setItem(`voca_day_progress_${userId}_${day}`, JSON.stringify(progress));
+        router.push('/homework/voca');
+    }, [userId, day, mode, currentIndex, allWords, learningQueue, testQueue, listeningQueue, results, testScore, subStep, showBack, router]);
+
     // Initialization
     useEffect(() => {
         const init = async () => {
@@ -83,16 +103,37 @@ export default function DayPage() {
             setTargetScore(score as 650 | 800 | 900);
 
             try {
+                // 1. Check for saved progress first
+                const savedKey = `voca_day_progress_${user.userId}_${day}`;
+                const saved = localStorage.getItem(savedKey);
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    // Check if data exists and is valid
+                    if (parsed.allWords && parsed.allWords.length > 0) {
+                        setAllWords(parsed.allWords);
+                        setMode(parsed.mode || 'sort');
+                        setCurrentIndex(parsed.currentIndex || 0);
+                        setLearningQueue(parsed.learningQueue || []);
+                        setTestQueue(parsed.testQueue || []);
+                        setListeningQueue(parsed.listeningQueue || []);
+                        setResults(parsed.results || []);
+                        setTestScore(parsed.testScore || 0);
+                        setSubStep(parsed.subStep || 'front');
+                        setShowBack(parsed.showBack || false);
+                        setLoading(false);
+                        return;
+                    }
+                }
+
+                // 2. Normal Fetching
                 const [dailyWords, reviewWords] = await Promise.all([
                     getWordsForDay(user.userId, day, score as 650 | 800 | 900),
                     getDueReviews(user.userId)
                 ]);
 
                 // Merge: Reviews first, then Daily words.
-                // Filter duplicates just in case a word is in both lists
                 const dailyIds = new Set(dailyWords.map(w => w.id));
                 const uniqueReviews = reviewWords.filter(w => !dailyIds.has(w.id));
-
                 const combinedWords = [...uniqueReviews, ...dailyWords];
 
                 // --- TEST MODE: 5 words for rapid verification ---
@@ -384,7 +425,15 @@ export default function DayPage() {
                 <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
                     {/* Header */}
                     <div className="flex justify-between items-center mb-6">
-                        <span className="text-slate-500 font-bold tracking-tighter italic">SORTING</span>
+                        <div className="flex flex-col">
+                            <span className="text-slate-500 font-bold tracking-tighter italic">SORTING</span>
+                            <button
+                                onClick={handleSaveAndExit}
+                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-1"
+                            >
+                                SAVE & EXIT
+                            </button>
+                        </div>
                         <span className="text-white font-black italic">{currentIndex + 1} / {allWords.length}</span>
                     </div>
 
@@ -460,7 +509,15 @@ export default function DayPage() {
             <div className="min-h-screen bg-slate-950 p-6 flex flex-col">
                 <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
                     <div className="flex justify-between items-center mb-6">
-                        <span className="text-amber-500 font-bold tracking-tighter italic">LEARNING</span>
+                        <div className="flex flex-col">
+                            <span className="text-amber-500 font-bold tracking-tighter italic">LEARNING</span>
+                            <button
+                                onClick={handleSaveAndExit}
+                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-1"
+                            >
+                                SAVE & EXIT
+                            </button>
+                        </div>
                         <span className="text-white font-black italic">{currentIndex + 1} / {learningQueue.length}</span>
                     </div>
 
@@ -515,7 +572,15 @@ export default function DayPage() {
             <div className="min-h-screen bg-slate-950 p-6 flex flex-col">
                 <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
                     <div className="flex justify-between items-center mb-6">
-                        <span className="text-violet-500 font-bold tracking-tighter italic">FINAL TEST</span>
+                        <div className="flex flex-col">
+                            <span className="text-violet-500 font-bold tracking-tighter italic">FINAL TEST</span>
+                            <button
+                                onClick={handleSaveAndExit}
+                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-1"
+                            >
+                                SAVE & EXIT
+                            </button>
+                        </div>
                         <span className="text-white font-black italic">{currentIndex + 1} / {testQueue.length}</span>
                     </div>
 
@@ -647,9 +712,17 @@ export default function DayPage() {
             <div className="min-h-screen bg-slate-950 p-6 flex flex-col items-center justify-center">
                 <div className="max-w-md mx-auto w-full space-y-8">
                     <div className="flex justify-between items-center mb-4">
-                        <Button variant="ghost" className="text-slate-400" onClick={() => setMode('result')}>
-                            <X className="w-6 h-6" /> QUIT
-                        </Button>
+                        <div className="flex flex-col gap-2">
+                            <Button variant="ghost" className="text-slate-400 p-0 h-auto w-fit hover:text-white" onClick={() => setMode('result')}>
+                                <X className="w-4 h-4 mr-1" /> QUIT
+                            </Button>
+                            <button
+                                onClick={handleSaveAndExit}
+                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit"
+                            >
+                                SAVE & EXIT
+                            </button>
+                        </div>
                         <div className="flex items-center gap-2 text-indigo-400 font-bold">
                             <Headphones className="w-5 h-5 animate-pulse" />
                             <span>LISTENING CHALLENGE: {listeningQueue.length} LEFT</span>
@@ -820,6 +893,8 @@ function SaveResultEffect({ testScore, total, day, userId }: { testScore: number
                         detail: `Day ${day}`
                     });
                     console.log("Voca Saved");
+                    // Clear progress upon successful completion save
+                    localStorage.removeItem(`voca_day_progress_${userId}_${day}`);
                 } catch (e) {
                     console.error("Failed to save voca result", e);
                 }
