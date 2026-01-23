@@ -127,7 +127,7 @@ export default function MockTestLobby() {
                         실제 시험과 동일한 시간 제한과 문제 구성으로 실력을 점검해보세요.<br />
                         <span className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-400 text-sm font-bold">
                             <AlertCircle className="w-4 h-4" />
-                            모의테스트는 1회만 응시 가능하며, 종료 시 재응시가 불가능합니다. | 현재 {maxMock}회차 오픈
+                            모의테스트는 1회만 응시 가능하며, 시험 시작 후에는 뒤로가기나 창 종료 시에도 응시로 처리되어 재응시가 불가능합니다. | 현재 {maxMock}회차 오픈
                         </span>
                     </p>
                 </header>
