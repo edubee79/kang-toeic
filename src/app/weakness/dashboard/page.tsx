@@ -153,9 +153,18 @@ export default function WeaknessDashboardPage() {
         fullTag: tag
     }));
 
-    // EXACT PREDICTION LOGIC FROM STUDENT DASHBOARD
-    const totalCorrect = Object.values(report.targetStats).reduce((acc, curr) => acc + curr.average, 0);
-    const estScore = totalCorrect > 0 ? Math.round((totalCorrect / 200) * 990) : 0;
+    // NEW PREDICTION LOGIC (UNIFIED)
+    const lcParts = ['p1', 'p2', 'p3', 'p4'];
+    const rcParts = ['p5', 'p6', 'p7_single', 'p7_double'];
+
+    const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
+    const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
+
+    // User Formula: (LC_Sum * 5) + 10, (RC_Sum * 5) - 10
+    const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
+    const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
+
+    const estScore = Math.max(0, lcScore) + Math.max(0, rcScore);
     const progress = Math.min(100, Math.round((estScore / report.targetScore) * 100));
 
     return (
@@ -211,9 +220,10 @@ export default function WeaknessDashboardPage() {
                             <div className="space-y-3">
                                 <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
                                 {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                                    const goal = report.targetStats[p].target;
-                                    const current = report.targetStats[p].average;
-                                    const latest = report.targetStats[p].latest;
+                                    const partStats = report.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                    const goal = partStats.target;
+                                    const current = partStats.average;
+                                    const latest = partStats.latest;
                                     const gap = latest - goal;  // ✅ Use latest, not average
 
                                     return (
@@ -245,9 +255,10 @@ export default function WeaknessDashboardPage() {
                             <div className="space-y-3">
                                 <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
                                 {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                                    const goal = report.targetStats[p].target;
-                                    const current = report.targetStats[p].average;
-                                    const latest = report.targetStats[p].latest;
+                                    const partStats = report.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                    const goal = partStats.target;
+                                    const current = partStats.average;
+                                    const latest = partStats.latest;
                                     const gap = latest - goal;  // ✅ Use latest, not average
 
                                     return (

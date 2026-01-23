@@ -27,13 +27,13 @@ async function createAdmin() {
 
         console.log(`Creating admin account: ${username}`);
 
-        // 문서 ID와 userId를 일치시켜야 updateDoc 등에서 문제가 발생하지 않습니다.
-        const docId = 'ADMIN001';
+        // ID로 문서 생성 (Winter_Users 컬렉션)
+        const docId = `admin_${Date.now()}`;
 
         await setDoc(doc(db, "Winter_Users", docId), {
             username: username,
             password: hashedPassword,
-            userId: 'ADMIN001', // 문서 ID와 일치시킴
+            userId: 'ADMIN001', // 학번 대신 관리자 코드
             userName: '관리자',
             universityName: 'KANGS TOEIC',
             status: 'approved',
@@ -41,11 +41,10 @@ async function createAdmin() {
             approvedAt: Timestamp.now(),
             approvedBy: 'system',
             className: '관리자반',
-            role: 'admin'
+            role: 'admin' // 명시적 역할
         });
 
         console.log("✅ Admin account created successfully!");
-        console.log(`Document ID: ${docId}`);
         console.log(`ID: ${username}`);
         console.log(`PW: ${password}`);
 

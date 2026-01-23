@@ -62,22 +62,6 @@ export default function Part3DetailPage() {
                     <p className="text-gray-500 text-sm">Listen to the conversation and choose the best answer.</p>
                 </div>
 
-                {/* Graphic Support */}
-                {set.image && (
-                    <div className="flex justify-center mb-8">
-                        <div className="relative group max-w-xl w-full">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                            <div className="relative border border-gray-200 p-2 rounded-lg shadow-xl bg-white">
-                                <img
-                                    src={set.image}
-                                    alt="Graphic for questions"
-                                    className="w-full h-auto object-contain rounded"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                )}
-
                 {/* Questions List */}
                 <div className="space-y-10">
                     {set.questions.map((q, index) => (

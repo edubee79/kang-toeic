@@ -1,6 +1,7 @@
-import { collection, query, where, orderBy, limit, getDocs } from 'firebase/firestore';
+import { collection, query, where, orderBy, limit, getDocs, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
+import { isActualTest, mapToPartKey } from '@/lib/filters/actualTestFilter';
 
 export interface AnalysisResult {
     topWeakness: {
@@ -9,6 +10,7 @@ export interface AnalysisResult {
         count: number;
         percentage: number;
         message: string;
+        status?: 'ACHIEVED' | 'WEAKNESS';
     } | null;
     lcHabit: {
         status: 'Excellent' | 'Good' | 'Fair' | 'Needs Improvement';
@@ -24,90 +26,123 @@ export interface AnalysisResult {
 
 export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResult> => {
     try {
-        // 1. Fetch recent results (Last 30 items)
-        const q = query(
+        // 1. Fetch User Profile for targets
+        const userRef = doc(db, 'Winter_Users', userId);
+        const userSnap = await getDoc(userRef);
+        const userData = userSnap.exists() ? userSnap.data() : {};
+
+        // Use part1_test style or p5 style targets
+        const targetP5 = userData.partTargets?.p5 || userData.partTargets?.part5_test || 24;
+
+        // 2. Fetch Recent Results (for LC habit and Latest P5 score)
+        const qRecent = query(
             collection(db, "Manager_Results"),
             where("studentId", "==", userId),
             orderBy("timestamp", "desc"),
             limit(30)
         );
-        const snapshot = await getDocs(q);
-        const results = snapshot.docs.map(d => d.data());
+        const snapshotRecent = await getDocs(qRecent);
+        const recentResults = snapshotRecent.docs.map(d => ({ id: d.id, ...d.data() }));
 
-        // 2. Part 5 Weakness Analysis
-        const tagCounts: Record<string, number> = {};
-        let totalWrong = 0;
+        // 3. Evaluate Part 5 Achievement (Latest Actual Test)
+        const p5Actuals = recentResults.filter(r => isActualTest(r) && mapToPartKey(r) === 'part5_test');
+        const latestP5 = p5Actuals.length > 0 ? p5Actuals[0] : null;
 
-        results.filter(r => r.type === 'part5_test' || r.unit?.includes('Part5')).forEach(r => {
-            if (r.incorrectQuestions && Array.isArray(r.incorrectQuestions)) {
-                r.incorrectQuestions.forEach((q: { classification: string }) => {
-                    const code = q.classification || 'Unknown';
-                    // Ignore 'Unknown' for authoritative analysis if possible, or count it.
-                    if (code !== 'Unknown') {
-                        tagCounts[code] = (tagCounts[code] || 0) + 1;
-                        totalWrong++;
-                    }
-                });
-            }
-        });
+        // Score calculation unified with dashboard logic
+        const latestP5Score = latestP5 ? (latestP5.score <= (latestP5.total || 30) ? latestP5.score : Math.round((latestP5.score / 100) * (latestP5.total || 30))) : 0;
 
-        // Find top weakness
         let topWeakness = null;
-        if (totalWrong > 0) {
-            const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
-            const [topCode, topCount] = sortedTags[0];
-            const label = getClassificationLabel(topCode);
-            const percentage = Math.round((topCount / totalWrong) * 100);
 
-            let advice = `${label} 유형에서 오답률이 가장 높습니다.`;
-            if (topCode.includes('POS')) advice += " 품사 자리 찾기 공식을 다시 점검하세요.";
-            else if (topCode.includes('VERB')) advice += " 동사의 수/태/시제를 꼼꼼히 확인하세요.";
-            else if (topCode.includes('VOCAB')) advice += " 문맥에 맞는 어휘 선택 연습이 필요합니다.";
-            else advice += " 해당 유형의 집중 공략이 필요합니다.";
-
+        if (latestP5Score >= targetP5 && latestP5Score > 0) {
+            // CASE A: Goal Achieved
             topWeakness = {
-                label: label.replace('문법: ', '').replace('어휘: ', ''), // Simplify label
-                code: topCode,
-                count: topCount,
-                percentage,
-                message: advice
+                label: "목표 달성",
+                code: "GOAL_REACHED",
+                count: 0,
+                percentage: 100,
+                status: 'ACHIEVED',
+                message: `현재 P5 점수 ${latestP5Score}점으로 목표(${targetP5}개)를 달성하였습니다! 현재 목표 범위 내에서는 약점이 없습니다.`
             };
         } else {
-            // No wrong counting data found yet
-            topWeakness = {
-                label: "데이터 부족",
-                code: "NONE",
-                count: 0,
-                percentage: 0,
-                message: "아직 충분한 오답 데이터가 모이지 않았습니다."
-            };
+            // CASE B: Below Target - Analyze ENTIRE history for real weakness
+            const qAllP5 = query(
+                collection(db, "Manager_Results"),
+                where("studentId", "==", userId)
+                // orderBy filtered client-side or assume many items are okay
+            );
+            const snapAll = await getDocs(qAllP5);
+
+            const tagCounts: Record<string, number> = {};
+            let totalWrong = 0;
+
+            snapAll.docs.forEach(docSnap => {
+                const r = docSnap.data();
+                if (!isActualTest(r) || mapToPartKey(r) !== 'part5_test') return;
+
+                if (r.incorrectQuestions && Array.isArray(r.incorrectQuestions)) {
+                    r.incorrectQuestions.forEach((q: { classification: string }) => {
+                        const code = q.classification || 'Unknown';
+                        if (code !== 'Unknown') {
+                            tagCounts[code] = (tagCounts[code] || 0) + 1;
+                            totalWrong++;
+                        }
+                    });
+                }
+            });
+
+            if (totalWrong > 0) {
+                const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
+                const [topCode, topCount] = sortedTags[0];
+                const label = getClassificationLabel(topCode) || topCode;
+                const percentage = Math.round((topCount / totalWrong) * 100);
+
+                let advice = `P5 ${label.replace('문법: ', '').replace('어휘: ', '')} 유형이 누적 오답 1위입니다.`;
+                if (latestP5Score > 0) advice = `현재 P5 ${latestP5Score}개로 목표(${targetP5}개) 재탈환을 위해 ${advice}`;
+
+                if (topCode.includes('POS')) advice += " 품사 자리 공식을 재점검하세요.";
+                else if (topCode.includes('VERB')) advice += " 수/태/시제를 다시 확인하세요.";
+                else if (topCode.includes('VOCAB')) advice += " 어휘 선택 연습량을 늘리세요.";
+
+                topWeakness = {
+                    label: label.replace('문법: ', '').replace('어휘: ', ''),
+                    code: topCode,
+                    count: topCount,
+                    percentage,
+                    status: 'WEAKNESS',
+                    message: advice
+                };
+            } else {
+                topWeakness = {
+                    label: "데이터 분석 중",
+                    code: "NONE",
+                    count: 0,
+                    percentage: 0,
+                    message: latestP5Score === 0 ? "Part 5 실전 테스트 결과가 쌓이면 정밀 약점을 분석합니다." : "현재 분석할 오답 데이터가 없습니다."
+                };
+            }
         }
 
-        // 3. LC Learning Habit (Frequency)
-        // Count unique days or attempts in last 10 items
-        const lcTests = results.filter(r => r.type === 'part2_test' || r.type === 'part3_test' || r.type === 'part4_test' || (r.unit && r.unit.includes('LC')));
+        // 4. LC Habit (From recent 30 items)
+        const lcTests = recentResults.filter(r => isActualTest(r) && ['part1_test', 'part2_test', 'part3_test', 'part4_test'].includes(mapToPartKey(r)));
         const lcCount = lcTests.length;
 
         let lcStatus: 'Excellent' | 'Good' | 'Fair' | 'Needs Improvement' = 'Fair';
-        let lcMessage = "LC 학습을 더 꾸준히 진행해보세요.";
+        let lcMessage = "LC 학습 빈도가 낮습니다. 매일 1회 실전 풀기를 권장합니다.";
 
         if (lcCount >= 5) {
             lcStatus = 'Excellent';
-            lcMessage = "매우 훌륭한 청취 학습 습관을 가지고 계십니다! 쉐도잉을 병행하여 청취력을 극대화하세요.";
+            lcMessage = "꾸준한 LC 학습 습관이 확인되었습니다! 쉐도잉을 통해 실전 감각을 유지하세요.";
         } else if (lcCount >= 3) {
             lcStatus = 'Good';
-            lcMessage = "안정적인 학습 흐름입니다. Part 3/4 비중을 조금 더 늘려보세요.";
+            lcMessage = "좋은 흐름입니다. Part 2/3 위주로 집중력을 더 높여보세요.";
         } else if (lcCount >= 1) {
             lcStatus = 'Fair';
-            lcMessage = "LC 학습 빈도가 다소 낮습니다. 하루 1세트 풀기를 목표로 하세요.";
-        } else {
-            lcStatus = 'Needs Improvement';
-            lcMessage = "최근 LC 학습 기록이 없습니다. 오늘 Part 2부터 시작해보는 건 어떨까요?";
+            lcMessage = "안정적인 습관을 위해 주당 3회 이상의 실전 풀기가 필요합니다.";
         }
 
-        // 4. Voca Status (Mock logic or real if stats provided, here defaulting to counting)
-        const vocaCount = results.filter(r => r.type === 'voca').length; // This is strictly from logs, usually we prefer profile data.
-        // We will assume the caller might pass profile stats, but here we return what we found in logs.
+        // 5. Voca Status (From profile and results)
+        // Here we can use profile data if available
+        const vocaPassed = userData.passedVocaDays?.length || 0;
 
         return {
             topWeakness,
@@ -117,9 +152,9 @@ export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResul
                 count: lcCount
             },
             vocaStatus: {
-                count: vocaCount,
-                target: 15,
-                message: ""
+                count: vocaPassed,
+                target: 30,
+                message: `${vocaPassed}일차 공부 중입니다.`
             }
         };
 
@@ -128,7 +163,7 @@ export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResul
         return {
             topWeakness: null,
             lcHabit: { status: 'Fair', message: "분석 중 오류가 발생했습니다.", count: 0 },
-            vocaStatus: { count: 0, target: 15, message: "" }
+            vocaStatus: { count: 0, target: 30, message: "" }
         };
     }
 };

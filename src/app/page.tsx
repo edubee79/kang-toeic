@@ -152,14 +152,6 @@ export default function Dashboard() {
                     <p className="text-sm font-bold text-slate-300">{user?.name || user?.username} 학생</p>
                     <p className="text-xs text-slate-500">{user?.className || user?.userClass || '배정 전'}반 {isPending && <span className="text-amber-500">(승인 대기중)</span>}</p>
                 </div>
-                {/* Dev Admin Access */}
-                {isAdmin(user?.username) && (
-                    <div className="absolute top-4 left-4 opacity-50 hover:opacity-100">
-                        <Link href="/admin/dashboard">
-                            <Button variant="ghost" size="sm" className="text-xs text-slate-600">🛠 Admin</Button>
-                        </Link>
-                    </div>
-                )}
             </div>
 
             {isPending && (
@@ -178,7 +170,8 @@ export default function Dashboard() {
                         </Link>
                     </div>
                 </div>
-            )}
+            )
+            }
 
             {/* My Study Room Entry Banner */}
             <div className="mb-12">
@@ -263,6 +256,6 @@ export default function Dashboard() {
                 {renderPracticeCard('part7', '/homework/part7', '독해 - 단일지문', 'Part 7 Single', 'orange')}
                 {renderPracticeCard('part7_double', '/homework/part7-double', '독해 - 이중지문', 'Part 7 Double/Triple', 'pink')}
             </div>
-        </div>
+        </div >
     );
 }

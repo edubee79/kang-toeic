@@ -95,6 +95,22 @@ export default function StudentDashboard() {
     const fetchWeaknessReport = async (userId: string) => {
         const report = await WeaknessService.analyzeUserWeakness(userId);
         setWeaknessReport(report);
+
+        // Synchronize currentScore with weakness report logic (sum of averages across all parts)
+        if (report && report.targetStats) {
+            const lcParts = ['p1', 'p2', 'p3', 'p4'];
+            const rcParts = ['p5', 'p6', 'p7_single', 'p7_double'];
+
+            const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
+            const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
+
+            // User Formula: (LC_Sum * 5) + 10, (RC_Sum * 5) - 10
+            const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
+            const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
+
+            const totalScore = Math.max(0, lcScore) + Math.max(0, rcScore);
+            setCurrentScore(totalScore);
+        }
     };
 
     // Target editing functions
@@ -134,80 +150,41 @@ export default function StudentDashboard() {
     };
 
     const handleAutoAllocate = () => {
-        // 1. Convert Target Score to Target Question Count (Approx. score / 4.95)
-        // High score targets require higher accuracy per question on average.
-        const targetLC_Count = Math.round(editTargetLC / 4.95);
-        const targetRC_Count = Math.round(editTargetRC / 4.95);
+        const requiredLC = Math.min(100, Math.ceil(editTargetLC / 5));
+        const requiredRC = Math.min(100, Math.ceil(editTargetRC / 5) + 4);
 
-        // 2. Difficulty Weights (Requested: Part 1,2,5,6 get +20% weight)
-        const WEIGHTS = {
-            p1: 1.2, p2: 1.2,    // LC Easy Parts (+20%)
-            p3: 1.0, p4: 1.0,    // LC Hard Parts
-            p5: 1.2, p6: 1.2,    // RC Easy Parts (+20%)
-            p7_single: 1.0, p7_double: 1.0 // RC Hard Parts
-        };
-
-        // 3. Proportional Allocation Logic
-        const allocate = (targetCount: number, parts: Array<keyof typeof MAX_Q>) => {
-            const result: Partial<Record<keyof typeof MAX_Q, number>> = {};
-
-            // Calculate total weighted capacity
-            // This represents the "ease-adjusted" total questions available
-            const totalWeightedMax = parts.reduce((sum, part) => sum + (MAX_Q[part] * WEIGHTS[part]), 0);
-
-            let allocatedSum = 0;
-            const allocationMap = new Map<keyof typeof MAX_Q, number>();
-
-            // First pass: Proportional distribution
-            parts.forEach(part => {
-                const maxQ = MAX_Q[part];
-                const weight = WEIGHTS[part];
-
-                // Formula: (PartMax * Weight / TotalWeightedMax) * TargetCount
-                let rawCount = (maxQ * weight / totalWeightedMax) * targetCount;
-
-                // Clamp between 0 and Max
-                let count = Math.min(maxQ, Math.max(0, Math.round(rawCount)));
-
-                allocationMap.set(part, count);
-                allocatedSum += count;
-            });
-
-            // Second pass: Adjust for rounding errors (Distribute remainder)
-            let remainder = targetCount - allocatedSum;
-
-            // If we are short, add to the easiest parts first (highest weight) that aren't full
-            // If we are over, subtract from hardest parts first (lowest weight)
-            const sortedParts = [...parts].sort((a, b) => {
-                if (remainder > 0) return WEIGHTS[b] - WEIGHTS[a]; // Descending weight (Easiest first)
-                return WEIGHTS[a] - WEIGHTS[b]; // Ascending weight (Hardest first)
-            });
-
-            for (const part of sortedParts) {
-                if (remainder === 0) break;
-
-                const current = allocationMap.get(part) || 0;
-                const max = MAX_Q[part];
-
-                if (remainder > 0 && current < max) {
-                    allocationMap.set(part, current + 1);
-                    remainder--;
-                } else if (remainder < 0 && current > 0) {
-                    allocationMap.set(part, current - 1);
-                    remainder++;
-                }
+        const distribute = (budget: number, parts: Array<{ key: keyof typeof MAX_Q; cap?: number }>) => {
+            const result: any = {};
+            let remaining = budget;
+            for (const part of parts) {
+                const max = part.cap || MAX_Q[part.key];
+                const allocated = Math.min(max, remaining);
+                result[part.key] = allocated;
+                remaining -= allocated;
+                if (remaining <= 0) break;
             }
-
-            // Finalize
-            parts.forEach(p => result[p] = allocationMap.get(p));
             return result;
         };
 
-        const lcParts: Array<keyof typeof MAX_Q> = ['p1', 'p2', 'p3', 'p4'];
-        const rcParts: Array<keyof typeof MAX_Q> = ['p5', 'p6', 'p7_single', 'p7_double'];
+        const lcParts = [
+            { key: 'p1' as const },
+            { key: 'p2' as const },
+            { key: 'p4' as const },
+            { key: 'p3' as const }
+        ];
+        const lcResult = distribute(requiredLC, lcParts);
 
-        const lcResult = allocate(targetLC_Count, lcParts);
-        const rcResult = allocate(targetRC_Count, rcParts);
+        let p5Cap = MAX_Q.p5;
+        if (editTotalScore < 750) p5Cap = 25;
+        if (editTotalScore < 600) p5Cap = 20;
+
+        const rcParts = [
+            { key: 'p5' as const, cap: p5Cap },
+            { key: 'p6' as const },
+            { key: 'p7_single' as const },
+            { key: 'p7_double' as const }
+        ];
+        const rcResult = distribute(requiredRC, rcParts);
 
         setEditPartTargets({
             p1: lcResult.p1 || 0, p2: lcResult.p2 || 0, p3: lcResult.p3 || 0, p4: lcResult.p4 || 0,
@@ -310,12 +287,11 @@ export default function StudentDashboard() {
             const finalScores: Record<string, number> = {};
             Object.keys(scoreSums).forEach(k => finalScores[k] = Math.round(scoreSums[k] / scoreCounts[k]));
 
-            const lcCorrect = (finalScores['part1_test'] || 0) + (finalScores['part2_test'] || 0) + (finalScores['part3_test'] || 0) + (finalScores['part4_test'] || 0);
-            const rcCorrect = (finalScores['part5_test'] || 0) + (finalScores['part6_test'] || 0) + (finalScores['part7_test'] || finalScores['part7_single'] || 0);
-            setCurrentScore(lcCorrect + rcCorrect > 0 ? Math.round(((lcCorrect + rcCorrect) / 200) * 990) : 0);
             setPartScores(finalScores);
             setLatestScores(latestScore);
             setStats(finalStats);
+
+            // Note: currentScore is now calculated from weaknessReport in fetchWeaknessReport for consistency
         } catch (error) {
             console.error("Error stats:", error);
         }
@@ -401,7 +377,7 @@ export default function StudentDashboard() {
                             <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div className={cn("h-full rounded-full", (stats['voca'] || 0) < 15 ? "bg-rose-500" : "bg-emerald-500")} style={{ width: `${Math.min(100, ((stats['voca'] || 0) / 15) * 100)}%` }}></div></div>
                         </div>
                         <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
-                            <div className="flex justify-between items-center mb-2"><span className="text-amber-400 font-bold text-sm">약점: {analysis?.topWeakness?.label || '분석 중...'}</span><span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">{analysis?.topWeakness?.percentage || 0}%</span></div>
+                            <div className="flex justify-between items-center mb-2"><span className="text-amber-400 font-bold text-sm">Part 5 분석: {analysis?.topWeakness?.label || '분석 중...'}</span><span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">{analysis?.topWeakness?.percentage || 0}%</span></div>
                             <p className="text-xs text-slate-400 leading-relaxed">{analysis?.topWeakness?.message || "테스트 데이터가 충분하지 않습니다."}</p>
                         </div>
                         <div className="bg-slate-800 border border-slate-700 rounded-lg p-4">
@@ -446,9 +422,10 @@ export default function StudentDashboard() {
                                         <div className="space-y-3">
                                             <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
                                             {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                                                const goal = weaknessReport.targetStats[p].target;
-                                                const current = weaknessReport.targetStats[p].average;
-                                                const latest = weaknessReport.targetStats[p].latest;
+                                                const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                                const goal = partStats.target;
+                                                const current = partStats.average;
+                                                const latest = partStats.latest;
                                                 const gap = latest - goal;
 
                                                 return (
@@ -480,9 +457,10 @@ export default function StudentDashboard() {
                                         <div className="space-y-3">
                                             <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
                                             {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                                                const goal = weaknessReport.targetStats[p].target;
-                                                const current = weaknessReport.targetStats[p].average;
-                                                const latest = weaknessReport.targetStats[p].latest;
+                                                const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                                const goal = partStats.target;
+                                                const current = partStats.average;
+                                                const latest = partStats.latest;
                                                 const gap = latest - goal;
 
                                                 return (

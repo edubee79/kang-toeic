@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2, ArrowLeft, Calendar, FileText, CheckCircle2, TrendingUp, Target, AlertTriangle, Zap, Send, Bell, BookOpen, PenSquare, Mic2, Headphones, Trophy } from "lucide-react";
+import { Loader2, ArrowLeft, Calendar, FileText, CheckCircle2, TrendingUp, Target, AlertTriangle, AlertCircle, Zap, Send, Bell, BookOpen, PenSquare, Mic2, Headphones, Trophy } from "lucide-react";
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { useParams, useRouter } from 'next/navigation';
@@ -145,12 +145,20 @@ export default function StudentDetailPage() {
                 passedVocaDays: userData.passedVocaDays || [],
             } : null;
 
-            // 2. Fetch Results History (Use the resolved Student ID Number)
+            // 2. Fetch Weakness Report & Results History (Use the resolved Student ID Number)
             const resultQueryId = userData?.userId || studentId;
+
+            // Fetch Weakness Report FIRST to get accurate prediction stats
+            let report: WeaknessReport | null = null;
+            try {
+                report = await WeaknessService.analyzeUserWeakness(resultQueryId);
+                setWeaknessReport(report);
+            } catch (e) {
+                console.error("Admin Weakness Report Error:", e);
+            }
 
             // Trigger Analysis in parallel
             getWeaknessAnalysis(resultQueryId).then(setAnalysis).catch(e => console.error("Admin Analysis Error:", e));
-            WeaknessService.analyzeUserWeakness(resultQueryId).then(setWeaknessReport).catch(e => console.error("Admin Weakness Report Error:", e));
             const qResults = query(
                 collection(db, "Manager_Results"),
                 where("studentId", "==", resultQueryId),
@@ -240,12 +248,27 @@ export default function StudentDetailPage() {
 
             setResults(resList);
             setStats(finalStats);
-            // Finalize Student Data with Estimated Score
+            // Finalize Student Data with Estimated Score (UNIFIED with Weakness Dashboard logic)
             if (studentBase) {
-                const lcCorrect = (finalScores['part1_test'] || 0) + (finalScores['part2_test'] || 0) + (finalScores['part3_test'] || 0) + (finalScores['part4_test'] || 0);
-                const rcCorrect = (finalScores['part5_test'] || 0) + (finalScores['part6_test'] || 0) + (finalScores['part7_test'] || 0);
-                const totalCorrect = lcCorrect + rcCorrect;
-                const estScore = totalCorrect > 0 ? Math.round((totalCorrect / 200) * 990) : 0;
+                let estScore = 0;
+                if (report && report.targetStats) {
+                    const lcParts = ['p1', 'p2', 'p3', 'p4'];
+                    const rcParts = ['p5', 'p6', 'p7_single', 'p7_double'];
+                    const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
+                    const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
+
+                    const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
+                    const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
+                    estScore = Math.max(0, lcScore) + Math.max(0, rcScore);
+                } else {
+                    // Fallback to legacy calculation if report fails
+                    const lcCorrect = (finalScores['part1_test'] || 0) + (finalScores['part2_test'] || 0) + (finalScores['part3_test'] || 0) + (finalScores['part4_test'] || 0);
+                    const rcCorrect = (finalScores['part5_test'] || 0) + (finalScores['part6_test'] || 0) + (finalScores['part7_test'] || 0);
+
+                    const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
+                    const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
+                    estScore = Math.max(0, lcScore) + Math.max(0, rcScore);
+                }
 
                 setStudent({
                     ...studentBase,
@@ -515,9 +538,10 @@ export default function StudentDetailPage() {
                                                             <div className="space-y-3">
                                                                 <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
                                                                 {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                                                                    const goal = weaknessReport.targetStats[p].target;
-                                                                    const current = weaknessReport.targetStats[p].average;
-                                                                    const latest = weaknessReport.targetStats[p].latest;
+                                                                    const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                                                    const goal = partStats.target;
+                                                                    const current = partStats.average;
+                                                                    const latest = partStats.latest;
                                                                     const gap = latest - goal;
 
                                                                     return (
@@ -549,9 +573,10 @@ export default function StudentDetailPage() {
                                                             <div className="space-y-3">
                                                                 <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
                                                                 {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                                                                    const goal = weaknessReport.targetStats[p].target;
-                                                                    const current = weaknessReport.targetStats[p].average;
-                                                                    const latest = weaknessReport.targetStats[p].latest;
+                                                                    const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                                                    const goal = partStats.target;
+                                                                    const current = partStats.average;
+                                                                    const latest = partStats.latest;
                                                                     const gap = latest - goal;
 
                                                                     return (
@@ -627,41 +652,46 @@ export default function StudentDetailPage() {
                                 </div>
                             </Card>
 
-                            <Card className="bg-slate-900 border-rose-500/30 p-6 relative overflow-hidden">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <AlertTriangle className="text-rose-400 w-5 h-5" />
-                                    <h3 className="text-lg font-bold text-white">취약점 분석</h3>
-                                </div>
-                                <div className="space-y-3">
-                                    {analysis?.topWeakness && analysis.topWeakness.code !== 'NONE' ? (
-                                        <>
-                                            <div className="bg-rose-500/10 border border-rose-500/20 rounded-xl p-4">
-                                                <div className="flex items-center gap-2 mb-2">
-                                                    <Badge variant="outline" className="bg-rose-500 text-white border-none text-[10px] h-5">TOP WEAKNESS</Badge>
-                                                    <span className="text-rose-400 font-bold text-sm">{analysis.topWeakness.label}</span>
-                                                </div>
-                                                <p className="text-xs text-slate-400 leading-relaxed">{analysis.topWeakness.message}</p>
-                                                <div className="mt-3 flex items-center justify-between text-[10px] font-bold">
-                                                    <span className="text-slate-500">오답 비중</span>
-                                                    <span className="text-rose-400">{analysis.topWeakness.percentage}%</span>
-                                                </div>
-                                            </div>
+                            <Card className="lg:col-span-1 border-indigo-500/20 bg-indigo-500/5 backdrop-blur relative overflow-hidden">
+                                <CardHeader className="pb-3">
+                                    <CardTitle className="text-white flex items-center gap-2 text-lg">
+                                        <Zap className="w-5 h-5 text-amber-400" />
+                                        AI 정밀 분석 (Diagnosis)
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    {weaknessReport ? (
+                                        <div className="space-y-6">
+                                            <p className="text-slate-200 text-base leading-relaxed font-medium">
+                                                {weaknessReport.analysisMessage}
+                                            </p>
 
-                                            <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-xl p-4">
-                                                <span className="text-indigo-400 font-bold text-sm block mb-1 uppercase tracking-wider text-[10px]">LC 학습 습관</span>
-                                                <p className="text-xs text-slate-400 leading-relaxed">{analysis.lcHabit.message}</p>
-                                                <div className="mt-2 flex items-center gap-1">
-                                                    <Badge variant="outline" className="border-indigo-500/30 text-indigo-400 text-[10px]">{analysis.lcHabit.status}</Badge>
+                                            {weaknessReport.weakestTags.length > 0 && (
+                                                <div className="mt-6 space-y-3">
+                                                    <h4 className="text-xs font-bold text-slate-500 uppercase flex items-center gap-2">
+                                                        <AlertCircle className="w-3 h-3 text-rose-500" />
+                                                        3회 이상 반복된 취약 유형
+                                                    </h4>
+                                                    <div className="flex flex-wrap gap-2">
+                                                        {weaknessReport.weakestTags.map(tag => (
+                                                            <div key={tag.tag} className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                                                <span className="text-sm font-bold text-slate-200">{tag.label}</span>
+                                                                <span className="bg-rose-500/20 text-rose-500 text-[10px] font-black px-1.5 py-0.5 rounded">
+                                                                    {tag.incorrect}회 오답
+                                                                </span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </>
+                                            )}
+                                        </div>
                                     ) : (
                                         <div className="text-center py-10 bg-slate-950/50 rounded-xl border border-dashed border-slate-800">
                                             <Loader2 className="w-5 h-5 animate-spin mx-auto text-slate-700 mb-2" />
                                             <p className="text-xs text-slate-600 font-medium font-bold">분석 데이터 생성 중...</p>
                                         </div>
                                     )}
-                                </div>
+                                </CardContent>
                             </Card>
                         </div>
 
