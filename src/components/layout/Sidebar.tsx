@@ -32,6 +32,7 @@ const menuItems = [
     { href: "/homework/part7-double", label: "Part 7 이중 지문 (PC 전용)", icon: Monitor, featureKey: 'part7_double' },
     { type: 'divider' },
     { href: "/mock-test", label: "TOEIC 모의테스트 (PC전용)", icon: Target, featureKey: 'mockTest' },
+    { href: "/level-test", label: "TOEIC 레벨테스트 (PC전용)", icon: Target, featureKey: 'levelTest' },
 ];
 
 function NavContent({
@@ -88,7 +89,7 @@ function NavContent({
                                 }
 
                                 // PC Only Menu Check
-                                if ((item.href === "/homework/part7-double" || item.href === "/mock-test") && typeof window !== 'undefined' && window.innerWidth < 1024) {
+                                if ((item.href === "/homework/part7-double" || item.href === "/mock-test" || item.href === "/level-test") && typeof window !== 'undefined' && window.innerWidth < 1024) {
                                     e.preventDefault();
                                     alert("이 메뉴는 PC에서만 이용 가능합니다.\n큰 화면으로 접속해주세요.");
                                     return;

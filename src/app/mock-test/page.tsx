@@ -132,138 +132,137 @@ export default function MockTestLobby() {
                     </p>
                 </header>
 
-                <div className="grid gap-12">
-                    {/* Full Mock Test Section */}
-                    <section className="animate-in fade-in slide-in-from-bottom-8 duration-700">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="p-2 bg-indigo-500/10 rounded-lg">
-                                <BookOpen className="w-6 h-6 text-indigo-500" />
-                            </div>
-                            <h2 className="text-2xl font-black text-white italic uppercase tracking-tight">Full Mock Exam</h2>
+
+                {/* Full Mock Test Section */}
+                <section className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+                    <div className="flex items-center gap-3 mb-8">
+                        <div className="p-2 bg-indigo-500/10 rounded-lg">
+                            <BookOpen className="w-6 h-6 text-indigo-500" />
                         </div>
+                        <h2 className="text-2xl font-black text-white italic uppercase tracking-tight">Full Mock Exam</h2>
+                    </div>
 
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {[
-                                { id: '9', title: '제1회 실전 모의고사', description: '실전 감각 극대화' },
-                                { id: '10', title: '제2회 실전 모의고사', description: '고득점 완성 최종 점검' }
-                            ].map((test, index) => {
-                                const status = attempts[`full-${test.id}`]?.status || 'none';
-                                const isCompleted = status === 'completed';
-                                const isStarted = status === 'started';
-                                const realTestIndex = test.id === '9' ? 1 : 2;
-                                const isLocked = realTestIndex > maxMock;
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {[
+                            { id: '9', title: '제1회 실전 모의고사', description: '실전 감각 극대화' },
+                            { id: '10', title: '제2회 실전 모의고사', description: '고득점 완성 최종 점검' }
+                        ].map((test, index) => {
+                            const status = attempts[`full-${test.id}`]?.status || 'none';
+                            const isCompleted = status === 'completed';
+                            const isStarted = status === 'started';
+                            const realTestIndex = test.id === '9' ? 1 : 2;
+                            const isLocked = realTestIndex > maxMock;
 
-                                return (
-                                    <div
-                                        key={test.id}
-                                        style={{ animationDelay: `${index * 150}ms` }}
-                                        className="group relative animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards"
-                                    >
-                                        <Card className={cn(
-                                            "relative overflow-hidden transition-all duration-500 backdrop-blur-sm group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]",
-                                            isLocked
-                                                ? "bg-slate-900/40 border-slate-800 opacity-40 grayscale cursor-not-allowed"
-                                                : "bg-slate-900/40 border-slate-800 hover:border-indigo-500/40 group-hover:-translate-y-1"
-                                        )}>
-                                            {/* Glow Effect */}
-                                            {!isLocked && (
-                                                <div className="absolute -right-20 -top-20 w-40 h-40 bg-indigo-600/5 rounded-full blur-3xl group-hover:bg-indigo-600/10 transition-all duration-700"></div>
-                                            )}
+                            return (
+                                <div
+                                    key={test.id}
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                    className="group relative animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards"
+                                >
+                                    <Card className={cn(
+                                        "relative overflow-hidden transition-all duration-500 backdrop-blur-sm group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]",
+                                        isLocked
+                                            ? "bg-slate-900/40 border-slate-800 opacity-40 grayscale cursor-not-allowed"
+                                            : "bg-slate-900/40 border-slate-800 hover:border-indigo-500/40 group-hover:-translate-y-1"
+                                    )}>
+                                        {/* Glow Effect */}
+                                        {!isLocked && (
+                                            <div className="absolute -right-20 -top-20 w-40 h-40 bg-indigo-600/5 rounded-full blur-3xl group-hover:bg-indigo-600/10 transition-all duration-700"></div>
+                                        )}
 
-                                            {isLocked && (
-                                                <div className="absolute top-4 right-4 bg-slate-800/50 text-slate-500 border border-slate-700/50 text-[10px] px-3 py-1 font-black rounded-lg uppercase tracking-widest z-20 flex items-center gap-2">
-                                                    <Lock className="w-3 h-3" />
-                                                    Locked
-                                                </div>
-                                            )}
+                                        {isLocked && (
+                                            <div className="absolute top-4 right-4 bg-slate-800/50 text-slate-500 border border-slate-700/50 text-[10px] px-3 py-1 font-black rounded-lg uppercase tracking-widest z-20 flex items-center gap-2">
+                                                <Lock className="w-3 h-3" />
+                                                Locked
+                                            </div>
+                                        )}
 
-                                            {isStarted && !isCompleted && !isLocked && (
-                                                <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-500 border border-amber-500/30 text-[10px] px-3 py-1 font-black rounded-lg uppercase tracking-widest z-20">
-                                                    In Progress
-                                                </div>
-                                            )}
-                                            {isCompleted && !isLocked && (
-                                                <div className="absolute top-4 right-4 bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 text-[10px] px-3 py-1 font-black rounded-lg uppercase tracking-widest z-20">
-                                                    Completed
-                                                </div>
-                                            )}
+                                        {isStarted && !isCompleted && !isLocked && (
+                                            <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-500 border border-amber-500/30 text-[10px] px-3 py-1 font-black rounded-lg uppercase tracking-widest z-20">
+                                                In Progress
+                                            </div>
+                                        )}
+                                        {isCompleted && !isLocked && (
+                                            <div className="absolute top-4 right-4 bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 text-[10px] px-3 py-1 font-black rounded-lg uppercase tracking-widest z-20">
+                                                Completed
+                                            </div>
+                                        )}
 
-                                            <CardHeader className="pt-8 px-8 flex flex-row items-start justify-between space-y-0">
-                                                <div>
-                                                    <CardTitle className={cn(
-                                                        "text-2xl md:text-3xl font-black mb-2 italic tracking-tight transition-colors",
-                                                        isLocked ? "text-slate-600" : "text-white group-hover:text-indigo-400"
-                                                    )}>
-                                                        {test.title}
-                                                    </CardTitle>
-                                                    <p className="text-slate-500 text-sm font-medium">{test.description}</p>
-                                                </div>
-                                            </CardHeader>
+                                        <CardHeader className="pt-8 px-8 flex flex-row items-start justify-between space-y-0">
+                                            <div>
+                                                <CardTitle className={cn(
+                                                    "text-2xl md:text-3xl font-black mb-2 italic tracking-tight transition-colors",
+                                                    isLocked ? "text-slate-600" : "text-white group-hover:text-indigo-400"
+                                                )}>
+                                                    {test.title}
+                                                </CardTitle>
+                                                <p className="text-slate-500 text-sm font-medium">{test.description}</p>
+                                            </div>
+                                        </CardHeader>
 
-                                            <CardContent className="p-8 pt-4 space-y-8">
-                                                <div className="flex gap-8">
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="w-8 h-8 rounded-lg bg-slate-800/50 flex items-center justify-center">
-                                                            <HelpCircle className="w-4 h-4 text-slate-400" />
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Questions</p>
-                                                            <p className="text-sm font-bold text-slate-300">200문항</p>
-                                                        </div>
+                                        <CardContent className="p-8 pt-4 space-y-8">
+                                            <div className="flex gap-8">
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-8 h-8 rounded-lg bg-slate-800/50 flex items-center justify-center">
+                                                        <HelpCircle className="w-4 h-4 text-slate-400" />
                                                     </div>
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="w-8 h-8 rounded-lg bg-slate-800/50 flex items-center justify-center">
-                                                            <Clock className="w-4 h-4 text-slate-400" />
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Duration</p>
-                                                            <p className="text-sm font-bold text-slate-300">120분</p>
-                                                        </div>
+                                                    <div>
+                                                        <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Questions</p>
+                                                        <p className="text-sm font-bold text-slate-300">200문항</p>
                                                     </div>
                                                 </div>
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-8 h-8 rounded-lg bg-slate-800/50 flex items-center justify-center">
+                                                        <Clock className="w-4 h-4 text-slate-400" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Duration</p>
+                                                        <p className="text-sm font-bold text-slate-300">120분</p>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                <div className="pt-2">
-                                                    {isLocked ? (
-                                                        <Button disabled className="w-full h-14 bg-slate-800/50 text-slate-600 border border-slate-700/50 rounded-2xl font-black italic tracking-widest uppercase">
-                                                            <Lock className="w-5 h-5 mr-3" />
-                                                            Locked (Range Exceeded)
-                                                        </Button>
-                                                    ) : isCompleted ? (
-                                                        <div className="flex flex-col gap-2">
-                                                            <Button
-                                                                onClick={() => router.push(`/mock-test/full/${test.id}/result`)}
-                                                                className="w-full h-14 bg-emerald-600/10 hover:bg-emerald-600 text-emerald-500 hover:text-white border border-emerald-600/30 rounded-2xl font-black italic tracking-widest uppercase transition-all"
-                                                            >
-                                                                View Results
-                                                            </Button>
-                                                            <p className="text-[10px] text-center text-slate-500 font-bold">이미 응시 완료한 시험입니다.</p>
-                                                        </div>
-                                                    ) : isStarted ? (
-                                                        <div className="flex flex-col gap-2">
-                                                            <Button disabled className="w-full h-14 bg-amber-500/10 text-amber-500 border border-amber-500/30 rounded-2xl font-black italic tracking-widest uppercase">
-                                                                <Lock className="w-5 h-5 mr-3" />
-                                                                Attempted (Locked)
-                                                            </Button>
-                                                            <p className="text-[10px] text-center text-amber-500 font-bold">이미 시작한 기록이 있습니다. 재응시 불가.</p>
-                                                        </div>
-                                                    ) : (
+                                            <div className="pt-2">
+                                                {isLocked ? (
+                                                    <Button disabled className="w-full h-14 bg-slate-800/50 text-slate-600 border border-slate-700/50 rounded-2xl font-black italic tracking-widest uppercase">
+                                                        <Lock className="w-5 h-5 mr-3" />
+                                                        Locked (Range Exceeded)
+                                                    </Button>
+                                                ) : isCompleted ? (
+                                                    <div className="flex flex-col gap-2">
                                                         <Button
-                                                            onClick={() => handleStartTest('full', test.id)}
-                                                            className="w-full h-14 bg-indigo-600 hover:bg-indigo-500 text-white border-2 border-indigo-500/50 rounded-2xl font-black italic tracking-widest uppercase shadow-[0_10px_30px_rgba(79,70,229,0.3)] active:scale-[0.98] transition-all group-hover:scale-[1.01]"
+                                                            onClick={() => router.push(`/mock-test/full/${test.id}/result`)}
+                                                            className="w-full h-14 bg-emerald-600/10 hover:bg-emerald-600 text-emerald-500 hover:text-white border border-emerald-600/30 rounded-2xl font-black italic tracking-widest uppercase transition-all"
                                                         >
-                                                            <PlayCircle className="w-5 h-5 mr-3" />
-                                                            Start Exam
+                                                            View Results
                                                         </Button>
-                                                    )}
-                                                </div>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </section>
-                </div>
+                                                        <p className="text-[10px] text-center text-slate-500 font-bold">이미 응시 완료한 시험입니다.</p>
+                                                    </div>
+                                                ) : isStarted ? (
+                                                    <div className="flex flex-col gap-2">
+                                                        <Button disabled className="w-full h-14 bg-amber-500/10 text-amber-500 border border-amber-500/30 rounded-2xl font-black italic tracking-widest uppercase">
+                                                            <Lock className="w-5 h-5 mr-3" />
+                                                            Attempted (Locked)
+                                                        </Button>
+                                                        <p className="text-[10px] text-center text-amber-500 font-bold">이미 시작한 기록이 있습니다. 재응시 불가.</p>
+                                                    </div>
+                                                ) : (
+                                                    <Button
+                                                        onClick={() => handleStartTest('full', test.id)}
+                                                        className="w-full h-14 bg-indigo-600 hover:bg-indigo-500 text-white border-2 border-indigo-500/50 rounded-2xl font-black italic tracking-widest uppercase shadow-[0_10px_30px_rgba(79,70,229,0.3)] active:scale-[0.98] transition-all group-hover:scale-[1.01]"
+                                                    >
+                                                        <PlayCircle className="w-5 h-5 mr-3" />
+                                                        Start Exam
+                                                    </Button>
+                                                )}
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </section>
             </div>
         </div>
     );

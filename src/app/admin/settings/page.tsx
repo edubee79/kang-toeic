@@ -28,6 +28,7 @@ export default function AdminSettingsPage() {
         mockTest: true,
         voca: true,
         grammar: true,
+        levelTest: true,
         maxSets: {}
     });
 
@@ -100,6 +101,7 @@ export default function AdminSettingsPage() {
         { key: 'part7', title: 'Part 7 Practice', desc: '독해 (단일 지문)', icon: Zap },
         { key: 'part7_double', title: 'Part 7 Double', desc: '독해 (이중/삼중 지문)', icon: Zap },
         { key: 'mockTest', title: 'Full Mock Test', desc: 'LC+RC 200문항 (PC 전용)', icon: Shield },
+        { key: 'levelTest', title: 'Level Test (Diagnostic)', desc: '심층 레벨 진단 하프테스트 (PC 전용)', icon: Zap },
     ];
 
     return (

@@ -11,9 +11,10 @@ export interface FeatureAccess {
     part7: boolean;
     part7_double: boolean;
     mockTest: boolean;
-    voca?: boolean; // Now explicitly optional but controllable
+    voca?: boolean;
     grammar?: boolean;
     part1_real?: boolean;
+    levelTest?: boolean;
     maxSets?: Record<string, number>;
 }
 
@@ -29,6 +30,7 @@ const DEFAULT_ACCESS: FeatureAccess = {
     mockTest: true,
     voca: true,
     grammar: true,
+    levelTest: true,
     maxSets: {
         part1: 10,
         part2: 10,
@@ -41,7 +43,8 @@ const DEFAULT_ACCESS: FeatureAccess = {
         mockTest: 10,
         voca: 15,
         grammar: 10,
-        part1_real: 10
+        part1_real: 10,
+        levelTest: 2
     }
 };
 

@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     title: "깡쌤토익 | TOEIC",
     description: "Real-time TOEIC Homework Manager",
     manifest: "/manifest.json",
+    icons: {
+        icon: "/favicon.jpg",
+        apple: "/icons/app-main-icon.jpg",
+    },
 };
 
 export const viewport: Viewport = {
