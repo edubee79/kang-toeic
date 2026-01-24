@@ -211,7 +211,8 @@ export default function RegistrationsPage() {
             });
             console.log('✅ User approved successfully');
 
-            // --- SEND PUSH NOTIFICATION ---
+            /* 
+            // --- SEND PUSH NOTIFICATION (PAUSED FOR TESTING) ---
             const userObj = registrations.find(u => u.id === userDocId);
             if (userObj?.fcmToken) {
                 try {
@@ -229,6 +230,7 @@ export default function RegistrationsPage() {
                     console.error('❌ Failed to send approval push:', pushErr);
                 }
             }
+            */
 
             fetchRegistrations();
         } catch (error) {
