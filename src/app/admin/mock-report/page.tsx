@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { ChevronRight, BarChart3, Download, ArrowLeft, Trophy, Users, Star } from 'lucide-react';
+import { ChevronRight, BarChart3, Download, ArrowLeft, Trophy, Users, Star, Trash2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import * as XLSX from 'xlsx';
@@ -141,6 +141,19 @@ export default function MockReportPage() {
             console.error("Report error:", error);
         } finally {
             setIsLoading(false);
+        }
+    };
+
+    // 2. Delete Record
+    const handleDeleteRecord = async (docId: string) => {
+        if (!window.confirm("이 응시 기록을 영구적으로 삭제하시겠습니까? 학생 리포트에서도 사라집니다.")) return;
+
+        try {
+            await deleteDoc(doc(db, 'MockTestAttempts', docId));
+            setReportData(prev => prev.filter(item => item.id !== docId));
+        } catch (error) {
+            console.error("Delete error:", error);
+            alert("삭제 중 오류가 발생했습니다.");
         }
     };
 
@@ -296,12 +309,20 @@ export default function MockReportPage() {
                                             </TableCell>
                                             <TableCell>
                                                 <div className="flex flex-col">
-                                                    <span className="font-bold text-slate-900">{item.userName}</span>
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="font-bold text-slate-900">{item.userName}</span>
+                                                        <Badge variant="secondary" className={`text-[9px] h-4 px-1.5 font-black uppercase tracking-tighter ${item.id.includes('half') || item.testTitle.includes('하프')
+                                                            ? 'bg-rose-100 text-rose-600 border-rose-200'
+                                                            : 'bg-indigo-100 text-indigo-600 border-indigo-200'
+                                                            }`}>
+                                                            {item.id.includes('half') || item.testTitle.includes('하프') ? 'HALF' : 'FULL'}
+                                                        </Badge>
+                                                    </div>
                                                     <span className="text-[10px] text-slate-400 uppercase tracking-tighter">{item.userId}</span>
                                                 </div>
                                             </TableCell>
                                             <TableCell>
-                                                <Badge variant="outline" className="bg-slate-50 border-slate-200 text-slate-500 font-bold">{item.className}</Badge>
+                                                <Badge variant="outline" className="bg-slate-50 border-slate-200 text-slate-500 font-bold max-w-[100px] truncate">{item.className}</Badge>
                                             </TableCell>
                                             <TableCell>
                                                 <div className="flex items-center gap-1">
@@ -314,14 +335,24 @@ export default function MockReportPage() {
                                                 const wrong = score ? score.total - score.correct : '-';
                                                 return (
                                                     <TableCell key={pKey} className="text-center font-bold">
-                                                        <span className={wrong !== '-' && (wrong as number) > 5 ? 'text-rose-500 font-black' : 'text-slate-500'}>
+                                                        <span className={wrong !== '-' && (wrong as number) > 3 ? 'text-rose-500 font-black' : 'text-slate-500'}>
                                                             {wrong}
                                                         </span>
                                                     </TableCell>
                                                 );
                                             })}
-                                            <TableCell className="text-right pr-8 text-xs text-slate-400 font-medium">
-                                                {new Date(item.date).toLocaleDateString()}
+                                            <TableCell className="text-right pr-4">
+                                                <div className="flex flex-col items-end">
+                                                    <span className="text-[10px] text-slate-400 font-medium">{new Date(item.date).toLocaleDateString()}</span>
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
+                                                        onClick={() => handleDeleteRecord(item.id)}
+                                                        className="h-7 w-7 p-0 text-slate-300 hover:text-rose-600 hover:bg-rose-50 mt-1 opacity-0 group-hover:opacity-100 transition-all"
+                                                    >
+                                                        <Trash2 className="w-3.5 h-3.5" />
+                                                    </Button>
+                                                </div>
                                             </TableCell>
                                         </TableRow>
                                     ))

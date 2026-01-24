@@ -111,7 +111,7 @@ export default function MockTestResult() {
                         <div className="space-y-2 text-center md:text-left">
                             <span className="bg-rose-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest">Premium Analysis</span>
                             <h1 className="text-3xl md:text-4xl font-black tracking-tighter text-white">
-                                1회 레벨테스트 <span className="text-indigo-400">학습결과</span>
+                                {isHalf ? (finalTestIdLabel?.includes('b') ? '2회' : '1회') : `${testId}회`} 레벨테스트 <span className="text-indigo-400">학습결과</span>
                             </h1>
                             <p className="text-slate-400 font-bold tracking-tight text-xs">응시 일시: {new Date(attempt.date).toLocaleString()}</p>
                         </div>

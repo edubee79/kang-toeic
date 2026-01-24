@@ -2,17 +2,26 @@
 
 import React, { useState, useEffect, useRef } from "react";
 // 기존 데이터 대신 하프 데이터를 임포트
-import { half9aPart1, half9aPart2, half9aPart3, half9aPart4, half9aFullLCAudio } from "@/data/mock/half_set9_a";
+// 기존 데이터 하드코딩 임포트 제거
 import { ChevronLeft, ChevronRight, Volume2, Monitor } from "lucide-react";
 
 interface Props {
+    testId: string;
     onFinishLC: (answers: Record<string, string>) => void;
 }
 
-/**
- * 기존 UI(MockTest_LC_Set9)를 100% 복제하고 데이터만 하프로 교체
- */
-export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
+export default function HalfTest_LC_Set9({ testId, onFinishLC }: Props) {
+    const isA = testId === '9a';
+    // 데이터 소스 선택
+    const data = isA
+        ? require("@/data/mock/half_set9_a")
+        : require("@/data/mock/half_set9_b");
+
+    const p1 = isA ? data.half9aPart1 : data.half9bPart1;
+    const p2 = isA ? data.half9aPart2 : data.half9bPart2;
+    const p3 = isA ? data.half9aPart3 : data.half9bPart3;
+    const p4 = isA ? data.half9aPart4 : data.half9bPart4;
+    const audio = isA ? data.half9aFullLCAudio : data.half9bFullLCAudio;
     const [currentSpread, setCurrentSpread] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [isPlaying, setIsPlaying] = useState(false);
@@ -55,7 +64,7 @@ export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
         }
     };
 
-    const totalSpreads = 4; // 하프테스트에 맞춰 스프레드 수 조정
+    const totalSpreads = 5; // 하프테스트 레이아웃 최적화를 위해 5개로 확장
 
     const nextSpread = () => {
         const currentQuestions = getSpreadQuestions(currentSpread);
@@ -80,14 +89,21 @@ export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
         const qIds: string[] = [];
         try {
             if (idx === 0) {
-                half9aPart1.forEach(q => qIds.push(String(q.id)));
+                p1.forEach(q => qIds.push(String(q.id)));
             } else if (idx === 1) {
-                half9aPart2.forEach(q => qIds.push(String(q.id)));
-                half9aPart3.slice(0, 2).forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
+                p2.forEach(q => qIds.push(String(q.id)));
+                p3.slice(0, 2).forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
             } else if (idx === 2) {
-                half9aPart3.slice(2).forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
+                // Part 3의 중반부 4세트 (각 페이지 2세트씩)
+                p3.slice(2, 6).forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
             } else if (idx === 3) {
-                half9aPart4.forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
+                // Part 3의 남은 세트 + Part 4 시작 세트
+                const p3Rem = p3.slice(6);
+                const p4Start = p4.slice(0, 3);
+                [...p3Rem, ...p4Start].forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
+            } else if (idx === 4) {
+                // Part 4 나머지 세트
+                p4.slice(3).forEach(set => set?.questions.forEach((q: any) => qIds.push(String(q.id))));
             }
         } catch (e) {
             console.error("Error collecting question IDs:", e);
@@ -101,13 +117,13 @@ export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
 
     return (
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
-            <audio ref={audioRef} src={half9aFullLCAudio} onEnded={() => onFinishLC(answers)} />
+            <audio ref={audioRef} src={audio} onEnded={() => onFinishLC(answers)} />
 
             <header className="h-16 border-b bg-white flex items-center justify-between px-6 shrink-0 z-[110] shadow-sm">
                 <div className="flex items-center gap-6">
                     <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
                     <div className="h-6 w-px bg-slate-200"></div>
-                    <span className="font-bold text-slate-500 uppercase text-xs tracking-widest text-rose-600">하프테스트 A (Listening)</span>
+                    <span className="font-bold text-slate-500 uppercase text-xs tracking-widest text-rose-600">하프테스트 {isA ? 'A' : 'B'} (Listening)</span>
                 </div>
 
                 <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-10 z-[120]">
@@ -136,12 +152,19 @@ export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
-                                console.log("Manual Force Finish LC");
-                                onFinishLC(answers);
+                                const currentQuestions = getSpreadQuestions(currentSpread);
+                                const unanswered = currentQuestions.filter(qId => !answers[qId]);
+                                if (unanswered.length > 0) {
+                                    alert(`현재 페이지의 모든 문제를 풀어주세요. (남은 문제: ${unanswered.length}개)`);
+                                    return;
+                                }
+                                if (window.confirm("Listening 파트를 종료하고 Reading 파트로 넘어가시겠습니까?")) {
+                                    onFinishLC(answers);
+                                }
                             }}
-                            className="bg-rose-600 text-white px-6 py-2.5 rounded-full text-sm font-black uppercase tracking-widest shadow-[0_0_20px_rgba(225,29,72,0.3)] hover:bg-rose-700 active:scale-95 transition-all z-[999] relative"
+                            className="bg-indigo-600 text-white px-6 py-2.5 rounded-full text-sm font-black uppercase tracking-widest shadow-[0_0_20px_rgba(79,70,229,0.2)] hover:bg-indigo-700 active:scale-95 transition-all z-[999] relative"
                         >
-                            Start Reading Now →
+                            Finish Listening →
                         </button>
                     )}
                     {!isPlaying && (
@@ -161,7 +184,7 @@ export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
             <main ref={mainContainerRef} className="flex-1 overflow-y-auto overflow-x-hidden relative flex bg-slate-100/50">
                 <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-slate-200/50 z-10 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.05)]"></div>
                 <div className="w-full h-fit min-h-full flex">
-                    {renderSpread(currentSpread, answers, handleAnswer)}
+                    {renderSpread(currentSpread, answers, handleAnswer, { p1, p2, p3, p4 })}
                 </div>
             </main>
 
@@ -182,7 +205,8 @@ export default function HalfTest_LC_Set9({ onFinishLC }: Props) {
     );
 }
 
-function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
+function renderSpread(spreadIdx: number, answers: any, onAnswer: any, data: any) {
+    const { p1, p2, p3, p4 } = data;
     switch (spreadIdx) {
         case 0: // P1 Directions + P1 (1,3,5)
             return (
@@ -192,11 +216,11 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <div className="directions-box">
                             <strong>PART 1 Directions:</strong> For each question in this part, select the one statement that best describes what you see in the picture.
                         </div>
-                        {renderP1Question(1, answers, onAnswer)}
+                        {renderP1Question(p1[0].id, answers, onAnswer, p1)}
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {[3, 5].map(num => renderP1Question(num, answers, onAnswer))}
+                            {p1.slice(1).map(q => renderP1Question(q.id, answers, onAnswer, p1))}
                         </div>
                     </div>
                 </>
@@ -207,38 +231,50 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     <div className="booklet-page flex flex-col">
                         <div className="directions-box !py-3 !mb-5 text-[12px]"><strong>PART 2 Directions:</strong> Select the best response.</div>
                         <div className="flex-1 flex gap-0">
-                            <div className="flex-1 space-y-2">{half9aPart2.slice(0, 7).map(q => renderP2Row(q, answers, onAnswer))}</div>
+                            <div className="flex-1 space-y-2">{p2.slice(0, 7).map(q => renderP2Row(q, answers, onAnswer))}</div>
                             <div className="column-divider"></div>
-                            <div className="flex-1 space-y-2">{half9aPart2.slice(7).map(q => renderP2Row(q, answers, onAnswer))}</div>
+                            <div className="flex-1 space-y-2">{p2.slice(7).map(q => renderP2Row(q, answers, onAnswer))}</div>
                         </div>
                     </div>
                     <div className="booklet-page flex flex-col">
                         <div className="directions-box !py-3 !mb-5 text-[12px]"><strong>PART 3 Directions:</strong> Answer three questions about each conversation.</div>
-                        {renderP34Page(half9aPart3.slice(0, 2), answers, onAnswer)}
+                        {renderP34Page(p3.slice(0, 2), answers, onAnswer)}
                     </div>
                 </>
             );
-        case 2: // P3 나머지
+        case 2: // P3 중반 (각 페이지 2세트씩)
             return (
                 <>
-                    <div className="booklet-page">{renderP34Page(half9aPart3.slice(2, 4), answers, onAnswer)}</div>
-                    <div className="booklet-page">{renderP34Page(half9aPart3.slice(4), answers, onAnswer)}</div>
+                    <div className="booklet-page">{renderP34Page(p3.slice(2, 4), answers, onAnswer)}</div>
+                    <div className="booklet-page">{renderP34Page(p3.slice(4, 6), answers, onAnswer)}</div>
                 </>
             );
-        case 3: // P4
+        case 3: // P3 마지막 + P4 초반
             return (
                 <>
-                    <div className="booklet-page">{renderP34Page(half9aPart4.slice(0, 2), answers, onAnswer)}</div>
-                    <div className="booklet-page">{renderP34Page(half9aPart4.slice(2), answers, onAnswer)}</div>
+                    <div className="booklet-page">{renderP34Page([...p3.slice(6, 7), ...p4.slice(0, 1)], answers, onAnswer)}</div>
+                    <div className="booklet-page">{renderP34Page(p4.slice(1, 3), answers, onAnswer)}</div>
+                </>
+            );
+        case 4: // P4 나머지
+            return (
+                <>
+                    <div className="booklet-page">{renderP34Page(p4.slice(3, 5), answers, onAnswer)}</div>
+                    <div className="booklet-page">
+                        <div className="h-full flex flex-col items-center justify-center opacity-20 italic">
+                            <div className="text-4xl mb-2 font-black">END OF LISTENING</div>
+                            <div className="text-xl">Next: Reading Section →</div>
+                        </div>
+                    </div>
                 </>
             );
         default: return <div className="p-20">End</div>;
     }
 }
 
-function renderP1Question(num: number, answers: any, onAnswer: any) {
-    // num과 q.id의 타입을 일치시켜 정확히 찾도록 수정
-    const qData = half9aPart1.find(q => Number(q.id) === Number(num));
+function renderP1Question(num: number, answers: any, onAnswer: any, p1: any[]) {
+    // p1 배열에서 직접 찾도록 수정
+    const qData = p1.find(q => Number(q.id) === Number(num));
 
     return (
         <div key={num} className="w-full">

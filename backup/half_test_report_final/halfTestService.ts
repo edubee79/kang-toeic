@@ -1,7 +1,7 @@
 import { db } from '@/lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { getCorrectAnswersForTest9, getCorrectAnswersForTest10 } from '@/lib/mock/scoring';
-// 하드코딩된 임포트 제거 (분석 시점에 동적 로드)
+import { half9aPart1, half9aPart2, half9aPart3, half9aPart4, half9aPart5, half9aPart6, half9aPart7 } from '@/data/mock/half_set9_a';
 
 export interface TimeLog {
     p5: number;
@@ -40,37 +40,25 @@ const TARGET_TIMES = {
     p5: 390, p6: 330, p7s: 750, p7m: 630
 };
 
-// 1. 한국어 매핑 라이브러리 (실전 데이터 9/10회차 모든 분류 코드 전수 수용)
+// 1. 한국어 매핑 라이브러리
 const TAG_MAP: Record<string, string> = {
+    // Part 5/6
+    'P5_VOC_VERB': '동사 어휘', 'P5_POS_ADJ': '형용사 자리', 'P5_POS_NOUN': '명사 자리', 'P5_POS_ADV': '부사 자리',
+    'P5_VOC_ADJ': '형용사 어휘', 'P5_VOC_NOUN': '명사 어휘', 'P5_PR_CASE': '대명사 격', 'P5_V_AGREE': '수 일치',
+    'P5_V_VOICE': '능동/수동태', 'P5_PREP_PHRA': '전치사/숙어', 'P6_GRAMMAR': '문법 구조', 'P6_VOCABULARY': '장문 어휘',
+    'P6_SENTENCE_INSERTION': '문장 삽입', 'P5_CONJ': '접속사/전치사',
     // Part 2
-    'How': '의문사(How) 정보', 'What': '의문사(What) 구체사항', 'When': '의문 시간/시점',
-    'Where': '의문 장소/위치', 'Who': '의문 인물/대상', 'Why': '의문 이유/근거',
-    'YesNo': '일반 의문문 응답', 'Choice': '선택 의문문 판단', 'Statement': '평서문 상황 맥락',
-    'Indirect': '우회적/회피형 답변', 'Negative': '부정 의문문 확인', 'Tag': '부가 의문문',
-    // Part 3/4/6/7 Core Type
-    'DETAIL': '세부 사항 파악', 'WHO_LOC': '인물/장소/직업 추론', 'MAIN_PURPOSE': '전체 주제 및 목적',
-    'WHY_PROBLEM': '이유 및 문제점 단서', 'NEXT_ACTION': '향후 행동/제안',
-    'IMPLIED_MEANING': '숨은 의도 파악', 'IMPLY_MEANING': '의도 추론', 'GRAPHIC': '시각 자료 매칭',
-    'VISUAL': '도표/시각자료 분석', 'INFERENCE': '문맥적 추론',
-    // Part 5/6 Grammar (G_...)
-    'G_POS': '필수 품사(명/형/부) 자리', 'G_CONJ': '접속사 및 전치사', 'G_VERB': '동사 시제 및 수 일치',
-    'G_PR': '대명사 및 격', 'G_PREP': '전치사 관용구', 'G_COMP': '비교/최상급',
-    // Part 5/6 Vocabulary (V_...)
-    'V_VERB': '동사 어휘', 'V_NOUN': '명사 어휘', 'V_ADJ': '형용사 어휘', 'V_ADV': '부사 어휘',
-    // Part 6/7 Specific
-    'P6_GRAMMAR': '장문 문법 구조', 'P6_VOCABULARY': '장문 문맥 어휘', 'P6_SENTENCE_INSERTION': '문장 삽입',
-    'P6_READING_COMPREHENSION': '지문 내용 이해', 'P7_PURPOSE': '지문 제작 목적',
-    'P7_DETAIL': '명시적 세부 정보', 'P7_INFERENCE': '암시적 내용 추론', 'P7_VOCABULARY': '문맥상 유의어',
-    'P7_SENTENCE_INSERTION': '문장 적절한 위치'
+    'How': '의문사(How)', 'What': '의문사(What)', 'When': '의문사(When)', 'Where': '의문사(Where)', 'Who': '의문사(Who)', 'Why': '의문사(Why)',
+    'YesNo': '일반 의문문', 'Choice': '선택 의문문', 'Statement': '평서문', 'Negative': '부정 의문문', 'Tag': '부가 의문문', 'Indirect': '우회적 답변',
+    // Part 3/4/7 Question Types
+    'MAIN_PURPOSE': '주제/목적 찾기', 'DETAIL': '세부 정보 파악', 'WHO_LOC': '인물/장소 추론', 'WHY_PROBLEM': '이유/문제점',
+    'NEXT_ACTION': '향후 행동', 'IMPLIED_MEANING': '의도 파악', 'GRAPHIC': '시각 자료 분석'
 };
 
 const PASSAGE_MAP: Record<string, string> = {
-    'EMAIL': '이메일/서신', 'E-MAIL': '이메일', 'LETTER': '공식 편지', 'NOTICE': '공고문/안내',
-    'ARTICLE': '기사/보도자료', 'MEMO': '회람/메모', 'ADVERTISEMENT': '광고/홍보',
-    'ANNOUNCEMENT': '안내 방송/공지', 'WEB PAGE': '웹페이지/사이트', 'CHAT': '메신저 대화',
-    'CHAT_MESSAGE': '실시간 채팅', 'FORM': '서식/양식/신청서', 'INVOICE': '송장/송수증',
-    'SCHEDULE': '일정표/스케줄', 'LIST': '목록/리스트', 'TESTIMONIAL': '사용 후기/추천사',
-    'Double': '연계 지문(Double)', 'Triple': '연계 지문(Triple)', 'DualPassage': '복합 지문'
+    'EMAIL': '이메일', 'LETTER': '편지', 'NOTICE': '공고문', 'ARTICLE': '기사', 'MEMO': '회람/메모',
+    'ADVERTISEMENT': '광고', 'ANNOUNCEMENT': '안내문', 'WEB PAGE': '웹페이지', 'CHAT': '채팅 메시지',
+    'FORM': '서식/양식', 'INVOICE': '송장'
 };
 
 export const HalfTestService = {
@@ -83,22 +71,7 @@ export const HalfTestService = {
         const logs = data.timeLogs as TimeLog;
         const userAnswers = data.answers as Record<string, string>;
         const targetGoal = data.targetScore || 800;
-        const fullTestId = data.testId;
-        const isA = fullTestId.includes('a');
-        const isTest9 = fullTestId.includes('9');
-
-        const testData = isA
-            ? require('@/data/mock/half_set9_a')
-            : require('@/data/mock/half_set9_b');
-
-        const p1_source = isA ? testData.half9aPart1 : testData.half9bPart1;
-        const p2_source = isA ? testData.half9aPart2 : testData.half9bPart2;
-        const p3_source = isA ? testData.half9aPart3 : testData.half9bPart3;
-        const p4_source = isA ? testData.half9aPart4 : testData.half9bPart4;
-        const p5_source = isA ? testData.half9aPart5 : testData.half9bPart5;
-        const p6_source = isA ? testData.half9aPart6 : testData.half9bPart6;
-        const p7_source = isA ? testData.half9aPart7 : testData.half9bPart7;
-
+        const isTest9 = data.testId.includes('9');
         const correctAnswers = isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10();
 
         const partGoals: Record<string, number> = targetGoal >= 900 ?
@@ -136,51 +109,52 @@ export const HalfTestService = {
                 partStats[partKey].correct++;
                 if (qNum <= 100) lcTotal++; else rcTotal++;
             } else {
+                // [정밀 분석 데이터 추출]
                 if (partKey === 'p1') {
                     partStats.p1.wrongTags.push("생활영어 어휘");
                 } else if (partKey === 'p2') {
-                    const qData = p2_source.find((q: any) => q.id === qNum);
+                    const qData = half9aPart2.find(q => q.id === qNum);
                     if (qData?.questionType) partStats.p2.wrongTags.push(TAG_MAP[qData.questionType] || qData.questionType);
                 } else if (partKey === 'p3' || partKey === 'p4') {
-                    const source = partKey === 'p3' ? p3_source : p4_source;
-                    const set = source.find((s: any) => s.questions.some((q: any) => q.id === qId));
+                    const source = partKey === 'p3' ? half9aPart3 : half9aPart4;
+                    const set = source.find(s => s.questions.some(q => q.id === qId));
                     if (set) {
                         partStats[partKey].wrongPassages.push(set.contextType || "비즈니스 상황");
-                        const q = set.questions.find((q: any) => q.id === qId);
+                        const q = set.questions.find(q => q.id === qId);
                         if (q?.questionType) partStats[partKey].wrongTags.push(TAG_MAP[q.questionType] || q.questionType);
                     }
                 } else if (partKey === 'p5') {
-                    const qData = p5_source.find((q: any) => q.id === qId);
+                    const qData = half9aPart5.find(q => q.id === qId);
                     if (qData?.classification) partStats.p5.wrongTags.push(TAG_MAP[qData.classification] || qData.classification);
                 } else if (partKey === 'p6' || partKey.startsWith('p7')) {
-                    const source = partKey === 'p6' ? p6_source : p7_source;
+                    const source = partKey === 'p6' ? half9aPart6 : half9aPart7;
                     const cleanQid = qId.replace('q', '');
-                    const set = source.find((s: any) => s.questions ? s.questions.some((q: any) => q.id === cleanQid) : (s.passages && s.passages.some((p: any) => p.id === cleanQid)));
+                    const set = source.find(s => s.questions ? s.questions.some(q => q.id === cleanQid) : (s.passages && s.passages.some(p => p.id === cleanQid)));
                     if (set) {
                         const type = set.type || (set.passages?.[0]?.type);
                         partStats[partKey].wrongPassages.push(PASSAGE_MAP[type] || type);
-                        const q = set.questions?.find((q: any) => q.id === cleanQid);
-                        const cls = q?.classification || q?.questionType;
-                        if (cls) partStats[partKey].wrongTags.push(TAG_MAP[cls] || cls);
+                        const q = set.questions?.find(q => q.id === cleanQid);
+                        if (q?.classification || q?.questionType) partStats[partKey].wrongTags.push(TAG_MAP[q.classification || q.questionType] || (q.classification || q.questionType));
                     }
                 }
             }
         });
 
-        // 2. 파트별 전문 코칭 라이브러리 (fallback 최소화 및 원본 데이터 유지 로직)
+        // 2. 파트별 전문 코칭 라이브러리 (서술형 문장 생성 구조)
         Object.keys(partStats).forEach(key => {
             const stat = partStats[key];
+            // 1. 중복 제거 및 내부 기호(A1, D2 등) 제거 로직
             const cleanPassages = Array.from(new Set(stat.wrongPassages))
-                .map((p: any) => p.replace(/^[A-Z][0-9]\.\s*/, '').trim())
-                .filter(p => p !== 'Double' && p !== 'Triple') // UI 태그로 이미 있으므로 텍스트에선 제외
+                .map((p: any) => p.replace(/^[A-Z][0-9]\.\s*/, '').trim()) // 'A1. ' 형태 제거
+                .filter(p => !/^[A-Z0-9_-]+$/.test(p)) // 순수 영문/기호로만 된 코드 제외
                 .slice(0, 2);
 
             const cleanTags = Array.from(new Set(stat.wrongTags))
-                .filter(t => !/^[A-Z][0-9]_/.test(t)) // 'A1_' 형태만 제거
+                .filter(t => !/^[A-Z0-9_-]+$/.test(t)) // 'P5_VOC' 같은 코드 제외 (TAG_MAP에서 매핑 안 된 경우 대비)
                 .slice(0, 2);
 
-            const passageText = cleanPassages.length > 0 ? cleanPassages.join(', ') : '';
-            const tagText = cleanTags.length > 0 ? cleanTags.join(', ') : '';
+            const passageText = cleanPassages.join(', ');
+            const tagText = cleanTags.join(', ');
 
             if (stat.correct < stat.target) {
                 switch (key) {
@@ -189,21 +163,23 @@ export const HalfTestService = {
                         stat.solution = "빈출 사진별 필수 상황 어휘를 우선 암기하고, 확실한 오답을 먼저 지워나가는 소거법 연습을 병행하세요.";
                         break;
                     case 'p2':
-                        const specificTags = tagText || "의문사와 상황 답변";
-                        stat.customCoaching = `주로 ${specificTags} 관련 문항에서 오답률이 높습니다. 질문의 첫 마디와 동사의 핵심 동작을 놓치는 경우가 많습니다.`;
-                        stat.solution = "의문사와 바로 뒤에 오는 동사의 시제, 주어에 집중하여 첫 3단어를 정확히 잡아내는 훈련을 반복하세요.";
+                        const isIndirect = stat.wrongTags.includes('우회적 답변');
+                        const specificTags = tagText || "의문사와 동사 표현";
+                        stat.customCoaching = `주로 ${specificTags} 관련 문항에서 오답률이 높습니다. ${isIndirect ? '정답이 바로 나오지 않는 회피형 답변에 취약한 상태입니다.' : '질문의 첫 마디와 동사 시제를 놓치는 경우가 많습니다.'}`;
+                        stat.solution = isIndirect ? "직접적인 대답이 아닌 '제3의 답변' 패턴을 익히고 반드시 소거법으로 접근하세요." : "의문사와 바로 뒤에 오는 동사 시제에 집중하여 듣는 훈련을 반복하세요.";
                         break;
                     case 'p3': case 'p4':
-                        stat.customCoaching = `주로 [${passageText || '비즈니스 실전'}] 관련 지문에서 오답이 높습니다. 문제 유형은 [${tagText || '전반적 정보 파악'}] 관련 문항의 오답률이 높은 편입니다.`;
-                        stat.solution = "지문을 듣기 전 질문과 보기를 먼저 분석하여 정답이 나올 위치를 예측하고, 소리가 들릴 때 바로 마킹하는 연습이 필요합니다.";
+                        stat.customCoaching = `주로 [${passageText || '비즈니스 일상'}] 관련 지문에서 오답이 높습니다. 문제 유형은 [${tagText || '세부 정보 파악'}] 관련 문항의 오답률이 높은 편입니다.`;
+                        stat.solution = "지문 전체를 듣기 전 보기를 미리 읽는(Pre-reading) 습관을 기르고, 들으면서 정답을 바로 체크하는 타이밍 연습이 필요합니다.";
                         break;
                     case 'p5':
-                        stat.customCoaching = `문제 유형 중 [${tagText || '기초 문법 및 어휘'}] 관련 문항에서 취약점을 보이고 있습니다. 정확한 분석 없이 느낌으로 풀거나 어울림(Collocation)을 간과하고 있습니다.`;
-                        stat.solution = "빈칸 앞뒤의 구조를 먼저 분석하여 품사 자리를 확정하고, 전치사나 명사와의 짝꿍 어휘를 덩어리로 암기하세요.";
+                        const isGrammar = stat.wrongTags.some(t => t.includes('자리') || t.includes('구조'));
+                        stat.customCoaching = `문제 유형 중 [${tagText || '기초 구조'}] 관련 문항에서 취약점을 보이고 있습니다. ${isGrammar ? '문장의 뼈대를 못 보고 느낌으로 풀고 있습니다.' : '단어 뜻에만 의존하여 품사나 어울림을 놓치고 있습니다.'}`;
+                        stat.solution = isGrammar ? "품사 자리 찾기와 기본 문장 성분 구조 분석을 통한 기초 문법 보완이 시급합니다." : "어휘 암기 시 짝꿍 전치사나 수식 관계를 통째로 외우는 '덩어리 학습'을 하세요.";
                         break;
                     case 'p6': case 'p7s': case 'p7m':
-                        stat.customCoaching = `주로 [${passageText || '정보 전달형'}] 지문에서 오답이 집중되고 있습니다. 문제 유형은 [${tagText || '문맥 파악 및 세부 정보'}] 문항에서 정보를 매칭하는 속도가 느려 오답이 발생합니다.`;
-                        stat.solution = "지문을 고속으로 훑으며 키워드를 찾는 스캐닝 훈련과, 여러 문장에 흩어진 단서를 연결하여 답을 찾는 연습이 병행되어야 합니다.";
+                        stat.customCoaching = `주로 [${passageText || '비즈니스 서신'}] 지문에서 오답이 집중되고 있습니다. 문제 유형은 [${tagText || '연계 추론/문맥 파악'}] 문항에서 정보를 매칭하는 속도가 느려 오답이 발생합니다.`;
+                        stat.solution = "지문을 다 읽으려 하지 말고 질문의 키워드를 먼저 잡고 지문에서 찾아내는 '스캐닝' 훈련 및 연계 지문의 연결 고리 찾기에 집중하세요.";
                         break;
                     default:
                         stat.customCoaching = "전반적인 파트 목표 정답 수에 미달했습니다. 취약 유형에 대한 집중 학습이 필요합니다.";

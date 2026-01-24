@@ -38,7 +38,7 @@ export default function HalfTestPage() {
                     userId: user.userId || user.uid,
                     studentName: user.userName || user.name || "Unknown",
                     testId: `half_${testId}`,
-                    testTitle: `하프테스트 제1회 (${testId.toUpperCase()})`,
+                    testTitle: `하프테스트 제2회 (${testId.toUpperCase()})`,
                     status: 'in_progress',
                     type: 'half',
                     date: new Date().toISOString(),
@@ -119,9 +119,9 @@ export default function HalfTestPage() {
                 </div>
             )}
             {status === 'lc' ? (
-                <HalfTest_LC_Set9 onFinishLC={handleFinishLC} />
+                <HalfTest_LC_Set9 testId={testId} onFinishLC={handleFinishLC} />
             ) : status === 'rc' ? (
-                <HalfTest_RC_Set9 onFinishExam={handleFinishExam} initialAnswers={lcAnswers} />
+                <HalfTest_RC_Set9 testId={testId} onFinishExam={handleFinishExam} initialAnswers={lcAnswers} />
             ) : null}
         </main>
     );

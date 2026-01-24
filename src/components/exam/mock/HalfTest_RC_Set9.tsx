@@ -1,19 +1,24 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { half9aPart5, half9aPart6, half9aPart7 } from "@/data/mock/half_set9_a";
+// 기존 데이터 하드코딩 임포트 제거
 import { ChevronLeft, ChevronRight, Clock } from "lucide-react";
 
 interface Props {
+    testId: string;
     onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
     initialAnswers?: Record<string, string>;
 }
 
-/**
- * 하프테스트 RC 엔진 (50문항 고착 버전)
- * 1단계씩 정밀 확인하며 진행: P5(13), P6(8), P7S(14), P7M(15) = 50Qs
- */
-export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: Props) {
+export default function HalfTest_RC_Set9({ testId, onFinishExam, initialAnswers = {} }: Props) {
+    const isA = testId === '9a';
+    const data = isA
+        ? require("@/data/mock/half_set9_a")
+        : require("@/data/mock/half_set9_b");
+
+    const p5 = isA ? data.half9aPart5 : data.half9bPart5;
+    const p6 = isA ? data.half9aPart6 : data.half9bPart6;
+    const p7 = isA ? data.half9aPart7 : data.half9bPart7;
     const [currentSpread, setCurrentSpread] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
     const [timeLeft, setTimeLeft] = useState(35 * 60);
@@ -26,10 +31,14 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
         const elapsedSinceLast = lastCheckTimeRef.current - timeLeft;
         let currentPartKey = "";
 
-        // 시간 분석 체크포인트 (A형 기준)
+        // 시간 분석 체크포인트 (동적 계산)
+        const p7sItems = p7.filter((s: any) => s.type !== 'Double' && s.type !== 'Triple');
+        const p7sSpreadsCount = Math.ceil(p7sItems.length / 2);
+
         if (currentSpread === 1 && timeLogs.p5 === 0) currentPartKey = "p5";
         else if (currentSpread === 2 && timeLogs.p6 === 0) currentPartKey = "p6";
-        else if (currentSpread === 5 && timeLogs.p7s === 0) currentPartKey = "p7s"; // P7 Single 종료 시점
+        // P7 Single 종료 시점 (동적: p6 종료 후 Single Spread 수만큼 지났을 때)
+        else if (currentSpread === (2 + p7sSpreadsCount) && timeLogs.p7s === 0) currentPartKey = "p7s";
 
         if (currentPartKey) {
             setTimeLogs(prev => ({ ...prev, [currentPartKey]: elapsedSinceLast }));
@@ -63,19 +72,23 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
         setAnswers(prev => {
             const newAnswers = { ...prev, [qId]: value };
 
-            // 현재 페이지 문항 추출
+            const p7s = p7.filter((s: any) => s.type !== 'Double' && s.type !== 'Triple');
+            const p7m = p7.filter((s: any) => s.type === 'Double' || s.type === 'Triple');
+            const p7sSpreadsCount = Math.ceil(p7s.length / 2);
             const qIds: string[] = [];
+
             if (currentSpread === 0) {
-                half9aPart5.forEach(q => qIds.push(q.id.toString()));
+                p5.forEach(q => qIds.push(q.id.toString()));
             } else if (currentSpread === 1) {
-                half9aPart6.forEach(set => set.questions.forEach((q: any) => qIds.push(q.id.toString())));
-            } else if (currentSpread >= 2 && currentSpread <= 4) {
+                p6.forEach(set => set.questions.forEach((q: any) => qIds.push(q.id.toString())));
+            } else if (currentSpread >= 2 && currentSpread < 2 + p7sSpreadsCount) {
                 const startIdx = (currentSpread - 2) * 2;
-                [half9aPart7[startIdx], half9aPart7[startIdx + 1]].forEach(set => {
+                [p7s[startIdx], p7s[startIdx + 1]].forEach(set => {
                     if (set) set.questions.forEach((q: any) => qIds.push(q.id.toString()));
                 });
             } else {
-                const set = half9aPart7[currentSpread + 1];
+                const mIdx = currentSpread - (2 + p7sSpreadsCount);
+                const set = p7m[mIdx];
                 if (set) set.questions.forEach((q: any) => qIds.push(q.id.toString()));
             }
 
@@ -95,17 +108,22 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     // 현재 페이지의 모든 문항이 마킹되었는지 확인
     const nextSpread = () => {
         const qIds: string[] = [];
+        const p7s = p7.filter((s: any) => s.type !== 'Double' && s.type !== 'Triple');
+        const p7m = p7.filter((s: any) => s.type === 'Double' || s.type === 'Triple');
+        const p7sSpreadsCount = Math.ceil(p7s.length / 2);
+
         if (currentSpread === 0) {
-            half9aPart5.forEach(q => qIds.push(q.id.toString()));
+            p5.forEach(q => qIds.push(q.id.toString()));
         } else if (currentSpread === 1) {
-            half9aPart6.forEach(set => set.questions.forEach((q: any) => qIds.push(q.id.toString())));
-        } else if (currentSpread >= 2 && currentSpread <= 4) {
+            p6.forEach(set => set.questions.forEach((q: any) => qIds.push(q.id.toString())));
+        } else if (currentSpread >= 2 && currentSpread < 2 + p7sSpreadsCount) {
             const startIdx = (currentSpread - 2) * 2;
-            [half9aPart7[startIdx], half9aPart7[startIdx + 1]].forEach(set => {
+            [p7s[startIdx], p7s[startIdx + 1]].forEach(set => {
                 if (set) set.questions.forEach((q: any) => qIds.push(q.id.toString()));
             });
         } else {
-            const set = half9aPart7[currentSpread + 1];
+            const mIdx = currentSpread - (2 + p7sSpreadsCount);
+            const set = p7m[mIdx];
             if (set) set.questions.forEach((q: any) => qIds.push(q.id.toString()));
         }
 
@@ -123,7 +141,9 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
         }
     }
     const prevSpread = () => setCurrentSpread(s => s - 1);
-    const totalSpreads = 8; // P5(1), P6(1), P7S(3), P7D(1), P7T(2) = 8
+    const p7sCount = p7.filter((s: any) => s.type !== 'Double' && s.type !== 'Triple').length;
+    const p7mCount = p7.filter((s: any) => s.type === 'Double' || s.type === 'Triple').length;
+    const totalSpreads = 1 + 1 + Math.ceil(p7sCount / 2) + p7mCount; // P5(1) + P6(1) + P7S + P7M
 
     return (
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
@@ -148,8 +168,21 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
                     </div>
                     <button
                         onClick={() => {
-                            console.log("RC Final Submit Triggered");
-                            handleInternalSubmit();
+                            const p7all = p7;
+                            const allQIds: string[] = [];
+                            p5.forEach(q => allQIds.push(q.id.toString()));
+                            p6.forEach(set => set.questions.forEach((q: any) => allQIds.push(q.id.toString())));
+                            p7all.forEach(set => set.questions.forEach((q: any) => allQIds.push(q.id.toString())));
+
+                            const unanswered = allQIds.filter(id => !answers[id]);
+                            if (unanswered.length > 0) {
+                                alert(`미답변 문항이 ${unanswered.length}개 있습니다. 모든 문제를 풀어주세요.`);
+                                return;
+                            }
+
+                            if (window.confirm("정말로 시험을 종료하고 제출하시겠습니까?")) {
+                                handleInternalSubmit();
+                            }
                         }}
                         className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 active:scale-95 hover:bg-emerald-700 transition-all z-40"
                     >
@@ -160,7 +193,7 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
 
             <main ref={mainContainerRef} className="flex-1 overflow-hidden relative flex bg-slate-100/50">
                 <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-slate-200/50 z-10 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.05)]"></div>
-                <div className="w-full h-full flex">{renderRCSpread(currentSpread, answers, handleAnswer)}</div>
+                <div className="w-full h-full flex">{renderRCSpread(currentSpread, answers, handleAnswer, { p5, p6, p7 })}</div>
             </main>
 
             <style jsx global>{`
@@ -181,7 +214,8 @@ export default function HalfTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     );
 }
 
-function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
+function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any, data: any) {
+    const { p5, p6, p7 } = data;
     // 0: Part 5 (13 Qs)
     if (spreadIdx === 0) {
         return (
@@ -190,17 +224,17 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     <h2 className="text-2xl font-black text-slate-800 mb-4 uppercase italic">Reading Test</h2>
                     <div className="directions-box"><strong>Part 5:</strong> Select the best response.</div>
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-3">{half9aPart5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-3">{p5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-3">{half9aPart5.slice(4, 7).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-3">{p5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
                 <div className="booklet-page">
                     <div className="h-10"></div>
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-3">{half9aPart5.slice(7, 10).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-3">{p5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-3">{half9aPart5.slice(10, 13).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-3">{p5.slice(12).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                     <div className="mt-20 border-t border-dashed border-slate-200 pt-10 text-center opacity-20 font-black italic tracking-widest uppercase">End of Part 5</div>
                 </div>
@@ -213,36 +247,41 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
             <>
                 <div className="booklet-page">
                     <div className="directions-box !py-2 !mb-3 text-[11px]"><strong>Part 6:</strong> Select the best answer.</div>
-                    {renderP6FullSet(half9aPart6[0], answers, onAnswer)}
+                    {renderP6FullSet(p6[0], answers, onAnswer)}
                 </div>
-                <div className="booklet-page">{renderP6FullSet(half9aPart6[1], answers, onAnswer)}</div>
+                <div className="booklet-page">{renderP6FullSet(p6[1], answers, onAnswer)}</div>
             </>
         );
     }
-    // 2, 3, 4: Part 7 Single (Sets 1-6)
-    if (spreadIdx >= 2 && spreadIdx <= 4) {
+    const p7s = p7.filter((s: any) => s.type !== 'Double' && s.type !== 'Triple');
+    const p7m = p7.filter((s: any) => s.type === 'Double' || s.type === 'Triple');
+    const p7sSpreadsCount = Math.ceil(p7s.length / 2);
+
+    // 2 ~ : Part 7 Single
+    if (spreadIdx >= 2 && spreadIdx < 2 + p7sSpreadsCount) {
         const startIdx = (spreadIdx - 2) * 2;
         return (
             <>
                 <div className="booklet-page">
                     {spreadIdx === 2 && <div className="directions-box !py-2 !mb-3 text-[11px]"><strong>Part 7:</strong> Read texts and answer questions.</div>}
-                    {renderP7FullSingleSet(half9aPart7[startIdx], answers, onAnswer)}
+                    {renderP7FullSingleSet(p7s[startIdx], answers, onAnswer)}
                 </div>
-                <div className="booklet-page">{renderP7FullSingleSet(half9aPart7[startIdx + 1], answers, onAnswer)}</div>
+                <div className="booklet-page">
+                    {p7s[startIdx + 1] ? renderP7FullSingleSet(p7s[startIdx + 1], answers, onAnswer) : (
+                        <div className="h-full flex flex-col items-center justify-center opacity-20 italic">
+                            <div className="text-4xl mb-2 font-black">END OF SINGLE</div>
+                            <div className="text-xl">Next: Multi-Passages →</div>
+                        </div>
+                    )}
+                </div>
             </>
         );
     }
-    // 5: Double Passage (Question 176~)
-    if (spreadIdx === 5) {
-        return renderP7DoubleTripleUI(half9aPart7[6], answers, onAnswer);
-    }
-    // 6: Triple Passage 1 (Question 186~)
-    if (spreadIdx === 6) {
-        return renderP7DoubleTripleUI(half9aPart7[7], answers, onAnswer);
-    }
-    // 7: Triple Passage 2 (Question 191~)
-    if (spreadIdx === 7) {
-        return renderP7DoubleTripleUI(half9aPart7[8], answers, onAnswer);
+    // Part 7 Multi
+    if (spreadIdx >= 2 + p7sSpreadsCount) {
+        const mIdx = spreadIdx - (2 + p7sSpreadsCount);
+        if (!p7m[mIdx]) return null;
+        return renderP7DoubleTripleUI(p7m[mIdx], answers, onAnswer);
     }
 
     return null;

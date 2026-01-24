@@ -35,24 +35,20 @@ export const half9aPart5 = (part5TestData.find(t => t.testId === 9)?.questions |
 const p6_raw = part6TestData.find(t => t.testId === 9)?.passages || [];
 export const half9aPart6 = [p6_raw[0], p6_raw[2]].filter(Boolean);
 
-// 3. Part 7 (29문항)
+// 3. Part 7 (29문항 -> 50문항 합계용 조정)
 const p7_full = part7TestData.find(t => t.testId === 9)?.sets || [];
-
-export const half9aPart7Single = [
+export const half9aPart7 = [
+    // Single (14문항): 세트 1(2), 2(2), 3(2), 4(2), 5(3), 6(3) 
     p7_full[0], // 147-148 (2)
     p7_full[1], // 149-150 (2)
     p7_full[2], // 151-152 (2)
     p7_full[3], // 153-154 (2)
     p7_full[4], // 155-157 (3)
     p7_full[5], // 158-160 (3)
-];
-
-export const half9aPart7Multi = [
+    // Multi (15문항): Double 1개 + Triple 2개
     rcPart7Test9[0], // Double 176-180 (5)
     rcPart7Test9[2], // Triple 186-190 (5)
     rcPart7Test9[3]  // Triple 191-195 (5)
-];
-
-export const half9aPart7 = [...half9aPart7Single, ...half9aPart7Multi];
+].filter(Boolean);
 
 // 최종 검증: 13(P5) + 8(P6) + 14(P7S) + 15(P7M) = 정확히 50문항
