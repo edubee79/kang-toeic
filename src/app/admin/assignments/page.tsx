@@ -30,7 +30,6 @@ const GRAMMAR_UNITS = [
 
 // Configuration for each column
 const HOMEWORK_COLS = [
-    { id: 'level_test', label: '레벨테스트 (Level)', prefix: 'Vol', range: 2 },
     { id: 'voca', label: '단어 (Voca)', prefix: 'Day', range: 20 },
     { id: 'grammar', label: '문법 (Grammar)', prefix: 'Unit', range: 13, startIndex: 0 },
     { id: 'part1_shadow', label: 'Part 1 쉐도잉', prefix: 'Set', range: 3 },
@@ -42,6 +41,7 @@ const HOMEWORK_COLS = [
     { id: 'part6_test', label: 'RC Part 6 실전', prefix: 'Test', range: 10 },
     { id: 'part7_single', label: 'RC Part 7 싱글', prefix: 'Test', range: 10 },
     { id: 'part7_double', label: 'RC Part 7 더블/트리플', prefix: 'Test', range: 10 },
+    { id: 'level_test', label: '레벨테스트 (Level Test)', prefix: '', range: 2, customLabels: ['9A', '9B'] },
     { id: 'mock_test', label: '모의고사 (Mock)', prefix: 'Exam', range: 5 },
     { id: 'weakness_review', label: 'AI취약점 (Analysis)', prefix: 'Week', range: 4 },
 ];
@@ -265,10 +265,16 @@ export default function AssignHomeworkPage() {
                                         </SelectTrigger>
                                         <SelectContent className="bg-white text-slate-900 border border-slate-200 shadow-xl z-[9999] max-h-[300px]">
                                             <SelectItem value="none" className="text-slate-400">선택 안함</SelectItem>
-                                            {Array.from({ length: col.range }, (_, i) => {
-                                                const num = i + (col.startIndex ?? 1);
-                                                return (<SelectItem key={i} value={`${col.prefix} ${num}`}>{col.prefix} {num}</SelectItem>);
-                                            })}
+                                            {col.customLabels ? (
+                                                col.customLabels.map((label, i) => (
+                                                    <SelectItem key={i} value={label}>{label}</SelectItem>
+                                                ))
+                                            ) : (
+                                                Array.from({ length: col.range }, (_, i) => {
+                                                    const num = i + (col.startIndex ?? 1);
+                                                    return (<SelectItem key={i} value={`${col.prefix} ${num}`}>{col.prefix} {num}</SelectItem>);
+                                                })
+                                            )}
                                         </SelectContent>
                                     </Select>
                                 </div>
