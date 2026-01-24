@@ -17,6 +17,7 @@ import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
 import { TargetSettingSection } from '@/components/dashboard/TargetSettingSection';
 import { ClassInfoCard } from '@/components/dashboard/ClassInfoCard';
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
+import { NotificationSetter } from '@/components/dashboard/NotificationSetter';
 
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
     voca: { label: '단어 암기 (Voca)', total: 30, unit: 'Days', color: 'emerald', icon: BookOpen },
@@ -325,7 +326,15 @@ export default function StudentDashboard() {
                     <Link href="/"><Button variant="ghost" className="text-slate-400 hover:text-white"><ArrowLeft className="w-5 h-5 mr-2" />메인으로</Button></Link>
                     <div>
                         <h2 className="text-3xl font-black text-white tracking-tight">나의 학습방</h2>
-                        <p className="text-slate-400 text-sm">개인 맞춤형 학습 성취도 분석 및 과제 관리</p>
+                        <div className="flex items-center gap-3 mt-1">
+                            <p className="text-slate-400 text-sm">개인 맞춤형 학습 성취도 분석 및 과제 관리</p>
+                            {user?.userId && (
+                                <>
+                                    <div className="w-1 h-1 rounded-full bg-slate-700" />
+                                    <NotificationSetter userId={user.userId} />
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
                 {user && <ClassInfoCard user={user} />}
