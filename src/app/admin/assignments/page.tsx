@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, addDoc, query, orderBy, getDocs, Timestamp, deleteDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, query, orderBy, getDocs, Timestamp, deleteDoc, doc, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -180,8 +180,7 @@ export default function AssignHomeworkPage() {
 
             await Promise.all(promises);
 
-            /*
-            // --- SEND PUSH NOTIFICATIONS TO CLASS (PAUSED FOR TESTING) ---
+            // --- SEND PUSH NOTIFICATIONS TO CLASS ---
             try {
                 // 1. Fetch all students in the target class
                 const usersRef = collection(db, "Winter_Users");
@@ -207,7 +206,7 @@ export default function AssignHomeworkPage() {
                         return `${config?.label}: ${val}`;
                     }).join(', ');
 
-                    const notificationPromises = tokens.map(token => 
+                    const notificationPromises = tokens.map(token =>
                         fetch('/api/send-push', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
@@ -224,7 +223,6 @@ export default function AssignHomeworkPage() {
             } catch (pushErr) {
                 console.error('❌ Failed to send assignment push notifications:', pushErr);
             }
-            */
 
             setSelections({});
             fetchAssignments();

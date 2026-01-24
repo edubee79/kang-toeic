@@ -142,7 +142,8 @@ export function NotificationSetter({ userId }: NotificationSetterProps) {
             ) : (
                 <Bell className="w-4 h-4" />
             )}
-            실시간 숙제 알림 켜기
+            <span className="hidden sm:inline">실시간 숙제 알림 켜기</span>
+            <span className="sm:hidden">알림 켜기</span>
         </Button>
     );
 }
