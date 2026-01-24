@@ -32,6 +32,7 @@ export interface User {
     rejectedAt?: Timestamp;
     rejectedBy?: string;
     rejectionReason?: string;
+    fcmToken?: string | null;
 }
 
 export type UserStatus = User['status'];

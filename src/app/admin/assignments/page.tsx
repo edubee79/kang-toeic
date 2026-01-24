@@ -180,6 +180,50 @@ export default function AssignHomeworkPage() {
 
             await Promise.all(promises);
 
+            // --- SEND PUSH NOTIFICATIONS TO CLASS ---
+            try {
+                // 1. Fetch all students in the target class
+                const usersRef = collection(db, "Winter_Users");
+                let usersQuery;
+                if (selectedClass === 'all') {
+                    usersQuery = query(usersRef, where("status", "==", "approved"));
+                } else {
+                    usersQuery = query(usersRef, where("className", "==", selectedClass), where("status", "==", "approved"));
+                }
+                const usersSnap = await getDocs(usersQuery);
+
+                // 2. Extract tokens
+                const tokens: string[] = [];
+                usersSnap.forEach(d => {
+                    const u = d.data();
+                    if (u.fcmToken) tokens.push(u.fcmToken);
+                });
+
+                // 3. Send notifications (Parallel)
+                if (tokens.length > 0) {
+                    const hwTitle = activeSelections.map(([key, val]) => {
+                        const config = HOMEWORK_COLS.find(c => c.id === key);
+                        return `${config?.label}: ${val}`;
+                    }).join(', ');
+
+                    const notificationPromises = tokens.map(token =>
+                        fetch('/api/send-push', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                token: token,
+                                title: '📖 새로운 숙제가 도착했습니다!',
+                                body: `${selectedClass === 'all' ? '전체' : selectedClass}반에 새로운 과제가 배포되었습니다: ${hwTitle}`
+                            })
+                        })
+                    );
+                    await Promise.allSettled(notificationPromises);
+                    console.log(`📢 Push notifications sent to ${tokens.length} students`);
+                }
+            } catch (pushErr) {
+                console.error('❌ Failed to send assignment push notifications:', pushErr);
+            }
+
             setSelections({});
             fetchAssignments();
             alert("숙제가 배포되었습니다.");

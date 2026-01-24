@@ -209,8 +209,27 @@ export default function RegistrationsPage() {
                 approvedAt: Timestamp.now(),
                 approvedBy: 'admin',
             });
-
             console.log('✅ User approved successfully');
+
+            // --- SEND PUSH NOTIFICATION ---
+            const userObj = registrations.find(u => u.id === userDocId);
+            if (userObj?.fcmToken) {
+                try {
+                    await fetch('/api/send-push', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            token: userObj.fcmToken,
+                            title: '🎉 가입 승인 완료!',
+                            body: `${userObj.userName}님, 가입이 승인되었습니다. 지금 바로 학습을 시작해보세요!`
+                        })
+                    });
+                    console.log('📢 Approval push notification sent');
+                } catch (pushErr) {
+                    console.error('❌ Failed to send approval push:', pushErr);
+                }
+            }
+
             fetchRegistrations();
         } catch (error) {
             console.error("❌ Error approving user:", error);
