@@ -1,44 +1,48 @@
-// Give the service worker access to Firebase Messaging.
-// Note: We need to import scripts from Firebase CND because SW doesn't support modules natively in all contexts easily without bundler magic for external sw.
-// However, standard Next.js public folder behavior accepts this.
+// Firebase Cloud Messaging Service Worker
+// This worker handles background notifications.
 
-importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js');
-importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compat.js');
+// 1. Import scripts
+importScripts('https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js');
+importScripts('https://www.gstatic.com/firebasejs/9.1.0/firebase-messaging-compat.js');
 
-// Initialize the Firebase app in the service worker by passing in the
-// messagingSenderId.
-firebase.initializeApp({
-    apiKey: "REPLACE_WITH_REAL_API_KEY_IF_NEEDED_BUT_CONFIG_IS_BETTER",
-    // Actually, for SW we just need messagingSenderId usually, or full config.
-    // Best practice: Use hardcoded values or a build step to inject them. 
-    // Since this is a public static file, we must be careful. 
-    // But wait, the previous firebase.ts uses env vars. 
-    // For the public SW, we can't easily access process.env at runtime if it's served statically.
-    // Workaround: We will use a simplified init.
-    // For now, let's just try basic messaging handling.
-    // Actually, newer Firebase SDKs in SW might need full config.
+// Add immediate activation
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', (event) => event.waitUntil(clients.claim()));
 
-    // Placeholder: The user's specific details.
-    // Given I can't see the .env.local values (they are masked or server side), 
-    // I will assume the user has to update this file or I should try to read them.
-    // But wait, I can read the source code.
+// 2. Initialize with config from URL params or default
+const urlParams = new URLSearchParams(location.search);
 
-    // NOTE: For now, I will create a dummy SW that just handles background events.
-    // Real implementation requires the actual config values.
-});
+const config = {
+    apiKey: urlParams.get('apiKey'),
+    authDomain: urlParams.get('authDomain'),
+    projectId: urlParams.get('projectId'),
+    storageBucket: urlParams.get('storageBucket'),
+    messagingSenderId: urlParams.get('messagingSenderId'),
+    appId: urlParams.get('appId'),
+};
 
-// Retrieve an instance of Firebase Messaging so that it can handle background
-// messages.
-const messaging = firebase.messaging();
+// Check if we have the minimum required config
+if (config.apiKey && config.messagingSenderId) {
+    try {
+        firebase.initializeApp(config);
+        const messaging = firebase.messaging();
 
-messaging.onBackgroundMessage((payload) => {
-    console.log('[firebase-messaging-sw.js] Received background message ', payload);
-    // Customize notification here
-    const notificationTitle = payload.notification.title;
-    const notificationOptions = {
-        body: payload.notification.body,
-        icon: '/icons/app-main-icon.jpg'
-    };
+        messaging.onBackgroundMessage((payload) => {
+            console.log('[firebase-messaging-sw.js] Received background message ', payload);
 
-    self.registration.showNotification(notificationTitle, notificationOptions);
-});
+            const notificationTitle = payload.notification?.title || '깡쌤토익 알림';
+            const notificationOptions = {
+                body: payload.notification?.body || '새로운 메시지가 도착했습니다.',
+                icon: '/icons/app-main-icon.jpg',
+                data: payload.data
+            };
+
+            self.registration.showNotification(notificationTitle, notificationOptions);
+        });
+    } catch (err) {
+        console.error('Firebase SW initialization error:', err);
+    }
+} else {
+    console.warn('[firebase-messaging-sw.js] Missing config. Notifications might not work in background.');
+    console.log('Current config was:', config);
+}

@@ -57,8 +57,45 @@ export function NotificationSetter({ userId }: NotificationSetterProps) {
                 return;
             }
 
+            // --- CUSTOM SERVICE WORKER REGISTRATION ---
+            // We pass config via query params so public/firebase-messaging-sw.js can initialize correctly
+            const configParams = new URLSearchParams({
+                apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '',
+                authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || '',
+                projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
+                storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || '',
+                messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || '',
+                appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
+            }).toString();
+
+            const swUrl = `/firebase-messaging-sw.js?${configParams}`;
+            const registration = await navigator.serviceWorker.register(swUrl, {
+                scope: '/firebase-cloud-messaging-push-scope',
+            });
+
+            // --- WAIT FOR SERVICE WORKER TO BE ACTIVE ---
+            // getToken requires an active service worker. 
+            // Registration might still be in 'installing' or 'activating' state.
+            const waitForActive = (reg: ServiceWorkerRegistration) => {
+                const sw = reg.installing || reg.waiting || reg.active;
+                if (!sw) return Promise.reject("No service worker found");
+
+                if (sw.state === 'activated') return Promise.resolve();
+
+                return new Promise<void>((resolve) => {
+                    sw.addEventListener('statechange', (e: any) => {
+                        if (e.target.state === 'activated') resolve();
+                    });
+                });
+            };
+
+            await waitForActive(registration);
+
             const vapidKey = process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY;
-            const token = await getToken(messaging, { vapidKey });
+            const token = await getToken(messaging, {
+                vapidKey,
+                serviceWorkerRegistration: registration
+            });
 
             if (token) {
                 await updateDoc(doc(db, "Winter_Users", userId), {
