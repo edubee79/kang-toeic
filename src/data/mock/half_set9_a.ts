@@ -20,7 +20,7 @@ const p3_raw = part3Data.filter(d => d.testId === 9);
 export const half9aPart3 = [0, 2, 4, 6, 8, 10].map(idx => p3_raw[idx]).filter(Boolean);
 const p4_raw = part4Data.filter(d => d.testId === 9);
 export const half9aPart4 = [0, 2, 4, 6, 8].map(idx => p4_raw[idx]).filter(Boolean);
-export const half9aFullLCAudio = "/audio/mock/test1.mp3";
+export const half9aFullLCAudio = "/audio/mock/half_9a_full.mp3";
 
 // [Reading - 정확히 50문항]
 

@@ -34,7 +34,7 @@ export const half9bPart3 = [1, 3, 5, 7, 9, 11, 12].map(idx => p3_raw[idx]).filte
 const p4_raw = part4Data.filter(d => d.testId === 9);
 export const half9bPart4 = [1, 3, 5, 7, 9].map(idx => p4_raw[idx]).filter(Boolean);
 
-export const half9bFullLCAudio = "/audio/mock/level_test_1b.mp3"; // 음원 통합 후 교체 예정
+export const half9bFullLCAudio = "/audio/mock/half_9b_full.mp3";
 
 // [Reading - 정확히 50문항]
 
