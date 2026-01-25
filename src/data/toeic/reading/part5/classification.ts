@@ -1,3 +1,5 @@
+import { TOEIC_TAG_REGISTRY } from '@/types/toeic-standards';
+
 const PART5_CLASSIFICATION_MAP: Record<string, string> = {
     // 1. 품사 및 문장 구조
     "P5_POS_NOUN": "문법: 명사 자리",
@@ -51,8 +53,29 @@ const PART5_CLASSIFICATION_MAP: Record<string, string> = {
     "P5_SPECIAL": "문법: 고득점 특수구문(도치/가정법)",
 };
 
+const LEGACY_TO_STANDARD: Record<string, string> = {
+    "P5_POS_NOUN": "n1",
+    "P5_POS_ADJ": "a1",
+    "P5_POS_ADV": "av1",
+    "P5_POS_VERB": "v1",
+    "P5_V_AGREE": "v1",
+    "P5_V_TENSE": "v4",
+    "P5_V_VOICE": "v2",
+    "P5_NF_TO": "i1",
+    "P5_NF_ING": "g1",
+    "P5_NF_PART": "pa1",
+    "P5_NF_PCONS": "pa4",
+    "P5_PR_CASE": "p1",
+    "P5_PR_SELF": "p4",
+    "P5_CONJ_ADV": "c3",
+    "P5_VOC_NOUN": "voc1",
+    "P5_VOC_VERB": "voc1",
+    "P5_VOC_ADJ": "voc1",
+    "P5_VOC_ADV": "voc1",
+    "P5_VOC_PHRA": "voc5"
+};
+
 const TAG_ALIASES: Record<string, string> = {
-    // Legacy Tags -> Standard Tags
     "P5_PRONOUN": "P5_PR_CASE",
     "pronoun": "P5_PR_CASE",
     "P5_VOCAB_ADJ": "P5_VOC_ADJ",
@@ -65,20 +88,25 @@ const TAG_ALIASES: Record<string, string> = {
     "P5_VERB_AGREEMENT": "P5_V_AGREE",
     "P5_VERB_VOICE": "P5_V_VOICE",
     "P5_V_AGREEMENT": "P5_V_AGREE",
-    "P5_POS_ADJ": "P5_POS_ADJ",
-    "P5_POS_NOUN": "P5_POS_NOUN",
-    "P5_POS_ADV": "P5_POS_ADV",
-    "P5_POS_VERB": "P5_POS_VERB",
 };
 
 const getClassificationLabel = (code?: string) => {
     if (!code) return "유형 미분류";
 
-    // 1. Check if it's an alias
-    const standardTag = TAG_ALIASES[code] || code;
+    // 1. Check New Standard Registry first
+    if (TOEIC_TAG_REGISTRY[code as any]) {
+        return TOEIC_TAG_REGISTRY[code as any].label;
+    }
 
-    // 2. Resolve final label
-    return PART5_CLASSIFICATION_MAP[standardTag] || standardTag;
+    // 2. Check if it's a legacy tag that maps to a standard tag
+    const resolvedLegacy = TAG_ALIASES[code] || code;
+    const mappedStandard = LEGACY_TO_STANDARD[resolvedLegacy];
+    if (mappedStandard && TOEIC_TAG_REGISTRY[mappedStandard as any]) {
+        return TOEIC_TAG_REGISTRY[mappedStandard as any].label;
+    }
+
+    // 3. Fallback to hardcoded map or the code itself
+    return PART5_CLASSIFICATION_MAP[resolvedLegacy] || code;
 };
 
 export { PART5_CLASSIFICATION_MAP, TAG_ALIASES, getClassificationLabel };

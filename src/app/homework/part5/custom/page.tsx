@@ -63,7 +63,7 @@ export default function Part5CustomPage() {
                         options: q.options,
                         correctAnswer: q.answer,
                         explanation: q.explanation,
-                        classification: q.type
+                        classification: q.classification
                     }));
 
                     setAssignment({
@@ -91,8 +91,14 @@ export default function Part5CustomPage() {
                 // Load questions from part5Data
                 const { part5Data } = await import('@/data/part5');
 
+                // part5Data is an object with unit keys, collect all questions first
+                const allQuestions: any[] = [];
+                Object.values(part5Data).forEach((unitQuestions: any) => {
+                    allQuestions.push(...unitQuestions);
+                });
+
                 // Filter questions by questionIds
-                const filteredQuestions = part5Data.filter((q: any) =>
+                const filteredQuestions = allQuestions.filter((q: any) =>
                     assignmentData.questionIds?.includes(q.id)
                 );
 

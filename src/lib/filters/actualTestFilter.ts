@@ -51,14 +51,14 @@ export function isActualTest(data: ManagerResult): boolean {
     const type = data.type || '';
 
     // Pattern A: type field ends with '_test'
-    if (type.endsWith('_test')) {
+    if (type.endsWith('_test') || type === 'part7_single' || type === 'part7_double') {
         // part5_test, part7_test, etc.
         return true;
     }
 
-    // Pattern B: unit field contains 'Test' or '회' (round number)
-    if (unit.includes('_Test') || unit.match(/Test\d+/) || unit.match(/\d+회/)) {
-        // LC_Part2_Test1, RC_Part5_Test3_real, "Part 5 1회", etc.
+    // Pattern B: unit field contains 'Test', '회', or 'Level'
+    if (unit.includes('_Test') || unit.match(/Test\d+/) || unit.match(/\d+회/) || unit.includes('Level')) {
+        // LC_Part2_Test1, RC_Part5_Test3_real, "Part 5 1회", "LevelTest", etc.
         return true;
     }
 

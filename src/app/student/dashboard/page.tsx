@@ -306,6 +306,7 @@ export default function StudentDashboard() {
             case 'part5_test': return `/homework/part5-real/test/${detail.match(/\d+/)?.[0] || '1'}`;
             case 'part7_double': return `/homework/part7-double`;
             case 'weakness_review': return `/homework/weakness/${id}`;
+            case 'level_test': return `/mock-test/half/${detail.toLowerCase()}`;
             default: return '/';
         }
     };
@@ -314,6 +315,7 @@ export default function StudentDashboard() {
         if (type.includes('voca')) return BookOpen;
         if (type.includes('part1')) return Mic2;
         if (type.includes('part5')) return PenSquare;
+        if (type === 'level_test') return Target;
         return Headphones;
     };
 

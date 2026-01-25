@@ -22,7 +22,7 @@ export const part5TestData: Part5TestSet[] = [
         "title": "Part 5 Real Test 1",
         "questions": [
             {
-                "id": "q101",
+                "id": "RT1_101",
                 "text": "Former Sendai Company CEO Ken Nakata spoke about _____ career experiences.",
                 "options": [
                     {
@@ -42,14 +42,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "himself"
                     }
                 ],
-                "classification": "P5_PR_CASE",
+                "classification": "p1",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "센다이 회사의 전 최고 경영자인 켄 나카타가 자신의 경력에 대해 말했다.",
                 "explanation": "빈칸에는 뒤에 온 복합명사 career experiences를 수식하는 인칭대명사가 들어가야 한다. 따라서 명사 앞에 쓰여 한정사 역할을 할 수 있는 소유격 인칭대명사 (B) his가 정답이다."
             },
             {
-                "id": "q102",
+                "id": "RT1_102",
                 "text": "Passengers who will be taking a _____ domestic flight should go to Terminal A.",
                 "options": [
                     {
@@ -69,14 +69,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "connecting"
                     }
                 ],
-                "classification": "P5_POS_ADJ",
+                "classification": "pa1",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "국내선 연결편을 이용하실 승객께서는 A 터미널로 가시기 바랍니다.",
                 "explanation": "빈칸 앞에는 부정관사, 뒤에는 「형용사+명사」로 이루어져 '국내선 항공편'을 뜻하는 명사구 domestic flight가 있으므로, 빈칸에는 명사 flight를 수식하는 형용사가 들어가 '연결하는 국내선 항공편'이라는 의미가 되어야 적절하다. 따라서 '연결하는'이라는 의미를 나타내며 형용사 역할을 하는 현재분사 (D) connecting이 정답이다. (A) connectivity는 명사, (B) connects와 (C) connect는 동사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q103",
+                "id": "RT1_103",
                 "text": "Fresh and _____ apple-cider donuts are available at Oakcrest Orchard's retail shop for £6 per dozen.",
                 "options": [
                     {
@@ -96,14 +96,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "free"
                     }
                 ],
-                "classification": "P5_VOC_ADJ",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "오크레스트 과수원의 소매점에서 신선하고 맛있는 사과 사이다 도넛을 12개당 6파운드에 구입할 수 있다.",
                 "explanation": "복합명사 apple-cider donuts를 수식하여 '신선하고 맛있는 사과 사이다 도넛'이라는 의미가 되어야 적절하므로 '맛있는'을 뜻하는 (C) tasty가 정답이다. (A) eaten은 '먹은', (B) open은 '열린', (D) free는 '무료의; 자유로운'이라는 의미이다."
             },
             {
-                "id": "q104",
+                "id": "RT1_104",
                 "text": "Zahn Flooring has the widest selection of _____ in the United Kingdom.",
                 "options": [
                     {
@@ -123,14 +123,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "curtains"
                     }
                 ],
-                "classification": "P5_VOC_NOUN",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "잔 플로어링은 영국에서 가장 다양한 종류의 타일을 보유하고 있다.",
                 "explanation": "Zahn Flooring에서 보유하고 있는 품목으로 적절한 명사를 골라야 한다. 상호에 '바닥재'를 뜻하는 Flooring이 들어가 있는 것으로 보아 바닥재 제품을 판매하는 곳임을 알 수 있으므로 바닥재에 속하는 '타일'이 들어가야 가장 적절하다. 따라서 (B) tiles가 정답이다. (A)의 paint(페인트), (C) furniture(가구), (D)의 curtain(커튼)은 flooring 매장이 가장 다양한 종류를 보유할 품목으로 어울리지 않는다."
             },
             {
-                "id": "q105",
+                "id": "RT1_105",
                 "text": "One responsibility of the IT department is to ensure that the company is using _____ software.",
                 "options": [
                     {
@@ -150,14 +150,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "updated"
                     }
                 ],
-                "classification": "P5_POS_ADJ",
+                "classification": "pa1",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "IT 부서의 한 가지 책임은 회사가 업데이트된 소프트웨어를 사용하도록 보장하는 것이다.",
                 "explanation": "빈칸에는 명사 software를 수식하는 형용사 또는 software와 복합명사를 이루는 명사가 들어갈 수 있다. 문맥상 '업데이트된 소프트웨어'라는 내용이 되어야 자연스러우므로, '업데이트된'이라는 수동의 의미를 나타내어 형용사 역할을 하는 과거분사 (D) updated가 정답이다. update가 명사로 쓰인 경우, (A) update와 (C) updates는 software와 복합명사를 이루기에 적절하지 않고, software는 update의 주체가 아닌 대상이므로 능동의 의미를 나타내는 현재분사 (B) updating은 답이 될 수 없다."
             },
             {
-                "id": "q106",
+                "id": "RT1_106",
                 "text": "It is wise to check a company's dress code _____ visiting its head office.",
                 "options": [
                     {
@@ -177,14 +177,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "before"
                     }
                 ],
-                "classification": "P5_PREP_PHRA",
+                "classification": "pr1",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "본사를 방문하기 전에 회사의 복장 규정을 확인하는 것이 현명하다.",
                 "explanation": "빈칸은 가주어 It, 진주어 to check its head office인 문장에서 동사 check와 목적어 a company's dress code 뒤에 visiting its head office를 연결해 주는 자리이다. visiting과 함께 쓰여 '방문하기 전에'라는 내용이 되어야 자연스러우므로 (D) before가 정답이다. before -ing(~하기 전에)와 after -ing(~한 후에)는 빈출 표현이니 암기해 두자."
             },
             {
-                "id": "q107",
+                "id": "RT1_107",
                 "text": "Wexler Store's management team expects that employees will _____ support any new hires.",
                 "options": [
                     {
@@ -204,14 +204,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "enthused"
                     }
                 ],
-                "classification": "P5_POS_ADV",
+                "classification": "av1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "웩슬러 스토어의 경영진은 직원들이 모든 신입 사원을 열심히 지원할 것으로 기대한다.",
                 "explanation": "빈칸이 조동사 will과 동사원형 support 사이에 있으므로 동사를 수식하는 부사 자리이다. 따라서 '매우 열심히, 열광적으로'를 뜻하는 부사 (A) enthusiastically가 정답이다. (B) enthusiasm은 명사, (C) enthusiastic은 형용사, (D) enthused는 동사/과거분사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q108",
+                "id": "RT1_108",
                 "text": "Wheel alignments and brake system _____ are part of our vehicle service plan.",
                 "options": [
                     {
@@ -231,14 +231,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "inspections"
                     }
                 ],
-                "classification": "P5_POS_NOUN",
+                "classification": "n3",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "휠 얼라인먼트와 브레이크 시스템 검사는 당사 차량 서비스 제도의 일부입니다.",
                 "explanation": "빈칸은 동사 are의 주어 자리로, and 앞의 복합명사 Wheel alignments와 대등하게 연결되면서 빈칸 앞의 brake system과 함께 복합명사를 만들 수 있는 명사가 들어가야 한다. '휠 얼라인먼트와 브레이크 시스템 검사는 서비스의 일부'라는 내용이 되어야 자연스러우므로 '검사'를 뜻하는 (D) inspections가 정답이다. '조사관'을 뜻하는 (B) inspector는 가산 단수명사로, 한정사 an, the 등이 필요하므로 오답이다."
             },
             {
-                "id": "q109",
+                "id": "RT1_109",
                 "text": "Registration for the Marketing Coalition Conference is now open _____ September 30.",
                 "options": [
                     {
@@ -258,14 +258,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "while"
                     }
                 ],
-                "classification": "P5_PREP_PHRA",
+                "classification": "pr1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "마케팅 연합 콘퍼런스의 등록은 현재 9월 30일까지 가능합니다.",
                 "explanation": "빈칸 앞에 Registration ~ Conference가 주어, is가 동사, open이 보어인 완전한 절이 있고 뒤에 명사구 September 30가 있으므로 빈칸은 전치사 자리이다. 빈칸 뒤에 시점을 나타내는 명사구가 왔고, '9월 30일까지 등록이 가능하다'라는 의미가 되어야 자연스러우므로 '~까지'를 뜻하는 전치사 (A) until이 정답이다. (B) into는 전치사이지만 '~ 안으로'라는 의미이고, (C) yet은 부사/접속사, (D) while은 접속사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q110",
+                "id": "RT1_110",
                 "text": "Growth in the home entertainment industry has been _____ this quarter.",
                 "options": [
                     {
@@ -285,14 +285,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "assorted"
                     }
                 ],
-                "classification": "P5_VOC_ADJ",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "이번 분기에는 홈 엔터테인먼트 산업의 성장이 제한적이었다.",
                 "explanation": "be동사 has been 뒤에 들어가 주어 Growth를 보충 설명하기에 적절한 형용사가 필요하다. 문맥상 '성장이 제한적이었다'라는 내용이 되어야 적절하므로 '제한된'을 뜻하는 (B) limited가 정답이다. (A) separate는 '분리된', (C) willing은 '자발적인', (D) assorted는 '여러 가지의'라는 의미이다."
             },
             {
-                "id": "q111",
+                "id": "RT1_111",
                 "text": "Hawson Furniture will be making _____ on the east side of town on Thursday.",
                 "options": [
                     {
@@ -312,14 +312,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "deliverable"
                     }
                 ],
-                "classification": "P5_POS_NOUN",
+                "classification": "n1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "호손 가구는 목요일에 시내 동쪽에서 배달을 할 예정이다.",
                 "explanation": "빈칸은 동사 will be making의 목적어 명사 자리로, make와 함께 '배달하다'라는 의미를 완성하는 명사 (A) deliveries가 정답이다. (B) delivered는 동사/과거분사, (C) deliver는 동사이고, 형용사나 명사로 쓰이는 (D) deliverable은 명사인 경우 가산 단수명사로 앞에 한정사 없이 쓸 수 없으므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q112",
+                "id": "RT1_112",
                 "text": "The Marlton City Council does not have the authority to _____ parking on city streets.",
                 "options": [
                     {
@@ -339,14 +339,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "travel"
                     }
                 ],
-                "classification": "P5_VOC_VERB",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "말튼 시 의회는 시내 도로에 주차하는 것을 금지할 권한이 없다.",
                 "explanation": "명사 authority를 수식하는 to부정사 자리에 들어갈 동사 어휘를 고르는 문제이다. parking을 목적어로 취해 '주차를 금지할 권한'이라는 의미가 되어야 자연스러우므로 '금지하다'를 뜻하는 (B) prohibit이 정답이다. (A) drive는 '운전하다', (C) bother는 '귀찮게 하다', (D) travel은 '여행하다'라는 의미이다."
             },
             {
-                "id": "q113",
+                "id": "RT1_113",
                 "text": "Project Earth Group is _____ for ways to reduce transport-related greenhouse gas emissions.",
                 "options": [
                     {
@@ -366,14 +366,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "leaning"
                     }
                 ],
-                "classification": "P5_VOC_VERB",
+                "classification": "voc2",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "프로젝트 어스 그룹은 운송 관련 온실가스 배출을 줄일 방법을 찾고 있다.",
                 "explanation": "빈칸 뒤에 목적어가 없고, 전치사 for가 있으므로 for와 자연스럽게 연결될 수 있는 자동사가 들어가야 한다. 문맥상 '방법을 찾고 있다'라는 의미가 되어야 자연스러우므로 for와 함께 쓰여 '~을 찾다'라는 의미를 나타내는 동사 Look의 현재분사형 (A) looking이 정답이다."
             },
             {
-                "id": "q114",
+                "id": "RT1_114",
                 "text": "Our skilled tailors are happy to design a custom-made suit that fits your style and budget _____.",
                 "options": [
                     {
@@ -393,14 +393,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "perfection"
                     }
                 ],
-                "classification": "P5_POS_ADV",
+                "classification": "av1",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "당사의 숙련된 재단사들이 귀하의 스타일과 예산에 완벽하게 맞는 맞춤 정장을 디자인할 수 있어서 기쁩니다.",
                 "explanation": "빈칸은 명사구 a custom-made suit를 수식하는 관계사절에 속해 있고, 앞에 온 동사 fits를 수식하는 부사 자리이므로 (C) perfectly가 정답이다. (A) perfect는 형용사/동사, (B) perfects는 동사, (D) perfection은 명사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q115",
+                "id": "RT1_115",
                 "text": "Project manager Hannah Chung has proved to be very _____ with completing company projects.",
                 "options": [
                     {
@@ -420,14 +420,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "helpful"
                     }
                 ],
-                "classification": "P5_POS_ADJ",
+                "classification": "a2",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "프로젝트 매니저 한나 정이 회사 프로젝트를 완수하는 데 매우 도움이 된 것으로 드러났다.",
                 "explanation": "빈칸에는 동사 has proved의 목적어 역할을 하는 to부정사 to be 뒤에 오기에 적절한 품사를 골라야 한다. to부정사의 동사가 2형식 동사 be이고 앞에 부사 very가 있으므로, 빈칸은 be동사의 보어 역할을 하면서 부사의 수식을 받을 수 있는 형용사 자리이다. 따라서 '도움이 되는'을 뜻하는 형용사 (D) helpful이 정답이다. (A) helpfulness는 명사, (B) help는 동사/명사, (C) helpfully는 부사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q116",
+                "id": "RT1_116",
                 "text": "Lehua Vacation Club members will receive double points _____ the month of August at participating hotels.",
                 "options": [
                     {
@@ -447,14 +447,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "between"
                     }
                 ],
-                "classification": "P5_PREP_PHRA",
+                "classification": "pr1",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "레후아 베케이션 클럽 회원들은 제휴 호텔에서 8월 한 달 동안 두 배의 포인트를 받게 될 것입니다.",
                 "explanation": "빈칸 뒤에 기간을 나타내는 명사구 the month of August가 있고, 문맥상 '8월 한 달 동안'이라는 의미가 되어야 자연스러우므로 '~ 동안'을 뜻하는 (C) during이 정답이다. (A) onto는 '~ 위로', (B) above는 '~보다 위에', (D) between은 between A and B 형태로 쓰여 '(특정 시점) 사이에'라는 의미를 나타낸다."
             },
             {
-                "id": "q117",
+                "id": "RT1_117",
                 "text": "The costumes were not received _____ enough to be used in the first dress rehearsal.",
                 "options": [
                     {
@@ -474,14 +474,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "soon"
                     }
                 ],
-                "classification": "P5_VOC_ADV",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "첫 드레스 리허설에 사용될 만큼 빨리 의상을 받지 못했다.",
                 "explanation": "빈칸에는 동사구 were not received를 수식하면서, 뒤에 나온 '~할 만큼 (충분히)'를 뜻하는 「enough+to부정사」 구문의 수식을 받는 적절한 부사가 들어가야 한다. 문맥상 '첫 리허설에 사용될 만큼 빨리 받지 못했다'라는 내용이 되어야 적절하므로 '곧, 빨리'를 뜻하는 부사 (D) soon이 정답이다. (A) far는 '멀리', (B) very는 '매우', (C) almost는 '거의'라는 의미이다."
             },
             {
-                "id": "q118",
+                "id": "RT1_118",
                 "text": "As a former publicist for several renowned orchestras, Mr. Wu would excel in the role of event _____.",
                 "options": [
                     {
@@ -501,14 +501,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "organizational"
                     }
                 ],
-                "classification": "P5_POS_NOUN",
+                "classification": "n4",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "몇몇 유명 오케스트라의 홍보 담당자였던 우 씨는 행사 주최자 역할에 뛰어날 것이다.",
                 "explanation": "빈칸은 앞의 명사 event와 함께 쓰여 전치사 of의 목적어 역할을 하는 명사 자리로, '행사 주최자'라는 의미의 복합명사를 만들 수 있는 '주최자, 조직자'라는 뜻의 (B) organizer가 정답이다. (A) organized는 동사/과거분사, (C) organizes는 동사, (D) organizational은 형용사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q119",
+                "id": "RT1_119",
                 "text": "The northbound lane on Davis Street will be _____ closed because of the city's bridge reinforcement project.",
                 "options": [
                     {
@@ -528,14 +528,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "collectively"
                     }
                 ],
-                "classification": "P5_VOC_ADV",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "데이비스 가의 북행 차선은 시의 교량 보강 프로젝트로 인해 일시적으로 폐쇄될 예정이다.",
                 "explanation": "동사구 will be closed를 수식하여 적절한 문맥을 완성하는 부사를 고르는 문제이다. '공사로 인해 차선이 일시적으로 폐쇄된다'라는 내용이 되어야 자연스러우므로 '일시적으로'를 뜻하는 (A) temporarily가 정답이다. (B) competitively는 '경쟁적으로', (D) collectively는 '전체적으로'라는 의미로 문맥상 적절하지 않고, (C) recently(최근에)는 주로 현재완료 시제와 함께 쓰이며 미래 시제와 어울리지 않는다."
             },
             {
-                "id": "q120",
+                "id": "RT1_120",
                 "text": "Airline representatives must handle a wide range of passenger issues, _____ missed connections to lost luggage.",
                 "options": [
                     {
@@ -555,14 +555,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "against"
                     }
                 ],
-                "classification": "P5_PREP_PHRA",
+                "classification": "pr1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "항공사 직원은 놓친 연결편부터 분실 수하물에 이르기까지 다양한 승객 문제를 처리해야 한다.",
                 "explanation": "빈칸 뒤 전치사구 to lost luggage와 함께 from A to B 구문을 이루어 '놓친 연결편부터 분실 수하물에 이르기까지'라는 의미가 되어야 자연스러우므로 (A) from이 정답이다."
             },
             {
-                "id": "q121",
+                "id": "RT1_121",
                 "text": "The meeting notes were _____ deleted, but Mr. Hahm was able to recreate them from memory.",
                 "options": [
                     {
@@ -582,14 +582,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "accidentally"
                     }
                 ],
-                "classification": "P5_POS_ADV",
+                "classification": "av1",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "회의록이 실수로 삭제되었지만, 함 씨는 기억을 더듬어 그것들을 되살릴 수 있었다.",
                 "explanation": "동사구 were deleted를 수식하는 부사 자리이므로 (D) accidentally(실수로, 우연히)가 정답이다. (A) accident와 (C) accidents는 명사, (B) accidental은 형용사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q122",
+                "id": "RT1_122",
                 "text": "The current issue of Farming Scene magazine predicts that the price of corn will rise 5 percent over the _____ year.",
                 "options": [
                     {
@@ -609,14 +609,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "now"
                     }
                 ],
-                "classification": "P5_POS_ADJ",
+                "classification": "a1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "<파밍 씬> 잡지의 이번 호에서는 옥수수 가격이 내년에 5퍼센트 오를 것으로 예측한다.",
                 "explanation": "빈칸 앞에 정관사 the가 있고, 뒤에 명사 year가 있으므로 빈칸은 명사를 수식하는 형용사 자리이다. 따라서 '다음의'를 뜻하는 형용사 (A) next가 정답이다. (B) with는 전치사, (C) which는 관계대명사/의문사, (D) now는 부사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q123",
+                "id": "RT1_123",
                 "text": "Anyone who still _____ to take the fire safety training should do so before the end of the month.",
                 "options": [
                     {
@@ -636,14 +636,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "were needing"
                     }
                 ],
-                "classification": "P5_V_AGREE",
+                "classification": "v1",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "아직 소방 안전 교육을 받아야 하는 사람은 이달 말까지 받아야 한다.",
                 "explanation": "빈칸은 선행사 Anyone을 수식하는 관계사절(who still ~ safety training)의 동사 자리이다. 관계사절의 동사는 선행사에 수를 일치시키는데, 선행사가 Anyone이므로 단수동사가 들어가야 한다. 또한 의무사항에 해당되는 사람의 조건을 설명하는 내용이므로 현재 시제를 써야 한다. 따라서 (B) needs가 정답이다. (A) needing은 현재분사/동명사이므로 품사상 답이 될 수 없고, (C) has needed는 시제가 맞지 않으며, (D) were needing은 Anyone과 수가 일치하지 않으므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q124",
+                "id": "RT1_124",
                 "text": "Emerging technologies have _____ begun to transform the shipping industry in ways that were once unimaginable.",
                 "options": [
                     {
@@ -663,14 +663,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "closely"
                     }
                 ],
-                "classification": "P5_VOC_ADV",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "A",
                 "translation": "신생 기술은 한때는 상상조차 할 수 없던 방식으로 해운 산업을 이미 탈바꿈하기 시작했다.",
                 "explanation": "동사구 have begun을 수식하여 적절한 문맥을 완성하는 부사를 고르는 문제이다. '신생 기술이 업계를 이미 탈바꿈하기 시작했다'라는 내용이 되어야 자연스러우므로 '이미, 벌써'라는 뜻의 (A) already가 정답이다. (B) exactly는 '정확히', (C) hardly는 '거의 ~않다', (D) closely는 '면밀히'라는 의미이다."
             },
             {
-                "id": "q125",
+                "id": "RT1_125",
                 "text": "The company handbook outlines the high _____ that employees are expected to meet every day.",
                 "options": [
                     {
@@ -690,14 +690,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "standards"
                     }
                 ],
-                "classification": "P5_VOC_NOUN",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "회사 안내서에는 직원들이 매일 충족해야 하는 높은 기준들이 설명되어 있다.",
                 "explanation": "형용사 high와 관계사절(that employees ~ to meet every day)의 수식을 받기에 어울리는 명사를 고르면 된다. '직원들이 매일 충족해야 하는 높은 기준'이라는 내용이 되어야 자연스러우므로 '기준'을 뜻하는 (D) standards가 정답이다. (A)의 expert는 '전문가', (B)의 account는 '계좌, (-s) 회계', (C)의 recommendation는 '추천'이라는 의미이다."
             },
             {
-                "id": "q126",
+                "id": "RT1_126",
                 "text": "Because _____ of the board members have scheduling conflicts, the board meeting will be moved to a date when all can attend.",
                 "options": [
                     {
@@ -717,14 +717,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "some"
                     }
                 ],
-                "classification": "P5_PR_CASE",
+                "classification": "p2",
                 "testId": 1,
                 "correctAnswer": "D",
                 "translation": "이사진 중 일부가 중복되는 일정이 있어서 이사회 회의는 전원 참석 가능한 날짜로 변경될 것입니다.",
                 "explanation": "빈칸은 부사절 접속사 because가 이끄는 절에서 복수동사 have의 주어 자리로 복수대명사가 필요하고, 문맥상 '이사진 중 일부가 중복되는 일정이 있다'라는 내용이 되어야 자연스러우므로 '일부, 몇몇'을 뜻하는 (D) some이 정답이다. (A) any는 긍정문에서 '누구든지'를 뜻하므로 문맥에 어울리지 않고, (B) everybody는 단수동사와 쓰이므로 답이 될 수 없다. 지시대명사 (C) those는 앞서 언급된 복수명사를 반복해서 사용하는 것을 피하기 위해 쓰이므로 적절하지 않다."
             },
             {
-                "id": "q127",
+                "id": "RT1_127",
                 "text": "The project _____ the collaboration of several teams across the company.",
                 "options": [
                     {
@@ -744,14 +744,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "performed"
                     }
                 ],
-                "classification": "P5_VOC_VERB",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "그 프로젝트는 회사 전체에 걸쳐 여러 팀의 협업을 필요로 했다.",
                 "explanation": "주어 The project의 동사 자리로, '프로젝트는 협업을 필요로 했다'라는 의미가 되어야 적절하므로 '필요로 하다, 요구하다'라는 의미의 동사 require의 과거형 (C) required가 정답이다. (A)의 pass는 '통과하다', (B)의 decide는 '결정하다', (D)의 perform은 '수행하다'라는 의미이다."
             },
             {
-                "id": "q128",
+                "id": "RT1_128",
                 "text": "We cannot send the store's coupon booklet to the printers until it _____ by Ms. Jeon.",
                 "options": [
                     {
@@ -771,14 +771,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "will be approved"
                     }
                 ],
-                "classification": "P5_V_VOICE",
+                "classification": "v2",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "전 씨의 승인을 받기 전까지는 매장 쿠폰 책자를 인쇄소에 보낼 수 없다.",
                 "explanation": "부사절 접속사 until이 이끄는 절의 동사 자리로, 뒤에 목적어가 아닌 전치사 by가 이끄는 전치사구가 왔으므로 수동태가 들어가야 한다. 따라서 능동태인 (A) is approving과 (B) approves는 빈칸에 들어갈 수 없다. 또한 until(~까지)은 시간 부사절을 이끄는 접속사로, 시간 부사절에서는 현재 시제 또는 현재완료 시제가 미래 시제 또는 미래 완료 시제를 대신하므로 미래 시제 (D) will be approved는 답이 될 수 없다. 따라서 (C) has been approved가 정답이다."
             },
             {
-                "id": "q129",
+                "id": "RT1_129",
                 "text": "_____ the closure of Verdigold Transport Services, we are looking for a new shipping company.",
                 "options": [
                     {
@@ -798,14 +798,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "According to"
                     }
                 ],
-                "classification": "P5_PREP_PHRA",
+                "classification": "pr5",
                 "testId": 1,
                 "correctAnswer": "C",
                 "translation": "버디골드 운송 서비스의 폐업을 고려하여, 우리는 새로운 운송 회사를 찾고 있다.",
                 "explanation": "'기존 운송 회사의 폐업을 고려해 새 회사를 찾고 있다'라는 내용이 되어야 적절하므로 '~을 고려하여'라는 뜻의 (C) In light of가 정답이다. (A) In spite of는 '~에도 불구하고', (B) Just as는 '마치 ~처럼', (D) According to는 '~에 따르면'이라는 의미이다."
             },
             {
-                "id": "q130",
+                "id": "RT1_130",
                 "text": "The _____ information provided by Uniss Bank's brochure helps applicants understand the terms of their loans.",
                 "options": [
                     {
@@ -825,7 +825,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "potential"
                     }
                 ],
-                "classification": "P5_VOC_ADJ",
+                "classification": "voc1",
                 "testId": 1,
                 "correctAnswer": "B",
                 "translation": "유니스 은행의 안내 책자에 제공되는 추가 정보는 신청자가 대출 조건을 이해하는 데 도움이 된다.",
@@ -838,7 +838,7 @@ export const part5TestData: Part5TestSet[] = [
         "title": "Part 5 Real Test 2",
         "questions": [
             {
-                "id": "q101",
+                "id": "RT2_101",
                 "text": "Before operating your handheld device, please _____ the enclosed cable to charge it.",
                 "options": [
                     {
@@ -858,14 +858,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "finish"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "휴대용 장치를 작동하기 전에 동봉된 케이블을 사용하여 충전하십시오.",
                 "explanation": "빈칸은 주어가 없는 명령문에서 the enclosed cable을 목적어로 취하는 타동사 자리로, 그것(=your handheld device)을 충전하기 위해 '동봉된 케이블을 사용하라'는 내용이 되어야 하므로 '사용하다'라는 의미의 동사 (C) use가 정답이다. (A) plan은 '계획하다', (D) finish는 '끝내다'라는 의미로 문맥상 어울리지 않고, (B) remain은 '~인 채로 있다'라는 의미의 자동사로 목적어를 취하지 않는다."
             },
             {
-                "id": "q102",
+                "id": "RT2_102",
                 "text": "Safile's new external hard drive can _____ store up to one terabyte of data.",
                 "options": [
                     {
@@ -885,14 +885,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "secured"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "av1",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "사파일의 새로운 외장 하드 드라이브는 최대 1테라바이트의 데이터를 안전하게 저장할 수 있다.",
                 "explanation": "조동사 can과 동사원형 store 사이에서 동사를 수식하는 부사 자리이므로, '안전하게'라는 의미의 부사 (C) securely가 정답이다. (A) secure는 형용사/동사, (B) security는 명사, (D) secured는 과거분사이므로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q103",
+                "id": "RT2_103",
                 "text": "Mr. Peterson will travel _____ the Tokyo office for the annual meeting.",
                 "options": [
                     {
@@ -912,14 +912,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "over"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "피터슨 씨는 연례 회의를 위해 도쿄 사무소로 출장을 갈 예정이다.",
                 "explanation": "빈칸 앞에 이동을 의미하는 동사 travel이, 뒤에 장소를 나타내는 명사 the Tokyo office가 있다. '도쿄 사무소로 출장을 간다'는 내용이 되어야 적절하므로, 이동 방향을 나타내어 '~로[에]'를 뜻하는 전치사 (A) to가 정답이다."
             },
             {
-                "id": "q104",
+                "id": "RT2_104",
                 "text": "Yong-Soo Cosmetics will not charge for items on back order until _____ have left our warehouse.",
                 "options": [
                     {
@@ -939,14 +939,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "their"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "용수 화장품은 이월 주문품에 대해 상품이 창고에서 출고될 때까지 대금을 청구하지 않을 것입니다.",
                 "explanation": "빈칸은 접속사 until이 이끄는 부사절에서 동사 have left의 주어 역할을 하는 자리이므로, 주격 대명사인 (B) they가 정답이다. (A) them과 (C) themselves는 목적어 역할을 하고, (D) their는 소유격으로 뒤에 명사가 있어야 하므로 답이 되지 않는다."
             },
             {
-                "id": "q105",
+                "id": "RT2_105",
                 "text": "Our premium day tour takes visitors to historic sites _____ the Aprico River.",
                 "options": [
                     {
@@ -966,14 +966,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "along"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "자사의 프리미엄 데이 투어는 방문객들을 아프리코 강변을 따라 있는 유적지로 안내합니다.",
                 "explanation": "빈칸 뒤 명사구 the Aprico River와 함께 historic sites를 수식하는 적절한 전치사를 고르는 문제이다. '아프리코 강변을 따라 있는 유적지'라는 문맥이므로 '~을 따라'라는 의미의 전치사 (D) along이 정답이다. (A) onto는 '~ (위)로', (B) since는 '~ 이후로', (C) inside는 '~ 안에'라는 의미로 문맥상 부적절하다."
             },
             {
-                "id": "q106",
+                "id": "RT2_106",
                 "text": "Eighty percent of drivers surveyed said they would consider buying a vehicle that runs on _____.",
                 "options": [
                     {
@@ -993,14 +993,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "electrify"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n4",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "설문에 응한 운전자의 80퍼센트가 전기로 움직이는 차량 구입을 고려하겠다고 말했다.",
                 "explanation": "빈칸은 수단을 나타내는 전치사 on의 목적어 자리이므로 명사가 들어가야 한다. 명사 보기인 (A) electricity(전기)와 (C) electricians (전기 기사) 중에서 자동차를 움직이게 하는 동력이 될 수 있는 단어가 필요하므로 (A) electricity가 정답이다. (B) electrically는 부사, (D) electrify는 동사로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q107",
+                "id": "RT2_107",
                 "text": "Xinzhe Zu has _____ Petrin Engineering as the vice president of operations.",
                 "options": [
                     {
@@ -1020,14 +1020,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "combined"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "신저 주는 페트린 엔지니어링에 운영 부사장으로 입사했다.",
                 "explanation": "Petrin Engineering을 목적어로 취하는 타동사 자리로, 빈칸 앞 조동사 has와 함께 '부사장으로 회사에 입사했다'는 내용이 되어야 자연스러우므로 동사 join (입사[가입]하다)의 과거분사형 (C) joined가 정답이다. (A)의 attach는 '첨부하다', (B)의 resign은 '(직·지위를) 사직하다', (D) combine은 '결합하다'라는 의미이다."
             },
             {
-                "id": "q108",
+                "id": "RT2_108",
                 "text": "Next month, Barder House Books will be holding _____ third author's hour in Cleveland.",
                 "options": [
                     {
@@ -1047,14 +1047,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "its"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "다음 달에 바더 하우스 북스는 클리블랜드에서 세 번째 작가의 시간을 주최할 예정이다.",
                 "explanation": "명사구 third author's hour를 한정 수식하는 자리이다. 앞에서 명사구를 수식할 수 있는 인칭대명사는 소유격이고, 문맥상 '그것(=Barder House Books)의 세 번째 작가의 시간'이 적절하므로 (D) its가 정답이다. (C) its own에서 own은 소유격 뒤에서 소유 관계를 강조하는 형용사이므로 문맥상 답이 되기에 부적절하다."
             },
             {
-                "id": "q109",
+                "id": "RT2_109",
                 "text": "Chester's Tiles _____ expanded to a second location in Turnington.",
                 "options": [
                     {
@@ -1074,14 +1074,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "exactly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "체스터스 타일스는 최근 터닝턴에 두 번째 지점으로 확장했다.",
                 "explanation": "동사 expanded를 수식하여 '최근 두 번째 지점으로 확장했다'는 내용이 되어야 자연스러우므로 '최근에'를 뜻하는 (C) recently가 정답이다. (A) severely는 '혹독하게', (B) usually는 '보통', (D) exactly는 '정확하게'의 의미이다."
             },
             {
-                "id": "q110",
+                "id": "RT2_110",
                 "text": "Tabrino's has _____ increased the number of almonds in the Nut Medley snack pack.",
                 "options": [
                     {
@@ -1101,14 +1101,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "significantly"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "av1",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "타브리노스는 넛 메들리 스낵팩의 아몬드 수를 크게 늘렸다.",
                 "explanation": "빈칸은 동사구 has increased를 수식하는 부사 자리이므로 '크게, 상당히'를 의미하는 (D) significantly가 정답이다. (A) significant는 형용사, (B) significance는 명사, (C) signifies는 동사이므로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q111",
+                "id": "RT2_111",
                 "text": "_____ she travels, Jacintha Flores collects samples of local fabrics and patterns.",
                 "options": [
                     {
@@ -1128,14 +1128,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "In contrast to"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "저신다 플로레스는 여행하는 곳 어디에서나 현지 직물과 패턴 견본을 수집한다.",
                 "explanation": "빈칸 뒤에 주어 she와 동사 travels를 갖춘 완전한 절이 왔으므로 부사절 접속사가 들어가야 한다. 따라서 '어디에서나, 어디든지'를 뜻하는 부사절 접속사 (A) Wherever가 정답이다. (B) In addition to와 (D) In contrast to는 전치사로 뒤에 명사(구)가 나와야 하고, (C) Either는 or와 함께 쓰이는 상관접속사로 답이 되지 않는다."
             },
             {
-                "id": "q112",
+                "id": "RT2_112",
                 "text": "Most picture _____ at Glowing Photo Lab go on sale at 3:00 P.M. today.",
                 "options": [
                     {
@@ -1155,14 +1155,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "frames"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "n3",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "글로잉 포토 랩의 사진 액자 대부분이 오늘 오후 3시에 할인 판매된다.",
                 "explanation": "문장의 동사가 복수동사 go이므로, 빈칸에는 picture와 복합명사를 이루어 주어 역할을 하는 복수명사가 들어가야 한다. 따라서 정답은 '액자, 틀'을 뜻하는 복수명사인 (D) frames이다. (A) framer(액자 세공사)와 (B) framing(구성)은 단수명사, (C) framed는 동사/과거분사이므로 답이 될 수 없다."
             },
             {
-                "id": "q113",
+                "id": "RT2_113",
                 "text": "All students in the business management class hold _____ college degrees.",
                 "options": [
                     {
@@ -1182,14 +1182,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "elated"
                     }
                 ],
-                "classification": "G_ADJ",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "경영학 수업의 학생들은 모두 고급 대학 학위를 소지하고 있다.",
                 "explanation": "경영학 수업 학생들의 학위(college degrees) 수준을 나타내는 형용사가 필요하다. 따라서 일반 학사보다 높은 석박사 등의 고급 학위를 나타내도록 '고급의, 상급의'라는 뜻의 형용사 (C) advanced가 정답이다. (A) late는 '늦은', (B) developed는 '발달한', (D) elated는 '의기양양한'이라는 의미로 문맥상 어울리지 않는다."
             },
             {
-                "id": "q114",
+                "id": "RT2_114",
                 "text": "We hired Noah Wan of Shengyao Accounting Ltd. _____ our company's financial assets.",
                 "options": [
                     {
@@ -1209,14 +1209,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "evaluate"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "i1",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "우리는 우리 회사의 금융 자산을 평가하기 위해 성야오 회계법인의 노아 완을 고용했다.",
                 "explanation": "빈칸 앞에 완전한 절(We hired Noah Wan of Shengyao Accounting Ltd.)이 있고 뒤에 명사구가 있으므로, 빈칸에는 뒤에 나온 명사구 our company's financial assets를 목적어로 취하면서 앞에 나온 완전한 절을 수식할 수 있는 준동사가 들어가야 한다. 따라서 능동형 to부정사 (A) to evaluate가 정답이다. 수동형 (B) to be evaluated는 목적어를 취할 수 없고, (C) will be evaluated와 (D) evaluate는 동사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q115",
+                "id": "RT2_115",
                 "text": "Ms. Charisse is taking on a new account _____ she finishes the Morrison project.",
                 "options": [
                     {
@@ -1236,14 +1236,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "between"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "차리스 씨는 모리슨 프로젝트를 마무리한 뒤 새로운 고객을 맡을 예정이다.",
                 "explanation": "빈칸은 두 개의 완전한 절을 이어주는 접속사 자리이다. 따라서 보기 중에 유일한 접속사로 '~한 뒤에'라는 의미를 나타내는 (C) after가 정답이다. (A) with와 (D) between은 전치사, (B) going은 현재분사이므로 절을 연결할 수 없다."
             },
             {
-                "id": "q116",
+                "id": "RT2_116",
                 "text": "Cormet Motors' profits are _____ this year than last year.",
                 "options": [
                     {
@@ -1263,14 +1263,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "highest"
                     }
                 ],
-                "classification": "G_ADJ",
+                "classification": "com1",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "올해 코멧 모터스의 수익은 작년보다 높다.",
                 "explanation": "빈칸은 주어 Cormet Motors' profits를 보충 설명하는 주격 보어 자리이고, 뒤에 than과 함께 this year와 last year가 비교되고 있으므로 비교급 형용사 (A) higher가 정답이다. (B) high는 원급 형용사, (C) highly는 부사, (D) highest는 최상급 형용사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q117",
+                "id": "RT2_117",
                 "text": "In its _____ advertising campaign, Jaymor Tools demonstrates how reliable its products are.",
                 "options": [
                     {
@@ -1290,14 +1290,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "collected"
                     }
                 ],
-                "classification": "G_ADJ",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "현재 광고 캠페인에서 제이머 툴스는 자사 제품이 얼마나 믿을 만한지를 보여 준다.",
                 "explanation": "빈칸 뒤의 명사구 advertising campaign을 수식하기에 적절한 형용사를 고르는 문제이다, 빈칸 뒤 절에서 현재 시제로 광고 내용을 설명하고 있으므로 '현재 (진행 중인) 광고 캠페인에서'라는 의미가 되어야 가장 적절하므로, '현재의'라는 뜻의 형용사 (A) current가 정답이다. (B) relative는 '상대적인', (C) spacious는 '널찍한', (D) collected는 '수집된'이라는 의미이다."
             },
             {
-                "id": "q118",
+                "id": "RT2_118",
                 "text": "Remember to submit receipts for reimbursement _____ returning from a business trip.",
                 "options": [
                     {
@@ -1317,14 +1317,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "within"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c5",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "출장에서 돌아오면 환급을 위해 잊지 말고 영수증을 제출하십시오.",
                 "explanation": "빈칸 앞에 동사 Remember와 목적어 to submit receipts for reimbursement를 갖춘 명령문 형태의 완전한 절이 있으므로, returning from a business trip은 분사구문 또는 동명사구로 볼 수 있다. 문맥상 '출장에서 돌아오면 영수증을 제출하라'는 내용이 적절하므로 분사구문을 이끄는 부사절 접속사 (B) when(~하면, ~할 때)이 정답이다. returning을 동명사로 볼 경우, 전치사도 빈칸에 들어갈 수 있지만 (A) such as(~와 같은)와 (D) within(~ 이내에)은 문맥상 적절하지 않다. 부사 (C) then(그리고 나서) 또한 분사 returning을 수식하기에 적절하지 않다."
             },
             {
-                "id": "q119",
+                "id": "RT2_119",
                 "text": "Patrons will be able to access Westside Library's _____ acquired collection of books on Tuesday.",
                 "options": [
                     {
@@ -1344,14 +1344,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "naturally"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "이용객들은 화요일에 웨스트사이드 도서관에 새로 입수된 장서를 이용할 수 있을 것입니다.",
                 "explanation": "빈칸 뒤 형용사 acquired를 수식하기에 적절한 부사를 고르는 문제이다. 앞으로 이용할 수 있게 될 도서관 장서에 관한 내용이므로 '새로 입수된 도서'라는 의미가 되어야 적절하다. 따라서 '새로, 최근에'라는 뜻의 (B) newly가 정답이다. (A) instantly는 '즉시', (C) early는 '일찍', (D) naturally는 '자연스럽게'라는 의미로 문맥상 적절하지 않다."
             },
             {
-                "id": "q120",
+                "id": "RT2_120",
                 "text": "Please _____ any questions about time sheets to Tabitha Jones in the payroll department.",
                 "options": [
                     {
@@ -1371,14 +1371,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "direct"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "근무 시간 기록표에 관한 모든 질문은 급여 지급 부서의 타비사 존스에게 보내 주십시오.",
                 "explanation": "주어가 생략된 채 Please로 시작하는 명령문에서 동사가 보이지 않으므로 빈칸은 동사 자리이다. 따라서 동사원형 (D) direct(보내다)가 정답이다. 과거형 (C) directed는 명령문의 동사로 쓰일 수 없다."
             },
             {
-                "id": "q121",
+                "id": "RT2_121",
                 "text": "Before signing a delivery _____, be sure to double-check that all the items ordered are in the shipment.",
                 "options": [
                     {
@@ -1398,14 +1398,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "limit"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n3",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "배송 영수증에 서명하기 전에, 주문한 모든 상품이 배송품에 포함되어 있는지 다시 확인해 주십시오.",
                 "explanation": "동명사 signing의 목적어 역할을 하는 명사 자리로, 서명할(sign) 수 있는 대상인 동시에 빈칸 앞의 명사 delivery와 함께 자연스러운 복합명사를 만들 수 있어야 한다. '배송 영수증에 서명하기 전에 배송품을 다시 확인하라'는 내용이 적절하므로 '영수증'을 뜻하는 (C) receipt가 정답이다. (A) decision은 '결정', (B) announcement는 '발표, 고지', (D) limit는 '제한'의 의미이다."
             },
             {
-                "id": "q122",
+                "id": "RT2_122",
                 "text": "Funds have been added to the budget for expenses _____ with the new building.",
                 "options": [
                     {
@@ -1425,14 +1425,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "associates"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "pa2",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "신축 건물과 관련된 비용을 위해 자금이 예산에 추가되었다.",
                 "explanation": "빈칸 앞에 완전한 절(Funds have been added for expenses)이 있으므로 빈칸에는 전치사구 with the new building과 함께 명사 expenses를 수식하는 말이 들어가야 한다. 비용은 신축 건물과 관련된 것이므로, 전치사 with와 함께 쓰여 '~와 관련된'이라는 수동의 의미를 나타내는 과거분사 (A) associated가 정답이다. '협회, 제휴'를 뜻하는 명사 (B) association은 빈칸 앞의 expenses와 복합명사를 이루기에 적절하지 않고, 문장에 이미 동사 have been added가 있으므로 동사 (C) associate와 (D) associates도 답이 되지 않는다. 참고로, associate는 형용사(제휴한)와 명사(동료)로도 쓰인다."
             },
             {
-                "id": "q123",
+                "id": "RT2_123",
                 "text": "Ms. Bernard _____ that a deadline was approaching, so she requested some assistance.",
                 "options": [
                     {
@@ -1452,14 +1452,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "appeared"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "A",
                 "translation": "버나드 씨는 마감일이 다가오고 있다는 것을 알고서 지원을 요청했다.",
                 "explanation": "빈칸 뒤 that절을 목적어로 취하는 동사 자리로, '마감일이 다가오고 있다는 것을 알았다'는 의미가 되어야 뒤에 이어지는 '그래서 도움을 요청했다'는 내용과 자연스럽게 연결된다. 따라서 동사 notice(알아차리다, 인지하다)의 과거형 (A) noticed가 정답이다. (B)의 obscure는 '모호하게 하다', (C)의 withdraw는 '철회하다', (D)의 appear는 '나타나다'라는 의미이다."
             },
             {
-                "id": "q124",
+                "id": "RT2_124",
                 "text": "Mr. Moscowitz is _____ that Dr. Tanaka will agree to present the keynote speech at this year's conference.",
                 "options": [
                     {
@@ -1479,14 +1479,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "hopefully"
                     }
                 ],
-                "classification": "G_ADJ",
+                "classification": "a2",
                 "testId": 2,
                 "correctAnswer": "C",
                 "translation": "모스코비츠 씨는 타나카 박사가 올해 콘퍼런스에서 기조연설을 하는 데에 동의할 것으로 기대하고 있다.",
                 "explanation": "빈칸은 be동사의 보어 자리로, 빈칸 뒤에 온 that절과 함께 쓸 수 있는 형용사가 와야 한다. 따라서 'that절의 내용을 기대한다'는 의미를 나타내는 형용사 (C) hopeful(기대하는)이 정답이다. (A) hopes는 동사, (D) hopefully는 부사이므로 품사상 빈칸에 들어갈 수 없다. 과거분사 (B) hoped는 be동사 뒤에 들어가면 수동태가 되므로 that절을 연결할 수 없고, 의미상으로도 적절하지 않다."
             },
             {
-                "id": "q125",
+                "id": "RT2_125",
                 "text": "Two Australian companies are developing new smartphones, but it is unclear _____ phone will become available first.",
                 "options": [
                     {
@@ -1506,14 +1506,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "because"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "nc3",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "오스트레일리아의 두 회사가 새로운 스마트폰을 개발하고 있지만, 어느 스마트폰이 먼저 출시될지는 불확실하다.",
                 "explanation": "빈칸에는 가주어 it의 진주어 역할을 하는 명사절을 이끌 수 있는 단어가 들어가야 한다. 빈칸 뒤의 명사 phone을 수식하면서 명사절을 이끌어 '어느 스마트폰이 먼저 출시될지'라는 의미를 나타내는 의문형용사 (B) which가 정답이다. (A) if도 명사절 접속사로서 진주어 자리에 쓰일 수 있지만 명사 phone을 수식할 수 없으며, (C) before와 (D) because는 부사절 접속사이므로 답이 될 수 없다."
             },
             {
-                "id": "q126",
+                "id": "RT2_126",
                 "text": "Corners Gym offers its members a free lesson in how to use _____ properly.",
                 "options": [
                     {
@@ -1533,14 +1533,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "weighed"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "n1",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "코너스 짐은 회원들에게 웨이트를 제대로 사용하는 법에 대한 무료 수업을 제공한다.",
                 "explanation": "전치사 in의 목적어 역할을 하는 「how+to부정사」구문으로, 빈칸은 to부정사 to use의 목적어 역할을 하는 명사 자리이다. 따라서 '웨이트, 역기'를 뜻하는 명사 (B) weights가 정답이다. (A) weighs는 동사, (C) weighty는 형용사, (D) weighed는 동사/과거분사이므로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q127",
+                "id": "RT2_127",
                 "text": "_____ the rules, overnight parking is not permitted at the clubhouse facility.",
                 "options": [
                     {
@@ -1560,14 +1560,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "According to"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr5",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "규정에 따라 클럽하우스 시설에서는 야간 주차가 허용되지 않습니다.",
                 "explanation": "뒤의 명사 the rules를 목적어로 취해 '규정에 따라 야간 주차가 허용되지 않는다'는 의미가 되어야 자연스러우므로 '~에 따라'를 뜻하는 (D) According to가 정답이다. (A) Prior to는 '~에 앞서', (B) Except for는 '~을 제외하고', (C) Instead of는 '~ 대신에'라는 의미이다."
             },
             {
-                "id": "q128",
+                "id": "RT2_128",
                 "text": "Once everyone _____, we can begin the conference call.",
                 "options": [
                     {
@@ -1587,14 +1587,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "has arrived"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v4",
                 "testId": 2,
                 "correctAnswer": "D",
                 "translation": "모두 도착하면 전화 회의를 시작할 수 있습니다.",
                 "explanation": "Once가 이끄는 부사절의 주어 everyone 뒤에 동사가 없으므로 빈칸은 동사 자리이다. 주절에서 전화 회의를 시작할 수 있다(can begin)는 것으로 보아 미래의 일이고, 회의를 시작하는 미래의 특정 시점까지 완료될 일을 나타내야 하므로 미래완료 시제 will have arrived가 들어가야 하지만, Once가 '~하자마자, 일단 ~하면'이라는 뜻으로 시간 부사절을 이끌고 있으므로 미래완료 대신 현재완료 시제를 쓴다. 따라서 (D) has arrived가 정답이다. (B) is arriving도 시간 부사절에서 미래를 나타낼 수 있지만 완료의 의미가 아니므로 오답이다."
             },
             {
-                "id": "q129",
+                "id": "RT2_129",
                 "text": "Each summer a motivational video that highlights the past year's _____ is shown to all company employees.",
                 "options": [
                     {
@@ -1614,14 +1614,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "uncertainties"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "매년 여름 지난 한 해의 성과를 강조하는 동기부여 영상이 회사의 전 직원에게 공개된다.",
                 "explanation": "빈칸은 주어 a motivational video와 동사 is shown 사이에서 주어를 수식하는 관계사절의 동사 highlights의 목적어 자리이다. 동기부여 영상을 수식하는 내용이 되어야 하므로 '지난해의 성과를 강조한다'는 의미가 되어야 적절하다. 따라서 '성과, 업적'을 뜻하는 (B) accomplishments가 정답이다. (A)의 preference는 '선호(도)', (C)의 communication은 '의사소통', (D)의 uncertainty는 '불확실성'이라는 의미이다."
             },
             {
-                "id": "q130",
+                "id": "RT2_130",
                 "text": "Employees who wish to attend the retirement dinner _____ Ms. Howell's 30 years of service should contact Mr. Lee.",
                 "options": [
                     {
@@ -1641,7 +1641,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "will be honored"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "i2",
                 "testId": 2,
                 "correctAnswer": "B",
                 "translation": "하월 씨의 30년 근무를 기념하는 퇴직 만찬에 참석을 희망하는 직원은 이 씨에게 연락해 주시기 바랍니다.",
@@ -1654,7 +1654,7 @@ export const part5TestData: Part5TestSet[] = [
         "title": "Part 5 Real Test 3",
         "questions": [
             {
-                "id": "q101",
+                "id": "RT3_101",
                 "text": "_____your order is being processed, please call customer service with any questions.",
                 "options": [
                     {
@@ -1674,14 +1674,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Also"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "주문이 처리되는 동안 문의사항이 있으면 고객 서비스로 전화 주십시오.",
                 "explanation": "주어(your order)와 동사(is being processed)를 갖춘 완전한 절을 콤마 뒤 주절에 연결하는 자리이므로, 빈칸에는 부사절 접속사가 들어가야 한다. 따라서 '~하는 동안'이라는 의미의 접속사 (C) While이 정답이다. (A) Still, (D) Also는 부사, (B) Either는 or와 함께 쓰이는 상관접속사로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q102",
+                "id": "RT3_102",
                 "text": "ABC Truck Supplies has the _____ selection of mufflers in the state.",
                 "options": [
                     {
@@ -1701,14 +1701,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "positive"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "com1",
                 "testId": 3,
                 "correctAnswer": "B",
                 "translation": "ABC 트럭 서플라이즈는 주 전역에서 가장 다양한 소음기를 보유하고 있다.",
                 "explanation": "'다양한, 엄선된'이라는 의미의 a selection of는 형용사 wide와 함께 '매우 다양한'의 뜻으로 자주 쓰인다. 따라서 빈칸 앞 정관사 the와 함께 wide의 최상급으로 '가장 다양한 소음기'라는 의미가 자연스러운 (B) widest가 정답이다. (A) natural은 '자연의', (C) overall은 '전반적인', (D) positive는 '긍정적인'이라는 의미로 문맥상 적절하지 않다."
             },
             {
-                "id": "q103",
+                "id": "RT3_103",
                 "text": "Sharswood Landscaping has received dozens of five-star _____ for its work.",
                 "options": [
                     {
@@ -1728,14 +1728,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "reviewing"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "샤스우드 조경은 작업에 대해 별 다섯 개짜리 평가 수십 개를 받았다.",
                 "explanation": "전치사 of의 목적어 자리로 형용사 five-star(별 다섯 개짜리의)의 수식을 받아 '별 다섯 개짜리 평가'라는 의미가 되어야 하므로 '후기, 평가'라는 뜻의 명사 (A) reviews가 정답이다. 참고로, 빈칸 앞 dozens of는 '수십 개의'라는 의미로 뒤에 복수명사를 수식하기 때문에 명사 (B) reviewer(비평가, 검열자)는 문맥상 어울리지 않을 뿐 아니라 dozens of와 수 일치도 되지 않는다. (C) reviewed는 동사/과거분사, (D) reviewing은 동명사/현재분사로 구조상 빈칸에 적절하지 않다."
             },
             {
-                "id": "q104",
+                "id": "RT3_104",
                 "text": "Dr. Cho will visit the Teledarr Lab during the annual open house, since _____ may not have another chance to see it.",
                 "options": [
                     {
@@ -1755,14 +1755,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "herself"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 3,
                 "correctAnswer": "B",
                 "translation": "조 박사는 텔레데어 연구소를 볼 기회가 다시없을 수도 있기 때문에 일 년에 한번 있는 공개일 동안 연구소를 방문할 예정이다.",
                 "explanation": "빈칸은 접속사 since가 이끄는 부사절의 주어 자리이므로 주격 인칭대명사 (B) she가 정답이다. 소유대명사인 (A) hers도 주어 자리에 들어갈 수 있지만, '그녀의 것'이라는 뜻으로 문맥상 적절하지 않고, (C) her는 목적격/소유격, (D) herself는 재귀대명사로 주어 자리에 들어갈 수 없으므로 오답이다."
             },
             {
-                "id": "q105",
+                "id": "RT3_105",
                 "text": "Dorn Department Store decided to _____ its already large selection of housewares.",
                 "options": [
                     {
@@ -1782,14 +1782,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "expand"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "돈 백화점은 이미 다양한 가정용품을 확대하기로 결정했다.",
                 "explanation": "동사 decided의 목적어 역할을 하는 to부정사에 들어갈 적절한 동사 어휘를 고르는 문제이다. 문맥상 '이미 다양한 제품군을 확대하기로 결정했다'라는 내용이 되어야 적절하므로 '확대하다, 확장하다'라는 뜻의 (D) expand가 정답이다. (A) create는 '만들다', (B) enforce는 '시행하다', (C) apply는 '적용하다'라는 의미이다."
             },
             {
-                "id": "q106",
+                "id": "RT3_106",
                 "text": "We _____ that you bring a portfolio of work samples to the interview.",
                 "options": [
                     {
@@ -1809,14 +1809,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "asks"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "면접에 작업 샘플 포트폴리오를 지참해 주시기 바랍니다.",
                 "explanation": "We가 주어, 빈칸 뒤 that절이 목적어인 문장에 동사가 필요하므로 빈칸은 동사 자리이다. 복수주어 We와 수 일치하는 복수동사가 와야 하므로 (C) ask가 정답이다. (A) was asking과 (D) asks는 3인칭 단수동사로 We와 수 일치되지 않고, (B) having asked는 동명사/현재분사로 문장의 동사 역할을 할 수 없다."
             },
             {
-                "id": "q107",
+                "id": "RT3_107",
                 "text": "Members of the Bold Stone Farm Store receive _____ discounts on all purchases.",
                 "options": [
                     {
@@ -1836,14 +1836,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "deeply"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "볼드스톤팜 스토어 회원은 모든 구매에 대해 큰 할인을 받는다.",
                 "explanation": "빈칸은 동사 receive의 목적어 역할을 하는 명사 discounts를 수식하는 형용사 자리이다. 따라서 깊은'이라는 의미의 형용사 (C) deep이 정답이다. (A) depth는 명사, (B) deepen은 동사, (D) deeply는 부사이므로 답이 될 수 없다."
             },
             {
-                "id": "q108",
+                "id": "RT3_108",
                 "text": "If your plans change, please contact us at least 24 hours before the time of your _____.",
                 "options": [
                     {
@@ -1863,14 +1863,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "reserve"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 3,
                 "correctAnswer": "B",
                 "translation": "계획이 변경될 경우, 적어도 예약 시간 24시간 전에 연락 주십시오.",
                 "explanation": "전치사 of의 목적어 자리로, 소유격 뒤에는 명사가 와야 하고 '예약 시간 24시간 전에'라는 의미가 되어야 자연스럽다. 따라서 '예약'이라는 뜻의 명사 (B) reservation이 정답이다. (A) reserved는 동사/과거분사, (C) reservable은 형용사, (D) reserve는 동사이므로 빈칸에 들어갈 수 없다. 참고로 reserve는 명사로도 쓰이지만, '비축; 보호 구역'이라는 의미이므로 문맥에 어울리지 않는다."
             },
             {
-                "id": "q109",
+                "id": "RT3_109",
                 "text": "Hold the tomato seedling gently by the stem in order to avoid harming _____ roots.",
                 "options": [
                     {
@@ -1890,14 +1890,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "in"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "뿌리가 다치지 않게 토마토 묘목을 줄기 쪽으로 살며시 잡으세요.",
                 "explanation": "빈칸은 동명사 harming의 목적어 역할을 하는 명사 roots를 수식하는 자리이다. 명사 앞에 쓰여 한정사 역할을 하고 문맥상으로도 '그것(the tomato seedling)의 뿌리'라는 내용이 적절하므로 소유격 인칭대명사 (A) its가 정답이다. (B) at과 (D) in은 전치사로 빈칸에 들어갈 수 없고, 지시형용사 (C) that은 복수명사와 쓸 수 없으므로 답이 되지 않는다."
             },
             {
-                "id": "q110",
+                "id": "RT3_110",
                 "text": "At the registration table, be sure to collect your name tag _____ entering the conference.",
                 "options": [
                     {
@@ -1917,14 +1917,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "before"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "pr1",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "회의에 입장하기 전에 등록 테이블에서 반드시 이름표를 수령하세요.",
                 "explanation": "빈칸은 뒤에 오는 entering the conference와 함께 앞에 있는 완전한 절(be sure to collect your name tag)을 수식하는 자리이다. entering과 함께 쓰여 '들어가기 전에'라는 의미를 나타내는 것이 적절하므로 (D) before가 정답이다. 부사인 (A) very, (B) often, (C) always 또한 구조상으로 가능해 보일 수 있으나, (A) very는 동사를 수식하지 않고, (B) often과 (C) always는 의미상 어색하므로 정답이 될 수 없다."
             },
             {
-                "id": "q111",
+                "id": "RT3_111",
                 "text": "Maihama vehicles include an extended _____ to cover engine repairs.",
                 "options": [
                     {
@@ -1944,14 +1944,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "warranty"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "마이하마 차량에는 엔진 수리를 보장하는 연장된 보증이 포함되어 있다.",
                 "explanation": "문맥상 빈칸에 들어갈 명사는 마이하마 차량(Maihama vehicles)에 포함된 것으로, to부정사구 to cover engine repairs의 수식을 받아 '엔진 수리를 보장하는 보증'이라는 내용이 되어야 자연스럽다. 따라서 '보증'이라는 의미의 (D) warranty가 정답이다. (A) record는 '기록', (B) operation은 '작동; 운영', (C) budget은 '예산'이라는 의미로 문맥상 빈칸에 적절하지 않다."
             },
             {
-                "id": "q112",
+                "id": "RT3_112",
                 "text": "The hotel's new Web site features an _____ collection of high-quality images.",
                 "options": [
                     {
@@ -1971,14 +1971,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "undefeated"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "호텔의 새로운 웹사이트는 인상적인 고품질 이미지 컬렉션이 특징이다.",
                 "explanation": "명사 collection을 수식하기에 적절한 형용사를 고르는 문제이다. collection이 고품질 이미지들로 구성되었다는 수식어구(of high-quality images)로 보아 문맥상 '고품질 이미지를 인상적으로 모아놓은 것'이라는 내용이 되어야 적절하므로 '인상적인'이라는 뜻의 (C) impressive가 정답이다. (A) absolute는 '절대적인', (B) efficient는 '효율적인', (D) undefeated는 '무패의'라는 의미이다."
             },
             {
-                "id": "q113",
+                "id": "RT3_113",
                 "text": "On behalf of everyone at Uniontown Bank, we _____ thank you for your continued patronage.",
                 "options": [
                     {
@@ -1998,14 +1998,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "perfectly"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "voc1",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "유니언타운 은행의 모든 임직원을 대표하여, 귀하의 지속적인 이용에 진심으로 감사드립니다.",
                 "explanation": "동사 thank를 수식하여 적절한 문맥을 완성하는 부사를 고르는 문제이다. '지속적인 이용에 진심으로 감사드린다'는 내용이 되어야 자연스러우므로 '진심으로'라는 뜻의 (C) sincerely가 정답이다. (A) deservedly는 '마땅히', (B) commonly는 '흔히', (D) perfectly는 '완벽하게'라는 의미로 문맥상 어울리지 않는다."
             },
             {
-                "id": "q114",
+                "id": "RT3_114",
                 "text": "Fragile equipment must be stored in a secure location so that nothing is _____ damaged.",
                 "options": [
                     {
@@ -2025,14 +2025,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "accidentally"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "av1",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "깨지기 쉬운 장비는 실수로 손상되지 않도록 안전한 장소에 보관되어야 한다.",
                 "explanation": "빈칸은 be동사 is와 과거분사 damaged 사이에서 동사를 수식하는 부사 자리이다. 따라서 '우연히, 실수로'라는 뜻의 부사 (D) accidentally가 정답이다. (A) accident와 (B) accidents는 명사, (C) accidental은 형용사이므로 품사상 오답이다."
             },
             {
-                "id": "q115",
+                "id": "RT3_115",
                 "text": "Ms. Sampson will not arrive at the convention _____ after our team's presentation.",
                 "options": [
                     {
@@ -2052,14 +2052,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "when"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "샘슨 씨는 우리 팀의 발표가 끝난 이후에야 컨벤션에 도착할 것이다.",
                 "explanation": "문맥상 '우리 팀의 발표 이후에야 도착할 것이다', 즉 '우리 팀의 발표가 끝난 이후까지 도착하지 않을 것이다'라는 의미가 되어야 자연스럽다. 따라서 빈칸 뒤 after와 함께 '~ 이후까지'라는 의미를 나타내는 (A) until이 정답이다. until after(~ 이후까지), until before(~ 이전까지), from within(~ 안에서부터), from behind(~ 뒤에서부터) 등의 관용 표현을 알아 두자."
             },
             {
-                "id": "q116",
+                "id": "RT3_116",
                 "text": "The community picnic will be held _____ the park behind the Seltzer Public Library.",
                 "options": [
                     {
@@ -2079,14 +2079,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "here"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "지역 사회 피크닉은 셀처 공공 도서관 뒤에 있는 공원에서 열릴 예정이다.",
                 "explanation": "명사구 the park를 목적어로 취하는 전치사 자리로, 보기에서 (A) in과 (C) for 중 하나를 선택해야 한다. the park가 장소를 나타내는 명사이고, 문맥상 '공원에서 열릴 것이다'라는 내용이 되어야 자연스러우므로 장소 명사와 함께 쓰여 '~에서'를 뜻하는 전치사 (A) in이 정답이다. (C) for(~을 위한)는 문맥상 어색하고, (B) all은 한정사/부사, (D) here는 부사이므로 빈칸에 적절하지 않다."
             },
             {
-                "id": "q117",
+                "id": "RT3_117",
                 "text": "The new hires _____ for an orientation on May 10 at 9:00 Α.Μ.",
                 "options": [
                     {
@@ -2106,14 +2106,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "to gather"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v4",
                 "testId": 3,
                 "correctAnswer": "B",
                 "translation": "신입 사원들은 5월 10일 오전 9시에 오리엔테이션을 위해 모일 예정이다.",
                 "explanation": "빈칸은 주어 The new hires의 동사 자리이다. 따라서 문장에서 본동사 역할을 할 수 있는 (B) will gather가 정답이다. (A) to be gathering과 (D) to gather는 to부정사, (C) gathering은 명사/동명사/현재분사이므로 품사상 답이 될 수 없다."
             },
             {
-                "id": "q118",
+                "id": "RT3_118",
                 "text": "When Mr. Young approached the desk, the receptionist _____ offered him a seat in the waiting room.",
                 "options": [
                     {
@@ -2133,14 +2133,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "politest"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "av1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "영 씨가 데스크로 다가가자 접수 담당자는 정중하게 대기실 자리를 권했다.",
                 "explanation": "빈칸은 주어 the receptionist와 동사 offered 사이에서 동사를 수식하는 부사 자리이다. 따라서 '정중하게'를 뜻하는 부사 (A) politely가 정답이다. (B) polite는 형용사, (C) politeness는 명사, (D) politest는 형용사의 최상급이므로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q119",
+                "id": "RT3_119",
                 "text": "Members of the Marvale marketing team claimed that _____ was the best design for the new corporate logo.",
                 "options": [
                     {
@@ -2160,14 +2160,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "their"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "마베일의 마케팅 팀원들은 그들의 것이 새로운 회사 로고를 위한 최고의 디자인이라고 주장했다.",
                 "explanation": "빈칸은 주절의 동사 claimed의 목적어 역할을 하는 that절의 주어 자리이다. was는 단수동사이므로 복수주어인 (A) they는 답이 될 수 없고, 문맥상 '그들(Members of the Marvale marketing team)의 것'이라는 의미를 나타내는 소유대명사 (C) theirs가 정답이다."
             },
             {
-                "id": "q120",
+                "id": "RT3_120",
                 "text": "The new Kitsuna video camera is currently on sale for $375, not _____ tax.",
                 "options": [
                     {
@@ -2187,14 +2187,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "including"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pa5",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "신형 키츠나 비디오카메라는 현재 세금을 포함하지 않고 375달러에 판매되고 있다.",
                 "explanation": "문맥상 '세금을 포함하지 않고'라는 의미가 되어야 하는데 앞에 not이 있으므로 '~을 포함하여'라는 뜻의 전치사 (D) including이 정답이다. '~을 제외하고'라는 뜻의 (A) excepting은 not과 함께 '~도 예외 없이'를 의미하므로 문맥에 맞지 않다. (B) alongside는 '~와 나란히', (C) within은 '~ 이내에'라는 의미이다."
             },
             {
-                "id": "q121",
+                "id": "RT3_121",
                 "text": "All associates are _____ to follow the standard operating procedures outlined in the handbook.",
                 "options": [
                     {
@@ -2214,14 +2214,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "expected"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v2",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "모든 직원들은 안내서에 기술된 표준 운영 절차를 따라야 한다.",
                 "explanation": "be동사 are와 to부정사 to follow 사이에서 과거분사 형태로 적절한 문맥을 완성하는 동사를 골라야 한다. '절차를 따라야 한다', 즉 '절차를 따를 것으로 기대된다'라는 의미가 되어야 하므로 'be expected to'의 형태로 쓰여 '~할 것으로 기대[예상]되다'를 의미하는 (D) expected가 정답이다. (A) concerned는 '우려하는'이라는 의미로 뒤에 주로 전치사 about이나 that절을 취하므로 빈칸에 적절하지 않고, (B)의 tend는 '경향이 있다'라는 뜻의 자동사로 수동태로 쓰이지 않으며, (C)의 maintain은 '유지하다'라는 뜻으로 문맥상 오답이다."
             },
             {
-                "id": "q122",
+                "id": "RT3_122",
                 "text": "This month Framley Publishing House is embarking on its _____ expansion so far.",
                 "options": [
                     {
@@ -2241,14 +2241,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "most ambitious"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "com1",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "이번 달 프램리 출판사는 지금까지 했던 것 중 가장 야심 찬 확장 사업을 착수할 것이다.",
                 "explanation": "빈칸 앞에 소유격, 뒤에 명사 expansion이 있으므로 빈칸에는 명사를 수식하는 형용사나 복합명사를 이루는 명사가 들어갈 수 있다. 문맥상으로 '가장 야심 찬 확장 사업'이라는 의미가 되어야 자연스러우므로 '야심 찬'이라는 뜻의 형용사 ambitious의 최상급 (D) most ambitious가 정답이다. 명사인 (C) ambition은 '야심'이라는 뜻으로 expansion과 복합명사를 이루지 않고, (A) ambitiously와 (B) most ambitiously는 부사이므로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q123",
+                "id": "RT3_123",
                 "text": "After months of collaboration, Matricks Technology's software developers _____ released a top-quality product.",
                 "options": [
                     {
@@ -2268,14 +2268,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "intensely"
                     }
                 ],
-                "classification": "G_ADV",
+                "classification": "voc1",
                 "testId": 3,
                 "correctAnswer": "C",
                 "translation": "몇 달간의 협업 끝에 매트릭스 테크놀로지의 소프트웨어 개발자들은 마침내 최고 품질의 제품을 출시했다.",
                 "explanation": "빈칸 뒤의 동사 released를 수식하여 '마침내 출시했다'는 의미가 되어야 적절하므로 '마침내'라는 뜻의 (C) finally가 정답이다. (A) profoundly는 '깊이', (B) overly는 '지나치게', (D) intensely '몹시'라는 의미이다."
             },
             {
-                "id": "q124",
+                "id": "RT3_124",
                 "text": "Tickets are valid for one-time access and do not allow for _____ into the venue.",
                 "options": [
                     {
@@ -2295,14 +2295,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "turnover"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 3,
                 "correctAnswer": "B",
                 "translation": "티켓으로는 1회 입장만 유효하며 행사장에는 재입장할 수 없습니다.",
                 "explanation": "빈칸 뒤 장소를 나타내는 전치사구 into the venue가 있고 앞에서 티켓은 1회 입장에만 유효하다(Tickets are valid for one-time access)고 했으므로, '행사장에 재입장할 수 없다'라는 내용으로 연결되어야 자연스럽다. 따라서 '재입장'을 뜻하는 (B) reentry가 정답이다. (A) duplication은 '이중, 중복', (C) permission은 '허락', (D) turnover는 '(상품의) 회전율'이라는 의미로 문맥에 어울리지 않는다."
             },
             {
-                "id": "q125",
+                "id": "RT3_125",
                 "text": "We hired Okafor Construction to do the renovation _____ it was not the lowest bidder on the project.",
                 "options": [
                     {
@@ -2322,14 +2322,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "even though"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "우리는 오카포 건설이 프로젝트의 최저 입찰자가 아님에도 불구하고 보수 공사 담당 업체로 고용했다.",
                 "explanation": "빈칸 뒤 완전한 절(it was not the lowest bidder on the project)을 이끄는 부사절 접속사 자리로 (A) if only, (C) whereas, (D) even though가 가능하다. 문맥상 '최저 입찰자가 아님에도 불구하고'라는 의미가 되어야 자연스러우므로 '~에도 불구하고, ~일지라도'를 뜻하는 (D) even though가 정답이다. (A) if only는 '~하면(좋을 텐데)'의 의미로 주로 가정법 시제와 쓰이고, (C) whereas는 '반면에'라는 뜻으로 의미상 적절하지 않으며, (B) alternatively는 부사이므로 품사상 오답이다."
             },
             {
-                "id": "q126",
+                "id": "RT3_126",
                 "text": "The first _____ of the training will introduce staff to certain workplace responsibilities.",
                 "options": [
                     {
@@ -2349,14 +2349,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "partial"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "교육의 첫 부분은 특정한 직장에서의 책무를 직원들에게 소개할 것이다.",
                 "explanation": "빈칸은 동사 will introduce의 주어 자리로, 빈칸 앞에 관사 The와 형용사 first가 있으므로 명사가 와야 한다. 따라서 명사인 (A) part가 정답이다. (B) parted는 동사/과거분사, (D) partial은 형용사이므로 품사상 빈칸에 들어갈 수 없다. (C) parting은 동명사로 쓰일 경우 주어 자리에 들어갈 수 있지만 '갈라짐'을 의미하므로 답이 될 수 없다."
             },
             {
-                "id": "q127",
+                "id": "RT3_127",
                 "text": "According to industry _____, Ghira Company plans to relocate its headquarters to Australia.",
                 "options": [
                     {
@@ -2376,14 +2376,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "reports"
                     }
                 ],
-                "classification": "G_NOUN",
+                "classification": "n3",
                 "testId": 3,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "D",
+                "translation": "업계 보고서에 따르면, 기라 컴퍼니는 본사를 오스트레일리아로 이전할 계획이다.",
+                "explanation": "빈칸은 According to 뒤의 전치사의 목적어 자리로 industry와 함께 복합명사를 이루는 명사가 필요하다. '업계 보고서'라는 의미의 (D) reports가 정답이다."
             },
             {
-                "id": "q128",
+                "id": "RT3_128",
                 "text": "Next month, the Kneath House will host an exhibition of _____ furniture and clothing from the eighteenth century.",
                 "options": [
                     {
@@ -2403,14 +2403,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "authenticity"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "a1",
                 "testId": 3,
                 "correctAnswer": "A",
                 "translation": "Translation unavailable.",
                 "explanation": "Explanation unavailable."
             },
             {
-                "id": "q129",
+                "id": "RT3_129",
                 "text": "PKTM's regional managers serve _____ the direction of the vice president.",
                 "options": [
                     {
@@ -2430,14 +2430,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "opposite"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 3,
                 "correctAnswer": "B",
                 "translation": "PKTM의 지역 관리자들은 부사장의 지휘하에 근무한다.",
                 "explanation": "빈칸 뒤의 명사구 the direction과 함께 '지휘[감독]하에'라는 의미를 나타내는 (B) under가 정답이다. (A) among은 '(셋 이상의) ~ 사이에'라는 의미로 복수명사가 뒤따라야 하므로 적절하지 않고, (C) behind는 '~ 뒤에', (D) opposite는 '~ 맞은편에'를 뜻하므로 문맥에 어울리지 않는다."
             },
             {
-                "id": "q130",
+                "id": "RT3_130",
                 "text": "_____ a recent surge in demand, Vanita's Catering is hiring four additional servers.",
                 "options": [
                     {
@@ -2457,7 +2457,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Owing to"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr5",
                 "testId": 3,
                 "correctAnswer": "D",
                 "translation": "최근 수요 급증으로 인해 바니타 케이터링은 네 명의 서빙 종업원을 추가로 채용 중이다.",
@@ -2470,7 +2470,7 @@ export const part5TestData: Part5TestSet[] = [
         "title": "Part 5 Real Test 4",
         "questions": [
             {
-                "id": "q101",
+                "id": "RT4_101",
                 "text": "Mr. Barrientos has worked at the company _____ six years.",
                 "options": [
                     {
@@ -2490,14 +2490,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "lately"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "배리엔토스 씨는 회사에서 6년 동안 근무했다.",
                 "explanation": "빈칸 앞에 Mr. Barrientos가 주어, has worked가 동사인 완전한 절이 있고 뒤에 명사구 six years가 있으므로 빈칸은 전치사 자리이다. six years가 기간을 나타내는 말이고, 문맥상 '6년 동안 일했다'라는 의미가 되어야 자연스러우므로 '~ 동안'을 뜻하는 (A) for가 정답이다. (B) since는 '~ 이후로'라는 뜻으로 과거 특정 시점을 나타내는 명사구를 목적어로 취하고, (C) with는 '~와 함께, ~을 가지고'라는 의미이다. (D) lately는 부사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q102",
+                "id": "RT4_102",
                 "text": "The staff cafeteria stops _____ lunch at 2:00 Ρ.Μ.",
                 "options": [
                     {
@@ -2517,14 +2517,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "working"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "g4",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "직원 식당은 오후 2시에 점심 식사 제공을 마친다.",
                 "explanation": "동사 stops의 목적어 자리에 들어갈 동명사 형태의 동사 어휘를 고르는 문제이다. lunch를 목적어로 취해 '점심 식사 제공을 멈추다'라는 내용이 되어야 자연스러우므로 '(식당 등에서 음식을) 제공하다'라는 뜻의 (C) serving이 정답이다. (A)의 take는 '가지고 가다', (B)의 buy는 '사다', (D)의 work는 '일하다; 효과가 있다'라는 의미이다."
             },
             {
-                "id": "q103",
+                "id": "RT4_103",
                 "text": "The annual report will be ready after _____ make the necessary revisions.",
                 "options": [
                     {
@@ -2544,14 +2544,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "my"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "연례 보고서는 제가 필요한 수정을 한 뒤 준비될 것입니다.",
                 "explanation": "빈칸은 after로 시작하는 부사절의 동사 make의 주어 자리이므로 인칭대명사 주격인 (A) I가 정답이다. 참고로, 재귀대명사 (C) myself는 주어 역할을 하지 않는다."
             },
             {
-                "id": "q104",
+                "id": "RT4_104",
                 "text": "Mr. Louden was offered a full-time position at Fortelio Corporation _____ a division manager.",
                 "options": [
                     {
@@ -2571,14 +2571,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "around"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 4,
                 "correctAnswer": "B",
                 "translation": "루덴 씨는 포르텔리오 사에서 부서 관리자로 정규직을 제안받았다.",
                 "explanation": "빈칸 뒤의 명사구 a division manager를 목적어로 취해 '부서 관리자로'라는 내용이 되어야 자연스러우므로 '~로(서)'를 뜻하는 (B) as가 정답이다."
             },
             {
-                "id": "q105",
+                "id": "RT4_105",
                 "text": "Kennedy Sports will _____ its end-of-season sale through the month of January.",
                 "options": [
                     {
@@ -2598,14 +2598,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "continue"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "케네디 스포츠는 1월 한 달 내내 시즌 말 세일을 계속할 것이다.",
                 "explanation": "조동사 will 뒤에는 동사원형이 와야 하므로 '계속하다'라는 뜻의 동사 원형 (D) continue가 정답이다."
             },
             {
-                "id": "q106",
+                "id": "RT4_106",
                 "text": "Ms. Najjar is going to give a presentation _____ workplace regulations at noon.",
                 "options": [
                     {
@@ -2625,14 +2625,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "on"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "나자르 씨는 정오에 직장 규정에 대해 발표할 예정이다.",
                 "explanation": "빈칸 뒤의 명사구 workplace regulations를 목적어로 취해 '직장 규정에 대한 발표'라는 내용이 되어야 자연스러우므로 '~에 관하여'를 뜻하는 (D) on이 정답이다. (A) near(~ 가까이에), (B) to(~으로), (C) past(~을 지나서)는 장소나 위치를 나타내는 명사를 목적어로 취한다."
             },
             {
-                "id": "q107",
+                "id": "RT4_107",
                 "text": "Mr. Telguld submitted the _____ surveys before the monthly board meeting.",
                 "options": [
                     {
@@ -2652,14 +2652,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "completes"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "pa1",
                 "testId": 4,
                 "correctAnswer": "B",
                 "translation": "텔걸드 씨는 월례 이사회 전에 완료된 설문 조사를 제출했다.",
                 "explanation": "빈칸은 정관사 the와 명사 surveys 사이에서 명사를 수식하는 형용사 자리이므로 분사가 들어갈 수 있다. surveys는 완료를 하는 주체가 아닌 완료가 되는 대상이고, '완료된 설문 조사를 제출했다'라는 내용이 되어야 자연스러우므로 수동의 의미를 나타내어 형용사 역할을 하는 과거분사 (B) completed가 정답이다. (A) completely는 부사, (C) completing은 현재분사/동명사, (D) completes는 동사로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q108",
+                "id": "RT4_108",
                 "text": "Travel funds are available to student presenters coming to the conference from a significant _____.",
                 "options": [
                     {
@@ -2679,14 +2679,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "distance"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "상당히 먼 곳에서 콘퍼런스에 참석하는 학생 발표자에게는 이동 경비가 제공된다.",
                 "explanation": "'~에서'를 의미하는 전치사 from의 목적어 자리로, 문맥상 위치나 장소를 나타내는 명사가 들어가야 한다. 정도를 강조하는 형용사 significant(상당한; 중요한)의 수식을 받아 '상당히 먼 곳에서'라는 내용이 되어야 적절하므로 '먼 곳, 거리'를 뜻하는 (D) distance가 정답이다. (A) location은 '장소, 위치'라는 뜻으로 significant의 수식을 받으면 '중요한 장소'를 의미해 문맥상 적절하지 않다. (B) amount는 '양', (C) reason은 '이유'라는 의미이다."
             },
             {
-                "id": "q109",
+                "id": "RT4_109",
                 "text": "Ms. Okada is _____ a new social media campaign at the request of our office manager.",
                 "options": [
                     {
@@ -2706,14 +2706,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "organization"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "v3",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "오카다 씨는 우리 사무실 관리자의 요청으로 새로운 소셜 미디어 캠페인을 기획하고 있습니다.",
                 "explanation": "be동사 뒤에 빈칸이 있고, 빈칸 뒤에 a new social media campaign이라는 목적어가 있으므로 능동태를 만들 수 있는 현재분사 (C) organizing이 정답이다. 빈칸 앞에 is가 있으므로 동사원형 (A) organize는 들어갈 수 없고, be동사와 함께 수동태를 만드는 과거분사 (B) organized는 빈칸 뒤에 목적어를 취할 수 없다. 명사 (D) organization은 보어로 쓰이는 경우 be동사 뒤에 위치할 수 있지만 주어 Ms. Okada와 동격도 아니고, 빈칸 뒤의 명사구를 연결할 수도 없으므로 답이 될 수 없다."
             },
             {
-                "id": "q110",
+                "id": "RT4_110",
                 "text": "The speaker will offer five tips for making wise purchasing _____.",
                 "options": [
                     {
@@ -2733,14 +2733,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "remedies"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n3",
                 "testId": 4,
                 "correctAnswer": "B",
                 "translation": "강연자는 현명한 구매 결정을 내리기 위한 5가지 조언을 제공할 것이다.",
                 "explanation": "빈칸 앞의 purchasing과 함께 복합명사를 이루는 동시에 형용사 wise(현명한)의 수식을 받기에 적절한 명사를 골라야 한다. '현명한 구매 결정'이라는 의미가 되어야 자연스러우므로 '결정'을 뜻하는 (B) decisions가 정답이다. (A)의 item은 '품목', (C)의 value는 '가치'라는 뜻으로 형용사 wise와 의미상 수식 관계가 어울리지 않고, (D)의 remedy는 '치료법'을 뜻하므로 purchasing과 복합명사를 이루기에 어색하다."
             },
             {
-                "id": "q111",
+                "id": "RT4_111",
                 "text": "Please log on to your online checking account _____ the next 30 days in order to keep it active.",
                 "options": [
                     {
@@ -2760,14 +2760,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "and"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "활성화 상태를 유지하시려면 30일 이내에 온라인 예금 계좌에 로그인하십시오.",
                 "explanation": "빈칸 앞에 완전한 절(Please log on to your online checking account)이 있고 뒤에 명사구 the next 30 days가 있으므로 빈칸은 전치사 자리이다. 따라서 '~ 이내에'를 뜻하는 전치사 (A) within이 정답이다. (B) how는 의문사/관계부사, (C) whether는 명사절/부사절 접속사이므로 구조상 들어갈 수 없고, 등위접속사 (D) and는 명사구를 연결할 수는 있으나 의미상 적합하지 않다."
             },
             {
-                "id": "q112",
+                "id": "RT4_112",
                 "text": "The Bradyville Inn _____ live jazz music in the dining area on Friday evenings.",
                 "options": [
                     {
@@ -2787,14 +2787,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "collects"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "브래디빌 호텔은 금요일 저녁에 식사 공간에서 라이브 재즈 음악을 제공합니다.",
                 "explanation": "빈칸 뒤의 명사구 live jazz music을 목적어로 취하여 '라이브 재즈 음악을 제공한다'라는 의미가 되어야 자연스러우므로 '~을 특징으로 삼다, 특별히 포함하다'라는 뜻의 동사 feature의 3인칭 단수형 (A) features가 정답이다. (B)의 mark는 '표시하다', (C)의 sound는 '소리가 나다, 울리다', (D)의 collect는 '모으다'라는 의미이다."
             },
             {
-                "id": "q113",
+                "id": "RT4_113",
                 "text": "Leeann's Organic Fruit Spreads can be purchased _____ from the company's Web site.",
                 "options": [
                     {
@@ -2814,14 +2814,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "directed"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 4,
                 "correctAnswer": "B",
                 "translation": "리안스 유기농 과일 스프레드는 회사 웹페이지에서 직접 구매할 수 있다.",
                 "explanation": "빈칸이 없어도 완전한 절(Leeann's Organic Fruit Spreads can be purchased)과 전치사구(from ~ Web site)로 이루어진 문장으로 빈칸은 문장 구조에 영향을 주지 않는 부사 자리이다. 동사구 can be purchased를 수식하여 '직접 구매할 수 있다'라는 내용이 되어야 자연스러우므로 '직접, 곧장'을 뜻하는 부사 (B) directly가 정답이다. (A) direction과 (C) directness는 명사, (D) directed는 동사/과거분사로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q114",
+                "id": "RT4_114",
                 "text": "_____ the event organizers' best efforts, they have been unable to attract enough volunteers this spring.",
                 "options": [
                     {
@@ -2841,14 +2841,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Despite"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "행사 주최 측의 최선의 노력에도 불구하고, 그들은 올봄에 충분한 자원봉사자들을 모을 수 없었다.",
                 "explanation": "빈칸 뒤의 명사구 the event organizers' best efforts를 목적어로 취하는 전치사 자리로, 행사 주최 측이 최선의 노력을 한 것(the event organizers' best efforts)과 충분한 자원봉사자들을 모을 수 없었던 것(unable to attract enough volunteers)은 상충되는 상황이므로 '~에도 불구하고'를 뜻하는 (D) Despite가 정답이다."
             },
             {
-                "id": "q115",
+                "id": "RT4_115",
                 "text": "Mr. Perez _____ as an industrial engineer at Gaberly Logistics for almost twenty years.",
                 "options": [
                     {
@@ -2868,14 +2868,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "has been employed"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v2",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "페레즈 씨는 개벌리 로지스틱스에서 산업 엔지니어로 거의 20년간 근무해 오고 있다.",
                 "explanation": "주어 Mr. Perez의 동사 자리로, 타동사인 employ(고용하다) 뒤에 목적어가 보이지 않으므로 수동태가 와야 한다. 따라서 (D) has been employed가 정답이다. to부정사구인 (B) to be employed는 품사상 빈칸에 들어갈 수 없고, (A) employs와 (C) is employing은 능동태이므로 뒤에 목적어가 필요하다."
             },
             {
-                "id": "q116",
+                "id": "RT4_116",
                 "text": "Soon after Ms. Manilla was hired, the sales department's productivity began to increase _____.",
                 "options": [
                     {
@@ -2895,14 +2895,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "closely"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "마닐라 씨가 채용된 직후, 영업부의 생산성이 눈에 띄게 증가하기 시작했다.",
                 "explanation": "동사 began의 목적어로 쓰인 to increase를 수식하여 '생산성이 눈에 띄게 증가하기 시작했다'는 의미가 되어야 적절하므로 '눈에 띄게'라는 뜻의 (C) noticeably가 정답이다. (A) mainly는 '주로', (B) respectively는 '각각', (D) closely는 '면밀히'라는 의미이다. 참고로, increase, rise, decrease 등의 증감 동사를 수식하는 부사로는 noticeably, significantly, dramatically 등이 자주 쓰인다."
             },
             {
-                "id": "q117",
+                "id": "RT4_117",
                 "text": "Small businesses _____ participate in the Get Ahead program will receive marketing tools to help them attract customers.",
                 "options": [
                     {
@@ -2922,14 +2922,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "whoever"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "ac1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "겟 어헤드 프로그램에 참여하는 중소기업은 고객을 유치하는 데 도움이 되는 마케팅 툴을 제공받을 것이다.",
                 "explanation": "빈칸 이하(participate in the Get Ahead program)는 주어 Small businesses와 동사 will receive 사이에서 주어를 수식하는 관계사절로, 빈칸 뒤에 동사가 나오므로 주격 관계대명사인 (A) that이 정답이다. 앞에 선행사가 있으므로 명사절 접속사 역할을 하는 (C) what과 (D) whoever는 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q118",
+                "id": "RT4_118",
                 "text": "Our copy editors will review the manuscript _____ will not return it until the end of next week.",
                 "options": [
                     {
@@ -2949,14 +2949,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "but"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "우리 교열 담당자들이 원고를 검토하겠지만 다음 주 말까지는 원고를 돌려주지 않을 것이다.",
                 "explanation": "빈칸에는 앞의 동사구 will review the manuscript와 뒤의 동사구 will not return it을 연결해 줄 등위접속사가 필요하다. '원고를 검토하겠지만 돌려주지 않을 것이다'는 내용이 되어야 자연스러우므로 대조를 나타내는 등위접속사 (D) but이 정답이다. 등위접속사 (A) or는 '또는'이라는 의미이고, (B) once는 부사/부사절 접속사이며, (C) either는 or와 함께 상관접속사 구문을 이끄므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q119",
+                "id": "RT4_119",
                 "text": "Mira Kumar was probably the _____ of all the interns at Kolbry Media last summer.",
                 "options": [
                     {
@@ -2976,14 +2976,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "more ambitiously"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "com1",
                 "testId": 4,
                 "correctAnswer": "B",
                 "translation": "미라 쿠마르는 아마 지난여름 콜브리 미디어의 모든 인턴들 중 가장 의욕적이었을 것이다.",
                 "explanation": "정관사 the와 함께 최상급을 이루어 주어인 Mira Kumar를 보충 설명하는 주격 보어 자리이다. 따라서 최상급 형용사가 들어가야 하므로 (B) most ambitious(가장 의욕적인)가 정답이다. (A) ambitious는 원급 형용사, (C) ambitiously와 (D) more ambitiously는 부사로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q120",
+                "id": "RT4_120",
                 "text": "Orbin's Fish Company expanded to a total of 26 stores _____ its takeover of a rival chain.",
                 "options": [
                     {
@@ -3003,14 +3003,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "usually"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "pa5",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "오빈스 피시 사는 경쟁 체인점을 인수한 후 총 26개 매장으로 확장했다.",
                 "explanation": "빈칸 앞에 완전한 절(Orbin's Fish Company expanded ~ 26 stores)이 있고 뒤에 명사구 its takeover of a rival chain이 있으므로 빈칸은 전치사 자리이다. '경쟁 체인을 인수한 후 26개 매장으로 확장했다'는 의미가 되어야 자연스러우므로 (C) following(~ 후에)이 정답이다. 전치사 (B) toward는 '~을 향해서'라는 의미이므로 문맥상 어울리지 않고, (A) whenever는 복합관계부사, (D) usually는 부사이므로 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q121",
+                "id": "RT4_121",
                 "text": "Ms. Cartwright told her team members that she wanted _____ to streamline the company's assembly process.",
                 "options": [
                     {
@@ -3030,14 +3030,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "themselves"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "카트라이트 씨는 그녀의 팀원들에게 회사의 조립 공정을 간소화하길 원한다고 말했다.",
                 "explanation": "빈칸은 타동사 wanted의 목적어 자리로, her team members를 받는 대명사가 필요하므로 목적격 인칭대명사 (C) them이 정답이다. 소유대명사 (A) theirs(그들의 것)는 앞에 가리키는 대상이 있어야 하고, 재귀대명사 (D) themselves는 동사 wanted의 주어인 she와 동일 인물이 아니므로 답이 될 수 없다."
             },
             {
-                "id": "q122",
+                "id": "RT4_122",
                 "text": "Rupert's Food Service uses _____ technology to track all of its shipments.",
                 "options": [
                     {
@@ -3057,14 +3057,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "crowded"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "루퍼트 푸드 서비스는 고급 기술을 사용하여 모든 배송을 추적합니다.",
                 "explanation": "빈칸에는 모든 배송을 추적하는 기술을 수식하기에 적절한 형용사가 들어가야 하므로 '고급의'라는 뜻의 (C) advanced가 정답이다. (A) strict는 '엄격한', (D) crowded는 '붐비는'이라는 뜻으로 technology를 수식하는 말로 어울리지 않고, (B) numerous는 '수많은'이라는 뜻으로 뒤에 복수명사가 와야 하므로 답이 될 수 없다."
             },
             {
-                "id": "q123",
+                "id": "RT4_123",
                 "text": "Our app includes a _____ so that users can determine whether they are within their budget goals.",
                 "options": [
                     {
@@ -3084,14 +3084,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "calculations"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "저희 앱에는 사용자가 예산 목표 내에 있는지 여부를 파악할 수 있도록 계산기가 포함되어 있습니다.",
                 "explanation": "빈칸은 타동사 includes의 목적어 자리로, 앞에 부정관사 a가 있으므로 단수명사가 들어가야 한다. 따라서 '계산기'라는 뜻의 단수명사 (A) calculator가 정답이다. (B) calculated는 동사/과거분사, (C) calculating은 현재분사/동명사이므로 품사상 답이 될 수 없고, (D) calculations(계산)는 복수명사이므로 부정관사와 함께 쓸 수 없다."
             },
             {
-                "id": "q124",
+                "id": "RT4_124",
                 "text": "To _____ that its facilities are cleaned every day, the Selboa Company has hired more janitors.",
                 "options": [
                     {
@@ -3111,14 +3111,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "secure"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "시설이 반드시 매일 청소될 수 있도록 셀보아 사는 더 많은 청소부들을 고용했다.",
                 "explanation": "완전한 절(the Selboa Company has hired more janitors)를 수식하는 부사적 역할의 to부정사에 들어갈 동사 어휘를 고르는 문제이다. that절을 목적어로 취해 '반드시 시설이 매일 청소될 수 있도록 하기 위해'라는 내용이 되어야 자연스러우므로 '반드시 ~하게 하다'를 뜻하는 (A) ensure가 정답이다. (B) affect는 '영향을 미치다', (C) provide는 '제공하다', (D) secure는 '확보하다'라는 의미이다."
             },
             {
-                "id": "q125",
+                "id": "RT4_125",
                 "text": "During his term as a legislator, Jeremy Moran _____ promoted public awareness of the need for infrastructure improvements.",
                 "options": [
                     {
@@ -3138,14 +3138,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "actively"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "제레미 모란은 국회의원 임기 동안 사회 기반 시설 개선의 필요성에 대한 대중의 인식을 적극적으로 고취시켰다.",
                 "explanation": "주어 Jeremy Moran과 동사 promoted 사이에서 동사를 수식하는 부사 자리이므로 '적극적으로'라는 뜻의 부사 (D) actively가 정답이다. (A) act는 동사/명사, (B) action은 명사, (C) active는 형용사로 품사상 빈칸에 들어갈 수 없다."
             },
             {
-                "id": "q126",
+                "id": "RT4_126",
                 "text": "Pyxie Print's business is so new that we need to explain the full range of our services to _____ clients.",
                 "options": [
                     {
@@ -3165,14 +3165,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "paid"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "B",
                 "translation": "픽시 프린트의 사업은 매우 새로운 것이라서 잠재 고객들에게 서비스의 전 영역을 설명해야 한다.",
                 "explanation": "명사 clients를 수식하여 '잠재 고객들'이라는 의미가 되어야 적합하므로 '잠재적인'을 뜻하는 (B) potential이 정답이다. (A) trained는 '훈련된', (C) elected는 '선출된', (D) paid는 '유급의'라는 의미이다."
             },
             {
-                "id": "q127",
+                "id": "RT4_127",
                 "text": "Phone orders that are _____ to local stores by 11:00 A.M. are eligible for same-day pickup.",
                 "options": [
                     {
@@ -3192,14 +3192,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "submits"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v2",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "오전 11시까지 지역 상점으로 접수된 전화 주문은 당일 픽업이 가능합니다.",
                 "explanation": "주어인 Phone orders를 수식하는 관계사절에서 be동사 뒤에 들어갈 알맞은 형태를 고르는 문제이다. 빈칸 뒤에 목적어가 없고 전화 주문은 '접수되는' 대상이므로 수동의 의미를 나타내는 과거분사 (A) submitted가 정답이다. 명사 (B) submission은 주격 보어로서 be동사 뒤에 위치할 수 있지만 의미상 주어가 되는 선행사 Phone orders와 동격 관계가 아니므로 답이 될 수 없고, 능동/진행의 의미를 나타내는 현재분사 (C) submitting은 뒤에 목적어가 필요하며, 관계사절에 이미 동사 are가 있으므로 동사 (D) submits는 들어갈 수 없다."
             },
             {
-                "id": "q128",
+                "id": "RT4_128",
                 "text": "An Oswald Hardware associate will _____ place an order for customers who need larger quantities than what is in stock.",
                 "options": [
                     {
@@ -3219,14 +3219,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "gladly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "D",
                 "translation": "오스왈드 하드웨어 직원은 재고로 있는 것보다 더 많은 수량이 필요한 고객을 위해 기꺼이 주문을 할 것입니다.",
                 "explanation": "동사구 place an order를 수식하여 '기꺼이 주문을 할 것이다'는 의미가 되어야 자연스러우므로 '기꺼이'를 뜻하는 (D) gladly가 정답이다. (A) slightly는 '약간', (B) wholly는 '전적으로', (C) busily는 '바쁘게'라는 의미이다."
             },
             {
-                "id": "q129",
+                "id": "RT4_129",
                 "text": "Mia Daushvili performed with the Bayhead Orchestra on Monday evening, _____ her virtuosic skills on the piccolo.",
                 "options": [
                     {
@@ -3246,14 +3246,14 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "was displayed"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "pa4",
                 "testId": 4,
                 "correctAnswer": "C",
                 "translation": "미아 다우슈빌리는 월요일 저녁에 베이헤드 오케스트라와 함께 연주하며 피콜로의 거장다운 그녀의 기술을 펼쳤다.",
                 "explanation": "콤마 앞에 완전한 절(Mia Daushvili performed ~ evening)이 있고, 빈칸 뒤에 목적어 역할을 하는 명사구 her virtuosic skills가 왔으므로 빈칸 이하는 분사구문이 되어야 한다. 문맥상 '오케스트라와 연주하며, 거장다운 기술을 펼쳤다'라는 의미가 되어야 자연스러우므로 능동의 의미를 나타내는 현재분사 (C) displaying이 정답이다. (A) displays는 명사/동사, (B) had displayed와 (D) was displayed는 동사로 빈칸에 들어갈 수 없다.."
             },
             {
-                "id": "q130",
+                "id": "RT4_130",
                 "text": "When reviewing applicants for the clerk position, Ms. Ng will consider both education and _____ experience.",
                 "options": [
                     {
@@ -3273,7 +3273,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "calm"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 4,
                 "correctAnswer": "A",
                 "translation": "서기직 지원자를 검토할 때, 응 씨는 학력과 이전 경력 두 가지를 모두 고려할 것이다.",
@@ -3306,7 +3306,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "having"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "g1",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "프로 데이터 위즈로 업그레이드한 뒤, 고객들은 스프레드시트에 문제를 겪기 시작했다.",
@@ -3333,7 +3333,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "reminded"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "v2",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "추가적인 휴가 요청은 인사부의 정 씨에 의해 승인된다.",
@@ -3360,7 +3360,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "above"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "프로그래머들은 다음 소프트웨어 업데이트를 위한 변경사항 목록을 가지고 있다.",
@@ -3387,7 +3387,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "to provide"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "파리다 연회 서비스가 귀사의 중요한 기업 행사에 전문적인 출장 요리를 제공하도록 해 주십시오.",
@@ -3414,7 +3414,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "method"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "다양한 혁신 기술을 이용하여 보이드 인더스트리스는 타일의 품질을 개선해 왔다.",
@@ -3441,7 +3441,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Selling"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "모든 화장품의 판매는 최종 판매이며, 어떠한 경우에도 환불되지 않습니다.",
@@ -3468,7 +3468,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "average"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "답변을 이미 제출한 경우 추가적인 조치는 필요하지 않습니다.",
@@ -3495,7 +3495,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "herself"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "시글락 씨는 앱 설계가 자신의 연구를 토대로 한 것이라고 말했다.",
@@ -3522,7 +3522,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Therefore"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "그 조직은 지원 활동을 두 배로 늘렸지만 아직 신규 고객의 증가는 보지 못했다.",
@@ -3549,7 +3549,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "to"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "n5",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "10월 8일부터 모든 교육 위원회 회의는 학군 웹사이트에서 생중계될 예정이다.",
@@ -3576,7 +3576,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "considering"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "어바나이트 살롱의 미용사들은 다양한 헤어 제품을 다루는 데 많은 경험을 가지고 있다.",
@@ -3603,7 +3603,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "gradually"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "두 후보자 모두 대리 직책에 동등하게 적합하다.",
@@ -3630,7 +3630,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "greatly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "블룸 서킷 인수를 통해 웰스트롬 하드웨어는 제품 및 서비스를 크게 확장했다.",
@@ -3657,7 +3657,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "pick"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "파일 이름에는 대문자나 공백이 들어 있으면 안 된다는 점에 유의하십시오.",
@@ -3684,7 +3684,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "allowed"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "pa2",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "선-테크 천장 선풍기는 만족한 고객으로부터 별 5개 평가를 15,000개 이상 받았다.",
@@ -3711,7 +3711,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "visiting"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "주문 제품에 조금이라도 불만이 있으시면 당사 웹사이트의 반품 섹션을 방문하십시오.",
@@ -3738,7 +3738,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "deals"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "이토 자동차 그룹은 이번 달에 중고 차량에 대해 훌륭한 할인 혜택을 제공합니다.",
@@ -3765,7 +3765,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "nearly"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "v2",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "제품 가격은 소비자 수요와 소매 경쟁과 같은 요인에 의해 영향을 받는다.",
@@ -3792,7 +3792,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "marketing"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "몬머스 엔터프라이시스는 4월 1일부터 온라인으로 조립식 주택을 상품으로 판촉할 예정이다.",
@@ -3819,7 +3819,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "themselves"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p3",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "모든 직원은 회사의 정책 및 절차를 익혀야 한다.",
@@ -3846,7 +3846,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "at"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "맞춤 가구 주문에는 주문 시 50퍼센트의 보증금이 필요하다.",
@@ -3873,7 +3873,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "celebrate"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "우리는 클렘너 사의 20주년 기념행사를 기획하고 있다.",
@@ -3900,7 +3900,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "next"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "A",
                 "translation": "디아즈 씨는 비록 정치적 경험은 부족하지만 시장으로서의 첫 임기 중에는 꽤 강한 인상을 주었다.",
@@ -3927,7 +3927,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "multiplicity"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "대학 도서관은 보통 학생들의 수요를 맞추기 위해 베스트셀러 책을 여러 권 구입한다.",
@@ -3954,7 +3954,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "generosities"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "올해 학회의 토트백은 에타니 디자인스가 후하게 기부해 주었다.",
@@ -3981,7 +3981,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "place"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "콴 씨의 30년간의 엔지니어링 경력을 기리기 위해 금요일에 축하연을 열 예정입니다.",
@@ -4008,7 +4008,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "indeed"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pa5",
                 "testId": 5,
                 "correctAnswer": "B",
                 "translation": "그루브 백그라운드는 클래식과 재즈를 포함하는 편안한 기악곡 재생 목록을 만들어 준다.",
@@ -4035,7 +4035,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "are invited"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v2",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "재무부서 직원들은 추아 씨의 리스크 방지에 대한 강의에 초대되었습니다.",
@@ -4062,7 +4062,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "across"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 5,
                 "correctAnswer": "C",
                 "translation": "이사회는 개정된 고용 정책을 놓고 몇 시간 동안 논의했다.",
@@ -4089,7 +4089,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "imitating"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "pa1",
                 "testId": 5,
                 "correctAnswer": "D",
                 "translation": "피트니스 강사의 동작을 유심히 따라 하는 참가자들은 적절한 기술을 더 빨리 익히는 경향이 있다.",
@@ -4122,7 +4122,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "themselves"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 6,
                 "correctAnswer": "B",
                 "translation": "새로운 정책은 직원들이 특정 조건 하에서 자신의 근무 시간을 정할 수 있도록 허용한다.",
@@ -4149,7 +4149,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "or"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 6,
                 "correctAnswer": "B",
                 "translation": "백 회사는 작년 자료를 바탕으로 올해 매출 전망치를 상향 조정했다.",
@@ -4176,7 +4176,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "onto"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "하비슨스 백화점은 표준 영업시간에 지원자 면접을 본다.",
@@ -4203,7 +4203,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "widely"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "테이컬롱 인더스트리스의 상업용 프로판 히터는 더 넓은 공간에 더 많은 온기를 전달한다.",
@@ -4230,7 +4230,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "greatest"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 6,
                 "correctAnswer": "B",
                 "translation": "새로운 프로젝트 관리 소프트웨어로 전환함으로써 편집팀은 출판 과정을 크게 개선했다.",
@@ -4257,7 +4257,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "has been nominated"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v3",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "인사 위원회는 최고 경영자 자리에 세 명의 후보를 지명했다.",
@@ -4284,7 +4284,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Furthermore"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "두 달의 지연 끝에 동쪽 회의실에 새로운 카펫이 깔렸다.",
@@ -4311,7 +4311,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "enrollment"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 6,
                 "correctAnswer": "D",
                 "translation": "메이크업 아티스트 아카데미는 등록을 늘리기 위해 신입생들에게 입문자용 무료 키트를 제공하고 있다.",
@@ -4338,7 +4338,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "delays"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "렉툴라 가구 회사가 배송 시간을 보장해 주기 때문에 우리는 새 호텔의 개관 날짜를 확정할 수 있었다.",
@@ -4365,7 +4365,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "frequent"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "그 컴퓨터 기술자는 매우 친절했지만 나의 문제를 해결하지 못했다.",
@@ -4392,7 +4392,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "regularity"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "회의 참석자를 위한 공간을 마련하기 위해, 사무실 건물의 정기 방문객들은 내일 뒤쪽 주차장을 이용해야 한다.",
@@ -4419,7 +4419,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "secretly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "직원들은 건물 내에 있을 때 분명히 알아볼 수 있는 방법으로 보안 배지를 착용해야 한다.",
@@ -4446,7 +4446,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "for example"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "폰 씨는 갤러리 개관식에 참석하기를 원했지만 악천후로 인해 참석할 수 없었다.",
@@ -4473,7 +4473,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "attracts"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "v1",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "창고 소포 담당자들에게 리더십 과제를 주는 것은 종종 그들이 더 생산적으로 작업하도록 동기를 부여해 준다.",
@@ -4500,7 +4500,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "exclusives"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "케이빙 건설은 뉴펀들랜드 지역에서 대형 상업 프로젝트를 독점하고 있다.",
@@ -4527,7 +4527,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "to have resigned"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "g1",
                 "testId": 6,
                 "correctAnswer": "B",
                 "translation": "칼리 로건이 사임할 계획이어서 앨런 질은 우표 클럽의 다음 회계 담당자가 되기를 자청했다.",
@@ -4554,7 +4554,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "over"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 6,
                 "correctAnswer": "D",
                 "translation": "여름 몇 달간 주택 시장이 주춤했지만 가을에 매매가 다시 살아나기 시작했다.",
@@ -4581,7 +4581,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "openly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "완전한 기능을 유지하려면 운동 기계를 정기적으로 청소해야 한다.",
@@ -4608,7 +4608,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "another"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "ac4",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "연장 보증은 10년 또는 10만 마일 중 먼저 도달하는 것에 적용됩니다.",
@@ -4635,7 +4635,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "hold"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "애틀랜틱 식료품점은 온라인 쇼핑 옵션을 제공해야 하고, 그렇지 않으면 다른 슈퍼마켓에 고객을 빼앗길 위험을 감수해야 한다.",
@@ -4662,7 +4662,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Most"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n5",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "각 고객은 문의사항을 받게 되는 개인 재무 자문가에게 배정된다.",
@@ -4689,7 +4689,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "committee"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 6,
                 "correctAnswer": "D",
                 "translation": "싱 씨는 몇몇 직원 보상 프로그램을 알아보기 위해 위원회를 구성하고자 한다.",
@@ -4716,7 +4716,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "in case"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 6,
                 "correctAnswer": "D",
                 "translation": "배달 기사가 연락해야 할 경우에 대비해 전화번호를 알려주십시오.",
@@ -4743,7 +4743,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Tenants"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 6,
                 "correctAnswer": "D",
                 "translation": "폰드뷰 타워의 세입자는 매월 1일 또는 그 전에 임대료를 지불해야 한다.",
@@ -4770,7 +4770,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "consideration"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 6,
                 "correctAnswer": "B",
                 "translation": "몸바사에서 가장 큰 회사 중 하나인 리코니 호스피탤리티 그룹은 지역 경제에 상당한 영향을 미친다.",
@@ -4797,7 +4797,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Becoming"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "베스트셀러 이외에도, 북스터스는 다양한 고전 문학과 전기를 제공한다.",
@@ -4824,7 +4824,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "consuming"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "g3",
                 "testId": 6,
                 "correctAnswer": "D",
                 "translation": "새로운 식품 규정은 모든 딘스 버거스 포장에 덜 익은 고기를 섭취하는 것이 해로울 수 있다는 공지문을 포함할 것을 요구한다.",
@@ -4851,7 +4851,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "minus"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "각각의 제누트리아 스낵바에는 지방과 콜레스테롤 없이 달걀 두 개만큼의 단백질이 들어 있다.",
@@ -4878,7 +4878,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "materials"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 6,
                 "correctAnswer": "C",
                 "translation": "피스코 안경테는 원형, 사각형, 타원형을 포함해 다양한 모양으로 제공된다.",
@@ -4905,7 +4905,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "rationalized"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "pa3",
                 "testId": 6,
                 "correctAnswer": "A",
                 "translation": "CEO는 내년 예산의 더 많은 부분을 연구 개발에 할당하기를 원한다.",
@@ -4938,7 +4938,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "our"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "승객들은 항상 그들의 탑승권과 수하물을 소지해야 합니다.",
@@ -4965,7 +4965,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "hardly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "c5",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "회사의 정책은 출장으로 기차와 비행기를 모두 이용하는 것을 허용합니다.",
@@ -4992,7 +4992,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "responsibilities"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a2",
                 "testId": 7,
                 "correctAnswer": "B",
                 "translation": "생산 기술자들은 공장 장비를 유지 관리할 책임을 맡고 있습니다.",
@@ -5019,7 +5019,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "extra"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "a3",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "그 팀은 사무실 직원 관리에 관한 디트리히 씨의 조언이 특히 도움이 된다고 생각했습니다.",
@@ -5046,7 +5046,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "arriving"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "촬영 팀은 홍보용 관광 캠페인을 준비하기 위해 이번 주 초에 나미비아에 도착했습니다.",
@@ -5073,7 +5073,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "by"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 7,
                 "correctAnswer": "D",
                 "translation": "위원회는 협상이 오후 4시까지 끝날 것으로 예상합니다.",
@@ -5100,7 +5100,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "expertly"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n3",
                 "testId": 7,
                 "correctAnswer": "B",
                 "translation": "유나이티드 메디컬 보드는 병원 개선을 위한 권고안을 제시하는 의사 전문가 위원단입니다.",
@@ -5127,7 +5127,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "now"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 7,
                 "correctAnswer": "D",
                 "translation": "이제 모든 서던 코치 버스 정류장에서 디지털 결제가 가능합니다.",
@@ -5154,7 +5154,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "secondly"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 7,
                 "correctAnswer": "B",
                 "translation": "작가의 낭독회는 취소되었지만 도서관을 위한 모금 행사는 성공적이었습니다.",
@@ -5181,7 +5181,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "look"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "배송 상태를 확인하려면 드롭다운 메뉴에서 주문 추적 옵션을 선택하세요.",
@@ -5208,7 +5208,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "counseled"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "우리의 프로젝트 기반 멘토링 접근법은 한정된 시간을 가진 임원들이 후배 직원들에게 상담을 제공할 수 있게 해 줍니다.",
@@ -5235,7 +5235,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "figures"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n3",
                 "testId": 7,
                 "correctAnswer": "D",
                 "translation": "여키스 씨는 보스턴 사무소로부터 최종 보고서를 받은 뒤 우리의 분기별 판매 수치를 업데이트하고 있습니다.",
@@ -5262,7 +5262,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Brightening"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "v1",
                 "testId": 7,
                 "correctAnswer": "B",
                 "translation": "노리미 문구의 아름다운 종이 제품으로 여러분의 책상에 활기를 주세요.",
@@ -5289,7 +5289,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "encourage"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "사용자가 실내 온도를 원격으로 조절할 수 있게 해 주는 애플리케이션 얼티템프는 현재 아시아에서만 이용 가능합니다.",
@@ -5316,7 +5316,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Because"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "여행 경비를 제외하면 학회 참석 비용은 합리적입니다.",
@@ -5343,7 +5343,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "rapidly"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "고객들은 아스키오 자동차의 최신 모델 픽업트럭을 간절히 기다리고 있습니다.",
@@ -5370,7 +5370,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "approving"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n1",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "가르시아 씨의 승인을 받는 대로 늘 이용하는 웹사이트들에 구인 목록을 게시해 주세요.",
@@ -5397,7 +5397,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "accurate"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "다비 레스토랑은 메뉴에 광범위한 변화를 줌으로써 고객층을 넓혔습니다.",
@@ -5424,7 +5424,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "effected"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "재설계된 교차로는 보행자용 건널목 거리를 효과적으로 단축하여 더 안전합니다.",
@@ -5451,7 +5451,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "hesitate"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "v1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "워크숍 참석자들은 공식 프레젠테이션이 끝날 때까지 질문을 자제해 달라는 요청을 받습니다.",
@@ -5478,7 +5478,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "proposing"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n3",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "타마노 재단은 다양한 과학 연구와 관련된 보조금 제안을 접수합니다.",
@@ -5505,7 +5505,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "from"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "게이트웨이 전자는 5일 이내에 찾아가지 않는 주문은 취소할 것입니다.",
@@ -5532,7 +5532,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "Anyone"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "ac1",
                 "testId": 7,
                 "correctAnswer": "D",
                 "translation": "오전 10시 이후 회사 주차장에 도착하는 사람은 누구나 출입 코드를 위해 보안실에 연락해야 합니다.",
@@ -5559,7 +5559,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "lately"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "회의실로 가려면 직원 식당을 지나자마자 바로 왼쪽으로 도세요.",
@@ -5586,7 +5586,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "initiative"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n3",
                 "testId": 7,
                 "correctAnswer": "D",
                 "translation": "트레이어 미디어 그룹의 건강 관리 계획은 곧바로 회사에 대한 더 높은 직원 만족으로 이어졌습니다.",
@@ -5613,7 +5613,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "in between"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 7,
                 "correctAnswer": "B",
                 "translation": "우리는 수요가 있는 한 우리의 대표 신발 디자인을 계속 생산할 것입니다.",
@@ -5640,7 +5640,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "dramatize"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "정기적인 비료의 사용은 묘목의 건강을 증진시키고 잎이 많은 채소의 성장을 급격하게 향상시킵니다.",
@@ -5667,7 +5667,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "dedication"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc2",
                 "testId": 7,
                 "correctAnswer": "C",
                 "translation": "원트너 제조는 사람 중심의 직장 환경을 인정받아 올해 최고 고용주 상을 수상했습니다.",
@@ -5694,7 +5694,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "repetitiousness"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "a1",
                 "testId": 7,
                 "correctAnswer": "B",
                 "translation": "편집자는 일부 반복되는 내용을 발견하고 삭제되어야 할 글에 표시해야 합니다.",
@@ -5721,7 +5721,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "previous"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 7,
                 "correctAnswer": "A",
                 "translation": "베이 시티 동물원 회원은 운영 시간 외 가이드 투어와 같은 회원 전용 활동을 독점 이용할 수 있습니다.",
@@ -5754,11 +5754,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "down"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 8,
                 "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "translation": "주문하신 물품은 11월 15일까지 도착할 것으로 예상됩니다.",
+                "explanation": "빈칸 뒤에 특정 시점인 November 15가 왔으며, '언제까지 도착하다'라는 완료의 의미에는 전치사 by가 적절하다."
             },
             {
                 "id": "q102",
@@ -5781,11 +5781,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "your"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 8,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "D",
+                "translation": "개인 소지품이 보이지 않는 곳에 안전하게 보관되어 있는지 확인하십시오.",
+                "explanation": "명사구 personal belongings를 수식하는 소유격 인칭대명사가 필요하므로 (D) your가 정답이다."
             },
             {
                 "id": "q103",
@@ -5808,11 +5808,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "surely"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 8,
                 "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "translation": "고객용 가방에 담기 전에 모든 옷을 깔끔하게 개었는지 확인하십시오.",
+                "explanation": "동사 fold를 수식하여 '깔끔하게 개다'라는 의미를 만들어야 하므로 부사 (A) neatly가 정답이다."
             },
             {
                 "id": "q104",
@@ -5835,11 +5835,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "photographed"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 8,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "C",
+                "translation": "방문객들은 시설의 제한 구역을 둘러보는 동안 사진을 찍어서는 안 됩니다.",
+                "explanation": "동사 take의 목적어 자리이므로 명사가 필요하다. '사진을 찍다'라는 표현인 take photographs를 완성하는 (C) photographs가 정답이다."
             },
             {
                 "id": "q105",
@@ -5862,11 +5862,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "completed"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "a1",
                 "testId": 8,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "B",
+                "translation": "추리 소설가 메러디스 델가도의 새 소설은 7월 9일부터 전국 서점에서 구입할 수 있습니다.",
+                "explanation": "be동사의 보어 자리로, 문맥상 '서점에서 구입 가능하다'라는 의미가 되어야 하므로 '이용 가능한, 구입 가능한'을 뜻하는 (B) available이 정답이다."
             },
             {
                 "id": "q106",
@@ -5889,11 +5889,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "additionally"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 8,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "C",
+                "translation": "계산대는 세 명 이상의 고객이 줄을 서 있을 때 추가 계산원을 요청해야 합니다.",
+                "explanation": "명사 cashier를 수식하는 형용사 자리이므로 '추가의'라는 뜻의 (C) additional이 정답이다."
             },
             {
                 "id": "q107",
@@ -5916,11 +5916,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "session"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n1",
                 "testId": 8,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "C",
+                "translation": "현재 남부 지역 영업 책임자인 응아 호는 2월에 트랑 미디어 그룹 내에서 새로운 역할을 맡게 될 것입니다.",
+                "explanation": "동사구 take on의 목적어 자리이므로 명사가 필요하다. '새로운 역할을 맡다'라는 의미가 되어야 하므로 '역할'을 뜻하는 (C) role이 정답이다."
             },
             {
                 "id": "q108",
@@ -5943,11 +5943,11 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "continuous"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 8,
-                "correctAnswer": "A",
-                "translation": "Translation unavailable.",
-                "explanation": "Explanation unavailable."
+                "correctAnswer": "C",
+                "translation": "가열하는 동안 소스가 타지 않도록 나무 숟가락으로 계속 저어주세요.",
+                "explanation": "동사 stir를 수식하는 부사 자리이므로 '계속해서'를 뜻하는 (C) continuously가 정답이다."
             }
         ]
     },
@@ -5976,7 +5976,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "calmness"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 9,
                 "correctAnswer": "B",
                 "translation": "류 씨는 직원들의 분쟁을 차분하게 조정하는 것으로 유명하다.",
@@ -6003,7 +6003,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "whether"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 9,
                 "correctAnswer": "B",
                 "translation": "시는 1월 25일까지 오시다 공원의 재설계를 위한 기획안을 접수하고 있다.",
@@ -6030,7 +6030,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "assistants"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "n3",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "판매 보조원은 고객 파일을 관리하고 물류 지원을 제공한다.",
@@ -6057,7 +6057,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "awarding"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "v3",
                 "testId": 9,
                 "correctAnswer": "B",
                 "translation": "오늘 밤 하버 폴스 도서관에서 델로이 그린 작가는 자메이카에서의 어린 시절 이야기를 들려줄 예정이다.",
@@ -6084,7 +6084,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "himself"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 9,
                 "correctAnswer": "B",
                 "translation": "캠 씨는 그의 은퇴식에 직원 모두를 초대했다.",
@@ -6111,7 +6111,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "musicals"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "디트로이트 시내에 있는 스탠리 포인트 극장은 다음 시즌에 연극 네 편과 뮤지컬 세 편을 제작할 예정이다.",
@@ -6138,7 +6138,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "remaining"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "pa2",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "여행 경비를 충당할 돈이 예산에 충분히 남아 있다.",
@@ -6165,7 +6165,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "once"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 9,
                 "correctAnswer": "C",
                 "translation": "롬 인더스트리스 직원들은 같은 날 고용된 아홉 명의 새로운 직장 동료들을 교육했다.",
@@ -6192,7 +6192,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "during"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "테일러 카나가와는 샙 출판사에서 40년 근무하는 동안 효과적인 팀 운영에 관한 책을 여러 권 집필했다.",
@@ -6219,7 +6219,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "grades"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "n3",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "지역 사회 진료 사업은 고립된 지역의 건강 상태를 향상시키기 위해 고안되었다.",
@@ -6246,7 +6246,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "additionally"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 9,
                 "correctAnswer": "C",
                 "translation": "징셴 항공은 내년에 200명의 추가 직원을 채용할 예정이라고 발표했다.",
@@ -6273,7 +6273,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "richly"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "고객은 슈미드 씨가 복잡한 기계를 능숙하게 조작하는 것에 감탄했다.",
@@ -6300,7 +6300,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "guest"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc2",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "직원들은 5월 첫째 주 동안 일련의 친목 행사에 참여하도록 초대받는다.",
@@ -6327,7 +6327,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "flexible"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "a2",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "계약서에는 솔커스 사가 업무 지연으로 인한 비용을 책임진다고 명시되어 있다.",
@@ -6354,7 +6354,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "heavier"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 9,
                 "correctAnswer": "B",
                 "translation": "민 판 작가의 최신 소설은 베트남 민간 설화의 영향을 많이 받았다.",
@@ -6381,7 +6381,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "initial"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "av1",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "홋카이도 미카사에 있는 소라치 디스커버리 박물관이 곧 개관하면 관광객들이 몰릴 것으로 예상된다.",
@@ -6408,7 +6408,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "installed"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "a1",
                 "testId": 9,
                 "correctAnswer": "C",
                 "translation": "공장의 작업 현장은 제품 조립의 각 단계별로 네 개의 뚜렷이 다른 구역으로 나뉜다.",
@@ -6435,7 +6435,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "off"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 9,
                 "correctAnswer": "C",
                 "translation": "오후 세미나를 위한 유인물은 점심시간 전에 준비되어야 한다.",
@@ -6462,7 +6462,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "that"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "챗 모바일은 연말 매출액에 근거해 추가 점포를 열지 여부를 결정할 것이다.",
@@ -6489,7 +6489,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "making"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 9,
                 "correctAnswer": "C",
                 "translation": "레드 라인은 주말에 핀 로에서 분 로까지 급행 정차만 할 것이다.",
@@ -6516,7 +6516,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "enthusiast"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "이 회사의 최신 비디오 게임인 <보물 사냥>은 평가단으로부터 열렬히 찬사를 받았다.",
@@ -6543,7 +6543,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "busy"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "pa1",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "그레이트 마운틴 놀이공원은 비수기 동안 단축된 시간으로 운영된다.",
@@ -6570,7 +6570,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "include"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "v1",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "이 건설 사업은 주거용 30세대와 열 개의 상업용 공간을 포함한다.",
@@ -6597,7 +6597,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "until"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 9,
                 "correctAnswer": "B",
                 "translation": "팜 씨의 초봉이 아직 협상 중이기 때문에 고용 계약이 확정될 수 없다.",
@@ -6624,7 +6624,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "more"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "ac1",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "사무용품이 필요한 사람은 누구나 우리의 물품 보관함에서 사무용품을 이용할 수 있습니다.",
@@ -6651,7 +6651,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "revolutionize"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "신생 주택 공급 업체인 필로세니아는 지역 중개인 네트워크를 통해 임대업 부문에 혁신을 일으키고자 한다.",
@@ -6678,7 +6678,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "to send"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v1",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "래피드 북스는 모든 회사가 필요로 하는 급여 설루션을 갖추고 있어 사용자로 하여금 손쉬운 3단계로 청구서를 보낼 수 있게 해 준다.",
@@ -6705,7 +6705,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "within"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 9,
                 "correctAnswer": "D",
                 "translation": "엡키 전자는 향후 2년 안에 여덟 곳의 소매점을 추가로 열 예정이다.",
@@ -6732,7 +6732,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "strategic"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n3",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "3일간의 워크숍은 기억에 남을 만한 발표를 하는 데 핵심이 되는 대중 연설 전략에 초점을 둔다.",
@@ -6759,7 +6759,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "distantly"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 9,
                 "correctAnswer": "A",
                 "translation": "비평가들은 영화 <색다른 소개>가 컴퓨터 생성 이미지와 라이브 액션을 매끄럽게 결합한다는 점에 동의한다.",
@@ -6792,7 +6792,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "ours"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "p1",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "부서장에 따르면, 우리는 아르보니교 프로젝트에 대한 작업을 시작할 준비가 되었다.",
@@ -6819,7 +6819,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "colorfully"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "방문자의 실험실 출입을 금지하는 방침은 엄격히 준수되어야 한다.",
@@ -6846,7 +6846,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "nearly"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "김윤희는 포천 500대 기업을 이끄는 첫 세리카 대학 졸업생이다.",
@@ -6873,7 +6873,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "if"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "만약 새로운 데이터베이스 소프트웨어에 문제가 있으면 IT 부서의 프랭크 마릴리에게 연락하십시오.",
@@ -6900,7 +6900,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "leads"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "선도적인 효율성 전문가가 11월 초에 우리 작업 현장을 방문할 예정이다.",
@@ -6927,7 +6927,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "types"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "갤런츠 펫 스토어에서 고객 주문은 오전 9시부터 오후 6시 사이에 접수됩니다.",
@@ -6954,7 +6954,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "higher"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "카레트 인더스트리스의 경영진은 연구팀의 업무를 매우 중요하게 여긴다.",
@@ -6981,7 +6981,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "lift"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "펜트렉사 약국은 영업일 기준 1일 이내에 대부분의 처방약을 조제할 수 있습니다.",
@@ -7008,7 +7008,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "constructs"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "휴론 종합병원의 주차 건물 공사는 6월 1일에 시작될 것이다.",
@@ -7035,7 +7035,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "beside"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "데일 밸리 로지를 둘러싼 화단의 일부는 최근의 폭우 이후에 다시 심어져야 했다.",
@@ -7062,7 +7062,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "installed"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v2",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "다음 주에 있을 마라톤의 경로를 따라 여러 개의 급수대가 설치될 예정이다.",
@@ -7089,7 +7089,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "scenic"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "크라운 라군 호텔은 각각 도시의 근사한 전망을 갖춘 150개의 객실을 보유하고 있다.",
@@ -7116,7 +7116,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "so"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "전반적으로 지난해에 자선 기부는 증가했지만, 아직 구체적인 달러 금액은 공개되지 않았다.",
@@ -7143,7 +7143,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "before"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "수리를 위해 맡기기 전에 전자 기기에 저장된 데이터를 백업할 것을 강력히 권고합니다.",
@@ -7170,7 +7170,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "frequently"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "av1",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "가르시아 씨가 도표와 그래프 만드는 것을 즐겨 하기 때문에 상사는 그녀에게 프레젠테이션 자료를 만들어 줄 것을 자주 요청한다.",
@@ -7197,7 +7197,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "energy"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "소비자들이 사치품을 덜 구매함에 따라 고급 제품 제조업체들은 과잉 재고를 처리하고 있다.",
@@ -7224,7 +7224,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "which"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "ac1",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "비즈니스 컨설턴트와 변호사로 구성된 헤일 그룹은 조세 정책 개혁을 지지한다.",
@@ -7251,7 +7251,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "practiced"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v2",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "다이시 아사야마는 킹스턴 프랜차이즈를 감독하는 일에 고려되고 있는 세 명의 지원자 중 한 명이다.",
@@ -7278,7 +7278,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "impression"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a1",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "첸씨 책의 평론가는 그녀의 연구가 인상적이었다고 언급했다.",
@@ -7305,7 +7305,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "like"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "pr1",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "페레이라 씨는 10년 전 애틀랜타 사무실로 전근한 이래로 우리 법무 부서에서 근무해 왔다.",
@@ -7332,7 +7332,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "distribution"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n1",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "페니팩 마켓츠는 곧 이 지역에서 가장 큰 유통 센터를 착공할 계획이다.",
@@ -7359,7 +7359,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "momentarily"
                     }
                 ],
-                "classification": "V_ADV",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "밀러 씨는 워크숍을 이끌 발표자들을 짧게 환영했다.",
@@ -7386,7 +7386,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "had stressed"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v4",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "나야르 씨는 정부가 해당 주제에 대한 보고서를 발표하기 훨씬 이전에 강화된 안전 규약의 필요성을 강조했다.",
@@ -7413,7 +7413,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "chaotic"
                     }
                 ],
-                "classification": "V_ADJ",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "안젤리아 파이낸셜은 최근 복리 후생 제도에 직원들의 열렬한 환영을 받은 상당한 변화를 발표했다.",
@@ -7440,7 +7440,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "None"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "a4",
                 "testId": 10,
                 "correctAnswer": "B",
                 "translation": "마이크 하노버가 쓴 몇몇 시들이 <머윈의 문집>의 개정판에 포함되어 있다.",
@@ -7467,7 +7467,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "refer"
                     }
                 ],
-                "classification": "V_VERB",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "D",
                 "translation": "식당에 식품을 공급하는 지역 농장의 명단을 원하시면 휴랜드 농장 협회 웹사이트를 참조하십시오.",
@@ -7494,7 +7494,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "productively"
                     }
                 ],
-                "classification": "G_POS",
+                "classification": "n1",
                 "testId": 10,
                 "correctAnswer": "C",
                 "translation": "사미두 커뮤니케이션즈는 직원 생산성을 향상시킬 방법에 대한 직원들의 제안을 수렴하고 있다.",
@@ -7521,7 +7521,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "besides"
                     }
                 ],
-                "classification": "G_CONJ",
+                "classification": "c3",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "벤모셰 씨는 영업팀이 휴일 기념 행사를 할 때마다 항상 사이토미스키친에 연회장을 예약한다.",
@@ -7548,7 +7548,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "be representing"
                     }
                 ],
-                "classification": "G_VERB",
+                "classification": "v4",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "아니카 둘린은 내일 톨라슨 인더스트리스의 기획 회의에서 마케팅 부서를 대표할 예정이다.",
@@ -7575,7 +7575,7 @@ export const part5TestData: Part5TestSet[] = [
                         "text": "responsibility"
                     }
                 ],
-                "classification": "V_NOUN",
+                "classification": "voc1",
                 "testId": 10,
                 "correctAnswer": "A",
                 "translation": "사전 승인 없이 소셜 미디어에 회사에 대한 어떠한 발언도 게시하지 마십시오.",
@@ -7583,1640 +7583,1640 @@ export const part5TestData: Part5TestSet[] = [
             }
         ]
     }
-,
-{
-    "testId": 11,
-    "title": "고급반 실전문제풀이 11회",
-    "questions": [
-        {
-            "id": "q1101",
-            "text": "Caridell Science Museum trustees are expected to be--------- --of all the museum’s operations.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "aware"
-                },
-                {
-                    "label": "B",
-                    "text": "current"
-                },
-                {
-                    "label": "C",
-                    "text": "serious"
-                },
-                {
-                    "label": "D",
-                    "text": "alert"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "a5",
-            "testId": 11,
-            "translation": "Caridell 과학 박물관의 이사들은 박물관의 모든 운영 사항을 인지하고 있어야 한다.",
-            "explanation": "be aware of(~을 알고 있다)는 숙어 표현으로, 이사들이 박물관 운영 전반을 '알고 있어야' 한다는 의미가 자연스럽습니다."
-        },
-        {
-            "id": "q1102",
-            "text": "With the completion of its airport, Honokai Island’s tourism-- ---------has improved dramatically.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "economical"
-                },
-                {
-                    "label": "B",
-                    "text": "economic"
-                },
-                {
-                    "label": "C",
-                    "text": "economize"
-                },
-                {
-                    "label": "D",
-                    "text": "economy"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "n1",
-            "testId": 11,
-            "translation": "공항 완공과 함께, Honokai 섬의 관광 경제는 비약적으로 발전했다.",
-            "explanation": "tourism economy(관광 경제)는 복합 명사로 사용됩니다. economic은 형용사로 뒤에 명사가 필요하므로, 명사인 economy가 정답입니다."
-        },
-        {
-            "id": "q1103",
-            "text": "The software for tracking orders has been ------------ successful as it has greatly decreased time spent on the task.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "haltingly"
-                },
-                {
-                    "label": "B",
-                    "text": "intimately"
-                },
-                {
-                    "label": "C",
-                    "text": "permissibly"
-                },
-                {
-                    "label": "D",
-                    "text": "markedly"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "av1",
-            "testId": 11,
-            "translation": "주문 추적 소프트웨어는 업무 소요 시간을 대폭 단축함에 따라 눈에 띄게 성공적으로 안착했다.",
-            "explanation": "형용사 successful을 수식하는 부사 자리로, '눈에 띄게, 현저하게'라는 의미의 markedly가 문맥상 적절합니다."
-        },
-        {
-            "id": "q1104",
-            "text": "Lately the community sports program has had a surplus of volunteers,-------------are students.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "inasmuch as"
-                },
-                {
-                    "label": "B",
-                    "text": "the reason being"
-                },
-                {
-                    "label": "C",
-                    "text": "because of them"
-                },
-                {
-                    "label": "D",
-                    "text": "most of whom"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "ac3",
-            "testId": 11,
-            "translation": "최근 지역 사회 스포츠 프로그램에 자원봉사자가 넘쳐나고 있으며, 이들 대부분은 학생들이다.",
-            "explanation": "앞의 volunteers를 선행사로 받는 계속적 용법의 관계대명사이며, 수량 표현과 함께 쓰이는 'most of whom'이 정답입니다."
-        },
-        {
-            "id": "q1105",
-            "text": "The use of high-quality yet---------- machine parts led to a decrease in costs for Mr. Kim’s factory.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "inexpensive"
-                },
-                {
-                    "label": "B",
-                    "text": "unhappy"
-                },
-                {
-                    "label": "C",
-                    "text": "incomplete"
-                },
-                {
-                    "label": "D",
-                    "text": "undecided"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "a1",
-            "testId": 11,
-            "translation": "고품질이면서도 저렴한 기계 부품의 사용은 Kim 씨 공장의 비용 절감을 이끌어냈다.",
-            "explanation": "yet(하지만 여전히)과 연결되어 high-quality와 대조되면서도 긍정적인 맥락(비용 절감)을 완성하는 inexpensive(비싸지 않은)가 정답입니다."
-        },
-        {
-            "id": "q1106",
-            "text": "Ms. Ling is not here today, but she---------- attends every library board meeting.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "previously"
-                },
-                {
-                    "label": "B",
-                    "text": "typically"
-                },
-                {
-                    "label": "C",
-                    "text": "almost"
-                },
-                {
-                    "label": "D",
-                    "text": "well"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "av3",
-            "testId": 11,
-            "translation": "Ling 씨는 오늘 여기 없지만, 그녀는 보통 모든 도서관 이사회 회의에 참석한다.",
-            "explanation": "빈도나 습관을 나타내는 부사 typically(보통, 전형적으로)가 문맥상 어울립니다."
-        },
-        {
-            "id": "q1107",
-            "text": "Investing in---------properties as possible can be risky but is often lucrative.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "as much"
-                },
-                {
-                    "label": "B",
-                    "text": "as many"
-                },
-                {
-                    "label": "C",
-                    "text": "so much"
-                },
-                {
-                    "label": "D",
-                    "text": "so many"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "com1",
-            "testId": 11,
-            "translation": "가능한 한 많은 부동산에 투자하는 것은 위험할 수 있지만 종종 수익성이 높다.",
-            "explanation": "가산 복수 명사인 properties를 수식하므로 as many가 정답입니다. (as many as possible: 가능한 한 많은)"
-        },
-        {
-            "id": "q1108",
-            "text": "Please inform Ms. Montgomery of any _______ to your office supplies order before 2:00 p.m.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "announcements"
-                },
-                {
-                    "label": "B",
-                    "text": "conversions"
-                },
-                {
-                    "label": "C",
-                    "text": "adjustments"
-                },
-                {
-                    "label": "D",
-                    "text": "commitments"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "n1",
-            "testId": 11,
-            "translation": "오후 2시 이전에 사무용품 주문에 대한 수정 사항이 있으면 Montgomery 씨에게 알려주시기 바랍니다.",
-            "explanation": "주문 내용에 대한 '수정, 조정'을 의미하는 adjustments가 적절합니다."
-        },
-        {
-            "id": "q1109",
-            "text": "The songs on Sophia Vestra’s new album are-------- the most innovative musical arrangements of her career.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "beside"
-                },
-                {
-                    "label": "B",
-                    "text": "over"
-                },
-                {
-                    "label": "C",
-                    "text": "among"
-                },
-                {
-                    "label": "D",
-                    "text": "upon"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "pr1",
-            "testId": 11,
-            "translation": "Sophia Vestra의 새 앨범 수록곡들은 그녀의 경력에서 가장 혁신적인 음악적 편곡 중 하나로 꼽힌다.",
-            "explanation": "여러 개 중 하나임을 나타내는 'among + 최상급 + 복수명사' 구문입니다."
-        },
-        {
-            "id": "q1110",
-            "text": "Panjan Air, an airline--------- in Singapore, is offering budget flights to Bangkok and Jakarta.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "stored"
-                },
-                {
-                    "label": "B",
-                    "text": "stayed"
-                },
-                {
-                    "label": "C",
-                    "text": "based"
-                },
-                {
-                    "label": "D",
-                    "text": "moved"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "pa1",
-            "testId": 11,
-            "translation": "싱가포르에 본사를 둔 항공사인 Panjan Air는 방콕과 자카르타행 저가 항공편을 제공하고 있다.",
-            "explanation": "based in(~에 근거지를 둔)은 특정 지역에 본사나 기반을 둔 회사를 설명할 때 쓰이는 어휘입니다."
-        },
-        {
-            "id": "q1111",
-            "text": "The-------- meadowlands surrounding the museum are designated as wildlife habitat.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "ethical"
-                },
-                {
-                    "label": "B",
-                    "text": "vast"
-                },
-                {
-                    "label": "C",
-                    "text": "absolute"
-                },
-                {
-                    "label": "D",
-                    "text": "economic"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "a1",
-            "testId": 11,
-            "translation": "박물관을 둘러싼 광활한 초지는 야생동물 서식지로 지정되어 있다.",
-            "explanation": "초지(meadowlands)의 광대함을 묘사하기에 적절한 형용사는 vast(광활한)입니다."
-        },
-        {
-            "id": "q1112",
-            "text": "-------of Mitesh Sandu’s international performances was filmed for the documentary.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "All"
-                },
-                {
-                    "label": "B",
-                    "text": "Others"
-                },
-                {
-                    "label": "C",
-                    "text": "Their own"
-                },
-                {
-                    "label": "D",
-                    "text": "Each one"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "p3",
-            "testId": 11,
-            "translation": "Mitesh Sandu의 국제 공연들 각각이 다큐멘터리를 위해 촬영되었다.",
-            "explanation": "동사가 단수형(was)이므로 단수 취급하는 Each one이 정답입니다. All은 복수 취급(were)이 어울립니다."
-        },
-        {
-            "id": "q1113",
-            "text": "Based on new data, Min-Soo Trucking’s proposal to expand its business to Southeast Asia would be only---------- successful.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "conspicuously"
-                },
-                {
-                    "label": "B",
-                    "text": "marginally"
-                },
-                {
-                    "label": "C",
-                    "text": "regrettably"
-                },
-                {
-                    "label": "D",
-                    "text": "intriguingly"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "av1",
-            "testId": 11,
-            "translation": "새로운 데이터에 따르면, Min-Soo Trucking의 동남아시아 사업 확장 제안은 미미한 성공만 거둘 것으로 보인다.",
-            "explanation": "only와 어울려 '미미하게, 겨우'라는 의미를 나타내는 부사 marginally가 적절합니다."
-        },
-        {
-            "id": "q1114",
-            "text": "The project meeting has been rescheduled ------- tomorrow because of the bad weather.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "in"
-                },
-                {
-                    "label": "B",
-                    "text": "by"
-                },
-                {
-                    "label": "C",
-                    "text": "out"
-                },
-                {
-                    "label": "D",
-                    "text": "for"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "pr1",
-            "testId": 11,
-            "translation": "악천후로 인해 프로젝트 회의 일정이 내일로 변경되었다.",
-            "explanation": "reschedule A for B(A를 B로 일정을 변경하다)의 구문에서 전치사 for가 쓰입니다."
-        },
-        {
-            "id": "q1115",
-            "text": "Smooth Tek’s newest software makes it much--------- for business owners to create newsletters.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "easy"
-                },
-                {
-                    "label": "B",
-                    "text": "easily"
-                },
-                {
-                    "label": "C",
-                    "text": "easier"
-                },
-                {
-                    "label": "D",
-                    "text": "ease"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "com1",
-            "testId": 11,
-            "translation": "Smooth Tek의 최신 소프트웨어는 사업주들이 뉴스레터를 만드는 것을 훨씬 더 쉽게 해준다.",
-            "explanation": "비교급 강조 부사 much와 함께 쓰일 비교급 형용사 easier가 정답입니다."
-        },
-        {
-            "id": "q1116",
-            "text": "The National Overview is the fourth-------------- distributed newspaper in the northeastern region.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "wide"
-                },
-                {
-                    "label": "B",
-                    "text": "widen"
-                },
-                {
-                    "label": "C",
-                    "text": "most widely"
-                },
-                {
-                    "label": "D",
-                    "text": "more widely"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "com3",
-            "testId": 11,
-            "translation": "National Overview는 북동부 지역에서 네 번째로 널리 배포되는 신문이다.",
-            "explanation": "서수(fourth)와 함께 쓰이며 과거분사 distributed를 수식하는 최상급 부사 표현 most widely가 정답입니다."
-        },
-        {
-            "id": "q1117",
-            "text": "The employee satisfaction survey  results are---------to differ among departments.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "important"
-                },
-                {
-                    "label": "B",
-                    "text": "likely"
-                },
-                {
-                    "label": "C",
-                    "text": "probable"
-                },
-                {
-                    "label": "D",
-                    "text": "recent"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "a5",
-            "testId": 11,
-            "translation": "직원 만족도 조사 결과는 부서마다 다를 가능성이 높다.",
-            "explanation": "be likely to(~할 가능성이 있다)는 빈출 구문입니다. probable은 가주어 it과 주로 쓰입니다."
-        },
-        {
-            "id": "q1118",
-            "text": "Please review the repair estimate carefully ------- it has been received from the maintenance department.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "then"
-                },
-                {
-                    "label": "B",
-                    "text": "while"
-                },
-                {
-                    "label": "C",
-                    "text": "ever since"
-                },
-                {
-                    "label": "D",
-                    "text": "as soon as"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "c3",
-            "testId": 11,
-            "translation": "관리 부서로부터 수리 견적서를 받는 대로 주의 깊게 검토해 주시기 바랍니다.",
-            "explanation": "as soon as(~하자마자)는 시간의 접속사로 문맥상 가장 적절합니다."
-        },
-        {
-            "id": "q1119",
-            "text": "------- of the marketing assistant include coordinating focus groups and writing detailed reports.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "Promotions"
-                },
-                {
-                    "label": "B",
-                    "text": "Offerings"
-                },
-                {
-                    "label": "C",
-                    "text": "Productions"
-                },
-                {
-                    "label": "D",
-                    "text": "Responsibilities"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "n1",
-            "testId": 11,
-            "translation": "마케팅 조수의 업무 책임에는 포커스 그룹 조정 및 상세 보고서 작성이 포함된다.",
-            "explanation": "뒤에 나열된 업무 내용들을 포괄할 수 있는 주어 명사는 Responsibilities(책무, 업무)입니다."
-        },
-        {
-            "id": "q1120",
-            "text": "The lawyers report that the merger was successfully concluded------------ last-minute negotiations.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "as well as"
-                },
-                {
-                    "label": "B",
-                    "text": "overall"
-                },
-                {
-                    "label": "C",
-                    "text": "thanks to"
-                },
-                {
-                    "label": "D",
-                    "text": "even if"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "pr2",
-            "testId": 11,
-            "translation": "변호사들은 막판 협상 덕분에 합병이 성공적으로 마무리되었다고 보고했다.",
-            "explanation": "합병 성공의 이유를 나타내는 전치사구 thanks to(~ 덕분에)가 적절합니다."
-        },
-        {
-            "id": "q1121",
-            "text": "------- in the news, the Honorable Cynthia Rengle is now making headlines with her proposal to drastically reduce local taxes.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "Less"
-                },
-                {
-                    "label": "B",
-                    "text": "Enough"
-                },
-                {
-                    "label": "C",
-                    "text": "Apart"
-                },
-                {
-                    "label": "D",
-                    "text": "Seldom"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "inv1",
-            "testId": 11,
-            "translation": "뉴스에 좀처럼 나오지 않던 Cynthia Rengle 의원이 이제 지방세 대폭 감면 제안으로 헤드라인을 장식하고 있다.",
-            "explanation": "부정 부사 Seldom이 문두로 나와 강조된 형태입니다. 문맥상 '좀처럼 ~않는'의 의미가 필요합니다."
-        },
-        {
-            "id": "q1122",
-            "text": "Despite being the audience’s least favorite film at the Star Film Festival, Lost Dog --------won the critics’ award for best animation.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "furthermore"
-                },
-                {
-                    "label": "B",
-                    "text": "without"
-                },
-                {
-                    "label": "C",
-                    "text": "nevertheless"
-                },
-                {
-                    "label": "D",
-                    "text": "neither"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "av3",
-            "testId": 11,
-            "translation": "Star 영화제에서 관객들에게 가장 인기 없는 영화였음에도 불구하고, Lost Dog은 평론가들이 뽑은 최우수 애니메이션상을 받았다.",
-            "explanation": "앞의 역접 상황(Despite ~)을 이어받아 '그럼에도 불구하고' 상을 받았음을 나타내는 부사 nevertheless가 정답입니다."
-        },
-        {
-            "id": "q1123",
-            "text": "Ms. Mills has correctly predicted that sales would increase-- --------- as the company's radio advertisement continues to air.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "arguably"
-                },
-                {
-                    "label": "B",
-                    "text": "reportedly"
-                },
-                {
-                    "label": "C",
-                    "text": "productively"
-                },
-                {
-                    "label": "D",
-                    "text": "incrementally"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "av1",
-            "testId": 11,
-            "translation": "Mills 씨는 회사의 라디오 광고가 계속 방송됨에 따라 매출이 점진적으로 증가할 것이라고 정확히 예측했다.",
-            "explanation": "매출이 서서히 늘어남을 나타내는 부사 incrementally(점진적으로)가 문맥상 어울립니다."
-        },
-        {
-            "id": "q1124",
-            "text": "The Physical Therapy Association is committed to keeping costs-------- for its certification programs.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "affordable"
-                },
-                {
-                    "label": "B",
-                    "text": "permitted"
-                },
-                {
-                    "label": "C",
-                    "text": "cutting"
-                },
-                {
-                    "label": "D",
-                    "text": "necessary"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "a1",
-            "testId": 11,
-            "translation": "물리치료 협회는 자격 인증 프로그램의 비용을 저렴하게 유지하기 위해 노력하고 있다.",
-            "explanation": "keep + 목적어 + 목적격 보어(형용사) 구조입니다. 비용이 '감당할 만한(저렴한)' 상태를 유지한다는 의미의 affordable이 적절합니다."
-        },
-        {
-            "id": "q1125",
-            "text": "To remain on schedule, editors must submit all------- to the book to the authors by Friday.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "ideas"
-                },
-                {
-                    "label": "B",
-                    "text": "essays"
-                },
-                {
-                    "label": "C",
-                    "text": "revisions"
-                },
-                {
-                    "label": "D",
-                    "text": "suggestions"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "n1",
-            "testId": 11,
-            "translation": "일정을 지키기 위해, 편집자들은 금요일까지 도서의 모든 수정 사항을 저자들에게 제출해야 한다.",
-            "explanation": "원고나 도서에 대한 '개정, 수정 사항'을 뜻하는 revisions가 문맥상 자연스럽습니다."
-        },
-        {
-            "id": "q1126",
-            "text": "The award-winning film Underwater Secrets promotes awareness--------ocean pollution and its effects on our planet.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "of"
-                },
-                {
-                    "label": "B",
-                    "text": "to"
-                },
-                {
-                    "label": "C",
-                    "text": "from"
-                },
-                {
-                    "label": "D",
-                    "text": "with"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "pr5",
-            "testId": 11,
-            "translation": "수상작인 영화 Underwater Secrets는 해양 오염과 그것이 지구에 미치는 영향에 대한 인식을 고취한다.",
-            "explanation": "awareness of(~에 대한 인식)는 명사-전치사 결합 표현입니다."
-        },
-        {
-            "id": "q1127",
-            "text": "BYF Company specializes in-------- promotional items to help companies advertise their brand.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "personally"
-                },
-                {
-                    "label": "B",
-                    "text": "personalized"
-                },
-                {
-                    "label": "C",
-                    "text": "personality"
-                },
-                {
-                    "label": "D",
-                    "text": "personalizes"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "pa1",
-            "testId": 11,
-            "translation": "BYF 사는 기업들이 브랜드를 광고할 수 있도록 돕는 개인 맞춤형 홍보물 제작을 전문으로 한다.",
-            "explanation": "명사 items를 수식하는 형용사 역할의 과거분사 personalized(개인 맞춤화된)가 정답입니다."
-        },
-        {
-            "id": "q1128",
-            "text": "Mr. Singh took notes on--------the focus group discussed during the morning session.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "each"
-                },
-                {
-                    "label": "B",
-                    "text": "several"
-                },
-                {
-                    "label": "C",
-                    "text": "another"
-                },
-                {
-                    "label": "D",
-                    "text": "everything"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "p3",
-            "testId": 11,
-            "translation": "Singh 씨는 오전 세션 동안 포커스 그룹이 논의한 모든 내용을 필기했다.",
-            "explanation": "뒤에 오는 관계대명사절(목적격 관계대명사 생략)의 수식을 받을 수 있는 대명사 everything이 정답입니다."
-        },
-        {
-            "id": "q1129",
-            "text": "Last year, Tadaka Computer Solutions ranked third------- in regional earnings.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "together"
-                },
-                {
-                    "label": "B",
-                    "text": "overall"
-                },
-                {
-                    "label": "C",
-                    "text": "consecutively"
-                },
-                {
-                    "label": "D",
-                    "text": "generally"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "av3",
-            "testId": 11,
-            "translation": "작년에 Tadaka Computer Solutions는 지역 수익 부문에서 종합 3위를 차지했다.",
-            "explanation": "여러 지표를 합산한 '전반적인, 종합적인' 순위를 나타내는 부사 overall이 적절합니다."
-        },
-        {
-            "id": "q1130",
-            "text": "The timeline for the pathway lighting project was extended to--------input from the environmental commission.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "use up"
-                },
-                {
-                    "label": "B",
-                    "text": "believe in"
-                },
-                {
-                    "label": "C",
-                    "text": "make into"
-                },
-                {
-                    "label": "D",
-                    "text": "allow for"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "voc4",
-            "testId": 11,
-            "translation": "산책로 조명 프로젝트의 기한이 환경 위원회의 의견을 수렴하기 위해 연장되었다.",
-            "explanation": "allow for(~을 감안하다, 고려하다)는 문맥상 위원회의 피드백을 반영할 시간을 번다는 의미와 가장 잘 어울립니다."
-        }
-    ]
-}
-,
-{
-    "testId": 12,
-    "title": "고급반 실전문제풀이 12회",
-    "questions": [
-        {
-            "id": "q1201",
-            "text": "Please congratulate Alan Schmit,-------- of the Leadership Award in Nursing at Knoll Hospital.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "won"
-                },
-                {
-                    "label": "B",
-                    "text": "wins"
-                },
-                {
-                    "label": "C",
-                    "text": "winning"
-                },
-                {
-                    "label": "D",
-                    "text": "winner"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "n1",
-            "testId": 12,
-            "translation": "Knoll 병원에서 수여하는 간호 부문 리더십 상의 수상자인 Alan Schmit 씨를 축하해 주십시오.",
-            "explanation": "빈칸은 동격의 콤마 뒤에서 Alan Schmit을 설명하는 명사 자리입니다. '수상자'라는 의미의 명사 (D) winner가 정답입니다."
-        },
-        {
-            "id": "q1202",
-            "text": "The------- of videos to electronic press releases can help companies showcase their products.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "content"
-                },
-                {
-                    "label": "B",
-                    "text": "addition"
-                },
-                {
-                    "label": "C",
-                    "text": "pictures"
-                },
-                {
-                    "label": "D",
-                    "text": "promotion"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "n1",
-            "testId": 12,
-            "translation": "전자 보도 자료에 비디오를 추가하는 것은 기업들이 제품을 선보이는 데 도움이 될 수 있다.",
-            "explanation": "전자 보도 자료에 비디오를 '추가'한다는 의미가 되어야 자연스러우므로 (B) addition이 정답입니다. addition A to B는 'B에 A를 추가함'이라는 의미로 자주 쓰입니다."
-        },
-        {
-            "id": "q1203",
-            "text": "When leaving the auditorium, please exit -------- the doors on the lower level.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "except"
-                },
-                {
-                    "label": "B",
-                    "text": "inside"
-                },
-                {
-                    "label": "C",
-                    "text": "without"
-                },
-                {
-                    "label": "D",
-                    "text": "through"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "pr1",
-            "testId": 12,
-            "translation": "강당을 나갈 때, 아래층에 있는 문을 통해서 나가 주시기 바랍니다.",
-            "explanation": "문을 '통과하여' 나간다는 의미가 되어야 하므로 장소의 통과를 나타내는 전치사 (D) through가 정답입니다."
-        },
-        {
-            "id": "q1204",
-            "text": "The Ford Group’s proposed advertising campaign is by far the most-------- we have seen so far.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "innovate"
-                },
-                {
-                    "label": "B",
-                    "text": "innovative"
-                },
-                {
-                    "label": "C",
-                    "text": "innovations"
-                },
-                {
-                    "label": "D",
-                    "text": "innovatively"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "a1",
-            "testId": 12,
-            "translation": "Ford Group이 제안한 광고 캠페인은 우리가 지금까지 본 것 중 단연코 가장 혁신적이다.",
-            "explanation": "비교급/최상급(the most)의 수식을 받아 보어 역할을 할 수 있는 형용사 자리입니다. 따라서 (B) innovative가 정답입니다."
-        },
-        {
-            "id": "q1205",
-            "text": "------ receiving the engineering award, Ms. Kwon made a point of thanking longtime mentors.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "Onto"
-                },
-                {
-                    "label": "B",
-                    "text": "Unlike"
-                },
-                {
-                    "label": "C",
-                    "text": "About"
-                },
-                {
-                    "label": "D",
-                    "text": "Upon"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "pr5",
-            "testId": 12,
-            "translation": "공학상을 받자마자, Kwon 씨는 오랜 멘토들에게 반드시 감사를 표했다.",
-            "explanation": "Upon/On -ing는 '~하자마자'라는 의미의 관용 표현입니다. 상을 '받자마자' 감사를 표했다는 문맥이 적절하므로 (D) Upon이 정답입니다."
-        },
-        {
-            "id": "q1206",
-            "text": "Please read the list of--------qualifications to ensure that you have the necessary education and experience for the position.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "slight"
-                },
-                {
-                    "label": "B",
-                    "text": "equal"
-                },
-                {
-                    "label": "C",
-                    "text": "obliged"
-                },
-                {
-                    "label": "D",
-                    "text": "essential"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "a1",
-            "testId": 12,
-            "translation": "해당 직책에 필요한 교육과 경험을 갖추었는지 확인하기 위해 필수 자격 요건 목록을 읽어 보시기 바랍니다.",
-            "explanation": "빈칸은 명사 qualifications를 수식하는 형용사 자리입니다. 문맥상 '필수적인' 자격을 의미하는 (D) essential이 가장 적절합니다."
-        },
-        {
-            "id": "q1207",
-            "text": "The actors held an additional rehearsal -------- perfect their performance in the final scene.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "considerably"
-                },
-                {
-                    "label": "B",
-                    "text": "in order to"
-                },
-                {
-                    "label": "C",
-                    "text": "nevertheless"
-                },
-                {
-                    "label": "D",
-                    "text": "as a result of"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "c3",
-            "testId": 12,
-            "translation": "배우들은 마지막 장면의 연기를 완벽하게 하기 위해 추가 리허설을 가졌다.",
-            "explanation": "빈칸 뒤의 동사 원형 perfect와 결합하여 목적(~하기 위해서)을 나타낼 수 있는 표현은 (B) in order to입니다."
-        },
-        {
-            "id": "q1208",
-            "text": "RZT Technology will double the size of its Toronto laboratory to--------the organization’s rapid growth.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "assign"
-                },
-                {
-                    "label": "B",
-                    "text": "investigate"
-                },
-                {
-                    "label": "C",
-                    "text": "experience"
-                },
-                {
-                    "label": "D",
-                    "text": "accommodate"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "v1",
-            "testId": 12,
-            "translation": "RZT Technology는 조직의 급격한 성장을 수용하기 위해 토론토 실험실의 규모를 두 배로 늘릴 것이다.",
-            "explanation": "조직의 성장에 맞추어 공간이나 인원 등을 '수용하다, 맞추다'라는 의미의 (D) accommodate가 정답입니다."
-        },
-        {
-            "id": "q1209",
-            "text": "The Williamsport Hotel is an ideal venue for the conference because of its-------- to the airport.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "achievement"
-                },
-                {
-                    "label": "B",
-                    "text": "proximity"
-                },
-                {
-                    "label": "C",
-                    "text": "competence"
-                },
-                {
-                    "label": "D",
-                    "text": "exception"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "n1",
-            "testId": 12,
-            "translation": "Williamsport 호텔은 공항과의 인접성 때문에 컨퍼런스를 위한 이상적인 장소이다.",
-            "explanation": "공항과 '가깝다'는 의미의 명사 proximity(인접성)가 정답입니다. 보통 proximity to의 형태로 쓰입니다."
-        },
-        {
-            "id": "q1210",
-            "text": "------ poorly the high-speed printer may be functioning, it is still making copies that are adequate for our purposes.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "Rather"
-                },
-                {
-                    "label": "B",
-                    "text": "Seldom"
-                },
-                {
-                    "label": "C",
-                    "text": "However"
-                },
-                {
-                    "label": "D",
-                    "text": "Thoroughly"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "c5",
-            "testId": 12,
-            "translation": "고속 프린터가 아무리 제대로 작동하지 않더라도, 여전히 우리 목적에 충분한 복사본을 만들어내고 있다.",
-            "explanation": "복합관계부사 However는 'However + 형용사/부사 + 주어 + 동사'의 어순으로 '아무리 ~할지라도'라는 양보의 의미를 나타냅니다."
-        },
-        {
-            "id": "q1211",
-            "text": "Staff at the Bismarck Hotel were-------- helpful to us during our stay.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "quite"
-                },
-                {
-                    "label": "B",
-                    "text": "enough"
-                },
-                {
-                    "label": "C",
-                    "text": "far"
-                },
-                {
-                    "label": "D",
-                    "text": "early"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "av1",
-            "testId": 12,
-            "translation": "Bismarck 호텔 직원들은 우리가 머무는 동안 우리에게 아주 도움이 되었다.",
-            "explanation": "형용사 helpful을 수식하여 '매우, 꽤'라는 의미를 더하는 부사 (A) quite가 정답입니다. enough는 형용사 뒤에서 수식합니다."
-        },
-        {
-            "id": "q1212",
-            "text": "Management announced that all salespeople would be receiving a bonus this year,------- in time for summer vacations.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "just"
-                },
-                {
-                    "label": "B",
-                    "text": "as"
-                },
-                {
-                    "label": "C",
-                    "text": "only"
-                },
-                {
-                    "label": "D",
-                    "text": "by"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "av3",
-            "testId": 12,
-            "translation": "경영진은 모든 영업 사원들이 올해 보너스를 받을 것이라고 발표했는데, 여름 휴가에 딱 맞춰 지급될 예정이다.",
-            "explanation": "특정 시점에 '딱 맞춰'라는 의미를 강조하는 부사 (A) just가 전치사구 in time for를 수식하기에 가장 적절합니다."
-        },
-        {
-            "id": "q1213",
-            "text": "All produce transported by Gocargo Trucking is refrigerated ------- upon pickup to prevent spoilage.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "lately"
-                },
-                {
-                    "label": "B",
-                    "text": "promptly"
-                },
-                {
-                    "label": "C",
-                    "text": "potentially"
-                },
-                {
-                    "label": "D",
-                    "text": "clearly"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "av1",
-            "testId": 12,
-            "translation": "Gocargo Trucking에 의해 운송되는 모든 농산물은 부패를 방지하기 위해 픽업 즉시 냉장 보관된다.",
-            "explanation": "수동태 동사구 is refrigerated를 수식하며 '즉시, 지체 없이'라는 의미를 가진 (B) promptly가 가장 적절합니다."
-        },
-        {
-            "id": "q1214",
-            "text": "Of all the truck models available today, it can be difficult to figure out------- would best suit your company’s needs.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "when"
-                },
-                {
-                    "label": "B",
-                    "text": "why"
-                },
-                {
-                    "label": "C",
-                    "text": "which"
-                },
-                {
-                    "label": "D",
-                    "text": "where"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "ac3",
-            "testId": 12,
-            "translation": "오늘날 이용 가능한 모든 트럭 모델 중에서, 어느 것이 귀사의 필요에 가장 적합한지 파악하는 것은 어려울 수 있다.",
-            "explanation": "정해진 범위(Of all the truck models) 내에서 '어느 것'을 선택하는 의미이므로 의문 대명사 (C) which가 정답입니다."
-        },
-        {
-            "id": "q1215",
-            "text": "At Derwin Securities, trainees alternate ------ attending information sessions and working closely with assigned mentors.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "along"
-                },
-                {
-                    "label": "B",
-                    "text": "against"
-                },
-                {
-                    "label": "C",
-                    "text": "between"
-                },
-                {
-                    "label": "D",
-                    "text": "near"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "pr1",
-            "testId": 12,
-            "translation": "Derwin Securities에서, 교육생들은 정보 세션 참석과 지정된 멘토와의 긴밀한 업무를 번갈아 가며 수행한다.",
-            "explanation": "두 가지 활동(A and B) 사이를 번갈아 한다는 의미이므로 전치사 (C) between이 적절합니다. alternate between A and B는 'A와 B를 번갈아 하다'라는 표현입니다."
-        },
-        {
-            "id": "q1216",
-            "text": "Belinda McKay fans who are-------- to the author’s formal writing style will be surprised by her latest biography.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "fortunate"
-                },
-                {
-                    "label": "B",
-                    "text": "readable"
-                },
-                {
-                    "label": "C",
-                    "text": "comparable"
-                },
-                {
-                    "label": "D",
-                    "text": "accustomed"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "a5",
-            "testId": 12,
-            "translation": "Belinda McKay의 격식 있는 집필 스타일에 익숙한 팬들은 그녀의 최신 전기에 놀랄 것이다.",
-            "explanation": "be accustomed to(~에 익숙하다)는 숙어 표현입니다. 문맥상 저자의 스타일에 '익숙한' 팬들이 상반된 최신작에 놀랄 것이라는 의미가 자연스럽습니다."
-        },
-        {
-            "id": "q1217",
-            "text": "We congratulate all Riverside employees, whose--------effort has resulted in a 20 percent reduction in waste disposal costs.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "collect"
-                },
-                {
-                    "label": "B",
-                    "text": "collective"
-                },
-                {
-                    "label": "C",
-                    "text": "collects"
-                },
-                {
-                    "label": "D",
-                    "text": "collector"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "a1",
-            "testId": 12,
-            "translation": "모든 Riverside 직원들을 축하합니다. 그들의 공동의 노력으로 폐기물 처리 비용이 20% 절감되었습니다.",
-            "explanation": "빈칸은 명사 effort를 수식하는 형용사 자리입니다. '단합된, 공동의'라는 뜻의 (B) collective가 정답입니다."
-        },
-        {
-            "id": "q1218",
-            "text": "The staff must------- as much market-research data as possible before planning the advertising campaign.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "equip"
-                },
-                {
-                    "label": "B",
-                    "text": "compile"
-                },
-                {
-                    "label": "C",
-                    "text": "endorse"
-                },
-                {
-                    "label": "D",
-                    "text": "compose"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "v1",
-            "testId": 12,
-            "translation": "직원들은 광고 캠페인을 계획하기 전에 가능한 한 많은 시장 조사 자료를 수집해야 한다.",
-            "explanation": "여러 곳의 자료를 모아 '수집하다, 편집하다'라는 의미의 (B) compile이 정답입니다."
-        },
-        {
-            "id": "q1219",
-            "text": "Customers can wait in the reception area --------our mechanics complete the car repairs.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "whether"
-                },
-                {
-                    "label": "B",
-                    "text": "except"
-                },
-                {
-                    "label": "C",
-                    "text": "while"
-                },
-                {
-                    "label": "D",
-                    "text": "during"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "c3",
-            "testId": 12,
-            "translation": "고객들은 정비사들이 자동차 수리를 완료하는 동안 접수처에서 기다릴 수 있다.",
-            "explanation": "뒤에 주어(our mechanics)와 동사(complete)를 갖춘 절이 오므로 접속사가 필요합니다. '~하는 동안'이라는 의미의 접속사는 (C) while입니다. during은 전치사입니다."
-        },
-        {
-            "id": "q1220",
-            "text": "To receive an electronic reminder when payment is due, set up an online account ------- Albright Bank.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "of"
-                },
-                {
-                    "label": "B",
-                    "text": "about"
-                },
-                {
-                    "label": "C",
-                    "text": "over"
-                },
-                {
-                    "label": "D",
-                    "text": "with"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "pr1",
-            "testId": 12,
-            "translation": "결제일이 되었을 때 전자 알림을 받으려면, Albright Bank에 온라인 계좌를 개설하십시오.",
-            "explanation": "특정 은행에 계좌를 가지고 있거나 개설할 때 전치사 with를 사용하여 an account with a bank라고 표현합니다."
-        },
-        {
-            "id": "q1221",
-            "text": "All identifying information has been----------- from this letter of complaint so that it can be used for training purposes.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "produced"
-                },
-                {
-                    "label": "B",
-                    "text": "extended"
-                },
-                {
-                    "label": "C",
-                    "text": "removed"
-                },
-                {
-                    "label": "D",
-                    "text": "resolved"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "pa1",
-            "testId": 12,
-            "translation": "교육용으로 사용할 수 있도록 이 불만 제기 편지에서 모든 신원 정보가 삭제되었습니다.",
-            "explanation": "문맥상 신원 정보를 '삭제하다, 제거하다'라는 의미가 되어야 하므로 (C) removed가 정답입니다."
-        },
-        {
-            "id": "q1222",
-            "text": "Table reservations for--------- greater than ten must be made at least one day in advance.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "plates"
-                },
-                {
-                    "label": "B",
-                    "text": "meals"
-                },
-                {
-                    "label": "C",
-                    "text": "sizes"
-                },
-                {
-                    "label": "D",
-                    "text": "parties"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "n1",
-            "testId": 12,
-            "translation": "10명 이상의 일행에 대한 테이블 예약은 최소 하루 전에 이루어져야 한다.",
-            "explanation": "party는 '정당'이나 '파티' 외에도 '일행, 단체'라는 뜻이 있습니다. 문맥상 10인 이상의 단체를 의미하는 (D) parties가 정답입니다."
-        },
-        {
-            "id": "q1223",
-            "text": "Online shoppers who experience long waits for their orders tend--------- the business low ratings.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "have given"
-                },
-                {
-                    "label": "B",
-                    "text": "gave"
-                },
-                {
-                    "label": "C",
-                    "text": "to give"
-                },
-                {
-                    "label": "D",
-                    "text": "giving"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "g_inf",
-            "testId": 12,
-            "translation": "주문 후 오래 기다려야 하는 온라인 쇼핑객들은 해당 업체에 낮은 평점을 주는 경향이 있다.",
-            "explanation": "tend는 to 부정사를 목적어로 취하는 동사입니다 (tend to do: ~하는 경향이 있다). 따라서 (C) to give가 정답입니다."
-        },
-        {
-            "id": "q1224",
-            "text": "Dr. Yuina Hashimoto recently added another doctor to her practice,---------- allowing more patients to be seen.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "that"
-                },
-                {
-                    "label": "B",
-                    "text": "thus"
-                },
-                {
-                    "label": "C",
-                    "text": "which"
-                },
-                {
-                    "label": "D",
-                    "text": "so that"
-                }
-            ],
-            "correctAnswer": "B",
-            "classification": "av3",
-            "testId": 12,
-            "translation": "Yuina Hashimoto 박사는 최근 진료소에 의사를 한 명 더 추가했고, 그리하여 더 많은 환자들이 진료를 받을 수 있게 되었다.",
-            "explanation": "앞선 상황에 대한 결과로 '그리하여, 따라서'라는 의미를 더하며 현재분사 구문을 이끄는 부사 (B) thus가 가장 적절합니다."
-        },
-        {
-            "id": "q1225",
-            "text": "Aki Katsuro’s latest novel is his most exciting-------- and is sure to make Radin Books’ best-seller list.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "just"
-                },
-                {
-                    "label": "B",
-                    "text": "later"
-                },
-                {
-                    "label": "C",
-                    "text": "yet"
-                },
-                {
-                    "label": "D",
-                    "text": "very"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "av3",
-            "testId": 12,
-            "translation": "Aki Katsuro의 최신 소설은 그의 작품 중 지금까지 가장 흥미진진하며, Radin Books의 베스트셀러 리스트에 오를 것이 확실하다.",
-            "explanation": "최상급 형용사 뒤에서 '지금까지 중 가장 ~한'이라는 의미를 강조하는 부사 (C) yet이 정답입니다."
-        },
-        {
-            "id": "q1226",
-            "text": "This free mobile app provides---------- calendar updates, so salespeople will never miss an appointment.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "casual"
-                },
-                {
-                    "label": "B",
-                    "text": "equal"
-                },
-                {
-                    "label": "C",
-                    "text": "continual"
-                },
-                {
-                    "label": "D",
-                    "text": "eventual"
-                }
-            ],
-            "correctAnswer": "C",
-            "classification": "a1",
-            "testId": 12,
-            "translation": "이 무료 모바일 앱은 지속적인 캘린더 업데이트를 제공하여, 영업 사원들이 약속을 놓치지 않게 해준다.",
-            "explanation": "약속을 놓치지 않으려면 업데이트가 '지속적인, 빈번한' 상태여야 하므로 (C) continual이 가장 적절합니다."
-        },
-        {
-            "id": "q1227",
-            "text": "Most senior managers approved the architect's proposal for the office layout, although-------- expressed concerns about the cost.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "one"
-                },
-                {
-                    "label": "B",
-                    "text": "one another"
-                },
-                {
-                    "label": "C",
-                    "text": "each other"
-                },
-                {
-                    "label": "D",
-                    "text": "other"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "p3",
-            "testId": 12,
-            "translation": "비용에 대해 우려를 표한 관리자도 한 명 있었지만, 대부분의 고위급 관리자들은 사무실 배치에 대한 건축가의 제안을 승인했다.",
-            "explanation": "앞서 언급된 'senior managers' 중 한 명을 지칭하는 대명사 (A) one이 주어 자리로 적절합니다. although 뒤에 단수 동사 expressed와 호응합니다."
-        },
-        {
-            "id": "q1228",
-            "text": "Wrazen Associates--------- a summary with a list of recommendations as a routine part of any audit.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "realizes"
-                },
-                {
-                    "label": "B",
-                    "text": "induces"
-                },
-                {
-                    "label": "C",
-                    "text": "causes"
-                },
-                {
-                    "label": "D",
-                    "text": "issues"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "v1",
-            "testId": 12,
-            "translation": "Wrazen Associates는 모든 회계 감사의 정기적인 절차로서 권고 사항 목록이 포함된 요약본을 발행한다.",
-            "explanation": "문서나 보고서 등을 '발행하다, 발급하다'라는 의미의 동사 (D) issues가 정답입니다."
-        },
-        {
-            "id": "q1229",
-            "text": "Sinee’s Catering is always-------- to deliver outstanding food to your special events.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "ready"
-                },
-                {
-                    "label": "B",
-                    "text": "skillful"
-                },
-                {
-                    "label": "C",
-                    "text": "complete"
-                },
-                {
-                    "label": "D",
-                    "text": "delicious"
-                }
-            ],
-            "correctAnswer": "A",
-            "classification": "a5",
-            "testId": 12,
-            "translation": "Sinee’s Catering은 여러분의 특별한 행사에 뛰어난 음식을 제공할 준비가 항상 되어 있습니다.",
-            "explanation": "be ready to do(~할 준비가 되어 있다)는 표현입니다. 업체가 서비스를 제공할 준비가 되었다는 문맥이 가장 자연스럽습니다."
-        },
-        {
-            "id": "q1230",
-            "text": "At Sloat Publishing, interns are assigned to a------- of positions with increasing responsibility.",
-            "options": [
-                {
-                    "label": "A",
-                    "text": "frequency"
-                },
-                {
-                    "label": "B",
-                    "text": "length"
-                },
-                {
-                    "label": "C",
-                    "text": "shortage"
-                },
-                {
-                    "label": "D",
-                    "text": "series"
-                }
-            ],
-            "correctAnswer": "D",
-            "classification": "n1",
-            "testId": 12,
-            "translation": "Sloat Publishing에서 인턴들은 점차 책임이 막중해지는 일련의 직책들에 배치된다.",
-            "explanation": "a series of는 '일련의, 연속적인'이라는 뜻의 표현입니다. 여러 직책을 단계적으로 거친다는 문맥이므로 (D) series가 정답입니다."
-        }
-    ]
-}
+    ,
+    {
+        "testId": 11,
+        "title": "고급반 실전문제풀이 11회",
+        "questions": [
+            {
+                "id": "q1101",
+                "text": "Caridell Science Museum trustees are expected to be--------- --of all the museum’s operations.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "aware"
+                    },
+                    {
+                        "label": "B",
+                        "text": "current"
+                    },
+                    {
+                        "label": "C",
+                        "text": "serious"
+                    },
+                    {
+                        "label": "D",
+                        "text": "alert"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "a5",
+                "testId": 11,
+                "translation": "Caridell 과학 박물관의 이사들은 박물관의 모든 운영 사항을 인지하고 있어야 한다.",
+                "explanation": "be aware of(~을 알고 있다)는 숙어 표현으로, 이사들이 박물관 운영 전반을 '알고 있어야' 한다는 의미가 자연스럽습니다."
+            },
+            {
+                "id": "q1102",
+                "text": "With the completion of its airport, Honokai Island’s tourism-- ---------has improved dramatically.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "economical"
+                    },
+                    {
+                        "label": "B",
+                        "text": "economic"
+                    },
+                    {
+                        "label": "C",
+                        "text": "economize"
+                    },
+                    {
+                        "label": "D",
+                        "text": "economy"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "n1",
+                "testId": 11,
+                "translation": "공항 완공과 함께, Honokai 섬의 관광 경제는 비약적으로 발전했다.",
+                "explanation": "tourism economy(관광 경제)는 복합 명사로 사용됩니다. economic은 형용사로 뒤에 명사가 필요하므로, 명사인 economy가 정답입니다."
+            },
+            {
+                "id": "q1103",
+                "text": "The software for tracking orders has been ------------ successful as it has greatly decreased time spent on the task.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "haltingly"
+                    },
+                    {
+                        "label": "B",
+                        "text": "intimately"
+                    },
+                    {
+                        "label": "C",
+                        "text": "permissibly"
+                    },
+                    {
+                        "label": "D",
+                        "text": "markedly"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "av1",
+                "testId": 11,
+                "translation": "주문 추적 소프트웨어는 업무 소요 시간을 대폭 단축함에 따라 눈에 띄게 성공적으로 안착했다.",
+                "explanation": "형용사 successful을 수식하는 부사 자리로, '눈에 띄게, 현저하게'라는 의미의 markedly가 문맥상 적절합니다."
+            },
+            {
+                "id": "q1104",
+                "text": "Lately the community sports program has had a surplus of volunteers,-------------are students.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "inasmuch as"
+                    },
+                    {
+                        "label": "B",
+                        "text": "the reason being"
+                    },
+                    {
+                        "label": "C",
+                        "text": "because of them"
+                    },
+                    {
+                        "label": "D",
+                        "text": "most of whom"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "ac3",
+                "testId": 11,
+                "translation": "최근 지역 사회 스포츠 프로그램에 자원봉사자가 넘쳐나고 있으며, 이들 대부분은 학생들이다.",
+                "explanation": "앞의 volunteers를 선행사로 받는 계속적 용법의 관계대명사이며, 수량 표현과 함께 쓰이는 'most of whom'이 정답입니다."
+            },
+            {
+                "id": "q1105",
+                "text": "The use of high-quality yet---------- machine parts led to a decrease in costs for Mr. Kim’s factory.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "inexpensive"
+                    },
+                    {
+                        "label": "B",
+                        "text": "unhappy"
+                    },
+                    {
+                        "label": "C",
+                        "text": "incomplete"
+                    },
+                    {
+                        "label": "D",
+                        "text": "undecided"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "a1",
+                "testId": 11,
+                "translation": "고품질이면서도 저렴한 기계 부품의 사용은 Kim 씨 공장의 비용 절감을 이끌어냈다.",
+                "explanation": "yet(하지만 여전히)과 연결되어 high-quality와 대조되면서도 긍정적인 맥락(비용 절감)을 완성하는 inexpensive(비싸지 않은)가 정답입니다."
+            },
+            {
+                "id": "q1106",
+                "text": "Ms. Ling is not here today, but she---------- attends every library board meeting.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "previously"
+                    },
+                    {
+                        "label": "B",
+                        "text": "typically"
+                    },
+                    {
+                        "label": "C",
+                        "text": "almost"
+                    },
+                    {
+                        "label": "D",
+                        "text": "well"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "av3",
+                "testId": 11,
+                "translation": "Ling 씨는 오늘 여기 없지만, 그녀는 보통 모든 도서관 이사회 회의에 참석한다.",
+                "explanation": "빈도나 습관을 나타내는 부사 typically(보통, 전형적으로)가 문맥상 어울립니다."
+            },
+            {
+                "id": "q1107",
+                "text": "Investing in---------properties as possible can be risky but is often lucrative.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "as much"
+                    },
+                    {
+                        "label": "B",
+                        "text": "as many"
+                    },
+                    {
+                        "label": "C",
+                        "text": "so much"
+                    },
+                    {
+                        "label": "D",
+                        "text": "so many"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "com1",
+                "testId": 11,
+                "translation": "가능한 한 많은 부동산에 투자하는 것은 위험할 수 있지만 종종 수익성이 높다.",
+                "explanation": "가산 복수 명사인 properties를 수식하므로 as many가 정답입니다. (as many as possible: 가능한 한 많은)"
+            },
+            {
+                "id": "q1108",
+                "text": "Please inform Ms. Montgomery of any _______ to your office supplies order before 2:00 p.m.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "announcements"
+                    },
+                    {
+                        "label": "B",
+                        "text": "conversions"
+                    },
+                    {
+                        "label": "C",
+                        "text": "adjustments"
+                    },
+                    {
+                        "label": "D",
+                        "text": "commitments"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "n1",
+                "testId": 11,
+                "translation": "오후 2시 이전에 사무용품 주문에 대한 수정 사항이 있으면 Montgomery 씨에게 알려주시기 바랍니다.",
+                "explanation": "주문 내용에 대한 '수정, 조정'을 의미하는 adjustments가 적절합니다."
+            },
+            {
+                "id": "q1109",
+                "text": "The songs on Sophia Vestra’s new album are-------- the most innovative musical arrangements of her career.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "beside"
+                    },
+                    {
+                        "label": "B",
+                        "text": "over"
+                    },
+                    {
+                        "label": "C",
+                        "text": "among"
+                    },
+                    {
+                        "label": "D",
+                        "text": "upon"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "pr1",
+                "testId": 11,
+                "translation": "Sophia Vestra의 새 앨범 수록곡들은 그녀의 경력에서 가장 혁신적인 음악적 편곡 중 하나로 꼽힌다.",
+                "explanation": "여러 개 중 하나임을 나타내는 'among + 최상급 + 복수명사' 구문입니다."
+            },
+            {
+                "id": "q1110",
+                "text": "Panjan Air, an airline--------- in Singapore, is offering budget flights to Bangkok and Jakarta.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "stored"
+                    },
+                    {
+                        "label": "B",
+                        "text": "stayed"
+                    },
+                    {
+                        "label": "C",
+                        "text": "based"
+                    },
+                    {
+                        "label": "D",
+                        "text": "moved"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "pa1",
+                "testId": 11,
+                "translation": "싱가포르에 본사를 둔 항공사인 Panjan Air는 방콕과 자카르타행 저가 항공편을 제공하고 있다.",
+                "explanation": "based in(~에 근거지를 둔)은 특정 지역에 본사나 기반을 둔 회사를 설명할 때 쓰이는 어휘입니다."
+            },
+            {
+                "id": "q1111",
+                "text": "The-------- meadowlands surrounding the museum are designated as wildlife habitat.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "ethical"
+                    },
+                    {
+                        "label": "B",
+                        "text": "vast"
+                    },
+                    {
+                        "label": "C",
+                        "text": "absolute"
+                    },
+                    {
+                        "label": "D",
+                        "text": "economic"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "a1",
+                "testId": 11,
+                "translation": "박물관을 둘러싼 광활한 초지는 야생동물 서식지로 지정되어 있다.",
+                "explanation": "초지(meadowlands)의 광대함을 묘사하기에 적절한 형용사는 vast(광활한)입니다."
+            },
+            {
+                "id": "q1112",
+                "text": "-------of Mitesh Sandu’s international performances was filmed for the documentary.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "All"
+                    },
+                    {
+                        "label": "B",
+                        "text": "Others"
+                    },
+                    {
+                        "label": "C",
+                        "text": "Their own"
+                    },
+                    {
+                        "label": "D",
+                        "text": "Each one"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "p3",
+                "testId": 11,
+                "translation": "Mitesh Sandu의 국제 공연들 각각이 다큐멘터리를 위해 촬영되었다.",
+                "explanation": "동사가 단수형(was)이므로 단수 취급하는 Each one이 정답입니다. All은 복수 취급(were)이 어울립니다."
+            },
+            {
+                "id": "q1113",
+                "text": "Based on new data, Min-Soo Trucking’s proposal to expand its business to Southeast Asia would be only---------- successful.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "conspicuously"
+                    },
+                    {
+                        "label": "B",
+                        "text": "marginally"
+                    },
+                    {
+                        "label": "C",
+                        "text": "regrettably"
+                    },
+                    {
+                        "label": "D",
+                        "text": "intriguingly"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "av1",
+                "testId": 11,
+                "translation": "새로운 데이터에 따르면, Min-Soo Trucking의 동남아시아 사업 확장 제안은 미미한 성공만 거둘 것으로 보인다.",
+                "explanation": "only와 어울려 '미미하게, 겨우'라는 의미를 나타내는 부사 marginally가 적절합니다."
+            },
+            {
+                "id": "q1114",
+                "text": "The project meeting has been rescheduled ------- tomorrow because of the bad weather.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "in"
+                    },
+                    {
+                        "label": "B",
+                        "text": "by"
+                    },
+                    {
+                        "label": "C",
+                        "text": "out"
+                    },
+                    {
+                        "label": "D",
+                        "text": "for"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "pr1",
+                "testId": 11,
+                "translation": "악천후로 인해 프로젝트 회의 일정이 내일로 변경되었다.",
+                "explanation": "reschedule A for B(A를 B로 일정을 변경하다)의 구문에서 전치사 for가 쓰입니다."
+            },
+            {
+                "id": "q1115",
+                "text": "Smooth Tek’s newest software makes it much--------- for business owners to create newsletters.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "easy"
+                    },
+                    {
+                        "label": "B",
+                        "text": "easily"
+                    },
+                    {
+                        "label": "C",
+                        "text": "easier"
+                    },
+                    {
+                        "label": "D",
+                        "text": "ease"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "com1",
+                "testId": 11,
+                "translation": "Smooth Tek의 최신 소프트웨어는 사업주들이 뉴스레터를 만드는 것을 훨씬 더 쉽게 해준다.",
+                "explanation": "비교급 강조 부사 much와 함께 쓰일 비교급 형용사 easier가 정답입니다."
+            },
+            {
+                "id": "q1116",
+                "text": "The National Overview is the fourth-------------- distributed newspaper in the northeastern region.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "wide"
+                    },
+                    {
+                        "label": "B",
+                        "text": "widen"
+                    },
+                    {
+                        "label": "C",
+                        "text": "most widely"
+                    },
+                    {
+                        "label": "D",
+                        "text": "more widely"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "com3",
+                "testId": 11,
+                "translation": "National Overview는 북동부 지역에서 네 번째로 널리 배포되는 신문이다.",
+                "explanation": "서수(fourth)와 함께 쓰이며 과거분사 distributed를 수식하는 최상급 부사 표현 most widely가 정답입니다."
+            },
+            {
+                "id": "q1117",
+                "text": "The employee satisfaction survey  results are---------to differ among departments.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "important"
+                    },
+                    {
+                        "label": "B",
+                        "text": "likely"
+                    },
+                    {
+                        "label": "C",
+                        "text": "probable"
+                    },
+                    {
+                        "label": "D",
+                        "text": "recent"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "a5",
+                "testId": 11,
+                "translation": "직원 만족도 조사 결과는 부서마다 다를 가능성이 높다.",
+                "explanation": "be likely to(~할 가능성이 있다)는 빈출 구문입니다. probable은 가주어 it과 주로 쓰입니다."
+            },
+            {
+                "id": "q1118",
+                "text": "Please review the repair estimate carefully ------- it has been received from the maintenance department.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "then"
+                    },
+                    {
+                        "label": "B",
+                        "text": "while"
+                    },
+                    {
+                        "label": "C",
+                        "text": "ever since"
+                    },
+                    {
+                        "label": "D",
+                        "text": "as soon as"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "c3",
+                "testId": 11,
+                "translation": "관리 부서로부터 수리 견적서를 받는 대로 주의 깊게 검토해 주시기 바랍니다.",
+                "explanation": "as soon as(~하자마자)는 시간의 접속사로 문맥상 가장 적절합니다."
+            },
+            {
+                "id": "q1119",
+                "text": "------- of the marketing assistant include coordinating focus groups and writing detailed reports.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "Promotions"
+                    },
+                    {
+                        "label": "B",
+                        "text": "Offerings"
+                    },
+                    {
+                        "label": "C",
+                        "text": "Productions"
+                    },
+                    {
+                        "label": "D",
+                        "text": "Responsibilities"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "n1",
+                "testId": 11,
+                "translation": "마케팅 조수의 업무 책임에는 포커스 그룹 조정 및 상세 보고서 작성이 포함된다.",
+                "explanation": "뒤에 나열된 업무 내용들을 포괄할 수 있는 주어 명사는 Responsibilities(책무, 업무)입니다."
+            },
+            {
+                "id": "q1120",
+                "text": "The lawyers report that the merger was successfully concluded------------ last-minute negotiations.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "as well as"
+                    },
+                    {
+                        "label": "B",
+                        "text": "overall"
+                    },
+                    {
+                        "label": "C",
+                        "text": "thanks to"
+                    },
+                    {
+                        "label": "D",
+                        "text": "even if"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "pr2",
+                "testId": 11,
+                "translation": "변호사들은 막판 협상 덕분에 합병이 성공적으로 마무리되었다고 보고했다.",
+                "explanation": "합병 성공의 이유를 나타내는 전치사구 thanks to(~ 덕분에)가 적절합니다."
+            },
+            {
+                "id": "q1121",
+                "text": "------- in the news, the Honorable Cynthia Rengle is now making headlines with her proposal to drastically reduce local taxes.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "Less"
+                    },
+                    {
+                        "label": "B",
+                        "text": "Enough"
+                    },
+                    {
+                        "label": "C",
+                        "text": "Apart"
+                    },
+                    {
+                        "label": "D",
+                        "text": "Seldom"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "inv1",
+                "testId": 11,
+                "translation": "뉴스에 좀처럼 나오지 않던 Cynthia Rengle 의원이 이제 지방세 대폭 감면 제안으로 헤드라인을 장식하고 있다.",
+                "explanation": "부정 부사 Seldom이 문두로 나와 강조된 형태입니다. 문맥상 '좀처럼 ~않는'의 의미가 필요합니다."
+            },
+            {
+                "id": "q1122",
+                "text": "Despite being the audience’s least favorite film at the Star Film Festival, Lost Dog --------won the critics’ award for best animation.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "furthermore"
+                    },
+                    {
+                        "label": "B",
+                        "text": "without"
+                    },
+                    {
+                        "label": "C",
+                        "text": "nevertheless"
+                    },
+                    {
+                        "label": "D",
+                        "text": "neither"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "av3",
+                "testId": 11,
+                "translation": "Star 영화제에서 관객들에게 가장 인기 없는 영화였음에도 불구하고, Lost Dog은 평론가들이 뽑은 최우수 애니메이션상을 받았다.",
+                "explanation": "앞의 역접 상황(Despite ~)을 이어받아 '그럼에도 불구하고' 상을 받았음을 나타내는 부사 nevertheless가 정답입니다."
+            },
+            {
+                "id": "q1123",
+                "text": "Ms. Mills has correctly predicted that sales would increase-- --------- as the company's radio advertisement continues to air.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "arguably"
+                    },
+                    {
+                        "label": "B",
+                        "text": "reportedly"
+                    },
+                    {
+                        "label": "C",
+                        "text": "productively"
+                    },
+                    {
+                        "label": "D",
+                        "text": "incrementally"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "av1",
+                "testId": 11,
+                "translation": "Mills 씨는 회사의 라디오 광고가 계속 방송됨에 따라 매출이 점진적으로 증가할 것이라고 정확히 예측했다.",
+                "explanation": "매출이 서서히 늘어남을 나타내는 부사 incrementally(점진적으로)가 문맥상 어울립니다."
+            },
+            {
+                "id": "q1124",
+                "text": "The Physical Therapy Association is committed to keeping costs-------- for its certification programs.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "affordable"
+                    },
+                    {
+                        "label": "B",
+                        "text": "permitted"
+                    },
+                    {
+                        "label": "C",
+                        "text": "cutting"
+                    },
+                    {
+                        "label": "D",
+                        "text": "necessary"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "a1",
+                "testId": 11,
+                "translation": "물리치료 협회는 자격 인증 프로그램의 비용을 저렴하게 유지하기 위해 노력하고 있다.",
+                "explanation": "keep + 목적어 + 목적격 보어(형용사) 구조입니다. 비용이 '감당할 만한(저렴한)' 상태를 유지한다는 의미의 affordable이 적절합니다."
+            },
+            {
+                "id": "q1125",
+                "text": "To remain on schedule, editors must submit all------- to the book to the authors by Friday.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "ideas"
+                    },
+                    {
+                        "label": "B",
+                        "text": "essays"
+                    },
+                    {
+                        "label": "C",
+                        "text": "revisions"
+                    },
+                    {
+                        "label": "D",
+                        "text": "suggestions"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "n1",
+                "testId": 11,
+                "translation": "일정을 지키기 위해, 편집자들은 금요일까지 도서의 모든 수정 사항을 저자들에게 제출해야 한다.",
+                "explanation": "원고나 도서에 대한 '개정, 수정 사항'을 뜻하는 revisions가 문맥상 자연스럽습니다."
+            },
+            {
+                "id": "q1126",
+                "text": "The award-winning film Underwater Secrets promotes awareness--------ocean pollution and its effects on our planet.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "of"
+                    },
+                    {
+                        "label": "B",
+                        "text": "to"
+                    },
+                    {
+                        "label": "C",
+                        "text": "from"
+                    },
+                    {
+                        "label": "D",
+                        "text": "with"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "pr5",
+                "testId": 11,
+                "translation": "수상작인 영화 Underwater Secrets는 해양 오염과 그것이 지구에 미치는 영향에 대한 인식을 고취한다.",
+                "explanation": "awareness of(~에 대한 인식)는 명사-전치사 결합 표현입니다."
+            },
+            {
+                "id": "q1127",
+                "text": "BYF Company specializes in-------- promotional items to help companies advertise their brand.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "personally"
+                    },
+                    {
+                        "label": "B",
+                        "text": "personalized"
+                    },
+                    {
+                        "label": "C",
+                        "text": "personality"
+                    },
+                    {
+                        "label": "D",
+                        "text": "personalizes"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "pa1",
+                "testId": 11,
+                "translation": "BYF 사는 기업들이 브랜드를 광고할 수 있도록 돕는 개인 맞춤형 홍보물 제작을 전문으로 한다.",
+                "explanation": "명사 items를 수식하는 형용사 역할의 과거분사 personalized(개인 맞춤화된)가 정답입니다."
+            },
+            {
+                "id": "q1128",
+                "text": "Mr. Singh took notes on--------the focus group discussed during the morning session.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "each"
+                    },
+                    {
+                        "label": "B",
+                        "text": "several"
+                    },
+                    {
+                        "label": "C",
+                        "text": "another"
+                    },
+                    {
+                        "label": "D",
+                        "text": "everything"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "p3",
+                "testId": 11,
+                "translation": "Singh 씨는 오전 세션 동안 포커스 그룹이 논의한 모든 내용을 필기했다.",
+                "explanation": "뒤에 오는 관계대명사절(목적격 관계대명사 생략)의 수식을 받을 수 있는 대명사 everything이 정답입니다."
+            },
+            {
+                "id": "q1129",
+                "text": "Last year, Tadaka Computer Solutions ranked third------- in regional earnings.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "together"
+                    },
+                    {
+                        "label": "B",
+                        "text": "overall"
+                    },
+                    {
+                        "label": "C",
+                        "text": "consecutively"
+                    },
+                    {
+                        "label": "D",
+                        "text": "generally"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "av3",
+                "testId": 11,
+                "translation": "작년에 Tadaka Computer Solutions는 지역 수익 부문에서 종합 3위를 차지했다.",
+                "explanation": "여러 지표를 합산한 '전반적인, 종합적인' 순위를 나타내는 부사 overall이 적절합니다."
+            },
+            {
+                "id": "q1130",
+                "text": "The timeline for the pathway lighting project was extended to--------input from the environmental commission.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "use up"
+                    },
+                    {
+                        "label": "B",
+                        "text": "believe in"
+                    },
+                    {
+                        "label": "C",
+                        "text": "make into"
+                    },
+                    {
+                        "label": "D",
+                        "text": "allow for"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "voc4",
+                "testId": 11,
+                "translation": "산책로 조명 프로젝트의 기한이 환경 위원회의 의견을 수렴하기 위해 연장되었다.",
+                "explanation": "allow for(~을 감안하다, 고려하다)는 문맥상 위원회의 피드백을 반영할 시간을 번다는 의미와 가장 잘 어울립니다."
+            }
+        ]
+    }
+    ,
+    {
+        "testId": 12,
+        "title": "고급반 실전문제풀이 12회",
+        "questions": [
+            {
+                "id": "q1201",
+                "text": "Please congratulate Alan Schmit,-------- of the Leadership Award in Nursing at Knoll Hospital.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "won"
+                    },
+                    {
+                        "label": "B",
+                        "text": "wins"
+                    },
+                    {
+                        "label": "C",
+                        "text": "winning"
+                    },
+                    {
+                        "label": "D",
+                        "text": "winner"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "n1",
+                "testId": 12,
+                "translation": "Knoll 병원에서 수여하는 간호 부문 리더십 상의 수상자인 Alan Schmit 씨를 축하해 주십시오.",
+                "explanation": "빈칸은 동격의 콤마 뒤에서 Alan Schmit을 설명하는 명사 자리입니다. '수상자'라는 의미의 명사 (D) winner가 정답입니다."
+            },
+            {
+                "id": "q1202",
+                "text": "The------- of videos to electronic press releases can help companies showcase their products.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "content"
+                    },
+                    {
+                        "label": "B",
+                        "text": "addition"
+                    },
+                    {
+                        "label": "C",
+                        "text": "pictures"
+                    },
+                    {
+                        "label": "D",
+                        "text": "promotion"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "n1",
+                "testId": 12,
+                "translation": "전자 보도 자료에 비디오를 추가하는 것은 기업들이 제품을 선보이는 데 도움이 될 수 있다.",
+                "explanation": "전자 보도 자료에 비디오를 '추가'한다는 의미가 되어야 자연스러우므로 (B) addition이 정답입니다. addition A to B는 'B에 A를 추가함'이라는 의미로 자주 쓰입니다."
+            },
+            {
+                "id": "q1203",
+                "text": "When leaving the auditorium, please exit -------- the doors on the lower level.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "except"
+                    },
+                    {
+                        "label": "B",
+                        "text": "inside"
+                    },
+                    {
+                        "label": "C",
+                        "text": "without"
+                    },
+                    {
+                        "label": "D",
+                        "text": "through"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "pr1",
+                "testId": 12,
+                "translation": "강당을 나갈 때, 아래층에 있는 문을 통해서 나가 주시기 바랍니다.",
+                "explanation": "문을 '통과하여' 나간다는 의미가 되어야 하므로 장소의 통과를 나타내는 전치사 (D) through가 정답입니다."
+            },
+            {
+                "id": "q1204",
+                "text": "The Ford Group’s proposed advertising campaign is by far the most-------- we have seen so far.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "innovate"
+                    },
+                    {
+                        "label": "B",
+                        "text": "innovative"
+                    },
+                    {
+                        "label": "C",
+                        "text": "innovations"
+                    },
+                    {
+                        "label": "D",
+                        "text": "innovatively"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "a1",
+                "testId": 12,
+                "translation": "Ford Group이 제안한 광고 캠페인은 우리가 지금까지 본 것 중 단연코 가장 혁신적이다.",
+                "explanation": "비교급/최상급(the most)의 수식을 받아 보어 역할을 할 수 있는 형용사 자리입니다. 따라서 (B) innovative가 정답입니다."
+            },
+            {
+                "id": "q1205",
+                "text": "------ receiving the engineering award, Ms. Kwon made a point of thanking longtime mentors.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "Onto"
+                    },
+                    {
+                        "label": "B",
+                        "text": "Unlike"
+                    },
+                    {
+                        "label": "C",
+                        "text": "About"
+                    },
+                    {
+                        "label": "D",
+                        "text": "Upon"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "pr5",
+                "testId": 12,
+                "translation": "공학상을 받자마자, Kwon 씨는 오랜 멘토들에게 반드시 감사를 표했다.",
+                "explanation": "Upon/On -ing는 '~하자마자'라는 의미의 관용 표현입니다. 상을 '받자마자' 감사를 표했다는 문맥이 적절하므로 (D) Upon이 정답입니다."
+            },
+            {
+                "id": "q1206",
+                "text": "Please read the list of--------qualifications to ensure that you have the necessary education and experience for the position.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "slight"
+                    },
+                    {
+                        "label": "B",
+                        "text": "equal"
+                    },
+                    {
+                        "label": "C",
+                        "text": "obliged"
+                    },
+                    {
+                        "label": "D",
+                        "text": "essential"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "a1",
+                "testId": 12,
+                "translation": "해당 직책에 필요한 교육과 경험을 갖추었는지 확인하기 위해 필수 자격 요건 목록을 읽어 보시기 바랍니다.",
+                "explanation": "빈칸은 명사 qualifications를 수식하는 형용사 자리입니다. 문맥상 '필수적인' 자격을 의미하는 (D) essential이 가장 적절합니다."
+            },
+            {
+                "id": "q1207",
+                "text": "The actors held an additional rehearsal -------- perfect their performance in the final scene.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "considerably"
+                    },
+                    {
+                        "label": "B",
+                        "text": "in order to"
+                    },
+                    {
+                        "label": "C",
+                        "text": "nevertheless"
+                    },
+                    {
+                        "label": "D",
+                        "text": "as a result of"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "c3",
+                "testId": 12,
+                "translation": "배우들은 마지막 장면의 연기를 완벽하게 하기 위해 추가 리허설을 가졌다.",
+                "explanation": "빈칸 뒤의 동사 원형 perfect와 결합하여 목적(~하기 위해서)을 나타낼 수 있는 표현은 (B) in order to입니다."
+            },
+            {
+                "id": "q1208",
+                "text": "RZT Technology will double the size of its Toronto laboratory to--------the organization’s rapid growth.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "assign"
+                    },
+                    {
+                        "label": "B",
+                        "text": "investigate"
+                    },
+                    {
+                        "label": "C",
+                        "text": "experience"
+                    },
+                    {
+                        "label": "D",
+                        "text": "accommodate"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "v1",
+                "testId": 12,
+                "translation": "RZT Technology는 조직의 급격한 성장을 수용하기 위해 토론토 실험실의 규모를 두 배로 늘릴 것이다.",
+                "explanation": "조직의 성장에 맞추어 공간이나 인원 등을 '수용하다, 맞추다'라는 의미의 (D) accommodate가 정답입니다."
+            },
+            {
+                "id": "q1209",
+                "text": "The Williamsport Hotel is an ideal venue for the conference because of its-------- to the airport.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "achievement"
+                    },
+                    {
+                        "label": "B",
+                        "text": "proximity"
+                    },
+                    {
+                        "label": "C",
+                        "text": "competence"
+                    },
+                    {
+                        "label": "D",
+                        "text": "exception"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "n1",
+                "testId": 12,
+                "translation": "Williamsport 호텔은 공항과의 인접성 때문에 컨퍼런스를 위한 이상적인 장소이다.",
+                "explanation": "공항과 '가깝다'는 의미의 명사 proximity(인접성)가 정답입니다. 보통 proximity to의 형태로 쓰입니다."
+            },
+            {
+                "id": "q1210",
+                "text": "------ poorly the high-speed printer may be functioning, it is still making copies that are adequate for our purposes.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "Rather"
+                    },
+                    {
+                        "label": "B",
+                        "text": "Seldom"
+                    },
+                    {
+                        "label": "C",
+                        "text": "However"
+                    },
+                    {
+                        "label": "D",
+                        "text": "Thoroughly"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "c5",
+                "testId": 12,
+                "translation": "고속 프린터가 아무리 제대로 작동하지 않더라도, 여전히 우리 목적에 충분한 복사본을 만들어내고 있다.",
+                "explanation": "복합관계부사 However는 'However + 형용사/부사 + 주어 + 동사'의 어순으로 '아무리 ~할지라도'라는 양보의 의미를 나타냅니다."
+            },
+            {
+                "id": "q1211",
+                "text": "Staff at the Bismarck Hotel were-------- helpful to us during our stay.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "quite"
+                    },
+                    {
+                        "label": "B",
+                        "text": "enough"
+                    },
+                    {
+                        "label": "C",
+                        "text": "far"
+                    },
+                    {
+                        "label": "D",
+                        "text": "early"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "av1",
+                "testId": 12,
+                "translation": "Bismarck 호텔 직원들은 우리가 머무는 동안 우리에게 아주 도움이 되었다.",
+                "explanation": "형용사 helpful을 수식하여 '매우, 꽤'라는 의미를 더하는 부사 (A) quite가 정답입니다. enough는 형용사 뒤에서 수식합니다."
+            },
+            {
+                "id": "q1212",
+                "text": "Management announced that all salespeople would be receiving a bonus this year,------- in time for summer vacations.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "just"
+                    },
+                    {
+                        "label": "B",
+                        "text": "as"
+                    },
+                    {
+                        "label": "C",
+                        "text": "only"
+                    },
+                    {
+                        "label": "D",
+                        "text": "by"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "av3",
+                "testId": 12,
+                "translation": "경영진은 모든 영업 사원들이 올해 보너스를 받을 것이라고 발표했는데, 여름 휴가에 딱 맞춰 지급될 예정이다.",
+                "explanation": "특정 시점에 '딱 맞춰'라는 의미를 강조하는 부사 (A) just가 전치사구 in time for를 수식하기에 가장 적절합니다."
+            },
+            {
+                "id": "q1213",
+                "text": "All produce transported by Gocargo Trucking is refrigerated ------- upon pickup to prevent spoilage.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "lately"
+                    },
+                    {
+                        "label": "B",
+                        "text": "promptly"
+                    },
+                    {
+                        "label": "C",
+                        "text": "potentially"
+                    },
+                    {
+                        "label": "D",
+                        "text": "clearly"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "av1",
+                "testId": 12,
+                "translation": "Gocargo Trucking에 의해 운송되는 모든 농산물은 부패를 방지하기 위해 픽업 즉시 냉장 보관된다.",
+                "explanation": "수동태 동사구 is refrigerated를 수식하며 '즉시, 지체 없이'라는 의미를 가진 (B) promptly가 가장 적절합니다."
+            },
+            {
+                "id": "q1214",
+                "text": "Of all the truck models available today, it can be difficult to figure out------- would best suit your company’s needs.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "when"
+                    },
+                    {
+                        "label": "B",
+                        "text": "why"
+                    },
+                    {
+                        "label": "C",
+                        "text": "which"
+                    },
+                    {
+                        "label": "D",
+                        "text": "where"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "ac3",
+                "testId": 12,
+                "translation": "오늘날 이용 가능한 모든 트럭 모델 중에서, 어느 것이 귀사의 필요에 가장 적합한지 파악하는 것은 어려울 수 있다.",
+                "explanation": "정해진 범위(Of all the truck models) 내에서 '어느 것'을 선택하는 의미이므로 의문 대명사 (C) which가 정답입니다."
+            },
+            {
+                "id": "q1215",
+                "text": "At Derwin Securities, trainees alternate ------ attending information sessions and working closely with assigned mentors.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "along"
+                    },
+                    {
+                        "label": "B",
+                        "text": "against"
+                    },
+                    {
+                        "label": "C",
+                        "text": "between"
+                    },
+                    {
+                        "label": "D",
+                        "text": "near"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "pr1",
+                "testId": 12,
+                "translation": "Derwin Securities에서, 교육생들은 정보 세션 참석과 지정된 멘토와의 긴밀한 업무를 번갈아 가며 수행한다.",
+                "explanation": "두 가지 활동(A and B) 사이를 번갈아 한다는 의미이므로 전치사 (C) between이 적절합니다. alternate between A and B는 'A와 B를 번갈아 하다'라는 표현입니다."
+            },
+            {
+                "id": "q1216",
+                "text": "Belinda McKay fans who are-------- to the author’s formal writing style will be surprised by her latest biography.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "fortunate"
+                    },
+                    {
+                        "label": "B",
+                        "text": "readable"
+                    },
+                    {
+                        "label": "C",
+                        "text": "comparable"
+                    },
+                    {
+                        "label": "D",
+                        "text": "accustomed"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "a5",
+                "testId": 12,
+                "translation": "Belinda McKay의 격식 있는 집필 스타일에 익숙한 팬들은 그녀의 최신 전기에 놀랄 것이다.",
+                "explanation": "be accustomed to(~에 익숙하다)는 숙어 표현입니다. 문맥상 저자의 스타일에 '익숙한' 팬들이 상반된 최신작에 놀랄 것이라는 의미가 자연스럽습니다."
+            },
+            {
+                "id": "q1217",
+                "text": "We congratulate all Riverside employees, whose--------effort has resulted in a 20 percent reduction in waste disposal costs.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "collect"
+                    },
+                    {
+                        "label": "B",
+                        "text": "collective"
+                    },
+                    {
+                        "label": "C",
+                        "text": "collects"
+                    },
+                    {
+                        "label": "D",
+                        "text": "collector"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "a1",
+                "testId": 12,
+                "translation": "모든 Riverside 직원들을 축하합니다. 그들의 공동의 노력으로 폐기물 처리 비용이 20% 절감되었습니다.",
+                "explanation": "빈칸은 명사 effort를 수식하는 형용사 자리입니다. '단합된, 공동의'라는 뜻의 (B) collective가 정답입니다."
+            },
+            {
+                "id": "q1218",
+                "text": "The staff must------- as much market-research data as possible before planning the advertising campaign.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "equip"
+                    },
+                    {
+                        "label": "B",
+                        "text": "compile"
+                    },
+                    {
+                        "label": "C",
+                        "text": "endorse"
+                    },
+                    {
+                        "label": "D",
+                        "text": "compose"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "v1",
+                "testId": 12,
+                "translation": "직원들은 광고 캠페인을 계획하기 전에 가능한 한 많은 시장 조사 자료를 수집해야 한다.",
+                "explanation": "여러 곳의 자료를 모아 '수집하다, 편집하다'라는 의미의 (B) compile이 정답입니다."
+            },
+            {
+                "id": "q1219",
+                "text": "Customers can wait in the reception area --------our mechanics complete the car repairs.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "whether"
+                    },
+                    {
+                        "label": "B",
+                        "text": "except"
+                    },
+                    {
+                        "label": "C",
+                        "text": "while"
+                    },
+                    {
+                        "label": "D",
+                        "text": "during"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "c3",
+                "testId": 12,
+                "translation": "고객들은 정비사들이 자동차 수리를 완료하는 동안 접수처에서 기다릴 수 있다.",
+                "explanation": "뒤에 주어(our mechanics)와 동사(complete)를 갖춘 절이 오므로 접속사가 필요합니다. '~하는 동안'이라는 의미의 접속사는 (C) while입니다. during은 전치사입니다."
+            },
+            {
+                "id": "q1220",
+                "text": "To receive an electronic reminder when payment is due, set up an online account ------- Albright Bank.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "of"
+                    },
+                    {
+                        "label": "B",
+                        "text": "about"
+                    },
+                    {
+                        "label": "C",
+                        "text": "over"
+                    },
+                    {
+                        "label": "D",
+                        "text": "with"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "pr1",
+                "testId": 12,
+                "translation": "결제일이 되었을 때 전자 알림을 받으려면, Albright Bank에 온라인 계좌를 개설하십시오.",
+                "explanation": "특정 은행에 계좌를 가지고 있거나 개설할 때 전치사 with를 사용하여 an account with a bank라고 표현합니다."
+            },
+            {
+                "id": "q1221",
+                "text": "All identifying information has been----------- from this letter of complaint so that it can be used for training purposes.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "produced"
+                    },
+                    {
+                        "label": "B",
+                        "text": "extended"
+                    },
+                    {
+                        "label": "C",
+                        "text": "removed"
+                    },
+                    {
+                        "label": "D",
+                        "text": "resolved"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "pa1",
+                "testId": 12,
+                "translation": "교육용으로 사용할 수 있도록 이 불만 제기 편지에서 모든 신원 정보가 삭제되었습니다.",
+                "explanation": "문맥상 신원 정보를 '삭제하다, 제거하다'라는 의미가 되어야 하므로 (C) removed가 정답입니다."
+            },
+            {
+                "id": "q1222",
+                "text": "Table reservations for--------- greater than ten must be made at least one day in advance.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "plates"
+                    },
+                    {
+                        "label": "B",
+                        "text": "meals"
+                    },
+                    {
+                        "label": "C",
+                        "text": "sizes"
+                    },
+                    {
+                        "label": "D",
+                        "text": "parties"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "n1",
+                "testId": 12,
+                "translation": "10명 이상의 일행에 대한 테이블 예약은 최소 하루 전에 이루어져야 한다.",
+                "explanation": "party는 '정당'이나 '파티' 외에도 '일행, 단체'라는 뜻이 있습니다. 문맥상 10인 이상의 단체를 의미하는 (D) parties가 정답입니다."
+            },
+            {
+                "id": "q1223",
+                "text": "Online shoppers who experience long waits for their orders tend--------- the business low ratings.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "have given"
+                    },
+                    {
+                        "label": "B",
+                        "text": "gave"
+                    },
+                    {
+                        "label": "C",
+                        "text": "to give"
+                    },
+                    {
+                        "label": "D",
+                        "text": "giving"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "g_inf",
+                "testId": 12,
+                "translation": "주문 후 오래 기다려야 하는 온라인 쇼핑객들은 해당 업체에 낮은 평점을 주는 경향이 있다.",
+                "explanation": "tend는 to 부정사를 목적어로 취하는 동사입니다 (tend to do: ~하는 경향이 있다). 따라서 (C) to give가 정답입니다."
+            },
+            {
+                "id": "q1224",
+                "text": "Dr. Yuina Hashimoto recently added another doctor to her practice,---------- allowing more patients to be seen.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "that"
+                    },
+                    {
+                        "label": "B",
+                        "text": "thus"
+                    },
+                    {
+                        "label": "C",
+                        "text": "which"
+                    },
+                    {
+                        "label": "D",
+                        "text": "so that"
+                    }
+                ],
+                "correctAnswer": "B",
+                "classification": "av3",
+                "testId": 12,
+                "translation": "Yuina Hashimoto 박사는 최근 진료소에 의사를 한 명 더 추가했고, 그리하여 더 많은 환자들이 진료를 받을 수 있게 되었다.",
+                "explanation": "앞선 상황에 대한 결과로 '그리하여, 따라서'라는 의미를 더하며 현재분사 구문을 이끄는 부사 (B) thus가 가장 적절합니다."
+            },
+            {
+                "id": "q1225",
+                "text": "Aki Katsuro’s latest novel is his most exciting-------- and is sure to make Radin Books’ best-seller list.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "just"
+                    },
+                    {
+                        "label": "B",
+                        "text": "later"
+                    },
+                    {
+                        "label": "C",
+                        "text": "yet"
+                    },
+                    {
+                        "label": "D",
+                        "text": "very"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "av3",
+                "testId": 12,
+                "translation": "Aki Katsuro의 최신 소설은 그의 작품 중 지금까지 가장 흥미진진하며, Radin Books의 베스트셀러 리스트에 오를 것이 확실하다.",
+                "explanation": "최상급 형용사 뒤에서 '지금까지 중 가장 ~한'이라는 의미를 강조하는 부사 (C) yet이 정답입니다."
+            },
+            {
+                "id": "q1226",
+                "text": "This free mobile app provides---------- calendar updates, so salespeople will never miss an appointment.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "casual"
+                    },
+                    {
+                        "label": "B",
+                        "text": "equal"
+                    },
+                    {
+                        "label": "C",
+                        "text": "continual"
+                    },
+                    {
+                        "label": "D",
+                        "text": "eventual"
+                    }
+                ],
+                "correctAnswer": "C",
+                "classification": "a1",
+                "testId": 12,
+                "translation": "이 무료 모바일 앱은 지속적인 캘린더 업데이트를 제공하여, 영업 사원들이 약속을 놓치지 않게 해준다.",
+                "explanation": "약속을 놓치지 않으려면 업데이트가 '지속적인, 빈번한' 상태여야 하므로 (C) continual이 가장 적절합니다."
+            },
+            {
+                "id": "q1227",
+                "text": "Most senior managers approved the architect's proposal for the office layout, although-------- expressed concerns about the cost.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "one"
+                    },
+                    {
+                        "label": "B",
+                        "text": "one another"
+                    },
+                    {
+                        "label": "C",
+                        "text": "each other"
+                    },
+                    {
+                        "label": "D",
+                        "text": "other"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "p3",
+                "testId": 12,
+                "translation": "비용에 대해 우려를 표한 관리자도 한 명 있었지만, 대부분의 고위급 관리자들은 사무실 배치에 대한 건축가의 제안을 승인했다.",
+                "explanation": "앞서 언급된 'senior managers' 중 한 명을 지칭하는 대명사 (A) one이 주어 자리로 적절합니다. although 뒤에 단수 동사 expressed와 호응합니다."
+            },
+            {
+                "id": "q1228",
+                "text": "Wrazen Associates--------- a summary with a list of recommendations as a routine part of any audit.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "realizes"
+                    },
+                    {
+                        "label": "B",
+                        "text": "induces"
+                    },
+                    {
+                        "label": "C",
+                        "text": "causes"
+                    },
+                    {
+                        "label": "D",
+                        "text": "issues"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "v1",
+                "testId": 12,
+                "translation": "Wrazen Associates는 모든 회계 감사의 정기적인 절차로서 권고 사항 목록이 포함된 요약본을 발행한다.",
+                "explanation": "문서나 보고서 등을 '발행하다, 발급하다'라는 의미의 동사 (D) issues가 정답입니다."
+            },
+            {
+                "id": "q1229",
+                "text": "Sinee’s Catering is always-------- to deliver outstanding food to your special events.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "ready"
+                    },
+                    {
+                        "label": "B",
+                        "text": "skillful"
+                    },
+                    {
+                        "label": "C",
+                        "text": "complete"
+                    },
+                    {
+                        "label": "D",
+                        "text": "delicious"
+                    }
+                ],
+                "correctAnswer": "A",
+                "classification": "a5",
+                "testId": 12,
+                "translation": "Sinee’s Catering은 여러분의 특별한 행사에 뛰어난 음식을 제공할 준비가 항상 되어 있습니다.",
+                "explanation": "be ready to do(~할 준비가 되어 있다)는 표현입니다. 업체가 서비스를 제공할 준비가 되었다는 문맥이 가장 자연스럽습니다."
+            },
+            {
+                "id": "q1230",
+                "text": "At Sloat Publishing, interns are assigned to a------- of positions with increasing responsibility.",
+                "options": [
+                    {
+                        "label": "A",
+                        "text": "frequency"
+                    },
+                    {
+                        "label": "B",
+                        "text": "length"
+                    },
+                    {
+                        "label": "C",
+                        "text": "shortage"
+                    },
+                    {
+                        "label": "D",
+                        "text": "series"
+                    }
+                ],
+                "correctAnswer": "D",
+                "classification": "n1",
+                "testId": 12,
+                "translation": "Sloat Publishing에서 인턴들은 점차 책임이 막중해지는 일련의 직책들에 배치된다.",
+                "explanation": "a series of는 '일련의, 연속적인'이라는 뜻의 표현입니다. 여러 직책을 단계적으로 거친다는 문맥이므로 (D) series가 정답입니다."
+            }
+        ]
+    }
 ]
     ;
 // Helper to find specific questions across all sets

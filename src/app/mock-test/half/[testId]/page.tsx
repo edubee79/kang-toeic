@@ -155,15 +155,27 @@ export default function HalfTestPage() {
                 p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
             };
 
+            const PART_MAX_STANDARD: Record<string, number> = {
+                p1: 6, p2: 25, p3: 39, p4: 30,
+                p5: 30, p6: 16, p7s: 29, p7m: 25
+            };
+
             Object.entries(partStats).forEach(([pKey, stats]) => {
                 if (partMapping[pKey] && stats.total > 0) {
                     const resultDoc = doc(resultsRef);
+                    const standardMax = PART_MAX_STANDARD[pKey] || stats.total;
+                    // Scale score to standard full test size for consistent prediction
+                    const scaledScore = Math.round((stats.correct / stats.total) * standardMax);
+
                     batch.set(resultDoc, {
                         ...commonData,
                         type: partMapping[pKey],
+                        unit: `LevelTest_${testId.toUpperCase()}`,
                         detail: `LevelTest_${testId.toUpperCase()}`,
-                        score: stats.correct,
-                        total: stats.total,
+                        score: scaledScore, // Standardized score for AI Prediction
+                        total: standardMax,
+                        rawCorrect: stats.correct,
+                        rawTotal: stats.total,
                         percentage: Math.round((stats.correct / stats.total) * 100)
                     });
                 }

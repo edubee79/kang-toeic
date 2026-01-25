@@ -15,7 +15,7 @@ interface Question {
     options: { [key: string]: string };
     answer: string;
     explanation?: string;
-    type?: string;
+    classification?: string;
 }
 
 interface Log {
@@ -26,7 +26,7 @@ interface Log {
     user_choice: string;
     correct_answer: string;
     explanation: string;
-    question_type?: string;
+    classification?: string;
 }
 
 export default function Part5Quiz() {
@@ -140,7 +140,7 @@ export default function Part5Quiz() {
             user_choice: selected,
             correct_answer: currentQ.answer,
             explanation: currentQ.explanation || "해설이 없습니다.",
-            question_type: currentQ.type
+            classification: currentQ.classification
         };
 
         const newLogs = [...logs, newLog];

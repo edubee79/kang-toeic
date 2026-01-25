@@ -5,13 +5,14 @@ export interface Part6Question {
     correctAnswer: string;
     translation?: string;
     explanation?: string;
-    classification?: string;
+    classification?: RCP6Tag;
 }
 
 export interface Part6Passage {
     id: string;
     guidance?: string;
-    type: "EMAIL" | "LETTER" | "NOTICE" | "ARTICLE" | "MEMO" | "ADVERTISEMENT" | "ANNOUNCEMENT" | "INTRODUCTION" | "WEB PAGE" | "PRESS RELEASE" | "INFORMATION" | "INSTRUCTIONS" | "POLICY";
+    type: RCPassageGroupTag | string;
+    docType?: string;
     title?: string;
     content: string;
     questions: Part6Question[];
@@ -31,7 +32,8 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t1-p1",
-                "type": "NOTICE",
+                "type": "P2_OFFI",
+                "docType": "NOTICE",
                 "guidance": "Questions 131-134 refer to the following notice.",
                 "content": "NOTICE\n\nTo continue providing the highest level of ___131___ to our corporate tenants, we have scheduled the south lobby restrooms for maintenance this weekend, May 13 and May 14. ___132___ this time, the restrooms will be out of order, so tenants and their guests should instead use the facilities in the north lobby.\n\nWe ___133___ for any inconvenience this might cause. ___134___.\n\nDenville Property Management Partners",
                 "questions": [
@@ -46,7 +48,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "D",
                         "explanation": "전치사 of의 목적어 역할을 하는 명사 자리인데, 전치사 of와 빈칸 사이에 한정사가 없으므로, 빈칸에는 복수명사 또는 불가산명사가 와야 한다. 문맥상 '최고 수준의 서비스'를 제공한다는 의미가 자연스러우므로 불가산명사 (D) service가 정답이다.",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_GRAMMAR"
                     },
                     {
                         "id": "132",
@@ -91,7 +93,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t1-p2",
-                "type": "ARTICLE",
+                "type": "P3_MEDI",
+                "docType": "ARTICLE",
                 "guidance": "Questions 135-138 refer to the following customer review.",
                 "content": "I recently received a last-minute invitation to a formal dinner. I bought a suit and needed it tailored as ___135___ as possible. A friend suggested that I use Antonio's Tailoring Shop in downtown Auckland. When I met Antonio, he gave me his full attention ___136___ his shop was busy. He took the time to listen to me and carefully noted all my measurements. He then explained all the tailoring costs up front and assured me that he could have my suit ready in three days, but he had it done in two! ___137___.\n\nAntonio has run his shop for over 30 years, and his experience really shows. He is a ___138___ tailor. I highly recommend him.\n\nJim Kestren, Auckland",
                 "questions": [
@@ -151,7 +154,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t1-p3",
-                "type": "LETTER",
+                "type": "P1_CORR",
+                "docType": "LETTER",
                 "guidance": "Questions 139-142 refer to the following letter.",
                 "content": "Dear Director Yoshida,\n\nThank you for your school's interest in visiting our farm next month. Please note that children must be at least six years old to visit and tour the farm. ___139___. I have enclosed a list of the ___140___ activities available for our young visitors. Two of these ___141___ must be scheduled in advance. They are a cheese-making class and an introduction to beekeeping. Both are very popular with our visitors.\n\nPlease let ___142___ know your selection by early next week. I look forward to welcoming your group soon!\n\nSincerely,\n\nAnnabel Romero, Coordinator\nMerrytree Family Farm",
                 "questions": [
@@ -211,7 +215,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t1-p4",
-                "type": "EMAIL",
+                "type": "P4_MARK",
+                "docType": "EMAIL",
                 "guidance": "Questions 143-146 refer to the following e-mail.",
                 "content": "To: Lakshmi Aiyar\nFrom: info@healthonity.com\nDate: February 8\nSubject: Healthonity Dental\n\nDear Ms. Aiyar,\n\nWe, the dental health professionals of the Healthonity Dental Center, are ___143___ to introduce our just-opened practice. We aim to provide access to the largest team of dental specialists in the region. On our Web site, you can see a comprehensive list of the procedures we offer. ___144___. The members of our practice share a passion for helping people maintain beautiful and healthy smiles.\n\nContact our center today at 305-555-0121 ___145___ an initial evaluation. All first-time ___146___ will benefit from a 50 percent discount on the cost through the end of the month.\n\nSincerely,\n\nThe Team at Healthonity Dental Center",
                 "questions": [
@@ -277,7 +282,8 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t2-p1",
-                "type": "MEMO",
+                "type": "P2_OFFI",
+                "docType": "MEMO",
                 "guidance": "Questions 131-134 refer to the following memo.",
                 "content": "To: All staff\nFrom: Bernard Villalobos, Vice President of Product Development\nDate: August 27\nSubject: Alzeret game (Product #DS8192)\n\nDue to the results from our trial customer testing, we have decided to postpone the launch of the Alzeret video game. Customer surveys indicated that the game was less ___131___ than we anticipated. Over the next few months, the game development team will introduce several ___132___ to make the product more attractive. ___133___. If the changes are successful, we hope to launch the game by next January ___134___ February.",
                 "questions": [
@@ -337,7 +343,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t2-p2",
-                "type": "EMAIL",
+                "type": "P1_CORR",
+                "docType": "EMAIL",
                 "guidance": "Questions 135-138 refer to the following e-mail.",
                 "content": "To: Eva Linn, Lunchtalk Industries\nFrom: Technical Services\nDate: January 15\nSubject: Technical query\n\nDear Ms. Linn,\n\nThank you for contacting our technical department ___135___ your query. ___136___, our call got disconnected when we were trying to reboot your system from our remote location. ___137___. Therefore, please call us at your earliest convenience and refer to conversation ID #TECH12-2020A to complete the system repair. We have prioritized your inquiry and look forward to helping you ___138___ your computer to its full capabilities.\n\nSincerely,\n\nArthur Feldt\nTechnical Service Facilitator",
                 "questions": [
@@ -365,7 +372,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "D",
                         "explanation": "빈칸 앞 문장에서 연락 주어 감사하다(Thank you for contacting our technical department)고 했는데, 뒤에서는 원격 지원 중 전화가 끊어졌다(our call got disconnected)며 함께 알고 있는 문제를 언급했다. 따라서 '아시다시피'라는 의미의 (D) As you know가 정답이다. 앞서 한 말을 바꿔 말하거나, 이유에 따른 결과를 설명하거나, 예시를 든 것이 아니므로 (A), (B), (C)는 오답이다.",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_CONNECTIVE"
                     },
                     {
                         "id": "137",
@@ -397,7 +404,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t2-p3",
-                "type": "WEB PAGE",
+                "type": "P4_MARK",
+                "docType": "WEB PAGE",
                 "guidance": "Questions 139-142 refer to the following Web page.",
                 "content": "For a limited time, the Uppercut Clothing Hanger Company is selling its highest quality hangers at huge discounts on wholesale orders. This special ___139___ is perfect for hotels, retailers, or anywhere hangers are used extensively. ___140___ of lacquered walnut wood, these hangers are not only durable, but also safe for the environment. ___141___ are strong enough to hold up to ten pounds. To order, visit www.uppercuthangerco.ca. Note that all orders require a 20 percent deposit. ___142___, Uppercut will cover all shipping and insurance costs.",
                 "questions": [
@@ -457,7 +465,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t2-p4",
-                "type": "EMAIL",
+                "type": "P1_CORR",
+                "docType": "EMAIL",
                 "guidance": "Questions 143-146 refer to the following e-mail.",
                 "content": "From: mcrane@doodlemail.com\nTo: jkumar@baxterartsupplies.com\nDate: October 14\nSubject: Application\nAttachment: Résumé\n\nDear Ms. Kumar,\n\nI am writing in response to the advertisement posted in the window of Baxter Art Supplies. As a frequent visitor to your ___143___, I have found it an invaluable source of inspiration over the years. I would be ___144___ to display my artwork. I would also enjoy running workshops to help inspire your customers.\n\nI believe I would be well suited for this role because I am both enthusiastic and friendly. ___145___, I have led successful workshops at various locations in the area. I have attached a copy of my résumé, which includes more details about these workshops. ___146___. I look forward to hearing from you after you have reviewed my application and work.\n\nKind regards,\n\nMelania Crane",
                 "questions": [
@@ -498,7 +507,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "A",
                         "explanation": "빈칸 앞 문장에서는 자신이 역할에 잘 맞는 이유(I would be well suited for this role because I am both enthusiastic and friendly)를, 빈칸 뒤에서는 역할과 관련된 자신의 경험(I have led successful workshops ~)을 언급했다. 즉, 본인이 업무에 적합한 이유를 추가적으로 설명한 것이므로, '게다가, 또한'이라는 의미의 (A) In addition이 정답이다.",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_CONNECTIVE"
                     },
                     {
                         "id": "146",
@@ -523,7 +532,8 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t3-p1",
-                "type": "INFORMATION",
+                "type": "P2_OFFI",
+                "docType": "INFORMATION",
                 "guidance": "Questions 131-134 refer to the following information.",
                 "content": "Thank you for shopping with Danforth Fashions online. Our quality-control team carefully inspects all products ___131___ packaging to ensure customer satisfaction. ___132___. If not, we make exchanges or returns easy. Simply contact us at service@danforthfashions.com if you need a different size, color, or pattern—or if you are dissatisfied for any reason. Your exchange ___133___ right away. To return an item for a refund, use the prepaid return shipping label included with your order and send it back to us in its original packaging unused and undamaged. We issue refunds to the original method of payment, ___134___ the return shipping fee.",
                 "questions": [
@@ -583,7 +593,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t3-p2",
-                "type": "NOTICE",
+                "type": "P2_OFFI",
+                "docType": "NOTICE",
                 "guidance": "Questions 135-138 refer to the following notice.",
                 "content": "Attention, Alden-Agner Industries Employees:\n\nPlease remember that the switch to our new e-mail software will begin at 11:00 P.M. on Sunday, May 2. All ___135___ information in your account, including contacts and calendar events, will be moved to the new system by 4:00 A.M. on Monday, May 3. Though we are working diligently to anticipate and provide solutions for all potential issues, some employees may experience difficulty ___136___ attempting to log in to their accounts after the switch. In addition, there is a remote possibility that some information may be lost. ___137___. be sure to back up any critical e-mail files as soon as possible. ___138___. A training session will be scheduled next week to familiarize employees with key functions of the new software.",
                 "questions": [
@@ -624,7 +635,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "D",
                         "explanation": "앞 문장에서 새 소프트웨어로 전환 시 일부 정보가 손실될(some information may be lost) 가능성이 있다는 문제점을 언급했고, 빈칸 뒤에서는 중요한 이메일 파일은 가급적 빨리 백업하라(be sure to back up any critical e-mail files as soon as possible)며 당부했다. 즉 앞서 설명한 문제점이 백업을 하라고 당부하는 이유가 되므로, '그러므로'라는 의미의 (D) For this reason이 정답이다.",
-                        "classification": "P6_VOCABULARY"
+                        "classification": "P6_CONNECTIVE"
                     },
                     {
                         "id": "138",
@@ -643,7 +654,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t3-p3",
-                "type": "EMAIL",
+                "type": "P1_CORR",
+                "docType": "EMAIL",
                 "guidance": "Questions 139-142 refer to the following e-mail.",
                 "content": "From: Hong Truong <htruong@jansenwebbfoundation.ca>\nSent: Friday, 16 November\nTo: Staff, Friends, and Stakeholders\nSubject: JWF's new budget director\n\nTo the JWF team and our community partners:\n\n___139___. I just want to let you know that Sofia Vargas ___140___ as the Jansen-Webb Foundation's new budget director. Ms. Vargas has a strong background in fiscal ___141___ within the nonprofit sector.\n\nMs. Vargas brings with her a wealth of experience in organizational finance, including most recently at The Lawton Children's Centre in Winnipeg. Ms. Vargas started her employment with us this morning, so please stop in and introduce ___142___ to her.\n\nBest,\n\nHong Truong\nCEO, Jansen-Webb Foundation",
                 "questions": [
@@ -703,7 +715,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t3-p4",
-                "type": "ADVERTISEMENT",
+                "type": "P4_MARK",
+                "docType": "ADVERTISEMENT",
                 "guidance": "Questions 143-146 refer to the following flyer.",
                 "content": "Jamaica National Tourist Organization Offers Free Cultural Passes\n\nThe Jamaica National Tourist Organization (JAMTO) announces an exciting new program that provides free entry to a variety of cultural attractions. The program is sponsored by the JAMTO ___143___ the hotels and businesses listed on the back of this flyer. Together we ___144___ you to take advantage of some of the finest cultural and educational experiences that Jamaica has to offer. ___145___ attractions include the Caribbean National Gardens, Montego Bay Potters Gallery, Jamaican Music Experience, and many others.\n\nTo obtain your pass, visit our Web site at www.jamto.org/freepass or stop by any JAMTO office. One pass is valid for up to five people. ___146___.",
                 "questions": [
@@ -769,7 +782,8 @@ export const part6TestData: Part6TestSet[] = [
         "passages": [
             {
                 "id": "p6-t4-p1",
-                "type": "EMAIL",
+                "type": "P2_OFFI",
+                "docType": "EMAIL",
                 "guidance": "Questions 131-134 refer to the following e-mail.",
                 "content": "To: Multiple Recipients\nFrom: Gold Star Bank <information@goldstarbank.co.in>\nSubject: Gold Star Bank App\nDate: 15 July\n\nDear Customer:\n\nHere at Gold Star Bank, we take our customers and their needs seriously. As some of you know, we ___131___ technical difficulties with our mobile app. ___132___. The trouble started on 14 July when our system went down because of a software bug. We expect the app to be up and running ___133___ the next twenty-four hours. ___134___ banking transactions can be done at any of our branch locations, and our automated cash machines are also working.\n\nWe apologize for any inconvenience.\n\nSincerely,\n\nRavi Chadda\nVice President of Customer Relations",
                 "questions": [
@@ -784,7 +798,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "D",
                         "explanation": "빈칸은 주어 we의 동사 자리로, technical difficulties를 목적어로 취한다. 뒷부분에서 모바일 앱의 기술적 문제가 시작된 시점이 7월 14일(The trouble started on 14 July)이며 편지를 쓴 시점(7월 15일)을 기준으로 24시간 이내에 해결이 될 것이라고 했으므로, 아직 문제를 겪고 있음을 알 수 있다. 따라서 현재진행형 동사 (D) are experiencing이 정답이다. (C) had experienced는 과거에 이미 완료된 일을 나타내므로 빈칸에 적절하지 않고, to부정사인 (A) to experience와 동명사/현재분사인 (B) experiencing은 본동사 자리에 들어갈 수 없다.",
-                        "classification": "P6_VOCABULARY",
+                        "classification": "P6_GRAMMAR",
                     },
                     {
                         "id": "132",
@@ -797,7 +811,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "A",
                         "explanation": "빈칸 앞 문장에서 모바일 앱 상에서 기술적 문제를 겪고 있다(we are experiencing technical difficulties with our mobile app)고 했고, 뒤 문장에서도 해당 문제에 대해 설명하고 있다. 따라서 빈칸에도 이와 관련된 내용이 들어가야 자연스러우므로, 문제를 처리 중이라고 한 (A)가 정답이다.",
-                        "classification": "P6_SENTENCE",
+                        "classification": "P6_SENTENCE_INSERTION",
                     },
                     {
                         "id": "133",
@@ -823,13 +837,14 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "C",
                         "explanation": "빈칸 앞 문장에서는 모바일 앱이 제대로 작동할 시점(We expect the app to be up and running within the next twenty-four hours)을, 뒤 문장에서는 그때까지의 대인(banking transactions can be done at any of our branch locations, also working)을 언급하고 있다. 따라서 '그동안에'라는 의미의 (C) In the meantime이 정답이다.",
-                        "classification": "P6_GRAMMAR",
+                        "classification": "P6_CONNECTIVE",
                     }
                 ]
             },
             {
                 "id": "p6-t4-p2",
-                "type": "INFORMATION",
+                "type": "P6_RULE",
+                "docType": "INFORMATION",
                 "guidance": "Questions 135-138 refer to the following information.",
                 "content": "Bethenie Industries guarantees that its products will function as ___135___ for at least one year from date of purchase. ___136___. This ___137___ applies only to products sold at Bethenie Industries stores and other licensed distributors. Products that are found to be defective may be shipped to our address for repair or exchange. Please note that products that are being returned because of damage should be shipped back to us, whenever possible, in their ___138___ packaging.",
                 "questions": [
@@ -857,7 +872,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "A",
                         "explanation": "빈칸 앞 문장에서 구입일자로부터 최소 1년간(for at least one year from date of purchase) 제품이 광고된 대로 작동될 것을 보장한다고 했고, 뒤 문장에서는 적용 대상에 대해 설명하고 있다. 따라서 빈칸에도 이와 관련된 내용이 들어가야 자연스러우므로, 특정 제품은 해당 보장 기간이 연장될 수 있다고 한 (A)가 정답이다.",
-                        "classification": "P6_SENTENCE",
+                        "classification": "P6_SENTENCE_INSERTION",
                     },
                     {
                         "id": "137",
@@ -889,7 +904,8 @@ export const part6TestData: Part6TestSet[] = [
             },
             {
                 "id": "p6-t4-p3",
-                "type": "NOTICE",
+                "type": "P2_OFFI",
+                "docType": "NOTICE",
                 "guidance": "Questions 139-142 refer to the following notice.",
                 "content": "Healthy Foods Market has planned some exciting renovations in the coming weeks. During this time the store will remain open, but certain departments will be temporarily unavailable. Beginning on August 3, the refrigerated and frozen-food sections of the store ___139___ to be under construction. ___140___ food from these areas will be unavailable while work is being completed. Remodeling should be finished by August 9. Store managers are confident that the ___141___ days of inconvenience will be well worth it.\n\n___142___. At this event, there will be complimentary samples of some new food choices, including an expanded selection of nutritious, ready-to-eat lunch and dinner meals.",
                 "questions": [
@@ -943,13 +959,14 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "D",
                         "explanation": "빈칸 뒤 문장에서 '이 행사(At this event)'의 구체적인 내용이 언급되고 있으므로, 빈칸에는 특정 행사가 열린다고 공지하는 내용이 들어가야 자연스럽다. 따라서 특별 기념 행사가 열릴 예정이라고 한 (D)가 정답이다.",
-                        "classification": "P6_TEXTUAL",
+                        "classification": "P6_SENTENCE_INSERTION",
                     }
                 ]
             },
             {
                 "id": "p6-t4-p4",
-                "type": "ARTICLE",
+                "type": "P3_MEDI",
+                "docType": "ARTICLE",
                 "guidance": "Questions 143-146 refer to the following article.",
                 "content": "VANCOUVER (3 February)—Poalesco unveiled its annual Plant Showcase today. According to Poalesco spokesman Nacio Roja, this ___143___ offering highlights the company's latest efforts in botanical research. Many of these efforts result from customer surveys designed to gain an understanding of common challenges. ___144___. This year, the company's specialized nurseries have turned out drought-hardy breeds, such as the Goldtone Apple Tree. These varietals can withstand extended dry conditions without sustaining damage. \"Gardeners in desert ___145___ will appreciate the Goldtones in particular,\" noted Roja. \"And ___146___ might also be interested in our new Q7 rose bushes, which thrive in a similar climate.\"",
                 "questions": [
@@ -977,7 +994,7 @@ export const part6TestData: Part6TestSet[] = [
                         ],
                         "correctAnswer": "C",
                         "explanation": "빈칸 앞 문장에서 이러한 프로젝트 중 상당수가 일반적인 문제들을 알아내고자 고안된 고객 설문조사에서 기인한다(Many of these efforts result from customer surveys designed to gain an understanding of common challenges)고 했고, 뒤 문장에서는 가뭄에 강한 품종(drought-hardy breeds)의 개발을 일례로 듣고 있다. 따라서 빈칸에는 해당 프로젝트와 관련된 내용이 들어가야 자연스러우므로, (C)가 정답이다.",
-                        "classification": "P6_TEXTUAL",
+                        "classification": "P6_SENTENCE_INSERTION",
                     },
                     {
                         "id": "145",
