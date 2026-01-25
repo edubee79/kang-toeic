@@ -101,7 +101,8 @@ async function calculateActualTestStats(userId: string): Promise<Record<string, 
         'part5_test': 'p5',
         'part6_test': 'p6',
         'part7_single': 'p7_single',
-        'part7_double': 'p7_double'
+        'part7_double': 'p7_double',
+        'part7_test': 'p7'
     };
 
     Object.keys(scoreSums).forEach(type => {
@@ -109,11 +110,16 @@ async function calculateActualTestStats(userId: string): Promise<Record<string, 
         const convertedKey = KEY_CONVERSION[type] || type;
 
         partStats[convertedKey] = {
-            scores: [average], // For compatibility
+            scores: Array(scoreCounts[type]).fill(average), // Simplified for compatibility
             latest: latestScore[type] || 0,
             average: average
         };
     });
+
+    // Special: Combine p7_single and p7_double into p7 if needed, but dashboard usually wants them separate or p7_single as p7
+    if (partStats['p7_single'] && !partStats['p7']) {
+        partStats['p7'] = partStats['p7_single'];
+    }
 
     console.log('📊 Actual test stats calculated:', partStats);
 
@@ -234,8 +240,21 @@ export async function analyzeGoalStatus(
     userId: string,
     partTargets: Record<string, number>
 ): Promise<GoalAnalysisResult> {
+    // 1. Normalize partTargets keys (part1_test -> p1, etc.)
+    const normalizedTargets: Record<string, number> = {};
+    const KEY_MAP: Record<string, string> = {
+        'part1_test': 'p1', 'part2_test': 'p2', 'part3_test': 'p3', 'part4_test': 'p4',
+        'part5_test': 'p5', 'part6_test': 'p6', 'part7_single': 'p7_single', 'part7_double': 'p7_double',
+        'part7_test': 'p7_single' // map combined to single for baseline
+    };
+
+    Object.entries(partTargets).forEach(([key, val]) => {
+        const normKey = KEY_MAP[key] || key;
+        normalizedTargets[normKey] = val;
+    });
+
     const stats = await calculateActualTestStats(userId);
-    const partGoals = calculateGoalGap(partTargets, stats);
+    const partGoals = calculateGoalGap(normalizedTargets, stats);
     const weakestPart = findWeakestPart(partGoals);
     const achievement = calculateLCRCAchievement(partGoals);
 

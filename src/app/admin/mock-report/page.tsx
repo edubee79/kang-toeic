@@ -98,8 +98,8 @@ export default function MockReportPage() {
                 let totalQuestions = data.totalQuestions || 0;
                 let partScores = data.partScores || {};
 
-                // **[FIX] Dynamically calculate score if missing for old records**
-                if ((!totalScore || totalScore === 0) && data.answers) {
+                // **[FIX] Always re-calculate if answers exist to fix key mismatch issues in stats**
+                if (data.answers) {
                     const testIdKey = String(data.testId);
                     const isTest9 = testIdKey.includes('9');
                     const isHalf = testIdKey.includes('half') || (data.testTitle && data.testTitle.includes('하프'));
@@ -116,13 +116,22 @@ export default function MockReportPage() {
                     };
 
                     Object.entries(data.answers).forEach(([qId, userAns]) => {
-                        const correct = correctAnswers[qId as keyof typeof correctAnswers];
+                        let lookupKey = qId;
+                        // Handle numeric keys (1, 2, 7, 8 etc.) from Half Test UI
+                        if (!correctAnswers[lookupKey as keyof typeof correctAnswers] && /^\d+$/.test(qId)) {
+                            const num = parseInt(qId);
+                            if (num <= 6) lookupKey = `p1_${num}`;
+                            else if (num <= 31) lookupKey = `p2_${num}`;
+                            else lookupKey = `q${num}`;
+                        }
+
+                        const correct = correctAnswers[lookupKey as keyof typeof correctAnswers];
                         const isCorrect = userAns === correct;
-                        const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+                        const qNum = parseInt(lookupKey.replace(/[^0-9]/g, ''));
 
                         let pKey = "";
-                        if (qId.startsWith('p1_') || (qNum >= 1 && qNum <= 6)) pKey = "p1";
-                        else if (qId.startsWith('p2_') || (qNum >= 7 && qNum <= 31)) pKey = "p2";
+                        if (lookupKey.startsWith('p1_') || (qNum >= 1 && qNum <= 6)) pKey = "p1";
+                        else if (lookupKey.startsWith('p2_') || (qNum >= 7 && qNum <= 31)) pKey = "p2";
                         else if (qNum >= 32 && qNum <= 70) pKey = "p3";
                         else if (qNum >= 71 && qNum <= 100) pKey = "p4";
                         else if (qNum >= 101 && qNum <= 130) pKey = "p5";
@@ -138,7 +147,7 @@ export default function MockReportPage() {
                         }
                     });
 
-                    // For Half tests, totalScore is typically correct * 10 for visualization
+                    // Update values for display
                     totalScore = isFull ? (correctCount > 100 ? correctCount : correctCount * 5) : correctCount * 10;
                     totalQuestions = Object.values(calculatedPartStats).reduce((acc: number, curr: any) => acc + curr.total, 0);
                     partScores = calculatedPartStats;

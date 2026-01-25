@@ -174,15 +174,17 @@ export default function HomeworkResultsPage() {
 
             snapResults.forEach(doc => {
                 const data = doc.data();
+                const type = data.type;
+                const detail = data.detail || data.unit;
+
                 // Key: studentId + type + detail
-                const key = `${data.studentId}_${data.type}_${data.detail}`;
-                // If duplicate, keep latest? Firestore doesn't prevent dupes.
-                // Let's assume existing logic is okay, or take highest score.
+                const key = `${data.studentId}_${type}_${detail}`;
+
                 if (!rMap[key] || rMap[key].timestamp < data.timestamp) {
                     rMap[key] = {
                         studentId: data.studentId,
-                        type: data.type,
-                        detail: data.unit || data.detail, // unit/detail naming inconsistency handling
+                        type: type,
+                        detail: detail,
                         score: data.score,
                         total: data.total,
                         timestamp: data.timestamp
@@ -206,7 +208,17 @@ export default function HomeworkResultsPage() {
         // Use all fetched assignments (up to 30) for Total Rate
         assignments.forEach(assign => {
             const key = `${student.id}_${assign.type}_${assign.detail}`;
-            if (resultsMap[key]) {
+            let isDone = !!resultsMap[key];
+
+            // Level Test Mapping (Backward compatibility)
+            if (!isDone && assign.type === 'level_test') {
+                // Check if any part (like p1_test or p5_test) exists for LevelTest_9A
+                const altKey = `${student.id}_part1_test_LevelTest_${assign.detail.toUpperCase()}`;
+                const altKey2 = `${student.id}_part5_test_LevelTest_${assign.detail.toUpperCase()}`;
+                if (resultsMap[altKey] || resultsMap[altKey2]) isDone = true;
+            }
+
+            if (isDone) {
                 completed++;
             }
         });
@@ -215,7 +227,15 @@ export default function HomeworkResultsPage() {
         const recentAssignments = assignments.slice(0, 5);
         recentAssignments.forEach(assign => {
             const key = `${student.id}_${assign.type}_${assign.detail}`;
-            if (resultsMap[key]) {
+            let isDone = !!resultsMap[key];
+
+            if (!isDone && assign.type === 'level_test') {
+                const altKey = `${student.id}_part1_test_LevelTest_${assign.detail.toUpperCase()}`;
+                const altKey2 = `${student.id}_part5_test_LevelTest_${assign.detail.toUpperCase()}`;
+                if (resultsMap[altKey] || resultsMap[altKey2]) isDone = true;
+            }
+
+            if (isDone) {
                 recentCompleted++;
             }
         });
@@ -335,7 +355,13 @@ export default function HomeworkResultsPage() {
 
     const getScoreCell = (studentId: string, assign: Assignment) => {
         const key = `${studentId}_${assign.type}_${assign.detail}`;
-        const result = resultsMap[key];
+        let result = resultsMap[key];
+
+        // Level Test Look-up
+        if (!result && assign.type === 'level_test') {
+            const altKey = `${studentId}_part5_test_LevelTest_${assign.detail.toUpperCase()}`;
+            result = resultsMap[altKey]; // Use P5 score as representative if available
+        }
 
         if (!result) return <div className="text-slate-700 text-xs">-</div>;
 

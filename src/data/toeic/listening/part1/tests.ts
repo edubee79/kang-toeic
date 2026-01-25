@@ -1140,7 +1140,7 @@ export const part1RealTests: Part1TestSet[] = [
                 id: "p1_t9_q1",
                 image: "/images/ETS_TOEIC_3/Test_09/Part_01/p1_q01.png",
                 audio: "/audio/ETS_TOEIC_3/Test_09/TEST%2009_PART%201_1.mp3",
-                correctAnswer: "A",
+                correctAnswer: "C",
                 options: {
                     A: "(A)",
                     B: "(B)",
@@ -1162,7 +1162,7 @@ export const part1RealTests: Part1TestSet[] = [
                 id: "p1_t9_q2",
                 image: "/images/ETS_TOEIC_3/Test_09/Part_01/p1_q02.png",
                 audio: "/audio/ETS_TOEIC_3/Test_09/TEST%2009_PART%201_2.mp3",
-                correctAnswer: "A",
+                correctAnswer: "D",
                 options: {
                     A: "(A)",
                     B: "(B)",
@@ -1228,7 +1228,7 @@ export const part1RealTests: Part1TestSet[] = [
                 id: "p1_t9_q5",
                 image: "/images/ETS_TOEIC_3/Test_09/Part_01/p1_q05.png",
                 audio: "/audio/ETS_TOEIC_3/Test_09/TEST%2009_PART%201_5.mp3",
-                correctAnswer: "A",
+                correctAnswer: "D",
                 options: {
                     A: "(A)",
                     B: "(B)",
@@ -1250,7 +1250,7 @@ export const part1RealTests: Part1TestSet[] = [
                 id: "p1_t9_q6",
                 image: "/images/ETS_TOEIC_3/Test_09/Part_01/p1_q06.png",
                 audio: "/audio/ETS_TOEIC_3/Test_09/TEST%2009_PART%201_6.mp3",
-                correctAnswer: "A",
+                correctAnswer: "B",
                 options: {
                     A: "(A)",
                     B: "(B)",

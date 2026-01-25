@@ -181,6 +181,18 @@ export default function HalfTestPage() {
                 }
             });
 
+            // Add summary record for the whole Level Test assignment
+            const summaryDoc = doc(resultsRef);
+            batch.set(summaryDoc, {
+                ...commonData,
+                type: 'level_test',
+                unit: testId.toUpperCase(),
+                detail: testId.toUpperCase(),
+                score: totalScore,
+                total: 1000,
+                isSummary: true
+            });
+
             await batch.commit();
 
             // 3. Local Storage Sync & Navigation
