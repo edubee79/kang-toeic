@@ -1,4 +1,4 @@
-import { TOEIC_TAG_REGISTRY } from "../../../types/toeic-standards";
+import { TOEIC_TAG_REGISTRY } from "@/types/toeic-standards";
 
 export const Part6ClassificationMap: Record<string, string> = {
     "P6_GRAMMAR": TOEIC_TAG_REGISTRY["P6_GRAMMAR"].label,
