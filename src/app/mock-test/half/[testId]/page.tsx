@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { db } from '@/lib/firebase';
-import { collection, addDoc, serverTimestamp, updateDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, updateDoc, doc, writeBatch } from 'firebase/firestore';
+import { getCorrectAnswersForTest9, getCorrectAnswersForTest10 } from '@/lib/mock/scoring';
 
 // 고품질 UI 컴포넌트 임포트
 import HalfTest_LC_Set9 from '@/components/exam/mock/HalfTest_LC_Set9';
@@ -66,33 +67,124 @@ export default function HalfTestPage() {
             return;
         }
 
-        setStatus('submitting'); // 제출 중 상태로 전환
+        setStatus('submitting');
         const allAnswers = { ...lcAnswers, ...rcAnswers };
 
         try {
-            await updateDoc(doc(db, 'MockTestAttempts', attemptId), {
+            const userStr = localStorage.getItem('toeic_user');
+            const user = userStr ? JSON.parse(userStr) : null;
+            const userId = user?.userId || user?.uid || 'Unknown';
+
+            // 1. Scoring Logic Integration
+            const isTest9 = testId.includes('9');
+            const correctAnswers = isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10();
+
+            let totalCorrect = 0;
+            const partStats: Record<string, { correct: number, total: number }> = {
+                p1: { correct: 0, total: 0 },
+                p2: { correct: 0, total: 0 },
+                p3: { correct: 0, total: 0 },
+                p4: { correct: 0, total: 0 },
+                p5: { correct: 0, total: 0 },
+                p6: { correct: 0, total: 0 },
+                p7: { correct: 0, total: 0 },
+                p7s: { correct: 0, total: 0 },
+                p7m: { correct: 0, total: 0 },
+            };
+
+            Object.entries(allAnswers).forEach(([qId, userAns]) => {
+                const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+                const isCorrect = userAns === correctAnswers[qId];
+
+                // Determine Part
+                let pKey = "";
+                if (qNum <= 6) pKey = "p1";
+                else if (qNum <= 31) pKey = "p2";
+                else if (qNum <= 70) pKey = "p3";
+                else if (qNum <= 100) pKey = "p4";
+                else if (qNum <= 130) pKey = "p5";
+                else if (qNum <= 146) pKey = "p6";
+                else if (qNum <= 175) pKey = "p7s";
+                else pKey = "p7m";
+
+                if (partStats[pKey]) {
+                    partStats[pKey].total++;
+                    if (isCorrect) {
+                        partStats[pKey].correct++;
+                        totalCorrect++;
+                    }
+                }
+            });
+
+            // P7 Unified for legacy dashboard compatibility
+            partStats.p7 = {
+                correct: partStats.p7s.correct + partStats.p7m.correct,
+                total: partStats.p7s.total + partStats.p7m.total
+            };
+
+            const totalQuestions = Object.values(partStats).reduce((acc, curr) => acc + curr.total, 0) - partStats.p7.total; // Avoid double counting p7
+            const totalScore = totalCorrect * 10; // Simple scaling for Half Test visualization
+
+            // 2. Batch Update (MockTestAttempts & Manager_Results)
+            const batch = writeBatch(db);
+
+            // Update Attempt Doc
+            batch.update(doc(db, 'MockTestAttempts', attemptId), {
                 status: 'completed',
                 answers: allAnswers,
-                timeLogs: timeLogs, // 파트별 시간 기록 추가
+                timeLogs: timeLogs,
+                totalScore: totalScore,
+                totalQuestions: totalCorrect + (totalQuestions - totalCorrect), // Total attempted/total Qs
+                partScores: partStats,
                 completedAt: serverTimestamp()
             });
 
-            // 로컬 스토리지에 결과 저장 (리포트 페이지 호환용)
+            // Add to Manager_Results for Dashboard/Statistics
+            const resultsRef = collection(db, 'Manager_Results');
+            const commonData = {
+                studentId: userId,
+                studentName: user?.userName || 'Unknown',
+                className: user?.className || 'Unknown',
+                timestamp: serverTimestamp(),
+                createdAt: serverTimestamp(),
+            };
+
+            // Individual Part Records for Dashboard
+            const partMapping: Record<string, string> = {
+                p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
+                p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
+            };
+
+            Object.entries(partStats).forEach(([pKey, stats]) => {
+                if (partMapping[pKey] && stats.total > 0) {
+                    const resultDoc = doc(resultsRef);
+                    batch.set(resultDoc, {
+                        ...commonData,
+                        type: partMapping[pKey],
+                        detail: `LevelTest_${testId.toUpperCase()}`,
+                        score: stats.correct,
+                        total: stats.total,
+                        percentage: Math.round((stats.correct / stats.total) * 100)
+                    });
+                }
+            });
+
+            await batch.commit();
+
+            // 3. Local Storage Sync & Navigation
             const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
             savedAttempts[`full-half_${testId}`] = {
                 answers: allAnswers,
-                timeLogs: timeLogs, // 분석용 시간 로그 포함
+                timeLogs: timeLogs,
+                totalScore: totalScore,
+                partScores: partStats,
                 date: new Date().toISOString()
             };
             localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-            // 결과 페이지로 이동 (쿼리 파라미터 보강 및 이동 보장)
             const resultUrl = `/mock-test/full/${testId.startsWith('9') ? '9' : '10'}/result?half=${testId}&attemptId=${attemptId}`;
-            console.log("[SUCCESS] Navigating to:", resultUrl);
-
             router.push(resultUrl);
 
-            // 혹시라도 push가 안될 경우를 대비한 0.5초 뒤 강제 이동 예외처리
             setTimeout(() => {
                 if (window.location.pathname.includes('half')) {
                     window.location.href = resultUrl;
@@ -100,7 +192,7 @@ export default function HalfTestPage() {
             }, 800);
         } catch (e) {
             console.error("[ERROR] Failed to finish exam:", e);
-            setStatus('rc'); // 실패 시 다시 시험 화면으로 복구
+            setStatus('rc');
             alert("제출 중 오류가 발생했습니다. 네트워크를 확인해주세요.");
         }
     };

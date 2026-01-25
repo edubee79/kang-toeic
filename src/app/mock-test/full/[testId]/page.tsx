@@ -13,7 +13,7 @@ import MockTest_RC_Set9 from '@/components/exam/mock/MockTest_RC_Set9';
 import MockTest_LC_Set10 from '@/components/exam/mock/MockTest_LC_Set10';
 import MockTest_RC_Set10 from '@/components/exam/mock/MockTest_RC_Set10';
 import { db } from '@/lib/firebase';
-import { collection, addDoc, serverTimestamp, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, query, where, getDocs, updateDoc, doc, writeBatch } from 'firebase/firestore';
 import { getCorrectAnswersForTest9, getCorrectAnswersForTest10 } from '@/lib/mock/scoring';
 
 
@@ -262,70 +262,107 @@ export default function MockTestRunner() {
                         savedAttempts[`full-${testId}`] = attempt;
                         localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-                        // 2. Sync to Firebase for Dashboard (Manager_Results)
-                        const userStr = localStorage.getItem('toeic_user');
-                        if (userStr && testId === 9) {
-                            const user = JSON.parse(userStr);
-                            const correctAnswers = getCorrectAnswersForTest9();
+                        // 2. Sync to Firebase (MockTestAttempts & Manager_Results)
+                        if (attemptId) {
+                            try {
+                                const correctAnswers = getCorrectAnswersForTest9();
+                                let totalCorrect = 0;
+                                let totalQs = 0;
+                                const partScores: Record<string, { correct: number, total: number }> = {
+                                    p1: { correct: 0, total: 0 },
+                                    p2: { correct: 0, total: 0 },
+                                    p3: { correct: 0, total: 0 },
+                                    p4: { correct: 0, total: 0 },
+                                    p5: { correct: 0, total: 0 },
+                                    p6: { correct: 0, total: 0 },
+                                    p7: { correct: 0, total: 0 },
+                                };
 
-                            // Group IDs by Part for separate recording
-                            const partMappings: Record<string, { type: string, label: string }> = {
-                                'p1': { type: 'part1_test', label: '실전 모의고사' },
-                                'p2': { type: 'part2_test', label: '실전 모의고사' },
-                                'q32-q70': { type: 'part3_test', label: '실전 모의고사' },
-                                'q71-q100': { type: 'part4_test', label: '실전 모의고사' },
-                                'q101-q130': { type: 'part5_test', label: '실전 모의고사' },
-                                'q131-q146': { type: 'part6_test', label: '실전 모의고사' },
-                                'q147-q175': { type: 'part7_single', label: '실전 모의고사' },
-                                'q176-q200': { type: 'part7_double', label: '실전 모의고사' }
-                            };
+                                // Group IDs by Part for Manager_Results
+                                const partMappings: Record<string, { type: string, label: string }> = {
+                                    'p1': { type: 'part1_test', label: '실전 모의고사' },
+                                    'p2': { type: 'part2_test', label: '실전 모의고사' },
+                                    'q32-q70': { type: 'part3_test', label: '실전 모의고사' },
+                                    'q71-q100': { type: 'part4_test', label: '실전 모의고사' },
+                                    'q101-q130': { type: 'part5_test', label: '실전 모의고사' },
+                                    'q131-q146': { type: 'part6_test', label: '실전 모의고사' },
+                                    'q147-q200': { type: 'part7_test', label: '실전 모의고사' }
+                                };
 
-                            // Save each part to Manager_Results
-                            const savePromises = Object.entries(partMappings).map(async ([partRange, config]) => {
-                                let correctCount = 0;
-                                let totalCount = 0;
-                                const incorrectQs: any[] = [];
+                                const userStr = localStorage.getItem('toeic_user');
+                                const user = userStr ? JSON.parse(userStr) : null;
+                                const userId = user?.userId || user?.uid || "Unknown";
 
+                                // Calculate scores
                                 Object.entries(correctAnswers).forEach(([qId, correct]) => {
-                                    // Logic to check if qId belongs to this partRange
-                                    let belongs = false;
+                                    totalQs++;
+                                    const uAns = finalAnswers[qId];
+                                    const isCorrect = uAns === correct;
+                                    if (isCorrect) totalCorrect++;
+
                                     const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+                                    let part = "";
+                                    if (qId.startsWith('p1_')) part = "p1";
+                                    else if (qId.startsWith('p2_')) part = "p2";
+                                    else if (qNum >= 32 && qNum <= 70) part = "p3";
+                                    else if (qNum >= 71 && qNum <= 100) part = "p4";
+                                    else if (qNum >= 101 && qNum <= 130) part = "p5";
+                                    else if (qNum >= 131 && qNum <= 146) part = "p6";
+                                    else if (qNum >= 147 && qNum <= 200) part = "p7";
 
-                                    if (partRange === 'p1' && qId.startsWith('p1_')) belongs = true;
-                                    else if (partRange === 'p2' && qId.startsWith('p2_')) belongs = true;
-                                    else if (partRange === 'q32-q70' && qNum >= 32 && qNum <= 70) belongs = true;
-                                    else if (partRange === 'q71-q100' && qNum >= 71 && qNum <= 100) belongs = true;
-                                    else if (partRange === 'q101-q130' && qNum >= 101 && qNum <= 130) belongs = true;
-                                    else if (partRange === 'q131-q146' && qNum >= 131 && qNum <= 146) belongs = true;
-                                    else if (partRange === 'q147-q175' && qNum >= 147 && qNum <= 175) belongs = true;
-                                    else if (partRange === 'q176-q200' && qNum >= 176 && qNum <= 200) belongs = true;
-
-                                    if (belongs) {
-                                        const userAns = finalAnswers[qId];
-                                        totalCount++;
-                                        if (userAns === correct) correctCount++;
-                                        else {
-                                            incorrectQs.push({ id: qId, classification: 'Unknown' });
-                                        }
+                                    if (part && partScores[part]) {
+                                        partScores[part].total++;
+                                        if (isCorrect) partScores[part].correct++;
                                     }
                                 });
 
-                                if (totalCount > 0) {
-                                    return addDoc(collection(db, "Manager_Results"), {
-                                        student: user.userName || user.name || "Unknown",
-                                        studentId: user.userId || user.uid,
-                                        unit: `제${testId === 9 ? 1 : testId}회 실전 모의고사 (${config.type})`,
-                                        type: config.type,
-                                        score: correctCount,
-                                        total: totalCount,
-                                        wrongCount: totalCount - correctCount,
-                                        incorrectQuestions: incorrectQs,
-                                        timestamp: serverTimestamp()
-                                    });
-                                }
-                            });
+                                const batch = writeBatch(db);
 
-                            await Promise.all(savePromises);
+                                // Update Attempt Doc
+                                batch.update(doc(db, 'MockTestAttempts', attemptId), {
+                                    status: 'completed',
+                                    completedAt: serverTimestamp(),
+                                    totalScore: totalCorrect,
+                                    totalQuestions: totalQs,
+                                    partScores: partScores,
+                                    answers: finalAnswers
+                                });
+
+                                // Manager_Results sync
+                                const resultsRef = collection(db, "Manager_Results");
+                                Object.entries(partMappings).forEach(([range, config]) => {
+                                    let pCorrect = 0;
+                                    let pTotal = 0;
+
+                                    // Use partScores for cleaner logic
+                                    let pKey = range.startsWith('q') ? range : range; // Dummy
+                                    if (range === 'p1') { pCorrect = partScores.p1.correct; pTotal = partScores.p1.total; }
+                                    else if (range === 'p2') { pCorrect = partScores.p2.correct; pTotal = partScores.p2.total; }
+                                    else if (range === 'q32-q70') { pCorrect = partScores.p3.correct; pTotal = partScores.p3.total; }
+                                    else if (range === 'q71-q100') { pCorrect = partScores.p4.correct; pTotal = partScores.p4.total; }
+                                    else if (range === 'q101-q130') { pCorrect = partScores.p5.correct; pTotal = partScores.p5.total; }
+                                    else if (range === 'q131-q146') { pCorrect = partScores.p6.correct; pTotal = partScores.p6.total; }
+                                    else if (range === 'q147-q200') { pCorrect = partScores.p7.correct; pTotal = partScores.p7.total; }
+
+                                    if (pTotal > 0) {
+                                        batch.set(doc(resultsRef), {
+                                            student: user?.userName || "Unknown",
+                                            studentId: userId,
+                                            unit: `제1회 실전 모의고사 (${config.type})`,
+                                            type: config.type,
+                                            score: pCorrect,
+                                            total: pTotal,
+                                            timestamp: serverTimestamp(),
+                                            createdAt: serverTimestamp()
+                                        });
+                                    }
+                                });
+
+                                await batch.commit();
+
+                            } catch (error) {
+                                console.error("Failed to sync Mock Test 9 results:", error);
+                            }
                         }
 
                         router.push(`/mock-test/full/${testId}/result`);
