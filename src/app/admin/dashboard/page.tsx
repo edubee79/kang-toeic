@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { collection, query, orderBy, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
@@ -11,12 +11,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
-import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload, Trophy, BarChart3, Target, ChevronDown, ChevronUp, TrendingUp, ChevronRight } from "lucide-react";
+import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload, Trophy, BarChart3 } from "lucide-react";
 import * as XLSX from 'xlsx';
-import { cn } from "@/lib/utils";
-import { isActualTest, mapToPartKey, calculateCorrectCount } from '@/lib/filters/actualTestFilter';
 
 import { Bar } from 'react-chartjs-2';
 import {
@@ -54,11 +51,6 @@ export default function AdminDashboard() {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
     const [selectedStudent, setSelectedStudent] = useState<any>(null);
-    const [averages, setAverages] = useState<any>({
-        targetScore: 0, predictedTotal: 0, predictedLC: 0, predictedRC: 0,
-        parts: {}
-    });
-    const [statsAverages, setStatsAverages] = useState<any>(null); // To store calculated avgs from fetchData
 
     useEffect(() => {
         const checkAdmin = () => {
@@ -93,29 +85,25 @@ export default function AdminDashboard() {
                 const usersSnapshot = await getDocs(q);
                 const usersMap = new Map();
 
+                let pending = 0;
+                let approved = 0;
+
                 usersSnapshot.forEach(doc => {
                     const userData = doc.data();
-                    usersMap.set(userData.userId, {
-                        ...userData,
-                        logs: [],
-                        stats: {
-                            vocaCount: 0,
-                            grammarCount: 0,
-                            maxShadowSet: 0,
-                            currents: {},
-                            targets: {},
-                            predictedLC: 0,
-                            predictedRC: 0,
-                            predictedTotal: 0
-                        }
-                    });
+                    usersMap.set(userData.userId, { ...userData, logs: [], stats: {} });
+                    if (userData.status === 'pending') pending++;
+                    if (userData.status === 'approved') approved++;
                 });
-
-                // Fetch Results (Recent first for latest score check)
-                const resultsSnapshot = await getDocs(query(collection(db, "Manager_Results"), orderBy("timestamp", "desc")));
 
                 // Fetch Assignments
                 const assignSnapshot = await getDocs(query(collection(db, "Assignments")));
+                let activeAssigns = 0;
+                assignSnapshot.forEach(doc => {
+                    if (doc.data().isActive) activeAssigns++;
+                });
+
+                // Fetch Results (Recent)
+                const resultsSnapshot = await getDocs(query(collection(db, "Manager_Results"), orderBy("timestamp", "desc")));
 
                 let todayCount = 0;
                 const todayStr = new Date().toDateString();
@@ -131,113 +119,40 @@ export default function AdminDashboard() {
                             const logDate = res.timestamp.toDate().toDateString();
                             if (logDate === todayStr) todayCount++;
                         }
-
-                        // Calculate Latest Score per Part or Total
-                        if (isActualTest(res)) {
-                            const partKey = mapToPartKey(res);
-                            const correctCount = calculateCorrectCount(res);
-
-                            // If it's a full test points (usually > 200), store as total
-                            if (correctCount > 200 && (user.stats.latestTotalScore === undefined)) {
-                                user.stats.latestTotalScore = correctCount;
-                            }
-
-                            if (user.stats.currents[partKey] === undefined) {
-                                user.stats.currents[partKey] = correctCount;
-                            }
-                        }
                     }
                 });
 
-                // Final Score Summaries & Status Counts
+                // Calculate Stats for Table
                 const studentList: any[] = [];
-                let pendingCount = 0;
-
                 usersMap.forEach(user => {
-                    if (user.status === 'pending') pendingCount++;
-                    if (user.status !== 'approved') return;
+                    let maxShadowSet = 0;
+                    let lc2Count = 0;
+                    let grammarCount = 0;
+                    let vocaCount = user.passedVocaDays ? user.passedVocaDays.length : 0;
 
-                    // Normalize Targets
-                    const pts = user.partTargets || {};
-                    const targets: Record<string, number> = {
-                        p1: pts.p1_goal || pts.p1 || 6,
-                        p2: pts.p2_goal || pts.p2 || 25,
-                        p3: pts.p3_goal || pts.p3 || 39,
-                        p4: pts.p4_goal || pts.p4 || 30,
-                        p5: pts.p5_goal || pts.p5 || 30,
-                        p6: pts.p6_goal || pts.p6 || 16,
-                        p7s: pts.p7s_goal || pts.p7_single || 29,
-                        p7d: pts.p7d_goal || pts.p7_double || 25
-                    };
-                    user.stats.targets = targets;
-
-                    // Standardize Currents (combine p7 if needed for calculation)
-                    const c = user.stats.currents;
-                    const lcCount = (c.part1_test || 0) + (c.part2_test || 0) + (c.part3_test || 0) + (c.part4_test || 0);
-                    const rcCount = (c.part5_test || 0) + (c.part6_test || 0) + (c.part7_single || 0) + (c.part7_double || 0);
-
-                    user.stats.predictedTotal = user.stats.latestTotalScore || 0;
-
-                    studentList.push(user);
-                });
-
-                // Calculate Rankings by Class
-                const classesInList = [...new Set(studentList.map(s => s.className))];
-                classesInList.forEach(cls => {
-                    const classStudents = studentList.filter(s => s.className === cls)
-                        .sort((a, b) => b.stats.predictedTotal - a.stats.predictedTotal);
-
-                    classStudents.forEach((s, idx) => {
-                        // Handle ties (optional, but straightforward)
-                        if (idx > 0 && classStudents[idx - 1].stats.predictedTotal === s.stats.predictedTotal) {
-                            s.stats.rank = classStudents[idx - 1].stats.rank;
-                        } else {
-                            s.stats.rank = idx + 1;
-                        }
-                        s.stats.classTotal = classStudents.length;
+                    user.logs.forEach((log: any) => {
+                        const unit = log.unit || "";
+                        if (unit.includes('Shadowing')) {
+                            const match = unit.match(/Set(\d+)/);
+                            if (match && parseInt(match[1]) > maxShadowSet) maxShadowSet = parseInt(match[1]);
+                        } else if (unit.includes('Part2')) lc2Count++;
+                        else if (unit.includes('Part5') || unit.includes('Unit')) grammarCount++;
                     });
+
+                    user.stats = { maxShadowSet, lc2Count, grammarCount, vocaCount };
+                    // Only approved active students for the table
+                    if (user.status === 'approved') {
+                        studentList.push(user);
+                    }
                 });
 
                 setStudents(studentList);
                 setStats({
-                    totalStudents: studentList.length,
-                    pendingStudents: pendingCount,
-                    activeAssignments: assignSnapshot.size,
+                    totalStudents: approved,
+                    pendingStudents: pending,
+                    activeAssignments: activeAssigns,
                     todayLogs: todayCount
                 });
-
-                // Calculate Initial Averages for all approved students
-                if (studentList.length > 0) {
-                    const count = studentList.length;
-                    const sums = studentList.reduce((acc, s) => {
-                        acc.targetScore += (s.targetScore || 850);
-                        acc.predictedLC += s.stats.predictedLC;
-                        acc.predictedRC += s.stats.predictedRC;
-                        acc.predictedTotal += s.stats.predictedTotal;
-
-                        // 안전하게 처리: 데이터가 없는 경우 빈 객체로 대체
-                        Object.entries(s.stats?.displayCurrents || {}).forEach(([p, val]) => {
-                            acc.parts[p] = (acc.parts[p] || 0) + (val as number);
-                        });
-                        Object.entries(s.stats?.targets || {}).forEach(([p, val]) => {
-                            acc.partTargets[p] = (acc.partTargets[p] || 0) + (val as number);
-                        });
-                        return acc;
-                    }, { targetScore: 0, predictedTotal: 0, predictedLC: 0, predictedRC: 0, parts: {}, partTargets: {} });
-
-                    const avgParts: Record<string, string> = {};
-                    Object.keys(sums.parts).forEach(p => {
-                        avgParts[p] = `${(sums.parts[p] / count).toFixed(1)} / ${(sums.partTargets[p] / count).toFixed(1)}`;
-                    });
-
-                    setStatsAverages({
-                        targetScore: Math.round(sums.targetScore / count),
-                        predictedTotal: Math.round(sums.predictedTotal / count),
-                        predictedLC: Math.round(sums.predictedLC / count),
-                        predictedRC: Math.round(sums.predictedRC / count),
-                        parts: avgParts
-                    });
-                }
 
             } catch (error) {
                 console.error("Error fetching admin data:", error);
@@ -254,7 +169,11 @@ export default function AdminDashboard() {
         const data = filteredStudents.map(s => ({
             Class: s.className || 'Unknown',
             Name: s.name || s.username || 'Unknown',
-            ID: s.userId
+            ID: s.userId,
+            "Shadowing Set": s.stats.maxShadowSet,
+            "Part2 Count": s.stats.lc2Count,
+            "Part5 Unit": s.stats.grammarCount,
+            "Voca Days": s.stats.vocaCount
         }));
         const ws = XLSX.utils.json_to_sheet(data);
         XLSX.utils.book_append_sheet(wb, ws, "Students");
@@ -268,133 +187,199 @@ export default function AdminDashboard() {
         };
     };
 
-    const filteredStudents = useMemo(() => {
-        return students
-            .filter(student => {
-                const matchesClass = filterClass === 'all' || (student.className && student.className === filterClass);
-                const nameMatch = (student.userName || student.name || '').toLowerCase().includes(searchTerm.toLowerCase());
-                const idMatch = (student.userId || '').toLowerCase().includes(searchTerm.toLowerCase());
-                const userMatch = (student.username || '').toLowerCase().includes(searchTerm.toLowerCase());
-                return matchesClass && (nameMatch || idMatch || userMatch);
-            })
-            .sort((a, b) => {
-                // First by rank (if same class), else by predictedTotal
-                return b.stats.predictedTotal - a.stats.predictedTotal;
-            });
-    }, [students, filterClass, searchTerm]);
-
-    // Move filtering logic here, but KEEP THE AVERAGES UPDATER SEPARATE AND STABLE
-    const filteredStats = useMemo(() => {
-        if (filteredStudents.length === 0) return null;
-        const count = filteredStudents.length;
-        const sums = filteredStudents.reduce((acc, s) => {
-            acc.targetScore += (s.targetScore || 850);
-            acc.predictedLC += s.stats.predictedLC;
-            acc.predictedRC += s.stats.predictedRC;
-            acc.predictedTotal += s.stats.predictedTotal;
-
-            // 안전하게 처리: 데이터가 없는 경우 빈 객체로 대체
-            Object.entries(s.stats?.displayCurrents || {}).forEach(([p, val]) => {
-                acc.parts[p] = (acc.parts[p] || 0) + (val as number);
-            });
-            Object.entries(s.stats?.targets || {}).forEach(([p, val]) => {
-                acc.partTargets[p] = (acc.partTargets[p] || 0) + (val as number);
-            });
-            return acc;
-        }, { targetScore: 0, predictedTotal: 0, predictedLC: 0, predictedRC: 0, parts: {}, partTargets: {} });
-
-        const avgParts: Record<string, string> = {};
-        Object.keys(sums.parts).forEach(p => {
-            avgParts[p] = `${(sums.parts[p] / count).toFixed(1)} / ${(sums.partTargets[p] / count).toFixed(1)}`;
-        });
-
-        return {
-            targetScore: Math.round(sums.targetScore / count),
-            predictedTotal: Math.round(sums.predictedTotal / count),
-            predictedLC: Math.round(sums.predictedLC / count),
-            predictedRC: Math.round(sums.predictedRC / count),
-            parts: avgParts
-        };
-    }, [filteredStudents]);
-
-    // Use derived state for display
-    const currentAverages = filteredStats || statsAverages;
+    const filteredStudents = students.filter(student => {
+        const matchesClass = filterClass === 'all' || (student.className && student.className === filterClass);
+        const nameMatch = (student.name || '').toLowerCase().includes(searchTerm.toLowerCase());
+        const idMatch = (student.userId || '').toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesClass && (nameMatch || idMatch);
+    });
 
     if (loading) return <div className="p-8 text-center text-slate-500 animate-pulse font-bold">데이터 분석 중...</div>;
 
     return (
         <div className="min-h-screen bg-slate-50 p-4 md:p-8 space-y-8">
-            <header className="flex flex-col gap-4">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div className="flex-1">
-                        <h1 className="text-3xl font-black text-slate-900 tracking-tight">강쌤토익 관리자</h1>
-                    </div>
-                    <div className="flex flex-wrap items-center justify-end gap-2 flex-[2]">
-                        <Link href="/"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">홈으로</Button></Link>
-                        <Link href="/admin/registrations">
-                            <Button variant="outline" size="sm" className={`font-bold h-10 px-4 ${stats.pendingStudents > 0 ? 'border-rose-500 text-rose-600 bg-rose-50' : 'border-slate-300 text-slate-700'}`}>
-                                가입 승인 {stats.pendingStudents > 0 && <span className="ml-1 px-2 py-0.5 bg-rose-500 text-white text-[11px] rounded-full">{stats.pendingStudents}</span>}
-                            </Button>
-                        </Link>
-                        <Link href="/admin/questions"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">문제 데이터 관리</Button></Link>
-                        <Link href="/admin/classes"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">반(Class) 관리</Button></Link>
-                        <Link href="/admin/schools"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">학교(Univ) 관리</Button></Link>
-                        <Link href="/admin/homework"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">숙제 결과 전체보기</Button></Link>
-                        <Link href="/admin/assignments"><Button variant="outline" size="sm" className="font-bold border-indigo-500 text-indigo-700 h-10 px-4">숙제 내기 (Assign)</Button></Link>
-                        <Link href="/admin/mock-reset"><Button variant="outline" size="sm" className="font-bold border-rose-500 text-rose-600 h-10 px-4">모의고사 RESET</Button></Link>
-                        <Link href="/admin/mock-report"><Button variant="outline" size="sm" className="font-bold border-indigo-500 text-indigo-700 h-10 px-4">모의고사 REPORT</Button></Link>
-                        <Link href="/admin/rankings"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">랭킹 관리</Button></Link>
-                        <Link href="/admin/settings"><Button variant="outline" size="sm" className="font-bold border-slate-300 text-slate-700 h-10 px-4">설정</Button></Link>
-
-                        <div className="w-[140px] ml-2">
-                            <Select value={filterClass} onValueChange={setFilterClass}>
-                                <SelectTrigger className="h-10 text-sm font-bold bg-white border-slate-400">
-                                    <SelectValue placeholder="반 선택" />
-                                </SelectTrigger>
-                                <SelectContent className="bg-white text-slate-900 border-slate-200">
-                                    <SelectItem value="all">전체보기</SelectItem>
-                                    {classes.map(cls => (
-                                        <SelectItem key={cls.name} value={cls.name}>{cls.name}</SelectItem>
-                                    ))}
-                                </SelectContent>
-                            </Select>
-                        </div>
-                        <Button onClick={handleExport} variant="outline" size="sm" className="font-bold border-emerald-500 text-emerald-700 h-10 px-4">엑셀 다운로드</Button>
+            <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h1 className="text-3xl font-black text-slate-900 tracking-tighter uppercase italic">Management <span className="text-indigo-600">Pro</span></h1>
+                    <p className="text-slate-500 text-xs font-bold mt-1">학생 진행 현황 실시간 관리</p>
+                </div>
+                <div className="flex flex-wrap items-center gap-3">
+                    <Link href="/">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-slate-600 border-slate-200 hover:bg-slate-50">
+                            <Shield className="w-4 h-4" /> 홈으로 (나가기)
+                        </Button>
+                    </Link>
+                    <Link href="/admin/registrations">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-rose-600 border-rose-200 hover:bg-rose-50">
+                            <Users className="w-4 h-4" /> 가입 승인 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/questions">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-indigo-600 border-indigo-200 hover:bg-indigo-50">
+                            <Upload className="w-4 h-4" /> 문제 데이터 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/classes">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-emerald-600 border-emerald-200 hover:bg-emerald-50">
+                            <Users className="w-4 h-4" /> 반(Class) 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/schools">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-purple-600 border-purple-200 hover:bg-purple-50">
+                            <GraduationCap className="w-4 h-4" /> 학교(Univ) 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/homework">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-indigo-600 border-indigo-200 hover:bg-indigo-50">
+                            <FileText className="w-4 h-4" /> 숙제 결과 전체보기
+                        </Button>
+                    </Link>
+                    <Link href="/admin/assignments">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-indigo-600 border-indigo-200 hover:bg-indigo-50">
+                            <PenSquare className="w-4 h-4" /> 숙제 내기 (Assign)
+                        </Button>
+                    </Link>
+                    <Link href="/admin/rankings">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-yellow-600 border-yellow-200 hover:bg-yellow-50">
+                            <Trophy className="w-4 h-4" /> 랭킹 관리
+                        </Button>
+                    </Link>
+                    <Link href="/admin/settings">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-amber-600 border-amber-200 hover:bg-amber-50">
+                            <Shield className="w-4 h-4" /> 접근 제어 설정
+                        </Button>
+                    </Link>
+                    <Button onClick={handleExport} variant="outline" className="gap-2 text-xs font-bold bg-white text-emerald-600 border-emerald-200 hover:bg-emerald-50">
+                        <Download className="w-4 h-4" /> 엑셀 다운로드
+                    </Button>
+                    {/* Dynamic Class Filter (Dropdown) */}
+                    <div className="w-[150px]">
+                        <Select value={filterClass} onValueChange={setFilterClass}>
+                            <SelectTrigger className="h-9 text-xs font-bold bg-white border-slate-200 text-slate-600 shadow-sm">
+                                <SelectValue placeholder="반 선택" />
+                            </SelectTrigger>
+                            <SelectContent className="bg-white text-slate-900 border border-slate-200 shadow-xl z-[50]">
+                                <SelectItem value="all" className="font-bold cursor-pointer hover:bg-slate-100 focus:bg-slate-100">전체보기</SelectItem>
+                                {classes.map(cls => (
+                                    <SelectItem key={cls.name} value={cls.name} className="cursor-pointer hover:bg-slate-100 focus:bg-slate-100">{cls.name}</SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
                     </div>
                 </div>
-            </header>
+            </header >
 
+            {/* Dashboard Overview Cards */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/admin/registrations" className="col-span-1">
+                    <Card className={`border-none shadow-lg transition-all hover:scale-105 cursor-pointer ${stats.pendingStudents > 0 ? 'bg-amber-500 text-white' : 'bg-white text-slate-900'}`}>
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase opacity-80 flex items-center gap-2">
+                                <Users className="w-4 h-4" /> 가입 승인 대기
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black">{stats.pendingStudents}</div>
+                            {stats.pendingStudents > 0 && <p className="text-xs font-medium mt-1 opacity-90">승인이 필요한 학생이 있습니다!</p>}
+                        </CardContent>
+                    </Card>
+                </Link>
 
-            {/* Student List Section */}
-            <div className="space-y-6">
+                <div className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 flex items-center gap-2">
+                                <Users className="w-4 h-4" /> 총 수강생
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700">{stats.totalStudents}</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400">활성 계정 수</p>
+                        </CardContent>
+                    </Card>
+                </div>
+
+                <Link href="/admin/assignments" className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900 hover:bg-indigo-50 transition-colors cursor-pointer group">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 group-hover:text-indigo-500 flex items-center gap-2">
+                                <PenSquare className="w-4 h-4" /> 배포된 과제
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700 group-hover:text-indigo-600">{stats.activeAssignments}</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400 group-hover:text-indigo-400">현재 활성화된 과제 세트</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                <Link href="/admin/mock-reset" className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900 hover:bg-rose-50 transition-colors cursor-pointer group">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 group-hover:text-rose-500 flex items-center gap-2">
+                                <Shield className="w-4 h-4" /> 모의고사 관리
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700 group-hover:text-rose-600">RESET</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400 group-hover:text-rose-400">재응시 초기화 및 기록 삭제</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                <Link href="/admin/mock-report" className="col-span-1">
+                    <Card className="border-none shadow-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors cursor-pointer group">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-indigo-200 group-hover:text-white flex items-center gap-2">
+                                <BarChart3 className="w-4 h-4" /> 모의고사 성적
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black group-hover:scale-105 transition-transform">REPORT</div>
+                            <p className="text-xs font-medium mt-1 text-indigo-200">반별 성적 일람 및 석차 확인</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                <div className="col-span-1">
+                    <Card className="border-none shadow-lg bg-white text-slate-900">
+                        <CardHeader className="pb-2">
+                            <CardTitle className="text-xs font-bold uppercase text-slate-400 flex items-center gap-2">
+                                <Trophy className="w-4 h-4" /> 학습 활동 (오늘)
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-4xl font-black text-slate-700">{stats.todayLogs}</div>
+                            <p className="text-xs font-medium mt-1 text-slate-400">오늘 완료된 학습 및 테스트</p>
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Student List */}
                 <Card className="col-span-1 lg:col-span-3 border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
-                    <CardHeader className="px-8 pt-8 flex flex-row items-center justify-between">
-                        <CardTitle className="text-lg font-black uppercase text-slate-400 tracking-tight">수강생 목록 ({filteredStudents.length}명)</CardTitle>
-                    </CardHeader>
-
-                    <CardContent className="p-0">
-                        {/* Student Search Bar */}
-                        <div className="px-8 pb-6">
-                            <div className="relative max-w-md">
-                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                                <Input
-                                    placeholder="찾으시는 학생 이름을 입력하세요..."
-                                    className="pl-12 h-12 text-base font-bold bg-slate-50 border-slate-100 rounded-2xl focus:bg-white transition-all shadow-sm"
-                                    value={searchTerm}
-                                    onChange={e => setSearchTerm(e.target.value)}
-                                />
-                            </div>
+                    <CardHeader className="flex flex-row items-center justify-between">
+                        <CardTitle className="text-sm font-black uppercase text-slate-400">Student List ({filteredStudents.length})</CardTitle>
+                        <div className="relative w-48">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                            <Input
+                                placeholder="이름 검색..."
+                                className="pl-9 h-9 text-xs font-bold bg-slate-50 border-none"
+                                value={searchTerm}
+                                onChange={e => setSearchTerm(e.target.value)}
+                            />
                         </div>
-
-                        <div className="max-h-[800px] overflow-auto border-t border-slate-50">
+                    </CardHeader>
+                    <CardContent className="p-0">
+                        <div className="max-h-[600px] overflow-auto">
                             <Table>
                                 <TableHeader className="bg-slate-50 sticky top-0">
                                     <TableRow>
-                                        <TableHead className="w-[180px] font-black text-base py-6">이름 / 반</TableHead>
-                                        <TableHead className="w-[100px] font-black text-base">석차</TableHead>
-                                        <TableHead className="w-[200px] font-black text-base">성적 (예측 / 목표)</TableHead>
-                                        <TableHead className="w-[100px] text-right font-black text-base">분석</TableHead>
+                                        <TableHead className="w-20 font-bold text-xs">Class</TableHead>
+                                        <TableHead className="font-bold text-xs">Student</TableHead>
+                                        <TableHead className="font-bold text-xs">Progress Summary</TableHead>
+                                        <TableHead className="text-right font-bold text-xs">Detail</TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
@@ -403,92 +388,55 @@ export default function AdminDashboard() {
                                         return (
                                             <Dialog key={student.userId}>
                                                 <DialogTrigger asChild>
-                                                    <TableRow className="cursor-pointer hover:bg-slate-50 h-28" onClick={() => setSelectedStudent({ ...student, stats })}>
-                                                        <TableCell className="py-6">
+                                                    <TableRow className="cursor-pointer hover:bg-slate-50" onClick={() => setSelectedStudent({ ...student, stats })}>
+                                                        <TableCell className="font-bold text-slate-500">{student.className || '-'}</TableCell>
+                                                        <TableCell>
                                                             <div className="flex flex-col">
-                                                                <span className="font-black text-slate-900 text-xl leading-tight">
-                                                                    {student.userName || student.name || student.username}
-                                                                </span>
-                                                                <div className="flex items-center gap-2 mt-1.5">
-                                                                    <span className="font-bold text-indigo-600 text-[13px] bg-indigo-50 px-1.5 rounded">{student.className || "반 미지정"}</span>
-                                                                    <span className="text-xs text-slate-400 font-medium tracking-tight">{student.userId}</span>
-                                                                </div>
+                                                                <span className="font-bold text-slate-900">{student.name || student.username}</span>
+                                                                <span className="text-[10px] text-slate-400">{student.userId}</span>
                                                             </div>
                                                         </TableCell>
                                                         <TableCell>
-                                                            <div className="flex items-baseline gap-1">
-                                                                <span className="text-2xl font-black text-rose-500">{student.stats.rank}</span>
-                                                                <span className="text-xs font-bold text-slate-400">위</span>
+                                                            <div className="flex flex-wrap gap-1">
+                                                                <span className="px-2 py-0.5 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded border border-emerald-100">VOCA {stats.vocaCount}D</span>
+                                                                {stats.maxShadowSet > 0 && <span className="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded border border-indigo-100">SHADOW {stats.maxShadowSet}</span>}
+                                                                {stats.lc2Count > 0 && <span className="px-2 py-0.5 bg-rose-50 text-rose-600 text-[10px] font-bold rounded border border-rose-100">LC2 {stats.lc2Count}</span>}
                                                             </div>
                                                         </TableCell>
-                                                        <TableCell>
-                                                            <div className="flex flex-col gap-1.5">
-                                                                <div className="flex items-baseline gap-1.5">
-                                                                    <div className="text-2xl font-black text-slate-700 group-hover:text-rose-600 uppercase">Reset</div>
-                                                                    <span className="text-sm font-bold text-slate-400">/ {student.targetScore || 850}점</span>
-                                                                </div>
-                                                                <div className="flex gap-2">
-                                                                    <span className="text-[11px] font-black text-blue-600 bg-blue-50 px-2 py-0.5 rounded">LC {student.stats.predictedLC}</span>
-                                                                    <span className="text-[11px] font-black text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">RC {student.stats.predictedRC}</span>
-                                                                </div>
+                                                        <TableCell className="text-right">
+                                                            <div className="inline-flex w-8 h-8 items-center justify-center rounded-full bg-slate-100 text-slate-400 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                                                <ListFilter className="w-4 h-4" />
                                                             </div>
-                                                        </TableCell>
-                                                        <TableCell className="text-right px-6">
-                                                            <Link href={`/admin/results/${student.userId}`} onClick={(e) => e.stopPropagation()}>
-                                                                <Button variant="outline" size="sm" className="font-bold border-slate-200 hover:bg-indigo-50 hover:text-indigo-600">상세보기</Button>
-                                                            </Link>
                                                         </TableCell>
                                                     </TableRow>
                                                 </DialogTrigger>
                                                 <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-xl border-none shadow-2xl rounded-[2.5rem] p-0 overflow-hidden text-slate-900">
                                                     <DialogHeader className="p-8 border-b bg-white/50">
                                                         <DialogTitle className="text-2xl font-black italic text-slate-900">
-                                                            {student.userName || student.name || student.username} <span className="text-slate-400 text-sm not-italic ml-2">({student.className}반 | {student.userId})</span>
+                                                            {student.name} <span className="text-slate-400 text-sm not-italic ml-2">({student.className}반 | {student.userId})</span>
                                                         </DialogTitle>
                                                     </DialogHeader>
                                                     <div className="p-8 overflow-y-auto max-h-[70vh]">
-
-                                                        <div className="flex items-center justify-between mb-4">
-                                                            <h3 className="text-sm font-black uppercase text-slate-400 italic">Level Test & Activity Logs</h3>
-                                                            <Link href={`/admin/results/${student.userId}`}>
-                                                                <Button variant="outline" size="sm" className="text-[10px] font-bold py-0.5 h-6">전체 결과 상세보기</Button>
-                                                            </Link>
+                                                        <div className="grid grid-cols-2 gap-4 mb-8">
+                                                            <ProgressCard title="Part 1" value={stats.maxShadowSet} subValue="/ 5 Sets" color="indigo" icon={Mic2} current={stats.maxShadowSet} total={5} />
+                                                            <ProgressCard title="Part 2" value={stats.lc2Count} subValue="/ 5 Sets" color="rose" icon={Headphones} current={stats.lc2Count} total={5} />
+                                                            <ProgressCard title="Part 5" value={stats.grammarCount} subValue="/ 10 Unit" color="blue" icon={PenSquare} current={stats.grammarCount} total={10} />
+                                                            <ProgressCard title="Voca" value={stats.vocaCount} subValue="/ 30 Days" color="emerald" icon={BookOpen} current={stats.vocaCount} total={30} />
                                                         </div>
+
+                                                        <h3 className="text-sm font-black uppercase text-slate-400 mb-4">Recent Activity Logs</h3>
                                                         <div className="space-y-3">
-                                                            {stats.logs && stats.logs.length > 0 ? (
-                                                                stats.logs.map((log: any, i: number) => {
-                                                                    const isLevelTest = (log.unit || '').includes('Level');
-                                                                    return (
-                                                                        <div key={i} className={cn(
-                                                                            "flex justify-between items-center p-4 rounded-2xl border transition-all",
-                                                                            isLevelTest ? "bg-indigo-50 border-indigo-200 shadow-sm" : "bg-slate-50 border-slate-100"
-                                                                        )}>
-                                                                            <div>
-                                                                                <div className="flex items-center gap-2">
-                                                                                    <p className={cn("text-xs font-black uppercase", isLevelTest ? "text-indigo-600" : "text-slate-500")}>
-                                                                                        {log.unit}
-                                                                                    </p>
-                                                                                    {isLevelTest && <Badge className="bg-indigo-600 text-[8px] h-3 px-1">LEVEL TEST</Badge>}
-                                                                                </div>
-                                                                                <p className="text-[10px] font-bold text-slate-400" suppressHydrationWarning>
-                                                                                    {log.timestamp?.toDate ? new Date(log.timestamp.toDate()).toLocaleString() : 'N/A'}
-                                                                                </p>
-                                                                            </div>
-                                                                            <div className="text-right">
-                                                                                <span className={cn("text-sm font-black", isLevelTest ? "text-indigo-700" : "text-indigo-600")}>
-                                                                                    {log.score}
-                                                                                </span>
-                                                                                <span className="text-[10px] text-slate-400">/{log.total}</span>
-                                                                                {log.type && <p className="text-[8px] font-bold text-slate-300 uppercase leading-none">{log.type}</p>}
-                                                                            </div>
-                                                                        </div>
-                                                                    );
-                                                                })
-                                                            ) : (
-                                                                <div className="text-center py-8 text-slate-400 text-xs font-bold border-2 border-dashed border-slate-100 rounded-3xl">
-                                                                    활동 내역이 없습니다.
+                                                            {stats.logs.slice(0, 5).map((log: any, i: number) => (
+                                                                <div key={i} className="flex justify-between items-center p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                                                    <div>
+                                                                        <p className="text-xs font-black text-slate-500 uppercase">{log.unit}</p>
+                                                                        <p className="text-[10px] font-bold text-slate-400" suppressHydrationWarning>{new Date(log.timestamp?.toDate()).toLocaleString()}</p>
+                                                                    </div>
+                                                                    <div className="text-right">
+                                                                        <span className="text-sm font-black text-indigo-600">{log.score}</span><span className="text-[10px] text-slate-400">/{log.total}</span>
+                                                                    </div>
                                                                 </div>
-                                                            )}
+                                                            ))}
                                                         </div>
                                                     </div>
                                                 </DialogContent>
