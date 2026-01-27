@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { db, auth } from '@/lib/firebase';
+import { signInAnonymously } from 'firebase/auth';
 import { verifyPassword } from '@/lib/password';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -71,7 +72,9 @@ export default function LoginPage() {
             }
 
             // User is approved - proceed with login
-            console.log("🎉 Login successful! Storing user data and redirecting...");
+            console.log("🎉 Login successful! Syncing with Firebase Auth...");
+            await signInAnonymously(auth);
+
             localStorage.setItem('toeic_user', JSON.stringify(userData));
             window.dispatchEvent(new Event('storage'));
 
