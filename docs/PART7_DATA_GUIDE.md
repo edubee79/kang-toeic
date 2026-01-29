@@ -29,11 +29,12 @@ import { PracticeSet } from './rc_part7_practice';
 export const rcPart7Test10: PracticeSet[] = [
     {
         id: 'test10-186-190',
-        type: 'Triple', // Double 또는 Single
+        setType: 'Triple', // Double 또는 Single
         passages: [
             {
                 id: 'p186-1',
-                type: 'SALES REPORT',
+                contextType: 'P3',
+                docType: 'SALES REPORT',
                 title: 'Report Title',
                 content: `Markdown Content...` // 여기에 마크다운 적용
             },

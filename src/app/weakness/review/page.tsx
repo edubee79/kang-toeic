@@ -81,7 +81,7 @@ export default function WeaknessReviewPage() {
                         .map(q => ({
                             text: "🔊 Listen to the question",
                             options: q.options.map((t: string, i: number) => ({ label: ['A', 'B', 'C'][i], text: t })),
-                            correctAnswer: ['A', 'B', 'C'][q.correct],
+                            correctAnswer: q.correctAnswer,
                             explanation: `Script: "${q.script}"`,
                             translation: "No translation available.",
                             tags: [q.questionType || 'Unknown'],

@@ -10,12 +10,13 @@ import { ArrowLeft, CheckCircle2, XCircle, Trophy, Clock, BookOpen, Volume2, Pla
 import { cn } from '@/lib/utils';
 
 interface Question {
-    id: number;
+    id: string;      // Standardized ID: p2-t1-q7
+    questionNo: number;
     script: string;
     options: string[];
-    correct: number;
+    correctAnswer: string; // "A", "B", "C"
     questionType?: string;
-    testId: number;  // Added for audio path
+    testId: number;
 }
 
 interface UserAnswer {
@@ -100,15 +101,15 @@ export default function Part2CustomPage() {
                     const loadedQuestions: any[] = [];
 
                     for (const uniqueId of assignmentData.questionIds) {
-                        // Parse uniqueId: P2_T1_Q7 -> testId=1, questionId=7
-                        const match = uniqueId.match(/P2_T(\d+)_Q(\d+)/);
+                        // Parse uniqueId: p2-t1-q7 or older P2_T1_Q7
+                        const match = uniqueId.match(/p2[_-]t(\d+)[_-]q(\d+)/i);
                         if (match) {
                             const testId = parseInt(match[1]);
-                            const questionId = parseInt(match[2]);
+                            const questionNo = parseInt(match[2]);
 
                             const testQuestions = part2Data[testId];
                             if (testQuestions) {
-                                const question = testQuestions.find(q => q.id === questionId);
+                                const question = testQuestions.find(q => q.questionNo === questionNo);
                                 if (question) {
                                     loadedQuestions.push({
                                         ...question,
@@ -184,7 +185,8 @@ export default function Part2CustomPage() {
 
     const handleNext = () => {
         const currentQ = questions[currentIndex];
-        const isCorrect = selectedAnswer === currentQ.correct;  // Fixed: use 'correct'
+        const choiceLetter = String.fromCharCode(65 + selectedAnswer!);
+        const isCorrect = choiceLetter === currentQ.correctAnswer;
 
         const newAnswer: UserAnswer = {
             questionId: currentQ.id,
@@ -226,7 +228,7 @@ export default function Part2CustomPage() {
                     return {
                         questionId: a.questionId,
                         userAnswer: a.userAnswer,
-                        correctAnswer: q?.correct,
+                        correctAnswer: q?.correctAnswer,
                         classification: q?.questionType || 'Unknown'  // Use questionType as classification
                     };
                 });
@@ -319,7 +321,7 @@ export default function Part2CustomPage() {
                                                 문제 {idx + 1}
                                             </span>
                                             <span className="text-xs text-slate-500">
-                                                정답: {String.fromCharCode(65 + question.correct)}
+                                                정답: {question.correctAnswer}
                                             </span>
                                         </div>
 
@@ -329,7 +331,8 @@ export default function Part2CustomPage() {
 
                                         <div className="space-y-2 mb-4">
                                             {question.options.map((option, optIdx) => {
-                                                const isCorrect = optIdx === question.correct;
+                                                const choiceLetter = String.fromCharCode(65 + optIdx);
+                                                const isCorrect = choiceLetter === question.correctAnswer;
                                                 const isUserChoice = optIdx === answer.userAnswer;
 
                                                 return (
@@ -366,7 +369,7 @@ export default function Part2CustomPage() {
 
     // Correct audio path format
     const tNum = String(currentQ.testId).padStart(2, '0');
-    const qNum = String(currentQ.id).padStart(2, '0');
+    const qNum = String(currentQ.questionNo).padStart(2, '0');
     const audioPath = `/audio/lc/part2/Test_${tNum}-${qNum}.mp3`;
 
     return (
@@ -461,7 +464,8 @@ export default function Part2CustomPage() {
                 <div className="space-y-3">
                     {currentQ.options.map((option, idx) => {
                         const isSelected = selectedAnswer === idx;
-                        const isCorrect = idx === currentQ.correct;  // Fixed: use 'correct' not 'correctAnswer'
+                        const choiceLetter = String.fromCharCode(65 + idx);
+                        const isCorrect = choiceLetter === currentQ.correctAnswer;
 
                         let btnClass = "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700";
 

@@ -10,9 +10,9 @@ export interface UserProfile {
     targetRC?: number;
     targetLC?: number;
     partTargets?: {
-        p1: number; p2: number; p3: number; p4: number;
-        p5: number; p6: number;
-        p7_single: number; p7_double: number;
+        p1_goal: number; p2_goal: number; p3_goal: number; p4_goal: number;
+        p5_goal: number; p6_goal: number;
+        p7s_goal: number; p7d_goal: number; p7f_goal?: number;
     };
 }
 
@@ -54,9 +54,9 @@ export const updateTargetDetails = async (
         targetRC: number;
         targetLC: number;
         partTargets: {
-            p1: number; p2: number; p3: number; p4: number;
-            p5: number; p6: number;
-            p7_single: number; p7_double: number;
+            p1_goal: number; p2_goal: number; p3_goal: number; p4_goal: number;
+            p5_goal: number; p6_goal: number;
+            p7s_goal: number; p7d_goal: number; p7f_goal?: number;
         }
     }
 ): Promise<void> => {

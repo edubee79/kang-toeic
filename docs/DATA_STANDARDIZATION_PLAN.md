@@ -193,9 +193,9 @@
 | **Part 4** | 지문별 | `"contextType"` | `"contextType": "D1_ads"` |
 | | 문항별 | `questionType` | `"questionType": "WHO_LOC"` |
 | **Part 5** | 문항별 | `classification` | `"classification": "n1"` (또는 `g1`, `v2` 등) |
-| **Part 6** | 지문별 | `type` | `"type": "P1_CORR"` |
-| | 문항별 | `classification` | `"classification": "P6_GRAMMAR"` |
-| **Part 7** | 지문별 | `type` | `"type": "P3_MEDI"` |
+| **Part 6** | 지문별 | `contextType` | `"contextType": "P1"` |
+| | 문항별 | `classification` | `"classification": "p6g"` |
+| **Part 7** | 지문별 | `contextType` | `"contextType": "P3"` |
 | | 문항별 | `classification` | `"classification": "P7_INFERENCE"` |
 
 ---

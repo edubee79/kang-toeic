@@ -193,7 +193,7 @@ function Part7PracticePageContent() {
 
     const calculateScore = () => {
         const allQuestions = testData.flatMap(set => set.questions);
-        return allQuestions.filter(q => answers[q.id] === q.answer).length;
+        return allQuestions.filter(q => answers[q.id] === (q.correctAnswer || q.answer)).length;
     };
 
     const finishPractice = async () => {
@@ -214,10 +214,10 @@ function Part7PracticePageContent() {
                     const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
 
                     set.questions.forEach(q => {
-                        if (answers[q.id] !== q.answer) {
+                        if (answers[q.id] !== (q.correctAnswer || q.answer)) {
                             incorrects.push({
                                 id: `P7_T${testId}_Q${q.id}`,
-                                classification: "Double/Triple",
+                                classification: q.classification || (set.setType ? `P7_${set.setType.toUpperCase()}` : 'P7_UNKNOWN'),
                                 contentType: passageTypes
                             });
                         }
@@ -485,17 +485,17 @@ function Part7PracticePageContent() {
                     <div ref={rightBottomRef} className={`${data.passages[2] ? 'h-[50%]' : 'h-full'} bg-white overflow-y-auto scroll-smooth`}>
                         <div className="pb-20 p-4">
                             <h2 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-3 border-b border-gray-100 pb-2">
-                                Questions {data.questions[0].id}-{data.questions[data.questions.length - 1].id}
+                                Questions {data.questions[0].questionNo || data.questions[0].id}-{data.questions[data.questions.length - 1].questionNo || data.questions[data.questions.length - 1].id}
                             </h2>
 
                             <div className="space-y-4">
                                 {data.questions
-                                    .filter(q => !reviewMode || answers[q.id] !== q.answer)
+                                    .filter(q => !reviewMode || answers[q.id] !== (q.correctAnswer || q.answer))
                                     .map((q, idx) => {
                                         const qNum = q.id;
                                         const myAnswer = answers[qNum];
                                         const isRevealed = reviewMode;
-                                        const isCorrect = myAnswer === q.answer;
+                                        const isCorrect = myAnswer === (q.correctAnswer || q.answer);
                                         const isActive = activeQuestionId === qNum;
 
                                         return (
@@ -512,7 +512,7 @@ function Part7PracticePageContent() {
                                             >
                                                 <div className="flex justify-between items-start mb-2">
                                                     <div className="flex gap-2">
-                                                        <span className="font-bold text-indigo-600 text-[16px]">{qNum}.</span>
+                                                        <span className="font-bold text-indigo-600 text-[16px]">{q.questionNo || qNum}.</span>
                                                         <p className="font-bold text-gray-900 text-[16px] leading-tight pt-0.5">
                                                             {q.text}
                                                         </p>
@@ -523,7 +523,7 @@ function Part7PracticePageContent() {
                                                 </div>
 
                                                 <div className="space-y-1 pl-4 mb-4">
-                                                    {q.options.map((option, optIdx) => {
+                                                    {(Array.isArray(q.options) ? q.options : Object.values(q.options)).map((option, optIdx) => {
                                                         const labelChar = String.fromCharCode(65 + optIdx);
                                                         const isSelected = myAnswer === labelChar;
 
@@ -533,7 +533,7 @@ function Part7PracticePageContent() {
                                                                 className={cn(
                                                                     "flex items-start gap-2 py-1 px-2 rounded border cursor-pointer transition text-[15px]",
                                                                     isSelected ? "border-indigo-500 bg-indigo-50 text-indigo-900 font-semibold" : "border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700",
-                                                                    isRevealed && labelChar === q.answer && "ring-1 ring-emerald-500 border-emerald-500 bg-emerald-50 text-emerald-700",
+                                                                    isRevealed && labelChar === (q.correctAnswer || q.answer) && "ring-1 ring-emerald-500 border-emerald-500 bg-emerald-50 text-emerald-700",
                                                                     isRevealed && isSelected && !isCorrect && "bg-rose-500 border-rose-500 text-white"
                                                                 )}
                                                             >
@@ -554,7 +554,7 @@ function Part7PracticePageContent() {
                                                     <div className="mt-4 pt-4 border-t border-gray-100 text-sm space-y-2 animate-in fade-in">
                                                         <div className="flex items-center gap-2 text-emerald-600">
                                                             <span className="text-gray-500 text-xs font-bold uppercase tracking-wider">Answer:</span>
-                                                            <span className="font-black">{q.answer}</span>
+                                                            <span className="font-black">{(q.correctAnswer || q.answer)}</span>
                                                         </div>
                                                         <div className="text-gray-700 text-sm leading-relaxed p-3 bg-gray-50 rounded border border-gray-200">
                                                             <span className="text-amber-600 font-black mr-2 uppercase text-[11px]">Explanation:</span>

@@ -77,10 +77,10 @@ export default function MockTest_LC_Set10({ onFinishLC }: Props) {
 
     const getSpreadQuestions = (idx: number): string[] => {
         const qIds: string[] = [];
-        if (idx === 0) [1, 2].forEach(n => qIds.push(`p1_${n}`));
-        if (idx === 1) [3, 4, 5, 6].forEach(n => qIds.push(`p1_${n}`));
+        if (idx === 0) test10Part1.slice(0, 2).forEach(q => qIds.push(q.id));
+        if (idx === 1) test10Part1.slice(2, 6).forEach(q => qIds.push(q.id));
         if (idx === 2) {
-            test10Part2.forEach(q => qIds.push(`p2_${q.id}`));
+            test10Part2.forEach(q => qIds.push(q.id));
             test10Part3.slice(0, 4).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
         }
         if (idx === 3) {
@@ -266,7 +266,7 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {[1, 2].map(num => renderP1Question(num, answers, onAnswer))}
+                            {test10Part1.slice(0, 2).map(q => renderP1Question(q, answers, onAnswer))}
                         </div>
                     </div>
                 </>
@@ -276,12 +276,12 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                 <>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {[3, 4].map(num => renderP1Question(num, answers, onAnswer))}
+                            {test10Part1.slice(2, 4).map(q => renderP1Question(q, answers, onAnswer))}
                         </div>
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {[5, 6].map(num => renderP1Question(num, answers, onAnswer))}
+                            {test10Part1.slice(4, 6).map(q => renderP1Question(q, answers, onAnswer))}
                         </div>
                     </div>
                 </>
@@ -397,21 +397,21 @@ function renderP34Page(sets: any[], answers: any, onAnswer: any) {
 }
 
 // Sub-renderers
-function renderP1Question(num: number, answers: any, onAnswer: any) {
-    const qData = test10Part1[num - 1];
+function renderP1Question(q: any, answers: any, onAnswer: any) {
+    const displayNum = q.id.includes('-q') ? q.id.split('-q')[1] : q.id;
     return (
-        <div key={num} className="w-full">
+        <div key={q.id} className="w-full">
             <div className="flex items-center justify-between mb-3 px-1">
-                <span className="text-2xl font-black text-slate-800 italic">0{num}.</span>
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Question {num}</span>
+                <span className="text-2xl font-black text-slate-800 italic">{parseInt(displayNum) < 10 ? `0${parseInt(displayNum)}` : displayNum}.</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Question {displayNum}</span>
             </div>
             <div className="p1-photo-container !h-auto !aspect-auto">
-                {qData?.image && <img src={qData.image} alt={`Q${num}`} className="w-full h-auto object-contain max-h-[400px]" />}
+                {q.image && <img src={q.image} alt={`Q${displayNum}`} className="w-full h-auto object-contain max-h-[400px]" />}
                 <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
             </div>
             <div className="flex justify-center gap-12 mt-4">
                 {['A', 'B', 'C', 'D'].map(opt => (
-                    <div key={opt} onClick={() => onAnswer(`p1_${num}`, opt)} className={`option-circle ${answers[`p1_${num}`] === opt ? 'selected' : ''}`}>
+                    <div key={opt} onClick={() => onAnswer(q.id, opt)} className={`option-circle ${answers[q.id] === opt ? 'selected' : ''}`}>
                         {opt}
                     </div>
                 ))}
@@ -423,10 +423,10 @@ function renderP1Question(num: number, answers: any, onAnswer: any) {
 function renderP2Row(q: any, answers: any, onAnswer: any) {
     return (
         <div key={q.id} className="flex items-center justify-between py-1.5 px-3 hover:bg-slate-50 rounded-lg transition-colors border-b border-slate-50 last:border-0">
-            <span className="q-num !m-0 !w-8">{q.id}.</span>
+            <span className="q-num !m-0 !w-8">{q.questionNo || (q.id.includes('-q') ? q.id.split('-q')[1] : q.id)}.</span>
             <div className="flex gap-4">
                 {['A', 'B', 'C'].map(opt => (
-                    <div key={opt} onClick={() => onAnswer(`p2_${q.id}`, opt)} className={`option-circle !w-10 !h-10 !text-[16px] ${answers[`p2_${q.id}`] === opt ? 'selected' : ''}`}>
+                    <div key={opt} onClick={() => onAnswer(q.id, opt)} className={`option-circle !w-10 !h-10 !text-[16px] ${answers[q.id] === opt ? 'selected' : ''}`}>
                         {opt}
                     </div>
                 ))}
@@ -450,11 +450,11 @@ function renderP34Set(set: any, answers: any, onAnswer: any) {
                 {set.questions.map((q: any) => (
                     <div key={q.id} className="q-item">
                         <div className="q-text !mb-2 flex items-start gap-1">
-                            <span className="text-indigo-600 shrink-0">{q.id.replace('q', '')}.</span>
+                            <span className="text-indigo-600 shrink-0">{q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}.</span>
                             <span>{q.text}</span>
                         </div>
                         <div className="flex flex-col gap-0.5 pl-4">
-                            {q.options.map((opt: any) => (
+                            {(Array.isArray(q.options) ? q.options : Object.entries(q.options || {}).map(([label, text]) => ({ label, text: text as string }))).map((opt: any) => (
                                 <div key={opt.label} onClick={() => onAnswer(q.id, opt.label)} className="flex items-center gap-3 cursor-pointer group py-0.5">
                                     <div className={`option-circle !w-8 !h-8 !text-[14px] shrink-0 ${answers[q.id] === opt.label ? 'selected' : ''}`}>
                                         {opt.label}

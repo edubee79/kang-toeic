@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { collection, query, where, getDocs, orderBy, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { getCorrectAnswersForTest9, getCorrectAnswersForTest10 } from '@/lib/mock/scoring';
+import { calculateMockScore } from '@/lib/mock/scoring';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -94,69 +94,20 @@ export default function MockReportPage() {
                     return;
                 }
 
-                let totalScore = data.totalScore || 0;
-                let totalQuestions = data.totalQuestions || 0;
-                let partScores = data.partScores || {};
+                const tId = String(data.testId);
+                const isHalf = tId.includes('half') || (data.testTitle && data.testTitle.includes('하프'));
 
-                // **[FIX] Always re-calculate if answers exist to fix key mismatch issues in stats**
-                if (data.answers) {
-                    const testIdKey = String(data.testId);
-                    const isTest9 = testIdKey.includes('9');
-                    const isHalf = testIdKey.includes('half') || (data.testTitle && data.testTitle.includes('하프'));
-                    const isFull = !isHalf;
+                // **[CENTRALIZED SCORING ENGINE]**
+                const result = calculateMockScore(tId, data.answers || {}, isHalf);
 
-                    const correctAnswers = isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10();
-
-                    let correctCount = 0;
-                    const calculatedPartStats: any = {
-                        p1: { correct: 0, total: 0 }, p2: { correct: 0, total: 0 },
-                        p3: { correct: 0, total: 0 }, p4: { correct: 0, total: 0 },
-                        p5: { correct: 0, total: 0 }, p6: { correct: 0, total: 0 },
-                        p7: { correct: 0, total: 0 }
-                    };
-
-                    Object.entries(data.answers).forEach(([qId, userAns]) => {
-                        let lookupKey = qId;
-                        // Handle numeric keys (1, 2, 7, 8 etc.) from Half Test UI
-                        if (!correctAnswers[lookupKey as keyof typeof correctAnswers] && /^\d+$/.test(qId)) {
-                            const num = parseInt(qId);
-                            if (num <= 6) lookupKey = `p1_${num}`;
-                            else if (num <= 31) lookupKey = `p2_${num}`;
-                            else lookupKey = `q${num}`;
-                        }
-
-                        const correct = correctAnswers[lookupKey as keyof typeof correctAnswers];
-                        const isCorrect = userAns === correct;
-                        const qNum = parseInt(lookupKey.replace(/[^0-9]/g, ''));
-
-                        let pKey = "";
-                        if (lookupKey.startsWith('p1_') || (qNum >= 1 && qNum <= 6)) pKey = "p1";
-                        else if (lookupKey.startsWith('p2_') || (qNum >= 7 && qNum <= 31)) pKey = "p2";
-                        else if (qNum >= 32 && qNum <= 70) pKey = "p3";
-                        else if (qNum >= 71 && qNum <= 100) pKey = "p4";
-                        else if (qNum >= 101 && qNum <= 130) pKey = "p5";
-                        else if (qNum >= 131 && qNum <= 146) pKey = "p6";
-                        else if (qNum >= 147 && qNum <= 200) pKey = "p7";
-
-                        if (pKey && calculatedPartStats[pKey]) {
-                            calculatedPartStats[pKey].total++;
-                            if (isCorrect) {
-                                calculatedPartStats[pKey].correct++;
-                                correctCount++;
-                            }
-                        }
-                    });
-
-                    // Update values for display
-                    totalScore = isFull ? (correctCount > 100 ? correctCount : correctCount * 5) : correctCount * 10;
-                    totalQuestions = Object.values(calculatedPartStats).reduce((acc: number, curr: any) => acc + curr.total, 0);
-                    partScores = calculatedPartStats;
-                }
+                let totalScore = result.totalScore;
+                let totalQuestions = result.totalQuestions;
+                let partScores = result.partScores;
 
                 results.push({
                     id: doc.id,
                     userId: data.userId,
-                    userName: data.userName || student?.userName || 'Unknown',
+                    userName: data.userName || data.studentName || student?.userName || 'Unknown',
                     className: student?.className || '-',
                     testTitle: data.testTitle || `Test ${data.testId}`,
                     totalScore: totalScore,

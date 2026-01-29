@@ -4,7 +4,7 @@
 import React, { useState, useRef } from 'react';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { part3Data } from '@/data/part3';
+import { part3RealTests } from '@/data/part3';
 
 export default function Part3DetailPage() {
     const [isMounted, setIsMounted] = React.useState(false);
@@ -17,7 +17,7 @@ export default function Part3DetailPage() {
     const router = useRouter();
     const setId = params.setId as string;
 
-    const set = part3Data.find(s => s.setId === setId);
+    const set = part3RealTests.find(s => s.setId === setId);
 
     if (!isMounted) return null;
 
@@ -68,7 +68,7 @@ export default function Part3DetailPage() {
                         <div key={q.id} className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: `${index * 100}ms` }}>
                             <div className="flex gap-4">
                                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">
-                                    {q.id.replace('q', '')}
+                                    {q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}
                                 </div>
                                 <div className="flex-1 space-y-4">
                                     <h3 className="text-lg font-medium text-gray-900 leading-snug">
@@ -76,19 +76,19 @@ export default function Part3DetailPage() {
                                     </h3>
 
                                     <div className="grid grid-cols-1 gap-3">
-                                        {q.options.map((opt) => {
-                                            const isSelected = selectedAnswers[q.id] === opt.label;
+                                        {Object.entries(q.options).map(([label, text]) => {
+                                            const isSelected = selectedAnswers[q.id] === label;
                                             return (
                                                 <button
-                                                    key={opt.label}
-                                                    onClick={() => handleSelect(q.id, opt.label)}
+                                                    key={label}
+                                                    onClick={() => handleSelect(q.id, label)}
                                                     className={`text-left px-4 py-3 rounded-xl transition-all duration-200 border-2 ${isSelected
                                                         ? 'border-blue-500 bg-blue-50 text-blue-700'
                                                         : 'border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700'
                                                         }`}
                                                 >
-                                                    <span className="font-bold mr-2">{opt.label}.</span>
-                                                    {opt.text}
+                                                    <span className="font-bold mr-2">{label}.</span>
+                                                    {text}
                                                 </button>
                                             );
                                         })}

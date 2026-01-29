@@ -204,7 +204,7 @@ function ShadowingStep({
                         <span className="text-[10px] bg-indigo-500 text-white px-2 py-0.5 rounded-full not-italic">Part 2</span>
                     </h2>
                     <p className="text-indigo-500 text-[10px] font-black uppercase tracking-widest mt-1">
-                        Question {data.id} - {getStepLabel()}
+                        Question {data.questionNo} - {getStepLabel()}
                     </p>
                 </div>
                 <div className="text-right">

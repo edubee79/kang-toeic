@@ -1071,16 +1071,21 @@ function renderPart5Question(q: any, answers: any, onAnswer: any) {
                 <div className="text-[13px] font-bold text-slate-800 leading-snug pt-0.5">{q.text}</div>
             </div>
             <div className="grid grid-cols-1 gap-0 ml-6">
-                {q.options.map((opt: any) => {
+                {(Array.isArray(q.options) ? q.options : Object.entries(q.options)).map((opt: any) => {
                     let label, text;
-                    if (typeof opt === 'string') {
-                        const match = opt.match(/\(([ABCD])\) (.+)/);
-                        label = match ? match[1] : opt.charAt(1);
-                        text = match ? match[2] : opt; // Or clean text
-                        if (!text) text = opt;
+                    if (Array.isArray(q.options)) {
+                        if (typeof opt === 'string') {
+                            const match = opt.match(/\(([ABCD])\) (.+)/);
+                            label = match ? match[1] : opt.charAt(1);
+                            text = match ? match[2] : opt;
+                        } else {
+                            label = opt.label;
+                            text = opt.text;
+                        }
                     } else {
-                        label = opt.label;
-                        text = opt.text;
+                        // Object.entries result: [label, text]
+                        label = opt[0];
+                        text = opt[1];
                     }
 
                     const isSelected = answers[q.id] === label;
@@ -1097,26 +1102,24 @@ function renderPart5Question(q: any, answers: any, onAnswer: any) {
                         >
                             <div className={`
                                 shrink-0 w-4 h-4 rounded-full border flex items-center justify-center text-[8px] font-black
-                                ${isSelected
-                                    ? 'bg-indigo-600 text-white border-indigo-600'
-                                    : 'bg-white text-slate-400 border-slate-200'}
+                                ${isSelected ? 'bg-indigo-600 border-indigo-600 text-white' : 'bg-white border-slate-300 text-slate-400 group-hover:border-indigo-400'}
                             `}>
                                 {label}
                             </div>
-                            <span className={`text-[13px] font-semibold ${isSelected ? 'text-indigo-900' : 'text-slate-600'}`}>{text}</span>
                             <input
                                 type="radio"
-                                name={String(q.id)}
+                                name={`q${q.id}`}
                                 value={label}
                                 checked={isSelected}
                                 onChange={() => onAnswer(String(q.id), label)}
                                 className="hidden"
                             />
+                            <div className={`text-[11px] ${isSelected ? 'text-indigo-900 font-bold' : 'text-slate-600 font-medium'}`}>{text}</div>
                         </label>
                     );
                 })}
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

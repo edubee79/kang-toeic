@@ -51,9 +51,21 @@ export default function MockTestResult() {
                 Object.entries(correctAnswers).forEach(([qId, correct]) => {
                     const userAns = data.answers[qId];
                     if (userAns === correct) {
-                        const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
-                        if (qNum <= 100) lcCorrect++;
-                        else rcCorrect++;
+                        // Standardized ID check (p1, p2, p3, p4 are LC)
+                        const isLC = qId.startsWith('p1') || qId.startsWith('p2') ||
+                            qId.startsWith('p3') || qId.startsWith('p4');
+
+                        if (isLC) {
+                            lcCorrect++;
+                        } else if (qId.startsWith('p5') || qId.startsWith('p6') || qId.startsWith('p7') || qId.startsWith('q')) {
+                            // q is for Part 5 old style
+                            rcCorrect++;
+                        } else {
+                            // Fallback for numeric or other formats
+                            const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+                            if (qNum <= 100) lcCorrect++;
+                            else rcCorrect++;
+                        }
                     }
                 });
 

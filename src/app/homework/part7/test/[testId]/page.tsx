@@ -144,7 +144,7 @@ function Part7TestRunnerContent() {
     };
 
     const getScore = () => {
-        return allQuestions.filter(q => selectedAnswers[q.id] === q.correctAnswer).length;
+        return allQuestions.filter(q => selectedAnswers[q.id] === (q.correctAnswer || (q as any).answer)).length;
     };
 
     const finishTest = async () => {
@@ -172,7 +172,8 @@ function Part7TestRunnerContent() {
                     const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
 
                     set.questions.forEach(q => {
-                        if (selectedAnswers[q.id] !== q.correctAnswer) {
+                        const correctAns = q.correctAnswer || (q as any).answer;
+                        if (selectedAnswers[q.id] !== correctAns) {
                             incorrects.push({
                                 id: `P7_T${testId}_Q${q.id}`,
                                 classification: q.classification || 'Unknown',
@@ -263,7 +264,7 @@ function Part7TestRunnerContent() {
     }
 
     const filteredSets = reviewMode
-        ? testSet.sets.filter(s => s.questions.some(q => selectedAnswers[q.id] !== q.correctAnswer))
+        ? testSet.sets.filter(s => s.questions.some(q => selectedAnswers[q.id] !== (q.correctAnswer || (q as any).answer)))
         : testSet.sets;
 
     const currentSet = filteredSets[currentSetIndex];
@@ -359,7 +360,7 @@ function Part7TestRunnerContent() {
                         <div ref={passageContainerRef} className="h-[70%] lg:h-fit lg:col-span-7 lg:sticky lg:top-0 space-y-2 lg:space-y-8 overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none">
                             {/* Question Range Header */}
                             <div className="text-slate-400 text-xs lg:text-sm font-medium px-2 lg:px-0 pt-2 lg:pt-0">
-                                Questions {currentSet.questionRange} refer to the following {currentSet.passages.length > 1 ? `${currentSet.passages.length} passages` : currentSet.passages[0].type.toLowerCase().replace('_', ' ')}.
+                                Questions {currentSet.questionRange} refer to the following {currentSet.passages.length > 1 ? `${currentSet.passages.length} passages` : (currentSet.passages[0].docType || 'passage').toLowerCase().replace('_', ' ')}.
                             </div>
 
                             {currentSet.passages.map((passage, pIdx) => (
@@ -402,10 +403,10 @@ function Part7TestRunnerContent() {
                             )}>
                                 <div className="space-y-0.5 lg:space-y-3 p-1 lg:p-0 pb-0">
                                     {currentSet.questions
-                                        .filter(q => !reviewMode || selectedAnswers[q.id] !== q.correctAnswer)
+                                        .filter(q => !reviewMode || selectedAnswers[q.id] !== (q.correctAnswer || (q as any).answer))
                                         .map((q) => {
                                             const isRevealed = reviewMode || (isDrillMode && !!selectedAnswers[q.id]);
-                                            const isCorrect = selectedAnswers[q.id] === q.correctAnswer;
+                                            const isCorrect = selectedAnswers[q.id] === (q.correctAnswer || (q as any).answer);
 
                                             return (
                                                 <div
@@ -424,7 +425,7 @@ function Part7TestRunnerContent() {
                                                                 "inline-flex items-center justify-center font-black text-[11px] lg:text-xs mr-1",
                                                                 "text-slate-500"
                                                             )}>
-                                                                {q.id}.
+                                                                {q.questionNo || q.id}.
                                                             </span>
                                                             {q.text}
                                                         </p>
@@ -433,7 +434,7 @@ function Part7TestRunnerContent() {
                                                         )}
                                                     </div>
                                                     <div className="grid gap-0.5 lg:gap-1.5">
-                                                        {q.options.map((opt) => (
+                                                        {(Array.isArray(q.options) ? q.options : Object.entries(q.options).map(([label, text]) => ({ label, text }))).map((opt) => (
                                                             <button
                                                                 key={opt.label}
                                                                 onClick={(e) => {
@@ -446,8 +447,8 @@ function Part7TestRunnerContent() {
                                                                     selectedAnswers[q.id] === opt.label
                                                                         ? "bg-indigo-600 border-indigo-500 text-white font-bold"
                                                                         : "bg-slate-800/50 border-slate-700/50 text-slate-300 font-medium hover:bg-slate-800 hover:text-white",
-                                                                    isRevealed && opt.label === q.correctAnswer && "ring-1 lg:ring-2 ring-emerald-500 border-emerald-500 bg-emerald-500/20 text-emerald-400",
-                                                                    isRevealed && selectedAnswers[q.id] === opt.label && selectedAnswers[q.id] !== q.correctAnswer && "bg-rose-500 border-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.3)]"
+                                                                    isRevealed && opt.label === (q.correctAnswer || (q as any).answer) && "ring-1 lg:ring-2 ring-emerald-500 border-emerald-500 bg-emerald-500/20 text-emerald-400",
+                                                                    isRevealed && selectedAnswers[q.id] === opt.label && selectedAnswers[q.id] !== (q.correctAnswer || (q as any).answer) && "bg-rose-500 border-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.3)]"
                                                                 )}
                                                             >
                                                                 <span className={cn(
@@ -463,7 +464,7 @@ function Part7TestRunnerContent() {
                                                         <div className="mt-1 lg:mt-4 pt-1 lg:pt-4 border-t border-slate-800/50 text-[9px] lg:text-sm space-y-0.5 lg:space-y-2 animate-in fade-in">
                                                             <div className="flex flex-wrap items-center gap-1.5 lg:gap-2 mb-0.5 lg:mb-2 text-emerald-400">
                                                                 <span className="text-slate-500 text-[10px] lg:text-xs font-bold uppercase tracking-wider">Answer:</span>
-                                                                <span className="font-black">{q.correctAnswer}</span>
+                                                                <span className="font-black">{(q.correctAnswer || (q as any).answer)}</span>
                                                                 <div className="ml-auto">
                                                                     <span className="inline-flex items-center gap-0.5 lg:gap-1.5 px-1 lg:px-2.5 py-0.5 lg:py-1 rounded-sm lg:rounded-md bg-slate-800 text-[8px] lg:text-xs font-medium text-slate-300 border border-slate-700">
                                                                         <Tag className="w-2 h-2 lg:w-3 lg:h-3" />

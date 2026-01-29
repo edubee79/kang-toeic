@@ -2,7 +2,8 @@ import { part1Data } from './part1_mock'; // Test 9 Part 1 (Placeholder)
 // import { part5Questions } from './rc_part5'; // Old Part 5 Data (Deprecated for Test 9)
 // import { part6Sets } from './mock/part6_data'; // Test 9 Part 6
 import { rcPart7Test9 as part7Data } from './rc_part7_test9'; // Test 9 Part 7
-import { part3Data } from './part3'; // Placeholder for LC
+import { part3RealTests } from './part3';
+// Placeholder for LC
 import { part4Data } from './part4';
 import { part5TestData } from './toeic/reading/part5/tests'; // Import the Real Test Data
 import { part6TestData } from './toeic/reading/part6/tests'; // Import Real Part 6 Data
@@ -22,9 +23,9 @@ export interface MockTest {
 // Transform Part 5 Test 9 Data from the "Real Test" source
 const realTest9 = part5TestData.find(t => t.testId === 9);
 const test9Part5Data = realTest9 ? realTest9.questions.map(q => ({
-    id: parseInt(q.id.replace('q', '')), // "q101" -> 101
+    id: q.questionNo, // Use direct questionNo from source data
     text: q.text,
-    options: q.options.map(o => `(${o.label}) ${o.text}`) // Transform options to strings: "(A) value"
+    options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`) // Transform options to strings: "(A) value"
 })) : [];
 
 // Transform Part 6 Test 9 Data
@@ -62,7 +63,7 @@ export const mockTest9: MockTest = {
         },
         {
             partId: 3,
-            data: part3Data.filter(p => p.testId === 9)
+            data: part3RealTests.filter(p => p.testId === 9)
         },
         {
             partId: 4,
@@ -86,9 +87,9 @@ export const mockTest9: MockTest = {
 // Transform Part 5 Test 10 Data
 const realTest10 = part5TestData.find(t => t.testId === 10);
 const test10Part5Data = realTest10 ? realTest10.questions.map(q => ({
-    id: parseInt(q.id.replace('q', '')),
+    id: q.questionNo,
     text: q.text,
-    options: q.options.map(o => `(${o.label}) ${o.text}`)
+    options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
 })) : [];
 
 // Transform Part 6 Test 10 Data
@@ -117,7 +118,7 @@ export const mockTest10: MockTest = {
         },
         {
             partId: 3,
-            data: part3Data.filter(p => p.testId === 10)
+            data: part3RealTests.filter(p => p.testId === 10)
         },
         {
             partId: 4,

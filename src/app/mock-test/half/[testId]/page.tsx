@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp, updateDoc, doc, writeBatch } from 'firebase/firestore';
-import { getCorrectAnswersForTest9, getCorrectAnswersForTest10 } from '@/lib/mock/scoring';
+import { calculateMockScore } from '@/lib/mock/scoring';
 
 // 고품질 UI 컴포넌트 임포트
 import HalfTest_LC_Set9 from '@/components/exam/mock/HalfTest_LC_Set9';
@@ -75,55 +75,21 @@ export default function HalfTestPage() {
             const user = userStr ? JSON.parse(userStr) : null;
             const userId = user?.userId || user?.uid || 'Unknown';
 
-            // 1. Scoring Logic Integration
-            const isTest9 = testId.includes('9');
-            const correctAnswers = isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10();
+            // **[CENTRALIZED SCORING ENGINE]**
+            const testIdFull = `half_${testId}`;
+            const result = calculateMockScore(testIdFull, allAnswers, true);
 
-            let totalCorrect = 0;
-            const partStats: Record<string, { correct: number, total: number }> = {
-                p1: { correct: 0, total: 0 },
-                p2: { correct: 0, total: 0 },
-                p3: { correct: 0, total: 0 },
-                p4: { correct: 0, total: 0 },
-                p5: { correct: 0, total: 0 },
-                p6: { correct: 0, total: 0 },
-                p7: { correct: 0, total: 0 },
-                p7s: { correct: 0, total: 0 },
-                p7m: { correct: 0, total: 0 },
-            };
-
-            Object.entries(allAnswers).forEach(([qId, userAns]) => {
-                const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
-                const isCorrect = userAns === correctAnswers[qId];
-
-                // Determine Part
-                let pKey = "";
-                if (qNum <= 6) pKey = "p1";
-                else if (qNum <= 31) pKey = "p2";
-                else if (qNum <= 70) pKey = "p3";
-                else if (qNum <= 100) pKey = "p4";
-                else if (qNum <= 130) pKey = "p5";
-                else if (qNum <= 146) pKey = "p6";
-                else if (qNum <= 175) pKey = "p7s";
-                else pKey = "p7m";
-
-                if (partStats[pKey]) {
-                    partStats[pKey].total++;
-                    if (isCorrect) {
-                        partStats[pKey].correct++;
-                        totalCorrect++;
-                    }
-                }
-            });
+            const totalCorrect = result.correctCount;
+            const totalScore = result.totalScore;
+            const partStats = result.partScores;
 
             // P7 Unified for legacy dashboard compatibility
-            partStats.p7 = {
-                correct: partStats.p7s.correct + partStats.p7m.correct,
-                total: partStats.p7s.total + partStats.p7m.total
+            const p7Combined = {
+                correct: (partStats.p7?.correct || 0),
+                total: (partStats.p7?.total || 0)
             };
 
-            const totalQuestions = Object.values(partStats).reduce((acc, curr) => acc + curr.total, 0) - partStats.p7.total; // Avoid double counting p7
-            const totalScore = totalCorrect * 10; // Simple scaling for Half Test visualization
+            const totalQuestions = result.totalQuestions;
 
             // 2. Batch Update (MockTestAttempts & Manager_Results)
             const batch = writeBatch(db);
@@ -134,7 +100,7 @@ export default function HalfTestPage() {
                 answers: allAnswers,
                 timeLogs: timeLogs,
                 totalScore: totalScore,
-                totalQuestions: totalCorrect + (totalQuestions - totalCorrect), // Total attempted/total Qs
+                totalQuestions: totalQuestions,
                 partScores: partStats,
                 completedAt: serverTimestamp()
             });

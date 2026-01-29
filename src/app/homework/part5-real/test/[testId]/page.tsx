@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { part5TestData } from '@/data/toeic/reading/part5/tests';
-import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
-import { cn } from "@/lib/utils";
+import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
+import { cn, normalizeOptions } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag } from "lucide-react";
 
 function Part5TestRunnerContent() {
@@ -343,7 +343,7 @@ function Part5TestRunnerContent() {
                                         ? (isCorrect ? "bg-emerald-500 text-slate-900 border-emerald-500" : "bg-rose-500 text-white border-rose-500")
                                         : (isSelected ? "bg-amber-500 text-slate-900 border-amber-500" : "bg-slate-800 text-slate-500 border-slate-700")
                                 )}>
-                                    {q.id}
+                                    {q.questionNo || q.id}
                                 </div>
 
                                 <div className="flex-1 space-y-4 md:space-y-6">
@@ -362,7 +362,7 @@ function Part5TestRunnerContent() {
                                                             : "border-slate-600 text-transparent"
                                                     )}>
                                                         {selectedAnswers[q.id]
-                                                            ? q.options.find(o => o.label === selectedAnswers[q.id])?.text
+                                                            ? normalizeOptions(q.options).find(o => o.label === selectedAnswers[q.id])?.text
                                                             : ""
                                                         }
                                                     </span>
@@ -372,7 +372,7 @@ function Part5TestRunnerContent() {
                                     </p>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
-                                        {q.options.map((opt) => (
+                                        {normalizeOptions(q.options).map((opt) => (
                                             <button
                                                 key={opt.label}
                                                 onClick={() => handleSelect(q.id, opt.label)}
@@ -417,7 +417,7 @@ function Part5TestRunnerContent() {
                                                 <div className="ml-auto flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-800 border border-slate-700">
                                                     <Tag className="w-3 h-3 text-slate-500" />
                                                     <span className="text-[10px] text-slate-400 font-bold">
-                                                        {getClassificationLabel(q.classification)}
+                                                        {getToeicTagLabel(q.classification)}
                                                     </span>
                                                 </div>
 

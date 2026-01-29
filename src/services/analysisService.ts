@@ -1,6 +1,6 @@
 import { collection, query, where, orderBy, limit, getDocs, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
+import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
 import { isActualTest, mapToPartKey } from '@/lib/filters/actualTestFilter';
 
 export interface AnalysisResult {
@@ -93,7 +93,7 @@ export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResul
             if (totalWrong > 0) {
                 const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
                 const [topCode, topCount] = sortedTags[0];
-                const label = getClassificationLabel(topCode) || topCode;
+                const label = getToeicTagLabel(topCode) || topCode;
                 const percentage = Math.round((topCount / totalWrong) * 100);
 
                 let advice = `P5 ${label.replace('문법: ', '').replace('어휘: ', '')} 유형이 누적 오답 1위입니다.`;
@@ -140,9 +140,52 @@ export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResul
             lcMessage = "안정적인 습관을 위해 주당 3회 이상의 실전 풀기가 필요합니다.";
         }
 
-        // 5. Voca Status (From profile and results)
-        // Here we can use profile data if available
+        // 5. Strategic Voca Analysis (Drills + All RC Vocab Errors) - INDEPENDENT SECTION
         const vocaPassed = userData.passedVocaDays?.length || 0;
+
+        let vocabErrors = 0;
+        try {
+            // Fetch all for vocab without sorting to avoid index requirements
+            const qVoca = query(collection(db, "Manager_Results"), where("studentId", "==", userId));
+            const snapVoca = await getDocs(qVoca);
+
+            snapVoca.docs.forEach(docSnap => {
+                const r = docSnap.data();
+                if (!isActualTest(r)) return;
+
+                if (r.incorrectQuestions && Array.isArray(r.incorrectQuestions)) {
+                    r.incorrectQuestions.forEach((q: { classification: string }) => {
+                        const code = q.classification || '';
+                        // Strategic check for all RC Vocab tags
+                        const isVoc = code.startsWith('voc') || code === 'p6v' || code === 'P7_VOCABULARY' || code.includes('VOCAB');
+                        if (isVoc) vocabErrors++;
+                    });
+                }
+            });
+        } catch (e) {
+            console.error("Voca analysis background fetch failed", e);
+        }
+
+        let vocaMessage = "";
+        if (vocaPassed === 0) {
+            if (vocabErrors > 0) {
+                vocaMessage = `전담 Voca 학습이 없는 상태에서 실전 어휘 오답(${vocabErrors}회)이 확인되었습니다. 점수 정체를 막으려면 기초 어휘부터 정리가 시급합니다.`;
+            } else {
+                vocaMessage = "기본 어휘력을 점검할 데이터가 부족합니다. 안정적인 점수 확보를 위해 Voca 학습을 시작하세요.";
+            }
+        } else if (vocaPassed < 30) {
+            if (vocabErrors > 0) {
+                vocaMessage = `보카 ${vocaPassed}일차 진행 중이나, 실전에서 어휘 오답(${vocabErrors}회)이 계속되고 있습니다. 단어의 맥락과 예문을 더 꼼꼼히 체크하세요.`;
+            } else {
+                vocaMessage = `${vocaPassed}일차 학습으로 어휘 실력이 탄탄해지고 있습니다. 완강까지 이 흐름을 유지하세요!`;
+            }
+        } else {
+            if (vocabErrors > 0) {
+                vocaMessage = "30일 과정 완료 후에도 고난도 어휘 오답이 확인됩니다. 오답 노트를 통해 혼동 어휘의 미묘한 쓰임새 차이를 정복하세요.";
+            } else {
+                vocaMessage = "우수한 어휘력을 보유하고 있습니다. 독해 지문 속의 생소한 표현들 위주로 확장 학습을 권장합니다.";
+            }
+        }
 
         return {
             topWeakness,
@@ -153,8 +196,8 @@ export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResul
             },
             vocaStatus: {
                 count: vocaPassed,
-                target: 30,
-                message: `${vocaPassed}일차 공부 중입니다.`
+                target: 15,
+                message: vocaMessage
             }
         };
 
@@ -163,7 +206,7 @@ export const getWeaknessAnalysis = async (userId: string): Promise<AnalysisResul
         return {
             topWeakness: null,
             lcHabit: { status: 'Fair', message: "분석 중 오류가 발생했습니다.", count: 0 },
-            vocaStatus: { count: 0, target: 30, message: "" }
+            vocaStatus: { count: 0, target: 15, message: "" }
         };
     }
 };

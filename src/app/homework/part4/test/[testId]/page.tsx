@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { part4Data, Part4Set, Part4Question } from '@/data/part4';
-import { cn } from "@/lib/utils";
+import { cn, normalizeOptions } from "@/lib/utils";
 import { Headphones, PlayCircle, Activity, Trophy, RotateCcw } from "lucide-react";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
@@ -582,7 +582,7 @@ export default function Part4TestRunnerPage() {
                                         </div>
 
                                         <div className="grid grid-cols-1 gap-2.5">
-                                            {q.options.map((opt) => {
+                                            {normalizeOptions(q.options).map((opt: any) => {
                                                 const isSelected = selectedAnswers[q.id] === opt.label;
                                                 const isCorrect = revealedQuestions.has(q.id) && opt.label === q.correctAnswer;
                                                 const isIncorrect = revealedQuestions.has(q.id) && isSelected && opt.label !== q.correctAnswer;

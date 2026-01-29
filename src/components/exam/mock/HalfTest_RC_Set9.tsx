@@ -364,9 +364,10 @@ function renderP7DoubleTripleUI(set: any, answers: any, onAnswer: any) {
 }
 
 function renderP5Question(q: any, answers: any, onAnswer: any) {
+    const displayNum = String(q.id).includes('-q') ? q.id.split('-q')[1] : String(q.id).replace(/[^\d]/g, '');
     return (
         <div key={q.id} className="q-block">
-            <div className="q-meta"><span className="q-id-badge">{q.id}</span></div>
+            <div className="q-meta"><span className="q-id-badge">{displayNum}</span></div>
             <p className="text-[16px] font-bold text-black mb-1.5 leading-relaxed">{q.text}</p>
             <div className="space-y-0.5 text-slate-800">
                 {q.options.map((opt: any) => {
@@ -386,9 +387,10 @@ function renderP5Question(q: any, answers: any, onAnswer: any) {
 }
 
 function renderP7Question(q: any, answers: any, onAnswer: any) {
+    const displayNum = String(q.id).includes('-q') ? q.id.split('-q')[1] : String(q.id).replace(/[^\d]/g, '');
     return (
         <div key={q.id} className="q-block border-b border-slate-50 pb-3">
-            <div className="flex items-start gap-2 mb-1.5"><span className="q-id-badge shrink-0">{q.id}</span><p className="text-[16px] font-bold text-black leading-snug">{q.text}</p></div>
+            <div className="flex items-start gap-2 mb-1.5"><span className="q-id-badge shrink-0">{displayNum}</span><p className="text-[16px] font-bold text-black leading-snug">{q.text}</p></div>
             <div className="space-y-0.5 pl-8 text-slate-800">
                 {q.options.map((opt: any) => {
                     let label = "", text = "";

@@ -13,14 +13,15 @@ import { Zap, Lock, Unlock, AlertCircle, TrendingUp } from 'lucide-react';
 interface TargetSettingSectionProps {
     user: UserProfile;
     currentStats: {
-        p1: number;
-        p2: number;
-        p3: number;
-        p4: number;
-        p5: number;
-        p6: number;
-        p7_single: number;
-        p7_double: number;
+        p1_cur: number;
+        p2_cur: number;
+        p3_cur: number;
+        p4_cur: number;
+        p5_cur: number;
+        p6_cur: number;
+        p7s_cur: number;
+        p7d_cur: number;
+        p7f_cur?: number;
     };
     onUpdate: (newScore?: number) => void;
 }
@@ -35,40 +36,37 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
     const [targetRC, setTargetRC] = useState(user.targetRC || 400);
 
     // 3. Part Targets State
-    const [partTargets, setPartTargets] = useState(user.partTargets || {
-        p1: 0, p2: 0, p3: 0, p4: 0,
-        p5: 0, p6: 0, p7_single: 0, p7_double: 0
+    const [partTargets, setPartTargets] = useState<UserProfile['partTargets']>({
+        p1_goal: 0, p2_goal: 0, p3_goal: 0, p4_goal: 0,
+        p5_goal: 0, p6_goal: 0,
+        p7s_goal: 0, p7d_goal: 0, p7f_goal: 0
     });
 
     // Validates and Syncs state when user prop updates
-    useEffect(() => {
-        if (user) {
-            setTotalScore(user.targetScore || 850);
-            setTargetLC(user.targetLC || 450);
-            setTargetRC(user.targetRC || 400);
+    if (user) {
+        setTotalScore(user.targetScore || 850);
+        setTargetLC(user.targetLC || 450);
+        setTargetRC(user.targetRC || 400);
 
-            // Legacy Migration Support
-            const rawTargets = user.partTargets as any;
-            if (rawTargets) {
-                if (rawTargets.p7 !== undefined && rawTargets.p7_single === undefined) {
-                    // Split old p7 roughly half-half if migrating (or just 0)
-                    // Better to just set 0 and let user fix
-                    setPartTargets({
-                        p1: rawTargets.p1, p2: rawTargets.p2, p3: rawTargets.p3, p4: rawTargets.p4,
-                        p5: rawTargets.p5, p6: rawTargets.p6,
-                        p7_single: 0, p7_double: 0
-                    });
-                } else {
-                    setPartTargets(user.partTargets!);
-                }
-            }
-        }
-    }, [user]);
+        // ✅ Enhanced Logic: Data Migration to p[N]_goal
+        const raw = user.partTargets as any || {};
+        setPartTargets({
+            p1_goal: raw.p1_goal ?? raw.p1 ?? 0,
+            p2_goal: raw.p2_goal ?? raw.p2 ?? 0,
+            p3_goal: raw.p3_goal ?? raw.p3 ?? 0,
+            p4_goal: raw.p4_goal ?? raw.p4 ?? 0,
+            p5_goal: raw.p5_goal ?? raw.p5 ?? 0,
+            p6_goal: raw.p6_goal ?? raw.p6 ?? 0,
+            p7s_goal: raw.p7s_goal ?? raw.p7_single ?? raw.p7s ?? 0,
+            p7d_goal: raw.p7d_goal ?? raw.p7_double ?? raw.p7d ?? 0,
+            p7f_goal: raw.p7f_goal ?? raw.p7_test ?? 0
+        });
+    }
 
     // Max questions per part
-    const MAX_Q = {
-        p1: 6, p2: 25, p3: 39, p4: 30,
-        p5: 30, p6: 16, p7_single: 29, p7_double: 25
+    const MAX_Q: Record<string, number> = {
+        p1_goal: 6, p2_goal: 25, p3_goal: 39, p4_goal: 30,
+        p5_goal: 30, p6_goal: 16, p7s_goal: 29, p7d_goal: 25, p7f_goal: 54
     };
 
     // Determine Required Counts based on Score (User Heuristic)
@@ -78,8 +76,8 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
     const requiredRC = Math.min(100, Math.ceil(targetRC / 5) + 4); // +4 Questions buffer for RC difficulty
 
     // Calculate current sums
-    const currentLCSum = partTargets.p1 + partTargets.p2 + partTargets.p3 + partTargets.p4;
-    const currentRCSum = partTargets.p5 + partTargets.p6 + partTargets.p7_single + partTargets.p7_double;
+    const currentLCSum = (partTargets?.p1_goal || 0) + (partTargets?.p2_goal || 0) + (partTargets?.p3_goal || 0) + (partTargets?.p4_goal || 0);
+    const currentRCSum = (partTargets?.p5_goal || 0) + (partTargets?.p6_goal || 0) + (partTargets?.p7s_goal || 0) + (partTargets?.p7d_goal || 0);
 
     // Remaining Points
     const remainingLC = requiredLC - currentLCSum;
@@ -177,9 +175,15 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         const rcResult = distribute(reqRC, rcParts);
 
         setPartTargets({
-            p1: lcResult.p1 || 0, p2: lcResult.p2 || 0, p3: lcResult.p3 || 0, p4: lcResult.p4 || 0,
-            p5: rcResult.p5 || 0, p6: rcResult.p6 || 0,
-            p7_single: rcResult.p7_single || 0, p7_double: rcResult.p7_double || 0
+            p1_goal: lcResult.p1 || 0,
+            p2_goal: lcResult.p2 || 0,
+            p3_goal: lcResult.p3 || 0,
+            p4_goal: lcResult.p4 || 0,
+            p5_goal: rcResult.p5 || 0,
+            p6_goal: rcResult.p6 || 0,
+            p7s_goal: rcResult.p7_single || 0,
+            p7d_goal: rcResult.p7_double || 0,
+            p7f_goal: 0
         });
     };
     // Use Effect to Auto-Allocate on open or when total changes significantly if not set
@@ -206,7 +210,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                 targetScore: totalScore,
                 targetLC,
                 targetRC,
-                partTargets
+                partTargets: partTargets!
             });
             setIsEditing(false);
             onUpdate(totalScore);
@@ -215,26 +219,22 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         }
     };
 
-    const updatePart = (part: keyof typeof MAX_Q, val: number) => {
-        // Smart Constraint: 
-        // Allow updating only if it fits in budget OR if we are reducing value
-        // But the Slider 'max' prop handles the upper bound constraint visually.
-        // Here we just set state.
-        setPartTargets(prev => ({ ...prev, [part]: val }));
+    const updatePart = (partKey: string, val: number) => {
+        setPartTargets(prev => ({ ...prev, [partKey]: val } as any));
     };
 
     if (!isEditing) {
         // Comparison View Logic
         const getPartCurrent = (part: string) => {
             switch (part) {
-                case 'p1': return currentStats.p1;
-                case 'p2': return currentStats.p2;
-                case 'p3': return currentStats.p3;
-                case 'p4': return currentStats.p4;
-                case 'p5': return currentStats.p5;
-                case 'p6': return currentStats.p6;
-                case 'p7_single': return currentStats.p7_single;
-                case 'p7_double': return currentStats.p7_double;
+                case 'p1': return currentStats.p1_cur;
+                case 'p2': return currentStats.p2_cur;
+                case 'p3': return currentStats.p3_cur;
+                case 'p4': return currentStats.p4_cur;
+                case 'p5': return currentStats.p5_cur;
+                case 'p6': return currentStats.p6_cur;
+                case 'p7s': return currentStats.p7s_cur;
+                case 'p7d': return currentStats.p7d_cur;
                 default: return null;
             }
         };
@@ -265,8 +265,8 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         <div className="space-y-3">
                             <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
                             {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                                const key = p as keyof typeof partTargets;
-                                const goal = partTargets[key];
+                                const goalKey = `${p}_goal` as keyof UserProfile['partTargets'];
+                                const goal = partTargets?.[goalKey] || 0;
                                 const current = getPartCurrent(p);
                                 const gap = current !== null ? current - goal : null;
 
@@ -299,15 +299,15 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         {/* RC Column */}
                         <div className="space-y-3">
                             <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
-                            {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                                const key = p as keyof typeof partTargets;
-                                const goal = partTargets[key];
+                            {['p5', 'p6', 'p7s', 'p7d'].map((p) => {
+                                const goalKey = `${p}_goal` as keyof UserProfile['partTargets'];
+                                const goal = partTargets?.[goalKey] || 0;
                                 const current = getPartCurrent(p);
                                 const gap = current !== null ? current - goal : null;
 
                                 return (
                                     <div key={p} className="flex items-center text-sm gap-2">
-                                        <span className="text-slate-400 font-bold w-16 uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7_', 'P7 ').replace('single', 'S').replace('double', 'D')}</span>
+                                        <span className="text-slate-400 font-bold w-16 uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7s', 'P7 S').replace('p7d', 'P7 D')}</span>
                                         <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
                                             <div className="flex flex-col items-center">
                                                 <span className="text-slate-500 text-[10px]">목표</span>
@@ -423,9 +423,9 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         </div>
 
                         {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                            const key = p as keyof typeof MAX_Q;
-                            const currentVal = partTargets[key];
-                            const smartMax = Math.min(MAX_Q[key], remainingLC >= 0 ? currentVal + remainingLC : currentVal);
+                            const goalKey = `${p}_goal`;
+                            const currentVal = (partTargets as any)?.[goalKey] || 0;
+                            const smartMax = Math.min(MAX_Q[goalKey], remainingLC >= 0 ? currentVal + remainingLC : currentVal);
 
                             return (
                                 <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
@@ -440,7 +440,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                                         min="0"
                                         max={smartMax}
                                         value={currentVal}
-                                        onChange={(e) => updatePart(key, parseInt(e.target.value))}
+                                        onChange={(e) => updatePart(goalKey, parseInt(e.target.value))}
                                         className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500 touch-none"
                                         disabled={smartMax === 0 && currentVal === 0}
                                     />
@@ -470,10 +470,10 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                             </div>
                         </div>
 
-                        {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                            const key = p as keyof typeof MAX_Q;
-                            const currentVal = partTargets[key];
-                            const smartMax = Math.min(MAX_Q[key], remainingRC >= 0 ? currentVal + remainingRC : currentVal);
+                        {['p5', 'p6', 'p7s', 'p7d'].map((p) => {
+                            const goalKey = `${p}_goal`;
+                            const currentVal = (partTargets as any)?.[goalKey] || 0;
+                            const smartMax = Math.min(MAX_Q[goalKey], remainingRC >= 0 ? currentVal + remainingRC : currentVal);
 
                             return (
                                 <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
@@ -490,7 +490,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                                         min="0"
                                         max={smartMax}
                                         value={currentVal}
-                                        onChange={(e) => updatePart(key, parseInt(e.target.value))}
+                                        onChange={(e) => updatePart(goalKey, parseInt(e.target.value))}
                                         className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500 touch-none"
                                         disabled={smartMax === 0 && currentVal === 0}
                                     />

@@ -272,25 +272,25 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any, data: any)
     }
 }
 
-function renderP1Question(num: number, answers: any, onAnswer: any, p1: any[]) {
-    // p1 배열에서 직접 찾도록 수정
-    const qData = p1.find(q => Number(q.id) === Number(num));
+function renderP1Question(qId: string, answers: any, onAnswer: any, p1: any[]) {
+    const qData = p1.find(q => q.id === qId);
+    const displayNum = qId.includes('-q') ? qId.split('-q')[1] : qId;
 
     return (
-        <div key={num} className="w-full">
+        <div key={qId} className="w-full">
             <div className="flex items-center justify-between mb-3">
-                <span className="text-2xl font-black text-slate-800 italic">{num < 10 ? `0${num}` : num}.</span>
+                <span className="text-2xl font-black text-slate-800 italic">{parseInt(displayNum) < 10 ? `0${parseInt(displayNum)}` : displayNum}.</span>
             </div>
             <div className="p1-photo-container !h-auto !aspect-auto">
                 {qData?.image ? (
                     <img
                         src={qData.image}
-                        alt={`Question ${num}`}
+                        alt={`Question ${displayNum}`}
                         className="w-full h-auto object-contain max-h-[450px]"
                     />
                 ) : (
                     <div className="w-full aspect-[16/10] flex items-center justify-center text-slate-300 font-bold italic bg-slate-50">
-                        Image Loading Error (ID: {num})
+                        Image Loading Error (ID: {displayNum})
                     </div>
                 )}
             </div>
@@ -298,8 +298,8 @@ function renderP1Question(num: number, answers: any, onAnswer: any, p1: any[]) {
                 {['A', 'B', 'C', 'D'].map(opt => (
                     <div
                         key={opt}
-                        onClick={() => onAnswer(`${num}`, opt)}
-                        className={`option-circle ${answers[`${num}`] === opt ? 'selected' : ''}`}
+                        onClick={() => onAnswer(`${qId}`, opt)}
+                        className={`option-circle ${answers[`${qId}`] === opt ? 'selected' : ''}`}
                     >
                         {opt}
                     </div>
@@ -312,7 +312,7 @@ function renderP1Question(num: number, answers: any, onAnswer: any, p1: any[]) {
 function renderP2Row(q: any, answers: any, onAnswer: any) {
     return (
         <div key={q.id} className="flex items-center justify-between py-1.5 px-3 hover:bg-slate-50 rounded-lg transition-colors border-b border-slate-50">
-            <span className="q-num !m-0 !w-8">{q.id}.</span>
+            <span className="q-num !m-0 !w-8">{q.questionNo || (q.id.includes('-q') ? q.id.split('-q')[1] : q.id)}.</span>
             <div className="flex gap-4">{['A', 'B', 'C'].map(opt => (
                 <div key={opt} onClick={() => onAnswer(`${q.id}`, opt)} className={`option-circle !w-10 !h-10 !text-[16px] ${answers[`${q.id}`] === opt ? 'selected' : ''}`}>{opt}</div>
             ))}</div>
@@ -338,11 +338,11 @@ function renderP34Page(sets: any[], answers: any, onAnswer: any) {
                         {set.questions.map((q: any) => (
                             <div key={q.id} className="q-item">
                                 <div className="q-text !mb-2 flex items-start gap-1">
-                                    <span className="text-indigo-600 shrink-0">{q.id.replace('q', '')}.</span>
+                                    <span className="text-indigo-600 shrink-0">{q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}.</span>
                                     <span>{q.text}</span>
                                 </div>
                                 <div className="flex flex-col gap-0.5 pl-4">
-                                    {q.options.map((opt: any) => (
+                                    {(Array.isArray(q.options) ? q.options : Object.entries(q.options || {}).map(([label, text]) => ({ label, text: text as string }))).map((opt: any) => (
                                         <div key={opt.label} onClick={() => onAnswer(q.id, opt.label)} className="flex items-center gap-3 cursor-pointer group py-0.5">
                                             <div className={`option-circle !w-8 !h-8 !text-[13px] shrink-0 ${answers[q.id] === opt.label ? 'selected' : ''}`}>{opt.label}</div>
                                             <span className={`text-[14px] leading-tight ${answers[q.id] === opt.label ? 'text-indigo-600 font-bold' : 'text-slate-800'}`}>{opt.text}</span>

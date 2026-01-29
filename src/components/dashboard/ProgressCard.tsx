@@ -9,7 +9,7 @@ interface ProgressCardProps {
     subValue?: string;
     total?: number;
     current?: number;
-    color: 'indigo' | 'rose' | 'blue' | 'emerald' | 'orange' | 'amber' | 'violet' | 'cyan' | 'pink';
+    color: 'indigo' | 'rose' | 'blue' | 'emerald' | 'orange' | 'amber' | 'violet' | 'cyan' | 'pink' | 'sky' | 'teal' | 'slate';
     icon?: LucideIcon;
     className?: string;
 }
@@ -78,6 +78,27 @@ export function ProgressCard({ title, value, subValue, total, current, color, ic
             value: 'text-pink-100',
             bar: 'bg-pink-400',
             shadow: 'shadow-pink-100'
+        },
+        sky: {
+            bg: 'bg-sky-500',
+            text: 'text-sky-100',
+            value: 'text-sky-100',
+            bar: 'bg-sky-400',
+            shadow: 'shadow-sky-100'
+        },
+        teal: {
+            bg: 'bg-teal-600',
+            text: 'text-teal-100',
+            value: 'text-teal-100',
+            bar: 'bg-teal-500',
+            shadow: 'shadow-teal-100'
+        },
+        slate: {
+            bg: 'bg-slate-700',
+            text: 'text-slate-100',
+            value: 'text-slate-100',
+            bar: 'bg-slate-500',
+            shadow: 'shadow-slate-100'
         }
     };
 

@@ -120,46 +120,73 @@ export const HalfTestService = {
         let rcTotal = 0;
 
         Object.entries(userAnswers).forEach(([qId, userAns]) => {
-            const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
-            const isCorrect = userAns === correctAnswers[qId];
             let partKey = "";
-            if (qNum <= 6) partKey = "p1";
-            else if (qNum <= 31) partKey = "p2";
-            else if (qNum <= 70) partKey = "p3";
-            else if (qNum <= 100) partKey = "p4";
-            else if (qNum <= 130) partKey = "p5";
-            else if (qNum <= 146) partKey = "p6";
-            else if (qNum <= 175) partKey = "p7s";
-            else partKey = "p7m";
+            let qNum = 0;
+
+            // 1. Standardized ID Format Check (pX-tY-qZ)
+            if (qId.startsWith('p1')) partKey = "p1";
+            else if (qId.startsWith('p2')) partKey = "p2";
+            else if (qId.startsWith('p3')) partKey = "p3";
+            else if (qId.startsWith('p4')) partKey = "p4";
+            else if (qId.startsWith('p5')) partKey = "p5";
+            else if (qId.startsWith('p6')) partKey = "p6";
+            else if (qId.startsWith('p7')) {
+                const match = qId.match(/-q(\d+)/);
+                qNum = match ? parseInt(match[1]) : 0;
+                partKey = qNum <= 175 ? "p7s" : "p7m";
+            }
+            else {
+                // 2. Legacy Numeric Format Fallback (e.g., "1", "q101")
+                qNum = parseInt(qId.replace(/[^0-9]/g, ''));
+                if (qNum <= 6) partKey = "p1";
+                else if (qNum <= 31) partKey = "p2";
+                else if (qNum <= 70) partKey = "p3";
+                else if (qNum <= 100) partKey = "p4";
+                else if (qNum <= 130) partKey = "p5";
+                else if (qNum <= 146) partKey = "p6";
+                else if (qNum <= 175) partKey = "p7s";
+                else partKey = "p7m";
+            }
+
+            const isCorrect = userAns === correctAnswers[qId];
+            if (!partKey) return; // Prevent errors for unknown IDs
+
+            // RC/LC classification for total score
+            const isLC = partKey.startsWith('p1') || partKey.startsWith('p2') || partKey.startsWith('p3') || partKey.startsWith('p4');
 
             if (isCorrect) {
                 partStats[partKey].correct++;
-                if (qNum <= 100) lcTotal++; else rcTotal++;
+                if (isLC) lcTotal++; else rcTotal++;
             } else {
+                // Wrong answer analysis - requires finding question data in source
                 if (partKey === 'p1') {
                     partStats.p1.wrongTags.push("생활영어 어휘");
                 } else if (partKey === 'p2') {
-                    const qData = p2_source.find((q: any) => q.id === qNum);
+                    const qData = p2_source.find((q: any) => q.id === qId || String(q.questionNo) === String(qNum));
                     if (qData?.questionType) partStats.p2.wrongTags.push(TAG_MAP[qData.questionType] || qData.questionType);
                 } else if (partKey === 'p3' || partKey === 'p4') {
                     const source = partKey === 'p3' ? p3_source : p4_source;
-                    const set = source.find((s: any) => s.questions.some((q: any) => q.id === qId));
+                    const set = source.find((s: any) => s.questions.some((q: any) => q.id === qId || parseInt(q.id.replace(/[^\d]/g, '')) === qNum));
                     if (set) {
                         partStats[partKey].wrongPassages.push(set.contextType || "비즈니스 상황");
-                        const q = set.questions.find((q: any) => q.id === qId);
+                        const q = set.questions.find((q: any) => q.id === qId || parseInt(q.id.replace(/[^\d]/g, '')) === qNum);
                         if (q?.questionType) partStats[partKey].wrongTags.push(TAG_MAP[q.questionType] || q.questionType);
                     }
                 } else if (partKey === 'p5') {
-                    const qData = p5_source.find((q: any) => q.id === qId);
+                    const qData = p5_source.find((q: any) => q.id === qId || parseInt(q.id.replace(/[^\d]/g, '')) === qNum);
                     if (qData?.classification) partStats.p5.wrongTags.push(TAG_MAP[qData.classification] || qData.classification);
                 } else if (partKey === 'p6' || partKey.startsWith('p7')) {
                     const source = partKey === 'p6' ? p6_source : p7_source;
-                    const cleanQid = qId.replace('q', '');
-                    const set = source.find((s: any) => s.questions ? s.questions.some((q: any) => q.id === cleanQid) : (s.passages && s.passages.some((p: any) => p.id === cleanQid)));
+                    const cleanQid = qId.includes('-q') ? qId.split('-q')[1] : qId.replace(/[^\d]/g, '');
+                    const set = source.find((s: any) => {
+                        if (s.questions) return s.questions.some((q: any) => q.id === qId || q.id === cleanQid || String(q.id) === String(qNum));
+                        if (s.passages) return s.passages.some((p: any) => p.id === cleanQid || String(p.id) === String(qNum));
+                        return false;
+                    });
                     if (set) {
                         const type = set.type || (set.passages?.[0]?.type);
                         partStats[partKey].wrongPassages.push(PASSAGE_MAP[type] || type);
-                        const q = set.questions?.find((q: any) => q.id === cleanQid);
+                        const q = set.questions?.find((q: any) => q.id === qId || q.id === cleanQid || String(q.id) === String(qNum));
                         const cls = q?.classification || q?.questionType;
                         if (cls) partStats[partKey].wrongTags.push(TAG_MAP[cls] || cls);
                     }

@@ -50,15 +50,19 @@ export function isActualTest(data: ManagerResult): boolean {
     const unit = data.unit || '';
     const type = data.type || '';
 
-    // Pattern A: type field ends with '_test'
-    if (type.endsWith('_test') || type === 'part7_single' || type === 'part7_double') {
-        // part5_test, part7_test, etc.
+    // Standard actual test types (long and short)
+    const actualTestTypes = [
+        'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7s', 'p7d', 'p7',
+        'part1_test', 'part2_test', 'part3_test', 'part4_test', 'part5_test', 'part6_test', 'part7_test',
+        'part7_single', 'part7_double'
+    ];
+
+    if (actualTestTypes.includes(type) || type.endsWith('_test')) {
         return true;
     }
 
-    // Pattern B: unit field contains 'Test', '회', or 'Level'
-    if (unit.includes('_Test') || unit.match(/Test\d+/) || unit.match(/\d+회/) || unit.includes('Level')) {
-        // LC_Part2_Test1, RC_Part5_Test3_real, "Part 5 1회", "LevelTest", etc.
+    // Pattern B: unit field contains 'Test', '회', 'Level', or 'p7'
+    if (unit.includes('_Test') || unit.match(/Test\d+/) || unit.match(/\d+회/) || unit.includes('Level') || unit.includes('p7s') || unit.includes('p7d')) {
         return true;
     }
 
@@ -81,25 +85,42 @@ export function mapToPartKey(data: ManagerResult): string {
     const unit = data.unit || '';
     const type = data.type || '';
 
-    // Direct type mapping
-    if (type && type.endsWith('_test')) {
-        return type; // part5_test, part7_test, etc.
-    }
+    // 1. Direct type mapping (Standardize everything to 'partX_test' or 'part7_single/double')
+    if (type === 'p1' || type === 'part1_test') return 'part1_test';
+    if (type === 'p2' || type === 'part2_test') return 'part2_test';
+    if (type === 'p3' || type === 'part3_test') return 'part3_test';
+    if (type === 'p4' || type === 'part4_test') return 'part4_test';
+    if (type === 'p5' || type === 'part5_test') return 'part5_test';
+    if (type === 'p6' || type === 'part6_test') return 'part6_test';
 
-    // Unit-based mapping
-    if (unit.includes('Part2') || unit.includes('part2')) return 'part2_test';
-    if (unit.includes('Part3') || unit.includes('part3')) return 'part3_test';
-    if (unit.includes('Part4') || unit.includes('part4')) return 'part4_test';
-    if (unit.includes('Part5') || unit.includes('part5')) return 'part5_test';
-    if (unit.includes('Part6') || unit.includes('part6')) return 'part6_test';
-    if (unit.includes('Part7') || unit.includes('part7')) {
-        // Distinguish between single and double passages
-        if (unit.includes('double') || unit.includes('이중') || unit.includes('Double')) {
+    // Part 7 Standard Mapping
+    if (['p7s', 'part7_single', 'p7_single', 'p7single'].includes(type)) return 'part7_single';
+    if (['p7d', 'p7t', 'p7m', 'part7_double', 'p7_double', 'part7_triple', 'p7_triple', 'p7double', 'p7triple'].includes(type)) return 'part7_double';
+    if (['part7_test', 'p7', 'p7f', 'part7full'].includes(type)) return 'part7_test';
+
+    // 2. Unit-based fallback (Parsing legacy strings like "8회 실전", "P7 Triple" 등)
+    const unitLower = unit.toLowerCase();
+
+    if (unitLower.includes('part1') || unitLower.includes('p1')) return 'part1_test';
+    if (unitLower.includes('part2') || unitLower.includes('p2')) return 'part2_test';
+    if (unitLower.includes('part3') || unitLower.includes('p3')) return 'part3_test';
+    if (unitLower.includes('part4') || unitLower.includes('p4')) return 'part4_test';
+    if (unitLower.includes('part5') || unitLower.includes('p5')) return 'part5_test';
+    if (unitLower.includes('part6') || unitLower.includes('p6')) return 'part6_test';
+
+    if (unitLower.includes('part7') || unitLower.includes('p7')) {
+        // Multi-passage (Double/Triple/Multiple) keywords
+        if (unitLower.includes('double') || unitLower.includes('triple') || unitLower.includes('multi') ||
+            unitLower.includes('이중') || unitLower.includes('삼중') || unitLower.includes('복합') ||
+            unitLower.includes('p7d') || unitLower.includes('p7m') || unitLower.includes('p7t')) {
             return 'part7_double';
         }
-        return 'part7_single';
+        // Single passage keywords
+        if (unitLower.includes('single') || unitLower.includes('단일') || unitLower.includes('p7s')) {
+            return 'part7_single';
+        }
+        return 'part7_test';
     }
-    if (unit.includes('Part1') || unit.includes('part1')) return 'part1_test';
 
     // Fallback: return type or 'unknown'
     return type || 'unknown';

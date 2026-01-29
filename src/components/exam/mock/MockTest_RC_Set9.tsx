@@ -345,10 +345,11 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
 }
 
 function renderP5Question(q: any, answers: any, onAnswer: any) {
+    const displayNum = String(q.id).includes('-q') ? q.id.split('-q')[1] : String(q.id).replace(/[^\d]/g, '');
     return (
         <div key={q.id} className="q-block">
             <div className="q-meta">
-                <span className="q-id-badge">{q.id}</span>
+                <span className="q-id-badge">{displayNum}</span>
             </div>
             <p className="text-[13px] font-black leading-relaxed text-black mb-2">{q.text}</p>
             <div className="space-y-0.5">
@@ -486,10 +487,11 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
 }
 
 function renderP7Question(q: any, answers: any, onAnswer: any) {
+    const displayNum = String(q.id).includes('-q') ? q.id.split('-q')[1] : String(q.id).replace(/[^\d]/g, '');
     return (
         <div key={q.id} className="q-block border-b border-slate-50 pb-4">
             <div className="flex items-start gap-2 mb-2">
-                <span className="q-id-badge shrink-0">{q.id}</span>
+                <span className="q-id-badge shrink-0">{displayNum}</span>
                 <p className="text-[13px] font-black leading-snug text-black">{q.text}</p>
             </div>
             <div className="space-y-0.5 pl-8">

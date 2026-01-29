@@ -7,7 +7,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Trophy, RotateCcw } from "lucide-react";
-import { part3Data, Part3Set, Part3Question } from '@/data/part3';
+import { part3RealTests, Part3Set, Part3Question } from '@/data/part3';
 import { cn } from "@/lib/utils";
 import { TouchDictionary } from '@/components/common/TouchDictionary';
 
@@ -22,7 +22,7 @@ export default function Part3TestRunnerPage() {
     const isOptionalSkimming = testId >= 4 && testId <= 10;
 
     // Filter sets for this Test ID
-    const testSets = part3Data.filter(s => s.testId === testId);
+    const testSets = part3RealTests.filter(s => s.testId === testId);
 
     const stopWords = new Set([
         'a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
@@ -319,7 +319,7 @@ export default function Part3TestRunnerPage() {
             set.questions.forEach((q: Part3Question) => {
                 if (selectedAnswers[q.id] !== q.correctAnswer) {
                     incorrectQuestions.push({
-                        id: `P3_T${testId}_${q.id.replace('q', '')}`,
+                        id: `P3_T${testId}_${q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}`,
                         classification: q.questionType || 'Unknown',
                         contextType: set.contextType || 'Unknown'
                     });
@@ -411,7 +411,7 @@ export default function Part3TestRunnerPage() {
                                 <div className="flex flex-wrap gap-2">
                                     {wrongQueue.map((q: Part3Question) => (
                                         <div key={q.id} className="px-3 py-1.5 bg-rose-500/10 border border-rose-500/20 rounded-xl">
-                                            <span className="text-[10px] font-black text-rose-500">Q{q.id.replace('q', '')}</span>
+                                            <span className="text-[10px] font-black text-rose-500">Q{q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -512,7 +512,7 @@ export default function Part3TestRunnerPage() {
                             <span className="block">{reviewMode ? 'REVIEW MODE' : `TEST ${testId} • ATTEMPT ${history.attempts}`}</span>
                         </span>
                         <span className="text-sm font-bold text-white">
-                            {reviewMode ? 'Reviewing' : 'Set'} {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {activeSets.length} <span className="text-slate-500 text-xs ml-1">({reviewMode ? 'Incorrect Only' : `Q${currentSet.questionRange}`})</span>
+                            {reviewMode ? 'Reviewing' : 'Set'} {currentIndex + 1} <span className="text-slate-600 mx-1">/</span> {activeSets.length} <span className="text-slate-500 text-xs ml-1">({reviewMode ? 'Incorrect Only' : `Q${currentSet?.questionRange}`})</span>
                         </span>
                     </div>
 
@@ -590,7 +590,7 @@ export default function Part3TestRunnerPage() {
                                         "flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center font-bold text-[10px] border transition-colors",
                                         "bg-slate-800 text-slate-400 border-slate-700"
                                     )}>
-                                        {q.id.replace('q', '')}
+                                        {q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}
                                     </div>
                                     <div className="flex-1 space-y-3">
                                         <div className={cn(
@@ -612,44 +612,44 @@ export default function Part3TestRunnerPage() {
                                         </div>
 
                                         <div className="grid grid-cols-1 gap-2.5">
-                                            {q.options.map((opt: { label: string; text: string }) => {
-                                                const isSelected = selectedAnswers[q.id] === opt.label;
+                                            {Object.entries(q.options).map(([label, text]) => {
+                                                const isSelected = selectedAnswers[q.id] === label;
                                                 return (
                                                     <button
-                                                        key={opt.label}
-                                                        onClick={() => handleSelect(q.id, opt.label)}
+                                                        key={label}
+                                                        onClick={() => handleSelect(q.id, label)}
                                                         disabled={(!reviewMode && skimmingState === 'active') || revealedQuestions.has(q.id)}
                                                         className={cn(
                                                             "text-left px-4 py-3 rounded-xl transition-all duration-200 border relative overflow-hidden group",
                                                             isSelected && !revealedQuestions.has(q.id)
                                                                 ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.1)]'
-                                                                : revealedQuestions.has(q.id) && opt.label === q.correctAnswer
+                                                                : revealedQuestions.has(q.id) && label === q.correctAnswer
                                                                     ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400'
-                                                                    : revealedQuestions.has(q.id) && isSelected && opt.label !== q.correctAnswer
+                                                                    : revealedQuestions.has(q.id) && isSelected && label !== q.correctAnswer
                                                                         ? 'border-rose-500 bg-rose-500/10 text-rose-400'
                                                                         : 'border-slate-800 bg-slate-900/40 text-slate-400 hover:bg-slate-800 hover:text-slate-200 hover:border-slate-700',
                                                             revealedQuestions.has(q.id) ? 'cursor-default opacity-90' : '',
                                                             skimmingState === 'active' && "cursor-wait"
                                                         )}
                                                     >
-                                                        <span className={`font-black mr-2 text-xs ${isSelected || (revealedQuestions.has(q.id) && opt.label === q.correctAnswer) ? 'text-emerald-500' : 'text-slate-600 group-hover:text-slate-400'}`}>{opt.label}</span>
+                                                        <span className={`font-black mr-2 text-xs ${isSelected || (revealedQuestions.has(q.id) && label === q.correctAnswer) ? 'text-emerald-500' : 'text-slate-600 group-hover:text-slate-400'}`}>{label}</span>
                                                         <div className="flex-1 text-base font-bold tracking-tight">
                                                             {reviewMode ? (
                                                                 <TouchDictionary
-                                                                    text={opt.text}
+                                                                    text={text}
                                                                     highlightKeywords={skimmingEnabled && isGuidedSkimming}
                                                                     stopWords={stopWords}
                                                                 />
                                                             ) : (
                                                                 <span
                                                                     dangerouslySetInnerHTML={{
-                                                                        __html: (skimmingEnabled && isGuidedSkimming) ? getHighlightedText(opt.text) : opt.text
+                                                                        __html: (skimmingEnabled && isGuidedSkimming) ? getHighlightedText(text) : text
                                                                     }}
                                                                 />
                                                             )}
                                                         </div>
 
-                                                        {revealedQuestions.has(q.id) && opt.label === q.correctAnswer && (
+                                                        {revealedQuestions.has(q.id) && label === q.correctAnswer && (
                                                             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-black text-emerald-500 uppercase tracking-tighter bg-emerald-500/10 px-2 py-0.5 rounded">Correct</span>
                                                         )}
                                                     </button>

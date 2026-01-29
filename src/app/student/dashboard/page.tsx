@@ -23,12 +23,16 @@ const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: stri
     voca: { label: '단어 암기 (Voca)', total: 30, unit: 'Days', color: 'emerald', icon: BookOpen },
     grammar: { label: '문법 (Grammar)', total: 13, unit: 'Units', color: 'blue', icon: PenSquare },
     part1_shadow: { label: 'Part 1 쉐도잉', total: 5, unit: 'Sets', color: 'indigo', icon: Mic2 },
+    part1_test: { label: 'Part 1 실전', total: 10, unit: 'Tests', color: 'blue', icon: Headphones },
     part2_test: { label: 'LC Part 2 실전', total: 10, unit: 'Tests', color: 'rose', icon: Headphones },
     part3_test: { label: 'LC Part 3 실전', total: 10, unit: 'Tests', color: 'orange', icon: Headphones },
     part4_test: { label: 'LC Part 4 실전', total: 10, unit: 'Tests', color: 'pink', icon: Headphones },
     part5_test: { label: 'RC Part 5 실전', total: 10, unit: 'Tests', color: 'amber', icon: PenSquare },
     part6_test: { label: 'RC Part 6 실전', total: 10, unit: 'Tests', color: 'violet', icon: BookOpen },
-    part7_test: { label: 'RC Part 7 실전', total: 10, unit: 'Tests', color: 'cyan', icon: BookOpen },
+    part7_single: { label: 'RC Part 7 싱글', total: 10, unit: 'Tests', color: 'cyan', icon: BookOpen },
+    part7_test: { label: 'RC Part 7 전체', total: 10, unit: 'Tests', color: 'sky', icon: BookOpen },
+    part7_double: { label: 'RC Part 7 다중', total: 10, unit: 'Tests', color: 'teal', icon: BookOpen },
+    mock_test: { label: '전체 모의고사', total: 5, unit: 'Exams', color: 'slate', icon: Target },
 };
 
 export default function StudentDashboard() {
@@ -38,7 +42,7 @@ export default function StudentDashboard() {
     const [isMounted, setIsMounted] = useState(false);
     const [stats, setStats] = useState<Record<string, number>>({});
     const [assignments, setAssignments] = useState<any[]>([]);
-    const [completedMap, setCompletedMap] = useState<Record<string, boolean>>({});
+    const [completedMap, setCompletedMap] = useState<Record<string, any>>({});
     const [partScores, setPartScores] = useState<Record<string, number>>({});
     const [latestScores, setLatestScores] = useState<Record<string, number>>({});
     const [currentScore, setCurrentScore] = useState<number>(0);
@@ -52,8 +56,12 @@ export default function StudentDashboard() {
     const [editTargetLC, setEditTargetLC] = useState(450);
     const [editTargetRC, setEditTargetRC] = useState(400);
     const [editPartTargets, setEditPartTargets] = useState({
-        p1: 0, p2: 0, p3: 0, p4: 0,
-        p5: 0, p6: 0, p7_single: 0, p7_double: 0
+        p1_goal: 0, p2_goal: 0, p3_goal: 0, p4_goal: 0,
+        p5_goal: 0, p6_goal: 0, p7s_goal: 0, p7d_goal: 0
+    });
+    const [currentStats, setCurrentStats] = useState({
+        p1_cur: 0, p2_cur: 0, p3_cur: 0, p4_cur: 0,
+        p5_cur: 0, p6_cur: 0, p7s_cur: 0, p7d_cur: 0, p7f_cur: 0
     });
 
     useEffect(() => {
@@ -97,27 +105,41 @@ export default function StudentDashboard() {
         const report = await WeaknessService.analyzeUserWeakness(userId);
         setWeaknessReport(report);
 
-        // Synchronize currentScore with weakness report logic (sum of averages across all parts)
+        // ✅ Synchronize with Weakness Dashboard's manual calculation logic
         if (report && report.targetStats) {
+            // 1. Manually sum only the parts visible in the UI (matches Weakness Dashboard)
             const lcParts = ['p1', 'p2', 'p3', 'p4'];
             const rcParts = ['p5', 'p6', 'p7_single', 'p7_double'];
 
             const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
             const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
 
-            // User Formula: (LC_Sum * 5) + 10, (RC_Sum * 5) - 10
+            // 2. Apply the TOEIC conversion formula
             const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
             const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
 
-            const totalScore = Math.max(0, lcScore) + Math.max(0, rcScore);
-            setCurrentScore(totalScore);
+            // 3. Set the total score (matches the 165 or similar manual sum)
+            setCurrentScore(Math.max(0, lcScore) + Math.max(0, rcScore));
+
+            // Update individual part stats for the table
+            setCurrentStats({
+                p1_cur: report.targetStats.p1?.latest || 0,
+                p2_cur: report.targetStats.p2?.latest || 0,
+                p3_cur: report.targetStats.p3?.latest || 0,
+                p4_cur: report.targetStats.p4?.latest || 0,
+                p5_cur: report.targetStats.p5?.latest || 0,
+                p6_cur: report.targetStats.p6?.latest || 0,
+                p7s_cur: report.targetStats.p7s?.latest || 0,
+                p7d_cur: report.targetStats.p7d?.latest || 0,
+                p7f_cur: report.targetStats.p7f?.latest || 0
+            });
         }
     };
 
     // Target editing functions
     const MAX_Q = {
-        p1: 6, p2: 25, p3: 39, p4: 30,
-        p5: 30, p6: 16, p7_single: 29, p7_double: 25
+        p1_goal: 6, p2_goal: 25, p3_goal: 39, p4_goal: 30,
+        p5_goal: 30, p6_goal: 16, p7s_goal: 29, p7d_goal: 25
     };
 
     const handleEditTarget = () => {
@@ -125,9 +147,18 @@ export default function StudentDashboard() {
             setEditTotalScore(user.targetScore || 850);
             setEditTargetLC(user.targetLC || 450);
             setEditTargetRC(user.targetRC || 400);
-            setEditPartTargets(user.partTargets || {
-                p1: 0, p2: 0, p3: 0, p4: 0,
-                p5: 0, p6: 0, p7_single: 0, p7_double: 0
+
+            // 데이터 정규화: 기존 p1 형식을 p1_goal 형식으로 변환하여 불러오기 (내일 수업 대비)
+            const pts = user.partTargets || {};
+            setEditPartTargets({
+                p1_goal: pts.p1_goal || pts.p1 || 0,
+                p2_goal: pts.p2_goal || pts.p2 || 0,
+                p3_goal: pts.p3_goal || pts.p3 || 0,
+                p4_goal: pts.p4_goal || pts.p4 || 0,
+                p5_goal: pts.p5_goal || pts.p5 || 0,
+                p6_goal: pts.p6_goal || pts.p6 || 0,
+                p7s_goal: pts.p7s_goal || pts.p7_single || 0,
+                p7d_goal: pts.p7d_goal || pts.p7_double || 0
             });
             setIsEditingTarget(true);
         }
@@ -151,46 +182,75 @@ export default function StudentDashboard() {
     };
 
     const handleAutoAllocate = () => {
-        const requiredLC = Math.min(100, Math.ceil(editTargetLC / 5));
-        const requiredRC = Math.min(100, Math.ceil(editTargetRC / 5) + 4);
+        // 1. Calculate required question counts from total scores
+        // Logic: Score to Questions (Simplified inverse of calculator)
+        const requiredLC = Math.min(100, Math.ceil((editTargetLC - 10) / 5));
+        const requiredRC = Math.min(100, Math.ceil((editTargetRC + 10) / 5));
 
-        const distribute = (budget: number, parts: Array<{ key: keyof typeof MAX_Q; cap?: number }>) => {
+        /**
+         * Strategic Distribution Logic: 
+         * - Proportional to Max Questions
+         * - +10% Weighted emphasis on 'Scoring Parts' (P1, P2, P5, P6)
+         */
+        const distributeStrategically = (budget: number, parts: Array<{ key: keyof typeof MAX_Q; isPriority: boolean }>) => {
             const result: any = {};
-            let remaining = budget;
-            for (const part of parts) {
-                const max = part.cap || MAX_Q[part.key];
-                const allocated = Math.min(max, remaining);
-                result[part.key] = allocated;
-                remaining -= allocated;
-                if (remaining <= 0) break;
+
+            // Calculate denominator: Sum of (MaxQ * Multiplier)
+            const sumWeightedMax = parts.reduce((sum, p) => {
+                const multiplier = p.isPriority ? 1.1 : 0.95; // Priority get +10%, others slightly less to balance
+                return sum + (MAX_Q[p.key] * multiplier);
+            }, 0);
+
+            // Calculate Base Achievement Rate (A)
+            const totalMax = parts.reduce((sum, p) => sum + MAX_Q[p.key], 0);
+            const A = budget / sumWeightedMax;
+
+            let remainingBudget = budget;
+
+            // First pass: Assign targets capped at MAX_Q
+            parts.forEach(p => {
+                const multiplier = p.isPriority ? 1.1 : 0.95;
+                let target = Math.round(MAX_Q[p.key] * A * multiplier);
+                target = Math.min(MAX_Q[p.key], target);
+                result[p.key] = target;
+                remainingBudget -= target;
+            });
+
+            // Second pass: Distribute any remaining due to caps or rounding (Waterfall for the last bits)
+            if (remainingBudget !== 0) {
+                for (const p of parts) {
+                    const room = MAX_Q[p.key] - result[p.key];
+                    const add = remainingBudget > 0 ? Math.min(room, remainingBudget) : Math.max(-result[p.key], remainingBudget);
+                    result[p.key] += add;
+                    remainingBudget -= add;
+                    if (remainingBudget === 0) break;
+                }
             }
+
             return result;
         };
 
         const lcParts = [
-            { key: 'p1' as const },
-            { key: 'p2' as const },
-            { key: 'p4' as const },
-            { key: 'p3' as const }
+            { key: 'p1_goal' as const, isPriority: true },
+            { key: 'p2_goal' as const, isPriority: true },
+            { key: 'p3_goal' as const, isPriority: false },
+            { key: 'p4_goal' as const, isPriority: false }
         ];
-        const lcResult = distribute(requiredLC, lcParts);
-
-        let p5Cap = MAX_Q.p5;
-        if (editTotalScore < 750) p5Cap = 25;
-        if (editTotalScore < 600) p5Cap = 20;
 
         const rcParts = [
-            { key: 'p5' as const, cap: p5Cap },
-            { key: 'p6' as const },
-            { key: 'p7_single' as const },
-            { key: 'p7_double' as const }
+            { key: 'p5_goal' as const, isPriority: true },
+            { key: 'p6_goal' as const, isPriority: true },
+            { key: 'p7s_goal' as const, isPriority: false },
+            { key: 'p7d_goal' as const, isPriority: false }
         ];
-        const rcResult = distribute(requiredRC, rcParts);
+
+        const lcResult = distributeStrategically(requiredLC, lcParts);
+        const rcResult = distributeStrategically(requiredRC, rcParts);
 
         setEditPartTargets({
-            p1: lcResult.p1 || 0, p2: lcResult.p2 || 0, p3: lcResult.p3 || 0, p4: lcResult.p4 || 0,
-            p5: rcResult.p5 || 0, p6: rcResult.p6 || 0,
-            p7_single: rcResult.p7_single || 0, p7_double: rcResult.p7_double || 0
+            p1_goal: lcResult.p1_goal || 0, p2_goal: lcResult.p2_goal || 0, p3_goal: lcResult.p3_goal || 0, p4_goal: lcResult.p4_goal || 0,
+            p5_goal: rcResult.p5_goal || 0, p6_goal: rcResult.p6_goal || 0,
+            p7s_goal: rcResult.p7s_goal || 0, p7d_goal: rcResult.p7d_goal || 0
         });
     };
 
@@ -214,10 +274,17 @@ export default function StudentDashboard() {
 
             const [assignSnap, statsSnap] = await Promise.all([getDocs(q), getDocs(statsQ)]);
 
-            const doneMap: Record<string, boolean> = {};
+            const doneMap: Record<string, any> = {};
             statsSnap.forEach(d => {
                 const r = d.data();
-                if (r.type && r.detail) doneMap[`${r.type}_${r.detail}`] = true;
+                if (r.type && r.detail) {
+                    doneMap[`${r.type}_${r.detail}`] = {
+                        isCompleted: true,
+                        score: r.score,
+                        total: r.total,
+                        timestamp: r.timestamp
+                    };
+                }
             });
             setCompletedMap(doneMap);
 
@@ -228,7 +295,7 @@ export default function StudentDashboard() {
                     list.push({ id: doc.id, ...data });
                 }
             });
-            setAssignments(list.slice(0, 4));
+            setAssignments(list);
         } catch (error) {
             console.error("Error assignments:", error);
         }
@@ -299,23 +366,43 @@ export default function StudentDashboard() {
     };
 
     const getHomeworkLink = (type: string, detail: string, id: string) => {
+        const testNum = detail.match(/\d+/)?.[0] || '1';
         switch (type) {
             case 'voca': return `/homework/voca`;
             case 'grammar': return `/homework/part5`;
-            case 'part2_test': return `/homework/part2/${detail.match(/\d+/)?.[0] || '1'}`;
-            case 'part5_test': return `/homework/part5-real/test/${detail.match(/\d+/)?.[0] || '1'}`;
+            case 'part1_test': return `/homework/part1-real/test/${testNum}`;
+            case 'part1_shadow': return `/homework/part1/${testNum}`;
+            case 'part2_test': return `/homework/part2/${testNum}`;
+            case 'part3_test': return `/homework/part3/test/${testNum}`;
+            case 'part4_test': return `/homework/part4/test/${testNum}`;
+            case 'part5_test': return `/homework/part5-real/test/${testNum}`;
+            case 'part6_test': return `/homework/part6/test/${testNum}`;
+            case 'part7_test':
+            case 'part7_single':
+                return `/homework/part7/test/${testNum}`;
             case 'part7_double': return `/homework/part7-double`;
             case 'weakness_review': return `/homework/weakness/${id}`;
-            case 'level_test': return `/mock-test/half/${detail.toLowerCase()}`;
+            case 'level_test': {
+                if (detail.includes('레벨테스트 1')) return `/mock-test/half/9a`;
+                if (detail.includes('레벨테스트 2')) return `/mock-test/half/9b`;
+                return `/mock-test/half/${detail.toLowerCase()}`;
+            }
+            case 'mock_test': {
+                if (detail.includes('모의고사 1회')) return `/mock-test/full/9`;
+                if (detail.includes('모의고사 2회')) return `/mock-test/full/10`;
+                if (detail.includes('모의고사 3회')) return `/mock-test/full/11`;
+                if (detail.includes('모의고사 4회')) return `/mock-test/full/12`;
+                return `/mock-test/full/${testNum}`;
+            }
             default: return '/';
         }
     };
 
     const getHomeworkIcon = (type: string) => {
-        if (type.includes('voca')) return BookOpen;
+        if (type.includes('voca') || type === 'grammar') return BookOpen;
         if (type.includes('part1')) return Mic2;
-        if (type.includes('part5')) return PenSquare;
-        if (type === 'level_test') return Target;
+        if (type.includes('part5') || type.includes('part6') || type.includes('part7')) return PenSquare;
+        if (type === 'level_test' || type === 'mock_test') return Target;
         return Headphones;
     };
 
@@ -342,29 +429,38 @@ export default function StudentDashboard() {
                     <Calendar className="text-indigo-400 w-5 h-5" /><h3 className="text-lg font-bold text-white">오늘의 과제 (Assignments)</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {assignments.map((assign) => {
-                        const isCompleted = completedMap[`${assign.type}_${assign.detail}`];
-                        return (
-                            <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id)} className={cn("block h-full transform transition-all hover:scale-[1.02]", isCompleted && "opacity-90")}>
-                                <Card className={cn("p-4 flex justify-between items-center h-full border transition-all relative overflow-hidden", isCompleted ? "bg-slate-900/40 border-emerald-500/20" : "bg-slate-800 border-indigo-500/30 shadow-lg")}>
+                    {(() => {
+                        const pending = assignments.filter(a => !completedMap[`${a.type}_${a.detail}`]).slice(0, 4);
+                        if (pending.length === 0) {
+                            return (
+                                <div className="col-span-full py-10 flex flex-col items-center justify-center bg-slate-800/20 rounded-xl border border-dashed border-slate-700">
+                                    <CheckCircle2 className="w-10 h-10 text-emerald-500 mb-3 opacity-50" />
+                                    <p className="text-slate-400 font-bold">오늘 지정된 모든 과제를 완료했습니다! 🎉</p>
+                                    <p className="text-slate-500 text-xs mt-1">새로운 과제가 배정될 때까지 기초 학습에 집중하세요.</p>
+                                </div>
+                            );
+                        }
+                        return pending.map((assign) => (
+                            <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id)} className="block h-full transform transition-all hover:scale-[1.02]">
+                                <Card className="p-4 flex justify-between items-center h-full border transition-all relative overflow-hidden bg-slate-800 border-indigo-500/30 shadow-lg">
                                     <div className="flex items-center gap-4 relative z-10">
-                                        <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center", isCompleted ? "bg-emerald-500/10 text-emerald-400" : "bg-indigo-500/10 text-indigo-400")}>
+                                        <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-indigo-500/10 text-indigo-400">
                                             {(() => { const Icon = getHomeworkIcon(assign.type); return <Icon className="w-6 h-6" />; })()}
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-2 mb-0.5">
-                                                <Badge variant="outline" className={cn("text-[10px] h-5 px-1.5 font-bold border-0", isCompleted ? "bg-emerald-500/10 text-emerald-400" : "bg-indigo-500/10 text-indigo-400")}>{assign.typeLabel || assign.type}</Badge>
+                                                <Badge variant="outline" className="text-[10px] h-5 px-1.5 font-bold border-0 bg-indigo-500/10 text-indigo-400">{assign.typeLabel || assign.type}</Badge>
                                             </div>
-                                            <p className={cn("font-black text-lg", isCompleted ? "text-slate-400 line-through decoration-slate-600" : "text-white")}>{assign.detail}</p>
+                                            <p className="font-black text-lg text-white">{assign.detail}</p>
                                         </div>
                                     </div>
                                     <div className="relative z-10">
-                                        {isCompleted ? <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.4)]"><CheckCircle2 className="w-6 h-6 text-white" /></div> : <Button size="sm" className="bg-indigo-600 hover:bg-indigo-500 shadow-lg font-bold">Start</Button>}
+                                        <Button size="sm" className="bg-indigo-600 hover:bg-indigo-500 shadow-lg font-bold">Start</Button>
                                     </div>
                                 </Card>
                             </Link>
-                        );
-                    })}
+                        ));
+                    })()}
                 </div>
             </div>
 
@@ -380,7 +476,8 @@ export default function StudentDashboard() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div className={cn("border rounded-lg p-4", (stats['voca'] || 0) < 15 ? "bg-rose-500/10 border-rose-500/20" : "bg-emerald-500/10 border-emerald-500/20")}>
                             <div className="flex justify-between items-center mb-2"><span className={cn("font-bold text-sm", (stats['voca'] || 0) < 15 ? "text-rose-400" : "text-emerald-400")}>어휘력 (Vocabulary)</span><span className="text-xs text-slate-400">{stats['voca'] || 0} / 15 days</span></div>
-                            <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div className={cn("h-full rounded-full", (stats['voca'] || 0) < 15 ? "bg-rose-500" : "bg-emerald-500")} style={{ width: `${Math.min(100, ((stats['voca'] || 0) / 15) * 100)}%` }}></div></div>
+                            <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mb-2"><div className={cn("h-full rounded-full", (stats['voca'] || 0) < 15 ? "bg-rose-500" : "bg-emerald-500")} style={{ width: `${Math.min(100, ((stats['voca'] || 0) / 15) * 100)}%` }}></div></div>
+                            <p className="text-xs text-slate-400 leading-relaxed">{analysis?.vocaStatus?.message || "어휘 학습 이력을 분석하고 있습니다."}</p>
                         </div>
                         <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
                             <div className="flex justify-between items-center mb-2"><span className="text-amber-400 font-bold text-sm">Part 5 분석: {analysis?.topWeakness?.label || '분석 중...'}</span><span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">{analysis?.topWeakness?.percentage || 0}%</span></div>
@@ -427,20 +524,25 @@ export default function StudentDashboard() {
                                         {/* LC Column */}
                                         <div className="space-y-3">
                                             <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
-                                            {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                                                const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                            {[
+                                                { k: 'p1', label: 'P1' },
+                                                { k: 'p2', label: 'P2' },
+                                                { k: 'p3', label: 'P3' },
+                                                { k: 'p4', label: 'P4' }
+                                            ].map(({ k, label }) => {
+                                                const partStats = weaknessReport.targetStats[k] || { target: 0, average: 0, latest: 0 };
                                                 const goal = partStats.target;
                                                 const current = partStats.average;
                                                 const latest = partStats.latest;
                                                 const gap = latest - goal;
 
                                                 return (
-                                                    <div key={p} className="flex items-center text-sm gap-2 font-inter">
-                                                        <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p}</span>
+                                                    <div key={k} className="flex items-center text-sm gap-2 font-inter">
+                                                        <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{label}</span>
                                                         <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
                                                             <div className="flex flex-col items-center min-w-[32px]">
                                                                 <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
-                                                                <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}</span>
+                                                                <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}개</span>
                                                             </div>
                                                             <div className="flex flex-col items-center min-w-[32px]">
                                                                 <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
@@ -462,20 +564,25 @@ export default function StudentDashboard() {
                                         {/* RC Column */}
                                         <div className="space-y-3">
                                             <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
-                                            {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                                                const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                            {[
+                                                { k: 'p5', label: 'P5' },
+                                                { k: 'p6', label: 'P6' },
+                                                { k: 'p7_single', label: 'P7 S' },
+                                                { k: 'p7_double', label: 'P7 D' }
+                                            ].map(({ k, label }) => {
+                                                const partStats = weaknessReport.targetStats[k] || { target: 0, average: 0, latest: 0 };
                                                 const goal = partStats.target;
                                                 const current = partStats.average;
                                                 const latest = partStats.latest;
                                                 const gap = latest - goal;
 
                                                 return (
-                                                    <div key={p} className="flex items-center text-sm gap-2 font-inter">
-                                                        <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7_', 'P7 ').replace('single', 'S').replace('double', 'D')}</span>
+                                                    <div key={k} className="flex items-center text-sm gap-2 font-inter">
+                                                        <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{label}</span>
                                                         <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
                                                             <div className="flex flex-col items-center min-w-[32px]">
                                                                 <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
-                                                                <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}</span>
+                                                                <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}개</span>
                                                             </div>
                                                             <div className="flex flex-col items-center min-w-[32px]">
                                                                 <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
@@ -520,12 +627,18 @@ export default function StudentDashboard() {
                                     </div>
                                     <Button onClick={handleAutoAllocate} variant="outline" size="sm" className="w-full"><Zap className="w-4 h-4 mr-2" />AI 자동 배분</Button>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                                        {Object.keys(MAX_Q).map((part) => (
-                                            <div key={part}>
-                                                <label className="text-xs text-slate-400 mb-1 block uppercase">{part}</label>
-                                                <Input type="number" value={editPartTargets[part as keyof typeof MAX_Q]} onChange={(e) => setEditPartTargets(prev => ({ ...prev, [part]: parseInt(e.target.value) || 0 }))} max={MAX_Q[part as keyof typeof MAX_Q]} className="bg-slate-800 border-slate-700 text-sm" />
-                                            </div>
-                                        ))}
+                                        {Object.keys(MAX_Q).map((part) => {
+                                            const labelMap: Record<string, string> = {
+                                                p1_goal: 'P1', p2_goal: 'P2', p3_goal: 'P3', p4_goal: 'P4',
+                                                p5_goal: 'P5', p6_goal: 'P6', p7s_goal: 'P7 S', p7d_goal: 'P7 D'
+                                            };
+                                            return (
+                                                <div key={part}>
+                                                    <label className="text-xs text-slate-400 mb-1 block uppercase font-bold">{labelMap[part] || part}</label>
+                                                    <Input type="number" value={editPartTargets[part as keyof typeof MAX_Q]} onChange={(e) => setEditPartTargets(prev => ({ ...prev, [part]: parseInt(e.target.value) || 0 }))} max={MAX_Q[part as keyof typeof MAX_Q]} className="bg-slate-800 border-slate-700 text-sm font-bold" />
+                                                </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             )}
@@ -580,6 +693,102 @@ export default function StudentDashboard() {
                     })}
                 </div>
             </div>
+
+            {/* Recently Completed Homework Section */}
+            {(() => {
+                const completed = assignments.filter(a => completedMap[`${a.type}_${a.detail}`]).slice(0, 3);
+                if (completed.length === 0) return null;
+                return (
+                    <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="flex items-center gap-2">
+                                <CheckCircle2 className="text-emerald-500 w-5 h-5" />
+                                <h3 className="text-xl font-bold text-white">최근 완료한 숙제 (Recent)</h3>
+                            </div>
+                            <Link href="/student/history">
+                                <Button variant="ghost" className="text-slate-400 hover:text-white text-xs font-bold gap-2">
+                                    전체 기록 보기 <ArrowLeft className="w-3 h-3 rotate-180" />
+                                </Button>
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {completed.map((assign) => {
+                                const result = completedMap[`${assign.type}_${assign.detail}`];
+
+                                // Direct lookup from USER DEFINED targets (strictly using pX_goal keys)
+                                const targetValue = (() => {
+                                    if (!user?.partTargets) return 0;
+                                    const lowerType = (assign.type || '').toLowerCase();
+
+                                    // Map to the exact _goal keys used in the target setting UI
+                                    let goalKey = '';
+                                    if (lowerType.includes('part1') || lowerType.includes('p1')) goalKey = 'p1_goal';
+                                    else if (lowerType.includes('part2') || lowerType.includes('p2')) goalKey = 'p2_goal';
+                                    else if (lowerType.includes('part3') || lowerType.includes('p3')) goalKey = 'p3_goal';
+                                    else if (lowerType.includes('part4') || lowerType.includes('p4')) goalKey = 'p4_goal';
+                                    else if (lowerType.includes('part5') || lowerType.includes('p5')) goalKey = 'p5_goal';
+                                    else if (lowerType.includes('part6') || lowerType.includes('p6')) goalKey = 'p6_goal';
+                                    else if (lowerType.includes('part7') || lowerType.includes('p7')) {
+                                        if (lowerType.includes('double') || lowerType.includes('triple') || lowerType.includes('multi')) goalKey = 'p7d_goal';
+                                        else goalKey = 'p7s_goal';
+                                    }
+
+                                    if (!goalKey) return 0;
+                                    const pts = user.partTargets as any;
+                                    return pts[goalKey] || 0;
+                                })();
+
+                                return (
+                                    <Card key={assign.id} className="bg-slate-900/40 border-emerald-500/20 p-5 flex flex-col border transition-all h-full justify-between gap-6">
+                                        <div className="flex items-start justify-between">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-emerald-500/10 text-emerald-500 shrink-0">
+                                                    {(() => { const Icon = getHomeworkIcon(assign.type); return <Icon className="w-5 h-5" />; })()}
+                                                </div>
+                                                <div className="min-w-0">
+                                                    <div className="flex items-center gap-2 mb-0.5">
+                                                        <span className="text-[10px] font-bold text-emerald-500/70 uppercase tracking-wider truncate">{assign.typeLabel || assign.type}</span>
+                                                        <Badge variant="outline" className="text-[9px] h-4 px-1.5 font-bold border-emerald-500/30 text-emerald-400">SUCCESS</Badge>
+                                                    </div>
+                                                    <p className="font-black text-white text-lg truncate uppercase">{assign.detail}</p>
+                                                </div>
+                                            </div>
+                                            <Link href={getHomeworkLink(assign.type, assign.detail, assign.id)}>
+                                                <Button size="sm" variant="ghost" className="text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-bold gap-1.5 px-3 h-8">
+                                                    복습하기 <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
+                                                </Button>
+                                            </Link>
+                                        </div>
+
+                                        <div className="flex items-end justify-between bg-slate-800/20 p-3 rounded-xl border border-slate-800/50">
+                                            {/* Target Section */}
+                                            <div className="flex flex-col gap-1">
+                                                <span className="text-[9px] text-slate-500 font-black uppercase tracking-tighter">당신의 목표</span>
+                                                <div className="flex items-baseline gap-1">
+                                                    <span className="text-3xl font-black text-amber-500 leading-none">{targetValue}</span>
+                                                    <span className="text-[10px] text-slate-600 font-bold uppercase">Goal</span>
+                                                </div>
+                                            </div>
+
+                                            {/* VS Divider */}
+                                            <div className="h-8 w-px bg-slate-800 hidden md:block" />
+
+                                            {/* Result Section */}
+                                            <div className="flex flex-col items-end gap-1">
+                                                <span className="text-[9px] text-slate-500 font-black uppercase tracking-tighter">취득 점수</span>
+                                                <div className="flex items-baseline gap-1">
+                                                    <span className="text-3xl font-black text-emerald-400 leading-none">{result.score || 0}</span>
+                                                    <span className="text-xs text-slate-600 font-bold">/ {result.total || '-'}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Card>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            })()}
         </div>
     );
 }

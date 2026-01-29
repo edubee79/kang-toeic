@@ -41,8 +41,8 @@ const HOMEWORK_COLS = [
     { id: 'part6_test', label: 'RC Part 6 실전', prefix: 'Test', range: 10 },
     { id: 'part7_single', label: 'RC Part 7 싱글', prefix: 'Test', range: 10 },
     { id: 'part7_double', label: 'RC Part 7 더블/트리플', prefix: 'Test', range: 10 },
-    { id: 'level_test', label: '레벨테스트 (Level Test)', prefix: '', range: 2, customLabels: ['9A', '9B'] },
-    { id: 'mock_test', label: '모의고사 (Mock)', prefix: 'Exam', range: 5 },
+    { id: 'level_test', label: '레벨테스트 (Level Test)', prefix: '', range: 2, customLabels: ['레벨테스트 1', '레벨테스트 2'] },
+    { id: 'mock_test', label: '모의고사 (Mock)', prefix: '', range: 4, customLabels: ['모의고사 1회', '모의고사 2회', '모의고사 3회', '모의고사 4회'] },
     { id: 'weakness_review', label: 'AI취약점 (Analysis)', prefix: 'Week', range: 4 },
 ];
 

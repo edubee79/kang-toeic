@@ -145,7 +145,7 @@ export default function Part2Test() {
         audioRef.current.volume = 1.0;
 
         const tNum = String(testId).padStart(2, '0');
-        const qNum = String(currentQuestion.id).padStart(2, '0');
+        const qNum = String(currentQuestion.questionNo).padStart(2, '0');
         audioRef.current.src = `/audio/lc/part2/Test_${tNum}-${qNum}.mp3`;
 
         audioRef.current.play()
@@ -264,7 +264,7 @@ export default function Part2Test() {
             // Sequence
             console.log(`TTS Session ${myId} Started`);
 
-            await speak(`Number ${currentQuestion.id}`, myId);
+            await speak(`Number ${currentQuestion.questionNo}`, myId);
             await wait(500, myId); if (myId !== playbackId.current) return;
 
             await speak(currentQuestion.script, myId);
@@ -337,7 +337,8 @@ export default function Part2Test() {
         setSelectedAnswer(choice);
         setShowResult(true);
 
-        const isCorrect = choice === currentQuestion.correct;
+        const choiceLetter = String.fromCharCode(65 + choice); // 0 -> 'A', 1 -> 'B', 2 -> 'C'
+        const isCorrect = choiceLetter === currentQuestion.correctAnswer;
 
         if (!isCorrect && !isReviewMode) {
             if (!wrongQueue.find(q => q.id === currentQuestion.id)) {
@@ -380,9 +381,9 @@ export default function Part2Test() {
         const score = questions.length - wrongQueue.length;
         const userStr = localStorage.getItem('toeic_user');
 
-        // Create detailed incorrect questions data with unique IDs (e.g., P2_T1_Q7)
+        // Create detailed incorrect questions data with unique IDs (e.g., p2-t1-q7)
         const incorrectQuestions = wrongQueue.map(q => ({
-            id: `P2_T${testId}_${q.id}`, // Unique ID across all tests
+            id: q.id, // Standardized unique ID
             classification: q.questionType || 'Unknown'
         }));
 
@@ -438,7 +439,7 @@ export default function Part2Test() {
                                 <div className="flex flex-wrap gap-2">
                                     {wrongQueue.map(q => (
                                         <div key={q.id} className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-500/10 border border-rose-500/20 rounded-lg">
-                                            <span className="text-xs font-black text-rose-500">Q{q.id}</span>
+                                            <span className="text-xs font-black text-rose-500">Q{q.questionNo}</span>
                                             {q.questionType === 'Indirect' && (
                                                 <span className="text-[9px] font-bold text-amber-500 bg-amber-500/10 px-1 rounded">Indirect</span>
                                             )}
@@ -524,7 +525,7 @@ export default function Part2Test() {
                         )}
                     </div>
                     <h1 className="text-xl md:text-2xl font-black text-white italic tracking-tighter">
-                        Question {currentQuestion.id}
+                        Question {currentQuestion.questionNo}
                     </h1>
                 </div>
                 <div className="text-right">
@@ -581,7 +582,8 @@ export default function Part2Test() {
                         }
 
                         if (showResult) {
-                            if (optIdx === currentQuestion.correct) {
+                            const choiceLetter = String.fromCharCode(65 + optIdx);
+                            if (choiceLetter === currentQuestion.correctAnswer) {
                                 btnClass = "bg-emerald-600/20 border-emerald-500 text-emerald-400"; // Correct
                             } else if (isSelected) {
                                 btnClass = "bg-rose-600/20 border-rose-500 text-rose-400"; // Wrong selected
@@ -603,7 +605,7 @@ export default function Part2Test() {
                                     <div className="flex items-center gap-4 z-10 relative w-full">
                                         <div className={cn(
                                             "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-black transition-colors shrink-0",
-                                            showResult && optIdx === currentQuestion.correct ? "bg-emerald-500 text-slate-900" : "bg-slate-900/50"
+                                            showResult && String.fromCharCode(65 + optIdx) === currentQuestion.correctAnswer ? "bg-emerald-500 text-slate-900" : "bg-slate-900/50"
                                         )}>
                                             {String.fromCharCode(65 + optIdx)}
                                         </div>
@@ -621,8 +623,8 @@ export default function Part2Test() {
                                             <div className="absolute inset-x-4 top-1/2 h-0.5 bg-slate-500/30 pointer-events-none" />
                                         )}
 
-                                        {showResult && optIdx === currentQuestion.correct && <CheckCircle className="w-5 h-5 text-emerald-500" />}
-                                        {showResult && isSelected && optIdx !== currentQuestion.correct && <XCircle className="w-5 h-5 text-rose-500" />}
+                                        {showResult && String.fromCharCode(65 + optIdx) === currentQuestion.correctAnswer && <CheckCircle className="w-5 h-5 text-emerald-500" />}
+                                        {showResult && isSelected && String.fromCharCode(65 + optIdx) !== currentQuestion.correctAnswer && <XCircle className="w-5 h-5 text-rose-500" />}
                                     </div>
                                 </button>
 

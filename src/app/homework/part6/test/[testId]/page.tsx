@@ -6,9 +6,9 @@ import Link from 'next/link';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { part6TestData, Part6Question } from '@/data/toeic/reading/part6/tests';
-import { getPart6ClassificationLabel } from '@/data/toeic/reading/part6/classification';
+import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
 // For now, reuse P5 map or just display raw if P6 specific.
-import { cn } from "@/lib/utils";
+import { cn, normalizeOptions } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TouchDictionary } from '@/components/common/TouchDictionary';
@@ -231,7 +231,7 @@ function Part6TestRunnerContent() {
                 const isRevealed = reviewMode || (isDrillMode && !!answer);
                 const isCorrect = answer === q?.correctAnswer;
 
-                const markerText = isRevealed && answer ? q?.options.find(o => o.label === answer)?.text : `[${qId}]`;
+                const markerText = isRevealed && answer ? q?.options.find(o => o.label === answer)?.text : `[${q?.questionNo || qId}]`;
 
                 return (
                     <span
@@ -465,7 +465,7 @@ function Part6TestRunnerContent() {
                                                                 "inline-flex items-center justify-center font-black text-[11px] lg:text-xs mr-1",
                                                                 isActive ? "text-indigo-400" : "text-slate-500"
                                                             )}>
-                                                                {q.id}.
+                                                                {q.questionNo || q.id}.
                                                             </span>
                                                             {reviewMode && testId === 1 ? <TouchDictionary text={q.text} /> : q.text}
                                                         </div>
@@ -475,7 +475,7 @@ function Part6TestRunnerContent() {
                                                     </div>
 
                                                     <div className="grid gap-0.5 lg:gap-1.5">
-                                                        {q.options.map((opt) => (
+                                                        {normalizeOptions(q.options).map((opt) => (
                                                             <button
                                                                 key={opt.label}
                                                                 onClick={(e) => {
@@ -511,7 +511,7 @@ function Part6TestRunnerContent() {
                                                                 <div className="ml-auto">
                                                                     <span className="inline-flex items-center gap-0.5 lg:gap-1.5 px-1 lg:px-2.5 py-0.5 lg:py-1 rounded-sm lg:rounded-md bg-slate-800 text-[8px] lg:text-xs font-medium text-slate-300 border border-slate-700">
                                                                         <Tag className="w-2 h-2 lg:w-3 lg:h-3" />
-                                                                        <span>{getPart6ClassificationLabel(q.classification)}</span>
+                                                                        <span>{getToeicTagLabel(q.classification)}</span>
                                                                     </span>
                                                                 </div>
                                                             </div>

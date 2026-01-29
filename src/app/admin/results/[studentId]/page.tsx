@@ -537,20 +537,25 @@ export default function StudentDetailPage() {
                                                             {/* LC Column */}
                                                             <div className="space-y-3">
                                                                 <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
-                                                                {['p1', 'p2', 'p3', 'p4'].map((p) => {
-                                                                    const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                                                {[
+                                                                    { k: 'p1', label: 'P1' },
+                                                                    { k: 'p2', label: 'P2' },
+                                                                    { k: 'p3', label: 'P3' },
+                                                                    { k: 'p4', label: 'P4' }
+                                                                ].map(({ k, label }) => {
+                                                                    const partStats = weaknessReport.targetStats[k] || { target: 0, average: 0, latest: 0 };
                                                                     const goal = partStats.target;
                                                                     const current = partStats.average;
                                                                     const latest = partStats.latest;
                                                                     const gap = latest - goal;
 
                                                                     return (
-                                                                        <div key={p} className="flex items-center text-sm gap-2 font-inter">
-                                                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p}</span>
+                                                                        <div key={k} className="flex items-center text-sm gap-2 font-inter">
+                                                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{label}</span>
                                                                             <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
                                                                                 <div className="flex flex-col items-center min-w-[32px]">
                                                                                     <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
-                                                                                    <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}</span>
+                                                                                    <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}개</span>
                                                                                 </div>
                                                                                 <div className="flex flex-col items-center min-w-[32px]">
                                                                                     <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
@@ -572,20 +577,25 @@ export default function StudentDetailPage() {
                                                             {/* RC Column */}
                                                             <div className="space-y-3">
                                                                 <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
-                                                                {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
-                                                                    const partStats = weaknessReport.targetStats[p] || { target: 0, average: 0, latest: 0 };
+                                                                {[
+                                                                    { k: 'p5', label: 'P5' },
+                                                                    { k: 'p6', label: 'P6' },
+                                                                    { k: 'p7_single', label: 'P7 S' },
+                                                                    { k: 'p7_double', label: 'P7 D' }
+                                                                ].map(({ k, label }) => {
+                                                                    const partStats = weaknessReport.targetStats[k] || { target: 0, average: 0, latest: 0 };
                                                                     const goal = partStats.target;
                                                                     const current = partStats.average;
                                                                     const latest = partStats.latest;
                                                                     const gap = latest - goal;
 
                                                                     return (
-                                                                        <div key={p} className="flex items-center text-sm gap-2 font-inter">
-                                                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7_', 'P7 ').replace('single', 'S').replace('double', 'D')}</span>
+                                                                        <div key={k} className="flex items-center text-sm gap-2 font-inter">
+                                                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{label}</span>
                                                                             <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
                                                                                 <div className="flex flex-col items-center min-w-[32px]">
                                                                                     <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
-                                                                                    <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}</span>
+                                                                                    <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}개</span>
                                                                                 </div>
                                                                                 <div className="flex flex-col items-center min-w-[32px]">
                                                                                     <span className="text-slate-500 text-[9px] mb-0.5">평균</span>

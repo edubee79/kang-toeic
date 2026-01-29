@@ -14,6 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { Users, Shield, Download, Search, ListFilter, Mic2, Headphones, BookOpen, PenSquare, FileText, GraduationCap, Upload, Trophy, BarChart3 } from "lucide-react";
 import * as XLSX from 'xlsx';
+import { cn } from "@/lib/utils";
 
 import { Bar } from 'react-chartjs-2';
 import {
@@ -36,6 +37,8 @@ ChartJS.register(
 );
 
 import { isAdmin } from '@/lib/adminAuth';
+import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
+import React from 'react'; // Added for Fragments
 
 export default function AdminDashboard() {
     const [stats, setStats] = useState({
@@ -48,9 +51,9 @@ export default function AdminDashboard() {
     const [students, setStudents] = useState<any[]>([]);
     const [classes, setClasses] = useState<{ name: string }[]>([]);
     const [filterClass, setFilterClass] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
-    const [selectedStudent, setSelectedStudent] = useState<any>(null);
+    const [reports, setReports] = useState<Record<string, WeaknessReport>>({});
+    const [loadingAnalysis, setLoadingAnalysis] = useState(false);
 
     useEffect(() => {
         const checkAdmin = () => {
@@ -83,16 +86,15 @@ export default function AdminDashboard() {
                 // Fetch Users
                 const q = query(collection(db, "Winter_Users"), orderBy("registeredAt", "desc"));
                 const usersSnapshot = await getDocs(q);
-                const usersMap = new Map();
-
-                let pending = 0;
-                let approved = 0;
+                const approvedStudents: any[] = [];
+                let pendingCount = 0;
 
                 usersSnapshot.forEach(doc => {
                     const userData = doc.data();
-                    usersMap.set(userData.userId, { ...userData, logs: [], stats: {} });
-                    if (userData.status === 'pending') pending++;
-                    if (userData.status === 'approved') approved++;
+                    if (userData.status === 'pending') pendingCount++;
+                    if (userData.status === 'approved' && !isAdmin(userData.username)) {
+                        approvedStudents.push({ ...userData, id: doc.id });
+                    }
                 });
 
                 // Fetch Assignments
@@ -104,55 +106,27 @@ export default function AdminDashboard() {
 
                 // Fetch Results (Recent)
                 const resultsSnapshot = await getDocs(query(collection(db, "Manager_Results"), orderBy("timestamp", "desc")));
-
                 let todayCount = 0;
                 const todayStr = new Date().toDateString();
 
                 resultsSnapshot.forEach(doc => {
                     const res = doc.data();
-                    if (usersMap.has(res.studentId)) {
-                        const user = usersMap.get(res.studentId);
-                        user.logs.push(res);
-
-                        // Check if log is today
-                        if (res.timestamp?.toDate) {
-                            const logDate = res.timestamp.toDate().toDateString();
-                            if (logDate === todayStr) todayCount++;
-                        }
+                    if (res.timestamp?.toDate) {
+                        const logDate = res.timestamp.toDate().toDateString();
+                        if (logDate === todayStr) todayCount++;
                     }
                 });
 
-                // Calculate Stats for Table
-                const studentList: any[] = [];
-                usersMap.forEach(user => {
-                    let maxShadowSet = 0;
-                    let lc2Count = 0;
-                    let grammarCount = 0;
-                    let vocaCount = user.passedVocaDays ? user.passedVocaDays.length : 0;
-
-                    user.logs.forEach((log: any) => {
-                        const unit = log.unit || "";
-                        if (unit.includes('Shadowing')) {
-                            const match = unit.match(/Set(\d+)/);
-                            if (match && parseInt(match[1]) > maxShadowSet) maxShadowSet = parseInt(match[1]);
-                        } else if (unit.includes('Part2')) lc2Count++;
-                        else if (unit.includes('Part5') || unit.includes('Unit')) grammarCount++;
-                    });
-
-                    user.stats = { maxShadowSet, lc2Count, grammarCount, vocaCount };
-                    // Only approved active students for the table
-                    if (user.status === 'approved') {
-                        studentList.push(user);
-                    }
-                });
-
-                setStudents(studentList);
+                setStudents(approvedStudents);
                 setStats({
-                    totalStudents: approved,
-                    pendingStudents: pending,
+                    totalStudents: approvedStudents.length,
+                    pendingStudents: pendingCount,
                     activeAssignments: activeAssigns,
                     todayLogs: todayCount
                 });
+
+                // Trigger Analysis
+                analyzeStudents(approvedStudents);
 
             } catch (error) {
                 console.error("Error fetching admin data:", error);
@@ -161,38 +135,97 @@ export default function AdminDashboard() {
             }
         };
 
+        const analyzeStudents = async (studentList: any[]) => {
+            setLoadingAnalysis(true);
+            const reportMap: Record<string, WeaknessReport> = {};
+
+            const chunkSize = 10;
+            for (let i = 0; i < studentList.length; i += chunkSize) {
+                const chunk = studentList.slice(i, i + chunkSize);
+                await Promise.all(chunk.map(async (s) => {
+                    try {
+                        const report = await WeaknessService.analyzeUserWeakness(s.userId);
+                        reportMap[s.userId] = report;
+                    } catch (e) {
+                        console.error(`Error analyzing ${s.userId}:`, e);
+                    }
+                }));
+                setReports(prev => ({ ...prev, ...reportMap }));
+            }
+            setLoadingAnalysis(false);
+        };
+
         checkAdmin();
     }, [router]);
 
     const handleExport = () => {
         const wb = XLSX.utils.book_new();
-        const data = filteredStudents.map(s => ({
-            Class: s.className || 'Unknown',
-            Name: s.name || s.username || 'Unknown',
-            ID: s.userId,
-            "Shadowing Set": s.stats.maxShadowSet,
-            "Part2 Count": s.stats.lc2Count,
-            "Part5 Unit": s.stats.grammarCount,
-            "Voca Days": s.stats.vocaCount
-        }));
+        const data = sortedStudents.map(s => {
+            const r = s.report;
+            const row: any = {
+                "수강반": s.className || '-',
+                "이름": s.userName || s.name || s.username,
+                "순위": s.rank,
+                "목표_총점": s.targetScore || 0,
+                "목표_RC": s.targetRC || 0,
+                "목표_LC": s.targetLC || 0,
+                "현재_예상점수": s.predicted,
+                "차이": s.predicted - (s.targetScore || 0)
+            };
+
+            const keys = [
+                { id: 'p1', label: 'P1' },
+                { id: 'p2', label: 'P2' },
+                { id: 'p3', label: 'P3' },
+                { id: 'p4', label: 'P4' },
+                { id: 'p5', label: 'P5' },
+                { id: 'p6', label: 'P6' },
+                { id: 'p7_single', label: 'P7단' },
+                { id: 'p7_double', label: 'P7중' }
+            ];
+
+            keys.forEach(k => {
+                const st = r?.targetStats[k.id];
+                row[`${k.label}_목표`] = st?.target || 0;
+                row[`${k.label}_평균`] = st?.average || 0;
+                row[`${k.label}_최근`] = st?.latest || 0;
+            });
+
+            return row;
+        });
+
         const ws = XLSX.utils.json_to_sheet(data);
-        XLSX.utils.book_append_sheet(wb, ws, "Students");
-        XLSX.writeFile(wb, "Toeic_Students_Report.xlsx");
+        XLSX.utils.book_append_sheet(wb, ws, "학생성취도");
+        XLSX.writeFile(wb, `Student_Progress_${filterClass}_${new Date().toISOString().slice(0, 10)}.xlsx`);
     };
 
-    const getStudentStats = (student: any) => {
-        return {
-            ...student.stats,
-            logs: student.logs || []
-        };
-    };
+    const sortedStudents = students
+        .filter(s => filterClass === 'all' || s.className === filterClass)
+        .map(s => {
+            const report = reports[s.userId];
+            const predicted = report ? (report.currentTotalLC + report.currentTotalRC) : 0;
+            return { ...s, predicted, report };
+        })
+        .sort((a, b) => b.predicted - a.predicted)
+        .map((s, idx) => ({ ...s, rank: idx + 1 }));
 
-    const filteredStudents = students.filter(student => {
-        const matchesClass = filterClass === 'all' || (student.className && student.className === filterClass);
-        const nameMatch = (student.name || '').toLowerCase().includes(searchTerm.toLowerCase());
-        const idMatch = (student.userId || '').toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesClass && (nameMatch || idMatch);
-    });
+    const renderPartColumns = (pKey: string, report?: WeaknessReport) => {
+        const stat = report?.targetStats[pKey];
+        if (!stat) return [
+            <TableCell key={`${pKey}-target`} className="text-center text-slate-300">-</TableCell>,
+            <TableCell key={`${pKey}-avg`} className="text-center text-slate-300">-</TableCell>,
+            <TableCell key={`${pKey}-latest`} className="text-center text-slate-300 border-r">-</TableCell>
+        ];
+
+        return [
+            <TableCell key={`${pKey}-target`} className="text-center font-bold text-slate-400 bg-slate-50/50">{stat.target}</TableCell>,
+            <TableCell key={`${pKey}-avg`} className="text-center text-slate-600">{stat.average}</TableCell>,
+            <TableCell key={`${pKey}-latest`} className={cn(
+                "text-center font-black border-r",
+                stat.latest >= stat.target ? "text-emerald-500" : "text-rose-500"
+            )}>{stat.latest}</TableCell>
+        ];
+    };
 
     if (loading) return <div className="p-8 text-center text-slate-500 animate-pulse font-bold">데이터 분석 중...</div>;
 
@@ -356,99 +389,108 @@ export default function AdminDashboard() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Student List */}
-                <Card className="col-span-1 lg:col-span-3 border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
-                    <CardHeader className="flex flex-row items-center justify-between">
-                        <CardTitle className="text-sm font-black uppercase text-slate-400">Student List ({filteredStudents.length})</CardTitle>
-                        <div className="relative w-48">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                            <Input
-                                placeholder="이름 검색..."
-                                className="pl-9 h-9 text-xs font-bold bg-slate-50 border-none"
-                                value={searchTerm}
-                                onChange={e => setSearchTerm(e.target.value)}
-                            />
+            {/* Performance Achievement Table */}
+            <Card className="border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
+                <CardHeader className="flex flex-row items-center justify-between bg-slate-900 text-white py-4 px-8">
+                    <CardTitle className="text-sm font-black uppercase tracking-widest italic">Student Performance Achievement</CardTitle>
+                    {loadingAnalysis && (
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-indigo-400 animate-pulse">
+                            <div className="w-3 h-3 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+                            ANALYZING DATA...
                         </div>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                        <div className="max-h-[600px] overflow-auto">
-                            <Table>
-                                <TableHeader className="bg-slate-50 sticky top-0">
-                                    <TableRow>
-                                        <TableHead className="w-20 font-bold text-xs">Class</TableHead>
-                                        <TableHead className="font-bold text-xs">Student</TableHead>
-                                        <TableHead className="font-bold text-xs">Progress Summary</TableHead>
-                                        <TableHead className="text-right font-bold text-xs">Detail</TableHead>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody>
-                                    {filteredStudents.map((student) => {
-                                        const stats = getStudentStats(student);
-                                        return (
-                                            <Dialog key={student.userId}>
-                                                <DialogTrigger asChild>
-                                                    <TableRow className="cursor-pointer hover:bg-slate-50" onClick={() => setSelectedStudent({ ...student, stats })}>
-                                                        <TableCell className="font-bold text-slate-500">{student.className || '-'}</TableCell>
-                                                        <TableCell>
-                                                            <div className="flex flex-col">
-                                                                <span className="font-bold text-slate-900">{student.name || student.username}</span>
-                                                                <span className="text-[10px] text-slate-400">{student.userId}</span>
-                                                            </div>
-                                                        </TableCell>
-                                                        <TableCell>
-                                                            <div className="flex flex-wrap gap-1">
-                                                                <span className="px-2 py-0.5 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded border border-emerald-100">VOCA {stats.vocaCount}D</span>
-                                                                {stats.maxShadowSet > 0 && <span className="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded border border-indigo-100">SHADOW {stats.maxShadowSet}</span>}
-                                                                {stats.lc2Count > 0 && <span className="px-2 py-0.5 bg-rose-50 text-rose-600 text-[10px] font-bold rounded border border-rose-100">LC2 {stats.lc2Count}</span>}
-                                                            </div>
-                                                        </TableCell>
-                                                        <TableCell className="text-right">
-                                                            <div className="inline-flex w-8 h-8 items-center justify-center rounded-full bg-slate-100 text-slate-400 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
-                                                                <ListFilter className="w-4 h-4" />
-                                                            </div>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                </DialogTrigger>
-                                                <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-xl border-none shadow-2xl rounded-[2.5rem] p-0 overflow-hidden text-slate-900">
-                                                    <DialogHeader className="p-8 border-b bg-white/50">
-                                                        <DialogTitle className="text-2xl font-black italic text-slate-900">
-                                                            {student.name} <span className="text-slate-400 text-sm not-italic ml-2">({student.className}반 | {student.userId})</span>
-                                                        </DialogTitle>
-                                                    </DialogHeader>
-                                                    <div className="p-8 overflow-y-auto max-h-[70vh]">
-                                                        <div className="grid grid-cols-2 gap-4 mb-8">
-                                                            <ProgressCard title="Part 1" value={stats.maxShadowSet} subValue="/ 5 Sets" color="indigo" icon={Mic2} current={stats.maxShadowSet} total={5} />
-                                                            <ProgressCard title="Part 2" value={stats.lc2Count} subValue="/ 5 Sets" color="rose" icon={Headphones} current={stats.lc2Count} total={5} />
-                                                            <ProgressCard title="Part 5" value={stats.grammarCount} subValue="/ 10 Unit" color="blue" icon={PenSquare} current={stats.grammarCount} total={10} />
-                                                            <ProgressCard title="Voca" value={stats.vocaCount} subValue="/ 30 Days" color="emerald" icon={BookOpen} current={stats.vocaCount} total={30} />
-                                                        </div>
+                    )}
+                </CardHeader>
+                <CardContent className="p-0 overflow-x-auto">
+                    <Table className="min-w-[1200px]">
+                        <TableHeader className="bg-slate-100">
+                            <TableRow className="hover:bg-transparent">
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] border-r text-slate-900">순위</TableHead>
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] border-r text-slate-900">수강반</TableHead>
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] border-r text-slate-900">이름</TableHead>
+                                <TableHead colSpan={1} className="text-center font-black text-[10px] border-r bg-indigo-50 text-indigo-700">목표 성적</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">PART 1</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">PART 2</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">PART 3</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">PART 4</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">PART 5</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">PART 6</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">P7 단지문</TableHead>
+                                <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">P7 이/삼중</TableHead>
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] border-r bg-emerald-50 text-emerald-700">현재예상</TableHead>
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] bg-rose-50 text-rose-700">부족/초과</TableHead>
+                            </TableRow>
+                            <TableRow className="hover:bg-transparent">
+                                <TableHead className="text-center text-[9px] font-bold border-r bg-indigo-50/50 text-indigo-700">총점/RC/LC</TableHead>
 
-                                                        <h3 className="text-sm font-black uppercase text-slate-400 mb-4">Recent Activity Logs</h3>
-                                                        <div className="space-y-3">
-                                                            {stats.logs.slice(0, 5).map((log: any, i: number) => (
-                                                                <div key={i} className="flex justify-between items-center p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                                                                    <div>
-                                                                        <p className="text-xs font-black text-slate-500 uppercase">{log.unit}</p>
-                                                                        <p className="text-[10px] font-bold text-slate-400" suppressHydrationWarning>{new Date(log.timestamp?.toDate()).toLocaleString()}</p>
-                                                                    </div>
-                                                                    <div className="text-right">
-                                                                        <span className="text-sm font-black text-indigo-600">{log.score}</span><span className="text-[10px] text-slate-400">/{log.total}</span>
-                                                                    </div>
-                                                                </div>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                </DialogContent>
-                                            </Dialog>
-                                        );
-                                    })}
-                                </TableBody>
-                            </Table>
-                        </div>
-                    </CardContent>
-                </Card>
-            </div>
+                                {[...Array(8)].map((_, i) => {
+                                    const keyBase = `head-p${i}`;
+                                    return (
+                                        <React.Fragment key={i}>
+                                            <TableHead key={`${keyBase}-target`} className="text-center text-[8px] font-medium bg-slate-50 text-slate-600">목표</TableHead>
+                                            <TableHead key={`${keyBase}-avg`} className="text-center text-[8px] font-medium text-slate-600">평균</TableHead>
+                                            <TableHead key={`${keyBase}-latest`} className="text-center text-[8px] font-bold border-r text-slate-900">최근</TableHead>
+                                        </React.Fragment>
+                                    );
+                                })}
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {sortedStudents.map((s) => {
+                                const report = reports[s.userId];
+                                const predicted = s.predicted;
+                                const target = s.targetScore || 850;
+                                const diff = predicted - target;
+
+                                return (
+                                    <TableRow key={s.userId} className="group hover:bg-slate-50 transition-colors">
+                                        <TableCell className="text-center font-black text-slate-400 border-r">{s.rank}위</TableCell>
+                                        <TableCell className="text-center text-[10px] font-bold text-slate-500 border-r">{s.className || '-'}</TableCell>
+                                        <TableCell className="border-r">
+                                            <button
+                                                onClick={() => router.push(`/admin/results/${s.userId}`)}
+                                                className="w-full text-center font-black text-slate-900 group-hover:text-indigo-600 transition-colors"
+                                            >
+                                                {s.userName || s.name || s.username}
+                                            </button>
+                                        </TableCell>
+                                        {/* Targets */}
+                                        <TableCell className="border-r bg-indigo-50/10">
+                                            <div className="flex flex-col items-center gap-0.5">
+                                                <span className="text-[11px] font-black text-indigo-600">{target}</span>
+                                                <span className="text-[9px] text-slate-400">{s.targetRC || 425}/{s.targetLC || 425}</span>
+                                            </div>
+                                        </TableCell>
+                                        {/* Part Stats */}
+                                        {renderPartColumns("p1", report)}
+                                        {renderPartColumns("p2", report)}
+                                        {renderPartColumns("p3", report)}
+                                        {renderPartColumns("p4", report)}
+                                        {renderPartColumns("p5", report)}
+                                        {renderPartColumns("p6", report)}
+                                        {renderPartColumns("p7_single", report)}
+                                        {renderPartColumns("p7_double", report)}
+                                        {/* Summary */}
+                                        <TableCell className="text-center border-r bg-emerald-50/20">
+                                            <span className="text-sm font-black text-emerald-600">{predicted}점</span>
+                                        </TableCell>
+                                        <TableCell className={cn(
+                                            "text-center font-black text-xs bg-rose-50/10",
+                                            diff >= 0 ? "text-emerald-500" : "text-rose-500"
+                                        )}>
+                                            {diff > 0 ? `+${diff}` : diff}
+                                        </TableCell>
+                                    </TableRow>
+                                );
+                            })}
+                            {sortedStudents.length === 0 && (
+                                <TableRow>
+                                    <TableCell colSpan={32} className="h-32 text-center text-slate-400 font-bold">표시할 학생 데이터가 없습니다.</TableCell>
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+                </CardContent>
+            </Card>
         </div >
     );
 }

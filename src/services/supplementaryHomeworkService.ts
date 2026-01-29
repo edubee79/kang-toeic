@@ -226,7 +226,7 @@ async function generateTypeReviewHomework(
                     allQuestions.push({
                         ...q,
                         testId: parseInt(testId),
-                        uniqueId: `P2_T${testId}_Q${q.id}`
+                        uniqueId: q.id // Use standardized unique ID (p2-tX-qY)
                     });
                 });
             }

@@ -1,6 +1,6 @@
 import { part1RealTests } from '../toeic/listening/part1/tests';
 import { part2Data } from '../part2';
-import { part3Data } from '../part3';
+import { part3RealTests } from '../part3';
 import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
 import { part6TestData } from '../toeic/reading/part6/tests';
@@ -27,7 +27,7 @@ export const test10Part1 = p1_raw.map(q => ({
 export const test10Part2 = part2Data[10] || [];
 
 // Part 3: 13세트 (32~70번)
-export const test10Part3 = part3Data.filter(d => d.testId === 10);
+export const test10Part3 = part3RealTests.filter(d => d.testId === 10);
 
 // Part 4: 10세트 (71~100번)
 export const test10Part4 = part4Data.filter(d => d.testId === 10);
@@ -35,14 +35,21 @@ export const test10Part4 = part4Data.filter(d => d.testId === 10);
 // Part 5: 30문제 (101~130번)
 const p5_raw = part5TestData.find(t => t.testId === 10)?.questions || [];
 export const test10Part5 = p5_raw.map(q => ({
-    id: parseInt(q.id.replace('q', '')),
+    id: q.id.includes('-q') ? q.id : `p5-t10-q${q.id.replace('q', '')}`,
     text: q.text,
-    options: q.options.map(o => `(${o.label}) ${o.text}`),
+    options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`),
     correctAnswer: q.correctAnswer
 }));
 
 // Part 6: 4지문 (131~146번)
-export const test10Part6 = part6TestData.find(t => t.testId === 10)?.passages || [];
+const p6_raw = part6TestData.find(t => t.testId === 10)?.passages || [];
+export const test10Part6 = p6_raw.map(p => ({
+    ...p,
+    questions: p.questions.map(q => ({
+        ...q,
+        id: `p6-t10-q${q.id}`
+    }))
+}));
 
 // Part 7: 싱글 (147~175번) + 멀티 (176~200번)
 const p7_full = part7TestData.find(t => t.testId === 10)?.sets || [];
@@ -51,10 +58,22 @@ const p7_full = part7TestData.find(t => t.testId === 10)?.sets || [];
 export const test10Part7Single = p7_full.filter(s => {
     const firstQ = parseInt(s.questions[0].id);
     return firstQ >= 147 && firstQ <= 175;
-});
+}).map(s => ({
+    ...s,
+    questions: s.questions.map(q => ({
+        ...q,
+        id: `p7-t10-q${q.id}`
+    }))
+}));
 
 // 176번부터의 멀티 지문 (별도 파일에서 가져옴)
-export const test10Part7Multi = rcPart7Test10;
+export const test10Part7Multi = rcPart7Test10.map(s => ({
+    ...s,
+    questions: s.questions.map(q => ({
+        ...q,
+        id: `p7-t10-q${q.id}`
+    }))
+}));
 
 
 // 전체 오디오 파일 경로 (데이터 파일 내 첫 번째 이미지의 폴더 기준 또는 별도 정의 필요)

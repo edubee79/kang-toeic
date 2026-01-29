@@ -42,7 +42,7 @@ export type RCP5Tag =
     | 'a1' | 'a2' | 'a3' | 'a4' | 'a5' | 'a6'
     | 'av1' | 'av2' | 'av3'
     // 2. Verb and Verbals (24)
-    | 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6' | 'v7' | 'v8'
+    | 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6' | 'v7' | 'v8' | 'v9'
     | 'i1' | 'i2' | 'i3' | 'i4' | 'i5' | 'i6'
     | 'g1' | 'g2' | 'g3' | 'g4' | 'g5'
     | 'pa1' | 'pa2' | 'pa3' | 'pa4' | 'pa5'
@@ -58,7 +58,7 @@ export type RCP5Tag =
     | 'voc1' | 'voc2' | 'voc3' | 'voc4';
 
 /** Part 6: Classification (3) */
-export type RCP6Tag = 'P6_GRAMMAR' | 'P6_VOCABULARY' | 'P6_SENTENCE_INSERTION' | 'P6_CONNECTIVE';
+export type RCP6Tag = 'p6g' | 'p6v' | 'p6s' | 'p6c';
 
 /** Part 7: Question Classification (8) */
 export type RCP7Tag =
@@ -66,8 +66,11 @@ export type RCP7Tag =
     | 'P7_VOCABULARY' | 'P7_INSERTION' | 'P7_GRAPHIC' | 'P7_LOCATION'
     | 'P7_INTENTION' | 'P7_LINK';
 
-/** RC Passage Group (8) */
 export type RCPassageGroupTag =
+    | 'P1' | 'P2' | 'P3' | 'P4'
+    | 'P5' | 'P6' | 'P7' | 'P8'
+    | 'P1_CORR' | 'P2_OFFI' | 'P3_MEDI' | 'P4_MARK'
+    | 'P5_FORM' | 'P6_RULE' | 'P7_CONV' | 'P8_VISU'
     | 'P1_CORR' | 'P2_OFFI' | 'P3_MEDI' | 'P4_MARK'
     | 'P5_FORM' | 'P6_RULE' | 'P7_CONV' | 'P8_VISU';
 
@@ -194,6 +197,7 @@ export const TOEIC_TAG_REGISTRY: Record<ToeicTag, { label: string, description: 
     'v6': { label: '조동사 뒤 원형', description: 'May, Can, Will 등 조동사 뒤 필수 원형' },
     'v7': { label: '자/타동사 구분', description: '목적어 유무에 따른 동사 성질 판단' },
     'v8': { label: '5형식 동사 패턴', description: 'Keep/Make/Find + O + OC 구조 이해' },
+    'v9': { label: '명령문과 동사 원형', description: 'Please로 시작하는 명령문이나 문장 내 본동사 위치에 올바른 원형을 찾는 유형' },
     'i1': { label: 'To부정사 명사적 용법', description: '문장 내 주어, 목적어 자리에 위치한 To v' },
     'i2': { label: '형용사적 용법', description: '명사 뒤에서 수식하는 To v' },
     'i3': { label: '부사적(목적) 용법', description: '~하기 위해서(In order to)의 의미 분석' },
@@ -252,10 +256,10 @@ export const TOEIC_TAG_REGISTRY: Record<ToeicTag, { label: string, description: 
     'voc4': { label: '고정 관용구(Idiom)', description: '개별 단어 의미를 넘어서는 고정 표현' },
 
     // Part 6
-    'P6_GRAMMAR': { label: '문맥 일관 문법 판단', description: '지문 전체의 흐름을 고려한 시제/태 판단' },
-    'P6_VOCABULARY': { label: '전체 맥락 어휘 추론', description: '문단 간 논리 연결을 고려한 최적 어휘' },
-    'P6_SENTENCE_INSERTION': { label: '장문 삽입 논리성', description: '전후 문맥을 고려한 올바른 문장 위치' },
-    'P6_CONNECTIVE': { label: '문맥 연결어구 판단', description: '문장과 문장을 잇는 부사/접속사 등의 논리적 연결어 선택' },
+    'p6g': { label: '문맥 일관 문법 판단', description: '지문 전체의 흐름을 고려한 시제/태 판단' },
+    'p6v': { label: '전체 맥락 어휘 추론', description: '문단 간 논리 연결을 고려한 최적 어휘' },
+    'p6s': { label: '장문 삽입 논리성', description: '전후 문맥을 고려한 올바른 문장 위치' },
+    'p6c': { label: '문맥 연결어구 판단', description: '문장과 문장을 잇는 부사/접속사 등의 논리적 연결어 선택' },
 
     // Part 7
     'P7_PURPOSE': { label: '글의 목적 및 핵심 취지', description: '발신 동기 및 글 전체가 지향하는 핵심 목표 파악' },
@@ -269,13 +273,23 @@ export const TOEIC_TAG_REGISTRY: Record<ToeicTag, { label: string, description: 
     'P7_INTENTION': { label: '발화의도 정밀 분석', description: '채팅/메시지 내 특정 어구(" ")의 문맥적 의도 파악' },
     'P7_LINK': { label: '다중지문 연계 추론', description: '두 개 이상의 지문 정보를 결합하여 정답 도출' },
 
-    // Passage Group
-    'P1_CORR': { label: '서신/이메일 독해력', description: '편지 유형의 전형적 비즈니스 소통 구조 이해' },
-    'P2_OFFI': { label: '공문/안내문 독해력', description: '공식 정보의 핵심 전달 사항 인지' },
-    'P3_MEDI': { label: '기사/보고서 독해력', description: '사실 중심 텍스트의 전문 정보 해독' },
-    'P4_MARK': { label: '홍보/광고/웹페이지', description: '마케팅 목적 지문의 세부 조건 파악' },
-    'P5_FORM': { label: '비즈니스 양식/영수증', description: '영수증, 송장 등 정형화된 데이터의 신속 처리' },
-    'P6_RULE': { label: '규정 및 지침서 독해', description: '지침서의 상세 조건부 문항 분석' },
-    'P7_CONV': { label: '메시지/채팅 대화', description: '채팅 지문의 구어체 흐름 파악 실력' },
-    'P8_VISU': { label: '도표 및 시각 자료 연계', description: '시각 정보를 통합하여 해석하는 실력' },
+    // RC Passage Group (Short IDs used in Data)
+    'P1': { label: '서신/이메일', description: '비즈니스 서신 및 이메일 소통 (Master: P1_CORR)' },
+    'P2': { label: '공문/안내문', description: '공지사항 및 공식 메시지 (Master: P2_OFFI)' },
+    'P3': { label: '기사/보고서', description: '뉴스 및 정보성 전문 텍스트 (Master: P3_MEDI)' },
+    'P4': { label: '홍보/광고', description: '마케팅 목적의 글 및 웹페이지 (Master: P4_MARK)' },
+    'P5': { label: '양식/영수증', description: '송장, 일정표 등 정형 데이터 (Master: P5_FORM)' },
+    'P6': { label: '규정/지침', description: '정책 및 조작 지침 분석 (Master: P6_RULE)' },
+    'P7': { label: '채팅/메시지', description: '메신저 대화 및 구어체 흐름 (Master: P7_CONV)' },
+    'P8': { label: '도표/시각자료', description: '그래프 및 이미지 정보 통합 (Master: P8_VISU)' },
+
+    // RC Master Classification (Reference for AI Analysis)
+    'P1_CORR': { label: '서신/이메일 독해력', description: '비즈니스 서신류의 전형적 소통 구조 및 의도 파악' },
+    'P2_OFFI': { label: '공문/안내문 독해력', description: '공지사항, 메시지 등 공식 정보의 핵심 전달 사항 인지' },
+    'P3_MEDI': { label: '기사/보고서 독해력', description: '뉴스 및 정보성 텍스트의 사실 관계 및 전문 정보 해독' },
+    'P4_MARK': { label: '홍보/광고/웹페이지', description: '마케팅 목적의 글에서 혜택 및 세부 조건 파악 능력' },
+    'P5_FORM': { label: '비즈니스 양식/영수증', description: '송장, 일정표 등 정형화된 양식 데이터의 신속한 처리' },
+    'P6_RULE': { label: '규정 및 지침서 독해', description: '정책, 조작 지침 등 조건부 문항에 대한 정확한 분석' },
+    'P7_CONV': { label: '메시지/채팅 대화', description: '메신저 및 대화문 지문에서의 구어체 흐름 및 상황 인지' },
+    'P8_VISU': { label: '도표 및 시각 자료 연계', description: '그래프, 이미지 정보를 텍스트와 통합하여 해석하는 실력' },
 };

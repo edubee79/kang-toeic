@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { cn } from "@/lib/utils";
+import { cn, normalizeOptions } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, Trophy, ChevronRight, BookOpen, Tag, Play, Volume2 } from "lucide-react";
-import { getClassificationLabel } from '@/data/toeic/reading/part5/classification';
+import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
 import { Part5TestQuestion } from '@/data/toeic/reading/part5/tests';
 
 interface Part5RunnerProps {
@@ -263,7 +263,7 @@ export function Part5Runner({
                                                                 : "border-slate-600 text-transparent"
                                                         )}>
                                                             {selectedAnswers[q.id]
-                                                                ? q.options.find(o => o.label === selectedAnswers[q.id])?.text
+                                                                ? normalizeOptions(q.options).find((o: any) => o.label === selectedAnswers[q.id])?.text
                                                                 : ""
                                                             }
                                                         </span>
@@ -274,7 +274,7 @@ export function Part5Runner({
                                     )}
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
-                                        {q.options.map((opt) => (
+                                        {normalizeOptions(q.options).map((opt: any) => (
                                             <button
                                                 key={opt.label}
                                                 onClick={() => handleSelect(q.id, opt.label)}
@@ -318,7 +318,7 @@ export function Part5Runner({
                                                 <div className="ml-auto flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-800 border border-slate-700">
                                                     <Tag className="w-3 h-3 text-slate-500" />
                                                     <span className="text-[10px] text-slate-400 font-bold">
-                                                        {getClassificationLabel(q.classification)}
+                                                        {getToeicTagLabel(q.classification)}
                                                     </span>
                                                 </div>
 

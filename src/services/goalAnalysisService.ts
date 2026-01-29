@@ -48,16 +48,16 @@ async function calculateActualTestStats(userId: string): Promise<Record<string, 
 
     const snapshot = await getDocs(q);
 
-    // PART_MAX from student dashboard
+    // Standard Short-form PART_MAX (Standardized across app)
     const PART_MAX: Record<string, number> = {
-        part1_test: 6, part2_test: 25, part3_test: 39, part4_test: 30,
-        part5_test: 30, part6_test: 16, part7_test: 54, part7_single: 29, part7_double: 25
+        p1: 6, p2: 25, p3: 39, p4: 30,
+        p5: 30, p6: 16, p7s: 29, p7d: 25, p7f: 54
     };
 
-    // Sort by createdAt (same as student dashboard)
+    // Sort by timestamp DESC (Latest First)
     const docs = snapshot.docs.sort((a, b) => {
-        const tA = a.data().createdAt?.toMillis() || a.data().timestamp?.toMillis() || 0;
-        const tB = b.data().createdAt?.toMillis() || b.data().timestamp?.toMillis() || 0;
+        const tA = a.data().timestamp?.toMillis() || a.data().createdAt?.toMillis() || 0;
+        const tB = b.data().timestamp?.toMillis() || b.data().createdAt?.toMillis() || 0;
         return tB - tA; // Latest first
     });
 
@@ -65,64 +65,60 @@ async function calculateActualTestStats(userId: string): Promise<Record<string, 
     const scoreCounts: Record<string, number> = {};
     const latestScore: Record<string, number> = {};
 
+    const LONG_TO_SHORT: Record<string, string> = {
+        'part1_test': 'p1', 'part2_test': 'p2', 'part3_test': 'p3', 'part4_test': 'p4',
+        'part5_test': 'p5', 'part6_test': 'p6',
+        'part7_single': 'p7s', 'part7_double': 'p7d', 'part7_triple': 'p7d', 'part7_test': 'p7f',
+        'p1': 'p1', 'p2': 'p2', 'p3': 'p3', 'p4': 'p4', 'p5': 'p5', 'p6': 'p6', 'p7s': 'p7s', 'p7d': 'p7d', 'p7t': 'p7d', 'p7f': 'p7f', 'p7m': 'p7d'
+    };
+
     docs.forEach(doc => {
         const data = doc.data() as ManagerResult;
 
-        // ✅ ONLY DIFFERENCE: Filter for actual tests
+        // ONLY actual tests (filters out 'drill' mode)
         if (!isActualTest(data)) return;
 
-        const type = mapToPartKey(data);
+        const longKey = mapToPartKey(data);
+        const type = LONG_TO_SHORT[longKey] || longKey;
 
-        // EXACT SAME score calculation as student dashboard
-        if (typeof data.score === 'number') {
+        if (typeof data.score === 'number' && PART_MAX[type] !== undefined) {
+            const max = PART_MAX[type];
             let correct = 0;
-            if (data.total) {
-                correct = data.score <= data.total
-                    ? data.score
-                    : Math.round((data.score / 100) * data.total);
-            } else if (PART_MAX[type]) {
-                correct = Math.round((data.score / 100) * PART_MAX[type]);
-            }
 
+            if (data.total) {
+                correct = data.score <= data.total ? data.score : Math.round((data.score / 100) * data.total);
+            } else {
+                correct = data.score <= max ? data.score : Math.round((data.score / 100) * max);
+            }
+            correct = Math.min(correct, max);
+
+            // Accumulate for average
             scoreSums[type] = (scoreSums[type] || 0) + correct;
             scoreCounts[type] = (scoreCounts[type] || 0) + 1;
-            if (latestScore[type] === undefined) latestScore[type] = correct;
+
+            // Pick LATEST (since docs are sorted by timestamp desc)
+            if (latestScore[type] === undefined) {
+                latestScore[type] = correct;
+            }
         }
     });
 
-    // Build result with converted keys (part1_test -> p1)
     const partStats: Record<string, { scores: number[], latest: number, average: number }> = {};
-
-    const KEY_CONVERSION: Record<string, string> = {
-        'part1_test': 'p1',
-        'part2_test': 'p2',
-        'part3_test': 'p3',
-        'part4_test': 'p4',
-        'part5_test': 'p5',
-        'part6_test': 'p6',
-        'part7_single': 'p7_single',
-        'part7_double': 'p7_double',
-        'part7_test': 'p7'
-    };
-
-    Object.keys(scoreSums).forEach(type => {
+    Object.keys(scoreCounts).forEach(type => {
         const average = Math.round(scoreSums[type] / scoreCounts[type]);
-        const convertedKey = KEY_CONVERSION[type] || type;
-
-        partStats[convertedKey] = {
-            scores: Array(scoreCounts[type]).fill(average), // Simplified for compatibility
+        partStats[type] = {
+            scores: Array(scoreCounts[type]).fill(average),
             latest: latestScore[type] || 0,
             average: average
         };
     });
 
-    // Special: Combine p7_single and p7_double into p7 if needed, but dashboard usually wants them separate or p7_single as p7
-    if (partStats['p7_single'] && !partStats['p7']) {
-        partStats['p7'] = partStats['p7_single'];
+    // Special: Map p7s to p7 for total P7 calculation if needed
+    if (partStats['p7s'] && !partStats['p7']) {
+        partStats['p7'] = partStats['p7s'];
     }
 
     console.log('📊 Actual test stats calculated:', partStats);
-
     return partStats;
 }
 
@@ -240,17 +236,23 @@ export async function analyzeGoalStatus(
     userId: string,
     partTargets: Record<string, number>
 ): Promise<GoalAnalysisResult> {
-    // 1. Normalize partTargets keys (part1_test -> p1, etc.)
+    // 1. Normalize partTargets keys (Support p1, p1_goal, etc.)
     const normalizedTargets: Record<string, number> = {};
     const KEY_MAP: Record<string, string> = {
-        'part1_test': 'p1', 'part2_test': 'p2', 'part3_test': 'p3', 'part4_test': 'p4',
-        'part5_test': 'p5', 'part6_test': 'p6', 'part7_single': 'p7_single', 'part7_double': 'p7_double',
-        'part7_test': 'p7_single' // map combined to single for baseline
+        'p1': 'p1', 'p1_goal': 'p1', 'part1_test': 'p1',
+        'p2': 'p2', 'p2_goal': 'p2', 'part2_test': 'p2',
+        'p3': 'p3', 'p3_goal': 'p3', 'part3_test': 'p3',
+        'p4': 'p4', 'p4_goal': 'p4', 'part4_test': 'p4',
+        'p5': 'p5', 'p5_goal': 'p5', 'part5_test': 'p5',
+        'p6': 'p6', 'p6_goal': 'p6', 'part6_test': 'p6',
+        'p7s': 'p7s', 'p7s_goal': 'p7s', 'p7_single_goal': 'p7s', 'part7_single': 'p7s',
+        'p7d': 'p7d', 'p7d_goal': 'p7d', 'p7_double_goal': 'p7d', 'part7_double': 'p7d',
+        'part7_test': 'p7f', 'p7f': 'p7f'
     };
 
     Object.entries(partTargets).forEach(([key, val]) => {
-        const normKey = KEY_MAP[key] || key;
-        normalizedTargets[normKey] = val;
+        const normKey = KEY_MAP[key] || key.replace('_goal', '');
+        normalizedTargets[normKey] = val || 0;
     });
 
     const stats = await calculateActualTestStats(userId);
