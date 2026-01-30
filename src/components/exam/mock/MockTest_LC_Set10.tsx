@@ -58,7 +58,8 @@ export default function MockTest_LC_Set10({ onFinishLC }: Props) {
     const totalSpreads = 6; // Spread 0 to 5
 
     const nextSpread = () => {
-        // Validation: Check if all questions on current spread are answered
+        // Validation: Check if all questions on current spread are answered (Disabled for testing Test 2)
+        /*
         const currentQuestions = getSpreadQuestions(currentSpread);
         const unanswered = currentQuestions.filter(qId => !answers[qId]);
 
@@ -66,6 +67,7 @@ export default function MockTest_LC_Set10({ onFinishLC }: Props) {
             alert(`현재 페이지의 모든 문제를 풀어주세요. (남은 문제: ${unanswered.length}개)`);
             return;
         }
+        */
 
         if (currentSpread < totalSpreads - 1) setCurrentSpread(s => s + 1);
         else {

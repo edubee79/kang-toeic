@@ -40,63 +40,19 @@ export default function MockTestResult() {
             if (data && data.answers) {
                 setAttempt(data);
 
-                // 1. Scoring Logic
-                let lcCorrect = 0;
-                let rcCorrect = 0;
-
-                // Determine which answer sheet to use
-                const correctAnswers = testId === 9 ? getCorrectAnswersForTest9() :
-                    testId === 10 ? getCorrectAnswersForTest10() : {};
-
-                Object.entries(correctAnswers).forEach(([qId, correct]) => {
-                    const userAns = data.answers[qId];
-                    if (userAns === correct) {
-                        // Standardized ID check (p1, p2, p3, p4 are LC)
-                        const isLC = qId.startsWith('p1') || qId.startsWith('p2') ||
-                            qId.startsWith('p3') || qId.startsWith('p4');
-
-                        if (isLC) {
-                            lcCorrect++;
-                        } else if (qId.startsWith('p5') || qId.startsWith('p6') || qId.startsWith('p7') || qId.startsWith('q')) {
-                            // q is for Part 5 old style
-                            rcCorrect++;
-                        } else {
-                            // Fallback for numeric or other formats
-                            const qNum = parseInt(qId.replace(/[^0-9]/g, ''));
-                            if (qNum <= 100) lcCorrect++;
-                            else rcCorrect++;
-                        }
+                if (attemptId) {
+                    const analysis = await HalfTestService.analyzeAttempt(attemptId);
+                    if (analysis) {
+                        setHalfAnalysis(analysis);
+                        setStats({
+                            lcRaw: analysis.lcScore / 5, // Approximate for internal display if needed
+                            rcRaw: analysis.rcScore / 5,
+                            lcScaled: analysis.lcScore,
+                            rcScaled: analysis.rcScore,
+                            total: analysis.overallScore, // Corrected from targetGoal
+                            isHalf: isHalf
+                        });
                     }
-                });
-
-                if (isHalf) {
-                    // Half Test: Simple x10 scoring for level visualization (roughly)
-                    setStats({
-                        lcRaw: lcCorrect,
-                        rcRaw: rcCorrect,
-                        lcScaled: lcCorrect * 10,
-                        rcScaled: rcCorrect * 10,
-                        total: (lcCorrect + rcCorrect) * 10,
-                        isHalf: true
-                    });
-
-                    // 2. Fetch REAL Time Analysis
-                    if (attemptId) {
-                        const analysis = await HalfTestService.analyzeAttempt(attemptId);
-                        if (analysis) setHalfAnalysis(analysis);
-                    }
-                } else {
-                    // Full Mock Test: Use ETS conversion table
-                    const lcScaled = calculateScaledScore(lcCorrect, 'LC');
-                    const rcScaled = calculateScaledScore(rcCorrect, 'RC');
-                    setStats({
-                        lcRaw: lcCorrect,
-                        rcRaw: rcCorrect,
-                        lcScaled,
-                        rcScaled,
-                        total: lcScaled + rcScaled,
-                        isHalf: false
-                    });
                 }
             } else {
                 router.push('/mock-test');
@@ -106,12 +62,14 @@ export default function MockTestResult() {
         fetchResult();
     }, [testId, testIdStr, isHalf, router, attemptId]);
 
-    if (!attempt || !stats || (stats.isHalf && !halfAnalysis)) return (
+    if (!attempt || !stats || !halfAnalysis) return (
         <div className="min-h-screen bg-white flex flex-col items-center justify-center">
             <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-            <div className="text-slate-400 font-bold animate-pulse">데이터 분석 리포트 생성 중...</div>
+            <div className="text-slate-400 font-bold animate-pulse">깡쌤의 정밀 취약 분석 리포트 생성 중...</div>
         </div>
     );
+
+    const safeHalf = halfAnalysis;
 
     return (
         <div className="min-h-screen bg-[#f8fafc] flex flex-col items-center py-6 px-4 md:px-6 font-sans">
@@ -123,7 +81,16 @@ export default function MockTestResult() {
                         <div className="space-y-2 text-center md:text-left">
                             <span className="bg-rose-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest">Premium Analysis</span>
                             <h1 className="text-3xl md:text-4xl font-black tracking-tighter text-white">
-                                {isHalf ? (finalTestIdLabel?.includes('b') ? '2회' : '1회') : `${testId}회`} 레벨테스트 <span className="text-indigo-400">학습결과</span>
+                                {(() => {
+                                    // 1. 레벨테스트 (isHalf)
+                                    if (isHalf) {
+                                        if (finalTestIdLabel?.includes('b')) return '레벨테스트 2회 결과';
+                                        return '레벨테스트 1회 결과';
+                                    }
+                                    // 2. 실전 모의고사 (Full)
+                                    if (testId === 10) return '2회 모의고사 결과';
+                                    return '1회 모의고사 결과';
+                                })()}
                             </h1>
                             <p className="text-slate-400 font-bold tracking-tight text-xs">응시 일시: {new Date(attempt.date).toLocaleString()}</p>
                         </div>
@@ -131,17 +98,17 @@ export default function MockTestResult() {
                         <div className="flex gap-4 md:gap-8 bg-white/5 p-4 md:p-6 rounded-[1.5rem] border border-white/10 shadow-inner">
                             <div className="text-center group">
                                 <p className="text-[9px] font-black text-blue-400 uppercase tracking-widest mb-1 group-hover:text-blue-300">LC 점수</p>
-                                <p className="text-2xl font-black">{halfAnalysis.lcScore}<span className="text-[10px] ml-0.5 opacity-50">점</span></p>
-                                <p className={cn("text-[10px] font-black mt-1", halfAnalysis.lcScore >= (halfAnalysis as any).lcTarget ? "text-emerald-400" : "text-rose-400")}>
-                                    {halfAnalysis.lcScore >= (halfAnalysis as any).lcTarget ? `+${halfAnalysis.lcScore - (halfAnalysis as any).lcTarget}` : `${halfAnalysis.lcScore - (halfAnalysis as any).lcTarget}`}
+                                <p className="text-2xl font-black">{safeHalf.lcScore}<span className="text-[10px] ml-0.5 opacity-50">점</span></p>
+                                <p className={cn("text-[10px] font-black mt-1", safeHalf.lcScore >= (safeHalf as any).lcTarget ? "text-emerald-400" : "text-rose-400")}>
+                                    {safeHalf.lcScore >= (safeHalf as any).lcTarget ? `+${safeHalf.lcScore - (safeHalf as any).lcTarget}` : `${safeHalf.lcScore - (safeHalf as any).lcTarget}`}
                                 </p>
                             </div>
                             <div className="w-px bg-white/10"></div>
                             <div className="text-center group">
                                 <p className="text-[9px] font-black text-emerald-400 uppercase tracking-widest mb-1 group-hover:text-emerald-300">RC 점수</p>
-                                <p className="text-2xl font-black">{halfAnalysis.rcScore}<span className="text-[10px] ml-0.5 opacity-50">점</span></p>
-                                <p className={cn("text-[10px] font-black mt-1", halfAnalysis.rcScore >= (halfAnalysis as any).rcTarget ? "text-emerald-400" : "text-rose-400")}>
-                                    {halfAnalysis.rcScore >= (halfAnalysis as any).rcTarget ? `+${halfAnalysis.rcScore - (halfAnalysis as any).rcTarget}` : `${halfAnalysis.rcScore - (halfAnalysis as any).rcTarget}`}
+                                <p className="text-2xl font-black">{safeHalf.rcScore}<span className="text-[10px] ml-0.5 opacity-50">점</span></p>
+                                <p className={cn("text-[10px] font-black mt-1", safeHalf.rcScore >= (safeHalf as any).rcTarget ? "text-emerald-400" : "text-rose-400")}>
+                                    {safeHalf.rcScore >= (safeHalf as any).rcTarget ? `+${safeHalf.rcScore - (safeHalf as any).rcTarget}` : `${safeHalf.rcScore - (safeHalf as any).rcTarget}`}
                                 </p>
                             </div>
                             <div className="w-px bg-white/10"></div>
@@ -150,9 +117,9 @@ export default function MockTestResult() {
                                 <p className="text-4xl font-black tracking-tighter text-white leading-none">{stats.total}<span className="text-sm ml-0.5 font-black text-white italic">점</span></p>
                                 <div className="mt-2 flex flex-col items-center">
                                     <div className="h-px w-full bg-white/10 my-1"></div>
-                                    <p className="text-[9px] font-bold text-slate-500 uppercase">목표: {halfAnalysis.targetGoal}점</p>
-                                    <p className={cn("text-[10px] font-black mt-0.5", stats.total >= halfAnalysis.targetGoal ? "text-emerald-400" : "text-rose-400")}>
-                                        {stats.total >= halfAnalysis.targetGoal ? `목표 달성 (+${stats.total - halfAnalysis.targetGoal})` : `목표 대비 ${halfAnalysis.targetGoal - stats.total}점 부족`}
+                                    <p className="text-[9px] font-bold text-slate-500 uppercase">목표: {safeHalf.targetGoal}점</p>
+                                    <p className={cn("text-[10px] font-black mt-0.5", stats.total >= safeHalf.targetGoal ? "text-emerald-400" : "text-rose-400")}>
+                                        {stats.total >= safeHalf.targetGoal ? `목표 달성 (+${stats.total - safeHalf.targetGoal})` : `목표 대비 ${safeHalf.targetGoal - stats.total}점 부족`}
                                     </p>
                                 </div>
                             </div>
@@ -165,13 +132,13 @@ export default function MockTestResult() {
                     <div className="bg-slate-50 px-8 py-4 border-b border-slate-100 flex items-center gap-3">
                         <AlertCircle className="w-5 h-5 text-rose-500" />
                         <h2 className="text-xl font-black text-slate-800 tracking-tight italic">깡쌤의 정밀 취약 유형 진단</h2>
-                        <span className="hidden md:inline-block ml-auto text-[10px] font-bold text-slate-400">목표 점수: {halfAnalysis.targetGoal}점</span>
+                        <span className="hidden md:inline-block ml-auto text-[10px] font-bold text-slate-400">목표 점수: {safeHalf.targetGoal}점</span>
                     </div>
                     <CardContent className="p-4 md:p-6 space-y-3">
                         {['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7s', 'p7m']
-                            .filter(key => halfAnalysis.partStats[key] && halfAnalysis.partStats[key].correct < halfAnalysis.partStats[key].target)
+                            .filter(key => safeHalf.partStats[key] && safeHalf.partStats[key].correct < safeHalf.partStats[key].target)
                             .map((key) => {
-                                const stat = halfAnalysis.partStats[key];
+                                const stat = safeHalf.partStats[key];
                                 return (
                                     <div key={key} className="flex flex-col md:flex-row gap-4 p-5 rounded-3xl bg-slate-50 border border-slate-100/50 hover:bg-indigo-50/30 transition-colors">
                                         <div className="shrink-0 flex md:flex-col items-center justify-center gap-2 md:w-20">
@@ -212,7 +179,7 @@ export default function MockTestResult() {
                             <h3 className="text-sm font-black text-slate-700">파트별 달성 현황</h3>
                         </div>
                         <CardContent className="p-4 grid grid-cols-2 gap-2">
-                            {Object.entries(halfAnalysis.partStats).map(([key, stat]: [any, any]) => (
+                            {Object.entries(safeHalf.partStats).map(([key, stat]: [any, any]) => (
                                 <div key={key} className="flex items-center justify-between p-3 bg-slate-50 rounded-2xl border border-slate-100 group hover:bg-white hover:shadow-sm transition-all">
                                     <span className="font-black text-slate-400 text-[10px] group-hover:text-indigo-500 transition-colors">{key.toUpperCase()}</span>
                                     <div className="text-right">
@@ -235,28 +202,41 @@ export default function MockTestResult() {
                             <h3 className="text-sm font-black text-indigo-400">RC 실전 시간 안배</h3>
                         </div>
                         <CardContent className="p-6 space-y-4">
-                            {halfAnalysis.rcTimeAnalysis.map((item, idx) => (
-                                <div key={idx} className="space-y-1.5">
-                                    <div className="flex justify-between items-end">
-                                        <p className="font-black text-slate-500 italic tracking-widest text-[9px] uppercase">{item.part}</p>
-                                        <span className={cn("text-[9px] font-black px-2 py-0.5 rounded-full",
-                                            item.level === 'RED' ? "bg-rose-500/20 text-rose-400" :
-                                                item.level === 'YELLOW' ? "bg-amber-500/20 text-amber-400" : "bg-emerald-500/20 text-emerald-400"
-                                        )}>
-                                            {item.level} PACE
-                                        </span>
+                            {(() => {
+                                const formatSec = (s: number) => {
+                                    const m = Math.floor(s / 60);
+                                    const rs = s % 60;
+                                    return rs > 0 ? `${m}분 ${rs}초` : `${m}분`;
+                                };
+
+                                return safeHalf.rcTimeAnalysis.map((item, idx) => (
+                                    <div key={idx} className="space-y-1.5">
+                                        <div className="flex justify-between items-end">
+                                            <div className="flex flex-col">
+                                                <p className="font-black text-slate-500 italic tracking-widest text-[9px] uppercase">{item.part}</p>
+                                                <p className="text-[10px] font-bold text-slate-400">
+                                                    권장 {formatSec(item.targetFull)} / <span className={item.level === 'GREEN' ? "text-emerald-400" : "text-rose-400"}>실제 {formatSec(item.estimateFull)}</span>
+                                                </p>
+                                            </div>
+                                            <span className={cn("text-[9px] font-black px-2 py-0.5 rounded-full",
+                                                item.level === 'RED' ? "bg-rose-500/20 text-rose-400" :
+                                                    item.level === 'YELLOW' ? "bg-amber-500/20 text-amber-400" : "bg-emerald-500/20 text-emerald-400"
+                                            )}>
+                                                {item.level} PACE
+                                            </span>
+                                        </div>
+                                        <p className="text-xs font-bold text-slate-200 leading-snug italic">"{item.coachingText}"</p>
+                                        <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                            <div
+                                                className={cn("h-full transition-all duration-1000",
+                                                    item.level === 'RED' ? "bg-rose-500" : item.level === 'YELLOW' ? "bg-amber-500" : "bg-emerald-500"
+                                                )}
+                                                style={{ width: `${Math.min((item.estimateFull / item.targetFull) * 100, 100)}%` }}
+                                            />
+                                        </div>
                                     </div>
-                                    <p className="text-xs font-bold text-slate-200 leading-snug italic">"{item.coachingText}"</p>
-                                    <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                                        <div
-                                            className={cn("h-full transition-all duration-1000",
-                                                item.level === 'RED' ? "bg-rose-500" : item.level === 'YELLOW' ? "bg-amber-500" : "bg-emerald-500"
-                                            )}
-                                            style={{ width: `${Math.min((item.estimateFull / item.targetFull) * 100, 100)}%` }}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
+                                ));
+                            })()}
                         </CardContent>
                     </Card>
                 </div>
@@ -270,13 +250,6 @@ export default function MockTestResult() {
                     >
                         <Home className="w-6 h-6 mr-3 transition-transform group-hover:-translate-y-1" />
                         학습 대시보드로 복귀
-                    </Button>
-                    <Button
-                        onClick={() => router.push(`/mock-test/half/${finalTestIdLabel}`)}
-                        className="flex-1 h-24 rounded-[2rem] font-black text-white bg-indigo-600 hover:bg-indigo-700 shadow-2xl shadow-indigo-200 transition-all active:scale-95 text-xl tracking-tighter group"
-                    >
-                        <RotateCcw className="w-6 h-6 mr-3 transition-transform group-hover:rotate-180 duration-500" />
-                        하프테스트 다시 응시
                     </Button>
                 </div>
             </div>

@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
+import { collection, query, where, getDocs, deleteDoc, doc, orderBy, writeBatch } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Search, Trash2, RefreshCcw, AlertTriangle, User as UserIcon, ArrowLeft } from 'lucide-react';
+import { Search, Trash2, RefreshCcw, AlertTriangle, User as UserIcon, ArrowLeft, CheckSquare } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Link from 'next/link';
@@ -36,7 +36,9 @@ export default function MockTestResetPage() {
     const [students, setStudents] = useState<Student[]>([]);
     const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
     const [attempts, setAttempts] = useState<MockTestAttempt[]>([]);
+    const [selectedAttempts, setSelectedAttempts] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isDeleting, setIsDeleting] = useState(false);
 
     // Class Filter States
     const [classes, setClasses] = useState<{ name: string }[]>([]);
@@ -119,6 +121,7 @@ export default function MockTestResetPage() {
     // 2. Load Attempts for Selected Student
     const selectStudent = async (student: Student) => {
         setSelectedStudent(student);
+        setSelectedAttempts([]); // Clear selection when student changes
         loadAttempts(student.userId);
     };
 
@@ -145,20 +148,62 @@ export default function MockTestResetPage() {
         }
     };
 
-    // 3. Reset (Delete) Attempt
     const handleDeleteAttempt = async (attemptId: string, testTitle: string) => {
         if (!confirm(`[${testTitle}] 응시 기록을 정말 삭제하시겠습니까?\n삭제 후 학생은 다시 시험을 볼 수 있습니다.`)) {
             return;
         }
 
+        setIsDeleting(true);
         try {
             await deleteDoc(doc(db, 'MockTestAttempts', attemptId));
-            alert("응시 기록이 삭제되었습니다. 이제 재응시가 가능합니다.");
+            setSelectedAttempts(prev => prev.filter(id => id !== attemptId));
             if (selectedStudent) loadAttempts(selectedStudent.userId); // Refresh
         } catch (error) {
             console.error("Error deleting attempt:", error);
             alert("삭제 중 오류가 발생했습니다.");
+        } finally {
+            setIsDeleting(false);
         }
+    };
+
+    const handleBatchDelete = async () => {
+        if (selectedAttempts.length === 0) return;
+        if (!confirm(`선택한 ${selectedAttempts.length}개의 응시 기록을 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.`)) {
+            return;
+        }
+
+        setIsDeleting(true);
+        try {
+            const batch = writeBatch(db);
+            selectedAttempts.forEach(id => {
+                const ref = doc(db, 'MockTestAttempts', id);
+                batch.delete(ref);
+            });
+            await batch.commit();
+
+            alert(`${selectedAttempts.length}개의 응시 기록이 삭제되었습니다.`);
+            setSelectedAttempts([]);
+            if (selectedStudent) loadAttempts(selectedStudent.userId);
+        } catch (error) {
+            console.error("Error batch deleting:", error);
+            alert("일괄 삭제 중 오류가 발생했습니다.");
+        } finally {
+            setIsDeleting(false);
+        }
+    };
+
+    const toggleSelectAll = () => {
+        if (selectedAttempts.length === attempts.length) {
+            setSelectedAttempts([]);
+        } else {
+            setSelectedAttempts(attempts.map(a => a.id));
+        }
+    };
+
+    const toggleSelect = (id: string) => {
+        setSelectedAttempts(prev =>
+            prev.includes(id) ? prev.filter(a => a !== id) : [...prev, id]
+        );
     };
 
     return (
@@ -244,13 +289,27 @@ export default function MockTestResetPage() {
 
                 {/* Right: Attempts List */}
                 <Card className="bg-slate-900 border-slate-800 lg:col-span-2">
-                    <CardHeader>
-                        <CardTitle>
-                            {selectedStudent ? `${selectedStudent.userName}님의 응시 기록` : '학생을 선택해주세요'}
-                        </CardTitle>
-                        <CardDescription>
-                            기록을 삭제하면 해당 회차를 다시 응시할 수 있습니다.
-                        </CardDescription>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0">
+                        <div>
+                            <CardTitle>
+                                {selectedStudent ? `${selectedStudent.userName}님의 응시 기록` : '학생을 선택해주세요'}
+                            </CardTitle>
+                            <CardDescription>
+                                기록을 삭제하면 해당 회차를 다시 응시할 수 있습니다.
+                            </CardDescription>
+                        </div>
+                        {selectedAttempts.length > 0 && (
+                            <Button
+                                variant="destructive"
+                                size="sm"
+                                onClick={handleBatchDelete}
+                                disabled={isDeleting}
+                                className="bg-rose-600 hover:bg-rose-500 font-bold"
+                            >
+                                <CheckSquare className="w-4 h-4 mr-2" />
+                                {selectedAttempts.length}개 일괄 삭제
+                            </Button>
+                        )}
                     </CardHeader>
                     <CardContent>
                         {!selectedStudent ? (
@@ -267,6 +326,14 @@ export default function MockTestResetPage() {
                                 <Table>
                                     <TableHeader className="bg-slate-950">
                                         <TableRow className="border-slate-800">
+                                            <TableHead className="w-[50px]">
+                                                <input
+                                                    type="checkbox"
+                                                    className="w-4 h-4 rounded border-slate-700 bg-slate-900"
+                                                    checked={attempts.length > 0 && selectedAttempts.length === attempts.length}
+                                                    onChange={toggleSelectAll}
+                                                />
+                                            </TableHead>
                                             <TableHead>시험명</TableHead>
                                             <TableHead>상태</TableHead>
                                             <TableHead>성적</TableHead>
@@ -277,6 +344,14 @@ export default function MockTestResetPage() {
                                     <TableBody>
                                         {attempts.map(attempt => (
                                             <TableRow key={attempt.id} className="border-slate-800 hover:bg-slate-800/30">
+                                                <TableCell>
+                                                    <input
+                                                        type="checkbox"
+                                                        className="w-4 h-4 rounded border-slate-700 bg-slate-900"
+                                                        checked={selectedAttempts.includes(attempt.id)}
+                                                        onChange={() => toggleSelect(attempt.id)}
+                                                    />
+                                                </TableCell>
                                                 <TableCell className="font-medium text-white">
                                                     {attempt.testTitle || `Test ID: ${attempt.testId}`}
                                                 </TableCell>
@@ -305,10 +380,11 @@ export default function MockTestResetPage() {
                                                         variant="destructive"
                                                         size="sm"
                                                         onClick={() => handleDeleteAttempt(attempt.id, attempt.testTitle || '시험')}
+                                                        disabled={isDeleting}
                                                         className="bg-rose-900/50 hover:bg-rose-700 text-rose-200 border border-rose-800"
                                                     >
                                                         <Trash2 className="w-3 h-3 mr-2" />
-                                                        기록 삭제 (초기화)
+                                                        삭제
                                                     </Button>
                                                 </TableCell>
                                             </TableRow>

@@ -5,7 +5,7 @@ import { test10Part5, test10Part6, test10Part7Single, test10Part7Multi } from "@
 import { ChevronLeft, ChevronRight, Clock, Info, CheckCircle2 } from "lucide-react";
 
 interface Props {
-    onFinishExam: (answers: Record<string, string>) => void;
+    onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
     initialAnswers?: Record<string, string>;
 }
 
@@ -13,8 +13,46 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
     const [currentSpread, setCurrentSpread] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
     const [timeLeft, setTimeLeft] = useState(75 * 60); // 75 minutes
+    const [timeLogs, setTimeLogs] = useState<Record<string, number>>({ p5: 0, p6: 0, p7s: 0, p7m: 0 });
+    const lastCheckTimeRef = useRef<number>(75 * 60);
     const lastAdvancedSpreadRef = useRef<number>(-1);
     const mainContainerRef = React.useRef<HTMLDivElement>(null);
+
+    // Scroll to top when spread changes
+    // Cumulative Time Tracking (Stopwatch 방식)
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("시험 시간이 종료되었습니다. 자동으로 제출합니다.");
+                    handleInternalSubmit();
+                    return 0;
+                }
+
+                // 현재 사용자가 보고 있는 Spread 번호에 따라 해당 파트 시간만 합산
+                let currentPartKey = "";
+                if (currentSpread <= 1) currentPartKey = "p5";
+                else if (currentSpread <= 3) currentPartKey = "p6";
+                else {
+                    const singleCount = test10Part7Single.length;
+                    const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
+                    if (currentSpread <= singleSpreadsEndIdx) currentPartKey = "p7s";
+                    else currentPartKey = "p7m";
+                }
+
+                if (currentPartKey) {
+                    setTimeLogs(prevLogs => ({
+                        ...prevLogs,
+                        [currentPartKey]: (prevLogs[currentPartKey] || 0) + 1
+                    }));
+                }
+
+                return prev - 1;
+            });
+        }, 1000);
+        return () => clearInterval(timer);
+    }, [currentSpread]);
 
     // Scroll to top when spread changes
     useEffect(() => {
@@ -23,21 +61,9 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
         }
     }, [currentSpread]);
 
-    // Timer Logic
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev <= 1) {
-                    clearInterval(timer);
-                    alert("시험 시간이 종료되었습니다. 자동으로 제출합니다.");
-                    onFinishExam(answers);
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
-        return () => clearInterval(timer);
-    }, [answers, onFinishExam]);
+    const handleInternalSubmit = () => {
+        onFinishExam(answers, timeLogs);
+    };
 
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
@@ -66,6 +92,8 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
     };
 
     const nextSpread = () => {
+        // Validation: Disabled for testing Test 2
+        /*
         const currentQuestions = getRCSpreadQuestions(currentSpread);
         const unanswered = currentQuestions.filter(qId => !answers[qId]);
 
@@ -73,33 +101,35 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
             alert(`현재 페이지의 모든 문제를 풀어주세요. (남은 문제: ${unanswered.length}개)`);
             return;
         }
+        */
         setCurrentSpread(s => s + 1);
     }
 
     const getRCSpreadQuestions = (idx: number): string[] => {
         const qIds: string[] = [];
         if (idx === 0) {
-            test10Part5.slice(0, 20).forEach(q => qIds.push(String(q.id)));
+            test10Part5.slice(0, 16).forEach(q => qIds.push(String(q.id)));
         } else if (idx === 1) {
-            test10Part5.slice(20, 30).forEach(q => qIds.push(String(q.id)));
-            test10Part6[0].questions.forEach((q: any) => qIds.push(String(q.id)));
+            test10Part5.slice(16, 30).forEach(q => qIds.push(String(q.id)));
         } else if (idx === 2) {
+            test10Part6[0].questions.forEach((q: any) => qIds.push(String(q.id)));
             test10Part6[1].questions.forEach((q: any) => qIds.push(String(q.id)));
-            test10Part6[2].questions.forEach((q: any) => qIds.push(String(q.id)));
         } else if (idx === 3) {
+            test10Part6[2].questions.forEach((q: any) => qIds.push(String(q.id)));
             test10Part6[3].questions.forEach((q: any) => qIds.push(String(q.id)));
+        } else if (idx === 4) {
             test10Part7Single[0].questions.forEach((q: any) => qIds.push(String(q.id)));
+            test10Part7Single[1].questions.forEach((q: any) => qIds.push(String(q.id)));
         } else {
-            // Dynamic logic for later spreads
             const singleCount = test10Part7Single.length;
-            const singleSpreads = Math.ceil((singleCount - 1) / 2) + 4;
+            const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
 
-            if (idx < singleSpreads) {
-                const singleOffset = (idx - 4) * 2 + 1;
-                test10Part7Single[singleOffset]?.questions.forEach((q: any) => qIds.push(String(q.id)));
-                test10Part7Single[singleOffset + 1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            if (idx <= singleSpreadsEndIdx) {
+                const offset = (idx - 4) * 2;
+                test10Part7Single[offset]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+                test10Part7Single[offset + 1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
             } else {
-                const multiIdx = idx - singleSpreads;
+                const multiIdx = idx - singleSpreadsEndIdx - 1;
                 test10Part7Multi[multiIdx]?.questions.forEach((q: any) => qIds.push(String(q.id)));
             }
         }
@@ -107,7 +137,7 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
     };
     const prevSpread = () => setCurrentSpread(s => s - 1);
 
-    const totalSpreads = 14;
+    const totalSpreads = 5 + test10Part7Multi.length + Math.ceil((test10Part7Single.length - 2) / 2);
 
     return (
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
@@ -137,7 +167,7 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
                         <Clock className="w-4 h-4" />
                         <span className="font-mono text-lg font-black">{formatTime(timeLeft)}</span>
                     </div>
-                    <button onClick={() => confirm("시험을 종료하고 제출하시겠습니까?") && onFinishExam(answers)} className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 transition-all active:scale-95">
+                    <button onClick={() => confirm("시험을 종료하고 제출하시겠습니까?") && handleInternalSubmit()} className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 transition-all active:scale-95">
                         Submit
                     </button>
                 </div>
@@ -248,6 +278,61 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
     );
 }
 
+const MarkdownTable = ({ content }: { content: string }) => {
+    // Check if it's a table (contains | and ---)
+    if (!content.includes('|') || !content.includes('---')) {
+        return <div className="whitespace-pre-wrap">{content}</div>;
+    }
+
+    const lines = content.split('\n');
+    const tableIndex = lines.findIndex(l => l.trim().startsWith('|'));
+
+    if (tableIndex === -1) return <div className="whitespace-pre-wrap">{content}</div>;
+
+    const beforeTable = lines.slice(0, tableIndex).join('\n');
+    const tableLines = lines.slice(tableIndex).filter(l => l.trim().startsWith('|'));
+    const afterTable = lines.slice(tableIndex + tableLines.length).join('\n');
+
+    // Parse table
+    const headerRow = tableLines[0].split('|').filter(c => c.trim() !== '').map(c => c.trim());
+    const bodyRows = tableLines.slice(2).map(line =>
+        line.split('|').filter((_, i) => i > 0 && i <= headerRow.length).map(c => c.trim())
+    );
+
+    return (
+        <div className="space-y-4">
+            {beforeTable && <div className="whitespace-pre-wrap">{beforeTable}</div>}
+            <div className="overflow-x-auto my-4 border rounded-lg">
+                <table className="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr className="bg-slate-50 border-b border-slate-200">
+                            {headerRow.map((h, i) => (
+                                <th key={i} className="px-4 py-2 font-black text-slate-700 border-r last:border-r-0 border-slate-200 uppercase tracking-tighter">
+                                    {h}
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {bodyRows.map((row, i) => (
+                            <tr key={i} className="border-b last:border-b-0 border-slate-100 hover:bg-slate-50/50 transition-colors">
+                                {row.map((cell, j) => (
+                                    <td key={j} className="px-4 py-2 border-r last:border-r-0 border-slate-100 text-slate-800 leading-normal">
+                                        {cell.split('<br>').map((line, k) => (
+                                            <div key={k}>{line}</div>
+                                        ))}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            {afterTable && <div className="whitespace-pre-wrap">{afterTable}</div>}
+        </div>
+    );
+};
+
 function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 0) {
         return (
@@ -259,16 +344,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <strong>Directions:</strong> A word or phrase is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence.
                     </div>
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test10Part5.slice(0, 5).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test10Part5.slice(5, 10).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
                 <div className="booklet-page pt-[120px]">
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test10Part5.slice(10, 15).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test10Part5.slice(15, 20).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(12, 16).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
             </>
@@ -280,17 +365,17 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
             <>
                 <div className="booklet-page">
                     <div className="flex h-fit mt-12">
-                        <div className="flex-1 space-y-4">{test10Part5.slice(20, 25).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(16, 20).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test10Part5.slice(25, 30).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(20, 24).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
-                <div className="booklet-page">
-                    <div className="directions-box !py-2 !mb-4 text-[11px]">
-                        <span className="font-black text-indigo-600 mr-2 uppercase">Part 6</span>
-                        <strong>Directions:</strong> Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each empty space are shown below the text.
+                <div className="booklet-page mt-[120px]">
+                    <div className="flex h-fit">
+                        <div className="flex-1 space-y-4">{test10Part5.slice(24, 27).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="column-divider-RC"></div>
+                        <div className="flex-1 space-y-4">{test10Part5.slice(27, 30).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
-                    {renderP6Set(test10Part6[0], answers, onAnswer)}
                 </div>
             </>
         );
@@ -299,8 +384,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 2) {
         return (
             <>
-                <div className="booklet-page">{renderP6Set(test10Part6[1], answers, onAnswer)}</div>
-                <div className="booklet-page">{renderP6Set(test10Part6[2], answers, onAnswer)}</div>
+                <div className="booklet-page">
+                    <div className="directions-box !py-2 !mb-4 text-[11px]">
+                        <span className="font-black text-indigo-600 mr-2 uppercase">Part 6</span>
+                        <strong>Directions:</strong> Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each empty space are shown below the text.
+                    </div>
+                    {renderP6Set(test10Part6[0], answers, onAnswer)}
+                </div>
+                <div className="booklet-page pt-[60px]">
+                    {renderP6Set(test10Part6[1], answers, onAnswer)}
+                </div>
             </>
         );
     }
@@ -308,7 +401,15 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 3) {
         return (
             <>
+                <div className="booklet-page">{renderP6Set(test10Part6[2], answers, onAnswer)}</div>
                 <div className="booklet-page">{renderP6Set(test10Part6[3], answers, onAnswer)}</div>
+            </>
+        );
+    }
+
+    if (spreadIdx === 4) {
+        return (
+            <>
                 <div className="booklet-page">
                     <div className="directions-box !py-2 !mb-4 text-[11px]">
                         <span className="font-black text-indigo-600 mr-2 uppercase">Part 7</span>
@@ -316,13 +417,15 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     </div>
                     {renderP7SingleSet(test10Part7Single[0], answers, onAnswer)}
                 </div>
+                <div className="booklet-page pt-[60px]">
+                    {test10Part7Single[1] && renderP7SingleSet(test10Part7Single[1], answers, onAnswer)}
+                </div>
             </>
         );
     }
 
-    // Dynamic Single Sets (Idx 1 to last)
-    // p7SingleIdx 1 starts at spread 4.L
-    const singleOffset = (spreadIdx - 4) * 2 + 1;
+    // Dynamic Single Sets (Idx >= 2)
+    const singleOffset = (spreadIdx - 5) * 2 + 2;
     if (singleOffset < test10Part7Single.length) {
         return (
             <>
@@ -333,11 +436,10 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     }
 
     // Multi Sets starts after all single sets are rendered
-    // Calculate Multi start spread
-    const singleCount = test10Part7Single.length; // usually 10-12
-    const singleSpreads = Math.ceil((singleCount - 1) / 2) + 4;
+    const singleCount = test10Part7Single.length;
+    const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4; // Adjustment for starting at index 2
 
-    const multiIdx = spreadIdx - singleSpreads;
+    const multiIdx = spreadIdx - singleSpreadsEndIdx - 1;
     if (multiIdx >= 0 && multiIdx < test10Part7Multi.length) {
         return renderP7MultiSpread(test10Part7Multi[multiIdx], answers, onAnswer);
     }
@@ -384,7 +486,7 @@ function renderP6Set(set: any, answers: any, onAnswer: any) {
     if (!set) return null;
     return (
         <div className="flex flex-col h-full">
-            <div className="passage-box whitespace-pre-wrap">{set.content}</div>
+            <div className="passage-box"><MarkdownTable content={set.content} /></div>
             <div className="flex-1 flex gap-0 mt-4 h-fit">
                 <div className="flex-1 space-y-6">
                     {set.questions.slice(0, 2).map((q: any) => renderP5Question(q, answers, onAnswer))}
@@ -410,7 +512,7 @@ function renderP7SingleSet(set: any, answers: any, onAnswer: any) {
                     <div key={p.id} className="mb-4">
                         <span className="passage-label">{p.type || 'Text'}</span>
                         {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                        <div className="whitespace-pre-wrap text-sm font-bold text-slate-900">{p.content}</div>
+                        <div className="text-sm font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                     </div>
                 ))}
             </div>
@@ -445,7 +547,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                             <div key={p.id} className="passage-box !mb-0">
                                 <span className="passage-label">{p.type}</span>
                                 {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                                <div className="whitespace-pre-wrap text-[14px] font-bold text-slate-900">{p.content}</div>
+                                <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                             </div>
                         ))}
                     </div>
@@ -468,7 +570,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                         <div key={p.id} className="passage-box !mb-0">
                             <span className="passage-label">{p.type}</span>
                             {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                            <div className="whitespace-pre-wrap text-[13px] font-bold text-slate-900">{p.content}</div>
+                            <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                         </div>
                     ))}
                 </div>
@@ -477,7 +579,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                 <div className="passage-box !mb-0 !p-4 shrink-0 border-b-2 border-slate-100 shadow-md z-10 max-h-[45%] overflow-y-auto">
                     <span className="passage-label">{passages[2].type}</span>
                     {passages[2].title && <h3 className="font-black text-xs border-b mb-1 uppercase">{passages[2].title}</h3>}
-                    <div className="whitespace-pre-wrap text-[13px] font-bold text-slate-1000 text-black">{passages[2].content}</div>
+                    <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} /></div>
                 </div>
                 <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-slate-50/50">
                     {questions.map((q: any) => renderP7Question(q, answers, onAnswer))}

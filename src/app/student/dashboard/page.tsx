@@ -109,7 +109,7 @@ export default function StudentDashboard() {
         if (report && report.targetStats) {
             // 1. Manually sum only the parts visible in the UI (matches Weakness Dashboard)
             const lcParts = ['p1', 'p2', 'p3', 'p4'];
-            const rcParts = ['p5', 'p6', 'p7_single', 'p7_double'];
+            const rcParts = ['p5', 'p6', 'p7s', 'p7d'];
 
             const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
             const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
@@ -597,8 +597,8 @@ export default function StudentDashboard() {
                                             {[
                                                 { k: 'p5', label: 'P5' },
                                                 { k: 'p6', label: 'P6' },
-                                                { k: 'p7_single', label: 'P7 S' },
-                                                { k: 'p7_double', label: 'P7 D' }
+                                                { k: 'p7s', label: 'P7 S' },
+                                                { k: 'p7d', label: 'P7 D' }
                                             ].map(({ k, label }) => {
                                                 const partStats = weaknessReport.targetStats[k] || { target: 0, average: 0, latest: 0 };
                                                 const goal = partStats.target;

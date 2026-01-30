@@ -1,5 +1,5 @@
 import { part1RealTests } from '../toeic/listening/part1/tests';
-import { part2Data } from '../part2';
+import { part2RealTests } from '../toeic/listening/part2/tests';
 import { part3RealTests } from '../part3';
 import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
@@ -24,7 +24,8 @@ export const test10Part1 = p1_raw.map(q => ({
 }));
 
 // Part 2: 10회차 필터링 (25문제, 7~31번)
-export const test10Part2 = part2Data[10] || [];
+// Part 2: 10회차 필터링 (25문제, 7~31번)
+export const test10Part2 = part2RealTests.find(t => t.testId === 10)?.questions || [];
 
 // Part 3: 13세트 (32~70번)
 export const test10Part3 = part3RealTests.filter(d => d.testId === 10);
@@ -47,7 +48,8 @@ export const test10Part6 = p6_raw.map(p => ({
     ...p,
     questions: p.questions.map(q => ({
         ...q,
-        id: `p6-t10-q${q.id}`
+        id: q.id.includes('-q') ? q.id : `p6-t10-q${String(q.id).replace(/[^\d]/g, '')}`,
+        options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
     }))
 }));
 
@@ -56,22 +58,29 @@ const p7_full = part7TestData.find(t => t.testId === 10)?.sets || [];
 
 // 175번까지의 싱글 지문만 필터링
 export const test10Part7Single = p7_full.filter(s => {
-    const firstQ = parseInt(s.questions[0].id);
+    const match = s.questions[0].id.match(/q?(\d+)$/);
+    const firstQ = match ? parseInt(match[1]) : 0;
     return firstQ >= 147 && firstQ <= 175;
 }).map(s => ({
     ...s,
     questions: s.questions.map(q => ({
         ...q,
-        id: `p7-t10-q${q.id}`
+        id: q.id.includes('-q') ? q.id : `p7-t10-q${String(q.id).replace(/[^\d]/g, '')}`,
+        options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
     }))
 }));
 
-// 176번부터의 멀티 지문 (별도 파일에서 가져옴)
-export const test10Part7Multi = rcPart7Test10.map(s => ({
+// 176번부터의 멀티 지문 (정밀 필터링 적용)
+export const test10Part7Multi = p7_full.filter(s => {
+    const match = s.questions[0].id.match(/q?(\d+)$/);
+    const firstQ = match ? parseInt(match[1]) : 0;
+    return firstQ >= 176;
+}).map(s => ({
     ...s,
     questions: s.questions.map(q => ({
         ...q,
-        id: `p7-t10-q${q.id}`
+        id: q.id.includes('-q') ? q.id : `p7-t10-q${String(q.id).replace(/[^\d]/g, '')}`,
+        options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
     }))
 }));
 

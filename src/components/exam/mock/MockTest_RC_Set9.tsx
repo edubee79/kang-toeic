@@ -247,6 +247,61 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     );
 }
 
+const MarkdownTable = ({ content }: { content: string }) => {
+    // Check if it's a table (contains | and ---)
+    if (!content.includes('|') || !content.includes('---')) {
+        return <div className="whitespace-pre-wrap">{content}</div>;
+    }
+
+    const lines = content.split('\n');
+    const tableIndex = lines.findIndex(l => l.trim().startsWith('|'));
+
+    if (tableIndex === -1) return <div className="whitespace-pre-wrap">{content}</div>;
+
+    const beforeTable = lines.slice(0, tableIndex).join('\n');
+    const tableLines = lines.slice(tableIndex).filter(l => l.trim().startsWith('|'));
+    const afterTable = lines.slice(tableIndex + tableLines.length).join('\n');
+
+    // Parse table
+    const headerRow = tableLines[0].split('|').filter(c => c.trim() !== '').map(c => c.trim());
+    const bodyRows = tableLines.slice(2).map(line =>
+        line.split('|').filter((_, i) => i > 0 && i <= headerRow.length).map(c => c.trim())
+    );
+
+    return (
+        <div className="space-y-4">
+            {beforeTable && <div className="whitespace-pre-wrap">{beforeTable}</div>}
+            <div className="overflow-x-auto my-4 border rounded-lg">
+                <table className="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr className="bg-slate-50 border-b border-slate-200">
+                            {headerRow.map((h, i) => (
+                                <th key={i} className="px-4 py-2 font-black text-slate-700 border-r last:border-r-0 border-slate-200 uppercase tracking-tighter">
+                                    {h}
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {bodyRows.map((row, i) => (
+                            <tr key={i} className="border-b last:border-b-0 border-slate-100 hover:bg-slate-50/50 transition-colors">
+                                {row.map((cell, j) => (
+                                    <td key={j} className="px-4 py-2 border-r last:border-r-0 border-slate-100 text-slate-800 leading-normal">
+                                        {cell.split('<br>').map((line, k) => (
+                                            <div key={k}>{line}</div>
+                                        ))}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            {afterTable && <div className="whitespace-pre-wrap">{afterTable}</div>}
+        </div>
+    );
+};
+
 function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 0) {
         return (
@@ -383,7 +438,7 @@ function renderP6Set(set: any, answers: any, onAnswer: any) {
     if (!set) return null;
     return (
         <div className="flex flex-col h-full">
-            <div className="passage-box whitespace-pre-wrap">{set.content}</div>
+            <div className="passage-box"><MarkdownTable content={set.content} /></div>
             <div className="flex-1 flex gap-0 mt-4 h-fit">
                 <div className="flex-1 space-y-6">
                     {set.questions.slice(0, 2).map((q: any) => renderP5Question(q, answers, onAnswer))}
@@ -409,7 +464,7 @@ function renderP7SingleSet(set: any, answers: any, onAnswer: any) {
                     <div key={p.id} className="mb-4">
                         <span className="passage-label">{p.type || 'Text'}</span>
                         {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                        <div className="whitespace-pre-wrap text-sm font-bold text-slate-900">{p.content}</div>
+                        <div className="text-sm font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                     </div>
                 ))}
             </div>
@@ -444,7 +499,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                             <div key={p.id} className="passage-box !mb-0">
                                 <span className="passage-label">{p.type}</span>
                                 {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                                <div className="whitespace-pre-wrap text-[14px] font-bold text-slate-900">{p.content}</div>
+                                <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                             </div>
                         ))}
                     </div>
@@ -467,7 +522,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                         <div key={p.id} className="passage-box !mb-0">
                             <span className="passage-label">{p.type}</span>
                             {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                            <div className="whitespace-pre-wrap text-[13px] font-bold text-slate-900">{p.content}</div>
+                            <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                         </div>
                     ))}
                 </div>
@@ -476,7 +531,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                 <div className="passage-box !mb-0 !p-4 shrink-0 border-b-2 border-slate-100 shadow-md z-10 max-h-[45%] overflow-y-auto">
                     <span className="passage-label">{passages[2].type}</span>
                     {passages[2].title && <h3 className="font-black text-xs border-b mb-1 uppercase">{passages[2].title}</h3>}
-                    <div className="whitespace-pre-wrap text-[13px] font-bold text-slate-1000 text-black">{passages[2].content}</div>
+                    <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} /></div>
                 </div>
                 <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-slate-50/50">
                     {questions.map((q: any) => renderP7Question(q, answers, onAnswer))}

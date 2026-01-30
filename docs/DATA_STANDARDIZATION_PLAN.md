@@ -194,9 +194,25 @@
 | | 문항별 | `questionType` | `"questionType": "WHO_LOC"` |
 | **Part 5** | 문항별 | `classification` | `"classification": "n1"` (또는 `g1`, `v2` 등) |
 | **Part 6** | 지문별 | `contextType` | `"contextType": "P1"` |
-| | 문항별 | `classification` | `"classification": "p6g"` |
-| **Part 7** | 지문별 | `contextType` | `"contextType": "P3"` |
+| | 문항별 | `classification` | `"classification": "P6_GRAMMAR"` |
+| **Part 7** | 지문별 분류 | `contextType` | `"contextType": "P1_CORR"` |
+| | **디자인 템플릿** | **`type`** | **`"type": "email"` (UI 레이아웃 결정)** |
 | | 문항별 | `classification` | `"classification": "P7_INFERENCE"` |
+
+---
+
+## 7. 🎨 고성능 템플릿 렌더링을 위한 본문 작성 규칙 (UI Rendering Rules)
+
+`type` 필드에 지정된 가칭에 따라 `content` 내부를 다음과 같이 작성해야 고성능 UI가 활성화된다:
+
+1. **Email (`type: "email"`)**:
+   - `To:`, `From:`, `Subject:`, `Date:` 헤더를 반드시 포함.
+   - 헤더 뒤에 **반드시 빈 줄( \n\n )을 1개 삽입**하여 본문과 분리.
+2. **Online Chat (`type: "online_chat"`)**:
+   - `이름 [시간]` 형식을 첫 줄에 사용 (예: `Tanvir Singh [9:41 A.M.]`).
+   - 이 형식을 지키지 않으면 채팅 말풍선 레이아웃으로 변환되지 않음.
+3. **Article/Notice/Table**:
+   - 소문자 태그(`article`, `notice`, `table`)를 권장하며, 문맥에 맞는 `title` 필드를 적절히 활용.
 
 ---
 

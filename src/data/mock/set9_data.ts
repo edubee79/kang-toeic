@@ -47,25 +47,39 @@ export const test9Part6 = p6_raw.map(p => ({
     ...p,
     questions: p.questions.map(q => ({
         ...q,
-        id: `p6-t9-q${q.id}`
+        id: q.id.includes('-q') ? q.id : `p6-t9-q${String(q.id).replace(/[^\d]/g, '')}`,
+        options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
     }))
 }));
 
 // Part 7: 54문제 (147~200번)
-const p7s_raw = part7TestData.find(t => t.testId === 9)?.sets || [];
-export const test9Part7Single = p7s_raw.map(s => ({
+const p7s_all = part7TestData.find(t => t.testId === 9)?.sets || [];
+
+// 정밀 필터링: 싱글 지문(175번까지)과 멀티 지문(176번부터) 분리
+export const test9Part7Single = p7s_all.filter(s => {
+    const match = s.questions[0].id.match(/q?(\d+)$/);
+    const firstQ = match ? parseInt(match[1]) : 0;
+    return firstQ >= 147 && firstQ <= 175;
+}).map(s => ({
     ...s,
     questions: s.questions.map(q => ({
         ...q,
-        id: `p7-t9-q${q.id}`
+        id: q.id.includes('-q') ? q.id : `p7-t9-q${String(q.id).replace(/[^\d]/g, '')}`,
+        options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
     }))
 }));
 
-export const test9Part7Multi = rcPart7Test9.map(s => ({
+// 176번부터의 멀티 지문 (정밀 필터링 적용)
+export const test9Part7Multi = p7s_all.filter(s => {
+    const match = s.questions[0].id.match(/q?(\d+)$/);
+    const firstQ = match ? parseInt(match[1]) : 0;
+    return firstQ >= 176;
+}).map(s => ({
     ...s,
     questions: s.questions.map(q => ({
         ...q,
-        id: `p7-t9-q${q.id}`
+        id: q.id.includes('-q') ? q.id : `p7-t9-q${String(q.id).replace(/[^\d]/g, '')}`,
+        options: Object.entries(q.options).map(([label, text]) => `(${label}) ${text}`)
     }))
 }));
 

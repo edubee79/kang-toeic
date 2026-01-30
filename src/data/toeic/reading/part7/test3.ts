@@ -320,8 +320,16 @@ export const test3Data: Part7Test = {
                 {
                     id: "p7-t3-s7-p1",
                     contextType: "P3",
-                    docType: "ARTICLE",
-                    content: `OTTAWA (22 May)—Waldenstone Business Review has added a new category to its esteemed international business awards this year. The Waldenstone Corporate Prize is awarded to a business with the foresight to develop strategies that help ensure the company's long-term viability.\n\nThis year's award was presented to Carila Corporation, a major player in the electronics sector. Under the direction of CEO Atsak Kakar, Carila Corporation went from near bankruptcy to a high level of profitability in just three years.\n\n"Winning this award was very gratifying, not just for me but for the entire company," Mr. Kakar said upon receiving the award. "Everyone has worked extremely hard to get this company back on solid financial ground. The long-term solution has brought exceptional value to our shareholders."`,
+                    type: "article",
+                    header: {
+                        headline: "Waldenstone Business Review",
+                        author: "OTTAWA (22 May)"
+                    },
+                    content: [
+                        "Waldenstone Business Review has added a new category to its esteemed international business awards this year. The Waldenstone Corporate Prize is awarded to a business with the foresight to develop strategies that help ensure the company's long-term viability.",
+                        "This year's award was presented to Carila Corporation, a major player in the electronics sector. Under the direction of CEO Atsak Kakar, Carila Corporation went from near bankruptcy to a high level of profitability in just three years.",
+                        "\"Winning this award was very gratifying, not just for me but for the entire company,\" Mr. Kakar said upon receiving the award. \"Everyone has worked extremely hard to get this company back on solid financial ground. The long-term solution has brought exceptional value to our shareholders.\""
+                    ],
                     translation: `오타와 (5월 22일) — 월든스톤 비즈니스 리뷰는 올해 명망 높은 국제 비즈니스 상에 새로운 부문을 추가했습니다. 월든스톤 기업상은 회사의 장기적인 성공 가능성을 보장하는 데 도움이 되는 전략을 개발하는 선견지명이 있는 기업에 수여됩니다.\n\n올해의 상은 전자 제품 분야의 주요 업체인 카릴라 코퍼레이션에게 수여되었습니다. 최고 경영자인 앗사카 카카르의 지휘 아래, 카릴라 코퍼레이션은 불과 3년 만에 파산 직전에서 수익성이 매우 높은 수준으로 전환했습니다.\n\n"이 상을 수상하는 것은 저뿐만 아니라 회사 전체에 매우 기쁜 일이었습니다."라고 카카르 씨가 상을 수상하면서 말했습니다. "모두가 이 회사를 탄탄한 재정 기반으로 되돌리기 위해 무척 열심히 일했습니다. 장기적인 해결책은 우리 주주들에게 탁월한 가치를 가져다주었습니다."`
                 }
             ],

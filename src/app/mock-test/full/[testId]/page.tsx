@@ -59,18 +59,12 @@ export default function MockTestRunner() {
             const snapshot = await getDocs(q);
 
             if (!snapshot.empty) {
-                // Check if any allowRetake is true? Currently strict mode.
                 const attempt = snapshot.docs[0].data();
-                if (!attempt.allowRetake) {
+                // Temporarily disable restriction for Test 2 (ID 10) for testing
+                if (testId !== 10 && !attempt.allowRetake && attempt.status === 'completed') {
                     alert("이미 응시한 내역이 있습니다. 재응시가 불가능합니다.\n관리자에게 문의해주세요.");
                     router.push('/mock-test');
                     return;
-                } else {
-                    // If retake allowed, maybe verify if we should delete old one or just create new?
-                    // For now, if allowRetake is true, we assume it's like a new start.
-                    // But simpler: if allowRetake is true, we delete the old doc and start fresh?
-                    // Or just proceed. Let's start fresh by ignoring old doc, but actually creating a NEW one is better for history.
-                    // For this strict implementation: simple check.
                 }
             }
 
@@ -365,7 +359,7 @@ export default function MockTestRunner() {
                             }
                         }
 
-                        router.push(`/mock-test/full/${testId}/result`);
+                        router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
                     }}
                 />
             );
@@ -388,7 +382,7 @@ export default function MockTestRunner() {
             return (
                 <MockTest_RC_Set10
                     initialAnswers={answers}
-                    onFinishExam={async (rcAnswers) => {
+                    onFinishExam={async (rcAnswers, timeLogs) => {
                         const finalAnswers = { ...answers, ...rcAnswers };
                         setAnswers(finalAnswers);
 
@@ -397,6 +391,7 @@ export default function MockTestRunner() {
                             status: 'completed',
                             date: new Date().toISOString(),
                             answers: finalAnswers,
+                            timeLogs: timeLogs,
                             testId
                         };
                         const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
@@ -456,7 +451,9 @@ export default function MockTestRunner() {
                                     completedAt: serverTimestamp(),
                                     totalScore: totalCorrect,
                                     totalQuestions: totalQs,
-                                    partScores: partScores // Save detailed breakdown
+                                    partScores: partScores,
+                                    timeLogs: timeLogs,
+                                    answers: finalAnswers // Missing answers field added
                                 });
                             } catch (e) {
                                 console.error("Failed to update status to completed", e);
@@ -542,7 +539,7 @@ export default function MockTestRunner() {
                             }
                         }
 
-                        router.push(`/mock-test/full/${testId}/result`);
+                        router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
                     }}
                 />
             );
