@@ -182,10 +182,33 @@ export default function StudentDashboard() {
     };
 
     const handleAutoAllocate = () => {
+        // 0. Synchronization: Ensure LC/RC add up to Total Score
+        let lc = Number(editTargetLC) || 0;
+        let rc = Number(editTargetRC) || 0;
+        const total = Number(editTotalScore) || 0;
+
+        if (lc + rc !== total || isNaN(lc) || isNaN(rc)) {
+            // If out of sync, distribute total score (roughly 52/48 split for LC/RC as typical strategy)
+            lc = Math.round((total * 0.52) / 5) * 5;
+            rc = total - lc;
+
+            // Re-cap if they exceed 495 (TOEIC max per section)
+            if (lc > 495) {
+                lc = 495;
+                rc = total - 495;
+            } else if (rc > 495) {
+                rc = 495;
+                lc = total - 495;
+            }
+
+            setEditTargetLC(lc);
+            setEditTargetRC(rc);
+        }
+
         // 1. Calculate required question counts from total scores
         // Logic: Score to Questions (Simplified inverse of calculator)
-        const requiredLC = Math.min(100, Math.ceil((editTargetLC - 10) / 5));
-        const requiredRC = Math.min(100, Math.ceil((editTargetRC + 10) / 5));
+        const requiredLC = Math.max(0, Math.min(100, Math.ceil((lc - 10) / 5)));
+        const requiredRC = Math.max(0, Math.min(100, Math.ceil((rc + 10) / 5)));
 
         /**
          * Strategic Distribution Logic: 
@@ -194,15 +217,18 @@ export default function StudentDashboard() {
          */
         const distributeStrategically = (budget: number, parts: Array<{ key: keyof typeof MAX_Q; isPriority: boolean }>) => {
             const result: any = {};
+            if (budget <= 0) {
+                parts.forEach(p => result[p.key] = 0);
+                return result;
+            }
 
             // Calculate denominator: Sum of (MaxQ * Multiplier)
             const sumWeightedMax = parts.reduce((sum, p) => {
-                const multiplier = p.isPriority ? 1.1 : 0.95; // Priority get +10%, others slightly less to balance
+                const multiplier = p.isPriority ? 1.1 : 0.95;
                 return sum + (MAX_Q[p.key] * multiplier);
             }, 0);
 
             // Calculate Base Achievement Rate (A)
-            const totalMax = parts.reduce((sum, p) => sum + MAX_Q[p.key], 0);
             const A = budget / sumWeightedMax;
 
             let remainingBudget = budget;
@@ -211,18 +237,22 @@ export default function StudentDashboard() {
             parts.forEach(p => {
                 const multiplier = p.isPriority ? 1.1 : 0.95;
                 let target = Math.round(MAX_Q[p.key] * A * multiplier);
-                target = Math.min(MAX_Q[p.key], target);
+                target = Math.max(0, Math.min(MAX_Q[p.key], target));
                 result[p.key] = target;
                 remainingBudget -= target;
             });
 
-            // Second pass: Distribute any remaining due to caps or rounding (Waterfall for the last bits)
+            // Second pass: Distribute any remaining due to caps or rounding
             if (remainingBudget !== 0) {
-                for (const p of parts) {
-                    const room = MAX_Q[p.key] - result[p.key];
-                    const add = remainingBudget > 0 ? Math.min(room, remainingBudget) : Math.max(-result[p.key], remainingBudget);
-                    result[p.key] += add;
-                    remainingBudget -= add;
+                // Sort by priority for the remainder
+                const sortedParts = [...parts].sort((a, b) => (b.isPriority ? 1 : 0) - (a.isPriority ? 1 : 0));
+                for (const p of sortedParts) {
+                    const room = remainingBudget > 0 ? (MAX_Q[p.key] - result[p.key]) : result[p.key];
+                    if (room > 0) {
+                        const add = remainingBudget > 0 ? Math.min(room, remainingBudget) : -Math.min(room, Math.abs(remainingBudget));
+                        result[p.key] += add;
+                        remainingBudget -= add;
+                    }
                     if (remainingBudget === 0) break;
                 }
             }
@@ -614,15 +644,15 @@ export default function StudentDashboard() {
                                     <div className="grid grid-cols-3 gap-4">
                                         <div>
                                             <label className="text-xs text-slate-400 mb-1 block">총점</label>
-                                            <Input type="number" value={editTotalScore} onChange={(e) => setEditTotalScore(parseInt(e.target.value))} className="bg-slate-800 border-slate-700" />
+                                            <Input type="number" value={editTotalScore} onChange={(e) => setEditTotalScore(Number(e.target.value) || 0)} className="bg-slate-800 border-slate-700" />
                                         </div>
                                         <div>
                                             <label className="text-xs text-slate-400 mb-1 block">LC</label>
-                                            <Input type="number" value={editTargetLC} onChange={(e) => setEditTargetLC(parseInt(e.target.value))} className="bg-slate-800 border-slate-700" />
+                                            <Input type="number" value={editTargetLC} onChange={(e) => setEditTargetLC(Number(e.target.value) || 0)} className="bg-slate-800 border-slate-700" />
                                         </div>
                                         <div>
                                             <label className="text-xs text-slate-400 mb-1 block">RC</label>
-                                            <Input type="number" value={editTargetRC} onChange={(e) => setEditTargetRC(parseInt(e.target.value))} className="bg-slate-800 border-slate-700" />
+                                            <Input type="number" value={editTargetRC} onChange={(e) => setEditTargetRC(Number(e.target.value) || 0)} className="bg-slate-800 border-slate-700" />
                                         </div>
                                     </div>
                                     <Button onClick={handleAutoAllocate} variant="outline" size="sm" className="w-full"><Zap className="w-4 h-4 mr-2" />AI 자동 배분</Button>
