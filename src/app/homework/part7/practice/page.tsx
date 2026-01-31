@@ -352,8 +352,8 @@ function Part7PracticePageContent() {
                     <div className="h-4 w-px bg-gray-300 mx-2"></div>
                     <h1 className="text-lg font-bold text-gray-800">Part 7 Practice</h1>
                     {data && (
-                        <span className={`px-2 py-0.5 text-xs font-semibold rounded-full border ${data.type === 'Double' ? 'bg-green-100 text-green-700 border-green-200' : 'bg-blue-100 text-blue-700 border-blue-200'}`}>
-                            {data.type} Passage
+                        <span className={`px-2 py-0.5 text-xs font-semibold rounded-full border ${data.setType === 'Double' ? 'bg-green-100 text-green-700 border-green-200' : 'bg-blue-100 text-blue-700 border-blue-200'}`}>
+                            {data.setType} Passage
                         </span>
                     )}
                 </div>
@@ -431,19 +431,8 @@ function Part7PracticePageContent() {
                                     </div>
 
                                     {/* Content (Rendered with Template or Markdown) */}
-                                    <div className={`text-gray-800 leading-relaxed font-serif text-[17px] prose prose-sm max-w-none prose-neutral prose-p:whitespace-pre-wrap prose-table:border-collapse prose-table:border prose-table:border-gray-300 prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-2 prose-td:border prose-td:border-gray-300 prose-td:p-2 ${(passage.type || '').toUpperCase().includes('NEWSLETTER') || (passage.type || '').toUpperCase().includes('REPORT') ? 'md:columns-2 md:gap-10 md:[column-rule:1px_solid_#d1d5db]' : ''}`}>
-                                        {(passage.type || '').toLowerCase() === 'article' ? (
-                                            <DocumentRenderer doc={passage} />
-                                        ) : (
-                                            <ReactMarkdown
-                                                remarkPlugins={[remarkGfm]}
-                                                components={{
-                                                    p: ({ node, ...props }) => <p className="mb-4 whitespace-pre-wrap" {...props} />
-                                                }}
-                                            >
-                                                {passage.content as string}
-                                            </ReactMarkdown>
-                                        )}
+                                    <div className={`text-gray-800 leading-relaxed font-serif text-[17px] prose prose-sm max-w-none prose-neutral prose-p:whitespace-pre-wrap prose-table:border-collapse prose-table:border prose-table:border-gray-300 prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-2 prose-td:border prose-td:border-gray-300 prose-td:p-2 ${((passage.docType || passage.type || '').toUpperCase().includes('NEWSLETTER') || (passage.docType || passage.type || '').toUpperCase().includes('REPORT') || (passage.docType || passage.type || '').toUpperCase().includes('BROCHURE')) ? 'md:columns-2 md:gap-10 md:[column-rule:1px_solid_#d1d5db]' : ''}`}>
+                                        <DocumentRenderer doc={passage as any} />
                                     </div>
                                 </div>
                             </div>
@@ -473,18 +462,7 @@ function Part7PracticePageContent() {
                                 </div>
                                 {/* Content (Rendered with Template or Markdown) */}
                                 <div className={`text-gray-800 leading-relaxed font-serif text-[16px] prose prose-sm max-w-none prose-neutral prose-p:whitespace-pre-wrap prose-table:border-collapse prose-table:border prose-table:border-gray-300 prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-2 prose-td:border prose-td:border-gray-300 prose-td:p-2 ${(data.passages[2].type || '').toUpperCase().includes('NEWSLETTER') || (data.passages[2].type || '').toUpperCase().includes('REPORT') ? 'md:columns-2 md:gap-10 md:[column-rule:1px_solid_#d1d5db]' : ''}`}>
-                                    {(data.passages[2].type || '').toLowerCase() === 'article' ? (
-                                        <DocumentRenderer doc={data.passages[2]} />
-                                    ) : (
-                                        <ReactMarkdown
-                                            remarkPlugins={[remarkGfm]}
-                                            components={{
-                                                p: ({ node, ...props }) => <p className="mb-4 whitespace-pre-wrap" {...props} />
-                                            }}
-                                        >
-                                            {data.passages[2].content as string}
-                                        </ReactMarkdown>
-                                    )}
+                                    <DocumentRenderer doc={data.passages[2] as any} />
                                 </div>
                             </div>
                         </div>

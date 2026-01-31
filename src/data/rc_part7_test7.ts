@@ -10,13 +10,27 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s11-p1",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.sunnywelcomehotel.co.in\n\nAt the Sunny Welcome Hotel in Kolkata, we work hard to ensure that you enjoy your stay. Please note:\n\n- Each room has a coffeemaker and complimentary coffee and tea. Guests may purchase snacks and other beverages in the vending areas located on each floor.\n- Guests with small children may request a rollaway bed or crib for their rooms for no additional charge.\n- The business center is open from 9:00 A.M. to 5:00 P.M. each day.\n- The swimming pool and children's playground are open during daylight hours. Children must always be supervised by an adult.\n- A deposit is necessary to guarantee a room reservation. The deposit will only be refunded if the reservation is cancelled or changed more than 24 hours prior to arrival.\n- Guests may check in as early as 2:00 P.M. Checkout after noon on the day of departure is subject to an additional charge.\n- Guests are required to present a passport or driver's license at the time of check-in.\n- We offer free shuttle service to the airport. Guests can make arrangements at the front desk.\n- Our reception desk is staffed 24 hours a day.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.sunnywelcomehotel.co.in"
+                },
+                content: [
+                    "At the Sunny Welcome Hotel in Kolkata, we work hard to ensure that you enjoy your stay. Please note:",
+                    "• Each room has a coffeemaker and complimentary coffee and tea. Guests may purchase snacks and other beverages in the vending areas located on each floor.",
+                    "• Guests with small children may request a rollaway bed or crib for their rooms for no additional charge.",
+                    "• The business center is open from 9:00 A.M. to 5:00 P.M. each day.",
+                    "• The swimming pool and children's playground are open during daylight hours. Children must always be supervised by an adult.",
+                    "• A deposit is necessary to guarantee a room reservation. The deposit will only be refunded if the reservation is cancelled or changed more than 24 hours prior to arrival.",
+                    "• Guests may check in as early as 2:00 P.M. Checkout after noon on the day of departure is subject to an additional charge.",
+                    "• Guests are required to present a passport or driver's license at the time of check-in.",
+                    "• We offer free shuttle service to the airport. Guests can make arrangements at the front desk.",
+                    "• Our reception desk is staffed 24 hours a day."
+                ]
             },
             {
                 id: "p7-t7-s11-p2",
                 contextType: "P1",
-                docType: "EMAIL",
+                type: "EMAIL",
                 content: `To: generalmanager@sunnywelcomehotel.co.in\nFrom: samuelramon@myemail.co.uk\nDate: 13 May\nSubject: Reservation number EX52417\n\nHello,\n\nMy family and I were very comfortable in the family suite at the Sunny Welcome Hotel in Kolkata last year, and we were looking forward to returning this year for a week starting on 17 April. Unfortunately, we suddenly had to postpone our trip until June, so I called the hotel on the morning of 17 April to change our reservation dates. I thought everything was in order, but when I opened my credit card statement this month, I discovered an additional charge from the Sunny Welcome Hotel.\n\nCould you please look into the matter? I believe that an error has been made and that I should be reimbursed. I would appreciate having the money credited to my account. We still plan to return to Kolkata later this year and anticipate an enjoyable stay at your hotel.\n\nYours sincerely,\nSamuel Ramon`
             }
         ],
@@ -102,14 +116,25 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s12-p1",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Nina Sosa\nFrom: Dexter Abbott\nDate: 20 August\nSubject: Next steps\n\nDear Ms. Sosa,\n\nI have good news. The plans for the layout of the new Fountain Road office building have just been approved by Lanfei Chan at our corporate office. We now need to start thinking about the artwork for the main open-plan office area on the third floor of the building. This is one of our last tasks before the office opens in October.\n\nI have heard that Red Starling Art has a good reputation for helping with office interiors. Could you look at the company's Web site today and find out if any of its services might be suitable for us? I am wondering whether photography or paintings would look best in the space. I am still waiting to hear back from Maxwell Willis in Finance about the budget for art, so please do not agree to anything with Red Starling Art until we know more.\n\nThank you,\nDexter Abbott, Facilities Manager\nKLX Accountancy`
+                type: "EMAIL",
+                content: `From: Dexter Abbott\nTo: Nina Sosa\nDate: 20 August\nSubject: Next steps\n\nDear Ms. Sosa,\n\nI have good news. The plans for the layout of the new Fountain Road office building have just been approved by Lanfei Chan at our corporate office. We now need to start thinking about the artwork for the main open-plan office area on the third floor of the building. This is one of our last tasks before the office opens in October.\n\nI have heard that Red Starling Art has a good reputation for helping with office interiors. Could you look at the company's Web site today and find out if any of its services might be suitable for us? I am wondering whether photography or paintings would look best in the space. What do you think? I am still waiting to hear back from Maxwell Willis in Finance about the budget for art, so please do not agree to anything with Red Starling Art until we know more.\n\nThank you,\n\nDexter Abbott, Facilities Manager\nKLX Accountancy`
             },
             {
                 id: "p7-t7-s12-p2",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.redstarlingart.co.uk/offices/\n\nRed Starling Art offers a range of consultancy services for office buildings:\n\n* Remake: For clients who want a complete redesign of the interior of their office.\n* Align: For clients looking to incorporate artwork into a new office, we help you find the right pieces (paintings, photographs, prints, or sculptures) for your space.\n* Connect: For clients who want to add a local touch to their offices, we collaborate with area artists.\n* Reframe: For clients who want to update but keep their existing artwork.\n\nOur work is always tailored to the specific needs of our clients. Please e-mail Birgit Lowenbruck at blowenbruck@redstarlingart.co.uk to book a free consultation. After the consultation, she will provide you with an estimate.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.redstarlingart.co.uk/offices/",
+                    navItems: ["Home", "About Us", "Services", "Contact Us"]
+                },
+                content: [
+                    "Red Starling Art offers a range of consultancy services for office buildings:",
+                    "• **Remake:** For clients who want a complete redesign of the interior of their office, we work with you to create a layout and decoration scheme that meets your needs.",
+                    "• **Align:** For clients looking to incorporate artwork into a new office, we help you find the right pieces (paintings, photographs, prints, or sculptures) for your space.",
+                    "• **Connect:** For clients who want to add a local touch to their offices, we collaborate with area artists and photographers to bring their unique perspective to you.",
+                    "• **Reframe:** For clients who want to update but keep their existing artwork, we suggest new framing, new lighting, or new arrangements for a fresh look.",
+                    "Our work is always tailored to the specific needs of our clients, so we cannot provide fixed prices. Please e-mail Birgit Lowenbruck at blowenbruck@redstarlingart.co.uk to book a free consultation. After the consultation, she will provide you with an estimate for the agreed-upon services."
+                ]
             }
         ],
         questions: [
@@ -194,20 +219,40 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s13-p1",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: jdixon@milkalenterprises.com\nFrom: humanresources@milkalenterprises.com\nDate: April 28\nSubject: Employee survey responses\n\nDear Ms. Dixon,\n\nI read through the responses to the semiannual employee survey. Here are the key suggestions:\n\n1. Flexible work-from-home policy\n2. Expanded in-office recycling strategy\n3. Financial rewards for excellence\n4. Technical training opportunities\n\nAlso, I propose simplifying the survey next time by using yes-no questions or rating scales instead of open-ended questions which are difficult to analyze.\n\nJudith Hathaway, Human Resources`
+                type: "EMAIL",
+                content: `To: jdixon@milkalenterprises.com\nFrom: humanresources@milkalenterprises.com\nDate: April 28\nSubject: Employee survey responses\n\nDear Ms. Dixon,\n\nI read through all the responses to the semiannual employee survey, and I want to highlight a few points that were repeatedly raised. We can use this list of suggestions to help determine our priorities.\n\nSuggestion 1. A more flexible policy for working from home\nSuggestion 2. An expanded in-office recycling strategy\nSuggestion 3. More financial rewards for excellent work\nSuggestion 4. More opportunities for technical training\n\nAlso, if you approve, I would like to simplify the survey form before we administer it again. The open-ended questions make the data difficult to analyze. I propose incorporating more yes-no questions or rating scales to determine how much a colleague agrees or disagrees with a statement.\n\nKind regards,\n\nJudith Hathaway, Human Resources`
             },
             {
                 id: "p7-t7-s13-p2",
                 contextType: "P1",
-                docType: "MEMO",
-                content: `To: All Staff\nFrom: Jenna Dixon, General Manager\nDate: May 8\nSubject: Volunteers needed\n\nI am seeking volunteers for a committee to launch an office recycling program, a key need from the survey. This program will cover plastics, glass, metal, paper, and cardboard.\n\nWe also need a committee coordinator. I'll meet with the coordinator to discuss the first steps. Note that this is in addition to regular duties, but a small fund for setup costs will be provided.`
+                type: "NOTICE",
+                header: {
+                    title: "MEMO"
+                },
+                content: [
+                    "**To:** All Staff",
+                    "**From:** Jenna Dixon, General Manager",
+                    "**Date:** May 8",
+                    "**Subject:** Volunteers needed",
+                    "I am seeking volunteers to form a committee that will launch an office recycling program. Having such a program was one of the most frequently identified needs mentioned on the recent employee survey. This program will prevent recyclables, including plastics, glass, metal, paper, and cardboard, from ending up in landfills.",
+                    "Also, we need a volunteer to be the coordinator of this committee. I will be happy to meet with this coordinator to discuss first steps. Note that time spent on coordination tasks would be in addition to your regular work duties. A small amount of funds will be made available to be spent on program setup costs."
+                ]
             },
             {
                 id: "p7-t7-s13-p3",
                 contextType: "P1",
-                docType: "MEMO",
-                content: `To: All Staff\nFrom: Mohammad Asghari\nDate: June 13\nSubject: Bins are here\n\nAs chairperson of the Recycling Committee, I'm happy to report that recycling bins for glass, cans, and paper are now in the kitchen. Finding containers narrow enough to fit between the door and the refrigerator was challenging, but I finally bought some.\n\nPlease follow the guidelines. I am creating illustrated instructions to hang above each bin by tomorrow. Committee members will monitor the collection to ensure it stays smooth.`
+                type: "NOTICE",
+                header: {
+                    title: "MEMO"
+                },
+                content: [
+                    "**To:** All Staff",
+                    "**From:** Mohammad Asghari",
+                    "**Date:** June 13",
+                    "**Subject:** Bins are here",
+                    "As chairperson of the In-office Recycling Committee, I am happy to report that we now have recycling bins in the kitchen for glass bottles, soda cans, and cardboard and paper. It took us some time to get this program started because finding containers narrow enough to squeeze three between the door and the refrigerator proved challenging. But I was finally able to purchase some.",
+                    "Please note that the recycling facility we are working with has stringent guidelines on what they accept, so I am creating illustrated instructions to hang above each bin. Those will be up tomorrow, and committee members will monitor our collection system to make sure the program is going smoothly. Please contact me with any questions, concerns, or feedback."
+                ]
             }
         ],
         questions: [
@@ -292,22 +337,42 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s14-p1",
                 contextType: "P4",
-                docType: "ADVERTISEMENT",
-                title: "Job Advertisement",
-                content: `Kooper's Vision is seeking an optician for its Danvers Mall branch. Must have a valid MA license and 3+ years of experience. Responsibilities include helping clients choose frames, ordering lenses, and insurance filing. Must be available to start work by the last week of August. Contact Tanisha Mosley at 978-555-0101.`
+                type: "NOTICE",
+                header: {
+                    title: "Job Advertisement"
+                },
+                content: [
+                    "Kooper's Vision is seeking an optician for its eyewear department. Must have a valid Massachusetts optician license and at least three years of relevant experience. The position requires excellent customer service skills and a strong awareness of current fashion trends in the industry. Responsibilities include helping clients choose frames, ordering eyeglasses, and filing insurance claims.",
+                    "This full-time position is available at Kooper's Vision at Danvers Mall. Contact store manager Tanisha Mosley at 978-555-0101. Must be available to start during the last week of August."
+                ]
             },
             {
                 id: "p7-t7-s14-p2",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.koopersvision.com\n\nKooper's Vision at Danvers Mall\nMon-Fri: 10AM-7PM | Sat: 10AM-6PM | Sun: 10AM-4PM\n\nAugust Special: 50% off the second pair of eyeglasses!\n\nNote: Annual eye exams are by appointment only. Located on the upper level next to Eight Days Sporting Goods.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.koopersvision.com"
+                },
+                content: [
+                    "**Kooper's Vision at Danvers Mall**",
+                    "**Hours:**\nMonday: 10 A.M.–7 P.M.\nTuesday: 10 A.M.–7 P.M.\nWednesday: 10 A.M.–7 P.M.\nThursday: 10 A.M.–7 P.M.\nFriday: 10 A.M.–7 P.M.\nSaturday: 10 A.M.–6 P.M.\nSunday: 10 A.M.–4 P.M.",
+                    "During the month of August, enjoy 50% off the second pair of eyeglasses!",
+                    "Kooper's Vision is your local optical center for all your eye-care needs in Danvers, Massachusetts. We are located on the upper level of the Danvers Mall next to Eight Days Sporting Goods. Call 978-555-0101 today to schedule your annual eye exam. Exams by appointment only."
+                ]
             },
             {
                 id: "p7-t7-s14-p3",
                 contextType: "P4",
-                docType: "REVIEW",
-                title: "Review",
-                content: `★★★★★\nMost recent visit: August 31. Ms. Palmer was incredibly helpful. She chose frames that perfectly fit my face shape and explained all lens options. I couldn't decide on just one pair, so I bought two! I was stunned to learn it was her first day on the job—she's clearly an expert. \n—Melvin Drake`
+                type: "REVIEW",
+                header: {
+                    title: "Optical Centers Reviews",
+                    rating: 5
+                },
+                content: [
+                    "I have been wearing eyeglasses since I was ten years old. I now have five children, and four of them wear glasses, so I have visited many opticians over the years. My recent visit to Kooper's Vision on August 31 was, by far, the best.",
+                    "Ms. Palmer offered her help when she saw that I was overwhelmed by the eyeglass selection at Kooper's Vision. She looked at the shape of my face and steered me toward a few pairs of glasses that were perfect for me! She knew exactly what looked best on me and advised me about the size, color, quality, and cost of the frames I considered. Ms. Palmer also explained the different types of lenses and lens coatings available. I could not decide which was my favorite pair of eyeglasses, so I bought two pairs! I was incredulous when she told me it was her first day working at the store—she was the best optician I have ever had!",
+                    "—Melvin Drake"
+                ]
             }
         ],
         questions: [
@@ -392,20 +457,31 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s15-p1",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.hellosnackvending.com/services\n\n| Service | Description |\n|---|---|\n| **1: Micromarket** | Open shelves set up in break rooms; self-service; electronic payments. |\n| **2: Pantry** | Break room cabinets stocked; paid in advance by company. |\n| **3: Coffee** | Break room stocked with coffee makers, beans, creamer/sugar. |\n| **4: Traditional** | Vending machine stocked with carbonated drinks, juice, water. |\n| **5: Healthy** | Vending machine stocked with healthy snacks. |`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.hellosnackvending.com/services"
+                },
+                content: [
+                    "**Our Services**",
+                    "Hello Snack Vending offers a variety of vending and coffee services for company break rooms and vending machines.",
+                    "**Service 1 (Micromarket)**—We set up a small market in your break room, with customized products available on open shelves. Micromarkets are self-service and feature electronic payments. Shelving and fixtures are provided.",
+                    "**Service 2 (Pantry)**—We stock your break room cabinets with a variety of products that you select. Pantry service is paid for in advance, freeing users from paying per item.",
+                    "**Service 3 (Coffee)**—We keep your break room stocked with coffee, tea, and all related essentials. We supply you with group-sized coffee makers, coffee, and individually sized creamer and sugar varieties.",
+                    "**Service 4 (Traditional Vending)**—We regularly stock your vending machine with a customized selection of carbonated beverages, juice, and water.",
+                    "**Service 5 (Healthy Vending)**—We regularly stock your vending machine with a wide selection of healthy snacks."
+                ]
             },
             {
                 id: "p7-t7-s15-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Customer Care (Hello Snack Vending)\nFrom: Denikia Lewis (Kivowitz Company)\nDate: November 14\n\nWe bought a used vending machine for our break room. We need a stocking service for snacks. Do you stock machines you don't own? If so, please send a snack product list.`
+                type: "EMAIL",
+                content: `To: customercare@hellosnackvending.com\nFrom: dlewis@kivowitzcompany.com\nDate: November 14\nSubject: Vending service\n\nHello,\n\nMy company recently bought a gently used nonrefrigerated vending machine, which has been placed in our employee break room. I am looking for a stocking service to fill it so that the staff can start using it.\n\nDoes your company only stock vending machines that you own, or do you also offer a stocking service for other machines? If you can service ours, I would like to know more about the snacks you have available to fill the machine. Could you please send me a list of the products you offer?\n\nThank you for your assistance.\n\nBest regards,\n\nDenikia Lewis\nKivowitz Company`
             },
             {
                 id: "p7-t7-s15-p3",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Denikia Lewis\nFrom: Dominik Scheibler (Customer Care)\nDate: November 15\n\nYes, we can stock your machine. However, old machines often break. It might be cheaper to use ours. Please send the model number. I attached the snack list. I also recommend renting a drink machine from us for cold beverages.`
+                type: "EMAIL",
+                content: `To: Denikia Lewis <dlewis@kivowitzcompany.com>\nFrom: Customer Care <customercare@hellosnackvending.com>\nDate: November 15\nSubject: Re: Vending service\nAttachment: @List\n\nDear Ms. Lewis,\n\nThank you for your e-mail. We would be happy to stock your machine even if it is not owned by our company. However, if your machine is old, it can be difficult to obtain parts for it, and older machines break more often. The cost of repairs can get high, making it more cost-effective for you to use one of our vending machines. Can you provide me with the model number?\n\nI have attached the list you requested. We can accommodate special requests if you have any. I also recommend renting a drink machine from us, because we find that employees usually enjoy having a cold drink with their snacks.\n\nPlease contact me if you have additional questions.\n\nSincerely,\n\nDominik Scheibler\nCustomer Care Representative`
             }
         ],
         questions: [

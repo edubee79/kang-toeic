@@ -10,15 +10,23 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s11-p1",
                 contextType: "P1",
-                docType: "EMAIL",
+                type: "EMAIL",
                 content: `To: Cassie Rafferty <cassie@mailcurrent.ie>\nFrom: Youssef Zimri <zimri@zimrimechanical.ie>\nSubject: Following up\nDate: 12 September\nAttachment: @cmcclinic\n\nDear Ms. Rafferty,\n\nI am very happy with your work so far. Your suggestion to add photos from our archive certainly dressed up the "Company History" page. The help-wanted pop-up bubble on the home page also looks good. Hopefully, it will attract applicants with mechanical experience.\n\nI'd like you to add one more project to our "Portfolio" page. We have finally finished replacing the plumbing and heating systems at Clary Medical Centre's satellite clinic in Galway. It was a challenging job, and I'm proud of our results. The attachment contains photos and a short description of what we did there.\n\nSincerely,\nYoussef Zimri\nOwner, Zimri Mechanical`
             },
             {
                 id: "p7-t5-s11-p2",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                title: "Clary Medical Center - Clinic opening soon",
-                content: `https://www.clarymedicalcentre.ie\n\n| About | **News** | Staff | Contact Us |\n|---|---|---|---|\n\n# Clinic opening soon\n\nWe have repurposed 47 High Street, Galway, into a satellite medical clinic and will celebrate with a grand opening party on Friday, 28 October. Remarks by Medical Director Dr. Celia O'Leary and local elected officials will begin promptly at 1:00 P.M., followed by a ribbon-cutting ceremony and tours until 4:30 P.M.\n\nThirty miles from the Clary Medical Centre's main campus, the Clary Clinic is housed in the historic Brandmore shoe factory, which closed more than two decades ago. During renovations, care was taken to maintain the exterior's nineteenth-century architectural features. The clinic's interior boasts eighteen examination rooms, a state-of-the-art x-ray facility, private offices for patient consultations, and a lab for processing patient samples.\n\nClinic staff will begin seeing patients on Tuesday, 1 November. To make an appointment, please call 020 915 1424.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.clarymedicalcentre.ie",
+                    navItems: ["About", "News", "Staff", "Contact Us"]
+                },
+                content: [
+                    "# Clinic opening soon",
+                    "\nWe have repurposed 47 High Street, Galway, into a satellite medical clinic and will celebrate with a grand opening party on Friday, 28 October. Remarks by Medical Director Dr. Celia O'Leary and local elected officials will begin promptly at 1:00 P.M., followed by a ribbon-cutting ceremony and tours until 4:30 P.M.",
+                    "\nThirty miles from the Clary Medical Centre's main campus, the Clary Clinic is housed in the historic Brandmore shoe factory, which closed more than two decades ago. During renovations, care was taken to maintain the exterior's nineteenth-century architectural features. The clinic's interior boasts eighteen examination rooms, a state-of-the-art x-ray facility, private offices for patient consultations, and a lab for processing patient samples.",
+                    "\nClinic staff will begin seeing patients on Tuesday, 1 November. To make an appointment, please call 020 915 1424."
+                ]
             }
         ],
         questions: [
@@ -103,13 +111,35 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s12-p1",
                 contextType: "P5",
-                docType: "PURCHASE_ORDER",
-                content: `**Pirate's Bounty Seafood**\n11 Harbor Street\nCharlottetown, Prince Edward Island, C1A 0A5\n2 October\nPurchase Order: 5338\n\n| VENDOR | SHIP TO |\n|---|---|\n| Rochette's Commercial Refrigeration<br>2175 Lyons Avenue<br>Guelph, Ontario, N1C 0A1<br>519-555-0112 | Pirate's Bounty Seafood<br>11 Harbor Street<br>Charlottetown, Prince Edward Island, C1A 0A5<br>Attn: Lenore Okiya<br>782-555-0145 |\n\n| ITEM NUMBER | DESCRIPTION | QUANTITY | PRICE | TOTAL |\n|---|---|---|---|---|\n| BF550 | Blizzard walk-in freezer<br>Features: 1.5m x 2m x 2.5m, adjustable shelves, aluminum flooring, galvanized steel panels | 1 | $6,400.00 | $6,400.00 |\n\n| COMMENTS OR SPECIAL INSTRUCTIONS | | |\n|---|---|---|\n| Restaurant expanding. Need unit by 17 November. | **SUBTOTAL** | $6,400.00 |\n| | **TAX** | $960.00 |\n| | **GRAND TOTAL** | **$7,360.00** |`
+                type: "TABLE",
+                header: {
+                    title: "PURCHASE ORDER",
+                    date: "2 October"
+                },
+                content: [
+                    "**Pirate's Bounty Seafood**\n11 Harbor Street\nCharlottetown, Prince Edward Island, C1A 0A5\nPurchase Order: 5338",
+                    "### VENDOR\nRochette's Commercial Refrigeration\n2175 Lyons Avenue\nGuelph, Ontario, N1C 0A1\n519-555-0112",
+                    "### SHIP TO\nPirate's Bounty Seafood\n11 Harbor Street\nCharlottetown, Prince Edward Island, C1A 0A5\nAttn: Lenore Okiya\n782-555-0145",
+                    "**COMMENTS OR SPECIAL INSTRUCTIONS**\n\n*Restaurant expanding. Need unit by 17 November.*"
+                ],
+                table_data: {
+                    headers: ["ITEM NUMBER", "DESCRIPTION", "QUANTITY", "PRICE", "TOTAL"],
+                    rows: [
+                        [
+                            "BF550",
+                            "Blizzard walk-in freezer\nFeatures: 1.5m x 2m x 2.5m, adjustable shelves, aluminum flooring, galvanized steel panels",
+                            "1",
+                            "$6,400.00",
+                            "$6,400.00"
+                        ]
+                    ],
+                    summary: "SUBTOTAL: $6,400.00 | TAX: $960.00 | GRAND TOTAL: $7,360.00"
+                }
             },
             {
                 id: "p7-t5-s12-p2",
                 contextType: "P1",
-                docType: "EMAIL",
+                type: "EMAIL",
                 content: `To: Lenore Okiya <lokiya@piratesbounty.ca>\nFrom: Shaliya Umuma <customerservice@rochettesrefrigeration.ca>\nDate: 3 October\nSubject: Purchase Order 5338\n\nDear Ms. Okiya,\n\nWe received your purchase order for the Blizzard walk-in freezer. Unfortunately, the model you requested is on back order and will not be available for three months. We regret the inconvenience and would like to offer you some options.\n\nI can offer you the Blizzard BF600, which measures 2m x 2.5m x 3m, at the discounted price of $6,900 plus tax. It comes with the same features as the item you ordered. Alternately, we have a refurbished BF400 in stock. It's the same size as the BF550; however, while the BF550 includes a remote control for setting the temperature, the BF400 has a wall-mounted device for that purpose. The BF400 unit comes with a two-year warranty. It is priced at $5,600 plus tax.\n\nPlease let me know how you wish to proceed. Just reply to this e-mail.\n\nShaliya Umuma, Customer Service Manager`
             }
         ],
@@ -195,21 +225,37 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s13-p1",
                 contextType: "P5",
-                docType: "SCHEDULE",
-                title: "Fifth Annual International Marketing Society Conference",
-                content: `23-25 October, Grant Hotel and Conference Centre, London\n\n**Day 1:**\n\n| Time | Description | Venue |\n|---|---|---|\n| 7:00 A.M. to 8:00 A.M. | Morning Social: Complimentary omelets, pastries, coffee, tea | Mezzanine |\n| 8:30 A.M. to 10:00 A.M. | Marcos Secada, founder and CEO, Grindstone Marketing Group | Room 2 |\n| 10:30 A.M. to noon | Claire Song, business columnist and best-selling author | Room 10 |\n| 12:30 P.M. to 2:00 P.M. | Lunch (ticket purchase required) | Alexander Ballroom |`
+                type: "TABLE",
+                header: {
+                    title: "Fifth Annual International Marketing Society Conference"
+                },
+                content: [
+                    "23-25 October, Grant Hotel and Conference Centre, London",
+                    "Day 1:"
+                ],
+                table_data: {
+                    headers: ["Time", "Description", "Venue"],
+                    rows: [
+                        ["7:00 A.M. to 8:00 A.M.", "Morning Social: Complimentary omelets, pastries, coffee, tea", "Mezzanine"],
+                        ["8:30 A.M. to 10:00 A.M.", "Marcos Secada, founder and CEO, Grindstone Marketing Group", "Room 2"],
+                        ["10:30 A.M. to noon", "Claire Song, business columnist and best-selling author", "Room 10"],
+                        ["12:30 P.M. to 2:00 P.M.", "Lunch (ticket purchase required)", "Alexander Ballroom"]
+                    ]
+                }
             },
             {
                 id: "p7-t5-s13-p2",
                 contextType: "P1",
-                docType: "EMAIL",
+                type: "EMAIL",
                 content: `To: Nadir Kalwar <kalwar.n@kdbuildingconcepts.com>\nFrom: Olek Dzik <odzik.k@kdbuildingconcepts.com>\nDate: 12 May\nSubject: Upcoming marketing campaign\nAttachment: @Link to video\n\nNadir,\n\nThanks for your help with the corporate marketing plan. Attached is a link to the video created for us by Grindstone Marketing Group. It shows our 3-D printing equipment pouring fast-setting concrete, layer by layer. I think it looks great as is, and I believe it will be the most compelling aspect of our 1 June launch, especially if the Sheffield house is sold by then.\n\nIn case you haven't heard, our next construction project will be a home just a couple of kilometres from your office building!\n\nOlek`
             },
             {
                 id: "p7-t5-s13-p3",
                 contextType: "P3",
-                docType: "ARTICLE",
-                title: "House Constructed Using 3-D Technology For Sale",
+                type: "ARTICLE",
+                header: {
+                    headline: "House Constructed Using 3-D Technology For Sale"
+                },
                 content: `SHEFFIELD (15 May)—An international construction firm specializing in innovative building technologies has completed one of Britain's first 3-D printed houses. The new structure is located on Morgan Road in Sheffield.\n\nKD Building Concepts took less than two weeks to execute the first phase of the project, which entailed printing the concrete walls and installing the electrical and plumbing systems, according to company president Olek Dzik. In just two months, the fully landscaped house with two bedrooms and two bathrooms was ready for market.\n\n"Labour costs were cut in half thanks to 3-D printing technology," said Mr. Dzik, whose company has offices in France and Germany, as well as in Sheffield. "At KD Building Concepts, we are committed to building homes that are both affordable and luxurious."\n\nThe house was listed for sale this week by a local real estate broker. The asking price is £150,000.\n\nNext on the horizon for KD Building Concepts is the construction of a home in Hamburg, Germany.`
             }
         ],
@@ -295,21 +341,35 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s14-p1",
                 contextType: "P4",
-                docType: "JOB_POSTING",
-                content: `**Gallery manager at Richard Lahiri Gallery in Cromwood**\n\nApplicants for this full-time position must have experience in retail art with an established history of successfully attracting patrons interested in purchasing original works of art. Experience managing a social media account is also desired. The position will be primarily on-site; however, some remote hours can be scheduled. Candidates must be available to start work on or before April 1. Qualified applicants should contact gallery director Richard Lahiri at rlahiri@richardlahirigallery.com.`
+                type: "NOTICE",
+                header: {
+                    title: "Gallery manager at Richard Lahiri Gallery in Cromwood"
+                },
+                content: [
+                    "Applicants for this full-time position must have experience in retail art with an established history of successfully attracting patrons interested in purchasing original works of art. Experience managing a social media account is also desired. The position will be primarily on-site; however, some remote hours can be scheduled. Candidates must be available to start work on or before April 1. Qualified applicants should contact gallery director Richard Lahiri at rlahiri@richardlahirigallery.com."
+                ]
             },
             {
                 id: "p7-t5-s14-p2",
                 contextType: "P4",
-                docType: "FLYER",
-                title: "Summer Scene Arts Program",
-                content: `Starting on May 1, five art galleries in Cromwood will be hosting open houses every Friday from May through August. Come enjoy live music, refreshments, artist talks, and more on the Cromwood boardwalk. Activities start at 4:00 P.M. and continue until 9:30 P.M., rain or shine. Participating galleries are listed below.\n\n**Rita Blake Art • Siitva Gallery • Richard Lahiri Gallery**\n**Patricia Dolivo Painting • Ashland Pottery and Crafts**\n\nFunded by the Cromwood City Council and Regents Bank`
+                type: "NOTICE",
+                header: {
+                    title: "Summer Scene Arts Program"
+                },
+                content: [
+                    "Starting on May 1, five art galleries in Cromwood will be hosting open houses every Friday from May through August. Come enjoy live music, refreshments, artist talks, and more on the Cromwood boardwalk. Activities start at 4:00 P.M. and continue until 9:30 P.M., rain or shine. Participating galleries are listed below.",
+                    "\n**Rita Blake Art • Siitva Gallery • Richard Lahiri Gallery**\n**Patricia Dolivo Painting • Ashland Pottery and Crafts**",
+                    "\nFunded by the Cromwood City Council and Regents Bank"
+                ]
             },
             {
                 id: "p7-t5-s14-p3",
                 contextType: "P3",
-                docType: "ARTICLE",
-                title: "Summer Activities in Middleton County",
+                type: "ARTICLE",
+                header: {
+                    headline: "Summer Activities in Middleton County",
+                    columns: 1
+                },
                 content: `**Cromwood Art Nights**\nCompiled by Lisa Yu-Seaver\n\nResidents of Elmhurst, Melbridge, and Cromwood are invited to explore the local art scene in Cromwood this summer. The five galleries on the boardwalk overlooking the Wye River are holding special events each Friday as part of the Summer Scene Arts Program. This Friday, Richard Lahiri and his gallery manager, Geetu Gelang, will use a giant screen to demonstrate software for creating virtual art. The event will also feature craft vendors, food trucks, and live music. See www.cromwood.gov/things-to-do for more information.\n\n**Movies in Brady Park**\nThe popular summer movie series in Herrontown returns on June 16! Each Saturday evening, a classic film will be projected on Brady Park's Grand Lawn. Bring your picnic basket and a blanket and get comfortable! The schedule of films is available at www.bradypark.org/activities.`
             }
         ],
@@ -395,22 +455,42 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s15-p1",
                 contextType: "P3",
-                docType: "ARTICLE",
-                title: "Senano Designs Buys Gendalla in $60 Million Deal",
+                type: "ARTICLE",
+                header: {
+                    headline: "Senano Designs Buys Gendalla in $60 Million Deal"
+                },
                 content: `LOS ANGELES (March 20)—Fashion powerhouse Senano Designs announced on Wednesday that it had acquired Gendalla, an up-and-coming luxury brand. The acquisition is part of Senano's plan to supplement its clothing products with a line of designer watches. Over the next two years, the company has further plans to expand its offerings to include fragrances and luggage. Lina Pacheco, Senano's chief executive officer, said that such expansion is necessary to keep up and compete with other international fashion houses. Although based in Los Angeles, in recent years Senano has opened offices in Philadelphia, Chicago, and Miami. Ms. Pacheco says she was unfamiliar with Gendalla products until a year ago, when she saw one of their ads in an automobile magazine. "The products have a distinctive, modern style," Ms. Pacheco said, "which will go well with Senano's trendsetting clothes."`
             },
             {
                 id: "p7-t5-s15-p2",
                 contextType: "P1",
-                docType: "MEMO",
-                content: `**MEMO**\nFrom: Oscar Johansen, Accounting department\nTo: All Gendalla employees\nDate: March 22\nSubject: Travel expense policy\nAttachment: Policy\n\nI have attached a copy of Senano's policy on travel expenses, which will go into effect when we officially become employees of Senano on March 31.\n\nNote that Senano's policy is more restrictive than Gendalla's policy in several ways. For example, employees will no longer have one month to submit expense reports. However, the new policy will make some processes much easier: specifically, Senano's requirements for submitting expenses under $50 are simpler than those under current Gendalla policy.\n\nCarlie Dawson, an accounting director who works at Senano's headquarters, will come to our New York office to lead an information session about this and other policy-related changes on Thursday, March 28, at 2:00 P.M. I strongly encourage you to attend.`
+                type: "NOTICE",
+                header: {
+                    title: "MEMO"
+                },
+                content: [
+                    "From: Oscar Johansen, Accounting department",
+                    "To: All Gendalla employees",
+                    "Date: March 22",
+                    "Subject: Travel expense policy",
+                    "Attachment: Policy",
+                    "\nI have attached a copy of Senano's policy on travel expenses, which will go into effect when we officially become employees of Senano on March 31.",
+                    "\nNote that Senano's policy is more restrictive than Gendalla's policy in several ways. For example, employees will no longer have one month to submit expense reports. However, the new policy will make some processes much easier: specifically, Senano's requirements for submitting expenses under $50 are simpler than those under current Gendalla policy.",
+                    "\nCarlie Dawson, an accounting director who works at Senano's headquarters, will come to our New York office to lead an information session about this and other policy-related changes on Thursday, March 28, at 2:00 P.M. I strongly encourage you to attend."
+                ]
             },
             {
                 id: "p7-t5-s15-p3",
                 contextType: "P6",
-                docType: "POLICY",
-                title: "Senano Designs Travel Expense Policy",
-                content: `**Senano Designs - Travel Expense Policy**\n\n* To be reimbursed for work-related travel, employees must submit a travel request at least two weeks before a trip, listing the reason for travel and estimating all expenses.\n* Original receipts must be submitted for expenses above $50. Any expenses below that do not require the submission of original receipts.\n* All receipts and expense reports must be submitted within three weeks after a trip is completed. Expenses submitted after this time will require the approval of the department head.`
+                type: "NOTICE",
+                header: {
+                    title: "Senano Designs Travel Expense Policy"
+                },
+                content: [
+                    "• To be reimbursed for work-related travel, employees must submit a travel request at least two weeks before a trip, listing the reason for travel and estimating all expenses.",
+                    "• Original receipts must be submitted for expenses above $50. Any expenses below that do not require the submission of original receipts.",
+                    "• All receipts and expense reports must be submitted within three weeks after a trip is completed. Expenses submitted after this time will require the approval of the department head."
+                ]
             }
         ],
         questions: [

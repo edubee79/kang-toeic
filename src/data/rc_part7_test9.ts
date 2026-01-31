@@ -10,15 +10,15 @@ export const rcPart7Test9: PracticeSet[] = [
             {
                 id: "p7-t9-s11-p1",
                 contextType: "P1",
-                docType: "EMAIL",
+                type: "EMAIL",
                 content: `To: headquartersstaff@seonwulawfirm.com\nFrom: iqalandar@seonwulawfirm.com\nDate: October 1, 9:39 A.M.\nSubject: Remote work setup\nAttachment: Equipment request form\n\nDear Associates,\n\nOn December 3, our headquarters will close for a month for renovation. As all of you normally work out of these offices in San Francisco, please plan to work off-site and collect everything you may need (your laptop, files, etc.) before December 1. Entry to the building will be restricted after that date.\n\nIf you would like a temporary space at our San Jose offices, please e-mail me, and I will reserve one for you. If you plan to work from home and need additional equipment (such as a printer), fill out the attached form from our technology department and return it to me. A representative of that department will mail the equipment to your home address.\n\nWe realize this work on the building is a disruption, but timing it with our slow season should make the situation easier. We think you will be happy with the changes when the building reopens on January 5. If you have any questions, please reach out to me.\n\nBest,\nIan Qalandar, Manager\nSeonwu Law Firm\n(415) 555-0177`
             },
             {
                 id: "p7-t9-s11-p2",
                 contextType: "P5",
-                docType: "FORM",
+                type: "FORM",
                 title: "Seonwu Law Firm—Equipment Request Form",
-                content: `Employee name: Jason Kang\nEmployee ID: 102899\nE-mail: jkang@seonwulawfirm.com\nDate to receive: November 30\nEquipment: desktop monitor, printer\n\nEmployee Signature: ____________________ Date: ____________________\n\n(This section is to be completed by the technology department.)\nRequest completed: [x] Yes  [ ] No\nRequest filled by: Aubrey Smith\nEquipment serial numbers: VN3902556, MXE96400\nDate sent: November 27 via overnight mail`
+                content: `Employee name: Jason Kang\nEmployee ID: 102899\nE-mail: jkang@seonwulawfirm.com\nDate to receive: November 30\nEquipment: desktop monitor, printer\n\n(This section is to be completed by the technology department.)\nRequest completed: [x] Yes  [ ] No\nRequest filled by: Aubrey Smith\nEquipment serial numbers: VN3902556, MXE96400\nDate sent: November 27 via overnight mail`
             }
         ],
         questions: [
@@ -103,15 +103,15 @@ export const rcPart7Test9: PracticeSet[] = [
             {
                 id: "p7-t9-s12-p1",
                 contextType: "P3",
-                docType: "ARTICLE",
+                type: "ARTICLE",
                 title: "Planning a Tour of Your Facility",
-                content: `by Didiane Lessard\n\nPlant tours are commonplace in many factories, but not all tours are effective. A potential investor and a casual tourist will not be impressed by the same things. \n\nBe selective. Unless your tour is for a safety inspection, your guests do not need to see every part of your factory. \n\nTiming is everything. Schedule breaks in tours lasting longer than an hour. Half an hour in one area is the limit before guests get bored.\n\nPersonality is NOT everything. A comprehensive knowledge of production processes is important—and absolutely vital during inspections. Visitors appreciate a tour that ends on time.`
+                content: `by Didiane Lessard\n\nPlant tours are commonplace in many factories, but not all tours are as effective as they could be. Too many companies make the mistake of adopting a one-size-fits-all approach rather than tailoring tours to maximize their usefulness. A potential investor and a casual tourist will probably not be impressed by the same things, so it is best to be clear about the tour's purpose early on. Here are some guidelines to make each tour as effective as possible.\n\nBe selective. Unless your tour is for a safety inspection, your guests do not need (or want) to see every part of your factory. Choose a few sections that will interest your guests and give them a better sense of your product. For example, journalists will want to create a story about your plant, so show them the parts of the plant that have historical significance, such as a room with the company's original production equipment.\n\nTiming is everything. Always be mindful of the physical demands of the tour. Even the hardiest guest will tire of standing or walking for long periods. It is a good idea to schedule breaks in tours lasting longer than an hour. The time spent in a single section matters also. If you allow guests only five minutes in an area, they will soon forget it. On the other hand, even the most impressive room gets boring after half an hour.\n\nPersonality is NOT everything. While having a personable and friendly tour guide is essential, your guests are coming to see what goes into making your product. Tour guides get asked a variety of questions, some unexpected, so a comprehensive knowledge of the production processes is important (and absolutely vital during inspections). You also want someone who will keep the tour moving—visitors will appreciate a tour that begins and ends on time.`
             },
             {
                 id: "p7-t9-s12-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Masumi Toda\nFrom: Ana Miftaroski\nDate: May 1\nSubject: Upcoming plant tour\n\nHi, Masumi, I attached Lessard's article to help plan this month's tour. I agree on timing. Since the tour, by necessity, will have to cover the entire plant, it must be conducted efficiently. I recommend Maja Clausen as a guide; she is very knowledgeable about our policies and procedures and can handle any questions.`
+                type: "EMAIL",
+                content: `To: Masumi Toda <mt978@vidatechsystems.com>\nFrom: Ana Miftaroski <am680@vidatechsystems.com>\nDate: May 1\nSubject: Upcoming plant tour\nAttachment: Lessard_article\n\nHi, Masumi,\n\nI have attached an April 15 article by Didiane Lessard to help you plan the tour we will be giving later this month. I especially agree with the section on timing. Since the tour, by necessity, will have to cover the entire plant, it must be conducted as efficiently as possible. As for a guide, I would have recommended Nathan Zarate, but he will be traveling on May 21. Perhaps Maja Clausen could do it. She has also worked here for several years; she is very knowledgeable about our facility, processes, policies, and procedures. I am confident that she will be able to handle any questions the visitors might ask.\n\nAna Miftaroski, Vice President of Operations`
             }
         ],
         questions: [
@@ -196,22 +196,22 @@ export const rcPart7Test9: PracticeSet[] = [
             {
                 id: "p7-t9-s13-p1",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.zonecatering.com/home\n\nZone Catering provides food trucks at film and television production sites. Our trucks move with your team. We offer a wide variety of cuisines and use CA-grown produce. We accommodate dietary restrictions and offer buffet or order-from-truck options. 24-hour support is available.`
+                type: "WEB_PAGE",
+                content: `https://www.zonecatering.com/home\n\n[Home] [Menus] [Testimonials] [Contact Us]\n\nZone Catering provides food trucks at film and television production sites throughout California. Just let us know where you need a food truck and how many people you need to feed. We can serve your entire cast and crew. Our trucks also move with you and your team if you are shooting scenes in various locations.\n\nAt Zone Catering, we offer a wide variety of cuisines. All the fruits and vegetables we use in our menus are grown here in California. Our menus are easily adapted to accommodate dietary restrictions. For convenience, our food trucks offer both full meals and individual items. We can serve meals buffet-style, or people can order directly from the truck.\n\nLet us take care of the catering for your production. You will find our food delicious, and you will find our service friendly and convenient. We even offer 24-hour support in case any issues arise while we are at your location. We hope to serve you soon!`
             },
             {
                 id: "p7-t9-s13-p2",
                 contextType: "P5",
-                docType: "SCHEDULE",
-                title: "Zone Catering Food Trucks (June 10)",
-                content: `| Film | Shooting Location | Contact Person |\n|---|---|---|\n| Trappings | Harpin Lot | Erin Begg |\n| Make the Meeting | 192 Laredo Street | Mark Lillo |\n| Tutors and Tuxedos | Tandor Fields | Jun-Seo Kil |\n| Jatem and the Storm | Spectrum Hall | Donna Gawason |`
+                type: "SCHEDULE",
+                title: "Zone Catering Food Trucks",
+                content: `Schedule Date: June 10\n\n| Film | Shooting Location | Contact Person |\n| --- | --- | --- |\n| Trappings | Harpin Lot | Erin Begg |\n| Make the Meeting | 192 Laredo Street | Mark Lillo |\n| Tutors and Tuxedos | Tandor Fields | Jun-Seo Kil |\n| Jatem and the Storm | Spectrum Hall | Donna Gawason |`
             },
             {
                 id: "p7-t9-s13-p3",
                 contextType: "P4",
-                docType: "REVIEW",
-                title: "Testimonial (June 10)",
-                content: `Filming 'Make the Meeting' today was great thanks to the food truck. The coffee was excellent, and the strawberries in the fruit salad were so fresh! Despite lines on a hot day, the server was fast and friendly. The beautiful mural on the truck was a nice touch!\n—Robert Chiodo`
+                type: "REVIEW",
+                title: "Testimonial",
+                content: `https://www.zonecatering.com/testimonials\n\n[Home] [Menus] [Testimonials] [Contact Us]\n\nJune 10—I have been in the acting business for over 25 years and am sometimes disappointed by the food trucks on film production sites. That was not the case today when we were filming Make the Meeting. The food truck had excellent coffee, and the strawberries in the large fruit salad were so fresh and tasty! Even though there was a long line of customers on an extremely hot and uncomfortable day, the server was able to get everyone's food ready quickly. She was friendly and easygoing, too! Even the food truck was pleasant-looking—the mural painted on the side of the truck was beautiful! I hope to see Zone Catering food trucks at future film shooting locations.\n\n—Robert Chiodo`
             }
         ],
         questions: [
@@ -296,21 +296,41 @@ export const rcPart7Test9: PracticeSet[] = [
             {
                 id: "p7-t9-s14-p1",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Hae-won Jeong\nFrom: Julia Laurent\nDate: July 28\nSubject: Dallas hotels\n\nDear Hae-won, I'm attending the Digital Marketing Conference in October. Since you've been many times, I need a recommendation for a hotel near the convention center. I'm leaning toward Bonita Suites. Hope you've settled into your new role in the digital marketing department!`
+                type: "EMAIL",
+                content: `To: Hae-won Jeong\nFrom: Julia Laurent\nDate: July 28\nSubject: Dallas hotels\nAttachment: List of downtown accommodations\n\nDear Hae-won,\n\nI plan to attend the National Digital Marketing Conference in October. I know you have traveled to this conference in Dallas many times. This will be my first time attending, and I'm not sure which hotel to book. I have attached a list of accommodations that are near the convention center. Right now, I am leaning toward the Bonita Suites Hotel, but I would like to know which property you would recommend.\n\nI hope you have settled into your new position with the digital marketing department. I am looking forward to the conference and hope to see you again there.\n\nKind regards,\n\nJulia Laurent\nE-mail Marketing Specialist\nThe 3R Marketing Firm`
             },
             {
                 id: "p7-t9-s14-p2",
                 contextType: "P3",
-                docType: "INFORMATION",
+                type: "TABLE",
                 title: "Dallas Accommodations",
-                content: `- The Oaktree Hotel: $204/night. Luxury, heart of downtown.\n- Alessi Dallas Hotel: $155/night. Boutique, lobby restaurant.\n- Bonita Suites Hotel: $125/night. Each suite has office/kitchen; lobby computer center; free on-site parking.`
+                content: "List of Downtown Accommodations (from www.topbusinesshotels.com/search/Dallashotels)",
+                table_data: {
+                    headers: ["Hotel", "Rate", "Description"],
+                    rows: [
+                        [
+                            "The Oaktree Hotel",
+                            "$204/night",
+                            "Luxury hotel in the heart of downtown<br>Close to the convention center<br>Outdoor pool, three on-site restaurants<br>Close to shopping"
+                        ],
+                        [
+                            "Alessi Dallas Hotel",
+                            "$155/night",
+                            "Quaint boutique hotel in downtown Dallas<br>Lobby restaurant for breakfast and dinner<br>Near convention center and history museum"
+                        ],
+                        [
+                            "Bonita Suites Hotel",
+                            "$125/night",
+                            "New hotel in downtown convention center area<br>Office and kitchen in each suite<br>Computer center with printers located in lobby<br>Meeting space available for groups<br>Free on-site parking available"
+                        ]
+                    ]
+                }
             },
             {
                 id: "p7-t9-s14-p3",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Julia Laurent\nFrom: Hae-won Jeong\nDate: July 29\nSubject: RE: Dallas hotels\n\nHi Julia, I'm also going! I'll stay at Alessi Dallas (closest to the center). For you, I suggest Bonita Suites—the newcomers' reception is actually held there. Reminder: our company's limit is $175/night.`
+                type: "EMAIL",
+                content: `To: Julia Laurent\nFrom: Hae-won Jeong\nDate: July 29\nSubject: RE: Dallas hotels\n\nDear Julia,\n\nI will be attending the National Digital Marketing Conference this year as well! I love traveling to Dallas every year for this conference because it is a great networking opportunity. Since this is your first time attending, I recommend you go to the newcomers' reception on the first night. The conference executive planning committee is putting it on, and it could be an excellent occasion to socialize with other conference goers.\n\nI will be staying at the Alessi Dallas Hotel. It is the closest to the convention center, and the rooms are comfortable. For you, I would suggest the one you already seem to prefer. It so happens that the newcomers' reception will be held in one of the event rooms there. It is a little farther away but still convenient. As a friendly reminder, we are advised not to book hotels with rates that exceed our company's limit of $175/night.\n\nI look forward to seeing you in October. It will be lovely to catch up.\n\nBest,\n\nHae-won Jeong\nDigital Marketing Director\nThe 3R Marketing Firm`
             }
         ],
         questions: [
@@ -395,20 +415,20 @@ export const rcPart7Test9: PracticeSet[] = [
             {
                 id: "p7-t9-s15-p1",
                 contextType: "P1",
-                docType: "LETTER",
-                content: `Dover Water Supply\nMarch 12\n\nDear Ms. Cam, service at 361 Farming Ave starts April 6. Your account/meter ID is DWS4289. Billing is monthly (due 15th). We'll flush the system on April 4; you might see temporary discoloration.\n\nMatthew Ensign, Account Rep`
+                type: "LETTER",
+                content: `Dover Water Supply\n7400 Rodney Boulevard, Dover, DE 19904\n\nMarch 12\n\nMs. Na-Ri Cam\n361 Farming Avenue\nDover, DE 19902\n\nDear Ms. Cam,\n\nThis letter is to confirm that Dover Water Supply will begin service at your address on Wednesday, April 6. Your customer account number, which is the same as your water meter number, is DWS4289.\n\nBilling is monthly, and payment is due on the fifteenth of each month. Bills can be paid by mailing a check to our main address or by entering your account number and payment information on our secure page at www.doverwatersupply.com/billing.\n\nWe will be performing a system flush of the pipes in your area on Monday, April 4. Customers may temporarily see discoloration or sediment in their water around that time. Please visit our Web site for more information. You can also contact Customer Support at questions@doverwatersupply.com or call us at (302) 555-0135.\n\nSincerely,\n\nMatthew Ensign\nMatthew Ensign\nAccount Representative, Dover Water Supply`
             },
             {
                 id: "p7-t9-s15-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Dover Water Supply\nFrom: Na-Ri Cam\nDate: March 17\nSubject: DWS4289\n\nI'm moving in! Will I see discoloration on April 6? Also, your website says my account ID is invalid. I need online access by the May 15 due date to pay.`
+                type: "EMAIL",
+                content: `To: questions@doverwatersupply.com\nFrom: Na-Ri Cam <n.cam@mailcurrent.com>\nDate: March 17\nSubject: Account number DWS4289\n\nHello,\n\nI am in the process of moving to my new home in Dover. I received a letter stating that my water service will start on April 6. It also said something about pipes being flushed on April 4. Should I expect to see discoloration when I start using my water? Are there any steps I should take?\n\nAlso, I tried to use your secure page, but it gave me an error message saying that my account number was not valid. I will need your help in getting online access by the May 15 due date.\n\nThank you for any information you can provide.\n\nNa-Ri Cam`
             },
             {
                 id: "p7-t9-s15-p3",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Na-Ri Cam\nFrom: Customer Support\nDate: March 18\n\nMs. Cam, your water might be cloudy on April 6 but is safe. Keep it running until clear. I have fixed your online account issue. Any more questions, reach out.\n\nRamona Hizon`
+                type: "EMAIL",
+                content: `E-Mail Message\n\nTo: Na-Ri Cam <n.cam@mailcurrent.com>\nFrom: Customer Support <questions@doverwatersupply.com>\nDate: March 18\nSubject: RE: Account number DWS4289\n\nDear Ms. Cam,\n\nThank you for your message. Your water might look cloudy on April 6 when you first turn on your faucets. We recommend that you keep the water running until it is clear before you use it. I assure you that the water is not harmful in any way. The minerals that cause the discoloration occur naturally, and our latest water analysis showed very high quality.\n\nI apologize for the problem you described. I have fixed it, so you should not have any further trouble.\n\nIf you have any other questions, please don't hesitate to reach out to us again.\n\nBest regards,\n\nRamona Hizon\nCustomer Support, Dover Water Supply`
             }
         ],
         questions: [

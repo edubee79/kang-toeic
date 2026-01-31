@@ -10,16 +10,20 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s11-p1",
                 contextType: "P4",
-                docType: "ADVERTISEMENT",
-                title: "Job Advertisement",
-                content: `BLISSFUL HORSE STABLES\n\nPart-time worker needed to feed, wash, and groom horses. Must be able to work a minimum of eight hours a week, including occasional weekends and holidays. Although previous experience with horses is preferred, we will train the right candidate. To apply, send an e-mail to Dorothy Lu, dlau@blissfulhorsestables.com, and attach your résumé.\n\nBlissful Horse Stables is the region's largest horse-boarding facility. It has been owned and operated by the Gandy family since 1988. Our business offers both long- and short-term boarding. We also offer riding lessons and trail rides. Our facility is located on many acres of pasture for our equine friends.`
+                type: "NOTICE",
+                header: {
+                    title: "BLISSFUL HORSE STABLES"
+                },
+                content: [
+                    "Part-time worker needed to feed, wash, and groom horses. Must be able to work a minimum of eight hours a week, including occasional weekend hours. Although training is available, applicants who have experience working with horses are preferred. To apply, send an e-mail to Dorothy Lu, dlu@blissfulhorsestables.com.au, and attach your résumé.",
+                    "Blissful Horse Stables is the region's largest horse-boarding facility. It has been owned and operated by one family since 1988. Our business offers both long- and short-term boarding contracts. We have state-of-the-art indoor and outdoor exercise rings and a five-acre grazing pasture for our equine friends. A veterinarian is always on call."
+                ]
             },
             {
                 id: "p7-t6-s11-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                title: "E-mail",
-                content: `From: ora.kyle@rapidmail.com.au\nTo: dlau@blissfulhorsestables.com\nSubject: Part-time position\nDate: June 10\nAttachment: orakyle.rtf\n\nDear Ms. Lu,\n\nThis e-mail is in response to the advertisement that appeared in yesterday's edition of Colby Today. At this time, I work for New Large Animal Clinic as a technician's assistant, but only three days a week. The part-time position you are advertising would enable me to do something I enjoy while increasing my working hours. I am happy to work on weekends and holidays.\n\nAll the best,\nKyle Ora`
+                type: "EMAIL",
+                content: `From: ota.kyle@opalmail.com.au\nTo: dlu@blissfulhorsestables.com.au\nSubject: Part-time position\nDate: 1 August\nAttachment: @ota.rtf\n\nDear Ms. Lu,\n\nThis e-mail is in response to the advertisement that appeared in yesterday's edition of the Colby Today. At this time, I work for Ness Large Animal Clinic as a technician's assistant, but only three days a week. The part-time position you are advertising would enable me to do something I enjoy while increasing my working hours. I am happy to provide references upon request.\n\nAll the best,\nKyle Ota`
             }
         ],
         questions: [
@@ -104,14 +108,22 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s12-p1",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.pinkferngardens.co.nz/contact\n\nAbout | Shop Online | Locations | Contact Us\n\nLocated in Picton, New Zealand, Pink Fern Gardens sells a wide variety of plants, both edible and decorative. Please use the form below to submit your questions and comments.\n\nName: Mia Dixon\nE-mail: mdixon@sunmail.co.nz\nComment:\n\nI saw the callout to local growers on your social media feed. A few years ago, I started a small business selling potted plants with my neighbours here in Henderson. For us to grow the business, we need to expand our offerings. Specifically, we have dozens of potted mint and cardamom seedlings as well as other aromatic herbs, and I wonder if you are interested in expanding your offerings of herbs. We also have a half dozen two-year-old lemon tree saplings that are becoming too large for us.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.pinkferngardens.co.nz/contact",
+                    navItems: ["About", "Shop Online", "Locations", "Contact Us"]
+                },
+                content: [
+                    "Located in Picton, New Zealand, Pink Fern Gardens sells a wide variety of plants, both edible and decorative. Please use the form below to submit your questions and comments.",
+                    "**Name:** Mia Dixon\n**E-mail:** mdixon@sunmail.co.nz",
+                    "**Comment:**\nI saw the callout to local growers on your social media feed. A few years ago, I started a large community food garden with my neighbours here in Helensville for us to tend in our free time. This year, we have more plants than we can consume ourselves. Specifically, we have dozens of potted mint and cardamom seedlings as well as other uncommon herbs, and I wonder if you are interested in expanding your offerings of herbs. We also have a half dozen two-year-old lemon tree saplings that are between two and three feet tall."
+                ]
             },
             {
                 id: "p7-t6-s12-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: mdixon@sunmail.co.nz\nFrom: purchasing@pinkferngardens.co.nz\nDate: 12 January\nSubject: Your comment\n\nDear Ms. Dixon,\n\nPink Fern Gardens is always seeking uncommon plants. As for your citrus saplings, we are interested in purchasing them. However, we need to be cautious about introducing new varieties. We learned our lesson regarding this last season when we bought some trees that were unhealthy.\n\nWe do buy other plants from independent growers, so long as the seedlings are potted and market ready. Here are the types of seedlings we buy and the wholesale prices we pay for each plant: ferns ($8), mints ($6), annual flowers ($5), and herbs for cooking ($4). Please let us know if you can deliver any plants at these prices.\n\nKind regards,\nKen Yoneda\nPurchaser, Pink Fern Gardens`
+                type: "EMAIL",
+                content: `To: mdixon@sunmail.co.nz\nFrom: purchasing@pinkferngardens.co.nz\nDate: 12 January\nSubject: Your comment\n\nDear Ms. Dixon,\n\nPink Fern Gardens is always seeking uncommon plants. As for your citrus saplings, we are currently purchasing those from licensed growers only. There is a disease affecting certain varieties, so we must be cautious. We learned our lesson regarding this last autumn!\n\nWe do buy other plants from independent growers, as long as the seedlings are potted and market ready. Here are the types of seedlings we buy and the wholesale price we pay for each plant: ferns ($8), vines ($6), annual flowers ($5), and herbs for cooking, especially oregano, mint, and rosemary ($2). Please stop by at your convenience with samples of your offerings, and we can discuss our needs further in person.\n\nKind regards,\nKen Yoneda\nPurchaser, Pink Fern Gardens`
             }
         ],
         questions: [
@@ -196,21 +208,35 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s13-p1",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.elektroproofrepair.com/about\n\nTrust Elektroproof Repair to get your computer running right again!\n\nElektroproof Repair's no-surprises policy offers flat fees for labor at three price points: $200, $300, and $350. These fees do not include replacement parts. The majority of our repairs incur the $200 fee.\n\nNOTE: Because of a dramatic increase in demand, we are accepting appointments only from customers who have used our services previously. To schedule your appointment, we require a $50 nonrefundable deposit, which will be credited toward the cost of services rendered.\n\nMost repairs are completed within three to five business days.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.elektroproofrepair.com/about"
+                },
+                content: [
+                    "**Trust Elektroproof Repair to get your computer running right again!**",
+                    "Elektroproof Repair's no-surprises policy offers flat fees for labor at three price points: $145, $200, and $350. These fees do not include the cost of software or replacement parts. The majority of our repairs incur the $200 fee.",
+                    "NOTE: Because of a dramatic increase in demand, we now require appointments for all services. For an initial consultation with one of our highly qualified technicians, simply select from the available time slots on our schedule page. When you schedule your appointment, we require a $60 nonrefundable deposit which will be credited toward the cost of services rendered.",
+                    "If you have any questions, please e-mail us at inquiries@elektroproofrepair.com. Whenever possible, we will contact you the same day or on the following business day. Most repairs are completed within three to five business days."
+                ]
             },
             {
                 id: "p7-t6-s13-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `From: Arthur Jacquet <ajacquet@elektroproofrepair.com>\nTo: Jessica Nelson <jnelson74@hoffmanns.com>\nDate: January 14, 1:00 P.M.\nSubject: RE: Repair inquiry\n\nDear Ms. Nelson,\n\nThank you for contacting Elektroproof Repair. You asked if you could bring us your laptop for inspection tomorrow, January 15. Unfortunately, we are currently booked solid through the end of the month. However, we do have an opening on February 3. Please let me know if you would like to book that slot.\n\nSincerely,\nArthur Jacquet, Elektroproof Repair`
+                type: "EMAIL",
+                content: `To: Jessica Nelson <jnelson17@saffronmail.com>\nFrom: Arthur Jacquet <ajacquet@elektroproofrepair.com>\nDate: January 14\nSubject: Re: Tea spill, please help!\n\nDear Ms. Nelson,\n\nThank you for contacting Elektroproof Repair. You asked if you could bring in your laptop for inspection tomorrow, January 15. Unfortunately, we are currently booked solid through January 18. The earliest available time slot is 8:00 A.M. on January 19. Please let me know if you would like to book that slot or if you have any questions.\n\nSincerely,\nArthur Jacquet, Elektroproof Repair`
             },
             {
                 id: "p7-t6-s13-p3",
                 contextType: "P4",
-                docType: "REVIEW",
-                title: "Review",
-                content: `https://www.reviewproofrepair.com/elektroproof\n\n★★★★★\nElektroproof Repair\n\nI appreciate the quick turnaround time on my laptop repair. I was afraid the internal components might have been damaged due to the liquid spill. Luckily, the technician was able to dry the computer's insides and prevent damage. The Web site said it would take three to five business days, but Arthur Jacquet called me back to tell me that my laptop was ready for pickup in less than 24 hours. Since my computer was not turned on at the time of the accident, severe damage was avoided. Highly recommend!\n\n—Silvia Lau`
+                type: "REVIEW",
+                header: {
+                    url: "https://www.buyertobuyerintel.com/repair_services/electronics/computer_devices",
+                    rating: 5
+                },
+                content: [
+                    "I spilled tea on the keyboard of my faithful old laptop, and while I dried the exterior rather quickly, I was afraid the internal components might have been ruined. Luckily for me, Elektroproof Repair came to the rescue! After booking my consultation on the Web site, I waited anxiously for a reply. Within an hour, I got an e-mail directly from the owner. Although the time slot I had requested was not available, when I responded to his e-mail to express how urgently I needed my laptop, the owner said they had an unexpected cancellation and asked if I could bring it in that very morning, which I did. Since my computer was not turned on at the time of the accident, an Elektroproof Repair technician was able to dry the computer's insides and prevent damage to the hard drive or internal circuits. Other than a new battery, no other part was needed, and Elektroproof Repair had my laptop fully functional and back in my hands within 24 hours.",
+                    "—Jessica Nelson"
+                ]
             }
         ],
         questions: [
@@ -295,20 +321,43 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s14-p1",
                 contextType: "P4",
-                docType: "ADVERTISEMENT",
-                content: `Learn to play guitar at Alexis Instruments!\n\nAlexis Instruments will offer group and individual guitar instruction beginning April 2. Lessons will be held at our new location on Kanga Drive in Chico. We have practice rooms and professional instructors. Call us today for availability information and pricing.`
+                type: "NOTICE",
+                header: {
+                    title: "Learn to play guitar at Alexis Instruments!"
+                },
+                content: [
+                    "Alexis Instruments will offer group and individual guitar instruction beginning April 2. Each of our locations has been updated with newly constructed classrooms and practice rooms. Our instructors have years of experience teaching and playing as professional musicians. Call an Alexis Instruments store today for availability and pricing."
+                ]
             },
             {
                 id: "p7-t6-s14-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `From: Krista Towers <ktowers@alexisinstruments.com>\nTo: Lucia Rivera <lucirivera@rapidpost.com>\nDate: April 26, 8:30 A.M.\nSubject: Order TS1052593\n\nDear Ms. Rivera,\n\nI am following up on the order you placed on April 23. We have only one guitar of the model you want in stock, and it was used as a display sample in our Santa Barbara showroom. It is in excellent condition with no scratches. We can offer you two options:\n\n1. Cancel for a full refund.\n2. Receive the floor model with a 10 percent discount.\n\nIf you choose the latter, we will deliver it to your local store in Chico by tomorrow, in time for your first lesson. \n\nKrista Towers, Sales Associate`
+                type: "EMAIL",
+                content: `To: Lucia Rivera <luciarivera@rapidonet.com>\nFrom: Krista Towers <ktowers@alexisinstruments.com>\nDate: April 26, 8:30 A.M.\nSubject: Order TS1058293\n\nDear Ms. Rivera,\n\nI am following up on the order you placed with us on April 23. We have only one guitar of the model you want in stock. It was used as a display sample on the floor of our salesroom here in Santa Barbara. This means it is out of the box and has been played by customers browsing the store. Our in-house luthier has thoroughly inspected the guitar, and it is still in excellent condition. There are no scratches, scuffs, or dents on it whatsoever. Because you purchased the instrument on the understanding that it was brand new, we want to offer you two options:\n\n1. If you do not want the floor model, you may cancel the order and receive an immediate full refund.\n2. If you would like the floor model, we will ship it immediately and offer you a 10 percent discount off the original retail price.\n\nIf you choose the latter, we will make sure the guitar is delivered to your local store in time for your first lesson there tomorrow. We apologize for the inconvenience.\n\nSincerely,\nKrista Towers\nAlexis Instruments`
             },
             {
                 id: "p7-t6-s14-p3",
                 contextType: "P5",
-                docType: "RECEIPT",
-                content: `Alexis Instruments\nOrder number: TS1052593\nDate: April 26\n\nDescription: XLT full-body acoustic guitar | $450.00\nStrings: set of 6 | $20.00\nMaintenance plan | $75.00\nDiscount (10% off guitar) | -$45.00\nSales tax | $34.80\nTotal: $534.80\n\nShip To: Alexis Instruments #23 (Chico, CA)\nBill To: Lucia Rivera (Santa Barbara, CA)`
+                type: "TABLE",
+                header: {
+                    title: "Alexis Instruments",
+                    titlePrefix: "Order number: TS1058293",
+                    date: "Date: April 26"
+                },
+                content: [
+                    "**Ship To:**\nAlexis Instruments, store #23\n3914 Joseph Drive\nChico, CA 95926",
+                    "**Bill To:**\nLucia Rivera\n11437 Shady Grove Lane\nChico, CA 95926"
+                ],
+                table_data: {
+                    headers: ["Description", "Price"],
+                    rows: [
+                        ["Domingo 313 full-body acoustic guitar", "$450.00"],
+                        ["10% discount on guitar", "-$45.00"],
+                        ["Three-year repair and maintenance plan, good at any Alexis Instruments location", "$75.00"],
+                        ["Sales tax", "$34.80"]
+                    ],
+                    summary: "Total: $514.80"
+                }
             }
         ],
         questions: [
@@ -393,50 +442,65 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s15-p1",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: All Instructors\nFrom: Jee-Young Choi\nSubject: New fee schedule\nDate: August 18\n\nDear Teachers,\n\nPlease use the updated fee schedule below when creating your monthly invoices.\n\n| Category | Description | Duration | Fee |\n|---|---|---|---|\n| Tour | Lead group tour | 60 mins | $50 |\n| Tour | Lead group tour | 90 mins | $75 |\n| Class | Teach art class | 75 mins | $65 |\n| Class | Teach art class | 120 mins | $110 |\n| Development | Plan new course | Varies | $200 |\n| Training | Staff training | Varies | $25/hr |\n\nElectronic payments will be processed two days after submission.\n\nJee-Young Choi, Education Coordinator`
+                type: "EMAIL",
+                content: `To: All Instructors\nFrom: Jee-Young Choi\nSubject: New fee schedule\nDate: August 15\n\nDear Teachers,\n\nThank you for lending your skills as artists and educators to the Mirabel Museum of Art. Please use the updated fee schedule below when creating your monthly invoices.\n\n| Category | Description | Duration | Fee |\n|---|---|---|---|\n| Tour | Lead group tour | 60 minutes | $50 |\n| Tour | Lead group tour | 90 minutes | $75 |\n| Class | Teach art class | 75 minutes | $65 |\n| Class | Teach art class | 120 minutes | $110 |\n| Development | Plan new course content | Varies | $200 |\n| Training | Instruct museum staff on a specialized topic | Varies | $25/hour |\n\nElectronic payments should be available ten business days after invoice submission.\n\nJee-Young Choi, Education Coordinator`
             },
             {
                 id: "p7-t6-s15-p2",
                 contextType: "P5",
-                docType: "INVOICE",
-                content: `Devonte Merriweather | Invoice #00278\nFor: Meribel Museum of Art | Month: September\n\n| Date | Description | Fee |\n|---|---|---|\n| Sept 22 | Tour: Special exhibit | $50 |\n| Sept 22 | Class: Drawing Beginners | $65 |\n| Sept 25 | Class: Sculpting with Clay | $110 |\n| | **Total** | **$225** |`
+                type: "TABLE",
+                header: {
+                    title: "Devonte Merriweather",
+                    subtitle: "d.merriweather@camail.ca"
+                },
+                content: [
+                    "**Invoice #00278**\n**For:** Services at the Mirabel Museum of Art\n**Sent:** September 30"
+                ],
+                table_data: {
+                    headers: ["Date", "Description", "Fee"],
+                    rows: [
+                        ["September 22", "Tour: Special exhibit", "$50"],
+                        ["September 22", "Class: Drawing for Beginners", "$65"],
+                        ["September 25", "Class: Sculpting with Clay", "$110"]
+                    ],
+                    summary: "Total: $225"
+                }
             },
             {
                 id: "p7-t6-s15-p3",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Devonte Merriweather\nFrom: Jee-Young Choi \nSubject: Payment Inquiry\nDate: October 6\n\nDear Mr. Merriweather,\n\nI noticed that you neglected to charge for the 90-minute tour you led on September 30. Since invoice #00278 has already been paid, please submit a second invoice for that amount. Also, student feedback for your September 25 class was excellent!\n\nBest,\nJee-Young Choi`
+                type: "EMAIL",
+                content: `To: Devonte Merriweather <d.merriweather@camail.ca>\nFrom: Jee-Young Choi <jy.choi@mirabelmuseumofart.ca>\nSubject: Payment\nDate: October 6\n\nDear Mr. Merriweather,\n\nThank you for submitting your September invoice. I noticed that you neglected to charge us for developing the curriculum for your sculpting class, which you taught for the first time on September 25. I checked with Carol Swann, and she said that because invoice #00278 has already been paid, it would be best if you submitted a second invoice for the development. I will ask her to process it quickly when I receive it.\n\nYou will be happy to know that the feedback from your students was very positive. I will e-mail scans of their feedback forms later today.\n\nBest,\nJee-Young Choi, Education Coordinator`
             }
         ],
         questions: [
             {
                 id: "p7-t6-q196",
                 questionNo: 196,
-                text: "What is indicated about the Meribel Museum of Art?",
+                text: "What is suggested in the first e-mail about the Mirabel Museum of Art?",
                 options: {
-                    "A": "It hires external art instructors.",
-                    "B": "It is closed for renovations in September.",
-                    "C": "It is expanding its permanent collection.",
-                    "D": "It offers free tours on weekends."
+                    "A": "It hires art teachers to lead tours.",
+                    "B": "It offers private tours to museum members.",
+                    "C": "Its art classes are free to the public.",
+                    "D": "Its next staff training will take place in ten days."
                 },
                 correctAnswer: "A",
-                classification: "P7_DETAIL",
-                explanation: "모든 강사(Instructors)에게 보내는 이메일과 Merriweather 씨가 송장을 청구하는 구조를 볼 때, 미술관이 외부 강사를 고용하여 운영함을 알 수 있습니다."
+                classification: "P7_INFERENCE",
+                explanation: "첫 번째 이메일의 수신인이 '모든 강사(All Instructors)'이고, 요금표에 '그룹 투어 진행(Lead group tour)' 항목이 있는 것으로 보아 미술 선생님들이 투어 가이드 역할도 수행함을 알 수 있습니다."
             },
             {
                 id: "p7-t6-q197",
                 questionNo: 197,
                 text: "What does the invoice suggest about Mr. Merriweather?",
                 options: {
-                    "A": "He is a full-time staff member.",
-                    "B": "He has expertise in multiple art forms.",
-                    "C": "He recently moved to a new city.",
-                    "D": "He specializes in staff training."
+                    "A": "He worked at the museum on September 30.",
+                    "B": "He has expertise in more than one art form.",
+                    "C": "One of his art classes was canceled.",
+                    "D": "Some of his artwork was exhibited in September."
                 },
                 correctAnswer: "B",
                 classification: "P7_INFERENCE",
-                explanation: "송장에 드로잉(Drawing)과 조각(Sculpting) 수업이 모두 포함되어 있는 것으로 보아, 여러 예술 분야에 전문성이 있음을 추론할 수 있습니다."
+                explanation: "송장(지문 2)에 드로잉(Drawing)과 조각(Sculpting) 수업이 모두 포함되어 있으므로, 한 가지 이상의 예술 분야에 전문성이 있음을 알 수 있습니다."
             },
             {
                 id: "p7-t6-q198",
@@ -450,35 +514,35 @@ export const rcPart7Test6: PracticeSet[] = [
                 },
                 correctAnswer: "D",
                 classification: "P7_LINK",
-                explanation: "송장에서 조각 수업료가 $110로 청구되었습니다. 지문 1의 요금표에서 $110인 클래스는 120분 수업입니다."
+                explanation: "송장(지문 2)에서 조각 수업료로 $110를 청구했습니다. 지문 1의 요금표에서 클래스(Class) 항목 중 $110인 수업의 시간은 120분입니다."
             },
             {
                 id: "p7-t6-q199",
                 questionNo: 199,
-                text: "What class did the students provide feedback for?",
+                text: "According to the second e-mail, who most likely is Ms. Swann?",
                 options: {
-                    "A": "Drawing for Beginners",
-                    "B": "Sculpting with Clay",
-                    "C": "Art History Overview",
-                    "D": "Staff Training Session"
+                    "A": "A bookkeeper",
+                    "B": "An art teacher",
+                    "C": "Mr. Merriweather's assistant",
+                    "D": "Director of the Mirabel Museum of Art"
                 },
-                correctAnswer: "B",
-                classification: "P7_LINK",
-                explanation: "두 번째 이메일(지문 3)에서 '9월 25일 수업에 대한 학생들의 피드백이 훌륭했다'고 했습니다. 송장(지문 2)을 보면 9월 25일 수업은 'Sculpting with Clay'입니다."
+                correctAnswer: "A",
+                classification: "P7_INFERENCE",
+                explanation: "두 번째 이메일(지문 3)에서 Choi 씨가 송장 처리와 관련하여 Swann 씨와 상의했고, 그녀가 송장을 '처리(process)'할 것이라고 했으므로 그녀는 회계 업무 담당자(bookkeeper)일 가능성이 높습니다."
             },
             {
                 id: "p7-t6-q200",
                 questionNo: 200,
-                text: "How much should Mr. Merriweather charge on his second invoice?",
+                text: "What can be concluded about Ms. Choi?",
                 options: {
-                    "A": "$25",
-                    "B": "$50",
-                    "C": "$65",
-                    "D": "$75"
+                    "A": "She forgot to read some student feedback forms.",
+                    "B": "She believes that Mr. Merriweather is owed $200.",
+                    "C": "She meets once a month with teachers.",
+                    "D": "She rejected Mr. Merriweather's October invoice."
                 },
-                correctAnswer: "D",
+                correctAnswer: "B",
                 classification: "P7_LINK",
-                explanation: "지문 3에서 그는 90분짜리 투어(90-minute tour)에 대해 청구 누락을 했습니다. 지문 1의 요금표에 따르면 90분 투어의 수수료는 $75입니다."
+                explanation: "두 번째 이메일(지문 3)에서 Choi 씨는 Merriweather 씨가 '커리큘럼 개발 비용(developing the curriculum)' 청구를 누락했다고 언급했습니다. 지문 1의 요금표에서 '강좌 개발(Development)' 비용은 $200로 책정되어 있습니다."
             }
         ]
     }

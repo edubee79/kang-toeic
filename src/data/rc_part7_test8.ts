@@ -10,16 +10,33 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s11-p1",
                 contextType: "P5",
-                docType: "TABLE_OF_CONTENTS",
-                title: "Leadership: Essays on Being a Great Leader",
-                content: `Skymill Publishing\nJoan Cristophe, Senior Editor\n\nTable of Contents\n\nIntroduction (ii)\n\nBeyond the Meeting Agenda: Leadership in Action (2)\nFrancisca Conde\n\nLeadership Lessons from Local Business (34)\nXiaofeng Li\n\nThink Small...Details Matter (51)\nRon Blake\n\nLow-Tech Managers in Business (83)\nT. Walker Prince\n\nFuture Leadership Models (119)\nRoderick Muller`
+                type: "NOTICE",
+                header: {
+                    title: "Table of Contents",
+                    subtitle: "Leadership: Essays on Being a Great Leader"
+                },
+                content: [
+                    "**Skymill Publishing**",
+                    "**Joan Cristophe, Senior Editor**",
+                    "Introduction ................................................................................. ii",
+                    "Beyond the Meeting Agenda: Leadership in Action ........................ 2\nFrancisca Conde",
+                    "Leadership Lessons from Local Business ........................................ 34\nXiaofeng Li",
+                    "Think Small...Details Matter ........................................................... 51\nRon Blake",
+                    "Low-Tech Managers in Business ..................................................... 83\nT. Walker Prince",
+                    "Future Leadership Models .............................................................. 119\nRoderick Muller"
+                ]
             },
             {
                 id: "p7-t8-s11-p2",
                 contextType: "P4",
-                docType: "REVIEW",
-                title: "Book Review: Leadership: Essays on Being a Great Leader",
-                content: `As a businessperson, I am glad there is a publisher whose sole focus is on business. Skymill Publishing's latest book is a great one for leaders in all industries. Joan Cristophe has sought out some of the world's best minds to write essays for this book that will provide readers with some unique perspectives. In her own introduction, she argues that there is a greater need than ever before for more effective leaders in business.\n\nCristophe expertly arranges the essays in this collection so that the voices of each author complement one another. The essay by Xiaofeng Li is the perfect example of this. It is strategically sandwiched between Francisca Conde's essay on leadership in action and Ron Blake's essay on focusing on the details. Roderick Muller's essay is the sole disappointment. Surprisingly little new information or insight is offered on its pages, and the writing style is rather flat. Besides that, the collection is excellent, and readers with an interest in leadership in many different situations will find useful nuggets of wisdom and vision within.`
+                type: "REVIEW",
+                header: {
+                    title: "Book Review: Leadership: Essays on Being a Great Leader"
+                },
+                content: [
+                    "As a businessperson, I am glad there is a publisher whose sole focus is on business. Skymill Publishing's latest book is a great one for leaders in all industries. Joan Cristophe has sought out some of the world's best minds to write essays for this book that will provide readers with some unique perspectives. In her own introduction, she argues that there is a greater need than ever before for more effective leaders in business.",
+                    "Cristophe expertly arranges the essays in this collection so that the voices of each author complement one another. The essay by Xiaofeng Li is the perfect example of this. It is strategically sandwiched between Francisca Conde's essay on leadership in action and Ron Blake's essay on focusing on the details. Roderick Muller's essay is the sole disappointment. Surprisingly little new information or insight is offered on its pages, and the writing style is rather flat. Besides that, the collection is excellent, and readers with an interest in leadership in many different situations will find useful nuggets of wisdom and vision within."
+                ]
             }
         ],
         questions: [
@@ -104,14 +121,21 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s12-p1",
                 contextType: "P6",
-                docType: "POLICY",
-                title: "Tanyalog Industries Policy 4-02",
-                content: `The cafeteria (3rd floor) is open to all employees and guests from 8:00 A.M. to 2:30 P.M. Food from the cafeteria may be eaten there or brought on trays to the following conference rooms: Chestnut Room (1st floor), Burnside Room (2nd floor), Smith Room (3rd floor), and Danville Room (4th floor).\n\nUsing the rooms at lunchtime does not require a reservation. However, please do not enter the room if it is already occupied by staff members for a business meeting. The room schedule is displayed on a digital panel by the door of each conference room.\n\nAll food items and trash must be removed from the conference room after use. Bins are located directly outside each of the conference rooms.\n\nNo food or drink is allowed in the Essex Room (3rd floor) or the Martinelli Room (4th floor).`
+                type: "NOTICE",
+                header: {
+                    title: "Tanyalog Industries Policy 4-02"
+                },
+                content: [
+                    "The cafeteria (3rd floor) is open to all employees and guests from 8:00 A.M. to 2:30 P.M. Food from the cafeteria may be eaten there or brought on trays to the following conference rooms: Chestnut Room (1st floor), Burnside Room (2nd floor), Smith Room (3rd floor), and Danville Room (4th floor).",
+                    "Using the rooms at lunchtime does not require a reservation. However, please do not enter the room if it is already occupied by staff members for a business meeting. The room schedule is displayed on a digital panel by the door of each conference room.",
+                    "All food items and trash must be removed from the conference room after use. Bins are located directly outside each of the conference rooms.",
+                    "No food or drink is allowed in the Essex Room (3rd floor) or the Martinelli Room (4th floor)."
+                ]
             },
             {
                 id: "p7-t8-s12-p2",
                 contextType: "P1",
-                docType: "EMAIL",
+                type: "EMAIL",
                 content: `From: Eugene Lasich\nTo: All Expansion Committee Members\nSubject: Tanyalog Industries Expansion Meeting\nDate: September 10\n\nCommittee Members,\n\nPlease join me for the first meeting of the Expansion Committee on Monday, September 17. All attendees should arrive at the Martinelli Room at 10:00 A.M. Then, at 12:00 P.M., we will break for lunch and you can visit the cafeteria to receive a complimentary meal. Just show your visitor's badge at Window 4. All committee members should bring their trays to the conference room on the third floor right beside the cafeteria, where we will continue our meeting from 12:45 P.M. until 4:00 P.M.\n\nThank you. We look forward to your input at the meeting.\n\nEugene Lasich, Expansion Committee Chair\nTanyalog Industries`
             }
         ],
@@ -197,21 +221,28 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s13-p1",
                 contextType: "P3",
-                docType: "ARTICLE",
-                title: "Hiking Permits to Be Required for Upton Parks",
-                content: `UPTON (January 8)—Starting on May 25, hikers will be required to obtain a permit for each day they hike on certain trails in Upton parks. The designated trails include some of the most popular hiking spots in the area. The permits are free of charge and require only that hikers register online at www.uptonparks.org or at any Upton Parks Department office.\n\nThe move is part of an effort to reduce foot traffic on the most used trails. Regina Faroni, a local hiker, expressed concern that she might not be able to get permits for spontaneous, weather-dependent hikes. However, she admits it would reduce the number of hikers on certain trails.\n—EJ Harjo, Upton Digest`
+                type: "ARTICLE",
+                header: {
+                    headline: "Hiking Permits to Be Required for Upton Parks",
+                    columns: 2
+                },
+                content: [
+                    "UPTON (January 8)—Starting on May 25, hikers will be required to obtain a permit for each day they hike on certain trails in Upton parks. The designated trails include some of the most popular hiking spots in the area. The permits are free of charge and require only that hikers register online at www.uptonparks.org or at any Upton Parks Department office. Upon registering, hikers will receive a permit that they can print out or display on a mobile device.",
+                    "The move is part of an effort to reduce foot traffic on the most used trails, but some hikers are concerned. \"I might not be able to get a permit for my favorite trails if none are left when I want to go,\" says Regina Faroni, an Upton parks hiker. \"In addition, I often check the weather in the morning and then decide if it's a good day to hike,\" she says. Having to apply for a permit could prevent her from taking spontaneous hikes. \"On the other hand, it would reduce the number of hikers on certain trails,\" Faroni admits.",
+                    "—EJ Harjo, Upton Digest"
+                ]
             },
             {
                 id: "p7-t8-s13-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `From: Arlo Gomes <arlog@uptonhikingclub.org>\nTo: Upton Parks Department <info@uptonparks.org>\nSubject: Hiking permits\nDate: January 22\n\nTo Whom It May Concern,\n\nI read in the Upton Digest that hikers soon will be required to register for permits. As the organizer of the Upton Hiking Club (17-20 members), I'm concerned about how this affects our group hikes. Is there a list of trails requiring permits? Will the number of permits vary? Also, we often take unplanned hikes on the spur of the moment and worry this requirement will prevent that.\n\nRegards,\nArlo Gomes`
+                type: "EMAIL",
+                content: `From: Arlo Gomes <arlog@uptonhikingclub.org>\nTo: Upton Parks Department <info@uptonparks.org>\nDate: January 22\nSubject: Hiking permits\n\nTo Whom It May Concern,\n\nI read in the Upton Digest that hikers soon will be required to register for permits for certain trails. As the organizer of the Upton Hiking Club, I would like more details on how this will affect our club. For example, is there a list of hiking trails that will require permits? I checked your Web site and could not find one.\n\nIs it also the case that the number of permits issued will vary from trail to trail? About seventeen to twenty club members participate in our group hikes. I’m concerned that we may not get enough permits to hike together. Are there special considerations for large groups?\n\nFinally, I am concerned that the permit requirement will not allow our club members to get together for a hike on the spur of the moment. We often will take an unplanned hike if we find that several members have a free day.\n\nI hope you are able to respond soon, as we are already planning our spring and summer hikes.\n\nRegards,\n\nArlo Gomes\nOrganizer, Upton Hiking Club`
             },
             {
                 id: "p7-t8-s13-p3",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `From: Upton Parks Department <info@uptonparks.org>\nTo: Arlo Gomes\nSubject: RE: Hiking permits\nDate: January 23\n\nHello, Mr. Gomes,\n\nI've attached a draft list of the twelve trails requiring permits and their daily limits. Permits can be reserved up to two weeks in advance. For most trails, the limit is substantially higher than your club's typical group size. Same-day permits can also be obtained. To stay updated on policy changes, please sign up for our weekly newsletter on our website.\n\nJenny Grieb, Public Relations`
+                type: "EMAIL",
+                content: `From: Upton Parks Department <info@uptonparks.org>\nTo: Arlo Gomes <arlog@uptonhikingclub.org>\nDate: January 23\nSubject: RE: Hiking permits\nAttachment: @Permit_Information_DRAFT\n\nHello, Mr. Gomes,\n\nThank you for your e-mail. I apologize that our Web site has not yet been updated with the information you were searching for and that the article in the Upton Digest was not clear. I have attached a proposed list of the twelve trails that will require permits and the number of permits that will be issued per day for each trail. The list will be finalized next month.\n\nPermits can be reserved up to two weeks in advance, and the number of permits available for most trails is substantially higher than the number of Upton Hiking Club members who join your group hikes. Same-day permits can be obtained.\n\nIf you have not already done so, you can sign up on our Web site for our weekly newsletter. Doing so will ensure that you get advance notice of any updates to our policies.\n\nJenny Grieb, Public Relations, Upton Parks Department`
             }
         ],
         questions: [
@@ -296,21 +327,31 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s14-p1",
                 contextType: "P5",
-                docType: "RESERVATION",
-                title: "Your Move Vehicle Rental Company",
-                content: `Reservation Number: 15288242\nPickup Location: 2833 Centennial Rd., Muncie, IN 47303\nDate and Time: October 31, 10:00 A.M.\nDrop-off Location: Same as pickup\nVehicle Description: 5-meter moving van\n\nIf you need to change your reservation, you can do so via your online account until three days before your scheduled pickup. After that, contact reservations@yourmove.com. Include your reservation number in the subject.`
+                type: "NOTICE",
+                header: {
+                    title: "Your Move Vehicle Rental Company"
+                },
+                content: [
+                    "**Reservation Number:** 15288242",
+                    "**Pickup Location:** 2833 Centennial Rd., Muncie, IN 47303",
+                    "**Date and Time:** October 31, 10:00 A.M.",
+                    "**Drop-off Location:** Same as pickup",
+                    "**Date and Time:** October 31, 6:30 P.M.",
+                    "**Vehicle Description:** 5-meter moving van",
+                    "If you need to change your reservation, you can do so via your online account until three days before your scheduled pickup. After that point, contact customer support at reservations@yourmove.com. Please include your reservation number in the e-mail subject."
+                ]
             },
             {
                 id: "p7-t8-s14-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: reservations@yourmove.com\nFrom: selina_os@chestnutmail.com\nDate: October 29\nSubject: Reservation 15288242\n\nHello,\n\nI reserved a moving van online for $150. I mistakenly listed the same location for both pickup and drop-off. I'd like a drop-off location closer to Cumberland. Can you help me update this?\n\nSincerely,\nSelina Osman`
+                type: "EMAIL",
+                content: `To: reservations@yourmove.com\nFrom: selina_os@chestnutmail.com\nDate: October 29\nSubject: Reservation 15288242\n\nHello,\n\nI reserved a moving van online and was given an estimated price of $150. However, I mistakenly listed the same location for both pickup and drop-off. I’d like to know if there is a drop-off location closer to my destination in Cumberland. If so, can you please help me update the reservation?\n\nSincerely,\n\nSelina Osman`
             },
             {
                 id: "p7-t8-s14-p3",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: selina_os@chestnutmail.com\nFrom: reservations@yourmove.com\nDate: October 30\nSubject: RE: Reservation 15288242\n\nDear Ms. Osman,\n\nWe have an office outside Indianapolis, ten minutes from Cumberland. Dropping off there means 90km of driving from Muncie. Updated estimate:\n\n- Rental (van/1 day): $39.99\n- Cart: $6.99\n- Furniture pads (12): $9.99\n- Distance ($1.05/km x 90km): $94.50\n- Insurance: $19.99\n**Total: $171.46 (plus taxes)**\n\nYour card will be charged for equipment now, and the final price adjusted upon return.`
+                type: "EMAIL",
+                content: `To: selina_os@chestnutmail.com\nFrom: reservations@yourmove.com\nDate: October 30\nSubject: RE: Reservation 15288242\n\nDear Ms. Osman,\n\nWe have a rental office just outside Indianapolis, about a ten-minute drive from Cumberland. If that is the drop-off location, you would have about 90 kilometers of driving from the starting point in Muncie. Based on this, we have updated your price estimate as follows:\n\nRental: 5-meter moving van for 1 day = $39.99\nRental: wheeled furniture cart = $6.99\nRental: furniture pads (set of 12) = $9.99\nDistance: $1.05 per kilometer = $94.50 (90 kilometers estimated)\nVehicle damage insurance = $19.99\n\n**Total = $171.46**\n\nPlease note that this total does not include taxes. The final price may vary based on the actual distance driven and will be calculated once the vehicle is returned to the drop-off location. Until that time, your credit card on file will be charged for the rental equipment only.\n\nSincerely,\n\nAlistair Muhn\nYour Move Vehicle Rental Company`
             }
         ],
         questions: [
@@ -395,20 +436,26 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s15-p1",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: Soon-Yee Kim\nFrom: Frank Zubiri, HR Senior Director\nDate: February 12\nSubject: Welcome\n\nDear Ms. Kim, Welcome to Jacobi Technologies! Your first day is Monday, February 28, at 9 A.M. (Green Building, Naperville). Your supervisor, Sophia Holland, will guide you. Schedule:\n1. Contract signing & ID badge (Green Building)\n2. Assign cubicle (4th floor, Yellow Building)\n3. Luncheon (Yellow Building conference room)\n4. Campus tour (Look for separate email)`
+                type: "EMAIL",
+                content: `To: Soon-Yee Kim\nFrom: Frank Zubiri\nDate: February 12\nSubject: Welcome\n\nDear Ms. Kim,\n\nWelcome to Jacobi Technologies’ sales team! Your first day is Monday, February 28. Please arrive at the Green Building, 1 Jacobi Circle, Naperville, at 9 A.M. Your team supervisor, Sophia Holland, will lead you through your first day. Here is an outline of what to expect.\n\n1. Sign your employment contract and receive an ID badge.\n2. Visit your assigned cubicle on the fourth floor of the Yellow Building.\n3. Attend a luncheon with members of your team in the Yellow Building conference room.\n4. Join other new hires for a guided tour of the campus. Look for an e-mail about this within a few days.\n\nBest regards,\n\nFrank Zubiri\nSenior Director, Human Resources`
             },
             {
                 id: "p7-t8-s15-p2",
                 contextType: "P1",
-                docType: "EMAIL",
-                content: `To: New Hires\nFrom: Toru Hada\nDate: February 15\nSubject: Campus Tour\n\nTour dates are February 21, 28, March 7, and 14. Reply with your name and start date. Tours start at 3:00 P.M. (Blue Building lobby). Locations: labs, sustainable power plant, and amenities.`
+                type: "EMAIL",
+                content: `To: New Hires Distribution List\nFrom: Toru Hada\nDate: February 15\nSubject: Campus Tour Dates\n\nThe next tour dates are February 21 and 28 and March 7 and 14. To sign up, simply reply to this e-mail with your full name and the date corresponding to your start day. Tours begin at 3:00 P.M. and last about an hour. Please meet me in the Blue Building lobby a few minutes before 3:00 P.M. Note that the Blue Building is on Jacobi Circle between the Green and Yellow Buildings. The tour will include stops at the labs, our sustainable power plant, and all employee amenities.\n\nShould you have any questions about your start day, the tour, or any of the employee onboarding materials, please do not hesitate to contact me.`
             },
             {
                 id: "p7-t8-s15-p3",
                 contextType: "P4",
-                docType: "WEB_PAGE",
-                content: `https://www.jacobitechnologies.com/about\n\nJacobi Technologies (Naperville/Providence) specializes in microprocessors. Our 900-acre Naperville campus features 10 Earth-friendly buildings and a waste-to-energy plant. Amenities for workers include two cafés, a gym, outdoor basketball/tennis courts, and a childcare center.`
+                type: "WEB_PAGE",
+                header: {
+                    url: "https://www.jacobitechnologies.com/about"
+                },
+                content: [
+                    "Jacobi Technologies develops, manufactures, and sells advanced microprocessors that power smart TVs, laptop computers, and other electronic devices. The company has more than 8,000 employees in Naperville, Illinois, and another 4,000 in Providence, Rhode Island.",
+                    "Jacobi Technologies acquired its 900-acre Naperville property in 1950. Since then, the company has invested more than $3 billion in constructing ten Earth-friendly buildings and a sustainable infrastructure, including a waste-to-energy power plant. In addition to state-of-the-art research labs and production facilities, the campus boasts special amenities for workers, including two cafés, a gym, outdoor basketball and tennis courts, and a childcare center."
+                ]
             }
         ],
         questions: [

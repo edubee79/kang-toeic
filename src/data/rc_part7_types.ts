@@ -1,10 +1,14 @@
 export interface PracticePassage {
     id: string;
     contextType: string;
+    type?: string;
     docType?: string;
     title?: string;
-    content: string;
+    content: string | string[];
     translation?: string;
+    header?: any;
+    table_data?: any;
+    messages?: any[];
 }
 
 export interface PracticeQuestion {
