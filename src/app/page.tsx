@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 import { isAdmin } from '@/lib/adminAuth';
+import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
 
 export default function Dashboard() {
     const [user, setUser] = useState<any>(null);
@@ -138,6 +139,8 @@ export default function Dashboard() {
 
     return (
         <div className="space-y-4 md:space-y-8 px-0 md:px-0">
+            {/* Force Push Notification Activation */}
+            {user?.userId && <NotificationForceModal userId={user.userId} />}
             <div className="flex justify-between items-center gap-2 overflow-hidden px-2 py-1 bg-slate-800/20 rounded-lg">
                 <div className="flex-1">
                     <p className="text-[10px] md:text-sm font-bold text-slate-400 uppercase tracking-widest leading-none">
