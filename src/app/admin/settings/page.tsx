@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Loader2, ArrowLeft, Shield, Save, Lock, Zap, BookOpen, PenSquare, ChevronRight } from "lucide-react";
 import Link from 'next/link';
 import { getFeatureAccess, setFeatureAccess, FeatureAccess } from '@/services/configService';
-import { migrateAllUsersPerformance } from '@/scripts/migrate-performance';
+import { migrateAllUsersPerformance } from '@/services/migrationService';
 
 import { isAdmin } from '@/lib/adminAuth';
 
