@@ -16,6 +16,7 @@ import { collection, query, where, getDocs } from 'firebase/firestore';
 import {
     ResponsiveContainer,
 } from 'recharts';
+import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
 
 // 🧪 PRODUCTION MODE (TEST_MODE logic has been merged into logic block)
 const TEST_MODE = false;
@@ -126,8 +127,13 @@ export default function WeaknessDashboardPage() {
 
     if (loading) {
         return (
-            <div className="flex h-screen items-center justify-center bg-slate-900">
-                <Loader2 className="h-8 w-8 animate-spin text-indigo-500" />
+            <div className="min-h-screen bg-slate-950 text-white animate-in fade-in duration-500">
+                {/* Force Push Notification Activation */}
+                {user?.userId && <NotificationForceModal userId={user.userId || user.uid} />}
+
+                <div className="flex h-screen items-center justify-center">
+                    <Loader2 className="h-8 w-8 animate-spin text-indigo-500" />
+                </div>
             </div>
         );
     }
@@ -169,6 +175,8 @@ export default function WeaknessDashboardPage() {
 
     return (
         <div className="space-y-8 max-w-7xl mx-auto pb-20 pt-8 px-4">
+            {/* Force Push Notification Activation */}
+            {user?.userId && <NotificationForceModal userId={user.userId || user.uid} />}
             {/* Header */}
             <div className="flex items-center gap-1 md:gap-4 mb-4 px-1">
                 <Link href="/student/dashboard">

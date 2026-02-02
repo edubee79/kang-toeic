@@ -18,6 +18,7 @@ import { TargetSettingSection } from '@/components/dashboard/TargetSettingSectio
 import { ClassInfoCard } from '@/components/dashboard/ClassInfoCard';
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { NotificationSetter } from '@/components/dashboard/NotificationSetter';
+import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
 import { distributeGoals } from '@/utils/goal-utils';
 
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
@@ -414,6 +415,9 @@ export default function StudentDashboard() {
 
     return (
         <div className="space-y-4 md:space-y-8 w-full pb-10 md:pb-20 px-0">
+            {/* Force Push Notification Activation */}
+            {user?.userId && <NotificationForceModal userId={user.userId} />}
+
             <div className="flex items-center justify-between gap-1 md:gap-6 px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-1 md:gap-4">
                     <Link href="/"><Button variant="ghost" className="text-slate-400 hover:text-white px-1 md:px-4 h-7 md:h-10"><ArrowLeft className="w-4 h-4 md:w-5 md:h-5 md:mr-2" /></Button></Link>
