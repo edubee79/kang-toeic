@@ -29,6 +29,7 @@ export default function Part1TestRunner() {
     // Audio
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isReady, setIsReady] = useState(false); // Flag for state restoration check
 
     useEffect(() => {
         const found = part1RealTests.find(t => t.testId === testId);
@@ -53,16 +54,21 @@ export default function Part1TestRunner() {
                 console.error("Failed to load progress", e);
             }
         }
+
+        // Mark as ready AFTER progress restoration attempt
+        setTimeout(() => setIsReady(true), 0);
     }, [testId]);
 
     // Timer
     useEffect(() => {
+        if (!isReady) return; // Wait for progress restoration
+
         let interval: NodeJS.Timeout;
         if (!isFinished && !reviewMode && testSet) {
             interval = setInterval(() => setElapsedTime(prev => prev + 1), 1000);
         }
         return () => clearInterval(interval);
-    }, [isFinished, reviewMode, testSet]);
+    }, [isFinished, reviewMode, testSet, isReady]);
 
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
@@ -103,7 +109,7 @@ export default function Part1TestRunner() {
 
     // Auto-play effect
     useEffect(() => {
-        if (reviewMode || isFinished) return;
+        if (!isReady || reviewMode || isFinished) return; // Added isReady check
 
         // Clear existing timeouts and stop audio
         if (autoPlayRef.current) clearTimeout(autoPlayRef.current);
@@ -125,7 +131,7 @@ export default function Part1TestRunner() {
                 audioRef.current.pause();
             }
         };
-    }, [currentQIndex, testSet, reviewMode, isFinished]);
+    }, [currentQIndex, testSet, reviewMode, isFinished, isReady]);
 
     // Manual Play Handler
     const handlePlay = () => {

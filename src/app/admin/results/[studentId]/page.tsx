@@ -55,6 +55,7 @@ interface Result {
     total: number;
     timestamp: any;
     className: string;
+    incorrectQuestions?: any[];
 }
 
 export default function StudentDetailPage() {
@@ -189,7 +190,8 @@ export default function StudentDetailPage() {
                     score: data.score,
                     total: data.total,
                     timestamp: data.timestamp,
-                    className: data.className
+                    className: data.className,
+                    incorrectQuestions: data.incorrectQuestions || []
                 });
 
                 const type = data.type || mapLegacyType(data.unit || "");
@@ -774,6 +776,20 @@ export default function StudentDetailPage() {
                                                                         <Badge variant="outline" className="text-[9px] text-indigo-400 border-indigo-500/20 bg-indigo-500/5 h-4 px-1.5">{getTypeLabel(res.type)}</Badge>
                                                                     </div>
                                                                     <p className="text-[10px] text-slate-500 mt-0.5 font-medium italic">#{(res.type || 'TASK').replace('_test', '').toUpperCase()} TASK COMPLETION</p>
+                                                                    {res.incorrectQuestions && res.incorrectQuestions.length > 0 && (
+                                                                        <div className="flex flex-wrap gap-1 mt-2 max-w-[400px]">
+                                                                            <span className="text-[9px] text-slate-600 font-bold mr-1 self-center uppercase tracking-tighter">WRONG:</span>
+                                                                            {res.incorrectQuestions.map((iq, idx) => {
+                                                                                const label = typeof iq === 'object' ? (iq.id || iq.questionNo || '??') : iq;
+                                                                                const shortLabel = label.toString().split('_').pop()?.replace('Q', '') || label;
+                                                                                return (
+                                                                                    <Badge key={idx} variant="outline" className="text-[8px] h-3.5 px-1 py-0 border-rose-500/30 text-rose-400 bg-rose-500/5 hover:bg-rose-500/20 font-mono transition-colors">
+                                                                                        {shortLabel}
+                                                                                    </Badge>
+                                                                                );
+                                                                            })}
+                                                                        </div>
+                                                                    )}
                                                                 </div>
                                                             </div>
                                                             <div className="text-right">

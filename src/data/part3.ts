@@ -105,61 +105,6 @@ export const part3RealTests: Part3Set[] = [
   },
   {
     testId: 1,
-    setId: "p3-t1-s1",
-    questionRange: "32-34",
-    contextType: "B4. 문의 / 안내",
-    audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_32-34.mp3",
-    questions: [
-      {
-        id: "p3-t1-q32",
-        text: "What does the man want to know?",
-        classification: "DETAIL",
-
-        options: {
-          A: "When a manager will be available",
-          B: "How to use a software program",
-          C: "Where to find a document",
-          D: "Whether a project is complete"
-        },
-        correctAnswer: "B"
-      },
-      {
-        id: "p3-t1-q33",
-        text: "Why did the woman speak to a technician?",
-        classification: "WHY_REASON",
-
-        options: {
-          A: "To order some equipment",
-          B: "To discuss a contract",
-          C: "To ask about a training session",
-          D: "To report a computer problem"
-        },
-        correctAnswer: "D"
-      },
-      {
-        id: "p3-t1-q34",
-        text: "What does the woman recommend?",
-        classification: "OFFER_SUGGEST",
-
-        options: {
-          A: "Looking at a manual",
-          B: "Calling another department",
-          C: "Meeting with a supervisor",
-          D: "Providing additional feedback"
-        },
-        correctAnswer: "A"
-      }
-    ],
-    script: [
-      { speaker: "Man", text: "Hi, Fatima. Do you have a minute? I'm having trouble with the new software the company just installed on our computers. Do you know how to use it?" },
-      { speaker: "Woman", text: "I've started using it. But actually... I had a lot of trouble with it myself. Earlier today I had to call a technician to come and help me." },
-      { speaker: "Man", text: "Oh, it's that difficult? I was hoping I could learn it quickly." },
-      { speaker: "Woman", text: "It is, at first. But the technician gave me this manual. It's really helpful. I'm not using it right now, so you can take it if you want." },
-      { speaker: "Man", text: "Thanks. I appreciate it." }
-    ]
-  },
-  {
-    testId: 1,
     setId: "p3-t1-s2",
     questionRange: "35-37",
     contextType: "A4. 재무 / 비용 / 승인",

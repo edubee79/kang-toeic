@@ -50,6 +50,7 @@ export default function Part4TestRunnerPage() {
     const [skimmingState, setSkimmingState] = useState<'idle' | 'active' | 'done'>('idle');
     const [timeLeft, setTimeLeft] = useState(0);
     const [showStartModal, setShowStartModal] = useState(isOptionalSkimming); // Show modal for 4-10
+    const [isReady, setIsReady] = useState(false); // Flag for state restoration check
 
     // Refs for Audio
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -91,6 +92,9 @@ export default function Part4TestRunnerPage() {
                 console.error("Failed to load history", e);
             }
         }
+
+        // Mark as ready AFTER progress restoration attempt
+        setTimeout(() => setIsReady(true), 0);
     }, [testId]);
 
     // 3. Save Progress to LocalStorage
@@ -120,28 +124,33 @@ export default function Part4TestRunnerPage() {
 
     // Effect: Reset Skimming on toggle or initial load (BUT NOT on index change, which is handled manually)
     useEffect(() => {
+        if (!isReady) return; // Wait for progress restoration
+
         // Only trigger if skimming mode CHANGED, or on mount
-        // We do NOT include currentIndex here to avoid race conditions
         if (skimmingEnabled && !reviewMode && !showCompletion) {
-            // If we are sitting on 'done', and enabled toggles on, reset to active
-            // (This covers the start modal case)
             if (skimmingState === 'idle' || skimmingState === 'done') {
                 setSkimmingState('active');
                 setTimeLeft(20);
             }
         } else {
-            // If disabled, ensure done
             setSkimmingState('done');
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [skimmingEnabled, reviewMode, showCompletion]); // Removed currentIndex
+    }, [isReady, skimmingEnabled, reviewMode, showCompletion]); // Added isReady, removed currentIndex
 
     // Audio Play Control
     useEffect(() => {
+        if (!isReady) return; // Wait for progress restoration
+
         if (skimmingState === 'done' && audioRef.current && !showCompletion && !showStartModal) {
+            audioRef.current.load(); // Explicitly load new source
             audioRef.current.play().catch(e => console.log("Auto-play blocked", e));
+        } else if (skimmingState === 'active' && audioRef.current) {
+            // Ensure audio is PAUSED during skimming
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
         }
-    }, [skimmingState, reviewMode, currentSet, showCompletion, showStartModal]);
+    }, [isReady, skimmingState, reviewMode, currentSet, showCompletion, showStartModal]);
 
     // Smarter Highlighting Helper (Part 4 - Indigo Theme)
     const getHighlightedText = (text: string) => {
@@ -258,6 +267,12 @@ export default function Part4TestRunnerPage() {
 
     const handleNext = () => {
         if (!isSetComplete && !reviewMode) return;
+
+        // STOP current audio explicitly before transition
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
+        }
 
         if (currentIndex < activeSets.length - 1) {
             // FIX: Reset skimming state synchronously BEFORE index change
@@ -514,10 +529,9 @@ export default function Part4TestRunnerPage() {
                             )}
                             <audio
                                 ref={audioRef}
-                                key={currentSet.audio}
-                                controls
-                                className="w-full h-8 opacity-90 invert-[.9]"
                                 src={currentSet.audio}
+                                className="w-full h-8 opacity-90 invert-[.9]"
+                                key={`${currentIndex}-${currentSet.audio}`}
                             >
                                 Your browser does not support the audio element.
                             </audio>

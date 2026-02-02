@@ -38,6 +38,7 @@ export default function Part2Test() {
     const [useTTS, setUseTTS] = useState(false);
     const [optionStatus, setOptionStatus] = useState<Record<number, 'eliminated' | 'uncertain'>>({}); // Track X/Triangle status
     const [notification, setNotification] = useState<string | null>(null);
+    const [isReady, setIsReady] = useState(false); // Flag for state restoration check
 
     // Refs
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -79,6 +80,8 @@ export default function Part2Test() {
             setMainQueue(data);
         }
         setLoading(false);
+        // Mark as ready AFTER progress restoration
+        setTimeout(() => setIsReady(true), 0);
 
         if (typeof window !== 'undefined') {
             synth.current = window.speechSynthesis;
@@ -96,7 +99,7 @@ export default function Part2Test() {
 
     // Audio Playback Engine
     useEffect(() => {
-        if (currentQuestion && !isReportMode) {
+        if (currentQuestion && !isReportMode && isReady) {
             // STOP EVERYTHING
             playbackId.current++; // Invalidate previous sessions
             if (synth.current) synth.current.cancel();
@@ -523,12 +526,16 @@ export default function Part2Test() {
                                 💾 저장 후 나가기
                             </button>
                         )}
-
                         {currentQuestion?.questionType === 'Indirect' && (
                             <span className="px-2 py-0.5 rounded text-[10px] font-black uppercase text-amber-500 bg-amber-500/10 border border-amber-500/20 flex items-center gap-1">
                                 <AlertTriangle className="w-3 h-3" /> 우회적 답변
                             </span>
                         )}
+                        <audio
+                            ref={audioRef}
+                            src={isPlaying ? `/audio/lc/part2/Test_${String(testId).padStart(2, '0')}-${String(currentQuestion.questionNo).padStart(2, '0')}.mp3` : undefined}
+                            key={`${currentIndex}-${currentQuestion?.id}`}
+                        />
                     </div>
                     <h1 className="text-xl md:text-2xl font-black text-white italic tracking-tighter">
                         Question {currentQuestion.questionNo}
