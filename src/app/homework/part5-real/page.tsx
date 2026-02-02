@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { part5TestData } from '@/data/toeic/reading/part5/tests';
-import { ChevronRight, Trophy, BookOpen, Timer, Lock } from "lucide-react";
+import { ArrowLeft, ChevronRight, Trophy, BookOpen, Timer, Lock, PlayCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function Part5RealLobbyPage() {
@@ -46,84 +47,91 @@ export default function Part5RealLobbyPage() {
     const maxTest = access?.maxSets?.part5 || 10;
 
     return (
-        <div className="min-h-screen bg-slate-950 text-white pb-20">
-            {/* Header */}
-            <div className="bg-slate-900/50 border-b border-slate-800">
-                <div className="max-w-5xl mx-auto px-6 py-12">
-                    <h1 className="text-4xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-600 mb-4 uppercase">
-                        Real Simulation PART 5
-                    </h1>
-                    <p className="text-slate-400 font-medium text-lg leading-relaxed max-w-2xl">
-                        실전과 동일한 환경에서 30문제를 풀고 점수를 확인하세요. | 현재 {maxTest}회차 오픈
-                    </p>
+        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
+            <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
+                <div className="flex items-center gap-4">
+                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter">
+                            <span className="text-white">Part 5</span>
+                            <span className="text-amber-500"> Simulation</span>
+                        </h2>
+                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">실전 30문항 ⸱ 10분 타임어택</p>
+                    </div>
                 </div>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxTest} Tests Open</p>
             </div>
 
-            <div className="max-w-5xl mx-auto px-6 py-12">
-
-                {/* Section: Real Practice */}
-                <section>
-                    <div className="flex items-center gap-4 mb-8">
-                        <div className="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center text-amber-500 shadow-xl shadow-amber-500/10">
-                            <Trophy className="w-6 h-6" />
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-black tracking-tight text-white/90">REAL PRACTICE</h2>
-                            <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Simulation Test</p>
-                        </div>
+            <div className="w-full px-0 md:px-8 py-4 md:py-6">
+                <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 px-3 md:px-0">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-amber-500/20 flex items-center justify-center text-amber-500 shadow-xl shadow-amber-500/10 shrink-0">
+                        <Trophy className="w-5 h-5 md:w-6 md:h-6" />
                     </div>
+                    <div>
+                        <h2 className="text-lg md:text-2xl font-black tracking-tight text-white/90 leading-none uppercase">Real Combat</h2>
+                        <p className="text-[10px] md:text-sm font-black text-slate-500 uppercase tracking-widest mt-1">Score Booster Mode</p>
+                    </div>
+                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-                        {part5TestData.map((test) => {
-                            const isLocked = test.testId > maxTest;
-                            return (
-                                <Link
-                                    href={isLocked ? "#" : `/homework/part5-real/mode/${test.testId}`}
-                                    key={test.testId}
-                                    onClick={(e) => {
-                                        if (isLocked) {
-                                            e.preventDefault();
-                                            alert(`${maxTest}회차까지만 현재 오픈되어 있습니다.`);
-                                        }
-                                    }}
-                                    className={`group block border rounded-3xl p-6 transition-all duration-300 relative overflow-hidden ${isLocked
-                                        ? 'bg-slate-900 border-slate-800 opacity-60 cursor-not-allowed'
-                                        : 'bg-slate-800/80 border-slate-700/50 hover:bg-amber-900/10 border-amber-500/30 hover:-translate-y-1'
-                                        }`}
-                                >
-                                    {!isLocked && (
-                                        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 md:gap-4 font-inter">
+                    {part5TestData.map((test) => {
+                        const isLocked = test.testId > maxTest;
+                        return (
+                            <Link
+                                href={isLocked ? "#" : `/homework/part5-real/mode/${test.testId}`}
+                                key={test.testId}
+                                onClick={(e) => {
+                                    if (isLocked) {
+                                        e.preventDefault();
+                                        alert(`${maxTest}회차까지만 현재 오픈되어 있습니다.`);
+                                    }
+                                }}
+                            >
+                                <div
+                                    className={cn(
+                                        "group relative bg-slate-900 border transition-all duration-300 rounded-xl md:rounded-2xl p-4 md:p-6 flex flex-col gap-1 md:gap-2",
+                                        isLocked
+                                            ? "border-slate-800 opacity-60 cursor-not-allowed grayscale"
+                                            : "bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-amber-500/50"
                                     )}
-                                    <div className="relative flex justify-between items-center">
-                                        <div>
-                                            <div className="flex items-center gap-3 mb-2">
-                                                <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${isLocked ? 'bg-slate-800 text-slate-600 border-slate-800' : 'bg-amber-500/20 text-amber-500 border-amber-500/30'}`}>
-                                                    Test {String(test.testId).padStart(2, '0')}
-                                                </span>
+                                >
+                                    <div className="relative z-10 flex items-center justify-between w-full">
+                                        <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
+                                            <div className={cn(
+                                                "w-7 h-7 md:w-10 md:h-10 rounded md:rounded-xl flex items-center justify-center shadow-lg border text-[10px] md:text-sm font-black transition-all bg-slate-950 shrink-0",
+                                                isLocked ? 'bg-slate-800 text-slate-600 border-slate-800' : 'bg-amber-500/20 text-amber-400 border-amber-500/30 group-hover:bg-amber-500 group-hover:text-white'
+                                            )}>
+                                                <Trophy className="w-4 h-4 md:w-5 md:h-5" />
                                             </div>
-                                            <h3 className={`text-xl font-bold mb-1 transition-colors ${isLocked ? 'text-slate-500' : 'text-white group-hover:text-amber-400'}`}>
-                                                {test.title}
+                                            <h3 className={cn(
+                                                "text-[22px] md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-4",
+                                                isLocked ? "text-slate-600" : "text-white"
+                                            )}>
+                                                TEST {String(test.testId).padStart(2, '0')}
                                             </h3>
-                                            {!isLocked && (
-                                                <div className="flex items-center gap-2 text-slate-500 text-sm font-medium">
-                                                    <BookOpen className="w-4 h-4" />
-                                                    <span>{test.questions.length} Questions</span>
-                                                    <span className="w-1 h-1 rounded-full bg-slate-700" />
-                                                    <Timer className="w-4 h-4 ml-1" />
-                                                    <span>권장풀이시간 MAX 13분</span>
-                                                </div>
+                                        </div>
+                                        <div className="shrink-0 pl-2">
+                                            {isLocked ? (
+                                                <Lock className="w-4 h-4 md:w-5 md:h-5 text-slate-700" />
+                                            ) : (
+                                                <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-amber-400 transition-colors" />
                                             )}
                                         </div>
-                                        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-lg scale-90 group-hover:scale-100 ${isLocked ? 'bg-slate-800 text-slate-600' : 'bg-slate-800 group-hover:bg-amber-500 text-slate-500 group-hover:text-slate-900'}`}>
-                                            {isLocked ? <Lock className="w-6 h-6" /> : <ChevronRight className="w-6 h-6 stroke-[3]" />}
-                                        </div>
                                     </div>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </section>
 
+                                    <div className="pl-10 md:pl-14">
+                                        <p className={cn(
+                                            "text-[10px] md:text-sm font-black tracking-widest uppercase opacity-60 leading-none",
+                                            isLocked ? "text-slate-700" : "text-slate-500"
+                                        )}>
+                                            PART 5 ⸱ 30Q ⸱ 10MIN
+                                        </p>
+                                    </div>
+                                </div>
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );

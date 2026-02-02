@@ -10,6 +10,7 @@ import { Trophy, RotateCcw } from "lucide-react";
 import { part3RealTests, Part3Set, Part3Question } from '@/data/part3';
 import { cn } from "@/lib/utils";
 import { TouchDictionary } from '@/components/common/TouchDictionary';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 
 export default function Part3TestRunnerPage() {
@@ -254,7 +255,7 @@ export default function Part3TestRunnerPage() {
             setTimeout(() => {
                 const nextEl = questionRefs.current[nextId];
                 if (nextEl) {
-                    const yOffset = -100; // Adjusted offset for better visibility
+                    const yOffset = -160; // Increased offset to clear sticky header
                     const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                 }
@@ -342,6 +343,8 @@ export default function Part3TestRunnerPage() {
                     incorrectQuestions: incorrectQuestions,
                     timestamp: serverTimestamp()
                 });
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid);
                 console.log("Score saved to Firebase");
             } catch (e) {
                 console.error("Save error:", e);
@@ -620,7 +623,7 @@ export default function Part3TestRunnerPage() {
                                                         onClick={() => handleSelect(q.id, label)}
                                                         disabled={(!reviewMode && skimmingState === 'active') || revealedQuestions.has(q.id)}
                                                         className={cn(
-                                                            "text-left px-4 py-3 rounded-xl transition-all duration-200 border relative overflow-hidden group",
+                                                            "text-left px-4 py-3 rounded-xl transition-all duration-200 border relative overflow-hidden group flex items-center gap-3",
                                                             isSelected && !revealedQuestions.has(q.id)
                                                                 ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.1)]'
                                                                 : revealedQuestions.has(q.id) && label === q.correctAnswer
@@ -632,7 +635,18 @@ export default function Part3TestRunnerPage() {
                                                             skimmingState === 'active' && "cursor-wait"
                                                         )}
                                                     >
-                                                        <span className={`font-black mr-2 text-xs ${isSelected || (revealedQuestions.has(q.id) && label === q.correctAnswer) ? 'text-emerald-500' : 'text-slate-600 group-hover:text-slate-400'}`}>{label}</span>
+                                                        <div className={cn(
+                                                            "w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0 border transition-all duration-200",
+                                                            isSelected && !revealedQuestions.has(q.id)
+                                                                ? "bg-emerald-500 text-white border-emerald-500"
+                                                                : revealedQuestions.has(q.id) && label === q.correctAnswer
+                                                                    ? "bg-emerald-500 text-white border-emerald-500"
+                                                                    : revealedQuestions.has(q.id) && isSelected && label !== q.correctAnswer
+                                                                        ? "bg-rose-500 text-white border-rose-500"
+                                                                        : "bg-slate-950 text-slate-500 border-slate-800 group-hover:border-slate-600 group-hover:text-slate-300"
+                                                        )}>
+                                                            {label}
+                                                        </div>
                                                         <div className="flex-1 text-base font-bold tracking-tight">
                                                             {reviewMode ? (
                                                                 <TouchDictionary

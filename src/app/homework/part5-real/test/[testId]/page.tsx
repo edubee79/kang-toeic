@@ -8,7 +8,10 @@ import { db } from '@/lib/firebase';
 import { part5TestData } from '@/data/toeic/reading/part5/tests';
 import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
 import { cn, normalizeOptions } from "@/lib/utils";
-import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag } from "lucide-react";
+import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, Tag, Sparkles, MessageSquare, Loader2, Send } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 function Part5TestRunnerContent() {
     const params = useParams();
@@ -30,6 +33,11 @@ function Part5TestRunnerContent() {
 
     // Refs for scrolling
     const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+    // AI Tutor State
+    const [userQueries, setUserQueries] = useState<Record<string, string>>({});
+    const [aiResponses, setAiResponses] = useState<Record<string, string>>({});
+    const [loadingAi, setLoadingAi] = useState<Record<string, boolean>>({});
 
     const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
 
@@ -201,6 +209,9 @@ function Part5TestRunnerContent() {
                     type: 'part5_test',
                     detail: `Test ${testId}`
                 });
+
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid);
             } catch (e) { console.error(e); }
         }
 
@@ -208,6 +219,39 @@ function Part5TestRunnerContent() {
         setHistory(newHistory);
         localStorage.setItem(`part5_history_test_${testId}`, JSON.stringify(newHistory));
         if (!isDrillMode) localStorage.removeItem(`part5_progress_test_${testId}`);
+    };
+
+    const askAiTutor = async (q: any) => {
+        if (loadingAi[q.id]) return;
+
+        setLoadingAi(prev => ({ ...prev, [q.id]: true }));
+        try {
+            const response = await fetch('/api/ai-tutor/part5', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    question: q.text,
+                    options: q.options,
+                    correctAnswer: q.correctAnswer,
+                    selectedAnswer: selectedAnswers[q.id],
+                    explanation: q.explanation,
+                    userQuery: userQueries[q.id] // Pass custom query if any
+                })
+            });
+
+            const data = await response.json();
+            if (data.text) {
+                setAiResponses(prev => ({ ...prev, [q.id]: data.text }));
+            } else {
+                const errMsg = data.message || data.error || "알 수 없는 에러가 발생했습니다.";
+                setAiResponses(prev => ({ ...prev, [q.id]: `⚠️ AI 선생님 답변 실패: ${errMsg}` }));
+            }
+        } catch (e) {
+            console.error(e);
+            setAiResponses(prev => ({ ...prev, [q.id]: "죄송합니다. AI 선생님과 연결이 잠시 끊겼습니다." }));
+        } finally {
+            setLoadingAi(prev => ({ ...prev, [q.id]: false }));
+        }
     };
 
     const handleRetake = () => {
@@ -432,6 +476,64 @@ function Part5TestRunnerContent() {
                                             )}
                                             {q.explanation && (
                                                 <p className="text-sm text-amber-500/80 italic">{q.explanation}</p>
+                                            )}
+
+                                            {/* AI Tutor Action - Only show in Review Mode */}
+                                            {reviewMode && (
+                                                <div className="mt-4 pt-4 border-t border-white/5">
+                                                    {!aiResponses[q.id] ? (
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="relative flex-1">
+                                                                <input
+                                                                    type="text"
+                                                                    placeholder="AI 선생님에게 질문하기 (예: (A)는 왜 안되나요?)"
+                                                                    value={userQueries[q.id] || ''}
+                                                                    onChange={(e) => setUserQueries(prev => ({ ...prev, [q.id]: e.target.value }))}
+                                                                    onKeyDown={(e) => e.key === 'Enter' && askAiTutor(q)}
+                                                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-300 placeholder:text-slate-600 focus:outline-none focus:ring-1 focus:ring-indigo-500/50"
+                                                                />
+                                                            </div>
+                                                            <button
+                                                                onClick={() => askAiTutor(q)}
+                                                                disabled={loadingAi[q.id]}
+                                                                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-bold hover:bg-indigo-500 transition-all disabled:opacity-50"
+                                                            >
+                                                                {loadingAi[q.id] ? (
+                                                                    <Loader2 className="w-4 h-4 animate-spin" />
+                                                                ) : (
+                                                                    <Send className="w-4 h-4" />
+                                                                )}
+                                                            </button>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="bg-slate-950/50 border border-indigo-500/20 rounded-2xl p-4 space-y-3 animate-in fade-in zoom-in-95">
+                                                            <div className="flex items-center justify-between pb-2 border-b border-white/5">
+                                                                <div className="flex items-center gap-2">
+                                                                    <Sparkles className="w-4 h-4 text-indigo-400" />
+                                                                    <span className="text-xs font-black text-indigo-400 tracking-tighter uppercase">AI Tutor Explanation</span>
+                                                                </div>
+                                                                <button
+                                                                    onClick={() => {
+                                                                        setAiResponses(prev => {
+                                                                            const next = { ...prev };
+                                                                            delete next[q.id];
+                                                                            return next;
+                                                                        });
+                                                                        setUserQueries(prev => ({ ...prev, [q.id]: '' }));
+                                                                    }}
+                                                                    className="text-[10px] text-slate-600 hover:text-slate-400 font-bold uppercase transition-colors"
+                                                                >
+                                                                    다시 질문하기
+                                                                </button>
+                                                            </div>
+                                                            <div className="text-sm text-slate-300 leading-relaxed prose prose-sm prose-invert max-w-none prose-p:my-1">
+                                                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                                                    {aiResponses[q.id]}
+                                                                </ReactMarkdown>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
                                             )}
                                         </div>
                                     )}

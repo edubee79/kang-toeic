@@ -8,57 +8,31 @@ export interface TestCorrectAnswers {
 export function getCorrectAnswersForTest9(): TestCorrectAnswers {
     const answers: TestCorrectAnswers = {};
 
-    // Part 1
-    test9Part1.forEach((q) => {
-        answers[q.id] = q.correctAnswer;
-    });
-
-    // Part 2
-    test9Part2.forEach(q => {
-        answers[q.id] = q.correctAnswer;
-    });
-
-    // Part 3
-    test9Part3.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 4
-    test9Part4.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 5
-    test9Part5.forEach(q => {
-        answers[q.id] = q.correctAnswer;
-    });
-
-    // Part 6
-    test9Part6.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 7 Single
-    test9Part7Single.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 7 Multi
-    test9Part7Multi.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer || q.answer;
-        });
-    });
+    test9Part1.forEach(q => answers[q.id] = q.correctAnswer);
+    test9Part2.forEach(q => answers[q.id] = q.correctAnswer);
+    test9Part3.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test9Part4.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test9Part5.forEach(q => answers[q.id] = q.correctAnswer);
+    test9Part6.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test9Part7Single.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test9Part7Multi.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer || q.answer));
 
     return answers;
+}
+
+export function getQuestionClassificationsForTest9(): Record<string, string> {
+    const classes: Record<string, string> = {};
+
+    test9Part1.forEach(q => classes[q.id] = q.classification || 'P1');
+    test9Part2.forEach(q => classes[q.id] = (q as any).classification || (q as any).questionType || 'Unknown');
+    test9Part3.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || q.questionType || (set as any).contextType || 'Unknown'));
+    test9Part4.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || q.questionType || (set as any).contextType || 'Unknown'));
+    test9Part5.forEach(q => classes[q.id] = q.classification || 'Unknown');
+    test9Part6.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || (set as any).contextType || 'Unknown'));
+    test9Part7Single.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || (set as any).docType || 'Unknown'));
+    test9Part7Multi.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || (set as any).docType || 'Unknown'));
+
+    return classes;
 }
 
 import { test10Part1, test10Part2, test10Part3, test10Part4, test10Part5, test10Part6, test10Part7Single, test10Part7Multi } from '@/data/mock/set10_data';
@@ -66,57 +40,31 @@ import { test10Part1, test10Part2, test10Part3, test10Part4, test10Part5, test10
 export function getCorrectAnswersForTest10(): TestCorrectAnswers {
     const answers: TestCorrectAnswers = {};
 
-    // Part 1
-    test10Part1.forEach((q) => {
-        answers[q.id] = q.correctAnswer;
-    });
-
-    // Part 2
-    test10Part2.forEach(q => {
-        answers[q.id] = q.correctAnswer;
-    });
-
-    // Part 3
-    test10Part3.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 4
-    test10Part4.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 5
-    test10Part5.forEach(q => {
-        answers[q.id] = q.correctAnswer;
-    });
-
-    // Part 6
-    test10Part6.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 7 Single
-    test10Part7Single.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer;
-        });
-    });
-
-    // Part 7 Multi
-    test10Part7Multi.forEach(set => {
-        set.questions.forEach((q: any) => {
-            answers[q.id] = q.correctAnswer || q.answer;
-        });
-    });
+    test10Part1.forEach(q => answers[q.id] = q.correctAnswer);
+    test10Part2.forEach(q => answers[q.id] = q.correctAnswer);
+    test10Part3.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test10Part4.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test10Part5.forEach(q => answers[q.id] = q.correctAnswer);
+    test10Part6.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test10Part7Single.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer));
+    test10Part7Multi.forEach(set => set.questions.forEach((q: any) => answers[q.id] = q.correctAnswer || q.answer));
 
     return answers;
+}
+
+export function getQuestionClassificationsForTest10(): Record<string, string> {
+    const classes: Record<string, string> = {};
+
+    test10Part1.forEach(q => classes[q.id] = q.classification || 'P1');
+    test10Part2.forEach(q => classes[q.id] = (q as any).classification || (q as any).questionType || 'Unknown');
+    test10Part3.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || q.questionType || (set as any).contextType || 'Unknown'));
+    test10Part4.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || q.questionType || (set as any).contextType || 'Unknown'));
+    test10Part5.forEach(q => classes[q.id] = q.classification || 'Unknown');
+    test10Part6.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || (set as any).contextType || 'Unknown'));
+    test10Part7Single.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || (set as any).docType || 'Unknown'));
+    test10Part7Multi.forEach(set => set.questions.forEach((q: any) => classes[q.id] = q.classification || (set as any).docType || 'Unknown'));
+
+    return classes;
 }
 
 /**
@@ -163,7 +111,15 @@ export function calculateMockScore(
     isHalf: boolean = false
 ): MockScoreResult {
     const testIdKey = String(testId).toLowerCase();
-    const isTest9 = testIdKey.includes('9');
+    // Strictly handle Full Mock Tests 9 (Set 1) and 10 (Set 2)
+    // Level tests like 9a, 9b are handled by levelScoring.ts
+    const isTest9 = testIdKey === '9' || testIdKey.startsWith('full-9') || testIdKey.includes('test9');
+    const isTest10 = testIdKey === '10' || testIdKey.startsWith('full-10') || testIdKey.includes('test10');
+
+    if (!isTest9 && !isTest10) {
+        console.warn('calculateMockScore called for non-mock test ID:', testId);
+    }
+
     const correctAnswers = isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10();
 
     let correctCount = 0;

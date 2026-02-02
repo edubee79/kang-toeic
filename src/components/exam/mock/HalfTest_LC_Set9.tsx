@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 // 기존 데이터 대신 하프 데이터를 임포트
 // 기존 데이터 하드코딩 임포트 제거
 import { ChevronLeft, ChevronRight, Volume2, Monitor } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
     testId: string;
@@ -121,7 +122,9 @@ export default function HalfTest_LC_Set9({ testId, onFinishLC }: Props) {
 
             <header className="h-16 border-b bg-white flex items-center justify-between px-6 shrink-0 z-[110] shadow-sm">
                 <div className="flex items-center gap-6">
-                    <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                        <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    </Link>
                     <div className="h-6 w-px bg-slate-200"></div>
                     <span className="font-bold text-slate-500 uppercase text-xs tracking-widest text-rose-600">하프테스트 {isA ? 'A' : 'B'} (Listening)</span>
                 </div>

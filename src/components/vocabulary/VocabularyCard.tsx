@@ -61,13 +61,13 @@ export function VocabularyCard({ word, showBack = false, onFlip, clickable = tru
     const wordFontSize = wordLength > 20 ? 'text-lg md:text-xl' :
         wordLength > 15 ? 'text-xl md:text-2xl' :
             wordLength > 12 ? 'text-2xl md:text-3xl' :
-                wordLength > 9 ? 'text-3xl md:text-5xl' :
-                    wordLength > 7 ? 'text-4xl md:text-6xl' : 'text-5xl md:text-7xl';
+                wordLength > 9 ? 'text-3xl md:text-4xl' :
+                    wordLength > 7 ? 'text-3xl md:text-5xl' : 'text-4xl md:text-6xl';
 
     return (
         <div
             className={cn(
-                "[perspective:1500px] w-full aspect-[4/5] group",
+                "[perspective:1500px] w-full h-fit group transition-all duration-500",
                 clickable && "cursor-pointer"
             )}
         >
@@ -80,16 +80,19 @@ export function VocabularyCard({ word, showBack = false, onFlip, clickable = tru
             >
                 {/* Front Side */}
                 <div
-                    className="absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit_backface_visibility:hidden] z-20"
+                    className={cn(
+                        "w-full h-fit min-h-[90px] md:min-h-[160px] [backface-visibility:hidden] [-webkit_backface_visibility:hidden] z-20 transition-all duration-500",
+                        !isFlipped ? "relative" : "absolute inset-0"
+                    )}
                     style={{ transform: 'rotateY(0deg)' }}
                 >
                     <div className={cn(
-                        "w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:shadow-2xl overflow-hidden shadow-none",
-                        "border-2 border-slate-700/50 md:border-slate-700 rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-8 flex flex-col items-center justify-center text-center"
+                        "w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:shadow-2xl overflow-hidden shadow-none transition-all duration-500",
+                        "border-2 border-slate-700/50 md:border-slate-700 rounded-xl md:rounded-[2.5rem] p-4 md:p-8 flex flex-col items-center justify-center text-center relative"
                     )}>
                         <h2
                             className={cn(
-                                "font-black text-white tracking-tight drop-shadow-2xl w-full px-2 text-wrap break-all hyphens-auto",
+                                "font-black text-white tracking-tight drop-shadow-2xl w-full px-2 break-words",
                                 wordFontSize
                             )}
                             lang="en"
@@ -104,14 +107,17 @@ export function VocabularyCard({ word, showBack = false, onFlip, clickable = tru
 
                 {/* Back Side */}
                 <div
-                    className="absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit_backface_visibility:hidden] z-10"
+                    className={cn(
+                        "w-full h-fit min-h-[90px] md:min-h-[160px] [backface-visibility:hidden] [-webkit_backface_visibility:hidden] z-10 transition-all duration-500",
+                        isFlipped ? "relative" : "absolute inset-0"
+                    )}
                     style={{ transform: 'rotateY(180deg)' }}
                 >
                     <div className={cn(
                         "w-full h-full bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 md:shadow-2xl shadow-none",
-                        "border-2 border-indigo-500/30 rounded-[2rem] md:rounded-[2.5rem] p-0.5 flex flex-col justify-center overflow-hidden"
+                        "border-2 border-indigo-500/30 rounded-xl md:rounded-[2.5rem] p-0.5 flex flex-col justify-center overflow-hidden"
                     )}>
-                        <div className="h-full w-full p-5 md:p-8 flex flex-col space-y-4 md:space-y-6 overflow-y-auto custom-scrollbar">
+                        <div className="h-full w-full p-4 md:p-8 flex flex-col space-y-2 md:space-y-6 overflow-y-auto custom-scrollbar">
                             <div>
                                 <div className="flex justify-between items-start mb-2 gap-2">
                                     <h3 className={cn(
@@ -133,15 +139,15 @@ export function VocabularyCard({ word, showBack = false, onFlip, clickable = tru
                             </div>
 
                             <div className="space-y-3 md:space-y-4 flex-1">
-                                <div className="p-4 md:p-5 bg-slate-950/40 rounded-2xl md:rounded-3xl border border-white/5 backdrop-blur-sm">
+                                <div className="p-3 md:p-5 bg-slate-950/40 rounded-xl md:rounded-3xl border border-white/5 backdrop-blur-sm">
                                     <p className={cn(
-                                        "text-white font-semibold leading-relaxed italic break-words",
+                                        "text-white font-semibold leading-tight italic break-words",
                                         getFontSize(word?.example, 'example')
                                     )}>"{word?.example || ''}"</p>
                                 </div>
 
-                                <div className="p-4 md:p-5 bg-slate-950/40 rounded-2xl md:rounded-3xl border border-white/5 backdrop-blur-sm">
-                                    <p className="text-slate-300 text-sm md:text-base font-medium leading-relaxed break-words">{word?.exampleKo || ''}</p>
+                                <div className="p-3 md:p-5 bg-slate-950/40 rounded-xl md:rounded-3xl border border-white/5 backdrop-blur-sm">
+                                    <p className="text-slate-300 text-xs md:text-base font-medium leading-tight break-words">{word?.exampleKo || ''}</p>
                                 </div>
 
                                 {/* Additional Info: Synonyms, Antonyms, Confusables */}

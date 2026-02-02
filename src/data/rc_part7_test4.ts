@@ -10,13 +10,13 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s11-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Manuel Torres <m.torres@opalmail.co.uk>\nFrom: Anya Patel <a.patel@support.harlund.co.uk>\nDate: 3 May\nSubject: Auto insurance\n\nDear Mr. Torres,\n\nWelcome to Harlund Ltd. We are pleased to provide you with comprehensive automobile insurance for your new vehicle. We have received your first payment of £36.00, and your coverage is now in effect. Your policy number is M413927.\n\nYour billing schedule is based on an annual premium of £432.00. The remaining payments of £36.00 per month are due on the fifteenth day of each month starting in June.\n\nYou can visit us online at www.harlund.co.uk to pay bills and manage your policy. Our Web site offers easy options for managing your account information and for making payments with scheduled transfers directly from your bank.\n\nShould you have any questions or wish to change your policy, call the customer support centre at 020 7946 0516. In the event of a vehicle incident, please contact an agent as soon as possible at 020 7946 0520. Be sure to have your policy number at hand. Thank you for trusting Harlund Ltd. We look forward to providing you with superior service.\n\nBest regards,\n\nAnya Patel, Harlund Ltd. Customer Support Agent`
             },
             {
                 id: "p7-t4-s11-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Anya Patel <a.patel@support.harlund.co.uk>\nFrom: Manuel Torres <m.torres@opalmail.co.uk>\nDate: 4 May\nSubject: RE: Auto insurance\n\nDear Ms. Patel,\n\nThank you for the confirmation. I'm happy to have insurance from a trustworthy company. For your reference, the new car is now registered in my name.\n\nAlthough I made the initial payment to you by credit card, I plan to follow the process outlined in your e-mail for future payments.\n\nI also wanted to let you know that I have not yet received the insurance certificate. I looked for one that I could download from your Web site, but I could not find anything. Could you please send me a copy of the certificate?\n\nSincerely,\n\nManuel Torres`
             }
         ],
@@ -107,7 +107,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s12-p1",
                 contextType: "P3",
-                type: "TABLE",
+                docType: "TABLE",
                 header: {
                     title: "Tour Schedule for Book Launch by Andrew Darr"
                 },
@@ -125,7 +125,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s12-p2",
                 contextType: "P3",
-                type: "REVIEW",
+                docType: "REVIEW",
                 title: "Book Review: Down the Mountainside",
                 content: `Reviewer: Camille Lin\nDate: 15 May\n\nAndrew Darr, the author of the best-selling series about detective Charles Martin, will be visiting our city this week, appearing at Neighbourhood Books to promote his new novel, *Down the Mountainside*. The new work sees Martin investigating mysterious events at a ski resort in the French Alps.\n\nDarr's storytelling has come a long way since readers first met Charles Martin in *The Doorbell*, and this installment is Darr's strongest work to date. Fans of the stories will welcome the return of Darr's wit after a three-year wait, and newcomers to the Martin series are sure to find themselves captivated.\n\nThe story includes the right balance of suspense and humour, with an ending that is unpredictable, even to the most devoted Darr reader. I highly recommend this book to all mystery fans. You won't be disappointed.`
             }
@@ -217,7 +217,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s13-p1",
                 contextType: "P3",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Annual Citrus Production in Yuma County"
                 },
@@ -234,13 +234,13 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s13-p2",
                 contextType: "P1",
-                type: "LETTER",
+                docType: "LETTER",
                 content: `City West Bank\n455 Canyon Avenue\nPhoenix, Arizona 85007\n\nMarch 21\n\nDomingo Ramirez, Director\nArizona Agriculture Division\n55 Sixth Avenue\nYuma, Arizona 85364\n\nDear Mr. Ramirez,\n\nI read the recent report from the Arizona Agriculture Division summarizing Yuma County's success in the citrus industry. City West Bank wants to help the Arizona Agriculture Division you lead by expanding this industry further. We offer low-interest loans and provide expert advice through our connections to area chambers of commerce and to agricultural researchers at Arizona's state universities.\n\nWe recognize that agritourism in southwest Arizona is growing as a result of the popularity of farm tours, bird-watching, and scenic country lodging, but tourism is unlikely to surpass the strength of this region's agriculture production. We support farmers in many counties in Arizona and are poised to help the citrus growers in Yuma County. Together, we can accomplish great things.\n\nCordially,\n\nBianca Schreiber\nBianca Schreiber\nIndustry Investment Programs`
             },
             {
                 id: "p7-t4-s13-p3",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 header: {
                     headline: "Schreiber Named Vice President of National Investment Strategies"
                 },
@@ -334,7 +334,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s14-p1",
                 contextType: "P7",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Unetcon - Message Center",
                     subtitle: "https://www.unetcon.org/messages_audreysmith80"
@@ -353,7 +353,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s14-p2",
                 contextType: "P3",
-                type: "TABLE",
+                docType: "TABLE",
                 header: {
                     title: "Stonerook University Graduates",
                     date: "https://www.unetcon.org/private/stonerookgrads"
@@ -373,7 +373,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s14-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Jonah Hilliard <jhilliard@mccleese.edu>\nFrom: Audrey Smith <audrey_smith80@rapidonet.co.uk>\nDate: 19 September\nSubject: Referral\n\nDear Jonah,\n\nIt has been a long time since we last talked. I recently came across your profile on Unetcon and saw that you are now leading the business school at McCleese! My research in Lagos ended last year, when I accepted a position as lead consultant at Pryor and Martell. I have been based here in Manchester ever since.\n\nCongratulations to you on your most recent business venture—Clear Path already has quite an impressive reputation! I have a nephew who is interested in pursuing a degree in management information systems in the United States, and I was hoping I could put you both in touch so that he can take advantage of your new company's expertise in this area.\n\nBest,\n\nAudrey Smith`
             }
         ],
@@ -464,7 +464,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s15-p1",
                 contextType: "P4",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Modern Salon Academy",
                     subtitle: "www.modernsalonacademy.ca"
@@ -481,7 +481,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s15-p2",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 header: {
                     headline: "Modern Salon Academy Expands in Ontario"
                 },
@@ -490,7 +490,7 @@ export const test4PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t4-s15-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Francine Dupuis <francine.dupuis@modernsalonacademy.ca>\nFrom: Amit Persaud <amitpersaud@shorelinebarbers.ca>\nSubject: Entry-level job opportunities\nDate: 19 November\n\nDear Ms. Dupuis,\n\nMy name is Amit Persaud, and I am the owner and operator of Shoreline Barbers. I am interested in recruiting some of your graduating students to work at my barbershop, which is just around the corner from your newly established regional campus. I am seeking highly qualified, entry-level employees who can provide both haircutting and hair-colouring services.\n\nWould it be possible for me to visit the nearby campus to give interested students an opportunity to talk with me? This would be a convenient way for me to evaluate them for the positions I am seeking to fill, and then I can also answer any questions they may have. Please let me know if an arrangement can be made.\n\nSincerely,\nAmit Persaud`
             }
         ],

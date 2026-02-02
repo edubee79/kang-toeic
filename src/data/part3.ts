@@ -8,7 +8,7 @@ export interface Part3Question {
     D: string;
   };
   correctAnswer: 'A' | 'B' | 'C' | 'D';
-  questionType?: string;
+  classification?: string;
   translation?: string;
   translation_A?: string;
   translation_B?: string;
@@ -37,7 +37,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q32",
         text: "What is the woman preparing for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A move to a new city",
           B: "A business trip",
@@ -49,7 +50,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q33",
         text: "Who most likely is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "An accountant",
           B: "An administrative assistant",
@@ -61,7 +63,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q34",
         text: "What does the woman want to pick up on Friday morning?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A building map",
           B: "A room key",
@@ -110,7 +113,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q32",
         text: "What does the man want to know?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "When a manager will be available",
           B: "How to use a software program",
@@ -122,7 +126,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q33",
         text: "Why did the woman speak to a technician?",
-        questionType: "WHY_REASON",
+        classification: "WHY_REASON",
+
         options: {
           A: "To order some equipment",
           B: "To discuss a contract",
@@ -134,7 +139,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q34",
         text: "What does the woman recommend?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Looking at a manual",
           B: "Calling another department",
@@ -162,7 +168,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q35",
         text: "What task is the man responsible for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Writing a budget",
           B: "Reviewing job applications",
@@ -174,7 +181,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q36",
         text: "What does the woman want to do next year?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Organize a trade show",
           B: "Open a new store",
@@ -186,7 +194,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q37",
         text: "What does the man ask the woman to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Order some business cards",
           B: "Write a press release",
@@ -213,7 +222,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q38",
         text: "What does the woman need a suit for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A job interview",
           B: "A fashion show",
@@ -225,7 +235,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q39",
         text: "What does the woman dislike about a suit on display?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "The fabric",
           B: "The price",
@@ -237,7 +248,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q40",
         text: "What does the man say that the price includes?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some accessories",
           B: "Alterations",
@@ -267,7 +279,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q41",
         text: "What kind of a business does the man most likely work for?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "A legal consulting firm",
           B: "An architecture firm",
@@ -279,7 +292,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q42",
         text: "What does the woman say she is concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "The length of a project",
           B: "The cost of an order",
@@ -291,7 +305,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q43",
         text: "What does the woman agree to let the man do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Submit an application",
           B: "Speak at a meeting",
@@ -319,7 +334,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q44",
         text: "Who most likely is Axel Schmidt?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A store manager",
           B: "A construction worker",
@@ -331,7 +347,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q45",
         text: "What renovation does the woman mention?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some walls are being painted.",
           B: "Some floors are being replaced.",
@@ -343,7 +360,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q46",
         text: "What does the woman encourage the man to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Visit a gift shop",
           B: "Send a package",
@@ -370,7 +388,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q47",
         text: "What does the speakers' company most likely sell?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Electronics",
           B: "Clothing",
@@ -382,7 +401,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q48",
         text: "Why is the woman surprised?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "Some software is expensive.",
           B: "A color is very bright.",
@@ -394,7 +414,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q49",
         text: "Why does the woman say, \"The slides are available on our company intranet\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To request assistance reviewing a document",
           B: "To recommend using a document as a reference",
@@ -422,7 +443,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q50",
         text: "According to the woman, what will happen at the end of November?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An executive will visit.",
           B: "An employee will retire.",
@@ -434,7 +456,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q51",
         text: "What does the man want to know?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Where he would be working",
           B: "When he would be starting a job",
@@ -446,7 +469,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q52",
         text: "What does the woman say the company will pay for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A work vehicle",
           B: "A private office",
@@ -472,7 +496,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q53",
         text: "What industry do the speakers work in?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Manufacturing",
           B: "Agriculture",
@@ -484,7 +509,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q54",
         text: "What does the woman say a project will do for a city?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Increase tourism",
           B: "Generate electricity",
@@ -496,7 +522,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q55",
         text: "What does Gerhard say needs to be done?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Permits need to be approved.",
           B: "Employees need to be trained.",
@@ -524,7 +551,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q56",
         text: "What does the woman imply when she says, \"I don't have much to do\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "She has time to help.",
           B: "She plans to leave work early.",
@@ -536,7 +564,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q57",
         text: "What does the man notice about some medication?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It needs to be refrigerated.",
           B: "It has expired.",
@@ -548,7 +577,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q58",
         text: "What does the man suggest doing in the future?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Installing some shelves",
           B: "Confirming with a doctor",
@@ -576,7 +606,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q59",
         text: "Who most likely is the woman?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A travel agent",
           B: "A bank teller",
@@ -588,7 +619,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q60",
         text: "What kind of document are the speakers discussing?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "A user agreement",
           B: "An employment contract",
@@ -600,7 +632,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q61",
         text: "Why must the document be revised by the end of the month?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To be included in a personnel file",
           B: "To use in a merger negotiation",
@@ -629,7 +662,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q62",
         text: "Look at the graphic. How much did the man's company charge for its service?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "$4,456",
           B: "$1,300",
@@ -641,7 +675,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q63",
         text: "Why does the man apologize?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "Business hours have changed.",
           B: "A price was wrong.",
@@ -653,7 +688,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q64",
         text: "What does the woman like about a venue?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It has a nice view.",
           B: "It is conveniently located.",
@@ -681,7 +717,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q65",
         text: "Why is the man surprised?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "A popular band is coming to town.",
           B: "The woman plays a musical instrument.",
@@ -693,7 +730,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q66",
         text: "Look at the graphic. In which section does the woman have seats?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Section 1",
           B: "Section 2",
@@ -705,7 +743,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q67",
         text: "What is the woman doing this weekend?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Practicing with her band",
           B: "Entering a radio contest",
@@ -734,7 +773,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q68",
         text: "Who most likely is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A maintenance worker",
           B: "A property manager",
@@ -746,7 +786,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q69",
         text: "Look at the graphic. Which name needs to be changed?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Tanaka",
           B: "Zhao",
@@ -758,7 +799,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t1-q70",
         text: "What does the woman say she is going to do tomorrow?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Fill out a registration form",
           B: "Meet with some neighbors",
@@ -778,7 +820,6 @@ export const part3RealTests: Part3Set[] = [
       { speaker: "Man", text: "OK. See you then." }
     ]
   },
-  ,
   {
     testId: 2,
     setId: "p3-t2-s1",
@@ -789,7 +830,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q32",
         text: "Why does the man want to buy Ms. Jefferson some flowers?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "She was promoted.",
           B: "She won an award.",
@@ -801,7 +843,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q33",
         text: "According to the woman, where is Greenwood Flower Shop?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "In a shopping mall",
           B: "In a train station",
@@ -813,7 +856,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q34",
         text: "What does the man say he will do before he leaves the office?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Fill out a time sheet",
           B: "Send an e-mail",
@@ -848,7 +892,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q35",
         text: "What did the man just do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "He upgraded a flight.",
           B: "He arranged for a rental car.",
@@ -860,7 +905,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q36",
         text: "What does the man remind the woman to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Save her receipts",
           B: "Bring her ID badge",
@@ -872,7 +918,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q37",
         text: "What does the woman ask the man about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "A bank",
           B: "A post office",
@@ -911,7 +958,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q38",
         text: "What industry do the speakers most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Television",
           B: "Fashion",
@@ -923,7 +971,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q39",
         text: "What does the man suggest doing?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Providing tours of a facility",
           B: "Opening a branch office",
@@ -935,7 +984,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q40",
         text: "What is the woman concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "A plan would be time-consuming.",
           B: "A color is too bright.",
@@ -970,7 +1020,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q41",
         text: "What problem is being discussed?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "A company manual contains some errors.",
           B: "A shipment was not delivered on time.",
@@ -982,7 +1033,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q42",
         text: "Who most likely is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A computer technician",
           B: "A security guard",
@@ -994,7 +1046,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q43",
         text: "What are the women most likely planning to do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Sign a contract",
           B: "Attend a training",
@@ -1041,7 +1094,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q44",
         text: "Where does the woman work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At an amusement park",
           B: "At a fitness center",
@@ -1053,7 +1107,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q45",
         text: "Why is the man unable to make a reservation for next Thursday?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "A calendar is fully booked.",
           B: "An employee is on vacation.",
@@ -1065,7 +1120,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q46",
         text: "What will the man most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Pick up a brochure",
           B: "Make a down payment",
@@ -1116,7 +1172,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q47",
         text: "Who is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A news reporter",
           B: "A photographer",
@@ -1128,7 +1185,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q48",
         text: "Why does the woman say, \"The issue is already being printed\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To apologize for an error",
           B: "To provide reassurance",
@@ -1140,7 +1198,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q49",
         text: "What does the woman ask the man to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Come in for an interview",
           B: "Appear in a feature story",
@@ -1187,7 +1246,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q50",
         text: "What kind of business do the speakers most likely work for?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "An automobile manufacturer",
           B: "An insurance company",
@@ -1199,7 +1259,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q51",
         text: "What problem do the women mention?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "A building site did not pass an inspection.",
           B: "A vehicle needs to be repaired.",
@@ -1211,7 +1272,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q52",
         text: "What does the man recommend?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Offering a discount",
           B: "Changing suppliers",
@@ -1250,7 +1312,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q53",
         text: "What has the woman volunteered to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Try out some new products",
           B: "Purchase beverages for a luncheon",
@@ -1262,7 +1325,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q54",
         text: "What does the man ask the woman to sign?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "An employee contract",
           B: "An attendance sheet",
@@ -1274,7 +1338,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q55",
         text: "What will the woman most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Set up her computer",
           B: "Go to another room",
@@ -1317,7 +1382,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q56",
         text: "Where most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a hair salon",
           B: "At a catering hall",
@@ -1329,7 +1395,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q57",
         text: "Why does the woman say, \"they don't have as many clients, though\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To express pride in her company's growth",
           B: "To explain why an expense is so high",
@@ -1341,7 +1408,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q58",
         text: "What will happen later today?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some supplies will be delivered.",
           B: "An inspection will be conducted.",
@@ -1392,7 +1460,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q59",
         text: "Which industry do the speakers most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Tourism",
           B: "Agriculture",
@@ -1404,7 +1473,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q60",
         text: "What does the man say he is concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Expenses",
           B: "Safety",
@@ -1416,7 +1486,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q61",
         text: "What does the man agree to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Apply for some funding",
           B: "Do some research",
@@ -1463,7 +1534,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q62",
         text: "What does the woman remind the man about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "She used to live in the area.",
           B: "She needs to stop at a store.",
@@ -1475,7 +1547,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q63",
         text: "Look at the graphic. Which exit will the speakers take?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Maple Road",
           B: "Carter Lane",
@@ -1487,7 +1560,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q64",
         text: "What will the man ask his coworkers to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Cancel a reservation",
           B: "Save some seats",
@@ -1535,7 +1609,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q65",
         text: "Where does the conversation most likely take place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a hotel",
           B: "At an accounting firm",
@@ -1547,7 +1622,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q66",
         text: "Look at the graphic. Which bin will the man use?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Bin 1",
           B: "Bin 2",
@@ -1559,7 +1635,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q67",
         text: "What does the woman suggest?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Using a cart",
           B: "Waiting for a confirmation",
@@ -1595,7 +1672,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q68",
         text: "What type of event are the speakers organizing?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An award ceremony",
           B: "A grand-opening celebration",
@@ -1607,7 +1685,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q69",
         text: "Look at the graphic. What time does the man think the music should begin?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "At 5:00 P.M.",
           B: "At 6:00 P.M.",
@@ -1619,7 +1698,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t2-q70",
         text: "What information does the man suggest adding to the invitation?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "The name of a sponsor",
           B: "The location of a concert hall",
@@ -1653,7 +1733,6 @@ export const part3RealTests: Part3Set[] = [
     ],
     image: "/images/ETS_TOEIC_3/Test_02/Part_03/p3_q68.png"
   },
-  ,
   {
     testId: 3,
     setId: "p3-t3-s1",
@@ -1664,7 +1743,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q32",
         text: "Why is the woman seeking a temporary position?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To become familiar with local opportunities",
           B: "To gain experience in a new field",
@@ -1676,7 +1756,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q33",
         text: "What skill does the woman have?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Accounting",
           B: "Event organizing",
@@ -1688,7 +1769,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q34",
         text: "Why does the man tell the woman to come in on Wednesday?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To complete some paperwork",
           B: "To visit a job site",
@@ -1731,7 +1813,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q35",
         text: "Why does the man ask Rosa to go to Montreal?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "To meet with a client",
           B: "To attend a trade show",
@@ -1743,7 +1826,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q36",
         text: "What does the woman ask permission to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Take a coworker",
           B: "Change a flight",
@@ -1755,7 +1839,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q37",
         text: "What will the man most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Prepare some sales data",
           B: "Order some business cards",
@@ -1790,7 +1875,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q38",
         text: "Who is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A lawyer",
           B: "An electrician",
@@ -1802,7 +1888,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q39",
         text: "Why does the man apologize?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "Some documents are missing.",
           B: "Some equipment is not working.",
@@ -1814,7 +1901,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q40",
         text: "Why is Ms. Yamamoto asked to fill out a form?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "To update her contact information",
           B: "To set up a payment plan",
@@ -1865,7 +1953,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q41",
         text: "Who will the woman give a presentation to?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "New employees",
           B: "Government officials",
@@ -1877,7 +1966,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q42",
         text: "What does the woman ask the man about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Adjusting a microphone",
           B: "Turning on a monitor",
@@ -1889,7 +1979,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q43",
         text: "What will the man do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Check a manual",
           B: "Give a demonstration",
@@ -1940,7 +2031,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q44",
         text: "What is the man concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Venue availability",
           B: "Product efficiency",
@@ -1952,7 +2044,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q45",
         text: "Who is Stefan Vogel?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A furniture designer",
           B: "A photographer",
@@ -1964,7 +2057,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q46",
         text: "What will the speakers do this afternoon?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Review some plans",
           B: "Consult with a graphic designer",
@@ -2011,7 +2105,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q47",
         text: "Where do the speakers work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a hardware store",
           B: "At a construction site",
@@ -2023,7 +2118,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q48",
         text: "What does the man mean when he says, \"And the rooms are so close together\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "Some renovations will be finished quickly.",
           B: "A work schedule will be revised.",
@@ -2035,7 +2131,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q49",
         text: "What does the woman hope to do before June?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Take inventory",
           B: "Order new uniforms",
@@ -2074,7 +2171,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q50",
         text: "What type of product are the speakers discussing?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Pencils",
           B: "Backpacks",
@@ -2086,7 +2184,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q51",
         text: "What is the woman frustrated by?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some customers wrote a negative review.",
           B: "Some equipment is malfunctioning.",
@@ -2098,7 +2197,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q52",
         text: "Why does the man say, \"The school year is starting in three months\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To request some time off from work",
           B: "To correct an error in a schedule",
@@ -2137,7 +2237,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q53",
         text: "What does the women's company sell?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Construction vehicles",
           B: "Power tools",
@@ -2149,7 +2250,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q54",
         text: "Why is the man visiting the company?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To interview for a job",
           B: "To revise a contract",
@@ -2161,7 +2263,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q55",
         text: "What does the man ask the women to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Lead him to a specific location",
           B: "Provide him a discounted service",
@@ -2204,7 +2307,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q56",
         text: "What is the woman renovating?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A kitchen",
           B: "A swimming pool",
@@ -2216,7 +2320,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q57",
         text: "What service does the man's company provide?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Landscaping",
           B: "Waste removal",
@@ -2228,7 +2333,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q58",
         text: "According to the man, how is a cost determined?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "By number of workers",
           B: "By project duration",
@@ -2271,7 +2377,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q59",
         text: "Where does the woman work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a museum",
           B: "At a movie theater",
@@ -2283,7 +2390,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q60",
         text: "Who does the woman say she has hired?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "An engineer",
           B: "A musician",
@@ -2295,7 +2403,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q61",
         text: "What problem does the man mention?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Traffic noise",
           B: "Late deliveries",
@@ -2338,7 +2447,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q62",
         text: "Why is the woman calling?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To compliment a staff member",
           B: "To schedule an appointment",
@@ -2350,7 +2460,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q63",
         text: "Look at the graphic. Which drawer will the man probably check next?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Drawer 1",
           B: "Drawer 2",
@@ -2362,7 +2473,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q64",
         text: "What does the man say about some processes?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "They are described in a training program.",
           B: "They take too long to complete.",
@@ -2402,7 +2514,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q65",
         text: "Where do the speakers work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a restaurant",
           B: "At a hotel",
@@ -2414,7 +2527,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q66",
         text: "Look at the graphic. How much extra money will the man receive in his next paycheck?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "$400",
           B: "$300",
@@ -2426,7 +2540,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q67",
         text: "What does the man say he will do with the extra money?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Fix his car",
           B: "Give it to his parents",
@@ -2466,7 +2581,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q68",
         text: "What is the woman planning a celebration for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A business merger",
           B: "A colleague's promotion",
@@ -2478,7 +2594,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q69",
         text: "Look at the graphic. Which day is the man attending a music festival?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "On Thursday",
           B: "On Friday",
@@ -2490,7 +2607,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t3-q70",
         text: "What does the woman say she will do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Purchase a gift",
           B: "Decorate a room",
@@ -2534,7 +2652,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q32",
         text: "What is the woman preparing for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A holiday raffle",
           B: "A grand opening",
@@ -2546,7 +2665,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q33",
         text: "What does the man say he can do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Rush an order",
           B: "Apply a discount",
@@ -2558,7 +2678,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q34",
         text: "What does the woman ask about?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "Payment methods",
           B: "Store hours",
@@ -2597,7 +2718,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q35",
         text: "What most likely is the woman's profession?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Sound engineer",
           B: "Travel agent",
@@ -2609,7 +2731,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q36",
         text: "Why is the man calling?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To ask the woman for a favor",
           B: "To offer the woman a job",
@@ -2621,7 +2744,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q37",
         text: "According to the woman, what might cause a problem?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "A billing error",
           B: "A schedule conflict",
@@ -2676,7 +2800,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q38",
         text: "What kind of event is taking place?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A trade show",
           B: "A job fair",
@@ -2688,7 +2813,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q39",
         text: "According to the man, what did a client request?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Projection equipment",
           B: "Vegetarian meals",
@@ -2700,7 +2826,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q40",
         text: "What will Fatima do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Locate some keys",
           B: "Process a payment",
@@ -2747,7 +2874,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q41",
         text: "Where is the conversation most likely taking place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a vegetable farm",
           B: "At an electronics store",
@@ -2759,7 +2887,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q42",
         text: "What does the woman ask the man to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Describe a phone",
           B: "Show a receipt",
@@ -2771,7 +2900,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q43",
         text: "What information does the woman give the man?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "The price of an item",
           B: "The name of a supervisor",
@@ -2818,7 +2948,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q44",
         text: "What field do the speakers most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Accounting",
           B: "Engineering",
@@ -2830,7 +2961,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q45",
         text: "Why does the man say, \"It won't take that long\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To request the woman's permission",
           B: "To convince the woman to meet",
@@ -2842,7 +2974,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q46",
         text: "What will the man likely do tomorrow morning?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Lead an employee orientation",
           B: "Present at a board meeting",
@@ -2881,7 +3014,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q47",
         text: "According to the woman, what do the results of a survey indicate about a company?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It should create an employee award.",
           B: "It should provide free transportation.",
@@ -2893,7 +3027,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q48",
         text: "What does the man say he did recently?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "He accepted a job offer.",
           B: "He read an article.",
@@ -2905,7 +3040,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q49",
         text: "What does the woman suggest?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Hiring a consultant",
           B: "Changing a venue",
@@ -2944,7 +3080,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q50",
         text: "What type of event did the woman attend?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A theater performance",
           B: "A grand opening",
@@ -2956,7 +3093,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q51",
         text: "What does the woman imply when she says, \"That'll be quite challenging\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "She wants to apply for a new position.",
           B: "She does not think she can meet a deadline.",
@@ -2968,7 +3106,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q52",
         text: "What does the woman say she will do now?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Speak with her assistant",
           B: "Print out her résumé",
@@ -3023,7 +3162,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q53",
         text: "Why is the man calling the Springfield Community Center?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "He is looking for a backpack.",
           B: "He is researching a historical place.",
@@ -3035,7 +3175,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q54",
         text: "What does the woman warn the man about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "A busy time of the month",
           B: "An early store closing",
@@ -3047,7 +3188,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q55",
         text: "What does the man ask about using?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "A library",
           B: "A message board",
@@ -3098,7 +3240,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q56",
         text: "Who most likely is the woman?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A cafeteria manager",
           B: "A hotel receptionist",
@@ -3110,7 +3253,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q57",
         text: "Why will the woman visit the man's business this afternoon?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To perform an inspection",
           B: "To select a product",
@@ -3122,7 +3266,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q58",
         text: "What does the man recommend that the woman bring?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Some measurements",
           B: "Some photographs",
@@ -3165,7 +3310,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q59",
         text: "Who most likely are the program participants?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Sales recruiters",
           B: "Prospective clients",
@@ -3177,7 +3323,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q60",
         text: "What does the man ask about?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "An office location",
           B: "A budget amount",
@@ -3189,7 +3336,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q61",
         text: "How should the participants communicate a request?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "By making a phone call",
           B: "By speaking with Ms. Park",
@@ -3228,7 +3376,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q62",
         text: "What kind of products does the woman's store sell?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Kitchen appliances",
           B: "Sporting goods",
@@ -3240,7 +3389,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q63",
         text: "Look at the graphic. Which model will the man buy?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Country",
           B: "Classic",
@@ -3252,7 +3402,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q64",
         text: "What is the man concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "A price",
           B: "A warranty",
@@ -3304,7 +3455,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q65",
         text: "What type of business is the woman calling?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A catering company",
           B: "A laundry service",
@@ -3316,7 +3468,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q66",
         text: "What does the man say his company is known for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Its prices",
           B: "Its locations",
@@ -3328,7 +3481,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q67",
         text: "Look at the graphic. What time will the delivery be made?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "6:00 A.M.",
           B: "7:00 A.M.",
@@ -3376,7 +3530,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q68",
         text: "Why does the man want to change an appointment?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "His car broke down.",
           B: "He has to attend a meeting.",
@@ -3388,7 +3543,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q69",
         text: "Look at the graphic. Who will the man see on Friday?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Dr. Fontana",
           B: "Dr. Miller",
@@ -3400,7 +3556,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t4-q70",
         text: "What will the man most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Answer some questions",
           B: "Visit a Web site",
@@ -3452,7 +3609,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q32",
         text: "Who most likely is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A photographer",
           B: "A journalist",
@@ -3464,7 +3622,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q33",
         text: "What is the man concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Contacting his assistant",
           B: "Locating a conference room",
@@ -3476,7 +3635,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q34",
         text: "What does the woman give the man?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some keys",
           B: "A parking pass",
@@ -3523,7 +3683,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q35",
         text: "What will be constructed at an airport?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A runway",
           B: "A parking area",
@@ -3535,7 +3696,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q36",
         text: "What is the residents' biggest concern?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Money",
           B: "Safety",
@@ -3547,7 +3709,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q37",
         text: "Why has a new meeting location been chosen?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "It is available on the weekend.",
           B: "It is closer to public transportation.",
@@ -3586,7 +3749,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q38",
         text: "Who most likely is the woman?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "An event organizer",
           B: "A marketing consultant",
@@ -3598,7 +3762,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q39",
         text: "What did the man order for the woman?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A computer tablet",
           B: "A credit card",
@@ -3610,7 +3775,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q40",
         text: "What does the man suggest the woman do?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Save receipts",
           B: "Return a handbook",
@@ -3653,7 +3819,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q41",
         text: "What will the man do next week?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Meet with some customers",
           B: "Attend a conference",
@@ -3665,7 +3832,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q42",
         text: "What does the man want the woman to recommend?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "City tours",
           B: "Transportation services",
@@ -3677,7 +3845,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q43",
         text: "What does the man say he will do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Look up an address",
           B: "Check a bus route",
@@ -3720,7 +3889,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q44",
         text: "What does the woman want to discuss?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Job candidates",
           B: "Vendor selections",
@@ -3732,7 +3902,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q45",
         text: "Why does the man say, \"The report's only half a page long\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To confirm some details",
           B: "To express disappointment",
@@ -3744,7 +3915,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q46",
         text: "What does the woman remind the man about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Checking a social media account",
           B: "Unpacking some equipment",
@@ -3895,7 +4067,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q47",
         text: "What city department does the man work in?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Parks and Recreation",
           B: "Water Management",
@@ -3907,7 +4080,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q48",
         text: "Why is the woman calling?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To complain about a fee",
           B: "To reserve a picnic area",
@@ -3919,7 +4093,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q49",
         text: "What will the man do for the woman?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Send a form",
           B: "Arrange an inspection",
@@ -3962,7 +4137,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q50",
         text: "What product is the woman talking about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Mobile phones",
           B: "Calculators",
@@ -3974,7 +4150,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q51",
         text: "What does the woman suggest doing?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Launching a new website",
           B: "Hiring temporary workers",
@@ -3986,7 +4163,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q52",
         text: "What information will the man provide this afternoon?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A budget",
           B: "An inventory count",
@@ -4025,7 +4203,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q53",
         text: "What project are the speakers working on?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A news article",
           B: "A training session",
@@ -4037,7 +4216,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q54",
         text: "What problem does the man mention?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "He has a scheduling conflict.",
           B: "He missed a presentation.",
@@ -4049,7 +4229,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q55",
         text: "What will the man do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Make a phone call",
           B: "Share some images",
@@ -4100,7 +4281,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q56",
         text: "Where does the conversation most likely take place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a hotel",
           B: "At a flower farm",
@@ -4112,7 +4294,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q57",
         text: "What did the man have a problem with this morning?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "An identification badge",
           B: "A parking pass",
@@ -4124,7 +4307,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q58",
         text: "What will the speakers most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Fill out some forms",
           B: "Tour a facility",
@@ -4167,7 +4351,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q59",
         text: "What field do the speakers most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Education",
           B: "Finance",
@@ -4179,7 +4364,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q60",
         text: "What does the woman mean when she says, \"I've presented at that conference before\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "She has a lot of professional experience.",
           B: "She dislikes giving presentations.",
@@ -4191,7 +4377,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q61",
         text: "What do the speakers agree to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Temporarily close an office",
           B: "Postpone hiring an employee",
@@ -4238,7 +4425,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q62",
         text: "Look at the graphic. Which dish pattern is the man interested in?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "#4058",
           B: "#4062",
@@ -4250,7 +4438,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q63",
         text: "According to the man, what will happen in May?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A store will take inventory.",
           B: "A new restaurant will open.",
@@ -4262,7 +4451,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q64",
         text: "What problem does the woman mention?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Some shipping fees will increase.",
           B: "Some items will become unavailable.",
@@ -4310,7 +4500,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q65",
         text: "What type of business is the woman calling?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A railway company",
           B: "A bus company",
@@ -4322,7 +4513,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q66",
         text: "Look at the graphic. What number will be updated?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "3",
           B: "22",
@@ -4334,7 +4526,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q67",
         text: "What will the man most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Collect some money",
           B: "Check a seat assignment",
@@ -4390,7 +4583,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q68",
         text: "What does the man ask the woman for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some plastic ties",
           B: "Some computer cables",
@@ -4402,7 +4596,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q69",
         text: "What is the man doing tomorrow?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Inspecting a factory",
           B: "Upgrading a company database",
@@ -4414,7 +4609,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t5-q70",
         text: "Look at the graphic. Which brand did the man buy?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Beep It",
           B: "Filez",
@@ -4458,7 +4654,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q32",
         text: "What kind of business does the man own?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A laundry service",
           B: "A cosmetics company",
@@ -4470,7 +4667,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q33",
         text: "What does the man want to know?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Who to contact about a purchase",
           B: "Where to send some documents",
@@ -4482,7 +4680,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q34",
         text: "What does the woman ask the man to provide?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "An order number",
           B: "A return mailing address",
@@ -4525,7 +4724,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q35",
         text: "Where most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "On a bus",
           B: "On a train",
@@ -4537,7 +4737,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q36",
         text: "What type of entertainment are the speakers discussing?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Music",
           B: "Games",
@@ -4549,7 +4750,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q37",
         text: "What does the woman say is convenient?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Being able to download an item",
           B: "Taking a direct route",
@@ -4592,7 +4794,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q38",
         text: "What industry does the woman most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Landscaping",
           B: "Health care",
@@ -4604,7 +4807,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q39",
         text: "What does the man say he is concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Cost",
           B: "Variety",
@@ -4616,7 +4820,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q40",
         text: "What will the speakers do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Look at a slideshow",
           B: "Have a meal",
@@ -4655,7 +4860,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q41",
         text: "What product are the speakers discussing?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Cameras",
           B: "Fitness trackers",
@@ -4667,7 +4873,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q42",
         text: "What complaint did customers have about the product?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It was unavailable in stores.",
           B: "The price was too high.",
@@ -4679,7 +4886,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q43",
         text: "What does the man suggest doing?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Revising a budget",
           B: "Postponing a product launch",
@@ -4722,7 +4930,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q44",
         text: "What is the topic of the conversation?",
-        questionType: "GIST",
+        classification: "DETAIL",
+
         options: {
           A: "Recruiting staff",
           B: "Marketing a product",
@@ -4734,7 +4943,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q45",
         text: "Where does the man say he used to work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a driving school",
           B: "At an automobile factory",
@@ -4746,7 +4956,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q46",
         text: "Who will the speakers meet with next?",
-        questionType: "WHO_LOC",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "A real estate agent",
           B: "A delivery person",
@@ -4797,7 +5008,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q47",
         text: "What problem does the woman have?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "She lost her keys.",
           B: "Her phone screen has cracked.",
@@ -4809,7 +5021,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q48",
         text: "What did the woman pay extra for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An extended warranty",
           B: "Twenty-four-hour assistance",
@@ -4821,7 +5034,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q49",
         text: "What does the man suggest the woman do?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Fill out a refund request",
           B: "Call another store",
@@ -4860,7 +5074,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q50",
         text: "Who is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A software designer",
           B: "A landscape architect",
@@ -4872,7 +5087,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q51",
         text: "What reason does the woman give for making a change?",
-        questionType: "DETAIL",
+        classification: "WHY_REASON",
+
         options: {
           A: "The business hours would be more convenient.",
           B: "The quality of materials would be better.",
@@ -4884,7 +5100,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q52",
         text: "What does the man ask the woman to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Visit a work site",
           B: "Send a contract",
@@ -4927,7 +5144,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q53",
         text: "What are the speakers preparing for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A client visit",
           B: "An employee orientation",
@@ -4939,7 +5157,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q54",
         text: "What does the woman say she needs to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Send some instructions",
           B: "Make a reservation",
@@ -4951,7 +5170,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q55",
         text: "Why does the woman say, \"The office supply store has a sale\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To extend an invitation",
           B: "To make a correction",
@@ -4998,7 +5218,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q56",
         text: "Which department do the speakers most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Human Resources",
           B: "Shipping",
@@ -5010,7 +5231,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q57",
         text: "Why are the women surprised?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "An event was canceled.",
           B: "A coworker retired on short notice.",
@@ -5022,7 +5244,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q58",
         text: "What complaint does the man have about a previous training?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It was not offered to all workers.",
           B: "It was not detailed enough.",
@@ -5065,7 +5288,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q59",
         text: "Why does the woman want to move out of her current apartment?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "It is far from her workplace.",
           B: "It is too small.",
@@ -5077,7 +5301,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q60",
         text: "What does the man mean when he says, \"I should be able to lease that unit pretty quickly\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "A rental payment will likely be reduced.",
           B: "Investing in a property would be profitable.",
@@ -5089,7 +5314,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q61",
         text: "What will the woman most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Post an advertisement",
           B: "Complete a form",
@@ -5136,7 +5362,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q62",
         text: "Why does the man ask the woman to work an extra shift?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "The store needs cleaning.",
           B: "A sale will happen soon.",
@@ -5148,7 +5375,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q63",
         text: "Look at the graphic. Which book is needed for an upcoming event?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Cooking with Kids",
           B: "Delicious Dinners",
@@ -5160,7 +5388,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q64",
         text: "Why does the man expect an event to be crowded?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "It is on a holiday weekend.",
           B: "It was advertised on television.",
@@ -5212,7 +5441,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q65",
         text: "What did the East Lake Band recently do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "They won a music award.",
           B: "They went on a national tour.",
@@ -5224,7 +5454,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q66",
         text: "Look at the graphic. Where do the speakers plan to sit?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "In Section 1",
           B: "In Section 2",
@@ -5236,7 +5467,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q67",
         text: "What does the man offer to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Pick up some tickets",
           B: "Provide transportation",
@@ -5284,7 +5516,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q68",
         text: "What does the man plan to do during his meeting?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Resolve a security issue",
           B: "Review a travel policy",
@@ -5296,7 +5529,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q69",
         text: "Look at the graphic. Which one of the woman's meetings will be changed?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Budget Meeting",
           B: "Training Meeting",
@@ -5308,7 +5542,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t6-q70",
         text: "What does the woman say she would like to improve?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Her technical knowledge",
           B: "Her organizational skills",
@@ -5348,7 +5583,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q32",
         text: "Where most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a fitness center",
           B: "At a doctor's office",
@@ -5360,7 +5596,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q33",
         text: "What did the woman do in advance?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "She checked some business hours.",
           B: "She made a list of questions.",
@@ -5372,7 +5609,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q34",
         text: "What does the woman say she will do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Get her coat",
           B: "Return to a parking garage",
@@ -5419,7 +5657,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q35",
         text: "Where most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a farm",
           B: "At a restaurant",
@@ -5431,7 +5670,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q36",
         text: "What does the woman say will happen soon?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some friends will join her.",
           B: "She will apply for a job.",
@@ -5443,7 +5683,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q37",
         text: "What does the man imply when he says, \"They're selling quickly\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "An item may be unavailable soon.",
           B: "An item is not expensive.",
@@ -5494,7 +5735,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q38",
         text: "Where does the man most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a ferry terminal",
           B: "At a bus depot",
@@ -5506,7 +5748,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q39",
         text: "What problem does the woman have?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Her colleague is late.",
           B: "Her suitcase is broken.",
@@ -5518,7 +5761,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q40",
         text: "What will the man borrow from one of his coworkers?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A pen",
           B: "A key",
@@ -5561,7 +5805,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q41",
         text: "Where do the women work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a construction company",
           B: "At an automotive factory",
@@ -5573,7 +5818,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q42",
         text: "What is the man's job?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "Warehouse manager",
           B: "Computer engineer",
@@ -5585,7 +5831,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q43",
         text: "What does Insook plan to do in the afternoon?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Finalize a contract",
           B: "Watch a demonstration",
@@ -5636,7 +5883,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q44",
         text: "Why is the man calling?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To hire a moving truck",
           B: "To schedule a job interview",
@@ -5648,7 +5896,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q45",
         text: "What does the woman suggest the man do soon?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Create an online account",
           B: "Schedule an appointment",
@@ -5660,7 +5909,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q46",
         text: "What does the man say he will do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Call back next week",
           B: "Write a report",
@@ -5699,7 +5949,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q47",
         text: "Why was the man late to work?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "He was stuck in traffic.",
           B: "He missed a train.",
@@ -5711,7 +5962,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q48",
         text: "What is scheduled to be delivered today?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Company uniforms",
           B: "Desktop computers",
@@ -5723,7 +5975,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q49",
         text: "What business will the man call?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A plumbing service",
           B: "A catering company",
@@ -5774,7 +6027,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q50",
         text: "Who most likely is the woman?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A client",
           B: "A supervisor",
@@ -5786,7 +6040,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q51",
         text: "What is a benefit of a new material?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It is strong.",
           B: "It is lightweight.",
@@ -5798,7 +6053,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q52",
         text: "What will the speakers do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Contact a colleague",
           B: "Plan a celebration",
@@ -5845,7 +6101,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q53",
         text: "What type of event are the speakers discussing?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "A holiday party",
           B: "A conference",
@@ -5857,7 +6114,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q54",
         text: "What does the woman say attendees will receive?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A discounted rate",
           B: "A raffle ticket",
@@ -5869,7 +6127,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q55",
         text: "What do the speakers need to do soon?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Write a short speech",
           B: "Submit a budget report",
@@ -5912,7 +6171,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q56",
         text: "Who most likely is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "An advertising executive",
           B: "A factory manager",
@@ -5924,7 +6184,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q57",
         text: "What does the woman imply when she says, \"Our clients are interested in environmentally friendly products\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "She is frustrated with her clients.",
           B: "She is surprised by some feedback.",
@@ -5936,7 +6197,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q58",
         text: "What does the man say will take place on Friday?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "An awards ceremony",
           B: "A managers' meeting",
@@ -5975,7 +6237,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q59",
         text: "Who is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "An art gallery owner",
           B: "A store manager",
@@ -5987,7 +6250,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q60",
         text: "What does the woman say happened last week?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "She visited some relatives.",
           B: "She received a raise.",
@@ -5999,7 +6263,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q61",
         text: "What does the man recommend doing?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Postponing a project",
           B: "Using a mobile phone application",
@@ -6050,7 +6315,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q62",
         text: "What problem are the speakers mainly discussing?",
-        questionType: "GIST",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "An event venue is unavailable.",
           B: "A project deadline has passed.",
@@ -6062,7 +6328,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q63",
         text: "Look at the graphic. Whose e-mail does the woman mention?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Claudine Li's",
           B: "Elise Choi's",
@@ -6074,7 +6341,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q64",
         text: "What event will happen this weekend?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A local election",
           B: "A corporate fund-raiser",
@@ -6110,7 +6378,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q65",
         text: "What does the man say the store has recently done?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Replaced some equipment",
           B: "Updated a company logo",
@@ -6122,7 +6391,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q66",
         text: "Look at the graphic. Which item will the store order?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Item 231",
           B: "Item 498",
@@ -6134,7 +6404,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q67",
         text: "What does the man say he will do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Print a receipt",
           B: "Stock some shelves",
@@ -6178,7 +6449,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q68",
         text: "Who most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Lawyers",
           B: "Bakers",
@@ -6190,7 +6462,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q69",
         text: "Look at the graphic. Which building does the man say he likes?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Building 1",
           B: "Building 2",
@@ -6202,7 +6475,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t7-q70",
         text: "What does the woman ask the man to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "E-mail a real estate agent",
           B: "Make a lunch reservation",
@@ -6242,7 +6516,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q32",
         text: "Where are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a museum",
           B: "At a public library",
@@ -6254,7 +6529,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q33",
         text: "What type of pass does the woman qualify for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Student",
           B: "Local resident",
@@ -6266,7 +6542,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q34",
         text: "What will the man check?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A ticket",
           B: "A receipt",
@@ -6313,7 +6590,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q35",
         text: "What type of business does the woman work for?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "A construction company",
           B: "A real estate agency",
@@ -6325,7 +6603,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q36",
         text: "What does the man ask the woman to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Reschedule an appointment",
           B: "Forward a telephone call",
@@ -6337,7 +6616,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q37",
         text: "What does the woman say a business has recently done?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It has updated a payment system.",
           B: "It has purchased new equipment.",
@@ -6380,7 +6660,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q38",
         text: "Why is a street blocked off?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "A tree is being removed.",
           B: "A car is being towed.",
@@ -6392,7 +6673,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q39",
         text: "What most likely is the woman's profession?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Auto mechanic",
           B: "Musician",
@@ -6404,7 +6686,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q40",
         text: "What does the man suggest the woman do?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Purchase an electric car",
           B: "File a complaint",
@@ -6443,7 +6726,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q41",
         text: "Where do the speakers work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a grocery store",
           B: "At a cooking school",
@@ -6455,7 +6739,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q42",
         text: "What does the woman ask the man to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Make some deliveries",
           B: "Open a cash register",
@@ -6467,7 +6752,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q43",
         text: "What does the woman imply when she says, \"we open at seven\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "The man must work quickly.",
           B: "The man should take a break.",
@@ -6510,7 +6796,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q44",
         text: "Who most likely is the woman?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A graphic designer",
           B: "A sales person",
@@ -6522,7 +6809,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q45",
         text: "Why is the woman worried she might not be offered a job?",
-        questionType: "WHO_LOC",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "She missed an application deadline.",
           B: "She has limited experience.",
@@ -6534,7 +6822,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q46",
         text: "What does the woman say she will do on Thursday?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Call a recruiter",
           B: "Tour a factory",
@@ -6581,7 +6870,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q47",
         text: "Where does the conversation take place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a bookshop",
           B: "At a supermarket",
@@ -6593,7 +6883,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q48",
         text: "What is the purpose of the man's visit?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "To have an item appraised",
           B: "To film a commercial",
@@ -6605,7 +6896,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q49",
         text: "According to Margaret, what can be found by the entrance?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A shopping basket",
           B: "A brochure",
@@ -6652,7 +6944,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q50",
         text: "Where does the man most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a hotel",
           B: "At a post office",
@@ -6664,7 +6957,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q51",
         text: "Why was the woman unavailable for two weeks?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "She was on vacation.",
           B: "She was moving to a new location.",
@@ -6676,7 +6970,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q52",
         text: "What does the man recommend doing?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Filing a complaint",
           B: "Visiting another location",
@@ -6723,7 +7018,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q53",
         text: "According to the speakers, what has recently been completed?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A map",
           B: "A brochure",
@@ -6735,7 +7031,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q54",
         text: "What do the women suggest doing?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Expanding parking areas",
           B: "Organizing an art festival",
@@ -6747,7 +7044,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q55",
         text: "Why will Priyanka post a public notice?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To identify ticket sale locations",
           B: "To encourage people to vote",
@@ -6782,7 +7080,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q56",
         text: "Where do the speakers most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a cosmetics company",
           B: "At a home appliance outlet",
@@ -6794,7 +7093,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q57",
         text: "What does the man say about some new machinery?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It requires very little maintenance.",
           B: "It is easy to learn how to use.",
@@ -6806,7 +7106,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q58",
         text: "What does the woman ask the man to prepare?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "A price list",
           B: "A meeting invitation",
@@ -6853,7 +7154,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q59",
         text: "Why did the man miss a conference?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "His plane was delayed.",
           B: "He was busy with a project.",
@@ -6865,7 +7167,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q60",
         text: "What does the man recommend the woman do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Edit a press release",
           B: "Consult with a coworker",
@@ -6877,7 +7180,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q61",
         text: "What does the woman mean when she says, \"I ran out of handouts\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "She was unprepared for a presentation.",
           B: "A coworker made an error.",
@@ -6928,7 +7232,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q62",
         text: "What will the speakers ask about?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "A refund",
           B: "A seat change",
@@ -6940,7 +7245,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q63",
         text: "What do the speakers want to prepare for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An employee interview",
           B: "A meeting with potential clients",
@@ -6952,7 +7258,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q64",
         text: "Look at the graphic. What platform will speakers go to?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Platform 3",
           B: "Platform 9",
@@ -6992,7 +7299,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q65",
         text: "Who most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Landscapers",
           B: "Photographers",
@@ -7004,7 +7312,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q66",
         text: "What will the man do after he leaves?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Have a vehicle repaired",
           B: "E-mail a contract",
@@ -7016,7 +7325,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q67",
         text: "Look at the graphic. Where will the woman put up a sign?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "At location A",
           B: "At location B",
@@ -7064,7 +7374,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q68",
         text: "Who recommended that the woman subscribe to the Portsville Times?",
-        questionType: "WHO_LOC",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "A professor",
           B: "A friend",
@@ -7076,7 +7387,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q69",
         text: "Look at the graphic. Which subscription option does the man recommend?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Option 1",
           B: "Option 2",
@@ -7088,7 +7400,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t8-q70",
         text: "What will the man most likely do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Confirm an address",
           B: "Choose a password",
@@ -7140,7 +7453,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q32",
         text: "Where does the man work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a department store",
           B: "At a bank",
@@ -7152,7 +7466,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q33",
         text: "Why is the woman calling?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To confirm a payment amount",
           B: "To schedule an appointment",
@@ -7164,7 +7479,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q34",
         text: "What does the man ask for?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "A confirmation number",
           B: "A location",
@@ -7207,7 +7523,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q35",
         text: "Where does the conversation most likely take place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a museum",
           B: "At a library",
@@ -7219,7 +7536,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q36",
         text: "Why is the man visiting?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To meet a friend",
           B: "To take some photographs",
@@ -7231,7 +7549,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q37",
         text: "Why does the woman suggest that the man hurry?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "An event will begin shortly.",
           B: "Closing time is approaching.",
@@ -7266,7 +7585,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q38",
         text: "Who is Chris Suzuki?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A shift manager",
           B: "An inspector",
@@ -7278,7 +7598,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q39",
         text: "Where is the conversation most likely taking place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "In a hardware store",
           B: "In a factory",
@@ -7290,7 +7611,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q40",
         text: "What will the woman probably do next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Negotiate a contract with Chris",
           B: "Review scheduling procedures with Chris",
@@ -7337,7 +7659,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q41",
         text: "What will most likely be celebrated on Friday?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "A promotion",
           B: "A retirement",
@@ -7349,7 +7672,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q42",
         text: "What does the man offer to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Look for a receipt",
           B: "Send invitations",
@@ -7361,7 +7685,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q43",
         text: "What does the woman say she is looking forward to?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Visiting her family",
           B: "Moving to a different city",
@@ -7412,7 +7737,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q44",
         text: "What was the problem with the man's previous floor mat?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "It was not durable.",
           B: "It had a strong odor.",
@@ -7424,7 +7750,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q45",
         text: "What does the woman invite the man to do?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "View images in a catalog",
           B: "Read about special features",
@@ -7436,7 +7763,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q46",
         text: "According to the woman, why is a manufacturer proud of its floor mats?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "They are easy to clean.",
           B: "They can be used on a variety of surfaces.",
@@ -7475,7 +7803,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q47",
         text: "What industry do the speakers most likely work in?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "Music",
           B: "Restaurant",
@@ -7487,7 +7816,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q48",
         text: "What does the man mean when he says, \"we just switched to a new software program\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "He needs to consult a user's manual.",
           B: "The quality of his work will improve.",
@@ -7499,7 +7829,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q49",
         text: "Why does the woman congratulate the man?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "He won an award.",
           B: "He received a promotion.",
@@ -7546,7 +7877,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q50",
         text: "What do the women want to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Rent a car",
           B: "Buy ferry tickets",
@@ -7558,7 +7890,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q51",
         text: "What does the man say was recently introduced?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A customer loyalty program",
           B: "An online feedback form",
@@ -7570,7 +7903,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q52",
         text: "What does the man suggest the women do?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Purchase some postcards",
           B: "Visit a historic site",
@@ -7625,7 +7959,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q53",
         text: "Where are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a fund-raiser",
           B: "At a trade show",
@@ -7637,7 +7972,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q54",
         text: "What kind of products does the man's company make?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Jewelry",
           B: "Handbags",
@@ -7649,7 +7985,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q55",
         text: "What does the man suggest doing?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Leaving a business card",
           B: "Registering online",
@@ -7688,7 +8025,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q56",
         text: "Who most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "News reporters",
           B: "Travel agents",
@@ -7700,7 +8038,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q57",
         text: "Why is the man concerned?",
-        questionType: "INFERENCE",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "He forgot to make a phone call.",
           B: "He might miss a deadline.",
@@ -7712,7 +8051,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q58",
         text: "Why does the woman say, \"they're hosting a big press conference at noon\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To suggest attending an event",
           B: "To inform the man about a schedule change",
@@ -7751,7 +8091,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q59",
         text: "Where do the speakers most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a real estate agency",
           B: "At a florist shop",
@@ -7763,7 +8104,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q60",
         text: "What do the speakers agree to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Promote some products on a Web site",
           B: "Send e-mails to previous customers",
@@ -7775,7 +8117,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q61",
         text: "Who does the man say he will contact?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "An administrative assistant",
           B: "An Internet provider",
@@ -7810,7 +8153,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q62",
         text: "What is the woman planning?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A product launch",
           B: "A charity event",
@@ -7822,7 +8166,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q63",
         text: "Look at the graphic. Which room will the woman most likely reserve?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "The Arroyo Room",
           B: "The Salinas Room",
@@ -7834,7 +8179,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q64",
         text: "What does the man say he will provide?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some measurements",
           B: "Some menu options",
@@ -7886,7 +8232,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q65",
         text: "Who most likely is the woman?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A commercial pilot",
           B: "A regional manager",
@@ -7898,7 +8245,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q66",
         text: "Look at the graphic. Which airport does the man point out?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Smithville Airport",
           B: "Greenview Airport",
@@ -7910,7 +8258,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q67",
         text: "What does the man recommend?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Adjusting travel plans",
           B: "Changing a delivery time",
@@ -7966,7 +8315,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q68",
         text: "What event is taking place next month?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "A concert",
           B: "A fund-raiser",
@@ -7978,7 +8328,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q69",
         text: "Look at the graphic. How much will the selected item cost?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "$5.00",
           B: "$6.00",
@@ -7990,7 +8341,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t9-q70",
         text: "What will the man do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Revise a design",
           B: "Search a Web site",
@@ -8035,7 +8387,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q32",
         text: "What is the conversation mainly about?",
-        questionType: "GIST",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "A product launch",
           B: "A grand opening",
@@ -8047,7 +8400,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q33",
         text: "Why has the man been busy?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "He has been working on a presentation.",
           B: "He has just returned from a family vacation.",
@@ -8059,7 +8413,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q34",
         text: "What does the woman suggest that the man do soon?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Make a reservation",
           B: "Review some sales data",
@@ -8110,7 +8465,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q35",
         text: "Where is the conversation taking place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a bakery",
           B: "At an employment agency",
@@ -8122,7 +8478,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q36",
         text: "What does the woman ask about?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "An upcoming event",
           B: "A project deadline",
@@ -8134,7 +8491,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q37",
         text: "What does the man remind the woman to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Register on a Web site",
           B: "Send a document",
@@ -8181,7 +8539,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q38",
         text: "Where do the women work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a bookstore",
           B: "At a computer store",
@@ -8193,7 +8552,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q39",
         text: "What are the women worried about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Opening a branch office",
           B: "Competing with online stores",
@@ -8205,7 +8565,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q40",
         text: "What does the man recommend?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Advertising online",
           B: "Attending a trade show",
@@ -8252,7 +8613,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q41",
         text: "What kind of products do the speakers sell?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Cleaning products",
           B: "Car accessories",
@@ -8264,7 +8626,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q42",
         text: "What does the woman mean when she says, \"He's probably waiting outside\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "A customer needs help immediately.",
           B: "A manager wants to discuss a complaint.",
@@ -8276,7 +8639,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q43",
         text: "What do the staff sometimes forget to do?",
-        questionType: "DETAIL",
+        classification: "WHEN_TIME",
+
         options: {
           A: "Restock inventory",
           B: "Sign receipts",
@@ -8319,7 +8683,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q44",
         text: "Who most likely are the men?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Teachers",
           B: "Bakers",
@@ -8331,7 +8696,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q45",
         text: "Why are the men frustrated?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "Some work will have to be redone.",
           B: "Some tools have been misplaced.",
@@ -8343,7 +8709,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q46",
         text: "What does the woman want the men to review?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A revised budget",
           B: "A meeting agenda",
@@ -8390,7 +8757,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q47",
         text: "What does the man want to do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Renovate a building",
           B: "Create a community garden",
@@ -8402,7 +8770,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q48",
         text: "What problem does the woman mention about a project?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "It will be noisy.",
           B: "It will be expensive.",
@@ -8414,7 +8783,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q49",
         text: "What does the woman suggest the man do?",
-        questionType: "INFERENCE",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Apply for a loan",
           B: "Check a city map",
@@ -8453,7 +8823,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q50",
         text: "What industry does the woman work in?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Finance",
           B: "Farming",
@@ -8465,7 +8836,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q51",
         text: "What did the woman do recently?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "She received an award.",
           B: "She opened a new business.",
@@ -8477,7 +8849,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q52",
         text: "What will the woman most likely discuss next?",
-        questionType: "INFERENCE",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Choosing an appropriate software program",
           B: "Preparing for a job interview",
@@ -8512,7 +8885,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q53",
         text: "What kind of business do the speakers most likely own?",
-        questionType: "INFERENCE",
+        classification: "DETAIL",
+
         options: {
           A: "An architecture studio",
           B: "A restaurant",
@@ -8524,7 +8898,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q54",
         text: "What does the man want to order?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Furniture",
           B: "Office supplies",
@@ -8536,7 +8911,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q55",
         text: "Why does the woman say, \"I just checked the account balance an hour ago\"?",
-        questionType: "INFERENCE",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To offer an excuse",
           B: "To make a complaint",
@@ -8587,7 +8963,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q56",
         text: "Who most likely is the man?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "The woman's former landlord",
           B: "The woman's professor",
@@ -8599,7 +8976,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q57",
         text: "What does the woman say she will do soon?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Return to her parents' house",
           B: "Apply for a job",
@@ -8611,7 +8989,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q58",
         text: "What does the woman ask for?",
-        questionType: "DETAIL",
+        classification: "ASK_QUESTION",
+
         options: {
           A: "A house key",
           B: "A copy of a certificate",
@@ -8666,7 +9045,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q59",
         text: "Where most likely are the speakers?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "In a government office",
           B: "In a television studio",
@@ -8678,7 +9058,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q60",
         text: "What does the man mention about the Lansing Bridge?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "There is a lot of traffic on it today.",
           B: "There is a beautiful view from it.",
@@ -8690,7 +9071,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q61",
         text: "How can the listeners find out more information?",
-        questionType: "DETAIL",
+        classification: "HOW_METHOD",
+
         options: {
           A: "By visiting an information desk",
           B: "By requesting a brochure",
@@ -8729,7 +9111,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q62",
         text: "Why is the man calling?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To confirm he will teach a class",
           B: "To complain about a recent class",
@@ -8741,7 +9124,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q63",
         text: "Look at the graphic. Which class are the speakers discussing?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Knitting",
           B: "Painting",
@@ -8753,7 +9137,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q64",
         text: "What does the man plan to do in Chicago?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Go to a graduation ceremony",
           B: "Attend a wedding",
@@ -8793,7 +9178,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q65",
         text: "Where do the speakers most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a car rental service",
           B: "At a market research firm",
@@ -8805,7 +9191,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q66",
         text: "Look at the graphic. Where do the speakers plan to start advertising job openings?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "On job-related search engines",
           B: "On social media sites",
@@ -8817,7 +9204,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q67",
         text: "What does the man say he will do later today?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Propose a budget adjustment",
           B: "Attend a training session",
@@ -8861,7 +9249,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q68",
         text: "What is the woman having difficulty deciding on?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A color",
           B: "A fabric",
@@ -8873,7 +9262,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q69",
         text: "Why was the company's logo redesigned?",
-        questionType: "INFERENCE",
+        classification: "WHY_REASON",
+
         options: {
           A: "To reflect design trends",
           B: "To celebrate an anniversary",
@@ -8885,7 +9275,8 @@ export const part3RealTests: Part3Set[] = [
       {
         id: "p3-t10-q70",
         text: "Look at the graphic. Where will the company's logo be placed?",
-        questionType: "VISUAL",
+        classification: "GRAPHIC",
+
         options: {
           A: "Location 1",
           B: "Location 2",

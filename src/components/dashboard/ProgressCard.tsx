@@ -106,16 +106,16 @@ export function ProgressCard({ title, value, subValue, total, current, color, ic
     const percentage = total && current !== undefined ? Math.min((current / total) * 100, 100) : 0;
 
     return (
-        <div className={cn(`rounded-[2rem] p-6 text-white shadow-xl relative overflow-hidden transition-all`, style.bg, style.shadow, className)}>
+        <div className={cn(`rounded-2xl md:rounded-[2rem] p-3 md:p-6 text-white shadow-xl relative overflow-hidden transition-all`, style.bg, style.shadow, className)}>
             {Icon && (
-                <Icon className={cn("absolute -right-4 -top-4 w-24 h-24 opacity-30 rotate-12", style.text)} />
+                <Icon className={cn("absolute -right-2 -top-2 w-12 h-12 md:w-24 md:h-24 opacity-30 rotate-12", style.text)} />
             )}
 
-            <h3 className={cn("text-[10px] font-black uppercase tracking-widest mb-4", style.text)}>
+            <h3 className={cn("text-xs md:text-[10px] font-black uppercase tracking-widest mb-2 md:mb-4 pr-6 leading-none", style.text)}>
                 {title}
             </h3>
 
-            <div className="flex items-end justify-between mb-3 relative z-10">
+            <div className="flex items-end justify-between mb-1.5 md:mb-3 relative z-10">
                 <span className="text-4xl font-black italic tracking-tighter">{value}</span>
                 {subValue && (
                     <span className={cn("text-xs font-bold opacity-80", style.text)}>{subValue}</span>
@@ -123,7 +123,7 @@ export function ProgressCard({ title, value, subValue, total, current, color, ic
             </div>
 
             {(total && current !== undefined) && (
-                <div className="w-full bg-black/20 h-2 rounded-full overflow-hidden relative z-10">
+                <div className="w-full bg-black/20 h-1 md:h-2 rounded-full overflow-hidden relative z-10">
                     <div
                         className="bg-white h-full transition-all duration-1000 ease-out"
                         style={{ width: `${percentage}%` }}

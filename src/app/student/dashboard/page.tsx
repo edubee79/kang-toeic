@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { collection, query, where, getDocs, orderBy, doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
-import { Mic2, Headphones, BookOpen, PenSquare, Target, Clock, ArrowLeft, Calendar, BarChart2, TrendingUp, AlertTriangle, Zap, CheckCircle2 } from "lucide-react";
+import { Mic2, Headphones, BookOpen, PenSquare, Target, Clock, ArrowLeft, ArrowRight, Calendar, BarChart2, TrendingUp, AlertTriangle, Zap, CheckCircle2 } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -18,6 +18,7 @@ import { TargetSettingSection } from '@/components/dashboard/TargetSettingSectio
 import { ClassInfoCard } from '@/components/dashboard/ClassInfoCard';
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { NotificationSetter } from '@/components/dashboard/NotificationSetter';
+import { distributeGoals } from '@/utils/goal-utils';
 
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
     voca: { label: '단어 암기 (Voca)', total: 30, unit: 'Days', color: 'emerald', icon: BookOpen },
@@ -102,26 +103,47 @@ export default function StudentDashboard() {
     };
 
     const fetchWeaknessReport = async (userId: string) => {
+        // 1. Get user profile first to check for summary
+        const profile = await getUserProfile(userId);
+
+        // 2. If pre-calculated summary exists, use it! (Ultra fast)
+        if (profile?.performanceSummary) {
+            const summary = profile.performanceSummary;
+            setCurrentScore(summary.predictedTotal);
+            setCurrentStats({
+                p1_cur: summary.partStats.p1?.latest || 0,
+                p2_cur: summary.partStats.p2?.latest || 0,
+                p3_cur: summary.partStats.p3?.latest || 0,
+                p4_cur: summary.partStats.p4?.latest || 0,
+                p5_cur: summary.partStats.p5?.latest || 0,
+                p6_cur: summary.partStats.p6?.latest || 0,
+                p7s_cur: summary.partStats.p7s?.latest || 0,
+                p7d_cur: summary.partStats.p7d?.latest || 0,
+                p7f_cur: summary.partStats.p7f?.latest || 0
+            });
+
+            // Still fetch weakness report for tags/priority, but we can potentially optimize this later too
+            const report = await WeaknessService.analyzeUserWeakness(userId);
+            setWeaknessReport(report);
+            return;
+        }
+
+        // 3. Fallback to existing manual calculation if no summary
         const report = await WeaknessService.analyzeUserWeakness(userId);
         setWeaknessReport(report);
 
-        // ✅ Synchronize with Weakness Dashboard's manual calculation logic
         if (report && report.targetStats) {
-            // 1. Manually sum only the parts visible in the UI (matches Weakness Dashboard)
             const lcParts = ['p1', 'p2', 'p3', 'p4'];
             const rcParts = ['p5', 'p6', 'p7s', 'p7d'];
 
             const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
             const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
 
-            // 2. Apply the TOEIC conversion formula
             const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
             const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
 
-            // 3. Set the total score (matches the 165 or similar manual sum)
             setCurrentScore(Math.max(0, lcScore) + Math.max(0, rcScore));
 
-            // Update individual part stats for the table
             setCurrentStats({
                 p1_cur: report.targetStats.p1?.latest || 0,
                 p2_cur: report.targetStats.p2?.latest || 0,
@@ -167,12 +189,21 @@ export default function StudentDashboard() {
     const handleSaveTarget = async () => {
         if (!user) return;
         try {
+            // ✅ AI Force Allocation: If any part target is 0, auto-calculate before saving
+            const isAnyTargetEmpty = Object.values(editPartTargets).some(v => v === 0);
+            let finalPartTargets = editPartTargets;
+
+            if (isAnyTargetEmpty) {
+                console.log("Empty targets detected. AI is auto-allocating...");
+                finalPartTargets = distributeGoals(editTotalScore, editTargetLC, editTargetRC);
+            }
+
             const userRef = doc(db, 'Winter_Users', user.userId);
             await updateDoc(userRef, {
                 targetScore: editTotalScore,
                 targetLC: editTargetLC,
                 targetRC: editTargetRC,
-                partTargets: editPartTargets
+                partTargets: finalPartTargets
             });
             setIsEditingTarget(false);
             await fetchData(user.userId, user.className);
@@ -182,106 +213,11 @@ export default function StudentDashboard() {
     };
 
     const handleAutoAllocate = () => {
-        // 0. Synchronization: Ensure LC/RC add up to Total Score
-        let lc = Number(editTargetLC) || 0;
-        let rc = Number(editTargetRC) || 0;
-        const total = Number(editTotalScore) || 0;
+        const result = distributeGoals(editTotalScore, editTargetLC, editTargetRC);
 
-        if (lc + rc !== total || isNaN(lc) || isNaN(rc)) {
-            // If out of sync, distribute total score (roughly 52/48 split for LC/RC as typical strategy)
-            lc = Math.round((total * 0.52) / 5) * 5;
-            rc = total - lc;
-
-            // Re-cap if they exceed 495 (TOEIC max per section)
-            if (lc > 495) {
-                lc = 495;
-                rc = total - 495;
-            } else if (rc > 495) {
-                rc = 495;
-                lc = total - 495;
-            }
-
-            setEditTargetLC(lc);
-            setEditTargetRC(rc);
-        }
-
-        // 1. Calculate required question counts from total scores
-        // Logic: Score to Questions (Simplified inverse of calculator)
-        const requiredLC = Math.max(0, Math.min(100, Math.ceil((lc - 10) / 5)));
-        const requiredRC = Math.max(0, Math.min(100, Math.ceil((rc + 10) / 5)));
-
-        /**
-         * Strategic Distribution Logic: 
-         * - Proportional to Max Questions
-         * - +10% Weighted emphasis on 'Scoring Parts' (P1, P2, P5, P6)
-         */
-        const distributeStrategically = (budget: number, parts: Array<{ key: keyof typeof MAX_Q; isPriority: boolean }>) => {
-            const result: any = {};
-            if (budget <= 0) {
-                parts.forEach(p => result[p.key] = 0);
-                return result;
-            }
-
-            // Calculate denominator: Sum of (MaxQ * Multiplier)
-            const sumWeightedMax = parts.reduce((sum, p) => {
-                const multiplier = p.isPriority ? 1.1 : 0.95;
-                return sum + (MAX_Q[p.key] * multiplier);
-            }, 0);
-
-            // Calculate Base Achievement Rate (A)
-            const A = budget / sumWeightedMax;
-
-            let remainingBudget = budget;
-
-            // First pass: Assign targets capped at MAX_Q
-            parts.forEach(p => {
-                const multiplier = p.isPriority ? 1.1 : 0.95;
-                let target = Math.round(MAX_Q[p.key] * A * multiplier);
-                target = Math.max(0, Math.min(MAX_Q[p.key], target));
-                result[p.key] = target;
-                remainingBudget -= target;
-            });
-
-            // Second pass: Distribute any remaining due to caps or rounding
-            if (remainingBudget !== 0) {
-                // Sort by priority for the remainder
-                const sortedParts = [...parts].sort((a, b) => (b.isPriority ? 1 : 0) - (a.isPriority ? 1 : 0));
-                for (const p of sortedParts) {
-                    const room = remainingBudget > 0 ? (MAX_Q[p.key] - result[p.key]) : result[p.key];
-                    if (room > 0) {
-                        const add = remainingBudget > 0 ? Math.min(room, remainingBudget) : -Math.min(room, Math.abs(remainingBudget));
-                        result[p.key] += add;
-                        remainingBudget -= add;
-                    }
-                    if (remainingBudget === 0) break;
-                }
-            }
-
-            return result;
-        };
-
-        const lcParts = [
-            { key: 'p1_goal' as const, isPriority: true },
-            { key: 'p2_goal' as const, isPriority: true },
-            { key: 'p3_goal' as const, isPriority: false },
-            { key: 'p4_goal' as const, isPriority: false }
-        ];
-
-        const rcParts = [
-            { key: 'p5_goal' as const, isPriority: true },
-            { key: 'p6_goal' as const, isPriority: true },
-            { key: 'p7s_goal' as const, isPriority: false },
-            { key: 'p7d_goal' as const, isPriority: false }
-        ];
-
-        const lcResult = distributeStrategically(requiredLC, lcParts);
-        const rcResult = distributeStrategically(requiredRC, rcParts);
-
-        setEditPartTargets({
-            p1_goal: lcResult.p1_goal || 0, p2_goal: lcResult.p2_goal || 0, p3_goal: lcResult.p3_goal || 0, p4_goal: lcResult.p4_goal || 0,
-            p5_goal: rcResult.p5_goal || 0, p6_goal: rcResult.p6_goal || 0,
-            p7s_goal: rcResult.p7s_goal || 0, p7d_goal: rcResult.p7d_goal || 0
-        });
+        // Update UI states
+        setEditTargetLC(Number(editTotalScore * 0.52 / 5) * 5); // Rough visual update if needed, but distributeGoals handles math
+        setEditPartTargets(result);
     };
 
     const fetchAnalysis = async (userId: string) => {
@@ -332,6 +268,44 @@ export default function StudentDashboard() {
     };
 
     const fetchStats = async (userId: string) => {
+        const profile = await getUserProfile(userId);
+
+        // Use summary if available to skip heavy calculations
+        if (profile?.performanceSummary) {
+            const summary = profile.performanceSummary;
+            const latestScore: Record<string, number> = {};
+            const averageScore: Record<string, number> = {};
+            const completedCount: Record<string, number> = {};
+
+            Object.entries(summary.partStats).forEach(([p, stat]: [string, any]) => {
+                latestScore[p] = stat.latest;
+                averageScore[p] = stat.average;
+                completedCount[p] = stat.completedCount;
+            });
+
+            // Map back to long keys for compatibility with dashboard UI
+            const SHORT_TO_LONG: Record<string, string> = {
+                'p1': 'part1_test', 'p2': 'part2_test', 'p3': 'part3_test', 'p4': 'part4_test',
+                'p5': 'part5_test', 'p6': 'part6_test', 'p7s': 'part7_single', 'p7d': 'part7_double', 'p7f': 'part7_test'
+            };
+
+            const finalScores: Record<string, number> = {};
+            const finalLatest: Record<string, number> = {};
+            const finalStats: Record<string, number> = {};
+
+            Object.keys(summary.partStats).forEach(p => {
+                const longKey = SHORT_TO_LONG[p] || p;
+                finalScores[longKey] = Math.round(summary.partStats[p].average);
+                finalLatest[longKey] = summary.partStats[p].latest;
+                finalStats[longKey] = summary.partStats[p].completedCount;
+            });
+
+            setPartScores(finalScores);
+            setLatestScores(finalLatest);
+            setStats(finalStats);
+            return;
+        }
+
         try {
             const q = query(collection(db, "Manager_Results"), where("studentId", "==", userId));
             const querySnapshot = await getDocs(q);
@@ -439,54 +413,49 @@ export default function StudentDashboard() {
     if (!isMounted || (loading && !user)) return <div className="min-h-screen flex items-center justify-center text-slate-500 font-bold animate-pulse">데이터 로딩 중...</div>;
 
     return (
-        <div className="space-y-8 max-w-7xl mx-auto pb-20">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-                <div className="flex items-center gap-4">
-                    <Link href="/"><Button variant="ghost" className="text-slate-400 hover:text-white px-2 md:px-4"><ArrowLeft className="w-5 h-5 md:mr-2" /><span className="hidden md:inline">메인으로</span></Button></Link>
+        <div className="space-y-4 md:space-y-8 w-full pb-10 md:pb-20 px-0">
+            <div className="flex items-center justify-between gap-1 md:gap-6 px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
+                <div className="flex items-center gap-1 md:gap-4">
+                    <Link href="/"><Button variant="ghost" className="text-slate-400 hover:text-white px-1 md:px-4 h-7 md:h-10"><ArrowLeft className="w-4 h-4 md:w-5 md:h-5 md:mr-2" /></Button></Link>
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight">나의 학습방</h2>
-                        <p className="text-slate-400 text-sm">개인 맞춤형 학습 성취도 분석 및 과제 관리</p>
+                        <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter leading-none uppercase italic">Workspace</h2>
+                        <p className="text-[10px] md:text-sm mt-1 font-black uppercase tracking-widest text-indigo-400/90">
+                            {user?.userName || user?.name || user?.username}님의 학습 분석 & 과제
+                        </p>
                     </div>
                 </div>
-                <div className="flex items-center gap-3 self-end md:self-auto">
-                    {user?.userId && <NotificationSetter userId={user.userId} />}
-                    {user && <ClassInfoCard user={user} />}
+                <div className="flex items-center gap-2 self-center md:self-auto">
+                    {user?.userId && <div className="scale-[0.9] md:scale-100 origin-right"><NotificationSetter userId={user.userId} /></div>}
+                    {user && <div className="scale-[0.9] md:scale-100 origin-right"><ClassInfoCard user={user} /></div>}
                 </div>
             </div>
 
-            <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-                <div className="flex items-center gap-2 mb-4">
-                    <Calendar className="text-indigo-400 w-5 h-5" /><h3 className="text-lg font-bold text-white">오늘의 과제 (Assignments)</h3>
+            <div className="bg-slate-900/40 border-y border-slate-800/60 px-2 md:px-8 py-4 md:py-8">
+                <div className="flex items-center gap-2 mb-3 md:mb-6 px-1">
+                    <Calendar className="text-indigo-400 w-5 h-5" /><h3 className="text-sm md:text-lg font-black text-slate-300 uppercase tracking-widest">오늘의 과제</h3>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
                     {(() => {
                         const pending = assignments.filter(a => !completedMap[`${a.type}_${a.detail}`]).slice(0, 4);
                         if (pending.length === 0) {
                             return (
-                                <div className="col-span-full py-10 flex flex-col items-center justify-center bg-slate-800/20 rounded-xl border border-dashed border-slate-700">
+                                <div className="col-span-full py-8 md:py-12 flex flex-col items-center justify-center bg-slate-800/20 rounded-xl border border-dashed border-slate-700">
                                     <CheckCircle2 className="w-10 h-10 text-emerald-500 mb-3 opacity-50" />
-                                    <p className="text-slate-400 font-bold">오늘 지정된 모든 과제를 완료했습니다! 🎉</p>
-                                    <p className="text-slate-500 text-xs mt-1">새로운 과제가 배정될 때까지 기초 학습에 집중하세요.</p>
+                                    <p className="text-slate-300 font-black text-sm md:text-lg italic">오늘의 모든 과제 완료! 🎉</p>
                                 </div>
                             );
                         }
                         return pending.map((assign) => (
-                            <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id)} className="block h-full transform transition-all hover:scale-[1.02]">
-                                <Card className="p-4 flex justify-between items-center h-full border transition-all relative overflow-hidden bg-slate-800 border-indigo-500/30 shadow-lg">
-                                    <div className="flex items-center gap-4 relative z-10">
-                                        <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-indigo-500/10 text-indigo-400">
-                                            {(() => { const Icon = getHomeworkIcon(assign.type); return <Icon className="w-6 h-6" />; })()}
+                            <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id)} className="block h-full transition-all">
+                                <Card className="p-3 md:p-5 flex flex-col justify-between h-32 md:h-48 border transition-all relative overflow-hidden bg-slate-800/50 border-indigo-500/10 hover:border-indigo-500/50 group">
+                                    <div className="relative z-10 w-full">
+                                        <div className="flex justify-between items-start mb-2">
+                                            <Badge variant="outline" className="text-[10px] h-4 px-1.5 font-black border-0 bg-indigo-500/20 text-indigo-300 uppercase italic tracking-widest leading-none">{assign.typeLabel || assign.type}</Badge>
+                                            <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-indigo-400/80" />
                                         </div>
-                                        <div>
-                                            <div className="flex items-center gap-2 mb-0.5">
-                                                <Badge variant="outline" className="text-[10px] h-5 px-1.5 font-bold border-0 bg-indigo-500/10 text-indigo-400">{assign.typeLabel || assign.type}</Badge>
-                                            </div>
-                                            <p className="font-black text-lg text-white">{assign.detail}</p>
-                                        </div>
+                                        <p className="font-black text-[16px] md:text-2xl text-white leading-tight italic truncate w-full">{assign.detail}</p>
                                     </div>
-                                    <div className="relative z-10">
-                                        <Button size="sm" className="bg-indigo-600 hover:bg-indigo-500 shadow-lg font-bold">Start</Button>
-                                    </div>
+                                    <Button size="sm" className="w-full bg-indigo-600/80 hover:bg-indigo-600 h-8 md:h-10 text-xs md:text-sm font-black rounded-lg md:rounded-xl uppercase tracking-widest shadow-lg shadow-indigo-900/50">Start Now</Button>
                                 </Card>
                             </Link>
                         ));
@@ -494,66 +463,67 @@ export default function StudentDashboard() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <Card className="lg:col-span-3 bg-slate-900 border-rose-500/30 p-6 relative overflow-hidden">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
-                        <div className="flex items-center gap-2"><AlertTriangle className="text-rose-400 w-5 h-5" /><h3 className="text-lg font-bold text-white">AI 약점 정밀 분석 및 솔루션 (Diagnosis & Solution)</h3></div>
-                        <Button variant="outline" size="sm" onClick={() => router.push('/weakness/dashboard')} className="bg-slate-800 text-white border-indigo-500/30 hover:bg-slate-700 hover:text-indigo-300 font-bold px-4 h-9">
-                            <BarChart2 className="w-4 h-4 mr-1.5" />분석 리포트 & 트레이닝 이동
+            <div className="px-2 md:px-8">
+                <Card className="bg-slate-900/60 border-rose-500/20 p-4 md:p-8 relative overflow-hidden rounded-xl md:rounded-[2.5rem]">
+                    <div className="flex items-center justify-between mb-4 md:mb-8 px-1">
+                        <div className="flex items-center gap-3"><AlertTriangle className="text-rose-400 w-6 h-6" /><h3 className="text-[17px] md:text-2xl font-black text-white uppercase tracking-widest italic">AI 약점 분석</h3></div>
+                        <Button variant="outline" size="sm" onClick={() => router.push('/weakness/dashboard')} className="bg-slate-800 text-white border-indigo-500/20 h-9 md:h-11 text-xs md:text-sm px-3 md:px-6 font-black uppercase tracking-widest rounded-xl">
+                            <BarChart2 className="w-4 h-4 mr-2" />전체 리포트
                         </Button>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div className={cn("border rounded-lg p-4", (stats['voca'] || 0) < 15 ? "bg-rose-500/10 border-rose-500/20" : "bg-emerald-500/10 border-emerald-500/20")}>
-                            <div className="flex justify-between items-center mb-2"><span className={cn("font-bold text-sm", (stats['voca'] || 0) < 15 ? "text-rose-400" : "text-emerald-400")}>어휘력 (Vocabulary)</span><span className="text-xs text-slate-400">{stats['voca'] || 0} / 15 days</span></div>
-                            <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mb-2"><div className={cn("h-full rounded-full", (stats['voca'] || 0) < 15 ? "bg-rose-500" : "bg-emerald-500")} style={{ width: `${Math.min(100, ((stats['voca'] || 0) / 15) * 100)}%` }}></div></div>
-                            <p className="text-xs text-slate-400 leading-relaxed">{analysis?.vocaStatus?.message || "어휘 학습 이력을 분석하고 있습니다."}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div className={cn("border rounded-2xl p-4 md:p-6 transition-all", (stats['voca'] || 0) < 15 ? "bg-rose-500/5 border-rose-500/20" : "bg-emerald-500/5 border-emerald-500/20")}>
+                            <div className="flex justify-between items-center mb-3 text-sm md:text-base"><span className={cn("font-black uppercase italic tracking-widest", (stats['voca'] || 0) < 15 ? "text-rose-400" : "text-emerald-400")}>Voca Status</span><span className="text-slate-500 font-black ml-1 text-xs md:text-lg italic">{stats['voca'] || 0}/15d</span></div>
+                            <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden mb-3"><div className={cn("h-full rounded-full transition-all duration-1000", (stats['voca'] || 0) < 15 ? "bg-rose-500 shadow-[0_0_12px_rgba(244,63,94,0.5)]" : "bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.5)]")} style={{ width: `${Math.min(100, ((stats['voca'] || 0) / 15) * 100)}%` }}></div></div>
+                            <p className="text-[15px] md:text-lg text-slate-200 leading-tight font-black italic">{analysis?.vocaStatus?.message || "분석 데이터를 불러오는 중입니다."}</p>
                         </div>
-                        <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
-                            <div className="flex justify-between items-center mb-2"><span className="text-amber-400 font-bold text-sm">Part 5 분석: {analysis?.topWeakness?.label || '분석 중...'}</span><span className="text-xs text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded">{analysis?.topWeakness?.percentage || 0}%</span></div>
-                            <p className="text-xs text-slate-400 leading-relaxed">{analysis?.topWeakness?.message || "테스트 데이터가 충분하지 않습니다."}</p>
+                        <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 md:p-6">
+                            <div className="flex justify-between items-center mb-3 text-sm md:text-base"><span className="text-amber-400 font-black uppercase italic tracking-widest">Grammar Weakness</span><span className="text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded-lg text-xs md:text-base font-black italic">{analysis?.topWeakness?.percentage || 0}%</span></div>
+                            <p className="text-[15px] md:text-lg text-slate-200 leading-tight font-black italic">{analysis?.topWeakness?.label || "데이터를 분석 중입니다."}</p>
                         </div>
-                        <div className="bg-slate-800 border border-slate-700 rounded-lg p-4">
-                            <div className="flex justify-between items-center mb-2"><span className="text-indigo-400 font-bold text-sm">LC 청취 습관</span><Badge variant="outline" className="text-[10px] text-indigo-400 border-indigo-500/50">{analysis?.lcHabit?.status || '분석 중'}</Badge></div>
-                            <p className="text-xs text-slate-400 leading-relaxed">{analysis?.lcHabit?.message || "LC 학습 이력을 분석하고 있습니다."}</p>
+                        <div className="bg-indigo-500/5 border border-indigo-500/20 rounded-2xl p-4 md:p-6 md:col-span-2 lg:col-span-1">
+                            <div className="flex justify-between items-center mb-3 text-sm md:text-base"><span className="text-indigo-400 font-black uppercase italic tracking-widest">Listening Habit</span><Badge variant="outline" className="text-xs md:text-sm text-indigo-400 border-indigo-500/20 h-6 px-3 leading-none font-black italic uppercase">Excellent</Badge></div>
+                            <p className="text-[15px] md:text-lg text-slate-200 leading-tight font-black italic">{analysis?.lcHabit?.message || "LC 데이터를 분석 중입니다."}</p>
                         </div>
                     </div>
                 </Card>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="px-2 md:px-8">
                 {/* Detailed Target Card - From Weakness Dashboard */}
                 {weaknessReport && (
-                    <Card className="bg-slate-900 border-indigo-500/30 p-6 relative overflow-hidden text-inter">
+                    <Card className="bg-slate-900 border-indigo-500/30 p-4 md:p-8 relative overflow-hidden text-inter rounded-xl md:rounded-[2.5rem]">
                         <div className="absolute right-0 top-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl"></div>
                         <div className="relative z-10">
                             {!isEditingTarget ? (
                                 <>
-                                    <div className="flex justify-between items-start mb-6">
-                                        <div>
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <Target className="text-indigo-400 w-5 h-5" />
-                                                <h3 className="text-lg font-bold text-white">나의 목표 상세 현황</h3>
+                                    <div className="flex flex-col sm:flex-row justify-between items-start mb-6 md:mb-10 gap-4">
+                                        <div className="flex-1">
+                                            <div className="flex items-center gap-3 mb-2">
+                                                <Target className="text-indigo-400 w-6 h-6" />
+                                                <h3 className="text-[17px] md:text-2xl font-black text-white uppercase tracking-widest italic">Target Status</h3>
                                             </div>
-                                            <p className="text-slate-400 text-sm">
-                                                목표: <span className="text-white font-bold">{weaknessReport.targetScore}점</span>
-                                                (LC {weaknessReport.targetLCScore} / RC {weaknessReport.targetRCScore})
+                                            <p className="text-slate-400 text-xs md:text-lg font-black uppercase tracking-widest leading-none">
+                                                목표: <span className="text-indigo-400">{weaknessReport.targetScore}점</span>
+                                                <span className="mx-3 text-slate-800">/</span>
+                                                LC {weaknessReport.targetLCScore} <span className="mx-1 text-slate-800">|</span> RC {weaknessReport.targetRCScore}
                                             </p>
                                         </div>
                                         <Button
                                             onClick={handleEditTarget}
                                             variant="outline"
-                                            className="h-8 text-xs border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
+                                            className="w-full sm:w-auto h-10 md:h-12 text-[10px] md:text-xs border-indigo-500/50 text-indigo-400 font-black uppercase tracking-widest rounded-xl"
                                         >
-                                            목표 수정하기
+                                            목표 수정
                                         </Button>
                                     </div>
 
                                     {/* Comparison Grid */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                                         {/* LC Column */}
-                                        <div className="space-y-3">
-                                            <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
+                                        <div className="space-y-4">
+                                            <h4 className="text-xs md:text-lg font-black text-blue-400 mb-4 uppercase italic tracking-widest border-b border-blue-500/20 pb-2">Listening (LC)</h4>
                                             {[
                                                 { k: 'p1', label: 'P1' },
                                                 { k: 'p2', label: 'P2' },
@@ -567,23 +537,23 @@ export default function StudentDashboard() {
                                                 const gap = latest - goal;
 
                                                 return (
-                                                    <div key={k} className="flex items-center text-sm gap-2 font-inter">
-                                                        <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{label}</span>
-                                                        <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
-                                                            <div className="flex flex-col items-center min-w-[32px]">
-                                                                <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
-                                                                <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}개</span>
+                                                    <div key={k} className="flex items-center gap-2 md:gap-4 font-inter">
+                                                        <span className="text-slate-500 font-black w-10 text-center uppercase text-[12px] md:text-lg flex-shrink-0 italic">{label}</span>
+                                                        <div className="flex-1 flex justify-between items-center px-4 bg-slate-800/40 rounded-xl py-3 border border-slate-700/30">
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-slate-600 text-[10px] md:text-[11px] font-black uppercase mb-1">Goal</span>
+                                                                <span className="text-emerald-400 font-black text-[15px] md:text-xl tracking-tighter italic">{goal}</span>
                                                             </div>
-                                                            <div className="flex flex-col items-center min-w-[32px]">
-                                                                <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
-                                                                <span className="text-white font-bold text-sm tracking-tight">{current}</span>
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-slate-600 text-[10px] md:text-[11px] font-black uppercase mb-1">Avg</span>
+                                                                <span className="text-slate-300 font-black text-[15px] md:text-xl tracking-tighter italic">{current}</span>
                                                             </div>
-                                                            <div className="flex flex-col items-center min-w-[32px]">
-                                                                <span className="text-slate-500 text-[9px] mb-0.5">최근</span>
-                                                                <span className={cn("font-bold text-sm tracking-tight", latest >= goal ? "text-emerald-400" : "text-rose-400")}>{latest}</span>
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-slate-600 text-[10px] md:text-[11px] font-black uppercase mb-1">Last</span>
+                                                                <span className={cn("font-black text-[15px] md:text-xl tracking-tighter italic", latest >= goal ? "text-emerald-400" : "text-rose-400")}>{latest}</span>
                                                             </div>
                                                         </div>
-                                                        <span className={cn("text-[11px] w-10 text-right font-black flex-shrink-0 font-inter", gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                                        <span className={cn("text-[13px] md:text-lg w-10 text-right font-black flex-shrink-0 font-inter italic", gap < 0 ? "text-rose-500" : "text-emerald-500")}>
                                                             {gap !== 0 ? (gap > 0 ? `+${gap}` : gap) : '-'}
                                                         </span>
                                                     </div>
@@ -592,8 +562,8 @@ export default function StudentDashboard() {
                                         </div>
 
                                         {/* RC Column */}
-                                        <div className="space-y-3">
-                                            <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
+                                        <div className="space-y-4">
+                                            <h4 className="text-xs md:text-lg font-black text-indigo-400 mb-4 uppercase italic tracking-widest border-b border-indigo-500/20 pb-2">Reading (RC)</h4>
                                             {[
                                                 { k: 'p5', label: 'P5' },
                                                 { k: 'p6', label: 'P6' },
@@ -607,23 +577,23 @@ export default function StudentDashboard() {
                                                 const gap = latest - goal;
 
                                                 return (
-                                                    <div key={k} className="flex items-center text-sm gap-2 font-inter">
-                                                        <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{label}</span>
-                                                        <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
-                                                            <div className="flex flex-col items-center min-w-[32px]">
-                                                                <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
-                                                                <span className="text-emerald-400 font-bold text-sm tracking-tight">{goal}개</span>
+                                                    <div key={k} className="flex items-center gap-2 md:gap-4 font-inter">
+                                                        <span className="text-slate-500 font-black w-10 text-center uppercase text-[12px] md:text-lg flex-shrink-0 italic">{label}</span>
+                                                        <div className="flex-1 flex justify-between items-center px-4 bg-slate-800/40 rounded-xl py-3 border border-slate-700/30">
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-slate-600 text-[10px] md:text-[11px] font-black uppercase mb-1">Goal</span>
+                                                                <span className="text-emerald-400 font-black text-[15px] md:text-xl tracking-tighter italic">{goal}</span>
                                                             </div>
-                                                            <div className="flex flex-col items-center min-w-[32px]">
-                                                                <span className="text-slate-500 text-[9px] mb-0.5">평균</span>
-                                                                <span className="text-white font-bold text-sm tracking-tight">{current}</span>
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-slate-600 text-[10px] md:text-[11px] font-black uppercase mb-1">Avg</span>
+                                                                <span className="text-slate-300 font-black text-[15px] md:text-xl tracking-tighter italic">{current}</span>
                                                             </div>
-                                                            <div className="flex flex-col items-center min-w-[32px]">
-                                                                <span className="text-slate-500 text-[9px] mb-0.5">최근</span>
-                                                                <span className={cn("font-bold text-sm tracking-tight", latest >= goal ? "text-emerald-400" : "text-rose-400")}>{latest}</span>
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="text-slate-600 text-[10px] md:text-[11px] font-black uppercase mb-1">Last</span>
+                                                                <span className={cn("font-black text-[15px] md:text-xl tracking-tighter italic", latest >= goal ? "text-emerald-400" : "text-rose-400")}>{latest}</span>
                                                             </div>
                                                         </div>
-                                                        <span className={cn("text-[11px] w-10 text-right font-black flex-shrink-0 font-inter", gap < 0 ? "text-rose-500" : "text-slate-600")}>
+                                                        <span className={cn("text-[13px] md:text-lg w-10 text-right font-black flex-shrink-0 font-inter italic", gap < 0 ? "text-rose-500" : "text-emerald-500")}>
                                                             {gap !== 0 ? (gap > 0 ? `+${gap}` : gap) : '-'}
                                                         </span>
                                                     </div>
@@ -714,12 +684,12 @@ export default function StudentDashboard() {
             </div>
 
             <div>
-                <h3 className="text-xl font-bold text-slate-400 mb-4">전체 학습 현황</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <h3 className="text-base md:text-xl font-bold text-slate-400 mb-3 md:mb-4 px-1 uppercase tracking-wider">학습 지표</h3>
+                <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-1.5 md:gap-4">
                     {Object.entries(HOMEWORK_CONFIG).map(([key, config]) => {
                         const count = stats[key] || 0;
                         if (count === 0 && !['voca', 'grammar', 'part5_test'].includes(key)) return null;
-                        return <ProgressCard key={key} title={config.label} value={`${(count / config.total * 100).toFixed(0)}%`} subValue={`${count}/${config.total} ${config.unit}`} current={count} total={config.total} color={config.color as any} icon={config.icon} />;
+                        return <ProgressCard key={key} title={config.label.split('(')[0]} value={`${(count / config.total * 100).toFixed(0)}%`} subValue={`${count}/${config.total}`} current={count} total={config.total} color={config.color as any} icon={config.icon} />;
                     })}
                 </div>
             </div>

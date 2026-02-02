@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Loader2, ArrowLeft, Shield, Save, Lock, Zap, BookOpen, PenSquare, ChevronRight } from "lucide-react";
 import Link from 'next/link';
 import { getFeatureAccess, setFeatureAccess, FeatureAccess } from '@/services/configService';
+import { migrateAllUsersPerformance } from '@/scripts/migrate-performance';
 
 import { isAdmin } from '@/lib/adminAuth';
 
@@ -16,6 +17,7 @@ export default function AdminSettingsPage() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
+    const [migrating, setMigrating] = useState(false);
     const [access, setAccess] = useState<FeatureAccess>({
         part1: true,
         part2: true,
@@ -79,6 +81,20 @@ export default function AdminSettingsPage() {
             alert("저장 중 오류가 발생했습니다.");
         } finally {
             setSaving(false);
+        }
+    };
+
+    const handleMigrate = async () => {
+        if (!confirm("전체 학생의 성적 요약 데이터를 재생성하시겠습니까? 학생 수에 따라 시간이 소요될 수 있습니다.")) return;
+        setMigrating(true);
+        try {
+            await migrateAllUsersPerformance();
+            alert("모든 학생의 성적 데이터 동기화가 완료되었습니다.");
+        } catch (error) {
+            console.error(error);
+            alert("동기화 중 오류가 발생했습니다.");
+        } finally {
+            setMigrating(false);
         }
     };
 
@@ -185,6 +201,37 @@ export default function AdminSettingsPage() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </CardContent>
+                </Card>
+
+                <Card className="border-none shadow-xl bg-slate-900 rounded-[2rem] overflow-hidden">
+                    <CardHeader className="p-8">
+                        <div className="flex items-center gap-3 text-white">
+                            <Zap className="w-6 h-6 text-indigo-400" />
+                            <div>
+                                <CardTitle className="text-xl font-bold">System Maintenance</CardTitle>
+                                <CardDescription className="text-slate-400">시스템 성능 최적화 및 데이터 무결성 도구</CardDescription>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="p-8 pt-0">
+                        <div className="bg-white/5 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-white/10">
+                            <div>
+                                <h4 className="font-bold text-white mb-1">성적 요약 데이터 동기화 (Performance Sync)</h4>
+                                <p className="text-xs text-slate-400 leading-relaxed">
+                                    학생들의 파트별 평균, 최근값, 예상 점수를 미리 계산하여 저장합니다. <br />
+                                    대시보드 로딩이 느리거나 점수가 일치하지 않을 때 실행하십시오.
+                                </p>
+                            </div>
+                            <Button
+                                onClick={handleMigrate}
+                                disabled={migrating}
+                                className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-8 h-12 rounded-xl"
+                            >
+                                {migrating ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Zap className="w-4 h-4 mr-2" />}
+                                동기화 실행 (Migration)
+                            </Button>
                         </div>
                     </CardContent>
                 </Card>

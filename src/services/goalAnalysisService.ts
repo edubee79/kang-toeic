@@ -7,7 +7,7 @@
  * IMPORTANT: Uses SAME logic as student dashboard's fetchStats
  */
 
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { isActualTest, mapToPartKey, ManagerResult } from '@/lib/filters/actualTestFilter';
 
@@ -47,6 +47,26 @@ async function calculateActualTestStats(userId: string): Promise<Record<string, 
     );
 
     const snapshot = await getDocs(q);
+
+    // ✅ NEW OPTIMIZATION: Check for pre-calculated summary in User Profile
+    const userRef = doc(db, 'Winter_Users', userId);
+    const userSnap = await getDoc(userRef);
+    if (userSnap.exists()) {
+        const userData = userSnap.data();
+        if (userData.performanceSummary) {
+            const summary = userData.performanceSummary;
+            const fastStats: Record<string, { scores: number[], latest: number, average: number }> = {};
+
+            Object.entries(summary.partStats).forEach(([p, stat]: [string, any]) => {
+                fastStats[p] = {
+                    scores: Array(stat.completedCount).fill(stat.average), // Mocking score history length
+                    latest: stat.latest,
+                    average: stat.average
+                };
+            });
+            return fastStats;
+        }
+    }
 
     // Standard Short-form PART_MAX (Standardized across app)
     const PART_MAX: Record<string, number> = {
@@ -92,13 +112,27 @@ async function calculateActualTestStats(userId: string): Promise<Record<string, 
             }
             correct = Math.min(correct, max);
 
-            // Accumulate for average
-            scoreSums[type] = (scoreSums[type] || 0) + correct;
-            scoreCounts[type] = (scoreCounts[type] || 0) + 1;
+            // ✅ NEW: Hybrid Distribution for Full Part 7 (p7f) to support legacy data
+            if (type === 'p7f') {
+                const sCorrect = Math.round(correct * (29 / 54));
+                const dCorrect = correct - sCorrect;
 
-            // Pick LATEST (since docs are sorted by timestamp desc)
-            if (latestScore[type] === undefined) {
-                latestScore[type] = correct;
+                [['p7s', sCorrect], ['p7d', dCorrect]].forEach(([subKey, curCorrect]) => {
+                    const sub = subKey as string;
+                    const val = curCorrect as number;
+                    scoreSums[sub] = (scoreSums[sub] || 0) + val;
+                    scoreCounts[sub] = (scoreCounts[sub] || 0) + 1;
+                    if (latestScore[sub] === undefined) latestScore[sub] = val;
+                });
+            } else {
+                // Accumulate for average
+                scoreSums[type] = (scoreSums[type] || 0) + correct;
+                scoreCounts[type] = (scoreCounts[type] || 0) + 1;
+
+                // Pick LATEST (since docs are sorted by timestamp desc)
+                if (latestScore[type] === undefined) {
+                    latestScore[type] = correct;
+                }
             }
         }
     });

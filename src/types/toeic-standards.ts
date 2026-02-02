@@ -30,7 +30,8 @@ export type LCP4ContextTag =
 /** Part 3/4: Question Type (9) */
 export type LCP34QuestionTag =
     | 'DETAIL' | 'WHO_LOC' | 'WHAT_WHICH' | 'WHEN_TIME' | 'WHY_REASON'
-    | 'HOW_METHOD' | 'ACTION_NEXT' | 'IMPLY_MEANING' | 'GRAPHIC';
+    | 'HOW_METHOD' | 'ACTION_NEXT' | 'IMPLY_MEANING' | 'GRAPHIC'
+    | 'ASK_QUESTION' | 'OFFER_SUGGEST' | 'PROBLEM_CONCERN';
 
 // --- RC: Reading Comprehension (99 Items) ---
 
@@ -71,8 +72,7 @@ export type RCPassageGroupTag =
     | 'P5' | 'P6' | 'P7' | 'P8'
     | 'P1_CORR' | 'P2_OFFI' | 'P3_MEDI' | 'P4_MARK'
     | 'P5_FORM' | 'P6_RULE' | 'P7_CONV' | 'P8_VISU'
-    | 'P1_CORR' | 'P2_OFFI' | 'P3_MEDI' | 'P4_MARK'
-    | 'P5_FORM' | 'P6_RULE' | 'P7_CONV' | 'P8_VISU';
+
 
 /** Root TOEIC Tag Union */
 export type ToeicTag =
@@ -165,6 +165,9 @@ export const TOEIC_TAG_REGISTRY: Record<ToeicTag, { label: string, description: 
     'ACTION_NEXT': { label: '향후 행동 예측', description: '화자가 직후에 할 일에 대한 추론' },
     'IMPLY_MEANING': { label: '발화자 의도 추론', description: '문맥 속 숨은 의미(따옴표) 파악' },
     'GRAPHIC': { label: '시각 정보 매칭', description: '소리와 도표 정보의 동시 처리 능력' },
+    'ASK_QUESTION': { label: '단순 정보 문의', description: '특정 정보에 대해 궁금해하거나 물어보는 사항 인지' },
+    'OFFER_SUGGEST': { label: '요청 및 제안 파악', description: '상대방에게 요청/부탁하거나 본인이 제안/제공하는 행동 인지' },
+    'PROBLEM_CONCERN': { label: '문제 및 우려 파악', description: '현재 겪고 있는 고충이나 걱정거리 파악' },
 
     // Part 5 - 1. Nouns etc
     'n1': { label: '명사 자리와 형태', description: '문장 내 주어/목적어 자리 명사 판단' },

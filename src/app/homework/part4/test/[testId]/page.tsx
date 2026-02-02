@@ -9,6 +9,7 @@ import { Headphones, PlayCircle, Activity, Trophy, RotateCcw } from "lucide-reac
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { TouchDictionary } from '@/components/common/TouchDictionary';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 
 export default function Part4TestRunnerPage() {
@@ -245,7 +246,7 @@ export default function Part4TestRunnerPage() {
             setTimeout(() => {
                 const nextEl = questionRefs.current[nextId];
                 if (nextEl) {
-                    const yOffset = -100; // Adjusted offset for better visibility
+                    const yOffset = -160; // Increased offset to clear sticky header
                     const y = nextEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                 }
@@ -328,6 +329,8 @@ export default function Part4TestRunnerPage() {
                     incorrectQuestions: incorrectQuestions,
                     timestamp: serverTimestamp()
                 });
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid);
                 console.log("Score saved to Firebase");
             } catch (e) {
                 console.error("Save error:", e);
@@ -560,7 +563,7 @@ export default function Part4TestRunnerPage() {
                                         "flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center font-black text-xs border transition-colors",
                                         "bg-slate-800 text-slate-500 border-slate-700"
                                     )}>
-                                        {q.id.replace('q', '')}
+                                        {q.id.includes('-q') ? q.id.split('-q')[1] : q.id.replace('q', '')}
                                     </div>
                                     <div className="flex-1 space-y-4">
                                         <div className={cn(
@@ -593,7 +596,7 @@ export default function Part4TestRunnerPage() {
                                                         onClick={() => handleSelect(q.id, opt.label)}
                                                         disabled={(!reviewMode && skimmingState === 'active') || revealedQuestions.has(q.id)}
                                                         className={cn(
-                                                            "text-left px-5 py-4 rounded-2xl transition-all duration-200 border relative overflow-hidden group",
+                                                            "text-left px-5 py-4 rounded-2xl transition-all duration-200 border relative overflow-hidden group flex items-center gap-4",
                                                             isSelected && !revealedQuestions.has(q.id)
                                                                 ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.1)]'
                                                                 : revealedQuestions.has(q.id) && opt.label === q.correctAnswer
@@ -605,7 +608,18 @@ export default function Part4TestRunnerPage() {
                                                             skimmingState === 'active' && "cursor-wait"
                                                         )}
                                                     >
-                                                        <span className={`font-black mr-3 text-xs ${isSelected || isCorrect ? 'text-indigo-500' : 'text-slate-700 group-hover:text-slate-500'}`}>{opt.label}</span>
+                                                        <div className={cn(
+                                                            "w-8 h-8 rounded-full flex items-center justify-center text-sm font-black shrink-0 border transition-all duration-200",
+                                                            isSelected && !revealedQuestions.has(q.id)
+                                                                ? "bg-indigo-600 text-white border-indigo-500"
+                                                                : revealedQuestions.has(q.id) && opt.label === q.correctAnswer
+                                                                    ? "bg-emerald-500 text-white border-emerald-500"
+                                                                    : revealedQuestions.has(q.id) && isSelected && opt.label !== q.correctAnswer
+                                                                        ? "bg-rose-500 text-white border-rose-500"
+                                                                        : "bg-slate-950 text-slate-600 border-slate-800 group-hover:border-slate-600 group-hover:text-slate-400"
+                                                        )}>
+                                                            {opt.label}
+                                                        </div>
                                                         <div className="flex-1 text-base font-bold tracking-tight">
                                                             {reviewMode ? (
                                                                 <TouchDictionary

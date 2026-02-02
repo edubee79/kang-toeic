@@ -10,14 +10,14 @@ export const rcPart7Test10: PracticeSet[] = [
             {
                 id: "p7-t10-s11-p1",
                 contextType: "P3",
-                type: "INFORMATION",
+                docType: "INFORMATION",
                 title: "Introduction to Project Management",
                 content: `Online Webinar\n18 January, 9 A.M.–2 P.M.\nPresenter: Shrijana Patel\nCost: €45\n(Register by 10 January and receive a 10% discount!)\n\nThis live webinar offers attendees a better understanding of how to improve the role that project management plays in their organizations. The presentation will provide the basics of managing projects and workers. Participants will learn strategies and best practices to effectively oversee their projects and foster buy-in from key players.\n\nParticipants will explore a simple step-by-step process for managing projects and learn how to use tools and documents such as scope statements and communication plans. The presenter will also cover topics such as developing a project's business case and facilitating productive team meetings.`
             },
             {
                 id: "p7-t10-s11-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Maya Liu\nFrom: Leonard Chung\nSubject: Webinar\nDate: 2 January\n\nDear Ms. Liu:\n\nThank you for sending me the webinar announcement. As a novice supervisor, I need to get all the training I can, but I'm not sure whether I will be able to take advantage of this particular offering. I am scheduled to present a detailed project update at my company's quarterly division meeting on the same day, and I don't think anyone else on the team would be able to take my place.\n\nDo you know whether the webinar will be recorded or whether there will be a similar webinar at a later date? I have no schedule conflicts after 29 January.\n\nLeonard Chung`
             }
         ],
@@ -103,13 +103,13 @@ export const rcPart7Test10: PracticeSet[] = [
             {
                 id: "p7-t10-s12-p1",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 content: `GALWAY (4 March)—Adelle Rosier, a third-generation soap maker, opened her shop in Galway eight years ago. Nestled behind Eglinton Gourmet Market on Raven Terrace, her business, Rosier and Finch, is booming.\n\nMs. Rosier credits the success to her commitment to lifelong learning. "Yes, my handcrafted soaps, shampoos, and lotions are luxurious," she said. "But there are a lot of high-quality skin-care products out there. So after learning the trade from my family, I have increased my sales knowledge by taking online courses in business-to-business (B2B) marketing."\n\nMs. Rosier adds that those courses built her confidence in selling her products directly to hotels. "Thanks to what I learned in my B2B strategies courses, I managed to persuade a number of boutique hotels in Europe to try my products." And so Rosier and Finch skin-care products are available in guest rooms at, for instance, the Bruadair Hotel in Galway, the Florinda Grand in Lisbon, Portugal, and the Zerra Inn in Reykjavík, Iceland.\n\nMs. Rosier further points out that many of her customers first learn of her products during a hotel stay. Afterward, they visit the shop in person or go online to purchase the items for themselves.\n\nRosier and Finch is located at 12 Raven Terrace and can be found online at www.rosierandfinch.co.ie.`
             },
             {
                 id: "p7-t10-s12-p2",
                 contextType: "P3",
-                type: "REVIEW",
+                docType: "REVIEW",
                 title: "Guest Review: Florinda Grand",
                 content: `https://www.florindagrand.pt/en/guest_reviews\n\nI had to arrange a last-minute business trip to my company's Portugal office, and the usual hotel I book was completely full. Based on some online recommendations, I decided to stay at Florinda Grand. While this charming hotel is much smaller than the usual places I stay, it has every comfort one would want during a business trip. In addition to a tastefully decorated and comfortable room, there were gourmet treats on my pillowcase and the finest soap, shampoo, and other toiletries available for me to enjoy. My only regret is that I was in Lisbon for just three days. Next time I visit the Lisbon office, I will stay longer and book a room at the Florinda Grand.\n\n—posted by Ashton Wu, 7 June`
             }
@@ -196,7 +196,7 @@ export const rcPart7Test10: PracticeSet[] = [
             {
                 id: "p7-t10-s13-p1",
                 contextType: "P5",
-                type: "TABLE",
+                docType: "TABLE",
                 title: "Margot's House of Ice Cream",
                 content: "Flavor Purchases by Percentage of Sales - July",
                 table_data: {
@@ -215,13 +215,13 @@ export const rcPart7Test10: PracticeSet[] = [
             {
                 id: "p7-t10-s13-p2",
                 contextType: "P2",
-                type: "MEMO",
+                docType: "MEMO",
                 content: `MEMO\n\nTo: All Store Managers\nFrom: June Willcox, CEO, Margot's House of Ice Cream\nSubject: New Stores\nDate: October 5\n\nMargot's House of Ice Cream is proud to welcome the following new stores.\n\n| Store Number | Location | Opening Date | Manager |\n|---|---|---|---|\n| 66 | Framingham, Massachusetts, United States | September 1 | Inga Slavin |\n| 67 | Appleton, Wisconsin, United States | September 7 | Zheng Tong |\n| 68 | Wollongong, New South Wales, Australia | September 14 | Geoffrey Pratt |\n| 69 | Rotorua, New Zealand | September 15 | Kehinde Ilogu |\n| 70 | Greater Sudbury, Ontario, Canada | September 29 | Hallie Strafford |\n\nFor the next six months, we will be supporting these stores with advertisements in their local media markets.\n\nIn December, we plan to open stores in Italy and Switzerland. Demand for our quality product is higher than ever, our market share is increasing, and we are not finished expanding! Stay tuned for more information!`
             },
             {
                 id: "p7-t10-s13-p3",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 title: "Popular Ice Cream Purveyor Comes to New Zealand",
                 content: `By Ysai Mendez\n\nROTORUA (2 November)—Residents of Rotorua have been flocking to Cargill Street, where Margot's House of Ice Cream has opened its first store in New Zealand.\n\n"I don't know what their secret is, but their ice cream really is something special," said Jeremy Frank, a schoolteacher who was enjoying ice cream cones with his family on a recent afternoon. "We've been here several times already since they opened. I think we'll be regulars."\n\n"I love strawberry, and their strawberry is the best I ever had," added his daughter, Olivia Frank, age 10.\n\nMargot's House of Ice Cream was founded five years ago in San Francisco by Margot Summers, a former chemistry major. Its ice cream contains at least 11 percent milk fat. Milk used in production, according to company CEO June Willcox, is sourced locally or regionally whenever possible.\n\nKehinde Ilogu, the manager of the Rotorua store, says that the number of visitors has been rising steadily.\n\n"We plan to keep the momentum going by having special events once a month," he said. "Next up is the strawberry festival. New Zealand's strawberry season will be getting started. In addition to our superb ice cream, we'll offer strawberries dipped in chocolate, strawberry cupcakes, and strawberry milkshakes. We look forward to a great future in Rotorua."`
             }
@@ -313,19 +313,19 @@ export const rcPart7Test10: PracticeSet[] = [
             {
                 id: "p7-t10-s14-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Emi Tokuda <etokuda@paterradepartmentstores.com>\nFrom: Paul Soderman <p.soderman@galahadindustrialmachinery.com>\nDate: January 25\nSubject: Our discussion\n\nDear Ms. Tokuda,\n\nI'm writing to confirm the details of our telephone conversation earlier today.\n\nAs we discussed, Galahad Industrial Machinery will install and maintain one self-service checkout kiosk in each of the four locations operated by Paterra Department Stores in Haddonfield. The installation charge for each kiosk will be $2,000 per unit. Installation will be scheduled at a mutually agreed-upon day and time.\n\nOur maintenance fee, covering all four kiosks, is $120 per month. Our technicians will be available 24 hours a day, 7 days a week, to service the kiosks. All equipment will meet or exceed international quality standards, and all our work is guaranteed.\n\nA formal written agreement will be sent to you by registered mail. We look forward to working with you.\n\nSincerely,\n\nPaul Soderman, Managing Director\nGalahad Industrial Machinery`
             },
             {
                 id: "p7-t10-s14-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Paul Soderman <p.soderman@galahadindustrialmachinery.com>\nFrom: Emi Tokuda <etokuda@paterradepartmentstores.com>\nDate: April 2\nSubject: Equipment removal and reinstallation\n\nDear Mr. Soderman,\n\nPlease be advised that we have decided to close our store at 1506 Maple Street. We plan to transfer the inventory and all equipment to our new location at 3300 Town Square Plaza. The transfer is planned for mid-June, but we have not yet set a date.\n\nI will contact you next month to confirm the date and arrange a convenient time for your work crew to install the self-service kiosk. I understand that, per our agreement dated January 25, your charge for the reinstallation will be the same as for the initial installation at the Maple Street store.\n\nYours truly,\n\nEmi Tokuda, Managing Director\nPaterra Department Stores`
             },
             {
                 id: "p7-t10-s14-p3",
                 contextType: "P2",
-                type: "MEMO",
+                docType: "MEMO",
                 content: `MEMO\n\nTo: All Paterra Staff\nFrom: Eleanor Bianchi, Branch Manager\nDate: June 5\nRe: Move update\n\nThanks to your hard work, our new store in the Town Square Plaza is on track to open on June 15. One of the problems with the store we are currently working out of is that it is not on a bus line. By contrast, the location we will be moving to is served by bus number 689, so we expect to have a larger number of customers at that location. We are only waiting for the last of our display shelves to be delivered from our warehouse so that we can finish the display in the gardening department.\n\nIn appreciation of your efforts, I've brought pastries from Aniqa's Bakery. I've put these treats on the break-room counter. Enjoy!`
             }
         ],
@@ -416,21 +416,21 @@ export const rcPart7Test10: PracticeSet[] = [
             {
                 id: "p7-t10-s15-p1",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 title: "Survey: Consumers Prefer Physical Stores",
                 content: `A recent consumer survey has shown that 33% of respondents prefer to touch the products they intend to purchase. Moreover, 61% of those surveyed said they are likely to spend more when shopping at a brick-and-mortar store rather than at an online store.\n\nThese data, backed up by other consumer preference studies, are causing many merchants who generate all their revenue from online sales to open physical stores as a supplement to their online presence.\n\nThe advantage of a physical space is that it helps retail owners build brand loyalty. "In terms of convenience, nothing beats online," says Marlene Fitzroy, who owns Toddles, a children's store in Shelburn, and an online site, toddles.com. "But a physical space fosters a sense of community that keeps local customers coming back and attracts new ones."\n\nMs. Fitzroy, a frequent speaker at local business events, is not only a strong supporter and promoter of customer engagement; she also practices what she preaches.\n\n"Four times a year, we host a special sales event during which children can enjoy themselves with a variety of activities," she said. "These events are a hit with both the children and their parents. And even if the parents don't buy anything on such occasions, the next time they need a children's toy, game, book, or puzzle, they'll probably think of us."`
             },
             {
                 id: "p7-t10-s15-p2",
                 contextType: "P3",
-                type: "INVITATION",
+                docType: "INVITATION",
                 title: "Shelburn Business Coalition (SBC)",
                 content: `Businesspeople from Shelburn and the surrounding area are invited to join us at the Shelburn Convention Center on October 8 for our annual Business Summit.\n\nOur keynote speaker this year will be Mr. Hansraj Deshpande, founder and CEO of Wintereden Hoteliers. Other speakers, all local business owners, are Ms. Omodele Akindjo, Ms. Marlene Fitzroy, Mr. Jasper Klinkhamer, and Mr. Alvin Liu. Topics to be covered include building a strong workforce, establishing a line of credit, engaging with customers, and attracting venture capital.\n\nBy registering for this event, you will automatically be added to our e-mail list. Please visit our Web site, www.shelburnbusinesscoalition.org, for the full schedule.`
             },
             {
                 id: "p7-t10-s15-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Vaughn Sgammato <vsgammato@opalmail.com>\nFrom: Irene Warga <irenewarga@shelburnbusinesscoalition.org>\nDate: September 15\nSubject: Your confirmation\n\nDear Mr. Sgammato,\n\nShelburn Business Coalition thanks you for registering for our Business Summit. Your confirmation number is R56690.\n\nAs a reminder, please note that the convention center underground garage will be closed for maintenance on October 8. Therefore, please park your car in the public parking area across the street. At the end of the summit, you will receive a voucher to cover the parking fee.\n\nWe look forward to seeing you. If you have any questions, please contact me at 555-0138.\n\nYours very truly,\n\nIrene Warga, Event Coordinator`
             }
         ],

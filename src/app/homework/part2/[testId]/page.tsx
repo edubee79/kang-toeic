@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2, Play, Volume2, RotateCcw, CheckCircle, XCircle, AlertTriangle, X, Triangle } from "lucide-react";
 import { part2Data, Part2Question } from '@/data/part2';
 import { cn } from "@/lib/utils";
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 export default function Part2Test() {
     const params = useParams();
@@ -400,6 +401,9 @@ export default function Part2Test() {
                     incorrectQuestions: incorrectQuestions, // Added for weakness analysis
                     timestamp: serverTimestamp()
                 });
+
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid);
             } catch (e) {
                 console.error("Save error:", e);
             }

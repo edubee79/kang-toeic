@@ -10,7 +10,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s11-p1",
                 contextType: "P4",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "BLISSFUL HORSE STABLES"
                 },
@@ -22,7 +22,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s11-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `From: ota.kyle@opalmail.com.au\nTo: dlu@blissfulhorsestables.com.au\nSubject: Part-time position\nDate: 1 August\nAttachment: @ota.rtf\n\nDear Ms. Lu,\n\nThis e-mail is in response to the advertisement that appeared in yesterday's edition of the Colby Today. At this time, I work for Ness Large Animal Clinic as a technician's assistant, but only three days a week. The part-time position you are advertising would enable me to do something I enjoy while increasing my working hours. I am happy to provide references upon request.\n\nAll the best,\nKyle Ota`
             }
         ],
@@ -108,7 +108,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s12-p1",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.pinkferngardens.co.nz/contact",
                     navItems: ["About", "Shop Online", "Locations", "Contact Us"]
@@ -122,7 +122,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s12-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: mdixon@sunmail.co.nz\nFrom: purchasing@pinkferngardens.co.nz\nDate: 12 January\nSubject: Your comment\n\nDear Ms. Dixon,\n\nPink Fern Gardens is always seeking uncommon plants. As for your citrus saplings, we are currently purchasing those from licensed growers only. There is a disease affecting certain varieties, so we must be cautious. We learned our lesson regarding this last autumn!\n\nWe do buy other plants from independent growers, as long as the seedlings are potted and market ready. Here are the types of seedlings we buy and the wholesale price we pay for each plant: ferns ($8), vines ($6), annual flowers ($5), and herbs for cooking, especially oregano, mint, and rosemary ($2). Please stop by at your convenience with samples of your offerings, and we can discuss our needs further in person.\n\nKind regards,\nKen Yoneda\nPurchaser, Pink Fern Gardens`
             }
         ],
@@ -208,7 +208,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s13-p1",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.elektroproofrepair.com/about"
                 },
@@ -222,13 +222,13 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s13-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Jessica Nelson <jnelson17@saffronmail.com>\nFrom: Arthur Jacquet <ajacquet@elektroproofrepair.com>\nDate: January 14\nSubject: Re: Tea spill, please help!\n\nDear Ms. Nelson,\n\nThank you for contacting Elektroproof Repair. You asked if you could bring in your laptop for inspection tomorrow, January 15. Unfortunately, we are currently booked solid through January 18. The earliest available time slot is 8:00 A.M. on January 19. Please let me know if you would like to book that slot or if you have any questions.\n\nSincerely,\nArthur Jacquet, Elektroproof Repair`
             },
             {
                 id: "p7-t6-s13-p3",
                 contextType: "P4",
-                type: "REVIEW",
+                docType: "REVIEW",
                 header: {
                     url: "https://www.buyertobuyerintel.com/repair_services/electronics/computer_devices",
                     rating: 5
@@ -321,7 +321,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s14-p1",
                 contextType: "P4",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Learn to play guitar at Alexis Instruments!"
                 },
@@ -332,13 +332,13 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s14-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Lucia Rivera <luciarivera@rapidonet.com>\nFrom: Krista Towers <ktowers@alexisinstruments.com>\nDate: April 26, 8:30 A.M.\nSubject: Order TS1058293\n\nDear Ms. Rivera,\n\nI am following up on the order you placed with us on April 23. We have only one guitar of the model you want in stock. It was used as a display sample on the floor of our salesroom here in Santa Barbara. This means it is out of the box and has been played by customers browsing the store. Our in-house luthier has thoroughly inspected the guitar, and it is still in excellent condition. There are no scratches, scuffs, or dents on it whatsoever. Because you purchased the instrument on the understanding that it was brand new, we want to offer you two options:\n\n1. If you do not want the floor model, you may cancel the order and receive an immediate full refund.\n2. If you would like the floor model, we will ship it immediately and offer you a 10 percent discount off the original retail price.\n\nIf you choose the latter, we will make sure the guitar is delivered to your local store in time for your first lesson there tomorrow. We apologize for the inconvenience.\n\nSincerely,\nKrista Towers\nAlexis Instruments`
             },
             {
                 id: "p7-t6-s14-p3",
                 contextType: "P5",
-                type: "TABLE",
+                docType: "TABLE",
                 header: {
                     title: "Alexis Instruments",
                     titlePrefix: "Order number: TS1058293",
@@ -442,13 +442,13 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s15-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: All Instructors\nFrom: Jee-Young Choi\nSubject: New fee schedule\nDate: August 15\n\nDear Teachers,\n\nThank you for lending your skills as artists and educators to the Mirabel Museum of Art. Please use the updated fee schedule below when creating your monthly invoices.\n\n| Category | Description | Duration | Fee |\n|---|---|---|---|\n| Tour | Lead group tour | 60 minutes | $50 |\n| Tour | Lead group tour | 90 minutes | $75 |\n| Class | Teach art class | 75 minutes | $65 |\n| Class | Teach art class | 120 minutes | $110 |\n| Development | Plan new course content | Varies | $200 |\n| Training | Instruct museum staff on a specialized topic | Varies | $25/hour |\n\nElectronic payments should be available ten business days after invoice submission.\n\nJee-Young Choi, Education Coordinator`
             },
             {
                 id: "p7-t6-s15-p2",
                 contextType: "P5",
-                type: "TABLE",
+                docType: "TABLE",
                 header: {
                     title: "Devonte Merriweather",
                     subtitle: "d.merriweather@camail.ca"
@@ -469,7 +469,7 @@ export const rcPart7Test6: PracticeSet[] = [
             {
                 id: "p7-t6-s15-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Devonte Merriweather <d.merriweather@camail.ca>\nFrom: Jee-Young Choi <jy.choi@mirabelmuseumofart.ca>\nSubject: Payment\nDate: October 6\n\nDear Mr. Merriweather,\n\nThank you for submitting your September invoice. I noticed that you neglected to charge us for developing the curriculum for your sculpting class, which you taught for the first time on September 25. I checked with Carol Swann, and she said that because invoice #00278 has already been paid, it would be best if you submitted a second invoice for the development. I will ask her to process it quickly when I receive it.\n\nYou will be happy to know that the feedback from your students was very positive. I will e-mail scans of their feedback forms later today.\n\nBest,\nJee-Young Choi, Education Coordinator`
             }
         ],

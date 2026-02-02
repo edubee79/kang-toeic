@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Card } from "@/components/ui/card";
-import { Headphones, PlayCircle, Activity, Mic2, Lock } from "lucide-react";
+import { ArrowLeft, Headphones, PlayCircle, Activity, Mic2, Lock } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 const tests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -47,92 +48,91 @@ export default function Part2Lobby() {
     const maxTest = access?.maxSets?.part2 || 10;
 
     return (
-        <div className="max-w-md mx-auto space-y-8 pb-20">
-            <div>
-                <h2 className="text-3xl font-black mb-2 tracking-tighter leading-tight">LC PART 2<br /><span className="text-emerald-500">REAL TEST</span></h2>
-                <p className="text-slate-400 font-medium text-xs">질의응답 실전 감각 키우기 | 현재 {maxTest}회차 오픈</p>
-
-                {/* Button Legend */}
-                <div className="flex gap-4 mt-6">
-                    <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
-                        <div className="w-6 h-6 rounded-full bg-emerald-600/20 border border-emerald-500/50 flex items-center justify-center text-emerald-500">
-                            <PlayCircle className="w-3 h-3" />
-                        </div>
-                        실전 문제 풀기
-                    </div>
-                    <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
-                        <div className="w-6 h-6 rounded-full bg-indigo-600/20 border border-indigo-500/50 flex items-center justify-center text-indigo-500">
-                            <Mic2 className="w-3 h-3" />
-                        </div>
-                        쉐도잉 연습 (Beta)
+        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0">
+            <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
+                <div className="flex items-center gap-4">
+                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter">
+                            <span className="text-white">Part 2</span>
+                            <span className="text-emerald-500"> Simulation</span>
+                        </h2>
+                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">응답 찾기 실전 ⸱ 쉐도잉 훈련</p>
                     </div>
                 </div>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxTest} Tests Open</p>
             </div>
 
-            <div className="space-y-4">
-                {tests.map((test) => {
-                    const isLocked = test > maxTest;
-                    return (
-                        <Card key={test} className={`
-                            group relative p-6 rounded-[2rem] border transition-all overflow-hidden
-                            ${isLocked
-                                ? 'bg-slate-900 border-slate-800 opacity-60'
-                                : 'bg-slate-800/80 border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-800'
-                            }
-                        `}>
-                            {!isLocked && (
-                                <div className="absolute right-0 top-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl group-hover:bg-emerald-500/10 transition-all"></div>
-                            )}
+            <div className="w-full px-0 md:px-8 py-4 md:py-6">
+                <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 px-3 md:px-0">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 shadow-xl shadow-emerald-500/10 shrink-0">
+                        <Activity className="w-5 h-5 md:w-6 md:h-6" />
+                    </div>
+                    <div>
+                        <h2 className="text-lg md:text-2xl font-black tracking-tight text-white/90 leading-none uppercase">Combat Training</h2>
+                        <p className="text-[10px] md:text-sm font-black text-slate-500 uppercase tracking-widest mt-1">Listening Drills</p>
+                    </div>
+                </div>
 
-                            <div className="relative z-10 flex items-center justify-between">
-                                <div className="flex items-center gap-4">
-                                    <div className={`
-                                        w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg border 
-                                        ${isLocked ? 'bg-slate-800 text-slate-600 border-slate-800' : 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30 group-hover:bg-emerald-500 group-hover:text-white'}
-                                    `}>
-                                        {isLocked ? <Lock className="w-6 h-6" /> : <Headphones className="w-6 h-6" />}
-                                    </div>
-                                    <div>
-                                        <h3 className={`text-lg font-black italic tracking-tighter ${isLocked ? 'text-slate-500' : 'text-white'}`}>TEST {String(test).padStart(2, '0')}</h3>
-                                        <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">{isLocked ? 'Locked' : 'Multiple Choice'}</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-2">
-                                    <Link
-                                        href={isLocked ? "#" : `/homework/part2/${test}`}
-                                        onClick={(e) => {
-                                            if (isLocked) {
-                                                e.preventDefault();
-                                                alert(`${maxTest}회차까지만 현재 오픈되어 있습니다.`);
-                                            }
-                                        }}
-                                    >
-                                        <div className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all cursor-pointer ${isLocked ? 'bg-slate-800 border-slate-800 text-slate-700' : 'bg-emerald-600/20 border-emerald-500/50 text-emerald-500 hover:bg-emerald-500 hover:text-white'}`} title={isLocked ? "Locked" : "Start Test"}>
-                                            <PlayCircle className="w-6 h-6" />
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 font-inter">
+                    {tests.map((test) => {
+                        const isLocked = test > maxTest;
+                        return (
+                            <Card key={test} className={cn(
+                                "group relative p-4 md:p-6 rounded-xl md:rounded-2xl border transition-all overflow-hidden flex flex-col gap-1 md:gap-2",
+                                isLocked
+                                    ? 'bg-slate-900 border-slate-800 opacity-60 grayscale'
+                                    : 'bg-slate-800/80 border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-800'
+                            )}>
+                                <div className="relative z-10 flex items-center justify-between w-full">
+                                    <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
+                                        <div className={cn(
+                                            "w-7 h-7 md:w-10 md:h-10 rounded md:rounded-xl flex items-center justify-center shadow-lg border text-[10px] md:text-sm font-black transition-all bg-slate-950 shrink-0",
+                                            isLocked ? 'bg-slate-800 text-slate-600 border-slate-800' : 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30 group-hover:bg-emerald-500 group-hover:text-white'
+                                        )}>
+                                            {test}
                                         </div>
-                                    </Link>
-                                    {!isLocked && (
-                                        <Link href={`/homework/part2/shadowing/${test}`}>
-                                            <div className="w-10 h-10 rounded-full bg-indigo-600/20 border border-indigo-500/50 flex items-center justify-center text-indigo-500 hover:bg-indigo-500 hover:text-white transition-all cursor-pointer" title="Start Shadowing">
-                                                <Mic2 className="w-5 h-5" />
-                                            </div>
-                                        </Link>
-                                    )}
+                                        <h3 className={cn(
+                                            "text-[22px] md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-4",
+                                            isLocked ? "text-slate-600" : "text-white"
+                                        )}>
+                                            TEST {String(test).padStart(2, '0')}
+                                        </h3>
+                                    </div>
+                                    <div className="shrink-0 flex items-center gap-1.5 md:gap-3">
+                                        {isLocked ? (
+                                            <Lock className="w-4 h-4 md:w-5 md:h-5 text-slate-700" />
+                                        ) : (
+                                            <>
+                                                <Link href={`/homework/part2/${test}?mode=real`} title="Test Mode">
+                                                    <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 hover:text-emerald-400 transition-colors" />
+                                                </Link>
+                                                <Link href={`/homework/part2/shadowing/${test}`} title="Shadowing Mode">
+                                                    <Mic2 className="w-5 h-5 md:w-7 md:h-7 text-slate-600 hover:text-emerald-400 transition-colors" />
+                                                </Link>
+                                            </>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        </Card>
-                    );
-                })}
+
+                                <div className="pl-10 md:pl-14">
+                                    <p className={cn(
+                                        "text-[10px] md:text-sm font-black tracking-widest uppercase opacity-60 leading-none",
+                                        isLocked ? "text-slate-700" : "text-slate-500"
+                                    )}>
+                                        PART 2 ⸱ 25 QUESTIONS
+                                    </p>
+                                </div>
+                            </Card>
+                        );
+                    })}
+                </div>
             </div>
 
-            <div className="bg-emerald-500/10 p-6 rounded-3xl border border-emerald-500/20 text-center">
-                <div className="flex justify-center mb-2 text-emerald-400">
-                    <Activity className="w-6 h-6 animate-pulse" />
-                </div>
-                <p className="text-xs text-emerald-300 font-bold leading-relaxed">
-                    실전과 동일한 AI 음성으로<br />
-                    청취 훈련이 진행됩니다.
+            <div className="bg-emerald-500/5 p-4 py-6 border-y border-emerald-500/10 text-center">
+                <p className="text-[11px] md:text-sm text-emerald-400/70 font-black uppercase tracking-[0.2em] leading-tight flex items-center justify-center gap-3">
+                    <Activity className="w-4 h-4 animate-pulse" />
+                    AI 음성 실전 청취 훈련 시스템
                 </p>
             </div>
         </div>

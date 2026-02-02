@@ -10,7 +10,7 @@ export const test3PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t3-s11-p1",
                 contextType: "P5",
-                type: "schedule",
+                docType: "schedule",
                 content: `Rambling River Festival
 Schedule of Musical Events
 
@@ -27,7 +27,7 @@ All events take place at the Bethesda Park Open-Air Stage unless otherwise noted
             {
                 id: "p7-t3-s11-p2",
                 contextType: "P7",
-                type: "text_message",
+                docType: "text_message",
                 content: `From: Rambling River Festival
 Date: Sep 8, 9:14 A.M.
 
@@ -125,7 +125,7 @@ We expect our full Saturday program to take place at the Bethesda Park Open-Air 
             {
                 id: "p7-t3-s12-p1",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `To: All Branch Managers
 From: Fran Corliss
 Subject: Survey results on mobile banking
@@ -147,7 +147,7 @@ Director of Mobile Banking, Ogden Bank`
             {
                 id: "p7-t3-s12-p2",
                 contextType: "P3",
-                type: "article",
+                docType: "article",
                 header: {
                     headline: "Boost for Mobile Banking",
                     author: "By Edward Panzius",
@@ -248,7 +248,7 @@ Director of Mobile Banking, Ogden Bank`
             {
                 id: "p7-t3-s13-p1",
                 contextType: "P6",
-                type: "notice",
+                docType: "notice",
                 content: `Attention, Library Members
 
 The Westwood Library is excited to announce the start of a book club, which is open to all library members. The club will meet on the last Thursday of each month, from 7:00 to 9:00 P.M. in the Harrison Meeting Room, to discuss a book chosen by one of our professional staff. From January to June, we will read recently published nonfiction works, and from July to December, we will focus on contemporary fiction titles. For more information, visit www.westwoodlibrary.org or speak with the staff at the circulation desk.`
@@ -256,7 +256,7 @@ The Westwood Library is excited to announce the start of a book club, which is o
             {
                 id: "p7-t3-s13-p2",
                 contextType: "P4",
-                type: "web_page",
+                docType: "web_page",
                 content: `https://www.westwoodlibrary.org/bookclub
 
 We hope you will join us for the book club on the last Thursday of each month at 7:00 P.M.! Below are the titles selected for the first half of the year.
@@ -271,7 +271,7 @@ June: To Be Announced`
             {
                 id: "p7-t3-s13-p3",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `To: Lisa Calle <lcalle@worldmail.com>
 From: Gail Frey <gfrey@myemail.com>
 Date: March 27
@@ -375,7 +375,7 @@ Gail Frey`
             {
                 id: "p7-t3-s14-p1",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `From: Tatiana Schwartz <orders@georgestreetssweets.co.uk>
 To: Alejandro Ordaz <aordaz@brooksidestationery.co.uk>
 Date: 28 April
@@ -397,7 +397,7 @@ Tatiana Schwartz`
             {
                 id: "p7-t3-s14-p2",
                 contextType: "P5",
-                type: "receipt",
+                docType: "receipt",
                 title: "George Street Sweets",
                 content: `Order: 47892
 Date of Order: 28 April
@@ -418,7 +418,7 @@ Customisation Instructions: None
             {
                 id: "p7-t3-s14-p3",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `From: Alejandro Ordaz <aordaz@brooksidestationery.co.uk>
 To: Tatiana Schwartz <orders@georgestreetssweets.co.uk>
 Date: 29 April
@@ -522,7 +522,7 @@ Alejandro Ordaz`
             {
                 id: "p7-t3-s15-p1",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `To: Undisclosed Recipients
 From: iqbal_grewal@woolfflooring.com.au
 Date: 12 June
@@ -544,7 +544,7 @@ Woolf Flooring`
             {
                 id: "p7-t3-s15-p2",
                 contextType: "P5",
-                type: "survey",
+                docType: "survey",
                 content: `Woolf Flooring Cost-Savings Survey
 
 Based on your experience as an employee of Woolf Flooring, please provide one idea for a change that could be implemented to improve productivity and cut costs. Thank you.
@@ -557,7 +557,7 @@ I have noticed that some employees grab a new pair of disposable gloves every ti
             {
                 id: "p7-t3-s15-p3",
                 contextType: "P3",
-                type: "report",
+                docType: "report",
                 content: `Woolf Flooring Report Summary
 Miyoko Consulting
 

@@ -10,13 +10,13 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s11-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Cassie Rafferty <cassie@mailcurrent.ie>\nFrom: Youssef Zimri <zimri@zimrimechanical.ie>\nSubject: Following up\nDate: 12 September\nAttachment: @cmcclinic\n\nDear Ms. Rafferty,\n\nI am very happy with your work so far. Your suggestion to add photos from our archive certainly dressed up the "Company History" page. The help-wanted pop-up bubble on the home page also looks good. Hopefully, it will attract applicants with mechanical experience.\n\nI'd like you to add one more project to our "Portfolio" page. We have finally finished replacing the plumbing and heating systems at Clary Medical Centre's satellite clinic in Galway. It was a challenging job, and I'm proud of our results. The attachment contains photos and a short description of what we did there.\n\nSincerely,\nYoussef Zimri\nOwner, Zimri Mechanical`
             },
             {
                 id: "p7-t5-s11-p2",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.clarymedicalcentre.ie",
                     navItems: ["About", "News", "Staff", "Contact Us"]
@@ -111,7 +111,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s12-p1",
                 contextType: "P5",
-                type: "TABLE",
+                docType: "TABLE",
                 header: {
                     title: "PURCHASE ORDER",
                     date: "2 October"
@@ -139,7 +139,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s12-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Lenore Okiya <lokiya@piratesbounty.ca>\nFrom: Shaliya Umuma <customerservice@rochettesrefrigeration.ca>\nDate: 3 October\nSubject: Purchase Order 5338\n\nDear Ms. Okiya,\n\nWe received your purchase order for the Blizzard walk-in freezer. Unfortunately, the model you requested is on back order and will not be available for three months. We regret the inconvenience and would like to offer you some options.\n\nI can offer you the Blizzard BF600, which measures 2m x 2.5m x 3m, at the discounted price of $6,900 plus tax. It comes with the same features as the item you ordered. Alternately, we have a refurbished BF400 in stock. It's the same size as the BF550; however, while the BF550 includes a remote control for setting the temperature, the BF400 has a wall-mounted device for that purpose. The BF400 unit comes with a two-year warranty. It is priced at $5,600 plus tax.\n\nPlease let me know how you wish to proceed. Just reply to this e-mail.\n\nShaliya Umuma, Customer Service Manager`
             }
         ],
@@ -225,7 +225,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s13-p1",
                 contextType: "P5",
-                type: "TABLE",
+                docType: "TABLE",
                 header: {
                     title: "Fifth Annual International Marketing Society Conference"
                 },
@@ -246,13 +246,13 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s13-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Nadir Kalwar <kalwar.n@kdbuildingconcepts.com>\nFrom: Olek Dzik <odzik.k@kdbuildingconcepts.com>\nDate: 12 May\nSubject: Upcoming marketing campaign\nAttachment: @Link to video\n\nNadir,\n\nThanks for your help with the corporate marketing plan. Attached is a link to the video created for us by Grindstone Marketing Group. It shows our 3-D printing equipment pouring fast-setting concrete, layer by layer. I think it looks great as is, and I believe it will be the most compelling aspect of our 1 June launch, especially if the Sheffield house is sold by then.\n\nIn case you haven't heard, our next construction project will be a home just a couple of kilometres from your office building!\n\nOlek`
             },
             {
                 id: "p7-t5-s13-p3",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 header: {
                     headline: "House Constructed Using 3-D Technology For Sale"
                 },
@@ -341,7 +341,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s14-p1",
                 contextType: "P4",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Gallery manager at Richard Lahiri Gallery in Cromwood"
                 },
@@ -352,7 +352,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s14-p2",
                 contextType: "P4",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Summer Scene Arts Program"
                 },
@@ -365,7 +365,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s14-p3",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 header: {
                     headline: "Summer Activities in Middleton County",
                     columns: 1
@@ -455,7 +455,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s15-p1",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 header: {
                     headline: "Senano Designs Buys Gendalla in $60 Million Deal"
                 },
@@ -464,7 +464,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s15-p2",
                 contextType: "P1",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "MEMO"
                 },
@@ -482,7 +482,7 @@ export const test5PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t5-s15-p3",
                 contextType: "P6",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Senano Designs Travel Expense Policy"
                 },

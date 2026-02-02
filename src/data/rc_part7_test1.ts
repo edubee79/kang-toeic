@@ -10,7 +10,7 @@ export const test1PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t1-s11-p1",
                 contextType: "P3",
-                type: "announcement",
+                docType: "announcement",
                 content: `Kitchen Swift—Media Contact
 akofran@kitchenswift.com.au
 
@@ -27,7 +27,7 @@ To find out more, visit the Kitchen Swift Web site at www.kitchenswift.com.au.`
             {
                 id: "p7-t1-s11-p2",
                 contextType: "P4",
-                type: "review",
+                docType: "review",
                 content: `https://www.sydneyrestaurants.com.au
 
 I recently dined at Enrique’s, one of the new Darius Cordero restaurants in Sydney. It is usually fully booked for dinner, so you may need to call months in advance for a table. We had a wonderful lunch there instead. If you go, be sure to try the bread and desserts—they are baked on-site! It was a worthwhile treat before I flew back to Hong Kong.
@@ -122,7 +122,7 @@ I recently dined at Enrique’s, one of the new Darius Cordero restaurants in Sy
             {
                 id: "p7-t1-s12-p1",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `To: laura.savard@orbitmail.scot
 From: cboyle@ceoleire.co.uk
 Date: 25 May
@@ -143,7 +143,7 @@ Ceoleire Classics`
             {
                 id: "p7-t1-s12-p2",
                 contextType: "P5",
-                type: "table",
+                docType: "table",
                 title: "Northern Ireland Ferry Service",
                 content: `Date of Issuance: 26 May
 Passenger Name: Conor Boyle
@@ -247,7 +247,7 @@ Please arrive 30 minutes prior to departure.`
             {
                 id: "p7-t1-s13-p1",
                 contextType: "P4",
-                type: "advertisement",
+                docType: "advertisement",
                 content: `Train to Achieve (TTA)—Our classes prepare you to succeed!
 
 Profiled in the latest Business Directions Nigeria newsletter, Train to Achieve (TTA) is one of the most innovative training providers in West Africa. By offering our classes entirely in online format, we bring the classroom to your home. All classes include individualized instruction and are taught by recognized professionals in their respective fields. Upon successful completion of a class, you will receive an official Certificate of Training, a valuable addition to any résumé. For a complete list of class fees and schedules, visit our Web site at www.traintoachieve.org.ng. The following are some of our most popular classes.
@@ -263,7 +263,7 @@ Basics of Graphic Design (TTA7633): Veteran graphic designer Doug Umaru helps yo
             {
                 id: "p7-t1-s13-p2",
                 contextType: "P7",
-                type: "online_chat",
+                docType: "online_chat",
                 title: "Discussion forum for students enrolled in Train to Achieve Class TTA1504",
                 content: `Joseph Egbe [9:41 A.M.]
 Viewing the list of students enrolled in this class, I remembered chatting with some of you on the forum for January's poster design class. I look forward to sharing our learning experiences again for this class. Yesterday I was the second student to meet with Mr. Akpan for an individual videoconference about my business. I own a food truck from which I sell baked goods, and when I shared with Mr. Akpan the outline for my Web site, he suggested that I add a section with vivid images of all my baked goods. It was helpful advice.`
@@ -271,7 +271,7 @@ Viewing the list of students enrolled in this class, I remembered chatting with 
             {
                 id: "p7-t1-s13-p3",
                 contextType: "P3",
-                type: "notice",
+                docType: "notice",
                 title: "Egbe's Bakery—Unique baked-in flavours in every bite!",
                 content: `- Section 1: Explore our menu and price list
 - Section 2: Browse photos of our delicious treats
@@ -366,7 +366,7 @@ Viewing the list of students enrolled in this class, I remembered chatting with 
             {
                 id: "p7-t1-s14-p1",
                 contextType: "P3",
-                type: "article",
+                docType: "article",
                 header: {
                     headline: "Caribbean Flavours Abound",
                     author: "By Rebecca Roats",
@@ -380,7 +380,7 @@ Viewing the list of students enrolled in this class, I remembered chatting with 
             {
                 id: "p7-t1-s14-p2",
                 contextType: "P4",
-                type: "review",
+                docType: "review",
                 content: `https://www.dinerreviews.co.uk/orangebaykitchen
 
 Posted on 22 August by Tamika Peterkin, tpeterkin@sunmail.co.uk
@@ -392,7 +392,7 @@ After reading a glowing article about Orange Bay Kitchen by Rebecca Roats, I was
             {
                 id: "p7-t1-s14-p3",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `To: tpeterkin@sunmail.co.uk
 From: vsmith@orangebaykitchen.co.uk
 Date: 24 August
@@ -496,7 +496,7 @@ Orange Bay Kitchen`
             {
                 id: "p7-t1-s15-p1",
                 contextType: "P5",
-                type: "receipt",
+                docType: "receipt",
                 title: "Orbys Distributors - Invoice",
                 content: `June 10
 Client: Green Canyon
@@ -515,7 +515,7 @@ Account: 4352-0
             {
                 id: "p7-t1-s15-p2",
                 contextType: "P2",
-                type: "notice",
+                docType: "notice",
                 title: "Orbys Distributors - Official Notice",
                 content: `To our valued customers:
 Our current invoicing system has been in use since Orbys Distributors was founded over twenty years ago. As a much-needed upgrade, we are switching to electronic invoicing. Starting August 1, invoices will be generated automatically each month and will be sent to the e-mail address associated with your company’s account.
@@ -532,7 +532,7 @@ More information about our transition to electronic invoicing is available on ou
             {
                 id: "p7-t1-s15-p3",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `To: Mary Peterson, Billing Department
 From: Tanvir Singh, Account Manager
 Date: September 12

@@ -10,7 +10,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s11-p1",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.sunnywelcomehotel.co.in"
                 },
@@ -30,7 +30,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s11-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: generalmanager@sunnywelcomehotel.co.in\nFrom: samuelramon@myemail.co.uk\nDate: 13 May\nSubject: Reservation number EX52417\n\nHello,\n\nMy family and I were very comfortable in the family suite at the Sunny Welcome Hotel in Kolkata last year, and we were looking forward to returning this year for a week starting on 17 April. Unfortunately, we suddenly had to postpone our trip until June, so I called the hotel on the morning of 17 April to change our reservation dates. I thought everything was in order, but when I opened my credit card statement this month, I discovered an additional charge from the Sunny Welcome Hotel.\n\nCould you please look into the matter? I believe that an error has been made and that I should be reimbursed. I would appreciate having the money credited to my account. We still plan to return to Kolkata later this year and anticipate an enjoyable stay at your hotel.\n\nYours sincerely,\nSamuel Ramon`
             }
         ],
@@ -116,13 +116,13 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s12-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `From: Dexter Abbott\nTo: Nina Sosa\nDate: 20 August\nSubject: Next steps\n\nDear Ms. Sosa,\n\nI have good news. The plans for the layout of the new Fountain Road office building have just been approved by Lanfei Chan at our corporate office. We now need to start thinking about the artwork for the main open-plan office area on the third floor of the building. This is one of our last tasks before the office opens in October.\n\nI have heard that Red Starling Art has a good reputation for helping with office interiors. Could you look at the company's Web site today and find out if any of its services might be suitable for us? I am wondering whether photography or paintings would look best in the space. What do you think? I am still waiting to hear back from Maxwell Willis in Finance about the budget for art, so please do not agree to anything with Red Starling Art until we know more.\n\nThank you,\n\nDexter Abbott, Facilities Manager\nKLX Accountancy`
             },
             {
                 id: "p7-t7-s12-p2",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.redstarlingart.co.uk/offices/",
                     navItems: ["Home", "About Us", "Services", "Contact Us"]
@@ -219,13 +219,13 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s13-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: jdixon@milkalenterprises.com\nFrom: humanresources@milkalenterprises.com\nDate: April 28\nSubject: Employee survey responses\n\nDear Ms. Dixon,\n\nI read through all the responses to the semiannual employee survey, and I want to highlight a few points that were repeatedly raised. We can use this list of suggestions to help determine our priorities.\n\nSuggestion 1. A more flexible policy for working from home\nSuggestion 2. An expanded in-office recycling strategy\nSuggestion 3. More financial rewards for excellent work\nSuggestion 4. More opportunities for technical training\n\nAlso, if you approve, I would like to simplify the survey form before we administer it again. The open-ended questions make the data difficult to analyze. I propose incorporating more yes-no questions or rating scales to determine how much a colleague agrees or disagrees with a statement.\n\nKind regards,\n\nJudith Hathaway, Human Resources`
             },
             {
                 id: "p7-t7-s13-p2",
                 contextType: "P1",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "MEMO"
                 },
@@ -241,7 +241,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s13-p3",
                 contextType: "P1",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "MEMO"
                 },
@@ -337,7 +337,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s14-p1",
                 contextType: "P4",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Job Advertisement"
                 },
@@ -349,7 +349,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s14-p2",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.koopersvision.com"
                 },
@@ -363,7 +363,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s14-p3",
                 contextType: "P4",
-                type: "REVIEW",
+                docType: "REVIEW",
                 header: {
                     title: "Optical Centers Reviews",
                     rating: 5
@@ -457,7 +457,7 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s15-p1",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.hellosnackvending.com/services"
                 },
@@ -474,13 +474,13 @@ export const rcPart7Test7: PracticeSet[] = [
             {
                 id: "p7-t7-s15-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: customercare@hellosnackvending.com\nFrom: dlewis@kivowitzcompany.com\nDate: November 14\nSubject: Vending service\n\nHello,\n\nMy company recently bought a gently used nonrefrigerated vending machine, which has been placed in our employee break room. I am looking for a stocking service to fill it so that the staff can start using it.\n\nDoes your company only stock vending machines that you own, or do you also offer a stocking service for other machines? If you can service ours, I would like to know more about the snacks you have available to fill the machine. Could you please send me a list of the products you offer?\n\nThank you for your assistance.\n\nBest regards,\n\nDenikia Lewis\nKivowitz Company`
             },
             {
                 id: "p7-t7-s15-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Denikia Lewis <dlewis@kivowitzcompany.com>\nFrom: Customer Care <customercare@hellosnackvending.com>\nDate: November 15\nSubject: Re: Vending service\nAttachment: @List\n\nDear Ms. Lewis,\n\nThank you for your e-mail. We would be happy to stock your machine even if it is not owned by our company. However, if your machine is old, it can be difficult to obtain parts for it, and older machines break more often. The cost of repairs can get high, making it more cost-effective for you to use one of our vending machines. Can you provide me with the model number?\n\nI have attached the list you requested. We can accommodate special requests if you have any. I also recommend renting a drink machine from us, because we find that employees usually enjoy having a cold drink with their snacks.\n\nPlease contact me if you have additional questions.\n\nSincerely,\n\nDominik Scheibler\nCustomer Care Representative`
             }
         ],

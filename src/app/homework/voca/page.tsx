@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getUserTargetScore, getUserProgress, getDueReviews } from '@/services/vocabularyService';
-import { BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target, Lock } from 'lucide-react';
+import { ArrowLeft, BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target, Lock } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
 export default function VocabularyDashboard() {
@@ -107,115 +108,123 @@ export default function VocabularyDashboard() {
     };
 
     return (
-        <div className="max-w-md mx-auto space-y-8 pb-20">
-            {/* Header */}
-            <div>
-                <h2 className="text-3xl font-black mb-2 tracking-tighter leading-tight">
-                    WORD<br />
-                    <span className="text-indigo-500">MASTER</span>
-                </h2>
-                <p className="text-slate-400 font-medium text-xs">
-                    {targetScore}점 목표 | 매일 꾸준히, 현재 Day {maxDay}까지 오픈
-                </p>
+        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
+            <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
+                <div className="flex items-center gap-4">
+                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter text-indigo-500">
+                            <span className="text-white">Word</span>
+                            <span className="text-indigo-500"> Master</span>
+                        </h2>
+                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">TOEIC 필수 어휘 1500개 완성</p>
+                    </div>
+                </div>
+                <div className="text-right">
+                    <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">Goal: {targetScore}</p>
+                    <p className="text-slate-600 font-black text-[9px] md:text-xs uppercase tracking-widest mt-1">Day {maxDay} Open</p>
+                </div>
             </div>
 
-            {/* Progress Overview */}
-            <Card className="bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-900 border-indigo-500/20 p-6">
-                <h3 className="text-lg font-black text-white mb-3">학습 진도</h3>
+            <div className="w-full px-0 md:px-8 py-4 md:py-6">
+                {/* Progress Overview */}
+                <Card className="bg-slate-900/60 border-indigo-500/20 p-4 md:p-6 mx-3 md:mx-0 mb-6 relative overflow-hidden">
+                    <div className="absolute right-0 top-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl"></div>
+                    <div className="relative z-10">
+                        <div className="flex justify-between items-center mb-2 md:mb-4">
+                            <h3 className="text-sm md:text-lg font-black text-slate-300 uppercase tracking-widest leading-none italic">Daily Progress</h3>
+                            <span className="text-indigo-400 font-black text-lg md:text-xl italic">{progress.progress}%</span>
+                        </div>
 
-                <div className="mb-4">
-                    <div className="flex justify-between text-sm mb-2">
-                        <span className="text-slate-400">전체 진행률</span>
-                        <span className="text-white font-bold">{progress.progress}%</span>
+                        <div className="mb-4 md:mb-6">
+                            <div className="w-full bg-slate-800/50 rounded-full h-1.5 md:h-2 overflow-hidden">
+                                <div
+                                    className="bg-gradient-to-r from-indigo-500 to-violet-500 h-full transition-all duration-500"
+                                    style={{ width: `${progress.progress}%` }}
+                                ></div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-3 gap-2 md:gap-4 font-inter">
+                            <div className="text-center py-2 md:py-3 bg-slate-800/40 rounded-xl border border-slate-700/30">
+                                <div className="text-lg md:text-2xl font-black text-emerald-400 leading-none italic">{progress.unknown}</div>
+                                <div className="text-[9px] md:text-xs text-slate-500 uppercase font-bold mt-1 tracking-widest">New</div>
+                            </div>
+                            <div className="text-center py-2 md:py-3 bg-slate-800/40 rounded-xl border border-slate-700/30">
+                                <div className="text-lg md:text-2xl font-black text-blue-400 leading-none italic">{progress.learning}</div>
+                                <div className="text-[9px] md:text-xs text-slate-500 uppercase font-bold mt-1 tracking-widest">Learn</div>
+                            </div>
+                            <div className="text-center py-2 md:py-3 bg-slate-800/40 rounded-xl border border-slate-700/30">
+                                <div className="text-lg md:text-2xl font-black text-violet-400 leading-none italic">{progress.mastered}</div>
+                                <div className="text-[9px] md:text-xs text-slate-500 uppercase font-bold mt-1 tracking-widest">Done</div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                        <div
-                            className="bg-gradient-to-r from-indigo-500 to-violet-500 h-full transition-all duration-500"
-                            style={{ width: `${progress.progress}%` }}
-                        ></div>
+                </Card>
+
+                <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 px-3 md:px-0 mt-4 md:mt-8">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shadow-xl shadow-indigo-500/10 shrink-0">
+                        <Target className="w-5 h-5 md:w-6 md:h-6" />
+                    </div>
+                    <div>
+                        <h2 className="text-lg md:text-2xl font-black tracking-tight text-white/90 leading-none uppercase italic">Combat Lexicon</h2>
+                        <p className="text-[10px] md:text-sm font-black text-slate-500 uppercase tracking-widest mt-1">Vocabulary Training</p>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3">
-                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
-                        <div className="text-xl font-black text-emerald-400">{progress.unknown}</div>
-                        <div className="text-xs text-slate-400">새로운</div>
-                    </div>
-                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
-                        <div className="text-xl font-black text-blue-400">{progress.learning}</div>
-                        <div className="text-xs text-slate-400">학습 중</div>
-                    </div>
-                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
-                        <div className="text-xl font-black text-violet-400">{progress.mastered}</div>
-                        <div className="text-xs text-slate-400">완료</div>
-                    </div>
-                </div>
-            </Card>
+                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 px-3 md:px-0">
+                    {days.map((day) => {
+                        const isPassed = false;
+                        const theme = DAY_THEMES[day] || "Loading";
+                        const isLocked = day > maxDay;
 
-            {/* Day Grid */}
-            <div className="grid grid-cols-3 gap-3">
-                {days.map((day) => {
-                    // TODO: Get actual completion status from Firestore
-                    const isPassed = false; // Placeholder
-                    const theme = DAY_THEMES[day] || "테마 준비중";
-                    const isLocked = day > maxDay;
-
-                    return (
-                        <Link
-                            key={day}
-                            href={isLocked ? "#" : `/homework/voca/${day}`}
-                            onClick={(e) => {
-                                if (isLocked) {
-                                    e.preventDefault();
-                                    alert(`Day ${maxDay}번까지만 현재 오픈되어 있습니다.`);
-                                }
-                            }}
-                        >
-                            <Card className={`
-                group relative p-4 rounded-3xl border transition-all cursor-pointer overflow-hidden flex flex-col items-center justify-center gap-1 h-32
-                ${isLocked
-                                    ? 'bg-slate-900/50 border-slate-800/50 opacity-40 grayscale'
-                                    : isPassed
-                                        ? 'bg-indigo-500/10 border-indigo-500/50 hover:bg-indigo-500/20'
-                                        : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/30'
-                                }
-              `}>
-                                {isLocked ? (
-                                    <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">
-                                        <Lock className="w-3 h-3" />
-                                    </div>
-                                ) : isPassed ? (
-                                    <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center text-slate-900 shadow-lg shadow-indigo-500/20">
-                                        <CheckCircle className="w-4 h-4" />
-                                    </div>
-                                ) : (
-                                    <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-slate-600 group-hover:text-indigo-500 transition-colors">
-                                        <BookOpen className="w-3 h-3" />
-                                    </div>
-                                )}
-
-                                <div className="text-center mt-2">
-                                    <span className={`font-black text-2xl italic tracking-tighter block mb-1 ${isLocked ? 'text-slate-600' : isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
-                                        }`}>
-                                        DAY {String(day).padStart(2, '0')}
-                                    </span>
-                                    {!isLocked && (
-                                        <span className="text-xs text-slate-500 font-bold bg-slate-900/50 px-2 py-1 rounded-full border border-slate-800 group-hover:border-indigo-500/30 group-hover:text-indigo-400 transition-colors">
-                                            {theme}
+                        return (
+                            <Link
+                                key={day}
+                                href={isLocked ? "#" : `/homework/voca/${day}`}
+                                onClick={(e) => {
+                                    if (isLocked) {
+                                        e.preventDefault();
+                                        alert(`Day ${maxDay}번까지만 현재 오픈되어 있습니다.`);
+                                    }
+                                }}
+                            >
+                                <Card className={cn(
+                                    "group relative p-2 md:p-3.5 rounded-xl md:rounded-2xl border transition-all cursor-pointer overflow-hidden flex flex-col items-center justify-center gap-1 h-auto min-h-[64px] md:min-h-[110px]",
+                                    isLocked
+                                        ? 'bg-slate-900 border-slate-800 opacity-40 grayscale'
+                                        : isPassed
+                                            ? 'bg-indigo-500/10 border-indigo-500/30 hover:bg-indigo-500/20 shadow-lg shadow-indigo-500/10'
+                                            : 'bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50'
+                                )}>
+                                    <div className="text-center relative z-10">
+                                        <span className={cn(
+                                            "font-black text-xl md:text-4xl italic tracking-tighter block leading-none",
+                                            isLocked ? 'text-slate-600' : isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
+                                        )}>
+                                            DAY {String(day).padStart(2, '0')}
                                         </span>
+                                        {!isLocked && (
+                                            <span className="text-[8px] md:text-xs text-slate-500 font-black uppercase block truncate max-w-[70px] md:max-w-none mt-1 tracking-tighter">
+                                                {theme}
+                                            </span>
+                                        )}
+                                    </div>
+                                    {isLocked && (
+                                        <div className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">
+                                            <Lock className="w-2.5 h-2.5" />
+                                        </div>
                                     )}
-                                </div>
-                            </Card>
-                        </Link>
-                    );
-                })}
+                                </Card>
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
 
-            {/* Info Card */}
-            <div className="bg-indigo-500/10 p-6 rounded-3xl border border-indigo-500/20 text-center">
-                <p className="text-xs text-indigo-300 font-bold leading-relaxed">
-                    각 Day를 클릭하여<br />
-                    Sort → Learn → Test 순서로 학습하세요
+            <div className="bg-indigo-500/5 p-4 py-6 border-y border-indigo-500/10 text-center">
+                <p className="text-[10px] md:text-xs text-indigo-400/70 font-black uppercase tracking-[0.2em] leading-tight">
+                    DAY 클릭 → Sort → Learn → Test 순서로 학습
                 </p>
             </div>
         </div>

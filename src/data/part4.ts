@@ -2,9 +2,14 @@
 export interface Part4Question {
   id: string;
   text: string;
-  options: { label: string; text: string }[];
+  options: {
+    A: string;
+    B: string;
+    C: string;
+    D: string;
+  };
   correctAnswer: string;
-  questionType?: string;
+  classification?: string;
 }
 
 export interface Part4Set {
@@ -29,36 +34,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q71",
         text: "What kind of business is the speaker most likely calling?",
+        classification: "DETAIL",
+
         options: {
           A: "A hair salon",
           B: "An insurance company",
           C: "A car dealership",
           D: "An eye doctor's office"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t1-q72",
         text: "What does the speaker say about her appointment?",
+        classification: "DETAIL",
+
         options: {
           A: "It is too far away.",
           B: "It needs to be rescheduled.",
           C: "It is too expensive.",
           D: "It should be with a different person."
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t1-q73",
         text: "What is the speaker interested in learning more about?",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Payment methods",
           B: "Delivery options",
           C: "A warranty",
           D: "A job opening"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -77,36 +85,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q74",
         text: "What is being advertised?",
+        classification: "DETAIL",
+
         options: {
           A: "A factory tour",
           B: "A baking competition",
           C: "A grand opening",
           D: "An art show"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q75",
         text: "What will participants receive?",
+        classification: "DETAIL",
+
         options: {
           A: "A poster",
           B: "A promotional mug",
           C: "A company T-shirt",
           D: "A photograph"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t1-q76",
         text: "What can the listeners do on a Web site?",
+        classification: "DETAIL",
+
         options: {
           A: "Find a recipe",
           B: "Fill out an entry form",
           C: "View a product list",
           D: "Download a coupon"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -124,36 +135,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q77",
         text: "Where does the announcement take place?",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a sports arena",
           B: "At a concert hall",
           C: "At an art museum",
           D: "At a movie theater"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t1-q78",
         text: "Why does the speaker apologize?",
+        classification: "WHY_REASON",
+
         options: {
           A: "A presenter has been delayed.",
           B: "Some lights have gone out.",
           C: "A sound system is broken.",
           D: "A construction project is noisy."
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t1-q79",
         text: "What does the speaker offer the listeners?",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "A promotional item",
           B: "A parking voucher",
           C: "Discounted snacks",
           D: "Free tickets"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -171,36 +185,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q80",
         text: "What event is taking place?",
+        classification: "DETAIL",
+
         options: {
           A: "A technology conference",
           B: "A product demonstration",
           C: "A company fund-raiser",
           D: "A training workshop"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q81",
         text: "Why does the speaker say, \"And over 300 people are here\"?",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To propose moving to a larger venue",
           B: "To indicate that some advertising was successful",
           C: "To emphasize the importance of working quickly",
           D: "To suggest more volunteers are needed"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t1-q82",
         text: "What does the speaker ask the listeners to do?",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Provide feedback",
           B: "Silence mobile phones",
           C: "Review an event program",
           D: "Enjoy some refreshments"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -219,39 +236,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q83",
         text: "What is the purpose of the plan?",
-        questionType: "WHO_LOC",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "To support local businesses",
           B: "To promote tourism",
           C: "To decrease traffic",
           D: "To reduce government spending"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t1-q84",
         text: "Who does the speaker say will receive a discount?",
-        questionType: "DETAIL",
+        classification: "WHO_LOC",
+
         options: {
           A: "Commuters",
           B: "Senior citizens",
           C: "Students",
           D: "City officials"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q85",
         text: "What will happen after three months?",
-        questionType: "IMPLY_MEANING",
+        classification: "DETAIL",
+
         options: {
           A: "A survey will be distributed.",
           B: "A new director will take over.",
           C: "A bus line will be added.",
           D: "A program evaluation will take place."
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -270,39 +287,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q86",
         text: "What event is the speaker discussing?",
-        questionType: "WHO_LOC",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "A sports competition",
           B: "A music festival",
           C: "A cooking demonstration",
           D: "A historical play"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t1-q87",
         text: "Why does the speaker say, \"tickets are almost sold out\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To encourage the listeners to enter a contest",
           B: "To suggest that the listeners arrive early",
           C: "To complain that an event space is too small",
           D: "To praise the results of a marketing plan"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q88",
         text: "What will happen tomorrow morning?",
-        questionType: "ACTION_NEXT",
+        classification: "DETAIL",
+
         options: {
           A: "A new venue will open.",
           B: "A prize winner will be announced.",
           C: "An interview will take place.",
           D: "A video will be filmed."
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -321,39 +338,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q89",
         text: "What type of business does the speaker work for?",
-        questionType: "WHAT_WHICH",
+        classification: "DETAIL",
+
         options: {
           A: "A computer company",
           B: "A construction firm",
           C: "A furniture manufacturer",
           D: "An office-supply distributor"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t1-q90",
         text: "What does the speaker say is an advantage of the new material?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It is inexpensive.",
           B: "It is durable.",
           C: "It is lightweight.",
           D: "It comes in many colors."
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q91",
         text: "What will the listeners do next?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Sign up for a mailing list",
           B: "Watch an instructional video",
           C: "Enter a contest",
           D: "Look at a sample"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -372,39 +389,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q92",
         text: "Which department does the speaker work in?",
-        questionType: "WHY_REASON",
+        classification: "DETAIL",
+
         options: {
           A: "Product Development",
           B: "Human Resources",
           C: "Legal",
           D: "Accounting"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t1-q93",
         text: "Why does the speaker say, \"there is a position to transfer you permanently\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To recommend an employee sign up for more training",
           B: "To indicate that a project deadline will be extended",
           C: "To approve a request to transfer",
           D: "To suggest consulting with an expert"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t1-q94",
         text: "What does the speaker want to discuss with the listener?",
-        questionType: "WHY_REASON",
+        classification: "DETAIL",
+
         options: {
           A: "Some sales results",
           B: "Some client feedback",
           C: "An office renovation",
           D: "A work schedule"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -424,39 +441,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q95",
         text: "Why are guests invited on the speaker's radio show?",
-        questionType: "WHO_LOC",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "To discuss their businesses",
           B: "To talk about local history",
           C: "To teach communication skills",
           D: "To offer travel tips"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q96",
         text: "What can the listeners do on a Web site?",
-        questionType: "GRAPHIC",
+        classification: "DETAIL",
+
         options: {
           A: "View photos of famous guests",
           B: "Sign up for a special service",
           C: "Read about upcoming programs",
           D: "Listen to previous episodes"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t1-q97",
         text: "Look at the graphic. Which day is this episode being aired?",
-        questionType: "WHY_REASON",
+        classification: "GRAPHIC",
+
         options: {
           A: "Tuesday",
           B: "Wednesday",
           C: "Thursday",
           D: "Friday"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -476,39 +493,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t1-q98",
         text: "Look at the graphic. Where will the scarves and ties be displayed?",
-        questionType: "WHO_LOC",
+        classification: "GRAPHIC",
+
         options: {
           A: "On Shelf 1",
           B: "On Shelf 2",
           C: "On Shelf 3",
           D: "On Shelf 4"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t1-q99",
         text: "What should be displayed near the cash registers?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Coupons",
           B: "Hats",
           C: "Gloves",
           D: "Socks"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t1-q100",
         text: "What should the listener expect to receive in an e-mail?",
-        questionType: "GRAPHIC",
+        classification: "DETAIL",
+
         options: {
           A: "A payment schedule",
           B: "Photographs",
           C: "Shipping information",
           D: "Display measurements"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -529,36 +546,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q71",
         text: "What did Starbright Corporation recently do?",
+        classification: "DETAIL",
+
         options: {
           A: "It changed its company logo.",
           B: "It opened a new factory.",
           C: "It conducted a financial audit.",
           D: "It upgraded a product line."
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t2-q72",
         text: "What type of product does Starbright Corporation make?",
+        classification: "DETAIL",
+
         options: {
           A: "Footwear",
           B: "Cosmetics",
           C: "Housewares",
           D: "Electronics"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t2-q73",
         text: "What is available online?",
+        classification: "DETAIL",
+
         options: {
           A: "An application",
           B: "A schedule",
           C: "A video interview",
           D: "A virtual tour"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -578,36 +598,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q74",
         text: "What event is taking place?",
+        classification: "DETAIL",
+
         options: {
           A: "An orientation session",
           B: "A gallery opening",
           C: "An awards ceremony",
           D: "A retirement party"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q75",
         text: "What type of business does Mustafa Perez work for?",
+        classification: "DETAIL",
+
         options: {
           A: "An advertising agency",
           B: "An art gallery",
           C: "A newspaper publisher",
           D: "A camera shop"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t2-q76",
         text: "What has the speaker created for the event?",
+        classification: "DETAIL",
+
         options: {
           A: "A slideshow",
           B: "A T-shirt design",
           C: "A Web site",
           D: "A brochure"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -626,36 +649,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q77",
         text: "What does the speaker's company produce?",
+        classification: "DETAIL",
+
         options: {
           A: "Medications",
           B: "Textbooks",
           C: "Exercise clothing",
           D: "Construction materials"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t2-q78",
         text: "What are the listeners reminded to do?",
+        classification: "DETAIL",
+
         options: {
           A: "Recruit some staff",
           B: "Enter some data",
           C: "Attend some training sessions",
           D: "Turn on a fan"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q79",
         text: "What can be found online?",
+        classification: "DETAIL",
+
         options: {
           A: "A product database",
           B: "An employee directory",
           C: "A handbook",
           D: "A contract"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -673,36 +699,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q80",
         text: "What will the speaker do at a park?",
+        classification: "DETAIL",
+
         options: {
           A: "Watch a performance",
           B: "Sell fruit",
           C: "Plant trees",
           D: "Take photographs"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t2-q81",
         text: "Why does the speaker say, \"but it's supposed to be cloudy all day\"?",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To ask for help",
           B: "To express frustration",
           C: "To reject the listener's suggestion",
           D: "To reassure the listener"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q82",
         text: "What does the speaker remind the listener to do?",
+        classification: "DETAIL",
+
         options: {
           A: "Register for a competition",
           B: "Purchase some supplies",
           C: "Prepare a shipment",
           D: "Speak to a customer"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -721,39 +750,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q83",
         text: "Where is the announcement being made?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a technology firm",
           B: "At a repair shop",
           C: "At a factory",
           D: "At a law office"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t2-q84",
         text: "Where should the listeners go at the end of their shifts?",
-        questionType: "DETAIL",
+        classification: "WHO_LOC",
+
         options: {
           A: "To the company cafeteria",
           B: "To the receptionist's desk",
           C: "To the locker room",
           D: "To the parking area"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t2-q85",
         text: "What will happen tomorrow?",
-        questionType: "IMPLY_MEANING",
+        classification: "DETAIL",
+
         options: {
           A: "Some office furniture will be delivered.",
           B: "New board members will be elected.",
           C: "A city official will conduct an inspection.",
           D: "Some time-reporting software will be fixed."
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -772,39 +801,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q86",
         text: "Where do the listeners work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At an employment agency",
           B: "At a sports arena",
           C: "At a conference center",
           D: "At a medical clinic"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q87",
         text: "What does the speaker imply when she says, \"Ms. Jenkins has retired\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "A role needs to be filled.",
           B: "An e-mail will not be answered.",
           C: "A marketing strategy should be revised.",
           D: "A process will be less efficient."
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t2-q88",
         text: "What will the listeners most likely do next?",
-        questionType: "ACTION_NEXT",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Check a schedule",
           B: "Complete a registration form",
           C: "Eat a meal",
           D: "Brainstorm some ideas"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -823,39 +852,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q89",
         text: "What is scheduled for Friday?",
-        questionType: "WHAT_WHICH",
+        classification: "DETAIL",
+
         options: {
           A: "A job fair",
           B: "A wellness workshop",
           C: "A client meeting",
           D: "An employee luncheon"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t2-q90",
         text: "Why does the speaker say, \"the advertising business is very competitive\"?",
-        questionType: "DETAIL",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To explain a decision to retire",
           B: "To justify an employee's promotion",
           C: "To question the listener's abilities",
           D: "To express confidence in an approach"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q91",
         text: "What does the speaker say about Isabel?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "She has recently joined the company.",
           B: "She can recommend some activities.",
           C: "She will approve expense reports.",
           D: "She used to work on the NVC Industries account."
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -874,39 +903,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q92",
         text: "What type of business does the speaker most likely work for?",
-        questionType: "WHY_REASON",
+        classification: "DETAIL",
+
         options: {
           A: "A television studio",
           B: "A hardware store",
           C: "A publishing company",
           D: "A grocery store"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q93",
         text: "What is the speaker concerned about?",
-        questionType: "IMPLY_MEANING",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "A business has lost customers.",
           B: "An advertising plan has not been effective.",
           C: "A stockroom is overcrowded.",
           D: "A Web site is not working."
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t2-q94",
         text: "What does the speaker plan to do?",
-        questionType: "WHY_REASON",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Transfer to another location",
           B: "Offer discounts online",
           C: "Hire more employees",
           D: "Add videos to a Web site"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -925,39 +954,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q95",
         text: "Who most likely is the speaker?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A car salesperson",
           B: "An auto mechanic",
           C: "A car rental agent",
           D: "A vehicle inspector"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t2-q96",
         text: "Look at the graphic. Which fee must be paid in cash?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Filing",
           B: "Contract processing",
           C: "Vehicle title",
           D: "Vehicle registration"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q97",
         text: "What service does the speaker remind the listener about?",
-        questionType: "WHY_REASON",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Shuttle service",
           B: "Maintenance reminders",
           C: "Free car washes",
           D: "Replacement keys"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -976,39 +1005,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t2-q98",
         text: "Who most likely is the speaker?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A jazz singer",
           B: "A music teacher",
           C: "A shop manager",
           D: "A radio host"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t2-q99",
         text: "What event will take place in September?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A music festival",
           B: "A press conference",
           C: "A charity dinner",
           D: "A talent contest"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t2-q100",
         text: "Look at the graphic. Which type of instrument does the speaker focus on?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Keyboards",
           B: "Pianos",
           C: "Drums",
           D: "Guitars"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1028,39 +1057,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q71",
         text: "Where is the announcement most likely being made?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a train station",
           B: "At a bus station",
           C: "At an airport",
           D: "At a ferry terminal"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t3-q72",
         text: "Why is a change being made?",
-        questionType: "WHY_REASON",
+        classification: "WHY_REASON",
+
         options: {
           A: "It will improve traffic flow.",
           B: "It will keep prices low.",
           C: "It will increase energy efficiency.",
           D: "It will save staff time."
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t3-q73",
         text: "What does the speaker recommend?",
-        questionType: "ACTION_NEXT",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Filling out a survey",
           B: "Printing some tickets",
           C: "Checking online for updates",
           D: "Allowing extra time"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -1079,39 +1108,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q74",
         text: "What event is taking place?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "A grand opening",
           B: "A focus group",
           C: "A food festival",
           D: "A sales workshop"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t3-q75",
         text: "What does the speaker say is distinct about a coffee blend?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "It is locally sourced.",
           B: "It is available in glass bottles.",
           C: "It comes in several different flavors.",
           D: "It contains a lot of caffeine."
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t3-q76",
         text: "What is the speaker offering customers?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Free delivery",
           B: "Two-day shipping",
           C: "A full refund",
           D: "A discount"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -1130,39 +1159,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q77",
         text: "How does each tour begin?",
-        questionType: "DETAIL",
+        classification: "HOW_METHOD",
+
         options: {
           A: "Refreshments are served.",
           B: "Safety equipment is explained.",
           C: "A video is shown.",
           D: "Maps are distributed."
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t3-q78",
         text: "What kind of gift do participants receive?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A discount coupon",
           B: "A bag of snacks",
           C: "A T-shirt",
           D: "A postcard"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t3-q79",
         text: "What does the speaker warn the listeners about?",
-        questionType: "DETAIL",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "How to pay for food",
           B: "What clothes to wear",
           C: "Where to park",
           D: "Which days to visit"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -1181,39 +1210,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q80",
         text: "Where does the speaker work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At an architecture firm",
           B: "At an accounting firm",
           C: "At a roofing company",
           D: "At an auto repair shop"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t3-q81",
         text: "Why does the speaker say, \"an official estimate includes parts and labor\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To compare her company to another one",
           B: "To correct a colleague's mistake",
           C: "To complain about an expense",
           D: "To ask for help with a project"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t3-q82",
         text: "What does the speaker offer to do this afternoon?",
-        questionType: "ACTION_NEXT",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Visit the listener's home",
           B: "Update the listener's contact information",
           C: "Consult a financial advisor",
           D: "Post a job announcement"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -1232,39 +1261,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q83",
         text: "What is the broadcast about?",
-        questionType: "WHAT_WHICH",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Financing your company",
           B: "Using social media",
           C: "Recruiting staff",
           D: "Getting a business license"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t3-q84",
         text: "What will the speaker help the listeners with today?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Choosing a service",
           B: "Lowering costs",
           C: "Analyzing feedback",
           D: "Setting goals"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t3-q85",
         text: "What will most likely happen next?",
-        questionType: "IMPLY_MEANING",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "The speaker will conduct an interview.",
           B: "The speaker will give a weather update.",
           C: "An advertisement will play.",
           D: "A contest winner will be announced."
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -1283,39 +1312,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q86",
         text: "Who most likely are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Potential investors",
           B: "Marketing specialists",
           C: "Quality control inspectors",
           D: "Product designers"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t3-q87",
         text: "According to the speaker, what is the company going to change?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "The material it uses",
           B: "The financing it makes available",
           C: "The maintenance schedule for its equipment",
           D: "The publisher for its catalog"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t3-q88",
         text: "Why does the speaker say, \"but I use these products\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To reject an offer",
           B: "To correct an advertisement",
           C: "To provide reassurance",
           D: "To explain a decision"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -1334,39 +1363,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q89",
         text: "Where is the talk taking place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At an awards ceremony",
           B: "At an exhibit opening",
           C: "At a club meeting",
           D: "At a national park tour"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t3-q90",
         text: "What did Kentaro Nakamura recently do?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "He published a book.",
           B: "He started a conservation society.",
           C: "He won a photography contest.",
           D: "He conducted a research project."
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t3-q91",
         text: "What are the listeners invited to do after the event?",
-        questionType: "DETAIL",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Enjoy some refreshments",
           B: "Sign up to volunteer",
           C: "Purchase some souvenirs",
           D: "Take some maps"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -1385,39 +1414,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q92",
         text: "What type of work do the listeners most likely do?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "Architectural planning",
           B: "Software design",
           C: "Therapy",
           D: "Sales"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t3-q93",
         text: "What does the speaker thank the listeners for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Finalizing a business contract",
           B: "Preparing a presentation",
           C: "Sharing some ideas",
           D: "Meeting with some clients"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t3-q94",
         text: "Why does the speaker say, \"we have a limited number of computers available\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To warn the listeners about a maintenance issue",
           B: "To encourage the listeners to sign up quickly",
           C: "To suggest that the listeners buy a device",
           D: "To remind the listeners about budget cuts"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1436,39 +1465,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q95",
         text: "What will take place this Friday?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An industry award ceremony",
           B: "A fund-raising dinner",
           C: "A company anniversary event",
           D: "A holiday celebration"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t3-q96",
         text: "Look at the graphic. Where does the speaker want some audio equipment?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Next to table 1",
           B: "Next to table 2",
           C: "Next to table 3",
           D: "Next to table 4"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t3-q97",
         text: "What has the speaker shipped to the hotel?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some tablecloths",
           B: "Some vases",
           C: "Some aprons",
           D: "Some glasses"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1487,39 +1516,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t3-q98",
         text: "Who most likely are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Event planners",
           B: "Fashion designers",
           C: "Sales analysts",
           D: "Store managers"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t3-q99",
         text: "Look at the graphic. Which topic does the speaker start the workshop with?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Topic 1",
           B: "Topic 2",
           C: "Topic 3",
           D: "Topic 4"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t3-q100",
         text: "What does the speaker say the listeners will do next?",
-        questionType: "ACTION_NEXT",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Introduce themselves",
           B: "Discuss some pictures",
           C: "Practice doing interviews",
           D: "Try out some software"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1539,39 +1568,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q71",
         text: "Who are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Residents in an apartment building",
           B: "Employees in an office building",
           C: "Visitors to a historical site",
           D: "Guests in a hotel"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t4-q72",
         text: "What service does the speaker say will be unavailable?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Telephone",
           B: "Electric",
           C: "Water",
           D: "Natural gas"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q73",
         text: "According to the speaker, why should the listeners go online?",
-        questionType: "WHY_REASON",
+        classification: "WHY_REASON",
+
         options: {
           A: "To download software",
           B: "To check for status updates",
           C: "To register a complaint",
           D: "To view a price list"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1590,39 +1619,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q74",
         text: "Where does the announcement most likely take place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a train station",
           B: "At a convention center",
           C: "At a restaurant",
           D: "At an outdoor market"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q75",
         text: "According to the speaker, what should customers be told?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "The Wi-Fi is not working.",
           B: "A room is closed for renovations.",
           C: "A schedule has been changed.",
           D: "An item is unavailable."
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t4-q76",
         text: "What does the speaker encourage the listeners to do?",
-        questionType: "ACTION_NEXT",
+        classification: "DETAIL",
+
         options: {
           A: "Work together",
           B: "Arrive early",
           C: "Take extra shifts",
           D: "Greet customers"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -1641,39 +1670,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q77",
         text: "Who most likely are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Building contractors",
           B: "Potential investors",
           C: "Fashion models",
           D: "News reporters"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t4-q78",
         text: "What type of clothing does the company sell?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Swimwear",
           B: "Hats",
           C: "Business suits",
           D: "Athletic shoes"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q79",
         text: "What does the speaker's company hope to purchase?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A new software program",
           B: "A larger storage facility",
           C: "Some delivery trucks",
           D: "Some manufacturing equipment"
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -1692,39 +1721,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q80",
         text: "What industry do the listeners most likely work in?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "Construction",
           B: "Retail",
           C: "Energy",
           D: "Broadcast"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q81",
         text: "What does the speaker imply when he says, “But there is a lot of paperwork to fill out”?",
-        questionType: "IMPLY_MEANING",
+        classification: "WHEN_TIME",
+
         options: {
           A: "The listeners may have to work overtime.",
           B: "The listeners will not begin work immediately.",
           C: "A permit will be difficult to obtain.",
           D: "Additional help is needed for a project."
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t4-q82",
         text: "What will the speaker do next?",
-        questionType: "ACTION_NEXT",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Take some photographs",
           B: "Look at a model home",
           C: "Collect some viewer feedback",
           D: "Go to the cafeteria"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -1743,39 +1772,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q83",
         text: "According to the speaker, what event will be held tonight?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "An anniversary party",
           B: "A press conference",
           C: "A board meeting",
           D: "A product launch"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t4-q84",
         text: "Why does the speaker say, “I’ll be driving to Holtsville from the office”?",
-        questionType: "IMPLY_MEANING",
+        classification: "WHY_REASON",
+
         options: {
           A: "To correct a mistake",
           B: "To provide an excuse",
           C: "To make an offer",
           D: "To request directions"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q85",
         text: "What does the speaker say he needs to pick up?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some promotional materials",
           B: "Some refreshments",
           C: "Customer surveys",
           D: "Event programs"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -1794,39 +1823,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q86",
         text: "Which department does the speaker most likely work for?",
-        questionType: "WHO_LOC",
+        classification: "DETAIL",
+
         options: {
           A: "Product Development",
           B: "Research",
           C: "Engineering",
           D: "Information Technology"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t4-q87",
         text: "What does the speaker say recently happened?",
-        questionType: "IMPLY_MEANING",
+        classification: "DETAIL",
+
         options: {
           A: "Some certification classes began.",
           B: "Name badges were handed out.",
           C: "A virus infected some computers.",
           D: "A manager retired."
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q88",
         text: "What does the speaker ask the listeners to do?",
-        questionType: "ACTION_NEXT",
+        classification: "OFFER_SUGGEST",
+
         options: {
           A: "Sign an attendance sheet",
           B: "Open a software program",
           C: "Submit some photos",
           D: "View a slideshow"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1845,39 +1874,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q89",
         text: "Where do the listeners most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a software development company",
           B: "At a book publishing company",
           C: "At a graphic design firm",
           D: "At a news Web site"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t4-q90",
         text: "What is the speaker concerned about?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Addressing a customer complaint",
           B: "Keeping up with competitors",
           C: "Exceeding an annual budget",
           D: "Improving employee productivity"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t4-q91",
         text: "What does the speaker imply when he says, “we have technology interns starting next week”?",
-        questionType: "IMPLY_MEANING",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "A task must be finished soon.",
           B: "An assignment should be delayed.",
           C: "Volunteers are needed to greet interns.",
           D: "Interns can assist with a new project."
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -1896,39 +1925,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q92",
         text: "Where is the speaker?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a public library",
           B: "At a history museum",
           C: "At a community center",
           D: "At a sports arena"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t4-q93",
         text: "What will happen next week?",
-        questionType: "DETAIL",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "A new exhibit will be set up.",
           B: "A fund-raiser will take place.",
           C: "A local election will be held.",
           D: "A construction project will begin."
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t4-q94",
         text: "What are visitors encouraged to do?",
-        questionType: "ACTION_NEXT",
+        classification: "DETAIL",
+
         options: {
           A: "Park on a side street",
           B: "Wear ear protection",
           C: "Donate money",
           D: "Take photographs"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1947,39 +1976,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q95",
         text: "Where is the announcement being made?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a supermarket",
           B: "At a clothing store",
           C: "At an office supply store",
           D: "At a home garden center"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t4-q96",
         text: "Look at the graphic. Which lane is the express lane?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Lane 1",
           B: "Lane 2",
           C: "Lane 3",
           D: "Lane 4"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t4-q97",
         text: "According to the speaker, what can the listeners receive assistance with?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Checking a price",
           B: "Moving large items",
           C: "Applying for a credit card",
           D: "Locating a vehicle"
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -1998,39 +2027,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t4-q98",
         text: "Who are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Park board members",
           B: "City officials",
           C: "Research scientists",
           D: "Commercial developers"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t4-q99",
         text: "Look at the graphic. What does the speaker discuss?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Building 1",
           B: "Building 2",
           C: "Building 3",
           D: "Building 4"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t4-q100",
         text: "What will the speaker give to the listeners?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A budget",
           B: "A schedule",
           C: "An invoice",
           D: "A contract"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -2049,39 +2078,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q71",
         text: "What is most likely being advertised?",
-        questionType: "TOPIC_PURPOSE",
+        classification: "DETAIL",
+
         options: {
           A: "A convention center",
           B: "A restaurant",
           C: "A supermarket",
           D: "A shipping company"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t5-q72",
         text: "What is the business famous for?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Its prices",
           B: "Its location",
           C: "Its history",
           D: "Its staff"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t5-q73",
         text: "What does the speaker say is on a Web site?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Some catering options",
           B: "Some driving directions",
           C: "Current discounts",
           D: "Business hours"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -2100,39 +2129,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q74",
         text: "Who most likely are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Product developers",
           B: "Investment bankers",
           C: "Book publishers",
           D: "Building contractors"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t5-q75",
         text: "What does the speaker say is favorable about a contract?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "There is 24-hour service call availability.",
           B: "There is an extended warranty.",
           C: "There is an immediate payment.",
           D: "There is a low interest rate."
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q76",
         text: "What does the speaker imply when he says, \"I'll send you the document later\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "He is having computer problems.",
           B: "He wants the listeners' opinions.",
           C: "He has missed a deadline.",
           D: "He is almost finished with some work."
         },
-        correctAnswer: "B"
-      }
+        correctAnswer: "B"}
     ],
     script: [
       {
@@ -2151,39 +2180,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q77",
         text: "Where is the tour taking place?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At an art gallery",
           B: "At a construction site",
           C: "At a solar-panel factory",
           D: "At a car-part warehouse"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q78",
         text: "What does the speaker remind the listeners to do?",
-        questionType: "ACTION_NEXT",
+        classification: "DETAIL",
+
         options: {
           A: "Wear protective hats",
           B: "Follow posted signs",
           C: "Stay together as a group",
           D: "Store personal belongings"
         },
-        correctAnswer: "A"
-      },
+        correctAnswer: "A"},
       {
         id: "p4-t5-q79",
         text: "What will the listeners see first on the tour?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A map of the grounds",
           B: "An informational video",
           C: "Some product models",
           D: "Some historic photographs"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -2202,39 +2231,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q80",
         text: "What is the focus of the episode?",
-        questionType: "TOPIC_PURPOSE",
+        classification: "DETAIL",
+
         options: {
           A: "Improving training programs",
           B: "Changing careers",
           C: "Designing Web sites",
           D: "Increasing sales"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t5-q81",
         text: "What does the speaker say is important?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Complying with industry regulations",
           B: "Emphasizing transferable skills",
           C: "Offering promotional discounts",
           D: "Attending networking events"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t5-q82",
         text: "Who is So-Hee Chung?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A company executive",
           B: "A government official",
           C: "A news reporter",
           D: "A financial analyst"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -2253,39 +2282,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q83",
         text: "What is the message mainly about?",
-        questionType: "TOPIC_PURPOSE",
+        classification: "WHAT_WHICH",
+
         options: {
           A: "Scheduling auditions",
           B: "Purchasing tickets",
           C: "Designing a set",
           D: "Revising a script"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q84",
         text: "Why does the speaker say, \"we have a large team\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To make a complaint",
           B: "To provide reassurance",
           C: "To express surprise",
           D: "To refuse an offer"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t5-q85",
         text: "Why is the speaker unable to meet tomorrow?",
-        questionType: "WHY_REASON",
+        classification: "WHY_REASON",
+
         options: {
           A: "Her car needs repairs.",
           B: "She is moving to a new apartment.",
           C: "She is going hiking.",
           D: "She is visiting family."
         },
-        correctAnswer: "D"
-      }
+        correctAnswer: "D"}
     ],
     script: [
       {
@@ -2304,39 +2333,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q86",
         text: "Who most likely are the listeners?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "Board members",
           B: "Government officials",
           C: "Clients",
           D: "Interns"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t5-q87",
         text: "What did the listeners receive?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An event ticket",
           B: "An information packet",
           C: "A project invoice",
           D: "An annual report"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t5-q88",
         text: "According to the speaker, what will the listeners do in an hour?",
-        questionType: "ACTION_NEXT",
+        classification: "DETAIL",
+
         options: {
           A: "Have lunch",
           B: "Join a conference call",
           C: "Get security badges",
           D: "Take a building tour"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -2355,39 +2384,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q89",
         text: "What did the speaker do last month?",
-        questionType: "ACTION_PAST",
+        classification: "DETAIL",
+
         options: {
           A: "She relocated to another building.",
           B: "She hired additional employees.",
           C: "She organized a luncheon.",
           D: "She attended a conference."
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t5-q90",
         text: "What do some customers have trouble locating?",
-        questionType: "DETAIL",
+        classification: "PROBLEM_CONCERN",
+
         options: {
           A: "Delivery schedules",
           B: "Password requirements",
           C: "Contact information",
           D: "Account archives"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q91",
         text: "What will the speaker do next?",
-        questionType: "ACTION_NEXT",
+        classification: "ACTION_NEXT",
+
         options: {
           A: "Give a demonstration",
           B: "Introduce a guest",
           C: "Distribute some documents",
           D: "Hand out some awards"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -2406,39 +2435,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q92",
         text: "Who is the speaker?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "A real-estate developer",
           B: "A city official",
           C: "A history professor",
           D: "A television reporter"
         },
-        correctAnswer: "B"
-      },
+        correctAnswer: "B"},
       {
         id: "p4-t5-q93",
         text: "What happened last year in Madison?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "An international hotel convention was held.",
           B: "A national sports event was hosted.",
           C: "A documentary movie was filmed.",
           D: "A historic landmark was named."
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q94",
         text: "Why does the speaker say, \"Those roads weren't designed for traffic\"?",
-        questionType: "IMPLY_MEANING",
+        classification: "IMPLY_MEANING",
+
         options: {
           A: "To make a complaint",
           B: "To show surprise",
           C: "To express concern",
           D: "To offer an apology"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {
@@ -2457,39 +2486,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q95",
         text: "According to the speaker, what will happen this Friday?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A delivery will arrive.",
           B: "A holiday sale will begin.",
           C: "An employee will retire.",
           D: "An author will visit."
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t5-q96",
         text: "Look at the graphic. Which aisle does the speaker direct the listeners to?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "Aisle 1",
           B: "Aisle 2",
           C: "Aisle 3",
           D: "Aisle 4"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q97",
         text: "What can the listeners win?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "A gift card",
           B: "A book",
           C: "A free membership",
           D: "A calendar"
         },
-        correctAnswer: "A"
-      }
+        correctAnswer: "A"}
     ],
     script: [
       {
@@ -2508,39 +2537,39 @@ export const part4Data: Part4Set[] = [
       {
         id: "p4-t5-q98",
         text: "Where does the speaker most likely work?",
-        questionType: "WHO_LOC",
+        classification: "WHO_LOC",
+
         options: {
           A: "At a boat dock",
           B: "At an auto repair shop",
           C: "At a warehouse",
           D: "At a job training school"
         },
-        correctAnswer: "C"
-      },
+        correctAnswer: "C"},
       {
         id: "p4-t5-q99",
         text: "What will the speaker's department be doing at the end of the month?",
-        questionType: "DETAIL",
+        classification: "DETAIL",
+
         options: {
           A: "Fixing some equipment",
           B: "Attending a trade show",
           C: "Interviewing job candidates",
           D: "Preparing a large order"
         },
-        correctAnswer: "D"
-      },
+        correctAnswer: "D"},
       {
         id: "p4-t5-q100",
         text: "Look at the graphic. Which session does the man request to attend?",
-        questionType: "GRAPHIC",
+        classification: "GRAPHIC",
+
         options: {
           A: "January 14",
           B: "January 23",
           C: "January 26",
           D: "January 31"
         },
-        correctAnswer: "C"
-      }
+        correctAnswer: "C"}
     ],
     script: [
       {

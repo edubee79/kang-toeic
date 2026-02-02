@@ -15,10 +15,7 @@ export default function MockTestResult() {
     const searchParams = useSearchParams();
     const testIdStr = params?.testId as string;
     const attemptId = searchParams.get('attemptId');
-    const halfParam = searchParams.get('half'); // 쿼리 파라미터 체크 추가
-    const isHalf = testIdStr?.includes('a') || testIdStr?.includes('b') || !!halfParam;
-    const finalTestIdLabel = halfParam || testIdStr;
-    const testId = Number(isHalf ? (halfParam || testIdStr).replace(/[^0-9]/g, '') : params?.testId);
+    const testId = Number(testIdStr);
 
     const [attempt, setAttempt] = useState<any>(null);
     const [halfAnalysis, setHalfAnalysis] = useState<HalfTestAnalysis | null>(null);
@@ -34,23 +31,22 @@ export default function MockTestResult() {
     useEffect(() => {
         const fetchResult = async () => {
             const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
-            const key = isHalf ? `full-half_${halfParam || testIdStr}` : `full-${testId}`;
-            const data = savedAttempts[key];
-
+            const data = savedAttempts[`full-${testId}`];
             if (data && data.answers) {
                 setAttempt(data);
 
                 if (attemptId) {
                     const analysis = await HalfTestService.analyzeAttempt(attemptId);
+
                     if (analysis) {
-                        setHalfAnalysis(analysis);
+                        setHalfAnalysis(analysis as any);
                         setStats({
-                            lcRaw: analysis.lcScore / 5, // Approximate for internal display if needed
-                            rcRaw: analysis.rcScore / 5,
+                            lcRaw: analysis.lcScore / 10,
+                            rcRaw: analysis.rcScore / 10,
                             lcScaled: analysis.lcScore,
                             rcScaled: analysis.rcScore,
-                            total: analysis.overallScore, // Corrected from targetGoal
-                            isHalf: isHalf
+                            total: analysis.overallScore,
+                            isHalf: false
                         });
                     }
                 }
@@ -81,16 +77,7 @@ export default function MockTestResult() {
                         <div className="space-y-2 text-center md:text-left">
                             <span className="bg-rose-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest">Premium Analysis</span>
                             <h1 className="text-3xl md:text-4xl font-black tracking-tighter text-white">
-                                {(() => {
-                                    // 1. 레벨테스트 (isHalf)
-                                    if (isHalf) {
-                                        if (finalTestIdLabel?.includes('b')) return '레벨테스트 2회 결과';
-                                        return '레벨테스트 1회 결과';
-                                    }
-                                    // 2. 실전 모의고사 (Full)
-                                    if (testId === 10) return '2회 모의고사 결과';
-                                    return '1회 모의고사 결과';
-                                })()}
+                                {testId === 10 ? '2회 모의고사 결과' : '1회 모의고사 결과'}
                             </h1>
                             <p className="text-slate-400 font-bold tracking-tight text-xs">응시 일시: {new Date(attempt.date).toLocaleString()}</p>
                         </div>
@@ -228,7 +215,7 @@ export default function MockTestResult() {
                                         <p className="text-xs font-bold text-slate-200 leading-snug italic">"{item.coachingText}"</p>
                                         <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
                                             <div
-                                                className={cn("h-full transition-all duration-1000",
+                                                className={cn("h-full rounded-full transition-all duration-1000",
                                                     item.level === 'RED' ? "bg-rose-500" : item.level === 'YELLOW' ? "bg-amber-500" : "bg-emerald-500"
                                                 )}
                                                 style={{ width: `${Math.min((item.estimateFull / item.targetFull) * 100, 100)}%` }}

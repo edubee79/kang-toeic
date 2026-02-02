@@ -1,28 +1,24 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
-import { Loader2, AlertCircle, AlertTriangle, BarChart2, TrendingUp, Target, Zap, BookOpen, ChevronRight, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Loader2, AlertCircle, AlertTriangle, BarChart2, TrendingUp, Target, Zap, BookOpen, ChevronRight, CheckCircle2, ArrowLeft, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { cn } from '@/lib/utils';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { db } from '@/lib/firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import {
-    BarChart,
-    Bar,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
     ResponsiveContainer,
-    Cell
 } from 'recharts';
 
-// 🧪 TEST MODE: Set to true to simulate assignments without Firestore
-const TEST_MODE = true;
+// 🧪 PRODUCTION MODE (TEST_MODE logic has been merged into logic block)
+const TEST_MODE = false;
 
 export default function WeaknessDashboardPage() {
     const router = useRouter();
@@ -32,6 +28,11 @@ export default function WeaknessDashboardPage() {
     const [recommendedTest, setRecommendedTest] = useState<{ testId: number; title: string; url: string } | null>(null);
     const [typeReviewAssignments, setTypeReviewAssignments] = useState<any[]>([]);
 
+    // AI Weekly Report States
+    const [user, setUser] = useState<any>(null);
+    const [loadingWeeklyReport, setLoadingWeeklyReport] = useState(false);
+    const [aiWeeklyReport, setAiWeeklyReport] = useState('');
+
     useEffect(() => {
         setIsMounted(true);
         const fetchWeakness = async () => {
@@ -40,8 +41,9 @@ export default function WeaknessDashboardPage() {
                 router.push('/');
                 return;
             }
-            const user = JSON.parse(userStr);
-            const userId = user.userId || user.uid;
+            const userObj = JSON.parse(userStr);
+            const userId = userObj.userId || userObj.uid;
+            setUser(userObj);
 
             const data = await WeaknessService.analyzeUserWeakness(userId);
             console.log('📊 Weakness Report:', data);
@@ -72,49 +74,47 @@ export default function WeaknessDashboardPage() {
                 }
             }
 
-            // 🧪 TEST MODE or PRODUCTION MODE
-            if (TEST_MODE) {
-                // Generate mock assignments for testing
-                const mockAssignments = [
-                    {
-                        id: 'test',  // Use 'test' to match custom page logic
-                        type: 'type_review',
-                        title: '📚 Part 2 유형별 복습',
-                        description: '자주 틀린 유형: Indirect, YesNo, Tag',
-                        targetPart: 'p2',
-                        homeworkUrl: '/homework/part2/custom?assignmentId=test'
-                    },
-                    {
-                        id: 'test',  // Use 'test' to match custom page logic
-                        type: 'type_review',
-                        title: '📚 Part 5 유형별 복습',
-                        description: '자주 틀린 유형: 동명사, 분사, 관계대명사',
-                        targetPart: 'p5',
-                        homeworkUrl: '/homework/part5/custom?assignmentId=test'
-                    }
-                ];
-                setTypeReviewAssignments(mockAssignments);
-            } else {
-                // PRODUCTION: Fetch from Firestore
-                try {
-                    const assignmentsSnapshot = await getDocs(
-                        query(
-                            collection(db, 'Assignments'),
-                            where('targetStudentId', '==', userId),
-                            where('type', '==', 'type_review'),
-                            where('status', '==', 'active')
-                        )
-                    );
+            // 🧪 PRODUCTION MODE: Fetch from Firestore with AI Dynamic Fallback
+            try {
+                const assignmentsSnapshot = await getDocs(
+                    query(
+                        collection(db, 'Assignments'),
+                        where('targetStudentId', '==', userId),
+                        where('type', '==', 'type_review'),
+                        where('status', '==', 'active')
+                    )
+                );
 
-                    const assignments = assignmentsSnapshot.docs.map(doc => ({
-                        id: doc.id,
-                        ...doc.data()
-                    }));
+                let fetchedAssignments = assignmentsSnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
 
-                    setTypeReviewAssignments(assignments);
-                } catch (error) {
-                    console.error('Error fetching type review assignments:', error);
+                // AI Dynamic Fallback if no specific assignments from teacher
+                if (fetchedAssignments.length === 0) {
+                    fetchedAssignments = [
+                        {
+                            id: 'ai_logic_drill',
+                            type: 'ai_drill',
+                            title: `💎 ${data.weakestTags[0]?.label || '핵심'} 빈출 유형 집중 훈련`,
+                            description: `${data.weakestTags[0]?.label}, ${data.weakestTags[1]?.label || '품사'} 등 오답률 TOP 유형 정밀 타격`,
+                            targetPart: data.weakestTags[0]?.part || 'p5',
+                            homeworkUrl: `/homework/${(data.weakestTags[0]?.part === 'p5' || !data.weakestTags[0]?.part) ? 'part5-real' : 'part1-real'}`
+                        },
+                        {
+                            id: 'ai_voca_drill',
+                            type: 'ai_drill',
+                            title: '📚 약점 보완 오답 유사 문항',
+                            description: '최근 틀린 문제와 논리 구조가 동일한 변형 문제 세트',
+                            targetPart: 'any',
+                            homeworkUrl: '/student/dashboard'
+                        }
+                    ];
                 }
+
+                setTypeReviewAssignments(fetchedAssignments);
+            } catch (error) {
+                console.error('Error fetching type review assignments:', error);
             }
 
             setLoading(false);
@@ -155,7 +155,7 @@ export default function WeaknessDashboardPage() {
 
     // NEW PREDICTION LOGIC (UNIFIED)
     const lcParts = ['p1', 'p2', 'p3', 'p4'];
-    const rcParts = ['p5', 'p6', 'p7_single', 'p7_double'];
+    const rcParts = ['p5', 'p6', 'p7s', 'p7d'];
 
     const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
     const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
@@ -170,22 +170,18 @@ export default function WeaknessDashboardPage() {
     return (
         <div className="space-y-8 max-w-7xl mx-auto pb-20 pt-8 px-4">
             {/* Header */}
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8">
+            <div className="flex items-center gap-1 md:gap-4 mb-4 px-1">
+                <Link href="/student/dashboard">
+                    <Button variant="ghost" className="text-slate-400 hover:text-white px-1 md:px-4 h-7 md:h-10">
+                        <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+                    </Button>
+                </Link>
                 <div>
-                    <h1 className="text-3xl font-black text-white tracking-tight flex items-center gap-2">
-                        <BarChart2 className="w-8 h-8 text-indigo-500" />
-                        나의 약점 분석 리포트
-                    </h1>
-                    <p className="text-slate-400 text-sm">목표 성적 달성을 위한 정밀 처방전입니다.</p>
+                    <h2 className="text-2xl md:text-3xl font-black text-white tracking-tighter leading-none uppercase italic">Weakness Dashboard</h2>
+                    <p className="text-[10px] md:text-sm mt-1 font-black uppercase tracking-widest text-indigo-400/90 italic">
+                        {user?.userName || user?.name || user?.username}님의 주간 정밀 분석 리포트
+                    </p>
                 </div>
-                <Button
-                    onClick={() => router.push('/student/dashboard')}
-                    variant="outline"
-                    className="bg-slate-800 text-white border-slate-700 hover:bg-slate-700 hover:border-indigo-500/50 font-bold"
-                >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    나의 학습방으로
-                </Button>
             </div>
 
             {/* 1. TOP: Goals & Achievement (LITERAL CODE COPY FROM STUDENT DASHBOARD) */}
@@ -254,16 +250,20 @@ export default function WeaknessDashboardPage() {
                             {/* RC Column */}
                             <div className="space-y-3">
                                 <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
-                                {['p5', 'p6', 'p7_single', 'p7_double'].map((p) => {
+                                {['p5', 'p6', 'p7s', 'p7d'].map((p) => {
                                     const partStats = report.targetStats[p] || { target: 0, average: 0, latest: 0 };
                                     const goal = partStats.target;
                                     const current = partStats.average;
                                     const latest = partStats.latest;
                                     const gap = latest - goal;  // ✅ Use latest, not average
 
+                                    const labelMap: Record<string, string> = {
+                                        p5: 'P5', p6: 'P6', p7s: 'P7 S', p7d: 'P7 D'
+                                    };
+
                                     return (
                                         <div key={p} className="flex items-center text-sm gap-2 font-inter">
-                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{p.replace('p7_', 'P7 ').replace('single', 'S').replace('double', 'D')}</span>
+                                            <span className="text-slate-400 font-bold w-12 text-center uppercase text-[10px] sm:text-xs flex-shrink-0">{labelMap[p] || p}</span>
                                             <div className="flex-1 flex justify-between items-center px-3 bg-slate-800/50 rounded py-2">
                                                 <div className="flex flex-col items-center min-w-[32px]">
                                                     <span className="text-slate-500 text-[9px] mb-0.5">목표</span>
@@ -330,72 +330,199 @@ export default function WeaknessDashboardPage() {
 
             {/* 2. MIDDLE: AI Analysis 섹션 */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <Card className="lg:col-span-2 border-indigo-500/20 bg-indigo-500/5 backdrop-blur relative overflow-hidden">
-                    <CardHeader>
+                <Card className="lg:col-span-2 border-indigo-500/20 bg-indigo-500/5 backdrop-blur relative overflow-hidden min-h-[400px]">
+                    <CardHeader className="flex flex-row items-center justify-between">
                         <CardTitle className="text-white flex items-center gap-2">
                             <Zap className="w-5 h-5 text-amber-400" />
-                            AI 정밀 분석
+                            AI 주간 정밀 분석 (Beta)
                         </CardTitle>
+                        <Button
+                            onClick={async () => {
+                                if (!report) return;
+                                setLoadingWeeklyReport(true);
+                                try {
+                                    const userStr = localStorage.getItem('toeic_user');
+                                    const user = userStr ? JSON.parse(userStr) : {};
+
+                                    const weeklyStats = await WeaknessService.getWeeklyDetailedStats(user.userId || user.uid);
+
+                                    const response = await fetch('/api/ai-tutor/weekly-report', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({
+                                            stats: weeklyStats,
+                                            goals: {
+                                                targetScore: report.targetScore,
+                                                targetLC: report.targetLCScore,
+                                                targetRC: report.targetRCScore,
+                                                currentEst: estScore
+                                            },
+                                            weakestTags: report.weakestTags,
+                                            studentName: user.userName || user.name
+                                        })
+                                    });
+                                    const data = await response.json();
+                                    if (data.text) setAiWeeklyReport(data.text);
+                                } catch (e) {
+                                    console.error(e);
+                                } finally {
+                                    setLoadingWeeklyReport(false);
+                                }
+                            }}
+                            disabled={loadingWeeklyReport}
+                            className="bg-indigo-600 hover:bg-indigo-500 text-xs font-bold h-8"
+                        >
+                            {loadingWeeklyReport ? (
+                                <>
+                                    <Loader2 className="w-3 h-3 mr-2 animate-spin" />
+                                    분석 중...
+                                </>
+                            ) : (
+                                <>
+                                    <Sparkles className="w-3 h-3 mr-2" />
+                                    리포트 생성하기
+                                </>
+                            )}
+                        </Button>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-slate-200 text-lg leading-relaxed font-medium">
-                            {report.analysisMessage}
-                        </p>
-                        {report.weakestTags.length > 0 && (
-                            <div className="mt-6 space-y-3">
-                                <h4 className="text-xs font-bold text-slate-500 uppercase flex items-center gap-2">
-                                    <AlertCircle className="w-3 h-3 text-rose-500" />
-                                    3회 이상 반복된 취약 유형
-                                </h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {report.weakestTags.map(tag => (
-                                        <div key={tag.tag} className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-2">
-                                            <span className="text-sm font-bold text-slate-200">{tag.label}</span>
-                                            <span className="bg-rose-500/20 text-rose-500 text-[10px] font-black px-1.5 py-0.5 rounded">
-                                                {tag.incorrect}회 오답
-                                            </span>
-                                        </div>
-                                    ))}
+                        {loadingWeeklyReport ? (
+                            <div className="flex flex-col items-center justify-center py-20 space-y-4">
+                                <div className="relative">
+                                    <div className="w-16 h-16 border-4 border-indigo-500/20 border-t-indigo-500 rounded-full animate-spin"></div>
+                                    <Sparkles className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-indigo-400 animate-pulse" />
+                                </div>
+                                <div className="text-center">
+                                    <p className="text-white font-bold">강쌤 AI가 분석 중입니다...</p>
+                                    <p className="text-slate-500 text-xs mt-1">지난 1주일간의 모든 학습 데이터를 검토하고 있습니다.</p>
                                 </div>
                             </div>
+                        ) : aiWeeklyReport ? (
+                            <div className="text-slate-200 text-sm leading-relaxed prose prose-invert max-w-none prose-p:my-2 prose-headings:text-white prose-headings:font-black prose-strong:text-amber-400 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                    {aiWeeklyReport}
+                                </ReactMarkdown>
+                                <div className="mt-8 pt-4 border-t border-white/5 flex justify-end">
+                                    <button
+                                        onClick={() => setAiWeeklyReport('')}
+                                        className="text-[10px] text-slate-500 hover:text-white font-bold uppercase transition-colors"
+                                    >
+                                        리포트 닫기
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (
+                            <>
+                                <p className="text-slate-200 text-lg leading-relaxed font-medium mb-6">
+                                    {report.analysisMessage}
+                                </p>
+                                {report.weakestTags.length > 0 && (
+                                    <div className="space-y-3">
+                                        <h4 className="text-xs font-bold text-slate-500 uppercase flex items-center gap-2">
+                                            <AlertCircle className="w-3 h-3 text-rose-500" />
+                                            반복 오답 분석 (상위 5개)
+                                        </h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {report.weakestTags.map(tag => (
+                                                <div key={tag.tag} className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                                    <span className="text-sm font-bold text-slate-200">{tag.label}</span>
+                                                    <span className="bg-rose-500/20 text-rose-500 text-[10px] font-black px-1.5 py-0.5 rounded">
+                                                        {tag.incorrect}회 오답
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <p className="text-[11px] text-slate-500 mt-4 leading-relaxed italic">
+                                            * 우측 상단의 '리포트 생성하기' 버튼을 누르면 AI가 오답 원인과 처방전이 포함된 정밀 리포트를 작성합니다.
+                                        </p>
+                                    </div>
+                                )}
+                            </>
                         )}
                     </CardContent>
                 </Card>
 
-                <Card className="border-slate-800 bg-slate-900/50 backdrop-blur">
+                <Card className="border-slate-800 bg-slate-900/50 backdrop-blur relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-3">
+                        <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                    </div>
                     <CardHeader className="pb-2">
-                        <CardTitle className="text-sm text-slate-400">오답 유형 비중</CardTitle>
+                        <CardTitle className="text-sm font-black text-indigo-400 uppercase tracking-widest flex items-center gap-2">
+                            <Target className="w-4 h-4" />
+                            파트별 학습 우선순위
+                        </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                        <div className="h-[200px] w-full">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={chartData.slice(0, 5)}>
-                                    <XAxis dataKey="name" hide />
-                                    <Bar dataKey="value" barSize={20} radius={[4, 4, 0, 0]}>
-                                        {chartData.map((entry, index) => (
-                                            <Cell key={`cell-${index}`} fill={index === 0 ? '#f43f5e' : '#6366f1'} />
-                                        ))}
-                                    </Bar>
-                                </BarChart>
-                            </ResponsiveContainer>
+                    <CardContent className="p-0">
+                        <div className="divide-y divide-white/5">
+                            {Object.entries(report.targetStats)
+                                .map(([part, stats]) => ({ part, ...stats }))
+                                .filter(p => p.target > 0)
+                                .sort((a, b) => a.gap - b.gap) // Most negative gap first
+                                .slice(0, 5)
+                                .map((item, idx) => {
+                                    const partLabels: Record<string, string> = {
+                                        p1: 'Part 1', p2: 'Part 2', p3: 'Part 3', p4: 'Part 4',
+                                        p5: 'Part 5', p6: 'Part 6', p7s: 'Part 7 Single', p7d: 'Part 7 Double/Triple'
+                                    };
+                                    const isCritical = item.gap <= -3;
+
+                                    return (
+                                        <div key={item.part} className="px-5 py-4 flex items-center justify-between hover:bg-white/[0.02] transition-colors group">
+                                            <div className="flex items-center gap-4">
+                                                <div className={cn(
+                                                    "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border",
+                                                    idx === 0 ? "bg-indigo-500 text-white border-indigo-400" : "bg-slate-800 text-slate-500 border-slate-700"
+                                                )}>
+                                                    {idx + 1}
+                                                </div>
+                                                <div>
+                                                    <p className="text-sm font-black text-slate-200 uppercase italic tracking-tighter">
+                                                        {partLabels[item.part] || item.part}
+                                                    </p>
+                                                    <p className={cn(
+                                                        "text-[10px] font-bold uppercase tracking-tight",
+                                                        isCritical ? "text-rose-400" : "text-slate-500"
+                                                    )}>
+                                                        {item.gap < 0 ? `${Math.abs(item.gap)}문제 더 맞춰야 함` : '목표 달성 중'}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="text-right">
+                                                <div className="text-[10px] text-slate-500 font-bold uppercase mb-0.5">Status</div>
+                                                <div className="flex items-baseline gap-1">
+                                                    <span className={cn("text-lg font-black italic tracking-tighter", isCritical ? "text-rose-500" : "text-emerald-400")}>
+                                                        {item.latest}
+                                                    </span>
+                                                    <span className="text-[10px] font-black text-slate-700">/ {item.target}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                        </div>
+                        <div className="p-4 bg-slate-950/30 border-t border-white/5">
+                            <p className="text-[10px] text-slate-600 leading-relaxed text-center font-medium">
+                                * 목표 점수 대비 정답 개수가 가장 부족한 파트순입니다.
+                            </p>
                         </div>
                     </CardContent>
                 </Card>
             </div>
 
             {/* 3. BOTTOM: AI Homework Recommendations */}
-            <Card className="border-2 border-emerald-500/20 bg-slate-900 relative overflow-hidden">
+            <Card className="border-none bg-slate-900 relative overflow-hidden shadow-2xl ring-1 ring-white/5">
+                <div className="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                 <CardContent className="p-8">
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         {/* Header */}
                         <div className="space-y-4">
-                            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/20">
-                                <Zap className="w-3 h-3" />
-                                AI 맞춤 학습 추천
+                            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-1.5 rounded-full text-xs font-black border border-emerald-500/20 tracking-wider">
+                                <Sparkles className="w-3.5 h-3.5" />
+                                AI 맞춤 정밀 처방전
                             </div>
-                            <h3 className="text-2xl font-black text-white leading-tight">
-                                취약점을 완벽하게 보완하기 위한<br />
-                                <span className="text-emerald-500">맞춤형 주말 과제</span>가 준비되었습니다.
+                            <h3 className="text-3xl font-black text-white leading-tight">
+                                취약점을 뿌리뽑기 위한<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 underline decoration-emerald-500/30 underline-offset-8">오늘의 필승 학습 전략</span>
                             </h3>
                             <p className="text-slate-400 max-w-2xl text-sm leading-relaxed">
                                 실제 오답 데이터와 목표 점수 분석을 기반으로 엄선된 학습 경로입니다.
@@ -404,7 +531,7 @@ export default function WeaknessDashboardPage() {
                         </div>
 
                         {/* Two Homework Options */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                             {/* Option 1: Weak Part Practice */}
                             <button
                                 onClick={() => {
@@ -412,31 +539,32 @@ export default function WeaknessDashboardPage() {
                                         router.push(recommendedTest.url);
                                     }
                                 }}
-                                className="group relative bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border-2 border-indigo-500/30 hover:border-indigo-500/50 rounded-xl p-6 text-left transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-indigo-500/20"
+                                className="group relative bg-slate-950 border border-white/5 hover:border-emerald-500/50 rounded-2xl p-8 text-left transition-all hover:shadow-2xl hover:shadow-emerald-500/10 overflow-hidden"
                             >
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-500/30 transition-colors">
-                                        <Target className="w-6 h-6 text-indigo-400" />
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-emerald-500/10 transition-colors"></div>
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                        <Target className="w-7 h-7 text-emerald-400" />
                                     </div>
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <span className="text-xs font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">1순위</span>
-                                            <h4 className="text-lg font-black text-white">AI 추천 취약 파트 연습</h4>
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-[10px] font-black text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded uppercase tracking-widest">Main Mission</span>
+                                            <h4 className="text-xl font-black text-white">취약 파트 실전 훈련</h4>
                                         </div>
-                                        <p className="text-sm text-slate-400 leading-relaxed mb-3">
+                                        <p className="text-sm text-slate-400 leading-relaxed font-medium">
                                             {recommendedTest
-                                                ? `${report.weakestPart?.part.toUpperCase().replace('_', ' ')} ${recommendedTest.title} 실전 모의고사를 풀어보세요.`
+                                                ? `${report.weakestPart?.part.toUpperCase().replace('_', ' ')} 집중 공략을 위한 ${recommendedTest.title} 테스트입니다.`
                                                 : '목표 대비 가장 부족한 파트를 분석 중입니다...'}
                                         </p>
-                                        <div className="flex items-center gap-2 text-xs text-indigo-400 font-bold">
-                                            <span>실전 모의고사 풀기</span>
-                                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        <div className="pt-4 flex items-center gap-2 text-xs text-emerald-400 font-black group-hover:translate-x-2 transition-transform">
+                                            <span>실전 모의고사 즉시 시작</span>
+                                            <ChevronRight className="w-4 h-4" />
                                         </div>
                                     </div>
                                 </div>
                             </button>
 
-                            {/* Option 2: Type Review - Dynamic rendering */}
+                            {/* Option 2: Type Review */}
                             {typeReviewAssignments.length > 0 ? (
                                 typeReviewAssignments.map((assignment, idx) => (
                                     <button
@@ -444,25 +572,24 @@ export default function WeaknessDashboardPage() {
                                         onClick={() => {
                                             router.push(assignment.homeworkUrl);
                                         }}
-                                        className="group relative bg-gradient-to-br from-rose-500/10 to-orange-500/10 border-2 border-rose-500/30 hover:border-rose-500/50 rounded-xl p-6 text-left transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-rose-500/20"
+                                        className="group relative bg-slate-950 border border-white/5 hover:border-indigo-500/50 rounded-2xl p-8 text-left transition-all hover:shadow-2xl hover:shadow-indigo-500/10 overflow-hidden"
                                     >
-                                        <div className="flex items-start gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-rose-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-rose-500/30 transition-colors">
-                                                <AlertTriangle className="w-6 h-6 text-rose-400" />
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-indigo-500/10 transition-colors"></div>
+                                        <div className="relative z-10">
+                                            <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                                <BookOpen className="w-7 h-7 text-indigo-400" />
                                             </div>
-                                            <div className="flex-1">
-                                                <div className="flex items-center gap-2 mb-2">
-                                                    <span className="text-xs font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded">
-                                                        2순위 {typeReviewAssignments.length > 1 ? `(${idx + 1}/${typeReviewAssignments.length})` : ''}
-                                                    </span>
-                                                    <h4 className="text-lg font-black text-white">{assignment.title}</h4>
+                                            <div className="space-y-4">
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-[10px] font-black text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded uppercase tracking-widest">Type Drill</span>
+                                                    <h4 className="text-xl font-black text-white">{assignment.title}</h4>
                                                 </div>
-                                                <p className="text-sm text-slate-400 leading-relaxed mb-3">
+                                                <p className="text-sm text-slate-400 leading-relaxed font-medium">
                                                     {assignment.description}
                                                 </p>
-                                                <div className="flex items-center gap-2 text-xs text-rose-400 font-bold">
-                                                    <span>유형별 문제 풀기</span>
-                                                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                                <div className="pt-4 flex items-center gap-2 text-xs text-indigo-400 font-black group-hover:translate-x-2 transition-transform">
+                                                    <span>핵심 유형 정복하기</span>
+                                                    <ChevronRight className="w-4 h-4" />
                                                 </div>
                                             </div>
                                         </div>
@@ -473,25 +600,26 @@ export default function WeaknessDashboardPage() {
                                     onClick={() => {
                                         router.push('/homework/part5/custom?assignmentId=test');
                                     }}
-                                    className="group relative bg-gradient-to-br from-rose-500/10 to-orange-500/10 border-2 border-rose-500/30 hover:border-rose-500/50 rounded-xl p-6 text-left transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-rose-500/20"
+                                    className="group relative bg-slate-950 border border-white/5 hover:border-rose-500/50 rounded-2xl p-8 text-left transition-all hover:shadow-2xl hover:shadow-rose-500/10 overflow-hidden"
                                 >
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-xl bg-rose-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-rose-500/30 transition-colors">
-                                            <AlertTriangle className="w-6 h-6 text-rose-400" />
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-rose-500/10 transition-colors"></div>
+                                    <div className="relative z-10">
+                                        <div className="w-14 h-14 rounded-2xl bg-rose-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                            <AlertTriangle className="w-7 h-7 text-rose-400" />
                                         </div>
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <span className="text-xs font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded">2순위</span>
-                                                <h4 className="text-lg font-black text-white">자주 틀리는 유형 학습</h4>
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-[10px] font-black text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded uppercase tracking-widest">Emergency Drill</span>
+                                                <h4 className="text-xl font-black text-white">자주 틀리는 유형 집중 복습</h4>
                                             </div>
-                                            <p className="text-sm text-slate-400 leading-relaxed mb-3">
+                                            <p className="text-sm text-slate-400 leading-relaxed font-medium">
                                                 {report.weakestTags.length > 0
-                                                    ? `${report.weakestTags[0].label} 등 반복 오답 유형을 집중 복습합니다.`
-                                                    : '이번 주 3회 이상 틀린 유형을 분석하여 제공합니다.'}
+                                                    ? `${report.weakestTags[0].label} 등 반복 오답 유형을 집중 교정합니다.`
+                                                    : '이번 주 3회 이상 틀린 유형을 긴급 처방합니다.'}
                                             </p>
-                                            <div className="flex items-center gap-2 text-xs text-rose-400 font-bold">
-                                                <span>유형별 문제 풀기 (테스트)</span>
-                                                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            <div className="pt-4 flex items-center gap-2 text-xs text-rose-400 font-black group-hover:translate-x-2 transition-transform">
+                                                <span>유형별 오답 클리닉 시작</span>
+                                                <ChevronRight className="w-4 h-4" />
                                             </div>
                                         </div>
                                     </div>

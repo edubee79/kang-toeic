@@ -10,7 +10,7 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s11-p1",
                 contextType: "P5",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Table of Contents",
                     subtitle: "Leadership: Essays on Being a Great Leader"
@@ -29,7 +29,7 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s11-p2",
                 contextType: "P4",
-                type: "REVIEW",
+                docType: "REVIEW",
                 header: {
                     title: "Book Review: Leadership: Essays on Being a Great Leader"
                 },
@@ -121,7 +121,7 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s12-p1",
                 contextType: "P6",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Tanyalog Industries Policy 4-02"
                 },
@@ -135,7 +135,7 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s12-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `From: Eugene Lasich\nTo: All Expansion Committee Members\nSubject: Tanyalog Industries Expansion Meeting\nDate: September 10\n\nCommittee Members,\n\nPlease join me for the first meeting of the Expansion Committee on Monday, September 17. All attendees should arrive at the Martinelli Room at 10:00 A.M. Then, at 12:00 P.M., we will break for lunch and you can visit the cafeteria to receive a complimentary meal. Just show your visitor's badge at Window 4. All committee members should bring their trays to the conference room on the third floor right beside the cafeteria, where we will continue our meeting from 12:45 P.M. until 4:00 P.M.\n\nThank you. We look forward to your input at the meeting.\n\nEugene Lasich, Expansion Committee Chair\nTanyalog Industries`
             }
         ],
@@ -221,7 +221,7 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s13-p1",
                 contextType: "P3",
-                type: "ARTICLE",
+                docType: "ARTICLE",
                 header: {
                     headline: "Hiking Permits to Be Required for Upton Parks",
                     columns: 2
@@ -235,13 +235,13 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s13-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `From: Arlo Gomes <arlog@uptonhikingclub.org>\nTo: Upton Parks Department <info@uptonparks.org>\nDate: January 22\nSubject: Hiking permits\n\nTo Whom It May Concern,\n\nI read in the Upton Digest that hikers soon will be required to register for permits for certain trails. As the organizer of the Upton Hiking Club, I would like more details on how this will affect our club. For example, is there a list of hiking trails that will require permits? I checked your Web site and could not find one.\n\nIs it also the case that the number of permits issued will vary from trail to trail? About seventeen to twenty club members participate in our group hikes. I’m concerned that we may not get enough permits to hike together. Are there special considerations for large groups?\n\nFinally, I am concerned that the permit requirement will not allow our club members to get together for a hike on the spur of the moment. We often will take an unplanned hike if we find that several members have a free day.\n\nI hope you are able to respond soon, as we are already planning our spring and summer hikes.\n\nRegards,\n\nArlo Gomes\nOrganizer, Upton Hiking Club`
             },
             {
                 id: "p7-t8-s13-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `From: Upton Parks Department <info@uptonparks.org>\nTo: Arlo Gomes <arlog@uptonhikingclub.org>\nDate: January 23\nSubject: RE: Hiking permits\nAttachment: @Permit_Information_DRAFT\n\nHello, Mr. Gomes,\n\nThank you for your e-mail. I apologize that our Web site has not yet been updated with the information you were searching for and that the article in the Upton Digest was not clear. I have attached a proposed list of the twelve trails that will require permits and the number of permits that will be issued per day for each trail. The list will be finalized next month.\n\nPermits can be reserved up to two weeks in advance, and the number of permits available for most trails is substantially higher than the number of Upton Hiking Club members who join your group hikes. Same-day permits can be obtained.\n\nIf you have not already done so, you can sign up on our Web site for our weekly newsletter. Doing so will ensure that you get advance notice of any updates to our policies.\n\nJenny Grieb, Public Relations, Upton Parks Department`
             }
         ],
@@ -327,7 +327,7 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s14-p1",
                 contextType: "P5",
-                type: "NOTICE",
+                docType: "NOTICE",
                 header: {
                     title: "Your Move Vehicle Rental Company"
                 },
@@ -344,13 +344,13 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s14-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: reservations@yourmove.com\nFrom: selina_os@chestnutmail.com\nDate: October 29\nSubject: Reservation 15288242\n\nHello,\n\nI reserved a moving van online and was given an estimated price of $150. However, I mistakenly listed the same location for both pickup and drop-off. I’d like to know if there is a drop-off location closer to my destination in Cumberland. If so, can you please help me update the reservation?\n\nSincerely,\n\nSelina Osman`
             },
             {
                 id: "p7-t8-s14-p3",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: selina_os@chestnutmail.com\nFrom: reservations@yourmove.com\nDate: October 30\nSubject: RE: Reservation 15288242\n\nDear Ms. Osman,\n\nWe have a rental office just outside Indianapolis, about a ten-minute drive from Cumberland. If that is the drop-off location, you would have about 90 kilometers of driving from the starting point in Muncie. Based on this, we have updated your price estimate as follows:\n\nRental: 5-meter moving van for 1 day = $39.99\nRental: wheeled furniture cart = $6.99\nRental: furniture pads (set of 12) = $9.99\nDistance: $1.05 per kilometer = $94.50 (90 kilometers estimated)\nVehicle damage insurance = $19.99\n\n**Total = $171.46**\n\nPlease note that this total does not include taxes. The final price may vary based on the actual distance driven and will be calculated once the vehicle is returned to the drop-off location. Until that time, your credit card on file will be charged for the rental equipment only.\n\nSincerely,\n\nAlistair Muhn\nYour Move Vehicle Rental Company`
             }
         ],
@@ -436,19 +436,19 @@ export const rcPart7Test8: PracticeSet[] = [
             {
                 id: "p7-t8-s15-p1",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: Soon-Yee Kim\nFrom: Frank Zubiri\nDate: February 12\nSubject: Welcome\n\nDear Ms. Kim,\n\nWelcome to Jacobi Technologies’ sales team! Your first day is Monday, February 28. Please arrive at the Green Building, 1 Jacobi Circle, Naperville, at 9 A.M. Your team supervisor, Sophia Holland, will lead you through your first day. Here is an outline of what to expect.\n\n1. Sign your employment contract and receive an ID badge.\n2. Visit your assigned cubicle on the fourth floor of the Yellow Building.\n3. Attend a luncheon with members of your team in the Yellow Building conference room.\n4. Join other new hires for a guided tour of the campus. Look for an e-mail about this within a few days.\n\nBest regards,\n\nFrank Zubiri\nSenior Director, Human Resources`
             },
             {
                 id: "p7-t8-s15-p2",
                 contextType: "P1",
-                type: "EMAIL",
+                docType: "EMAIL",
                 content: `To: New Hires Distribution List\nFrom: Toru Hada\nDate: February 15\nSubject: Campus Tour Dates\n\nThe next tour dates are February 21 and 28 and March 7 and 14. To sign up, simply reply to this e-mail with your full name and the date corresponding to your start day. Tours begin at 3:00 P.M. and last about an hour. Please meet me in the Blue Building lobby a few minutes before 3:00 P.M. Note that the Blue Building is on Jacobi Circle between the Green and Yellow Buildings. The tour will include stops at the labs, our sustainable power plant, and all employee amenities.\n\nShould you have any questions about your start day, the tour, or any of the employee onboarding materials, please do not hesitate to contact me.`
             },
             {
                 id: "p7-t8-s15-p3",
                 contextType: "P4",
-                type: "WEB_PAGE",
+                docType: "WEB_PAGE",
                 header: {
                     url: "https://www.jacobitechnologies.com/about"
                 },

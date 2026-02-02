@@ -54,7 +54,11 @@ function NavContent({
 
     return (
         <div className="flex flex-col h-full bg-[#0B0F1A] text-white p-6 border-r border-indigo-500/10 shadow-[4px_0_24px_rgba(0,0,0,0.5)]">
-            <Link href="/" className="mb-10 flex items-center gap-3 px-2 hover:opacity-80 transition-opacity">
+            <Link
+                href="/"
+                className="mb-10 flex items-center gap-3 px-2 hover:opacity-80 transition-opacity"
+                onClick={() => setOpen?.(false)}
+            >
                 <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
                     <Target className="w-5 h-5 text-white" />
                 </div>
@@ -193,10 +197,28 @@ export function Sidebar({ open, setOpen }: { open?: boolean; setOpen?: (v: boole
 }
 
 export function Navbar({ onMenuClick, onLogout }: { onMenuClick: () => void; onLogout: () => void }) {
+    const [userName, setUserName] = useState<string>('');
+
+    useEffect(() => {
+        const userData = localStorage.getItem('toeic_user');
+        if (userData) {
+            try {
+                const parsed = JSON.parse(userData);
+                setUserName(parsed.userName || parsed.name || parsed.username || '');
+            } catch (e) {
+                console.error("Failed to parse user data", e);
+            }
+        }
+    }, []);
+
     return (
         <nav className="p-4 md:p-6 flex justify-between items-center bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
             <div className="flex items-center gap-4">
-                <h1 className="font-black text-xl italic tracking-tighter text-indigo-400">깡쌤토익</h1>
+                <Link href="/">
+                    <h1 className="font-black text-xl italic tracking-tighter text-indigo-400 hover:opacity-80 transition-opacity">
+                        깡쌤토익
+                    </h1>
+                </Link>
                 <div className="hidden md:flex items-center gap-2 ml-4">
                     <Link href="/admin/dashboard">
                         <Button variant="ghost" size="sm" className="text-slate-500 hover:text-indigo-400 font-bold gap-2">
@@ -206,19 +228,29 @@ export function Navbar({ onMenuClick, onLogout }: { onMenuClick: () => void; onL
                     </Link>
                 </div>
             </div>
-            <div className="flex items-center gap-2">
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"
-                    onClick={onLogout}
-                    title="로그아웃"
-                >
-                    <LogOut className="w-5 h-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-white md:hidden" onClick={onMenuClick}>
-                    <Menu className="w-6 h-6" />
-                </Button>
+            <div className="flex items-center gap-3 md:gap-6">
+                {userName && (
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-indigo-500/5 rounded-full border border-indigo-500/10">
+                        <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                        <span className="text-xs md:text-sm font-black text-slate-200">
+                            {userName} <span className="text-slate-500 font-bold ml-0.5">님</span>
+                        </span>
+                    </div>
+                )}
+                <div className="flex items-center gap-1 md:gap-2 border-l border-slate-800 pl-3 md:pl-6">
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors h-8 w-8"
+                        onClick={onLogout}
+                        title="로그아웃"
+                    >
+                        <LogOut className="w-4 h-4 md:w-5 md:h-5" />
+                    </Button>
+                    <Button variant="ghost" size="icon" className="text-white md:hidden h-8 w-8" onClick={onMenuClick}>
+                        <Menu className="w-5 h-5 md:w-6 md:h-6" />
+                    </Button>
+                </div>
             </div>
         </nav>
     );

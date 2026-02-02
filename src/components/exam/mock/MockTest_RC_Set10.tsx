@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { test10Part5, test10Part6, test10Part7Single, test10Part7Multi } from "@/data/mock/set10_data";
 import { ChevronLeft, ChevronRight, Clock, Info, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
     onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
@@ -20,44 +21,45 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
 
     // Scroll to top when spread changes
     // Cumulative Time Tracking (Stopwatch 방식)
+    // Timer Logic & Time Tracking
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
                     alert("시험 시간이 종료되었습니다. 자동으로 제출합니다.");
-                    handleInternalSubmit();
+                    onFinishExam(answers, timeLogs);
                     return 0;
                 }
+                return prev - 1;
+            });
 
-                // 현재 사용자가 보고 있는 Spread 번호에 따라 해당 파트 시간만 합산
-                let currentPartKey = "";
-                if (currentSpread <= 1) currentPartKey = "p5";
-                else if (currentSpread <= 3) currentPartKey = "p6";
+            // Track time per part based on current spread
+            setTimeLogs(prev => {
+                const copy = { ...prev };
+                if (currentSpread <= 1) copy.p5 += 1;
+                else if (currentSpread <= 3) copy.p6 += 1;
                 else {
                     const singleCount = test10Part7Single.length;
                     const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
-                    if (currentSpread <= singleSpreadsEndIdx) currentPartKey = "p7s";
-                    else currentPartKey = "p7m";
+                    if (currentSpread <= singleSpreadsEndIdx) copy.p7s += 1;
+                    else copy.p7m += 1;
                 }
-
-                if (currentPartKey) {
-                    setTimeLogs(prevLogs => ({
-                        ...prevLogs,
-                        [currentPartKey]: (prevLogs[currentPartKey] || 0) + 1
-                    }));
-                }
-
-                return prev - 1;
+                return copy;
             });
         }, 1000);
         return () => clearInterval(timer);
-    }, [currentSpread]);
+    }, [answers, onFinishExam, currentSpread, timeLogs]);
 
     // Scroll to top when spread changes
     useEffect(() => {
         if (mainContainerRef.current) {
             mainContainerRef.current.scrollTop = 0;
+            // Reset all internal scrollable areas (booklet pages, question containers, etc.)
+            const scrollables = mainContainerRef.current.querySelectorAll('.booklet-page, .overflow-y-auto');
+            scrollables.forEach(el => {
+                el.scrollTop = 0;
+            });
         }
     }, [currentSpread]);
 
@@ -92,7 +94,6 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
     };
 
     const nextSpread = () => {
-        // Validation: Disabled for testing Test 2
         /*
         const currentQuestions = getRCSpreadQuestions(currentSpread);
         const unanswered = currentQuestions.filter(qId => !answers[qId]);
@@ -144,7 +145,9 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
             {/* Header */}
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30">
                 <div className="flex items-center gap-6">
-                    <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                        <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    </Link>
                     <div className="h-6 w-px bg-slate-200"></div>
                     <span className="font-bold text-slate-500 uppercase text-xs tracking-widest">제2회 실전 모의고사: Reading Section</span>
                 </div>
@@ -449,13 +452,18 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
 
 function renderP5Question(q: any, answers: any, onAnswer: any) {
     const displayNum = String(q.id).includes('-q') ? q.id.split('-q')[1] : String(q.id).replace(/[^\d]/g, '');
+
+    // Check if boilerplate text in Part 6
+    const isRedundantText = q.text === "Select the best answer." ||
+        q.text === "Select the best sentence to complete the text.";
+
     return (
         <div key={q.id} className="q-block">
-            <div className="q-meta">
-                <span className="q-id-badge">{displayNum}</span>
+            <div className="flex items-start gap-2 mb-2">
+                <span className="q-id-badge shrink-0">{displayNum}</span>
+                {!isRedundantText && <p className="text-[13px] font-black leading-relaxed text-black">{q.text}</p>}
             </div>
-            <p className="text-[13px] font-black leading-relaxed text-black mb-2">{q.text}</p>
-            <div className="space-y-0.5">
+            <div className={`space-y-0.5 ${isRedundantText ? 'pl-8' : ''}`}>
                 {q.options.map((opt: any) => {
                     let label = "";
                     let text = "";
@@ -481,6 +489,32 @@ function renderP5Question(q: any, answers: any, onAnswer: any) {
         </div>
     );
 }
+
+const getPassageLabel = (p: any) => {
+    const type = p.docType || p.type || p.contextType || 'Text';
+    const mapping: Record<string, string> = {
+        'notice': 'Notice', 'NOTICE': 'Notice',
+        'article': 'Article', 'ARTICLE': 'Article',
+        'advertisement': 'Advertisement', 'ADVERTISEMENT': 'Advertisement',
+        'letter': 'Letter', 'LETTER': 'Letter',
+        'email': 'Email', 'EMAIL': 'Email',
+        'chat_message': 'Chat Message', 'CHAT_MESSAGE': 'Chat Message',
+        'sign': 'Sign', 'SIGN': 'Sign',
+        'memo': 'Memo', 'MEMO': 'Memo',
+        'form': 'Form', 'FORM': 'Form',
+        'schedule': 'Schedule', 'SCHEDULE': 'Schedule',
+        'web_page': 'Web Page', 'WEB_PAGE': 'Web Page',
+        'information': 'Information', 'INFORMATION': 'Information'
+    };
+    if (mapping[type]) return mapping[type];
+
+    // Handle P1, P2... codes
+    if (/^P\d+$/i.test(type)) {
+        return 'Passage';
+    }
+
+    return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+};
 
 function renderP6Set(set: any, answers: any, onAnswer: any) {
     if (!set) return null;
@@ -510,7 +544,7 @@ function renderP7SingleSet(set: any, answers: any, onAnswer: any) {
             <div className="passage-box">
                 {set.passages.map((p: any) => (
                     <div key={p.id} className="mb-4">
-                        <span className="passage-label">{p.type || 'Text'}</span>
+                        <span className="passage-label">{getPassageLabel(p)}</span>
                         {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
                         <div className="text-sm font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                     </div>
@@ -545,7 +579,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                     <div className="space-y-8">
                         {passages.map((p: any) => (
                             <div key={p.id} className="passage-box !mb-0">
-                                <span className="passage-label">{p.type}</span>
+                                <span className="passage-label">{getPassageLabel(p)}</span>
                                 {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
                                 <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                             </div>
@@ -568,7 +602,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                 <div className="space-y-6">
                     {passages.slice(0, 2).map((p: any) => (
                         <div key={p.id} className="passage-box !mb-0">
-                            <span className="passage-label">{p.type}</span>
+                            <span className="passage-label">{getPassageLabel(p)}</span>
                             {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
                             <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                         </div>
@@ -577,7 +611,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
             </div>
             <div className="booklet-page flex flex-col h-full !overflow-hidden">
                 <div className="passage-box !mb-0 !p-4 shrink-0 border-b-2 border-slate-100 shadow-md z-10 max-h-[45%] overflow-y-auto">
-                    <span className="passage-label">{passages[2].type}</span>
+                    <span className="passage-label">{getPassageLabel(passages[2])}</span>
                     {passages[2].title && <h3 className="font-black text-xs border-b mb-1 uppercase">{passages[2].title}</h3>}
                     <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} /></div>
                 </div>

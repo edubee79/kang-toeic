@@ -10,7 +10,7 @@ export const test2PracticeSet: PracticeSet[] = [
             {
                 id: "p7-t2-s11-p1",
                 contextType: "P1", // E-MAIL
-                type: "email",
+                docType: "email",
                 content: `From: Madalyn Kerluke <mkerluke@karabel.ca>
 To: Omar Niklaus <oniklaus@karabel.ca>, Jay Toncic <jtoncic@karabel.ca>
 Date: Friday, 3 February 2:16 P.M.
@@ -28,7 +28,7 @@ Madalyn Kerluke`
             {
                 id: "p7-t2-s11-p2",
                 contextType: "P5",
-                type: "table",
+                docType: "table",
                 title: "Fatior Labs Consumer Taste-Testing Survey",
                 content: `Date: 24 January
 Company: Karabel Industries
@@ -133,7 +133,7 @@ Comments: The fruit-flavoured ice creams were surprisingly sour. I did not care 
             {
                 id: "p7-t2-s12-p1",
                 contextType: "P3",
-                type: "web_page",
+                docType: "web_page",
                 content: `https://www.creategreat.ca/openings
 
 Create Great, an Ontario-based creative agency with a diverse range of global clients in the fashion industry, is seeking a copywriter who is passionate about fashion, understands market trends, and handles digital tools with ease.
@@ -145,7 +145,7 @@ To apply, send your cover letter and résumé to the director of our creative te
             {
                 id: "p7-t2-s12-p2",
                 contextType: "P1",
-                type: "letter",
+                docType: "letter",
                 content: `Annie Smith
 4810 South Bryant Street
 Portland, OR 97206
@@ -259,7 +259,7 @@ Enclosure`
             {
                 id: "p7-t2-s13-p1",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `From: Akihito Nakashima <a.nakashima@gilchristshipping.com>
 To: Fowler Office Supplies <support@fowlerofficesupplies.com>
 Subject: Order B19849
@@ -277,7 +277,7 @@ Gilchrist Shipping`
             {
                 id: "p7-t2-s13-p2",
                 contextType: "P1",
-                type: "email",
+                docType: "email",
                 content: `From: Fowler Office Supplies <support@fowlerofficesupplies.com>
 To: Akihito Nakashima <a.nakashima@gilchristshipping.com>
 Subject: RE: Order B19849
@@ -300,7 +300,7 @@ Fowler Office Supplies`
             {
                 id: "p7-t2-s13-p3",
                 contextType: "P5",
-                type: "receipt",
+                docType: "receipt",
                 title: "Fowler Office Supplies",
                 content: `Receipt for Order: B19849
 Order Date: August 18
@@ -403,7 +403,7 @@ Return Policy: Unopened merchandise may be returned by mail or in one of our sto
             {
                 id: "p7-t2-s14-p1",
                 contextType: "P3",
-                type: "article",
+                docType: "article",
                 header: {
                     headline: "Crawford and Duval Opens Brick-and-Mortar Stores",
                     date: "HONG KONG (18 February)"
@@ -415,7 +415,7 @@ Return Policy: Unopened merchandise may be returned by mail or in one of our sto
             {
                 id: "p7-t2-s14-p2",
                 contextType: "P4",
-                type: "web_page",
+                docType: "web_page",
                 content: `https://www.crawfordandduval.com.hk
 
 Home | Best Sellers | Full Catalogue | Shopping Cart
@@ -435,7 +435,7 @@ Members of our online Frequent Purchase Club will receive the same benefits in o
             {
                 id: "p7-t2-s14-p3",
                 contextType: "P5",
-                type: "receipt",
+                docType: "receipt",
                 title: "Crawford and Duval",
                 content: `Customer Receipt
 Date: 23 February
@@ -545,7 +545,7 @@ Stop at our in-store café for a treat!`
             {
                 id: "p7-t2-s15-p1",
                 contextType: "P4",
-                type: "web_page",
+                docType: "web_page",
                 content: `https://www.osawacorporateteambuilding.com/home
 
 Osawa Corporate Team Building
@@ -567,7 +567,7 @@ Book an event in October and receive 15 percent off.`
             {
                 id: "p7-t2-s15-p2",
                 contextType: "P5",
-                type: "web_page",
+                docType: "web_page",
                 content: `https://www.osawacorporateteambuilding.com/requests
 
 Name: Alexandra Peterson
@@ -589,7 +589,7 @@ We will contact you within three business days with a quote and confirmation.`
             {
                 id: "p7-t2-s15-p3",
                 contextType: "P4",
-                type: "review",
+                docType: "review",
                 title: "What Our Customers Are Saying",
                 content: `https://www.osawacorporateteambuilding.com/reviews
 

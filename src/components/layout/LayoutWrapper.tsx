@@ -56,8 +56,18 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
                 <main className={cn(
                     "flex-1 w-full mx-auto",
-                    pathname === '/homework/part7/practice' || pathname.startsWith('/mock-test/full/') ? "max-w-none p-0" : "max-w-7xl md:p-10 p-6",
-                    pathname.startsWith('/homework/') && pathname !== '/homework/part7/practice' && pathname.split('/').filter(Boolean).length >= 3
+                    (
+                        pathname === '/' ||
+                        pathname === '/student/dashboard' ||
+                        pathname === '/mock-test' ||
+                        pathname === '/level-test' ||
+                        (pathname.startsWith('/homework/') && pathname.split('/').filter(Boolean).length === 2) ||
+                        pathname === '/homework/part7/practice' ||
+                        pathname.startsWith('/mock-test/full/')
+                    ) ? "max-w-none p-0" : "max-w-7xl md:p-10 p-6",
+                    pathname.startsWith('/homework/') &&
+                        pathname.split('/').filter(Boolean).length >= 3 &&
+                        pathname !== '/homework/part7/practice'
                         ? "p-0"
                         : ""
                 )}>

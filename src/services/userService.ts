@@ -3,8 +3,9 @@ import { db } from '@/lib/firebase';
 
 export interface UserProfile {
     userId: string;
-    username: string;
-    name: string;
+    username: string; // login ID
+    name: string; // legacy or fallback
+    userName?: string; // actual name (matched from Signup)
     className?: string; // e.g. "Sparta 700+"
     targetScore?: number;
     targetRC?: number;

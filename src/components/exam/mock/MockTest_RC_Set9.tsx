@@ -3,9 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { test9Part5, test9Part6, test9Part7Single, test9Part7Multi } from "@/data/mock/set9_data";
 import { ChevronLeft, ChevronRight, Clock, Info, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
-    onFinishExam: (answers: Record<string, string>) => void;
+    onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
     initialAnswers?: Record<string, string>;
 }
 
@@ -13,6 +14,7 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     const [currentSpread, setCurrentSpread] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
     const [timeLeft, setTimeLeft] = useState(75 * 60); // 75 minutes
+    const [timeLogs, setTimeLogs] = useState<Record<string, number>>({ p5: 0, p6: 0, p7s: 0, p7m: 0 });
     const lastAdvancedSpreadRef = useRef<number>(-1);
     const mainContainerRef = React.useRef<HTMLDivElement>(null);
 
@@ -20,24 +22,39 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     useEffect(() => {
         if (mainContainerRef.current) {
             mainContainerRef.current.scrollTop = 0;
+            // Reset all internal scrollable areas (booklet pages, question containers, etc.)
+            const scrollables = mainContainerRef.current.querySelectorAll('.booklet-page, .overflow-y-auto');
+            scrollables.forEach(el => {
+                el.scrollTop = 0;
+            });
         }
     }, [currentSpread]);
 
-    // Timer Logic
+    // Timer Logic & Time Tracking
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
                     alert("시험 시간이 종료되었습니다. 자동으로 제출합니다.");
-                    onFinishExam(answers);
+                    onFinishExam(answers, timeLogs);
                     return 0;
                 }
                 return prev - 1;
             });
+
+            // Track time per part based on current spread
+            setTimeLogs(prev => {
+                const copy = { ...prev };
+                if (currentSpread <= 1) copy.p5 += 1;
+                else if (currentSpread <= 3) copy.p6 += 1;
+                else if (currentSpread <= 8) copy.p7s += 1;
+                else copy.p7m += 1;
+                return copy;
+            });
         }, 1000);
         return () => clearInterval(timer);
-    }, [answers, onFinishExam]);
+    }, [answers, onFinishExam, currentSpread, timeLogs]);
 
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
@@ -66,6 +83,7 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     };
 
     const nextSpread = () => {
+        /*
         const currentQuestions = getRCSpreadQuestions(currentSpread);
         const unanswered = currentQuestions.filter(qId => !answers[qId]);
 
@@ -73,33 +91,36 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
             alert(`현재 페이지의 모든 문제를 풀어주세요. (남은 문제: ${unanswered.length}개)`);
             return;
         }
+        */
         setCurrentSpread(s => s + 1);
     }
 
     const getRCSpreadQuestions = (idx: number): string[] => {
         const qIds: string[] = [];
         if (idx === 0) {
-            test9Part5.slice(0, 20).forEach(q => qIds.push(String(q.id)));
+            test9Part5.slice(0, 16).forEach(q => qIds.push(String(q.id)));
         } else if (idx === 1) {
-            test9Part5.slice(20, 30).forEach(q => qIds.push(String(q.id)));
-            test9Part6[0].questions.forEach((q: any) => qIds.push(String(q.id)));
+            test9Part5.slice(16, 30).forEach(q => qIds.push(String(q.id)));
         } else if (idx === 2) {
-            test9Part6[1].questions.forEach((q: any) => qIds.push(String(q.id)));
-            test9Part6[2].questions.forEach((q: any) => qIds.push(String(q.id)));
+            test9Part6[0]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            test9Part6[1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
         } else if (idx === 3) {
-            test9Part6[3].questions.forEach((q: any) => qIds.push(String(q.id)));
-            test9Part7Single[0].questions.forEach((q: any) => qIds.push(String(q.id)));
+            test9Part6[2]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            test9Part6[3]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+        } else if (idx === 4) {
+            test9Part7Single[0]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            test9Part7Single[1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
         } else {
-            // Dynamic logic for later spreads
-            const singleCount = test9Part7Single.length;
-            const singleSpreads = Math.ceil((singleCount - 1) / 2) + 4;
-
-            if (idx < singleSpreads) {
-                const singleOffset = (idx - 4) * 2 + 1;
+            // Dynamic Single Sets (Idx >= 5)
+            const singleOffset = (idx - 5) * 2 + 2;
+            if (singleOffset < test9Part7Single.length) {
                 test9Part7Single[singleOffset]?.questions.forEach((q: any) => qIds.push(String(q.id)));
                 test9Part7Single[singleOffset + 1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
             } else {
-                const multiIdx = idx - singleSpreads;
+                // Multi Sets
+                const singleCount = test9Part7Single.length;
+                const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
+                const multiIdx = idx - singleSpreadsEndIdx - 1;
                 test9Part7Multi[multiIdx]?.questions.forEach((q: any) => qIds.push(String(q.id)));
             }
         }
@@ -107,14 +128,16 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     };
     const prevSpread = () => setCurrentSpread(s => s - 1);
 
-    const totalSpreads = 14;
+    const totalSpreads = 5 + test9Part7Multi.length + Math.ceil((test9Part7Single.length - 2) / 2);
 
     return (
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
             {/* Header */}
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30">
                 <div className="flex items-center gap-6">
-                    <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                        <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    </Link>
                     <div className="h-6 w-px bg-slate-200"></div>
                     <span className="font-bold text-slate-500 uppercase text-xs tracking-widest">제1회 실전 모의고사: Reading Section</span>
                 </div>
@@ -137,7 +160,7 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
                         <Clock className="w-4 h-4" />
                         <span className="font-mono text-lg font-black">{formatTime(timeLeft)}</span>
                     </div>
-                    <button onClick={() => confirm("시험을 종료하고 제출하시겠습니까?") && onFinishExam(answers)} className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 transition-all active:scale-95">
+                    <button onClick={() => confirm("시험을 종료하고 제출하시겠습니까?") && onFinishExam(answers, timeLogs)} className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 transition-all active:scale-95">
                         Submit
                     </button>
                 </div>
@@ -313,16 +336,24 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <strong>Directions:</strong> A word or phrase is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence.
                     </div>
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(0, 5).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(5, 10).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                     </div>
                 </div>
                 <div className="booklet-page pt-[120px]">
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(10, 15).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(15, 20).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(12, 16).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                     </div>
                 </div>
             </>
@@ -334,17 +365,25 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
             <>
                 <div className="booklet-page">
                     <div className="flex h-fit mt-12">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(20, 25).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(16, 20).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(25, 30).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(20, 24).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                     </div>
                 </div>
-                <div className="booklet-page">
-                    <div className="directions-box !py-2 !mb-4 text-[11px]">
-                        <span className="font-black text-indigo-600 mr-2 uppercase">Part 6</span>
-                        <strong>Directions:</strong> Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each empty space are shown below the text.
+                <div className="booklet-page pt-[120px]">
+                    <div className="flex h-fit">
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(24, 27).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
+                        <div className="column-divider-RC"></div>
+                        <div className="flex-1 space-y-4">
+                            {test9Part5.slice(27, 30).map(q => renderP5Question(q, answers, onAnswer))}
+                        </div>
                     </div>
-                    {renderP6Set(test9Part6[0], answers, onAnswer)}
                 </div>
             </>
         );
@@ -353,8 +392,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 2) {
         return (
             <>
-                <div className="booklet-page">{renderP6Set(test9Part6[1], answers, onAnswer)}</div>
-                <div className="booklet-page">{renderP6Set(test9Part6[2], answers, onAnswer)}</div>
+                <div className="booklet-page">
+                    <div className="directions-box !py-2 !mb-4 text-[11px]">
+                        <span className="font-black text-indigo-600 mr-2 uppercase">Part 6</span>
+                        <strong>Directions:</strong> Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each empty space are shown below the text.
+                    </div>
+                    {renderP6Set(test9Part6[0], answers, onAnswer)}
+                </div>
+                <div className="booklet-page pt-[60px]">
+                    {renderP6Set(test9Part6[1], answers, onAnswer)}
+                </div>
             </>
         );
     }
@@ -362,7 +409,15 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 3) {
         return (
             <>
+                <div className="booklet-page">{renderP6Set(test9Part6[2], answers, onAnswer)}</div>
                 <div className="booklet-page">{renderP6Set(test9Part6[3], answers, onAnswer)}</div>
+            </>
+        );
+    }
+
+    if (spreadIdx === 4) {
+        return (
+            <>
                 <div className="booklet-page">
                     <div className="directions-box !py-2 !mb-4 text-[11px]">
                         <span className="font-black text-indigo-600 mr-2 uppercase">Part 7</span>
@@ -370,13 +425,15 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     </div>
                     {renderP7SingleSet(test9Part7Single[0], answers, onAnswer)}
                 </div>
+                <div className="booklet-page pt-[60px]">
+                    {test9Part7Single[1] && renderP7SingleSet(test9Part7Single[1], answers, onAnswer)}
+                </div>
             </>
         );
     }
 
-    // Dynamic Single Sets (Idx 1 to last)
-    // p7SingleIdx 1 starts at spread 4.L
-    const singleOffset = (spreadIdx - 4) * 2 + 1;
+    // Dynamic Single Sets (Idx >= 5)
+    const singleOffset = (spreadIdx - 5) * 2 + 2;
     if (singleOffset < test9Part7Single.length) {
         return (
             <>
@@ -387,11 +444,10 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     }
 
     // Multi Sets starts after all single sets are rendered
-    // Calculate Multi start spread
-    const singleCount = test9Part7Single.length; // usually 10-12
-    const singleSpreads = Math.ceil((singleCount - 1) / 2) + 4;
+    const singleCount = test9Part7Single.length;
+    const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
 
-    const multiIdx = spreadIdx - singleSpreads;
+    const multiIdx = spreadIdx - singleSpreadsEndIdx - 1;
     if (multiIdx >= 0 && multiIdx < test9Part7Multi.length) {
         return renderP7MultiSpread(test9Part7Multi[multiIdx], answers, onAnswer);
     }
@@ -401,13 +457,18 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
 
 function renderP5Question(q: any, answers: any, onAnswer: any) {
     const displayNum = String(q.id).includes('-q') ? q.id.split('-q')[1] : String(q.id).replace(/[^\d]/g, '');
+
+    // Check if boilerplate text in Part 6
+    const isRedundantText = q.text === "Select the best answer." ||
+        q.text === "Select the best sentence to complete the text.";
+
     return (
         <div key={q.id} className="q-block">
-            <div className="q-meta">
-                <span className="q-id-badge">{displayNum}</span>
+            <div className="flex items-start gap-2 mb-2">
+                <span className="q-id-badge shrink-0">{displayNum}</span>
+                {!isRedundantText && <p className="text-[13px] font-black leading-relaxed text-black">{q.text}</p>}
             </div>
-            <p className="text-[13px] font-black leading-relaxed text-black mb-2">{q.text}</p>
-            <div className="space-y-0.5">
+            <div className={`space-y-0.5 ${isRedundantText ? 'pl-8' : ''}`}>
                 {q.options.map((opt: any) => {
                     let label = "";
                     let text = "";
@@ -434,6 +495,32 @@ function renderP5Question(q: any, answers: any, onAnswer: any) {
     );
 }
 
+const getPassageLabel = (p: any) => {
+    const type = p.docType || p.type || p.contextType || 'Text';
+    const mapping: Record<string, string> = {
+        'notice': 'Notice', 'NOTICE': 'Notice',
+        'article': 'Article', 'ARTICLE': 'Article',
+        'advertisement': 'Advertisement', 'ADVERTISEMENT': 'Advertisement',
+        'letter': 'Letter', 'LETTER': 'Letter',
+        'email': 'Email', 'EMAIL': 'Email',
+        'chat_message': 'Chat Message', 'CHAT_MESSAGE': 'Chat Message',
+        'sign': 'Sign', 'SIGN': 'Sign',
+        'memo': 'Memo', 'MEMO': 'Memo',
+        'form': 'Form', 'FORM': 'Form',
+        'schedule': 'Schedule', 'SCHEDULE': 'Schedule',
+        'web_page': 'Web Page', 'WEB_PAGE': 'Web Page',
+        'information': 'Information', 'INFORMATION': 'Information'
+    };
+    if (mapping[type]) return mapping[type];
+
+    // Handle P1, P2... codes
+    if (/^P\d+$/i.test(type)) {
+        return 'Passage';
+    }
+
+    return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+};
+
 function renderP6Set(set: any, answers: any, onAnswer: any) {
     if (!set) return null;
     return (
@@ -441,11 +528,15 @@ function renderP6Set(set: any, answers: any, onAnswer: any) {
             <div className="passage-box"><MarkdownTable content={set.content} /></div>
             <div className="flex-1 flex gap-0 mt-4 h-fit">
                 <div className="flex-1 space-y-6">
-                    {set.questions.slice(0, 2).map((q: any) => renderP5Question(q, answers, onAnswer))}
+                    {set.questions.slice(0, 2).map((q: any) => (
+                        <React.Fragment key={q.id}>{renderP5Question(q, answers, onAnswer)}</React.Fragment>
+                    ))}
                 </div>
                 <div className="column-divider-RC"></div>
                 <div className="flex-1 space-y-6">
-                    {set.questions.slice(2).map((q: any) => renderP5Question(q, answers, onAnswer))}
+                    {set.questions.slice(2).map((q: any) => (
+                        <React.Fragment key={q.id}>{renderP5Question(q, answers, onAnswer)}</React.Fragment>
+                    ))}
                 </div>
             </div>
         </div>
@@ -462,7 +553,7 @@ function renderP7SingleSet(set: any, answers: any, onAnswer: any) {
             <div className="passage-box">
                 {set.passages.map((p: any) => (
                     <div key={p.id} className="mb-4">
-                        <span className="passage-label">{p.type || 'Text'}</span>
+                        <span className="passage-label">{getPassageLabel(p)}</span>
                         {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
                         <div className="text-sm font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                     </div>
@@ -470,11 +561,15 @@ function renderP7SingleSet(set: any, answers: any, onAnswer: any) {
             </div>
             <div className="flex-1 flex gap-1 mt-2">
                 <div className="flex-1 space-y-6">
-                    {set.questions.slice(0, mid).map((q: any) => renderP7Question(q, answers, onAnswer))}
+                    {set.questions.slice(0, mid).map((q: any) => (
+                        <React.Fragment key={q.id}>{renderP7Question(q, answers, onAnswer)}</React.Fragment>
+                    ))}
                 </div>
                 <div className="column-divider-RC"></div>
                 <div className="flex-1 space-y-6">
-                    {set.questions.slice(mid).map((q: any) => renderP7Question(q, answers, onAnswer))}
+                    {set.questions.slice(mid).map((q: any) => (
+                        <React.Fragment key={q.id}>{renderP7Question(q, answers, onAnswer)}</React.Fragment>
+                    ))}
                 </div>
             </div>
         </div>
@@ -486,55 +581,55 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
     const passages = set.passages;
     const questions = set.questions;
 
-    // Layout: 
-    // Double: L (P1, P2), R (Q)
-    // Triple: L (P1, P2), R (P3, Q)
-
-    if (set.type === 'Double' || passages.length === 2) {
+    if (set.setType === 'Triple' || passages.length === 3) {
         return (
             <>
                 <div className="booklet-page">
-                    <div className="space-y-8">
-                        {passages.map((p: any) => (
+                    <div className="space-y-6">
+                        {passages.slice(0, 2).map((p: any) => (
                             <div key={p.id} className="passage-box !mb-0">
-                                <span className="passage-label">{p.type}</span>
+                                <span className="passage-label">{getPassageLabel(p)}</span>
                                 {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                                <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
+                                <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="booklet-page">
-                    <div className="flex-1 space-y-6">
-                        {questions.map((q: any) => renderP7Question(q, answers, onAnswer))}
+                <div className="booklet-page flex flex-col h-full !overflow-hidden">
+                    <div className="passage-box !mb-0 !p-4 shrink-0 border-b-2 border-slate-100 shadow-md z-10 max-h-[45%] overflow-y-auto">
+                        <span className="passage-label">{getPassageLabel(passages[2])}</span>
+                        {passages[2].title && <h3 className="font-black text-xs border-b mb-1 uppercase">{passages[2].title}</h3>}
+                        <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} /></div>
+                    </div>
+                    <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-slate-50/50">
+                        {questions.map((q: any) => (
+                            <React.Fragment key={q.id}>{renderP7Question(q, answers, onAnswer)}</React.Fragment>
+                        ))}
                     </div>
                 </div>
             </>
         );
     }
 
-    // Triple
+    // Double
     return (
         <>
             <div className="booklet-page">
-                <div className="space-y-6">
-                    {passages.slice(0, 2).map((p: any) => (
+                <div className="space-y-8">
+                    {passages.map((p: any) => (
                         <div key={p.id} className="passage-box !mb-0">
-                            <span className="passage-label">{p.type}</span>
+                            <span className="passage-label">{getPassageLabel(p)}</span>
                             {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                            <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
+                            <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="booklet-page flex flex-col h-full !overflow-hidden">
-                <div className="passage-box !mb-0 !p-4 shrink-0 border-b-2 border-slate-100 shadow-md z-10 max-h-[45%] overflow-y-auto">
-                    <span className="passage-label">{passages[2].type}</span>
-                    {passages[2].title && <h3 className="font-black text-xs border-b mb-1 uppercase">{passages[2].title}</h3>}
-                    <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} /></div>
-                </div>
-                <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-slate-50/50">
-                    {questions.map((q: any) => renderP7Question(q, answers, onAnswer))}
+            <div className="booklet-page">
+                <div className="flex-1 space-y-6">
+                    {questions.map((q: any) => (
+                        <React.Fragment key={q.id}>{renderP7Question(q, answers, onAnswer)}</React.Fragment>
+                    ))}
                 </div>
             </div>
         </>

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { test9Part1, test9Part2, test9Part3, test9Part4, test9FullLCAudio } from "@/data/mock/set9_data";
 import { ChevronLeft, ChevronRight, Clock, Volume2, Monitor } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
     onFinishLC: (answers: Record<string, string>) => void;
@@ -58,6 +59,7 @@ export default function MockTest_LC_Set9({ onFinishLC }: Props) {
     const totalSpreads = 6; // Spread 0 to 5
 
     const nextSpread = () => {
+        /*
         // Validation: Check if all questions on current spread are answered
         const currentQuestions = getSpreadQuestions(currentSpread);
         const unanswered = currentQuestions.filter(qId => !answers[qId]);
@@ -66,6 +68,7 @@ export default function MockTest_LC_Set9({ onFinishLC }: Props) {
             alert(`현재 페이지의 모든 문제를 풀어주세요. (남은 문제: ${unanswered.length}개)`);
             return;
         }
+        */
 
         if (currentSpread < totalSpreads - 1) setCurrentSpread(s => s + 1);
         else {
@@ -108,7 +111,9 @@ export default function MockTest_LC_Set9({ onFinishLC }: Props) {
             {/* Header */}
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30">
                 <div className="flex items-center gap-6">
-                    <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                        <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    </Link>
                     <div className="h-6 w-px bg-slate-200"></div>
                     <span className="font-bold text-slate-500 uppercase text-xs tracking-widest">제1회 실전 모의고사: Listening Section</span>
                 </div>
@@ -265,7 +270,9 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {test9Part1.slice(0, 2).map(q => renderP1Question(q, answers, onAnswer))}
+                            {test9Part1.slice(0, 2).map(q => (
+                                <React.Fragment key={q.id}>{renderP1Question(q, answers, onAnswer)}</React.Fragment>
+                            ))}
                         </div>
                     </div>
                 </>
@@ -275,12 +282,16 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                 <>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {test9Part1.slice(2, 4).map(q => renderP1Question(q, answers, onAnswer))}
+                            {test9Part1.slice(2, 4).map(q => (
+                                <React.Fragment key={q.id}>{renderP1Question(q, answers, onAnswer)}</React.Fragment>
+                            ))}
                         </div>
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {test9Part1.slice(4, 6).map(q => renderP1Question(q, answers, onAnswer))}
+                            {test9Part1.slice(4, 6).map(q => (
+                                <React.Fragment key={q.id}>{renderP1Question(q, answers, onAnswer)}</React.Fragment>
+                            ))}
                         </div>
                     </div>
                 </>
@@ -295,11 +306,15 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         </div>
                         <div className="flex-1 flex gap-0">
                             <div className="flex-1 space-y-2">
-                                {test9Part2.slice(0, 13).map(q => renderP2Row(q, answers, onAnswer))}
+                                {test9Part2.slice(0, 13).map(q => (
+                                    <React.Fragment key={q.id}>{renderP2Row(q, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                             <div className="column-divider"></div>
                             <div className="flex-1 space-y-2">
-                                {test9Part2.slice(13).map(q => renderP2Row(q, answers, onAnswer))}
+                                {test9Part2.slice(13).map(q => (
+                                    <React.Fragment key={q.id}>{renderP2Row(q, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -321,11 +336,15 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     <div className="booklet-page">
                         <div className="flex h-full gap-8">
                             <div className="flex-1 flex flex-col gap-6">
-                                {test9Part3.slice(8, 10).map(set => renderP34Set(set, answers, onAnswer))}
+                                {test9Part3.slice(8, 10).map(set => (
+                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                             <div className="w-px bg-slate-100 my-4"></div>
                             <div className="flex-1 flex flex-col gap-6">
-                                {test9Part3.slice(10, 11).map(set => renderP34Set(set, answers, onAnswer))}
+                                {test9Part3.slice(10, 11).map(set => (
+                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -337,11 +356,15 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     <div className="booklet-page">
                         <div className="flex h-full gap-8">
                             <div className="flex-1 flex flex-col gap-6">
-                                {test9Part3.slice(11, 12).map(set => renderP34Set(set, answers, onAnswer))}
+                                {test9Part3.slice(11, 12).map(set => (
+                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                             <div className="w-px bg-slate-100 my-4"></div>
                             <div className="flex-1 flex flex-col gap-6">
-                                {test9Part3.slice(12, 13).map(set => renderP34Set(set, answers, onAnswer))}
+                                {test9Part3.slice(12, 13).map(set => (
+                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                         </div>
                         <div className="border-t pt-4 mt-6">
@@ -359,14 +382,18 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     <div className="booklet-page">
                         {renderP34Page(test9Part4.slice(4, 8), answers, onAnswer)}
                     </div>
-                    <div className="booklet-page">
+                    <div className="booklet-page flex flex-col h-full !overflow-hidden">
                         <div className="flex h-full gap-8">
                             <div className="flex-1 flex flex-col gap-6">
-                                {test9Part4.slice(8, 9).map(set => renderP34Set(set, answers, onAnswer))}
+                                {test9Part4.slice(8, 9).map(set => (
+                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                                ))}
                             </div>
                             <div className="w-px bg-slate-100 my-4"></div>
                             <div className="flex-1 flex flex-col gap-6">
-                                {test9Part4.slice(9, 10).map(set => renderP34Set(set, answers, onAnswer))}
+                                {test9Part4.slice(9, 10).map(set => (
+                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                                ))}
                                 <div className="mt-12 text-center opacity-10 select-none border-t pt-8">
                                     <span className="font-black text-4xl block mb-2 italic tracking-tighter text-slate-900">LISTENING END</span>
                                     <p className="font-bold text-sm uppercase tracking-widest text-slate-800">Please continue to Reading Section</p>
@@ -385,11 +412,15 @@ function renderP34Page(sets: any[], answers: any, onAnswer: any) {
     return (
         <div className="flex h-full gap-8">
             <div className="flex-1 flex flex-col gap-6">
-                {sets.slice(0, 2).map(set => renderP34Set(set, answers, onAnswer))}
+                {sets.slice(0, 2).map(set => (
+                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                ))}
             </div>
             <div className="w-px bg-slate-100 my-4"></div>
             <div className="flex-1 flex flex-col gap-6">
-                {sets.slice(2, 4).map(set => renderP34Set(set, answers, onAnswer))}
+                {sets.slice(2, 4).map(set => (
+                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
+                ))}
             </div>
         </div>
     );
@@ -453,16 +484,30 @@ function renderP34Set(set: any, answers: any, onAnswer: any) {
                             <span>{q.text}</span>
                         </div>
                         <div className="flex flex-col gap-0.5 pl-4">
-                            {(Array.isArray(q.options) ? q.options : Object.entries(q.options || {}).map(([label, text]) => ({ label, text: text as string }))).map((opt: any) => (
-                                <div key={opt.label} onClick={() => onAnswer(q.id, opt.label)} className="flex items-center gap-3 cursor-pointer group py-0.5">
-                                    <div className={`option-circle !w-8 !h-8 !text-[14px] shrink-0 ${answers[q.id] === opt.label ? 'selected' : ''}`}>
-                                        {opt.label}
+                            {(Array.isArray(q.options) ? q.options : Object.entries(q.options || {}).map(([label, text]) => ({ label, text: text as string }))).map((opt: any) => {
+                                let label = "";
+                                let text = "";
+
+                                if (typeof opt === 'string') {
+                                    const match = opt.match(/\(([ABCD])\)\s*(.*)/);
+                                    label = match ? match[1] : "";
+                                    text = match ? match[2] : opt;
+                                } else {
+                                    label = opt.label;
+                                    text = opt.text;
+                                }
+
+                                return (
+                                    <div key={label} onClick={() => onAnswer(q.id, label)} className="flex items-center gap-3 cursor-pointer group py-0.5">
+                                        <div className={`option-circle !w-8 !h-8 !text-[14px] shrink-0 ${answers[q.id] === label ? 'selected' : ''}`}>
+                                            {label}
+                                        </div>
+                                        <span className={`text-[15px] leading-tight ${answers[q.id] === label ? 'text-indigo-600 font-bold' : 'text-slate-800 group-hover:text-indigo-600'}`}>
+                                            {text}
+                                        </span>
                                     </div>
-                                    <span className={`text-[15px] leading-tight ${answers[q.id] === opt.label ? 'text-indigo-600 font-bold' : 'text-slate-800 group-hover:text-indigo-600'}`}>
-                                        {opt.text}
-                                    </span>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 ))}

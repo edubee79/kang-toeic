@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef } from "react";
  */
 // import { half9aPart5, half9aPart6, half9aPart7 } from "@/data/mock/half_set9_a"; // 여기에 실제 데이터 경로 지정
 import { ChevronLeft, ChevronRight, Clock } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
     data: {
@@ -129,7 +130,9 @@ export default function HalfTest_RC_TypeA_Template({ data, onFinishExam, initial
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30 shadow-sm font-sans">
                 <div className="flex items-center gap-6">
-                    <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                        <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
+                    </Link>
                     <div className="h-6 w-px bg-slate-200"></div>
                     <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest text-rose-600 italic">Half Test RC ({testIdLabel})</span>
                 </div>

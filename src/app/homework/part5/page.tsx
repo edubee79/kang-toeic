@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { part5Data } from '@/data/part5';
-import { ChevronRight, Sword, Lock } from "lucide-react";
+import { ArrowLeft, ChevronRight, Sword, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
@@ -52,36 +52,35 @@ export default function Part5LobbyPage() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-950 text-white pb-20">
-            {/* Header */}
-            <div className="bg-slate-900/50 border-b border-slate-800">
-                <div className="max-w-5xl mx-auto px-6 py-12">
-                    <h1 className="text-4xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-600 mb-4">
-                        GRAMMAR MISSION
-                    </h1>
-                    <p className="text-slate-400 font-medium text-lg leading-relaxed max-w-2xl">
-                        Skill building drills to master TOEIC grammar points. | 현재 Unit {maxGrammar}까지 오픈
-                        <br />
-                        <span className="text-sm text-slate-500">각 유닛별로 핵심 문법을 익히고 문제를 풀어보세요.</span>
-                    </p>
+        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
+            <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
+                <div className="flex items-center gap-4">
+                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter">
+                            <span className="text-white">Grammar</span>
+                            <span className="text-amber-500"> Mission</span>
+                        </h2>
+                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">기초 문법 ⸱ 핵심 유형 12개 정복</p>
+                    </div>
                 </div>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxGrammar} Units Open</p>
             </div>
 
-            <div className="max-w-5xl mx-auto px-6 py-12">
-
+            <div className="w-full px-0 md:px-8 py-4 md:py-6">
                 {/* Section: Grammar Mission (Drill) */}
                 <section>
-                    <div className="flex items-center gap-4 mb-8">
-                        <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shadow-xl shadow-indigo-500/10">
-                            <Sword className="w-6 h-6" />
+                    <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 px-3 md:px-0">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shadow-xl shadow-indigo-500/10 shrink-0">
+                            <Sword className="w-5 h-5 md:w-6 md:h-6" />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black tracking-tight text-white/90">GRAMMAR DRILLS</h2>
-                            <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Skill Building</p>
+                            <h2 className="text-lg md:text-2xl font-black tracking-tight text-white/90 leading-none uppercase">Grammar Drills</h2>
+                            <p className="text-[10px] md:text-sm font-black text-slate-500 uppercase tracking-widest mt-1">Skill Building</p>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 font-inter">
                         {grammarUnits.map((unitId) => {
                             const unitNumber = parseInt(unitId.split('_')[1]);
                             const isLocked = unitNumber > maxGrammar;
@@ -97,43 +96,44 @@ export default function Part5LobbyPage() {
                                         }
                                     }}
                                     className={cn(
-                                        "group relative bg-slate-900/50 border transition-all duration-300 rounded-3xl p-6",
+                                        "group relative bg-slate-900 border transition-all duration-300 rounded-xl md:rounded-2xl p-2 md:p-3 flex flex-col gap-1.5 h-auto min-h-[76px] md:min-h-[110px]",
                                         isLocked
-                                            ? "border-slate-800 opacity-40 grayscale cursor-not-allowed"
-                                            : "hover:bg-indigo-900/20 border-indigo-500/10 hover:border-indigo-500/50 hover:-translate-y-1"
+                                            ? "border-slate-800 opacity-60 grayscale cursor-not-allowed"
+                                            : "bg-slate-800/80 border-slate-700/50 hover:bg-amber-900/10 hover:border-amber-500/50"
                                     )}
                                 >
-                                    <div className="flex justify-between items-start mb-4">
+                                    <div className="flex justify-between items-start">
                                         <div className={cn(
-                                            "w-10 h-10 rounded-xl bg-slate-950 flex items-center justify-center font-black text-sm border transition-colors",
-                                            isLocked ? "text-slate-600 border-slate-800" : "text-slate-500 group-hover:text-indigo-400 border-slate-800"
+                                            "w-6 h-6 md:w-8 md:h-8 rounded md:rounded-lg bg-slate-950 flex items-center justify-center font-black text-[10px] md:text-sm border transition-colors",
+                                            isLocked ? "text-slate-600 border-slate-800" : "text-amber-500/50 group-hover:text-amber-400 border-slate-800"
                                         )}>
                                             {unitId.split('_')[1]}
                                         </div>
                                         {isLocked ? (
-                                            <Lock className="w-5 h-5 text-slate-600" />
+                                            <Lock className="w-3 h-3 md:w-4 md:h-4 text-slate-700" />
                                         ) : (
-                                            <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
+                                            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-slate-500 group-hover:text-amber-400 transition-colors" />
                                         )}
                                     </div>
-                                    <h3 className={cn(
-                                        "text-lg font-bold transition-colors mb-1",
-                                        isLocked ? "text-slate-600" : "text-slate-200 group-hover:text-white"
-                                    )}>
-                                        {UNIT_TITLES[unitId] || unitId.replace(/Unit_\d+_/, '').replace(/_/g, ' ')}
-                                    </h3>
-                                    <p className={cn(
-                                        "text-xs font-bold tracking-widest uppercase",
-                                        isLocked ? "text-slate-700" : "text-indigo-500/50 group-hover:text-indigo-500/80"
-                                    )}>
-                                        {isLocked ? "Locked" : "Drill Mode"}
-                                    </p>
+                                    <div className="space-y-0.5 mt-auto">
+                                        <h3 className={cn(
+                                            "text-[18px] md:text-2xl font-black transition-colors leading-none italic tracking-tighter truncate",
+                                            isLocked ? "text-slate-600" : "text-white"
+                                        )}>
+                                            {UNIT_TITLES[unitId] || unitId.replace(/Unit_\d+_/, '').replace(/_/g, ' ')}
+                                        </h3>
+                                        <p className={cn(
+                                            "text-[8px] md:text-xs font-black tracking-widest uppercase opacity-70",
+                                            isLocked ? "text-slate-700" : "text-slate-500"
+                                        )}>
+                                            {isLocked ? "Locked" : "Drill Mode"}
+                                        </p>
+                                    </div>
                                 </Link>
                             );
                         })}
                     </div>
                 </section>
-
             </div>
         </div>
     );

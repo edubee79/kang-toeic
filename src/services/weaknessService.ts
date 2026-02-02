@@ -4,6 +4,7 @@ import { collection, query, where, getDocs, getDoc, doc, orderBy } from 'firebas
 import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
 import { analyzeGoalStatus } from './goalAnalysisService';
 import { isActualTest, mapToPartKey, calculateCorrectCount, ManagerResult } from '@/lib/filters/actualTestFilter';
+import { distributeGoals } from '@/utils/goal-utils';
 
 export interface WeaknessTag {
     tag: string;
@@ -82,7 +83,7 @@ export const WeaknessService = {
 
             // 2. Use targets from userData (standardizing keys)
             const pts = userData.partTargets || {};
-            const partTargets = {
+            let partTargets = {
                 p1: pts.p1_goal ?? pts.p1 ?? 0,
                 p2: pts.p2_goal ?? pts.p2 ?? 0,
                 p3: pts.p3_goal ?? pts.p3 ?? 0,
@@ -93,9 +94,31 @@ export const WeaknessService = {
                 p7d: pts.p7d_goal ?? pts.p7_double ?? pts.p7d ?? 0
             };
 
+            // ✅ NEW: Fallback Allocation if targets are completely missing
+            const isTargetsEmpty = Object.values(partTargets).every(v => v === 0);
+            if (isTargetsEmpty) {
+                const targetScore = userData.targetScore || 850;
+                const targetLC = userData.targetLC || 450;
+                const targetRC = userData.targetRC || 400;
+                const autoTargets = distributeGoals(targetScore, targetLC, targetRC);
+                partTargets = {
+                    p1: autoTargets.p1_goal,
+                    p2: autoTargets.p2_goal,
+                    p3: autoTargets.p3_goal,
+                    p4: autoTargets.p4_goal,
+                    p5: autoTargets.p5_goal,
+                    p6: autoTargets.p6_goal,
+                    p7s: autoTargets.p7s_goal,
+                    p7d: autoTargets.p7d_goal
+                };
+            }
+
             const goalAnalysis = await analyzeGoalStatus(userId, partTargets);
 
-            // 3. Get all results for tag analysis
+            // 3. Optional: Check for pre-calculated summary to speed up scores
+            const summary = userData.performanceSummary;
+
+            // 4. Get all results for tag analysis (Still needed for specific tag counts)
             const resultsRef = collection(db, 'Manager_Results');
             const q = query(resultsRef, where('studentId', '==', userId), orderBy('timestamp', 'desc'));
             const snapshot = await getDocs(q);
@@ -221,6 +244,69 @@ export const WeaknessService = {
         } catch (error) {
             console.error('Error analyzing user weakness:', error);
             throw error;
+        }
+    },
+
+    getWeeklyDetailedStats: async (userId: string) => {
+        try {
+            const resultsRef = collection(db, 'Manager_Results');
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+            const q = query(
+                resultsRef,
+                where('studentId', '==', userId),
+                where('timestamp', '>=', oneWeekAgo),
+                orderBy('timestamp', 'desc')
+            );
+
+            const snapshot = await getDocs(q);
+            const stats: any = {
+                totalSolved: 0,
+                parts: {} as any,
+                weakestTags: [] as any[]
+            };
+
+            const tagMap: Record<string, { total: number, incorrect: number }> = {};
+
+            snapshot.docs.forEach(docSnap => {
+                const data = docSnap.data();
+                const part = data.unit || 'Unknown';
+                if (!stats.parts[part]) {
+                    stats.parts[part] = { solved: 0, correct: 0, timeSpent: 0 };
+                }
+
+                const correctCount = data.score || 0;
+                const totalCount = data.total || 0;
+
+                stats.parts[part].solved += totalCount;
+                stats.parts[part].correct += correctCount;
+                stats.parts[part].timeSpent += (data.timeSpent || 0);
+                stats.totalSolved += totalCount;
+
+                if (data.incorrectQuestions) {
+                    data.incorrectQuestions.forEach((iq: any) => {
+                        const tag = iq.classification || 'Unknown';
+                        if (!tagMap[tag]) tagMap[tag] = { total: 0, incorrect: 0 };
+                        tagMap[tag].incorrect++;
+                    });
+                }
+            });
+
+            // Flatten weak tags
+            stats.weakestTags = Object.entries(tagMap)
+                .map(([tag, val]) => ({
+                    tag,
+                    label: getToeicTagLabel(tag),
+                    incorrectCount: val.incorrect
+                }))
+                .sort((a, b) => b.incorrectCount - a.incorrectCount)
+                .slice(0, 5);
+
+            return stats;
+        } catch (error) {
+            console.error('Error getting weekly stats:', error);
+            return null;
         }
     }
 };

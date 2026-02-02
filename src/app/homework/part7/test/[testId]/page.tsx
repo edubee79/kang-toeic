@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, ChevronLeft, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 function Part7TestRunnerContent() {
     const params = useParams();
@@ -198,6 +199,9 @@ function Part7TestRunnerContent() {
                     type: 'part7_test',
                     detail: `Test ${testId}`
                 });
+
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid);
             } catch (e) { console.error(e); }
         }
 
@@ -357,7 +361,7 @@ function Part7TestRunnerContent() {
 
                     <div key={currentSet.id} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full overflow-hidden lg:overflow-visible">
                         {/* Passages: 70% on Mobile, 70% on Desktop */}
-                        <div ref={passageContainerRef} className="h-[70%] lg:h-fit lg:col-span-7 lg:sticky lg:top-0 space-y-2 lg:space-y-8 overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none">
+                        <div ref={passageContainerRef} className="max-h-[60%] lg:h-fit lg:col-span-7 lg:sticky lg:top-0 space-y-2 lg:space-y-8 overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none flex-shrink-0">
                             {/* Question Range Header */}
                             <div className="text-slate-400 text-xs lg:text-sm font-medium px-2 lg:px-0 pt-2 lg:pt-0">
                                 Questions {currentSet.questionRange} refer to the following {currentSet.passages.length > 1 ? `${currentSet.passages.length} passages` : (currentSet.passages[0].docType || 'passage').toLowerCase().replace('_', ' ')}.
@@ -372,7 +376,7 @@ function Part7TestRunnerContent() {
                                         </div>
                                     )}
 
-                                    <div className="bg-white text-slate-900 rounded-none lg:rounded-xl p-2 lg:p-8 shadow-none lg:shadow-xl font-serif text-[13px] lg:text-lg leading-tight lg:leading-loose mx-auto w-full select-none min-h-[200px] lg:min-h-[300px]">
+                                    <div className="bg-white text-slate-900 rounded-none lg:rounded-xl p-2 lg:p-8 shadow-none lg:shadow-xl font-serif text-[15px] lg:text-lg leading-tight lg:leading-loose mx-auto w-full select-none min-h-[200px] lg:min-h-[300px]">
                                         {/* Header info */}
                                         {(passage.title || passage.label) && (
                                             <h3 className="font-sans font-bold text-center border-b pb-1 lg:pb-4 mb-1 lg:mb-4 text-slate-800 text-[13px] lg:text-base">
@@ -396,7 +400,7 @@ function Part7TestRunnerContent() {
                         </div>
 
                         {/* Questions */}
-                        <div className="flex flex-col h-[30%] lg:h-auto lg:col-span-3">
+                        <div className="flex flex-col flex-1 lg:h-auto lg:col-span-3 overflow-hidden">
                             <div ref={questionContainerRef} className={cn(
                                 "flex-1 overflow-y-auto lg:overflow-visible bg-slate-900/50 lg:bg-transparent p-0 lg:p-0",
                                 "space-y-0.5 lg:space-y-3"

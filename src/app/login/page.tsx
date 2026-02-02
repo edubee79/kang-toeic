@@ -94,7 +94,9 @@ export default function LoginPage() {
             <Card className="w-full max-w-md bg-slate-900 border-slate-800 text-white shadow-2xl">
                 <CardHeader className="space-y-4 text-center pb-8 border-b border-slate-800/50">
                     <div className="mx-auto w-16 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-rose-500 rounded-full mb-4"></div>
-                    <CardTitle className="text-3xl font-black italic tracking-tighter">깡쌤토익</CardTitle>
+                    <Link href="/" className="inline-block hover:opacity-80 transition-opacity mx-auto">
+                        <CardTitle className="text-3xl font-black italic tracking-tighter">깡쌤토익</CardTitle>
+                    </Link>
                     <CardDescription className="text-slate-400 font-medium">
                         토익 특강 로그인
                     </CardDescription>

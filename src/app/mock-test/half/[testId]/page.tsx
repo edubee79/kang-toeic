@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp, updateDoc, doc, writeBatch } from 'firebase/firestore';
-import { calculateMockScore } from '@/lib/mock/scoring';
+import { calculateLevelScore } from '@/lib/level/scoring';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 // 고품질 UI 컴포넌트 임포트
 import HalfTest_LC_Set9 from '@/components/exam/mock/HalfTest_LC_Set9';
@@ -75,21 +76,12 @@ export default function HalfTestPage() {
             const user = userStr ? JSON.parse(userStr) : null;
             const userId = user?.userId || user?.uid || 'Unknown';
 
-            // **[CENTRALIZED SCORING ENGINE]**
-            const testIdFull = `half_${testId}`;
-            const result = calculateMockScore(testIdFull, allAnswers, true);
+            // **[LEVEL TEST SCORING ENGINE]**
+            const result = calculateLevelScore(testId, allAnswers);
 
             const totalCorrect = result.correctCount;
             const totalScore = result.totalScore;
             const partStats = result.partScores;
-
-            // P7 Unified for legacy dashboard compatibility
-            const p7Combined = {
-                correct: (partStats.p7?.correct || 0),
-                total: (partStats.p7?.total || 0)
-            };
-
-            const totalQuestions = result.totalQuestions;
 
             // 2. Batch Update (MockTestAttempts & Manager_Results)
             const batch = writeBatch(db);
@@ -100,7 +92,7 @@ export default function HalfTestPage() {
                 answers: allAnswers,
                 timeLogs: timeLogs,
                 totalScore: totalScore,
-                totalQuestions: totalQuestions,
+                totalQuestions: result.totalQuestions,
                 partScores: partStats,
                 completedAt: serverTimestamp()
             });
@@ -113,6 +105,7 @@ export default function HalfTestPage() {
                 className: user?.className || 'Unknown',
                 timestamp: serverTimestamp(),
                 createdAt: serverTimestamp(),
+                attemptId: attemptId,
             };
 
             // Individual Part Records for Dashboard
@@ -126,19 +119,23 @@ export default function HalfTestPage() {
                 p5: 30, p6: 16, p7s: 29, p7m: 25
             };
 
-            Object.entries(partStats).forEach(([pKey, stats]) => {
+            const testLabel = testId.includes('a') ? '레벨테스트 1회' : '레벨테스트 2회';
+
+            Object.entries(partStats).forEach(([pKey, stats]: [any, any]) => {
                 if (partMapping[pKey] && stats.total > 0) {
                     const resultDoc = doc(resultsRef);
-                    const standardMax = PART_MAX_STANDARD[pKey] || stats.total;
+                    const standardMax = PART_MAX_STANDARD[pKey] || stats.total * 2; // Approximate if not set
+
                     // Scale score to standard full test size for consistent prediction
+                    // Level test has ~half questions, so we scale it.
                     const scaledScore = Math.round((stats.correct / stats.total) * standardMax);
 
                     batch.set(resultDoc, {
                         ...commonData,
                         type: partMapping[pKey],
-                        unit: `LevelTest_${testId.toUpperCase()}`,
-                        detail: `LevelTest_${testId.toUpperCase()}`,
-                        score: scaledScore, // Standardized score for AI Prediction
+                        unit: `${testLabel} (${pKey.toUpperCase()})`,
+                        detail: testLabel,
+                        score: scaledScore,
                         total: standardMax,
                         rawCorrect: stats.correct,
                         rawTotal: stats.total,
@@ -152,8 +149,8 @@ export default function HalfTestPage() {
             batch.set(summaryDoc, {
                 ...commonData,
                 type: 'level_test',
-                unit: testId.toUpperCase(),
-                detail: testId.toUpperCase(),
+                unit: testLabel,
+                detail: testLabel,
                 score: totalScore,
                 total: 1000,
                 isSummary: true
@@ -161,9 +158,13 @@ export default function HalfTestPage() {
 
             await batch.commit();
 
+            // ✅ NEW: Sync Performance Summary after Level Test submission
+            await PerformanceSyncService.syncUserSummary(userId);
+
             // 3. Local Storage Sync & Navigation
             const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
             savedAttempts[`full-half_${testId}`] = {
+                status: 'completed',
                 answers: allAnswers,
                 timeLogs: timeLogs,
                 totalScore: totalScore,
@@ -172,7 +173,7 @@ export default function HalfTestPage() {
             };
             localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-            const resultUrl = `/mock-test/full/${testId.startsWith('9') ? '9' : '10'}/result?half=${testId}&attemptId=${attemptId}`;
+            const resultUrl = `/mock-test/level/result?testId=${testId}&attemptId=${attemptId}`;
             router.push(resultUrl);
 
             setTimeout(() => {

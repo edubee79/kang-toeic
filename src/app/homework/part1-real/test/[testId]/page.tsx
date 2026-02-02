@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Play, Pause, ChevronRight, CheckCircle2, AlertCircle, RotateCcw, Timer, Trophy, BookOpen } from "lucide-react";
 import { part1RealTests, Part1Question } from '@/data/toeic/listening/part1/tests';
 import { cn } from "@/lib/utils";
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 export default function Part1TestRunner() {
     const params = useParams();
@@ -189,6 +190,9 @@ export default function Part1TestRunner() {
                     correctCount: correct,
                     timestamp: serverTimestamp()
                 });
+
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid || "guest");
             } catch (e) {
                 console.error("Save failed", e);
             }

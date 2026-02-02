@@ -421,23 +421,27 @@ export default function DayPage() {
         const progress = ((currentIndex + 1) / allWords.length) * 100;
 
         return (
-            <div className="min-h-screen bg-slate-950 p-6 flex flex-col">
+            <div className="min-h-screen bg-slate-950 p-3 md:p-6 flex flex-col">
                 <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
                     {/* Header */}
-                    <div className="flex justify-between items-center mb-6">
+                    <div className="flex justify-between items-end mb-2 px-1">
                         <div className="flex flex-col">
-                            <span className="text-slate-500 font-bold tracking-tighter italic">SORTING</span>
+                            <span className="text-indigo-400 font-bold tracking-widest italic text-[10px] md:text-sm">SORTING</span>
                             <button
                                 onClick={handleSaveAndExit}
-                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-1"
+                                className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-0.5"
                             >
                                 SAVE & EXIT
                             </button>
                         </div>
-                        <span className="text-white font-black italic">{currentIndex + 1} / {allWords.length}</span>
+                        <span className="text-slate-500 font-bold italic text-sm md:text-lg leading-none">
+                            <span className="text-white font-black">{currentIndex + 1}</span>
+                            <span className="mx-1 opacity-50">/</span>
+                            {allWords.length}
+                        </span>
                     </div>
 
-                    <div className="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden mb-12">
+                    <div className="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden mb-3 md:mb-12">
                         <div
                             className="h-full bg-indigo-500 transition-all duration-500"
                             style={{ width: `${progress}%` }}
@@ -445,7 +449,7 @@ export default function DayPage() {
                     </div>
 
                     {/* Flashcard */}
-                    <div className="flex-1 flex flex-col justify-center mb-12">
+                    <div className="mt-4 mb-8 max-w-[340px] mx-auto w-full">
                         <VocabularyCard
                             word={currentWord}
                             showBack={showBack}
@@ -455,21 +459,21 @@ export default function DayPage() {
                     </div>
 
                     {/* Buttons */}
-                    <div className="grid grid-cols-2 gap-4 mb-8">
+                    <div className="grid grid-cols-2 gap-3 mb-6">
                         {subStep === 'front' ? (
                             <>
                                 <Button
                                     onClick={handleSortDontKnow}
                                     variant="outline"
-                                    className="h-20 rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-xl italic hover:bg-rose-500/10 hover:border-rose-500/50 transition-all"
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-lg md:text-xl italic hover:bg-rose-500/10 hover:border-rose-500/50 transition-all"
                                 >
-                                    <X className="w-6 h-6 mr-2" /> 몰라요
+                                    <X className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 몰라요
                                 </Button>
                                 <Button
                                     onClick={handleSortKnow}
-                                    className="h-20 rounded-3xl bg-indigo-600 text-white font-black text-xl italic hover:bg-indigo-500 shadow-xl shadow-indigo-600/20 active:scale-95 transition-all"
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl bg-indigo-600 text-white font-black text-lg md:text-xl italic hover:bg-indigo-500 shadow-xl shadow-indigo-600/20 active:scale-95 transition-all"
                                 >
-                                    <CheckCircle className="w-6 h-6 mr-2" /> 알아요
+                                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 알아요
                                 </Button>
                             </>
                         ) : (
@@ -477,15 +481,15 @@ export default function DayPage() {
                                 <Button
                                     onClick={handleSortDontKnow}
                                     variant="outline"
-                                    className="h-20 rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-xl italic hover:bg-rose-500/10"
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-lg md:text-xl italic hover:bg-rose-500/10"
                                 >
-                                    <X className="w-6 h-6 mr-2" /> 몰라요
+                                    <X className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 몰라요
                                 </Button>
                                 <Button
                                     onClick={handleReallyKnow}
-                                    className="h-20 rounded-3xl bg-emerald-600 text-white font-black text-xl italic hover:bg-emerald-500 shadow-xl shadow-emerald-600/20 active:scale-95 transition-all"
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl bg-emerald-600 text-white font-black text-lg md:text-xl italic hover:bg-emerald-500 shadow-xl shadow-emerald-600/20 active:scale-95 transition-all"
                                 >
-                                    <CheckCircle className="w-6 h-6 mr-2" /> 진짜 알아요
+                                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 진짜 알아요
                                 </Button>
                             </>
                         )}
@@ -506,22 +510,26 @@ export default function DayPage() {
         const currentWord = learningQueue[currentIndex];
 
         return (
-            <div className="min-h-screen bg-slate-950 p-6 flex flex-col">
+            <div className="min-h-screen bg-slate-950 p-3 md:p-6 flex flex-col">
                 <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
-                    <div className="flex justify-between items-center mb-6">
+                    <div className="flex justify-between items-end mb-2">
                         <div className="flex flex-col">
-                            <span className="text-amber-500 font-bold tracking-tighter italic">LEARNING</span>
+                            <span className="text-amber-500 font-bold tracking-widest italic text-[10px] md:text-sm">LEARNING</span>
                             <button
                                 onClick={handleSaveAndExit}
-                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-1"
+                                className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-0.5"
                             >
                                 SAVE & EXIT
                             </button>
                         </div>
-                        <span className="text-white font-black italic">{currentIndex + 1} / {learningQueue.length}</span>
+                        <span className="text-slate-500 font-bold italic text-sm md:text-lg leading-none">
+                            <span className="text-white font-black">{currentIndex + 1}</span>
+                            <span className="mx-1 opacity-50">/</span>
+                            {learningQueue.length}
+                        </span>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-center mb-12 space-y-4">
+                    <div className="mt-4 mb-8 max-w-[340px] mx-auto w-full space-y-4">
                         <VocabularyCard
                             word={currentWord}
                             showBack={showBack}
@@ -534,14 +542,13 @@ export default function DayPage() {
                             }}
                             clickable={true}
                         />
-
                     </div>
 
-                    <div className="mb-8">
+                    <div className="mb-6">
                         <Button
                             onClick={handleLearnMemorized}
                             className={cn(
-                                "w-full h-20 rounded-3xl text-white font-black text-xl italic transition-all shadow-xl active:scale-95",
+                                "w-full h-14 md:h-20 rounded-2xl md:rounded-3xl text-white font-black text-lg md:text-xl italic transition-all shadow-xl active:scale-95",
                                 showBack
                                     ? "bg-indigo-600 hover:bg-indigo-500 shadow-indigo-600/20"
                                     : "bg-emerald-600 hover:bg-emerald-500 shadow-emerald-600/20"
@@ -549,11 +556,11 @@ export default function DayPage() {
                         >
                             {showBack ? (
                                 <>
-                                    <ArrowRight className="w-6 h-6 mr-2" /> 다음 단어 (Next)
+                                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 다음 (Next)
                                 </>
                             ) : (
                                 <>
-                                    <CheckCircle className="w-6 h-6 mr-2" /> 진짜 외웠어요
+                                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 외웠어요
                                 </>
                             )}
                         </Button>
@@ -569,23 +576,27 @@ export default function DayPage() {
         const progress = ((currentIndex + 1) / testQueue.length) * 100;
 
         return (
-            <div className="min-h-screen bg-slate-950 p-6 flex flex-col">
+            <div className="min-h-screen bg-slate-950 p-3 md:p-6 flex flex-col">
                 <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
-                    <div className="flex justify-between items-center mb-6">
+                    <div className="flex justify-between items-end mb-2 px-1">
                         <div className="flex flex-col">
-                            <span className="text-violet-500 font-bold tracking-tighter italic">FINAL TEST</span>
+                            <span className="text-violet-500 font-bold tracking-widest italic text-[10px] md:text-sm">FINAL TEST</span>
                             <button
                                 onClick={handleSaveAndExit}
-                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-1"
+                                className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-0.5"
                             >
                                 SAVE & EXIT
                             </button>
                         </div>
-                        <span className="text-white font-black italic">{currentIndex + 1} / {testQueue.length}</span>
+                        <span className="text-slate-500 font-bold italic text-sm md:text-lg leading-none">
+                            <span className="text-white font-black">{currentIndex + 1}</span>
+                            <span className="mx-1 opacity-50">/</span>
+                            {testQueue.length}
+                        </span>
                     </div>
 
                     {/* Timer bar */}
-                    <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden mb-12 flex items-center">
+                    <div className="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden mb-3 md:mb-12 flex items-center">
                         <div
                             className={cn(
                                 "h-full transition-all duration-1000",
@@ -595,13 +606,15 @@ export default function DayPage() {
                         />
                     </div>
 
-                    <Card className="bg-slate-900 border-2 border-slate-800 p-8 rounded-[2.5rem] mb-12 shadow-2xl">
-                        <div className="text-center mb-4">
+                    <Card className="bg-slate-900 border-2 border-slate-800 p-6 md:p-8 rounded-3xl md:rounded-[2.5rem] mb-3 md:mb-12 shadow-2xl relative overflow-hidden">
+                        <div className="absolute top-3 right-4">
                             <Clock className={cn(
-                                "w-8 h-8 mx-auto mb-4",
-                                timeLeft <= 1 ? "text-rose-500 animate-pulse" : "text-slate-600"
+                                "w-4 h-4 md:w-8 md:h-8",
+                                timeLeft <= 1 ? "text-rose-500 animate-pulse" : "text-slate-700"
                             )} />
-                            <h2 className="text-5xl font-black text-white italic tracking-tight">{currentWord.word}</h2>
+                        </div>
+                        <div className="text-center">
+                            <h2 className="text-2xl md:text-5xl font-black text-white italic tracking-tight">{currentWord.word}</h2>
                         </div>
                     </Card>
 
@@ -623,7 +636,7 @@ export default function DayPage() {
                                     onClick={() => handleTestAnswer(idx)}
                                     disabled={selectedAnswer !== null}
                                     className={cn(
-                                        "w-full h-16 rounded-2xl font-bold text-lg transition-all",
+                                        "w-full h-12 md:h-16 rounded-xl md:rounded-2xl font-bold text-base md:text-lg transition-all",
                                         btnClass
                                     )}
                                 >
@@ -709,31 +722,31 @@ export default function DayPage() {
         };
 
         return (
-            <div className="min-h-screen bg-slate-950 p-6 flex flex-col items-center justify-center">
-                <div className="max-w-md mx-auto w-full space-y-8">
-                    <div className="flex justify-between items-center mb-4">
-                        <div className="flex flex-col gap-2">
-                            <Button variant="ghost" className="text-slate-400 p-0 h-auto w-fit hover:text-white" onClick={() => setMode('result')}>
-                                <X className="w-4 h-4 mr-1" /> QUIT
+            <div className="min-h-screen bg-slate-950 p-3 md:p-6 flex flex-col">
+                <div className="max-w-md mx-auto w-full space-y-2 md:space-y-6">
+                    <div className="flex justify-between items-end mb-2 px-1">
+                        <div className="flex flex-col gap-1">
+                            <Button variant="ghost" className="text-slate-500 p-0 h-auto w-fit hover:text-white text-[10px] md:text-xs font-bold" onClick={() => setMode('result')}>
+                                <X className="w-3 h-3 md:w-4 md:h-4 mr-1" /> QUIT
                             </Button>
                             <button
                                 onClick={handleSaveAndExit}
-                                className="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit"
+                                className="text-[9px] md:text-[10px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 md:px-2 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-0.5 leading-none"
                             >
                                 SAVE & EXIT
                             </button>
                         </div>
-                        <div className="flex items-center gap-2 text-indigo-400 font-bold">
-                            <Headphones className="w-5 h-5 animate-pulse" />
-                            <span>LISTENING CHALLENGE: {listeningQueue.length} LEFT</span>
+                        <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs md:text-base">
+                            <Headphones className="w-4 h-4 md:w-5 md:h-5 animate-pulse" />
+                            <span>LISTENING: {listeningQueue.length} LEFT</span>
                         </div>
                     </div>
 
-                    <Card className="bg-slate-900 border-2 border-indigo-500/30 p-12 rounded-[2.5rem] shadow-2xl flex flex-col items-center justify-center min-h-[300px] cursor-pointer" onClick={() => speak(currentWord?.word || '')}>
-                        <div className="bg-indigo-500/20 p-6 rounded-full mb-6 animate-bounce">
-                            <Volume2 className="w-16 h-16 text-indigo-400" />
+                    <Card className="bg-slate-900 border-2 border-indigo-500/30 p-6 md:p-12 rounded-3xl md:rounded-[2.5rem] shadow-2xl flex flex-col items-center justify-center min-h-[160px] md:min-h-[300px] cursor-pointer" onClick={() => speak(currentWord?.word || '')}>
+                        <div className="bg-indigo-500/20 p-3 md:p-6 rounded-full mb-2 md:mb-6 animate-bounce">
+                            <Volume2 className="w-8 h-8 md:w-16 md:h-16 text-indigo-400" />
                         </div>
-                        <p className="text-slate-500 font-medium text-sm animate-pulse">Touch to replay audio</p>
+                        <p className="text-slate-500 font-bold text-[9px] md:text-sm animate-pulse uppercase tracking-widest">Touch to replay</p>
                     </Card>
 
                     <div className="grid grid-cols-1 gap-3">
@@ -759,7 +772,7 @@ export default function DayPage() {
                                     onClick={() => submitListeningAnswer(option)}
                                     disabled={listeningFeedback !== null}
                                     className={cn(
-                                        "w-full h-16 rounded-2xl text-lg font-bold transition-all",
+                                        "w-full h-12 md:h-16 rounded-xl md:rounded-2xl text-base md:text-lg font-bold transition-all",
                                         btnClass
                                     )}
                                 >
@@ -778,32 +791,32 @@ export default function DayPage() {
         const passed = percentage >= 80;
 
         return (
-            <div className="min-h-screen bg-slate-950 p-6 flex flex-col justify-center">
-                <div className="max-w-md mx-auto w-full text-center space-y-8">
+            <div className="min-h-screen bg-slate-950 p-3 md:p-6 flex flex-col">
+                <div className="max-w-md mx-auto w-full text-center space-y-3 md:space-y-6">
                     <div className={cn(
-                        "w-32 h-32 rounded-[2.5rem] mx-auto flex items-center justify-center shadow-2xl transform rotate-6",
+                        "w-24 h-24 md:w-32 md:h-32 rounded-3xl md:rounded-[2.5rem] mx-auto flex items-center justify-center shadow-2xl transform rotate-6",
                         passed ? "bg-emerald-500/20 text-emerald-400" : "bg-rose-500/20 text-rose-400"
                     )}>
-                        {passed ? <Trophy className="w-16 h-16" /> : <AlertCircle className="w-16 h-16" />}
+                        {passed ? <Trophy className="w-12 h-12 md:w-16 md:h-16" /> : <AlertCircle className="w-12 h-12 md:w-16 md:h-16" />}
                     </div>
 
                     <div>
-                        <h1 className="text-5xl font-black text-white italic tracking-tighter mb-2">
+                        <h1 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter mb-1 md:mb-2 leading-none">
                             {passed ? "SUCCESS!" : "TRY AGAIN"}
                         </h1>
-                        <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">
-                            {passed ? "Perfectly mastered today's mission" : "A bit more practice needed"}
+                        <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px] md:text-xs">
+                            {passed ? "Mission Complete" : "More practice needed"}
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-slate-900 p-6 rounded-3xl border border-slate-800">
-                            <div className="text-xs font-bold text-slate-500 mb-1 uppercase">Accuracy</div>
-                            <div className="text-3xl font-black text-white italic">{percentage}%</div>
+                    <div className="grid grid-cols-2 gap-3 md:gap-4">
+                        <div className="bg-slate-900 p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-800">
+                            <div className="text-[10px] md:text-xs font-bold text-slate-500 mb-0.5 md:mb-1 uppercase tracking-wider">Accuracy</div>
+                            <div className="text-2xl md:text-3xl font-black text-white italic leading-none">{percentage}%</div>
                         </div>
-                        <div className="bg-slate-900 p-6 rounded-3xl border border-slate-800">
-                            <div className="text-xs font-bold text-slate-500 mb-1 uppercase">Score</div>
-                            <div className="text-3xl font-black text-white italic">{testScore} / {total}</div>
+                        <div className="bg-slate-900 p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-800">
+                            <div className="text-[10px] md:text-xs font-bold text-slate-500 mb-0.5 md:mb-1 uppercase tracking-wider">Score</div>
+                            <div className="text-2xl md:text-3xl font-black text-white italic leading-none">{testScore} / {total}</div>
                         </div>
                     </div>
 
@@ -815,22 +828,16 @@ export default function DayPage() {
                         userId={userId}
                     />
 
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                         {!passed && (
                             <Button
                                 onClick={() => {
-                                    // 1. Identification Strategy
-                                    // We need to find words that were answered INCORRECTLY.
-                                    // 'results' array tracks boolean success/fail for each index in testQueue.
-
                                     const failedIndices = results
                                         .map((r, i) => r === false ? i : -1)
                                         .filter(i => i !== -1);
 
                                     let retryList = failedIndices.map(i => testQueue[i]);
 
-                                    // Fallback: If for some reason the list is empty (but we failed?), 
-                                    // just take the whole testQueue to be safe (retry all).
                                     if (retryList.length === 0 && testQueue.length > 0) {
                                         retryList = [...testQueue];
                                     }
@@ -840,7 +847,6 @@ export default function DayPage() {
                                         setMode('listening');
                                         setCurrentIndex(0);
                                     } else {
-                                        // Should not happen if passed=false, but safety valve
                                         setMode('sort');
                                         setCurrentIndex(0);
                                     }
@@ -848,15 +854,15 @@ export default function DayPage() {
                                     setResults([]);
                                     setTestScore(0);
                                 }}
-                                className="w-full h-16 bg-amber-500 text-slate-900 font-black text-xl italic rounded-2xl hover:bg-amber-400"
+                                className="w-full h-12 md:h-16 bg-amber-500 text-slate-900 font-bold text-base md:text-xl italic rounded-xl md:rounded-2xl hover:bg-amber-400"
                             >
-                                <Headphones className="w-6 h-6 mr-2" /> RESTART MISSION (Listening)
+                                <Headphones className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> RESTART MISSION
                             </Button>
                         )}
                         <Button
                             onClick={() => router.push('/homework/voca')}
                             variant="outline"
-                            className="w-full h-16 border-2 border-slate-800 bg-transparent text-slate-400 font-black text-xl italic rounded-2xl hover:text-white"
+                            className="w-full h-12 md:h-16 border-2 border-slate-800 bg-transparent text-slate-400 font-bold text-base md:text-xl italic rounded-xl md:rounded-2xl hover:text-white"
                         >
                             DASHBOARD
                         </Button>

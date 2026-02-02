@@ -13,6 +13,7 @@ import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCir
 import { Button } from "@/components/ui/button";
 import { TouchDictionary } from '@/components/common/TouchDictionary';
 import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 function Part6TestRunnerContent() {
     const params = useParams();
@@ -191,6 +192,9 @@ function Part6TestRunnerContent() {
                     type: 'part6_test',
                     detail: `Test ${testId}`
                 });
+
+                // ✅ NEW: Sync Performance Summary after submission
+                await PerformanceSyncService.syncUserSummary(user.userId || user.uid);
             } catch (e) { console.error(e); }
         }
 
@@ -399,10 +403,10 @@ function Part6TestRunnerContent() {
                     <div key={passage.id} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full overflow-hidden lg:overflow-visible">
                         {/* Passage: 70% on Mobile, 70% on Desktop */}
                         <div className={cn(
-                            "h-[70%] lg:h-fit overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none",
-                            "lg:col-span-7 lg:sticky lg:top-0 space-y-0 lg:space-y-4"
+                            "max-h-[60%] lg:h-fit overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none",
+                            "lg:col-span-7 lg:sticky lg:top-0 space-y-0 lg:space-y-4 flex-shrink-0"
                         )}>
-                            <div className="bg-white text-slate-900 rounded-none lg:rounded-xl p-2 lg:p-8 shadow-none lg:shadow-xl font-serif text-[13px] lg:text-lg leading-tight lg:leading-loose mx-auto w-full select-none min-h-full lg:min-h-[500px]">
+                            <div className="bg-white text-slate-900 rounded-none lg:rounded-xl p-2 lg:p-8 shadow-none lg:shadow-xl font-serif text-[15px] lg:text-lg leading-tight lg:leading-loose mx-auto w-full select-none min-h-full lg:min-h-[500px]">
                                 {/* Guidance Line */}
                                 {passage.guidance && (
                                     <div className="bg-slate-50 border-y lg:border-none border-slate-200 py-1 px-4 mb-4 text-[11px] lg:text-sm text-slate-500 font-sans italic text-center">
@@ -427,7 +431,7 @@ function Part6TestRunnerContent() {
                             )}
                         </div>
 
-                        <div className="flex flex-col h-[30%] lg:h-auto lg:col-span-3">
+                        <div className="flex flex-col flex-1 lg:h-auto lg:col-span-3 overflow-hidden">
                             <div
                                 ref={questionContainerRef}
                                 className={cn(
@@ -467,7 +471,6 @@ function Part6TestRunnerContent() {
                                                             )}>
                                                                 {q.questionNo || q.id}.
                                                             </span>
-                                                            {reviewMode && testId === 1 ? <TouchDictionary text={q.text} /> : q.text}
                                                         </div>
                                                         {isRevealed && !isCorrect && (
                                                             <span className="text-[10px] font-black text-rose-500 px-1.5 py-0.5 bg-rose-500/10 rounded uppercase">Incorrect</span>
