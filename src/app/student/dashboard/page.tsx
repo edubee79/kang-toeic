@@ -19,7 +19,9 @@ import { ClassInfoCard } from '@/components/dashboard/ClassInfoCard';
 import { ProgressCard } from '@/components/dashboard/ProgressCard';
 import { NotificationSetter } from '@/components/dashboard/NotificationSetter';
 import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
+import { NotificationDropdown } from '@/components/dashboard/NotificationDropdown';
 import { distributeGoals } from '@/utils/goal-utils';
+import { format } from 'date-fns';
 
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
     voca: { label: '단어 암기 (Voca)', total: 30, unit: 'Days', color: 'emerald', icon: BookOpen },
@@ -214,10 +216,19 @@ export default function StudentDashboard() {
     };
 
     const handleAutoAllocate = () => {
-        const result = distributeGoals(editTotalScore, editTargetLC, editTargetRC);
+        // Sync LC/RC first based on current total in input
+        const score = editTotalScore;
+        let lc = Math.round((score + 50) / 2 / 5) * 5;
+        if (lc > 495) lc = 495;
+        if (lc < 0) lc = 0;
+        let rc = score - lc;
+        if (rc < 0) rc = 0;
 
-        // Update UI states
-        setEditTargetLC(Number(editTotalScore * 0.52 / 5) * 5); // Rough visual update if needed, but distributeGoals handles math
+        setEditTargetLC(lc);
+        setEditTargetRC(rc);
+
+        // Run part-by-part distribution
+        const result = distributeGoals(score, lc, rc);
         setEditPartTargets(result);
     };
 
@@ -429,7 +440,12 @@ export default function StudentDashboard() {
                     </div>
                 </div>
                 <div className="flex items-center gap-2 self-center md:self-auto">
-                    {user?.userId && <div className="scale-[0.9] md:scale-100 origin-right"><NotificationSetter userId={user.userId} /></div>}
+                    {user?.userId && (
+                        <div className="flex items-center gap-1 md:gap-2 scale-[0.9] md:scale-100 origin-right">
+                            <NotificationDropdown userId={user.userId} />
+                            <NotificationSetter userId={user.userId} />
+                        </div>
+                    )}
                     {user && <div className="scale-[0.9] md:scale-100 origin-right"><ClassInfoCard user={user} /></div>}
                 </div>
             </div>
@@ -527,7 +543,9 @@ export default function StudentDashboard() {
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                                         {/* LC Column */}
                                         <div className="space-y-4">
-                                            <h4 className="text-xs md:text-lg font-black text-blue-400 mb-4 uppercase italic tracking-widest border-b border-blue-500/20 pb-2">Listening (LC)</h4>
+                                            <h4 className="text-xs md:text-lg font-black text-blue-400 mb-4 uppercase italic tracking-widest border-b border-blue-500/20 pb-2">
+                                                Listening (LC) 총필요 정답수:{Math.min(100, Math.round(weaknessReport.targetLCScore * 0.18 + 9))}
+                                            </h4>
                                             {[
                                                 { k: 'p1', label: 'P1' },
                                                 { k: 'p2', label: 'P2' },
@@ -567,7 +585,9 @@ export default function StudentDashboard() {
 
                                         {/* RC Column */}
                                         <div className="space-y-4">
-                                            <h4 className="text-xs md:text-lg font-black text-indigo-400 mb-4 uppercase italic tracking-widest border-b border-indigo-500/20 pb-2">Reading (RC)</h4>
+                                            <h4 className="text-xs md:text-lg font-black text-indigo-400 mb-4 uppercase italic tracking-widest border-b border-indigo-500/20 pb-2">
+                                                Reading (RC) 총필요 정답수:{Math.min(100, Math.round(weaknessReport.targetRCScore * 0.16 + 21))}
+                                            </h4>
                                             {[
                                                 { k: 'p5', label: 'P5' },
                                                 { k: 'p6', label: 'P6' },
@@ -618,18 +638,61 @@ export default function StudentDashboard() {
                                     <div className="grid grid-cols-3 gap-4">
                                         <div>
                                             <label className="text-xs text-slate-400 mb-1 block">총점</label>
-                                            <Input type="number" value={editTotalScore} onChange={(e) => setEditTotalScore(Number(e.target.value) || 0)} className="bg-slate-800 border-slate-700" />
+                                            <Input
+                                                type="number"
+                                                value={editTotalScore}
+                                                onChange={(e) => {
+                                                    const score = Number(e.target.value) || 0;
+                                                    setEditTotalScore(score);
+                                                    // Immediately sync LC/RC in UI
+                                                    let lc = Math.round((score + 50) / 2 / 5) * 5;
+                                                    if (lc > 495) lc = 495;
+                                                    if (lc < 0) lc = 0;
+                                                    let rc = score - lc;
+                                                    if (rc < 0) rc = 0;
+                                                    setEditTargetLC(lc);
+                                                    setEditTargetRC(rc);
+                                                }}
+                                                className="bg-slate-800 border-slate-700 font-bold"
+                                            />
                                         </div>
                                         <div>
-                                            <label className="text-xs text-slate-400 mb-1 block">LC</label>
-                                            <Input type="number" value={editTargetLC} onChange={(e) => setEditTargetLC(Number(e.target.value) || 0)} className="bg-slate-800 border-slate-700" />
+                                            <label className="text-xs text-slate-400 mb-1 block text-blue-400">LC 목표</label>
+                                            <Input
+                                                type="number"
+                                                value={editTargetLC}
+                                                onChange={(e) => {
+                                                    const lc = Math.min(495, Number(e.target.value) || 0);
+                                                    setEditTargetLC(lc);
+                                                    // Adjust RC to keep total fixed
+                                                    setEditTargetRC(Math.max(0, editTotalScore - lc));
+                                                }}
+                                                className="bg-slate-800 border-slate-700 font-bold text-blue-400"
+                                            />
                                         </div>
                                         <div>
-                                            <label className="text-xs text-slate-400 mb-1 block">RC</label>
-                                            <Input type="number" value={editTargetRC} onChange={(e) => setEditTargetRC(Number(e.target.value) || 0)} className="bg-slate-800 border-slate-700" />
+                                            <label className="text-xs text-slate-400 mb-1 block text-indigo-400">RC 목표</label>
+                                            <Input
+                                                type="number"
+                                                value={editTargetRC}
+                                                onChange={(e) => {
+                                                    const rc = Math.min(495, Number(e.target.value) || 0);
+                                                    setEditTargetRC(rc);
+                                                    // Adjust LC to keep total fixed
+                                                    setEditTargetLC(Math.max(0, editTotalScore - rc));
+                                                }}
+                                                className="bg-slate-800 border-slate-700 font-bold text-indigo-400"
+                                            />
                                         </div>
                                     </div>
-                                    <Button onClick={handleAutoAllocate} variant="outline" size="sm" className="w-full"><Zap className="w-4 h-4 mr-2" />AI 자동 배분</Button>
+                                    <Button
+                                        onClick={handleAutoAllocate}
+                                        variant="outline"
+                                        size="sm"
+                                        className="w-full bg-indigo-500/10 border-indigo-500/30 text-indigo-400 hover:bg-indigo-500 hover:text-white"
+                                    >
+                                        <Zap className="w-4 h-4 mr-2" />전체 데이터에 맞춰 AI 자동 분배
+                                    </Button>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                         {Object.keys(MAX_Q).map((part) => {
                                             const labelMap: Record<string, string> = {
@@ -688,13 +751,89 @@ export default function StudentDashboard() {
             </div>
 
             <div>
-                <h3 className="text-base md:text-xl font-bold text-slate-400 mb-3 md:mb-4 px-1 uppercase tracking-wider">학습 지표</h3>
-                <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-1.5 md:gap-4">
+                <h3 className="text-base md:text-xl font-bold text-slate-400 mb-3 md:mb-4 px-1 uppercase tracking-wider">학습 지표 (Aggregate)</h3>
+                <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-1.5 md:gap-4 mb-10">
                     {Object.entries(HOMEWORK_CONFIG).map(([key, config]) => {
                         const count = stats[key] || 0;
                         if (count === 0 && !['voca', 'grammar', 'part5_test'].includes(key)) return null;
                         return <ProgressCard key={key} title={config.label.split('(')[0]} value={`${(count / config.total * 100).toFixed(0)}%`} subValue={`${count}/${config.total}`} current={count} total={config.total} color={config.color as any} icon={config.icon} />;
                     })}
+                </div>
+
+                {/* Daily Homework Tracker Section */}
+                <div className="mb-10 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+                    <div className="flex items-center gap-2 px-1">
+                        <Calendar className="text-indigo-400 w-5 h-5 md:w-6 md:h-6" />
+                        <h3 className="text-lg md:text-2xl font-black text-white uppercase tracking-tight italic">나의 과제 일지 (Daily Tasks)</h3>
+                    </div>
+                    <div className="space-y-6">
+                        {assignments.length > 0 ? (
+                            Object.entries(
+                                assignments.reduce((acc, a) => {
+                                    const d = a.createdAt?.toDate ? format(a.createdAt.toDate(), 'yyyy-MM-dd') : 'No Date';
+                                    if (!acc[d]) acc[d] = [];
+                                    acc[d].push(a);
+                                    return acc;
+                                }, {} as Record<string, any[]>)
+                            ).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 5).map(([date, items]) => (
+                                <div key={date} className="space-y-3">
+                                    <div className="flex items-center gap-2">
+                                        <div className="h-px flex-1 bg-slate-800"></div>
+                                        <span className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest px-2 italic">{date} Assignments</span>
+                                        <div className="h-px flex-1 bg-slate-800"></div>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
+                                        {items.map(item => {
+                                            const isDone = !!completedMap[`${item.type}_${item.detail}`];
+                                            const Icon = getHomeworkIcon(item.type);
+                                            return (
+                                                <Link key={item.id} href={getHomeworkLink(item.type, item.detail, item.id)}>
+                                                    <div className={cn(
+                                                        "group flex items-center justify-between p-4 rounded-2xl border transition-all duration-300",
+                                                        isDone
+                                                            ? "bg-emerald-500/5 border-emerald-500/10 hover:border-emerald-500/30"
+                                                            : "bg-slate-900/50 border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900Shadow-indigo-500/10"
+                                                    )}>
+                                                        <div className="flex items-center gap-3">
+                                                            <div className={cn(
+                                                                "w-10 h-10 rounded-xl flex items-center justify-center transition-colors",
+                                                                isDone ? "bg-emerald-500/10 text-emerald-500" : "bg-slate-800 text-slate-500 group-hover:text-indigo-400"
+                                                            )}>
+                                                                <Icon className="w-5 h-5 md:w-6 md:h-6" />
+                                                            </div>
+                                                            <div className="min-w-0">
+                                                                <p className={cn(
+                                                                    "text-[9px] md:text-[10px] font-black uppercase leading-none mb-1 tracking-tighter",
+                                                                    isDone ? "text-emerald-500/60" : "text-slate-600"
+                                                                )}>
+                                                                    {item.typeLabel || item.type}
+                                                                </p>
+                                                                <p className="text-sm md:text-base font-black text-white uppercase truncate tracking-tight">
+                                                                    {item.detail}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="shrink-0 flex items-center gap-2">
+                                                            {isDone ? (
+                                                                <Badge className="bg-emerald-500/20 text-emerald-500 border-none px-2 h-6 font-black italic tracking-tighter">DONE</Badge>
+                                                            ) : (
+                                                                <Badge variant="outline" className="text-slate-600 border-slate-800 px-2 h-6 font-black italic tracking-tighter">PENDING</Badge>
+                                                            )}
+                                                            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-slate-700 group-hover:text-indigo-500 rotate-180 transition-colors" />
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="text-center py-10 bg-slate-900/30 rounded-3xl border border-dashed border-slate-800">
+                                <p className="text-slate-500 font-bold">배포된 과제가 없습니다.</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 

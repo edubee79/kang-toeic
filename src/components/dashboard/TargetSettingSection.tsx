@@ -43,25 +43,28 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
     });
 
     // Validates and Syncs state when user prop updates
-    if (user) {
-        setTotalScore(user.targetScore || 850);
-        setTargetLC(user.targetLC || 450);
-        setTargetRC(user.targetRC || 400);
+    useEffect(() => {
+        // CRITICAL: Do not overwrite state if user is actively editing
+        if (!isEditing && user) {
+            setTotalScore(user.targetScore || 850);
+            setTargetLC(user.targetLC || 450);
+            setTargetRC(user.targetRC || 400);
 
-        // ✅ Enhanced Logic: Data Migration to p[N]_goal
-        const raw = user.partTargets as any || {};
-        setPartTargets({
-            p1_goal: raw.p1_goal ?? raw.p1 ?? 0,
-            p2_goal: raw.p2_goal ?? raw.p2 ?? 0,
-            p3_goal: raw.p3_goal ?? raw.p3 ?? 0,
-            p4_goal: raw.p4_goal ?? raw.p4 ?? 0,
-            p5_goal: raw.p5_goal ?? raw.p5 ?? 0,
-            p6_goal: raw.p6_goal ?? raw.p6 ?? 0,
-            p7s_goal: raw.p7s_goal ?? raw.p7_single ?? raw.p7s ?? 0,
-            p7d_goal: raw.p7d_goal ?? raw.p7_double ?? raw.p7d ?? 0,
-            p7f_goal: raw.p7f_goal ?? raw.p7_test ?? 0
-        });
-    }
+            // ✅ Enhanced Logic: Data Migration to p[N]_goal
+            const raw = user.partTargets as any || {};
+            setPartTargets({
+                p1_goal: raw.p1_goal ?? raw.p1 ?? 0,
+                p2_goal: raw.p2_goal ?? raw.p2 ?? 0,
+                p3_goal: raw.p3_goal ?? raw.p3 ?? 0,
+                p4_goal: raw.p4_goal ?? raw.p4 ?? 0,
+                p5_goal: raw.p5_goal ?? raw.p5 ?? 0,
+                p6_goal: raw.p6_goal ?? raw.p6 ?? 0,
+                p7s_goal: raw.p7s_goal ?? raw.p7_single ?? raw.p7s ?? 0,
+                p7d_goal: raw.p7d_goal ?? raw.p7_double ?? raw.p7d ?? 0,
+                p7f_goal: raw.p7f_goal ?? raw.p7_test ?? 0
+            });
+        }
+    }, [user.userId, isEditing]);
 
     // Max questions per part
     const MAX_Q: Record<string, number> = {
@@ -69,11 +72,9 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
         p5_goal: 30, p6_goal: 16, p7s_goal: 29, p7d_goal: 25, p7f_goal: 54
     };
 
-    // Determine Required Counts based on Score (User Heuristic)
-    // LC: Close to simple /5 (e.g. 98 correct ~= 495)
-    // RC: "Need 3-5 more correct than the 5-point system"
-    const requiredLC = Math.min(100, Math.ceil(targetLC / 5));
-    const requiredRC = Math.min(100, Math.ceil(targetRC / 5) + 4); // +4 Questions buffer for RC difficulty
+    // Determine Required Counts based on Score (Calibrated to Hackers table)
+    const requiredLC = Math.min(100, Math.round(targetLC * 0.18 + 9));
+    const requiredRC = Math.min(100, Math.round(targetRC * 0.16 + 21));
 
     // Calculate current sums
     const currentLCSum = (partTargets?.p1_goal || 0) + (partTargets?.p2_goal || 0) + (partTargets?.p3_goal || 0) + (partTargets?.p4_goal || 0);
@@ -85,19 +86,12 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
 
     // AI Auto-Allocate Logic
     const handleAutoAllocate = () => {
-        // Strategy 2.2: "Human Heuristic"
-        // 1. Target >= 900 => LC must be ~480-495 (Max out LC first).
-        // 2. RC requires more raw correct answers (handled by requiredRC above).
-
         // 1. Determine realistic LC/RC split
         let newLC, newRC;
 
         if (totalScore >= 900) {
-            // High Scorer Strategy
-            // LC should be 480-495.
-            // If Total=900, LC=480, RC=420.
-            // If Total=950, LC=490, RC=460.
-            newLC = 480 + Math.max(0, (totalScore - 900) * 0.5); // Push LC hard
+            // High Scorer Strategy (Target LC 480-495)
+            newLC = 480 + Math.max(0, (totalScore - 900) * 0.5);
             newLC = Math.min(495, Math.ceil(newLC / 5) * 5);
             newRC = totalScore - newLC;
         } else {
@@ -112,13 +106,11 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
 
         // 2. Allocate Part Targets (Re-calculate required based on NEW split)
         const reqLC = Math.min(100, Math.ceil(newLC / 5));
-        const reqRC = Math.min(100, Math.ceil(newRC / 5) + 4); // Keep consistency
+        const reqRC = Math.min(100, Math.ceil(newRC / 5) + 4);
 
-        // ✅ IMPROVED: Proportional Distribution (More Balanced)
-        const distribute = (budget: number, parts: { key: keyof typeof MAX_Q, cap?: number }[]) => {
-            const result: Partial<Record<keyof typeof MAX_Q, number>> = {};
-
-            // Calculate total capacity and proportions
+        // Proportional Distribution Logic
+        const distribute = (budget: number, parts: { key: string, cap?: number }[]) => {
+            const result: Record<string, number> = {};
             const totalCapacity = parts.reduce((sum, p) => sum + (p.cap ?? MAX_Q[p.key]), 0);
 
             // First pass: Proportional allocation
@@ -128,80 +120,136 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                 const proportion = max / totalCapacity;
                 const target = Math.floor(budget * proportion);
                 result[p.key] = Math.min(target, max);
-                allocated += result[p.key]!;
+                allocated += result[p.key];
             });
 
             // Second pass: Distribute remainder evenly
             let remaining = budget - allocated;
             let idx = 0;
-            while (remaining > 0 && idx < parts.length * 2) { // Max 2 rounds
+            while (remaining > 0 && idx < 2) {
                 for (const p of parts) {
                     if (remaining <= 0) break;
-                    const current = result[p.key] || 0;
                     const max = p.cap ?? MAX_Q[p.key];
-                    if (current < max) {
-                        result[p.key] = current + 1;
+                    if (result[p.key] < max) {
+                        result[p.key]++;
                         remaining--;
                     }
                 }
                 idx++;
             }
-
             return result;
         };
 
-        // LC Parts Definition (Priority Order: P1 -> P2 -> P4 -> P3)
-        const lcParts = [
-            { key: 'p1' as const },
-            { key: 'p2' as const },
-            { key: 'p4' as const },
-            { key: 'p3' as const }
-        ];
-        const lcResult = distribute(reqLC, lcParts);
+        const lcResult = distribute(reqLC, [
+            { key: 'p1_goal' }, { key: 'p2_goal' }, { key: 'p4_goal' }, { key: 'p3_goal' }
+        ]);
 
-        // RC Parts Definition
-        // P5 Logic: < 750 => Cap 25. < 600 => Cap 20.
-        let p5Cap = MAX_Q.p5;
+        let p5Cap = MAX_Q.p5_goal;
         if (totalScore < 750) p5Cap = 25;
         if (totalScore < 600) p5Cap = 20;
 
-        // Priority: P5 -> P6 -> P7 Single -> P7 Double
-        const rcParts = [
-            { key: 'p5' as const, cap: p5Cap },
-            { key: 'p6' as const },
-            { key: 'p7_single' as const },
-            { key: 'p7_double' as const }
-        ];
-        const rcResult = distribute(reqRC, rcParts);
+        const rcResult = distribute(reqRC, [
+            { key: 'p5_goal', cap: p5Cap }, { key: 'p6_goal' }, { key: 'p7s_goal' }, { key: 'p7d_goal' }
+        ]);
 
         setPartTargets({
-            p1_goal: lcResult.p1 || 0,
-            p2_goal: lcResult.p2 || 0,
-            p3_goal: lcResult.p3 || 0,
-            p4_goal: lcResult.p4 || 0,
-            p5_goal: rcResult.p5 || 0,
-            p6_goal: rcResult.p6 || 0,
-            p7s_goal: rcResult.p7_single || 0,
-            p7d_goal: rcResult.p7_double || 0,
-            p7f_goal: 0
+            p1_goal: lcResult.p1_goal || 0,
+            p2_goal: lcResult.p2_goal || 0,
+            p3_goal: lcResult.p3_goal || 0,
+            p4_goal: lcResult.p4_goal || 0,
+            p5_goal: rcResult.p5_goal || 0,
+            p6_goal: rcResult.p6_goal || 0,
+            p7s_goal: rcResult.p7s_goal || 0,
+            p7d_goal: rcResult.p7d_goal || 0,
+            p7f_goal: (rcResult.p7s_goal || 0) + (rcResult.p7d_goal || 0)
         });
     };
     // Use Effect to Auto-Allocate on open or when total changes significantly if not set
     // For now, let's just leave it manual or button click to avoid overriding user data annoyingly
 
-    // Auto-calculate Split when Total Changes (Default simple split, AI button does advanced)
+    // Auto-calculate Split and Allocations when Total Changes
     const handleTotalChange = (val: string) => {
-        const score = parseInt(val);
-        if (isNaN(score)) return;
+        const score = parseInt(val) || 0;
         setTotalScore(score);
 
-        // Simple default: LC = RC + 50 (similar to AI logic base)
-        let lc = Math.ceil((score + 50) / 2 / 5) * 5;
+        // 1. Sync LC/RC immediately
+        let lc = Math.round((score + 50) / 2 / 5) * 5;
         if (lc > 495) lc = 495;
+        if (lc < 0) lc = 0;
         let rc = score - lc;
+        if (rc < 0) rc = 0;
 
         setTargetLC(lc);
         setTargetRC(rc);
+
+        // 2. Automagically trigger part allocation to keep Sliders in sync
+        // Re-allocate required based on NEW split
+        const reqLC = Math.min(100, Math.ceil(lc / 5));
+        const reqRC = Math.min(100, Math.ceil(rc / 5) + 4);
+
+        const distribute = (budget: number, parts: { key: string, cap?: number }[]) => {
+            const result: Record<string, number> = {};
+            const totalCapacity = parts.reduce((sum, p) => sum + (p.cap ?? MAX_Q[p.key]), 0);
+            let allocated = 0;
+            parts.forEach(p => {
+                const max = p.cap ?? MAX_Q[p.key];
+                const proportion = max / totalCapacity;
+                const target = Math.floor(budget * proportion);
+                result[p.key] = Math.min(target, max);
+                allocated += result[p.key];
+            });
+            let remaining = budget - allocated;
+            let idx = 0;
+            while (remaining > 0 && idx < 2) {
+                for (const p of parts) {
+                    if (remaining <= 0) break;
+                    const max = p.cap ?? MAX_Q[p.key];
+                    if (result[p.key] < max) {
+                        result[p.key]++;
+                        remaining--;
+                    }
+                }
+                idx++;
+            }
+            return result;
+        };
+
+        const lcRes = distribute(reqLC, [
+            { key: 'p1_goal' }, { key: 'p2_goal' }, { key: 'p4_goal' }, { key: 'p3_goal' }
+        ]);
+        let p5Cap = MAX_Q.p5_goal;
+        if (score < 750) p5Cap = 25;
+        const rcRes = distribute(reqRC, [
+            { key: 'p5_goal', cap: p5Cap }, { key: 'p6_goal' }, { key: 'p7s_goal' }, { key: 'p7d_goal' }
+        ]);
+
+        setPartTargets({
+            p1_goal: lcRes.p1_goal || 0,
+            p2_goal: lcRes.p2_goal || 0,
+            p3_goal: lcRes.p3_goal || 0,
+            p4_goal: lcRes.p4_goal || 0,
+            p5_goal: rcRes.p5_goal || 0,
+            p6_goal: rcRes.p6_goal || 0,
+            p7s_goal: rcRes.p7s_goal || 0,
+            p7d_goal: rcRes.p7d_goal || 0,
+            p7f_goal: (rcRes.p7s_goal || 0) + (rcRes.p7d_goal || 0)
+        });
+    };
+
+    // Manual adjustment for LC
+    const handleLCChange = (val: string) => {
+        const lc = Math.min(495, parseInt(val) || 0);
+        setTargetLC(lc);
+        // Total should remain fixed, so RC adjusted
+        setTargetRC(Math.max(0, totalScore - lc));
+    };
+
+    // Manual adjustment for RC
+    const handleRCChange = (val: string) => {
+        const rc = Math.min(495, parseInt(val) || 0);
+        setTargetRC(rc);
+        // Total should remain fixed, so LC adjusted
+        setTargetLC(Math.max(0, totalScore - rc));
     };
 
     const handleSave = async () => {
@@ -263,7 +311,9 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* LC Column */}
                         <div className="space-y-3">
-                            <h4 className="text-xs font-bold text-blue-400 mb-2 uppercase border-b border-blue-500/20 pb-1">Listening (LC)</h4>
+                            <h4 className="text-xs font-bold text-blue-400 uppercase border-b border-blue-500/20 pb-1 mb-2">
+                                Listening (LC) 총필요 정답수:{Math.min(100, Math.round(targetLC * 0.18 + 9))}
+                            </h4>
                             {['p1', 'p2', 'p3', 'p4'].map((p) => {
                                 const goalKey = `${p}_goal` as keyof UserProfile['partTargets'];
                                 const goal = partTargets?.[goalKey] || 0;
@@ -298,7 +348,9 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
 
                         {/* RC Column */}
                         <div className="space-y-3">
-                            <h4 className="text-xs font-bold text-indigo-400 mb-2 uppercase border-b border-indigo-500/20 pb-1">Reading (RC)</h4>
+                            <h4 className="text-xs font-bold text-indigo-400 uppercase border-b border-indigo-500/20 pb-1 mb-2">
+                                Reading (RC) 총필요 정답수:{Math.min(100, Math.round(targetRC * 0.16 + 21))}
+                            </h4>
                             {['p5', 'p6', 'p7s', 'p7d'].map((p) => {
                                 const goalKey = `${p}_goal` as keyof UserProfile['partTargets'];
                                 const goal = partTargets?.[goalKey] || 0;
@@ -386,10 +438,15 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         <label className="text-xs font-bold text-blue-400 uppercase mb-2 block">LC 목표 (청해)</label>
                         <div className="flex justify-between items-end">
                             <div>
-                                <div className="text-2xl font-black text-white">{targetLC}</div>
+                                <Input
+                                    type="number"
+                                    value={targetLC}
+                                    onChange={(e) => handleLCChange(e.target.value)}
+                                    className="text-2xl font-black text-white h-10 w-24 bg-transparent border-none p-0 focus-visible:ring-0"
+                                />
                                 <div className="text-xs text-slate-500">필요 정답수: <span className="text-blue-400 font-bold">{requiredLC}개</span></div>
                             </div>
-                            <div className="text-[10px] text-slate-600 mb-1">RC + 50점 Recommended</div>
+                            <div className="text-[10px] text-slate-600 mb-1">Recommended: {(totalScore + 50) / 2}</div>
                         </div>
                     </div>
 
@@ -398,7 +455,12 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         <label className="text-xs font-bold text-indigo-400 uppercase mb-2 block">RC 목표 (독해)</label>
                         <div className="flex justify-between items-end">
                             <div>
-                                <div className="text-2xl font-black text-white">{targetRC}</div>
+                                <Input
+                                    type="number"
+                                    value={targetRC}
+                                    onChange={(e) => handleRCChange(e.target.value)}
+                                    className="text-2xl font-black text-white h-10 w-24 bg-transparent border-none p-0 focus-visible:ring-0"
+                                />
                                 <div className="text-xs text-slate-500">필요 정답수: <span className="text-indigo-400 font-bold">{requiredRC}개</span></div>
                             </div>
                         </div>
@@ -410,7 +472,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                     {/* LC Section */}
                     <div className="space-y-4">
                         <div className="flex justify-between items-center mb-2">
-                            <h4 className="font-bold text-blue-400">LC Part-by-Part</h4>
+                            <h4 className="font-bold text-blue-400">LC 총필요 정답수:{requiredLC}</h4>
                             <div className={cn(
                                 "flex items-center gap-2 px-3 py-1.5 rounded-lg border",
                                 remainingLC === 0 ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400" :
@@ -425,13 +487,14 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         {['p1', 'p2', 'p3', 'p4'].map((p) => {
                             const goalKey = `${p}_goal`;
                             const currentVal = (partTargets as any)?.[goalKey] || 0;
-                            const smartMax = Math.min(MAX_Q[goalKey], remainingLC >= 0 ? currentVal + remainingLC : currentVal);
+                            const maxVal = MAX_Q[goalKey] || 0;
+                            const smartMax = Math.min(maxVal, remainingLC >= 0 ? currentVal + remainingLC : currentVal);
 
                             return (
                                 <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
                                     <div className="flex justify-between text-xs mb-2">
-                                        <span className="text-slate-300 font-bold uppercase">{p} ({MAX_Q[key]}문항)</span>
-                                        <span className={cn("font-bold", currentVal === MAX_Q[key] ? "text-emerald-400" : "text-white")}>
+                                        <span className="text-slate-300 font-bold uppercase">{p} ({maxVal}문항)</span>
+                                        <span className={cn("font-bold", currentVal === maxVal ? "text-emerald-400" : "text-white")}>
                                             {currentVal}개
                                         </span>
                                     </div>
@@ -458,7 +521,7 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                     {/* RC Section */}
                     <div className="space-y-4">
                         <div className="flex justify-between items-center mb-2">
-                            <h4 className="font-bold text-indigo-400">RC Part-by-Part</h4>
+                            <h4 className="font-bold text-indigo-400">RC 총필요 정답수:{requiredRC}</h4>
                             <div className={cn(
                                 "flex items-center gap-2 px-3 py-1.5 rounded-lg border",
                                 remainingRC === 0 ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400" :
@@ -473,15 +536,18 @@ export function TargetSettingSection({ user, currentStats, onUpdate }: TargetSet
                         {['p5', 'p6', 'p7s', 'p7d'].map((p) => {
                             const goalKey = `${p}_goal`;
                             const currentVal = (partTargets as any)?.[goalKey] || 0;
-                            const smartMax = Math.min(MAX_Q[goalKey], remainingRC >= 0 ? currentVal + remainingRC : currentVal);
+                            const maxVal = MAX_Q[goalKey] || 0;
+                            const smartMax = Math.min(maxVal, remainingRC >= 0 ? currentVal + remainingRC : currentVal);
+
+                            const partLabel = p === 'p7s' ? 'Part 7 Single' : p === 'p7d' ? 'Part 7 Double/Triple' : p.toUpperCase();
 
                             return (
                                 <div key={p} className="bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
                                     <div className="flex justify-between text-xs mb-2">
                                         <span className="text-slate-300 font-bold uppercase">
-                                            {p === 'p7_single' ? 'Part 7 Single' : p === 'p7_double' ? 'Part 7 Double/Triple' : p} ({MAX_Q[key]}문항)
+                                            {partLabel} ({maxVal}문항)
                                         </span>
-                                        <span className={cn("font-bold", currentVal === MAX_Q[key] ? "text-emerald-400" : "text-white")}>
+                                        <span className={cn("font-bold", currentVal === maxVal ? "text-emerald-400" : "text-white")}>
                                             {currentVal}개
                                         </span>
                                     </div>

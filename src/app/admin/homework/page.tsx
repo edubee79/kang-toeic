@@ -562,14 +562,52 @@ export default function HomeworkResultsPage() {
                                 {!loading && students.length > 0 && (
                                     <Table>
                                         <TableHeader className="bg-slate-950">
+                                            {/* 1st Header Row: Date Groups */}
+                                            <TableRow className="border-slate-800 bg-slate-950/50">
+                                                <TableHead className="w-[120px] bg-slate-950 sticky left-0 z-30 border-r border-slate-800"></TableHead>
+                                                {(() => {
+                                                    const groups: { date: string, count: number }[] = [];
+                                                    assignments.forEach(a => {
+                                                        const d = format(a.createdAt.toDate(), 'MM/dd');
+                                                        if (groups.length > 0 && groups[groups.length - 1].date === d) {
+                                                            groups[groups.length - 1].count++;
+                                                        } else {
+                                                            groups.push({ date: d, count: 1 });
+                                                        }
+                                                    });
+                                                    return groups.map((g, i) => (
+                                                        <TableHead key={i} colSpan={g.count} className="text-center text-[10px] font-black text-indigo-400 border-r border-slate-800/50 h-8 uppercase tracking-tighter">
+                                                            {g.date} RELEASED
+                                                        </TableHead>
+                                                    ));
+                                                })()}
+                                            </TableRow>
+                                            {/* 2nd Header Row: Part & Detail */}
                                             <TableRow className="border-slate-800 hover:bg-slate-950">
-                                                <TableHead className="w-[120px] font-bold text-white bg-slate-950 sticky left-0 z-20">이름</TableHead>
-                                                {assignments.map(assign => (
-                                                    <TableHead key={assign.id} className="text-center min-w-[80px] p-2">
-                                                        <div className="text-[10px] text-slate-500">{format(assign.createdAt.toDate(), 'MM/dd')}</div>
-                                                        <div className="font-bold text-xs text-slate-200 truncate max-w-[80px]" title={assign.detail}>{assign.detail}</div>
-                                                    </TableHead>
-                                                ))}
+                                                <TableHead className="w-[120px] font-bold text-white bg-slate-950 sticky left-0 z-20 border-r border-slate-800">이름</TableHead>
+                                                {assignments.map(assign => {
+                                                    const shortLabel = (assign.typeLabel || assign.type)
+                                                        .replace('단어 암기', 'VOCA')
+                                                        .replace('문법 (Grammar)', 'GRAMMAR')
+                                                        .replace('쉐도잉', 'SHD')
+                                                        .replace('실전', 'TEST')
+                                                        .replace('RC Part 7 ', 'P7 ')
+                                                        .replace('LC Part ', 'P')
+                                                        .split(' (')[0];
+
+                                                    return (
+                                                        <TableHead key={assign.id} className="text-center min-w-[90px] p-2 border-r border-slate-800/50 bg-slate-900/30">
+                                                            <div className="flex flex-col gap-0.5">
+                                                                <div className="text-[9px] text-indigo-300 font-black uppercase leading-none opacity-70 mb-0.5">
+                                                                    {shortLabel}
+                                                                </div>
+                                                                <div className="font-black text-[11px] text-white truncate max-w-[85px] leading-tight" title={assign.detail}>
+                                                                    {assign.detail}
+                                                                </div>
+                                                            </div>
+                                                        </TableHead>
+                                                    );
+                                                })}
                                             </TableRow>
                                         </TableHeader>
                                         <TableBody>

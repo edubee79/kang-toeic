@@ -336,6 +336,8 @@ export default function Part3TestRunnerPage() {
                     student: user.userName || user.username || user.name || "Unknown",
                     studentId: user.userId || user.uid || "Guest",
                     className: user.userClass || user.className || "Unknown",
+                    type: 'part3_test',
+                    detail: `Test ${testId}`,
                     unit: `LC_Part3_Test${testId}`,
                     score: score,
                     total: testSets.reduce((acc, set: Part3Set) => acc + set.questions.length, 0),

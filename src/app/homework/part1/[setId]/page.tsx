@@ -325,6 +325,8 @@ export default function ShadowingPractice() {
             await addDoc(collection(db, "Manager_Results"), {
                 student: user.userName || user.name || "Unknown",
                 studentId: user.userId || user.uid || "Guest",
+                type: 'part1_shadow',
+                detail: `Set ${setId}`,
                 unit: unitName,
                 score: finalScore,
                 total: 20,

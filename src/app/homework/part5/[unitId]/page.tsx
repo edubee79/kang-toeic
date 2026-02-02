@@ -171,6 +171,8 @@ export default function Part5Quiz() {
         try {
             await addDoc(collection(db, "Manager_Results"), {
                 unit: unitId,
+                type: 'grammar',
+                detail: `Unit ${parseInt(unitId.split('_')[1])}`,
                 student: studentName,
                 studentId: studentId,
                 studentClass: studentClass,

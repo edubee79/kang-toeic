@@ -155,80 +155,89 @@ export default function StudentHistoryPage() {
                 </div>
 
                 {/* Content */}
-                <Card className="bg-slate-900/50 border-slate-800 overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left border-collapse">
-                            <thead>
-                                <tr className="border-b border-slate-800 bg-slate-900/80">
-                                    <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">학습 일자</th>
-                                    <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">구분</th>
-                                    <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">과제 명</th>
-                                    <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center">Score</th>
-                                    <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-slate-850">
-                                {filteredResults.length === 0 ? (
-                                    <tr>
-                                        <td colSpan={5} className="px-6 py-20 text-center text-slate-500 font-medium">
-                                            기록된 학습 데이터가 없습니다.
-                                        </td>
-                                    </tr>
-                                ) : (
-                                    filteredResults.map((res) => {
+                {/* Content */}
+                <div className="space-y-8">
+                    {filteredResults.length === 0 ? (
+                        <Card className="bg-slate-900/50 border-slate-800 p-20 text-center text-slate-500 font-medium">
+                            기록된 학습 데이터가 없습니다.
+                        </Card>
+                    ) : (
+                        Object.entries(
+                            filteredResults.reduce((acc, res) => {
+                                const date = res.timestamp instanceof Timestamp ? res.timestamp.toDate() : new Date();
+                                const dateKey = format(date, 'yyyy-MM-dd');
+                                if (!acc[dateKey]) acc[dateKey] = [];
+                                acc[dateKey].push(res);
+                                return acc;
+                            }, {} as Record<string, ManagerResult[]>)
+                        ).sort((a, b) => b[0].localeCompare(a[0])).map(([dateKey, items]) => (
+                            <div key={dateKey} className="space-y-4">
+                                <div className="flex items-center gap-3 px-1">
+                                    <div className="bg-indigo-600/20 text-indigo-400 p-1.5 rounded-lg border border-indigo-500/20">
+                                        <Calendar className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg font-black text-white italic tracking-tight">
+                                        {format(new Date(dateKey), 'yyyy년 MM월 dd일', { locale: ko })}
+                                        <span className="ml-3 text-[10px] font-bold text-slate-500 not-italic uppercase tracking-widest bg-slate-800 px-2 py-0.5 rounded-md">
+                                            {items.length} Tasks COMPLETED
+                                        </span>
+                                    </h3>
+                                </div>
+
+                                <div className="grid grid-cols-1 gap-3">
+                                    {items.map((res) => {
                                         const date = res.timestamp instanceof Timestamp ? res.timestamp.toDate() : new Date();
                                         const Icon = getIcon(res.type);
-
                                         return (
-                                            <tr key={res.id} className="hover:bg-slate-800/30 transition-colors group">
-                                                <td className="px-6 py-4">
-                                                    <div className="flex items-center gap-2 text-slate-300">
-                                                        <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                                                        <span className="text-sm font-medium">{format(date, 'yyyy. MM. dd', { locale: ko })}</span>
+                                            <Card key={res.id} className="bg-slate-900/40 border-slate-800 p-4 md:p-5 hover:border-indigo-500/30 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="w-12 h-12 rounded-xl bg-slate-800 flex flex-col items-center justify-center shrink-0 border border-slate-700/50">
+                                                        <span className="text-[9px] text-slate-500 font-black leading-none mb-0.5">TIME</span>
+                                                        <span className="text-xs font-black text-slate-300">{format(date, 'HH:mm')}</span>
                                                     </div>
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    <Badge variant="outline" className="bg-slate-800 border-slate-700 text-slate-400 text-[10px] font-bold py-0 h-5 px-2">
-                                                        {(res.type || 'UNKNOWN').replace('_test', '').toUpperCase()}
-                                                    </Badge>
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-500 shrink-0">
-                                                            <Icon className="w-4 h-4" />
+                                                    <div className="min-w-0">
+                                                        <div className="flex items-center gap-2 mb-1">
+                                                            <Badge variant="outline" className="bg-indigo-500/5 border-indigo-500/20 text-indigo-400 text-[9px] font-black h-4 px-1.5 uppercase">
+                                                                {(res.type || 'UNKNOWN').replace('_test', '').toUpperCase()}
+                                                            </Badge>
+                                                            <span className="text-[10px] text-slate-600 font-bold uppercase tracking-tighter">SUCCESSFULLY DONE</span>
                                                         </div>
-                                                        <span className="text-white font-bold text-sm tracking-tight">{res.detail}</span>
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="w-6 h-6 rounded-md bg-slate-800 flex items-center justify-center text-slate-400 shrink-0">
+                                                                <Icon className="w-3 h-3" />
+                                                            </div>
+                                                            <p className="font-bold text-white text-base truncate tracking-tight">{res.detail}</p>
+                                                        </div>
                                                     </div>
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    <div className="flex flex-col items-center">
-                                                        <div className="flex items-end gap-1">
-                                                            <span className="text-lg font-black text-emerald-400 leading-none">{res.score || 0}</span>
-                                                            <span className="text-[10px] text-slate-600 font-bold mb-0.5">/ {res.total || '-'}</span>
+                                                </div>
+
+                                                <div className="flex items-center justify-between md:justify-end gap-6 pt-3 md:pt-0 border-t md:border-t-0 border-slate-800/50">
+                                                    <div className="flex flex-col items-center md:items-end">
+                                                        <div className="flex items-baseline gap-1">
+                                                            <span className="text-2xl font-black text-emerald-400 tracking-tighter">{res.score || 0}</span>
+                                                            <span className="text-[10px] text-slate-600 font-bold">/ {res.total || '-'}</span>
                                                         </div>
-                                                        <div className="w-16 h-1 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+                                                        <div className="w-20 h-1 bg-slate-800 rounded-full mt-1.5 overflow-hidden hidden md:block">
                                                             <div
                                                                 className="h-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"
                                                                 style={{ width: `${(res.score / (res.total || 1)) * 100}%` }}
                                                             />
                                                         </div>
                                                     </div>
-                                                </td>
-                                                <td className="px-6 py-4 text-right">
-                                                    <Link href={getHomeworkLink(res.type, res.detail, res.id)}>
-                                                        <Button size="sm" variant="ghost" className="text-indigo-400 hover:text-white hover:bg-indigo-600/20 font-bold text-xs gap-2">
-                                                            복습하기 <ExternalLink className="w-3 h-3" />
+                                                    <Link href={getHomeworkLink(res.type, res.detail, res.id)} className="shrink-0">
+                                                        <Button size="sm" variant="outline" className="text-indigo-400 border-indigo-500/20 hover:bg-indigo-500 hover:text-white font-bold text-xs gap-2 h-9 px-4">
+                                                            복습하기 <ExternalLink className="w-3.5 h-3.5" />
                                                         </Button>
                                                     </Link>
-                                                </td>
-                                            </tr>
+                                                </div>
+                                            </Card>
                                         );
-                                    })
-                                )}
-                            </tbody>
-                        </table>
-                    </div>
-                </Card>
+                                    })}
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </div>
             </div>
         </div>
     );

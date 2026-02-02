@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { collection, addDoc, getDocs, deleteDoc, doc, query, orderBy, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc, query, orderBy, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,6 +22,8 @@ interface ClassType {
     universityId: string;
     universityName: string;
     studentsCount?: number;
+    reminderTime?: string; // e.g. "22:00"
+    reminderDay?: 'today' | 'tomorrow';
 }
 
 interface University {
@@ -37,10 +39,14 @@ export default function ClassManagementPage() {
     // Form State
     const [newClassName, setNewClassName] = useState('');
     const [newClassDesc, setNewClassDesc] = useState('');
+    const [newReminderTime, setNewReminderTime] = useState('21:00');
+    const [newReminderDay, setNewReminderDay] = useState<'today' | 'tomorrow'>('today');
     const [selectedUnivId, setSelectedUnivId] = useState('');
 
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isEditMode, setIsEditMode] = useState(false);
+    const [editingId, setEditingId] = useState<string | null>(null);
     const router = useRouter();
 
     useEffect(() => {
@@ -87,25 +93,59 @@ export default function ClassManagementPage() {
 
         try {
             setIsSubmitting(true);
-            await addDoc(collection(db, "Classes"), {
-                name: newClassName,
-                description: newClassDesc,
-                universityId: univ.id,
-                universityName: univ.name,
-                createdAt: serverTimestamp()
-            });
+            if (isEditMode && editingId) {
+                // UPDATE
+                await updateDoc(doc(db, "Classes", editingId), {
+                    name: newClassName,
+                    description: newClassDesc,
+                    universityId: univ.id,
+                    universityName: univ.name,
+                    reminderTime: newReminderTime,
+                    reminderDay: newReminderDay,
+                });
+            } else {
+                // CREATE
+                await addDoc(collection(db, "Classes"), {
+                    name: newClassName,
+                    description: newClassDesc,
+                    universityId: univ.id,
+                    universityName: univ.name,
+                    reminderTime: newReminderTime,
+                    reminderDay: newReminderDay,
+                    createdAt: serverTimestamp()
+                });
+            }
 
-            setNewClassName('');
-            setNewClassDesc('');
-            setSelectedUnivId('');
+            resetForm();
             setIsDialogOpen(false);
-            fetchData(); // Refresh list
+            fetchData();
         } catch (error) {
-            console.error("Error adding class:", error);
-            alert("반 추가에 실패했습니다.");
+            console.error("Error saving class:", error);
+            alert("저장에 실패했습니다.");
         } finally {
             setIsSubmitting(false);
         }
+    };
+
+    const resetForm = () => {
+        setNewClassName('');
+        setNewClassDesc('');
+        setSelectedUnivId('');
+        setNewReminderTime('21:00');
+        setNewReminderDay('today');
+        setIsEditMode(false);
+        setEditingId(null);
+    };
+
+    const handleOpenEdit = (cls: ClassType) => {
+        setNewClassName(cls.name);
+        setNewClassDesc(cls.description);
+        setSelectedUnivId(cls.universityId);
+        setNewReminderTime(cls.reminderTime || '21:00');
+        setNewReminderDay(cls.reminderDay || 'today');
+        setEditingId(cls.id);
+        setIsEditMode(true);
+        setIsDialogOpen(true);
     };
 
     const handleDeleteClass = async (id: string, name: string) => {
@@ -137,17 +177,20 @@ export default function ClassManagementPage() {
                         </div>
                     </div>
 
-                    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                    <Dialog open={isDialogOpen} onOpenChange={(open) => {
+                        setIsDialogOpen(open);
+                        if (!open) resetForm();
+                    }}>
                         <DialogTrigger asChild>
-                            <Button className="bg-indigo-600 hover:bg-indigo-500 font-bold">
+                            <Button className="bg-indigo-600 hover:bg-indigo-500 font-bold" onClick={() => setIsEditMode(false)}>
                                 <Plus className="w-4 h-4 mr-2" /> 새 반 추가
                             </Button>
                         </DialogTrigger>
                         <DialogContent className="bg-slate-900 border-slate-800 text-white">
                             <DialogHeader>
-                                <DialogTitle>새로운 반 추가</DialogTitle>
+                                <DialogTitle>{isEditMode ? '반 정보 수정' : '새로운 반 추가'}</DialogTitle>
                                 <DialogDescription className="text-slate-400">
-                                    새로 개설할 반의 소속 대학교와 이름을 입력해주세요.
+                                    {isEditMode ? '수정할 반의 정보를 입력해주세요.' : '새로 개설할 반의 소속 대학교와 이름을 입력해주세요.'}
                                 </DialogDescription>
                             </DialogHeader>
                             <form onSubmit={handleAddClass} className="space-y-4 pt-4">
@@ -164,29 +207,64 @@ export default function ClassManagementPage() {
                                         </SelectContent>
                                     </Select>
                                 </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="name">반 이름 (필수)</Label>
-                                    <Input
-                                        id="name"
-                                        placeholder="예: 750+ 실전반"
-                                        value={newClassName}
-                                        onChange={(e) => setNewClassName(e.target.value)}
-                                        className="bg-slate-950 border-slate-800"
-                                    />
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="space-y-2">
+                                        <Label htmlFor="name">반 이름 (필수)</Label>
+                                        <Input
+                                            id="name"
+                                            placeholder="예: 750+ 실전반"
+                                            value={newClassName}
+                                            onChange={(e) => setNewClassName(e.target.value)}
+                                            className="bg-slate-950 border-slate-800"
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="desc">설명 (선택)</Label>
+                                        <Input
+                                            id="desc"
+                                            placeholder="예: 월수금"
+                                            value={newClassDesc}
+                                            onChange={(e) => setNewClassDesc(e.target.value)}
+                                            className="bg-slate-950 border-slate-800"
+                                        />
+                                    </div>
                                 </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="desc">설명 (선택)</Label>
-                                    <Input
-                                        id="desc"
-                                        placeholder="예: 월수금 저녁반"
-                                        value={newClassDesc}
-                                        onChange={(e) => setNewClassDesc(e.target.value)}
-                                        className="bg-slate-950 border-slate-800"
-                                    />
+                                <div className="space-y-4">
+                                    <Label htmlFor="reminder">숙제 독촉 시점 및 시간</Label>
+                                    <div className="flex gap-3">
+                                        <div className="flex-1">
+                                            <Select value={newReminderDay} onValueChange={(val: any) => setNewReminderDay(val)}>
+                                                <SelectTrigger className="bg-slate-950 border-slate-800">
+                                                    <SelectValue placeholder="당일/익일" />
+                                                </SelectTrigger>
+                                                <SelectContent className="bg-slate-900 border-slate-800 text-white">
+                                                    <SelectItem value="today">당일 (Today)</SelectItem>
+                                                    <SelectItem value="tomorrow">익일 (Tomorrow)</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+                                        <div className="flex-1">
+                                            <Select value={newReminderTime} onValueChange={setNewReminderTime}>
+                                                <SelectTrigger className="bg-slate-950 border-slate-800">
+                                                    <SelectValue placeholder="시간 선택" />
+                                                </SelectTrigger>
+                                                <SelectContent className="bg-slate-900 border-slate-800 text-white shadow-xl max-h-[200px]">
+                                                    {Array.from({ length: 24 }).map((_, i) => {
+                                                        const time = `${String(i).padStart(2, '0')}:00`;
+                                                        return <SelectItem key={time} value={time}>{time}</SelectItem>;
+                                                    })}
+                                                    <SelectItem value="none">알림 없음</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+                                    </div>
+                                    <p className="text-[10px] text-slate-500 italic">
+                                        {newReminderDay === 'today' ? '숙제 배포 당일 저녁' : '숙제 배포 다음 날'}에 알림이 발송됩니다.
+                                    </p>
                                 </div>
                                 <DialogFooter>
                                     <Button type="submit" disabled={isSubmitting} className="bg-indigo-600 hover:bg-indigo-500 text-white">
-                                        {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : '추가하기'}
+                                        {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : (isEditMode ? '수정하기' : '추가하기')}
                                     </Button>
                                 </DialogFooter>
                             </form>
@@ -222,8 +300,9 @@ export default function ClassManagementPage() {
                                         <TableRow className="border-slate-800 hover:bg-slate-950">
                                             <TableHead className="text-slate-400 font-bold w-[120px]">소속 대학</TableHead>
                                             <TableHead className="text-slate-400 font-bold">반 이름</TableHead>
+                                            <TableHead className="text-slate-400 font-bold">독촉 시간</TableHead>
                                             <TableHead className="text-slate-400 font-bold">설명</TableHead>
-                                            <TableHead className="text-right text-slate-400 font-bold">관리</TableHead>
+                                            <TableHead className="text-right text-slate-400 font-bold pr-12">관리</TableHead>
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>
@@ -239,16 +318,32 @@ export default function ClassManagementPage() {
                                                     )}
                                                 </TableCell>
                                                 <TableCell className="font-bold text-white">{cls.name}</TableCell>
+                                                <TableCell>
+                                                    <Badge variant="outline" className={cls.reminderTime === 'none' ? "border-slate-700 text-slate-500" : "border-amber-500/50 text-amber-500 bg-amber-500/5"}>
+                                                        {cls.reminderTime === 'none' ? '미설정' : `${cls.reminderDay === 'tomorrow' ? '익일' : '당일'} ${cls.reminderTime}`}
+                                                    </Badge>
+                                                </TableCell>
                                                 <TableCell className="text-slate-400">{cls.description}</TableCell>
                                                 <TableCell className="text-right">
-                                                    <Button
-                                                        variant="ghost"
-                                                        size="sm"
-                                                        onClick={() => handleDeleteClass(cls.id, cls.name)}
-                                                        className="text-rose-400 hover:text-rose-300 hover:bg-rose-500/10"
-                                                    >
-                                                        <Trash2 className="w-4 h-4" />
-                                                    </Button>
+                                                    <div className="flex justify-end gap-2">
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="sm"
+                                                            onClick={() => handleOpenEdit(cls)}
+                                                            className="text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10"
+                                                        >
+                                                            <Plus className="w-3 h-3 rotate-45" /> {/* Use Plus as a generic icon or search for Edit below */}
+                                                            수정
+                                                        </Button>
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="sm"
+                                                            onClick={() => handleDeleteClass(cls.id, cls.name)}
+                                                            className="text-rose-400 hover:text-rose-300 hover:bg-rose-500/10"
+                                                        >
+                                                            <Trash2 className="w-4 h-4" />
+                                                        </Button>
+                                                    </div>
                                                 </TableCell>
                                             </TableRow>
                                         ))}

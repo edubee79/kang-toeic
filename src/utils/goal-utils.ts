@@ -29,22 +29,22 @@ export function distributeGoals(totalScore: number, lcScore: number, rcScore: nu
 
     // 1. Synchronize LC/RC if they don't match total
     if (lc + rc !== total || isNaN(lc) || isNaN(rc)) {
-        lc = Math.round((total * 0.52) / 5) * 5;
+        // Standard Formula: LC = (Total + 50) / 2
+        lc = Math.round((total + 50) / 2 / 5) * 5;
+        if (lc > 495) lc = 495;
         rc = total - lc;
 
-        if (lc > 495) {
-            lc = 495;
-            rc = total - 495;
-        } else if (rc > 495) {
+        if (rc > 495) {
             rc = 495;
             lc = total - 495;
         }
     }
 
-    // 2. Calculate required correct questions
-    // Simple inverse: Score to Qs
-    const requiredLC = Math.max(0, Math.min(100, Math.ceil((lc - 10) / 5)));
-    const requiredRC = Math.max(0, Math.min(100, Math.ceil((rc + 10) / 5)));
+    // 2. Calculate required correct questions (Calibrated to Hackers table)
+    // LC: Score 400 -> 81, 450 -> 90 => Formula: Score * 0.18 + 9
+    // RC: Score 350 -> 77, 400 -> 85 => Formula: Score * 0.16 + 21
+    const requiredLC = Math.max(0, Math.min(100, Math.round(lc * 0.18 + 9)));
+    const requiredRC = Math.max(0, Math.min(100, Math.round(rc * 0.16 + 21)));
 
     const distribute = (budget: number, parts: Array<{ key: string; max: number; isPriority: boolean }>) => {
         const result: Record<string, number> = {};

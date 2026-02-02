@@ -394,6 +394,8 @@ export default function Part2Test() {
                 await addDoc(collection(db, "Manager_Results"), {
                     student: user.userName || user.name || "Unknown",
                     studentId: user.userId || user.uid || "Guest",
+                    type: 'part2_test',
+                    detail: `Test ${testId}`,
                     unit: `LC_Part2_Test${testId}`,
                     score: score,
                     total: questions.length,

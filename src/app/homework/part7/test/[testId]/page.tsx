@@ -196,7 +196,7 @@ function Part7TestRunnerContent() {
                     timestamp: serverTimestamp(),
                     timeSpent: elapsedTime,
                     mode: mode,
-                    type: 'part7_test',
+                    type: 'part7_single',
                     detail: `Test ${testId}`
                 });
 

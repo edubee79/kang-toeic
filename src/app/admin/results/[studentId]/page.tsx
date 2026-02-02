@@ -358,8 +358,9 @@ export default function StudentDetailPage() {
                 body: JSON.stringify({
                     token: student.fcmToken,
                     title: '깡쌤토익 알림',
-                    body: pushMessage
-                })
+                    body: pushMessage,
+                    userId: studentId
+                }),
             });
 
             const data = await res.json();
@@ -739,29 +740,55 @@ export default function StudentDetailPage() {
                                         아직 완료된 학습 내역이 없습니다.
                                     </div>
                                 ) : (
-                                    <div className="space-y-4">
-                                        {results.map((res, idx) => (
-                                            <div key={res.id} className="flex items-center justify-between bg-slate-950/50 p-4 rounded-lg border border-slate-800 hover:border-indigo-500/30 transition-colors">
-                                                <div className="flex items-center gap-4">
-                                                    <div className="flex flex-col items-center justify-center w-12 h-12 bg-slate-900 rounded-lg border border-slate-800">
-                                                        <span className="text-xs text-slate-500 font-bold">{format(res.timestamp?.toDate ? res.timestamp.toDate() : new Date(), 'MM/dd')}</span>
-                                                        <span className="text-xs text-slate-600">{format(res.timestamp?.toDate ? res.timestamp.toDate() : new Date(), 'HH:mm')}</span>
-                                                    </div>
-                                                    <div>
-                                                        <h4 className="font-bold text-slate-200">{res.detail}</h4>
-                                                        <Badge variant="outline" className="text-[10px] text-slate-500 border-slate-700 mt-1">{getTypeLabel(res.type)}</Badge>
-                                                    </div>
+                                    <div className="space-y-8">
+                                        {Object.entries(
+                                            results.reduce((acc, res) => {
+                                                const date = res.timestamp?.toDate ? res.timestamp.toDate() : new Date();
+                                                const dateKey = format(date, 'yyyy-MM-dd');
+                                                if (!acc[dateKey]) acc[dateKey] = [];
+                                                acc[dateKey].push(res);
+                                                return acc;
+                                            }, {} as Record<string, Result[]>)
+                                        ).sort((a, b) => b[0].localeCompare(a[0])).map(([dateKey, items]) => (
+                                            <div key={dateKey} className="space-y-3">
+                                                <div className="flex items-center gap-2 mb-2">
+                                                    <Calendar className="w-4 h-4 text-indigo-400" />
+                                                    <h3 className="text-sm font-black text-indigo-300 uppercase tracking-wider">
+                                                        {format(new Date(dateKey), 'yyyy년 MM월 dd일')}
+                                                        <span className="ml-2 text-[10px] bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded-full border border-indigo-500/20">
+                                                            {items.length}건 완료
+                                                        </span>
+                                                    </h3>
                                                 </div>
-                                                <div className="text-right">
-                                                    <div className="text-xl font-black text-emerald-400">
-                                                        {res.score}
-                                                        <span className="text-xs text-slate-500 font-normal ml-0.5">/ {res.total}</span>
-                                                    </div>
-                                                    {res.score >= (res.total * 0.8) ? (
-                                                        <span className="text-[10px] text-emerald-600 font-bold">PASS</span>
-                                                    ) : (
-                                                        <span className="text-[10px] text-rose-500 font-bold">REVIEW NEEDED</span>
-                                                    )}
+                                                <div className="grid grid-cols-1 gap-3 pl-6 border-l-2 border-slate-800">
+                                                    {items.map((res) => (
+                                                        <div key={res.id} className="flex items-center justify-between bg-slate-950/50 p-4 rounded-lg border border-slate-800 hover:border-indigo-500/30 transition-colors">
+                                                            <div className="flex items-center gap-4">
+                                                                <div className="flex flex-col items-center justify-center w-10 h-10 bg-slate-900 rounded-lg border border-slate-800 shrink-0">
+                                                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">TIME</span>
+                                                                    <span className="text-xs text-slate-300 font-black">{format(res.timestamp?.toDate ? res.timestamp.toDate() : new Date(), 'HH:mm')}</span>
+                                                                </div>
+                                                                <div>
+                                                                    <div className="flex items-center gap-2">
+                                                                        <h4 className="font-bold text-slate-200">{res.detail}</h4>
+                                                                        <Badge variant="outline" className="text-[9px] text-indigo-400 border-indigo-500/20 bg-indigo-500/5 h-4 px-1.5">{getTypeLabel(res.type)}</Badge>
+                                                                    </div>
+                                                                    <p className="text-[10px] text-slate-500 mt-0.5 font-medium italic">#{(res.type || 'TASK').replace('_test', '').toUpperCase()} TASK COMPLETION</p>
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-right">
+                                                                <div className="flex items-baseline justify-end gap-1">
+                                                                    <span className="text-xl font-black text-emerald-400 tracking-tighter">{res.score}</span>
+                                                                    <span className="text-[10px] text-slate-600 font-bold">/ {res.total}</span>
+                                                                </div>
+                                                                {res.score >= (res.total * 0.8) ? (
+                                                                    <span className="text-[9px] bg-emerald-500/10 text-emerald-500 font-black px-1.5 py-0.5 rounded leading-none border border-emerald-500/20">PASS</span>
+                                                                ) : (
+                                                                    <span className="text-[9px] bg-rose-500/10 text-rose-500 font-black px-1.5 py-0.5 rounded leading-none border border-rose-500/20">REVIEW</span>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    ))}
                                                 </div>
                                             </div>
                                         ))}

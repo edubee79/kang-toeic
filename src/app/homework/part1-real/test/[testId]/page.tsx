@@ -183,8 +183,8 @@ export default function Part1TestRunner() {
                     studentId: user.userId || "guest",
                     studentName: user.userName || "Guest",
                     type: 'part1_test',
-                    unit: `Part1 Real Vol.${testId}`,
-                    detail: `Vol.${testId}`,
+                    unit: `Part1 Real Test ${testId}`,
+                    detail: `Test ${testId}`,
                     score: finalPercentage, // Save as percentage
                     totalQuestions: testSet.questions.length, // Save raw total for reference
                     correctCount: correct,

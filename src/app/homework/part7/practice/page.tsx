@@ -237,8 +237,8 @@ function Part7PracticePageContent() {
                     timestamp: serverTimestamp(),
                     timeSpent: elapsedTime,
                     mode: 'practice',
-                    type: 'part7_double_test',
-                    detail: `Test ${testId} (Double/Triple)`
+                    type: 'part7_double',
+                    detail: `Test ${testId}`
                 });
             } catch (e) { console.error(e); }
         }
