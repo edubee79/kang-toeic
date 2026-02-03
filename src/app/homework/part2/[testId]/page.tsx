@@ -126,7 +126,7 @@ export default function Part2Test() {
             };
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentQuestion?.id, isReportMode, playDelay]);
+    }, [currentQuestion?.id, isReportMode, playDelay, isReady]);
 
     const handlePlay = () => {
         if (isPlaying) return; // Defensive
@@ -533,7 +533,7 @@ export default function Part2Test() {
                         )}
                         <audio
                             ref={audioRef}
-                            src={isPlaying ? `/audio/lc/part2/Test_${String(testId).padStart(2, '0')}-${String(currentQuestion.questionNo).padStart(2, '0')}.mp3` : undefined}
+                            src={`/audio/lc/part2/Test_${String(testId).padStart(2, '0')}-${String(currentQuestion.questionNo).padStart(2, '0')}.mp3`}
                             key={`${currentIndex}-${currentQuestion?.id}`}
                         />
                     </div>
