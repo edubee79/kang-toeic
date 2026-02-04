@@ -21,7 +21,27 @@ import { NotificationSetter } from '@/components/dashboard/NotificationSetter';
 import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
 import { NotificationDropdown } from '@/components/dashboard/NotificationDropdown';
 import { distributeGoals } from '@/utils/goal-utils';
-import { format } from 'date-fns';
+import { format, isValid } from 'date-fns';
+
+// Helper function to safely handle various date formats (Firestore Timestamp, JS Date, etc.)
+const getSafeDate = (dateField: any): Date => {
+    if (!dateField) return new Date(0);
+
+    // 1. Firestore Timestamp
+    if (typeof dateField.toDate === 'function') {
+        return dateField.toDate();
+    }
+
+    // 2. Seconds/Nanoseconds object (sometimes Firestore data arrives as a plain POJO)
+    if (typeof dateField.seconds === 'number') {
+        return new Date(dateField.seconds * 1000);
+    }
+
+    // 3. Already a Date or String/Number that can be parsed
+    const d = new Date(dateField);
+    return isValid(d) ? d : new Date(0);
+};
+
 
 const HOMEWORK_CONFIG: Record<string, { label: string, total: number, unit: string, color: string, icon: any }> = {
     voca: { label: '단어 암기 (Voca)', total: 30, unit: 'Days', color: 'emerald', icon: BookOpen },
@@ -247,10 +267,18 @@ export default function StudentDashboard() {
 
     const fetchAssignments = async (className: string, userId: string) => {
         try {
-            const q = query(collection(db, "Assignments"), orderBy("createdAt", "desc"));
+            // Rule-Safe Queries: Avoid broad collection reads to prevent 'Insufficient Permissions'
+            const qPersonal = query(collection(db, "Assignments"), where("targetStudentId", "==", userId));
+            const qClass = query(collection(db, "Assignments"), where("targetClass", "==", className));
+            const qAll = query(collection(db, "Assignments"), where("targetClass", "==", "all"));
             const statsQ = query(collection(db, "Manager_Results"), where("studentId", "==", userId));
 
-            const [assignSnap, statsSnap] = await Promise.all([getDocs(q), getDocs(statsQ)]);
+            const [personalSnap, classSnap, allSnap, statsSnap] = await Promise.all([
+                getDocs(qPersonal),
+                getDocs(qClass),
+                getDocs(qAll),
+                getDocs(statsQ)
+            ]);
 
             const doneMap: Record<string, any> = {};
             statsSnap.forEach(d => {
@@ -266,13 +294,20 @@ export default function StudentDashboard() {
             });
             setCompletedMap(doneMap);
 
-            const list: any[] = [];
-            assignSnap.forEach((doc) => {
-                const data = doc.data();
-                if (data.targetClass === 'all' || data.targetClass === className || data.targetStudentId === userId) {
-                    list.push({ id: doc.id, ...data });
-                }
+            // Combine and Deduplicate
+            const assignmentMap = new Map();
+            [...personalSnap.docs, ...classSnap.docs, ...allSnap.docs].forEach(doc => {
+                assignmentMap.set(doc.id, { id: doc.id, ...doc.data() });
             });
+
+            const list = Array.from(assignmentMap.values())
+                .filter(data => !data.isAiGenerated) // Hide AI tasks from main dashboard
+                .sort((a, b) => {
+                    const dateA = getSafeDate(a.createdAt).getTime();
+                    const dateB = getSafeDate(b.createdAt).getTime();
+                    return dateB - dateA;
+                });
+
             setAssignments(list);
         } catch (error) {
             console.error("Error assignments:", error);
@@ -381,8 +416,11 @@ export default function StudentDashboard() {
         }
     };
 
-    const getHomeworkLink = (type: string, detail: string, id: string) => {
-        const testNum = detail.match(/\d+/)?.[0] || '1';
+    const getHomeworkLink = (type: string, detail: string, id: string, homeworkUrl?: string) => {
+        // If the assignment already has a direct URL, use it (for AI generated ones)
+        if (homeworkUrl) return homeworkUrl;
+
+        const testNum = detail?.match(/\d+/)?.[0] || '1';
         switch (type) {
             case 'voca': return `/homework/voca`;
             case 'grammar': return `/homework/part5`;
@@ -398,12 +436,15 @@ export default function StudentDashboard() {
                 return `/homework/part7/test/${testNum}`;
             case 'part7_double': return `/homework/part7-double`;
             case 'weakness_review': return `/homework/weakness/${id}`;
+            case 'type_review': return homeworkUrl || `/homework/part5-real`;
             case 'level_test': {
+                if (!detail) return '/';
                 if (detail.includes('레벨테스트 1')) return `/mock-test/half/9a`;
                 if (detail.includes('레벨테스트 2')) return `/mock-test/half/9b`;
                 return `/mock-test/half/${detail.toLowerCase()}`;
             }
             case 'mock_test': {
+                if (!detail) return '/';
                 if (detail.includes('모의고사 1회')) return `/mock-test/full/9`;
                 if (detail.includes('모의고사 2회')) return `/mock-test/full/10`;
                 if (detail.includes('모의고사 3회')) return `/mock-test/full/11`;
@@ -466,14 +507,14 @@ export default function StudentDashboard() {
                             );
                         }
                         return pending.map((assign) => (
-                            <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id)} className="block h-full transition-all">
+                            <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id, assign.homeworkUrl)} className="block h-full transition-all">
                                 <Card className="p-3 md:p-5 flex flex-col justify-between h-32 md:h-48 border transition-all relative overflow-hidden bg-slate-800/50 border-indigo-500/10 hover:border-indigo-500/50 group">
                                     <div className="relative z-10 w-full">
                                         <div className="flex justify-between items-start mb-2">
                                             <Badge variant="outline" className="text-[10px] h-4 px-1.5 font-black border-0 bg-indigo-500/20 text-indigo-300 uppercase italic tracking-widest leading-none">{assign.typeLabel || assign.type}</Badge>
                                             <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-indigo-400/80" />
                                         </div>
-                                        <p className="font-black text-[16px] md:text-2xl text-white leading-tight italic truncate w-full">{assign.detail}</p>
+                                        <p className="font-black text-[16px] md:text-2xl text-white leading-tight italic truncate w-full">{assign.title || assign.detail}</p>
                                     </div>
                                     <Button size="sm" className="w-full bg-indigo-600/80 hover:bg-indigo-600 h-8 md:h-10 text-xs md:text-sm font-black rounded-lg md:rounded-xl uppercase tracking-widest shadow-lg shadow-indigo-900/50">Start Now</Button>
                                 </Card>
@@ -770,7 +811,10 @@ export default function StudentDashboard() {
                         {assignments.length > 0 ? (
                             Object.entries(
                                 assignments.reduce((acc, a) => {
-                                    const d = a.createdAt?.toDate ? format(a.createdAt.toDate(), 'yyyy-MM-dd') : 'No Date';
+                                    const safeDate = getSafeDate(a.createdAt);
+                                    const d = isValid(safeDate) && safeDate.getTime() !== 0
+                                        ? format(safeDate, 'yyyy-MM-dd')
+                                        : 'No Date';
                                     if (!acc[d]) acc[d] = [];
                                     acc[d].push(a);
                                     return acc;
@@ -787,7 +831,7 @@ export default function StudentDashboard() {
                                             const isDone = !!completedMap[`${item.type}_${item.detail}`];
                                             const Icon = getHomeworkIcon(item.type);
                                             return (
-                                                <Link key={item.id} href={getHomeworkLink(item.type, item.detail, item.id)}>
+                                                <Link key={item.id} href={getHomeworkLink(item.type, item.detail, item.id, item.homeworkUrl)}>
                                                     <div className={cn(
                                                         "group flex items-center justify-between p-4 rounded-2xl border transition-all duration-300",
                                                         isDone
