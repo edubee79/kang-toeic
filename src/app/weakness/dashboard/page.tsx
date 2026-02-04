@@ -28,11 +28,15 @@ export default function WeaknessDashboardPage() {
     const [isMounted, setIsMounted] = useState(false);
     const [recommendedTest, setRecommendedTest] = useState<{ testId: number; title: string; url: string } | null>(null);
     const [typeReviewAssignments, setTypeReviewAssignments] = useState<any[]>([]);
+    const [aiRecommendations, setAiRecommendations] = useState<any[]>([]);
+    const [completedMap, setCompletedMap] = useState<Record<string, boolean>>({});
 
     // AI Weekly Report States
     const [user, setUser] = useState<any>(null);
     const [loadingWeeklyReport, setLoadingWeeklyReport] = useState(false);
     const [aiWeeklyReport, setAiWeeklyReport] = useState('');
+    const [showFullReport, setShowFullReport] = useState(false);
+    const [reportDate, setReportDate] = useState<string | null>(null);
 
     useEffect(() => {
         setIsMounted(true);
@@ -46,10 +50,13 @@ export default function WeaknessDashboardPage() {
             const userId = userObj.userId || userObj.uid;
             setUser(userObj);
 
+            // Fetch Main Report
             const data = await WeaknessService.analyzeUserWeakness(userId);
-            console.log('📊 Weakness Report:', data);
-            console.log('📊 Weakest Part:', data?.weakestPart);
             setReport(data);
+
+            // Fetch AI Recommendations (Prescriptions)
+            const aiRecs = await WeaknessService.getAiRecommendations(userId);
+            setAiRecommendations(aiRecs);
 
             // Fetch recommended test if there's a weakest part
             if (data.weakestPart && data.weakestPart.part !== 'none') {
@@ -75,53 +82,54 @@ export default function WeaknessDashboardPage() {
                 }
             }
 
-            // 🧪 PRODUCTION MODE: Fetch from Firestore with AI Dynamic Fallback
+            // Fetch regular Type Review assignments (from teacher) - Rule-Safe Query
             try {
-                const assignmentsSnapshot = await getDocs(
-                    query(
-                        collection(db, 'Assignments'),
-                        where('targetStudentId', '==', userId),
-                        where('type', '==', 'type_review'),
-                        where('status', '==', 'active')
-                    )
+                const q = query(
+                    collection(db, 'Assignments'),
+                    where('targetStudentId', '==', userId),
+                    where('type', '==', 'type_review')
                 );
 
-                let fetchedAssignments = assignmentsSnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-
-                // AI Dynamic Fallback if no specific assignments from teacher
-                if (fetchedAssignments.length === 0) {
-                    fetchedAssignments = [
-                        {
-                            id: 'ai_logic_drill',
-                            type: 'ai_drill',
-                            title: `💎 ${data.weakestTags[0]?.label || '핵심'} 빈출 유형 집중 훈련`,
-                            description: `${data.weakestTags[0]?.label}, ${data.weakestTags[1]?.label || '품사'} 등 오답률 TOP 유형 정밀 타격`,
-                            targetPart: data.weakestTags[0]?.part || 'p5',
-                            homeworkUrl: `/homework/${(data.weakestTags[0]?.part === 'p5' || !data.weakestTags[0]?.part) ? 'part5-real' : 'part1-real'}`
-                        },
-                        {
-                            id: 'ai_voca_drill',
-                            type: 'ai_drill',
-                            title: '📚 약점 보완 오답 유사 문항',
-                            description: '최근 틀린 문제와 논리 구조가 동일한 변형 문제 세트',
-                            targetPart: 'any',
-                            homeworkUrl: '/student/dashboard'
-                        }
-                    ];
-                }
+                const snap = await getDocs(q);
+                const fetchedAssignments = snap.docs
+                    .map(doc => ({ id: doc.id, ...doc.data() }))
+                    .filter((a: any) => a.status === 'active' && !a.isAiGenerated);
 
                 setTypeReviewAssignments(fetchedAssignments);
             } catch (error) {
                 console.error('Error fetching type review assignments:', error);
             }
 
+            // Fetch Manager_Results to check for completion
+            try {
+                const qResults = query(
+                    collection(db, 'Manager_Results'),
+                    where('studentId', '==', userId)
+                );
+                const resultsSnap = await getDocs(qResults);
+                const doneMap: Record<string, boolean> = {};
+                resultsSnap.forEach(d => {
+                    const r = d.data();
+                    // Match pattern: type_detail_mode (e.g., part5_test_Test 10_drill)
+                    const key = `${r.type}_${r.detail}_${r.mode || 'real'}`;
+                    doneMap[key] = true;
+                });
+                setCompletedMap(doneMap);
+            } catch (error) {
+                console.error('Error fetching results for completion check:', error);
+            }
+
+            // Fetch Persisted AI Report if any
+            if (data.latestWeeklyReport) {
+                setAiWeeklyReport(data.latestWeeklyReport.content);
+                setReportDate(data.latestWeeklyReport.createdAt);
+                setShowFullReport(false);
+            }
+
             setLoading(false);
         };
         fetchWeakness();
-    }, [router]);
+    }, [router, aiWeeklyReport]); // Refresh when aiWeeklyReport changes (after generation)
 
     if (!isMounted) return null;
 
@@ -366,11 +374,21 @@ export default function WeaknessDashboardPage() {
                                                 currentEst: estScore
                                             },
                                             weakestTags: report.weakestTags,
-                                            studentName: user.userName || user.name
+                                            studentName: user.userName || user.name || "학생",
+                                            userId: user.userId || user.uid
                                         })
                                     });
+
                                     const data = await response.json();
-                                    if (data.text) setAiWeeklyReport(data.text);
+
+                                    if (response.ok && data.text) {
+                                        setAiWeeklyReport(data.text);
+                                        setReportDate(new Date().toISOString());
+                                        setShowFullReport(true); // Open upon generation
+                                    } else {
+                                        console.error("API Error:", data.error || "Unknown error");
+                                        alert(data.error || "리포트 생성 중 오류가 발생했습니다. 잠시 후 서버가 재시작되면 다시 시도해주세요.");
+                                    }
                                 } catch (e) {
                                     console.error(e);
                                 } finally {
@@ -406,18 +424,42 @@ export default function WeaknessDashboardPage() {
                                 </div>
                             </div>
                         ) : aiWeeklyReport ? (
-                            <div className="text-slate-200 text-sm leading-relaxed prose prose-invert max-w-none prose-p:my-2 prose-headings:text-white prose-headings:font-black prose-strong:text-amber-400 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                    {aiWeeklyReport}
-                                </ReactMarkdown>
-                                <div className="mt-8 pt-4 border-t border-white/5 flex justify-end">
-                                    <button
-                                        onClick={() => setAiWeeklyReport('')}
-                                        className="text-[10px] text-slate-500 hover:text-white font-bold uppercase transition-colors"
+                            <div className="space-y-4">
+                                <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg border border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-bold text-sm">최신 정밀 리포트가 준비되어 있습니다</p>
+                                            <p className="text-slate-500 text-[10px]">{reportDate ? new Date(reportDate).toLocaleDateString() : ''} 분석 완료</p>
+                                        </div>
+                                    </div>
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={() => setShowFullReport(!showFullReport)}
+                                        className="text-xs border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10 h-8"
                                     >
-                                        리포트 닫기
-                                    </button>
+                                        {showFullReport ? '리포트 숨기기' : '전체 내용 보기'}
+                                    </Button>
                                 </div>
+
+                                {showFullReport && (
+                                    <div className="text-slate-200 text-sm leading-relaxed prose prose-invert max-w-none prose-p:my-2 prose-headings:text-white prose-headings:font-black prose-strong:text-amber-400 animate-in fade-in slide-in-from-top-4 duration-500 border-t border-white/5 pt-4">
+                                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                            {aiWeeklyReport}
+                                        </ReactMarkdown>
+                                        <div className="mt-8 pt-4 border-t border-white/5 flex justify-end">
+                                            <button
+                                                onClick={() => setShowFullReport(false)}
+                                                className="text-[10px] text-slate-500 hover:text-white font-bold uppercase transition-colors"
+                                            >
+                                                리포트 닫기
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         ) : (
                             <>
@@ -538,100 +580,97 @@ export default function WeaknessDashboardPage() {
                             </p>
                         </div>
 
-                        {/* Two Homework Options */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                            {/* Option 1: Weak Part Practice */}
-                            <button
-                                onClick={() => {
-                                    if (recommendedTest) {
-                                        router.push(recommendedTest.url);
-                                    }
-                                }}
-                                className="group relative bg-slate-950 border border-white/5 hover:border-emerald-500/50 rounded-2xl p-8 text-left transition-all hover:shadow-2xl hover:shadow-emerald-500/10 overflow-hidden"
-                            >
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-emerald-500/10 transition-colors"></div>
-                                <div className="relative z-10">
-                                    <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                        <Target className="w-7 h-7 text-emerald-400" />
-                                    </div>
-                                    <div className="space-y-4">
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-[10px] font-black text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded uppercase tracking-widest">Main Mission</span>
-                                            <h4 className="text-xl font-black text-white">취약 파트 실전 훈련</h4>
-                                        </div>
-                                        <p className="text-sm text-slate-400 leading-relaxed font-medium">
-                                            {recommendedTest
-                                                ? `${report.weakestPart?.part.toUpperCase().replace('_', ' ')} 집중 공략을 위한 ${recommendedTest.title} 테스트입니다.`
-                                                : '목표 대비 가장 부족한 파트를 분석 중입니다...'}
-                                        </p>
-                                        <div className="pt-4 flex items-center gap-2 text-xs text-emerald-400 font-black group-hover:translate-x-2 transition-transform">
-                                            <span>실전 모의고사 즉시 시작</span>
-                                            <ChevronRight className="w-4 h-4" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
+                        {/* AI Recommendations Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                            {aiRecommendations.length > 0 ? (
+                                aiRecommendations.map((item) => {
+                                    // Deriving match key from homeworkUrl
+                                    // Example: /homework/part5-real/test/10?mode=drill&tag=p5-conjunctions
+                                    const url = item.homeworkUrl || '';
+                                    const isPart2 = url.includes('part2');
+                                    const parts = url.split('/');
+                                    const testIdPart = isPart2 ? parts[3] : parts[4]; // Adjust based on path structure
+                                    const testId = testIdPart?.split('?')[0];
+                                    const urlParams = new URLSearchParams(url.split('?')[1] || '');
+                                    const mode = urlParams.get('mode') || 'real';
 
-                            {/* Option 2: Type Review */}
-                            {typeReviewAssignments.length > 0 ? (
-                                typeReviewAssignments.map((assignment, idx) => (
-                                    <button
-                                        key={assignment.id + '_' + idx}
-                                        onClick={() => {
-                                            router.push(assignment.homeworkUrl);
-                                        }}
-                                        className="group relative bg-slate-950 border border-white/5 hover:border-indigo-500/50 rounded-2xl p-8 text-left transition-all hover:shadow-2xl hover:shadow-indigo-500/10 overflow-hidden"
-                                    >
-                                        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-indigo-500/10 transition-colors"></div>
-                                        <div className="relative z-10">
-                                            <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                                <BookOpen className="w-7 h-7 text-indigo-400" />
-                                            </div>
-                                            <div className="space-y-4">
-                                                <div className="flex items-center gap-2">
-                                                    <span className="text-[10px] font-black text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded uppercase tracking-widest">Type Drill</span>
-                                                    <h4 className="text-xl font-black text-white">{assignment.title}</h4>
+                                    // Map part path to result type
+                                    const pathMap: Record<string, string> = {
+                                        'part1-real': 'part1_test',
+                                        'part2': 'part2_test',
+                                        'part3': 'part3_test',
+                                        'part4': 'part4_test',
+                                        'part5-real': 'part5_test',
+                                        'part6': 'part6_test',
+                                        'part7': 'part7_test'
+                                    };
+                                    const path = isPart2 ? 'part2' : parts[2];
+                                    const type = pathMap[path] || 'unknown';
+
+                                    const matchKey = `${type}_Test ${testId}_${mode}`;
+                                    const isDone = completedMap[matchKey];
+
+                                    return (
+                                        <button
+                                            key={item.id}
+                                            onClick={() => router.push(item.homeworkUrl)}
+                                            className={cn(
+                                                "group relative bg-slate-950 border rounded-2xl p-6 text-left transition-all overflow-hidden",
+                                                isDone ? "border-emerald-500/50 bg-emerald-500/5 shadow-inner" : "border-white/5 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10"
+                                            )}
+                                        >
+                                            <div className={cn(
+                                                "absolute top-0 right-0 w-24 h-24 rounded-full -mr-12 -mt-12 blur-2xl transition-colors",
+                                                isDone ? "bg-emerald-500/10" : "bg-emerald-500/5 group-hover:bg-emerald-500/10"
+                                            )}></div>
+                                            <div className="relative z-10">
+                                                <div className="flex justify-between items-start mb-4">
+                                                    <div className={cn(
+                                                        "w-12 h-12 rounded-xl flex items-center justify-center transition-transform",
+                                                        isDone ? "bg-emerald-500 text-white" : "bg-emerald-500/10 text-emerald-400 group-hover:scale-110"
+                                                    )}>
+                                                        {isDone ? <CheckCircle2 className="w-6 h-6" /> : <Zap className="w-6 h-6" />}
+                                                    </div>
+                                                    {isDone && (
+                                                        <div className="flex items-center gap-1.5 px-3 py-1 bg-emerald-500 text-white rounded-full text-[10px] font-black uppercase tracking-widest animate-in fade-in zoom-in duration-300">
+                                                            <CheckCircle2 className="w-3 h-3" />
+                                                            COMPLETED
+                                                        </div>
+                                                    )}
                                                 </div>
-                                                <p className="text-sm text-slate-400 leading-relaxed font-medium">
-                                                    {assignment.description}
-                                                </p>
-                                                <div className="pt-4 flex items-center gap-2 text-xs text-indigo-400 font-black group-hover:translate-x-2 transition-transform">
-                                                    <span>핵심 유형 정복하기</span>
-                                                    <ChevronRight className="w-4 h-4" />
+                                                <div className="space-y-3">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className={cn(
+                                                            "text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-widest",
+                                                            isDone ? "text-emerald-300 bg-emerald-900/40" : "text-emerald-400 bg-emerald-500/10"
+                                                        )}>
+                                                            AI Priority
+                                                        </span>
+                                                    </div>
+                                                    <h4 className={cn(
+                                                        "text-[17px] font-black leading-tight",
+                                                        isDone ? "text-emerald-100/70" : "text-white"
+                                                    )}>{item.title}</h4>
+                                                    <p className="text-[11px] text-slate-400 leading-relaxed font-medium line-clamp-3">
+                                                        {item.description}
+                                                    </p>
+                                                    <div className={cn(
+                                                        "pt-2 flex items-center gap-2 text-[10px] font-black transition-transform",
+                                                        isDone ? "text-emerald-500" : "text-emerald-400 group-hover:translate-x-2"
+                                                    )}>
+                                                        <span>{isDone ? '다시 보강하기' : '지금 바로 보강하기'}</span>
+                                                        <ChevronRight className="w-3 h-3" />
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </button>
-                                ))
+                                        </button>
+                                    );
+                                })
                             ) : (
-                                <button
-                                    onClick={() => {
-                                        router.push('/homework/part5/custom?assignmentId=test');
-                                    }}
-                                    className="group relative bg-slate-950 border border-white/5 hover:border-rose-500/50 rounded-2xl p-8 text-left transition-all hover:shadow-2xl hover:shadow-rose-500/10 overflow-hidden"
-                                >
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-rose-500/10 transition-colors"></div>
-                                    <div className="relative z-10">
-                                        <div className="w-14 h-14 rounded-2xl bg-rose-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                            <AlertTriangle className="w-7 h-7 text-rose-400" />
-                                        </div>
-                                        <div className="space-y-4">
-                                            <div className="flex items-center gap-2">
-                                                <span className="text-[10px] font-black text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded uppercase tracking-widest">Emergency Drill</span>
-                                                <h4 className="text-xl font-black text-white">자주 틀리는 유형 집중 복습</h4>
-                                            </div>
-                                            <p className="text-sm text-slate-400 leading-relaxed font-medium">
-                                                {report.weakestTags.length > 0
-                                                    ? `${report.weakestTags[0].label} 등 반복 오답 유형을 집중 교정합니다.`
-                                                    : '이번 주 3회 이상 틀린 유형을 긴급 처방합니다.'}
-                                            </p>
-                                            <div className="pt-4 flex items-center gap-2 text-xs text-rose-400 font-black group-hover:translate-x-2 transition-transform">
-                                                <span>유형별 오답 클리닉 시작</span>
-                                                <ChevronRight className="w-4 h-4" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
+                                <div className="col-span-full py-12 flex flex-col items-center justify-center text-center bg-slate-950/50 rounded-2xl border border-dashed border-white/5 mx-auto w-full">
+                                    <Sparkles className="w-8 h-8 text-slate-700 mb-3" />
+                                    <p className="text-slate-500 text-sm font-medium">위의 버튼을 눌러 리포트를 생성하면<br />나만을 위한 맞춤 처방 과제가 이곳에 생성됩니다.</p>
+                                </div>
                             )}
                         </div>
                     </div>

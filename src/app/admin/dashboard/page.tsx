@@ -257,7 +257,7 @@ export default function AdminDashboard() {
                             <Users className="w-4 h-4" /> 반(Class) 관리
                         </Button>
                     </Link>
-                    <Link href="/admin/schools">
+                    <Link href="/admin/universities">
                         <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-purple-600 border-purple-200 hover:bg-purple-50">
                             <GraduationCap className="w-4 h-4" /> 학교(Univ) 관리
                         </Button>

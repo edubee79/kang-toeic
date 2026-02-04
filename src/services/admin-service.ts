@@ -17,7 +17,7 @@ export interface University {
     createdAt?: any;
 }
 
-const COLLECTION_NAME = "universities";
+const COLLECTION_NAME = "Universities";
 
 export const getUniversities = async (): Promise<University[]> => {
     const q = query(collection(db, COLLECTION_NAME), orderBy("name"));
