@@ -38,6 +38,11 @@ export interface WeaknessReport {
     totalTargetRC: number;
     currentTotalLC: number;
     currentTotalRC: number;
+    latestWeeklyReport?: {
+        content: string;
+        createdAt: string;
+        statsSummarized?: any;
+    };
     weakestPart?: {
         part: string;
         gap: number;
@@ -120,7 +125,7 @@ export const WeaknessService = {
 
             // 4. Get all results for tag analysis (Still needed for specific tag counts)
             const resultsRef = collection(db, 'Manager_Results');
-            const q = query(resultsRef, where('studentId', '==', userId), orderBy('timestamp', 'desc'));
+            const q = query(resultsRef, where('studentId', '==', userId));
             const snapshot = await getDocs(q);
 
             // 4. Analyze tags from actual tests only
@@ -238,6 +243,7 @@ export const WeaknessService = {
                 totalTargetRC,
                 currentTotalLC,
                 currentTotalRC,
+                latestWeeklyReport: userData.latestWeeklyReport,
                 weakestPart: goalAnalysis.weakestPart
             };
 
@@ -253,11 +259,11 @@ export const WeaknessService = {
             const oneWeekAgo = new Date();
             oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
+            // ⚠️ Removed orderBy to avoid requiring complex Firestore indexes
             const q = query(
                 resultsRef,
                 where('studentId', '==', userId),
-                where('timestamp', '>=', oneWeekAgo),
-                orderBy('timestamp', 'desc')
+                where('timestamp', '>=', oneWeekAgo)
             );
 
             const snapshot = await getDocs(q);
@@ -270,8 +276,10 @@ export const WeaknessService = {
             const tagMap: Record<string, { total: number, incorrect: number }> = {};
 
             snapshot.docs.forEach(docSnap => {
-                const data = docSnap.data();
-                const part = data.unit || 'Unknown';
+                const data = docSnap.data() as ManagerResult;
+                const part = mapToPartKey(data);
+                if (part === 'unknown') return; // Skip non-TOEIC data
+
                 if (!stats.parts[part]) {
                     stats.parts[part] = { solved: 0, correct: 0, timeSpent: 0 };
                 }
@@ -306,7 +314,26 @@ export const WeaknessService = {
             return stats;
         } catch (error) {
             console.error('Error getting weekly stats:', error);
-            return null;
+            // Return empty stats instead of null to prevent downstream crashes
+            return { totalSolved: 0, parts: {}, weakestTags: [] };
+        }
+    },
+
+    getAiRecommendations: async (userId: string) => {
+        try {
+            const resultsRef = collection(db, 'Assignments');
+            const q = query(
+                resultsRef,
+                where('targetStudentId', '==', userId),
+                where('isAiGenerated', '==', true)
+            );
+            const snapshot = await getDocs(q);
+            return snapshot.docs
+                .map(doc => ({ id: doc.id, ...doc.data() }))
+                .sort((a: any, b: any) => (a.dayOffset || 0) - (b.dayOffset || 0));
+        } catch (error) {
+            console.error('Error getting AI recommendations:', error);
+            return [];
         }
     }
 };

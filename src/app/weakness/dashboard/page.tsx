@@ -38,98 +38,108 @@ export default function WeaknessDashboardPage() {
     const [showFullReport, setShowFullReport] = useState(false);
     const [reportDate, setReportDate] = useState<string | null>(null);
 
+    const [error, setError] = useState<string | null>(null);
+
     useEffect(() => {
         setIsMounted(true);
         const fetchWeakness = async () => {
-            const userStr = localStorage.getItem('toeic_user');
-            if (!userStr) {
-                router.push('/');
-                return;
-            }
-            const userObj = JSON.parse(userStr);
-            const userId = userObj.userId || userObj.uid;
-            setUser(userObj);
+            try {
+                setLoading(true);
+                setError(null);
 
-            // Fetch Main Report
-            const data = await WeaknessService.analyzeUserWeakness(userId);
-            setReport(data);
-
-            // Fetch AI Recommendations (Prescriptions)
-            const aiRecs = await WeaknessService.getAiRecommendations(userId);
-            setAiRecommendations(aiRecs);
-
-            // Fetch recommended test if there's a weakest part
-            if (data.weakestPart && data.weakestPart.part !== 'none') {
-                try {
-                    const response = await fetch(`/api/homework/next-test?userId=${userId}&part=${data.weakestPart.part}`);
-                    const testData = await response.json();
-
-                    if (testData.success && testData.testId) {
-                        const partUrlMap: Record<string, string> = {
-                            'p1': 'part1-real', 'p2': 'part2-real', 'p3': 'part3-real', 'p4': 'part4-real',
-                            'p5': 'part5-real', 'p6': 'part6-real', 'p7_single': 'part7-real', 'p7_double': 'part7-real'
-                        };
-                        const url = partUrlMap[data.weakestPart.part];
-
-                        setRecommendedTest({
-                            testId: testData.testId,
-                            title: `Part ${data.weakestPart.part.replace('p', '')} Test ${testData.testId}`,
-                            url: `/homework/${url}?test=${testData.testId}`
-                        });
-                    }
-                } catch (error) {
-                    console.error('Error fetching recommended test:', error);
+                const userStr = localStorage.getItem('toeic_user');
+                if (!userStr) {
+                    router.push('/');
+                    return;
                 }
+                const userObj = JSON.parse(userStr);
+                const userId = userObj.userId || userObj.uid;
+                setUser(userObj);
+
+                // Fetch Main Report
+                console.log("Fetching weakness analysis...");
+                const data = await WeaknessService.analyzeUserWeakness(userId);
+                setReport(data);
+
+                // Fetch AI Recommendations (Prescriptions)
+                const aiRecs = await WeaknessService.getAiRecommendations(userId);
+                setAiRecommendations(aiRecs);
+
+                // Fetch recommended test if there's a weakest part
+                if (data.weakestPart && data.weakestPart.part !== 'none') {
+                    try {
+                        const response = await fetch(`/api/homework/next-test?userId=${userId}&part=${data.weakestPart.part}`);
+                        const testData = await response.json();
+
+                        if (testData.success && testData.testId) {
+                            const partUrlMap: Record<string, string> = {
+                                'p1': 'part1-real', 'p2': 'part2-real', 'p3': 'part3-real', 'p4': 'part4-real',
+                                'p5': 'part5-real', 'p6': 'part6-real', 'p7_single': 'part7-real', 'p7_double': 'part7-real'
+                            };
+                            const url = partUrlMap[data.weakestPart.part];
+
+                            setRecommendedTest({
+                                testId: testData.testId,
+                                title: `Part ${data.weakestPart.part.replace('p', '')} Test ${testData.testId}`,
+                                url: `/homework/${url}?test=${testData.testId}`
+                            });
+                        }
+                    } catch (err) {
+                        console.warn('Recommended test fetch failed:', err);
+                    }
+                }
+
+                // Fetch regular Type Review assignments
+                try {
+                    const q = query(
+                        collection(db, 'Assignments'),
+                        where('targetStudentId', '==', userId),
+                        where('type', '==', 'type_review')
+                    );
+
+                    const snap = await getDocs(q);
+                    const fetchedAssignments = snap.docs
+                        .map(doc => ({ id: doc.id, ...doc.data() }))
+                        .filter((a: any) => a.status === 'active' && !a.isAiGenerated);
+
+                    setTypeReviewAssignments(fetchedAssignments);
+                } catch (err) {
+                    console.warn('Assignments fetch failed:', err);
+                }
+
+                // Fetch Manager_Results
+                try {
+                    const qResults = query(
+                        collection(db, 'Manager_Results'),
+                        where('studentId', '==', userId)
+                    );
+                    const resultsSnap = await getDocs(qResults);
+                    const doneMap: Record<string, boolean> = {};
+                    resultsSnap.forEach(d => {
+                        const r = d.data();
+                        const key = `${r.type}_${r.detail}_${r.mode || 'real'}`;
+                        doneMap[key] = true;
+                    });
+                    setCompletedMap(doneMap);
+                } catch (err) {
+                    console.warn('Results fetch failed:', err);
+                }
+
+                // Fetch Persisted AI Report
+                if (data.latestWeeklyReport) {
+                    setAiWeeklyReport(data.latestWeeklyReport.content);
+                    setReportDate(data.latestWeeklyReport.createdAt);
+                }
+
+            } catch (err: any) {
+                console.error('Fatal Error in Weakness Dashboard:', err);
+                setError(err.message || "데이터를 불러오는 중 오류가 발생했습니다.");
+            } finally {
+                setLoading(false);
             }
-
-            // Fetch regular Type Review assignments (from teacher) - Rule-Safe Query
-            try {
-                const q = query(
-                    collection(db, 'Assignments'),
-                    where('targetStudentId', '==', userId),
-                    where('type', '==', 'type_review')
-                );
-
-                const snap = await getDocs(q);
-                const fetchedAssignments = snap.docs
-                    .map(doc => ({ id: doc.id, ...doc.data() }))
-                    .filter((a: any) => a.status === 'active' && !a.isAiGenerated);
-
-                setTypeReviewAssignments(fetchedAssignments);
-            } catch (error) {
-                console.error('Error fetching type review assignments:', error);
-            }
-
-            // Fetch Manager_Results to check for completion
-            try {
-                const qResults = query(
-                    collection(db, 'Manager_Results'),
-                    where('studentId', '==', userId)
-                );
-                const resultsSnap = await getDocs(qResults);
-                const doneMap: Record<string, boolean> = {};
-                resultsSnap.forEach(d => {
-                    const r = d.data();
-                    // Match pattern: type_detail_mode (e.g., part5_test_Test 10_drill)
-                    const key = `${r.type}_${r.detail}_${r.mode || 'real'}`;
-                    doneMap[key] = true;
-                });
-                setCompletedMap(doneMap);
-            } catch (error) {
-                console.error('Error fetching results for completion check:', error);
-            }
-
-            // Fetch Persisted AI Report if any
-            if (data.latestWeeklyReport) {
-                setAiWeeklyReport(data.latestWeeklyReport.content);
-                setReportDate(data.latestWeeklyReport.createdAt);
-                setShowFullReport(false);
-            }
-
-            setLoading(false);
         };
         fetchWeakness();
-    }, [router, aiWeeklyReport]); // Refresh when aiWeeklyReport changes (after generation)
+    }, [router]);
 
     if (!isMounted) return null;
 
@@ -142,6 +152,21 @@ export default function WeaknessDashboardPage() {
                 <div className="flex h-screen items-center justify-center">
                     <Loader2 className="h-8 w-8 animate-spin text-indigo-500" />
                 </div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="flex h-screen flex-col items-center justify-center bg-slate-900 p-6 text-center">
+                <div className="mb-4 rounded-full bg-rose-500/10 p-4">
+                    <AlertCircle className="h-12 w-12 text-rose-500" />
+                </div>
+                <h2 className="text-xl font-bold text-white mb-2">오류가 발생했습니다</h2>
+                <p className="text-slate-400 mb-6 max-w-md">{error}</p>
+                <Button onClick={() => window.location.reload()} className="bg-indigo-600 hover:bg-indigo-500">
+                    다시 시도하기
+                </Button>
             </div>
         );
     }
