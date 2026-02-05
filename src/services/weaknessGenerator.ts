@@ -70,29 +70,13 @@ export const generateWeeklyReview = async (className: string) => {
             const enhancedQuestionIds: string[] = [];
             const processedClassifications = new Set<string>();
 
-            // 1. Process RC Part 5 (Non P2 IDs)
-            const rcWrongIds = wrongIds.filter(id => !id.startsWith('P2_'));
-            if (rcWrongIds.length > 0) {
-                const originalRC = getQuestionsByIds(rcWrongIds.slice(0, 5)); // Take 5 RC wrongs
-                originalRC.forEach(originalQ => {
-                    enhancedQuestionIds.push(originalQ.id); // Add original
-                    if (originalQ.classification && !processedClassifications.has(originalQ.classification)) {
-                        processedClassifications.add(originalQ.classification);
-                        const similar = findSimilarQuestions(originalQ.classification, wrongIds, 2);
-                        similar.forEach(sq => enhancedQuestionIds.push(sq.id));
-                    }
-                });
-            }
-
-            // 2. Process LC Part 2 (P2_ IDs)
-            const lc2WrongIds = wrongIds.filter(id => id.startsWith('P2_'));
+            // 1. Process LC Part 2 (P2_ IDs)
+            const lc2WrongIds = wrongIds.filter(id => id.toUpperCase().startsWith('P2_') || id.toLowerCase().startsWith('p2-'));
             if (lc2WrongIds.length > 0) {
-                // For Part 2, we group by classification from the result itself (via studentWeaknessMap)
                 const lc2ProcessedTags = new Set<string>();
                 lc2WrongIds.slice(0, 5).forEach(id => {
-                    enhancedQuestionIds.push(id); // Add original
+                    enhancedQuestionIds.push(id);
 
-                    // Look up the classification for this ID from the map we built earlier
                     let foundTag = "";
                     for (const [tag, ids] of data.incorrectByClassification.entries()) {
                         if (ids.includes(id)) {
@@ -105,6 +89,33 @@ export const generateWeeklyReview = async (className: string) => {
                         lc2ProcessedTags.add(foundTag);
                         const similarL2 = findSimilarPart2Questions(foundTag, wrongIds, 2);
                         similarL2.forEach(sid => enhancedQuestionIds.push(sid));
+                    }
+                });
+            }
+
+            // 2. Process LC Part 3 & 4 (Include original wrong ones)
+            const otherLcWrongIds = wrongIds.filter(id => {
+                const upper = id.toUpperCase();
+                return upper.startsWith('P3_') || upper.startsWith('P3-') ||
+                    upper.startsWith('P4_') || upper.startsWith('P4-');
+            });
+            otherLcWrongIds.forEach(id => enhancedQuestionIds.push(id));
+
+            // 3. Process RC Part 5 (Remaining)
+            const rcWrongIds = wrongIds.filter(id => {
+                const upper = id.toUpperCase();
+                return !upper.startsWith('P2_') && !upper.startsWith('P3_') && !upper.startsWith('P4_') &&
+                    !id.toLowerCase().startsWith('p2-') && !id.toLowerCase().startsWith('p3-') && !id.toLowerCase().startsWith('p4-');
+            });
+
+            if (rcWrongIds.length > 0) {
+                const originalRC = getQuestionsByIds(rcWrongIds.slice(0, 5));
+                originalRC.forEach(originalQ => {
+                    enhancedQuestionIds.push(originalQ.id);
+                    if (originalQ.classification && !processedClassifications.has(originalQ.classification)) {
+                        processedClassifications.add(originalQ.classification);
+                        const similar = findSimilarQuestions(originalQ.classification, wrongIds, 2);
+                        similar.forEach(sq => enhancedQuestionIds.push(sq.id));
                     }
                 });
             }

@@ -53,13 +53,13 @@ export default function Part3TestRunnerPage() {
     const audioRef = useRef<HTMLAudioElement>(null);
     const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-    // Derive current set
-    const activeSets = reviewMode ? reviewSets : testSets;
-    const currentSet = activeSets[currentIndex];
-
     // Data
     const [testSets, setTestSets] = useState<Part3Set[]>([]);
     const [isReady, setIsReady] = useState(false);
+
+    // Derive current set
+    const activeSets = reviewMode ? reviewSets : testSets;
+    const currentSet = activeSets[currentIndex];
 
     // Initial Load & Drill Filter
     useEffect(() => {

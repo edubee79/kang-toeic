@@ -297,8 +297,8 @@ export const part2Data: Part2TestData = {
  */
 
 export const getPart2QuestionByUniqueId = (uniqueId: string): (Part2Question) | null => {
-    // Standard Format: p2-t1-q7
-    const match = uniqueId.match(/p2-t(\d+)-q(\d+)/i);
+    // Robust Format: p2-t1-q7 or P2_T1_07 or p2_t1_q7
+    const match = uniqueId.match(/p2?[_-]t(\d+)[_-]q(\d+)/i);
     if (!match) return null;
 
     const testId = parseInt(match[1]);

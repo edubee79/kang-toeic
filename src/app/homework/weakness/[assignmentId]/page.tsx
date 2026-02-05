@@ -1,12 +1,13 @@
+'use client';
 
-"use client";
-
-import React, { useState, useEffect } from 'react';
-import { notFound, useParams, useRouter } from 'next/navigation';
-import { collection, doc, getDoc, addDoc, serverTimestamp } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { getQuestionsByIds } from '@/data/toeic/reading/part5/tests';
 import { getPart2QuestionByUniqueId } from '@/data/part2';
+import { getPart3QuestionByUniqueId } from '@/data/part3';
+import { getPart4QuestionByUniqueId } from '@/data/part4';
 import { Part5Runner } from '@/components/exam/Part5Runner';
 import { Loader2 } from "lucide-react";
 
@@ -14,27 +15,27 @@ export default function WeaknessReviewPage() {
     const params = useParams();
     const router = useRouter();
     const assignmentId = params.assignmentId as string;
-
-    const [loading, setLoading] = useState(true);
     const [assignment, setAssignment] = useState<any>(null);
     const [questions, setQuestions] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchDisplayData = async () => {
-            // Load Assignment
             try {
-                const docRef = doc(db, "Assignments", assignmentId);
-                const snap = await getDoc(docRef);
-                if (snap.exists()) {
-                    const data = snap.data();
+                setLoading(true);
+                const docRef = doc(db, 'Assignments', assignmentId);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
                     setAssignment(data);
 
                     if (data.questionIds && Array.isArray(data.questionIds)) {
                         const loadedQuestions = data.questionIds.map((id: string) => {
-                            if (id.startsWith('P2_')) {
+                            const upperId = id.toUpperCase();
+                            if (upperId.startsWith('P2_') || upperId.startsWith('P2-')) {
                                 const q = getPart2QuestionByUniqueId(id);
                                 if (q) {
-                                    // Adapt Part 2 to the common interface used by the runner
                                     return {
                                         id: id,
                                         text: "(Audio Question)",
@@ -42,109 +43,95 @@ export default function WeaknessReviewPage() {
                                             label: String.fromCharCode(65 + idx),
                                             text: opt
                                         })),
-                                        correctAnswer: String.fromCharCode(65 + q.correct),
-                                        audio: `/audio/ETS_TOEIC_3/Test_${q.testId.toString().padStart(2, '0')}/TEST ${q.testId.toString().padStart(2, '0')}_PART 2_${q.id.toString()}.mp3`,
+                                        correctAnswer: q.correctAnswer,
+                                        audio: `/audio/ETS_TOEIC_3/Test_${q.testId.toString().padStart(2, '0')}/TEST ${q.testId.toString().padStart(2, '0')}_PART 2_${q.questionNo.toString()}.mp3`,
                                         type: 'LC_PART2',
                                         classification: q.questionType
                                     };
                                 }
-                                return null;
+                            } else if (upperId.startsWith('P3_') || upperId.startsWith('P3-')) {
+                                const result = getPart3QuestionByUniqueId(id);
+                                if (result) {
+                                    const { question, set } = result;
+                                    return {
+                                        id: id,
+                                        text: question.text,
+                                        options: Object.entries(question.options).map(([label, text]) => ({ label, text })),
+                                        correctAnswer: question.correctAnswer,
+                                        audio: set.audio,
+                                        type: 'LC_PART3',
+                                        classification: question.classification || set.contextType,
+                                        translation: question.translation
+                                    };
+                                }
+                            } else if (upperId.startsWith('P4_') || upperId.startsWith('P4-')) {
+                                const result = getPart4QuestionByUniqueId(id);
+                                if (result) {
+                                    const { question, set } = result;
+                                    return {
+                                        id: id,
+                                        text: question.text,
+                                        options: Object.entries(question.options).map(([label, text]) => ({ label, text })),
+                                        correctAnswer: question.correctAnswer,
+                                        audio: set.audio,
+                                        type: 'LC_PART4',
+                                        classification: question.classification || set.contextType
+                                    };
+                                }
                             } else {
                                 const qs = getQuestionsByIds([id]);
                                 return qs.length > 0 ? { ...qs[0], type: 'RC_PART5' } : null;
                             }
+                            return null;
                         }).filter(Boolean);
                         setQuestions(loadedQuestions);
                     }
-                } else {
-                    return notFound();
                 }
-            } catch (e) {
-                console.error("Failed to load assignment", e);
+            } catch (error) {
+                console.error("Error fetching assignment:", error);
             } finally {
                 setLoading(false);
             }
         };
 
-        if (assignmentId) fetchDisplayData();
-    }, [assignmentId]);
-
-    const handleFinish = async (score: number, elapsedTime: number, selectedAnswers: Record<string, string>) => {
-        const userStr = localStorage.getItem('toeic_user');
-        if (!userStr || !assignment) return;
-
-        const user = JSON.parse(userStr);
-
-        try {
-            // Identify Incorrect Questions (Again, for record keeping if they fail again)
-            const incorrects: { id: string, classification: string }[] = [];
-            questions.forEach(q => {
-                if (selectedAnswers[q.id] !== q.correctAnswer) {
-                    incorrects.push({
-                        id: q.id.toString(),
-                        classification: q.classification || 'Unknown'
-                    });
-                }
-            });
-
-            await addDoc(collection(db, "Manager_Results"), {
-                student: user.userName || user.username || user.name,
-                studentId: user.userId,
-                className: user.userClass || user.className || "Unknown",
-                unit: `Weakness_Review_${assignmentId}`, // Unique ID for completion tracking
-                assignmentId: assignmentId, // Link back
-                score: score,
-                total: questions.length,
-                wrongCount: questions.length - score,
-                incorrectQuestions: incorrects,
-                timestamp: serverTimestamp(),
-                timeSpent: elapsedTime,
-                mode: 'weakness',
-                type: 'weakness_review',
-                detail: assignment.detail || 'Weakness Review'
-            });
-
-            // Navigate back to dashboard after short delay
-            setTimeout(() => {
-                router.push('/student/dashboard');
-            }, 2000);
-
-        } catch (e) {
-            console.error("Error saving results:", e);
+        if (assignmentId) {
+            fetchDisplayData();
         }
-    };
+    }, [assignmentId]);
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-500">
-                <Loader2 className="w-8 h-8 animate-spin" />
+            <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 font-inter">
+                <Loader2 className="w-12 h-12 text-indigo-500 animate-spin mb-4" />
+                <p className="text-slate-400 font-bold animate-pulse uppercase tracking-widest text-xs">Loading AI Drill...</p>
             </div>
         );
     }
 
     if (!assignment || questions.length === 0) {
         return (
-            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-slate-500 p-4 text-center">
-                <h2 className="text-xl font-bold text-white mb-2">과제를 불러올 수 없습니다.</h2>
-                <p>문제가 없거나 이미 삭제된 과제일 수 있습니다.</p>
-                <button onClick={() => router.push('/student/dashboard')} className="mt-4 px-4 py-2 bg-slate-800 rounded-lg text-white">
-                    돌아가기
-                </button>
+            <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white">
+                <p>과제를 불러올 수 없습니다.</p>
+                <button onClick={() => router.back()} className="mt-4 text-indigo-400 hover:underline">돌아가기</button>
             </div>
         );
     }
 
     return (
-        <React.Suspense fallback={<div>Loading...</div>}>
-            <Part5Runner
-                testId={assignmentId}
-                title={assignment.detail || "Weakness Review"}
-                questions={questions}
-                mode="weakness"
-                storageKey={`weakness_progress_${assignmentId}`}
-                onFinish={handleFinish}
-                onExit={() => router.push('/student/dashboard')}
-            />
-        </React.Suspense>
+        <div className="min-h-screen bg-slate-950">
+            <div className="max-w-4xl mx-auto py-8 px-4">
+                <div className="mb-8">
+                    <h1 className="text-2xl font-black text-white tracking-tighter uppercase italic">{assignment.title || '취약점 보강 과제'}</h1>
+                    <p className="text-slate-500 text-sm mt-1">{assignment.description || 'AI가 분석한 오답 및 유사 유형 정복 과제입니다.'}</p>
+                </div>
+
+                <Part5Runner
+                    questions={questions}
+                    testId={assignmentId}
+                    mode="drill"
+                    onFinish={() => router.push('/student/dashboard')}
+                />
+            </div>
+        </div>
     );
 }

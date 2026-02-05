@@ -9264,3 +9264,24 @@ export const part3RealTests: Part3Set[] = [
     image: "/images/ETS_TOEIC_3/Test_10/Part_03/p3_q68.png"
   }
 ];
+
+export const getPart3QuestionByUniqueId = (uniqueId: string): { question: Part3Question, set: Part3Set } | null => {
+  // Format: p3-t1-q32 or P3_T1_32
+  const match = uniqueId.match(/p3[_-]t(\d+)[_-]q?(\d+)/i);
+  if (!match) return null;
+
+  const testId = parseInt(match[1]);
+  const questionNoStr = match[2];
+  const questionId = `p3-t${testId}-q${questionNoStr}`;
+
+  // Find the set containing this question
+  for (const set of part3RealTests) {
+    if (set.testId === testId) {
+      const question = set.questions.find(q => q.id === questionId || q.id.toLowerCase() === `p3-t${testId}-q${parseInt(questionNoStr)}`);
+      if (question) {
+        return { question, set };
+      }
+    }
+  }
+  return null;
+};

@@ -42,7 +42,8 @@ export const part4Data: Part4Set[] = [
           C: "A car dealership",
           D: "An eye doctor's office"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t1-q72",
         text: "What does the speaker say about her appointment?",
@@ -54,7 +55,8 @@ export const part4Data: Part4Set[] = [
           C: "It is too expensive.",
           D: "It should be with a different person."
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t1-q73",
         text: "What is the speaker interested in learning more about?",
@@ -66,7 +68,8 @@ export const part4Data: Part4Set[] = [
           C: "A warranty",
           D: "A job opening"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -93,7 +96,8 @@ export const part4Data: Part4Set[] = [
           C: "A grand opening",
           D: "An art show"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q75",
         text: "What will participants receive?",
@@ -105,7 +109,8 @@ export const part4Data: Part4Set[] = [
           C: "A company T-shirt",
           D: "A photograph"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t1-q76",
         text: "What can the listeners do on a Web site?",
@@ -117,7 +122,8 @@ export const part4Data: Part4Set[] = [
           C: "View a product list",
           D: "Download a coupon"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -143,7 +149,8 @@ export const part4Data: Part4Set[] = [
           C: "At an art museum",
           D: "At a movie theater"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t1-q78",
         text: "Why does the speaker apologize?",
@@ -155,7 +162,8 @@ export const part4Data: Part4Set[] = [
           C: "A sound system is broken.",
           D: "A construction project is noisy."
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t1-q79",
         text: "What does the speaker offer the listeners?",
@@ -167,7 +175,8 @@ export const part4Data: Part4Set[] = [
           C: "Discounted snacks",
           D: "Free tickets"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -193,7 +202,8 @@ export const part4Data: Part4Set[] = [
           C: "A company fund-raiser",
           D: "A training workshop"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q81",
         text: "Why does the speaker say, \"And over 300 people are here\"?",
@@ -205,7 +215,8 @@ export const part4Data: Part4Set[] = [
           C: "To emphasize the importance of working quickly",
           D: "To suggest more volunteers are needed"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t1-q82",
         text: "What does the speaker ask the listeners to do?",
@@ -217,7 +228,8 @@ export const part4Data: Part4Set[] = [
           C: "Review an event program",
           D: "Enjoy some refreshments"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -244,7 +256,8 @@ export const part4Data: Part4Set[] = [
           C: "To decrease traffic",
           D: "To reduce government spending"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t1-q84",
         text: "Who does the speaker say will receive a discount?",
@@ -256,7 +269,8 @@ export const part4Data: Part4Set[] = [
           C: "Students",
           D: "City officials"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q85",
         text: "What will happen after three months?",
@@ -268,7 +282,8 @@ export const part4Data: Part4Set[] = [
           C: "A bus line will be added.",
           D: "A program evaluation will take place."
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -295,7 +310,8 @@ export const part4Data: Part4Set[] = [
           C: "A cooking demonstration",
           D: "A historical play"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t1-q87",
         text: "Why does the speaker say, \"tickets are almost sold out\"?",
@@ -307,7 +323,8 @@ export const part4Data: Part4Set[] = [
           C: "To complain that an event space is too small",
           D: "To praise the results of a marketing plan"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q88",
         text: "What will happen tomorrow morning?",
@@ -319,7 +336,8 @@ export const part4Data: Part4Set[] = [
           C: "An interview will take place.",
           D: "A video will be filmed."
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -346,7 +364,8 @@ export const part4Data: Part4Set[] = [
           C: "A furniture manufacturer",
           D: "An office-supply distributor"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t1-q90",
         text: "What does the speaker say is an advantage of the new material?",
@@ -358,7 +377,8 @@ export const part4Data: Part4Set[] = [
           C: "It is lightweight.",
           D: "It comes in many colors."
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q91",
         text: "What will the listeners do next?",
@@ -370,7 +390,8 @@ export const part4Data: Part4Set[] = [
           C: "Enter a contest",
           D: "Look at a sample"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -397,7 +418,8 @@ export const part4Data: Part4Set[] = [
           C: "Legal",
           D: "Accounting"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t1-q93",
         text: "Why does the speaker say, \"there is a position to transfer you permanently\"?",
@@ -409,7 +431,8 @@ export const part4Data: Part4Set[] = [
           C: "To approve a request to transfer",
           D: "To suggest consulting with an expert"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t1-q94",
         text: "What does the speaker want to discuss with the listener?",
@@ -421,7 +444,8 @@ export const part4Data: Part4Set[] = [
           C: "An office renovation",
           D: "A work schedule"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -449,7 +473,8 @@ export const part4Data: Part4Set[] = [
           C: "To teach communication skills",
           D: "To offer travel tips"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q96",
         text: "What can the listeners do on a Web site?",
@@ -461,7 +486,8 @@ export const part4Data: Part4Set[] = [
           C: "Read about upcoming programs",
           D: "Listen to previous episodes"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t1-q97",
         text: "Look at the graphic. Which day is this episode being aired?",
@@ -473,7 +499,8 @@ export const part4Data: Part4Set[] = [
           C: "Thursday",
           D: "Friday"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -501,7 +528,8 @@ export const part4Data: Part4Set[] = [
           C: "On Shelf 3",
           D: "On Shelf 4"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t1-q99",
         text: "What should be displayed near the cash registers?",
@@ -513,7 +541,8 @@ export const part4Data: Part4Set[] = [
           C: "Gloves",
           D: "Socks"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t1-q100",
         text: "What should the listener expect to receive in an e-mail?",
@@ -525,7 +554,8 @@ export const part4Data: Part4Set[] = [
           C: "Shipping information",
           D: "Display measurements"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -554,7 +584,8 @@ export const part4Data: Part4Set[] = [
           C: "It conducted a financial audit.",
           D: "It upgraded a product line."
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t2-q72",
         text: "What type of product does Starbright Corporation make?",
@@ -566,7 +597,8 @@ export const part4Data: Part4Set[] = [
           C: "Housewares",
           D: "Electronics"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t2-q73",
         text: "What is available online?",
@@ -578,7 +610,8 @@ export const part4Data: Part4Set[] = [
           C: "A video interview",
           D: "A virtual tour"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -606,7 +639,8 @@ export const part4Data: Part4Set[] = [
           C: "An awards ceremony",
           D: "A retirement party"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q75",
         text: "What type of business does Mustafa Perez work for?",
@@ -618,7 +652,8 @@ export const part4Data: Part4Set[] = [
           C: "A newspaper publisher",
           D: "A camera shop"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t2-q76",
         text: "What has the speaker created for the event?",
@@ -630,7 +665,8 @@ export const part4Data: Part4Set[] = [
           C: "A Web site",
           D: "A brochure"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -657,7 +693,8 @@ export const part4Data: Part4Set[] = [
           C: "Exercise clothing",
           D: "Construction materials"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t2-q78",
         text: "What are the listeners reminded to do?",
@@ -669,7 +706,8 @@ export const part4Data: Part4Set[] = [
           C: "Attend some training sessions",
           D: "Turn on a fan"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q79",
         text: "What can be found online?",
@@ -681,7 +719,8 @@ export const part4Data: Part4Set[] = [
           C: "A handbook",
           D: "A contract"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -707,7 +746,8 @@ export const part4Data: Part4Set[] = [
           C: "Plant trees",
           D: "Take photographs"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t2-q81",
         text: "Why does the speaker say, \"but it's supposed to be cloudy all day\"?",
@@ -719,7 +759,8 @@ export const part4Data: Part4Set[] = [
           C: "To reject the listener's suggestion",
           D: "To reassure the listener"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q82",
         text: "What does the speaker remind the listener to do?",
@@ -731,7 +772,8 @@ export const part4Data: Part4Set[] = [
           C: "Prepare a shipment",
           D: "Speak to a customer"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -758,7 +800,8 @@ export const part4Data: Part4Set[] = [
           C: "At a factory",
           D: "At a law office"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t2-q84",
         text: "Where should the listeners go at the end of their shifts?",
@@ -770,7 +813,8 @@ export const part4Data: Part4Set[] = [
           C: "To the locker room",
           D: "To the parking area"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t2-q85",
         text: "What will happen tomorrow?",
@@ -782,7 +826,8 @@ export const part4Data: Part4Set[] = [
           C: "A city official will conduct an inspection.",
           D: "Some time-reporting software will be fixed."
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -809,7 +854,8 @@ export const part4Data: Part4Set[] = [
           C: "At a conference center",
           D: "At a medical clinic"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q87",
         text: "What does the speaker imply when she says, \"Ms. Jenkins has retired\"?",
@@ -821,7 +867,8 @@ export const part4Data: Part4Set[] = [
           C: "A marketing strategy should be revised.",
           D: "A process will be less efficient."
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t2-q88",
         text: "What will the listeners most likely do next?",
@@ -833,7 +880,8 @@ export const part4Data: Part4Set[] = [
           C: "Eat a meal",
           D: "Brainstorm some ideas"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -860,7 +908,8 @@ export const part4Data: Part4Set[] = [
           C: "A client meeting",
           D: "An employee luncheon"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t2-q90",
         text: "Why does the speaker say, \"the advertising business is very competitive\"?",
@@ -872,7 +921,8 @@ export const part4Data: Part4Set[] = [
           C: "To question the listener's abilities",
           D: "To express confidence in an approach"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q91",
         text: "What does the speaker say about Isabel?",
@@ -884,7 +934,8 @@ export const part4Data: Part4Set[] = [
           C: "She will approve expense reports.",
           D: "She used to work on the NVC Industries account."
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -911,7 +962,8 @@ export const part4Data: Part4Set[] = [
           C: "A publishing company",
           D: "A grocery store"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q93",
         text: "What is the speaker concerned about?",
@@ -923,7 +975,8 @@ export const part4Data: Part4Set[] = [
           C: "A stockroom is overcrowded.",
           D: "A Web site is not working."
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t2-q94",
         text: "What does the speaker plan to do?",
@@ -935,7 +988,8 @@ export const part4Data: Part4Set[] = [
           C: "Hire more employees",
           D: "Add videos to a Web site"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -962,7 +1016,8 @@ export const part4Data: Part4Set[] = [
           C: "A car rental agent",
           D: "A vehicle inspector"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t2-q96",
         text: "Look at the graphic. Which fee must be paid in cash?",
@@ -974,7 +1029,8 @@ export const part4Data: Part4Set[] = [
           C: "Vehicle title",
           D: "Vehicle registration"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q97",
         text: "What service does the speaker remind the listener about?",
@@ -986,7 +1042,8 @@ export const part4Data: Part4Set[] = [
           C: "Free car washes",
           D: "Replacement keys"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -1013,7 +1070,8 @@ export const part4Data: Part4Set[] = [
           C: "A shop manager",
           D: "A radio host"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t2-q99",
         text: "What event will take place in September?",
@@ -1025,7 +1083,8 @@ export const part4Data: Part4Set[] = [
           C: "A charity dinner",
           D: "A talent contest"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t2-q100",
         text: "Look at the graphic. Which type of instrument does the speaker focus on?",
@@ -1037,7 +1096,8 @@ export const part4Data: Part4Set[] = [
           C: "Drums",
           D: "Guitars"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1065,7 +1125,8 @@ export const part4Data: Part4Set[] = [
           C: "At an airport",
           D: "At a ferry terminal"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t3-q72",
         text: "Why is a change being made?",
@@ -1077,7 +1138,8 @@ export const part4Data: Part4Set[] = [
           C: "It will increase energy efficiency.",
           D: "It will save staff time."
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t3-q73",
         text: "What does the speaker recommend?",
@@ -1089,7 +1151,8 @@ export const part4Data: Part4Set[] = [
           C: "Checking online for updates",
           D: "Allowing extra time"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -1116,7 +1179,8 @@ export const part4Data: Part4Set[] = [
           C: "A food festival",
           D: "A sales workshop"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t3-q75",
         text: "What does the speaker say is distinct about a coffee blend?",
@@ -1128,7 +1192,8 @@ export const part4Data: Part4Set[] = [
           C: "It comes in several different flavors.",
           D: "It contains a lot of caffeine."
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t3-q76",
         text: "What is the speaker offering customers?",
@@ -1140,7 +1205,8 @@ export const part4Data: Part4Set[] = [
           C: "A full refund",
           D: "A discount"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -1167,7 +1233,8 @@ export const part4Data: Part4Set[] = [
           C: "A video is shown.",
           D: "Maps are distributed."
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t3-q78",
         text: "What kind of gift do participants receive?",
@@ -1179,7 +1246,8 @@ export const part4Data: Part4Set[] = [
           C: "A T-shirt",
           D: "A postcard"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t3-q79",
         text: "What does the speaker warn the listeners about?",
@@ -1191,7 +1259,8 @@ export const part4Data: Part4Set[] = [
           C: "Where to park",
           D: "Which days to visit"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -1218,7 +1287,8 @@ export const part4Data: Part4Set[] = [
           C: "At a roofing company",
           D: "At an auto repair shop"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t3-q81",
         text: "Why does the speaker say, \"an official estimate includes parts and labor\"?",
@@ -1230,7 +1300,8 @@ export const part4Data: Part4Set[] = [
           C: "To complain about an expense",
           D: "To ask for help with a project"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t3-q82",
         text: "What does the speaker offer to do this afternoon?",
@@ -1242,7 +1313,8 @@ export const part4Data: Part4Set[] = [
           C: "Consult a financial advisor",
           D: "Post a job announcement"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -1269,7 +1341,8 @@ export const part4Data: Part4Set[] = [
           C: "Recruiting staff",
           D: "Getting a business license"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t3-q84",
         text: "What will the speaker help the listeners with today?",
@@ -1281,7 +1354,8 @@ export const part4Data: Part4Set[] = [
           C: "Analyzing feedback",
           D: "Setting goals"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t3-q85",
         text: "What will most likely happen next?",
@@ -1293,7 +1367,8 @@ export const part4Data: Part4Set[] = [
           C: "An advertisement will play.",
           D: "A contest winner will be announced."
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -1320,7 +1395,8 @@ export const part4Data: Part4Set[] = [
           C: "Quality control inspectors",
           D: "Product designers"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t3-q87",
         text: "According to the speaker, what is the company going to change?",
@@ -1332,7 +1408,8 @@ export const part4Data: Part4Set[] = [
           C: "The maintenance schedule for its equipment",
           D: "The publisher for its catalog"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t3-q88",
         text: "Why does the speaker say, \"but I use these products\"?",
@@ -1344,7 +1421,8 @@ export const part4Data: Part4Set[] = [
           C: "To provide reassurance",
           D: "To explain a decision"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -1371,7 +1449,8 @@ export const part4Data: Part4Set[] = [
           C: "At a club meeting",
           D: "At a national park tour"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t3-q90",
         text: "What did Kentaro Nakamura recently do?",
@@ -1383,7 +1462,8 @@ export const part4Data: Part4Set[] = [
           C: "He won a photography contest.",
           D: "He conducted a research project."
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t3-q91",
         text: "What are the listeners invited to do after the event?",
@@ -1395,7 +1475,8 @@ export const part4Data: Part4Set[] = [
           C: "Purchase some souvenirs",
           D: "Take some maps"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -1422,7 +1503,8 @@ export const part4Data: Part4Set[] = [
           C: "Therapy",
           D: "Sales"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t3-q93",
         text: "What does the speaker thank the listeners for?",
@@ -1434,7 +1516,8 @@ export const part4Data: Part4Set[] = [
           C: "Sharing some ideas",
           D: "Meeting with some clients"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t3-q94",
         text: "Why does the speaker say, \"we have a limited number of computers available\"?",
@@ -1446,7 +1529,8 @@ export const part4Data: Part4Set[] = [
           C: "To suggest that the listeners buy a device",
           D: "To remind the listeners about budget cuts"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1473,7 +1557,8 @@ export const part4Data: Part4Set[] = [
           C: "A company anniversary event",
           D: "A holiday celebration"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t3-q96",
         text: "Look at the graphic. Where does the speaker want some audio equipment?",
@@ -1485,7 +1570,8 @@ export const part4Data: Part4Set[] = [
           C: "Next to table 3",
           D: "Next to table 4"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t3-q97",
         text: "What has the speaker shipped to the hotel?",
@@ -1497,7 +1583,8 @@ export const part4Data: Part4Set[] = [
           C: "Some aprons",
           D: "Some glasses"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1524,7 +1611,8 @@ export const part4Data: Part4Set[] = [
           C: "Sales analysts",
           D: "Store managers"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t3-q99",
         text: "Look at the graphic. Which topic does the speaker start the workshop with?",
@@ -1536,7 +1624,8 @@ export const part4Data: Part4Set[] = [
           C: "Topic 3",
           D: "Topic 4"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t3-q100",
         text: "What does the speaker say the listeners will do next?",
@@ -1548,7 +1637,8 @@ export const part4Data: Part4Set[] = [
           C: "Practice doing interviews",
           D: "Try out some software"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1576,7 +1666,8 @@ export const part4Data: Part4Set[] = [
           C: "Visitors to a historical site",
           D: "Guests in a hotel"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t4-q72",
         text: "What service does the speaker say will be unavailable?",
@@ -1588,7 +1679,8 @@ export const part4Data: Part4Set[] = [
           C: "Water",
           D: "Natural gas"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q73",
         text: "According to the speaker, why should the listeners go online?",
@@ -1600,7 +1692,8 @@ export const part4Data: Part4Set[] = [
           C: "To register a complaint",
           D: "To view a price list"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1627,7 +1720,8 @@ export const part4Data: Part4Set[] = [
           C: "At a restaurant",
           D: "At an outdoor market"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q75",
         text: "According to the speaker, what should customers be told?",
@@ -1639,7 +1733,8 @@ export const part4Data: Part4Set[] = [
           C: "A schedule has been changed.",
           D: "An item is unavailable."
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t4-q76",
         text: "What does the speaker encourage the listeners to do?",
@@ -1651,7 +1746,8 @@ export const part4Data: Part4Set[] = [
           C: "Take extra shifts",
           D: "Greet customers"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -1678,7 +1774,8 @@ export const part4Data: Part4Set[] = [
           C: "Fashion models",
           D: "News reporters"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t4-q78",
         text: "What type of clothing does the company sell?",
@@ -1690,7 +1787,8 @@ export const part4Data: Part4Set[] = [
           C: "Business suits",
           D: "Athletic shoes"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q79",
         text: "What does the speaker's company hope to purchase?",
@@ -1702,7 +1800,8 @@ export const part4Data: Part4Set[] = [
           C: "Some delivery trucks",
           D: "Some manufacturing equipment"
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -1729,7 +1828,8 @@ export const part4Data: Part4Set[] = [
           C: "Energy",
           D: "Broadcast"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q81",
         text: "What does the speaker imply when he says, “But there is a lot of paperwork to fill out”?",
@@ -1741,7 +1841,8 @@ export const part4Data: Part4Set[] = [
           C: "A permit will be difficult to obtain.",
           D: "Additional help is needed for a project."
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t4-q82",
         text: "What will the speaker do next?",
@@ -1753,7 +1854,8 @@ export const part4Data: Part4Set[] = [
           C: "Collect some viewer feedback",
           D: "Go to the cafeteria"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -1780,7 +1882,8 @@ export const part4Data: Part4Set[] = [
           C: "A board meeting",
           D: "A product launch"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t4-q84",
         text: "Why does the speaker say, “I’ll be driving to Holtsville from the office”?",
@@ -1792,7 +1895,8 @@ export const part4Data: Part4Set[] = [
           C: "To make an offer",
           D: "To request directions"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q85",
         text: "What does the speaker say he needs to pick up?",
@@ -1804,7 +1908,8 @@ export const part4Data: Part4Set[] = [
           C: "Customer surveys",
           D: "Event programs"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -1831,7 +1936,8 @@ export const part4Data: Part4Set[] = [
           C: "Engineering",
           D: "Information Technology"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t4-q87",
         text: "What does the speaker say recently happened?",
@@ -1843,7 +1949,8 @@ export const part4Data: Part4Set[] = [
           C: "A virus infected some computers.",
           D: "A manager retired."
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q88",
         text: "What does the speaker ask the listeners to do?",
@@ -1855,7 +1962,8 @@ export const part4Data: Part4Set[] = [
           C: "Submit some photos",
           D: "View a slideshow"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1882,7 +1990,8 @@ export const part4Data: Part4Set[] = [
           C: "At a graphic design firm",
           D: "At a news Web site"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t4-q90",
         text: "What is the speaker concerned about?",
@@ -1894,7 +2003,8 @@ export const part4Data: Part4Set[] = [
           C: "Exceeding an annual budget",
           D: "Improving employee productivity"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t4-q91",
         text: "What does the speaker imply when he says, “we have technology interns starting next week”?",
@@ -1906,7 +2016,8 @@ export const part4Data: Part4Set[] = [
           C: "Volunteers are needed to greet interns.",
           D: "Interns can assist with a new project."
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -1933,7 +2044,8 @@ export const part4Data: Part4Set[] = [
           C: "At a community center",
           D: "At a sports arena"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t4-q93",
         text: "What will happen next week?",
@@ -1945,7 +2057,8 @@ export const part4Data: Part4Set[] = [
           C: "A local election will be held.",
           D: "A construction project will begin."
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t4-q94",
         text: "What are visitors encouraged to do?",
@@ -1957,7 +2070,8 @@ export const part4Data: Part4Set[] = [
           C: "Donate money",
           D: "Take photographs"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -1984,7 +2098,8 @@ export const part4Data: Part4Set[] = [
           C: "At an office supply store",
           D: "At a home garden center"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t4-q96",
         text: "Look at the graphic. Which lane is the express lane?",
@@ -1996,7 +2111,8 @@ export const part4Data: Part4Set[] = [
           C: "Lane 3",
           D: "Lane 4"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t4-q97",
         text: "According to the speaker, what can the listeners receive assistance with?",
@@ -2008,7 +2124,8 @@ export const part4Data: Part4Set[] = [
           C: "Applying for a credit card",
           D: "Locating a vehicle"
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -2035,7 +2152,8 @@ export const part4Data: Part4Set[] = [
           C: "Research scientists",
           D: "Commercial developers"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t4-q99",
         text: "Look at the graphic. What does the speaker discuss?",
@@ -2047,7 +2165,8 @@ export const part4Data: Part4Set[] = [
           C: "Building 3",
           D: "Building 4"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t4-q100",
         text: "What will the speaker give to the listeners?",
@@ -2059,7 +2178,8 @@ export const part4Data: Part4Set[] = [
           C: "An invoice",
           D: "A contract"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -2086,7 +2206,8 @@ export const part4Data: Part4Set[] = [
           C: "A supermarket",
           D: "A shipping company"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t5-q72",
         text: "What is the business famous for?",
@@ -2098,7 +2219,8 @@ export const part4Data: Part4Set[] = [
           C: "Its history",
           D: "Its staff"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t5-q73",
         text: "What does the speaker say is on a Web site?",
@@ -2110,7 +2232,8 @@ export const part4Data: Part4Set[] = [
           C: "Current discounts",
           D: "Business hours"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -2137,7 +2260,8 @@ export const part4Data: Part4Set[] = [
           C: "Book publishers",
           D: "Building contractors"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t5-q75",
         text: "What does the speaker say is favorable about a contract?",
@@ -2149,7 +2273,8 @@ export const part4Data: Part4Set[] = [
           C: "There is an immediate payment.",
           D: "There is a low interest rate."
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q76",
         text: "What does the speaker imply when he says, \"I'll send you the document later\"?",
@@ -2161,7 +2286,8 @@ export const part4Data: Part4Set[] = [
           C: "He has missed a deadline.",
           D: "He is almost finished with some work."
         },
-        correctAnswer: "B"}
+        correctAnswer: "B"
+      }
     ],
     script: [
       {
@@ -2188,7 +2314,8 @@ export const part4Data: Part4Set[] = [
           C: "At a solar-panel factory",
           D: "At a car-part warehouse"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q78",
         text: "What does the speaker remind the listeners to do?",
@@ -2200,7 +2327,8 @@ export const part4Data: Part4Set[] = [
           C: "Stay together as a group",
           D: "Store personal belongings"
         },
-        correctAnswer: "A"},
+        correctAnswer: "A"
+      },
       {
         id: "p4-t5-q79",
         text: "What will the listeners see first on the tour?",
@@ -2212,7 +2340,8 @@ export const part4Data: Part4Set[] = [
           C: "Some product models",
           D: "Some historic photographs"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -2239,7 +2368,8 @@ export const part4Data: Part4Set[] = [
           C: "Designing Web sites",
           D: "Increasing sales"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t5-q81",
         text: "What does the speaker say is important?",
@@ -2251,7 +2381,8 @@ export const part4Data: Part4Set[] = [
           C: "Offering promotional discounts",
           D: "Attending networking events"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t5-q82",
         text: "Who is So-Hee Chung?",
@@ -2263,7 +2394,8 @@ export const part4Data: Part4Set[] = [
           C: "A news reporter",
           D: "A financial analyst"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -2290,7 +2422,8 @@ export const part4Data: Part4Set[] = [
           C: "Designing a set",
           D: "Revising a script"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q84",
         text: "Why does the speaker say, \"we have a large team\"?",
@@ -2302,7 +2435,8 @@ export const part4Data: Part4Set[] = [
           C: "To express surprise",
           D: "To refuse an offer"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t5-q85",
         text: "Why is the speaker unable to meet tomorrow?",
@@ -2314,7 +2448,8 @@ export const part4Data: Part4Set[] = [
           C: "She is going hiking.",
           D: "She is visiting family."
         },
-        correctAnswer: "D"}
+        correctAnswer: "D"
+      }
     ],
     script: [
       {
@@ -2341,7 +2476,8 @@ export const part4Data: Part4Set[] = [
           C: "Clients",
           D: "Interns"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t5-q87",
         text: "What did the listeners receive?",
@@ -2353,7 +2489,8 @@ export const part4Data: Part4Set[] = [
           C: "A project invoice",
           D: "An annual report"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t5-q88",
         text: "According to the speaker, what will the listeners do in an hour?",
@@ -2365,7 +2502,8 @@ export const part4Data: Part4Set[] = [
           C: "Get security badges",
           D: "Take a building tour"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -2392,7 +2530,8 @@ export const part4Data: Part4Set[] = [
           C: "She organized a luncheon.",
           D: "She attended a conference."
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t5-q90",
         text: "What do some customers have trouble locating?",
@@ -2404,7 +2543,8 @@ export const part4Data: Part4Set[] = [
           C: "Contact information",
           D: "Account archives"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q91",
         text: "What will the speaker do next?",
@@ -2416,7 +2556,8 @@ export const part4Data: Part4Set[] = [
           C: "Distribute some documents",
           D: "Hand out some awards"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -2443,7 +2584,8 @@ export const part4Data: Part4Set[] = [
           C: "A history professor",
           D: "A television reporter"
         },
-        correctAnswer: "B"},
+        correctAnswer: "B"
+      },
       {
         id: "p4-t5-q93",
         text: "What happened last year in Madison?",
@@ -2455,7 +2597,8 @@ export const part4Data: Part4Set[] = [
           C: "A documentary movie was filmed.",
           D: "A historic landmark was named."
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q94",
         text: "Why does the speaker say, \"Those roads weren't designed for traffic\"?",
@@ -2467,7 +2610,8 @@ export const part4Data: Part4Set[] = [
           C: "To express concern",
           D: "To offer an apology"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -2494,7 +2638,8 @@ export const part4Data: Part4Set[] = [
           C: "An employee will retire.",
           D: "An author will visit."
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t5-q96",
         text: "Look at the graphic. Which aisle does the speaker direct the listeners to?",
@@ -2506,7 +2651,8 @@ export const part4Data: Part4Set[] = [
           C: "Aisle 3",
           D: "Aisle 4"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q97",
         text: "What can the listeners win?",
@@ -2518,7 +2664,8 @@ export const part4Data: Part4Set[] = [
           C: "A free membership",
           D: "A calendar"
         },
-        correctAnswer: "A"}
+        correctAnswer: "A"
+      }
     ],
     script: [
       {
@@ -2545,7 +2692,8 @@ export const part4Data: Part4Set[] = [
           C: "At a warehouse",
           D: "At a job training school"
         },
-        correctAnswer: "C"},
+        correctAnswer: "C"
+      },
       {
         id: "p4-t5-q99",
         text: "What will the speaker's department be doing at the end of the month?",
@@ -2557,7 +2705,8 @@ export const part4Data: Part4Set[] = [
           C: "Interviewing job candidates",
           D: "Preparing a large order"
         },
-        correctAnswer: "D"},
+        correctAnswer: "D"
+      },
       {
         id: "p4-t5-q100",
         text: "Look at the graphic. Which session does the man request to attend?",
@@ -2569,7 +2718,8 @@ export const part4Data: Part4Set[] = [
           C: "January 26",
           D: "January 31"
         },
-        correctAnswer: "C"}
+        correctAnswer: "C"
+      }
     ],
     script: [
       {
@@ -5132,3 +5282,24 @@ export const part4Data: Part4Set[] = [
     ]
   }
 ];
+
+export const getPart4QuestionByUniqueId = (uniqueId: string): { question: Part4Question, set: Part4Set } | null => {
+  // Format: p4-t1-q71 or P4_T1_71
+  const match = uniqueId.match(/p4[_-]t(\d+)[_-]q?(\d+)/i);
+  if (!match) return null;
+
+  const testId = parseInt(match[1]);
+  const questionNoStr = match[2];
+  const questionId = `p4-t${testId}-q${questionNoStr}`;
+
+  // Find the set containing this question
+  for (const set of part4Data) {
+    if (set.testId === testId) {
+      const question = set.questions.find(q => q.id === questionId || q.id.toLowerCase() === `p4-t${testId}-q${parseInt(questionNoStr)}`);
+      if (question) {
+        return { question, set };
+      }
+    }
+  }
+  return null;
+};
