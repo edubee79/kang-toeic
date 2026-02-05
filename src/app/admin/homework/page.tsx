@@ -145,8 +145,11 @@ export default function HomeworkResultsPage() {
             let count = 0;
             snapAssignments.forEach(doc => {
                 const data = doc.data();
+
+                // Skip AI-generated assignments in the main homework monitor
+                if (data.isAiGenerated === true) return;
+
                 // Filter: Include if targetClass is 'all', matches class, or is a weakness review for someone in this class
-                // For simplicity in matrix, let's show class-wide assignments mainly
                 if (data.targetClass === className || data.targetClass === 'all' || !data.targetClass) {
                     if (count < 30) { // Fetch up to 30 recent assignments
                         assignList.push({
@@ -568,7 +571,12 @@ export default function HomeworkResultsPage() {
                                                 {(() => {
                                                     const groups: { date: string, count: number }[] = [];
                                                     assignments.forEach(a => {
-                                                        const d = format(a.createdAt.toDate(), 'MM/dd');
+                                                        // Fix: Handle both Firestore Timestamp and JS Date
+                                                        const validDate = a.createdAt && typeof a.createdAt.toDate === 'function'
+                                                            ? a.createdAt.toDate()
+                                                            : a.createdAt;
+
+                                                        const d = format(validDate, 'MM/dd');
                                                         if (groups.length > 0 && groups[groups.length - 1].date === d) {
                                                             groups[groups.length - 1].count++;
                                                         } else {

@@ -49,19 +49,48 @@ export default function Part2Test() {
     useEffect(() => {
         setIsMounted(true);
         if (!testId) return;
+
+        // NEW: Check for Drill Mode and Tag
+        const urlParams = new URLSearchParams(window.location.search);
+        const mode = urlParams.get('mode');
+        const tag = urlParams.get('tag');
+
+        if (mode === 'drill' && tag) {
+            // Pool questions from ALL tests that match the tag
+            const drilledQuestions: Part2Question[] = [];
+            Object.values(part2Data).forEach(testSet => {
+                testSet.forEach(q => {
+                    if (q.questionType === tag) {
+                        drilledQuestions.push(q);
+                    }
+                });
+            });
+
+            if (drilledQuestions.length > 0) {
+                setQuestions(drilledQuestions.slice(0, 15)); // Limit to 15 for a focused drill
+                setMainQueue(drilledQuestions.slice(0, 15));
+                setLoading(false);
+                setTimeout(() => setIsReady(true), 0);
+                return;
+            } else {
+                setNotification(`유형(${tag}) 관련 문제가 부족하여 일반 테스트를 진행합니다.`);
+                setTimeout(() => setNotification(null), 3000);
+            }
+        }
+
         const data = part2Data[testId];
         if (!data) {
             alert("해당 테스트 데이터가 없습니다.");
             router.push('/homework/part2');
             return;
         }
-        // Check for saved progress
-        const saved = localStorage.getItem(`part2_progress_test_${testId}`);
+        // Check for saved progress (only in normal mode)
+        const saved = !mode ? localStorage.getItem(`part2_progress_test_${testId}`) : null;
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
                 if (parsed.mainQueue && parsed.mainQueue.length > 0) {
-                    setQuestions(parsed.mainQueue); // Restore original question set (if shuffle was used)
+                    setQuestions(parsed.mainQueue);
                     setMainQueue(parsed.mainQueue);
                 } else {
                     setQuestions(data);
@@ -413,7 +442,11 @@ export default function Part2Test() {
                 console.error("Save error:", e);
             }
         }
-        if (navigate) router.push('/homework/part2');
+        if (navigate) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+            router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
+        }
     };
 
     if (!isMounted || loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
@@ -495,7 +528,11 @@ export default function Part2Test() {
                 <div>
                     <div className="flex items-center gap-2 mb-1">
                         <button
-                            onClick={() => router.push('/homework/part2')}
+                            onClick={() => {
+                                const urlParams = new URLSearchParams(window.location.search);
+                                const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                                router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
+                            }}
                             className="bg-slate-800 p-1 rounded-md text-slate-400 hover:text-white mr-1"
                         >
                             <X className="w-4 h-4" />
@@ -519,7 +556,9 @@ export default function Part2Test() {
                                             mainQueue
                                         }));
                                     }
-                                    router.push('/homework/part2');
+                                    const urlParams = new URLSearchParams(window.location.search);
+                                    const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                                    router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
                                 }}
                                 className="px-2 py-0.5 rounded text-[10px] font-bold uppercase text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 flex items-center gap-1 ml-1"
                             >

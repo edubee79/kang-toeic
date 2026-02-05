@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 14: Conditionals & Inversion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Conditional Basics (If Clauses) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 14]</div>
+        </header>
+
+        <h1>Unit 01. 가정법(Conditionals)의 공식과 시제 일치</h1>
+
+        <div class="unit-box">
+            <h2>01. 가정법 핵심 출제 패턴 (The Final Logic)</h2>
+            <p style="font-size: 13.5px;">가정법은 '사실과 반대'되는 일을 가정하며, <span class="highlight">If절과 주절의 시제 짝</u>을 맞추는 것이
+                    핵심입니다.</p>
+            <table>
+                <tr>
+                    <th>종류</th>
+                    <th>If 절 (조건)</th>
+                    <th>주절 (결과)</th>
+                    <th>토익 실전 포인트</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>가정법 과거</b></td>
+                    <td align="center">If + S + <span class="blue-bold">과거동사(were)</span></td>
+                    <td align="center">S + <span class="blue-bold">would/could</span> + 원형</td>
+                    <td>현재 사실과 반대<br><small>(내가 너라면...)</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>가정법 과거완료</b></td>
+                    <td align="center">If + S + <span class="highlight">had p.p.</span></td>
+                    <td align="center">S + <span class="highlight">would have p.p.</span></td>
+                    <td>과거 사실과 반대<br><small>(그때 그랬더라면...)</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>가정법 미래</b></td>
+                    <td align="center">If + S + <span class="blue-bold">should</span> + 원형</td>
+                    <td align="center">주어 + will / 원형(명령문)</td>
+                    <td>희박한 가능성, 정중한 제안</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="trend-tip">
+            <b>명령문과의 결합 (가정법 미래):</b> <br>
+            If절에 <span class="highlight">should</span>가 오면 주절은 <u>Please + 동사원형</u> 형태의 명령문이 잘 어울립니다. <br>
+            Ex) <u>Should</u> any problems occur, <u>please call</u> the service center.
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Inversion (The Hidden S-V) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 14]</div>
+        </header>
+
+        <h1>Unit 02. 도치 구문(Inversion)의 원리와 가정법 도치</h1>
+
+        <div class="unit-box">
+            <h2>01. 가정법 도치 (If 생략형)</h2>
+            <p style="font-size: 13px;">If가 생략되면 <span class="highlight">조동사가 주어 앞으로</span> 튀어 나옵니다.</p>
+            <ul class="important-list">
+                <li><b>과거</b>: <span class="blue-bold">Were</span> I you, I would... (If I were you...)</li>
+                <li><b>과거완료</b>: <span class="highlight">Had</span> I known the fact, I... (If I had known...)</li>
+                <li><b>미래</b>: <span class="blue-bold">Should</span> you have any questions, ... (If you should have...)
+                </li>
+            </ul>
+        </div>
+
+        <div class="unit-box" style="border: 2px solid var(--danger);">
+            <h2>02. 부정어 도치 (Negative Inversion)</h2>
+            <p style="font-size: 13px;">강조를 위해 부정어가 문두에 올 때 <span class="highlight">의문문 어순</span>으로 도치됩니다.</p>
+            <div class="memorize-card">
+                <b>Never / Seldom / Rarely / Hardly / Scarcely / Little</b> + <span
+                    class="highlight">do/does/did/have</span> + S + V
+            </div>
+            <small>Ex) <u>Never</u> <span class="blue-bold">did we expect</span> such an increase in sales. (우리는 전혀 예상치
+                못했다)</small>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 보어 및 장소 부사구 도치</h2>
+            <ul class="important-list">
+                <li><b>보어 도치</b>: Enclosed is the report. (보고서가 동봉되어 있다)</li>
+                <li><b>Only 부사구 도치</b>: <span class="highlight">Only after</span> the completion... <span
+                        class="highlight">should</span> the plant begin.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Special Subjunctive & Idioms -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 14]</div>
+        </header>
+
+        <h1>Unit 03. 조동사 완료형과 가정법 관용 표현</h1>
+
+        <div class="unit-box">
+            <h2>01. 조동사 + have p.p. (과거 추측/후회)</h2>
+            <table>
+                <tr>
+                    <th width="30%">표현</th>
+                    <th>의미</th>
+                    <th>실전 예문</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>should have p.p.</b></td>
+                    <td>~했어야 했는데 (후회)</td>
+                    <td>I should have checked the stock.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>could have p.p.</b></td>
+                    <td>~할 수도 있었는데 (가능)</td>
+                    <td>We could have won the contract.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>would have p.p.</b></td>
+                    <td>~했을 텐데 (가정)</td>
+                    <td>It would have been better if...</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>must have p.p.</b></td>
+                    <td>~했음에 틀림없다 (확신)</td>
+                    <td>He must have left the office early.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 가정법 관련 관용 표현 리스트</h2>
+            <div class="col-grid">
+                <ul class="important-list">
+                    <li><b>if any</b> (만약 있다면)</li>
+                    <li><b>if so</b> (만일 그렇다면)</li>
+                    <li><b>if not</b> (그렇지 않다면)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>otherwise</b> (그렇지 않으면)</li>
+                    <li><b>if it were not for</b> (~이 없다면)</li>
+                    <li><b>if it had not been for</b> (~이 없었더라면)</li>
+                </ul>
+            </div>
+            <small>Ex) Please leave your comments, <u>if any</u>, at the bottom of the form.</small>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Actual Check-up -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 14]</div>
+        </header>
+
+        <h1>Day 14. Actual Check-up (Subjunctive Mastery)</h1>
+
+        <div class="exercise-grid">
+            <div class="q-item">
+                <div class="q-text">01. _______ you have any problems with our products, we will immediately send our
+                    technical repairman to fix them at no additional cost.</div>
+                <div class="choices">(A) Have &nbsp; (B) Should &nbsp; (C) Will have &nbsp; (D) Had</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. If the user manual _______ written more carefully by the technical writers, we
+                    could have operated the equipment much more easily.</div>
+                <div class="choices">(A) was &nbsp; (B) were &nbsp; (C) had been &nbsp; (D) has been</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. _______ have our sales representatives seen such a significant increase in
+                    demand for premium products during the winter season.</div>
+                <div class="choices">(A) Ever &nbsp; (B) Although &nbsp; (C) Seldom &nbsp; (D) Even</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The board of directors maintains that if the proposed plans _______ approved
+                    last week, the construction would have started by now.</div>
+                <div class="choices">(A) are &nbsp; (B) were &nbsp; (C) had been &nbsp; (D) into been</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. _______ is the revised list of our latest products currently available in
+                        all of our retail branches across the nation.</div>
+                    <div class="choices">(A) Enclosed &nbsp; (B) Enclosure &nbsp; (C) Enclosing &nbsp; (D) Enclose</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. The supervisor requested that staff members leave their specific comments,
+                        if _______, on the server maintenance report.</div>
+                    <div class="choices">(A) so &nbsp; (B) any &nbsp; (C) not &nbsp; (D) case</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:20px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(B) Should 도치 (If you should have...). | 2.(C) 주절이 could have p.p이므로 가정법 과거완료 had been. | 3.(C) 부정어 도치
+                (Seldom + have + S + p.p). | 4.(C) 주절 would have p.p 세트인 had been. | 5.(A) 보어 도치 (Enclosed is the
+                list...). | 6.(B) if any (만약 있다면) 관용구.
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

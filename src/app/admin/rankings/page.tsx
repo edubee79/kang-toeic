@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from "next/link";
 import { collection, query, orderBy, getDocs, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
@@ -21,10 +22,35 @@ export default function AdminRankingsPage() {
 
     // For manual update trigger
     const [updating, setUpdating] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
-        fetchClasses();
-        fetchRankings();
+        const checkAdmin = async () => {
+            const userData = localStorage.getItem('toeic_user');
+            if (!userData) {
+                router.replace('/login');
+                return;
+            }
+            const user = JSON.parse(userData);
+            const { isAdmin } = await import('@/lib/adminAuth');
+            if (!isAdmin(user.username)) {
+                alert("관리자 권한이 없습니다.");
+                router.replace('/');
+                return;
+            }
+
+            // Ensure Firebase Auth is initialized
+            const { auth } = await import('@/lib/firebase');
+            if (!auth.currentUser) {
+                const { signInAnonymously } = await import('firebase/auth');
+                await signInAnonymously(auth);
+            }
+
+            fetchClasses();
+            fetchRankings();
+        };
+
+        checkAdmin();
     }, [filterClass, activeTab]);
 
     const fetchClasses = async () => {

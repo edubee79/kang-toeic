@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */ // Force Restart 3
+/** @type {import('next').NextConfig} */ // Force Restart 4
 const nextConfig = {
     reactStrictMode: true,
     typescript: {

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 01: Sentence Architecture</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #e2e8f0;
+            --bg-light: #f8fafc;
+            --bg-point: #eff6ff;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        .unit-box h2 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        /* Tables & Lists */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 10px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid var(--border);
+            font-size: 13.5px;
+            line-height: 1.6;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 12px;
+            border-radius: 6px;
+            position: relative;
+            margin: 15px 0;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+            font-size: 15px;
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Grammar Visualization */
+        .sentence-structure {
+            font-family: 'Inter', sans-serif;
+            background: #1e293b;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .s-v {
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        /* Subject-Verb */
+        .o-c {
+            color: #facc15;
+            font-weight: 700;
+        }
+
+        /* Object-Complement */
+        .mod {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        /* Modifier */
+
+        .example-set {
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 3px solid var(--border);
+        }
+
+        .example-set small {
+            color: #64748b;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .exercise-grid {
+            margin-top: 20px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14.5px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Parts of Speech & Sentence Components -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 01]</div>
+        </header>
+
+        <h1>Unit 01. 8품사 분류와 문장의 4대 필수 성분</h1>
+
+        <div class="unit-box">
+            <h2>01. 8품사(Parts of Speech)의 역할 체계</h2>
+            <p style="font-size: 13px;">토익은 '단어의 의미'보다 '단어의 위치(품사)'를 묻습니다. 8품사는 문장 성분을 구성하는 재료입니다.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>품사</th>
+                        <th>핵심 역할</th>
+                        <th>토익 실전 예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center"><b>명사(N)</b></td>
+                        <td>S, O, C 자리에 위치</td>
+                        <td>The <b>contract</b> requires <b>authorization</b>.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>대명사(Pro)</b></td>
+                        <td>명사 반복 회피 (격 주의)</td>
+                        <td>Mr. Kim did not bring <b>his</b> laptop.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>동사(V)</b></td>
+                        <td>문장의 핵심 동작/상태</td>
+                        <td>The board <b>approved</b> the merger.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>형용사(Adj)</b></td>
+                        <td>명사 수식, 보어(C) 역할</td>
+                        <td>We need a <b>reliable</b> assistant.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>부사(Adv)</b></td>
+                        <td>명사 빼고 다 수식 (거품)</td>
+                        <td>The sales rose <b>significantly</b>.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>전치사(Prep)</b></td>
+                        <td>명사 앞에 위치 (전명구)</td>
+                        <td>... <b>during</b> the corporate conference.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>접속사(Conj)</b></td>
+                        <td>단어/구/절 연결</td>
+                        <td>... <b>because</b> the demand is high.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>감탄사(Intj)</b></td>
+                        <td colspan="2" align="center" style="background:#fef2f2; color:#991b1b;">토익 출제 비중 0% (학습 생략)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 문장 뼈대 세우기 (S, V, O, C)</h2>
+            <div class="trend-tip">
+                <b>주어 자리에는 무엇이 어울리는가?</b> <br>
+                문법적으로 To부정사 주어가 가능하지만, 실제 토익/실무에서는 <b>동명사(G-ing)</b> 주어 혹은 <b>it is (adj) to do...</b> 가구조가 99%입니다.
+            </div>
+            <ul class="important-list">
+                <li><b>주어 (Subject)</b>: 문장의 주인공. <b>명사·대명사·동명사</b> 위주로 기억할 것.</li>
+                <li><b>동사 (Verb)</b>: 한 문장에 '진짜 동사'는 단 하나! 준동사(to-do, -ing, p.p)와 헷갈리지 마라.</li>
+                <li><b>목적어 (Object)</b>: 타동사 뒤 명사 자리.</u></li>
+                <li><b>보어 (Complement)</b>: 불완전 동기 뒤 보충어. <b>형용사</b>가 정답으로 가장 많이 출제됨.</li>
+            </ul>
+
+            <div class="sentence-structure">
+                <span class="mod">According to the report,</span> <span class="s-v">investing</span> <span
+                    class="mod">in renewable energy</span> <span class="s-v">proves</span> <span
+                    class="o-c">profitable</span> <span class="mod">for many firms.</span>
+                <br><br>
+                <small style="color: #cbd5e1; font-size: 11px;">[분석] Investing: 주어(동명사) | Proves: 동사(2형식) | Profitable:
+                    보어(형용사) | Mod: 수식어 거품</small>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Sentence Patterns (1-3) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 01]</div>
+        </header>
+
+        <h1>Unit 02. 토익이 좋아하는 자동사/타동사 (The 5 Patterns)</h1>
+
+        <div class="unit-box" style="border-left: 5px solid var(--info);">
+            <h2>Pattern 01. 1형식 (S + V) & Pattern 02. 2형식 (S + V + C)</h2>
+            <p style="font-size: 13.5px;">자동사 뒤에는 <b>목적어(명사)</b>가 올 수 없으며, 바로 <b>전치사</b>나 <b>부사</b>가 옵니다.</p>
+
+            <h3 style="font-size: 14px; color: var(--info); margin-bottom: 5px;">★ 필수 암기 자동사 리스트 (토익 1순위)</h3>
+            <table>
+                <tr>
+                    <th width="15%">구분</th>
+                    <th width="35%">동사 리스트</th>
+                    <th>토익 팁 / 결합 표현</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>1형식</b></td>
+                    <td>Rise, Occur, Arrive, Depart, Work, Function, Expire, Exist</td>
+                    <td>Rise <b>sharply</b>, Work <b>closely with</b>, Arrive <b>on time</b> <br><small>(뒤에 명사 없이
+                            끝남)</small></td>
+                </tr>
+                <tr>
+                    <td align="center" rowspan="2"><b>2형식</b></td>
+                    <td>Be, Remain, Stay, Keep</td>
+                    <td>상태 유지: Remain <b>accessible</b>, Stay <b>competitive</b></td>
+                </tr>
+                <tr>
+                    <td>Become, Seem, Appear, Look</td>
+                    <td>상태 변화/판단: Become <b>available</b>, Seem <b>unlikely</b></td>
+                </tr>
+            </table>
+
+            <div class="trend-tip">
+                <b>함정 주의:</b> 2형식 동사 뒤에는 절대 <b>부사(-ly)</b>를 쓰지 않습니다. 반드시 <b>형용사</b> 보어를 선택하세요. <br>
+                <span style="color: var(--danger)">Ex) The procedure remains (simplicity / simply /
+                    <b>simple</b>).</span>
+            </div>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--success);">
+            <h2>Pattern 03. 3형식 (S + V + O) - "절대 강자"</h2>
+            <p style="font-size: 13.5px;">문장의 70%는 3형식입니다. 타동사이므로 뒤에 <b>목적어(명사)</b>가 필수입니다.</p>
+            <ul class="important-list">
+                <li><b>동사 + 명사</b>: discuss the project (discuss about X), reach a conclusion</li>
+                <li><b>동사 + that절</b>: suggest that..., announce that..., recommend that...</li>
+            </ul>
+            <div class="example-set">
+                <div class="example-box"
+                    style="background:#f0fdf4; border-left: 4px solid var(--success); padding: 10px;">
+                    <span class="s-v">We</span> <span class="s-v">recommend</span> <span class="o-c">that all employees
+                        perform</span> <span class="mod">a thorough review of the guidelines.</span>
+                    <br><small>[분석] 주어: We | 동사: Recommend | 목적어: that절 전체</small>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Sentence Patterns (4-5) & Special Structures -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 01]</div>
+        </header>
+
+        <h1>Unit 03. 고난도 4·5형식과 특수 주어 구문</h1>
+
+        <div class="unit-box" style="border-left: 5px solid var(--danger);">
+            <h2>Pattern 04 & 05. 목적어 뒤의 '구조'가 중요한 유형</h2>
+            <table>
+                <tr>
+                    <th width="15%">구분</th>
+                    <th width="35%">주요 동사</th>
+                    <th>토익 실전 구조 (Trend)</th>
+                </tr>
+                <tr>
+                    <td align="center" rowspan="2"><b>4형식</b></td>
+                    <td>Give, Offer, Grant, Award</td>
+                    <td>A에게 B를 주다: Offer <b>him</b> a <b>promotion</b></td>
+                </tr>
+                <tr>
+                    <td><b>Inform, Notify, Remind, Assure</b></td>
+                    <td><b>사람</b>에게 <b>내용(of/that절)</b>을 알리다: <br>Notify <b>users of</b> the update.</td>
+                </tr>
+                <tr>
+                    <td align="center" rowspan="2"><b>5형식</b></td>
+                    <td>Make, Keep, Find, Consider</td>
+                    <td>목적어를 ~하게 만들다: Keep the <b>room clean</b></td>
+                </tr>
+                <tr>
+                    <td><b>Allow, Require, Force, Enable</b></td>
+                    <td>목적어가 ~하도록 하다: <b>Allow you to access</b></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 구(Phrase) vs 절(Clause) & 특수 구문 (It vs There)</h2>
+            <div class="trend-tip">
+                <b>It vs There: 1초 풀이법</b> <br>
+                1. 뒤에 <b>형용사</b>(important, likely 등)가 온다? → <b>It</b> 이 정답 <br>
+                2. 뒤에 <b>명사 진짜 주어</b>(errors, reasons 등)가 온다? → <b>There</b> 가 정답
+            </div>
+            <p style="font-size: 13.5px;">토익은 '단어'가 아무리 길어도 <b>'동사'</b>가 있느냐 없느냐로 분사(-ing)인지 진짜 동사인지 결정됩니다.</p>
+            <ul>
+                <li><b>구 (Phrase)</b>: <span class="mod">Before the final deadline (전명구)</span></li>
+                <li><b>절 (Clause)</b>: <span class="mod">Before the company finalize the deal (부사절)</span></li>
+            </ul>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 18px; color: var(--primary);">Day 01: Actual Check-up (Intermediate)</h2>
+            <div class="q-item">
+                <div class="q-text">1. The newly appointed supervisor _______ suggested that all departments implement
+                    the new filing system ASAP.</div>
+                <div class="choices">(A) strong &nbsp; (B) strongly &nbsp; (C) strength &nbsp; (D) strengthen</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">2. Despite the recent expansion, the CEO assured _______ that there would be no
+                    immediate changes to the staffing structure.</div>
+                <div class="choices">(A) shareholders &nbsp; (B) to shareholders &nbsp; (C) for shareholders &nbsp; (D)
+                    from shareholders</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">3. _______ remains an increasing demand for sustainable architecture among urban
+                    development projects this year.</div>
+                <div class="choices">(A) It &nbsp; (B) This &nbsp; (C) There &nbsp; (D) That</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">4. Many financial analysts find the current market volatility _________ when
+                    predicting long-term investment outcomes.</div>
+                <div class="choices">(A) challenging &nbsp; (B) challenge &nbsp; (C) challenged &nbsp; (D) to challenge
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Summary & Advanced Tips -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 01]</div>
+        </header>
+
+        <h1>Day 01. 마무리 학습: Part 5 자리 찾기 공식</h1>
+
+        <div class="unit-box">
+            <h2>★ 3초만에 자리를 파악하는 핵심 공식</h2>
+            <ol style="font-size: 14px; line-height: 2;">
+                <li><span class="highlight">관사/소유격 + ( &nbsp; &nbsp; &nbsp; ) + 명사</span> → <b>형용사</b> 자리</li>
+                <li><span class="highlight">부사 + ( &nbsp; &nbsp; &nbsp; )</span> → <b>형용사/부사/동사</b> 수식 자리</li>
+                <li><span class="highlight">전치사 + ( &nbsp; &nbsp; &nbsp; )</span> → <b>명사·대명사·동명사</b> 자리</li>
+                <li><span class="highlight">타동사 + ( &nbsp; &nbsp; &nbsp; )</span> → <b>명사(목적어)</b> 자리</li>
+                <li><span class="highlight">Be/Remain/Become + ( &nbsp; &nbsp; &nbsp; )</span> → <b>형용사(보어)</b> 자리</li>
+            </ol>
+        </div>
+
+        <div class="unit-box" style="background:#fffcf0;">
+            <h2>질문: 문장이 너무 길어서 동사를 못 찾겠어요!</h2>
+            <p style="font-size: 13.5px;">토익은 수식어 거품을 주어와 동사 사이에 끼워 넣습니다. 다음 요소들을 <b>괄호( )</b>로 묶어보세요.</p>
+            <ul class="important-list">
+                <li>전치사구: The profit (from the sale of the assets) is...</li>
+                <li>분사/형용사구: The staff (working in the factory) are...</li>
+                <li>관계대명사절: The proposal (which was submitted yesterday) looks...</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>Next Lesson Preview: Unit 02. Nouns & Pronouns</h2>
+            <p style="font-size: 13px;">다음 수업에서는 명사의 가산/불가산 구분법과 고난도 복합명사, 그리고 토익의 영원한 베스트셀러 '재귀대명사'의 완벽한 용법을 다룹니다.</p>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center; color: #94a3b8;">
+            <p><i>"TOEIC 고득점의 시작은 품사와 구조를 발라내는 눈에서 결정됩니다."</i></p>
+            <div style="font-weight: bold; color: var(--primary);">KANG'S TOEIC ELITE SERIES</div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

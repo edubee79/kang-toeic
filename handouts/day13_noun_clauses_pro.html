@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 13: Noun Clauses</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & That vs What -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 13]</div>
+        </header>
+
+        <h1>Unit 01. 명사절 접속사의 개념과 That vs What</h1>
+
+        <div class="unit-box">
+            <h2>01. 명사절 접속사 핵심 출제 패턴</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① That vs What 선택 (뒤 문장의 완전성)</div>
+                <div class="pattern-ex"><span class="highlight">What</span> the results indicate is a decline in sales.
+                    (indicate의 목적어 없음)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② Whether / If 구별 (의미상 불확실성)</div>
+                <div class="pattern-ex">The manager is wondering <span class="highlight">whether</span> we will win the
+                    contract.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 복합 관계 대명사 (Whoever / Whatever)</div>
+                <div class="pattern-ex"><span class="highlight">Whoever</span> agrees to work during holidays will
+                    receive bonuses.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 의문사 + to부정사 구조</div>
+                <div class="pattern-ex">The lawyer will know <span class="highlight">what to do</span> in this
+                    situation.</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. That vs What 결정적 차이</h2>
+            <p style="font-size: 13.5px;">토익 1초 컷 문제로 가장 많이 나옵니다.</p>
+            <table>
+                <tr>
+                    <th width="20%">접속사</th>
+                    <th width="40%">뒤 문장 구조</th>
+                    <th>의미 및 특징</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>That</b></td>
+                    <td align="center"><span class="blue-bold">완전한 문장</span></td>
+                    <td>~라는 것 (확정적 사실)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>What</b></td>
+                    <td align="center"><span class="highlight">불완전한 문장</span></td>
+                    <td>~하는 것 (선행사 포함)</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>That의 예외:</b> 명사절 접속사 That은 <span class="highlight">전치사 바로 뒤</span>에 올 수 없습니다! <br>
+                (We didn't know about that the products... X)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Whether/If & Comparisons -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 13]</div>
+        </header>
+
+        <h1>Unit 02. Whether / If (~인지 아닌지) 명사절</h1>
+
+        <div class="unit-box">
+            <h2>01. Whether vs If 상세 비교</h2>
+            <table>
+                <tr>
+                    <th width="25%">기능</th>
+                    <th width="37.5%">Whether</th>
+                    <th width="37.5%">If</th>
+                </tr>
+                <tr>
+                    <td align="center">명사절 자리</td>
+                    <td>주어, 목적어, 보어 <span class="blue-bold">(전부 가능)</span></td>
+                    <td>주로 <span class="highlight">타동사의 목적어</span>만</td>
+                </tr>
+                <tr>
+                    <td align="center">전치사 뒤</td>
+                    <td align="center">O</td>
+                    <td align="center">X</td>
+                </tr>
+                <tr>
+                    <td align="center">To부정사와 결합</td>
+                    <td align="center">Whether to-do (O)</td>
+                    <td align="center">X</td>
+                </tr>
+                <tr>
+                    <td align="center">or not 결합</td>
+                    <td align="center">Whether or not (O)</td>
+                    <td align="center">If ... or not (O)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box" style="border: 2px solid var(--info);">
+            <h2>02. That vs Whether 구분 (확신 vs 미정)</h2>
+            <ul class="important-list">
+                <li><span class="blue-bold">That (확정 사실)</span>: agree, believe, state, mention, conclude 뒤</li>
+                <li><span class="highlight">Whether (미정 사실)</span>: wonder, ask, not sure, still remains to be seen 뒤
+                </li>
+            </ul>
+            <small>Ex) The CEO <b>concluded</b> <u>that</u>... (확정) / Team members are <b>wondering</b>
+                <u>whether</u>... (미정)</small>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Interrogative Clauses & Compounds -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 13]</div>
+        </header>
+
+        <h1>Unit 03. 의문사 명사절과 복합 관계사</h1>
+
+        <div class="unit-box">
+            <h2>01. 의문사가 이끄는 명사절 (간접의문문)</h2>
+            <p style="font-size: 13px;">의문사 자체가 접속사 역할을 하며 <span class="blue-bold">의문사 + 주어 + 동사</span> 어순을 따릅니다.</p>
+            <ul class="important-list">
+                <li><b>의문대명사 (Who, What, Which)</b>: 뒤가 <u>불완전</u>함.</li>
+                <li><b>의문부사 (When, Where, How, Why)</b>: 뒤가 <u>완전</u>함.</li>
+                <li><b>의문형용사 (Whose, What, Which) + 명사</b>: 뒤가 <u>불완전</u>함.</li>
+            </ul>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--danger);">
+            <h2>02. 복합 관계 대명사 (The -ever Ending)</h2>
+            <table>
+                <tr>
+                    <th width="25%">종류</th>
+                    <th>명사절 의미 (~든지)</th>
+                    <th>전환 가능 표현</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>Whoever</b></td>
+                    <td align="center">하는 사람은 누구든지</td>
+                    <td>Anyone who</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Whomever</b></td>
+                    <td align="center">하는 누구를(에게)든지</td>
+                    <td>Anyone whom</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Whatever</b></td>
+                    <td align="center">하는 무엇이든지</td>
+                    <td>Anything that</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Whichever</b></td>
+                    <td align="center">하는 어느 쪽이든지</td>
+                    <td>Any one that</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>주어 자리의 Whoever:</b> 단수 동사와 짝꿍입니다. <br>
+                Ex) <u>Whoever</u> <b>files</b> (file X) a complaint will be contacted.
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Actual Check-up -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 13]</div>
+        </header>
+
+        <h1>Day 13. Actual Check-up (Noun Clause Mastery)</h1>
+
+        <div class="exercise-grid">
+            <div class="q-item">
+                <div class="q-text">01. The recent market analysis indicates _______ the candidate's popularity among
+                    consumers has been increasing steadily over the last quarter.</div>
+                <div class="choices">(A) what &nbsp; (B) that &nbsp; (C) which &nbsp; (D) those</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. _______ the new office secretary had made a complete backup of the computer
+                    files, the information was easily recovered after the unexpected power failure.</div>
+                <div class="choices">(A) Since &nbsp; (B) Whether &nbsp; (C) What &nbsp; (D) That</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The board of directors will determine _________ proposal will be selected for
+                    the urban redevelopment project based on cost efficiency.</div>
+                <div class="choices">(A) who &nbsp; (B) whom &nbsp; (C) whoever &nbsp; (D) whose</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The newly appointed executive vice president wants to know _______ the final
+                    revisions will be completed for the merger agreement.</div>
+                <div class="choices">(A) on &nbsp; (B) about &nbsp; (C) when &nbsp; (D) which</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. _______ is discussed during the closed-door board meeting is strictly
+                        confidential and should not be divulged to other staff members.</div>
+                    <div class="choices">(A) Whichever &nbsp; (B) Whatever &nbsp; (C) Whenever &nbsp; (D) However</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. The research facility is still in controversy concerning the issue of
+                        _________ to allow the rival company to participate in the joint venture.</div>
+                    <div class="choices">(A) if &nbsp; (B) whether &nbsp; (C) that &nbsp; (D) what</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:20px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(B) indicate 뒤 완전한 절을 이끄는 명사절 접속사 that. | 2.(A) 문맥상 원인을 나타내며 절을 이끄는 since. | 3.(D) proposal(명사)을 수식하는
+                의문형용사(누구의 제안). | 4.(C) 동사 know의 목적어절을 이끄는 의문부사(언제). | 5.(B) 주어 역할을 하며 discuss의 목적어가 빠진 불완전절을 이끄는
+                Whatever. | 6.(B) 전치사(concerning the issue of) 뒤에는 명사절 if 불가.
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

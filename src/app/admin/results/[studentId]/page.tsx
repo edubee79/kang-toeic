@@ -71,6 +71,7 @@ export default function StudentDetailPage() {
     const [studentRankings, setStudentRankings] = useState<any[]>([]);
     const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
     const [weaknessReport, setWeaknessReport] = useState<WeaknessReport | null>(null);
+    const [aiTasks, setAiTasks] = useState<any[]>([]);
 
     const [pushMessage, setPushMessage] = useState('');
     const [isSending, setIsSending] = useState(false);
@@ -160,6 +161,7 @@ export default function StudentDetailPage() {
 
             // Trigger Analysis in parallel
             getWeaknessAnalysis(resultQueryId).then(setAnalysis).catch(e => console.error("Admin Analysis Error:", e));
+            WeaknessService.getAiRecommendations(resultQueryId).then(setAiTasks).catch(e => console.error("Admin AI Tasks error:", e));
             const qResults = query(
                 collection(db, "Manager_Results"),
                 where("studentId", "==", resultQueryId),
@@ -182,6 +184,11 @@ export default function StudentDetailPage() {
 
             resSnap.forEach(doc => {
                 const data = doc.data();
+
+                // Skip AI Weakness Review results in the main detail timeline 
+                // to avoid cluttering regular homework history
+                if (data.type === 'weakness_review' || data.mode === 'weakness') return;
+
                 resList.push({
                     id: doc.id,
                     type: data.type,
@@ -694,6 +701,37 @@ export default function StudentDetailPage() {
                                                                 </span>
                                                             </div>
                                                         ))}
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {/* ✅ AI Assigned Drill Status (Separate Tracking) */}
+                                            {aiTasks.length > 0 && (
+                                                <div className="mt-8 space-y-3 pt-6 border-t border-slate-800">
+                                                    <h4 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em] flex items-center gap-2">
+                                                        <Zap className="w-3 h-3" />
+                                                        AI Assigned Drill Status
+                                                    </h4>
+                                                    <div className="space-y-2">
+                                                        {aiTasks.map((task, idx) => {
+                                                            const isDone = results.some(r => r.unit === `Weakness_Review_${task.id}`);
+                                                            return (
+                                                                <div key={task.id} className="flex items-center justify-between bg-slate-900/80 p-3 rounded-xl border border-slate-800/50">
+                                                                    <div className="flex items-center gap-3">
+                                                                        <div className={cn(
+                                                                            "w-1.5 h-1.5 rounded-full",
+                                                                            isDone ? "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" : "bg-slate-700"
+                                                                        )}></div>
+                                                                        <span className="text-sm font-bold text-slate-300">{task.detail}</span>
+                                                                    </div>
+                                                                    {isDone ? (
+                                                                        <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20 text-[9px] font-black h-5 uppercase">Completed</Badge>
+                                                                    ) : (
+                                                                        <span className="text-[10px] font-bold text-slate-500 italic">In Progress</span>
+                                                                    )}
+                                                                </div>
+                                                            );
+                                                        })}
                                                     </div>
                                                 </div>
                                             )}

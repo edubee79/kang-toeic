@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 03: Pronouns</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #e2e8f0;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12.5px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Pronoun Core Patterns & Personal Pronouns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 03]</div>
+        </header>
+
+        <h1>Unit 01. 대명사의 출제 패턴과 인칭대명사</h1>
+
+        <div class="unit-box">
+            <h2>01. 대명사(Pronoun) 핵심 출제 패턴 (The Core 4)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 격(Case) 선택 문제: 주격 vs 소유격 vs 목적격</div>
+                <div class="pattern-ex">After revising <span class="highlight">her</span> report, Ms. Seaward met the
+                    manager. (명사 앞 = 소유격)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 재귀대명사(Reflexive): 목적어 자리 vs 강조 부사 자리</div>
+                <div class="pattern-ex">The director <span class="highlight">himself</span> called numerous clients. (강조
+                    용법)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 지시대명사(Demonstrative): that/those of 비교 구문</div>
+                <div class="pattern-ex">Our sales figures are similar to <span class="highlight">those</span> of our
+                    competitors. (figures 복수 지칭)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 부정대명사(Indefinite): 수 일치와 단복수 구별</div>
+                <div class="pattern-ex"><span class="highlight">Each</span> of the candidates has an MBA. (Each of 복수명사
+                    + 단수동사)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 인칭대명사의 격과 자리 (The Case Table)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="15%">인칭/성</th>
+                        <th>주격 (~은/는)</th>
+                        <th>소유격 (~의)</th>
+                        <th>목적격 (~을/를)</th>
+                        <th>소유대명사 (~의 것)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">1인칭 (단)</td>
+                        <td align="center">I</td>
+                        <td align="center">my</td>
+                        <td align="center">me</td>
+                        <td align="center">mine</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2인칭 (단/복)</td>
+                        <td align="center">you</td>
+                        <td align="center">your</td>
+                        <td align="center">you</td>
+                        <td align="center">yours</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3인칭 (남)</td>
+                        <td align="center">he</td>
+                        <td align="center">his</td>
+                        <td align="center">him</td>
+                        <td align="center">his</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3인칭 (여)</td>
+                        <td align="center">she</td>
+                        <td align="center">her</td>
+                        <td align="center">her</td>
+                        <td align="center">hers</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3인칭 (사물)</td>
+                        <td align="center">it</td>
+                        <td align="center">its</td>
+                        <td align="center">it</td>
+                        <td align="center">-</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3인칭 (복)</td>
+                        <td align="center">they</td>
+                        <td align="center">their</td>
+                        <td align="center">them</td>
+                        <td align="center">theirs</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="trend-tip">
+                <b>실전 팁:</b> 소유대명사(mine, hers 등) 뒤에는 명사가 올 수 없습니다! "hers report" (X) → "her report" (O) <br>
+                <b>주의:</b> <b>They</b>는 '그들(사람)' 뿐만 아니라 '그것들(사물)'도 지칭할 수 있습니다.
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Demonstrative Pronouns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 03]</div>
+        </header>
+
+        <h1>Unit 02. 지시대명사(this/that, these/those)의 정밀 용법</h1>
+
+        <div class="unit-box">
+            <h2>01. 명사의 반복을 피하는 that / those</h2>
+            <p style="font-size: 13px;">비교 분석 문장에서 앞에 나온 명사를 대신할 때 씁니다. (this/these는 이 용법으로 불가)</p>
+            <ul class="important-list">
+                <li><span class="blue-bold">That</span>: 앞에 나온 <b>단수 명사</b>를 지칭
+                    <br><small>Ex) The quality of our product is better than <u>that</u> of our rivals.</small>
+                </li>
+                <li><span class="blue-bold">Those</span>: 앞에 나온 <b>복수 명사</b>를 지칭
+                    <br><small>Ex) The laboratory facilities are comparable to <u>those</u> of other
+                        universities.</small>
+                </li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. "사람들"을 뜻하는 Those vs Anyone</h2>
+            <table>
+                <tr>
+                    <th width="30%">구분</th>
+                    <th width="35%">Those (who)</th>
+                    <th width="35%">Anyone (who)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>의미</b></td>
+                    <td align="center">~하는 사람들</td>
+                    <td align="center">~하는 누구든지</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>수 일치</b></td>
+                    <td align="center"><span class="highlight">복수 동사</span> (are / have)</td>
+                    <td align="center"><span class="highlight">단수 동사</span> (is / has)</td>
+                </tr>
+            </table>
+            <div class="example-set">
+                <small>Ex 1) <b>Those</b> who <u>wish</u> to apply... (wish 복수동사 확인)</small>
+                <small>Ex 2) <b>Anyone</b> who <u>wishes</u> to apply... (wishes 단수동사 확인)</small>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 지시 형용사 (this/that + N)</h2>
+            <p style="font-size: 13px;">명사 앞에서 수식하는 '이/그/저'의 의미입니다.</p>
+            <ul class="important-list">
+                <li>This / That + <b>단수/불가산 명사</b> (this seminar, that information)</li>
+                <li>These / Those + <b>복수 명사</b> (these items, those regulations)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Indefinite Pronouns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 03]</div>
+        </header>
+
+        <h1>Unit 03. 부정대명사(Indefinite) - "정해지지 않은 것"</h1>
+
+        <div class="unit-box">
+            <h2>01. One, Another, Other, Others 총정리</h2>
+            <table>
+                <tr>
+                    <th width="15%">종류</th>
+                    <th width="20%">대명사/형용사</th>
+                    <th width="30%">수 일치 특징</th>
+                    <th>핵심 예시</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>One</b></td>
+                    <td align="center">둘 다 가능</td>
+                    <td>가산 단수</td>
+                    <td>The new <b>one</b> is efficient.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Another</b></td>
+                    <td align="center">둘 다 가능</td>
+                    <td>가산 단수 (막연한 또 하나)</td>
+                    <td>... with <b>another</b> reason.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Other</b></td>
+                    <td align="center"><span class="highlight">형용사만!</span></td>
+                    <td>복수 OR 불가산</td>
+                    <td><b>Other</b> issues / equipment</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Others</b></td>
+                    <td align="center"><span class="highlight">대명사만!</span></td>
+                    <td>항상 복수 (막연한 다른 것들)</td>
+                    <td>Some like coffee, <b>others</b> tea.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Each other</b></td>
+                    <td align="center">대명사</td>
+                    <td>주어 자리 불가 (목적어 전용)</td>
+                    <td>They helped <b>each other</b>.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. Some vs Any & Most vs Almost</h2>
+            <div class="trend-tip">
+                <b>Some</b>: 긍정문 / 권유문 ("몇몇") <br>
+                <b>Any</b>: 부정문 / 의문문 / 조건문 ("어떠한 ~라도")
+            </div>
+            <table>
+                <tr>
+                    <th width="20%">비교</th>
+                    <th>상세 규칙</th>
+                    <th>예시</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>Most</b> (대/형)</td>
+                    <td>대부분의 (명사 직접 수식/대신)</td>
+                    <td><b>Most</b> employees (O) / <b>Most of the</b> employees (O)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Almost</b> (부)</td>
+                    <td>거의 (한정사/부사 수식)</td>
+                    <td><b>Almost all</b> employees (O) / Almost employees (X)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>None</b> (대)</td>
+                    <td>아무도 ~않다 (No + one)</td>
+                    <td><b>None</b> of the rooms were available.</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Reflexive Pronouns & Practice -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 03]</div>
+        </header>
+
+        <h1>Unit 04. 재귀대명사(Reflexive)와 관용 표현</h1>
+
+        <div class="unit-box">
+            <h2>01. 재귀대명사의 2가지 핵심 용법</h2>
+            <ul class="important-list">
+                <li><b>재귀 용법 (필수 성분)</b>: 주어와 목적어가 같을 때. <br> <small>Ex) Bill always treats <b>himself</b> to a coffee.
+                        (Bill = himself)</small></li>
+                <li><b>강조 용법 (거품 성분)</b>: 주어나 목적어를 강조. 생략 가능. <br> <small>Ex) The president <b>himself</b> announced the
+                        policy. / reviewed it <b>herself</b>.</small></li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 재귀대명사 및 Own 관련 숙어 (암기 필수!)</h2>
+            <table>
+                <tr>
+                    <th width="35%">표현</th>
+                    <th>의미</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>by oneself</b></td>
+                    <td>혼자서, 스스로 (=on one's own) <span class="highlight">[최빈출]</span></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>for oneself</b></td>
+                    <td>혼자 힘으로 (직접)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>in itself</b></td>
+                    <td>그 자체로 (본질적으로)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>one's own + 명사</b></td>
+                    <td>~ 자신의 것 (his own business)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 03: Actual Check-up (High Density)</h2>
+            <div class="q-item">
+                <div class="q-text">01. Although the manager gathered various opinions, the final decision on the
+                    department's budget was _______.</div>
+                <div class="choices">(A) him &nbsp; (B) his &nbsp; (C) himself &nbsp; (D) he</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Customers who experience issues with the online payment system may contact
+                    _______ by sending an e-mail.</div>
+                <div class="choices">(A) we &nbsp; (B) our &nbsp; (C) ours &nbsp; (D) us</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. Food prices in general rose last year, and _______ of vegetables increased by
+                    almost 20 percent.</div>
+                <div class="choices">(A) this &nbsp; (B) that &nbsp; (C) those &nbsp; (D) these</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The pension scheme has attracted fewer _______ than originally projected by the
+                    government agency.</div>
+                <div class="choices">(A) register &nbsp; (B) registration &nbsp; (C) registrants &nbsp; (D) registered
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">05. Employees are encouraged to complete the mandatory safety training modules
+                    _______ before the quarterly deadline.</div>
+                <div class="choices">(A) them &nbsp; (B) themselves &nbsp; (C) their &nbsp; (D) theirs</div>
+            </div>
+        </div>
+
+        <div class="unit-box" style="margin-top:15px; background: #fef2f2; font-size: 11.5px;">
+            <b>[정답 및 가이드]</b> <br>
+            1.(B) his (소유대명사: 그의 것). | 2.(D) us (동사 뒤 목적격). | 3.(C) those (복수 명사 prices 지칭 비교대명사). | 4.(C) registrants
+            (fewer 뒤 가산 복수 명사 - 사람). | 5.(B) themselves (강조 용법 부사 자리).
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

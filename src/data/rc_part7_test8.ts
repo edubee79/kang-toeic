@@ -1,6 +1,6 @@
 import { PracticeSet } from './rc_part7_types';
 
-export const rcPart7Test8: PracticeSet[] = [
+export const test8PracticeSet: PracticeSet[] = [
     // Questions 176-180: Double Passage (Table of Contents + Book Review)
     {
         id: "p7-t8-set11",

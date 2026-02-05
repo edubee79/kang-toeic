@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 10: Prepositions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & Time/Place Basics -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 10]</div>
+        </header>
+
+        <h1>Unit 01. 전치사의 출제 패턴과 기본 정립</h1>
+
+        <div class="unit-box">
+            <h2>01. 전치사(Preposition) 핵심 출제 패턴 (The Core 3)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 의미 파악: 문맥상 가장 어울리는 전치사 선택</div>
+                <div class="pattern-ex">Free tickets <span class="highlight">to</span> the new museum were distributed.
+                </div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 품사 구별: 전치사 vs 접속사 vs 접속부사</div>
+                <div class="pattern-ex">The game was canceled <span class="highlight">due to</span> heavy rain. (전치사 +
+                    명사구)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 숙어 선택: 동사/형용사/명사와 어울리는 전치사</div>
+                <div class="pattern-ex">Homeowners rely heavily <span class="highlight">on</span> local benefactors.
+                    (rely on 숙어)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 시간·장소의 In / At / On 완벽 비교</h2>
+            <table>
+                <tr>
+                    <th width="15%">전치사</th>
+                    <th width="42.5%">시간 (Time)</th>
+                    <th width="42.5%">장소 (Place)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>In</b></td>
+                    <td>월, 연도, 계절, 오전/오후<br><small>in August, in 2024</small></td>
+                    <td>넓은 공간, 내부, 도시/국가<br><small>in the world, in Seoul</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>At</b></td>
+                    <td>시각, 특정 시점<br><small>at 7 o'clock, at noon</small></td>
+                    <td>좁은 지점, 번지수, 정류장<br><small>at the bus stop, at the station</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>On</b></td>
+                    <td>날짜, 요일, 특정한 날<br><small>on Friday, on June 1</small></td>
+                    <td>표면 위, 노선, 층수<br><small>on the table, on the 3rd floor</small></td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>금기 사항:</b> this, last, next Friday 등 앞에는 전치사(at, on, in)를 쓰지 않습니다!
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Time vs Period & Logic Prepos -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 10]</div>
+        </header>
+
+        <h1>Unit 02. 시점 vs 기간 및 논리 전치사</h1>
+
+        <div class="unit-box">
+            <h2>01. 시점(Point) vs 기간(Period) 전치사</h2>
+            <table>
+                <tr>
+                    <th width="50%">시점 전치사 (+특정 날/시각)</th>
+                    <th width="50%">기간 전치사 (+숫자/기간명사)</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="important-list">
+                            <li><b>By</b>: ~까지 (완료의 의미)</li>
+                            <li><b>Until</b>: ~까지 (상태의 지속)</li>
+                            <li><b>Since</b>: ~이래로 (현재완료와 결합)</li>
+                            <li><b>From</b>: ~부터</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="important-list">
+                            <li><b>For</b>: ~동안 (숫자 기간)</li>
+                            <li><b>During</b>: ~동안 (특정 행사/사건)</li>
+                            <li><b>Within</b>: ~이내에</li>
+                            <li><b>Throughout</b>: ~내내, ~도처에</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="memorize-card" style="border-color: var(--danger);">
+            <div class="memorize-title" style="color: var(--danger);">1초 구분: By vs Until</div>
+            <p style="font-size: 13px; margin: 0;">
+                <b>By (완료)</b>: 제출하다(submit), 끝내다(finish), 배달하다(deliver)와 짝꿍 <br>
+                <b>Until (지속)</b>: 머무르다(stay), 열려있다(remain open), 계속되다(continue)와 짝꿍
+            </p>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 이유, 양보, 목적의 전치사</h2>
+            <ul class="important-list">
+                <li><b>이유 (~때문에)</b>: <span class="blue-bold">because of, due to, owing to, on account of</span></li>
+                <li><b>양보 (~에도 불구하고)</b>: <span class="highlight">despite, in spite of, notwithstanding, with all</span>
+                </li>
+                <li><b>목적 (~을 위하여)</b>: for (for your convenience, for future use)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Location, Direction & Advanced Lists -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 10]</div>
+        </header>
+
+        <h1>Unit 03. 위치·방향 및 필수 테마 전치사</h1>
+
+        <div class="unit-box">
+            <h2>01. 숫자·수치 수식 전치사 (Over/Under/Above/Below)</h2>
+            <div class="col-grid">
+                <ul class="important-list">
+                    <li><b>Above / Over</b>: ~보다 위에 / 이상인</li>
+                    <li><b>Below / Under</b>: ~보다 아래에 / 이하인</li>
+                    <li><b>Between / Among</b>: (둘) / (셋 이상) 사이에</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>Beyond</b>: ~를 넘어서 / ~이 불가능한</li>
+                    <li><b>Against</b>: ~에 반대하여 / ~에 기대어</li>
+                    <li><b>Beside / Next to</b>: ~옆에</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--success);">
+            <h2>02. "~에 관하여" 전치사 패밀리</h2>
+            <p style="font-size: 13.5px; font-weight: 700; color: var(--success);">토익 RC에서 가장 정답률이 높은 전치사군입니다.</p>
+            <div class="memorize-card" style="margin:0; background: #f0fdf4; border:none;">
+                <b>about, on, concerning, regarding, pertaining to, with regard to, <br> in respect of, as for, as
+                    to</b>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 구전치사(Compound Prepositions) 암기 리스트</h2>
+            <div class="col-grid" style="font-size: 12.5px;">
+                <ul class="important-list">
+                    <li><b>in addition to</b> (~외에 더하여)</li>
+                    <li><b>in place of / instead of</b> (~대신에)</li>
+                    <li><b>in celebration of</b> (~을 축하하여)</li>
+                    <li><b>in honor of</b> (~에 경의를 표하며)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>in response to</b> (~에 응하여)</li>
+                    <li><b>in preparation for</b> (~에 대비하여)</li>
+                    <li><b>on behalf of</b> (~를 대표하여/대신하여)</li>
+                    <li><b>regardless of</b> (~에 상관없이)</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Collocations & Practice -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 10]</div>
+        </header>
+
+        <h1>Unit 04. 전치사 콜로케이션 및 실전 Check-up</h1>
+
+        <div class="unit-box">
+            <h2>01. 필수 암기 세트 (V + Prep / Adj + Prep)</h2>
+            <div class="col-grid" style="font-size: 12.5px;">
+                <ul class="important-list">
+                    <li><b>wait for</b> (기다리다) / <b>await</b> (타동사)</li>
+                    <li><b>rely/depend on</b> (~에 의존하다)</li>
+                    <li><b>comply with</b> (~을 준수하다)</li>
+                    <li><b>consist of</b> (~로 구성되다)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>contribute to</b> (~에 기여하다)</li>
+                    <li><b>responsible for</b> (~에 책임 있는)</li>
+                    <li><b>comparable to</b> (~에 필적하는)</li>
+                    <li><b>consistent with</b> (~와 일관된)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 10: Actual Check-up (Preposition Mastery)</h2>
+            <div class="q-item">
+                <div class="q-text">01. Free admission tickets _______ the new modern arts museum were distributed to
+                    the first two hundred visitors yesterday morning.</div>
+                <div class="choices">(A) in &nbsp; (B) at &nbsp; (C) on &nbsp; (D) to</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Corporate profits have increased steadily ________ the past ten years due to
+                    aggressive expansion into Asian markets.</div>
+                <div class="choices">(A) since &nbsp; (B) on &nbsp; (C) over &nbsp; (D) about</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The annual shareholders' meeting is scheduled to take place _______ the second
+                    floor of the company's headquarters.</div>
+                <div class="choices">(A) in &nbsp; (B) at &nbsp; (C) on &nbsp; (D) to</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. All department monthly reports must be submitted to the regional manager _______
+                    the end of business on Friday.</div>
+                <div class="choices">(A) by &nbsp; (B) until &nbsp; (C) since &nbsp; (D) during</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. The technical team worked _______ the night to ensure that the server
+                        maintenance was completed before the Monday commute.</div>
+                    <div class="choices">(A) among &nbsp; (B) between &nbsp; (C) throughout &nbsp; (D) along</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. The newly proposed budget for office decor was rejected _______ to the
+                        urgent need for high-quality medical equipment.</div>
+                    <div class="choices">(A) because &nbsp; (B) regarding &nbsp; (C) due &nbsp; (D) despite</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:15px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(D) tickets to (~로의 행선지/대상). | 2.(C) over the past years (과거 기간 전치사). | 3.(C) on the floor (층수 앞 전치사).
+                | 4.(A) 제출 기한(완료)이므로 by. | 5.(C) 시간 내내를 의미하는 throughout. | 6.(C) due to (~때문에). options 중 유일하게 to와 결합
+                가능.
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

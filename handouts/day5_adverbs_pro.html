@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 05: Adverbs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12.5px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .memorize-title::before {
+            content: '★';
+            margin-right: 5px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Adverb Core Patterns & Positions -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 05]</div>
+        </header>
+
+        <h1>Unit 01. 부사의 출제 패턴과 기본 위치</h1>
+
+        <div class="unit-box">
+            <h2>01. 부사(Adverb) 핵심 출제 패턴 (The Core 5)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 자리 찾기: 동사/형용사/부사/문장전체 수식</div>
+                <div class="pattern-ex">There is a store <span class="highlight">conveniently</span> located from your
+                    home.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 혼동 부사: 형태가 비슷하지만 뜻이 다른 부사</div>
+                <div class="pattern-ex">Nearly 300 soldiers... (거의) vs near the building (근처에)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 시제 관련 시간 부사: 특정 시제와 짝꿍</div>
+                <div class="pattern-ex">The director has <span class="highlight">already</span> approved the design.
+                    (현재완료 긍정)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 수치 수식 부사: 숫자 앞에서 '약, 대략'</div>
+                <div class="pattern-ex"><span class="highlight">Approximately</span> 50 attendees...</div>
+
+                <div class="pattern-item" style="margin-top:8px;">⑤ 접속부사: 문장 간의 논리 관계 (however, therefore)</div>
+                <div class="pattern-ex">Finance was damaged; <span class="highlight">therefore</span>, it must be
+                    replaced.</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 부사의 위치 (Where to Put?)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="30%">수식 대상</th>
+                        <th>부사의 위치 및 예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center"><b>형용사/부사 수식</b></td>
+                        <td><b>부사 + 형/부</b>: very beautiful, quite popular, work very hard</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>문장 전체 수식</b></td>
+                        <td><b>부사, S + V</b>: Actually, I was surprised.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>일반 동사 수식</b></td>
+                        <td><b>S + 부사 + V</b>: I really love you.</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>BE/HAVE 동사 사이</b></td>
+                        <td><b>be/have + 부사 + p.p(-ing)</b>: has been thoroughly tested, is still deliberating</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>조동사 사이</b></td>
+                        <td><b>조동사 + 부사 + 동사원형</b>: will soon arrive</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>동사구 뒤</b></td>
+                        <td><b>S + V + O + 부사</b>: increased revenue significantly</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="trend-tip">
+                <b>주의: 부사처럼 생겼는데 명사인 -ing:</b> <br>
+                openings, findings, recordings는 부사가 아닌 '가산 명사'입니다!
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Confusing Adverbs & Forms -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 05]</div>
+        </header>
+
+        <h1>Unit 02. 혼동하기 쉬운 부사 (Must Memorize)</h1>
+
+        <div class="unit-box">
+            <h2>01. 형용사와 형태가 같은 부사</h2>
+            <p style="font-size: 13px;">이 단어들은 형태의 변화 없이 형용사와 부사로 모두 쓰입니다.</p>
+            <table>
+                <tr>
+                    <th>단어</th>
+                    <th>형용사 뜻</th>
+                    <th>부사 뜻</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>hard</b></td>
+                    <td>어려운, 딱딱한</td>
+                    <td class="blue-bold">열심히</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>late</b></td>
+                    <td>늦은</td>
+                    <td class="blue-bold">늦게</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>high</b></td>
+                    <td>높은</td>
+                    <td class="blue-bold">높게</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>near</b></td>
+                    <td>가까운</td>
+                    <td class="blue-bold">가까이에</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>fast</b></td>
+                    <td>빠른</td>
+                    <td class="blue-bold">빨리</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>early</b></td>
+                    <td>이른</td>
+                    <td class="blue-bold">일찍</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. -ly가 붙으면 뜻이 바뀌는 부사 (시험 1순위!)</h2>
+            <table>
+                <tr>
+                    <th width="50%">원래 형태 부사</th>
+                    <th>-ly 형태 부사 (완전 다른 뜻)</th>
+                </tr>
+                <tr>
+                    <td><b>hard</b> (열심히)</td>
+                    <td><span class="highlight">hardly</span> (거의 ~않다)</td>
+                </tr>
+                <tr>
+                    <td><b>late</b> (늦게)</td>
+                    <td><span class="highlight">lately</span> (최근에)</td>
+                </tr>
+                <tr>
+                    <td><b>near</b> (가까이에)</td>
+                    <td><span class="highlight">nearly</span> (거의 - 수량수식)</td>
+                </tr>
+                <tr>
+                    <td><b>high</b> (높게)</td>
+                    <td><span class="highlight">highly</span> (매우/대단히)</td>
+                </tr>
+                <tr>
+                    <td><b>close</b> (가까이)</td>
+                    <td><span class="highlight">closely</span> (면밀히/친밀히)</td>
+                </tr>
+                <tr>
+                    <td><b>most</b> (가장 많이)</td>
+                    <td><span class="highlight">mostly</span> (대개/주로)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="trend-tip">
+            <b>경제(economic/economical) 시리즈 재등장:</b> <br>
+            prices rose <b>economically</b>? (X) -> prices rose <b>significantly</b> (O) <br>
+            부사 문제에서 <b>economically</b>는 '절약하여'라는 뜻으로 주로 '사용/관리' 동사와 어울립니다.
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Special Adverbs (Time, Frequency, Intensity) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 05]</div>
+        </header>
+
+        <h1>Unit 03. 부류별 특수 부사 리스트 (Categorized)</h1>
+
+        <div class="unit-box">
+            <h2>01. 시간 부사 & 빈도 부사 (Time & Frequency)</h2>
+            <ul class="important-list">
+                <li><b>Already</b>: 긍정문 / 현재완료 (동사 사이) </li>
+                <li><b>Still</b>: 여전히 (부정어 not 앞 위치 주의)</li>
+                <li><b>Yet</b>: 아직 ~않다 (부정어 not 뒤 / have yet to V)</li>
+                <li><b>Ever</b>: 언젠가 (hardly ever: 거의 ~않다)</li>
+                <li><b>Recently / Lately</b>: 최근에 (과거/현재완료 시제와 사용)</li>
+                <li><b>Shortly / Soon</b>: 곧 (미래 시제와 사용)</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 숫자 수식 부사 (Approximation Adverbs)</h2>
+            <p style="font-size: 13.5px; color: var(--info);">★ 숫자(형용사) 바로 앞에서 정답으로 자주 출제됩니다.</p>
+            <div class="memorize-card">
+                <b>대략/거의</b>: <span class="highlight">almost, nearly, approximately, roughly, around, about</span> <br>
+                <b>최소/최대</b>: at least, up to, a maximum of <br>
+                <b>겨우/이상</b>: only, over, more than
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 강조 부사 (Intensity Adverbs)</h2>
+            <table>
+                <tr>
+                    <th width="30%">역할</th>
+                    <th>강조 부사 종류</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>비교급 강조</b></td>
+                    <td><span class="blue-bold">much, still, even, far, a lot, by far</span> (~보다 훨씬)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>최상급 강조</b></td>
+                    <td>by far, quite (~중 단연)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>원급 강조</b></td>
+                    <td>just as ... as, nearly/almost</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>'매우' 의미</b></td>
+                    <td>so (+형/부), such (+명), very, too (부정적)</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>so... that... vs such... that...</b> <br>
+                1. so <b>heavy</b> that (so + 형용사) <br>
+                2. such <b>a sizable event</b> that (such + 명사구)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Collocations & Practice -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 05]</div>
+        </header>
+
+        <h1>Unit 04. 부사 실전: 접속부사와 빈출 콜로케이션</h1>
+
+        <div class="unit-box">
+            <h2>01. 접속부사 (Conjunctive Adverbs)</h2>
+            <p style="font-size: 13px;">문장 내에서 독립적으로 의미를 연결합니다. (세미콜론 ; 뒤에 자주 등장)</p>
+            <div class="col-grid" style="font-size: 12.5px;">
+                <ul class="important-list">
+                    <li><b>However</b>: 그러나 (역접)</li>
+                    <li><b>Therefore / Consequently</b>: 그러므로 (인과)</li>
+                    <li><b>Moreover / Furthermore</b>: 게다가 (첨언)</li>
+                    <li><b>Otherwise</b>: 그렇지 않으면</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>Meanwhile</b>: 한편, 그동안에</li>
+                    <li><b>Then</b>: 그러고 나서</li>
+                    <li><b>Instead</b>: 대신에</li>
+                    <li><b>Nevertheless</b>: 그럼에도 불구하고</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="memorize-card" style="border-color: var(--success);">
+            <div class="memorize-title" style="color: var(--success);">★ 입에 붙여야 할 부사+동사 짝꿍 (Collocations)</div>
+            <div class="col-grid" style="font-size: 12.5px;">
+                <ul class="important-list">
+                    <li>read/examine <b>closely</b> (면밀히)</li>
+                    <li>inspect/check <b>regularly</b> (정기적으로)</li>
+                    <li>review <b>thoroughly</b> (철저히)</li>
+                    <li>answer <b>promptly</b> (즉시)</li>
+                </ul>
+                <ul class="important-list">
+                    <li>rise/increase <b>steadily/sharply</b></li>
+                    <li>work <b>collaboratively</b> (협력하여)</li>
+                    <li>await <b>eagerly</b> (간절히 기다리다)</li>
+                    <li>store <b>securely</b> (안전하게 보관)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 05: Actual Check-up (Professional Adverbs)</h2>
+            <div class="q-item">
+                <div class="q-text">01. The team leader's proposal was _______ accepted by the board, as it addressed
+                    all the major budgetary concerns.</div>
+                <div class="choices">(A) total &nbsp; (B) totality &nbsp; (C) totally &nbsp; (D) totaled</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Due to the severe storm, the flight from Incheon has been delayed, and we expect
+                    it to arrive _______ after the scheduled time.</div>
+                <div class="choices">(A) shortly &nbsp; (B) short &nbsp; (C) shorter &nbsp; (D) shorten</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The newly renovated auditorium can easily accommodate _________ 500 guests for
+                    the upcoming annual gala.</div>
+                <div class="choices">(A) near &nbsp; (B) nearly &nbsp; (C) most &nbsp; (D) mostly</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. Suggestions made by junior staff are always welcome; _________, most are not
+                    acted upon until the quarterly review meeting.</div>
+                <div class="choices">(A) hence &nbsp; (B) instead &nbsp; (C) however &nbsp; (D) also</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">05. The tech support department advises that users check their network security
+                    settings _________ to prevent unauthorized access.</div>
+                <div class="choices">(A) regular &nbsp; (B) regularity &nbsp; (C) regulate &nbsp; (D) regularly</div>
+            </div>
+        </div>
+
+        <div class="unit-box" style="margin-top:10px; background: #fef2f2; font-size: 11.5px;">
+            <b>[정답 및 가이드]</b> <br>
+            1.(C) be + 부사 + p.p 사이. | 2.(A) shortly (곧/얼마 안 있어). | 3.(B) nearly (숫자 500 수식: 거의). | 4.(C) 문장 사이의 역접
+            논리(그러나). | 5.(D) 동사 check를 수식하는 문장 끝 부사.
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -12,11 +12,11 @@ import { test2PracticeSet } from '@/data/rc_part7_test2'; // RC 2회
 import { test3PracticeSet } from '@/data/rc_part7_test3'; // RC 3회
 import { test4PracticeSet } from '@/data/rc_part7_test4'; // RC 4회
 import { test5PracticeSet } from '@/data/rc_part7_test5'; // RC 5회
-import { rcPart7Test6 } from '@/data/rc_part7_test6'; // RC 6회
-import { rcPart7Test7 } from '@/data/rc_part7_test7'; // RC 7회
-import { rcPart7Test8 } from '@/data/rc_part7_test8'; // RC 8회
-import { rcPart7Test9 } from '@/data/rc_part7_test9'; // RC 9회
-import { rcPart7Test10 } from '@/data/rc_part7_test10'; // RC 10회
+import { test6PracticeSet } from '@/data/rc_part7_test6'; // RC 6회
+import { test7PracticeSet } from '@/data/rc_part7_test7'; // RC 7회
+import { test8PracticeSet } from '@/data/rc_part7_test8'; // RC 8회
+import { test9PracticeSet } from '@/data/rc_part7_test9'; // RC 9회
+import { test10PracticeSet } from '@/data/rc_part7_test10'; // RC 10회
 
 const availableTests = [
     { id: 1, data: fullPracticeTest, title: 'RC 1회' },
@@ -24,11 +24,11 @@ const availableTests = [
     { id: 3, data: test3PracticeSet, title: 'RC 3회' },
     { id: 4, data: test4PracticeSet, title: 'RC 4회' },
     { id: 5, data: test5PracticeSet, title: 'RC 5회' },
-    { id: 6, data: rcPart7Test6, title: 'RC 6회' },
-    { id: 7, data: rcPart7Test7, title: 'RC 7회' },
-    { id: 8, data: rcPart7Test8, title: 'RC 8회' },
-    { id: 9, data: rcPart7Test9, title: 'RC 9회' },
-    { id: 10, data: rcPart7Test10, title: 'RC 10회' },
+    { id: 6, data: test6PracticeSet, title: 'RC 6회' },
+    { id: 7, data: test7PracticeSet, title: 'RC 7회' },
+    { id: 8, data: test8PracticeSet, title: 'RC 8회' },
+    { id: 9, data: test9PracticeSet, title: 'RC 9회' },
+    { id: 10, data: test10PracticeSet, title: 'RC 10회' },
 ];
 
 export default function Part7DoubleLobbyPage() {
@@ -107,7 +107,7 @@ export default function Part7DoubleLobbyPage() {
                         return (
                             <Link
                                 key={set.id}
-                                href={showLocked ? "#" : `/homework/part7-double/test/${set.id}?mode=real`}
+                                href={showLocked ? "#" : set.path}
                                 onClick={(e) => {
                                     if (showLocked) {
                                         e.preventDefault();

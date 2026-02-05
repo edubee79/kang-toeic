@@ -6,11 +6,11 @@ import { test2PracticeSet } from '@/data/rc_part7_test2';
 import { test3PracticeSet } from '@/data/rc_part7_test3';
 import { test4PracticeSet } from '@/data/rc_part7_test4';
 import { test5PracticeSet } from '@/data/rc_part7_test5';
-import { rcPart7Test6 } from '@/data/rc_part7_test6';
-import { rcPart7Test7 } from '@/data/rc_part7_test7';
-import { rcPart7Test8 } from '@/data/rc_part7_test8';
-import { rcPart7Test9 } from '@/data/rc_part7_test9';
-import { rcPart7Test10 } from '@/data/rc_part7_test10';
+import { test6PracticeSet } from '@/data/rc_part7_test6';
+import { test7PracticeSet } from '@/data/rc_part7_test7';
+import { test8PracticeSet } from '@/data/rc_part7_test8';
+import { test9PracticeSet } from '@/data/rc_part7_test9';
+import { test10PracticeSet } from '@/data/rc_part7_test10';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, ArrowLeft, Timer, Trophy, BookOpen, CheckCircle2, RotateCcw, AlertCircle, Tag } from 'lucide-react';
@@ -30,11 +30,11 @@ const testDataMap: Record<number, PracticeSet[]> = {
     3: test3PracticeSet,
     4: test4PracticeSet,
     5: test5PracticeSet,
-    6: rcPart7Test6,
-    7: rcPart7Test7,
-    8: rcPart7Test8,
-    9: rcPart7Test9,
-    10: rcPart7Test10,
+    6: test6PracticeSet,
+    7: test7PracticeSet,
+    8: test8PracticeSet,
+    9: test9PracticeSet,
+    10: test10PracticeSet,
 };
 
 function Part7PracticePageContent() {

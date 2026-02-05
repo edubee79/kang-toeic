@@ -21,9 +21,6 @@ export default function Part4TestRunnerPage() {
     const isGuidedSkimming = testId >= 1 && testId <= 3;
     const isOptionalSkimming = testId >= 4 && testId <= 10;
 
-    // Filter sets for this Test ID
-    const testSets = part4Data.filter(s => s.testId === testId);
-
     const stopWords = new Set([
         'a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
         'to', 'of', 'in', 'for', 'with', 'on', 'at', 'by', 'from', 'up', 'down',
@@ -50,7 +47,6 @@ export default function Part4TestRunnerPage() {
     const [skimmingState, setSkimmingState] = useState<'idle' | 'active' | 'done'>('idle');
     const [timeLeft, setTimeLeft] = useState(0);
     const [showStartModal, setShowStartModal] = useState(isOptionalSkimming); // Show modal for 4-10
-    const [isReady, setIsReady] = useState(false); // Flag for state restoration check
 
     // Refs for Audio
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -60,42 +56,51 @@ export default function Part4TestRunnerPage() {
     const activeSets = reviewMode ? reviewSets : testSets;
     const currentSet = activeSets[currentIndex];
 
-    // 1. Audio Cleanup on Unmount
+    // Data
+    const [testSets, setTestSets] = useState<Part4Set[]>([]);
+    const [isReady, setIsReady] = useState(false);
+
+    // Initial Load & Drill Filter
     useEffect(() => {
         setIsMounted(true);
-        return () => {
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current.currentTime = 0;
-            }
-        };
-    }, []);
+        const urlParams = new URLSearchParams(window.location.search);
+        const mode = urlParams.get('mode');
+        const tag = urlParams.get('tag');
 
-    // 2. Load Progress & History from LocalStorage
-    useEffect(() => {
-        const savedProgress = localStorage.getItem(`part4_progress_test_${testId}`);
-        if (savedProgress) {
-            try {
-                const parsed = JSON.parse(savedProgress);
-                if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
-                if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
-            } catch (e) {
-                console.error("Failed to load progress", e);
+        if (mode === 'drill' && tag) {
+            // Pool all sets matching the tag
+            const drilledSets: Part4Set[] = part4Data.filter(s => {
+                const contextMatch = s.contextType === tag;
+                const questionMatch = s.questions.some(q => q.questionType === tag);
+                return contextMatch || questionMatch;
+            });
+
+            if (drilledSets.length > 0) {
+                setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets
+                setIsReady(true);
+                return;
             }
         }
 
-        const savedHistory = localStorage.getItem(`part4_history_test_${testId}`);
-        if (savedHistory) {
-            try {
-                setHistory(JSON.parse(savedHistory));
-            } catch (e) {
-                console.error("Failed to load history", e);
+        const found = part4Data.filter(s => s.testId === testId);
+        setTestSets(found);
+
+        // Progress restoration logic
+        if (!mode) {
+            const savedProgress = localStorage.getItem(`part4_progress_test_${testId}`);
+            if (savedProgress) {
+                try {
+                    const parsed = JSON.parse(savedProgress);
+                    if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
+                    if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
+                } catch (e) {
+                    console.error("Failed to load progress", e);
+                }
             }
         }
 
-        // Mark as ready AFTER progress restoration attempt
         setTimeout(() => setIsReady(true), 0);
-    }, [testId]);
+    }, [testId, router]);
 
     // 3. Save Progress to LocalStorage
     useEffect(() => {
@@ -450,12 +455,16 @@ export default function Part4TestRunnerPage() {
                     >
                         Review Incorrect Answers
                     </button>
-                    <Link
-                        href="/homework/part4"
-                        className="h-14 flex items-center justify-center text-slate-500 hover:text-white transition-colors text-sm font-bold"
+                    <button
+                        onClick={() => {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                            router.push(isAi ? '/weakness/dashboard' : '/homework/part4');
+                        }}
+                        className="h-14 flex items-center justify-center w-full text-slate-500 hover:text-white transition-colors text-sm font-bold"
                     >
                         Back to Lobby
-                    </Link>
+                    </button>
                 </div>
             </div>
         );
@@ -476,9 +485,16 @@ export default function Part4TestRunnerPage() {
 
             <div className="sticky top-0 z-10 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-2xl">
                 <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-                    <Link href="/homework/part4" className="text-slate-400 hover:text-white text-sm font-medium flex items-center gap-1 transition-colors">
+                    <button
+                        onClick={() => {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                            router.push(isAi ? '/weakness/dashboard' : '/homework/part4');
+                        }}
+                        className="text-slate-400 hover:text-white text-sm font-medium flex items-center gap-1 transition-colors"
+                    >
                         ✕ Exit
-                    </Link>
+                    </button>
 
                     <div className="flex-1 text-center">
                         <span className="text-[10px] font-black tracking-widest text-indigo-500 uppercase block mb-0.5">
@@ -492,7 +508,9 @@ export default function Part4TestRunnerPage() {
                                                 selectedAnswers
                                             }));
                                         }
-                                        router.push('/homework/part4');
+                                        const urlParams = new URLSearchParams(window.location.search);
+                                        const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                                        router.push(isAi ? '/weakness/dashboard' : '/homework/part4');
                                     }}
                                     className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-indigo-900/30 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-900/50 transition-colors cursor-pointer active:scale-95"
                                 >

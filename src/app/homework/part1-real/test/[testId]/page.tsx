@@ -240,9 +240,16 @@ export default function Part1TestRunner() {
                     <button onClick={handleRetake} className="w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all bg-amber-600 hover:bg-amber-500">
                         다시 풀기
                     </button>
-                    <Link href="/homework/part1-real" className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold">
+                    <button
+                        onClick={() => {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                            router.push(isAi ? '/weakness/dashboard' : '/homework/part1-real');
+                        }}
+                        className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
+                    >
                         목록으로 돌아가기
-                    </Link>
+                    </button>
                 </div>
             </div>
         );
@@ -264,7 +271,11 @@ export default function Part1TestRunner() {
             {/* Header */}
             <div className="h-16 border-b border-slate-800 flex items-center justify-between px-4 bg-slate-900/50 backdrop-blur">
                 <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm" onClick={() => router.back()} className="text-slate-400">
+                    <Button variant="ghost" size="sm" onClick={() => {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                        router.push(isAi ? '/weakness/dashboard' : '/homework/part1-real');
+                    }} className="text-slate-400">
                         <ArrowLeft className="w-4 h-4 mr-2" /> Exit
                     </Button>
                     {!reviewMode && !isFinished && (
@@ -281,7 +292,9 @@ export default function Part1TestRunner() {
                                         elapsedTime
                                     }));
                                 }
-                                router.push('/homework/part1-real');
+                                const urlParams = new URLSearchParams(window.location.search);
+                                const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                                router.push(isAi ? '/weakness/dashboard' : '/homework/part1-real');
                             }}
                         >
                             Save & Exit

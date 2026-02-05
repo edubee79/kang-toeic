@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 18: Part 5 Speed-Kill Master Strategy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #cbd5e1;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            height: 296mm;
+            padding: 12mm 15mm;
+            margin: 0 auto;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 19px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: #b91c1c;
+            font-size: 11px;
+        }
+
+        h1 {
+            font-size: 21px;
+            color: var(--primary);
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 6px;
+            height: 26px;
+            background: var(--primary);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .unit-box h2 {
+            font-size: 14.5px;
+            margin: 0 0 6px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 6px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 5px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 10px;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid var(--border);
+            font-size: 10.5px;
+            line-height: 1.35;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+            font-size: 11.5px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+            top: 3px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 7px;
+            border-radius: 6px;
+            position: relative;
+            margin: 8px 0;
+            font-size: 11.5px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: '핵심 전략';
+            position: absolute;
+            top: -9px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 7.5px;
+            font-weight: 800;
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 8px;
+            background: #fff;
+            margin: 8px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 12.5px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .passage-box {
+            border: 1px dashed #475569;
+            padding: 10px;
+            background: #fafafa;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #1e293b;
+            margin-top: 5px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 8mm;
+            width: calc(100% - 30mm);
+            border-top: 1px solid var(--border);
+            padding-top: 4px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 18]</div>
+        </header>
+
+        <h1>Unit 01. 파트 5 기계적 메커니즘: 보기가 답을 말한다</h1>
+
+        <div class="unit-box">
+            <h2>01. 1단계: 보기(Options)를 통한 문제 유형 정의</h2>
+            <p style="font-size: 12px; margin-bottom: 8px;">지문을 읽기 전 보기를 스캔하여 전략을 설정하되, <b>'뼈대 중심의 최소 해석'</b>은 반드시
+                병행합니다.</p>
+            <table>
+                <tr>
+                    <th width="20%">구분</th>
+                    <th width="40%">품사/문법 문제 (Grammar)</th>
+                    <th>어휘/연결어 문제 (Vocab)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>보기에 특징</b></td>
+                    <td>어근이 같고 접미사만 다름<br><small>(Ex: slow, slowly, slowness)</small></td>
+                    <td>단어가 완전히 다르거나 품사가 섞임<br><small>(Ex: despite, although, however)</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>풀이 목표</b></td>
+                    <td><b>구조 분석 + 의미 검증.</b> 뼈대 위주의 최소 해석 필수.</td>
+                    <td>문맥 파악 & 짝꿍 단어 확인.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 2단계: 문장의 '뼈대(S+V)' 장악 및 의미 검증</h2>
+            <p style="font-size: 11.5px;">구조가 보인다면 즉시 <u>S+V+O의 관계</u>가 논리적으로 맞는지 **최소 해석**으로 확인합니다.</p>
+            <ul class="important-list">
+                <li><b>거품 제거 후 뼈대 독해</b>: 수식어를 걷어내고 남은 핵심 성분이 말이 되는지 봅니다.</li>
+                <li><b>의미적 안전장치</b>: 구조만 보고 찍으면 '함정 문제'에 걸립니다. 선택한 품사가 문맥 속에서 제 역할을 하는지 확인하는 습관이 850점의 기본입니다.</li>
+                <li><b>동사의 개수 확인</b>: <span class="blue-bold">동사 개수 - 1 = 접속사 개수</span> 공식으로 결합 상태를 확인합니다.</li>
+            </ul>
+        </div>
+
+        <div class="trend-tip">
+            <b>해석은 '정답의 확신'을 주는 안전장치입니다.</b> <br>
+            무작정 찍는 것은 실력 향상에 도움이 되지 않습니다. 구조로 범위를 좁혔다면, 반드시 <u>뼈대(주어+동사+목적어)</u>만이라도 짧게 해석하여 내가 잡은 문법이 논리적으로 맞는지 최종
+            판단하세요.
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 파트 5 목표 타임 라인: 10-Minute Kill</h2>
+            <ul class="important-list">
+                <li><b>Easy (15문항)</b>: 개당 5~10초 (구조 문제들)</li>
+                <li><b>Normal (10문항)</b>: 개당 20초 (일반 어휘 문제)</li>
+                <li><b>Hard (5문항)</b>: 개당 40초 (추론/함정 문제)</li>
+                <li><b class="highlight">Total: 10분 내외</b> → 남은 65분을 파트 6, 7에 올인!</li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 18]</div>
+        </header>
+
+        <h1>Unit 02. 문법 문장 격파: TVA & 1초 구조 분석</h1>
+
+        <div class="unit-box">
+            <h2>01. 동사 문제의 3단계 오답 소거 (TVA Rule)</h2>
+            <p style="font-size: 11.5px;">보기에 동사가 섞여 있다면 무조건 이 순서로 소거합니다. (자의적 해석 금지)</p>
+            <table>
+                <tr>
+                    <th width="30%">순서</th>
+                    <th>체크 포인트</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>1. 수 일치<br>(Agreement)</b></td>
+                    <td>주어의 단/복수 확인</td>
+                    <td>주어가 단수인데 동사에 S가 없다면 즉시 제거.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>2. 태<br>(Voice)</b></td>
+                    <td>능동 vs 수동</td>
+                    <td>뒤에 <b>목적어(명사)</b>가 있는가? <br><small>목적어 O → 능동 / 목적어 X → 수동 (자동사 제외)</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>3. 시제<br>(Tense)</b></td>
+                    <td>시간 부사 확인</td>
+                    <td>since, as of, recently 등 <b>시간 힌트</b>가 있을 때만 시제 적용.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 명/형/부 자리 1초 공식</h2>
+            <ul class="important-list">
+                <li><b>형용사 자리</b>: <span class="highlight">a/the/소유격 + (____) + 명사</span> / <span class="blue-bold">be +
+                        (____)</span></li>
+                <li><b>명사 자리</b>: 전치사 뒤 / 타동사 뒤 / 주어 자리</li>
+                <li><b>부사 자리</b>: <b>거품 자리</b> (문장 전체 수식, 동사/형용사/다른 부사 수식) <br>
+                    <small>*특히 <span class="highlight">be + (adv) + p.p</span> 또는 <span class="highlight">have + (adv) +
+                            p.p</span> '중간 끼어들기' 빈출!</small>
+                </li>
+            </ul>
+        </div>
+
+        <div class="memorize-card">
+            <div class="memorize-title">절대로 속으면 안 되는 '형용사처럼 생긴 명사'</div>
+            <p style="font-size: 11px; line-height: 1.4;">
+                - <b>alternative</b> (대안) / <b>objective</b> (목표) / <b>representative</b> (대표자) <br>
+                - <b>initiative</b> (계획, 주도권) / <b>appraisal</b> (평가) / <b>potential</b> (잠재력) <br>
+                - <b>professional</b> (전문가) / <b>original</b> (원본)
+            </p>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--danger);">
+            <h2>03. 분사(ing/ed)의 1초 격격 공식</h2>
+            <p style="font-size: 11.5px;">- <b>자동사의 분사</b>: 무조건 <u>V-ing</u> (Ex: existing office, missing bag)<br>
+                - <b>감정 동사의 분사</b>: <u>사람 주체 → p.p</u> (satisfied) / <u>사물 주체 → ing</u> (satisfying)</p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 18]</div>
+        </header>
+
+        <h1>Unit 03. 어휘 문장 격파: Collocation & Logic</h1>
+
+        <div class="unit-box">
+            <h2>01. 어휘는 '짝꿍'으로 푼다 (The Power of Pairs)</h2>
+            <p style="font-size: 11.5px;">고득점자는 단어 하나하나를 번역하지 않고 뭉텅이(Chunk)로 인식합니다.</p>
+            <table style="font-size: 10px;">
+                <tr>
+                    <th width="33%">명사 + 전치사</th>
+                    <th width="33%">형용사 + 전치사</th>
+                    <th>동사 + 전치사</th>
+                </tr>
+                <tr>
+                    <td><b>Access to</b> (~로의 접근)<br><b>Reason for</b> (~의 이유)<br><b>Concern about</b> (~에 대한 걱정)</td>
+                    <td><b>Eligible for</b> (~할 자격이 있는)<br><b>Responsible for</b> (~에 책임 있는)<br><b>Compatible with</b>
+                        (~와 호환되는)</td>
+                    <td><b>Comply with</b> (준수하다)<br><b>Refrain from</b> (삼가다)<br><b>Account for</b> (설명하다/차지하다)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 뉘앙스 차이로 오답 버리기</h2>
+            <ul class="important-list">
+                <li><b>Offer vs Provide</b>: <br>
+                    - Offer (4형식 가능): Offer A B (A에게 B를 주다) <br>
+                    - Provide (3형식): Provide A <span class="highlight">with</span> B (A에게 B를 공급하다)
+                </li>
+                <li><b>Speak vs Tell vs Say</b>: <br>
+                    - <span class="blue-bold">Tell</span> + 사람 목적어 (Tell me, Tell us) <br>
+                    - <span class="highlight">Say</span> + 내용 (Say that...) <br>
+                    - <span class="success">Speak</span> + 언어 / with (~와 대화하다)
+                </li>
+            </ul>
+        </div>
+
+        <div class="trend-tip">
+            <b>'확장된' 부사 어휘에 주목하세요.</b> <br>
+            단순히 `very` 같은 부사는 나오지 않습니다. <u>significantly (상당히)</u>, <u>exclusively (독점적으로)</u>, <u>tentatively (임시로)</u>
+            등 비즈니스 상황에 특화된 부사가 정답 후보 1순위입니다.
+        </div>
+
+        <div class="memorize-card">
+            <div class="memorize-title">실전 빈출 자동사 + 전치사 마스터 세트</div>
+            <p style="font-size: 11px; line-height: 1.4;">
+                - <b>Collaborate on</b> (프로젝트에 협력하다) / <b>on behalf of</b> (~를 대신하여) <br>
+                - <b>React to</b> (~에 반응하다) / <b>Abide by</b> (법을 지키다) <br>
+                - <b>Coincide with</b> (~와 일치하다) / <b>Deal with</b> (다루다)
+            </p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 18]</div>
+        </header>
+
+        <h1>Unit 04. 연결어 마스터: 전치사 vs 접속사 vs 부사</h1>
+
+        <div class="unit-box">
+            <h2>01. 품사 판별을 통한 1초 소거법</h2>
+            <p style="font-size: 11.5px;">의미는 같지만 <b>문법적 성질</b>이 달라 오답을 지울 수 있는 가장 고마운 유형입니다.</p>
+            <table style="font-size: 9.5px;">
+                <tr>
+                    <th width="15%">논리</th>
+                    <th width="28%">전치사 (+ 명사)</th>
+                    <th width="28%">접속사 (+ S+V)</th>
+                    <th>접속부사 (. Adv, )</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>양보/대조</b></td>
+                    <td><b>Despite / In spite of</b></td>
+                    <td><b>Although / Though</b></td>
+                    <td><b>However / Nevertheless</b></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>이유</b></td>
+                    <td><b>Because of / Due to</b></td>
+                    <td><b>Because / Since / As</b></td>
+                    <td><b>Therefore / Hence</b></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>시간</b></td>
+                    <td><b>During</b></td>
+                    <td><b>While</b></td>
+                    <td><b>Meanwhile</b></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>조건</b></td>
+                    <td><b>In case of</b></td>
+                    <td><b>If / Unless / In case</b></td>
+                    <td><b>Otherwise</b></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2 style="color: #b91c1c;">Actual Speed-Kill Practice</h2>
+            <div class="passage-box">
+                <b>1. The marketing director decided to hire more interns -------- the recent increase in
+                    workload.</b><br>
+                (A) although (B) because <span class="highlight">(C) due to</span> (D) however <br>
+                <i>→ Logic: 빈칸 뒤 the recent increase(명사구). 전치사 자리.</i><br><br>
+
+                <b>2. All employees must -------- with the new safety regulations starting next month.</b><br>
+                (A) follow (B) observe <span class="highlight">(C) comply</span> (D) confirm <br>
+                <i>→ Logic: 빈칸 뒤 with. ‘~와 함께 준수하다’ 자동사는 comply.</i><br><br>
+
+                <b>3. Ms. Rivera was -------- impressed by the candidate's extensive experience in sales.</b><br>
+                (A) highly (B) very <span class="blue-bold">(C) particularly</span> (D) most <br>
+                <i>→ Logic: p.p를 수식하는 비즈니스 부사. '특히 인상 깊은'.</i>
+            </div>
+        </div>
+
+        <div class="memorize-card" style="border-left: 5px solid var(--danger);">
+            <div class="memorize-title">최종 점검 리스트 (인쇄 전 확인)</div>
+            <ul style="font-size: 10.5px; padding-left: 15px; margin: 0;">
+                <li>해석보다 <b>보기를 먼저</b> 보았는가? (유형 분류)</li>
+                <li>문장의 <b>S+V</b>를 찾았는가? (동사 vs 준동사)</li>
+                <li>자동사-타동사 <b>짝꿍</b>을 기억하는가?</li>
+                <li><b>접속사 vs 전치사</b> 성질을 구분했는가?</li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

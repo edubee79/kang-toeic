@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 02: Nouns</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #e2e8f0;
+            --bg-light: #f8fafc;
+            --bg-point: #eff6ff;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .unit-box h2 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13.5px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 12px;
+            border-radius: 6px;
+            position: relative;
+            margin: 15px 0;
+            font-size: 13.5px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .pattern-item {
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #475569;
+            margin-left: 20px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 10px;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & Basic Patterns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 02]</div>
+        </header>
+
+        <h1>Unit 01. 명사의 출제 패턴과 기본 원리</h1>
+
+        <div class="unit-box">
+            <h2>01. 명사(Noun) 핵심 출제 패턴 (The 5 Core Patterns)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 자리에 맞는 품사를 찾는 문제 (Positioning)</div>
+                <div class="pattern-ex">Please review the <span class="highlight">proposal</span> for new safety
+                    procedures. (명사 vs 동사/분사)</div>
+
+                <div class="pattern-item" style="margin-top:10px;">② 수량 표현과 맞는 명사의 종류 (Quantifiers)</div>
+                <div class="pattern-ex"><span class="highlight">Every</span> sample must be kept at the correct
+                    temperature. (가산단수 vs 복수)</div>
+
+                <div class="pattern-item" style="margin-top:10px;">③ 복합명사 (Compound Nouns)</div>
+                <div class="pattern-ex">Mr. Lee hired two lawyers to help with <span class="highlight">contract
+                        negotiations</span>. (명사+명사)</div>
+
+                <div class="pattern-item" style="margin-top:10px;">④ 사람 명사 vs 일반 사물/추상 명사 (Person vs Thing)</div>
+                <div class="pattern-ex"><span class="highlight">Applicants</span> for the position must pass an
+                    examination. (지원자 vs 지원/신청)</div>
+
+                <div class="pattern-item" style="margin-top:10px;">⑤ 특이 형태/혼동 형태 명사 (Irregular Forms)</div>
+                <div class="pattern-ex">The <span class="highlight">openings</span> in the marketing department were
+                    filled. (-ing형 명사)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 명사의 역할과 끝자리(Suffix)</h2>
+            <p style="font-size: 13.5px;">명사는 문장의 <b>S, O, C</b> 자리에 오며, 특정 접미사로 끝나는 경우가 많습니다.</p>
+            <table>
+                <tr>
+                    <th width="25%">분류</th>
+                    <th>접미사(Suffix)</th>
+                    <th>실전 어휘 예시</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>사물/추상</b></td>
+                    <td>-ment, -tion, -ness, -ty, -ance/ence</td>
+                    <td>Management, Resolution, Promptness, Authority, Compliance</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>사람/행위자</b></td>
+                    <td>-er/or, -ant/ent, -ist, -cian</td>
+                    <td>Advisor, Supervisor, Attendant, Specialist, Technician</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>형용사처럼 생겼는데 명사인 놈들(자주 출제):</b> <br>
+                -ive: alternat<b>ive</b>(대안), initiat<b>ive</b>(계획/주도권), object<b>ive</b>(목표) <br>
+                -al: renew<b>al</b>(갱신), approv<b>al</b>(승인), propos<b>al</b>(제안), profession<b>al</b>(전문가)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Countability & Determiners -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 02]</div>
+        </header>
+
+        <h1>Unit 02. 가산성(Countability)과 한정사(Determiners)</h1>
+
+        <div class="unit-box">
+            <h2>01. 가산 명사 vs 불가산 명사 완벽 정리</h2>
+            <div class="trend-tip">
+                <b>가산명사의 규칙:</b> 단독으로 사용 불가! 앞에 <b>관사(a/an)</b>가 있거나 뒤에 <b>복수(-s)</b>가 있어야 함. <br>
+                <b>불가산명사의 규칙:</b> <b>a/an/-s</b> 절대 금지! 양(Amount)으로 측정함.
+            </div>
+            <table>
+                <tr>
+                    <th width="20%">구분</th>
+                    <th width="40%">가산 명사 (Countable)</th>
+                    <th width="40%">불가산 명사 (Uncountable)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>사람/사물</b></td>
+                    <td>applicant, representative, result, product, bag</td>
+                    <td>staff(집합적), research, information, luggage/baggage</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>행무/성격</b></td>
+                    <td>discount, price, task, measure</td>
+                    <td>accounting, equipment, machinery, clothing, furniture</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>토익 빈출</b></td>
+                    <td class="blue-bold">a permit, an account, a certificate</td>
+                    <td class="highlight">advice, access, documentation, feedback, consent</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 수량 한정사(Quantifiers)와의 결합</h2>
+            <p style="font-size: 13.5px;">빈칸 뒤의 명사가 단수인지 복수인지, 불가산인지에 따라 결정됩니다.</p>
+            <table>
+                <tr>
+                    <th>한정사 종류</th>
+                    <th>뒤에 오는 명사의 형태</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>Each / Every / Another</b></td>
+                    <td><b>가산 단수 명사</b> (Every employees X → Every employee O)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Many / (A) Few / Several</b></td>
+                    <td><b>가산 복수 명사</b> (Several suggestions)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Much / (A) Little / Less</b></td>
+                    <td><b>불가산 명사</b> (Much interest, Little experience)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>All / Most / Some / Other</b></td>
+                    <td><b>가산 복수</b> OR <b>불가산</b> (All candidates / All information)</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>The number of</b> + 복수명사 → <b>단수</b> 취급 (~의 수) <br>
+                <b>A number of</b> + 복수명사 → <b>복수</b> 취급 (많은 ~)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Advanced Nouns (Compound, -ing, Person vs Thing) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 02]</div>
+        </header>
+
+        <h1>Unit 03. 실전 함정: 복약명사, -ing 명사, 사람명사</h1>
+
+        <div class="unit-box">
+            <h2>01. 토익이 사랑하는 복합명사 (Compound Nouns)</h2>
+            <p style="font-size: 13px;">명사 두 개가 나란히 올 때, 앞 명사는 보통 단수형을 쓰며 하나의 고유한 의미를 가집니다.</p>
+            <div class="col-grid">
+                <table>
+                    <tr>
+                        <td>office supplies (사무용품)</td>
+                    </tr>
+                    <tr>
+                        <td>performance review (인사고과)</td>
+                    </tr>
+                    <tr>
+                        <td>expiration date (유효기간)</td>
+                    </tr>
+                    <tr>
+                        <td>quality requirements (품질요건)</td>
+                    </tr>
+                    <tr>
+                        <td>safety standards (안전기준)</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>attendance record (출석기록)</td>
+                    </tr>
+                    <tr>
+                        <td>customer satisfaction (고객만족)</td>
+                    </tr>
+                    <tr>
+                        <td>job openings (공석)</td>
+                    </tr>
+                    <tr>
+                        <td>luggage allowance (수량제한)</td>
+                    </tr>
+                    <tr>
+                        <td>parking permit (주차허가증)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 동명사(-ing)와 혼동되는 -ing형 명사</h2>
+            <p style="font-size: 13px;">동명사는 목적어를 가져오지만, <b>-ing형 명사</b>는 순수 명사처럼 관사나 형용사의 수식을 받습니다.</p>
+            <ul class="important-list">
+                <li><b>seating</b> (좌석), <b>ticketing</b> (발권), <b>processing</b> (공정/처리)</li>
+                <li><b>funding</b> (자금 지원), <b>advertising</b> (광고업), <b>planning</b> (기획)</li>
+                <li><span class="highlight">가산형 -ing:</span> openings (공석), findings (조사 결과), recordings (녹음)</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 사람 명사 vs 일반 사물/추상 명사 구별</h2>
+            <p style="font-size: 13px;">의미상 문맥이 '사람'인지 '사물/개념'인지를 묻는 문제가 매월 출제됩니다.</p>
+            <table>
+                <tr>
+                    <th width="33%">단어 선택 (V)</th>
+                    <th width="33%">사람 (Person)</th>
+                    <th width="33%">사물/개념 (Thing/Concept)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>지원/신청</b></td>
+                    <td class="blue-bold">applicant (지원자)</td>
+                    <td>application (신청서/지원)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>참석/출석</b></td>
+                    <td class="blue-bold">attendant (안내원), attendee (참석자)</td>
+                    <td>attendance (출석/출석률)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>분석/회계</b></td>
+                    <td class="blue-bold">analyst (분석가), accountant (회계사)</td>
+                    <td>analysis (분석), accounting (회계)</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Actual Check-up -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 02]</div>
+        </header>
+
+        <h1>Day 02. Actual Check-up (Intermediate to Advanced)</h1>
+
+        <div class="exercise-grid">
+            <div class="q-item">
+                <div class="q-text">01. The human resources director requested that any _______ regarding the new
+                    work-from-home policy be submitted by Friday.</div>
+                <div class="choices">(A) suggest &nbsp; (B) suggesting &nbsp; (C) suggestions &nbsp; (D) suggestive
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Due to the high volume of traffic, the IT department has promised to expedite
+                    the _______ of all pending service requests.</div>
+                <div class="choices">(A) process &nbsp; (B) processing &nbsp; (C) processed &nbsp; (D) processor</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The feasibility study includes a detailed _______ of the potential risks
+                    associated with the urban redevelopment project.</div>
+                <div class="choices">(A) analyst &nbsp; (B) analytical &nbsp; (C) analyze &nbsp; (D) analysis</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The newly released security software provides ______ protection against various
+                    types of malware and unauthorized access.</div>
+                <div class="choices">(A) addition &nbsp; (B) additionally &nbsp; (C) additive &nbsp; (D) additional
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">05. Please be reminded that each _______ must bring a valid identification card to
+                    the registration desk on the morning of the conference.</div>
+                <div class="choices">(A) participate &nbsp; (B) participant &nbsp; (C) participatory &nbsp; (D)
+                    participation</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">06. The research team found a wide _______ of consumer preferences across the
+                    different age groups surveyed last quarter.</div>
+                <div class="choices">(A) vary &nbsp; (B) various &nbsp; (C) variety &nbsp; (D) varying</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">07. Although the company faced a recent economic downturn, it managed to maintain a
+                    high level of customer _______.</div>
+                <div class="choices">(A) satisfy &nbsp; (B) satisfied &nbsp; (C) satisfactory &nbsp; (D) satisfaction
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">08. Many experienced financial consultants recommend the _______ of diverse
+                    investment portfolios to minimize long-term risks.</div>
+                <div class="choices">(A) maintenance &nbsp; (B) maintain &nbsp; (C) maintainable &nbsp; (D) maintained
+                </div>
+            </div>
+        </div>
+
+        <div class="unit-box" style="margin-top:20px; background: #fef2f2;">
+            <p style="font-size: 12px; margin: 0;"><b>[정답 및 간략 해설]</b> <br>
+                1.(C) suggest는 동사, 빈칸은 any 뒤 명사 자리. | 2.(B) the 뒤 명사 자리, 문맥상 '처리(processing)'. | 3.(D) a detailed (형용사)
+                뒤 명사 자리. 사물이므로 analysis. | 4.(D) protection(명사) 수식 형용사 자리. | 5.(B) each (한정사) 뒤 가산 단수 명사 자리. 문맥상 사람. |
+                6.(C) a wide variety of (숙어). | 7.(D) customer (명사)와 결합하는 복합명사 satisfaction. | 8.(A) the 뒤 명사 자리.
+            </p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

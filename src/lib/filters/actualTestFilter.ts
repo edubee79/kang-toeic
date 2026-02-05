@@ -85,45 +85,29 @@ export function mapToPartKey(data: ManagerResult): string {
     const unit = data.unit || '';
     const type = data.type || '';
 
-    // 1. Direct type mapping (Standardize everything to 'partX_test' or 'part7_single/double')
-    if (type === 'p1' || type === 'part1_test') return 'part1_test';
-    if (type === 'p2' || type === 'part2_test') return 'part2_test';
-    if (type === 'p3' || type === 'part3_test') return 'part3_test';
-    if (type === 'p4' || type === 'part4_test') return 'part4_test';
-    if (type === 'p5' || type === 'part5_test') return 'part5_test';
-    if (type === 'p6' || type === 'part6_test') return 'part6_test';
+    // 1. Unified mapping (Standardize to p1...p7d)
+    const normalized = (type + '_' + unit).toLowerCase();
 
-    // Part 7 Standard Mapping
-    if (['p7s', 'part7_single', 'p7_single', 'p7single'].includes(type)) return 'part7_single';
-    if (['p7d', 'p7t', 'p7m', 'part7_double', 'p7_double', 'part7_triple', 'p7_triple', 'p7double', 'p7triple'].includes(type)) return 'part7_double';
-    if (['part7_test', 'p7', 'p7f', 'part7full'].includes(type)) return 'part7_test';
+    if (normalized.includes('part1') || normalized.includes('p1')) return 'p1';
+    if (normalized.includes('part2') || normalized.includes('p2')) return 'p2';
+    if (normalized.includes('part3') || normalized.includes('p3')) return 'p3';
+    if (normalized.includes('part4') || normalized.includes('p4')) return 'p4';
+    if (normalized.includes('part5') || normalized.includes('p5')) return 'p5';
+    if (normalized.includes('part6') || normalized.includes('p6')) return 'p6';
 
-    // 2. Unit-based fallback (Parsing legacy strings like "8회 실전", "P7 Triple" 등)
-    const unitLower = unit.toLowerCase();
-
-    if (unitLower.includes('part1') || unitLower.includes('p1')) return 'part1_test';
-    if (unitLower.includes('part2') || unitLower.includes('p2')) return 'part2_test';
-    if (unitLower.includes('part3') || unitLower.includes('p3')) return 'part3_test';
-    if (unitLower.includes('part4') || unitLower.includes('p4')) return 'part4_test';
-    if (unitLower.includes('part5') || unitLower.includes('p5')) return 'part5_test';
-    if (unitLower.includes('part6') || unitLower.includes('p6')) return 'part6_test';
-
-    if (unitLower.includes('part7') || unitLower.includes('p7')) {
-        // Multi-passage (Double/Triple/Multiple) keywords
-        if (unitLower.includes('double') || unitLower.includes('triple') || unitLower.includes('multi') ||
-            unitLower.includes('이중') || unitLower.includes('삼중') || unitLower.includes('복합') ||
-            unitLower.includes('p7d') || unitLower.includes('p7m') || unitLower.includes('p7t')) {
-            return 'part7_double';
+    if (normalized.includes('part7') || normalized.includes('p7')) {
+        if (normalized.includes('double') || normalized.includes('triple') || normalized.includes('multi') ||
+            normalized.includes('이중') || normalized.includes('삼중') || normalized.includes('복합') ||
+            normalized.includes('p7d') || normalized.includes('p7m') || normalized.includes('p7t')) {
+            return 'p7d';
         }
-        // Single passage keywords
-        if (unitLower.includes('single') || unitLower.includes('단일') || unitLower.includes('p7s')) {
-            return 'part7_single';
+        if (normalized.includes('single') || normalized.includes('단일') || normalized.includes('p7s')) {
+            return 'p7s';
         }
-        return 'part7_test';
+        return 'p7s'; // Default P7 to single if unknown
     }
 
-    // Fallback: return type or 'unknown'
-    return type || 'unknown';
+    return 'unknown';
 }
 
 /**

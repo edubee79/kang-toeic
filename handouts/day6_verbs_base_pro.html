@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 06: Verb Core & S-V Agreement</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+            --bg-point: #eff6ff;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12.5px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .memorize-title::before {
+            content: '★';
+            margin-right: 5px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        .analysis {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .col-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & Basic Verb Logic -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 06]</div>
+        </header>
+
+        <h1>Unit 01. 동사의 출제 패턴과 수 일치 기초</h1>
+
+        <div class="unit-box">
+            <h2>01. 동사(Verb) 핵심 출제 패턴 (The Core 3 Patterns)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 주어와 동사의 수 일치 (Subject-Verb Agreement)</div>
+                <div class="pattern-ex">Each of the topics <span class="highlight">was</span> discussed during the
+                    meeting. (단수 동사)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 능동태 vs 수동태의 구별 (Active vs Passive)</div>
+                <div class="pattern-ex">The newly ordered item <span class="highlight">arrived</span> yesterday. (자동사 =
+                    수동태 불가)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 시제 선택 (Tense Selection)</div>
+                <div class="pattern-ex">The CEO <span class="highlight">regularly announces</span> new corporate
+                    policies. (현재 시제)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 동사 자리 문제 풀이 공식: 수-태-시 (S-V-T Logic)</h2>
+            <p style="font-size: 13.5px;">토익 동사 문제는 무조건 다음 순서로 오답을 소거합니다.</p>
+            <div class="memorize-card">
+                <ol style="margin: 0; padding-left: 20px;">
+                    <li><span class="blue-bold">수 (Agreement)</span>: 단수 주어 vs 복수 주어 판단</li>
+                    <li><span class="blue-bold">태 (Voice)</span>: 뒤에 목적어 유무 + 해석 (능동/수동)</li>
+                    <li><span class="blue-bold">시 (Tense)</span>: 문장 내 시간 부사(Markers) 확인</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 단수 동사/복수 동사 완벽 총정리</h2>
+            <table>
+                <tr>
+                    <th width="50%">단수 취급 (Singular)</th>
+                    <th width="50%">복수 취급 (Plural)</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="important-list">
+                            <li>-s로 끝나는 학문명 (economics)</li>
+                            <li>지명/국명 (The United States)</li>
+                            <li>뉴스/데이터 (News, Data)</li>
+                            <li><span class="highlight">동명사/to부정사/명사절 주어</span></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="important-list">
+                            <li>사람들의 집단 (staff members)</li>
+                            <li>A and B (The manager and ceo)</li>
+                            <li>Both / Many / Several / (A) few</li>
+                            <li>The + 형용사 (The rich = 사람들)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Transitive vs Intransitive -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 06]</div>
+        </header>
+
+        <h1>Unit 02. 자동사 vs 타동사 (The Core Distinction)</h1>
+
+        <div class="unit-box">
+            <h2>01. 토익이 가장 사랑하는 자동사 (Intransitive)</h2>
+            <p style="font-size: 13px;">이 동사들은 <span class="highlight">수동태(be + p.p)가 절대 불가능</span>하며, 뒤에 목적어를 취하려면 반드시
+                <b>전치사</b>가 필요합니다.</p>
+            <div class="col-3">
+                <ul class="important-list">
+                    <li><b>occur / happen</b> (발생)</li>
+                    <li><b>rise / increase</b> (상승)</li>
+                    <li><b>exist</b> (존재)</li>
+                    <li><b>arrive</b> (도착)</li>
+                    <li><b>function / work</b> (작동)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>stay / remain</b> (유지)</li>
+                    <li><b>expire</b> (만료)</li>
+                    <li><b>emerge</b> (나타나다)</li>
+                    <li><b>disappear</b> (사라지다)</li>
+                    <li><b>belong to</b> (~에 속하다)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>wait for</b> (기다리다)</li>
+                    <li><b>listen to</b> (~을 듣다)</li>
+                    <li><b>participate in</b> (참석)</li>
+                    <li><b>comply with</b> (준수)</li>
+                    <li><b>rely/depend on</b> (의존)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 헷갈리기 쉬운 자동사 vs 타동사 짝꿍</h2>
+            <table>
+                <tr>
+                    <th width="15%">의미</th>
+                    <th width="40%">자동사 (V + Prep)</th>
+                    <th width="45%">타동사 (V + Object)</th>
+                </tr>
+                <tr>
+                    <td align="center">기다리다</td>
+                    <td><b>wait for</b></td>
+                    <td><b>await</b> (the decision)</td>
+                </tr>
+                <tr>
+                    <td align="center">말하다</td>
+                    <td><b>talk to / speak to</b></td>
+                    <td><b>tell / mention / discuss</b></td>
+                </tr>
+                <tr>
+                    <td align="center">도착하다</td>
+                    <td><b>arrive at / in</b></td>
+                    <td><b>reach</b> (the destination)</td>
+                </tr>
+                <tr>
+                    <td align="center">답변하다</td>
+                    <td><b>reply to / react to</b></td>
+                    <td><b>answer</b> (the question)</td>
+                </tr>
+                <tr>
+                    <td align="center">설명하다</td>
+                    <td><b>account for</b></td>
+                    <td><b>explain</b> (the reason)</td>
+                </tr>
+                <tr>
+                    <td align="center">참가하다</td>
+                    <td><b>participate in</b></td>
+                    <td><b>attend</b> (the seminar)</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>Discuss 주의:</b> "discuss about the issue" (X) → "discuss the issue" (O) <br>
+                토익에서 discuss는 타동사이므로 전치사 없이 목적어가 바로 옵니다.
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Complex S-V Agreement Rules -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 06]</div>
+        </header>
+
+        <h1>Unit 03. 수량 표현 및 접속사 관련 수 일치</h1>
+
+        <div class="unit-box">
+            <h2>01. 수량 표현이 포함된 주어၏ 수</h2>
+            <table>
+                <tr>
+                    <th width="65%">주어 형태</th>
+                    <th>동사 수 결정</th>
+                </tr>
+                <tr>
+                    <td><b>One of / Each of / Either of</b> + 복수명사</td>
+                    <td align="center" class="highlight">단수 동사</td>
+                </tr>
+                <tr>
+                    <td><b>A number of</b> + 복수명사 (많은 ~)</td>
+                    <td align="center" class="blue-bold">복수 동사</td>
+                </tr>
+                <tr>
+                    <td><b>The number of</b> + 복수명사 (~의 수)</td>
+                    <td align="center" class="highlight">단수 동사</td>
+                </tr>
+                <tr>
+                    <td><b>All / Most / Half / Some / Part of</b> + 명사</td>
+                    <td align="center" class="blue-bold">뒤 명사에 맞춤</td>
+                </tr>
+            </table>
+            <div class="example-set">
+                <small>Ex 1) <b>One of</b> the employees <u>is</u> scheduled to... (is 확인)</small>
+                <small>Ex 2) <b>Most of</b> the equipment <u>is</u> new. (equipment 불가산 단수취급)</small>
+                <small>Ex 3) <b>Most of</b> the workers <u>are</u> satisfied. (workers 복수취급)</small>
+            </div>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--success);">
+            <h2>02. 상관접속사와 수 일치</h2>
+            <ul class="important-list">
+                <li><b>Both A and B</b>: 항상 <span class="blue-bold">복수</span> 취급</li>
+                <li><b>Either A or B / Neither A nor B / Not only A but also B</b>: 항상 <span class="highlight">B</span>에
+                    일치</li>
+                <li><b>A as well as B</b>: 항상 <span class="highlight">A</span>에 일치</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 특수 보어 구문: be동사 뒤 전명구</h2>
+            <p style="font-size: 13px;">전명구가 보어 역할을 하여 상태를 나타내는 관용구 리스트 (암기 필수!)</p>
+            <div class="col-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                <ul class="important-list">
+                    <li><b>out of order</b> (고장난)</li>
+                    <li><b>under construction</b> (공사 중인)</li>
+                    <li><b>under consideration</b> (고려 중인)</li>
+                    <li><b>on sick leave</b> (병가 중인)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>in error</b> (잘못된)</li>
+                    <li><b>in effect</b> (효력이 있는)</li>
+                    <li><b>in stock</b> (재고가 있는)</li>
+                    <li><b>on schedule</b> (일정대로인)</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Advanced Patterns & Practice -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 06]</div>
+        </header>
+
+        <h1>Unit 04. 고난도 4·5형식 패턴과 실전 Check-up</h1>
+
+        <div class="unit-box">
+            <h2>01. 4형식 & 5형식 문장 구조의 재정리</h2>
+            <table>
+                <tr>
+                    <th width="30%">구조</th>
+                    <th>핵심 동사</th>
+                    <th>토익 실전 특징</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>4형식 (S+V+IO+DO)</b></td>
+                    <td><b>Give, Offer, Grant, Inform, Notify</b></td>
+                    <td>뒤에 명사가 <span class="highlight">2개</span>가 연속으로 오는 경우</td>
+                </tr>
+                <tr>
+                    <td align="center" rowspan="2"><b>5형식 (S+V+O+OC)</b></td>
+                    <td><b>Make, Keep, Find, Consider</b></td>
+                    <td>O를 C(형용사) 상태로 유지/생각하다</td>
+                </tr>
+                <tr>
+                    <td><b>Allow, Require, Force, Enable</b></td>
+                    <td>O가 <b>to-do</b> 하도록 시키다/허락하다</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 06: Actual Check-up (Verb Base)</h2>
+            <div class="q-item">
+                <div class="q-text">01. The sudden resignation of the CEO who had led the company successfully for 10
+                    years _______ the stock investors.</div>
+                <div class="choices">(A) have embarrassed &nbsp; (B) has embarrassed &nbsp; (C) was embarrassed &nbsp;
+                    (D) were embarrassed</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. A large number of refund requests _________ when purchased items are recalled
+                    because of significant safety defects.</div>
+                <div class="choices">(A) occur &nbsp; (B) occurs &nbsp; (C) is occurred &nbsp; (D) are occurred</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. An administrative assistant _______ assembly participants that the scheduled
+                    venue had been changed to the main ballroom.</div>
+                <div class="choices">(A) described &nbsp; (B) informed &nbsp; (C) suggested &nbsp; (D) explains</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The board of directors maintains that the current project _________ under
+                    investigation for potential regulatory violations.</div>
+                <div class="choices">(A) remain &nbsp; (B) remains &nbsp; (C) remaining &nbsp; (D) into remains</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. Management expects that using the new automated system will help the
+                        warehouse staff ________ order processing times.</div>
+                    <div class="choices">(A) reduction &nbsp; (B) reduces &nbsp; (C) reduce &nbsp; (D) to reduction
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:15px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(B) 주어는 Resignation(단수)이므로 has. | 2.(A) A number of + 복수명사(requests)는 복수 취급. occur는 자동사이므로 수동 불가. |
+                3.(B) informed A that... (4형식 구조). | 4.(B) 주어 Project(단수) + 자동사 remains + 전명구 보어. | 5.(C) help + O +
+                (to) V 구조.
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

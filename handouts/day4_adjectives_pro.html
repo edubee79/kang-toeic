@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 04: Adjectives</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #e2e8f0;
+            --bg-light: #f8fafc;
+            --bg-point: #eff6ff;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12.5px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .memorize-title::before {
+            content: '★';
+            margin-right: 5px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Adjective Core Patterns & Positions -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 04]</div>
+        </header>
+
+        <h1>Unit 01. 형용사의 출제 패턴과 기본 위치</h1>
+
+        <div class="unit-box">
+            <h2>01. 형용사(Adjective) 핵심 출제 패턴 (The Core 4)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 명사 수식 자리: 한정사 + ( &nbsp; &nbsp; ) + 명사</div>
+                <div class="pattern-ex">The Remagine laptop comes with a <span class="highlight">removable</span>
+                    keyboard.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 보어 자리(C): 2형식/5형식 동사 뒤</div>
+                <div class="pattern-ex">Paychecks are now <span class="highlight">ready</span> for pickup. (be 동사 뒤 주격
+                    보어)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 수량 형용사: 수/양의 일치</div>
+                <div class="pattern-ex"><span class="highlight">All</span> employees should attend the meeting. (복수명사
+                    수식)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 형용사 관용 표현: be + 형용사 + 전치사/to-do</div>
+                <div class="pattern-ex">Rates are <span class="highlight">subject to</span> change without notice.</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 형용사의 역할과 형태(Suffix)</h2>
+            <p style="font-size: 13.5px;">형용사는 명사의 <b>성질/상태</b>를 설명하며, 주로 다음과 같은 접미사로 끝납니다.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="30%">대표 접미사</th>
+                        <th>예시 어휘</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center"><b>-al, -ful, -ous</b></td>
+                        <td>Professional, Helpful, Continuous</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>-ive, -able, -ible</b></td>
+                        <td>Protective, Reliable, Accessible</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>-ic, -ary, -ent</b></td>
+                        <td>Strategic, Necessary, Efficient</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="memorize-card">
+                <div class="memorize-title">필수 암기: 부사처럼 생겼는데 형용사인 놈들 (-ly 형)</div>
+                <p style="font-size: 13px; margin: 5px 0;"><b>timely</b> (시기적절한), <b>costly</b> (비싼), <b>orderly</b>
+                    (질서정연한), <b>likely</b> (~할 것 같은), <b>friendly</b> (친절한)</p>
+            </div>
+
+            <div class="trend-tip">
+                <b>형용사의 2중 수식:</b> <br>
+                형용사는 명사 앞에 2개 이상 연달아 올 수 있습니다. <br>
+                Ex) a <span class="blue-bold">massive public</span> campaign (거대한 대중 캠페인)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Confusing Adjectives & Selection Rules -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 04]</div>
+        </header>
+
+        <h1>Unit 02. 혼동하기 쉬운 형용사 (Must Memorize)</h1>
+
+        <div class="unit-box">
+            <h2>01. 형태는 비슷하지만 의미가 전혀 다른 짝</h2>
+            <p style="font-size: 13px; color: var(--danger);">★ 토익 Part 5에서 고득점을 가르는 "어휘 선택" 문제입니다.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="50%">사람/성격 중심</th>
+                        <th>사물/상태/수량 중심</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>considerate</b> (사려 깊은)</td>
+                        <td><b>considerable</b> (상당한/중요한)</td>
+                    </tr>
+                    <tr>
+                        <td><b>favorable</b> (호의적인/유리한)</td>
+                        <td><b>favorite</b> (가장 좋아하는 자)</td>
+                    </tr>
+                    <tr>
+                        <td><b>responsible</b> (책임 있는)</td>
+                        <td><b>responsive</b> (민감하게 반응하는)</td>
+                    </tr>
+                    <tr>
+                        <td><b>successful</b> (성공한)</td>
+                        <td><b>successive</b> (연속적인)</td>
+                    </tr>
+                    <tr>
+                        <td><b>respectable/respectful</b> (존경할만한/공손한)</td>
+                        <td><b>respective</b> (각각의)</td>
+                    </tr>
+                    <tr>
+                        <td><b>confident</b> (확신하는)</td>
+                        <td><b>confidential</b> (기밀의)</td>
+                    </tr>
+                    <tr>
+                        <td><b>understanding</b> (이해심 많은)</td>
+                        <td><b>understandable</b> (이해할만한)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 특수 용법 및 금기 사항</h2>
+            <ul class="important-list">
+                <li><b>possible</b>: 주어가 <u>사람</u>일 때는 쓸 수 없음. <br> <small>(It is possible for you to... (O) / You are
+                        possible to... (X))</small></li>
+                <li><b>following</b>: 형용사로 쓰일 때 반드시 앞에 <u>the</u>가 필요함. <br> <small>(the following year / fixed on the
+                        following Monday)</small></li>
+                <li><b>upcoming</b>: 미래에 일어날 일을 나타내며 주로 행사와 결합.</li>
+                <li><b>diverse</b>: 불가산명사나 복수명사가 아닌 <u>단수명사</u>와도 결합 가능. (a diverse world)</li>
+            </ul>
+        </div>
+
+        <div class="trend-tip">
+            <b>경제 vs 경제적:</b> <br>
+            <b>economic</b> (경제의-학문/분야) vs <b>economical</b> (경제적인-절약하는) <br>
+            Ex) economic growth (경제 성장) / an economical car (연비 좋은 차)
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Participial Adjectives & Phrasal Patterns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 04]</div>
+        </header>
+
+        <h1>Unit 03. 분사형 형용사와 관용 전치사 패턴</h1>
+
+        <div class="unit-box">
+            <h2>01. 형용사로 굳어진 분사 (-ing vs -ed)</h2>
+            <div class="col-grid">
+                <table>
+                    <tr>
+                        <th colspan="2">능동/진행/사물 수식 (-ing)</th>
+                    </tr>
+                    <tr>
+                        <td><b>lasting</b> (오래 지속되는)</td>
+                        <td><b>remaining</b> (남아있는)</td>
+                    </tr>
+                    <tr>
+                        <td><b>missing</b> (분실된)</td>
+                        <td><b>outstanding</b> (뛰어난/미결제된)</td>
+                    </tr>
+                    <tr>
+                        <td><b>encouraging</b> (고무적인)</td>
+                        <td><b>deteriorating</b> (악화되는)</td>
+                    </tr>
+                    <tr>
+                        <td><b>fascinating</b> (매혹적인)</td>
+                        <td><b>rewarding</b> (보람 있는)</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="2">수동/완료/사람 감정 (-ed)</th>
+                    </tr>
+                    <tr>
+                        <td><b>qualified</b> (자격 있는)</td>
+                        <td><b>distinguished</b> (저명한)</td>
+                    </tr>
+                    <tr>
+                        <td><b>limited</b> (제한된)</td>
+                        <td><b>motivated</b> (의욕적인)</td>
+                    </tr>
+                    <tr>
+                        <td><b>unprecedented</b> (전례 없는)</td>
+                        <td><b>satisfied</b> (만족해하는)</td>
+                    </tr>
+                    <tr>
+                        <td><b>complicated</b> (복잡한)</td>
+                        <td><b>detailed</b> (상세한)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="memorize-card" style="border-color: var(--success);">
+            <div class="memorize-title" style="color: var(--success);">매달 출제되는 "be + 형용사 + 전치사" 리스트</div>
+            <div class="col-grid" style="font-size: 12.5px;">
+                <ul class="important-list">
+                    <li><b>be eligible for</b> (~에 자격이 있다)</li>
+                    <li><b>be responsible for</b> (~에 책임이 있다)</li>
+                    <li><b>be aware of</b> (~을 알고 있다)</li>
+                    <li><b>be consistent with</b> (~와 일치하다)</li>
+                    <li><b>be comparable to</b> (~에 필적하다)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>be compliant with</b> (~을 준수하다)</li>
+                    <li><b>be accustomed to</b> (~에 익숙하다)</li>
+                    <li><b>be subject to</b> (~의 대상이 되다)</li>
+                    <li><b>be exempt from</b> (~이 면제되다)</li>
+                    <li><b>be appreciative of</b> (~에 감사하다)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="memorize-card" style="border-color: var(--danger);">
+            <div class="memorize-title" style="color: var(--danger);">"be + 형용사 + to-inf" 리스트</div>
+            <p style="font-size: 13px; margin: 0;"><b>be reluctant to do</b> (꺼리다), <b>be eager to do</b> (갈망하다), <b>be
+                    hesitant to do</b> (망설이다), <b>be pleased to do</b> (기쁘게 ~하다)</p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Quantifiers & Check-up -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 04]</div>
+        </header>
+
+        <h1>Day 04. 수량 형용사 정리와 실전 문제</h1>
+
+        <div class="unit-box">
+            <h2>01. 수량/부정 형용사 일치 규칙</h2>
+            <table>
+                <tr>
+                    <th>수식 대상</th>
+                    <th>형용사 종류</th>
+                    <th>예시</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>가산 단수</b></td>
+                    <td>a(n), another, each, every, either</td>
+                    <td>each <u>team</u> (teams X)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>가산 복수</b></td>
+                    <td>many, numerous, several, various, (a) few</td>
+                    <td>several <u>products</u></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>불가산</b></td>
+                    <td>much, (a) little, less, a great deal of</td>
+                    <td>little <u>information</u></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>전부 가능</b></td>
+                    <td>all, most, some, other, a lot of, plenty of</td>
+                    <td>most <u>staff</u> / <u>results</u></td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>1초 구분:</b> <u>Every + 숫자 + 복수명사</u> (~마다) <br>
+                Ex) every three months (3개월마다) - 단복수 예외 패턴!
+            </div>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 04: Actual Check-up (Professional)</h2>
+            <div class="q-item">
+                <div class="q-text">01. Employees on international assignment receive _______ financial support when
+                    finding a permanent residence.</div>
+                <div class="choices">(A) extend &nbsp; (B) extent &nbsp; (C) extensive &nbsp; (D) extending</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Critics of the recent documentary have called the narrative too _________ and
+                    lacking in originality.</div>
+                <div class="choices">(A) predicting &nbsp; (B) predicted &nbsp; (C) predictable &nbsp; (D) predictably
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. All department heads must be _________ that the annual budget report is due for
+                    submission by next Friday.</div>
+                <div class="choices">(A) indicative &nbsp; (B) aware &nbsp; (C) eager &nbsp; (D) competent</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The newly appointed floor manager is responsible for keeping the selling area
+                    ________ and orderly at all times.</div>
+                <div class="choices">(A) cleanly &nbsp; (B) clean &nbsp; (C) cleanliness &nbsp; (D) cleaning</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. Under more _________ economic circumstances, the company would have approved
+                        the construction of the new laboratory.</div>
+                    <div class="choices">(A) favor &nbsp; (B) favorite &nbsp; (C) favorable &nbsp; (D) favorably</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. The research facility is now _________ for the promotion of several senior
+                        scientists to lead regional projects.</div>
+                    <div class="choices">(A) possible &nbsp; (B) decisive &nbsp; (C) eligible &nbsp; (D) significant
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:15px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(C) financial(명사수식 형용사) 앞 수식. | 2.(C) be동사(called+O+C) 뒤 보어 자리. | 3.(B) be aware that (~을 인지하다). |
+                4.(B) keep + O + C(형용사). | 5.(C) circumstances(명사) 앞 형용사 '유리한'. | 6.(C) be eligible for/to (~에 자격이 있다).
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

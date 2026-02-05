@@ -1,0 +1,446 @@
+[
+  {
+    "id": "00f9Fr0i1UGCTKZ9d4CN",
+    "part": null,
+    "text": "After several rounds of negotiations, the union and management _______ agreed on the terms of the new contract.",
+    "options": [
+      {
+        "label": "A",
+        "text": "final"
+      },
+      {
+        "label": "B",
+        "text": "finality"
+      },
+      {
+        "label": "C",
+        "text": "finally"
+      },
+      {
+        "label": "D",
+        "text": "finalize"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해설] 동사 'agreed'를 수식하는 부사가 필요합니다. '마침내' 합의했다는 의미를 나타내기 위해 'finally'가 가장 적절합니다. A는 형용사, B는 명사, D는 동사입니다.",
+    "tags": [
+      "P5_POS_ADV",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T00:27:02.934Z",
+    "createdAt": {
+      "_seconds": 1768901065,
+      "_nanoseconds": 401000000
+    },
+    "source": "ai-generated",
+    "originFile": "ai_generated_part5_pool.json"
+  },
+  {
+    "id": "016XUrDDzmzcr1v7h82f",
+    "part": 5,
+    "text": "------for fuel products is determined mainly based on oil production costs and the level of demand in the global market.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Having priced"
+      },
+      {
+        "label": "B",
+        "text": "To price"
+      },
+      {
+        "label": "C",
+        "text": "Pricing"
+      },
+      {
+        "label": "D",
+        "text": "Priced"
+      }
+    ],
+    "correctAnswer": "C",
+    "classification": "g1",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 문장의 주어 자리이며 '가격을 책정하는 것'이라는 의미의 동명사 Pricing이 정답입니다.",
+    "source": "actual-test-03",
+    "createdAt": "2026-01-21T19:23:00.000Z",
+    "metadata": {
+      "batch": "actual-test-2026-01-21",
+      "version": "v3.0-high-quality"
+    }
+  },
+  {
+    "id": "02K3WPzk5DY4H70RR0NE",
+    "part": null,
+    "text": "After careful consideration, the board of directors decided to ______ Mr. Henderson's proposal for restructuring the department.",
+    "options": [
+      {
+        "label": "A",
+        "text": "approve"
+      },
+      {
+        "label": "B",
+        "text": "approves"
+      },
+      {
+        "label": "C",
+        "text": "approving"
+      },
+      {
+        "label": "D",
+        "text": "approval"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 'decided to' 다음에는 동사 원형이 와야 합니다. 따라서 'approve'가 정답입니다. 'approves'는 주어가 3인칭 단수일 때 사용하는 형태이고, 'approving'은 동명사나 현재분사로 쓰일 수 있지만 문맥상 부적절하며, 'approval'은 명사입니다.",
+    "tags": [
+      "P5_POS_VERB",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T00:28:24.475Z",
+    "createdAt": {
+      "_seconds": 1768901065,
+      "_nanoseconds": 403000000
+    },
+    "source": "ai-generated",
+    "originFile": "ai_generated_part5_pool.json"
+  },
+  {
+    "id": "02uf0gtUGjBUzGV0hMQ2",
+    "part": 6,
+    "type": "EMAIL",
+    "content": "Subject: Update on Upcoming Software Training\n\nDear Staff,\n\nI hope this email finds you well.\n\nThis email is to provide an update regarding the upcoming software training scheduled for the week of October 28th. As you know, we will be transitioning to the new \"SynergySuite\" platform, and this training is crucial for all team members to effectively utilize its features.\n\nDue to unforeseen circumstances, we have had to make some adjustments to the original schedule. The initial training sessions, [131] were planned for Monday and Tuesday, have been condensed into a single, comprehensive session on Wednesday, October 30th, from 9:00 AM to 4:00 PM in the main conference room. We apologize for any inconvenience this may cause.\n\nLunch will be provided. Please RSVP to training@corp.com by October 25th so we can finalize catering arrangements. [132] If you have any dietary restrictions, please include them in your reply.\n\nWe understand that changes to schedules can sometimes be disruptive, but we believe this revised format will allow for a more focused and efficient learning experience. [133] \n\nWe appreciate your understanding and cooperation in this matter. [134] , please do not hesitate to contact the IT department at extension 5555.\n\nSincerely,\n\nEdward Harrison\nTraining Coordinator",
+    "translation": "KR",
+    "questions": [
+      {
+        "id": "131",
+        "text": "Select the best answer.",
+        "options": [
+          {
+            "label": "A",
+            "text": "which"
+          },
+          {
+            "label": "B",
+            "text": "that"
+          },
+          {
+            "label": "C",
+            "text": "what"
+          },
+          {
+            "label": "D",
+            "text": "who"
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "The nonrestrictive clause 'which were planned' modifies 'The initial training sessions'.",
+        "classification": "P6_GRAMMAR_TENSE"
+      },
+      {
+        "id": "132",
+        "text": "Select the best answer.",
+        "options": [
+          {
+            "label": "A",
+            "text": "Submit"
+          },
+          {
+            "label": "B",
+            "text": "Will submit"
+          },
+          {
+            "label": "C",
+            "text": "Please submit"
+          },
+          {
+            "label": "D",
+            "text": "Submitting"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "'Please submit' is a polite and appropriate imperative form for this context.",
+        "classification": "P6_VOCAB_CONTEXT"
+      },
+      {
+        "id": "133",
+        "text": "Where does the following sentence best belong in the passage? \"A detailed agenda will be circulated early next week.\"",
+        "options": [
+          {
+            "label": "A",
+            "text": "After 'Lunch will be provided.'"
+          },
+          {
+            "label": "B",
+            "text": "After 'efficient learning experience.'"
+          },
+          {
+            "label": "C",
+            "text": "After 'catering arrangements.'"
+          },
+          {
+            "label": "D",
+            "text": "After 'any inconvenience this may cause.'"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The sentence 'A detailed agenda...' logically follows the sentence about a more focused learning experience, providing further detail.",
+        "classification": "P6_SENTENCE_INSERT"
+      },
+      {
+        "id": "134",
+        "text": "Select the best answer.",
+        "options": [
+          {
+            "label": "A",
+            "text": "Unless questions arise"
+          },
+          {
+            "label": "B",
+            "text": "If you have any questions"
+          },
+          {
+            "label": "C",
+            "text": "Before any questions"
+          },
+          {
+            "label": "D",
+            "text": "Until questions arise"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "'If you have any questions' is the most logical and natural transition to offering assistance.",
+        "classification": "P6_CONNECTION"
+      }
+    ],
+    "generatedAt": "2026-01-20T03:02:54.783Z",
+    "createdAt": {
+      "_seconds": 1768901072,
+      "_nanoseconds": 346000000
+    },
+    "source": "ai-generated",
+    "originFile": "ai_generated_reading_pool.json"
+  },
+  {
+    "id": "050mWU0URhi4tYJfjqY6",
+    "part": 5,
+    "text": "Ms. Tanaka was commended for her decisive actions that ______ mitigated the potential damage caused by the recent system malfunction.",
+    "options": [
+      {
+        "label": "A",
+        "text": "significantly"
+      },
+      {
+        "label": "B",
+        "text": "significance"
+      },
+      {
+        "label": "C",
+        "text": "significant"
+      },
+      {
+        "label": "D",
+        "text": "signing"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 빈칸은 동사 'mitigated'를 수식하는 부사가 와야 할 자리입니다. 'significantly'는 '상당히, 중요하게'라는 뜻으로 문맥상 적절하며, 동사를 수식하는 부사 역할을 합니다. (B) significance는 명사, (C) significant는 형용사, (D) signing은 동명사 또는 현재분사로 문맥에 맞지 않습니다.",
+    "classification": "voc1",
+    "source": "legacy-generator-pool",
+    "createdAt": {
+      "_seconds": 1768990389,
+      "_nanoseconds": 585000000
+    },
+    "metadata": {
+      "legacy_tags": [
+        "P5_PREP_DIRC",
+        "AI_Generated"
+      ],
+      "version": "v3.0-migrated"
+    }
+  },
+  {
+    "id": "073BzE4mcQXcgxT2hb5Z",
+    "part": null,
+    "text": "The construction project _______ by a series of unexpected delays, forcing the company to revise its timeline.",
+    "options": [
+      {
+        "label": "A",
+        "text": "was hampered"
+      },
+      {
+        "label": "B",
+        "text": "hampered"
+      },
+      {
+        "label": "C",
+        "text": "is hampering"
+      },
+      {
+        "label": "D",
+        "text": "has hampered"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 건설 프로젝트가 예상치 못한 일련의 지연으로 인해 방해를 받았다는 의미이므로 수동태 표현인 'was hampered'가 가장 적절합니다. 'hampered'는 능동태로 프로젝트가 방해하는 주체가 되어야 하므로 문맥상 맞지 않습니다. 'is hampering'은 현재 진행형으로, 'has hampered'는 현재 완료형으로, 문맥상 과거의 사건에 대한 영향을 설명하는 'was hampered'가 더 적절합니다.",
+    "tags": [
+      "P5_V_VOICE",
+      "AI_Generated"
+    ],
+    "generatedAt": "2026-01-20T00:19:38.545Z",
+    "createdAt": {
+      "_seconds": 1768901065,
+      "_nanoseconds": 391000000
+    },
+    "source": "ai-generated",
+    "originFile": "ai_generated_part5_pool.json"
+  },
+  {
+    "id": "08t07pcCxRKLX0FmLLSr",
+    "part": 5,
+    "text": "Despite the initial setbacks, the marketing team successfully launched the new campaign, ______ the sales figures exceeded all prior forecasts.",
+    "options": [
+      {
+        "label": "A",
+        "text": "and"
+      },
+      {
+        "label": "B",
+        "text": "so"
+      },
+      {
+        "label": "C",
+        "text": "yet"
+      },
+      {
+        "label": "D",
+        "text": "or"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[해설] 'and'는 앞 문장의 결과가 뒷 문장에 추가적으로 발생했음을 나타내는 대등 접속사입니다. 마케팅 팀의 성공적인 캠페인 출시와 판매량 증가라는 두 가지 긍정적인 결과를 연결하므로 'and'가 가장 적절합니다.",
+    "classification": "voc1",
+    "source": "legacy-generator-pool",
+    "createdAt": {
+      "_seconds": 1768990389,
+      "_nanoseconds": 586000000
+    },
+    "metadata": {
+      "legacy_tags": [
+        "P5_CONJ_COOR",
+        "AI_Generated"
+      ],
+      "version": "v3.0-migrated"
+    }
+  },
+  {
+    "id": "0948YTya1Piww4hHKHYP",
+    "part": 5,
+    "text": "All employees are required to ensure that their timesheets _______ accurately by the end of each week.",
+    "options": [
+      {
+        "label": "A",
+        "text": "complete"
+      },
+      {
+        "label": "B",
+        "text": "are completed"
+      },
+      {
+        "label": "C",
+        "text": "completing"
+      },
+      {
+        "label": "D",
+        "text": "will complete"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "[해설] timesheets (근무 시간 기록표)가 '정확하게 작성되어야 한다'는 수동적인 의미가 되어야 하므로 수동태가 필요합니다. 'ensure that' 절의 주어가 복수 명사인 'timesheets'이므로 복수 동사가 필요하고, 'by the end of each week'와 함께 사용될 때 적절한 시제는 현재 시제입니다. 따라서 'are completed'가 정답입니다. (A) 'complete'는 동사 원형으로, 주어가 복수일 때는 가능하지만 수동태 의미가 없습니다. (C) 'completing'은 현재 분사로, 적절하지 않습니다. (D) 'will complete'는 미래 시제로, 현재의 의무를 나타내는 문맥에 어울리지 않습니다.",
+    "classification": "v2",
+    "source": "legacy-generator-pool",
+    "createdAt": {
+      "_seconds": 1768990389,
+      "_nanoseconds": 582000000
+    },
+    "metadata": {
+      "legacy_tags": [
+        "P5_V_VOICE",
+        "AI_Generated"
+      ],
+      "version": "v3.0-migrated"
+    }
+  },
+  {
+    "id": "09sW6I749EH6skSg9vRT",
+    "part": 5,
+    "text": "Mr. Cooper first won the Salesman of the Year award and----- -surpassed the all-time annual sales record at CarMax.",
+    "options": [
+      {
+        "label": "A",
+        "text": "reluctantly"
+      },
+      {
+        "label": "B",
+        "text": "subsequently"
+      },
+      {
+        "label": "C",
+        "text": "orderly"
+      },
+      {
+        "label": "D",
+        "text": "irregularly"
+      }
+    ],
+    "correctAnswer": "B",
+    "classification": "av3",
+    "difficulty": 700,
+    "translation": "",
+    "explanation": "[해설] 상을 받은 '후에' 이어서 기록을 깼다는 시간적 순서를 나타내는 부사 subsequently가 적절합니다.",
+    "source": "actual-test-04",
+    "createdAt": "2026-01-21T19:25:00.000Z",
+    "metadata": {
+      "batch": "actual-test-2026-01-21",
+      "version": "v3.0-high-quality"
+    }
+  },
+  {
+    "id": "0AytziN6d7Napu80nxGH",
+    "part": 5,
+    "text": "The library offers _______ resources for students conducting historical research.",
+    "options": [
+      {
+        "label": "B",
+        "text": "each"
+      },
+      {
+        "label": "C",
+        "text": "various"
+      },
+      {
+        "label": "D",
+        "text": "one"
+      },
+      {
+        "label": "A",
+        "text": "a little"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "[해석] 도서관은 역사 연구를 수행하는 학생들을 위해 다양한 자료를 제공합니다. [해설] 복수 명사 resources를 수식하는 형용사 various가 적절합니다.",
+    "classification": "voc1",
+    "source": "legacy-generator-pool",
+    "createdAt": {
+      "_seconds": 1768990385,
+      "_nanoseconds": 986000000
+    },
+    "metadata": {
+      "legacy_tags": [
+        "P5_VOC_ADJ",
+        "Legacy_Retagged"
+      ],
+      "version": "v3.0-migrated"
+    }
+  }
+]

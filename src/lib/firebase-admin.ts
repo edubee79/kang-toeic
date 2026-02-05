@@ -26,4 +26,5 @@ if (!admin.apps.length) {
     }
 }
 
-export { admin };
+const db = admin.firestore();
+export { admin, db };

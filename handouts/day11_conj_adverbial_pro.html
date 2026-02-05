@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 11: Conjunctions (Adverbial Clauses)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & Classification -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 11]</div>
+        </header>
+
+        <h1>Unit 01. 접속사의 종류와 등위·상관 접속사</h1>
+
+        <div class="unit-box">
+            <h2>01. 접속사(Conjunction) 핵심 출제 패턴</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 등위 접속사: 단어/구/절의 대등한 연결 (Parallelism)</div>
+                <div class="pattern-ex">The job is to find <span class="highlight">and</span> to correct errors. (to부정사
+                    병렬)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 상관 접속사 자궁 채우기: Both A and B 등</div>
+                <div class="pattern-ex">The gallery displays <span class="highlight">both</span> paintings <span
+                        class="highlight">and</span> sculptures.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 부사절 접속사의 적절한 의미 선택</div>
+                <div class="pattern-ex"><span class="highlight">Although</span> she was busy, she found a replacement.
+                    (양보)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 전치사 vs 접속사 구별 (품사 싸움)</div>
+                <div class="pattern-ex"><span class="highlight">Because</span> it was raining... (접속사+S+V) vs Because of
+                    rain... (전치사+N)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 등위 및 상관 접속사 총정리</h2>
+            <table>
+                <tr>
+                    <th width="30%">분류</th>
+                    <th>종류 및 특징</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>등위 접속사</b></td>
+                    <td><b>and, but, or, so, for, nor, yet</b><br><small>* 문장 맨 앞에 올 수 없음 (so, for 특징)</small></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>상관 접속사</b></td>
+                    <td><b>both A and B</b> (항상 복수)<br><b>either A or B</b> / <b>neither A nor B</b> (B에 일치)<br><b>not
+                            only A but also B</b> (= B as well as A)<br><b>not A but B</b></td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>수 일치 주의:</b> Both A and B를 제외한 대부분의 상관접속사는 <u>B에 동사의 수를 맞춥니다.</u>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Adverbial Clauses (Time & Condition) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 11]</div>
+        </header>
+
+        <h1>Unit 02. 부사절 접속사 1: 시간과 조건</h1>
+
+        <div class="unit-box">
+            <h2>01. 시간을 나타내는 접속사</h2>
+            <div class="col-grid">
+                <ul class="important-list">
+                    <li><b>when / as</b> (~할 때)</li>
+                    <li><b>while / even as</b> (~하는 동안 / 마침 ~할 때)</li>
+                    <li><b>since</b> (~한 이래로 - 주절 현재완료)</li>
+                    <li><b>after / before</b> (~한 후에 / 전에)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>until / by the time</b> (~할 때까지)</li>
+                    <li><b>once</b> (일단 ~하면, ~하자마자)</li>
+                    <li><b>as soon as</b> (~하자마자 = immediately after)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-box" style="border: 2px solid var(--danger);">
+            <h2>02. 조건을 나타내는 접속사 (If/Unless)</h2>
+            <ul class="important-list">
+                <li><b>if / assuming (that)</b> (만약 ~라면)</li>
+                <li><b>unless</b> (만약 ~이 아니라면 = if ~not)</li>
+                <li><b>as long as / providing (that) / provided (that)</b> (~하는 한, ~라면)</li>
+                <li><b>only if / on condition that</b> (오직 ~하는 경우에만)</li>
+                <li><b>in case (that) / in the event (that)</b> (~에 대비하여, ~의 경우에)</li>
+            </ul>
+        </div>
+
+        <div class="trend-tip">
+            <b>[필살기] 시간·조건 부사절의 시제:</b> <br>
+            주절이 미래(`will`)일지라도 접속사 뒤 부사절에서는 무조건 <span class="highlight">현재 시제</span>를 씁니다. <br>
+            Ex) We <u>will</u> ship the order once we <b>receive</b> (will receive X) payment.
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Adverbial Clauses (Contrast, Reason, Purpose) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 11]</div>
+        </header>
+
+        <h1>Unit 03. 부사절 접속사 2: 양보·이유·목적</h1>
+
+        <div class="unit-box">
+            <h2>01. 양보 및 대조 (~에도 불구하고, ~인 반면에)</h2>
+            <ul class="important-list">
+                <li><b>although / though / even though / even if</b> (비록 ~이지만)</li>
+                <li><b>whereas / while</b> (~인 반면에)</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 이유 및 목적·결과</h2>
+            <table>
+                <tr>
+                    <th width="25%">의미</th>
+                    <th>접속사 종류</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>이유</b></td>
+                    <td><b>because, as, since, now that</b> (~이니까), <b>in that</b> (~라는 점에서)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>목적</b></td>
+                    <td><b>so that, in order that</b> (~할 수 있도록)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>결과</b></td>
+                    <td><b>so + 형/부 + that</b> (매우 ~해서 ~하다), <b>such + 명사 + that</b></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--info);">
+            <h2>03. 복합 관계 부사 (however + 형/부)</h2>
+            <p style="font-size: 13px;">양보의 부사절을 이끌며 토익 800점대 이상 단골 문제입니다.</p>
+            <ul class="important-list">
+                <li><b>however + 형/부 + S + V</b>: 아무리 ~할지라도 (= no matter how)</li>
+                <li><b>whenever / wherever</b>: 언제/어디서 ~하더라도</li>
+            </ul>
+            <small>Ex) <u>However</u> much it costs, we must upgrade the system.</small>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Preposition vs Conjunction & Practice -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 11]</div>
+        </header>
+
+        <h1>Unit 04. 전치사 vs 접속사 vs 접속부사 완전 정복</h1>
+
+        <div class="unit-box">
+            <h2>01. [필수 암기] 3사(社) 형태 비교표</h2>
+            <table>
+                <tr>
+                    <th>의미</th>
+                    <th>접속사 (+S+V)</th>
+                    <th>전치사 (+N)</th>
+                    <th>접속부사 (;)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>이유</b></td>
+                    <td>because, since, as</td>
+                    <td>because of, due to</td>
+                    <td>therefore, thus</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>양보</b></td>
+                    <td>although, even though</td>
+                    <td>despite, in spite of</td>
+                    <td>however, nevertheless</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>시간</b></td>
+                    <td>while</td>
+                    <td>during</td>
+                    <td>meanwhile</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>조건</b></td>
+                    <td>if, unless</td>
+                    <td>without</td>
+                    <td>otherwise</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>추가</b></td>
+                    <td>(and)</td>
+                    <td>in addition to, besides</td>
+                    <td>moreover, furthermore</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 11: Actual Check-up (Adverbial Clauses)</h2>
+            <div class="q-item">
+                <div class="q-text">01. _______ Ms. Bai was not available to lead the marketing strategy meeting, she
+                    was able to find a suitable replacement.</div>
+                <div class="choices">(A) Although &nbsp; (B) Despite &nbsp; (C) Instead &nbsp; (D) Accordingly</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. This special offer on our premium copy paper is valid at all participating store
+                    locations _______ supplies last.</div>
+                <div class="choices">(A) during &nbsp; (B) until &nbsp; (C) while &nbsp; (D) after</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The CEO is planning to convene an emergency session _______ he can deliberate on
+                    the proposed budget for the next fiscal year.</div>
+                <div class="choices">(A) so that &nbsp; (B) in order to &nbsp; (C) whether &nbsp; (D) in case of</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The research findings were so persuasive _______ the transit board swiftly
+                    approved the funding for the urban development project.</div>
+                <div class="choices">(A) because &nbsp; (B) that &nbsp; (C) which &nbsp; (D) although</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. Employees of Lennon Construction will receive a salary increase _______ the
+                        company's annual profits meet the president's expectations.</div>
+                    <div class="choices">(A) as a result &nbsp; (B) provided that &nbsp; (C) because of &nbsp; (D) as
+                        well as</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:15px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(A) 뒤에 주어+동사가 오는 양보의 부사절 접속사. | 2.(C) supplies last(주어+동사)를 이끄는 '동안'의 접속사. | 3.(A) 뒤에 절이 오며 목적(~할 수
+                있도록)을 나타냄. | 4.(B) so ~ that 구문. | 5.(B) '~라면/하는 한'의 의미를 가진 조건의 접속사.
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

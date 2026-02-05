@@ -1,6 +1,6 @@
 import { PracticeSet } from './rc_part7_types';
 
-export const rcPart7Test7: PracticeSet[] = [
+export const test7PracticeSet: PracticeSet[] = [
     // Questions 176-180: Double Passage (Web page + E-mail)
     {
         id: "p7-t7-set11",

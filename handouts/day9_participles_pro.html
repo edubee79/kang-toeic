@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 09: Participles</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .memorize-title::before {
+            content: '★';
+            margin-right: 5px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & Participle Basics -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 09]</div>
+        </header>
+
+        <h1>Unit 01. 분사(Participle)의 형태와 위치</h1>
+
+        <div class="unit-box">
+            <h2>01. 분사의 출제 패턴 (The Core 4)</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 형용사 자리: 명사 앞·뒤 수식</div>
+                <div class="pattern-ex">Crown Corp. has been the nation's <span class="highlight">leading</span>
+                    supplier. (supplier 수식)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 보어 자리: 2형식/5형식 보어</div>
+                <div class="pattern-ex">The project seems <span class="highlight">interesting</span>. (주격 보어)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 현재분사(-ing) vs 과거분사(-ed) 선택</div>
+                <div class="pattern-ex">A thunderstorm <span class="highlight">accompanied</span> by gusty winds... (동반된
+                    폭풍우)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 분사구문 (Participle Phrases)</div>
+                <div class="pattern-ex"><span class="highlight">Having earned</span> a degree, Ms. Sakai was hired. (완료형
+                    분사구문)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 분사의 기본 성질: 형용사 (Adjectival Nature)</h2>
+            <p style="font-size: 13.5px;">분사는 '동사의 성격'을 가진 '형용사'입니다.</p>
+            <table>
+                <tr>
+                    <th width="30%">종류</th>
+                    <th width="35%">현재분사 (-ing)</th>
+                    <th width="35%">과거분사 (-ed)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>의미</b></td>
+                    <td align="center">능동, 진행 (~하는)</td>
+                    <td align="center">수동, 완료 (~된/해진)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>수식 예시</b></td>
+                    <td>the <span class="blue-bold">leading</span> firm (선두 기업)</td>
+                    <td>the <span class="highlight">enclosed</span> file (동봉된 파일)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>뒤에 목적어</b></td>
+                    <td align="center">있음 (주로 타동사일 때)</td>
+                    <td align="center">없음 (자동사는 수동태 불가)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="trend-tip">
+            <b>분사가 뒤에서 수식할 때의 팁:</b> <br>
+            명사 뒤에 분사 빈칸이 있다면, 분사 뒤에 목적어(명사)가 있는지 확인하세요! <br>
+            Ex) a paper <span class="blue-bold">detailing</span> a strategy (전략을 상세히 설명하는 보고서)
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Emotional Participles & Set Phrases -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 09]</div>
+        </header>
+
+        <h1>Unit 02. 감정 동사와 필수 암기 분사 어휘</h1>
+
+        <div class="unit-box" style="border-left: 5px solid var(--danger);">
+            <h2>01. 감정 동사의 분사화 (S vs P Rule)</h2>
+            <p style="font-size: 13px;">감정 원인이면 <b>-ing</b>, 감정을 직접 느끼면 <b>-ed</b>를 씁니다.</p>
+            <table>
+                <tr>
+                    <th width="20%">주체</th>
+                    <th width="40%">현재분사 (-ing)</th>
+                    <th width="40%">과거분사 (-ed)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>사물</b></td>
+                    <td class="blue-bold">Satisfying results</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>사람</b></td>
+                    <td>-</td>
+                    <td class="highlight">Satisfied customers</td>
+                </tr>
+            </table>
+            <div class="memorize-card" style="font-size: 12.5px;">
+                <b>기초 리스트</b>: interesting(ed), exciting(ed), surprising(ed), disappointing(ed), frustrating(ed),
+                rewarding, fascinating(ed), overwhelming(ed)
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. [필수 암기] 고정된 의미의 분사구문 (Set Phrases)</h2>
+            <p style="font-size: 13.5px; color: var(--info);">★ 명사 앞에 하나의 형용사처럼 굳어져 쓰이는 표현들입니다.</p>
+            <div class="col-grid">
+                <table>
+                    <tr>
+                        <th colspan="2">현재분사 + 명사</th>
+                    </tr>
+                    <tr>
+                        <td><b>existing</b> equipment</td>
+                        <td>기존 설비</td>
+                    </tr>
+                    <tr>
+                        <td><b>missing</b> luggage</td>
+                        <td>분실된 수하물</td>
+                    </tr>
+                    <tr>
+                        <td><b>lasting</b> impression</td>
+                        <td>지속적인 인상</td>
+                    </tr>
+                    <tr>
+                        <td><b>promising</b> recruit</td>
+                        <td>유망한 신입사원</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="2">과거분사 + 명사</th>
+                    </tr>
+                    <tr>
+                        <td><b>preferred</b> means</td>
+                        <td>선호되는 수단</td>
+                    </tr>
+                    <tr>
+                        <td><b>proposed</b> plan</td>
+                        <td>제안된 계획</td>
+                    </tr>
+                    <tr>
+                        <td><b>detailed</b> information</td>
+                        <td>상세한 정보</td>
+                    </tr>
+                    <tr>
+                        <td><b>attached</b> document</td>
+                        <td>첨부된 서류</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="trend-tip">
+                <b>주의:</b> <u>authorized</u> dealer (공인 딜러), <u>limited</u> warranty (제한된 품질보증) 등 수동 의미가 강한 표현은 -ed형을
+                씁니다.
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Participle Phrases (Reduced Clauses) -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 09]</div>
+        </header>
+
+        <h1>Unit 03. 분사구문의 축약과 활용</h1>
+
+        <div class="unit-box">
+            <h2>01. 분사구문 형성 원리 (Reduction)</h2>
+            <p style="font-size: 13px;">부사절의 접속사와 주어를 생략하고 동사를 분사 형태로 바꾼 것입니다.</p>
+            <ul class="important-list">
+                <li><b>능동 관계</b>: <span class="blue-bold">V-ing</span>, S + V <br> <small>Ex) (Because he arrived)
+                        <u>Arriving</u> late, Mr. Barth apologized.</small></li>
+                <li><b>수동 관계</b>: <span class="highlight">(Being) p.p.</span>, S + V <br> <small>Ex) (If it is
+                        distributed) <u>Distributed</u> widely, the flyer will attract more customers.</small></li>
+                <li><b>완료 관계</b>: <span class="blue-bold">Having p.p.</span>, S + V <br> <small>Ex) <u>Having earned</u>
+                        a degree, she was hired. (취득한 게 먼저)</small></li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 특수 접속사가 살아있는 분사구문</h2>
+            <p style="font-size: 13px;">의미를 명확히 하기 위해 접속사를 지우지 않는 경우도 많습니다.</p>
+            <ul class="important-list">
+                <li><b>when / while + -ing</b>: (~하는 동안/할 때)</li>
+                <li><b>once / unless + p.p.</b>: (일단 ~되면 / ~되지 않는 한)</li>
+                <li><b>as + p.p.</b>: (~했듯이, ~한 대로) <br> <small>Ex) <u>As discussed</u> in our conversation... (대화에서 논의된
+                        대로)</small></li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 분사 vs 동명사 구별 (Be동사 뒤)</h2>
+            <table>
+                <tr>
+                    <th width="30%">구조</th>
+                    <th>기능</th>
+                    <th>예시</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>My job is ...</b></td>
+                    <td>보어 (동명사)</td>
+                    <td>My job is <u>encouraging</u> staff. (~하는 것)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>He is ...</b></td>
+                    <td>진행 (동사)</td>
+                    <td>He is <u>encouraging</u> staff. (~하고 있는 중)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>The result is ...</b></td>
+                    <td>상태 (분사)</td>
+                    <td>The result is very <u>encouraging</u>. (고무적이다)</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Check-up & Final Patterns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 09]</div>
+        </header>
+
+        <h1>Day 09. Actual Check-up (Participle Mastery)</h1>
+
+        <div class="exercise-grid">
+            <div class="q-item">
+                <div class="q-text">01. Abraham Consulting Corporation specializes in offering _______ staffing
+                    solutions for small and midsize businesses in the IT sector.</div>
+                <div class="choices">(A) customize &nbsp; (B) customizes &nbsp; (C) customizing &nbsp; (D) customized
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. The city has experienced an unusually large amount of rainfall this year,
+                    _______ it difficult for major road projects to be completed on time.</div>
+                <div class="choices">(A) made &nbsp; (B) make &nbsp; (C) makes &nbsp; (D) making</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. Based on the _______ number of advance ticket sales, we expect to see record
+                    attendance levels at this year's cultural festival.</div>
+                <div class="choices">(A) overwhelm &nbsp; (B) overwhelms &nbsp; (C) overwhelming &nbsp; (D)
+                    overwhelmingly</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. _______ by the impressive product demonstration last week, the operations
+                    manager has decided to order several new appliances.</div>
+                <div class="choices">(A) Impressed &nbsp; (B) Impressive &nbsp; (C) Impressing &nbsp; (D) Impression
+                </div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. _______ a bachelor's degree in accounting, Ms. Sakai is considered one of
+                        the top candidates for the senior financial analyst position.</div>
+                    <div class="choices">(A) Having earned &nbsp; (B) Earned &nbsp; (C) Being earned &nbsp; (D) Earns
+                    </div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. The newly appointed floor manager is responsible for keeping the production
+                        equipment _________ at all times.</div>
+                    <div class="choices">(A) update &nbsp; (B) updating &nbsp; (C) updated &nbsp; (D) updates</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:20px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(D) customized (제공되는 솔루션 = 수동). | 2.(D) 앞 문장 전체를 주어로 하는 분사구문(결과). | 3.(C) number(수치)를 꾸미는 분사형 형용사(압도적인
+                수). | 4.(A) 감명받은(수동/감정 느낌). | 5.(A) 완료형 분사구문(학위를 딴 것이 고용 전). | 6.(C) keep(5형식) + O + C(équipement은 업데이트
+                '되는' 대상).
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

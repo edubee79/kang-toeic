@@ -5,7 +5,7 @@ import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
 import { part6TestData } from '../toeic/reading/part6/tests';
 import { part7TestData } from '../toeic/reading/part7/tests';
-import { rcPart7Test9 } from '../rc_part7_test9';
+import { test9PracticeSet } from '../rc_part7_test9';
 
 /**
  * 하프테스트 A회차 (실전 9회차 기반)
@@ -82,9 +82,9 @@ export const half9aPart7Single = [
 }));
 
 export const half9aPart7Multi = [
-    rcPart7Test9[0], // Double 176-180 (5)
-    rcPart7Test9[2], // Triple 186-190 (5)
-    rcPart7Test9[3]  // Triple 191-195 (5)
+    test9PracticeSet[0], // Double 176-180 (5)
+    test9PracticeSet[2], // Triple 186-190 (5)
+    test9PracticeSet[3]  // Triple 191-195 (5)
 ].map(s => ({
     ...s,
     questions: s.questions.map((q: any) => ({

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 15: Comparison & Parallelism</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Degrees of Comparison -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 15]</div>
+        </header>
+
+        <h1>Unit 01. 비교 구문의 기본과 출제 공식</h1>
+
+        <div class="unit-box">
+            <h2>01. 비교(Comparison) 핵심 출제 패턴</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 원급 비교: as + 형용사/부사 + as</div>
+                <div class="pattern-ex">Confidence is <span class="highlight">as significant as</span> experience in the
+                    workplace.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 비교급 비교: 비교급 + than</div>
+                <div class="pattern-ex">The new line is <span class="highlight">more efficient than</span> those of its
+                    rivals.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 최상급 비교: the + 최상급 + of/in/that절</div>
+                <div class="pattern-ex">City Hall is the <span class="highlight">oldest</span> building of all the
+                    structures.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 품사 결정: as~as 나 비교급 앞의 동사를 보고 결정</div>
+                <div class="pattern-ex">I drove more <span class="highlight">slowly</span> (slow X) than usual. (동사
+                    drove 수식)</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 비교급/최상급 강조 부사 (Adverbs of Emphasis)</h2>
+            <p style="font-size: 13.5px;">원급을 꾸미는 부사와 비교급을 꾸미는 부사는 <span class="highlight">절대 섞일 수 없습니다.</span></p>
+            <table>
+                <tr>
+                    <th width="30%">원급 강조 (Very류)</th>
+                    <th width="70%">비교급 강조 (Much류 - "훨씬")</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>very, quite, too, so</b></td>
+                    <td><b>much, even, still, far, a lot, by far</b><br>
+                        <small>최신 기출: <b>noticeably, considerably, significantly, substantially</b></small>
+                    </td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>최상급 강조:</b> by far, quite, much는 <u>the 앞에</u> / very, single은 <u>the 뒤에</u> 위치합니다.
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Comparison Idioms & Late Latin -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 15]</div>
+        </header>
+
+        <h1>Unit 02. 비교 구문 필수 암기 표현 및 라틴어 비교</h1>
+
+        <div class="unit-box">
+            <h2>01. Than 대신 To를 쓰는 비교 (라틴어 비교급)</h2>
+            <ul class="important-list">
+                <li><b>prior to</b> (~보다 이전에 = before)</li>
+                <li><b>superior to</b> (~보다 우수한) / <b>inferior to</b> (~보다 열등한)</li>
+                <li><b>prefer A to B</b> (B보다 A를 선호하다)</li>
+            </ul>
+        </div>
+
+        <div class="unit-box" style="border: 2px solid var(--info);">
+            <h2>02. [핵심] 비교 관련 관용 표현</h2>
+            <table>
+                <tr>
+                    <th>표현</th>
+                    <th>해석 및 출제 포인트</th>
+                </tr>
+                <tr>
+                    <td><b>as ~ as possible</b></td>
+                    <td>가능한 한 가장 ~하게 (= as ~ as S can)</td>
+                </tr>
+                <tr>
+                    <td><b>no later than</b></td>
+                    <td>늦어도 ~까지 (시점 전치사 by와 유사)</td>
+                </tr>
+                <tr>
+                    <td><b>no sooner than</b></td>
+                    <td>~하자마자 (= as soon as)</td>
+                </tr>
+                <tr>
+                    <td><b>rather than</b></td>
+                    <td>~라기 보다는 / ~하는 것보다 차라리</td>
+                </tr>
+                <tr>
+                    <td><b>more than doubled</b></td>
+                    <td>두 배 이상이 되었다 (동사로 쓰임)</td>
+                </tr>
+                <tr>
+                    <td><b>at the latest</b></td>
+                    <td>아무리 늦어도 (문장 맨 뒤 위치)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="trend-tip">
+            <b>더 ~할수록 더 ~하다:</b> <br>
+            <span class="highlight">The more</span> you exercise, <span class="highlight">the healthier</span> you will
+            be. <br>
+            (The + 비교급 ..., The + 비교급 ... 구문은 동사 생략 가능)
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Parallelism & Redundancy -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 15]</div>
+        </header>
+
+        <h1>Unit 03. 병치(Parallelism)와 도치 도식화</h1>
+
+        <div class="unit-box">
+            <h2>01. 등위/상관 접속사의 병치 원칙</h2>
+            <p style="font-size: 13px;">and, but, or 등으로 연결되는 요소는 <span class="blue-bold">품사, 형태, 구조</span>가 일치해야 합니다.
+            </p>
+            <ul class="important-list">
+                <li><b>단어 병렬</b>: Staff members <u>and</u> executive <u>managers</u> (명사+명사)</li>
+                <li><b>구 병렬</b>: to find errors <u>and</u> <span class="highlight">to correct</span> them (to부정사+to부정사)
+                </li>
+                <li><b>형용사 병렬</b>: more detailed <u>but</u> <span class="highlight">more practical</span></li>
+            </ul>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--danger);">
+            <h2>02. 토익 빈출 도치(Inversion) 구문 복습</h2>
+            <table>
+                <tr>
+                    <th width="30%">도치 원인</th>
+                    <th>어순 및 예문</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>부정어 문두</b></td>
+                    <td><b>Never / Seldom / Rarely</b> + <span class="highlight">Do/Have + S + V</span></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>보어 문두</b></td>
+                    <td><b>Enclosed / Attached</b> + <span class="highlight">Be동사 + 주어</span></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>Only 부사구</b></td>
+                    <td><b>Only after ...</b> + <span class="highlight">Should/Can + S + V</span></td>
+                </tr>
+            </table>
+            <small>Ex) <u>Attached</u> <b>are the results</b> of the employee survey.</small>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Actual Check-up -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 15]</div>
+        </header>
+
+        <h1>Day 15. Actual Check-up (Final Comparison)</h1>
+
+        <div class="exercise-grid">
+            <div class="q-item">
+                <div class="q-text">01. Certainly, Mr. Henny will be promoted to senior section manager because he is
+                    the _______ staff member in the entire regional division.</div>
+                <div class="choices">(A) dependable &nbsp; (B) most dependable &nbsp; (C) most dependent &nbsp; (D) more
+                    dependently</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. The marketing team is currently seeking an editor with previous experience
+                    _______ excellent professional communication skills.</div>
+                <div class="choices">(A) such &nbsp; (B) but &nbsp; (C) and &nbsp; (D) unless</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The mission of this community health clinic is to provide as _______ much
+                    information as possible on vital public health issues.</div>
+                <div class="choices">(A) as &nbsp; (B) more &nbsp; (C) than &nbsp; (D) very</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. Payment of monthly parking vouchers can be made either by personal check _______
+                    by automatic withdrawal from a registered bank account.</div>
+                <div class="choices">(A) but &nbsp; (B) and &nbsp; (C) or &nbsp; (D) if</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. The advertising campaign for the newly launched Cool Fizz drink will feature
+                        fruit flavor _______ price in its upcoming television commercial.</div>
+                    <div class="choices">(A) rather than &nbsp; (B) in the event of &nbsp; (C) except for &nbsp; (D) as
+                        for</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. Recently, the manufacturing costs of new cars have risen _____ high that
+                        most consumers have decided to maintain their current used vehicles.</div>
+                    <div class="choices">(A) too &nbsp; (B) such &nbsp; (C) very &nbsp; (D) so</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:20px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(B) 최상급(the + ...est). | 2.(C) experience와 skills를 연결하는 명사 병렬. | 3.(A) as much ~ as possible (원급 비교
+                관용구). | 4.(C) either A or B (상관접속사 짝궁). | 5.(A) rather than (~라기보다). | 6.(D) so ~ that 구문.
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

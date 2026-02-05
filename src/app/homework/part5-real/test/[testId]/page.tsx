@@ -298,9 +298,12 @@ function Part5TestRunnerContent() {
                     <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
                         다시 풀기
                     </button>
-                    <Link href="/homework/part5-real" className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold">
+                    <button
+                        onClick={() => router.push(isDrillMode ? '/weakness/dashboard' : '/homework/part5-real')}
+                        className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
+                    >
                         목록으로 돌아가기
-                    </Link>
+                    </button>
                 </div>
             </div>
         );
@@ -344,7 +347,7 @@ function Part5TestRunnerContent() {
                                             elapsedTime
                                         }));
                                     }
-                                    router.push('/homework/part5-real');
+                                    router.push(isDrillMode ? '/weakness/dashboard' : '/homework/part5-real');
                                 }}
                                 className="mr-2 px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/50 text-xs font-bold hover:bg-indigo-600 hover:text-white transition-all"
                             >

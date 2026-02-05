@@ -5,7 +5,7 @@ import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
 import { part6TestData } from '../toeic/reading/part6/tests';
 import { part7TestData } from '../toeic/reading/part7/tests';
-import { rcPart7Test10 } from '../rc_part7_test10';
+import { test10PracticeSet } from '../rc_part7_test10';
 
 
 /**

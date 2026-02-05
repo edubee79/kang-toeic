@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 08: Infinitives & Gerunds</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12.5px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .memorize-title::before {
+            content: '★';
+            margin-right: 5px;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Intro & To-Infinitive Basics -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 08]</div>
+        </header>
+
+        <h1>Unit 01. To부정사의 출제 패턴과 명사적 용법</h1>
+
+        <div class="unit-box">
+            <h2>01. 준동사(To부정사·동명사) 핵심 출제 패턴</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① To부정사의 형태와 기본 용법 (명사/형용사/부사)</div>
+                <div class="pattern-ex">Those who plan <span class="highlight">to participate</span> should notify us.
+                    (목적어 자리)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 명사 수식 패턴: 명사 + to-do</div>
+                <div class="pattern-ex">The ability <span class="highlight">to gain</span> the confidence of clients is
+                    essential.</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 부사적 용법 (목적): ~하기 위하여</div>
+                <div class="pattern-ex"><span class="highlight">In order to</span> submit a proposal, you need to
+                    access...</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 특수 구문: too ~ to-do / enough to-do</div>
+                <div class="pattern-ex">The program is easy <span class="highlight">enough to install</span> by
+                    yourself.</div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. To부정사의 명사적 용법 (S, O, C)</h2>
+            <table>
+                <tr>
+                    <th width="20%">역할</th>
+                    <th>설명 및 실전 예문</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>주어 (S)</b></td>
+                    <td><span class="blue-bold">To learn</span> a second language is rewarding. (가주어 It이 더 빈출)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>목적어 (O)</b></td>
+                    <td>Mr. Lee wants <span class="blue-bold">to renegotiate</span> the contract. (WANT류 동사 뒤)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>보어 (C)</b></td>
+                    <td>The objective is <span class="blue-bold">to design</span> a better product. (be동사 뒤)</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>가목적어 it 구문 (고난도):</b> <br>
+                Advances have made <span class="highlight">it</span> possible <span class="highlight">to
+                    construct</span> skyscrapers. <br>
+                (make / find / consider + it + 형용사 + to-do 구문은 정답률 100%)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: To-Infinitive Adjectives & Verbs -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 08]</div>
+        </header>
+
+        <h1>Unit 02. To부정사 전용 동사 및 명사 수식 패턴</h1>
+
+        <div class="unit-box">
+            <h2>01. [필수 암기] To부정사를 목적어로 취하는 동사</h2>
+            <div class="col-grid">
+                <ul class="important-list">
+                    <li><b>want / wish / hope / desire</b> (~를 원하다)</li>
+                    <li><b>plan / aim / intend / mean</b> (계획하다)</li>
+                    <li><b>expect / would like</b> (예상/하고 싶다)</li>
+                    <li><b>decide / determine / resolve</b> (결정하다)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>agree / refuse / decline</b> (동의/거절)</li>
+                    <li><b>strive / endeavor / attempt</b> (노력/시도)</li>
+                    <li><b>promise / pledge / mental</b> (약속/맹세)</li>
+                    <li><b>fail / hesitate / afford</b> (~못하다/주저/여유)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-box" style="border: 2px solid var(--success);">
+            <h2>02. [필수 암기] To부정사의 수식을 받는 명사</h2>
+            <p style="font-size: 13px;">이 명사들 뒤에 빈칸이 있으면 99% <b>To부정사</b>가 정답입니다.</p>
+            <div class="col-grid" style="font-size: 12.5px;">
+                <ul class="important-list">
+                    <li><b>ability / capacity</b> (~할 능력)</li>
+                    <li><b>effort / attempt</b> (~하려는 노력/시도)</li>
+                    <li><b>plan / strategy</b> (~하려는 계획/전략)</li>
+                    <li><b>opportunity / chance</b> (~할 기회)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>right / authority</b> (~할 권리/권한)</li>
+                    <li><b>decision / need</b> (~하려는 결정/필요)</li>
+                    <li><b>time / way</b> (~할 시간/방법)</li>
+                    <li><b>permission</b> (~할 허가)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 목적을 나타내는 부사적 용법</h2>
+            <div class="memorize-card">
+                <b>In order (for 명사) to-do</b> = <b>So as to-do</b> (~하기 위하여) <br>
+                <small>* 문장 맨 앞이나 뒤에서 목적을 나타내며, 명사적 용법과 구별해야 함.</small>
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Gerund Basics & Selection -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 08]</div>
+        </header>
+
+        <h1>Unit 03. 동명사(Gerund)의 용법과 전용 동사</h1>
+
+        <div class="unit-box">
+            <h2>01. 동명사의 역할과 특징</h2>
+            <ul class="important-list">
+                <li><b>역할</b>: 주어, 목적어, 보어 자리에 오는 <u>명사</u> 역할</li>
+                <li><b>특징</b>: 뒤에 <span class="highlight">목적어(명사)</span>를 동반할 수 있음 (순수 명사와의 차이점)</li>
+                <li><b>의미상의 주어</b>: 소유격 (Ex: <span class="blue-bold">his</span> responding) </li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. [필수 암기] 동명사(-ing)만 목적어로 취하는 동사</h2>
+            <div class="col-grid">
+                <ul class="important-list">
+                    <li><b>consider / suggest / recommend</b> (고려/제안)</li>
+                    <li><b>finish / quit / stop / discontinue</b> (중단)</li>
+                    <li><b>avoid / mind / postpone / delay</b> (기피/지연)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>enjoy / include / involve</b> (즐기다/포함)</li>
+                    <li><b>keep / maintain / continue</b> (계속하다)</li>
+                    <li><b>deny / resist / appreciate</b> (부인/감사)</li>
+                </ul>
+            </div>
+            <div class="trend-tip">
+                <b>Suggest 주의:</b> Suggest + <span class="highlight">V-ing</span> (O) / Suggest + <span
+                    class="highlight">to-do</span> (X) <br>
+                토익에서 suggest는 부정사를 목적어로 취할 수 없습니다.
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 동명사 vs To부정사 (의미 변화)</h2>
+            <table>
+                <tr>
+                    <th width="20%">동사</th>
+                    <th width="40%">+ V-ing (과거/이미 한 일)</th>
+                    <th width="40%">+ to-do (미래/해야 할 일)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>remember</b></td>
+                    <td>~한 것을 기억하다</td>
+                    <td>~할 것을 기억하다</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>forget</b></td>
+                    <td>~한 것을 잊다</td>
+                    <td>~할 것을 잊다</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>regret</b></td>
+                    <td>~한 것을 후회하다</td>
+                    <td>~하게 되어 유감이다</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Gerund Idioms & Practice -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 08]</div>
+        </header>
+
+        <h1>Unit 04. 전치사 to 함정과 동명사 관용 표현</h1>
+
+        <div class="unit-box">
+            <h2>01. [함정] 전치사 to (~에) + 동명사 리스트</h2>
+            <p style="font-size: 13px; color: var(--danger);">★ to 뒤에 원형이 아닌 <u>-ing</u>를 써야 하는 기출 1순위 표현입니다.</p>
+            <ul class="important-list">
+                <li><b>look forward to -ing</b> (~를 고대하다)</li>
+                <li><b>be committed/devoted/dedicated to -ing</b> (~에 헌신하다)</li>
+                <li><b>be used/accustomed to -ing</b> (~에 익숙하다)</li>
+                <li><b>in addition to -ing</b> (~외에도)</li>
+                <li><b>object to -ing</b> (~에 반대하다) / <b>be opposed to -ing</b></li>
+                <li><b>contribute to -ing</b> (~에 기여하다)</li>
+            </ul>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--info);">
+            <h2>02. 기타 빈출 동명사 관용구</h2>
+            <ul class="important-list">
+                <li><b>be busy -ing</b> (~하느라 바쁘다)</li>
+                <li><b>have difficulty (in) -ing</b> (~하는 데 어려움을 겪다)</li>
+                <li><b>spend + 시간/돈 + -ing</b> (~하는 데 ~을 쓰다)</li>
+                <li><b>go -ing</b> (~하러 가다) / <b>feel like -ing</b> (~하고 싶다)</li>
+                <li><b>keep (A) from -ing</b> (A가 ~하는 것을 막다)</li>
+            </ul>
+        </div>
+
+        <div class="exercise-grid">
+            <h2 style="font-size: 17px;">Day 08: Actual Check-up (Verbals)</h2>
+            <div class="q-item">
+                <div class="q-text">01. The marketing team is currently considering _______ a series of online
+                    advertisements to promote the new summer collection.</div>
+                <div class="choices">(A) launch &nbsp; (B) to launch &nbsp; (C) launching &nbsp; (D) launched</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Ms. Watson is looking forward to _______ the quarterly sales results with the
+                    board of directors at the upcoming meeting.</div>
+                <div class="choices">(A) discuss &nbsp; (B) discussing &nbsp; (C) discussion &nbsp; (D) discussed</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. The primary purpose of this government program is _______ small businesses with
+                    grants for technological upgrades.</div>
+                <div class="choices">(A) provide &nbsp; (B) for providing &nbsp; (C) to provide &nbsp; (D) provision
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. The administrative supervisor will consider ________ his assistant's contract if
+                    the current performance issues are not resolved.</div>
+                <div class="choices">(A) to terminate &nbsp; (B) terminating &nbsp; (C) termination &nbsp; (D)
+                    terminated</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. Employees are encouraged to make every effort _______ the confidentiality of
+                        all patient records stored in the database.</div>
+                    <div class="choices">(A) maintain &nbsp; (B) to maintain &nbsp; (C) maintaining &nbsp; (D)
+                        maintenance</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:10px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(C) consider + V-ing. | 2.(B) look forward to(전치사) + -ing. | 3.(C) be동사 뒤 보어 자리 To부정사(~하는 것이다). |
+                4.(B) consider + V-ing. | 5.(B) effort + to-do (명사 수식 형용사적 용법).
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

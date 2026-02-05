@@ -1,13 +1,11 @@
-import { part1Data } from './part1_mock'; // Test 9 Part 1 (Placeholder)
-// import { part5Questions } from './rc_part5'; // Old Part 5 Data (Deprecated for Test 9)
-// import { part6Sets } from './mock/part6_data'; // Test 9 Part 6
-import { rcPart7Test9 as part7Data } from './rc_part7_test9'; // Test 9 Part 7
+import { part1Data } from './part1_mock';
+import { test9PracticeSet } from './rc_part7_test9';
+import { test10PracticeSet } from './rc_part7_test10';
 import { part3RealTests } from './part3';
-// Placeholder for LC
 import { part4Data } from './part4';
-import { part5TestData } from './toeic/reading/part5/tests'; // Import the Real Test Data
-import { part6TestData } from './toeic/reading/part6/tests'; // Import Real Part 6 Data
-import { part7TestData } from './toeic/reading/part7/tests'; // Import Real Part 7 Data
+import { part5TestData } from './toeic/reading/part5/tests';
+import { part6TestData } from './toeic/reading/part6/tests';
+import { part7TestData } from './toeic/reading/part7/tests';
 
 export interface MockTestPart {
     partId: number; // 1, 2, 3, 4, 5, 6, 7
@@ -32,21 +30,11 @@ const test9Part5Data = realTest9 ? realTest9.questions.map(q => ({
 const realPart6Test9 = part6TestData.find(t => t.testId === 9);
 const test9Part6Data = realPart6Test9 ? realPart6Test9.passages : [];
 
-// Transform Part 7 Test 9 Data
-// User requested Single Passages (147-175) for now, but usually Part 7 includes Double/Triple.
-// We will load ALL sets for Test 9, but the UI might handle them differently or we can filter.
-// The user explicitly said "147-175", which usually corresponds to Single Passages.
-// Let's filter for sets that have questions in range 147-175.
+// Transform Part 7 Test 9 Data (Single + Double/Triple)
 const realPart7Test9 = part7TestData.find(t => t.testId === 9);
-const test9Part7Data = realPart7Test9 ? realPart7Test9.sets.filter(s => {
-    // Basic check: looks for sets where IDs start with 147 up to 175.
-    // Or we can blindly take all, and the UI stops at 175?
-    // Let's take ALL sets from Test 9. The user might want to continue later.
-    // Actually, "Part 7 Single Passage 147-175... page config same as Part 6".
-    // I'll filter for sets where the question range falls within 147-175.
-    const firstQ = parseInt(s.questions[0].id);
-    return firstQ >= 147 && firstQ <= 175;
-}) : [];
+const singlePassages9 = realPart7Test9 ? realPart7Test9.sets : [];
+const multiPassages9 = test9PracticeSet || [];
+const test9Part7Data = [...singlePassages9, ...multiPassages9];
 
 // Constructing Mock Test 9 (Label: Full Mock Test 1)
 export const mockTest9: MockTest = {
@@ -96,12 +84,11 @@ const test10Part5Data = realTest10 ? realTest10.questions.map(q => ({
 const realPart6Test10 = part6TestData.find(t => t.testId === 10);
 const test10Part6Data = realPart6Test10 ? realPart6Test10.passages : [];
 
-// Transform Part 7 Test 10 Data
+// Transform Part 7 Test 10 Data (Single + Double/Triple)
 const realPart7Test10 = part7TestData.find(t => t.testId === 10);
-const test10Part7Data = realPart7Test10 ? realPart7Test10.sets.filter(s => {
-    const firstQ = parseInt(s.questions[0].id);
-    return firstQ >= 147 && firstQ <= 175;
-}) : [];
+const singlePassages10 = realPart7Test10 ? realPart7Test10.sets : [];
+const multiPassages10 = test10PracticeSet || [];
+const test10Part7Data = [...singlePassages10, ...multiPassages10];
 
 // Constructing Mock Test 10 (Label: Full Mock Test 2)
 export const mockTest10: MockTest = {

@@ -259,9 +259,14 @@ function Part7TestRunnerContent() {
                     <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
                         다시 풀기
                     </button>
-                    <Link href="/homework/part7" className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold">
+                    <button
+                        onClick={() => {
+                            router.push(isDrillMode ? '/weakness/dashboard' : '/homework/part7');
+                        }}
+                        className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
+                    >
                         목록으로 돌아가기
-                    </Link>
+                    </button>
                 </div>
             </div>
         );
@@ -296,7 +301,7 @@ function Part7TestRunnerContent() {
             <div className="h-10 lg:h-16 bg-slate-950/95 border-b border-white/5 flex items-center justify-between px-2 lg:px-6 shrink-0 z-20">
                 <div className="flex items-center gap-1 lg:gap-4">
                     <button
-                        onClick={() => router.push('/homework/part7')}
+                        onClick={() => router.push(isDrillMode ? '/weakness/dashboard' : '/homework/part7')}
                         className="text-slate-400 hover:text-white transition-colors p-1"
                     >
                         <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,7 +325,7 @@ function Part7TestRunnerContent() {
                                         currentSetIndex
                                     }));
                                 }
-                                router.push('/homework/part7');
+                                router.push(isDrillMode ? '/weakness/dashboard' : '/homework/part7');
                             }}
                         >
                             <span className="hidden lg:inline mr-1">💾</span> 중단하고 나가기
@@ -359,9 +364,9 @@ function Part7TestRunnerContent() {
                         ))}
                     </div>
 
-                    <div key={currentSet.id} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full overflow-hidden lg:overflow-visible">
+                    <div key={currentSet.id} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full lg:h-auto overflow-hidden lg:overflow-visible">
                         {/* Passages: 70% on Mobile, 70% on Desktop */}
-                        <div ref={passageContainerRef} className="max-h-[60%] lg:h-fit lg:col-span-7 lg:sticky lg:top-0 space-y-2 lg:space-y-8 overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none flex-shrink-0">
+                        <div ref={passageContainerRef} className="max-h-[60%] lg:max-h-[calc(100vh-200px)] lg:col-span-7 lg:sticky lg:top-0 space-y-2 lg:space-y-8 overflow-y-auto p-0 lg:p-0 border-b border-slate-700 lg:border-none flex-shrink-0 lg:pr-4 custom-scrollbar">
                             {/* Question Range Header */}
                             <div className="text-slate-400 text-xs lg:text-sm font-medium px-2 lg:px-0 pt-2 lg:pt-0">
                                 Questions {currentSet.questionRange} refer to the following {currentSet.passages.length > 1 ? `${currentSet.passages.length} passages` : (currentSet.passages[0].docType || 'passage').toLowerCase().replace('_', ' ')}.

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 16: Part 6 Ultimate Strategy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #cbd5e1;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            height: 296mm;
+            padding: 12mm 15mm;
+            margin: 0 auto;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 19px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: #b91c1c;
+            font-size: 11px;
+        }
+
+        h1 {
+            font-size: 21px;
+            color: var(--primary);
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 6px;
+            height: 26px;
+            background: var(--primary);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .unit-box h2 {
+            font-size: 14.5px;
+            margin: 0 0 6px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 6px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 5px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 10px;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid var(--border);
+            font-size: 10.5px;
+            line-height: 1.35;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+            font-size: 11.5px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+            top: 3px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 7px;
+            border-radius: 6px;
+            position: relative;
+            margin: 8px 0;
+            font-size: 11.5px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'Reading Tip';
+            position: absolute;
+            top: -9px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 7.5px;
+            font-weight: 800;
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 8px;
+            background: #fff;
+            margin: 8px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 12.5px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .passage-box {
+            border: 1px dashed #475569;
+            padding: 10px;
+            background: #fafafa;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #1e293b;
+            margin-top: 5px;
+        }
+
+        .blank {
+            display: inline-block;
+            width: 45px;
+            border-bottom: 2px solid #000;
+            text-align: center;
+            font-weight: 800;
+            color: var(--danger);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 8mm;
+            width: calc(100% - 30mm);
+            border-top: 1px solid var(--border);
+            padding-top: 4px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 16]</div>
+        </header>
+
+        <h1>Unit 01. 파트 6 지문 분석 및 4대 문제 유형</h1>
+
+        <div class="unit-box">
+            <h2>01. 파트 6 빈출 지문 종류 (Passage Types)</h2>
+            <p style="font-size: 13.5px;">파트 6은 문맥 파악이 핵심이며, 비즈니스 상황이 100% 반영됩니다.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <ul class="important-list">
+                    <li><b>Email / Letter</b> (가장 빈출 - 업무/고객 메시지)</li>
+                    <li><b>Memo</b> (사내 공지 - 인사/정책 변경)</li>
+                    <li><b>Notice</b> (대중 공지 - 공사/공연/운영시간)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>Article</b> (기사 - 기업 성적/지역 뉴스)</li>
+                    <li><b>Information</b> (안내문 - 시설 이용 가이드)</li>
+                    <li><b>Instructions</b> (설명서 - 조립/사용법)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 실전 문제 유형 4가지 (The 4 Question Pillars)</h2>
+            <table>
+                <tr>
+                    <th width="25%">유형</th>
+                    <th>특징 및 공략법</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>문법 (Grammar)</b></td>
+                    <td><b>시제와 태</b>가 80% 이상입니다. 특히 '미래 계획'이나 '완료된 사건' 등 앞뒤 문맥을 통해 시제를 결정해야 합니다.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>어휘 (Vocabulary)</b></td>
+                    <td>파트 5와 달리 <b>문장과 문장 사이의 흐름</b>을 타는 어휘가 정답입니다. (아래 Unit 02 상세 설명)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>연결어구 (Connectors)</b></td>
+                    <td><b>접속부사</b> 선택 문제. 논리적 인과관계(Therefore), 대조(However), 첨언(Moreover) 등을 묻습니다.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>문장 삽입 (Insertion)</b></td>
+                    <td>알맞은 문장을 통째로 넣는 보너스(?)이자 지뢰형 문항. 지시어와 대명사를 활용해야 합니다.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="trend-tip">
+            <b>제발 '빈칸 주변'만 읽지 마세요!</b> <br>
+            파트 6은 파트 5의 확장판이 아닙니다. 제목, 발신자, 수신자, 첫 문장을 통해 <u>지문의 목적</u>을 먼저 파악하는 것이 시간 단축의 지름길입니다.
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 16]</div>
+        </header>
+
+        <h1>Unit 02. 파트 6 어휘 전략: Context vs Syntax</h1>
+
+        <div class="unit-box">
+            <h2>01. 파트 5 vs 파트 6 어휘 문제의 차이점</h2>
+            <table>
+                <tr>
+                    <th width="15%">구분</th>
+                    <th width="42.5%">Part 5 (Syntax-driven)</th>
+                    <th width="42.5%">Part 6 (Context-driven)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>핵심 단서</b></td>
+                    <td>빈칸 앞뒤의 <b>짝꿍 단어</b> (Collocation)</td>
+                    <td>앞 문장 혹은 뒤 문장의 <b>상황 정보</b></td>
+                </tr>
+                <tr>
+                    <td align="center"><b>풀이 방식</b></td>
+                    <td>명사/형용사/부사 자리와 어휘 조합 확인</td>
+                    <td>글 전체의 <b>논리적 흐름(Storyline)</b> 확인</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>예시</b></td>
+                    <td>highly + competitive (수식 관계)</td>
+                    <td>기계가 고장 났으므로 '수리(Repair)'가 필요함</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--info);">
+            <h2>02. 어휘 유형의 3대 정답 공식</h2>
+            <ul class="important-list">
+                <li><b>Paraphrasing 확인</b>: 앞 문장의 단어를 아래에서 다른 단어로 바꿔 표현하는 경우 <br>
+                    <small>Ex) Buy a property → This <span class="highlight">transaction</span> (거래)</small>
+                </li>
+                <li><b>인과 관계 추론</b>: "원금이 부족하다" → "대출을 <span class="highlight">거절하다(decline)</span>"</li>
+                <li><b>상황별 기능어</b>: 편지의 목적 표현 (Enclose, Remind, Inform 등)</li>
+            </ul>
+        </div>
+
+        <div class="memorize-card">
+            <div class="memorize-title">파트 6 빈출 시제-어휘 콤보</div>
+            <p style="font-size: 13px; margin: 0;">
+                - <b>currently</b> + 현재진행형 (지금 수행 중인 업무) <br>
+                - <b>originally</b> + 과거시제 (원래는 그랬으나 지금은 바뀜) <br>
+                - <b>soon / shortly</b> + 미래시제 (곧 일어날 공지 사항)
+            </p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 16]</div>
+        </header>
+
+        <h1>Unit 03. 문장 넣기 전략과 지시어 함정 탈출</h1>
+
+        <div class="unit-box">
+            <h2>01. 문장 넣기 정답을 찾는 3대 Key (T-D-C)</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px;">
+                <div style="background: #fff; padding: 10px; border: 2px solid var(--border); border-radius: 8px;">
+                    <b style="color: var(--danger);">TargetING</b> <br>
+                    <small>지시어/대명사<br>(This, He, They)</small>
+                </div>
+                <div style="background: #fff; padding: 10px; border: 2px solid var(--border); border-radius: 8px;">
+                    <b style="color: var(--info);">Detailing</b> <br>
+                    <small>앞 문장에 대한<br>구체적 사례/부연</small>
+                </div>
+                <div style="background: #fff; padding: 10px; border: 2px solid var(--border); border-radius: 8px;">
+                    <b style="color: var(--success);">Concluding</b> <br>
+                    <small>지문 마지막 줄<br>마무리/연락 촉구</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 학생들이 낚이는 대명사/지시어 활용법</h2>
+            <p style="font-size: 13px;">보기(A~D)에 다음 단어가 있다면 정답 후보 1순위이며, 앞 문장에 해당 명사가 있는지 확인하세요.</p>
+            <ul class="important-list">
+                <li><b>This / That</b>: 앞 문장의 내용 전체나 특정 사실을 지칭</li>
+                <li><b>These / Those</b>: 앞 문장에 언급된 복수 명사들</li>
+                <li><b>He / She / They</b>: 앞에 언급된 특정 인물이나 부서 사람들</li>
+                <li><b>Such + 명사</b>: '그러한 ~' (앞에 이미 언급된 종류)</li>
+            </ul>
+        </div>
+
+        <div class="trend-tip">
+            <b>마지막 문장 삽입의 국룰:</b> <br>
+            지문의 가장 마지막에 빈칸이 있다면 대부분 <u>"연락 주세요"</u>, <u>"회신 기다릴게요"</u>, <u>"그때 뵙겠습니다"</u> 류가 정답입니다. <br>
+            Ex) <b>We look forward to seeing you then.</b> / <b>Please call me if you have questions.</b>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 16]</div>
+        </header>
+
+        <h1>Unit 04. 파트 6 논리 연결어구(Connectors) 마스터 백서</h1>
+
+        <div class="unit-box">
+            <h2>01. [Essential Master List] 논리 관계별 접속부사 총망라</h2>
+            <p style="font-size: 11.5px; color: var(--danger); margin-bottom: 8px;">★ 문장 간의 흐름을 결정하는 1초 정답 후보들입니다. 단순
+                암기를 넘어 상황별 뉘앙스를 마스터하세요.</p>
+            <table style="font-size: 10.5px;">
+                <thead>
+                    <tr>
+                        <th width="15%">관계</th>
+                        <th width="38%">핵심 접속부사 (Connectors)</th>
+                        <th>해석 및 출제 포인트 (Nuance)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center" style="background:#fff1f2;"><b>역접/대조<br>(Contrast)</b></td>
+                        <td><b>However, Nevertheless, Nonetheless, <br>Even so, On the contrary, Conversely, <br><span
+                                    class="highlight">With that said, That being said</span></b></td>
+                        <td>하지만, 그럼에도 불구하고, 반대로 <br> (앞의 긍정적 내용을 인정하면서도 반전된 사실 제시) <br> <small>*With that said: 그렇긴 하지만
+                                (실제 기출 고난도)</small></td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background:#f0f9ff;"><b>인과/결과<br>(Cause)</b></td>
+                        <td><b>Therefore, Consequently, As a result, <br>Accordingly, Thus, Hence, <br>For this reason,
+                                <span class="blue-bold">In turn</span></b></td>
+                        <td>그러므로, 따라서, 결과적으로 <br> (원인과 필연적인 결과 연결) <br> <small>*In turn: '결국' 혹은 '차례로'</small></td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background:#f0fdf4;"><b>첨가/나열<br>(Addition)</b></td>
+                        <td><b>Moreover, Furthermore, In addition, <br>Additionally, Besides, Also, <br>Similarly,
+                                Likewise</b></td>
+                        <td>게다가, 더욱이, 아울러, 마찬가지로 <br> (앞 내용과 성격이 같은 정보를 나열)</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background:#fffbeb;"><b>예시/강조<br>(Example)</b></td>
+                        <td><b>For example, For instance, <br>In particular, Specifically, <span
+                                    class="blue-bold">Namely,</span> <br>In fact, Indeed</b></td>
+                        <td>예를 들어, 특히, 사실은 <br> (추상적 공지 사항을 구체적 예시로 뒷받침) <br> <small>*Namely: 즉, 다시 말해</small></td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background:#eff6ff;"><b>시간/순서<br>(Time)</b></td>
+                        <td><b>Meanwhile, Meantime, Subsequentally, <br>Afterward, Thereafter, Later,
+                                <br>Simultaneously</b></td>
+                        <td>한편, 그 후에, 나중에, 동시에 <br> (업무 처리 공정이나 사건의 논리적 흐름 강조)</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background:#fdf4ff;"><b>조건/대안<br>(Option)</b></td>
+                        <td><b>Otherwise, Alternatively, <br>Instead, Rather, <span class="highlight">Granted</span></b>
+                        </td>
+                        <td>그렇지 않으면, 대안으로, 오히려 <br> (플랜 B 추천이나 반박 사실 정정) <br> <small>*Granted: 인정하건대/물론 (반전의 도입)</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background:#f8fafc;"><b>결론/요약<br>(Summary)</b></td>
+                        <td><b>In summary, Overall, To conclude, <br>Ultimately, In short, <span class="blue-bold">In
+                                    light of this</span></b></td>
+                        <td>요약하자면, 궁극적으로, 이러한 관점에서 <br> (앞의 정보들을 갈무리하며 최종 결정 통보)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="memorize-card"
+            style="border-left: 5px solid var(--primary); padding-top: 8px; padding-bottom: 8px;">
+            <div style="font-size:12px;"><b>문법 Tip (반드시 체크!):</b> <br>
+                - <b class="highlight">접속부사</b>: 문장 연결 힘 X. 뒤에 콤마(,)와 함께 단독 사용. <small>(. However, / ; however,)</small>
+                <br>
+                - <b class="blue-bold">등위접속사</b>: 문장과 문장을 바로 연결. <small>(and, but, or, so)</small> <br>
+                - <b class="success">부사절접속사</b>: 주어+동사를 통째로 부사화. <small>(although, because, while)</small></div>
+        </div>
+
+        <div class="unit-box" style="margin-top: 10px;">
+            <h2 style="color: #b91c1c;">Actual Practice Check-up</h2>
+            <div class="passage-box">
+                To: All Staff Members <br>
+                From: Human Resources Department <br>
+                Subject: New Time-Tracking System <br><br>
+                Beginning next Monday, all employees are required to use the new "SyncTime" portal to log their daily
+                hours. This system replaces the manual logs we have used previously. <span class="blank">1. </span> <br>
+                We understand that transitioning to a new platform can be challenging. <span class="blank">2. </span>,
+                we believe the increased accuracy will benefit everyone. Training sessions will be held this Friday in
+                Conference Room B. <span class="blank">3. </span> staff members who cannot attend should contact their
+                supervisor for an instructional guide.
+            </div>
+            <div style="font-size: 11.5px; margin-top:10px;">
+                <b>Q1. (A) It was designed to manage payroll more efficiently.</b> (지시어 연결) <br>
+                <b>Q2. (A) However</b> (반전 대조) <br>
+                <b>Q3. (A) Instead</b> (대안 제시)
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

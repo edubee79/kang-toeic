@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 17: Part 7 Ultimate Reading Strategy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #cbd5e1;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            height: 296mm;
+            padding: 12mm 15mm;
+            margin: 0 auto;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 19px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: #b91c1c;
+            font-size: 11px;
+        }
+
+        h1 {
+            font-size: 21px;
+            color: var(--primary);
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 6px;
+            height: 26px;
+            background: var(--primary);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .unit-box h2 {
+            font-size: 14.5px;
+            margin: 0 0 6px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 6px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 5px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 10px;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid var(--border);
+            font-size: 10.5px;
+            line-height: 1.35;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+            font-size: 11.5px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+            top: 3px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 7px;
+            border-radius: 6px;
+            position: relative;
+            margin: 8px 0;
+            font-size: 11.5px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: '독해의 기술';
+            position: absolute;
+            top: -9px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 7.5px;
+            font-weight: 800;
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 8px;
+            background: #fff;
+            margin: 8px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 12.5px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .blue-bold {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .passage-box {
+            border: 1px dashed #475569;
+            padding: 10px;
+            background: #fafafa;
+            font-family: 'Inter', sans-serif;
+            font-size: 11.5px;
+            line-height: 1.5;
+            color: #1e293b;
+            margin-top: 5px;
+            overflow-y: hidden;
+        }
+
+        .blank {
+            display: inline-block;
+            width: 45px;
+            border-bottom: 2px solid #000;
+            text-align: center;
+            font-weight: 800;
+            color: var(--danger);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 8mm;
+            width: calc(100% - 30mm);
+            border-top: 1px solid var(--border);
+            padding-top: 4px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 17]</div>
+        </header>
+
+        <h1>Unit 01. 파트 7 거시적 분석: 독해력의 기반</h1>
+
+        <div class="unit-box">
+            <h2>01. 파트 7 구성 및 목표 점수별 시간 관리</h2>
+            <p style="font-size: 12px; margin-bottom: 8px;">60초당 1문제를 푸는 능력이 850점의 당락을 결정합니다.</p>
+            <table>
+                <tr>
+                    <th width="25%">구분</th>
+                    <th width="25%">문항 수</th>
+                    <th>시간 배정 (권장)</th>
+                    <th>전략 포인트 (Super Elite)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>단일 지문</b></td>
+                    <td align="center">29문항</td>
+                    <td align="center"><b>25분</b></td>
+                    <td><b>지문 목적</b> 선파악 (배경지식 활용 1초 컷)</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>이중 지문</b></td>
+                    <td align="center">10문항</td>
+                    <td align="center"><b>10분</b></td>
+                    <td>세트당 5분. <b>Linking Question</b>에 모든 승부를 건다.</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>삼중 지문</b></td>
+                    <td align="center">15문항</td>
+                    <td align="center"><b>13분</b></td>
+                    <td><b>Scanning Speed Kill.</b> 필요한 단서만 빠르게 습격.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 7대 빈출 지문 유형 (Core Passage Types)</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <ul class="important-list">
+                    <li><b>Email / Letter</b>: 요청, 제안, 문의 (가장 흔한 흐름)</li>
+                    <li><b>Article / Report</b>: 최근 소식, 실적 분석 (고급 어휘)</li>
+                    <li><b>Announcement / Notice</b>: 공고, 일정 변경 (세부 사항)</li>
+                    <li><b>Advertisement</b>: 제품 홍보, 구인 광고 (특전/조건)</li>
+                </ul>
+                <ul class="important-list">
+                    <li><b>Text Message / Chat</b>: 메신저 대화 (의도 파악 문제)</li>
+                    <li><b>Webpage / Blog</b>: 정보성 포스팅 (메뉴 확인 필수)</li>
+                    <li><b>Form / Schedule</b>: 송장, 송신증, 일정표 (숫자 확인)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="trend-tip">
+            <b>지문을 읽기 전 '발문 & 보기'부터 Skimming 하세요!</b> <br>
+            질문과 보기에서 <u>핵심 키워드(고유명사, 숫자, NOT TRUE 타겟)</u>를 먼저 잡아낸 뒤, 지문에서는 그 정보만 찾아내는 <b>Scanning</b>에 집중해야 합니다. 지문을 다
+            읽고 문제를 보는 것이 아니라, <u>문제가 시키는 것만 지문에서 빼오는 것</u>이 850점의 핵심입니다.
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 필살기 1: 문제 Skimming(훑기) vs 지문 Scanning(찾기)</h2>
+            <p style="font-size: 11.5px;">- <b>문제 Skimming</b>: 발문과 보기(A~D)를 먼저 훑어 <u>핵심 키워드와 정답의 타겟</u>을 파악 (특히
+                NOT/Inference 문제)<br>
+                - <b>지문 Scanning</b>: 문제에서 잡은 타겟을 지문에서 <u>좌표 찍듯 빠르게 찾아내어</u> 정답만 격추</p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 17]</div>
+        </header>
+
+        <h1>Unit 02. 파트 7 미시적 공략: 5대 문제 유형</h1>
+
+        <div class="unit-box">
+            <h2>01. 주제/목적 찾기 (Main Idea / Purpose)</h2>
+            <ul class="important-list">
+                <li><b>질문 형태</b>: Why is the email written? / What is the purpose of the notice?</li>
+                <li><b>정답 근거</b>: 첫 문장의 <u>I am writing to...</u> / <u>This is to inform you...</u> 뒤에 80% 존재.</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 세부 사항 확인 (Specific Detail)</h2>
+            <ul class="important-list">
+                <li><b>질문 형태</b>: According to the article, what is X? / What does X mention about Y?</li>
+                <li><b>정답 근거</b>: 키워드 Scanning 후, 지문의 단어가 보기에 어떻게 **Paraphrasing** 되었나 확인.</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>03. NOT / EXCEPT 문제 (부정 질문)</h2>
+            <ul class="important-list">
+                <li><b>질문 형태</b>: What is NOT mentioned about X? / Which feature is NOT included?</li>
+                <li><b>공략법</b>: 보기 4개 중 3개가 지문에 나열되어 있음. <b>소거법(Elimination)</b>이 유일한 정답.</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>04. 추론 문제 (Inference) - 최고 난이도</h2>
+            <ul class="important-list">
+                <li><b>질문 형태</b>: What is suggested about X? / What is most likely true about X?</li>
+                <li><b>공략법</b>: 직접 언급은 없으나, "어제 입사했다" → "신입 사원이다"와 같은 <b>논리적 결합</b> 필요.</li>
+            </ul>
+        </div>
+
+        <div class="unit-box">
+            <h2>05. 동의어 / 문장 삽입 / 의도 파악</h2>
+            <table style="font-size: 10px;">
+                <tr>
+                    <th width="30%">유형</th>
+                    <th>실전 핵꿀팁</th>
+                </tr>
+                <tr>
+                    <td><b>동의어</b></td>
+                    <td>오직 <u>문맥상 의미</u>만 따질 것. 원래 알던 단어의 뜻이 오답일 확률 높음.</td>
+                </tr>
+                <tr>
+                    <td><b>문장 삽입</b></td>
+                    <td>앞뒤 문장의 <u>지시어, 대명사, 연결어(Also, However)</u>를 절대 단서로 활용.</td>
+                </tr>
+                <tr>
+                    <td><b>의도 파악</b></td>
+                    <td>채팅 메시지의 전후 문장을 읽고 <u>말하는 이의 감정이나 의도</u> 추론.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="memorize-card">
+            <div class="memorize-title">파트 7 빈출 Paraphrasing 공식 리스트</div>
+            <p style="font-size: 11px; line-height: 1.4;">
+                - Fix / Repair → <b>Maintenance / Out of order</b> <br>
+                - Postpone / Delay → <b>Put off / Set back / Reschedule</b> <br>
+                - Look for new staff → <b>Recruit / Hiring process</b> <br>
+                - Reduced price / Cheap → <b>Discount / Special offer / Affordable</b> <br>
+                - Free of charge → <b>Complimentary / No cost</b>
+            </p>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 17]</div>
+        </header>
+
+        <h1>Unit 03. 연계 지문(다중 지문)의 비밀: Linking Logic</h1>
+
+        <div class="unit-box">
+            <h2>01. 연계 문제의 구조 (Linking Questions)</h2>
+            <p style="font-size: 11.5px;">이중/삼중 지문 5문제 중 2~3문제는 반드시 <b>두 개 이상의 지문을 동시에</b> 봐야 풀립니다.</p>
+            <table style="font-size: 10px;">
+                <tr>
+                    <th width="30%">연계 패턴</th>
+                    <th>설명 및 예시</th>
+                </tr>
+                <tr>
+                    <td><b>인물-일정 연계</b></td>
+                    <td>1지문(메모)의 담당자와 2지문(일정표)의 시간을 매칭하여 정답 도출.</td>
+                </tr>
+                <tr>
+                    <td><b>이벤트-장소 연계</b></td>
+                    <td>1지문(공고)의 행사명과 2지문(리뷰)의 만족도 장소를 연결.</td>
+                </tr>
+                <tr>
+                    <td><b>가격-주문 연계</b></td>
+                    <td>1지문(가격표) 단가와 2지문(메일)의 주문 수량을 보고 총액 계산.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 다중 지문 독해 순서 (The Anchor Strategy)</h2>
+            <p style="font-size: 11.5px; color: var(--danger); margin-bottom: 8px;">★ 무조건적인 스피드보다 <b>'첫 번째 지문의 장악력'</b>이
+                연계 문제의 열쇠입니다.</p>
+            <ol style="font-size: 11.5px; padding-left: 20px;">
+                <li><b>지문 01: 완벽 장악 (The Anchor)</b>: 첫 지문을 꼼꼼히 읽고 핵심 정보(금액, 대상, 기간, 제약 조건 등)를 머릿속에 <b>각인</b>시켜야 합니다. 이
+                    정보를 잊으면 뒤에서 연계 포인트가 나와도 감지할 수 없습니다.</li>
+                <li><b>지문 02 & 03: 연결 고리 포착</b>: 첫 지문의 내용을 기억한 상태에서 다음 지문을 읽으며, "어? 이거 아까 그 광고에서 말한 날짜인데?", "아까 그 사람이 보낸
+                    메일이네?"라고 <b>회환(Cross-check)</b>해야 합니다.</li>
+                <li><b>질문 Skimming</b>: 지문 간의 관계가 잡힌 상태에서 문제를 보면, 어디와 어디를 섞어서 정답을 낼지 출제자의 의도가 뻔히 보입니다.</li>
+            </ol>
+        </div>
+
+        <div class="trend-tip">
+            <b>삼중 지문은 보너스 점수판이다!</b> <br>
+            삼중 지문은 길이는 길지만, 정보 찾기가 매우 직관적입니다. 쫄지 말고 <u>지문 1-2 연계</u>, <u>지문 2-3 연계</u>, <u>지문 1-3 연계</u> 포인트를 하나씩 선으로 잇는
+            연습을 하세요.
+        </div>
+
+        <div class="unit-box">
+            <h2>03. 독해 속도를 갉아먹는 3대 습관 교정</h2>
+            <ul class="important-list">
+                <li><b>번역기 습관</b>: 한국어로 완벽하게 번역하지 마세요. <u>팩트(Fact)</u>만 추려내세요.</li>
+                <li><b>재독 습관</b>: 이해 안 된다고 계속 다시 읽지 마세요. 질문이 요구하는 것만 찾으세요.</li>
+                <li><b>상상 습관</b>: 본인의 상식(그럴 것이다)을 넣지 마세요. 정답은 지문에 <u>명시</u>되어 있습니다.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 17]</div>
+        </header>
+
+        <h1>Unit 04. 파트 7 실전 연계 훈련 (Double Passage)</h1>
+
+        <div class="unit-box" style="margin-bottom: 5px;">
+            <h2 style="font-size: 13px;">[Passage 1: Advertisement]</h2>
+            <div class="passage-box" style="height: 90px;">
+                <b>Starlight Stationery - Annual Clearance Sale!</b><br>
+                For one week only (Jan 10 - Jan 17), enjoy discounts on all bulk orders.<br>
+                - Premium Printer Paper: 20% OFF (Min. 10 boxes)<br>
+                - Ink Cartridges: Buy 2 Get 1 FREE!<br>
+                - <b>Free shipping</b> for orders over $200.
+            </div>
+            <h2 style="font-size: 13px; margin-top: 5px;">[Passage 2: Email]</h2>
+            <div class="passage-box" style="height: 110px;">
+                To: Customer Service (support@starlight.com)<br>
+                From: Mark Spencer (mspencer@corp.com)<br>
+                Date: Jan 12<br>
+                Subject: Bulk Order Inquiry<br><br>
+                Hello, I'd like to order 12 boxes of Premium Printer Paper for my office. The price on your website
+                shows $25 per box. I believe I am <b>eligible for the discount</b> mentioned in your ad. Also, since my
+                total is over the limit, please ensure shipping is handled at no extra cost.
+            </div>
+        </div>
+
+        <div class="unit-box" style="margin-top: 5px;">
+            <h2 style="color: #b91c1c; font-size: 14px;">Actual Logic Check-up</h2>
+            <div style="font-size: 11px;">
+                <b>1. How much will Mr. Spencer pay for each box of paper?</b><br>
+                - <i>Logic:</i> 1지문에서 10박스 이상 20% 할인 명시. 2지문에서 12박스 주문. <br>
+                - <i>Calc:</i> $25 - ($25 x 0.2) = <b>$20 per box</b> (Paraphrasing: Discount applied)<br><br>
+
+                <b>2. What is true about Mr. Spencer's order?</b><br>
+                - (A) He will pay for shipping.<br>
+                - (B) He ordered ink cartridges.<br>
+                - <b>(C) He will not be charged for delivery.</b> <br>
+                - <i>Logic:</i> 2지문 총액 $240 ($20 x 12). 1지문에서 $200 이상 배송비 무료 명시. <br>
+                - <i>Paraphrasing:</i> Free shipping = <b>at no extra cost</b> / <b>not be charged for delivery</b>
+            </div>
+        </div>
+
+        <div class="memorize-card" style="border-left: 5px solid var(--danger);">
+            <div class="memorize-title">고득점 독해 키워드 Master Table</div>
+            <table style="font-size: 9.5px; margin: 0;">
+                <tr>
+                    <td width="50%"><b>Original in Passage</b></td>
+                    <td><b>Paraphrased in Option</b></td>
+                </tr>
+                <tr>
+                    <td>Submit the application</td>
+                    <td>Hand in the document</td>
+                </tr>
+                <tr>
+                    <td>Renovation / Remodeling</td>
+                    <td>Improve the facility</td>
+                </tr>
+                <tr>
+                    <td>Mandatory / Required</td>
+                    <td>Essential / Compulsory</td>
+                </tr>
+                <tr>
+                    <td>Discontinued product</td>
+                    <td>No longer manufactured</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 4 / 4</span>
+        </footer>
+    </div>
+</body>
+
+</html>

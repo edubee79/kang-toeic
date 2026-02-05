@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC ELITE 850+ | Day 12: Relative Clauses</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #111827;
+            --info: #0369a1;
+            --danger: #be123c;
+            --success: #15803d;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #cbd5e1;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto 20px;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-weight: 700;
+            color: var(--info);
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: var(--primary);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h1::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .unit-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .unit-box h2 {
+            font-size: 17px;
+            margin: 0 0 10px 0;
+            color: var(--info);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 8px;
+            font-weight: 700;
+            color: #334155;
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 11.5px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .important-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .important-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .important-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            top: 4px;
+            color: var(--info);
+        }
+
+        .trend-tip {
+            background: #fffcf0;
+            border: 1px solid #fde68a;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .trend-tip b {
+            color: var(--danger);
+        }
+
+        .trend-tip::after {
+            content: 'TOEIC Trend';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #fbbf24;
+            color: #000;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .pattern-box {
+            border-left: 5px solid var(--primary);
+            background: #f8fafc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .pattern-item {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pattern-ex {
+            font-family: 'Inter', sans-serif;
+            font-size: 12.5px;
+            color: #475569;
+            margin-left: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+
+        .memorize-card {
+            border: 2px solid var(--info);
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+            margin: 15px 0;
+        }
+
+        .memorize-title {
+            font-weight: 800;
+            color: var(--info);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-grid {
+            margin-top: 15px;
+        }
+
+        .q-item {
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .choices {
+            display: flex;
+            gap: 15px;
+            font-size: 12.5px;
+            color: #475569;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15mm;
+            width: calc(100% - 40mm);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1: Relative Pronoun Basics -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 12]</div>
+        </header>
+
+        <h1>Unit 01. 관계대명사의 기본 구조와 선택</h1>
+
+        <div class="unit-box">
+            <h2>01. 형용사절(관계사절) 핵심 출제 패턴</h2>
+            <div class="pattern-box">
+                <div class="pattern-item">① 선행사 확인: 사람인 경우 vs 사물인 경우</div>
+                <div class="pattern-ex">The candidate <span class="highlight">who</span> won the popular vote... (사람
+                    선행사)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">② 격 결정: 뒤 문장의 성분 탈락 여부 확인</div>
+                <div class="pattern-ex">... contractors <span class="highlight">whose</span> collective knowledge...
+                    (소유격 + 명사)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">③ 관계대명사 앞 전치사: V + Prep 결합 확인</div>
+                <div class="pattern-ex">... merchandise <span class="highlight">with</span> which you are not satisfied.
+                    (be satisfied with)</div>
+
+                <div class="pattern-item" style="margin-top:8px;">④ 수 일치: 관계사절 내 동사는 선행사에 일치</div>
+                <div class="pattern-ex">An accountant <span class="highlight">who has</span> (have X) certification...
+                </div>
+            </div>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 관계대명사 종류 및 격 요약표</h2>
+            <table>
+                <tr>
+                    <th width="20%">선행사</th>
+                    <th width="26%">주격 (O생략불가)</th>
+                    <th width="26%">소유격 (+완전한 절)</th>
+                    <th width="26%">목적격 (O생략가능)</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>사람</b></td>
+                    <td align="center">Who</td>
+                    <td align="center">Whose</td>
+                    <td align="center">Whom / Who</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>사물</b></td>
+                    <td align="center">Which</td>
+                    <td align="center">Whose</td>
+                    <td align="center">Which</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>사람/사물</b></td>
+                    <td align="center">That</td>
+                    <td align="center">-</td>
+                    <td align="center">That</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>That의 자격 상실:</b> 관계대명사 that은 <span class="highlight">콤마(,)</span> 뒤나 <span
+                    class="highlight">전치사</span> 뒤에는 절대 올 수 없습니다!
+            </div>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 1 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Advanced Relative Patterns -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 12]</div>
+        </header>
+
+        <h1>Unit 02. 고난도 관계대명사 구문 (부분/전치사)</h1>
+
+        <div class="unit-box">
+            <h2>01. 부분/수량 표현 + Of + 관계대명사</h2>
+            <p style="font-size: 13px;">전체를 말한 후 그중 일부를 설명할 때 쓰는 패턴으로 고득점 포인트입니다.</p>
+            <div class="memorize-card">
+                <b>One / Each / All / Most / Some / Many</b> + <span class="highlight">of whom</span> (사람) / <span
+                    class="highlight">of which</span> (사물)
+            </div>
+            <small>Ex) The firm hired ten workers, <u>all of whom</u> have extensive experience.</small>
+        </div>
+
+        <div class="unit-box">
+            <h2>02. 전치사 + 관계대명사</h2>
+            <p style="font-size: 13px;">관계사절 뒤에 있던 전치사가 관계대명사 앞으로 이동한 형태입니다. 뒤는 <b>완전한 절</b>이 옵니다.</p>
+            <ul class="important-list">
+                <li>I interviewed the woman <u>with whom</u> I had a date.</li>
+                <li>The proposal (which) we are waiting <u>for</u>... → ... the proposal <u>for which</u> we are
+                    waiting.</li>
+            </ul>
+        </div>
+
+        <div class="unit-box" style="border-left: 5px solid var(--info);">
+            <h2>03. 관계대명사의 생략 (Reduced Clauses)</h2>
+            <ul class="important-list">
+                <li><b>목적격 생략</b>: The report (which) I read...</li>
+                <li><b>주격 + be동사 동시 생략</b>: 뒤에 분사/형용사가 남음. <br>
+                    <small>Ex) The location <u>(which was) selected</u>... → The location <b>selected</b>...</small>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 2 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 3: Relative Adverbs & Comparisons -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 12]</div>
+        </header>
+
+        <h1>Unit 03. 관계부사(Relative Adverbs)와 1초 구분법</h1>
+
+        <div class="unit-box">
+            <h2>01. 관계부사의 종류와 변환</h2>
+            <table>
+                <tr>
+                    <th>선행사(의미)</th>
+                    <th>관계부사</th>
+                    <th>전치사 + 관계대명사</th>
+                </tr>
+                <tr>
+                    <td align="center"><b>시간 (Time)</b></td>
+                    <td align="center">When</td>
+                    <td align="center">at / in / on which</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>장소 (Place)</b></td>
+                    <td align="center">Where</td>
+                    <td align="center">in / at / on which</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>이유 (Reason)</b></td>
+                    <td align="center">Why</td>
+                    <td align="center">for which</td>
+                </tr>
+                <tr>
+                    <td align="center"><b>방법 (Way)</b></td>
+                    <td align="center">How</td>
+                    <td align="center">in which</td>
+                </tr>
+            </table>
+            <div class="trend-tip">
+                <b>The way vs How:</b> 두 단어는 <span class="highlight">나란히 쓸 수 없습니다.</span> 하나만 골라 쓰거나, <u>the way in
+                    which</u> 혹은 <u>the way that</u>으로 써야 합니다.
+            </div>
+        </div>
+
+        <div class="unit-box" style="border: 2px solid var(--danger);">
+            <h2>02. [결정적 차이] 관계대명사 vs 관계부사</h2>
+            <p style="font-size: 13.5px;">토익 Part 5에서 가장 헷갈리는 포인트입니다. 뒷문장의 <b>완전성</b>을 보세요.</p>
+            <ul class="important-list">
+                <li><b>관계대명사 (Who/Which/That)</b>: 뒤에 <span class="highlight">불완전한 절</span> (주어나 목적어가 빠짐)</li>
+                <li><b>관계부사 (Where/When/Why/How)</b>: 뒤에 <span class="blue-bold">완전한 절</span> (빠진 성분 없음)</li>
+            </ul>
+            <small>Ex) This is the building <b>which</b> he <u>built</u>. (built의 목적어 없음)</small><br>
+            <small>Ex) This is the building <b>where</b> he <u>works</u>. (work는 자동사로 문장 완전)</small>
+        </div>
+
+        <footer>
+            <span>KANG'S TOEIC Elite Course</span>
+            <span>Page 3 / 4</span>
+        </footer>
+    </div>
+
+    <!-- Page 4: Actual Check-up -->
+    <div class="page">
+        <header>
+            <div class="logo">KANG'S TOEIC ACADEMY</div>
+            <div class="course-tag">Elite Intensive [Day 12]</div>
+        </header>
+
+        <h1>Day 12. Actual Check-up (Relative Mastery)</h1>
+
+        <div class="exercise-grid">
+            <div class="q-item">
+                <div class="q-text">01. Crowne Corporation has been the nation's _______ commercial supplier of
+                    industrial fabric dyes for over 25 years.</div>
+                <div class="choices">(A) leads &nbsp; (B) leader &nbsp; (C) to lead &nbsp; (D) leading</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">02. Winthrop Strategies is seeking to employ a highly _________ individual who
+                    consistently meets project deadlines and works well under pressure.</div>
+                <div class="choices">(A) motivate &nbsp; (B) motivated &nbsp; (C) motivation &nbsp; (D) motivations
+                </div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">03. Annually, the international pharmaceutical committee awards a grand prize to the
+                    researcher _______ findings contribute most to medical history.</div>
+                <div class="choices">(A) who &nbsp; (B) which &nbsp; (C) what &nbsp; (D) whose</div>
+            </div>
+            <div class="q-item">
+                <div class="q-text">04. Jimmy has been working with our marketing division for over a decade, _______
+                    makes him the most eligible candidate for the promotion.</div>
+                <div class="choices">(A) which &nbsp; (B) what &nbsp; (C) who &nbsp; (D) that</div>
+                </tr>
+                <div class="q-item">
+                    <div class="q-text">05. Please proceed to the main entrance _______ one of our staff members will
+                        kindly escort you to the VIP reception area.</div>
+                    <div class="choices">(A) which &nbsp; (B) what &nbsp; (C) where &nbsp; (D) that</div>
+                </div>
+                <div class="q-item">
+                    <div class="q-text">06. The council consists of five senior members, all of _______ have
+                        comprehensive experience in corporate human resources counseling.</div>
+                    <div class="choices">(A) that &nbsp; (B) who &nbsp; (C) whom &nbsp; (D) them</div>
+                </div>
+            </div>
+
+            <div class="unit-box" style="margin-top:20px; background: #fef2f2; font-size: 11.5px;">
+                <b>[정답 및 가이드]</b> <br>
+                1.(D) leading (현재분사-선도하는). | 2.(B) motivated (과거분사-의욕적인). | 3.(D) 소유격 (Findings 수식). | 4.(A) 앞 문장 전체를
+                선행사로 받는 계속적 용법의 which (that 불가). | 5.(C) 뒤에 완전한 문장이 오고 장소를 나타내는 관계부사. | 6.(C) 전치사 + 목적격 관계대명사(사람).
+            </div>
+
+            <footer>
+                <span>KANG'S TOEIC Elite Course</span>
+                <span>Page 4 / 4</span>
+            </footer>
+        </div>
+</body>
+
+</html>

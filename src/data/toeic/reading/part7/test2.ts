@@ -6,11 +6,12 @@ export const test2Data: Part7Test = {
         // Questions 147-148: Webinar Invitation
         {
             id: "p7-t2-set1",
+            setType: "Single",
             questionRange: "147-148",
             passages: [
                 {
                     id: "p7-t2-s1-p1",
-                    contextType: "P5",
+                    contextType: "P5_FORM",
                     docType: "INVITATION",
                     title: "Focus Your Social Media Presence",
                     content: `For small-business owners, it can be a challenge to stand out in a competitive social media environment. Successfully reaching your target market involves knowing how and where to promote your products in a way that is effective and memorable. The Savan Business Center offers support for business owners who need a lift in doing just that. For over 50 years, we've been helping entrepreneurs grow their sales through insight of current industry trends and understanding of our clients' unique needs.\n\nLet us help you get more organized in creating effective and far-reaching social media content. Our latest webinar, Focus Your Social Media Presence, will cover topics related to making your business stand out. You can sign up on our event Web page.\n\nDate: February 5\nTime: 10:00 A.M. to 11:00 A.M.\nEvent Web page: https://www.savanbusinesscenter.com/socialmedia`,
@@ -55,11 +56,12 @@ export const test2Data: Part7Test = {
         // Questions 149-150: Dine Out Darville Announcement
         {
             id: "p7-t2-set2",
+            setType: "Single",
             questionRange: "149-150",
             passages: [
                 {
                     id: "p7-t2-s2-p1",
-                    contextType: "P2",
+                    contextType: "P2_OFFI",
                     docType: "ANNOUNCEMENT",
                     title: "Dine Out Darville Is Back!",
                     content: `Dine Out Darville, which runs this year from June 22 to 28, is the perfect chance to try a restaurant in Darville for the first time or revisit one of your favorite restaurants in town. You may even visit multiple restaurants during the weeklong event! Twelve popular restaurants will offer special four-course dinners—including a cup of soup, a salad, a main course, and dessert—all for a reduced price of $30. Reservations are highly recommended. Dine Out Darville welcomes hundreds of locals and tourists each year, and you do not want to miss your opportunity to get a great meal at a great price.\n\nVisit www.darvillebusinesscouncil.org/dineout for a list of participating restaurants.`,
@@ -104,11 +106,12 @@ export const test2Data: Part7Test = {
         // Questions 151-152: Article - Rainsy To Move Headquarters
         {
             id: "p7-t2-set3",
+            setType: "Single",
             questionRange: "151-152",
             passages: [
                 {
                     id: "p7-t2-s3-p1",
-                    contextType: "P3",
+                    contextType: "P3_MEDI",
                     docType: "ARTICLE",
                     title: "Rainsy To Move Headquarters",
                     content: `DADE (July 11)—Rainsy LLC announced yesterday that it is moving its headquarters to Dade.\n\nThe data storage and analytics firm currently based in Salt Creek, Rainsy has clients that include some of the country's largest credit card companies, online retailers, and software providers. Rainsy helps businesses manage and understand their customer data.\n\nRainsy is not planning to close its current offices in Salt Creek. However, the Dade location will become its new base of operations, as several members of its executive team will work there. The company's chief executive officer and chief financial officer will relocate to Dade along with approximately 50 percent of the company's workforce.\n\nThe office of Rainsy's chief technology officer will remain in Salt Creek, as will the account management team. The company's new Dade offices are located at 12 Glacier Parkway.`,
@@ -153,11 +156,12 @@ export const test2Data: Part7Test = {
         // Questions 153-154: Text Message Chain
         {
             id: "p7-t2-set4",
+            setType: "Single",
             questionRange: "153-154",
             passages: [
                 {
                     id: "p7-t2-s4-p1",
-                    contextType: "P7",
+                    contextType: "P7_CONV",
                     docType: "TEXT_MESSAGE",
                     content: `Michael Liu (9:43 A.M.)\nHi, Jana. I'm at Biz Plus. The paper you need is out of stock until next week. Will another color work?\n\nJana Bhat (9:45 A.M.)\nWhat are the options?\n\nMichael Liu (9:46 A.M.)\nThey have yellow, green, and pink in the brand that you prefer.\n\nJana Bhat (9:47 A.M.)\nI really need blue. Are there other brands of blue printer paper?\n\nMichael Liu (9:48 A.M.)\nYes, but they're all a darker blue. They also cost more.\n\nJana Bhat (9:49 A.M.)\nOK, forget it. I'll place an order online.`,
                     translation: `마이클 리우 (오전 9:43)\n안녕하세요, 제나. 지금 비즈 플러스에 있는데요. 당신이 필요한 종이가 다음 주까지 재고가 없어요. 다른 색도 될까요?\n\n제나 바트 (오전 9:45)\n어떤 선택지가 있나요?\n\n마이클 리우 (오전 9:46)\n당신이 선호하는 브랜드에 노란색, 초록색, 분홍색이 있어요.\n\n제나 바트 (오전 9:47)\n저는 파란색이 꼭 필요해요. 다른 브랜드의 파란색 프린터 용지가 있나요?\n\n마이클 리우 (오전 9:48)\n네, 하지만 모두 진한 파란색이에요. 가격도 더 비싸고요.\n\n제나 바트 (오전 9:49)\n알겠어요, 신경 쓰지 마세요. 제가 온라인으로 주문할게요.`
@@ -167,7 +171,7 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q153",
                     questionNo: 153,
-                    text: "What is implied about the paper Mr. Liu is trying to buy?",
+                    text: "What is suggested about the paper Mr. Liu is shopping for?",
                     classification: "P7_INFERENCE",
 
                     options: {
@@ -201,11 +205,12 @@ export const test2Data: Part7Test = {
         // Questions 155-157: Letter
         {
             id: "p7-t2-set5",
+            setType: "Single",
             questionRange: "155-157",
             passages: [
                 {
                     id: "p7-t2-s5-p1",
-                    contextType: "P1",
+                    contextType: "P1_CORR",
                     docType: "LETTER",
                     content: `20 May\n\nNeil Croft, Director\nQueensland Libraries\n13 Hummocky Road\nBrisbane QLD 4003\n\nDear Mr. Croft,\n\n— [1] —. I have read your inquiry about offering financial management courses at libraries across Queensland. The Society for Financial Management Advisors (SFMA) welcomes the opportunity to partner with the libraries to make basic financial management information more widely available.\n\nYou proposed that SFMA members could lead introductory courses at several library branches. — [2] —. SFMA members have offered similar courses to recent graduates, people changing careers, and first-time investors in the past.\n\n— [3] —. If you have a list of library branches that would host the first series of events, I can suggest facilitators who work near those libraries or would be willing to travel to them. Do you have a general profile of the expected attendees? — [4] —. That information would help us tailor the courses to audience needs and interests.\n\nI look forward to meeting with you to develop a plan. Please contact me by telephone at 07 5550 1344 to set up a time to discuss the courses.\n\nSincerely,\n\nRoberta Otney\nRoberta Otney\nChairperson, Society for Financial Management Advisors`,
                     translation: `5월 20일\n\n닐 크로프트 관장\n퀸즐랜드 도서관\n해노키 로드 13\n브리즈번 QLD 4003\n\n크로프트 씨께,\n\n— [1] —. 퀸즐랜드 전역의 도서관에 재무관리 과정을 개설하는 것에 관한 귀하의 문의를 읽었습니다. 재무관리 전문가 협회(SFMA)는 기초 재무 관리 정보에 보다 널리 접근할 수 있도록 도서관과 협력할 수 있는 기회를 환영합니다.\n\n귀하는 SFMA 회원들이 몇몇 도서관 분관에서 입문 과정을 지도해 줄 것을 제안했습니다. — [2] —. 과거에 SFMA 회원들은 최근 졸업생, 직업을 바꾸려는 사람들, 처음 투자하는 사람들에게 비슷한 과정을 제공했습니다.\n\n— [3] —. 첫 행사 시리즈를 진행할 도서관 분관 목록이 있으시다면 해당 도서관 근처에서 근무하거나 그 도서관으로 갈 의향이 있는 진행자들을 제안해 드릴 수 있습니다. 예상 참석자들의 일반적인 프로필이 있으십니까? — [4] —. 그 정보는 수강생의 요구와 관심에 맞게 과정을 조정하는 데 도움이 될 것입니다.\n\n귀하와 만나서 계획을 세우기를 기대합니다. 과정에 대해 논의할 시간을 잡기 위해 07 5550 1344로 전화 주시기 바랍니다.\n\n로버타 오트니\n협회장, 재무관리 전문가 협회`
@@ -215,14 +220,14 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q155",
                     questionNo: 155,
-                    text: "Why did Ms. Ottini write the letter?",
+                    text: "Why did Ms. Otney write the letter?",
                     classification: "P7_DETAIL",
 
                     options: {
-                        "A": "To describe new library courses",
+                        "A": "To welcome a new library director",
                         "B": "To register for an SFMA finance course",
-                        "C": "To verify some educational credentials",
-                        "D": "To respond to an inquiry from Mr. Croft"
+                        "C": "To confirm some educational credentials",
+                        "D": "To reply to a question from Mr. Croft"
                     },
                     correctAnswer: "D",
                     translation: "오트니 씨가 편지를 쓴 이유는?",
@@ -231,14 +236,14 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q156",
                     questionNo: 156,
-                    text: "What is one thing Ms. Ottini requested?",
+                    text: "What is one thing Ms. Otney requested?",
                     classification: "P7_DETAIL",
 
                     options: {
-                        "A": "Library membership requirements",
+                        "A": "A library membership",
                         "B": "A list of course instructors",
-                        "C": "The locations of libraries",
-                        "D": "Mr. Croft's phone number"
+                        "C": "The locations of some libraries",
+                        "D": "Mr. Croft's telephone number"
                     },
                     correctAnswer: "C",
                     translation: "오트니 씨가 요청한 내용 중 하나는?",
@@ -248,7 +253,7 @@ export const test2Data: Part7Test = {
                     id: "p7-t2-q157",
                     questionNo: 157,
                     text: "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"This is something I would be happy to arrange.\"",
-                    classification: "P7_INTENTION",
+                    classification: "P7_INSERTION",
 
                     options: {
                         "A": "[1]",
@@ -265,11 +270,12 @@ export const test2Data: Part7Test = {
         // Questions 158-160: Advertisement
         {
             id: "p7-t2-set6",
+            setType: "Single",
             questionRange: "158-160",
             passages: [
                 {
                     id: "p7-t2-s6-p1",
-                    contextType: "P4",
+                    contextType: "P4_MARK",
                     docType: "ADVERTISEMENT",
                     title: "Claro Vision",
                     content: `The difference is clear.\n\nTake advantage of our limited-time offer:\n50% off all eyeglass frames through 30 September\n\nOther advantages available today and every day:\n\n• Free eyeglass fittings and adjustments\n\n• Money-back guarantee if you are not completely satisfied\n\n• More than 500 locations in shopping malls throughout Canada\n\n• Low-cost vision checkups by licensed opticians\n\nTo find a store near you, visit www.clarovision.ca/locations,\nor call 416-555-0122 today!`,
@@ -281,7 +287,7 @@ export const test2Data: Part7Test = {
                     id: "p7-t2-q158",
                     questionNo: 158,
                     text: "Why most likely was the advertisement created?",
-                    classification: "P7_INFERENCE",
+                    classification: "P7_DETAIL",
 
                     options: {
                         "A": "To draw attention to an underused professional service",
@@ -330,13 +336,14 @@ export const test2Data: Part7Test = {
         // Questions 161-163: Letter
         {
             id: "p7-t2-set7",
+            setType: "Single",
             questionRange: "161-163",
             passages: [
                 {
                     id: "p7-t2-s7-p1",
-                    contextType: "P1",
+                    contextType: "P1_CORR",
                     docType: "LETTER",
-                    content: `Rossery Building Corporation\n2710 South Exmouth Drive\nSingapore 188509\n\n1 April\n\nElizabeth Balakrishnan\nBala Home Furnishings\n416 Holliton Drive C2\nSingapore 793801\n\nDear Ms. Balakrishnan,\n\nThis is a reminder that the one-year lease for your space will end on 30 April. Please contact my office at 1555 0124 to make an appointment to renew your lease. There will be a small increase in rent and fees because of rising operating costs.\n\nUpdated charges upon lease renewal:\nMonthly rental         S$1,800.00\nParking space fee      S$50.00\nCleaning service       S$10.00\nSecurity fee           S$35.00\nTotal per month        S$1,895.00\n\nIf you do not plan to renew your lease, please notify our office by 15 April. You will need to vacate the premises by 5:00 P.M. on 30 April. The building will be inspected at that time, and costs for repairs or damage beyond normal wear and usage may be incurred.\n\nAlexis Tan`,
+                    content: `Rossery Building Corporation\n2710 South Exmouth Drive\nSingapore 188509\n\n1 April\n\nElizabeth Balakrishnan\nBala Home Furnishings\n416 Holliton Drive C2\nSingapore 793801\n\nDear Ms. Balakrishnan,\n\nThis is a reminder that the one-year lease for your space will end on 30 April. Please contact my office at 1555 0124 to make an appointment to renew your lease. There will be a small increase in rent and fees because of rising operating costs.\n\nUpdated charges upon lease renewal:\nMonthly rental         S$1,800.00\nParking space fee      S$50.00\nCleaning service       S$10.00\nSecurity fee           S$35.00\nTotal monthly charge   S$1,895.00\n\nIf you are not renewing your lease, please notify our office by 15 April. Plan to vacate the property by 5 P.M. on 30 April. There will be an inspection of the property, and there may be charges for repairs or damages beyond normal usage.\n\nKind regards,\n\nAlexis Tan\nAlexis Tan`,
                     translation: `로세리 빌딩 코퍼레이션\n2710 사우스 엑스머스 드라이브\n싱가포르 188509\n\n4월 1일\n\n엘리자베스 발라크리슈난\n발라 홈 퍼니싱\n416 홀리턴 드라이브 C2\n싱가포르 793801\n\n발라크리슈난 씨께,\n\n귀하의 공간에 대한 1년 임대차 계약이 4월 30일에 종료됨을 상기시켜 드립니다. 임대차 계약 갱신을 위한 예약을 하시려면 제 사무실 1555 0124로 연락해 주십시오. 운영비 상승으로 인해 임대료 및 수수료가 소폭 인상될 예정입니다.\n\n임대차 계약 갱신 시 변경된 요금:\n월세: 1,800싱가포르달러\n주차 공간 요금: 50싱가포르달러\n청소 서비스: 10싱가포르달러\n보안 수수료: 35싱가포르달러\n월 총액: 1,895싱가포르달러\n\n만약 임대차 계약을 갱신하지 않을 계획이라면, 4월 15일까지 저희 사무소로 통지해 주십시오. 4월 30일 오후 5시까지 건물을 비워 주셔야 합니다. 그 시간에 건물 점검이 있을 예정이며, 정상적인 사용을 넘어선 수리 또는 손상에 대한 비용이 발생할 수 있습니다.\n\n알렉시스 탄`
                 }
             ],
@@ -345,13 +352,13 @@ export const test2Data: Part7Test = {
                     id: "p7-t2-q161",
                     questionNo: 161,
                     text: "What is the purpose of the letter?",
-                    classification: "P7_PURPOSE",
+                    classification: "P7_DETAIL",
 
                     options: {
-                        "A": "To explain equipment installation fees",
-                        "B": "To provide a discount for a service",
+                        "A": "To explain the fees for equipment installation",
+                        "B": "To offer a discount on a service",
                         "C": "To provide information about a lease agreement",
-                        "D": "To request a change to building amenities"
+                        "D": "To request a change to a property amenity"
                     },
                     correctAnswer: "C",
                     translation: "편지의 목적은?",
@@ -394,27 +401,28 @@ export const test2Data: Part7Test = {
         // Questions 164-167: E-mail
         {
             id: "p7-t2-set8",
+            setType: "Single",
             questionRange: "164-167",
             passages: [
                 {
                     id: "p7-t2-s8-p1",
-                    contextType: "P1",
+                    contextType: "P1_CORR",
                     docType: "EMAIL",
-                    content: `From: khajel@qualiview.co.uk\nTo: lkhoury@briteiyauto.co.uk\nDate: 14 April\nSubject: Proposed revisions to your contract\n\nDear Ms. Khoury,\n\nThank you for forwarding your proposed revisions to the contract for Qualiview Ltd. to become your wholesale supplier of automotive window glass.\n\nFirst, we agree to your request to extend the term of the contract from one year to three years. Second, we are still uncertain about how we can best address your concerns about packaging. We use an innovative type of custom-built crate that reduces breakage for items in transit. We would not be willing to agree to pay an additional penalty fee in the event of damage, however.\n\nI would like to discuss this further with you next week, and I will be out of the office on Tuesday afternoon. Would you be available to meet before 11:00 A.M. on either Wednesday or Thursday? Friday is also possible. Please let me know your preferred date.\n\nKarl Hajel\nQualiview Ltd.`,
-                    translation: `발신: khajel@qualiview.co.uk\n수신: lkhoury@briteiyauto.co.uk\n날짜: 4월 14일\n제목: 귀사의 계약 수정안 제안\n\n코우리 씨께,\n\n퀄리뷰 사가 귀사의 자동차 유리 도매 공급업체가 되는 계약에 대한 수정 제안 사항을 보내주셔서 감사합니다.\n\n먼저, 계약 기간을 1년에서 3년으로 연장해 달라는 귀하의 요청에 동의합니다. 둘째, 포장 제재에 대한 귀사의 우려를 어떻게 가장 잘 해결(address)할 수 있을지 아직 확신이 서지 않습니다. 저희는 운송 중 파손을 줄이는 혁신적인 맞춤형 상자를 사용합니다. 하지만 파손이 발생할 경우 추가 위약금을 지불하는 데에는 동의하지 않습니다.\n\n다음 주에 이에 대해 귀하와 추가로 논의하고 싶습니다만, 제가 화요일 오후에는 사무실을 비울 예정입니다. 수요일이나 목요일 오전 11시 전에 만나실 수 있을까요? 금요일도 가능합니다. 편하신 날짜를 알려주십시오.\n\n칼 헤이글\n퀄리뷰 사`
+                    content: `To: lkhoury@britelyauto.co.uk\nFrom: khagel@qualiview.co.uk\nDate: 14 April\nSubject: Your proposed changes\n\nDear Ms. Khoury,\n\nThank you for forwarding your proposed revisions to the contract for Qualiview Ltd. to be your wholesale supplier of automotive window glass.\n\nFirst, we will gladly agree to an extension of the contract term from one to three years. Secondly, I am not sure what more we can do to address your concerns about packaging materials. We use custom-built crates and innovative packaging to reduce the risk of breakage during shipping. While we will replace any goods that may be damaged in transit, we do not agree to pay an additional penalty fee in the event of such damage.\n\nI would like to discuss this further with you next week; however, I will be out of the office through Tuesday afternoon. Would you be available to meet before 11:00 A.M. on either Wednesday or Thursday? Friday is also possible. Please let me know a convenient date and time for you.\n\nBest regards,\n\nKarl Hagel\nQualiview Ltd.`,
+                    translation: `발신: khagel@qualiview.co.uk\n수신: lkhoury@briteiyauto.co.uk\n날짜: 4월 14일\n제목: 귀사의 계약 수정안 제안\n\n코우리 씨께,\n\n퀄리뷰 사가 귀사의 자동차 유리 도매 공급업체가 되는 계약에 대한 수정 제안 사항을 보내주셔서 감사합니다.\n\n먼저, 계약 기간을 1년에서 3년으로 연장해 달라는 귀하의 요청에 동의합니다. 둘째, 포장 제재에 대한 귀사의 우려를 어떻게 가장 잘 해결(address)할 수 있을지 아직 확신이 서지 않습니다. 저희는 운송 중 파손을 줄이는 혁신적인 맞춤형 상자를 사용합니다. 하지만 파손이 발생할 경우 추가 위약금을 지불하는 데에는 동의하지 않습니다.\n\n다음 주에 이에 대해 귀하와 추가로 논의하고 싶습니다만, 제가 화요일 오후에는 사무실을 비울 예정입니다. 수요일이나 목요일 오전 11시 전에 만나실 수 있을까요? 금요일도 가능합니다. 편하신 날짜를 알려주십시오.\n\n칼 헤이글\n퀄리뷰 사`
                 }
             ],
             questions: [
                 {
                     id: "p7-t2-q164",
                     questionNo: 164,
-                    text: "Why did Mr. Hajel write the e-mail?",
+                    text: "Why did Mr. Hagel write the e-mail?",
                     classification: "P7_DETAIL",
 
                     options: {
-                        "A": "To report damage to some goods",
+                        "A": "To report damage to an item",
                         "B": "To finalize a purchase",
-                        "C": "To request some product samples",
+                        "C": "To request a product sample",
                         "D": "To negotiate a contract"
                     },
                     correctAnswer: "D",
@@ -429,8 +437,8 @@ export const test2Data: Part7Test = {
 
                     options: {
                         "A": "It sells its products online.",
-                        "B": "It is a vehicle window manufacturer.",
-                        "C": "It has paid a penalty fee in the past.",
+                        "B": "It makes windows for cars.",
+                        "C": "It has paid penalty fees in the past.",
                         "D": "It recently redesigned its shipping crates."
                     },
                     correctAnswer: "B",
@@ -440,8 +448,8 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q166",
                     questionNo: 166,
-                    text: "In the second paragraph, the word \"address\" is closest in meaning to",
-                    classification: "P7_INTENTION",
+                    text: "The word \"address\" in paragraph 2, line 2, is closest in meaning to",
+                    classification: "P7_VOCABULARY",
 
                     options: {
                         "A": "respond to",
@@ -474,11 +482,12 @@ export const test2Data: Part7Test = {
         // Questions 168-171: Article
         {
             id: "p7-t2-set9",
+            setType: "Single",
             questionRange: "168-171",
             passages: [
                 {
                     id: "p7-t2-s9-p1",
-                    contextType: "P3",
+                    contextType: "P3_MEDI",
                     docType: "ARTICLE",
                     title: "Shipping Shortage Issues",
                     content: `Shipping Disruptions\n\nSINGAPORE (6 June)—Recently, the demand for international freight space has been outpacing the availability of shipping containers. This container shortage has led to higher costs for goods being shipped out of Asian ports. A drop in the production of rolls of steel, the raw material that containers are made from, has further complicated the situation. — [1] — .\n\nSome exporters have considered the more expensive option of air freight, but companies are still faced with a difficult choice. — [2] — . They must either ask their customers to accept shipment delays, or substantially raise customer prices to cover the costs of expedited shipping. Either way, suppliers risk triggering customer dissatisfaction.\n\n"We are working with business partners, investors, and government officials to discuss solutions to this problem," said Henry Lam, a spokesperson for the household goods producer QET Group. — [3] — . "It's going to take total cooperation of all stakeholders to find a solution."\n\nNot all companies are suffering, though. For example, Fezker, the producer of athletic apparel and footwear, has implemented strategies to better overcome this situation. Fezker has successfully refocused its efforts away from exports to western countries and toward expanding its domestic and regional markets. — [4] — .\n\n"We moved quickly, so the shipping container shortage has not caused a significant impact on our profits," said Fezker CEO Nuwa Lee.`,
@@ -493,9 +502,9 @@ export const test2Data: Part7Test = {
                     classification: "P7_DETAIL",
 
                     options: {
-                        "A": "They are available in various sizes.",
-                        "B": "They are currently in short supply.",
-                        "C": "They are made of several different materials.",
+                        "A": "They come in different sizes.",
+                        "B": "They are in short supply.",
+                        "C": "They are made from a variety of materials.",
                         "D": "They can be used for long-term storage."
                     },
                     correctAnswer: "B",
@@ -505,14 +514,14 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q169",
                     questionNo: 169,
-                    text: "What does Mr. Loh say is necessary to solve the situation?",
+                    text: "What does Mr. Lam say is needed to resolve the situation?",
                     classification: "P7_DETAIL",
 
                     options: {
-                        "A": "A sudden increase in the number of customers",
-                        "B": "Widespread relaxation of government restrictions",
-                        "C": "Development of a new type of technology",
-                        "D": "Better communication between affected groups"
+                        "A": "A sharp increase in the number of customers",
+                        "B": "A relaxation of government restrictions",
+                        "C": "The development of new technologies",
+                        "D": "Communication between affected groups"
                     },
                     correctAnswer: "D",
                     translation: "램 씨는 상황을 해결하기 위해 무엇이 필요하다고 말하는가?",
@@ -525,9 +534,9 @@ export const test2Data: Part7Test = {
                     classification: "P7_DETAIL",
 
                     options: {
-                        "A": "Rain gear",
+                        "A": "Rain jackets",
                         "B": "Sportswear",
-                        "C": "Formal wear",
+                        "C": "Business suits",
                         "D": "Work uniforms"
                     },
                     correctAnswer: "B",
@@ -537,8 +546,8 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q171",
                     questionNo: 171,
-                    text: "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"These markets are more easily supplied by trucks and rail transportation.\"",
-                    classification: "P7_INTENTION",
+                    text: "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"These markets are supplied using more readily available truck and train transportation.\"",
+                    classification: "P7_INSERTION",
 
                     options: {
                         "A": "[1]",
@@ -555,13 +564,14 @@ export const test2Data: Part7Test = {
         // Questions 172-175: Online Chat
         {
             id: "p7-t2-set10",
+            setType: "Single",
             questionRange: "172-175",
             passages: [
                 {
                     id: "p7-t2-s10-p1",
-                    contextType: "P7",
+                    contextType: "P7_CONV",
                     docType: "CHAT_MESSAGE",
-                    content: `Gary Pendell (7:40 A.M.)\nGood morning, team. Can you share the current status of your projects, please?\n\nCheng Yu (7:42 A.M.)\nI'm meeting with Nathan later today to confirm start dates for phase B of the Belleside project.\n\nRobbie Juna (7:43 A.M.)\nI am headed out to the Riverview project site now. The rain last week delayed pouring the concrete for the sidewalks. Now that things look better, I'll be doing a status check there today.\n\nGary Pendell (7:44 A.M.)\nWhen does phase B of Belleside start?\n\nCheng Yu (7:46 A.M.)\nWe plan to break ground in March and have the building completed by November.\n\nGary Pendell (7:47 A.M.)\nGood news about the March start. Our client will be happy, I'm sure.\n\nGary Pendell (7:50 A.M.)\nRobbie, after you get a feel for the situation on-site, please let Nathan know. He might be able to help with additional workers if you're behind schedule. He's our most experienced concrete finisher.\n\nRobbie Juna (7:55 A.M.)\nActually, I'm meeting Nathan at the site this morning to get his opinion on when we can pour the concrete. Everything else will be on hold until we can get that work done.\n\nGary Pendell (7:57 A.M.)\nKeep me regular updates. I don't want to rush if its too early, but we are already behind schedule on the Riverview project because of the equipment issues and the building material shipment delays.\n\nRobbie Juna (7:58 A.M.)\nWill do.`,
+                    content: `Gary Wendel (7:40 A.M.)\nGood morning, team. Can you share the current status of your projects, please?\n\nJing Yu (7:42 A.M.)\nI met with the client last week to confirm the start date for Phase B of the Palisade project.\n\nRobbie Zuniga (7:43 A.M.)\nI am headed to the job site now for the Riverview project. The rain last week delayed pouring the concrete for the sidewalks. I will check the conditions this morning to see if the situation has improved.\n\nGary Wendel (7:44 A.M.)\nWhen will Phase B of the Palisade project begin?\n\nJing Yu (7:46 A.M.)\nWe will break ground in March and plan to have the building completed by November.\n\nGary Wendel (7:47 A.M.)\nThat's good news about the March start date. I am sure the client is happy about that.\n\nGary Wendel (7:50 A.M.)\nRobbie, let me know what you find out about the site conditions. Perhaps Nathan Burry can help at the site. He's our most knowledgeable concrete finisher.\n\nRobbie Zuniga (7:55 A.M.)\nActually, I'm meeting Nathan at the site this morning, so I'll get his opinion on when we can pour the concrete. The rest of the project is on hold until we can do this.\n\nGary Wendel (7:57 A.M.)\nKeep me posted. I don't want to rush it if it's still too wet. At the same time, the Riverview project is already behind schedule because of equipment problems and late delivery of building materials.\n\nRobbie Zuniga (7:58 A.M.)\nWill do.`,
                     translation: `게리 펜델 (오전 7:40)\n좋은 아침입니다, 팀 여러분. 여러분의 프로젝트 현황을 공유해 주시겠습니까?\n\n청 유 (오전 7:42)\n저는 벨레사이드 프로젝트 B단계의 시작일을 확인하기 위해 오늘 늦게 네이선 씨와 만납니다.\n\n로비 주나 (오전 7:43)\n저는 지금 리버뷰 프로젝트 현장으로 가고 있습니다. 지난주에 내린 비로 인해 보도용 콘크리트 타설 작업이 지연되었습니다. 이제 상황이 나아졌으니 오늘 그곳의 상태 점검을 할 예정입니다.\n\n게리 펜델 (오전 7:44)\n벨레사이드 B단계는 언제 시작되나요?\n\n청 유 (오전 7:46)\n저희는 3월에 착공해서 11월까지 건물을 완공할 계획입니다.\n\n게리 펜델 (오전 7:47)\n3월 시작에 관한 좋은 소식이군요. 고객이 좋아할 것이라고 확신합니다.\n\n게리 펜델 (오전 7:50)\n로비 씨, 현장 상황을 파악한 후에 네이선 씨에게 알려주세요. 만약 일정이 늦어졌다면 그가 추가 근로자들을 보내 도와줄 수 있을 것입니다. 그는 저희 회사에서 가장 노련한 콘크리트 마감 작업자입니다.\n\n로비 주나 (오전 7:55)\n사실 오늘 아침 현장에서 네이선 씨를 만나 언제 콘크리트를 타설할 수 있을지 그의 의견을 구할 예정입니다. 그 작업을 마무리할 수 있을 때까지 다른 모든 업무는 보류됩니다.\n\n게리 펜델 (오전 7:57)\n계속해서 소식을 들려주세요. 너무 성급하게 서두르고 싶지는 않지만, 리버뷰 프로젝트는 이미 장비 문제와 건축 자재 배송 지연으로 인해 일정이 지연된 상태입니다.\n\n로비 주나 (오전 7:58)\n그렇게 하겠습니다.`
                 }
             ],
@@ -570,7 +580,7 @@ export const test2Data: Part7Test = {
                     id: "p7-t2-q172",
                     questionNo: 172,
                     text: "In what industry do the chat participants most likely work?",
-                    classification: "P7_INFERENCE",
+                    classification: "P7_DETAIL",
 
                     options: {
                         "A": "Construction",
@@ -585,8 +595,8 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q173",
                     questionNo: 173,
-                    text: "Why did Mr. Pendell most likely initiate the chat?",
-                    classification: "P7_INFERENCE",
+                    text: "Why did Mr. Wendel most likely initiate the chat?",
+                    classification: "P7_DETAIL",
 
                     options: {
                         "A": "To plan a client meeting",
@@ -606,7 +616,7 @@ export const test2Data: Part7Test = {
 
                     options: {
                         "A": "It was delayed by equipment problems.",
-                        "B": "It is being managed by Mr. Yu.",
+                        "B": "It is being managed by Ms. Yu.",
                         "C": "It will be completed in November.",
                         "D": "Its customers are satisfied with progress."
                     },
@@ -617,7 +627,7 @@ export const test2Data: Part7Test = {
                 {
                     id: "p7-t2-q175",
                     questionNo: 175,
-                    text: "At 7:58 A.M., what does Mr. Juna most likely mean when he writes, \"Will do\"?",
+                    text: "At 7:58 A.M., what does Mr. Zuniga most likely mean when he writes, \"Will do\"?",
                     classification: "P7_INTENTION",
 
                     options: {
