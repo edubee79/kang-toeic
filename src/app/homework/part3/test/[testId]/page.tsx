@@ -33,6 +33,8 @@ export default function Part3TestRunnerPage() {
 
     // State
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [audioIndex, setAudioIndex] = useState(0); // Tracks which audio is currently playing
+    const [isAudioTransitioning, setIsAudioTransitioning] = useState(false);
     const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
     const [showCompletion, setShowCompletion] = useState(false);
     const [reviewMode, setReviewMode] = useState(false);
@@ -44,7 +46,7 @@ export default function Part3TestRunnerPage() {
     const [isMounted, setIsMounted] = useState(false);
 
     // Additional State for Skimming
-    const [skimmingEnabled, setSkimmingEnabled] = useState(isGuidedSkimming); // Default true for 1-3
+    const [skimmingEnabled, setSkimmingEnabled] = useState(true); // Default true for Real Mode
     const [skimmingState, setSkimmingState] = useState<'idle' | 'active' | 'done'>('idle');
     const [timeLeft, setTimeLeft] = useState(0);
     const [showStartModal, setShowStartModal] = useState(isOptionalSkimming); // Show modal for 4-10
@@ -60,6 +62,7 @@ export default function Part3TestRunnerPage() {
     // Derive current set
     const activeSets = reviewMode ? reviewSets : testSets;
     const currentSet = activeSets[currentIndex];
+    const audioSet = activeSets[audioIndex]; // Set corresponding to current audio
 
     // Initial Load & Drill Filter
     useEffect(() => {
@@ -95,7 +98,10 @@ export default function Part3TestRunnerPage() {
             if (savedProgress) {
                 try {
                     const parsed = JSON.parse(savedProgress);
-                    if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
+                    if (parsed.currentIndex !== undefined) {
+                        setCurrentIndex(parsed.currentIndex);
+                        setAudioIndex(parsed.currentIndex);
+                    }
                     if (parsed.selectedAnswers) setSelectedAnswers(parsed.selectedAnswers);
                 } catch (e) {
                     console.error("Failed to load progress", e);
@@ -132,36 +138,65 @@ export default function Part3TestRunnerPage() {
         }
     }, [skimmingState, timeLeft]);
 
-    // Effect: Reset Skimming on toggle or initial load (BUT NOT on index change)
+    // Effect: Reset Skimming on initial load (In Real Mode, it's always starting with 20s)
     useEffect(() => {
-        if (!isReady) return; // Wait for progress restoration
+        if (!isReady) return;
 
-        // Only trigger if skimming mode CHANGED, or on mount
-        if (skimmingEnabled && !reviewMode && !showCompletion) {
-            if (skimmingState === 'idle' || skimmingState === 'done') {
+        if (!reviewMode && !showCompletion && !showStartModal) {
+            if (skimmingState === 'idle') {
                 setSkimmingState('active');
                 setTimeLeft(20);
             }
-        } else {
-            setSkimmingState('done');
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isReady, skimmingEnabled, reviewMode, showCompletion]); // Added isReady, removed currentIndex
+    }, [isReady, reviewMode, showCompletion, showStartModal, skimmingState]);
 
     // Audio Play Control
     useEffect(() => {
-        if (!isReady) return; // Wait for progress restoration
+        if (!isReady) return;
 
-        if (skimmingState === 'done' && audioRef.current && !showCompletion && !showStartModal) {
+        if (skimmingState === 'done' && audioRef.current && !showCompletion && !showStartModal && !isAudioTransitioning) {
             // Explicitly load before play to avoid race conditions with src changes
-            audioRef.current.load();
+            if (audioRef.current.src !== audioSet?.audio) {
+                audioRef.current.load();
+            }
             audioRef.current.play().catch(e => console.log("Auto-play blocked", e));
-        } else if (skimmingState === 'active' && audioRef.current) {
-            // Ensure audio is PAUSED during skimming
-            audioRef.current.pause();
-            audioRef.current.currentTime = 0;
+        } else if (audioRef.current) {
+            if (skimmingState === 'active' || isAudioTransitioning) {
+                audioRef.current.pause();
+                if (skimmingState === 'active') audioRef.current.currentTime = 0;
+            }
         }
-    }, [isReady, skimmingState, reviewMode, currentSet, showCompletion, showStartModal]);
+    }, [isReady, skimmingState, reviewMode, audioIndex, audioSet, showCompletion, showStartModal, isAudioTransitioning]);
+
+    // Audio End Handler
+    const handleAudioEnded = () => {
+        if (audioIndex < activeSets.length - 1) {
+            setIsAudioTransitioning(true);
+            setTimeout(() => {
+                setAudioIndex(prev => prev + 1);
+                // In review mode, we sync the UI with the audio
+                if (reviewMode) {
+                    setCurrentIndex(prev => prev + 1);
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                }
+                setIsAudioTransitioning(false);
+            }, 2000); // 2s gap
+        } else {
+            // Last audio ended. 
+            if (reviewMode) {
+                setShowCompletion(true);
+                setReviewMode(false);
+                return;
+            }
+
+            // Real Mode: Check if all questions answered.
+            const allAnswered = testSets.every(set => set.questions.every(q => selectedAnswers[q.id]));
+            if (allAnswered) {
+                finishTest();
+            }
+        }
+    };
+
 
     // Smarter Highlighting Helper
     // Filter to keep Wh-words + Nouns/Verbs (long words) - Common Stopwords
@@ -250,28 +285,44 @@ export default function Part3TestRunnerPage() {
 
     // Handlers
     const handleSelect = (questionId: string, optionLabel: string) => {
+        if (revealedQuestions.has(questionId)) return;
+
+        const newAnswers = {
+            ...selectedAnswers,
+            [questionId]: optionLabel
+        };
+        setSelectedAnswers(newAnswers);
+
         if (reviewMode) {
-            if (revealedQuestions.has(questionId)) return;
-            setSelectedAnswers(prev => ({
-                ...prev,
-                [questionId]: optionLabel
-            }));
             const nextRevealed = new Set(revealedQuestions);
             nextRevealed.add(questionId);
             setRevealedQuestions(nextRevealed);
-
-            // Auto scroll to next question in review mode
             scrollToNext(questionId);
             return;
         }
 
-        setSelectedAnswers(prev => ({
-            ...prev,
-            [questionId]: optionLabel
-        }));
-
-        // Auto scroll to next question in test mode
+        // Test Mode Logic
         scrollToNext(questionId);
+
+        // Check if CURRENT SET is complete
+        const currentSetQuestions = currentSet.questions;
+        const currentSetComplete = currentSetQuestions.every((q: Part3Question) => newAnswers[q.id]);
+
+        if (currentSetComplete) {
+            if (currentIndex < activeSets.length - 1) {
+                // Wait a tiny bit for satisfaction then auto-transition UI
+                setTimeout(() => {
+                    setCurrentIndex(prev => prev + 1);
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                }, 400);
+            } else {
+                // Last set answered.
+                // If audio already ended, finishTest.
+                if (audioRef.current?.ended && audioIndex === activeSets.length - 1) {
+                    finishTest();
+                }
+            }
+        }
     };
 
     const scrollToNext = (currentId: string) => {
@@ -295,34 +346,20 @@ export default function Part3TestRunnerPage() {
     const isSetComplete = currentSet?.questions.every((q: Part3Question) => selectedAnswers[q.id]);
 
     const handleNext = () => {
-        if (!isSetComplete && !reviewMode) return;
-
-        // STOP current audio explicitly before transition
-        if (audioRef.current) {
-            audioRef.current.pause();
-            audioRef.current.currentTime = 0;
-        }
+        if (!reviewMode) return; // Disabled in test mode
 
         if (currentIndex < activeSets.length - 1) {
-            // FIX: Reset skimming state synchronously BEFORE index change
-            if (skimmingEnabled && !reviewMode) {
-                setSkimmingState('active');
-                setTimeLeft(20);
-            } else {
-                setSkimmingState('done');
-            }
-
             setCurrentIndex(prev => prev + 1);
-            window.scrollTo({ top: 0, behavior: 'instant' }); // Snap to top for new set
+            setAudioIndex(prev => prev + 1); // Stay in sync during review
+            window.scrollTo({ top: 0, behavior: 'instant' });
         } else {
             if (reviewMode) {
                 setShowCompletion(true);
                 setReviewMode(false);
-            } else {
-                finishTest();
             }
         }
     };
+
 
     const handleRestart = () => {
         if (confirm("Are you sure you want to restart? Current progress will be lost.")) {
@@ -591,11 +628,17 @@ export default function Part3TestRunnerPage() {
                                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Wait for Skimming...</span>
                                 </div>
                             )}
+                            {isAudioTransitioning && (
+                                <div className="absolute inset-0 z-10 bg-emerald-900/60 rounded-full flex items-center justify-center backdrop-blur-[1px] animate-pulse">
+                                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">Next audio starting in 2s...</span>
+                                </div>
+                            )}
                             <audio
                                 ref={audioRef}
                                 className="w-full h-8 opacity-90 invert-[.9]"
-                                src={currentSet.audio}
-                                key={`${currentIndex}-${currentSet.audio}`}
+                                src={audioSet?.audio}
+                                key={`${audioIndex}-${audioSet?.audio}`}
+                                onEnded={handleAudioEnded}
                             >
                                 Your browser does not support the audio element.
                             </audio>
@@ -739,30 +782,6 @@ export default function Part3TestRunnerPage() {
                 </div>
             </div>
 
-            {/* Bottom Navigation Bar */}
-            <div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent pointer-events-none">
-                <div className="max-w-3xl mx-auto flex justify-end items-center pointer-events-auto">
-                    <button
-                        onClick={handleNext}
-                        disabled={!isSetComplete && !reviewMode}
-                        className={`
-                            px-8 py-3.5 rounded-2xl font-bold text-sm tracking-wide transition-all shadow-lg active:scale-95 flex items-center gap-2
-                            ${(isSetComplete || reviewMode)
-                                ? 'bg-emerald-600 text-white hover:bg-emerald-500 hover:shadow-emerald-500/25 ring-1 ring-inset ring-white/10'
-                                : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
-                            }
-                        `}
-                    >
-                        {reviewMode
-                            ? (currentIndex === activeSets.length - 1 ? <span>Finish Review 🏁</span> : <span>Next (Review) →</span>)
-                            : (!isSetComplete
-                                ? <span>Select All Answers</span>
-                                : (currentIndex === testSets.length - 1 ? <span>Finish Test 🎉</span> : <span>Next Set <span className="opacity-50 ml-1">→</span></span>)
-                            )
-                        }
-                    </button>
-                </div>
-            </div>
         </div>
     );
 }
