@@ -90,7 +90,11 @@ export default function Part4TestRunnerPage() {
 
         // Progress restoration logic
         if (!mode) {
-            const savedProgress = localStorage.getItem(`part4_progress_test_${testId}`);
+            const userStr = localStorage.getItem('toeic_user');
+            const user = userStr ? JSON.parse(userStr) : null;
+            const userId = user?.id || 'guest';
+
+            const savedProgress = localStorage.getItem(`part4_progress_${userId}_test_${testId}`);
             if (savedProgress) {
                 try {
                     const parsed = JSON.parse(savedProgress);
@@ -113,7 +117,11 @@ export default function Part4TestRunnerPage() {
         if (reviewMode || showCompletion) return;
 
         if (Object.keys(selectedAnswers).length > 0) {
-            localStorage.setItem(`part4_progress_test_${testId}`, JSON.stringify({
+            const userStr = localStorage.getItem('toeic_user');
+            const user = userStr ? JSON.parse(userStr) : null;
+            const userId = user?.id || 'guest';
+
+            localStorage.setItem(`part4_progress_${userId}_test_${testId}`, JSON.stringify({
                 currentIndex,
                 selectedAnswers
             }));
@@ -736,6 +744,31 @@ export default function Part4TestRunnerPage() {
                         )
                     })}
                 </div>
+
+                {/* Submit Button for the last set */}
+                {currentIndex === activeSets.length - 1 && !reviewMode && (
+                    <div className="pt-10 pb-20 flex justify-center px-4">
+                        <button
+                            onClick={finishTest}
+                            disabled={!isSetComplete}
+                            className={cn(
+                                "w-full max-w-md h-16 rounded-2xl font-black text-lg transition-all shadow-xl flex items-center justify-center gap-2",
+                                isSetComplete
+                                    ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-500/20 active:scale-95 cursor-pointer"
+                                    : "bg-slate-800 text-slate-500 cursor-not-allowed opacity-50"
+                            )}
+                        >
+                            {isSetComplete ? (
+                                <>
+                                    <Trophy className="w-6 h-6" />
+                                    <span>Finish and Check Results</span>
+                                </>
+                            ) : (
+                                "Complete all questions to finish"
+                            )}
+                        </button>
+                    </div>
+                )}
             </div>
 
         </div>
