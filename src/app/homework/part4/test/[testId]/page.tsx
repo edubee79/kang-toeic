@@ -85,7 +85,7 @@ export default function Part4TestRunnerPage() {
             }
         }
 
-        const found = part4Data.filter(s => s.testId === testId);
+        const found = part4Data.filter(s => s.testId === Number(testId));
         setTestSets(found);
 
         // Progress restoration logic

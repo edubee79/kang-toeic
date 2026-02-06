@@ -89,7 +89,7 @@ export default function Part3TestRunnerPage() {
             }
         }
 
-        const found = part3RealTests.filter(s => s.testId === testId);
+        const found = part3RealTests.filter(s => s.testId === Number(testId));
         setTestSets(found);
 
         // Progress restoration logic
