@@ -408,11 +408,27 @@ export const HalfTestService = {
             };
         });
 
-        const lcTarget = (partGoals.p1 + partGoals.p2 + partGoals.p3 + partGoals.p4) * 10;
-        const rcTarget = (partGoals.p5 + partGoals.p6 + partGoals.p7s + partGoals.p7m) * 10;
+        const lcTarget = (partGoals.p1 + partGoals.p2 + partGoals.p3 + partGoals.p4);
+        const rcTarget = (partGoals.p5 + partGoals.p6 + partGoals.p7s + partGoals.p7m);
 
-        const lcScaledValue = isFullTest ? calculateScaledScore(lcTotal, 'LC') : lcTotal * 10;
-        const rcScaledValue = isFullTest ? calculateScaledScore(rcTotal, 'RC') : rcTotal * 10;
+        // REALISTIC SCORE CALCULATION (Calibrated to Hackers table)
+        // LC: Score = (CorrectCount - 9) / 0.18
+        // RC: Score = (CorrectCount - 21) / 0.16
+        const calculateRealisticScore = (count: number, isLC: boolean, isFull: boolean) => {
+            if (count === 0) return 5;
+            const fullCount = isFull ? count : count * 2; // Scale up if it's a half-test
+
+            let score;
+            if (isLC) {
+                score = Math.round(((fullCount - 9) / 0.18) / 5) * 5;
+            } else {
+                score = Math.round(((fullCount - 21) / 0.16) / 5) * 5;
+            }
+            return Math.max(5, Math.min(495, score));
+        };
+
+        const lcScaledValue = isFullTest ? calculateScaledScore(lcTotal, 'LC') : calculateRealisticScore(lcTotal, true, false);
+        const rcScaledValue = isFullTest ? calculateScaledScore(rcTotal, 'RC') : calculateRealisticScore(rcTotal, false, false);
 
         return {
             overallScore: lcScaledValue + rcScaledValue,

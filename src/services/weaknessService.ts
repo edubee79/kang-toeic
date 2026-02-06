@@ -209,11 +209,18 @@ export const WeaknessService = {
                 actualRCCount += (targetStats[p]?.latest || 0);
             });
 
-            // TOEIC Score Conversion (Simplified but accurate)
+            // TOEIC Score Conversion (Realistic Calibration - Calibrated to Hackers table)
+            // LC: Score = (CorrectCount - 9) / 0.18
+            // RC: Score = (CorrectCount - 21) / 0.16
             const calculateToeicScore = (count: number, isLC: boolean) => {
-                if (count === 0) return 0;
-                if (isLC) return (count * 5) + 10;
-                return (count * 5) - 10;
+                if (count === 0) return 5;
+                let score;
+                if (isLC) {
+                    score = Math.round(((count - 9) / 0.18) / 5) * 5;
+                } else {
+                    score = Math.round(((count - 21) / 0.16) / 5) * 5;
+                }
+                return Math.max(5, Math.min(495, score));
             };
 
             const currentTotalLC = calculateToeicScore(actualLCCount, true);

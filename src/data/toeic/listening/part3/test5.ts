@@ -1,7 +1,7 @@
 import { Part3Set } from '../../../listening_types';
 
 export const test5: Part3Set[] = [
-{
+  {
     testId: 5,
     setId: "p3-t5-s1",
     contextType: "A2. 프로젝트 / 업무 진행",
@@ -75,7 +75,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s2",
     contextType: "A2. 프로젝트 / 업무 진행",
@@ -141,7 +141,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s3",
     contextType: "A4. 재무 / 비용 / 승인",
@@ -211,7 +211,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s4",
     contextType: "B4. 문의 / 안내",
@@ -281,7 +281,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s5",
     contextType: "A2. 프로젝트 / 업무 진행",
@@ -356,109 +356,6 @@ export const test5: Part3Set[] = [
     ]
   },
   {
-    "testId": 5,
-    "setId": "set_47_49",
-    "contextType": "B4. 문의 / 안내",
-    "questionRange": "47-49",
-    "audio": "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_47-49.mp3",
-    "questions": [
-      {
-        "id": "q47",
-        "text": "What city department does the man work in?",
-        "questionType": "DETAIL",
-        "options": [
-          {
-            "label": "A",
-            "text": "Parks and Recreation"
-          },
-          {
-            "label": "B",
-            "text": "Water Management"
-          },
-          {
-            "label": "C",
-            "text": "Transportation"
-          },
-          {
-            "label": "D",
-            "text": "Education"
-          }
-        ],
-        "correctAnswer": "A"
-      },
-      {
-        "id": "q48",
-        "text": "Why is the woman calling?",
-        "questionType": "INFERENCE",
-        "options": [
-          {
-            "label": "A",
-            "text": "To report a fallen tree"
-          },
-          {
-            "label": "B",
-            "text": "To ask about city-job openings"
-          },
-          {
-            "label": "C",
-            "text": "To find out the cost of a project"
-          },
-          {
-            "label": "D",
-            "text": "To inquire about a tree planting program"
-          }
-        ],
-        "correctAnswer": "D"
-      },
-      {
-        "id": "q49",
-        "text": "What does the man tell the woman to do?",
-        "questionType": "DETAIL",
-        "options": [
-          {
-            "label": "A",
-            "text": "Review a policy"
-          },
-          {
-            "label": "B",
-            "text": "Make an appointment"
-          },
-          {
-            "label": "C",
-            "text": "Complete an online form"
-          },
-          {
-            "label": "D",
-            "text": "Contact a different office"
-          }
-        ],
-        "correctAnswer": "C"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "Man",
-        "text": "Mount Alifan Department of Parks and Recreation. How can I help you?"
-      },
-      {
-        "speaker": "Woman",
-        "text": "Hello, I read about your tree planting initiative, and I wanted to learn more about it."
-      },
-      {
-        "speaker": "Man",
-        "text": "Sure. Our department is now offering residents the opportunity to have a tree planted on their street in honor of someone special. It's part of our city's new beautification project."
-      },
-      {
-        "speaker": "Woman",
-        "text": "That's great. How can I make a request to do this?"
-      },
-      {
-        "speaker": "Man",
-        "text": "You'll need to fill out an online request form from our Web site. After you put in all your information and submit the form, you'll receive weekly e-mail updates."
-      }
-    ]
-  },
-{
     testId: 5,
     setId: "p3-t5-s6",
     contextType: "B4. 문의 / 안내",
@@ -528,7 +425,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s7",
     contextType: "A2. 프로젝트 / 업무 진행",
@@ -594,7 +491,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s8",
     contextType: "A1. 회의 / 일정 조정",
@@ -672,7 +569,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s9",
     contextType: "A5. 교육 / 트레이닝",
@@ -742,7 +639,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s10",
     contextType: "A3. 인사 / 휴가 / 근무",
@@ -816,7 +713,7 @@ export const test5: Part3Set[] = [
       }
     ]
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s11",
     contextType: "B2. 주문 / 배송",
@@ -891,7 +788,7 @@ export const test5: Part3Set[] = [
     ],
     image: "/images/ETS_TOEIC_3/Test_05/Part_03/p3_q62.png"
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s12",
     contextType: "C3. 일정 변경 / 취소",
@@ -974,7 +871,7 @@ export const test5: Part3Set[] = [
     ],
     image: "/images/ETS_TOEIC_3/Test_05/Part_03/p3_q65.png"
   },
-{
+  {
     testId: 5,
     setId: "p3-t5-s13",
     contextType: "D1. 사무기기 고장",
