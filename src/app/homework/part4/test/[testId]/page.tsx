@@ -5,7 +5,7 @@ import { notFound, useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { part4Data, Part4Set, Part4Question } from '@/data/part4';
 import { cn, normalizeOptions } from "@/lib/utils";
-import { Headphones, PlayCircle, Activity, Trophy, RotateCcw } from "lucide-react";
+import { Headphones, PlayCircle, Activity, Trophy, RotateCcw, ChevronRight } from "lucide-react";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { TouchDictionary } from '@/components/common/TouchDictionary';
@@ -49,6 +49,7 @@ export default function Part4TestRunnerPage() {
     const [skimmingState, setSkimmingState] = useState<'idle' | 'active' | 'done'>('idle');
     const [timeLeft, setTimeLeft] = useState(0);
     const [showStartModal, setShowStartModal] = useState(isOptionalSkimming); // Show modal for 4-10
+    const [isAudioBlocked, setIsAudioBlocked] = useState(false);
 
     // Refs for Audio
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -161,7 +162,14 @@ export default function Part4TestRunnerPage() {
             if (audioRef.current.src !== audioSet?.audio) {
                 audioRef.current.load();
             }
-            audioRef.current.play().catch(e => console.log("Auto-play blocked", e));
+            audioRef.current.play()
+                .then(() => setIsAudioBlocked(false))
+                .catch(e => {
+                    if (e.name === 'NotAllowedError') {
+                        setIsAudioBlocked(true);
+                    }
+                    console.log("Auto-play blocked", e);
+                });
         } else if (audioRef.current) {
             if (skimmingState === 'active' || isAudioTransitioning) {
                 audioRef.current.pause();
@@ -172,25 +180,18 @@ export default function Part4TestRunnerPage() {
 
     // Audio End Handler
     const handleAudioEnded = () => {
+        // In review mode, don't auto-advance - user controls navigation
+        if (reviewMode) {
+            return;
+        }
+
         if (audioIndex < activeSets.length - 1) {
             setIsAudioTransitioning(true);
             setTimeout(() => {
                 setAudioIndex(prev => prev + 1);
-                // In review mode, we sync the UI with the audio
-                if (reviewMode) {
-                    setCurrentIndex(prev => prev + 1);
-                    window.scrollTo({ top: 0, behavior: 'instant' });
-                }
                 setIsAudioTransitioning(false);
             }, 2000); // 2s gap
         } else {
-            // Last audio ended. 
-            if (reviewMode) {
-                setShowCompletion(true);
-                setReviewMode(false);
-                return;
-            }
-
             // Real Mode: Check if all questions answered.
             const allAnswered = testSets.every(set => set.questions.every(q => selectedAnswers[q.id]));
             if (allAnswered) {
@@ -492,6 +493,8 @@ export default function Part4TestRunnerPage() {
                             setShowCompletion(false);
                             setReviewMode(true);
                             setCurrentIndex(0);
+                            setAudioIndex(0);  // Reset audio to match first wrong question set
+                            setSkimmingState('done');  // Skip skimming in review mode
                         }}
                         className="h-14 bg-slate-800 text-white rounded-2xl font-bold hover:bg-slate-700 transition-colors"
                     >
@@ -515,6 +518,30 @@ export default function Part4TestRunnerPage() {
 
     return (
         <div className="min-h-screen bg-slate-950 pb-32 font-sans selection:bg-indigo-500/30">
+            {isAudioBlocked && (
+                <div className="fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-500">
+                    <div className="max-w-xs w-full bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] shadow-2xl text-center space-y-6">
+                        <div className="w-20 h-20 bg-indigo-500/10 text-indigo-500 rounded-full flex items-center justify-center mx-auto ring-4 ring-indigo-500/5">
+                            <Headphones className="w-10 h-10 animate-pulse" />
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-xl font-black text-white tracking-tight">오디오 재생 준비</h3>
+                            <p className="text-slate-400 text-sm font-medium leading-relaxed">학습 시작을 위해 오디오 재생 버튼을 눌러주세요.</p>
+                        </div>
+                        <button
+                            onClick={() => {
+                                setIsAudioBlocked(false);
+                                if (audioRef.current) {
+                                    audioRef.current.play().catch(console.error);
+                                }
+                            }}
+                            className="w-full h-16 bg-indigo-600 hover:bg-indigo-500 text-white text-lg font-black rounded-2xl shadow-xl shadow-indigo-500/20 active:scale-95 transition-all flex items-center justify-center gap-2"
+                        >
+                            <PlayCircle className="w-6 h-6" /> 오디오 시작하기
+                        </button>
+                    </div>
+                </div>
+            )}
             {/* Non-obstructive Skimming Timer */}
             {skimmingState === 'active' && (
                 <div className="fixed top-24 right-4 z-50 animate-in fade-in slide-in-from-right duration-500">
@@ -745,29 +772,74 @@ export default function Part4TestRunnerPage() {
                     })}
                 </div>
 
-                {/* Submit Button for the last set */}
-                {currentIndex === activeSets.length - 1 && !reviewMode && (
+                {/* Navigation Buttons */}
+                {reviewMode ? (
                     <div className="pt-10 pb-20 flex justify-center px-4">
-                        <button
-                            onClick={finishTest}
-                            disabled={!isSetComplete}
-                            className={cn(
-                                "w-full max-w-md h-16 rounded-2xl font-black text-lg transition-all shadow-xl flex items-center justify-center gap-2",
-                                isSetComplete
-                                    ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-500/20 active:scale-95 cursor-pointer"
-                                    : "bg-slate-800 text-slate-500 cursor-not-allowed opacity-50"
-                            )}
-                        >
-                            {isSetComplete ? (
-                                <>
-                                    <Trophy className="w-6 h-6" />
-                                    <span>Finish and Check Results</span>
-                                </>
-                            ) : (
-                                "Complete all questions to finish"
-                            )}
-                        </button>
+                        {currentIndex < activeSets.length - 1 ? (
+                            <button
+                                onClick={() => {
+                                    const allRevealed = currentSet.questions.every(q => revealedQuestions.has(q.id));
+                                    if (allRevealed) {
+                                        setCurrentIndex(prev => prev + 1);
+                                        setAudioIndex(prev => prev + 1);  // Sync audio with UI
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }
+                                }}
+                                disabled={!currentSet.questions.every(q => revealedQuestions.has(q.id))}
+                                className={cn(
+                                    "w-full max-w-md h-16 rounded-2xl font-black text-lg transition-all shadow-xl flex items-center justify-center gap-2",
+                                    currentSet.questions.every(q => revealedQuestions.has(q.id))
+                                        ? "bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/20 active:scale-95 cursor-pointer"
+                                        : "bg-slate-800 text-slate-500 cursor-not-allowed opacity-50"
+                                )}
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                                <span>다음 틀린 문제 세트로</span>
+                            </button>
+                        ) : (
+                            <button
+                                onClick={() => {
+                                    const urlParams = new URLSearchParams(window.location.search);
+                                    const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                                    router.push(isAi ? '/weakness/dashboard' : '/homework/part4');
+                                }}
+                                disabled={!currentSet.questions.every(q => revealedQuestions.has(q.id))}
+                                className={cn(
+                                    "w-full max-w-md h-16 rounded-2xl font-black text-lg transition-all shadow-xl flex items-center justify-center gap-2",
+                                    currentSet.questions.every(q => revealedQuestions.has(q.id))
+                                        ? "bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/20 active:scale-95 cursor-pointer"
+                                        : "bg-slate-800 text-slate-500 cursor-not-allowed opacity-50"
+                                )}
+                            >
+                                <Trophy className="w-6 h-6" />
+                                <span>복습 완료</span>
+                            </button>
+                        )}
                     </div>
+                ) : (
+                    currentIndex === activeSets.length - 1 && (
+                        <div className="pt-10 pb-20 flex justify-center px-4">
+                            <button
+                                onClick={finishTest}
+                                disabled={!isSetComplete}
+                                className={cn(
+                                    "w-full max-w-md h-16 rounded-2xl font-black text-lg transition-all shadow-xl flex items-center justify-center gap-2",
+                                    isSetComplete
+                                        ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-500/20 active:scale-95 cursor-pointer"
+                                        : "bg-slate-800 text-slate-500 cursor-not-allowed opacity-50"
+                                )}
+                            >
+                                {isSetComplete ? (
+                                    <>
+                                        <Trophy className="w-6 h-6" />
+                                        <span>Finish and Check Results</span>
+                                    </>
+                                ) : (
+                                    "Complete all questions to finish"
+                                )}
+                            </button>
+                        </div>
+                    )
                 )}
             </div>
 
