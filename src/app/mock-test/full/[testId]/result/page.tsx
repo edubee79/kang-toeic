@@ -131,10 +131,54 @@ export default function MockTestResult() {
         fetchResult();
     }, [testId, testIdStr, router, attemptId]);
 
+    const handleManualRecovery = async () => {
+        const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+        const localData = savedAttempts[`full-${testId}`];
+        if (!localData || !localData.answers || !attemptId) {
+            alert("로컬 기기에 저장된 답안 데이터를 찾을 수 없습니다. (시험을 본 기기에서 시도해 주세요)");
+            return;
+        }
+
+        try {
+            console.log("🛠 Manual Recovery triggered...");
+            const finalAnswers = localData.answers;
+            const result = calculateMockScore(String(testId), finalAnswers);
+
+            const batch = writeBatch(db);
+            const attemptRef = doc(db, 'MockTestAttempts', attemptId);
+
+            batch.update(attemptRef, {
+                status: 'completed',
+                completedAt: serverTimestamp(),
+                totalScore: result.correctCount,
+                totalQuestions: result.totalQuestions,
+                partScores: result.partScores,
+                answers: finalAnswers,
+                isRecoveredManual: true
+            });
+
+            await batch.commit();
+            alert("✅ 데이터 복구 성공! 페이지를 새로고침합니다.");
+            window.location.reload();
+        } catch (e) {
+            console.error(e);
+            alert("❌ 복구 중 오류가 발생했습니다.");
+        }
+    };
+
     if (!attempt || !stats || !halfAnalysis) return (
-        <div className="min-h-screen bg-white flex flex-col items-center justify-center">
+        <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-            <div className="text-slate-400 font-bold animate-pulse">깡쌤의 정밀 취약 분석 리포트 생성 중...</div>
+            <div className="text-slate-500 font-bold mb-8">깡쌤의 정밀 취약 분석 리포트 생성 중...</div>
+
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 max-w-sm">
+                <p className="text-xs text-slate-400 mb-4 font-medium">
+                    1분 이상 로딩이 지속된다면 네트워크 오류로 데이터 전송이 누락되었을 수 있습니다. 시험을 본 기기라면 아래 버튼을 눌러 복구를 시도하세요.
+                </p>
+                <Button onClick={handleManualRecovery} className="w-full bg-slate-800 hover:bg-black text-white rounded-xl py-6 font-black uppercase tracking-widest text-xs">
+                    내 답안 강제 복구하기
+                </Button>
+            </div>
         </div>
     );
 
