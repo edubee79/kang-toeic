@@ -5,8 +5,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Home, BarChart3, RotateCcw, Award, Clock, AlertCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { getCorrectAnswersForTest9, getCorrectAnswersForTest10, calculateScaledScore } from '@/lib/mock/scoring';
+import { getCorrectAnswersForTest9, getCorrectAnswersForTest10, calculateScaledScore, calculateMockScore, getQuestionClassificationsForTest9, getQuestionClassificationsForTest10 } from '@/lib/mock/scoring';
 import { HalfTestService, HalfTestAnalysis } from '@/services/halfTestService';
+import { db } from '@/lib/firebase';
+import { doc, getDoc, updateDoc, serverTimestamp, writeBatch, collection } from 'firebase/firestore';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 import { cn } from '@/lib/utils';
 
 export default function MockTestResult() {
@@ -31,12 +34,82 @@ export default function MockTestResult() {
     useEffect(() => {
         const fetchResult = async () => {
             const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
-            const data = savedAttempts[`full-${testId}`];
-            if (data && data.answers) {
-                setAttempt(data);
+            const localData = savedAttempts[`full-${testId}`];
+
+            if (localData && localData.answers) {
+                setAttempt(localData);
 
                 if (attemptId) {
-                    const analysis = await HalfTestService.analyzeAttempt(attemptId);
+                    let analysis = await HalfTestService.analyzeAttempt(attemptId);
+
+                    // 🚨 [SELF-HEALING LOGIC] 
+                    // If DB is in_progress or lacks answers but we have them locally, sync it NOW.
+                    const needsRecovery = !analysis ||
+                        (Object.keys((analysis as any).partStats || {}).every(k => (analysis as any).partStats[k].total === 0));
+
+                    if (needsRecovery && localData.answers && Object.keys(localData.answers).length > 0) {
+                        console.log("🛠 Attempting to recover missing data from localStorage for attempt:", attemptId);
+                        try {
+                            const finalAnswers = localData.answers;
+                            const result = calculateMockScore(String(testId), finalAnswers);
+                            const totalCorrect = result.correctCount;
+                            const partScores = result.partScores;
+                            const totalQs = result.totalQuestions;
+
+                            const userStr = localStorage.getItem('toeic_user');
+                            const user = userStr ? JSON.parse(userStr) : null;
+                            const userId = user?.userId || user?.uid || "Unknown";
+                            const testLabel = testId === 10 ? "모의고사 2회" : "모의고사 1회";
+
+                            const batch = writeBatch(db);
+                            const attemptRef = doc(db, 'MockTestAttempts', attemptId);
+
+                            batch.update(attemptRef, {
+                                status: 'completed',
+                                completedAt: serverTimestamp(),
+                                totalScore: totalCorrect,
+                                totalQuestions: totalQs,
+                                partScores: partScores,
+                                answers: finalAnswers,
+                                isRecovered: true
+                            });
+
+                            // Re-sync Manager_Results
+                            const resultsRef = collection(db, "Manager_Results");
+                            const partMap: Record<string, string> = {
+                                p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
+                                p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
+                            };
+
+                            Object.entries(partScores).forEach(([pKey, stat]: [string, any]) => {
+                                if (pKey === 'p7') return;
+                                if (stat.total > 0) {
+                                    batch.set(doc(resultsRef), {
+                                        student: user?.userName || user?.name || "Unknown",
+                                        studentId: userId,
+                                        unit: `${testLabel} (${pKey.toUpperCase()})`,
+                                        detail: testLabel,
+                                        type: partMap[pKey] || pKey,
+                                        score: stat.correct,
+                                        total: stat.total,
+                                        wrongCount: stat.total - stat.correct,
+                                        incorrectQuestions: [],
+                                        attemptId: attemptId,
+                                        timestamp: serverTimestamp(),
+                                        createdAt: serverTimestamp()
+                                    });
+                                }
+                            });
+
+                            await batch.commit();
+                            console.log("✅ Data recovered successfully.");
+
+                            // Re-fetch analysis after recovery
+                            analysis = await HalfTestService.analyzeAttempt(attemptId);
+                        } catch (e) {
+                            console.error("Critical: Self-healing failed", e);
+                        }
+                    }
 
                     if (analysis) {
                         setHalfAnalysis(analysis as any);
