@@ -234,9 +234,16 @@ export default function Part1TestRunner() {
                 </div>
 
                 <div className="space-y-3 w-full max-w-xs">
-                    <button onClick={() => { setIsFinished(false); setReviewMode(true); setCurrentQIndex(0); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
-                        틀린문제 확인
-                    </button>
+                    {correctCount === testSet.questions.length ? (
+                        <div className="w-full h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl font-bold flex items-center justify-center gap-2 text-emerald-400">
+                            <CheckCircle2 className="w-5 h-5" />
+                            <span>완벽합니다! 🎉</span>
+                        </div>
+                    ) : (
+                        <button onClick={() => { setIsFinished(false); setReviewMode(true); setCurrentQIndex(0); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
+                            틀린문제 확인
+                        </button>
+                    )}
                     <button onClick={handleRetake} className="w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all bg-amber-600 hover:bg-amber-500">
                         다시 풀기
                     </button>

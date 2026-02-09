@@ -1,7 +1,7 @@
 import { Part4Set } from '../../../listening_types';
 
 export const test4: Part4Set[] = [
-{
+  {
     testId: 4,
     setId: "p4-t4-s1",
     questionRange: "71-73",
@@ -55,7 +55,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s2",
     questionRange: "74-76",
@@ -109,7 +109,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s3",
     questionRange: "77-79",
@@ -163,7 +163,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s4",
     questionRange: "80-82",
@@ -217,7 +217,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s5",
     questionRange: "83-85",
@@ -271,7 +271,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s6",
     questionRange: "86-88",
@@ -325,7 +325,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s7",
     questionRange: "89-91",
@@ -379,7 +379,7 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s8",
     questionRange: "92-94",
@@ -433,12 +433,13 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s9",
     questionRange: "95-97",
     contextType: "A1 (announcement)",
     audio: "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 4_95-97.mp3",
+    image: "/images/ETS_TOEIC_3/Test_04/Part_04/p4_q95.png",
     questions: [
       {
         id: "p4-t4-q95",
@@ -487,49 +488,50 @@ export const test4: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 4,
     setId: "p4-t4-s10",
     questionRange: "98-100",
     contextType: "B1 (internal_meeting)",
     audio: "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 4_98-100.mp3",
+    image: "/images/ETS_TOEIC_3/Test_04/Part_04/p4_q98.png",
     questions: [
       {
         id: "p4-t4-q98",
-        text: "Who are the listeners?",
+        text: "Who is the speaker?",
         classification: "WHO_LOC",
 
         options: {
-          A: "Park board members",
-          B: "City officials",
-          C: "Research scientists",
-          D: "Commercial developers"
+          A: "A structural engineer",
+          B: "A journalist",
+          C: "A tour guide",
+          D: "A city official"
         },
-        correctAnswer: "B"
+        correctAnswer: "D"
       },
       {
         id: "p4-t4-q99",
-        text: "Look at the graphic. What does the speaker discuss?",
-        classification: "GRAPHIC",
-
-        options: {
-          A: "Building 1",
-          B: "Building 2",
-          C: "Building 3",
-          D: "Building 4"
-        },
-        correctAnswer: "A"
-      },
-      {
-        id: "p4-t4-q100",
-        text: "What will the speaker give to the listeners?",
+        text: "Why is a building special?",
         classification: "DETAIL",
 
         options: {
-          A: "A budget",
-          B: "A schedule",
-          C: "An invoice",
-          D: "A contract"
+          A: "It was constructed in a short time.",
+          B: "It has a technologically advanced security system.",
+          C: "It has environmentally friendly features.",
+          D: "It was designed by a famous architect."
+        },
+        correctAnswer: "C"
+      },
+      {
+        id: "p4-t4-q100",
+        text: "Look at the graphic. Which floor of the building is not open yet?",
+        classification: "GRAPHIC",
+
+        options: {
+          A: "Floor 4",
+          B: "Floor 3",
+          C: "Floor 2",
+          D: "Floor 1"
         },
         correctAnswer: "A"
       }
@@ -537,7 +539,7 @@ export const test4: Part4Set[] = [
     script: [
       {
         speaker: "Speaker",
-        text: "W-Am: Hi, I'm Pearl Darcus, lead architect for the city's new park project. I'm happy to know that the mayor's office has approved the plans. But there have been some changes. Originally we were going to build a cafe next to the parking lot. But we've since found a new site that offers a better view of the river. Now, if you look at the map, you can see where the playground is. We're going to put the cafe in the building directly across from the playground. I know this change will cost more money, so I've created a breakdown of the expenses for you to review."
+        text: "M-Cn: Welcome to the new Conference Center. I'm the mayor, and I'm delighted to give you a tour of this building. As you can see from the diagram, the building has four floors. The first floor has a food court. The second floor is a recreation center. The third floor has offices. And the fourth floor, the Conference Center, is not open yet. We're still working on it. Now, what makes this building special is that it has many environmentally friendly features. For example, the building uses solar panels for energy. Let me show you around."
       }
     ]
   }

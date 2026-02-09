@@ -5,6 +5,7 @@ import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
 import { part6TestData } from '../toeic/reading/part6/tests';
 import { part7TestData } from '../toeic/reading/part7/tests';
+import { test9PracticeSet } from '../rc_part7_test9';
 
 /**
  * 이 파일은 원본 데이터를 수정하지 않고, 9회차 모의고사(Set 9)를 위해 필요한 데이터만 
@@ -85,11 +86,7 @@ export const test9Part7Single = p7_full.filter(s => {
 }));
 
 // 176번부터의 멀티 지문 (정밀 필터링 적용)
-export const test9Part7Multi = p7_full.filter(s => {
-    const match = s.questions[0].id.match(/q?(\d+)$/);
-    const firstQ = match ? parseInt(match[1]) : 0;
-    return firstQ >= 176;
-}).map(s => ({
+export const test9Part7Multi = test9PracticeSet.map(s => ({
     ...s,
     questions: s.questions.map(q => ({
         ...q,

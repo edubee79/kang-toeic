@@ -1,7 +1,7 @@
 import { Part4Set } from '../../../listening_types';
 
 export const test7: Part4Set[] = [
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s1",
     "questionRange": "71-73",
@@ -52,7 +52,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s2",
     "questionRange": "74-76",
@@ -103,7 +103,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s3",
     "questionRange": "77-79",
@@ -154,7 +154,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s4",
     "questionRange": "80-82",
@@ -205,7 +205,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s5",
     "questionRange": "83-85",
@@ -256,7 +256,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s6",
     "questionRange": "86-88",
@@ -307,7 +307,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s7",
     "questionRange": "89-91",
@@ -358,7 +358,7 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s8",
     "questionRange": "92-94",
@@ -409,12 +409,13 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s9",
     "questionRange": "95-97",
     "contextType": "F2 (media_broadcast)",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_95-97.mp3",
+    "image": "/images/ETS_TOEIC_3/Test_07/Part_04/p4_q95.png",
     "questions": [
       {
         "id": "p4-t7-q95",
@@ -460,12 +461,13 @@ export const test7: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 7,
     "setId": "p4-t7-s10",
     "questionRange": "98-100",
     "contextType": "B3 (company_training)",
     "audio": "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 4_98-100.mp3",
+    "image": "/images/ETS_TOEIC_3/Test_07/Part_04/p4_q98.png",
     "questions": [
       {
         "id": "p4-t7-q98",

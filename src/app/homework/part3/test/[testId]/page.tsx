@@ -71,22 +71,35 @@ export default function Part3TestRunnerPage() {
         const urlParams = new URLSearchParams(window.location.search);
         const mode = urlParams.get('mode');
         const tag = urlParams.get('tag');
+        const context = urlParams.get('context');
 
-        if (mode === 'drill' && tag) {
-            // Find all sets matching the contextType or containing questions of the target type
-            const drilledSets: Part3Set[] = part3RealTests.filter(s => {
-                const contextMatch = s.contextType === tag;
-                const questionMatch = s.questions.some(q => q.questionType === tag);
-                return contextMatch || questionMatch;
-            });
+        if (mode === 'drill') {
+            let drilledSets: Part3Set[] = [];
 
-            if (drilledSets.length > 0) {
-                setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets (15 questions) for drill
-                setIsReady(true);
-                return;
-            } else {
-                // Fallback: Continue with regular testId if no drill match
-                console.log(`No drill sets found for tag: ${tag}`);
+            if (context) {
+                // Context-based drill: filter by conversation situation
+                drilledSets = part3RealTests.filter(s => s.contextType === context);
+
+                if (drilledSets.length > 0) {
+                    setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets (15 questions)
+                    setIsReady(true);
+                    return;
+                } else {
+                    console.log(`No drill sets found for context: ${context}`);
+                }
+            } else if (tag) {
+                // Classification-based drill: filter by question type (for INFERENCE/GRAPHIC)
+                drilledSets = part3RealTests.filter(s => {
+                    return s.questions.some(q => q.classification === tag);
+                });
+
+                if (drilledSets.length > 0) {
+                    setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets (15 questions)
+                    setIsReady(true);
+                    return;
+                } else {
+                    console.log(`No drill sets found for classification: ${tag}`);
+                }
             }
         }
 

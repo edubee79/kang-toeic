@@ -39,6 +39,7 @@ export default function Part2Test() {
     const [optionStatus, setOptionStatus] = useState<Record<number, 'eliminated' | 'uncertain'>>({}); // Track X/Triangle status
     const [notification, setNotification] = useState<string | null>(null);
     const [isReady, setIsReady] = useState(false); // Flag for state restoration check
+    const [isAudioBlocked, setIsAudioBlocked] = useState(false); // Handle browser auto-play block
 
     // Refs
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -56,6 +57,7 @@ export default function Part2Test() {
         const tag = urlParams.get('tag');
 
         if (mode === 'drill' && tag) {
+            console.log(`[Part2 Drill] mode=${mode}, tag=${tag}`);
             // Pool questions from ALL tests that match the tag
             const drilledQuestions: Part2Question[] = [];
             Object.values(part2Data).forEach(testSet => {
@@ -65,6 +67,9 @@ export default function Part2Test() {
                     }
                 });
             });
+
+            console.log(`[Part2 Drill] Found ${drilledQuestions.length} questions with questionType=${tag}`);
+            console.log(`[Part2 Drill] First 3 questions:`, drilledQuestions.slice(0, 3).map(q => ({ id: q.id, type: q.questionType, script: q.script.substring(0, 30) })));
 
             if (drilledQuestions.length > 0) {
                 setQuestions(drilledQuestions.slice(0, 15)); // Limit to 15 for a focused drill
@@ -177,18 +182,26 @@ export default function Part2Test() {
         audioRef.current.currentTime = 0;
         audioRef.current.volume = 1.0;
 
-        const tNum = String(testId).padStart(2, '0');
+        const tNum = String(currentQuestion.testId).padStart(2, '0');
         const qNum = String(currentQuestion.questionNo).padStart(2, '0');
         audioRef.current.src = `/audio/lc/part2/Test_${tNum}-${qNum}.mp3`;
 
         audioRef.current.play()
             .then(() => {
+                setIsAudioBlocked(false);
                 if (myId !== playbackId.current) {
                     audioRef.current?.pause(); // Stale request
                 }
             })
             .catch(e => {
                 if (myId !== playbackId.current) return;
+
+                if (e.name === 'NotAllowedError') {
+                    console.log("Audio play blocked by browser. User interaction required.");
+                    setIsAudioBlocked(true);
+                    setIsPlaying(false);
+                    return;
+                }
 
                 // Ignore play interruption errors (expected when skipping/answering fast)
                 if (e.name === 'AbortError' || e.message.includes('interrupted')) return;
@@ -517,6 +530,29 @@ export default function Part2Test() {
                 onEnded={handleAudioEnd}
                 className="hidden"
             />
+
+            {isAudioBlocked && (
+                <div className="fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-500">
+                    <div className="max-w-xs w-full bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] shadow-2xl text-center space-y-6">
+                        <div className="w-20 h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto ring-4 ring-emerald-500/5">
+                            <Volume2 className="w-10 h-10 animate-pulse" />
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-xl font-black text-white tracking-tight">오디오 재생 준비</h3>
+                            <p className="text-slate-400 text-sm font-medium leading-relaxed">학습 시작을 위해 아래 버튼을 눌러주세요.</p>
+                        </div>
+                        <Button
+                            onClick={() => {
+                                setIsAudioBlocked(false);
+                                handlePlay();
+                            }}
+                            className="w-full h-16 bg-emerald-600 hover:bg-emerald-500 text-white text-lg font-black rounded-2xl shadow-xl shadow-emerald-500/20 active:scale-95 transition-all"
+                        >
+                            <Play className="mr-2 w-6 h-6 fill-current" /> 학습 시작하기
+                        </Button>
+                    </div>
+                </div>
+            )}
 
             <div className="py-4 md:p-6 flex justify-between items-end max-w-3xl mx-auto px-4 md:px-6 relative">
                 {notification && (

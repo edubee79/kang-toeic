@@ -45,7 +45,21 @@ export const QuestionAssembler = {
 
         const tag = tagInfo.tag;
         const label = tagInfo.label;
-        const part = tagInfo.part || (tag.startsWith('p5') || tag.startsWith('voc') || tag.match(/^[n|p|a|v|i|g|p|c|s]/) ? 'p5' : 'p2');
+        let part = tagInfo.part;
+
+        // If no part information provided, try simple prefix-based inference
+        if (!part) {
+            if (tag.startsWith('p1')) part = 'p1';
+            else if (['Who', 'When', 'Where', 'Why', 'How', 'What', 'YesNo', 'Choice', 'Statement', 'Tag', 'Negative', 'Indirect'].includes(tag)) part = 'p2';
+            else if (tag.startsWith('p5') || tag.startsWith('voc') || tag.match(/^[n|p|a|v|i|g|p|c|s][1-9]/)) part = 'p5';
+            else if (tag.startsWith('p6')) part = 'p6';
+            else if (tag.startsWith('P7')) part = 'p7s';
+            else {
+                // Cannot infer part - skip this tag
+                console.warn(`[QuestionAssembler] Cannot infer part for tag: ${tag}. Skipping.`);
+                return null;
+            }
+        }
         const partName = this.getPartName(part);
 
         // For LC, we currently use the standard practice players as we don't have AI generated LC bank yet
@@ -54,16 +68,33 @@ export const QuestionAssembler = {
 
         if (isLC) {
             const baseUrl = this.getPartUrl(part);
-            const finalUrl = baseUrl === 'part2'
-                ? `/homework/part2/${testId}?mode=drill&tag=${tag}`
-                : `/homework/${baseUrl}/test/${testId}?mode=drill&tag=${tag}`;
+            let finalUrl: string;
+            let description: string;
+
+            // Detect if tag is a contextType (starts with letter+number like "A1", "B2", etc.)
+            const isContextType = /^[A-Z]\d/.test(tag);
+            const isPart3or4 = part === 'p3' || part === 'p4';
+
+            if (isPart3or4 && isContextType) {
+                // Part 3/4 with contextType: situation-based drill
+                finalUrl = `/homework/${baseUrl}/test/${testId}?mode=drill&context=${tag}&returnTo=/weakness/dashboard`;
+                description = `${label} 대화 상황을 집중적으로 청취하며 익숙해집니다.`;
+            } else {
+                // Other LC parts OR classification-based drill (INFERENCE/GRAPHIC)
+                finalUrl = baseUrl === 'part2'
+                    ? `/homework/part2/${testId}?mode=drill&tag=${tag}&returnTo=/weakness/dashboard`
+                    : `/homework/${baseUrl}/test/${testId}?mode=drill&tag=${tag}&returnTo=/weakness/dashboard`;
+                description = `${label} 유형의 문제를 집중적으로 청취하며 돌발 상황에 대비합니다.`;
+            }
+
+            console.log(`[QuestionAssembler] Creating LC drill: part=${part}, tag=${tag}, isContextType=${isContextType}, url=${finalUrl}`);
 
             return {
                 targetStudentId: userId,
                 targetStudentName: studentName,
                 type: 'ai_drill',
                 title: `[Day ${dayOffset}] [${partName}] ${label} 집중 공략`,
-                description: `${label} 유형의 문제를 집중적으로 청취하며 돌발 상황에 대비합니다.`,
+                description,
                 targetTag: tag,
                 targetLabel: label,
                 homeworkUrl: finalUrl,
@@ -92,7 +123,7 @@ export const QuestionAssembler = {
             questionIds,
             targetTag: tag,
             targetLabel: label,
-            homeworkUrl: `/homework/part5-real/ai-drill?tag=${tag}`,
+            homeworkUrl: `/homework/part5-real/ai-drill?tag=${tag}&returnTo=/weakness/dashboard`,
             isAiGenerated: true,
             status: 'active',
             createdAt: new Date().toISOString(),
@@ -106,8 +137,8 @@ export const QuestionAssembler = {
         const partName = this.getPartName(part);
         const baseUrl = this.getPartUrl(part);
         const finalUrl = baseUrl === 'part2'
-            ? `/homework/part2/${testId}?direct=true&mode=real`
-            : `/homework/${baseUrl}/test/${testId}?direct=true&mode=real`;
+            ? `/homework/part2/${testId}?direct=true&mode=real&returnTo=/weakness/dashboard`
+            : `/homework/${baseUrl}/test/${testId}?direct=true&mode=real&returnTo=/weakness/dashboard`;
 
         return {
             targetStudentId: userId,

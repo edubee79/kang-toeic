@@ -1,7 +1,7 @@
 import { Part4Set } from '../../../listening_types';
 
 export const test9: Part4Set[] = [
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s1",
     "questionRange": "71-73",
@@ -52,7 +52,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s2",
     "questionRange": "74-76",
@@ -103,7 +103,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s3",
     "questionRange": "77-79",
@@ -154,7 +154,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s4",
     "questionRange": "80-82",
@@ -205,7 +205,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s5",
     "questionRange": "83-85",
@@ -256,7 +256,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s6",
     "questionRange": "86-88",
@@ -307,7 +307,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s7",
     "questionRange": "89-91",
@@ -358,7 +358,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s8",
     "questionRange": "92-94",
@@ -409,7 +409,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s9",
     "questionRange": "95-97",
@@ -461,7 +461,7 @@ export const test9: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 9,
     "setId": "p4-t9-s10",
     "questionRange": "98-100",
@@ -487,29 +487,29 @@ export const test9: Part4Set[] = [
         "text": "What does the speaker say is his goal?",
         "options": {
           "A": "To attract qualified job candidates",
-          "B": "To minimize scheduling errors",
-          "C": "To lower energy costs",
-          "D": "To prevent sports injuries"
+          "B": "To reduce costs",
+          "C": "To boost membership sales",
+          "D": "To encourage healthy eating habits"
         },
-        "correctAnswer": "C"
+        "correctAnswer": "D"
       },
       {
         "id": "p4-t9-q100",
         "questionType": "GRAPHIC",
-        "text": "Look at the graphic. Which room will have the temperature lowered?",
+        "text": "Look at the graphic. On which days can the speaker change his schedule?",
         "options": {
-          "A": "Cafeteria",
-          "B": "Meeting Room",
-          "C": "Waiting Room",
-          "D": "Gymnasium"
+          "A": "Mondays",
+          "B": "Wednesdays",
+          "C": "Thursdays",
+          "D": "Saturdays"
         },
-        "correctAnswer": "D"
+        "correctAnswer": "A"
       }
     ],
     "script": [
       {
         "speaker": "Speaker",
-        "text": "M-Au: Good morning. This is James from the Facilities Department. I'd like to tell you about a change here at the hospital. I've been asked by the hospital director to find ways to reduce our heating bill this winter. My goal is to lower our costs by 15 percent. To do this, I've decided to lower the temperature in the gymnasium on the first floor by three degrees. It won't affect the patients, because there are no patient rooms in that area."
+        "text": "M-Au: Since the hospital hired me, I've been working to make our patients' meals more nutritious. But I also want to promote healthy eating habits among our staff. To do this, I'd like to schedule our first nutrition class at a time that's available to as many people as possible, so I'm asking that you complete this short survey. I do have some flexibility in the afternoons so I could move the afternoon session during the week to a later time if necessary. The weekend session cannot be moved."
       }
     ]
   }

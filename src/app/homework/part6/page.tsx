@@ -7,6 +7,8 @@ import { ArrowLeft, BookOpen, Clock, Trophy, Star, Lock, PlayCircle, Layers } fr
 import { part6TestData } from '@/data/toeic/reading/part6/tests';
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
+import { CompletionBadge } from '@/components/ui/completion-badge';
 
 export default function Part6LobbyPage() {
     const router = useRouter();
@@ -14,6 +16,7 @@ export default function Part6LobbyPage() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
@@ -30,6 +33,18 @@ export default function Part6LobbyPage() {
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
+
+            // Fetch completion status
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+
+                const units = Array.from({ length: 10 }, (_, i) => `RC_Part6_Test${i + 1}_real`);
+                const completionData = await getMultipleTestCompletions(userId, units);
+                setCompletions(completionData);
+            }
+
             setLoading(false);
         };
         fetchAccess();
@@ -109,7 +124,14 @@ export default function Part6LobbyPage() {
                                             TEST {String(test.testId).padStart(2, '0')}
                                         </h3>
                                     </div>
-                                    <div className="shrink-0 pl-2">
+                                    <div className="shrink-0 pl-2 flex items-center gap-2">
+                                        {!isLocked && completions[`RC_Part6_Test${test.testId}_real`] && (
+                                            <CompletionBadge
+                                                completed={completions[`RC_Part6_Test${test.testId}_real`].completed}
+                                                score={completions[`RC_Part6_Test${test.testId}_real`].score}
+                                                total={completions[`RC_Part6_Test${test.testId}_real`].total}
+                                            />
+                                        )}
                                         {!isLocked ? (
                                             <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-indigo-400 transition-colors" />
                                         ) : (

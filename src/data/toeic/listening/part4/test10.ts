@@ -415,6 +415,7 @@ export const test10: Part4Set[] = [
     "questionRange": "95-97",
     "contextType": "D2 (voice_message)",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_95-97.mp3",
+    "image": "/images/ETS_TOEIC_3/Test_10/Part_04/p4_q95.png",
     "questions": [
       {
         "id": "p4-t10-q95",
@@ -466,6 +467,7 @@ export const test10: Part4Set[] = [
     "questionRange": "98-100",
     "contextType": "B1 (internal_meeting)",
     "audio": "/audio/ETS_TOEIC_3/Test_10/TEST 10_PART 4_98-100.mp3",
+    "image": "/images/ETS_TOEIC_3/Test_10/Part_04/p4_q98.png",
     "questions": [
       {
         "id": "p4-t10-q98",

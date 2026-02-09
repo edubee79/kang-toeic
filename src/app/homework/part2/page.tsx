@@ -7,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, Headphones, PlayCircle, Activity, Mic2, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
+import { CompletionBadge } from '@/components/ui/completion-badge';
 
 const tests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -16,6 +18,7 @@ export default function Part2Lobby() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
@@ -32,6 +35,19 @@ export default function Part2Lobby() {
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
+
+            // Fetch completion status
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+
+                // Generate unit names (matching Firestore format)
+                const units = Array.from({ length: 10 }, (_, i) => `LC_Part2_Test${i + 1}`);
+                const completionData = await getMultipleTestCompletions(userId, units);
+                setCompletions(completionData);
+            }
+
             setLoading(false);
         };
         fetchAccess();
@@ -100,6 +116,13 @@ export default function Part2Lobby() {
                                         </h3>
                                     </div>
                                     <div className="shrink-0 flex items-center gap-1.5 md:gap-3">
+                                        {!isLocked && completions[`LC_Part2_Test${test}`] && (
+                                            <CompletionBadge
+                                                completed={completions[`LC_Part2_Test${test}`].completed}
+                                                score={completions[`LC_Part2_Test${test}`].score}
+                                                total={completions[`LC_Part2_Test${test}`].total}
+                                            />
+                                        )}
                                         {isLocked ? (
                                             <Lock className="w-4 h-4 md:w-5 md:h-5 text-slate-700" />
                                         ) : (

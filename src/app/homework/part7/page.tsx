@@ -7,6 +7,8 @@ import { ArrowLeft, BookOpen, Trophy, Lock, PlayCircle } from 'lucide-react';
 import { part7TestData } from '@/data/toeic/reading/part7/tests';
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
+import { CompletionBadge } from '@/components/ui/completion-badge';
 
 export default function Part7LobbyPage() {
     const router = useRouter();
@@ -15,6 +17,7 @@ export default function Part7LobbyPage() {
     const [loading, setLoading] = useState(true);
     const [testHistory, setTestHistory] = useState<Record<number, { attempts?: number; lastScore?: number }>>({});
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
@@ -41,6 +44,16 @@ export default function Part7LobbyPage() {
                 }
             });
             setTestHistory(history);
+
+            // Fetch completion status
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+                const units = Array.from({ length: 10 }, (_, i) => `RC_Part7_Test${i + 1}_real`);
+                const completionData = await getMultipleTestCompletions(userId, units);
+                setCompletions(completionData);
+            }
 
             setLoading(false);
         };
@@ -117,7 +130,14 @@ export default function Part7LobbyPage() {
                                             TEST {String(test.testId).padStart(2, '0')}
                                         </h3>
                                     </div>
-                                    <div className="shrink-0 pl-2">
+                                    <div className="shrink-0 pl-2 flex items-center gap-2">
+                                        {!isLocked && completions[`RC_Part7_Test${test.testId}_real`] && (
+                                            <CompletionBadge
+                                                completed={completions[`RC_Part7_Test${test.testId}_real`].completed}
+                                                score={completions[`RC_Part7_Test${test.testId}_real`].score}
+                                                total={completions[`RC_Part7_Test${test.testId}_real`].total}
+                                            />
+                                        )}
                                         {!isLocked ? (
                                             <Link href={`/homework/part7/test/${test.testId}?mode=real`}>
                                                 <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-amber-400 transition-colors" />

@@ -1,6 +1,6 @@
 
 import { db } from '@/lib/firebase';
-import { collection, query, where, getDocs, getDoc, doc, orderBy } from 'firebase/firestore';
+import { collection, query, where, getDocs, getDoc, doc, orderBy, limit } from 'firebase/firestore';
 import { getToeicTagLabel } from '@/utils/toeic-tag-utils';
 import { analyzeGoalStatus } from './goalAnalysisService';
 import { isActualTest, mapToPartKey, calculateCorrectCount, ManagerResult } from '@/lib/filters/actualTestFilter';
@@ -138,8 +138,28 @@ export const WeaknessService = {
                 if (!isActualTest(data)) return;
 
                 if (data.incorrectQuestions && Array.isArray(data.incorrectQuestions)) {
-                    data.incorrectQuestions.forEach((q: { id: string, classification?: string }) => {
-                        const tag = q.classification || 'Unknown';
+                    const isPart3or4 = data.type === 'part3_test' || data.type === 'part4_test';
+
+                    data.incorrectQuestions.forEach((q: { id: string, classification?: string, contextType?: string }) => {
+                        let tag: string;
+
+                        // For Part 3/4: use contextType UNLESS it's INFERENCE or GRAPHIC
+                        if (isPart3or4) {
+                            const classification = q.classification || '';
+                            const isSpecialType = classification === 'INFERENCE' || classification === 'GRAPHIC';
+
+                            if (isSpecialType) {
+                                // Special question types: track by classification
+                                tag = classification;
+                            } else {
+                                // Normal questions: track by contextType (conversation situation)
+                                tag = q.contextType || 'Unknown';
+                            }
+                        } else {
+                            // For other parts (1,2,5,6,7): use classification as before
+                            tag = q.classification || 'Unknown';
+                        }
+
                         if (tag === 'Unknown') return;
 
                         if (!tagStats[tag]) {
@@ -260,17 +280,17 @@ export const WeaknessService = {
         }
     },
 
-    getWeeklyDetailedStats: async (userId: string) => {
+    getWeeklyDetailedStats: async (userId: string, periodDays: number = 7) => {
         try {
             const resultsRef = collection(db, 'Manager_Results');
-            const oneWeekAgo = new Date();
-            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            const startDate = new Date();
+            startDate.setDate(startDate.getDate() - periodDays);
 
             // ⚠️ Removed orderBy to avoid requiring complex Firestore indexes
             const q = query(
                 resultsRef,
                 where('studentId', '==', userId),
-                where('timestamp', '>=', oneWeekAgo)
+                where('timestamp', '>=', startDate)
             );
 
             const snapshot = await getDocs(q);
@@ -335,9 +355,17 @@ export const WeaknessService = {
                 where('isAiGenerated', '==', true)
             );
             const snapshot = await getDocs(q);
-            return snapshot.docs
-                .map(doc => ({ id: doc.id, ...doc.data() }))
-                .sort((a: any, b: any) => (a.dayOffset || 0) - (b.dayOffset || 0));
+            const allAssignments = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+            // Client-side filtering: get latest 7 assignments by createdAt
+            return allAssignments
+                .sort((a: any, b: any) => {
+                    const dateA = new Date(a.createdAt || 0).getTime();
+                    const dateB = new Date(b.createdAt || 0).getTime();
+                    return dateB - dateA;  // 최신순
+                })
+                .slice(0, 7)  // 최신 7개만
+                .sort((a: any, b: any) => (a.dayOffset || 0) - (b.dayOffset || 0));  // dayOffset 순서로 재정렬
         } catch (error) {
             console.error('Error getting AI recommendations:', error);
             return [];

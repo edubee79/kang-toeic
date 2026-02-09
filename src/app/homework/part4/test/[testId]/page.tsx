@@ -70,19 +70,35 @@ export default function Part4TestRunnerPage() {
         const urlParams = new URLSearchParams(window.location.search);
         const mode = urlParams.get('mode');
         const tag = urlParams.get('tag');
+        const context = urlParams.get('context');
 
-        if (mode === 'drill' && tag) {
-            // Pool all sets matching the tag
-            const drilledSets: Part4Set[] = part4Data.filter(s => {
-                const contextMatch = s.contextType === tag;
-                const questionMatch = s.questions.some(q => q.questionType === tag);
-                return contextMatch || questionMatch;
-            });
+        if (mode === 'drill') {
+            let drilledSets: Part4Set[] = [];
 
-            if (drilledSets.length > 0) {
-                setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets
-                setIsReady(true);
-                return;
+            if (context) {
+                // Context-based drill: filter by conversation situation
+                drilledSets = part4Data.filter(s => s.contextType === context);
+
+                if (drilledSets.length > 0) {
+                    setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets (15 questions)
+                    setIsReady(true);
+                    return;
+                } else {
+                    console.log(`No drill sets found for context: ${context}`);
+                }
+            } else if (tag) {
+                // Classification-based drill: filter by question type (for INFERENCE/GRAPHIC)
+                drilledSets = part4Data.filter(s => {
+                    return s.questions.some(q => q.classification === tag);
+                });
+
+                if (drilledSets.length > 0) {
+                    setTestSets(drilledSets.slice(0, 5)); // Limit to 5 sets (15 questions)
+                    setIsReady(true);
+                    return;
+                } else {
+                    console.log(`No drill sets found for classification: ${tag}`);
+                }
             }
         }
 

@@ -8,7 +8,7 @@ import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 import { Loader2, ArrowLeft, Shield, Save, Lock, Zap, BookOpen, PenSquare, ChevronRight } from "lucide-react";
 import Link from 'next/link';
-import { getFeatureAccess, setFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getFeatureAccess, setFeatureAccess, FeatureAccess, getAIReportSchedule, setAIReportSchedule, AIReportSchedule, calculateReportPeriod } from '@/services/configService';
 import { migrateAllUsersPerformance } from '@/services/migrationService';
 
 import { isAdmin } from '@/lib/adminAuth';
@@ -18,6 +18,9 @@ export default function AdminSettingsPage() {
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [migrating, setMigrating] = useState(false);
+    const [aiSchedule, setAiSchedule] = useState<AIReportSchedule>({
+        enabledDays: [5]
+    });
     const [access, setAccess] = useState<FeatureAccess>({
         part1: true,
         part2: true,
@@ -56,6 +59,8 @@ export default function AdminSettingsPage() {
         setLoading(true);
         const data = await getFeatureAccess();
         setAccess(data);
+        const schedule = await getAIReportSchedule();
+        setAiSchedule(schedule);
         setLoading(false);
     };
 
@@ -95,6 +100,27 @@ export default function AdminSettingsPage() {
             alert("동기화 중 오류가 발생했습니다.");
         } finally {
             setMigrating(false);
+        }
+    };
+
+    const handleDayToggle = (dayIndex: number) => {
+        setAiSchedule(prev => {
+            const newDays = prev.enabledDays.includes(dayIndex)
+                ? prev.enabledDays.filter(d => d !== dayIndex)
+                : [...prev.enabledDays, dayIndex].sort((a, b) => a - b);
+            return { ...prev, enabledDays: newDays };
+        });
+    };
+
+    const handleSaveSchedule = async () => {
+        setSaving(true);
+        try {
+            await setAIReportSchedule(aiSchedule);
+            alert("AI 리포트 스케줄이 저장되었습니다.");
+        } catch (error) {
+            alert("저장 중 오류가 발생했습니다.");
+        } finally {
+            setSaving(false);
         }
     };
 
@@ -201,6 +227,91 @@ export default function AdminSettingsPage() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </CardContent>
+                </Card>
+
+                <Card className="border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
+                    <CardHeader className="p-8 border-b border-slate-50 bg-indigo-50/30">
+                        <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-2xl bg-indigo-100 flex items-center justify-center">
+                                <span className="text-2xl">🤖</span>
+                            </div>
+                            <div>
+                                <CardTitle className="text-xl font-bold">AI 리포트 스케줄 설정</CardTitle>
+                                <CardDescription>AI 주간 리포트 생성 가능 요일을 설정합니다</CardDescription>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="p-8">
+                        <div className="space-y-6">
+                            <div>
+                                <h4 className="text-sm font-bold text-slate-700 mb-3">리포트 생성 가능 요일</h4>
+                                <div className="flex gap-2">
+                                    {['일', '월', '화', '수', '목', '금', '토'].map((day, idx) => (
+                                        <label
+                                            key={idx}
+                                            className={`flex-1 flex flex-col items-center gap-2 p-3 rounded-xl border-2 cursor-pointer transition-all ${aiSchedule.enabledDays.includes(idx)
+                                                    ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
+                                                    : 'bg-slate-50 border-slate-200 text-slate-400 hover:border-slate-300'
+                                                }`}
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                checked={aiSchedule.enabledDays.includes(idx)}
+                                                onChange={() => handleDayToggle(idx)}
+                                                className="sr-only"
+                                            />
+                                            <span className="text-xs font-bold">{day}</span>
+                                            {aiSchedule.enabledDays.includes(idx) && (
+                                                <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+                                            )}
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {aiSchedule.lastReportDate && (
+                                <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                                    <div className="flex items-center justify-between">
+                                        <div>
+                                            <p className="text-xs font-bold text-slate-500 mb-1">마지막 리포트 생성</p>
+                                            <p className="text-sm font-bold text-slate-900">
+                                                {new Date(aiSchedule.lastReportDate).toLocaleDateString('ko-KR', {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                    weekday: 'short'
+                                                })}
+                                            </p>
+                                        </div>
+                                        <div className="text-right">
+                                            <p className="text-xs font-bold text-slate-500 mb-1">경과 일수</p>
+                                            <p className="text-2xl font-black text-indigo-600">
+                                                {calculateReportPeriod(aiSchedule.lastReportDate)}
+                                                <span className="text-sm text-slate-400 ml-1">일</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
+                                <p className="text-xs text-blue-800 leading-relaxed">
+                                    <strong className="font-bold">💡 동작 방식:</strong> 설정된 요일에 학생이 리포트를 생성하면,
+                                    마지막 리포트 이후 경과 일수만큼의 데이터를 분석합니다.
+                                    예: 화요일/금요일 설정 시 → 금요일 생성 시 7일 데이터, 화요일 생성 시 3일 데이터 분석
+                                </p>
+                            </div>
+
+                            <Button
+                                onClick={handleSaveSchedule}
+                                disabled={saving || aiSchedule.enabledDays.length === 0}
+                                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold h-12 rounded-xl"
+                            >
+                                {saving ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Save className="w-4 h-4 mr-2" />}
+                                스케줄 저장하기
+                            </Button>
                         </div>
                     </CardContent>
                 </Card>

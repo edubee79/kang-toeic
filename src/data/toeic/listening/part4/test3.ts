@@ -1,7 +1,7 @@
 import { Part4Set } from '../../../listening_types';
 
 export const test3: Part4Set[] = [
-{
+  {
     testId: 3,
     setId: "p4-t3-s1",
     questionRange: "71-73",
@@ -55,7 +55,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s2",
     questionRange: "74-76",
@@ -109,7 +109,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s3",
     questionRange: "77-79",
@@ -163,7 +163,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s4",
     questionRange: "80-82",
@@ -217,7 +217,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s5",
     questionRange: "83-85",
@@ -271,7 +271,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s6",
     questionRange: "86-88",
@@ -325,7 +325,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s7",
     questionRange: "89-91",
@@ -379,7 +379,7 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s8",
     questionRange: "92-94",
@@ -433,12 +433,13 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s9",
     questionRange: "95-97",
     contextType: "F1 (event_information)",
     audio: "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_95-97.mp3",
+    image: "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q95.png",
     questions: [
       {
         id: "p4-t3-q95",
@@ -487,12 +488,13 @@ export const test3: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 3,
     setId: "p4-t3-s10",
     questionRange: "98-100",
     contextType: "B3 (company_training)",
     audio: "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_98-100.mp3",
+    image: "/images/ETS_TOEIC_3/Test_03/Part_04/p4_q98.png",
     questions: [
       {
         id: "p4-t3-q98",

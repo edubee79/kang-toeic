@@ -212,7 +212,10 @@ export default function AiDrillPlayerPage() {
                     </span>
                     {Object.keys(revealMap).length === questions.length && (
                         <Button
-                            onClick={() => router.push('/weakness/dashboard')}
+                            onClick={() => {
+                                const returnTo = searchParams.get('returnTo');
+                                router.push(returnTo || '/homework/part5-real');
+                            }}
                             className="bg-emerald-600 hover:bg-emerald-500 text-xs py-1 h-8 px-4 font-black"
                         >
                             FINISH

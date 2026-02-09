@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
 import { cn } from '@/lib/utils';
-import { Loader2, AlertCircle, AlertTriangle, BarChart2, TrendingUp, Target, Zap, BookOpen, ChevronRight, CheckCircle2, ArrowLeft, Sparkles } from 'lucide-react';
+import { Loader2, AlertCircle, AlertTriangle, BarChart2, TrendingUp, Target, Zap, BookOpen, ChevronRight, CheckCircle2, ArrowLeft, Sparkles, Lock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -37,6 +37,8 @@ export default function WeaknessDashboardPage() {
     const [aiWeeklyReport, setAiWeeklyReport] = useState('');
     const [showFullReport, setShowFullReport] = useState(false);
     const [reportDate, setReportDate] = useState<string | null>(null);
+    const [aiSchedule, setAiSchedule] = useState<any>(null);
+    const [isReportDayEnabled, setIsReportDayEnabled] = useState(true);
 
     const [error, setError] = useState<string | null>(null);
 
@@ -64,6 +66,16 @@ export default function WeaknessDashboardPage() {
                 // Fetch AI Recommendations (Prescriptions)
                 const aiRecs = await WeaknessService.getAiRecommendations(userId);
                 setAiRecommendations(aiRecs);
+
+                // ✅ Fetch AI Report Schedule
+                const { getAIReportSchedule } = await import('@/services/configService');
+                const schedule = await getAIReportSchedule();
+                setAiSchedule(schedule);
+
+                // Check if today is an enabled day
+                const today = new Date().getDay();
+                const isEnabled = schedule.enabledDays.includes(today);
+                setIsReportDayEnabled(isEnabled);
 
                 // Fetch recommended test if there's a weakest part
                 if (data.weakestPart && data.weakestPart.part !== 'none') {
@@ -380,12 +392,29 @@ export default function WeaknessDashboardPage() {
                         <Button
                             onClick={async () => {
                                 if (!report) return;
+
+                                // ✅ Check if today is an enabled day
+                                if (!isReportDayEnabled) {
+                                    const dayNames = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+                                    const enabledDayNames = aiSchedule?.enabledDays.map((d: number) => dayNames[d]).join(', ') || '설정된 요일 없음';
+                                    alert(`AI 리포트는 ${enabledDayNames}에만 생성할 수 있습니다.`);
+                                    return;
+                                }
+
                                 setLoadingWeeklyReport(true);
                                 try {
                                     const userStr = localStorage.getItem('toeic_user');
                                     const user = userStr ? JSON.parse(userStr) : {};
 
-                                    const weeklyStats = await WeaknessService.getWeeklyDetailedStats(user.userId || user.uid);
+                                    // ✅ Fetch AI report schedule and calculate period
+                                    const { getAIReportSchedule, calculateReportPeriod } = await import('@/services/configService');
+                                    const schedule = await getAIReportSchedule();
+                                    const periodDays = calculateReportPeriod(schedule.lastReportDate);
+
+                                    const weeklyStats = await WeaknessService.getWeeklyDetailedStats(
+                                        user.userId || user.uid,
+                                        periodDays  // ✅ Dynamic period
+                                    );
 
                                     const response = await fetch('/api/ai-tutor/weekly-report', {
                                         method: 'POST',
@@ -398,9 +427,11 @@ export default function WeaknessDashboardPage() {
                                                 targetRC: report.targetRCScore,
                                                 currentEst: estScore
                                             },
+                                            targetStats: report.targetStats,  // ✅ 파트별 목표 추가
                                             weakestTags: report.weakestTags,
                                             studentName: user.userName || user.name || "학생",
-                                            userId: user.userId || user.uid
+                                            userId: user.userId || user.uid,
+                                            periodDays  // ✅ Pass period to API
                                         })
                                     });
 
@@ -420,13 +451,21 @@ export default function WeaknessDashboardPage() {
                                     setLoadingWeeklyReport(false);
                                 }
                             }}
-                            disabled={loadingWeeklyReport}
-                            className="bg-indigo-600 hover:bg-indigo-500 text-xs font-bold h-8"
+                            disabled={loadingWeeklyReport || !isReportDayEnabled}
+                            className={`text-xs font-bold h-8 ${!isReportDayEnabled
+                                ? 'bg-slate-600 hover:bg-slate-600 cursor-not-allowed'
+                                : 'bg-indigo-600 hover:bg-indigo-500'
+                                }`}
                         >
                             {loadingWeeklyReport ? (
                                 <>
                                     <Loader2 className="w-3 h-3 mr-2 animate-spin" />
                                     분석 중...
+                                </>
+                            ) : !isReportDayEnabled ? (
+                                <>
+                                    <Lock className="w-3 h-3 mr-2" />
+                                    오늘은 생성 불가
                                 </>
                             ) : (
                                 <>

@@ -1,7 +1,7 @@
 import { Part4Set } from '../../../listening_types';
 
 export const test1: Part4Set[] = [
-{
+  {
     testId: 1,
     setId: "p4-t1-s1",
     questionRange: "71-73",
@@ -55,7 +55,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s2",
     questionRange: "74-76",
@@ -109,7 +109,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s3",
     questionRange: "77-79",
@@ -162,7 +162,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s4",
     questionRange: "80-82",
@@ -215,7 +215,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s5",
     questionRange: "83-85",
@@ -269,7 +269,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s6",
     questionRange: "86-88",
@@ -323,7 +323,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s7",
     questionRange: "89-91",
@@ -377,7 +377,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s8",
     questionRange: "92-94",
@@ -431,7 +431,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s9",
     questionRange: "95-97",
@@ -486,7 +486,7 @@ export const test1: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p4-t1-s10",
     questionRange: "98-100",

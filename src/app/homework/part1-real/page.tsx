@@ -7,6 +7,8 @@ import { ArrowLeft, Headphones, Mic2, Lock, PlayCircle } from 'lucide-react';
 import { part1RealTests } from '@/data/toeic/listening/part1/tests';
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 import { cn } from "@/lib/utils";
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
+import { CompletionBadge } from '@/components/ui/completion-badge';
 
 export default function Part1RealLobby() {
     const router = useRouter();
@@ -14,6 +16,7 @@ export default function Part1RealLobby() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
@@ -30,6 +33,19 @@ export default function Part1RealLobby() {
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
+
+            // Fetch completion status
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+
+                // Generate unit names (matching Firestore format)
+                const units = Array.from({ length: 10 }, (_, i) => `Part1 Real Test ${i + 1}`);
+                const completionData = await getMultipleTestCompletions(userId, units);
+                setCompletions(completionData);
+            }
+
             setLoading(false);
         };
         fetchAccess();
@@ -107,7 +123,14 @@ export default function Part1RealLobby() {
                                             TEST {String(test.testId).padStart(2, '0')}
                                         </h3>
                                     </div>
-                                    <div className="shrink-0 pl-2">
+                                    <div className="shrink-0 pl-2 flex items-center gap-2">
+                                        {!isLocked && completions[`Part1 Real Test ${test.testId}`] && (
+                                            <CompletionBadge
+                                                completed={completions[`Part1 Real Test ${test.testId}`].completed}
+                                                score={completions[`Part1 Real Test ${test.testId}`].score}
+                                                total={completions[`Part1 Real Test ${test.testId}`].total}
+                                            />
+                                        )}
                                         {isLocked ? (
                                             <Lock className="w-4 h-4 md:w-5 md:h-5 text-slate-700" />
                                         ) : (

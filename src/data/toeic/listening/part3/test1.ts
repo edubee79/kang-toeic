@@ -1,7 +1,7 @@
 import { Part3Set } from '../../../listening_types';
 
 export const test1: Part3Set[] = [
-{
+  {
     setId: "p3-t1-s1",
     contextType: "A1. 회의 / 일정 조정",
     questionRange: "32-34",
@@ -75,7 +75,7 @@ export const test1: Part3Set[] = [
     testId: 1,
     audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_32-34.mp3"
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s2",
     questionRange: "35-37",
@@ -129,7 +129,7 @@ export const test1: Part3Set[] = [
       { speaker: "Man", text: "No problem. I can include that in the budget. I'll just need the details about the positions, including the job titles and expected salaries. Could you send that to me?" }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s3",
     questionRange: "38-40",
@@ -186,7 +186,7 @@ export const test1: Part3Set[] = [
       { speaker: "Man", text: "Let me show you some suits in that price range. By the way, any alterations needed for the suit are included in the price." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s4",
     questionRange: "41-43",
@@ -241,7 +241,7 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "Well, we have a board meeting here next week. I could give us ten minutes at the beginning to give us the details." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s5",
     questionRange: "44-46",
@@ -295,7 +295,7 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "I'm sorry about that. But we sell items featuring that painting in the gift shop. You could buy a souvenir so you could enjoy The Tulips every day!" }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s6",
     questionRange: "47-49",
@@ -350,7 +350,7 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "Remember Julie's presentation last year? It was very impressive. The slides are available on our company intranet." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s7",
     questionRange: "50-52",
@@ -403,7 +403,7 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "The first week of December ideally. We'd pay for all your moving expenses, of course. If you decide to accept the offer." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s8",
     questionRange: "53-55",
@@ -458,7 +458,7 @@ export const test1: Part3Set[] = [
       { speaker: "Man", text: "Well, we're going to have to wait until all the permits are approved. It'll be a while before anything else can happen." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s9",
     questionRange: "56-58",
@@ -513,7 +513,7 @@ export const test1: Part3Set[] = [
       { speaker: "Man", text: "Then maybe we should increase the number of bottles in our next order from the distributor." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s10",
     questionRange: "59-61",
@@ -568,7 +568,7 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "We don't want to be fined by banking regulators, so all cardholders will need to be notified by the end of the month." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s11",
     questionRange: "62-64",
@@ -623,13 +623,13 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "I understand. The venue is difficult to see from the road. I really like this location, though, with its view of the mountains from the gardens in the back." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s12",
     questionRange: "65-67",
     contextType: "B4. 문의 / 안내",
     audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_65-67.mp3",
-    image: "/images/ETS_TOEIC_3/Test_01/Part_03/p3_q68.png",
+    image: "/images/ETS_TOEIC_3/Test_01/Part_03/p3_q65.png",
     questions: [
       {
         id: "p3-t1-q65",
@@ -679,13 +679,13 @@ export const test1: Part3Set[] = [
       { speaker: "Woman", text: "This weekend is my parents' anniversary. My sisters and I are planning a party for them at their home in Boston." }
     ]
   },
-{
+  {
     testId: 1,
     setId: "p3-t1-s13",
     questionRange: "68-70",
     contextType: "D3. 건물 / 시설 유지보수",
     audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_68-70.mp3",
-    image: "/images/part3/q65-70.jpg",
+    image: "/images/ETS_TOEIC_3/Test_01/Part_03/p3_q68.png",
     questions: [
       {
         id: "p3-t1-q68",

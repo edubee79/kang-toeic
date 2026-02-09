@@ -1,13 +1,12 @@
 import { Part4Set } from '../../../listening_types';
 
 export const test2: Part4Set[] = [
-{
+  {
     testId: 2,
     setId: "p4-t2-s1",
     questionRange: "71-73",
     contextType: "D2 (voice_message)",
     audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_71-73.mp3",
-    image: "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q71.png",
     questions: [
       {
         id: "p4-t2-q71",
@@ -56,13 +55,12 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s2",
     questionRange: "74-76",
     contextType: "B2 (company_management_message)",
     audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_74-76.mp3",
-    image: "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q74.png",
     questions: [
       {
         id: "p4-t2-q74",
@@ -111,12 +109,11 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s3",
     questionRange: "77-79",
     audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_77-79.mp3",
-    image: "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q77.png",
     questions: [
       {
         id: "p4-t2-q77",
@@ -165,7 +162,7 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s4",
     questionRange: "80-82",
@@ -218,7 +215,7 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s5",
     questionRange: "83-85",
@@ -272,7 +269,7 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s6",
     questionRange: "86-88",
@@ -326,7 +323,7 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s7",
     questionRange: "89-91",
@@ -380,7 +377,7 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s8",
     questionRange: "92-94",
@@ -434,12 +431,13 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s9",
     questionRange: "95-97",
     contextType: "F1 (event_information)",
     audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_95-97.mp3",
+    image: "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q95.png",
     questions: [
       {
         id: "p4-t2-q95",
@@ -488,12 +486,13 @@ export const test2: Part4Set[] = [
       }
     ]
   },
-{
+  {
     testId: 2,
     setId: "p4-t2-s10",
     questionRange: "98-100",
     contextType: "B3 (company_training)",
     audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_98-100.mp3",
+    image: "/images/ETS_TOEIC_3/Test_02/Part_04/p4_q98.png",
     questions: [
       {
         id: "p4-t2-q98",

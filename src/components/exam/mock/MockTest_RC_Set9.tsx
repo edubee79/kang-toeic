@@ -270,7 +270,44 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     );
 }
 
-const MarkdownTable = ({ content }: { content: string }) => {
+const MarkdownTable = ({ content, tableData }: { content: string, tableData?: any }) => {
+    // If structured table_data exists, render it
+    if (tableData && tableData.headers && tableData.rows) {
+        return (
+            <div className="space-y-4">
+                {content && content !== "Select the best answer." && (
+                    <div className="whitespace-pre-wrap">{content}</div>
+                )}
+                <div className="overflow-x-auto my-4 border rounded-lg">
+                    <table className="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr className="bg-slate-50 border-b border-slate-200">
+                                {tableData.headers.map((h: string, i: number) => (
+                                    <th key={i} className="px-4 py-2 font-black text-slate-700 border-r last:border-r-0 border-slate-200 uppercase tracking-tighter">
+                                        {h}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tableData.rows.map((row: string[], i: number) => (
+                                <tr key={i} className="border-b last:border-b-0 border-slate-100 hover:bg-slate-50/50 transition-colors">
+                                    {row.map((cell: string, j: number) => (
+                                        <td key={j} className="px-4 py-2 border-r last:border-r-0 border-slate-100 text-slate-800 leading-normal">
+                                            {cell.split('<br>').map((line, k) => (
+                                                <div key={k}>{line}</div>
+                                            ))}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }
+
     // Check if it's a table (contains | and ---)
     if (!content.includes('|') || !content.includes('---')) {
         return <div className="whitespace-pre-wrap">{content}</div>;
@@ -555,7 +592,7 @@ function renderP7SingleSet(set: any, answers: any, onAnswer: any) {
                     <div key={p.id} className="mb-4">
                         <span className="passage-label">{getPassageLabel(p)}</span>
                         {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                        <div className="text-sm font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
+                        <div className="text-sm font-bold text-slate-900"><MarkdownTable content={p.content} tableData={p.table_data} /></div>
                     </div>
                 ))}
             </div>
@@ -590,7 +627,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                             <div key={p.id} className="passage-box !mb-0">
                                 <span className="passage-label">{getPassageLabel(p)}</span>
                                 {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                                <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
+                                <div className="text-[13px] font-bold text-slate-900"><MarkdownTable content={p.content} tableData={p.table_data} /></div>
                             </div>
                         ))}
                     </div>
@@ -599,7 +636,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                     <div className="passage-box !mb-0 !p-4 shrink-0 border-b-2 border-slate-100 shadow-md z-10 max-h-[45%] overflow-y-auto">
                         <span className="passage-label">{getPassageLabel(passages[2])}</span>
                         {passages[2].title && <h3 className="font-black text-xs border-b mb-1 uppercase">{passages[2].title}</h3>}
-                        <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} /></div>
+                        <div className="text-[13px] font-bold text-slate-1000 text-black"><MarkdownTable content={passages[2].content} tableData={passages[2].table_data} /></div>
                     </div>
                     <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-slate-50/50">
                         {questions.map((q: any) => (
@@ -620,7 +657,7 @@ function renderP7MultiSpread(set: any, answers: any, onAnswer: any) {
                         <div key={p.id} className="passage-box !mb-0">
                             <span className="passage-label">{getPassageLabel(p)}</span>
                             {p.title && <h3 className="font-black text-sm border-b mb-2 uppercase">{p.title}</h3>}
-                            <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} /></div>
+                            <div className="text-[14px] font-bold text-slate-900"><MarkdownTable content={p.content} tableData={p.table_data} /></div>
                         </div>
                     ))}
                 </div>

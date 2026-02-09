@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
@@ -294,6 +294,7 @@ function ShadowingStep({
 export default function Part2ShadowingPage() {
     const params = useParams();
     const router = useRouter();
+    const searchParams = useSearchParams();
     const testId = parseInt(params.testId as string);
 
     const [questions, setQuestions] = useState<Part2Question[]>([]);
@@ -344,6 +345,30 @@ export default function Part2ShadowingPage() {
         }
     };
 
+    const handleSaveAndExit = async () => {
+        // Save partial progress
+        const userStr = localStorage.getItem('toeic_user');
+        if (userStr) {
+            const user = JSON.parse(userStr);
+            try {
+                await addDoc(collection(db, "Manager_Results"), {
+                    student: user.userName || user.name || "Unknown",
+                    studentId: user.userId || user.uid || "Guest",
+                    unit: `Shadowing_LC_Part2_test${testId}_partial`,
+                    score: currentIndex, // Progress count
+                    total: questions.length,
+                    timestamp: serverTimestamp()
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Navigate back
+        const returnTo = searchParams.get('returnTo');
+        router.push(returnTo || '/homework/part2');
+    };
+
     if (!isMounted || loading) return <div className="flex h-screen items-center justify-center bg-slate-950"><Loader2 className="animate-spin text-emerald-500" /></div>;
 
     if (isFinished) {
@@ -354,7 +379,10 @@ export default function Part2ShadowingPage() {
                 </div>
                 <h2 className="text-4xl font-black mb-2 tracking-tighter uppercase text-white">Shadowing Complete!</h2>
                 <div className="grid grid-cols-2 gap-4 w-full max-w-sm mt-8">
-                    <Button onClick={() => router.push('/homework/part2')} className="h-14 bg-indigo-600 rounded-2xl font-black">
+                    <Button onClick={() => {
+                        const returnTo = searchParams.get('returnTo');
+                        router.push(returnTo || '/homework/part2');
+                    }} className="h-14 bg-indigo-600 rounded-2xl font-black">
                         Lobby
                     </Button>
                 </div>
@@ -364,6 +392,22 @@ export default function Part2ShadowingPage() {
 
     return (
         <div className="min-h-screen bg-slate-950">
+            {/* Header with Back Button */}
+            <header className="bg-slate-900/80 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
+                <div className="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={handleSaveAndExit}
+                        className="text-slate-400 hover:text-white"
+                    >
+                        <ChevronLeft className="w-6 h-6" />
+                    </Button>
+                    <h1 className="text-sm font-black text-white/90 uppercase tracking-tight">Part 2 Shadowing</h1>
+                    <div className="w-10" /> {/* Spacer for centering */}
+                </div>
+            </header>
+
             <ShadowingStep
                 key={`${currentIndex}-${step}`} // Remount on change to reset state
                 data={questions[currentIndex]}

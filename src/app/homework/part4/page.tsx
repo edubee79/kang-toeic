@@ -7,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, Headphones, PlayCircle, Activity, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
+import { CompletionBadge } from '@/components/ui/completion-badge';
 
 // Mock data for tests (1 to 10)
 const initialTests = Array.from({ length: 10 }, (_, i) => ({
@@ -21,6 +23,7 @@ export default function Part4LobbyPage() {
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
@@ -37,6 +40,16 @@ export default function Part4LobbyPage() {
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
+
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+                const units = Array.from({ length: 10 }, (_, i) => `LC_Part4_Test${i + 1}`);
+                const completionData = await getMultipleTestCompletions(userId, units);
+                setCompletions(completionData);
+            }
+
             setLoading(false);
         };
         fetchAccess();
@@ -116,7 +129,14 @@ export default function Part4LobbyPage() {
                                             TEST {String(test.id).padStart(2, '0')}
                                         </h3>
                                     </div>
-                                    <div className="shrink-0 pl-2">
+                                    <div className="shrink-0 pl-2 flex items-center gap-2">
+                                        {test.isActive && completions[`LC_Part4_Test${test.id}`] && (
+                                            <CompletionBadge
+                                                completed={completions[`LC_Part4_Test${test.id}`].completed}
+                                                score={completions[`LC_Part4_Test${test.id}`].score}
+                                                total={completions[`LC_Part4_Test${test.id}`].total}
+                                            />
+                                        )}
                                         {!test.isActive ? (
                                             <Lock className="w-4 h-4 md:w-5 md:h-5 text-slate-700" />
                                         ) : (

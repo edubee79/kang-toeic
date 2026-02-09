@@ -77,3 +77,71 @@ export const setFeatureAccess = async (access: FeatureAccess): Promise<void> => 
         throw error;
     }
 };
+
+// ============================================
+// AI Report Schedule Configuration
+// ============================================
+
+export interface AIReportSchedule {
+    enabledDays: number[];  // 0=Sunday, 1=Monday, ..., 6=Saturday
+    lastReportDate?: string;  // ISO date string
+    updatedAt?: string;
+    updatedBy?: string;
+}
+
+const DEFAULT_SCHEDULE: AIReportSchedule = {
+    enabledDays: [5],  // Default: Friday only
+};
+
+export const getAIReportSchedule = async (): Promise<AIReportSchedule> => {
+    try {
+        const docRef = doc(db, 'System_Config', 'aiReportSchedule');
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            return { ...DEFAULT_SCHEDULE, ...docSnap.data() } as AIReportSchedule;
+        }
+        return DEFAULT_SCHEDULE;
+    } catch (error) {
+        console.error("Error fetching AI report schedule:", error);
+        return DEFAULT_SCHEDULE;
+    }
+};
+
+export const setAIReportSchedule = async (schedule: AIReportSchedule): Promise<void> => {
+    try {
+        const docRef = doc(db, 'System_Config', 'aiReportSchedule');
+        await setDoc(docRef, {
+            ...schedule,
+            updatedAt: new Date().toISOString()
+        });
+    } catch (error) {
+        console.error("Error saving AI report schedule:", error);
+        throw error;
+    }
+};
+
+export const updateLastReportDate = async (): Promise<void> => {
+    try {
+        const docRef = doc(db, 'System_Config', 'aiReportSchedule');
+        const current = await getAIReportSchedule();
+        await setDoc(docRef, {
+            ...current,
+            lastReportDate: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        });
+    } catch (error) {
+        console.error("Error updating last report date:", error);
+        throw error;
+    }
+};
+
+export const calculateReportPeriod = (lastReportDate?: string): number => {
+    if (!lastReportDate) return 7;  // Default 7 days if no previous report
+
+    const daysSince = Math.floor(
+        (Date.now() - new Date(lastReportDate).getTime()) / (1000 * 60 * 60 * 24)
+    );
+
+    return Math.max(1, daysSince);  // Minimum 1 day
+};

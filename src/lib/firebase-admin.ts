@@ -6,31 +6,42 @@ if (!admin.apps.length) {
         const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
         const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
 
-        console.log('[Firebase Admin Init] Checking Environment Variables:', {
-            hasPrivateKey: !!rawPrivateKey,
-            privateKeyLength: rawPrivateKey?.length || 0,
-            hasClientEmail: !!clientEmail,
-            clientEmail: clientEmail ? `${clientEmail.substring(0, 10)}...` : 'MISSING',
-            projectId: projectId || 'MISSING'
-        });
+        const hasPK = !!rawPrivateKey && rawPrivateKey.trim().length > 0;
+        const hasEmail = !!clientEmail && clientEmail.trim().length > 0;
 
-        if (rawPrivateKey && clientEmail) {
-            const privateKey = rawPrivateKey.replace(/\\n/g, '\n');
+        if (hasPK && hasEmail) {
+            // Remove potential quotes if they exist
+            let privateKey = rawPrivateKey!.trim();
+            if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
+                privateKey = privateKey.substring(1, privateKey.length - 1);
+            }
+            privateKey = privateKey.replace(/\\n/g, '\n');
+
+            let email = clientEmail!.trim();
+            if (email.startsWith('"') && email.endsWith('"')) {
+                email = email.substring(1, email.length - 1);
+            }
+
             admin.initializeApp({
                 credential: admin.credential.cert({
                     projectId: projectId,
-                    clientEmail: clientEmail,
+                    clientEmail: email,
                     privateKey: privateKey,
                 }),
             });
-            console.log('✅ Firebase Admin initialized with credentials');
+            console.log('✅ Firebase Admin initialized with certificate');
         } else {
-            console.error('❌ Firebase Admin credentials missing. Falling back to applicationDefault() - this will likely fail.');
+            console.error('❌ Firebase Admin credentials missing:', {
+                hasPK,
+                hasEmail,
+                projectId
+            });
+            // Try to use environment's default (service account file) if available, 
+            // but log a clear warning as this usually fails in local dev without ADC set.
             admin.initializeApp({
                 credential: admin.credential.applicationDefault(),
                 projectId: projectId,
             });
-            console.warn('⚠️ Firebase Admin initialized with applicationDefault (may fail locally)');
         }
     } catch (error: any) {
         console.error('Firebase admin initialization error', error.stack);

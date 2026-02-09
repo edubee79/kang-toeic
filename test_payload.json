@@ -1,0 +1,30 @@
+{
+    "stats": {
+        "totalSolved": 10,
+        "parts": {
+            "p5": {
+                "solved": 5,
+                "correct": 3
+            },
+            "p2": {
+                "solved": 5,
+                "correct": 2
+            }
+        }
+    },
+    "goals": {
+        "targetScore": 800,
+        "targetLC": 400,
+        "targetRC": 400,
+        "currentEst": 550
+    },
+    "weakestTags": [
+        {
+            "tag": "p5-grammar",
+            "label": "문법",
+            "incorrect": 2
+        }
+    ],
+    "studentName": "테스트학생",
+    "userId": "test-user-id"
+}

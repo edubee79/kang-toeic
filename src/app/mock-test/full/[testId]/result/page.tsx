@@ -56,7 +56,7 @@ export default function MockTestResult() {
         };
 
         fetchResult();
-    }, [testId, testIdStr, isHalf, router, attemptId]);
+    }, [testId, testIdStr, router, attemptId]);
 
     if (!attempt || !stats || !halfAnalysis) return (
         <div className="min-h-screen bg-white flex flex-col items-center justify-center">

@@ -439,6 +439,7 @@ export const test5: Part4Set[] = [
     questionRange: "95-97",
     contextType: "A1 (announcement)",
     audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_95-97.mp3",
+    image: "/images/ETS_TOEIC_3/Test_05/Part_04/p4_q95.png",
     questions: [
       {
         id: "p4-t5-q95",
@@ -493,6 +494,7 @@ export const test5: Part4Set[] = [
     questionRange: "98-100",
     contextType: "D2 (voice_message)",
     audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 4_98-100.mp3",
+    image: "/images/ETS_TOEIC_3/Test_05/Part_04/p4_q98.png",
     questions: [
       {
         id: "p4-t5-q98",
