@@ -290,6 +290,9 @@ export default function AdminRankingsPage() {
                                 <TableHead className="w-24 text-center font-black text-xs uppercase text-slate-500">Rank</TableHead>
                                 <TableHead className="font-bold text-xs text-slate-500">Student Info</TableHead>
                                 <TableHead className="font-bold text-xs text-slate-500">Class Info</TableHead>
+                                {type === 'total' && (
+                                    <TableHead className="text-center font-bold text-xs text-slate-500">Effort Rank</TableHead>
+                                )}
                                 <TableHead className="text-right font-bold text-xs text-slate-500">
                                     {type === 'voca' ? '단어 실력 (AVG)' : type === 'consistency' ? '학습 열정 (Diligence)' : '실전 실력 (Score)'}
                                 </TableHead>
@@ -322,6 +325,16 @@ export default function AdminRankingsPage() {
                                             {rank.className || 'No Class'}
                                         </Badge>
                                     </TableCell>
+                                    {type === 'total' && (
+                                        <TableCell className="text-center">
+                                            <div className="flex flex-col items-center">
+                                                <Badge className="bg-orange-100 text-orange-600 border-orange-200 font-black px-3 py-1 text-[11px] italic">
+                                                    #{rank.effortRank || '-'}
+                                                </Badge>
+                                                <span className="text-[9px] font-bold text-slate-400 mt-1 uppercase tracking-tighter">Diligence</span>
+                                            </div>
+                                        </TableCell>
+                                    )}
                                     <TableCell className="text-right">
                                         <div className="flex flex-col items-end gap-0.5">
                                             <span className={`text-lg font-black ${type === 'voca' ? 'text-emerald-600' : type === 'consistency' ? 'text-orange-600' : 'text-indigo-600'}`}>

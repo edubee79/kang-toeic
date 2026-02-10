@@ -20,6 +20,8 @@ export interface RankingEntry {
     previousRank?: number;
     change?: number;
     detail?: string;
+    effortScore?: number;
+    effortRank?: number | string;
 }
 
 export const updateRankings = async (period: string, className: string = 'all') => {
@@ -98,6 +100,15 @@ export const updateRankings = async (period: string, className: string = 'all') 
             }
         });
 
+        const assignRanks = (list: RankingEntry[]) => {
+            list.sort((a, b) => b.score - a.score);
+            return list.map((entry, idx) => ({
+                ...entry,
+                rank: idx + 1,
+                change: 0 // Initialize as stable
+            }));
+        };
+
         // 5. Build Rankings for each Group
         const processGroup = (groupName: string, groupStudents: typeof students) => {
             if (className !== 'all' && groupName !== className) return;
@@ -113,7 +124,7 @@ export const updateRankings = async (period: string, className: string = 'all') 
                 // Skill Rank (TOEIC Total)
                 totalR.push({
                     userId: sid, userName: info.name, className: info.class,
-                    score: stat.predictedScore, rank: 0, detail: `예상 점수: ${stat.predictedScore}점`
+                    score: stat.predictedScore, rank: 0, detail: `예상: ${stat.predictedScore}p / 학습: ${stat.hwCount}회`
                 });
 
                 // Effort Rank (Task Count)
@@ -132,22 +143,23 @@ export const updateRankings = async (period: string, className: string = 'all') 
             });
 
             // Standard Ranking Logic
-            const rankedTotal = assignRanks(totalR);
+            const rankedTotalInitial = assignRanks(totalR);
             const rankedVoca = assignRanks(vocaR);
             const rankedConsistency = assignRanks(consistencyR);
 
-            addToBatch(batch, period, groupName, 'total', rankedTotal);
-            addToBatch(batch, period, groupName, 'voca', rankedVoca);
-            addToBatch(batch, period, groupName, 'consistency', rankedConsistency);
-        };
+            // Cross-reference effort rank into total rank list
+            const rankedTotalWithEffort = rankedTotalInitial.map(t => {
+                const c = rankedConsistency.find(cons => cons.userId === t.userId);
+                return {
+                    ...t,
+                    effortRank: c ? c.rank : '-',
+                    effortScore: c ? c.score : 0
+                };
+            });
 
-        const assignRanks = (list: RankingEntry[]) => {
-            list.sort((a, b) => b.score - a.score);
-            return list.slice(0, 50).map((entry, idx) => ({
-                ...entry,
-                rank: idx + 1,
-                change: 0 // Initialize as stable
-            }));
+            addToBatch(batch, period, groupName, 'total', rankedTotalWithEffort.slice(0, 50));
+            addToBatch(batch, period, groupName, 'voca', rankedVoca.slice(0, 50));
+            addToBatch(batch, period, groupName, 'consistency', rankedConsistency.slice(0, 50));
         };
 
         const addToBatch = (batch: any, period: string, classId: string, type: string, list: RankingEntry[]) => {
