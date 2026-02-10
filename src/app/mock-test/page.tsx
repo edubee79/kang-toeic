@@ -52,11 +52,20 @@ export default function MockTestLobby() {
                     const dbAttempts: Record<string, TestAttempt> = {};
                     snapshot.forEach(doc => {
                         const data = doc.data();
-                        dbAttempts[`full-${data.testId}`] = {
-                            status: data.status === 'in_progress' ? 'started' : 'completed',
-                            date: data.date
-                        };
+                        const key = `full-${data.testId}`;
+
+                        // Priority: completed > started > none
+                        const newStatus = data.status === 'completed' ? 'completed' :
+                            data.status === 'in_progress' ? 'started' : 'none';
+
+                        if (!dbAttempts[key] || newStatus === 'completed') {
+                            dbAttempts[key] = {
+                                status: newStatus,
+                                date: data.date
+                            };
+                        }
                     });
+                    console.log("✅ Mock Test Attempts loaded:", dbAttempts);
                     setAttempts(dbAttempts);
                 }
             } catch (error) {

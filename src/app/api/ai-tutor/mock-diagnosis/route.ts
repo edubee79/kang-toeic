@@ -6,6 +6,34 @@ export async function POST(req: Request) {
         const body = await req.json();
         const { attemptData, studentName, userId } = body;
 
+        // 1. Fetch Student History (Previous Mock Test Attempts)
+        let historyText = "첫 번째 응시입니다. 이전 응시 기록이 없습니다.";
+        if (userId) {
+            try {
+                const historySnap = await db.collection('MockTestAttempts')
+                    .where('userId', '==', userId)
+                    .where('status', '==', 'completed')
+                    .orderBy('timestamp', 'desc')
+                    .limit(6) // Fetch 6 to filter out the current one and show 5 previous
+                    .get();
+
+                if (!historySnap.empty) {
+                    const history = historySnap.docs
+                        .map(doc => doc.data())
+                        // Note: Depending on timing, the 'current' attempt might already be 'completed'
+                        // We will just show the latest few and the AI will see the trend.
+                        .map(data => `- ${data.testTitle || `모의고사 ${data.testId}회`}: 총 ${data.totalScore}/${data.totalQuestions}개 정답 (응시일: ${data.date ? data.date.split('T')[0] : '날짜정보없음'})`);
+
+                    if (history.length > 0) {
+                        historyText = history.join('\n');
+                    }
+                }
+            } catch (historyError) {
+                console.warn("History fetch failed:", historyError);
+                // Keep default text
+            }
+        }
+
         const apiKey = process.env.GEMINI_API_KEY;
         if (!apiKey) {
             return NextResponse.json({ error: "API Key not configured" }, { status: 500 });
@@ -23,6 +51,9 @@ export async function POST(req: Request) {
 - 목표 점수: ${attemptData.targetGoal}점
 - 이번 시험 총점: ${attemptData.overallScore}점 (LC: ${attemptData.lcScore}, RC: ${attemptData.rcScore})
 
+[응시 이력 (비교 분석용)]
+${historyText}
+
 [현장 데이터 (분석용)]
 - 파트별 상세 현황: ${JSON.stringify(attemptData.partStats)}
 - RC 시간 배분 결과: ${JSON.stringify(attemptData.rcTimeAnalysis)}
@@ -30,7 +61,10 @@ export async function POST(req: Request) {
 [필독: 답변 지침 (절대 엄수)]
 1. 전문 용어 노출 금지: 'wrongTags', 'partStats', 'p1~p7', 'v1', 'nc1' 등의 내부 데이터 키값이나 기술적인 태그 식별자를 절대 답변에 포함하지 마십시오. 학생은 이런 암호를 이해할 수 없습니다.
 2. 자연스러운 설명: 대신 "동사의 형태와 수 일치 문제", "이메일 지문의 세부 정보 파약", "Part 5 문법 파트"와 같이 사람이 이해할 수 있는 자연스러운 용어로 풀어서 설명하십시오.
-3. 데이터 기반 추론: 데이터에 나타난 '숫자'와 '틀린 유형'의 상관관계를 강쌤의 노하우로 해석하십시오. (예: "Part 5 정답률은 높으나 RC 시간이 부족한 것은, 아는 문제를 너무 신중하게 풀다가 Part 7을 놓치고 있다는 증거입니다.")
+3. 데이터 기반 추론 및 이력 비교: 
+   - 현재 데이터와 [응시 이력]을 대조하십시오. 
+   - 점수가 올랐다면 칭찬과 함께 탄력을 받을 부분을 짚어주고, 떨어졌거나 정체라면 원인을 날카롭게 분석하십시오.
+   - (예: "지난 1회차 대비 Part 5 속도는 빨라졌으나 오답률이 올라간 것은, 속도에 너무 치중해 정확도를 놓치고 있다는 방증입니다.")
 4. 점수대별 맞춤 전략:
    - 600점 이하: 어휘력과 기초 문법 부재를 따끔하게 지적하고 단어 암기를 최우선으로 지시하십시오.
    - 600~850점: 정체기 탈출을 위한 '시간 관리'와 '버릴 문제 버리기' 전략을 강조하십시오.

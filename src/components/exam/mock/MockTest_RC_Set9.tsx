@@ -63,8 +63,20 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
     // Replace internal timer with simple submission check
     useEffect(() => {
         if (timeLeft <= 0) {
-            logTimeSpent(); // Final log
-            onFinishExam(answers, timeLogs);
+            const now = Date.now();
+            const elapsedSeconds = Math.floor((now - spreadEntryTimeRef.current) / 1000);
+            const finalLogs = { ...timeLogs };
+
+            if (elapsedSeconds > 0) {
+                const pNum = getCurrentPartNum();
+                if (pNum === 5) finalLogs.p5 += elapsedSeconds;
+                else if (pNum === 6) finalLogs.p6 += elapsedSeconds;
+                else {
+                    if (currentSpread <= 8) finalLogs.p7s += elapsedSeconds;
+                    else finalLogs.p7m += elapsedSeconds;
+                }
+            }
+            onFinishExam(answers, finalLogs);
         }
     }, [timeLeft]);
 
@@ -100,6 +112,7 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
                 lastAdvancedSpreadRef.current = currentSpread;
                 // Auto advance with a small delay for better UX
                 setTimeout(() => {
+                    logTimeSpent(); // 🚩 Log time spent on current page before auto-advancing
                     setCurrentSpread(s => s + 1);
                 }, 600);
             }
@@ -112,6 +125,26 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
         if (currentSpread <= 1) return 5;
         if (currentSpread <= 3) return 6;
         return 7;
+    };
+
+    const handleFinalSubmit = () => {
+        if (!confirm("시험을 종료하고 제출하시겠습니까?")) return;
+
+        const now = Date.now();
+        const elapsedSeconds = Math.floor((now - spreadEntryTimeRef.current) / 1000);
+        const finalLogs = { ...timeLogs };
+
+        if (elapsedSeconds > 0) {
+            const pNum = getCurrentPartNum();
+            if (pNum === 5) finalLogs.p5 += elapsedSeconds;
+            else if (pNum === 6) finalLogs.p6 += elapsedSeconds;
+            else {
+                if (currentSpread <= 8) finalLogs.p7s += elapsedSeconds;
+                else finalLogs.p7m += elapsedSeconds;
+            }
+        }
+
+        onFinishExam(answers, finalLogs);
     };
 
     const nextSpread = () => {
@@ -196,7 +229,7 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
                         <Clock className="w-4 h-4" />
                         <span className="font-mono text-lg font-black">{formatTime(timeLeft)}</span>
                     </div>
-                    <button onClick={() => confirm("시험을 종료하고 제출하시겠습니까?") && onFinishExam(answers, timeLogs)} className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 transition-all active:scale-95">
+                    <button onClick={handleFinalSubmit} className="bg-emerald-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-100 transition-all active:scale-95">
                         Submit
                     </button>
                 </div>
