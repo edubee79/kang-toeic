@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, HelpCircle, AlertCircle, Monitor, PlayCircle, Lock, BookOpen } from "lucide-react";
+import { Clock, HelpCircle, AlertCircle, Monitor, PlayCircle, Lock, BookOpen, Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 import { db } from '@/lib/firebase';
@@ -117,6 +117,69 @@ export default function MockTestLobby() {
                             <AlertCircle className="w-3 h-3 text-rose-500" />
                             PC 응시 전용 | 1회 응시 가능
                         </p>
+                    </div>
+
+                    {/* NEW: Exam Guidelines Section */}
+                    <div className="mt-8 max-w-4xl">
+                        <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl flex flex-col md:flex-row gap-8 items-start justify-between">
+                            <div className="flex-1">
+                                <h3 className="text-indigo-400 font-black text-xs md:text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                                    <Monitor className="w-4 h-4" /> Exam Rules & Guidelines
+                                </h3>
+                                <ul className="space-y-3 text-[10px] md:text-[13px] text-slate-400 font-bold leading-relaxed">
+                                    <li className="flex gap-2">
+                                        <span className="text-indigo-500">•</span>
+                                        <span>LC(리스닝) 종료 후 RC로 넘어가면 다시 LC 섹션으로 돌아가 답안을 수정할 수 없습니다.</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-indigo-500">•</span>
+                                        <span>RC 시험 시작 시 75분의 제한시간이 주어지며, 타이머가 종료되는 즉시 시험이 자동 완료됩니다.</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-indigo-500">•</span>
+                                        <span>모의고사는 1회 응시가 원칙이며, 시험이 시작된 이후에는 임의로 재응시를 요청할 수 없습니다.</span>
+                                    </li>
+                                    <li className="flex gap-2 text-indigo-400">
+                                        <span className="text-indigo-500">•</span>
+                                        <span>실전과 동일한 환경을 위해 시험 시작 시 '전체화면'으로 전환됩니다. (우측 하단 버튼이나 ESC로 해제 가능)</span>
+                                    </li>
+                                    <li className="flex gap-2 text-rose-400/80">
+                                        <span className="text-rose-500">•</span>
+                                        <span>뒤로가기나 창 닫기 등으로 시험이 중단될 경우 기록 복구가 어려울 수 있으니 주의하시기 바랍니다.</span>
+                                    </li>
+                                    <li className="flex gap-2 text-slate-500 pt-2 border-t border-slate-800/50">
+                                        <HelpCircle className="w-4 h-4 text-indigo-500/50 shrink-0" />
+                                        <span>응시 중 기술적 문제가 발생할 경우 관리자에게 즉시 문의해 주세요.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="shrink-0 flex flex-col items-center md:items-end gap-4">
+                                {/* NEW: Audio Test Button */}
+                                <div className="text-center md:text-right space-y-2">
+                                    <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest px-1">Audio Check</p>
+                                    <button
+                                        onClick={() => {
+                                            window.speechSynthesis.cancel();
+                                            const msg = "수험자 여러분, 읽기 평가 종료 15분 전입니다. 답안지 마킹을 점검해 주시기 바랍니다.";
+                                            const utterance = new SpeechSynthesisUtterance(msg);
+                                            utterance.lang = 'ko-KR';
+                                            utterance.rate = 0.85;
+
+                                            const voices = window.speechSynthesis.getVoices();
+                                            const bestVoice = voices.find(v => v.lang.includes('ko') && v.name.includes('Google'))
+                                                || voices.find(v => v.lang.includes('ko'));
+                                            if (bestVoice) utterance.voice = bestVoice;
+
+                                            window.speechSynthesis.speak(utterance);
+                                        }}
+                                        className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl text-[12px] font-bold transition-all border border-indigo-500/20 shadow-lg shadow-indigo-500/5"
+                                    >
+                                        <Volume2 className="w-4 h-4" /> 안내방송 음성 테스트
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </header>
 

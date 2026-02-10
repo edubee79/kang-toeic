@@ -39,6 +39,7 @@ export default function MockTestResetPage() {
     const [selectedAttempts, setSelectedAttempts] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isDeleting, setIsDeleting] = useState(false);
+    const [isCleaning, setIsCleaning] = useState(false);
 
     // Class Filter States
     const [classes, setClasses] = useState<{ name: string }[]>([]);
@@ -149,15 +150,30 @@ export default function MockTestResetPage() {
     };
 
     const handleDeleteAttempt = async (attemptId: string, testTitle: string) => {
-        if (!confirm(`[${testTitle}] 응시 기록을 정말 삭제하시겠습니까?\n삭제 후 학생은 다시 시험을 볼 수 있습니다.`)) {
+        if (!confirm(`[${testTitle}] 응시 기록을 정말 삭제하시겠습니까?\n이와 연동된 모든 학습 성적(Manager_Results)도 함께 영구 삭제됩니다.`)) {
             return;
         }
 
         setIsDeleting(true);
         try {
-            await deleteDoc(doc(db, 'MockTestAttempts', attemptId));
+            const batch = writeBatch(db);
+
+            // 1. Delete the Attempt Document
+            batch.delete(doc(db, 'MockTestAttempts', attemptId));
+
+            // 2. Find and Delete Linked Manager_Results
+            const resultsRef = collection(db, 'Manager_Results');
+            const q = query(resultsRef, where('attemptId', '==', attemptId));
+            const snapshot = await getDocs(q);
+            snapshot.forEach(d => {
+                batch.delete(d.ref);
+            });
+
+            await batch.commit();
+
             setSelectedAttempts(prev => prev.filter(id => id !== attemptId));
             if (selectedStudent) loadAttempts(selectedStudent.userId); // Refresh
+            alert(`[${testTitle}] 기록과 연동된 성 데이터가 모두 삭제되었습니다.`);
         } catch (error) {
             console.error("Error deleting attempt:", error);
             alert("삭제 중 오류가 발생했습니다.");
@@ -168,20 +184,31 @@ export default function MockTestResetPage() {
 
     const handleBatchDelete = async () => {
         if (selectedAttempts.length === 0) return;
-        if (!confirm(`선택한 ${selectedAttempts.length}개의 응시 기록을 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.`)) {
+        if (!confirm(`선택한 ${selectedAttempts.length}개의 응시 기록과 연동된 모든 학습 내역을 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.`)) {
             return;
         }
 
         setIsDeleting(true);
         try {
             const batch = writeBatch(db);
-            selectedAttempts.forEach(id => {
-                const ref = doc(db, 'MockTestAttempts', id);
-                batch.delete(ref);
-            });
+
+            // We loop through selected attemptIds to delete both the attempt and its linked results
+            for (const attemptId of selectedAttempts) {
+                // Delete Attempt
+                batch.delete(doc(db, 'MockTestAttempts', attemptId));
+
+                // Find linked Results (Sync query required for each to ensure all are caught)
+                const resultsRef = collection(db, 'Manager_Results');
+                const q = query(resultsRef, where('attemptId', '==', attemptId));
+                const snapshot = await getDocs(q);
+                snapshot.forEach(d => {
+                    batch.delete(d.ref);
+                });
+            }
+
             await batch.commit();
 
-            alert(`${selectedAttempts.length}개의 응시 기록이 삭제되었습니다.`);
+            alert(`${selectedAttempts.length}개의 기록과 관련된 모든 데이터가 삭제되었습니다.`);
             setSelectedAttempts([]);
             if (selectedStudent) loadAttempts(selectedStudent.userId);
         } catch (error) {
@@ -189,6 +216,64 @@ export default function MockTestResetPage() {
             alert("일괄 삭제 중 오류가 발생했습니다.");
         } finally {
             setIsDeleting(false);
+        }
+    };
+
+    const handleGlobalCleanup = async () => {
+        const confirmMsg = "모든 학생의 데이터를 전수 조사하여, 뿌리(응시 기록)가 없는 유령 성적 데이터를 찾아 삭제합니다.\n기존에 잘못 삭제된 기록들을 정리하는 데 효과적입니다. 실행하시겠습니까?";
+        if (!confirm(confirmMsg)) return;
+
+        setIsCleaning(true);
+        try {
+            // 1. Get all valid attempt IDs
+            const attemptsSnap = await getDocs(collection(db, 'MockTestAttempts'));
+            const validAttemptIds = new Set(attemptsSnap.docs.map(d => d.id));
+
+            // 2. Get all Manager_Results that should have an attemptId
+            const resultsRef = collection(db, 'Manager_Results');
+            // We focus on mock_test or part_test types that have attemptId field
+            const resultsSnap = await getDocs(resultsRef);
+
+            const orphans: any[] = [];
+            resultsSnap.forEach(doc => {
+                const data = doc.data();
+                // If it has an attemptId but that ID is NOT in our valid set
+                if (data.attemptId && !validAttemptIds.has(data.attemptId)) {
+                    orphans.push(doc.ref);
+                }
+            });
+
+            if (orphans.length === 0) {
+                alert("삭제할 유령 기록이 없습니다. 데이터가 깨끗합니다!");
+                return;
+            }
+
+            if (!confirm(`총 ${orphans.length}개의 유령 기록이 발견되었습니다. 모두 삭제할까요?`)) return;
+
+            // 3. Batch delete orphans
+            const batch = writeBatch(db);
+            let count = 0;
+            for (const ref of orphans) {
+                batch.delete(ref);
+                count++;
+                // Firestore batch limit is 500
+                if (count % 400 === 0) {
+                    await batch.commit();
+                    // Need a new batch object if we continue
+                }
+            }
+
+            if (count % 400 !== 0) {
+                await batch.commit();
+            }
+
+            alert(`성공적으로 ${count}개의 유령 기록을 청소했습니다!`);
+            if (selectedStudent) loadAttempts(selectedStudent.userId);
+        } catch (error) {
+            console.error("Cleanup error:", error);
+            alert("청소 도중 오류가 발생했습니다.");
+        } finally {
+            setIsCleaning(false);
         }
     };
 
@@ -220,6 +305,20 @@ export default function MockTestResetPage() {
                         모의고사 재응시 관리
                     </h1>
                     <p className="text-slate-400">학생의 모의고사 응시 기록을 초기화(삭제)하여 재응시를 허용합니다.</p>
+                </div>
+                <div className="ml-auto flex items-center gap-4">
+                    <div className="text-right hidden md:block">
+                        <p className="text-[10px] font-black text-rose-500 uppercase tracking-widest leading-none mb-1">Data Integrity</p>
+                        <p className="text-[10px] text-slate-500 font-bold italic">주인 없는 유령 기록들을 청소합니다.</p>
+                    </div>
+                    <Button
+                        onClick={handleGlobalCleanup}
+                        disabled={isCleaning}
+                        className="bg-slate-900 border border-rose-500/30 text-rose-500 hover:bg-rose-500 hover:text-white font-black italic uppercase text-xs h-12 px-6 rounded-xl shadow-lg transition-all"
+                    >
+                        {isCleaning ? <RefreshCcw className="w-4 h-4 animate-spin mr-2" /> : <Trash2 className="w-4 h-4 mr-2" />}
+                        유령 기록 일괄 청소기 (Cleanup)
+                    </Button>
                 </div>
             </div>
 

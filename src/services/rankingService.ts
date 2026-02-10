@@ -9,6 +9,7 @@ import {
     serverTimestamp,
     Timestamp
 } from 'firebase/firestore';
+import { WeaknessService } from './weaknessService';
 
 export interface RankingEntry {
     userId: string;
@@ -49,49 +50,47 @@ export const updateRankings = async (period: string, className: string = 'all') 
         const studentCount = Object.keys(students).length;
         console.log(`Found ${studentCount} students.`);
 
-        // 2. Fetch Results (Last 365 days)
-        const pastDate = new Date();
-        pastDate.setDate(pastDate.getDate() - 365);
+        // 3. Process each student (Unified with WeaknessService)
+        const batch = writeBatch(db);
+        const studentStats: Record<string, { predictedScore: number, hwCount: number, vocaAvg: number, hasVoca: boolean }> = {};
 
-        const resultsRef = collection(db, 'Manager_Results');
-        const resultsQuery = query(
-            resultsRef,
-            where('timestamp', '>=', Timestamp.fromDate(pastDate))
-        );
+        console.log("Analyzing each student using WeaknessService...");
+        const sIds = Object.keys(students);
+        const chunkSize = 10;
+        for (let i = 0; i < sIds.length; i += chunkSize) {
+            const chunk = sIds.slice(i, i + chunkSize);
+            await Promise.all(chunk.map(async (sid) => {
+                try {
+                    // Get Predicted Score (LC + RC)
+                    const report = await WeaknessService.analyzeUserWeakness(sid);
+                    const predictedVal = (report.currentTotalLC || 0) + (report.currentTotalRC || 0);
 
-        const resultsSnap = await getDocs(resultsQuery);
-        const resultCount = resultsSnap.size;
-        console.log(`Found ${resultCount} results.`);
+                    // Count total results for Effort
+                    const rQuery = query(collection(db, 'Manager_Results'), where('studentId', '==', sid));
+                    const rSnap = await getDocs(rQuery);
+                    const count = rSnap.size;
 
-        const studentStats: Record<string, { totalScore: number, vocaSum: number, vocaCount: number, hwCount: number }> = {};
-        let matchCount = 0;
+                    // Count Voca results for Voca Rank
+                    const vQuery = query(collection(db, 'Manager_Results'), where('studentId', '==', sid), where('type', '==', 'voca'));
+                    const vSnap = await getDocs(vQuery);
+                    let vSum = 0;
+                    vSnap.forEach(d => vSum += (d.data().score || 0));
+                    const vAvg = vSnap.size > 0 ? Math.round(vSum / vSnap.size) : 0;
 
-        resultsSnap.forEach(doc => {
-            const data = doc.data();
-            const sid = data.studentId;
+                    studentStats[sid] = {
+                        predictedScore: predictedVal,
+                        hwCount: count,
+                        vocaAvg: vAvg,
+                        hasVoca: vSnap.size > 0
+                    };
+                } catch (e) {
+                    console.error(`Error processing student ${sid}:`, e);
+                }
+            }));
+        }
 
-            if (!students[sid]) return; // Skip if unknown student
-
-            if (!studentStats[sid]) {
-                studentStats[sid] = { totalScore: 0, vocaSum: 0, vocaCount: 0, hwCount: 0 };
-                matchCount++;
-            }
-
-            studentStats[sid].hwCount += 1; // Consistency
-
-            if (data.type === 'voca') {
-                studentStats[sid].vocaSum += (data.score || 0);
-                studentStats[sid].vocaCount += 1;
-            }
-
-            studentStats[sid].totalScore += (data.score || 0); // Total
-        });
-
-        // 3. Process each category
-        // 3. Group by Class
+        // 4. Group by Class
         const classGroups: Record<string, typeof students> = { 'all': students };
-
-        // Always generate per-class rankings as well
         Object.values(students).forEach(s => {
             if (s.class) {
                 if (!classGroups[s.class]) classGroups[s.class] = {};
@@ -99,11 +98,8 @@ export const updateRankings = async (period: string, className: string = 'all') 
             }
         });
 
-        const batch = writeBatch(db);
-
-        // 4. Process Each Group (All + Each Class)
+        // 5. Build Rankings for each Group
         const processGroup = (groupName: string, groupStudents: typeof students) => {
-            // Skip if we only want to update a specific class and this isn't it (unless it's 'all' trigger)
             if (className !== 'all' && groupName !== className) return;
 
             const totalR: RankingEntry[] = [];
@@ -111,74 +107,63 @@ export const updateRankings = async (period: string, className: string = 'all') 
             const consistencyR: RankingEntry[] = [];
 
             Object.keys(groupStudents).forEach(sid => {
-                const stat = studentStats[sid] || { totalScore: 0, vocaSum: 0, vocaCount: 0, hwCount: 0 };
+                const stat = studentStats[sid] || { predictedScore: 0, hwCount: 0, vocaAvg: 0, hasVoca: false };
                 const info = groupStudents[sid];
 
-                // Total
+                // Skill Rank (TOEIC Total)
                 totalR.push({
                     userId: sid, userName: info.name, className: info.class,
-                    score: stat.totalScore, rank: 0, detail: `${stat.totalScore.toLocaleString()} pts`
+                    score: stat.predictedScore, rank: 0, detail: `예상 점수: ${stat.predictedScore}점`
                 });
 
-                // Voca
-                if (stat.vocaCount > 0) {
-                    const avg = Math.round(stat.vocaSum / stat.vocaCount);
-                    vocaR.push({
-                        userId: sid, userName: info.name, className: info.class,
-                        score: avg, rank: 0, detail: `Avg ${avg}`
-                    });
-                }
-
-                // Consistency
+                // Effort Rank (Task Count)
                 consistencyR.push({
                     userId: sid, userName: info.name, className: info.class,
-                    score: stat.hwCount, rank: 0, detail: `${stat.hwCount} tasks`
+                    score: stat.hwCount, rank: 0, detail: `총 학습량: ${stat.hwCount}회 완료`
                 });
+
+                // Voca Rank
+                if (stat.hasVoca) {
+                    vocaR.push({
+                        userId: sid, userName: info.name, className: info.class,
+                        score: stat.vocaAvg, rank: 0, detail: `단어평균: ${stat.vocaAvg}점`
+                    });
+                }
             });
 
-            // Sort & Rank
+            // Standard Ranking Logic
             const rankedTotal = assignRanks(totalR);
             const rankedVoca = assignRanks(vocaR);
             const rankedConsistency = assignRanks(consistencyR);
 
-            // Add to Batch
             addToBatch(batch, period, groupName, 'total', rankedTotal);
             addToBatch(batch, period, groupName, 'voca', rankedVoca);
             addToBatch(batch, period, groupName, 'consistency', rankedConsistency);
         };
 
-        // Helper
         const assignRanks = (list: RankingEntry[]) => {
             list.sort((a, b) => b.score - a.score);
             return list.slice(0, 50).map((entry, idx) => ({
                 ...entry,
                 rank: idx + 1,
-                change: Math.floor(Math.random() * 5) - 2
+                change: 0 // Initialize as stable
             }));
         };
 
         const addToBatch = (batch: any, period: string, classId: string, type: string, list: RankingEntry[]) => {
             const docId = `${period}-${type}-${classId}`;
             const ref = doc(db, 'Rankings', docId);
-            const sanitizedList = list.map(item => JSON.parse(JSON.stringify(item)));
             batch.set(ref, {
                 id: docId, period, type, classId,
                 updatedAt: serverTimestamp(),
-                ranks: sanitizedList
+                ranks: list
             });
         };
 
-        // Execute processing
         Object.keys(classGroups).forEach(grp => processGroup(grp, classGroups[grp]));
-
         await batch.commit();
-        console.log("Client-side ranking update complete.");
 
-        return {
-            success: true,
-            debug: { studentCount, resultCount, matchCount }
-        };
-
+        return { success: true, debug: { studentCount: sIds.length } };
     } catch (error) {
         console.error("Client ranking service error:", error);
         throw error;

@@ -6,7 +6,7 @@ import { mockTests } from '@/data/mock-test-data';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { Clock, CheckCircle2, AlertTriangle, ChevronLeft, ChevronRight, Volume2 } from 'lucide-react';
+import { Clock, CheckCircle2, AlertTriangle, ChevronLeft, ChevronRight, Volume2, Maximize2, Minimize2 } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import MockTest_LC_Set9 from '@/components/exam/mock/MockTest_LC_Set9';
 import MockTest_RC_Set9 from '@/components/exam/mock/MockTest_RC_Set9';
@@ -32,16 +32,40 @@ export default function MockTestRunner() {
     // State
     const [status, setStatus] = useState<'loading' | 'lc' | 'rc' | 'completed'>('loading');
     const [currentPart, setCurrentPart] = useState(1);
-    const [timeLeft, setTimeLeft] = useState(45 * 60); // LC: 45m, RC: 75m
+    const [timeLeft, setTimeLeft] = useState(75 * 60); // RC: 75m (LC is audio-driven)
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [rcStarted, setRcStarted] = useState(false);
 
     // Pagination
     const [currentPage, setCurrentPage] = useState(0);
+    const [initialSpread, setInitialSpread] = useState(0);
 
     const testData = mockTests[testId];
 
     const [attemptId, setAttemptId] = useState<string | null>(null);
+    const [announcement, setAnnouncement] = useState<{ message: string, type: 'info' | 'warning' | 'danger' } | null>(null);
+    const [isFullScreen, setIsFullScreen] = useState(false);
+
+    const toggleFullScreen = () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(e => {
+                console.error(`Error attempting to enable full-screen mode: ${e.message}`);
+            });
+            setIsFullScreen(true);
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+                setIsFullScreen(false);
+            }
+        }
+    };
+
+    // Keep state in sync with browser state
+    useEffect(() => {
+        const handler = () => setIsFullScreen(!!document.fullscreenElement);
+        document.addEventListener('fullscreenchange', handler);
+        return () => document.removeEventListener('fullscreenchange', handler);
+    }, []);
 
     useEffect(() => {
         if (!testData) {
@@ -54,27 +78,53 @@ export default function MockTestRunner() {
             const userStr = localStorage.getItem('toeic_user');
             if (!userStr) {
                 alert("로그인이 필요합니다.");
-                router.push('/data-management/users'); // Or login page
+                router.push('/data-management/users');
                 return;
             }
             const user = JSON.parse(userStr);
             const userId = user.userId || user.uid;
 
-            // 1. Check existing attempts
+            // 1. Check for existing 'in_progress' attempts
             const attemptsRef = collection(db, 'MockTestAttempts');
-            const q = query(attemptsRef, where('userId', '==', userId), where('testId', '==', testId));
+            const q = query(
+                attemptsRef,
+                where('userId', '==', userId),
+                where('testId', '==', testId),
+                where('status', '==', 'in_progress')
+            );
             const snapshot = await getDocs(q);
 
-            /* 
             if (!snapshot.empty) {
-                const attempt = snapshot.docs[0].data();
-                if (!attempt.allowRetake && attempt.status === 'completed') {
-                    alert("이미 응시한 내역이 있습니다. 재응시가 불가능합니다.\n관리자에게 문의해주세요.");
-                    router.push('/mock-test');
+                const existing = snapshot.docs[0];
+                const data = existing.data();
+
+                if (confirm("이전에 풀던 기록이 있습니다. 이어서 진행하시겠습니까?\n(취소 시 새로 시작하며 기존 기록은 무효화됩니다.)")) {
+                    toggleFullScreen(); // Try to auto fullscreen on user gesture
+                    setAttemptId(existing.id);
+                    setAnswers(data.answers || {});
+                    setInitialSpread(data.lastSpread || 0); // Restore spread
+
+                    // Restore status and timer
+                    if (data.rcEndTime) {
+                        const remaining = Math.max(0, Math.floor((data.rcEndTime - Date.now()) / 1000));
+                        if (remaining <= 0) {
+                            alert("시험 시간이 이미 종료되었습니다.");
+                            setStatus('rc');
+                            setTimeLeft(0);
+                        } else {
+                            setTimeLeft(remaining);
+                            setStatus('rc');
+                        }
+                    } else {
+                        setStatus('lc');
+                    }
+                    setCurrentPart(data.lastPart || 1); // Restore part
                     return;
+                } else {
+                    // Mark old as abandoned
+                    await updateDoc(doc(db, 'MockTestAttempts', existing.id), { status: 'abandoned' });
                 }
             }
-            */
 
             // 2. Create new 'in_progress' attempt
             try {
@@ -84,9 +134,10 @@ export default function MockTestRunner() {
                     testId,
                     testTitle: testData.title,
                     status: 'in_progress',
-                    date: new Date().toISOString(), // String format for UI
-                    timestamp: serverTimestamp(),  // Firestore timestamp for sorting
-                    allowRetake: false
+                    date: new Date().toISOString(),
+                    timestamp: serverTimestamp(),
+                    allowRetake: false,
+                    answers: {}
                 });
                 setAttemptId(docRef.id);
                 setStatus('lc');
@@ -101,21 +152,14 @@ export default function MockTestRunner() {
 
     // Timer logic ... (same as before)
     useEffect(() => {
-        if (status === 'completed' || status === 'loading') return;
+        if (status !== 'rc') return; // Only RC has a countdown timer
 
         const timer = setInterval(() => {
             setTimeLeft((prev) => {
                 if (prev <= 1) {
-                    if (status === 'lc') {
-                        setStatus('rc');
-                        setRcStarted(true);
-                        setCurrentPart(5);
-                        setCurrentPage(0);
-                        return 75 * 60;
-                    } else {
-                        handleSubmit();
-                        return 0;
-                    }
+                    clearInterval(timer);
+                    handleSubmit();
+                    return 0;
                 }
                 return prev - 1;
             });
@@ -124,15 +168,75 @@ export default function MockTestRunner() {
         return () => clearInterval(timer);
     }, [status]);
 
+    const speakAnnouncement = (text: string) => {
+        if (typeof window === 'undefined' || !window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        utterance.rate = 0.9;
+
+        // Find best Korean voice (Google voice is usually better)
+        const voices = window.speechSynthesis.getVoices();
+        const bestVoice = voices.find(v => v.lang.includes('KO') && v.name.includes('Google'))
+            || voices.find(v => v.lang.includes('KO'));
+
+        if (bestVoice) utterance.voice = bestVoice;
+
+        window.speechSynthesis.speak(utterance);
+    };
+
+    // RC Exam Announcements (15m, 5m, End)
+    useEffect(() => {
+        if (status !== 'rc') return;
+
+        if (timeLeft === 900) { // 15 mins
+            const msg = "수험자 여러분, 읽기 평가 종료 15분 전입니다. 답안지 마킹을 점검해 주시기 바랍니다.";
+            setAnnouncement({ message: msg, type: 'info' });
+            speakAnnouncement(msg);
+            setTimeout(() => setAnnouncement(null), 8000);
+        } else if (timeLeft === 300) { // 5 mins
+            const msg = "수험자 여러분, 읽기 평가 종료 5분 전입니다. 답안 마킹을 서둘러 마무리해 주시기 바랍니다.";
+            setAnnouncement({ message: msg, type: 'warning' });
+            speakAnnouncement(msg);
+            setTimeout(() => setAnnouncement(null), 8000);
+        } else if (timeLeft === 1) { // End
+            const msg = "시험 시간이 종료되었습니다. 필기도구를 내려놓으시고 작성을 중단해 주십시오.";
+            setAnnouncement({ message: msg, type: 'danger' });
+            speakAnnouncement(msg);
+        }
+    }, [timeLeft, status]);
+
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
         return `${m}:${s.toString().padStart(2, '0')}`;
     };
 
+    const syncProgress = async (currentAnswers: Record<string, string>, part: number, timeLogs?: Record<string, number>, spread?: number) => {
+        if (!attemptId) return;
+        try {
+            const updateData: any = {
+                answers: currentAnswers,
+                lastPart: part,
+                lastSyncAt: serverTimestamp()
+            };
+            if (spread !== undefined) updateData.lastSpread = spread;
+            if (timeLogs) updateData.timeLogs = timeLogs;
+
+            await updateDoc(doc(db, 'MockTestAttempts', attemptId), updateData);
+            console.log(`✅ Part ${part} progress synced to server (page ${spread}).`);
+        } catch (e) {
+            console.warn("Progress sync failed:", e);
+        }
+    };
+
     const handleAnswer = (questionId: string, value: string) => {
         const newAnswers = { ...answers, [questionId]: value };
         setAnswers(newAnswers);
+
+        // 1-A. Step 1: Real-time Local Backup
+        localStorage.setItem(`mock_ans_${testId}`, JSON.stringify(newAnswers));
 
         // Part 1 Auto-Advance Logic
         if (currentPart === 1) {
@@ -151,14 +255,12 @@ export default function MockTestRunner() {
             const allAnswered = currentPageQuestions.every((q: any) => newAnswers[q.id]);
 
             if (allAnswered) {
-                // Max screens = 2 (0 and 1). If on 0, go to 1.
                 if (currentPage < 1) {
                     setTimeout(() => setCurrentPage(prev => prev + 1), 500);
                 } else {
-                    // If on last page (1), go to Part 2?
-                    // User requested auto-advance.
-                    // Transition to Part 2
+                    // Transition to Part 2 + SERVER SYNC
                     setTimeout(() => {
+                        syncProgress(newAnswers, 1);
                         setCurrentPart(2);
                         setCurrentPage(0);
                     }, 500);
@@ -166,6 +268,19 @@ export default function MockTestRunner() {
             }
         }
     };
+
+    const renderFullScreenButton = () => (
+        <button
+            onClick={toggleFullScreen}
+            className="fixed bottom-6 right-6 z-[10000] p-3 bg-slate-900/80 backdrop-blur-md text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all group"
+            title={isFullScreen ? "축소하기" : "전체화면으로 보기"}
+        >
+            {isFullScreen ? <Minimize2 className="w-6 h-6" /> : <Maximize2 className="w-6 h-6" />}
+            <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-900 px-3 py-1.5 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                {isFullScreen ? "창 모드 (ESC)" : "전체화면 모드"}
+            </span>
+        </button>
+    );
 
     const handleSubmit = () => {
         // Calculate score (mock logic for now)
@@ -231,165 +346,221 @@ export default function MockTestRunner() {
         return () => rightPanel.removeEventListener('wheel', handleWheel);
     }, []);
 
+    const renderAnnouncement = () => {
+        if (!announcement) return null;
+        const colors = {
+            info: 'bg-indigo-600 border-indigo-400',
+            warning: 'bg-amber-600 border-amber-400',
+            danger: 'bg-rose-700 border-rose-500'
+        };
+        return (
+            <div className="fixed top-20 left-1/2 -translate-x-1/2 z-[9999] animate-in fade-in slide-in-from-top-4 duration-500">
+                <div className={cn("px-8 py-4 rounded-2xl border-2 shadow-2xl flex items-center gap-4 text-white font-bold", colors[announcement.type])}>
+                    <Volume2 className="w-6 h-6 animate-pulse" />
+                    <p className="text-lg tracking-tight whitespace-nowrap">{announcement.message}</p>
+                </div>
+            </div>
+        );
+    };
+
     if (status === 'loading') return <div className="p-10 text-center">Loading Test...</div>;
 
     // Special Handling for Premium Mock Test #9
     if (testId === 9) {
         if (status === 'lc') {
             return (
-                <MockTest_LC_Set9
-                    onFinishLC={(lcAnswers) => {
-                        setAnswers(prev => ({ ...prev, ...lcAnswers }));
-                        setStatus('rc');
-                    }}
-                />
+                <>
+                    {renderFullScreenButton()}
+                    <MockTest_LC_Set9
+                        testId={testId}
+                        initialSpread={initialSpread}
+                        onProgressUpdate={(lcAnswers, part, _, spread) => {
+                            setAnswers(prev => ({ ...prev, ...lcAnswers }));
+                            setCurrentPart(part);
+                            syncProgress({ ...answers, ...lcAnswers }, part, undefined, spread);
+                        }}
+                        onFinishLC={(lcAnswers) => {
+                            const finalLCAnswers = { ...answers, ...lcAnswers };
+                            setAnswers(finalLCAnswers);
+
+                            // Set absolute end time for RC (75 mins from now)
+                            const rcEndTime = Date.now() + (75 * 60 * 1000);
+
+                            if (attemptId) {
+                                updateDoc(doc(db, 'MockTestAttempts', attemptId), {
+                                    rcEndTime: rcEndTime,
+                                    lastPart: 4,
+                                    answers: finalLCAnswers
+                                });
+                            }
+
+                            setTimeLeft(75 * 60);
+                            setStatus('rc');
+                        }}
+                    />
+                </>
             );
         }
         if (status === 'rc') {
             return (
-                <MockTest_RC_Set9
-                    initialAnswers={answers}
-                    onFinishExam={async (rcAnswers, timeLogs) => {
-                        const finalAnswers = { ...answers, ...rcAnswers };
-                        setAnswers(finalAnswers);
+                <>
+                    {renderFullScreenButton()}
+                    {renderAnnouncement()}
+                    <MockTest_RC_Set9
+                        testId={testId}
+                        initialAnswers={answers}
+                        initialSpread={initialSpread}
+                        timeLeft={timeLeft}
+                        onProgressUpdate={(rcAnswers, part, rcTimeLogs, spread) => {
+                            setAnswers(prev => ({ ...prev, ...rcAnswers }));
+                            setCurrentPart(part);
+                            syncProgress({ ...answers, ...rcAnswers }, part, rcTimeLogs, spread);
+                        }}
+                        onFinishExam={async (rcAnswers, timeLogs) => {
+                            const finalAnswers = { ...answers, ...rcAnswers };
+                            setAnswers(finalAnswers);
 
-                        // 1. Save to LocalStorage (Immediate UI)
-                        const attempt = {
-                            status: 'completed',
-                            date: new Date().toISOString(),
-                            answers: finalAnswers,
-                            timeLogs: timeLogs,
-                            testId
-                        };
-                        const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
-                        savedAttempts[`full-${testId}`] = attempt;
-                        localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+                            // 1. Save to LocalStorage (Immediate UI)
+                            const attempt = {
+                                status: 'completed',
+                                date: new Date().toISOString(),
+                                answers: finalAnswers,
+                                timeLogs: timeLogs,
+                                testId
+                            };
+                            const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                            savedAttempts[`full-${testId}`] = attempt;
+                            localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-                        // 2. Sync to Firebase (MockTestAttempts & Manager_Results)
-                        if (attemptId) {
-                            try {
-                                console.log('Finishing exam, calculating score...', testId);
-                                const result = calculateMockScore(String(testId), finalAnswers);
-                                const totalCorrect = result.correctCount;
-                                const partScores = result.partScores;
-                                const totalQs = result.totalQuestions;
+                            // 2. Sync to Firebase (MockTestAttempts & Manager_Results)
+                            if (attemptId) {
+                                try {
+                                    console.log('Finishing exam, calculating score...', testId);
+                                    const result = calculateMockScore(String(testId), finalAnswers);
+                                    const totalCorrect = result.correctCount;
+                                    const partScores = result.partScores;
+                                    const totalQs = result.totalQuestions;
 
-                                const classifications = getQuestionClassificationsForTest9();
+                                    const classifications = getQuestionClassificationsForTest9();
 
-                                const userStr = localStorage.getItem('toeic_user');
-                                const user = userStr ? JSON.parse(userStr) : null;
-                                const userId = user?.userId || user?.uid || "Unknown";
-                                const testLabel = "모의고사 1회";
+                                    const userStr = localStorage.getItem('toeic_user');
+                                    const user = userStr ? JSON.parse(userStr) : null;
+                                    const userId = user?.userId || user?.uid || "Unknown";
+                                    const testLabel = "모의고사 1회";
 
-                                // Collect incorrect questions for each part
-                                const partIncorrectQs: Record<string, any[]> = {
-                                    p1: [], p2: [], p3: [], p4: [], p5: [], p6: [], p7s: [], p7d: [] // Unified p7d/m check needed?
-                                    // calculateMockScore returns p7s and p7m. Let's map them.
-                                };
-                                // Note: calculateMockScore returns p7m, but here we used p7d. 
-                                // Let's stick to what calculateMockScore provides in partScores.
+                                    // Collect incorrect questions for each part
+                                    const partIncorrectQs: Record<string, any[]> = {
+                                        p1: [], p2: [], p3: [], p4: [], p5: [], p6: [], p7s: [], p7d: [] // Unified p7d/m check needed?
+                                        // calculateMockScore returns p7s and p7m. Let's map them.
+                                    };
+                                    // Note: calculateMockScore returns p7m, but here we used p7d. 
+                                    // Let's stick to what calculateMockScore provides in partScores.
 
-                                // Helper to collect incorrects based on result.partScores (which already tracked correctness)
-                                // But calculateMockScore doesn't return the list of incorrect Qs directly, only counts.
-                                // So we DO need a small loop to identify incorrects for reporting, OR trusting the previous logic.
-                                // The ORIGINAL code likely did this:
+                                    // Helper to collect incorrects based on result.partScores (which already tracked correctness)
+                                    // But calculateMockScore doesn't return the list of incorrect Qs directly, only counts.
+                                    // So we DO need a small loop to identify incorrects for reporting, OR trusting the previous logic.
+                                    // The ORIGINAL code likely did this:
 
-                                const correctAnswers = getCorrectAnswersForTest9();
-                                Object.entries(correctAnswers).forEach(([qId, correct]) => {
-                                    // Re-implementing ONLY the incorrect collection part which might have been there or I added it. 
-                                    // Actually, standard calculateMockScore usage in other parts of the app (if any) might not save detailed incorrects per part in Manager_Results?
-                                    // Let's look at the "Incident" again. The original code WAS simple.
-                                    // Let's use the robust Match logic from calculateMockScore for SCORING, 
-                                    // but we still need to populate Manager_Results.
+                                    const correctAnswers = getCorrectAnswersForTest9();
+                                    Object.entries(correctAnswers).forEach(([qId, correct]) => {
+                                        // Re-implementing ONLY the incorrect collection part which might have been there or I added it. 
+                                        // Actually, standard calculateMockScore usage in other parts of the app (if any) might not save detailed incorrects per part in Manager_Results?
+                                        // Let's look at the "Incident" again. The original code WAS simple.
+                                        // Let's use the robust Match logic from calculateMockScore for SCORING, 
+                                        // but we still need to populate Manager_Results.
 
-                                    // Wait, if I restore calculateMockScore, I get correct counts.
-                                    // But to save "incorrectQuestions" array to Firebase, I need to know WHICH ones.
-                                    // calculateMockScore does NOT return that array.
-                                    // SO, the original code MUST have had a loop to collect incorrects OR it didn't save them.
-                                    // HOWEVER, assuming the user improved the app to save incorrects.
+                                        // Wait, if I restore calculateMockScore, I get correct counts.
+                                        // But to save "incorrectQuestions" array to Firebase, I need to know WHICH ones.
+                                        // calculateMockScore does NOT return that array.
+                                        // SO, the original code MUST have had a loop to collect incorrects OR it didn't save them.
+                                        // HOWEVER, assuming the user improved the app to save incorrects.
 
-                                    // Let's trust my "Meaningful Restoration":
-                                    // 1. Use calculateMockScore for reliable SCORING (Fixes 0 score bug).
-                                    // 2. Use a simple loop for incorrects (visual only).
-                                });
+                                        // Let's trust my "Meaningful Restoration":
+                                        // 1. Use calculateMockScore for reliable SCORING (Fixes 0 score bug).
+                                        // 2. Use a simple loop for incorrects (visual only).
+                                    });
 
-                                // Let's just restore the calculateMockScore call first and foremost.
+                                    // Let's just restore the calculateMockScore call first and foremost.
 
-                                const batch = writeBatch(db);
+                                    const batch = writeBatch(db);
 
-                                // 1. Update MockTestAttempts Doc
-                                const attemptRef = doc(db, 'MockTestAttempts', attemptId);
-                                batch.update(attemptRef, {
-                                    status: 'completed',
-                                    completedAt: serverTimestamp(),
-                                    totalScore: totalCorrect, // Restore: Raw Score
-                                    totalQuestions: totalQs,
-                                    partScores: partScores,
-                                    timeLogs: timeLogs,
-                                    answers: finalAnswers
-                                });
+                                    // 1. Update MockTestAttempts Doc
+                                    const attemptRef = doc(db, 'MockTestAttempts', attemptId);
+                                    batch.update(attemptRef, {
+                                        status: 'completed',
+                                        completedAt: serverTimestamp(),
+                                        totalScore: totalCorrect, // Restore: Raw Score
+                                        totalQuestions: totalQs,
+                                        partScores: partScores,
+                                        timeLogs: timeLogs,
+                                        answers: finalAnswers
+                                    });
 
-                                // 2. Sync Each Part to Manager_Results
-                                const resultsRef = collection(db, "Manager_Results");
-                                const partMap: Record<string, string> = {
-                                    p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
-                                    p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
-                                };
-                                // Note: calculateMockScore uses 'p7m', my previous revert used 'p7d'. 
-                                // I will use whatever calculateMockScore returns.
+                                    // 2. Sync Each Part to Manager_Results
+                                    const resultsRef = collection(db, "Manager_Results");
+                                    const partMap: Record<string, string> = {
+                                        p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
+                                        p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
+                                    };
+                                    // Note: calculateMockScore uses 'p7m', my previous revert used 'p7d'. 
+                                    // I will use whatever calculateMockScore returns.
 
-                                Object.entries(partScores).forEach(([pKey, stat]: [string, any]) => {
-                                    if (pKey === 'p7') return; // Skip combined p7
-                                    if (stat.total > 0) {
-                                        const type = partMap[pKey] || pKey;
-                                        // We need incorrect Qs. 
-                                        // Constructing incorrect list manually using MATCH logic just for this log.
-                                        const incorrects: any[] = []; // Placeholder to avoid logic complexity for now, or re-implement safe match.
+                                    Object.entries(partScores).forEach(([pKey, stat]: [string, any]) => {
+                                        if (pKey === 'p7') return; // Skip combined p7
+                                        if (stat.total > 0) {
+                                            const type = partMap[pKey] || pKey;
+                                            // We need incorrect Qs. 
+                                            // Constructing incorrect list manually using MATCH logic just for this log.
+                                            const incorrects: any[] = []; // Placeholder to avoid logic complexity for now, or re-implement safe match.
 
-                                        batch.set(doc(resultsRef), {
-                                            student: user?.userName || user?.name || "Unknown",
-                                            studentId: userId,
-                                            unit: `${testLabel} (${pKey.toUpperCase()})`,
-                                            detail: testLabel,
-                                            type: type,
-                                            score: stat.correct,
-                                            total: stat.total,
-                                            wrongCount: stat.total - stat.correct,
-                                            incorrectQuestions: incorrects, // Empty for safety now, better than broken
-                                            attemptId: attemptId,
-                                            timestamp: serverTimestamp(),
-                                            createdAt: serverTimestamp()
-                                        });
-                                    }
-                                });
+                                            batch.set(doc(resultsRef), {
+                                                student: user?.userName || user?.name || "Unknown",
+                                                studentId: userId,
+                                                unit: `${testLabel} (${pKey.toUpperCase()})`,
+                                                detail: testLabel,
+                                                type: type,
+                                                score: stat.correct,
+                                                total: stat.total,
+                                                wrongCount: stat.total - stat.correct,
+                                                incorrectQuestions: incorrects, // Empty for safety now, better than broken
+                                                attemptId: attemptId,
+                                                timestamp: serverTimestamp(),
+                                                createdAt: serverTimestamp()
+                                            });
+                                        }
+                                    });
 
-                                // 3. Sync Summary
-                                batch.set(doc(resultsRef), {
-                                    student: user?.userName || user?.name || "Unknown",
-                                    studentId: userId,
-                                    unit: testLabel,
-                                    detail: testLabel,
-                                    type: 'mock_test',
-                                    score: totalCorrect, // Raw
-                                    total: totalQs,
-                                    attemptId: attemptId,
-                                    timestamp: serverTimestamp(),
-                                    createdAt: serverTimestamp()
-                                });
+                                    // 3. Sync Summary
+                                    batch.set(doc(resultsRef), {
+                                        student: user?.userName || user?.name || "Unknown",
+                                        studentId: userId,
+                                        unit: testLabel,
+                                        detail: testLabel,
+                                        type: 'mock_test',
+                                        score: totalCorrect, // Raw
+                                        total: totalQs,
+                                        attemptId: attemptId,
+                                        timestamp: serverTimestamp(),
+                                        createdAt: serverTimestamp()
+                                    });
 
-                                await batch.commit();
+                                    await batch.commit();
 
-                                // ✅ NEW: Sync Performance Summary after submission
-                                await PerformanceSyncService.syncUserSummary(userId);
-                            } catch (error) {
-                                console.error("Failed to sync Mock Test 9 results:", error);
+                                    // 4. Clear Local Backup
+                                    localStorage.removeItem(`mock_progress_${testId}`);
+
+                                    // ✅ NEW: Sync Performance Summary after submission
+                                    await PerformanceSyncService.syncUserSummary(userId);
+                                } catch (error) {
+                                    console.error("Failed to sync Mock Test 9 results:", error);
+                                }
                             }
-                        }
 
 
-                        router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
-                    }}
-                />
+                            router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
+                        }}
+                    />
+                </>
             );
         }
     }
@@ -398,123 +569,160 @@ export default function MockTestRunner() {
     if (testId === 10) {
         if (status === 'lc') {
             return (
-                <MockTest_LC_Set10
-                    onFinishLC={(lcAnswers) => {
-                        setAnswers(prev => ({ ...prev, ...lcAnswers }));
-                        setStatus('rc');
-                    }}
-                />
+                <>
+                    {renderFullScreenButton()}
+                    <MockTest_LC_Set10
+                        testId={testId}
+                        initialSpread={initialSpread}
+                        onProgressUpdate={(lcAnswers, part, _, spread) => {
+                            setAnswers(prev => ({ ...prev, ...lcAnswers }));
+                            setCurrentPart(part);
+                            syncProgress({ ...answers, ...lcAnswers }, part, undefined, spread);
+                        }}
+                        onFinishLC={(lcAnswers) => {
+                            const finalLCAnswers = { ...answers, ...lcAnswers };
+                            setAnswers(finalLCAnswers);
+
+                            // Set absolute end time for RC (75 mins from now)
+                            const rcEndTime = Date.now() + (75 * 60 * 1000);
+
+                            if (attemptId) {
+                                updateDoc(doc(db, 'MockTestAttempts', attemptId), {
+                                    rcEndTime: rcEndTime,
+                                    lastPart: 4,
+                                    answers: finalLCAnswers
+                                });
+                            }
+
+                            setTimeLeft(75 * 60);
+                            setStatus('rc');
+                        }}
+                    />
+                </>
             );
         }
         if (status === 'rc') {
             return (
-                <MockTest_RC_Set10
-                    initialAnswers={answers}
-                    onFinishExam={async (rcAnswers, timeLogs) => {
-                        const finalAnswers = { ...answers, ...rcAnswers };
-                        setAnswers(finalAnswers);
+                <>
+                    {renderFullScreenButton()}
+                    {renderAnnouncement()}
+                    <MockTest_RC_Set10
+                        testId={testId}
+                        initialAnswers={answers}
+                        initialSpread={initialSpread}
+                        timeLeft={timeLeft}
+                        onProgressUpdate={(rcAnswers, part, rcTimeLogs, spread) => {
+                            setAnswers(prev => ({ ...prev, ...rcAnswers }));
+                            setCurrentPart(part);
+                            syncProgress({ ...answers, ...rcAnswers }, part, rcTimeLogs, spread);
+                        }}
+                        onFinishExam={async (rcAnswers, timeLogs) => {
+                            const finalAnswers = { ...answers, ...rcAnswers };
+                            setAnswers(finalAnswers);
 
-                        // 1. Save to LocalStorage (Immediate UI)
-                        const attempt = {
-                            status: 'completed',
-                            date: new Date().toISOString(),
-                            answers: finalAnswers,
-                            timeLogs: timeLogs,
-                            testId
-                        };
-                        const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
-                        savedAttempts[`full-${testId}`] = attempt;
-                        localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+                            // 1. Save to LocalStorage (Immediate UI)
+                            const attempt = {
+                                status: 'completed',
+                                date: new Date().toISOString(),
+                                answers: finalAnswers,
+                                timeLogs: timeLogs,
+                                testId
+                            };
+                            const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                            savedAttempts[`full-${testId}`] = attempt;
+                            localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-                        // 2. Final Submit and Sync (MockTestAttempts & Manager_Results)
-                        if (attemptId) {
-                            try {
-                                const result = calculateMockScore(String(testId), finalAnswers);
-                                const totalCorrect = result.correctCount;
-                                const partScores = result.partScores;
-                                const totalQs = result.totalQuestions;
+                            // 2. Final Submit and Sync (MockTestAttempts & Manager_Results)
+                            if (attemptId) {
+                                try {
+                                    const result = calculateMockScore(String(testId), finalAnswers);
+                                    const totalCorrect = result.correctCount;
+                                    const partScores = result.partScores;
+                                    const totalQs = result.totalQuestions;
 
-                                const classifications = getQuestionClassificationsForTest10();
+                                    const classifications = getQuestionClassificationsForTest10();
 
-                                const userStr = localStorage.getItem('toeic_user');
-                                const user = userStr ? JSON.parse(userStr) : null;
-                                const userId = user?.userId || user?.uid || "Unknown";
-                                const testLabel = "모의고사 2회";
+                                    const userStr = localStorage.getItem('toeic_user');
+                                    const user = userStr ? JSON.parse(userStr) : null;
+                                    const userId = user?.userId || user?.uid || "Unknown";
+                                    const testLabel = "모의고사 2회";
 
-                                const batch = writeBatch(db);
+                                    const batch = writeBatch(db);
 
-                                // 1. Update MockTestAttempts Doc
-                                const attemptRef = doc(db, 'MockTestAttempts', attemptId);
-                                batch.update(attemptRef, {
-                                    status: 'completed',
-                                    completedAt: serverTimestamp(),
-                                    totalScore: totalCorrect, // Raw
-                                    totalQuestions: totalQs,
-                                    partScores: partScores,
-                                    timeLogs: timeLogs,
-                                    answers: finalAnswers
-                                });
+                                    // 1. Update MockTestAttempts Doc
+                                    const attemptRef = doc(db, 'MockTestAttempts', attemptId);
+                                    batch.update(attemptRef, {
+                                        status: 'completed',
+                                        completedAt: serverTimestamp(),
+                                        totalScore: totalCorrect, // Raw
+                                        totalQuestions: totalQs,
+                                        partScores: partScores,
+                                        timeLogs: timeLogs,
+                                        answers: finalAnswers
+                                    });
 
-                                // 2. Sync Each Part to Manager_Results
-                                const resultsRef = collection(db, "Manager_Results");
-                                const partMap: Record<string, string> = {
-                                    p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
-                                    p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
-                                };
+                                    // 2. Sync Each Part to Manager_Results
+                                    const resultsRef = collection(db, "Manager_Results");
+                                    const partMap: Record<string, string> = {
+                                        p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
+                                        p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
+                                    };
 
-                                Object.entries(partScores).forEach(([pKey, stat]: [string, any]) => {
-                                    if (pKey === 'p7') return;
-                                    if (stat.total > 0) {
-                                        const type = partMap[pKey] || pKey;
-                                        batch.set(doc(resultsRef), {
-                                            student: user?.userName || user?.name || "Unknown",
-                                            studentId: userId,
-                                            unit: `${testLabel} (${pKey.toUpperCase()})`,
-                                            detail: testLabel,
-                                            type: type,
-                                            score: stat.correct,
-                                            total: stat.total,
-                                            wrongCount: stat.total - stat.correct,
-                                            incorrectQuestions: [], // Placeholder
-                                            attemptId: attemptId,
-                                            timestamp: serverTimestamp(),
-                                            createdAt: serverTimestamp()
-                                        });
-                                    }
-                                });
+                                    Object.entries(partScores).forEach(([pKey, stat]: [string, any]) => {
+                                        if (pKey === 'p7') return;
+                                        if (stat.total > 0) {
+                                            const type = partMap[pKey] || pKey;
+                                            batch.set(doc(resultsRef), {
+                                                student: user?.userName || user?.name || "Unknown",
+                                                studentId: userId,
+                                                unit: `${testLabel} (${pKey.toUpperCase()})`,
+                                                detail: testLabel,
+                                                type: type,
+                                                score: stat.correct,
+                                                total: stat.total,
+                                                wrongCount: stat.total - stat.correct,
+                                                incorrectQuestions: [], // Placeholder
+                                                attemptId: attemptId,
+                                                timestamp: serverTimestamp(),
+                                                createdAt: serverTimestamp()
+                                            });
+                                        }
+                                    });
 
-                                // 3. Sync Summary Mock Test Record
-                                batch.set(doc(resultsRef), {
-                                    student: user?.userName || user?.name || "Unknown",
-                                    studentId: userId,
-                                    unit: testLabel,
-                                    detail: testLabel,
-                                    type: 'mock_test',
-                                    score: totalCorrect, // Raw
-                                    total: totalQs,
-                                    attemptId: attemptId,
-                                    timestamp: serverTimestamp(),
-                                    createdAt: serverTimestamp()
-                                });
+                                    // 3. Sync Summary Mock Test Record
+                                    batch.set(doc(resultsRef), {
+                                        student: user?.userName || user?.name || "Unknown",
+                                        studentId: userId,
+                                        unit: testLabel,
+                                        detail: testLabel,
+                                        type: 'mock_test',
+                                        score: totalCorrect, // Raw
+                                        total: totalQs,
+                                        attemptId: attemptId,
+                                        timestamp: serverTimestamp(),
+                                        createdAt: serverTimestamp()
+                                    });
 
-                                await batch.commit();
+                                    await batch.commit();
 
-                                // ✅ NEW: Sync Performance Summary after submission
-                                await PerformanceSyncService.syncUserSummary(userId);
-                            } catch (e) {
-                                console.error("Failed to sync Mock Test 10 results:", e);
+                                    // ✅ NEW: Sync Performance Summary after submission
+                                    await PerformanceSyncService.syncUserSummary(userId);
+                                } catch (e) {
+                                    console.error("Failed to sync Mock Test 10 results:", e);
+                                }
                             }
-                        }
 
-                        router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
-                    }}
-                />
+                            router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
+                        }}
+                    />
+                </>
             );
         }
     }
 
     return (
         <div className="flex flex-col h-screen bg-slate-50 overflow-hidden">
+            {renderFullScreenButton()}
             {/* Header */}
             <header className="relative bg-white border-b px-6 py-3 flex items-center justify-between shrink-0 h-16 z-20">
                 <div className="flex items-center gap-4">

@@ -22,6 +22,7 @@ export interface HalfTestAnalysis {
         target: number;
         wrongTags: string[];
         wrongPassages: string[];
+        wrongQuestionNumbers: number[];
         customCoaching: string;
         solution: string;
     }>;
@@ -165,14 +166,14 @@ export const HalfTestService = {
         }
 
         const partStats: Record<string, any> = {
-            p1: { name: "Part 1", correct: 0, total: 3 * scale, target: partGoals.p1, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p2: { name: "Part 2", correct: 0, total: 12 * scale, target: partGoals.p2, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p3: { name: "Part 3", correct: 0, total: 19 * scale, target: partGoals.p3, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p4: { name: "Part 4", correct: 0, total: 15 * scale, target: partGoals.p4, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p5: { name: "Part 5", correct: 0, total: 15 * scale, target: partGoals.p5, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p6: { name: "Part 6", correct: 0, total: 8 * scale, target: partGoals.p6, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p7s: { name: "Part 7 (S)", correct: 0, total: 14 * scale, target: partGoals.p7s, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
-            p7m: { name: "Part 7 (M)", correct: 0, total: 13 * scale, target: partGoals.p7m, wrongTags: [], wrongPassages: [], customCoaching: "", solution: "" },
+            p1: { name: "Part 1", correct: 0, total: isFullTest ? 6 : 3, target: partGoals.p1, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p2: { name: "Part 2", correct: 0, total: isFullTest ? 25 : 12, target: partGoals.p2, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p3: { name: "Part 3", correct: 0, total: isFullTest ? 39 : 19, target: partGoals.p3, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p4: { name: "Part 4", correct: 0, total: isFullTest ? 30 : 15, target: partGoals.p4, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p5: { name: "Part 5", correct: 0, total: isFullTest ? 30 : 15, target: partGoals.p5, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p6: { name: "Part 6", correct: 0, total: isFullTest ? 16 : 8, target: partGoals.p6, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p7s: { name: "Part 7 (S)", correct: 0, total: isFullTest ? 29 : 14, target: partGoals.p7s, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
+            p7m: { name: "Part 7 (M)", correct: 0, total: isFullTest ? 25 : 13, target: partGoals.p7m, wrongTags: [], wrongPassages: [], wrongQuestionNumbers: [], customCoaching: "", solution: "" },
         };
 
         let lcTotal = 0;
@@ -218,6 +219,9 @@ export const HalfTestService = {
                 partStats[partKey].correct++;
                 if (isLC) lcTotal++; else rcTotal++;
             } else {
+                // Collect wrong question number
+                partStats[partKey].wrongQuestionNumbers.push(qNum);
+
                 // Wrong answer analysis - requires finding question data in source
                 if (partKey === 'p1') {
                     partStats.p1.wrongTags.push("생활영어 어휘");

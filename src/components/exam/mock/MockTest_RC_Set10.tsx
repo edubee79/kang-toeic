@@ -7,49 +7,57 @@ import Link from "next/link";
 
 interface Props {
     onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
+    onProgressUpdate?: (answers: Record<string, string>, currentPart: number, timeLogs: Record<string, number>, currentSpread: number) => void;
+    testId?: number;
     initialAnswers?: Record<string, string>;
+    initialSpread?: number;
+    timeLeft: number;
 }
 
-export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }: Props) {
-    const [currentSpread, setCurrentSpread] = useState(0);
+export default function MockTest_RC_Set10({ onFinishExam, onProgressUpdate, testId, initialAnswers = {}, initialSpread = 0, timeLeft }: Props) {
+    const [currentSpread, setCurrentSpread] = useState(initialSpread);
     const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
-    const [timeLeft, setTimeLeft] = useState(75 * 60); // 75 minutes
     const [timeLogs, setTimeLogs] = useState<Record<string, number>>({ p5: 0, p6: 0, p7s: 0, p7m: 0 });
-    const lastCheckTimeRef = useRef<number>(75 * 60);
+    const spreadEntryTimeRef = useRef<number>(Date.now());
     const lastAdvancedSpreadRef = useRef<number>(-1);
     const mainContainerRef = React.useRef<HTMLDivElement>(null);
 
     // Scroll to top when spread changes
     // Cumulative Time Tracking (Stopwatch 방식)
-    // Timer Logic & Time Tracking
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev <= 1) {
-                    clearInterval(timer);
-                    alert("시험 시간이 종료되었습니다. 자동으로 제출합니다.");
-                    onFinishExam(answers, timeLogs);
-                    return 0;
-                }
-                return prev - 1;
-            });
+    // Track time spent on the current spread before changing it
+    const logTimeSpent = () => {
+        const now = Date.now();
+        const elapsedSeconds = Math.floor((now - spreadEntryTimeRef.current) / 1000);
 
-            // Track time per part based on current spread
+        if (elapsedSeconds > 0) {
             setTimeLogs(prev => {
                 const copy = { ...prev };
-                if (currentSpread <= 1) copy.p5 += 1;
-                else if (currentSpread <= 3) copy.p6 += 1;
+                const pNum = getCurrentPartNum();
+                if (pNum === 5) copy.p5 += elapsedSeconds;
+                else if (pNum === 6) copy.p6 += elapsedSeconds;
                 else {
                     const singleCount = test10Part7Single.length;
                     const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
-                    if (currentSpread <= singleSpreadsEndIdx) copy.p7s += 1;
-                    else copy.p7m += 1;
+                    if (currentSpread <= singleSpreadsEndIdx) copy.p7s += elapsedSeconds;
+                    else copy.p7m += elapsedSeconds;
                 }
+
+                // Notify parent of updated time logs along with answers and spread
+                if (onProgressUpdate) onProgressUpdate(answers, pNum, copy, currentSpread);
+
                 return copy;
             });
-        }, 1000);
-        return () => clearInterval(timer);
-    }, [answers, onFinishExam, currentSpread, timeLogs]);
+        }
+        spreadEntryTimeRef.current = now;
+    };
+
+    // Replace internal timer with simple submission check
+    useEffect(() => {
+        if (timeLeft <= 0) {
+            logTimeSpent(); // Final log
+            onFinishExam(answers, timeLogs);
+        }
+    }, [timeLeft]);
 
     // Scroll to top when spread changes
     useEffect(() => {
@@ -77,6 +85,20 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
         setAnswers(prev => {
             const newAnswers = { ...prev, [qId]: value };
 
+            // 🚩 [SAFETY] Real-time Local Backup
+            if (testId) {
+                const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                if (savedAttempts[`full-${testId}`]) {
+                    savedAttempts[`full-${testId}`].answers = {
+                        ...(savedAttempts[`full-${testId}`].answers || {}),
+                        ...newAnswers
+                    };
+                    localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+                }
+            }
+
+            if (onProgressUpdate) onProgressUpdate(newAnswers, getCurrentPartNum(), timeLogs, currentSpread);
+
             // Check if current spread is complete
             const currentQuestions = getRCSpreadQuestions(currentSpread);
             const isComplete = currentQuestions.every(id => newAnswers[id]);
@@ -93,6 +115,15 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
         });
     };
 
+    const getCurrentPartNum = () => {
+        if (currentSpread <= 1) return 5;
+        if (currentSpread <= 3) return 6;
+        const singleCount = test10Part7Single.length;
+        const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
+        if (currentSpread <= singleSpreadsEndIdx) return 7; // Unified Part 7
+        return 7;
+    };
+
     const nextSpread = () => {
         /*
         const currentQuestions = getRCSpreadQuestions(currentSpread);
@@ -103,6 +134,7 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
             return;
         }
         */
+        logTimeSpent(); // 🚩 Log time BEFORE changing spread
         setCurrentSpread(s => s + 1);
     }
 
@@ -136,7 +168,10 @@ export default function MockTest_RC_Set10({ onFinishExam, initialAnswers = {} }:
         }
         return qIds;
     };
-    const prevSpread = () => setCurrentSpread(s => s - 1);
+    const prevSpread = () => {
+        logTimeSpent(); // 🚩 Log time BEFORE changing spread
+        setCurrentSpread(s => s - 1);
+    };
 
     const totalSpreads = 5 + test10Part7Multi.length + Math.ceil((test10Part7Single.length - 2) / 2);
 

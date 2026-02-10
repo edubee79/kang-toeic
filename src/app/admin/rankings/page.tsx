@@ -243,15 +243,15 @@ export default function AdminRankingsPage() {
             </header >
 
             <Tabs defaultValue="total" className="w-full" onValueChange={setActiveTab}>
-                <TabsList className="grid w-full grid-cols-3 lg:w-[400px] mb-8 bg-slate-100 p-1 rounded-xl">
+                <TabsList className="grid w-full grid-cols-3 lg:w-[450px] mb-8 bg-slate-100 p-1 rounded-xl">
                     <TabsTrigger value="total" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-indigo-600 data-[state=active]:shadow-sm">
-                        종합 랭킹
+                        실전 실력 순위
                     </TabsTrigger>
                     <TabsTrigger value="voca" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-emerald-600 data-[state=active]:shadow-sm">
                         단어왕
                     </TabsTrigger>
                     <TabsTrigger value="consistency" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-orange-600 data-[state=active]:shadow-sm">
-                        성실왕
+                        학습 열정 순위
                     </TabsTrigger>
                 </TabsList>
 
@@ -290,7 +290,9 @@ export default function AdminRankingsPage() {
                                 <TableHead className="w-24 text-center font-black text-xs uppercase text-slate-500">Rank</TableHead>
                                 <TableHead className="font-bold text-xs text-slate-500">Student Info</TableHead>
                                 <TableHead className="font-bold text-xs text-slate-500">Class Info</TableHead>
-                                <TableHead className="text-right font-bold text-xs text-slate-500">Score / Stats</TableHead>
+                                <TableHead className="text-right font-bold text-xs text-slate-500">
+                                    {type === 'voca' ? '단어 실력 (AVG)' : type === 'consistency' ? '학습 열정 (Diligence)' : '실전 실력 (Score)'}
+                                </TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>

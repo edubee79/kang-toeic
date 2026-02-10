@@ -7,14 +7,18 @@ import Link from "next/link";
 
 interface Props {
     onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
+    onProgressUpdate?: (answers: Record<string, string>, currentPart: number, timeLogs: Record<string, number>, currentSpread: number) => void;
+    testId?: number;
     initialAnswers?: Record<string, string>;
+    initialSpread?: number;
+    timeLeft: number;
 }
 
-export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: Props) {
-    const [currentSpread, setCurrentSpread] = useState(0);
+export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testId, initialAnswers = {}, initialSpread = 0, timeLeft }: Props) {
+    const [currentSpread, setCurrentSpread] = useState(initialSpread);
     const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
-    const [timeLeft, setTimeLeft] = useState(75 * 60); // 75 minutes
     const [timeLogs, setTimeLogs] = useState<Record<string, number>>({ p5: 0, p6: 0, p7s: 0, p7m: 0 });
+    const spreadEntryTimeRef = useRef<number>(Date.now());
     const lastAdvancedSpreadRef = useRef<number>(-1);
     const mainContainerRef = React.useRef<HTMLDivElement>(null);
 
@@ -30,31 +34,39 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
         }
     }, [currentSpread]);
 
-    // Timer Logic & Time Tracking
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev <= 1) {
-                    clearInterval(timer);
-                    alert("시험 시간이 종료되었습니다. 자동으로 제출합니다.");
-                    onFinishExam(answers, timeLogs);
-                    return 0;
-                }
-                return prev - 1;
-            });
+    // Track time spent on the current spread before changing it
+    const logTimeSpent = () => {
+        const now = Date.now();
+        const elapsedSeconds = Math.floor((now - spreadEntryTimeRef.current) / 1000);
 
-            // Track time per part based on current spread
+        if (elapsedSeconds > 0) {
             setTimeLogs(prev => {
                 const copy = { ...prev };
-                if (currentSpread <= 1) copy.p5 += 1;
-                else if (currentSpread <= 3) copy.p6 += 1;
-                else if (currentSpread <= 8) copy.p7s += 1;
-                else copy.p7m += 1;
+                const pNum = getCurrentPartNum();
+                if (pNum === 5) copy.p5 += elapsedSeconds;
+                else if (pNum === 6) copy.p6 += elapsedSeconds;
+                else {
+                    // Logic to split P7 Single (S) vs Multi (M)
+                    if (currentSpread <= 8) copy.p7s += elapsedSeconds;
+                    else copy.p7m += elapsedSeconds;
+                }
+
+                // Notify parent of updated time logs along with answers and spread
+                if (onProgressUpdate) onProgressUpdate(answers, pNum, copy, currentSpread);
+
                 return copy;
             });
-        }, 1000);
-        return () => clearInterval(timer);
-    }, [answers, onFinishExam, currentSpread, timeLogs]);
+        }
+        spreadEntryTimeRef.current = now;
+    };
+
+    // Replace internal timer with simple submission check
+    useEffect(() => {
+        if (timeLeft <= 0) {
+            logTimeSpent(); // Final log
+            onFinishExam(answers, timeLogs);
+        }
+    }, [timeLeft]);
 
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
@@ -65,6 +77,20 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
     const handleAnswer = (qId: string, value: string) => {
         setAnswers(prev => {
             const newAnswers = { ...prev, [qId]: value };
+
+            // 🚩 [SAFETY] Real-time Local Backup
+            if (testId) {
+                const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                if (savedAttempts[`full-${testId}`]) {
+                    savedAttempts[`full-${testId}`].answers = {
+                        ...(savedAttempts[`full-${testId}`].answers || {}),
+                        ...newAnswers
+                    };
+                    localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+                }
+            }
+
+            if (onProgressUpdate) onProgressUpdate(newAnswers, getCurrentPartNum(), timeLogs, currentSpread);
 
             // Check if current spread is complete
             const currentQuestions = getRCSpreadQuestions(currentSpread);
@@ -82,6 +108,12 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
         });
     };
 
+    const getCurrentPartNum = () => {
+        if (currentSpread <= 1) return 5;
+        if (currentSpread <= 3) return 6;
+        return 7;
+    };
+
     const nextSpread = () => {
         /*
         const currentQuestions = getRCSpreadQuestions(currentSpread);
@@ -92,6 +124,7 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
             return;
         }
         */
+        logTimeSpent(); // 🚩 Log time BEFORE changing spread
         setCurrentSpread(s => s + 1);
     }
 
@@ -126,7 +159,10 @@ export default function MockTest_RC_Set9({ onFinishExam, initialAnswers = {} }: 
         }
         return qIds;
     };
-    const prevSpread = () => setCurrentSpread(s => s - 1);
+    const prevSpread = () => {
+        logTimeSpent(); // 🚩 Log time BEFORE changing spread
+        setCurrentSpread(s => s - 1);
+    };
 
     const totalSpreads = 5 + test9Part7Multi.length + Math.ceil((test9Part7Single.length - 2) / 2);
 
@@ -362,6 +398,8 @@ const MarkdownTable = ({ content, tableData }: { content: string, tableData?: an
     );
 };
 
+const totalSpreads = 5 + test9Part7Multi.length + Math.ceil((test9Part7Single.length - 2) / 2);
+
 function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 0) {
         return (
@@ -373,24 +411,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <strong>Directions:</strong> A word or phrase is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence.
                     </div>
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
                 <div className="booklet-page pt-[120px]">
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(12, 16).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(12, 16).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
             </>
@@ -402,24 +432,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
             <>
                 <div className="booklet-page">
                     <div className="flex h-fit mt-12">
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(16, 20).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(16, 20).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(20, 24).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(20, 24).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
                 <div className="booklet-page pt-[120px]">
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(24, 27).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(24, 27).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">
-                            {test9Part5.slice(27, 30).map(q => renderP5Question(q, answers, onAnswer))}
-                        </div>
+                        <div className="flex-1 space-y-4">{test9Part5.slice(27, 30).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
             </>

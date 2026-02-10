@@ -155,7 +155,45 @@ export default function AdminDashboard() {
             setLoadingAnalysis(false);
         };
 
+        const checkAndAutoUpdateRankings = async () => {
+            try {
+                const now = new Date();
+                const year = now.getFullYear();
+                const onejan = new Date(year, 0, 1);
+                const week = Math.ceil((((now.getTime() - onejan.getTime()) / 86400000) + onejan.getDay() + 1) / 7);
+                const period = `${year}-W${String(week).padStart(2, '0')}`;
+                const docId = `${period}-total-all`;
+
+                const { doc, getDoc } = await import('firebase/firestore');
+                const rankDoc = await getDoc(doc(db, 'Rankings', docId));
+
+                let needsUpdate = false;
+                if (!rankDoc.exists()) {
+                    needsUpdate = true;
+                } else {
+                    const data = rankDoc.data();
+                    if (data.updatedAt?.toDate) {
+                        const lastUpdate = data.updatedAt.toDate().toDateString();
+                        const today = new Date().toDateString();
+                        if (lastUpdate !== today) needsUpdate = true;
+                    } else {
+                        needsUpdate = true;
+                    }
+                }
+
+                if (needsUpdate) {
+                    console.log("Auto-updating rankings for new day...");
+                    const { updateRankings } = await import('@/services/rankingService');
+                    await updateRankings(period, 'all');
+                    console.log("Auto-update complete.");
+                }
+            } catch (e) {
+                console.error("Auto-ranking update failed:", e);
+            }
+        };
+
         checkAdmin();
+        checkAndAutoUpdateRankings();
     }, [router]);
 
     const handleExport = () => {
@@ -417,7 +455,8 @@ export default function AdminDashboard() {
                                 <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">P7 단지문</TableHead>
                                 <TableHead colSpan={3} className="text-center font-black text-[10px] border-r text-slate-900">P7 이/삼중</TableHead>
                                 <TableHead rowSpan={2} className="text-center font-black text-[10px] border-r bg-emerald-50 text-emerald-700">현재예상</TableHead>
-                                <TableHead rowSpan={2} className="text-center font-black text-[10px] bg-rose-50 text-rose-700">부족/초과</TableHead>
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] border-r bg-rose-50 text-rose-700">부족/초과</TableHead>
+                                <TableHead rowSpan={2} className="text-center font-black text-[10px] bg-orange-50 text-orange-700">학습 열정</TableHead>
                             </TableRow>
                             <TableRow className="hover:bg-transparent">
                                 <TableHead className="text-center text-[9px] font-bold border-r bg-indigo-50/50 text-indigo-700">총점/RC/LC</TableHead>
@@ -478,6 +517,9 @@ export default function AdminDashboard() {
                                             diff >= 0 ? "text-emerald-500" : "text-rose-500"
                                         )}>
                                             {diff > 0 ? `+${diff}` : diff}
+                                        </TableCell>
+                                        <TableCell className="text-center font-bold text-slate-500 bg-orange-50/10">
+                                            {report?.completedCount || 0}개
                                         </TableCell>
                                     </TableRow>
                                 );

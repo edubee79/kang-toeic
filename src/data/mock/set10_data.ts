@@ -70,13 +70,18 @@ export const test10Part7Single = p7_full.filter(s => {
     }))
 }));
 
-// 176번부터의 멀티 지문 (정밀 필터링 적용)
-export const test10Part7Multi = p7_full.filter(s => {
-    const match = s.questions[0].id.match(/q?(\d+)$/);
-    const firstQ = match ? parseInt(match[1]) : 0;
-    return firstQ >= 176;
-}).map(s => ({
+// 176번부터의 멀티 지문
+const p7_multi_raw = test10PracticeSet.length > 0
+    ? test10PracticeSet
+    : p7_full.filter(s => {
+        const match = s.questions[0].id.match(/q?(\d+)$/);
+        const firstQ = match ? parseInt(match[1]) : 0;
+        return firstQ >= 176;
+    });
+
+export const test10Part7Multi = p7_multi_raw.map(s => ({
     ...s,
+    type: s.setType || (s.passages.length >= 3 ? 'Triple' : 'Double'),
     questions: s.questions.map(q => ({
         ...q,
         id: q.id.includes('-q') ? q.id : `p7-t10-q${String(q.id).replace(/[^\d]/g, '')}`,
@@ -88,4 +93,4 @@ export const test10Part7Multi = p7_full.filter(s => {
 // 전체 오디오 파일 경로 (데이터 파일 내 첫 번째 이미지의 폴더 기준 또는 별도 정의 필요)
 // 보통 LC는 전체 파일 하나가 있으므로 이를 호출해야 함. 
 // 여기서는 데이터 파일에 정의된 개별 오디오가 아닌 '전체 LC 오디오'를 사용함.
-export const test10FullLCAudio = "/audio/mock/test1.mp3"; 
+export const test10FullLCAudio = "/audio/mock/test2.mp3"; 

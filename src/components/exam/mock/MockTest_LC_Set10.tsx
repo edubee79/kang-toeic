@@ -8,10 +8,13 @@ import Link from "next/link";
 
 interface Props {
     onFinishLC: (answers: Record<string, string>) => void;
+    onProgressUpdate?: (answers: Record<string, string>, currentPart: number, timeLogs?: Record<string, number>, currentSpread?: number) => void;
+    testId?: number;
+    initialSpread?: number;
 }
 
-export default function MockTest_LC_Set10({ onFinishLC }: Props) {
-    const [currentSpread, setCurrentSpread] = useState(0);
+export default function MockTest_LC_Set10({ onFinishLC, onProgressUpdate, testId, initialSpread = 0 }: Props) {
+    const [currentSpread, setCurrentSpread] = useState(initialSpread);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -30,13 +33,26 @@ export default function MockTest_LC_Set10({ onFinishLC }: Props) {
         setAnswers(prev => {
             const newAnswers = { ...prev, [qId]: value };
 
+            // 🚩 [SAFETY] Real-time Local Backup
+            if (testId) {
+                const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                if (savedAttempts[`full-${testId}`]) {
+                    savedAttempts[`full-${testId}`].answers = {
+                        ...(savedAttempts[`full-${testId}`].answers || {}),
+                        ...newAnswers
+                    };
+                    localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+                }
+            }
+
+            if (onProgressUpdate) onProgressUpdate(newAnswers, getCurrentPartNum(), undefined, currentSpread);
+
             // Check if current spread is complete
             const currentQuestions = getSpreadQuestions(currentSpread);
             const isComplete = currentQuestions.every(id => newAnswers[id]);
 
             if (isComplete && currentSpread < totalSpreads - 1 && lastAdvancedSpreadRef.current !== currentSpread) {
                 lastAdvancedSpreadRef.current = currentSpread;
-                // Auto advance with a small delay for better UX
                 setTimeout(() => {
                     setCurrentSpread(s => s + 1);
                 }, 600);
@@ -44,6 +60,13 @@ export default function MockTest_LC_Set10({ onFinishLC }: Props) {
 
             return newAnswers;
         });
+    };
+
+    const getCurrentPartNum = () => {
+        if (currentSpread <= 1) return 1;
+        if (currentSpread === 2) return 2;
+        if (currentSpread <= 3) return 3;
+        return 4;
     };
 
     // Audio Control (Starting once at the beginning) - User requested no pausing

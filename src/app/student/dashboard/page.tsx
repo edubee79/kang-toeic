@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { collection, query, where, getDocs, orderBy, doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
-import { Mic2, Headphones, BookOpen, PenSquare, Target, Clock, ArrowLeft, ArrowRight, Calendar, BarChart2, TrendingUp, AlertTriangle, Zap, CheckCircle2 } from "lucide-react";
+import { Mic2, Headphones, BookOpen, PenSquare, Target, Clock, ArrowLeft, ArrowRight, Calendar, BarChart2, TrendingUp, AlertTriangle, Zap, CheckCircle2, FileText } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -288,7 +288,8 @@ export default function StudentDashboard() {
                         isCompleted: true,
                         score: r.score,
                         total: r.total,
-                        timestamp: r.timestamp
+                        timestamp: r.timestamp,
+                        attemptId: r.attemptId // ✨ Store attemptId for result links
                     };
                 }
             });
@@ -416,7 +417,13 @@ export default function StudentDashboard() {
         }
     };
 
-    const getHomeworkLink = (type: string, detail: string, id: string, homeworkUrl?: string) => {
+    const getHomeworkLink = (type: string, detail: string, id: string, homeworkUrl?: string, attemptId?: string) => {
+        // ✨ If we have an attemptId, it means this is a completed test result we want to view
+        if (attemptId && type === 'mock_test') {
+            const testNum = detail?.includes('2회') ? 10 : 9;
+            return `/mock-test/full/${testNum}/result?attemptId=${attemptId}`;
+        }
+
         // If the assignment already has a direct URL, use it (for AI generated ones)
         if (homeworkUrl) return homeworkUrl;
 
@@ -481,6 +488,15 @@ export default function StudentDashboard() {
                     </div>
                 </div>
                 <div className="flex items-center gap-2 self-center md:self-auto">
+                    {/* 나의 학습 기록실 (History) Button */}
+                    <Link href="/student/history">
+                        <Button variant="outline" className="h-8 md:h-10 bg-slate-800 border-indigo-500/30 text-indigo-400 hover:bg-slate-700 hover:text-white px-2 md:px-4 text-[10px] md:text-sm font-black uppercase tracking-widest gap-2">
+                            <FileText className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                            <span className="hidden sm:inline">나의 학습 기록실</span>
+                            <span className="sm:hidden">기록실</span>
+                        </Button>
+                    </Link>
+
                     {user?.userId && (
                         <div className="flex items-center gap-1 md:gap-2 scale-[0.9] md:scale-100 origin-right">
                             <NotificationDropdown userId={user.userId} />
@@ -529,7 +545,7 @@ export default function StudentDashboard() {
                     <div className="flex items-center justify-between mb-4 md:mb-8 px-1">
                         <div className="flex items-center gap-3"><AlertTriangle className="text-rose-400 w-6 h-6" /><h3 className="text-[17px] md:text-2xl font-black text-white uppercase tracking-widest italic">AI 약점 분석</h3></div>
                         <Button variant="outline" size="sm" onClick={() => router.push('/weakness/dashboard')} className="bg-slate-800 text-white border-indigo-500/20 h-9 md:h-11 text-xs md:text-sm px-3 md:px-6 font-black uppercase tracking-widest rounded-xl">
-                            <BarChart2 className="w-4 h-4 mr-2" />전체 리포트
+                            <BarChart2 className="w-4 h-4 mr-2" />AI 정밀 진단실
                         </Button>
                     </div>
 
@@ -801,181 +817,10 @@ export default function StudentDashboard() {
                     })}
                 </div>
 
-                {/* Daily Homework Tracker Section */}
-                <div className="mb-10 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
-                    <div className="flex items-center gap-2 px-1">
-                        <Calendar className="text-indigo-400 w-5 h-5 md:w-6 md:h-6" />
-                        <h3 className="text-lg md:text-2xl font-black text-white uppercase tracking-tight italic">나의 과제 일지 (Daily Tasks)</h3>
-                    </div>
-                    <div className="space-y-6">
-                        {assignments.length > 0 ? (
-                            Object.entries(
-                                assignments.reduce((acc, a) => {
-                                    const safeDate = getSafeDate(a.createdAt);
-                                    const d = isValid(safeDate) && safeDate.getTime() !== 0
-                                        ? format(safeDate, 'yyyy-MM-dd')
-                                        : 'No Date';
-                                    if (!acc[d]) acc[d] = [];
-                                    acc[d].push(a);
-                                    return acc;
-                                }, {} as Record<string, any[]>)
-                            ).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 5).map(([date, items]) => (
-                                <div key={date} className="space-y-3">
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-px flex-1 bg-slate-800"></div>
-                                        <span className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest px-2 italic">{date} Assignments</span>
-                                        <div className="h-px flex-1 bg-slate-800"></div>
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
-                                        {items.map(item => {
-                                            const isDone = !!completedMap[`${item.type}_${item.detail}`];
-                                            const Icon = getHomeworkIcon(item.type);
-                                            return (
-                                                <Link key={item.id} href={getHomeworkLink(item.type, item.detail, item.id, item.homeworkUrl)}>
-                                                    <div className={cn(
-                                                        "group flex items-center justify-between p-4 rounded-2xl border transition-all duration-300",
-                                                        isDone
-                                                            ? "bg-emerald-500/5 border-emerald-500/10 hover:border-emerald-500/30"
-                                                            : "bg-slate-900/50 border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900Shadow-indigo-500/10"
-                                                    )}>
-                                                        <div className="flex items-center gap-3">
-                                                            <div className={cn(
-                                                                "w-10 h-10 rounded-xl flex items-center justify-center transition-colors",
-                                                                isDone ? "bg-emerald-500/10 text-emerald-500" : "bg-slate-800 text-slate-500 group-hover:text-indigo-400"
-                                                            )}>
-                                                                <Icon className="w-5 h-5 md:w-6 md:h-6" />
-                                                            </div>
-                                                            <div className="min-w-0">
-                                                                <p className={cn(
-                                                                    "text-[9px] md:text-[10px] font-black uppercase leading-none mb-1 tracking-tighter",
-                                                                    isDone ? "text-emerald-500/60" : "text-slate-600"
-                                                                )}>
-                                                                    {item.typeLabel || item.type}
-                                                                </p>
-                                                                <p className="text-sm md:text-base font-black text-white uppercase truncate tracking-tight">
-                                                                    {item.detail}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div className="shrink-0 flex items-center gap-2">
-                                                            {isDone ? (
-                                                                <Badge className="bg-emerald-500/20 text-emerald-500 border-none px-2 h-6 font-black italic tracking-tighter">DONE</Badge>
-                                                            ) : (
-                                                                <Badge variant="outline" className="text-slate-600 border-slate-800 px-2 h-6 font-black italic tracking-tighter">PENDING</Badge>
-                                                            )}
-                                                            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-slate-700 group-hover:text-indigo-500 rotate-180 transition-colors" />
-                                                        </div>
-                                                    </div>
-                                                </Link>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            ))
-                        ) : (
-                            <div className="text-center py-10 bg-slate-900/30 rounded-3xl border border-dashed border-slate-800">
-                                <p className="text-slate-500 font-bold">배포된 과제가 없습니다.</p>
-                            </div>
-                        )}
-                    </div>
-                </div>
+
             </div>
 
-            {/* Recently Completed Homework Section */}
-            {(() => {
-                const completed = assignments.filter(a => completedMap[`${a.type}_${a.detail}`]).slice(0, 3);
-                if (completed.length === 0) return null;
-                return (
-                    <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="text-emerald-500 w-5 h-5" />
-                                <h3 className="text-xl font-bold text-white">최근 완료한 숙제 (Recent)</h3>
-                            </div>
-                            <Link href="/student/history">
-                                <Button variant="ghost" className="text-slate-400 hover:text-white text-xs font-bold gap-2">
-                                    전체 기록 보기 <ArrowLeft className="w-3 h-3 rotate-180" />
-                                </Button>
-                            </Link>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {completed.map((assign) => {
-                                const result = completedMap[`${assign.type}_${assign.detail}`];
-
-                                // Direct lookup from USER DEFINED targets (strictly using pX_goal keys)
-                                const targetValue = (() => {
-                                    if (!user?.partTargets) return 0;
-                                    const lowerType = (assign.type || '').toLowerCase();
-
-                                    // Map to the exact _goal keys used in the target setting UI
-                                    let goalKey = '';
-                                    if (lowerType.includes('part1') || lowerType.includes('p1')) goalKey = 'p1_goal';
-                                    else if (lowerType.includes('part2') || lowerType.includes('p2')) goalKey = 'p2_goal';
-                                    else if (lowerType.includes('part3') || lowerType.includes('p3')) goalKey = 'p3_goal';
-                                    else if (lowerType.includes('part4') || lowerType.includes('p4')) goalKey = 'p4_goal';
-                                    else if (lowerType.includes('part5') || lowerType.includes('p5')) goalKey = 'p5_goal';
-                                    else if (lowerType.includes('part6') || lowerType.includes('p6')) goalKey = 'p6_goal';
-                                    else if (lowerType.includes('part7') || lowerType.includes('p7')) {
-                                        if (lowerType.includes('double') || lowerType.includes('triple') || lowerType.includes('multi')) goalKey = 'p7d_goal';
-                                        else goalKey = 'p7s_goal';
-                                    }
-
-                                    if (!goalKey) return 0;
-                                    const pts = user.partTargets as any;
-                                    return pts[goalKey] || 0;
-                                })();
-
-                                return (
-                                    <Card key={assign.id} className="bg-slate-900/40 border-emerald-500/20 p-5 flex flex-col border transition-all h-full justify-between gap-6">
-                                        <div className="flex items-start justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-emerald-500/10 text-emerald-500 shrink-0">
-                                                    {(() => { const Icon = getHomeworkIcon(assign.type); return <Icon className="w-5 h-5" />; })()}
-                                                </div>
-                                                <div className="min-w-0">
-                                                    <div className="flex items-center gap-2 mb-0.5">
-                                                        <span className="text-[10px] font-bold text-emerald-500/70 uppercase tracking-wider truncate">{assign.typeLabel || assign.type}</span>
-                                                        <Badge variant="outline" className="text-[9px] h-4 px-1.5 font-bold border-emerald-500/30 text-emerald-400">SUCCESS</Badge>
-                                                    </div>
-                                                    <p className="font-black text-white text-lg truncate uppercase">{assign.detail}</p>
-                                                </div>
-                                            </div>
-                                            <Link href={getHomeworkLink(assign.type, assign.detail, assign.id)}>
-                                                <Button size="sm" variant="ghost" className="text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-bold gap-1.5 px-3 h-8">
-                                                    복습하기 <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
-                                                </Button>
-                                            </Link>
-                                        </div>
-
-                                        <div className="flex items-end justify-between bg-slate-800/20 p-3 rounded-xl border border-slate-800/50">
-                                            {/* Target Section */}
-                                            <div className="flex flex-col gap-1">
-                                                <span className="text-[9px] text-slate-500 font-black uppercase tracking-tighter">당신의 목표</span>
-                                                <div className="flex items-baseline gap-1">
-                                                    <span className="text-3xl font-black text-amber-500 leading-none">{targetValue}</span>
-                                                    <span className="text-[10px] text-slate-600 font-bold uppercase">Goal</span>
-                                                </div>
-                                            </div>
-
-                                            {/* VS Divider */}
-                                            <div className="h-8 w-px bg-slate-800 hidden md:block" />
-
-                                            {/* Result Section */}
-                                            <div className="flex flex-col items-end gap-1">
-                                                <span className="text-[9px] text-slate-500 font-black uppercase tracking-tighter">취득 점수</span>
-                                                <div className="flex items-baseline gap-1">
-                                                    <span className="text-3xl font-black text-emerald-400 leading-none">{result.score || 0}</span>
-                                                    <span className="text-xs text-slate-600 font-bold">/ {result.total || '-'}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Card>
-                                );
-                            })}
-                        </div>
-                    </div>
-                );
-            })()}
+            {/* Recently Completed Homework Section - Removed for Slimmer Dashboard. Accessed via History Page. */}
         </div>
     );
 }
