@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { VocabularyCard } from '@/components/vocabulary/VocabularyCard';
 import { getWordsForLearning, updateWordStatus } from '@/services/vocabularyService';
@@ -15,6 +15,8 @@ export default function LearnPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [reviewPool, setReviewPool] = useState<number[]>([]);
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/home';
 
     const [showBack, setShowBack] = useState(false);
     const [hasPeeked, setHasPeeked] = useState(false); // Track if user peeked at least once
@@ -123,7 +125,7 @@ export default function LearnPage() {
             <div className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-2xl">
                 <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
                     <button
-                        onClick={() => router.back()}
+                        onClick={() => router.push(fromPath)}
                         className="text-slate-400 hover:text-white text-sm font-medium flex items-center gap-1 transition-colors"
                     >
                         ✕ Exit
@@ -140,7 +142,7 @@ export default function LearnPage() {
                                             reviewPool
                                         }));
                                     }
-                                    router.push('/homework/voca');
+                                    router.push(fromPath);
                                 }}
                                 className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
                             >

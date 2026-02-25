@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Sidebar, Navbar } from "@/components/layout/Sidebar";
+import MainBottomNav from "@/components/layout/MainBottomNav";
 import { cn } from "@/lib/utils";
 import { auth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
@@ -25,20 +26,26 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
     // Pages that should NOT have sidebar
     const noSidebarPages = ['/login', '/signup', '/admin'];
-    const shouldShowSidebar = !noSidebarPages.some(page => pathname.startsWith(page));
+    const mainTabPages = ['/student/home', '/student/selection', '/student/analysis', '/student/history'];
 
-    // If no sidebar needed, just render children
-    if (!shouldShowSidebar) {
-        return <>{children}</>;
-    }
+    const isMainTabPage = mainTabPages.includes(pathname);
+    const isAuthPage = noSidebarPages.some(page => pathname.startsWith(page));
+
+    // Sidebar should be hidden on Auth pages.
+    // On Main Tabs, it should be visible on Desktop but hidden on Mobile (handled by CSS in Sidebar).
+    // However, for the Wrapper's padding, we need to know if we are on Desktop.
+    const shouldShowSidebar = !isAuthPage;
 
     return (
-        <div className="flex min-h-screen bg-slate-900 text-white">
-            {/* Desktop Sidebar */}
-            <Sidebar />
+        <div className="flex min-h-screen bg-slate-950 text-white">
+            {/* Desktop Sidebar - Always show except login/admin */}
+            {shouldShowSidebar && <Sidebar />}
 
-            <div className="flex-1 flex flex-col md:pl-72 transition-all">
-                {/* Global Navbar with Logout */}
+            <div className={cn(
+                "flex-1 flex flex-col transition-all min-w-0 font-sans",
+                shouldShowSidebar ? "md:pl-72" : "pl-0"
+            )}>
+                {/* Global Navbar with Logout - Shown on all pages including main tabs */}
                 <Navbar
                     onMenuClick={() => setSidebarOpen(true)}
                     onLogout={async () => {
@@ -52,19 +59,22 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 />
 
                 {/* Mobile Sidebar Sheet Control */}
-                <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+                {shouldShowSidebar && <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />}
 
                 <main className={cn(
-                    "flex-1 w-full mx-auto",
+                    "flex-1 w-full",
                     (
                         pathname === '/' ||
-                        pathname === '/student/dashboard' ||
+                        pathname === '/student/home' ||
+                        isMainTabPage ||
                         pathname === '/mock-test' ||
                         pathname === '/level-test' ||
                         (pathname.startsWith('/homework/') && pathname.split('/').filter(Boolean).length === 2) ||
                         pathname === '/homework/part7/practice' ||
-                        pathname.startsWith('/mock-test/full/')
-                    ) ? "max-w-none p-0" : "max-w-7xl md:p-10 p-6",
+                        pathname.startsWith('/mock-test/full/') ||
+                        pathname.startsWith('/admin')
+                    ) ? "max-w-none p-0" : "w-full md:p-10 p-6",
+                    isMainTabPage && "overflow-x-hidden",
                     pathname.startsWith('/homework/') &&
                         pathname.split('/').filter(Boolean).length >= 3 &&
                         pathname !== '/homework/part7/practice'
@@ -73,6 +83,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 )}>
                     {children}
                 </main>
+
+                {/* Bottom Navigation for Main Tabs */}
+                {isMainTabPage && <MainBottomNav />}
             </div>
         </div>
     );

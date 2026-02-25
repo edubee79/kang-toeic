@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { test9Part1, test9Part2, test9Part3, test9Part4, test9FullLCAudio } from "@/data/mock/set9_data";
 import { ChevronLeft, ChevronRight, Clock, Volume2, Monitor } from "lucide-react";
+import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,6 +15,8 @@ interface Props {
 }
 
 export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId, initialSpread = 0 }: Props) {
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/';
     const [currentSpread, setCurrentSpread] = useState(initialSpread);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [isPlaying, setIsPlaying] = useState(false);
@@ -134,7 +137,7 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
             {/* Header */}
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30">
                 <div className="flex items-center gap-6">
-                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                    <Link href={fromPath} className="hover:opacity-80 transition-opacity">
                         <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
                     </Link>
                     <div className="h-6 w-px bg-slate-200"></div>

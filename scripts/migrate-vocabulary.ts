@@ -21,8 +21,23 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
+
+async function authenticate() {
+    const email = "temp-uploader@test.com";
+    const password = "TempPass123!@#";
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+        console.log("🔓 Authenticated as uploader account.");
+    } catch (error) {
+        console.error("❌ Authentication failed:", error);
+        throw error;
+    }
+}
 
 interface VocabWord {
     day: number;
@@ -112,6 +127,7 @@ async function validateMigration() {
 // Main execution
 async function main() {
     try {
+        await authenticate();
         await migrateVocabulary();
         await validateMigration();
         process.exit(0);

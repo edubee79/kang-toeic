@@ -2,21 +2,38 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { part5Data } from '@/data/part5';
 import { ArrowLeft, ChevronRight, Sword, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
+import { CompletionBadge } from '@/components/ui/completion-badge';
 
 export default function Part5LobbyPage() {
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/selection?tab=PROBLEM';
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
+
+            // Fetch completion status
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+                const grammarUnits = Object.keys(part5Data);
+                const completionData = await getMultipleTestCompletions(userId, grammarUnits);
+                setCompletions(completionData);
+            }
+
             setLoading(false);
         };
         fetchAccess();
@@ -55,7 +72,7 @@ export default function Part5LobbyPage() {
         <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
-                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter">
                             <span className="text-white">Grammar</span>
@@ -87,7 +104,7 @@ export default function Part5LobbyPage() {
 
                             return (
                                 <Link
-                                    href={isLocked ? "#" : `/homework/part5/${unitId}`}
+                                    href={isLocked ? "#" : `/homework/part5/${unitId}?from=${encodeURIComponent(`/homework/part5?from=${encodeURIComponent(fromPath)}`)}`}
                                     key={unitId}
                                     onClick={(e) => {
                                         if (isLocked) {
@@ -99,21 +116,34 @@ export default function Part5LobbyPage() {
                                         "group relative bg-slate-900 border transition-all duration-300 rounded-xl md:rounded-2xl p-2 md:p-3 flex flex-col gap-1.5 h-auto min-h-[76px] md:min-h-[110px]",
                                         isLocked
                                             ? "border-slate-800 opacity-60 grayscale cursor-not-allowed"
-                                            : "bg-slate-800/80 border-slate-700/50 hover:bg-amber-900/10 hover:border-amber-500/50"
+                                            : !!completions[unitId]?.completed
+                                                ? "bg-amber-500/5 border-amber-500/30 hover:bg-amber-500/10"
+                                                : "bg-slate-800/80 border-slate-700/50 hover:bg-amber-900/10 hover:border-amber-500/50"
                                     )}
                                 >
                                     <div className="flex justify-between items-start">
                                         <div className={cn(
                                             "w-6 h-6 md:w-8 md:h-8 rounded md:rounded-lg bg-slate-950 flex items-center justify-center font-black text-[10px] md:text-sm border transition-colors",
-                                            isLocked ? "text-slate-600 border-slate-800" : "text-amber-500/50 group-hover:text-amber-400 border-slate-800"
+                                            isLocked ? "text-slate-600 border-slate-800" : (!!completions[unitId]?.completed ? "text-amber-400 border-amber-500/30" : "text-amber-500/50 group-hover:text-amber-400 border-slate-800")
                                         )}>
                                             {unitId.split('_')[1]}
                                         </div>
-                                        {isLocked ? (
-                                            <Lock className="w-3 h-3 md:w-4 md:h-4 text-slate-700" />
-                                        ) : (
-                                            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-slate-500 group-hover:text-amber-400 transition-colors" />
-                                        )}
+                                        <div className="flex items-center gap-2">
+                                            {!isLocked && completions[unitId] && completions[unitId].completed && (
+                                                <div className="scale-75 md:scale-90 origin-right">
+                                                    <CompletionBadge
+                                                        completed={true}
+                                                        score={completions[unitId].score}
+                                                        total={completions[unitId].total}
+                                                    />
+                                                </div>
+                                            )}
+                                            {isLocked ? (
+                                                <Lock className="w-3 h-3 md:w-4 md:h-4 text-slate-700" />
+                                            ) : (
+                                                <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-slate-500 group-hover:text-amber-400 transition-colors" />
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="space-y-0.5 mt-auto">
                                         <h3 className={cn(

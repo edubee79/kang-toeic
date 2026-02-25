@@ -29,6 +29,13 @@ export interface VocabularyWord {
     synonyms?: string[];
     antonyms?: string[];
     similar?: string[];
+    // Sinagong Voca enhanced fields
+    usageNote?: string;
+    collocations?: { en: string; ko: string }[];
+    derivatives?: { word: string; pos: string; meaning: string }[];
+    grammarPoint?: string;
+    pos?: string;
+    sinaId?: string;
 }
 
 export interface WordStatus {
@@ -48,11 +55,10 @@ export interface SRSCard {
     nextReview: Date;
 }
 
-// Get words by target score
-export async function getWordsByTargetScore(targetScore: 650 | 800 | 900): Promise<VocabularyWord[]> {
+// Get all words (targetScore filtering removed to show all 1000 words)
+export async function getWordsByTargetScore(_targetScore: 650 | 800 | 900): Promise<VocabularyWord[]> {
     const q = query(
-        collection(db, 'vocabularies'),
-        where('targetScore', '<=', targetScore)
+        collection(db, 'vocabularies')
     );
 
     const snapshot = await getDocs(q);
@@ -142,22 +148,21 @@ export async function getWordsForSorting(userId: string, targetScore: 650 | 800 
 }
 
 // Get words for a specific day
-// Get words for a specific day
-export async function getWordsForDay(userId: string, day: number, targetScore: 650 | 800 | 900): Promise<VocabularyWord[]> {
-    // Get words for this day AND target score
+export async function getWordsForDay(userId: string, day: number, _targetScore: 650 | 800 | 900): Promise<VocabularyWord[]> {
+    // Get ALL words for this day, regardless of target score
     const q = query(
         collection(db, 'vocabularies'),
-        where('day', '==', day),
-        where('part', '==', 1),
-        where('targetScore', '<=', targetScore)
+        where('day', '==', day)
     );
 
     const snapshot = await getDocs(q);
-    const words = snapshot.docs.map(doc => doc.data() as VocabularyWord);
+    const words = snapshot.docs.map(doc => ({
+        ...doc.data(),
+        id: doc.id
+    } as VocabularyWord));
 
-    // Sort in memory
+    // Sort by part and then by number (standard Sinagong order)
     words.sort((a, b) => {
-        if (a.targetScore !== b.targetScore) return a.targetScore - b.targetScore;
         if (a.part !== b.part) return a.part - b.part;
         return a.no - b.no;
     });
@@ -199,24 +204,43 @@ export async function getWordsForLearning(userId: string): Promise<VocabularyWor
     return words;
 }
 
-// Get SRS cards due for review (OPTIMIZED with batch queries)
-export async function getDueReviews(userId: string): Promise<VocabularyWord[]> {
+// Get SRS cards due for review (3-hit prioritized logic)
+export async function getDueReviews(userId: string, limit: number = 40): Promise<VocabularyWord[]> {
+    // 1. Get due SRS cards
     const srsQuery = query(
         collection(db, 'userVocabulary', userId, 'srsCards'),
         where('nextReview', '<=', Timestamp.now())
     );
 
     const srsSnapshot = await getDocs(srsQuery);
-    const wordIds = srsSnapshot.docs.map(doc => doc.id);
+    if (srsSnapshot.empty) return [];
 
-    if (wordIds.length === 0) return [];
+    // 2. Fetch word statuses for prioritized sorting (incorrectCount)
+    const statusQuery = query(
+        collection(db, 'wordStatus'),
+        where('userId', '==', userId)
+    );
+    const statusSnapshot = await getDocs(statusQuery);
+    const statusMap = new Map();
+    statusSnapshot.docs.forEach(doc => {
+        statusMap.set(doc.data().wordId, doc.data().incorrectCount || 0);
+    });
 
-    // Batch fetch in chunks of 30 (Firestore 'in' operator limit)
+    // 3. Sort due cards: high incorrectCount first
+    const sortedCardIds = srsSnapshot.docs
+        .map(doc => ({ id: doc.id, incorrectCount: statusMap.get(doc.id) || 0 }))
+        .sort((a, b) => b.incorrectCount - a.incorrectCount)
+        .slice(0, limit)
+        .map(c => c.id);
+
+    if (sortedCardIds.length === 0) return [];
+
+    // 4. Batch fetch vocabulary data
     const words: VocabularyWord[] = [];
     const chunkSize = 30;
 
-    for (let i = 0; i < wordIds.length; i += chunkSize) {
-        const chunk = wordIds.slice(i, i + chunkSize);
+    for (let i = 0; i < sortedCardIds.length; i += chunkSize) {
+        const chunk = sortedCardIds.slice(i, i + chunkSize);
         const wordsQuery = query(
             collection(db, 'vocabularies'),
             where(documentId(), 'in', chunk)
@@ -232,7 +256,7 @@ export async function getDueReviews(userId: string): Promise<VocabularyWord[]> {
     return words;
 }
 
-// Create or update SRS card (SM-2 algorithm)
+// Create or update SRS card (3-hit graduation logic)
 export async function updateSRSCard(
     userId: string,
     wordId: string,
@@ -241,28 +265,42 @@ export async function updateSRSCard(
     const srsRef = doc(db, 'userVocabulary', userId, 'srsCards', wordId);
     const srsDoc = await getDoc(srsRef);
 
-    let interval = 1;
-    let repetitions = 0;
-    let easeFactor = 2.5;
+    let interval = 1;      // days until next review
+    let repetitions = 0;   // consecutive correct count (hits)
 
     if (srsDoc.exists()) {
         const data = srsDoc.data();
-        interval = data.interval;
-        repetitions = data.repetitions;
-        easeFactor = data.easeFactor;
+        interval = data.interval || 1;
+        repetitions = data.repetitions || 0;
     }
 
     if (correct) {
-        if (repetitions === 0) {
-            interval = 1;
-        } else if (repetitions === 1) {
-            interval = 3;
-        } else {
-            interval = Math.round(interval * easeFactor);
-        }
         repetitions += 1;
+        if (repetitions === 1) {
+            interval = 1; // 1st hit -> 1 day
+        } else if (repetitions === 2) {
+            interval = 3; // 2nd hit -> 3 days
+        } else if (repetitions >= 3) {
+            // 3rd hit -> Graduate (Mastered)
+            await updateWordStatus(userId, wordId, 'mastered', true);
+            // Optionally remove from SRS cards to keep it clean
+            // For now, just set nextReview very far or handle in fetching
+            // Preferred way: Mark word status as mastered and exclude from due reviews
+            // But getDueReviews currently only checks nextReview.
+            // Let's set nextReview to 10 years and reps to 3
+            const horizon = new Date();
+            horizon.setFullYear(horizon.getFullYear() + 10);
+            await setDoc(srsRef, {
+                wordId,
+                interval: 3650,
+                repetitions: 3,
+                nextReview: Timestamp.fromDate(horizon),
+                lastReviewed: Timestamp.now()
+            }, { merge: true });
+            return;
+        }
     } else {
-        // Reset on wrong answer
+        // Reset on wrong answer (Retry tomorrow)
         interval = 1;
         repetitions = 0;
     }
@@ -274,18 +312,16 @@ export async function updateSRSCard(
         wordId,
         interval,
         repetitions,
-        easeFactor,
         nextReview: Timestamp.fromDate(nextReview),
         lastReviewed: Timestamp.now()
-    });
+    }, { merge: true });
 }
 
 // Get user progress stats
-export async function getUserProgress(userId: string, targetScore: 650 | 800 | 900) {
-    // 1. Total Words (Fast Count)
+export async function getUserProgress(userId: string, _targetScore: 650 | 800 | 900) {
+    // 1. Total Words (Show all 1000 words regardless of user score)
     const qTotal = query(
-        collection(db, 'vocabularies'),
-        where('targetScore', '<=', targetScore)
+        collection(db, 'vocabularies')
     );
     const snapTotal = await getCountFromServer(qTotal);
     const totalWords = snapTotal.data().count;

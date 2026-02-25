@@ -13,6 +13,7 @@ export default function LevelTestResult() {
     const searchParams = useSearchParams();
     const testId = searchParams.get('testId');
     const attemptId = searchParams.get('attemptId');
+    const fromPath = searchParams.get('from') || '/student/home';
 
     const [attempt, setAttempt] = useState<any>(null);
     const [analysis, setAnalysis] = useState<LevelTestAnalysis | null>(null);
@@ -199,12 +200,12 @@ export default function LevelTestResult() {
                 {/* Footer */}
                 <div className="flex gap-4 pt-2">
                     <Button
-                        onClick={() => router.push('/student/dashboard')}
+                        onClick={() => router.push(fromPath)}
                         variant="outline"
                         className="flex-1 h-20 border-2 border-slate-200 rounded-[2rem] font-black text-slate-700 hover:bg-slate-50 transition-all shadow-sm"
                     >
                         <Home className="w-5 h-5 mr-3" />
-                        학습 대시보드로 복귀
+                        나의 학습방으로 복귀
                     </Button>
                 </div>
             </div>

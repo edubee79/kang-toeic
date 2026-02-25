@@ -3,10 +3,11 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getUserTargetScore, getUserProgress, getDueReviews } from '@/services/vocabularyService';
-import { ArrowLeft, BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target, Lock } from 'lucide-react';
+import { ArrowLeft, BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target, Lock, HelpCircle, Shield, Volume2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 
@@ -24,7 +25,12 @@ export default function VocabularyDashboard() {
         progress: 0
     });
     const [dueReviewCount, setDueReviewCount] = useState(0);
+    const [showGuide, setShowGuide] = useState(true);
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/selection?tab=VOCAB';
+
+    const [completions, setCompletions] = useState<Record<string, any>>({});
 
     useEffect(() => {
         setIsMounted(true);
@@ -49,8 +55,16 @@ export default function VocabularyDashboard() {
 
                 setTargetScore(score as 650 | 800 | 900);
 
-                const progressData = await getUserProgress(user.userId, score as 650 | 800 | 900);
+                // Fetch Progress and Completions
+                const [progressData, completionData] = await Promise.all([
+                    getUserProgress(user.userId, score as 650 | 800 | 900),
+                    import('@/services/completionService').then(m =>
+                        m.getMultipleTestCompletions(user.userId, Array.from({ length: 20 }, (_, i) => `Voca_Day${i + 1}`))
+                    )
+                ]);
+
                 setProgress(progressData);
+                setCompletions(completionData);
             } catch (error) {
                 console.error('Error loading vocabulary data:', error);
             } finally {
@@ -85,39 +99,43 @@ export default function VocabularyDashboard() {
 
     const maxDay = access?.maxSets?.voca || 30; // Default to 30 if not set
 
-    // Generate Day 1-30
-    // Generate Day 1-15 (User requested to hide 16-30 for now)
-    const days = Array.from({ length: 15 }, (_, i) => i + 1);
+    // Generate Day 1-20
+    const days = Array.from({ length: 20 }, (_, i) => i + 1);
 
     const DAY_THEMES: Record<number, string> = {
-        1: "인사/채용",
-        2: "사무/업무",
-        3: "의사소통",
-        4: "고객서비스",
-        5: "시설/장소",
-        6: "재무/회계",
-        7: "마케팅/광고",
-        8: "계약/협상",
-        9: "생산/제조",
-        10: "물류/배송",
-        11: "연구/개발",
-        12: "경영/관리",
-        13: "인사/복지",
-        14: "법률/규정",
-        15: "종합/숙어",
+        1: "채용/인사",
+        2: "사무/행정",
+        3: "연결어/전치사",
+        4: "계약/성과",
+        5: "급여/복지",
+        6: "경영/관리",
+        7: "재무/회계",
+        8: "금융/은행",
+        9: "투자/M&A",
+        10: "고난도 부사",
+        11: "생산/제조",
+        12: "품질/재고",
+        13: "물류/배송",
+        14: "마케팅/광고",
+        15: "시장조사/고객",
+        16: "IT/기술연구",
+        17: "법률/규정",
+        18: "의료/환경",
+        19: "교통/여행",
+        20: "혼동어휘/완성",
     };
 
     return (
         <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
-                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter text-indigo-500">
                             <span className="text-white">Word</span>
                             <span className="text-indigo-500"> Master</span>
                         </h2>
-                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">TOEIC 필수 어휘 1500개 완성</p>
+                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">TOEIC 필수 어휘 1600개 완성</p>
                     </div>
                 </div>
                 <div className="text-right">
@@ -162,6 +180,74 @@ export default function VocabularyDashboard() {
                     </div>
                 </Card>
 
+                {/* Strategic Study Guide */}
+                <Card className="bg-slate-900 border-2 border-indigo-500/20 p-4 md:p-6 mx-3 md:mx-0 mb-8 relative overflow-hidden group">
+                    <div className="absolute right-0 top-0 p-2 md:p-4 text-indigo-500/10 group-hover:text-indigo-500/20 transition-colors">
+                        <Shield className="w-16 h-16 md:w-24 md:h-24" />
+                    </div>
+                    <div className="relative z-10">
+                        <div className="flex items-center justify-between mb-4 md:mb-6">
+                            <div className="flex items-center gap-2 md:gap-3">
+                                <div className="p-2 bg-indigo-500/20 rounded-lg text-indigo-400">
+                                    <HelpCircle className="w-4 h-4 md:w-5 md:h-5" />
+                                </div>
+                                <h3 className="text-sm md:text-xl font-black text-white italic tracking-tight uppercase">Word Master 전략적 학습 가이드</h3>
+                            </div>
+                            <button
+                                onClick={() => setShowGuide(!showGuide)}
+                                className="text-[10px] md:text-xs font-black text-slate-500 hover:text-white transition-colors border border-slate-700 px-2 py-1 rounded"
+                            >
+                                {showGuide ? '접기' : '길게 보기'}
+                            </button>
+                        </div>
+
+                        {showGuide && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 animate-in fade-in slide-in-from-top-2 duration-500">
+                                <div className="space-y-2">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs bg-indigo-500 text-white font-black px-1.5 py-0.5 rounded leading-none">01</span>
+                                        <span className="text-xs md:text-sm font-black text-slate-300 uppercase italic">SORT (분류)</span>
+                                    </div>
+                                    <p className="text-[11px] md:text-xs text-slate-500 font-medium leading-relaxed">아는 단어는 과감히 넘기고, 모르는 단어만 골라내 학습 효율을 극대화하세요.</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs bg-indigo-500 text-white font-black px-1.5 py-0.5 rounded leading-none">02</span>
+                                        <span className="text-xs md:text-sm font-black text-slate-300 uppercase italic">LEARN (학습)</span>
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <div className="flex items-start gap-1.5">
+                                            <span className="text-[9px] bg-emerald-500/20 text-emerald-400 font-black px-1 rounded mt-0.5">Basic</span>
+                                            <p className="text-[10px] md:text-[11px] text-slate-400 font-medium">핵심 뜻과 예문에 집중</p>
+                                        </div>
+                                        <div className="flex items-start gap-1.5">
+                                            <span className="text-[9px] bg-amber-500/20 text-amber-400 font-black px-1 rounded mt-0.5">Advanced</span>
+                                            <p className="text-[10px] md:text-[11px] text-slate-400 font-medium">콜로케이션과 문법 팁까지 섭렵</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs bg-indigo-500 text-white font-black px-1.5 py-0.5 rounded leading-none">03</span>
+                                        <span className="text-xs md:text-sm font-black text-slate-300 uppercase italic">TEST (평가)</span>
+                                    </div>
+                                    <p className="text-[11px] md:text-xs text-slate-500 font-medium leading-relaxed">뜻 맞추기와 <strong>문장 빈칸 채우기</strong> 퀴즈를 통해 실전적 응용력을 평가합니다.</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs bg-indigo-500 text-white font-black px-1.5 py-0.5 rounded leading-none">04</span>
+                                        <span className="text-xs md:text-sm font-black text-slate-300 uppercase italic">AUDIO (청취)</span>
+                                    </div>
+                                    <div className="flex items-center gap-2 p-2 bg-slate-950/50 rounded-xl border border-white/5">
+                                        <Volume2 className="w-4 h-4 text-indigo-400" />
+                                        <p className="text-[10px] md:text-[11px] text-slate-500 font-medium">모든 예문은 클릭 시 학습에 최적화된 속도로 재생됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </Card>
+
                 <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 px-3 md:px-0 mt-4 md:mt-8">
                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 shadow-xl shadow-indigo-500/10 shrink-0">
                         <Target className="w-5 h-5 md:w-6 md:h-6" />
@@ -174,14 +260,15 @@ export default function VocabularyDashboard() {
 
                 <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 px-3 md:px-0">
                     {days.map((day) => {
-                        const isPassed = false;
+                        const completionKey = `Voca_Day${day}`;
+                        const isPassed = completions[completionKey]?.completed || false;
                         const theme = DAY_THEMES[day] || "Loading";
                         const isLocked = day > maxDay;
 
                         return (
                             <Link
                                 key={day}
-                                href={isLocked ? "#" : `/homework/voca/${day}`}
+                                href={isLocked ? "#" : `/homework/voca/${day}?from=${encodeURIComponent(`/homework/voca?from=${encodeURIComponent(fromPath)}`)}`}
                                 onClick={(e) => {
                                     if (isLocked) {
                                         e.preventDefault();
@@ -194,9 +281,14 @@ export default function VocabularyDashboard() {
                                     isLocked
                                         ? 'bg-slate-900 border-slate-800 opacity-40 grayscale'
                                         : isPassed
-                                            ? 'bg-indigo-500/10 border-indigo-500/30 hover:bg-indigo-500/20 shadow-lg shadow-indigo-500/10'
+                                            ? 'bg-indigo-500/10 border-indigo-500/40 hover:bg-indigo-500/20 shadow-lg shadow-indigo-500/10'
                                             : 'bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50'
                                 )}>
+                                    {isPassed && !isLocked && (
+                                        <div className="absolute top-1.5 right-1.5 text-emerald-500">
+                                            <CheckCircle className="w-3 h-3 md:w-4 md:h-4" />
+                                        </div>
+                                    )}
                                     <div className="text-center relative z-10">
                                         <span className={cn(
                                             "font-black text-xl md:text-4xl italic tracking-tighter block leading-none",

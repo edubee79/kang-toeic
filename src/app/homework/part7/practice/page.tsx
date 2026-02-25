@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { fullPracticeTest, PracticeSet } from '@/data/rc_part7_practice';
-import { test2PracticeSet } from '@/data/rc_part7_test2';
-import { test3PracticeSet } from '@/data/rc_part7_test3';
-import { test4PracticeSet } from '@/data/rc_part7_test4';
-import { test5PracticeSet } from '@/data/rc_part7_test5';
-import { test6PracticeSet } from '@/data/rc_part7_test6';
-import { test7PracticeSet } from '@/data/rc_part7_test7';
-import { test8PracticeSet } from '@/data/rc_part7_test8';
-import { test9PracticeSet } from '@/data/rc_part7_test9';
-import { test10PracticeSet } from '@/data/rc_part7_test10';
+import { part7MultiTestData, PracticeSet } from '@/data/toeic/reading/part7/multi_tests';
+const fullPracticeTest = part7MultiTestData.test1;
+const test2PracticeSet = part7MultiTestData.test2;
+const test3PracticeSet = part7MultiTestData.test3;
+const test4PracticeSet = part7MultiTestData.test4;
+const test5PracticeSet = part7MultiTestData.test5;
+const test6PracticeSet = part7MultiTestData.test6;
+const test7PracticeSet = part7MultiTestData.test7;
+const test8PracticeSet = part7MultiTestData.test8;
+const test9PracticeSet = part7MultiTestData.test9;
+const test10PracticeSet = part7MultiTestData.test10;
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, ArrowLeft, Timer, Trophy, BookOpen, CheckCircle2, RotateCcw, AlertCircle, Tag } from 'lucide-react';
@@ -40,6 +41,7 @@ const testDataMap: Record<number, PracticeSet[]> = {
 function Part7PracticePageContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
+    const fromPath = searchParams.get('from') || '/student/home';
     const testId = Number(searchParams.get('test')) || 1;
     const [isMobile, setIsMobile] = useState(false);
     const [currentSetIndex, setCurrentSetIndex] = useState(0);
@@ -283,7 +285,7 @@ function Part7PracticePageContent() {
                     이중/삼중 지문 연습은<br />
                     큰 화면(PC)에서만 이용 가능합니다.
                 </p>
-                <Link href="/" className="mt-8 px-6 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+                <Link href="/student/home" className="mt-8 px-6 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
                     홈으로 돌아가기
                 </Link>
             </div>
@@ -345,7 +347,7 @@ function Part7PracticePageContent() {
             {/* Minimal Header */}
             <header className="h-14 bg-white border-b border-gray-200 flex items-center px-6 justify-between shrink-0">
                 <div className="flex items-center gap-4">
-                    <Link href="/student/dashboard" className="text-gray-500 hover:text-gray-900 flex items-center gap-1 text-sm font-medium">
+                    <Link href={fromPath} className="text-gray-500 hover:text-gray-900 flex items-center gap-1 text-sm font-medium">
                         <ArrowLeft size={18} />
                         나가기
                     </Link>

@@ -5,7 +5,8 @@ import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
 import { part6TestData } from '../toeic/reading/part6/tests';
 import { part7TestData } from '../toeic/reading/part7/tests';
-import { test9PracticeSet } from '../rc_part7_test9';
+import { part7MultiTestData } from '../toeic/reading/part7/multi_tests';
+const test9PracticeSet = part7MultiTestData.test9;
 
 /**
  * 하프테스트 A회차 (실전 9회차 기반)
@@ -13,7 +14,7 @@ import { test9PracticeSet } from '../rc_part7_test9';
  */
 
 // [Listening - 50문항]
-const p1_raw = part1RealTests.find(t => t.testId === 9)?.questions || [];
+const p1_raw = part1RealTests.find(t => t.vol === 3 && t.testId === 9)?.questions.questions || [];
 export const half9aPart1 = p1_raw.filter(q => [1, 3, 5].includes(parseInt(q.id.split('-q')[1]))).map(q => ({
     ...q,
     id: q.id // Already standard: p1-t9-qX
@@ -26,13 +27,13 @@ export const half9aPart2 = (part2Data[9] || [])
         id: q.id // Already standard: p2-t9-qX
     }));
 
-const p3_raw = part3RealTests.filter(d => d.testId === 9);
+const p3_raw = part3RealTests.filter(d => d.testId === 9).flatMap(t => t.questions);
 export const half9aPart3 = [0, 2, 4, 6, 8, 10].map(idx => p3_raw[idx]).filter(Boolean).map(s => ({
     ...s,
     questions: s.questions.map((q: any) => ({ ...q, id: q.id })) // Already standard
 }));
 
-const p4_raw = part4Data.filter(d => d.testId === 9);
+const p4_raw = part4Data.filter(d => d.testId === 9).flatMap(t => t.questions);
 export const half9aPart4 = [0, 2, 4, 6, 8].map(idx => p4_raw[idx]).filter(Boolean).map(s => ({
     ...s,
     questions: s.questions.map((q: any) => ({ ...q, id: q.id })) // Already standard

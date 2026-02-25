@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 // 기존 데이터 대신 하프 데이터를 임포트
 // 기존 데이터 하드코딩 임포트 제거
 import { ChevronLeft, ChevronRight, Volume2, Monitor } from "lucide-react";
+import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
 }
 
 export default function HalfTest_LC_Set9({ testId, onFinishLC }: Props) {
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/';
     const isA = testId === '9a';
     // 데이터 소스 선택
     const data = isA
@@ -122,7 +125,7 @@ export default function HalfTest_LC_Set9({ testId, onFinishLC }: Props) {
 
             <header className="h-16 border-b bg-white flex items-center justify-between px-6 shrink-0 z-[110] shadow-sm">
                 <div className="flex items-center gap-6">
-                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                    <Link href={fromPath} className="hover:opacity-80 transition-opacity">
                         <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
                     </Link>
                     <div className="h-6 w-px bg-slate-200"></div>

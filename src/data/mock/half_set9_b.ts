@@ -5,7 +5,8 @@ import { part4Data } from '../part4';
 import { part5TestData } from '../toeic/reading/part5/tests';
 import { part6TestData } from '../toeic/reading/part6/tests';
 import { part7TestData } from '../toeic/reading/part7/tests';
-import { test9PracticeSet } from '../rc_part7_test9';
+import { part7MultiTestData } from '../toeic/reading/part7/multi_tests';
+const test9PracticeSet = part7MultiTestData.test9;
 
 /**
  * 하프테스트 B회차 (실전 9회차 기반)

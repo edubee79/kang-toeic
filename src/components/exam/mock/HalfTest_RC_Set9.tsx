@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 // 기존 데이터 하드코딩 임포트 제거
 import { ChevronLeft, ChevronRight, Clock } from "lucide-react";
+import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
 }
 
 export default function HalfTest_RC_Set9({ testId, onFinishExam, initialAnswers = {} }: Props) {
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/';
     const isA = testId === '9a';
     const data = isA
         ? require("@/data/mock/half_set9_a")
@@ -150,7 +153,7 @@ export default function HalfTest_RC_Set9({ testId, onFinishExam, initialAnswers 
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30 shadow-sm font-sans">
                 <div className="flex items-center gap-6">
-                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                    <Link href={fromPath} className="hover:opacity-80 transition-opacity">
                         <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
                     </Link>
                     <div className="h-6 w-px bg-slate-200"></div>

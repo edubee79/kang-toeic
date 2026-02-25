@@ -20,6 +20,8 @@ interface TestAttempt {
 
 export default function LevelTestLobby() {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/selection?tab=PROBLEM';
     const [attempts, setAttempts] = useState<Record<string, TestAttempt>>({});
     const [isMobile, setIsMobile] = useState(false);
     const [access, setAccess] = useState<FeatureAccess | null>(null);
@@ -87,11 +89,11 @@ export default function LevelTestLobby() {
                 <header className="mb-8 md:mb-20 px-2">
                     <div className="flex justify-between items-center mb-6">
                         <Link
-                            href="/"
+                            href={fromPath}
                             className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4" />
-                            <span className="font-bold text-xs">Home</span>
+                            <span className="font-bold text-xs">Back</span>
                         </Link>
                         <span className="bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-wider">
                             Diagnostic System
@@ -142,7 +144,7 @@ export default function LevelTestLobby() {
                                         </div>
 
                                         <Button
-                                            onClick={() => router.push(`/level-test/${test.id}`)}
+                                            onClick={() => router.push(`/level-test/${test.id}?from=${encodeURIComponent(`/level-test?from=${encodeURIComponent(fromPath)}`)}`)}
                                             disabled={isCompleted || isMobile}
                                             className={cn(
                                                 "w-full h-8 md:h-16 rounded-xl md:rounded-2xl font-black text-[10px] md:text-lg flex items-center justify-center transition-all",

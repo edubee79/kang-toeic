@@ -1,24 +1,38 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Mic2, PlayCircle, Star, Award, CheckCircle, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { getMultipleTestCompletions, TestCompletion } from '@/services/completionService';
 
 const sets = Array.from({ length: 10 }, (_, i) => i + 1);
 
 export default function ShadowingLobby() {
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/selection?tab=PROBLEM';
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     useEffect(() => {
         setIsMounted(true);
         const fetchAccess = async () => {
             const data = await getFeatureAccess();
             setAccess(data);
+
+            const userStr = localStorage.getItem('toeic_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                const userId = user.userId || user.uid;
+                const units = sets.map(s => `Shadowing_Unit01_Set${s}`);
+                const completionData = await getMultipleTestCompletions(userId, units);
+                setCompletions(completionData);
+            }
             setLoading(false);
         };
         fetchAccess();
@@ -38,7 +52,7 @@ export default function ShadowingLobby() {
         <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
-                    <Link href="/"><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
+                    <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black mb-0 tracking-tighter leading-none italic uppercase font-inter">
                             <span className="text-white">Part 1</span>
@@ -67,7 +81,7 @@ export default function ShadowingLobby() {
                         return (
                             <Link
                                 key={set}
-                                href={isLocked ? "#" : `/homework/part1/${set}`}
+                                href={isLocked ? "#" : `/homework/part1/${set}?from=${encodeURIComponent(`/homework/part1?from=${encodeURIComponent(fromPath)}`)}`}
                                 onClick={(e) => {
                                     if (isLocked) {
                                         e.preventDefault();
@@ -79,7 +93,9 @@ export default function ShadowingLobby() {
                                     "group relative p-4 md:p-6 rounded-xl md:rounded-2xl border transition-all cursor-pointer overflow-hidden flex flex-col gap-1 md:gap-2",
                                     isLocked
                                         ? 'bg-slate-900 border-slate-800 opacity-60'
-                                        : 'bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50'
+                                        : completions[`Shadowing_Unit01_Set${set}`]?.completed
+                                            ? 'bg-indigo-500/10 border-indigo-500/30 hover:bg-indigo-500/20 shadow-lg shadow-indigo-500/10'
+                                            : 'bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50'
                                 )}>
                                     <div className="relative z-10 flex items-center justify-between w-full">
                                         <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
@@ -89,28 +105,36 @@ export default function ShadowingLobby() {
                                             )}>
                                                 {set}
                                             </div>
-                                            <h3 className={cn(
-                                                "text-[22px] md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-4",
-                                                isLocked ? "text-slate-600" : "text-white"
-                                            )}>
-                                                SET {String(set).padStart(2, '0')}
-                                            </h3>
+                                            <div className="flex flex-col">
+                                                <h3 className={cn(
+                                                    "text-[22px] md:text-3xl font-black transition-colors leading-none italic tracking-tighter",
+                                                    isLocked ? "text-slate-600" : "text-white"
+                                                )}>
+                                                    SET {String(set).padStart(2, '0')}
+                                                </h3>
+                                                {!isLocked && completions[`Shadowing_Unit01_Set${set}`]?.completed && (
+                                                    <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic">
+                                                        SCORE: {completions[`Shadowing_Unit01_Set${set}`].score}/20
+                                                    </span>
+                                                )}
+                                            </div>
                                         </div>
                                         <div className="shrink-0 pl-2">
                                             {isLocked ? (
                                                 <Lock className="w-4 h-4 md:w-5 md:h-5 text-slate-700" />
+                                            ) : completions[`Shadowing_Unit01_Set${set}`]?.completed ? (
+                                                <CheckCircle className="w-5 h-5 md:w-7 md:h-7 text-emerald-500" />
                                             ) : (
                                                 <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-indigo-400 transition-colors" />
                                             )}
                                         </div>
                                     </div>
-
                                     <div className="pl-10 md:pl-14">
                                         <p className={cn(
                                             "text-[10px] md:text-sm font-black tracking-widest uppercase opacity-60 leading-none",
-                                            isLocked ? "text-slate-700" : "text-slate-500"
+                                            isLocked ? "text-slate-700" : (completions[`Shadowing_Unit01_Set${set}`]?.completed ? "text-indigo-400" : "text-slate-500")
                                         )}>
-                                            {isLocked ? 'LOCKED' : '20 SENTENCES'}
+                                            {isLocked ? 'LOCKED' : completions[`Shadowing_Unit01_Set${set}`]?.completed ? 'COMPLETED' : '20 SENTENCES'}
                                         </p>
                                     </div>
                                 </Card>

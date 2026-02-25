@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
-import { Loader2, Play, Volume2, RotateCcw, CheckCircle, XCircle, AlertTriangle, X, Triangle } from "lucide-react";
+import { Loader2, Play, Volume2, RotateCcw, CheckCircle, XCircle, AlertTriangle, X, Triangle, ChevronLeft, ChevronRight } from "lucide-react";
 import { part2Data, Part2Question } from '@/data/part2';
 import { cn } from "@/lib/utils";
 import { PerformanceSyncService } from '@/services/performanceSyncService';
@@ -14,6 +14,8 @@ export default function Part2Test() {
     const params = useParams();
     const router = useRouter();
     const testId = parseInt(params.testId as string);
+    const [isLoadingMock, setIsLoadingMock] = useState(false);
+    const [mockAnswers, setMockAnswers] = useState<Record<string, string>>({});
 
     // Data
     const [questions, setQuestions] = useState<Part2Question[]>([]);
@@ -24,6 +26,8 @@ export default function Part2Test() {
 
     // Mode States
     const [isReviewMode, setIsReviewMode] = useState(false);
+    const [reSolveMode, setReSolveMode] = useState(false);
+    const [originalAnswers, setOriginalAnswers] = useState<Record<string, string>>({});
     const [isReportMode, setIsReportMode] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -40,6 +44,7 @@ export default function Part2Test() {
     const [notification, setNotification] = useState<string | null>(null);
     const [isReady, setIsReady] = useState(false); // Flag for state restoration check
     const [isAudioBlocked, setIsAudioBlocked] = useState(false); // Handle browser auto-play block
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
 
     // Refs
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -89,8 +94,73 @@ export default function Part2Test() {
             router.push('/homework/part2');
             return;
         }
-        // Check for saved progress (only in normal mode)
+        // NEW: Check for saved progress (only in normal mode)
         const saved = !mode ? localStorage.getItem(`part2_progress_test_${testId}`) : null;
+
+        // ✅ NEW: Handle mock review mode
+        const mockAttemptId = urlParams.get('mockAttemptId');
+        if (mode === 'review' && mockAttemptId) {
+            const fetchMockData = async () => {
+                setIsLoadingMock(true);
+                try {
+                    const { doc, getDoc } = await import('firebase/firestore');
+                    const docRef = doc(db, 'MockTestAttempts', mockAttemptId);
+                    const snap = await getDoc(docRef);
+
+                    if (snap.exists()) {
+                        const mData = snap.data();
+                        const mAnswers = mData.answers || {};
+                        setMockAnswers(mAnswers);
+                        setOriginalAnswers(mAnswers);
+
+                        const testQuestions = part2Data[testId] || [];
+
+                        // ✅ Standardize ID format for lookup (p2-tX-qY)
+                        const getAnswer = (qid: string) => {
+                            if (mAnswers[qid]) return mAnswers[qid];
+                            const num = qid.split('-q')[1] || qid.replace(/[^\d]/g, '');
+                            const variations = [
+                                `p2-${testId}-q${num}`, `p2-t${testId}-q${num}`,
+                                num
+                            ];
+                            for (const v of variations) {
+                                if (mAnswers[v]) return mAnswers[v];
+                            }
+                            return undefined;
+                        };
+
+                        const wrongQs = testQuestions.filter(q => {
+                            const userAns = getAnswer(q.id);
+                            return userAns && userAns !== q.correctAnswer;
+                        });
+
+                        const queueToUse = wrongQs.length > 0 ? wrongQs : testQuestions;
+                        setQuestions(queueToUse);
+                        setMainQueue(queueToUse);
+                        setWrongQueue(wrongQs);
+
+                        if (mode === 'review') {
+                            setIsReviewMode(true);
+                            setReSolveMode(false);
+                            setShowResult(true);
+                        } else {
+                            setReSolveMode(true);
+                            setIsReviewMode(false);
+                            setShowResult(false);
+                        }
+                    }
+                } catch (err) {
+                    console.error("Error fetching mock data:", err);
+                } finally {
+                    setIsLoadingMock(false);
+                    setLoading(false);
+                    setTimeout(() => setIsReady(true), 0);
+                }
+            };
+            fetchMockData();
+            return;
+        }
+
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
@@ -128,7 +198,9 @@ export default function Part2Test() {
     }, [testId, router]);
 
     // Current Question Data
-    const currentQueue = isReviewMode ? wrongQueue : mainQueue;
+    const currentQueue = (isReviewMode || reSolveMode)
+        ? (wrongQueue.length > 0 ? wrongQueue : mainQueue)
+        : mainQueue;
     const currentQuestion = currentQueue[currentIndex];
 
     // Audio Playback Engine
@@ -144,7 +216,7 @@ export default function Part2Test() {
 
             // Reset state
             setSelectedAnswer(null);
-            setShowResult(false);
+            setShowResult(isReviewMode);
             setIsPlaying(false);
             setProgress(0);
             setUseTTS(false);
@@ -183,8 +255,8 @@ export default function Part2Test() {
         audioRef.current.volume = 1.0;
 
         const tNum = String(currentQuestion.testId).padStart(2, '0');
-        const qNum = String(currentQuestion.questionNo).padStart(2, '0');
-        audioRef.current.src = `/audio/lc/part2/Test_${tNum}-${qNum}.mp3`;
+        const qNum = String(currentQuestion.questionNo);
+        audioRef.current.src = `/audio/ETS_TOEIC_3/Test_${tNum}/TEST ${tNum}_PART 2_${qNum}.mp3`;
 
         audioRef.current.play()
             .then(() => {
@@ -395,7 +467,7 @@ export default function Part2Test() {
         setTimeout(() => {
             setPlayDelay(1000);
 
-            if (isReviewMode) {
+            if (isReviewMode || reSolveMode) {
                 if (currentIndex < currentQueue.length - 1) {
                     setCurrentIndex(prev => prev + 1);
                 } else {
@@ -424,6 +496,10 @@ export default function Part2Test() {
     };
 
     const finishAll = async (navigate = true) => {
+        if (reSolveMode) {
+            setIsReportMode(true);
+            return;
+        }
         const score = questions.length - wrongQueue.length;
         const userStr = localStorage.getItem('toeic_user');
 
@@ -455,10 +531,11 @@ export default function Part2Test() {
                 console.error("Save error:", e);
             }
         }
+        localStorage.removeItem(`part2_progress_test_${testId}`);
         if (navigate) {
             const urlParams = new URLSearchParams(window.location.search);
             const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
-            router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
+            router.push(isAi ? '/student/analysis' : '/homework/part2');
         }
     };
 
@@ -466,55 +543,61 @@ export default function Part2Test() {
 
     if (isReportMode) {
         return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
-                <div className="max-w-md w-full space-y-8 text-center">
-                    <div>
-                        <h2 className="text-3xl font-black text-white mb-2 tracking-tighter">학습 완료</h2>
-                        <p className="text-slate-400 font-medium">
-                            {wrongQueue.length === 0 ? "만점입니다! 완벽해요! 🎉" : "틀린 문제를 확인하고 복습하세요."}
-                        </p>
-                    </div>
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                <div className={cn(
+                    "w-24 h-24 rounded-3xl flex items-center justify-center text-5xl mb-6 ring-1 shadow-2xl",
+                    reSolveMode ? "bg-rose-500/10 text-rose-500 ring-rose-500/50 shadow-rose-500/20" : "bg-emerald-500/10 text-emerald-500 ring-emerald-500/50 shadow-emerald-500/20"
+                )}>
+                    {reSolveMode ? <RotateCcw className="w-12 h-12" /> : <CheckCircle className="w-12 h-12" />}
+                </div>
+                <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tight">
+                    {reSolveMode ? "오답 다시 풀기 완료" : "학습 완료"}
+                </h2>
+                <p className={cn("font-bold tracking-widest text-xs uppercase mb-8", reSolveMode ? "text-rose-500" : "text-emerald-500")}>
+                    Part 2 • Test {testId} • {reSolveMode ? "Mock Review Mode" : "Mission Complete"}
+                </p>
 
-                    <div className="bg-slate-900/50 rounded-3xl p-8 border border-slate-800">
-                        <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="text-center">
-                                <p className="text-sm font-bold text-slate-500 uppercase">점수</p>
-                                <p className="text-4xl font-black text-white">{questions.length - wrongQueue.length}</p>
-                            </div>
-                            <div className="w-px h-12 bg-slate-700"></div>
-                            <div className="text-center">
-                                <p className="text-sm font-bold text-slate-500 uppercase">오답</p>
-                                <p className="text-4xl font-black text-rose-500">{wrongQueue.length}</p>
-                            </div>
-                        </div>
-
-                        {wrongQueue.length > 0 && (
-                            <div className="text-left">
-                                <p className="text-xs font-bold text-slate-500 uppercase mb-3">틀린 문제</p>
-                                <div className="flex flex-wrap gap-2">
-                                    {wrongQueue.map(q => (
-                                        <div key={q.id} className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-500/10 border border-rose-500/20 rounded-lg">
-                                            <span className="text-xs font-black text-rose-500">Q{q.questionNo}</span>
-                                            {q.questionType === 'Indirect' && (
-                                                <span className="text-[9px] font-bold text-amber-500 bg-amber-500/10 px-1 rounded">Indirect</span>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm mb-8">
+                    <div className="flex items-end justify-center gap-2 mb-2">
+                        <span className="text-6xl font-black text-white leading-none">{questions.length - wrongQueue.length}</span>
+                        <span className="text-2xl font-bold text-slate-600 mb-1">/ {reSolveMode ? currentQueue.length : questions.length}</span>
                     </div>
+                </div>
 
-                    <div className="space-y-3">
-                        {wrongQueue.length > 0 && (
-                            <Button onClick={startReview} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-lg font-bold rounded-2xl shadow-lg shadow-emerald-500/20">
-                                <RotateCcw className="mr-2 w-5 h-5" /> 틀린 문제 재학습
-                            </Button>
-                        )}
-                        <Button onClick={() => finishAll()} variant="outline" className="w-full h-14 border-slate-700 bg-transparent text-slate-400 hover:bg-slate-800 hover:text-white text-lg font-bold rounded-2xl">
-                            <CheckCircle className="mr-2 w-5 h-5" /> 학습 종료
-                        </Button>
-                    </div>
+                <div className="flex flex-col gap-3 w-full max-w-xs">
+                    <Button
+                        onClick={() => {
+                            setIsReviewMode(true);
+                            setReSolveMode(false);
+                            setCurrentIndex(0);
+                            setIsReportMode(false);
+                            // Ensure results are always shown in review mode
+                            setShowResult(true);
+                        }}
+                        className="w-full h-14 bg-slate-800 text-white font-bold rounded-2xl hover:bg-slate-700 transition-all"
+                    >
+                        오답 확인 (답안/해설)
+                    </Button>
+                    <Button
+                        onClick={() => {
+                            setReSolveMode(true);
+                            setIsReviewMode(false);
+                            setCurrentIndex(0);
+                            setSelectedAnswer(null);
+                            setShowResult(false);
+                            setIsReportMode(false);
+                        }}
+                        className="w-full h-14 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-xl shadow-indigo-600/20 transition-all active:scale-95"
+                    >
+                        오답 다시 풀기
+                    </Button>
+                    <Button
+                        onClick={() => finishAll()}
+                        variant="ghost"
+                        className="w-full h-12 text-slate-500 hover:text-white text-sm font-bold"
+                    >
+                        학습 종료
+                    </Button>
                 </div>
             </div>
         );
@@ -564,11 +647,7 @@ export default function Part2Test() {
                 <div>
                     <div className="flex items-center gap-2 mb-1">
                         <button
-                            onClick={() => {
-                                const urlParams = new URLSearchParams(window.location.search);
-                                const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
-                                router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
-                            }}
+                            onClick={() => setShowExitConfirm(true)}
                             className="bg-slate-800 p-1 rounded-md text-slate-400 hover:text-white mr-1"
                         >
                             <X className="w-4 h-4" />
@@ -594,11 +673,11 @@ export default function Part2Test() {
                                     }
                                     const urlParams = new URLSearchParams(window.location.search);
                                     const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
-                                    router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
+                                    router.push(isAi ? '/student/analysis' : '/homework/part2');
                                 }}
                                 className="px-2 py-0.5 rounded text-[10px] font-bold uppercase text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 flex items-center gap-1 ml-1"
                             >
-                                💾 저장 후 나가기
+                                💾 저장하고 나가기
                             </button>
                         )}
                         {currentQuestion?.questionType === 'Indirect' && (
@@ -608,7 +687,7 @@ export default function Part2Test() {
                         )}
                         <audio
                             ref={audioRef}
-                            src={`/audio/lc/part2/Test_${String(testId).padStart(2, '0')}-${String(currentQuestion.questionNo).padStart(2, '0')}.mp3`}
+                            src={`/audio/ETS_TOEIC_3/Test_${String(testId).padStart(2, '0')}/TEST ${String(testId).padStart(2, '0')}_PART 2_${currentQuestion.questionNo}.mp3`}
                             key={`${currentIndex}-${currentQuestion?.id}`}
                         />
                     </div>
@@ -657,6 +736,16 @@ export default function Part2Test() {
 
                 {/* Options */}
                 <div className="space-y-3 px-4 md:px-0">
+                    {/* Review mode script display */}
+                    {showResult && (
+                        <div className="mb-6 p-6 bg-slate-900/80 border border-slate-800 rounded-3xl animate-in fade-in slide-in-from-top-4 duration-500">
+                            <p className="text-[10px] font-black text-indigo-500 uppercase tracking-widest mb-2 italic">Question Script</p>
+                            <p className="text-white font-bold text-lg leading-relaxed italic">
+                                "{currentQuestion.script}"
+                            </p>
+                        </div>
+                    )}
+
                     {[0, 1, 2].map((optIdx) => {
                         const isSelected = selectedAnswer === optIdx;
                         const status = optionStatus[optIdx]; // 'eliminated' | 'uncertain'
@@ -748,7 +837,76 @@ export default function Part2Test() {
                 <p className="text-center text-slate-500 text-xs mt-8 pb-10">
                     * 듣기 평가입니다. 오디오를 먼저 듣고 정답을 선택하세요. {useTTS && "(AI 오디오 모드)"}
                 </p>
+
+                {/* Navigation for Review Mode */}
+                {isReviewMode && (
+                    <div className="flex gap-4 mt-8 px-4 md:px-0">
+                        <Button
+                            variant="outline"
+                            onClick={() => {
+                                playbackId.current++; // Stop current playback
+                                if (audioRef.current) audioRef.current.pause();
+                                setCurrentIndex(prev => Math.max(0, prev - 1));
+                            }}
+                            disabled={currentIndex === 0}
+                            className="flex-1 h-14 rounded-2xl border-slate-700 bg-transparent text-slate-400 hover:text-white font-bold"
+                        >
+                            <ChevronLeft className="mr-2 w-5 h-5" /> 이전 문제
+                        </Button>
+                        <Button
+                            onClick={() => {
+                                playbackId.current++; // Stop current playback
+                                if (audioRef.current) audioRef.current.pause();
+                                if (currentIndex < currentQueue.length - 1) {
+                                    setCurrentIndex(prev => prev + 1);
+                                } else {
+                                    setIsReportMode(true);
+                                }
+                            }}
+                            className="flex-1 h-14 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-black shadow-xl shadow-indigo-600/20"
+                        >
+                            {currentIndex < currentQueue.length - 1 ? "다음 문제" : "리뷰 종료"} <ChevronRight className="ml-2 w-5 h-5" />
+                        </Button>
+                    </div>
+                )}
             </div>
+
+            {/* Exit Confirmation Modal */}
+            {showExitConfirm && (
+                <div className="fixed inset-0 z-[200] bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-300">
+                    <div className="max-w-xs w-full bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] shadow-2xl text-center space-y-6">
+                        <div className="w-20 h-20 bg-rose-500/10 text-rose-500 rounded-full flex items-center justify-center mx-auto ring-4 ring-rose-500/5">
+                            <AlertTriangle className="w-10 h-10" />
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-xl font-black text-white tracking-tight">학습을 중단할까요?</h3>
+                            <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                                '저장하고 나가기'를 누르지 않으면<br />
+                                현재까지의 진행 상황이 사라집니다.
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <Button
+                                onClick={() => {
+                                    const urlParams = new URLSearchParams(window.location.search);
+                                    const isAi = urlParams.get('mode') === 'drill' || urlParams.get('direct') === 'true';
+                                    router.push(isAi ? '/weakness/dashboard' : '/homework/part2');
+                                }}
+                                variant="ghost"
+                                className="w-full h-12 text-rose-400 hover:text-rose-300 hover:bg-rose-500/5 font-bold"
+                            >
+                                저장 없이 그냥 나가기
+                            </Button>
+                            <Button
+                                onClick={() => setShowExitConfirm(false)}
+                                className="w-full h-14 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-2xl transition-all"
+                            >
+                                계속 학습하기
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

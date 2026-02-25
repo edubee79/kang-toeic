@@ -133,18 +133,29 @@ export const EmailTemplate: React.FC<EmailProps> = ({ header, content, className
                     <span className="text-black font-semibold border-b border-gray-100 flex items-center">{header?.to}</span>
                     <span className="text-gray-500 font-bold text-[13px] uppercase self-center">From:</span>
                     <span className="text-black font-semibold border-b border-gray-100 flex items-center">{header?.from}</span>
+                    {header?.cc && (<>
+                        <span className="text-gray-500 font-bold text-[13px] uppercase self-center">CC:</span>
+                        <span className="text-black font-semibold border-b border-gray-100 flex items-center">{header.cc}</span>
+                    </>)}
                     <span className="text-gray-500 font-bold text-[13px] uppercase self-center">Date:</span>
                     <span className="text-black font-semibold border-b border-gray-100 flex items-center">{header?.date}</span>
                     <span className="text-gray-500 font-bold text-[13px] uppercase self-center">Subject:</span>
                     <span className="text-black font-bold border-b border-gray-100 flex items-center">{header?.subject}</span>
+                    {header?.attachment && (<>
+                        <span className="text-gray-500 font-bold text-[13px] uppercase self-center">📎</span>
+                        <span className="text-blue-700 font-semibold text-[13px] underline flex items-center">{header.attachment}</span>
+                    </>)}
                 </div>
             </div>
             <div className="p-6 space-y-5 leading-relaxed text-black">
                 {content.map((para, i) => (
-                    <div key={i} className="prose prose-base max-w-none !text-black
-                        prose-table:border-collapse prose-table:border prose-table:border-black 
-                        prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:!text-black
-                        prose-td:border prose-td:border-black prose-td:p-2 prose-td:!text-black">
+                    <div key={i} className={cn(
+                        "prose prose-base max-w-none !text-black prose-p:my-0",
+                        para.includes('\n') && "whitespace-pre-wrap",
+                        "prose-table:border-collapse prose-table:border prose-table:border-black",
+                        "prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:!text-black",
+                        "prose-td:border prose-td:border-black prose-td:p-2 prose-td:!text-black"
+                    )}>
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
                     </div>
                 ))}
@@ -171,10 +182,13 @@ export const LetterTemplate: React.FC<LetterProps> = ({ header, content, classNa
             )}
             <div className="space-y-4 leading-relaxed text-black">
                 {content.map((para, i) => (
-                    <div key={i} className="prose prose-sm max-w-none !text-black
-                        prose-table:border-collapse prose-table:border prose-table:border-black 
-                        prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:!text-black
-                        prose-td:border prose-td:border-black prose-td:p-2 prose-td:!text-black">
+                    <div key={i} className={cn(
+                        "prose prose-sm max-w-none !text-black prose-p:my-0",
+                        para.includes('\n') && "whitespace-pre-wrap",
+                        "prose-table:border-collapse prose-table:border prose-table:border-black",
+                        "prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:!text-black",
+                        "prose-td:border prose-td:border-black prose-td:p-2 prose-td:!text-black"
+                    )}>
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
                     </div>
                 ))}
@@ -195,38 +209,45 @@ export const NoticeTemplate: React.FC<NoticeProps> = ({ header, content, classNa
             </div>
             <div className="p-6 space-y-4 leading-relaxed text-black">
                 {content.map((para, i) => (
-                    <div key={i} className="prose prose-base max-w-none text-black
-                        prose-table:border-collapse prose-table:border prose-table:border-black 
-                        prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:text-black
-                        prose-td:border prose-td:border-black prose-td:p-2 prose-td:text-black">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
-                    </div>
+                    para.includes('\n') ? (
+                        // Multi-line content (schedule, list): preserve line breaks
+                        <pre key={i} className="whitespace-pre-wrap font-sans text-base leading-relaxed m-0 text-black">{para}</pre>
+                    ) : (
+                        <div key={i} className="prose prose-base max-w-none text-black
+                            prose-table:border-collapse prose-table:border prose-table:border-black 
+                            prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:text-black
+                            prose-td:border prose-td:border-black prose-td:p-2 prose-td:text-black">
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        </div>
+                    )
                 ))}
             </div>
         </div>
     );
 };
 
-/**
- * 4. Article Template
- */
 export const ArticleTemplate: React.FC<ArticleProps> = ({ header, content, className }) => {
     return (
-        <div className={cn("font-serif text-base text-gray-900 p-0 bg-transparent", className)}>
-            <div className="border-b-4 border-black pb-2 mb-4">
-                <h1 className="text-2xl font-black leading-tight mb-2 font-sans tracking-tight">{header.headline}</h1>
-                {header.sub_headline && <h3 className="text-lg italic text-black mb-2 opacity-90">{header.sub_headline}</h3>}
-                <div className="flex justify-between items-center text-[12px] font-black text-black uppercase tracking-widest mt-2 border-t border-gray-200 pt-1">
-                    {header.author && <span>{header.author}</span>}
+        <div className={cn("font-serif text-base text-gray-900 p-8 bg-white border border-gray-200 shadow-lg", className)}>
+            <div className="border-b-4 border-black pb-4 mb-6 text-center">
+                <h1 className="text-3xl font-black leading-tight mb-3 font-sans tracking-tight text-black">{header.headline}</h1>
+                {header.sub_headline && <h3 className="text-xl italic text-gray-700 mb-4 font-medium">{header.sub_headline}</h3>}
+                <div className="flex justify-between items-center text-[13px] font-black text-black uppercase tracking-widest mt-4 border-t border-gray-100 pt-2">
+                    {header.author ? <span>By {header.author}</span> : <span></span>}
                     {header.date && <span>{header.date}</span>}
                 </div>
             </div>
             <div className={cn(
-                "gap-10 [column-fill:_balance] leading-relaxed text-justify antialiased text-black",
+                "gap-10 [column-fill:_balance] leading-relaxed text-left antialiased text-black",
                 header.columns === 1 ? "columns-1" : "columns-2"
             )}>
                 {content.map((para, i) => (
-                    <p key={i} className="mb-4 first:mt-0 text-black font-medium">{para}</p>
+                    <div key={i} className={cn(
+                        "prose prose-base max-w-none text-black mb-6 first:mt-0 font-medium",
+                        para.includes('\n') && "whitespace-pre-wrap"
+                    )}>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                    </div>
                 ))}
             </div>
         </div>
@@ -341,10 +362,13 @@ export const WebPageTemplate: React.FC<WebPageProps> = ({ header, content, class
             </div>
             <div className="p-6 space-y-4 leading-relaxed">
                 {content.map((para, i) => (
-                    <div key={i} className="prose prose-sm max-w-none 
-                        prose-table:border-collapse prose-table:border prose-table:border-gray-300 
-                        prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-2 
-                        prose-td:border prose-td:border-gray-300 prose-td:p-2">
+                    <div key={i} className={cn(
+                        "prose prose-sm max-w-none",
+                        para.includes('\n') && "whitespace-pre-wrap",
+                        "prose-table:border-collapse prose-table:border prose-table:border-gray-300",
+                        "prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-2",
+                        "prose-td:border prose-td:border-gray-300 prose-td:p-2"
+                    )}>
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
                     </div>
                 ))}
@@ -485,12 +509,13 @@ export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc }) => {
         if (primaryType === 'table' || primaryType === 'form') return 'table';
 
         // Priority 2: Fallback to keyword matching in rawDocType or Title
-        const type = (rawDocType || rawType || '').toLowerCase();
+        // Normalize underscores → spaces for flexible matching (e.g. TEXT_MESSAGE → text message)
+        const type = (rawDocType || rawType || '').toLowerCase().replace(/_/g, ' ');
         if (type.includes('email')) return 'email';
         if (type.includes('letter') || type.includes('invitation')) return 'letter';
         if (type.includes('web') || type.includes('online portal') || type.includes('url') || type.includes('webinar')) return 'web_page';
         if (type.includes('text message') || type.includes('sms')) return 'text_message';
-        if (type.includes('chat') || type.includes('discussion') || type.includes('text_chain')) return 'online_chat';
+        if (type.includes('chat') || type.includes('discussion') || type.includes('text chain')) return 'online_chat';
         if (type.includes('article')) return 'article';
         if (type.includes('review')) return 'review';
         if (type.includes('notice') || type.includes('announcement') || type.includes('memo') || type.includes('report') || type.includes('posting') || type.includes('schedule')) return 'notice';
@@ -508,40 +533,106 @@ export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc }) => {
     if (typeof doc.content === 'string') {
         const text = doc.content as string;
         if (resolvedType === 'email') {
-            const lines = text.split('\n');
+            // Split on actual newlines (handle \r\n too)
+            const lines = text.split(/\r?\n/);
             const header: any = {};
             const contentLines: string[] = [];
             let headerDone = false;
             lines.forEach(line => {
                 const trimmedLine = line.trim();
+                const lowerLine = trimmedLine.toLowerCase();
+
                 if (!headerDone) {
-                    const lowerLine = trimmedLine.toLowerCase();
+                    // Skip empty lines at the very beginning or lines that just repeat the document type
+                    if (trimmedLine === '' && contentLines.length === 0 && Object.keys(header).length === 0) {
+                        return;
+                    }
+                    if ((lowerLine.startsWith('*') && lowerLine.endsWith('*')) || lowerLine === 'e-mail' || lowerLine === 'email') {
+                        if (contentLines.length === 0 && Object.keys(header).length === 0) return;
+                    }
+
                     if (lowerLine.startsWith('to:')) header.to = trimmedLine.substring(3).trim();
                     else if (lowerLine.startsWith('from:')) header.from = trimmedLine.substring(5).trim();
                     else if (lowerLine.startsWith('subject:')) header.subject = trimmedLine.substring(8).trim();
                     else if (lowerLine.startsWith('date:')) header.date = trimmedLine.substring(5).trim();
-                    else if (trimmedLine === '') headerDone = true;
-                    else headerDone = true;
+                    else if (lowerLine.startsWith('attachment:')) header.attachment = trimmedLine.substring(11).trim();
+                    else if (lowerLine.startsWith('cc:')) header.cc = trimmedLine.substring(3).trim();
+                    else if (trimmedLine === '') {
+                        // Only finish headers if we've actually found some headers
+                        if (Object.keys(header).length > 0) headerDone = true;
+                    }
+                    else {
+                        // If we hit something that isn't a header and isn't a skip-line, we're in the body
+                        contentLines.push(line);
+                        headerDone = true;
+                    }
                 } else {
                     contentLines.push(line);
                 }
             });
             finalDoc.header = { ...header, ...doc.header };
-            finalDoc.content = [contentLines.join('\n').trim()];
+            // Split body into paragraphs by blank lines
+            const bodyText = contentLines.join('\n').trim();
+            finalDoc.content = bodyText.split(/\n\n+/).map(s => s.trim()).filter(Boolean);
         } else if (resolvedType === 'online_chat' || resolvedType === 'text_message') {
-            const lines = text.split('\n').filter(l => l.trim() !== '');
+            // Updated regex to handle both "Name (HH:MM)", "Name [HH:MM]", and "Name HH:MM"
+            const nameTimeRe = /^(.*?)\s*[(\[]?(\d{1,2}:\d{2}\s*(?:A\.M\.|P\.M\.|[AP]M)?)[)\]]?\s*(.*)$/i;
+            const allLines = text.split(/\r?\n/);
             const messages: any[] = [];
-            lines.forEach(line => {
-                const match = line.match(/^([^[]+)\s\[([^\]]+)\]\n?(.*)/);
+
+            for (let i = 0; i < allLines.length; i++) {
+                const line = allLines[i].trim();
+                if (!line) continue;
+
+                const match = line.match(nameTimeRe);
                 if (match) {
-                    messages.push({ sender: match[1].trim(), time: match[2].trim(), text: match[3].trim(), is_me: false });
+                    const sender = match[1].trim();
+                    const time = match[2].trim();
+                    let content = match[3] ? match[3].trim() : '';
+
+                    // If content is empty on the current line, look at the next line
+                    if (!content && i + 1 < allLines.length) {
+                        const nextLine = allLines[i + 1].trim();
+                        // Only consume next line if it's NOT another name/time header
+                        if (nextLine && !nextLine.match(nameTimeRe)) {
+                            content = nextLine;
+                            i++;
+                        }
+                    }
+
+                    messages.push({ sender, time, text: content, is_me: false });
                 } else if (messages.length > 0) {
-                    messages[messages.length - 1].text += '\n' + line;
+                    // Continuation of previous message
+                    messages[messages.length - 1].text += ' ' + line;
                 }
-            });
+            }
             finalDoc.messages = messages;
+        } else if (resolvedType === 'web_page') {
+            const lines = text.split(/\r?\n/);
+            const contentLines: string[] = [];
+            const header: any = { ...doc.header };
+
+            // Check if first line is a URL
+            if (lines.length > 0) {
+                const firstLine = lines[0].trim();
+                if (firstLine.match(/^https?:\/\//i) || firstLine.startsWith('www.')) {
+                    header.url = firstLine;
+                    // Remove first line and subsequent blank lines
+                    let firstContentIdx = 1;
+                    while (firstContentIdx < lines.length && lines[firstContentIdx].trim() === '') {
+                        firstContentIdx++;
+                    }
+                    contentLines.push(...lines.slice(firstContentIdx));
+                } else {
+                    contentLines.push(...lines);
+                }
+            }
+            finalDoc.header = header;
+            const bodyText = contentLines.join('\n').trim();
+            finalDoc.content = bodyText.split(/\n\n+/).map(s => s.trim()).filter(Boolean);
         } else {
-            finalDoc.content = [text];
+            // FIX 3: Split by blank lines into proper paragraph array
+            finalDoc.content = text.split(/\r?\n\r?\n+/).map(s => s.trim()).filter(Boolean);
         }
     } else if (Array.isArray(doc.content)) {
         finalDoc.content = doc.content;

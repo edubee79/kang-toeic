@@ -1,6 +1,7 @@
-import { part1Data } from './part1_mock';
-import { test9PracticeSet } from './rc_part7_test9';
-import { test10PracticeSet } from './rc_part7_test10';
+import { part1RealTests } from './toeic/listening/part1/tests';
+import { part7MultiTestData } from './toeic/reading/part7/multi_tests';
+const test9PracticeSet = part7MultiTestData.test9;
+const test10PracticeSet = part7MultiTestData.test10;
 import { part3RealTests } from './part3';
 import { part4Data } from './part4';
 import { part5TestData } from './toeic/reading/part5/tests';
@@ -17,6 +18,14 @@ export interface MockTest {
     title: string;
     parts: MockTestPart[];
 }
+
+// Transform Part 1 Test 9 Data
+const realPart1Test9 = part1RealTests.find(t => t.vol === 3 && t.testId === 9);
+const test9Part1Data = realPart1Test9 ? realPart1Test9.questions.questions : [];
+
+// Transform Part 1 Test 10 Data
+const realPart1Test10 = part1RealTests.find(t => t.vol === 3 && t.testId === 10);
+const test10Part1Data = realPart1Test10 ? realPart1Test10.questions.questions : [];
 
 // Transform Part 5 Test 9 Data from the "Real Test" source
 const realTest9 = part5TestData.find(t => t.testId === 9);
@@ -43,7 +52,7 @@ export const mockTest9: MockTest = {
     parts: [
         {
             partId: 1,
-            data: part1Data // Placeholder using P1 mock data
+            data: test9Part1Data
         },
         {
             partId: 2,
@@ -51,11 +60,11 @@ export const mockTest9: MockTest = {
         },
         {
             partId: 3,
-            data: part3RealTests.filter(p => p.testId === 9)
+            data: part3RealTests.filter(p => p.testId === 9).flatMap(t => t.questions).flatMap(set => set.questions)
         },
         {
             partId: 4,
-            data: part4Data.filter(p => p.testId === 9)
+            data: part4Data.filter(p => p.testId === 9).flatMap(t => t.questions).flatMap(set => set.questions)
         },
         {
             partId: 5,
@@ -97,7 +106,7 @@ export const mockTest10: MockTest = {
     parts: [
         {
             partId: 1,
-            data: part1Data // Placeholder using P1 mock data
+            data: test10Part1Data
         },
         {
             partId: 2,
@@ -105,11 +114,11 @@ export const mockTest10: MockTest = {
         },
         {
             partId: 3,
-            data: part3RealTests.filter(p => p.testId === 10)
+            data: part3RealTests.filter(p => p.testId === 10).flatMap(t => t.questions).flatMap(set => set.questions)
         },
         {
             partId: 4,
-            data: part4Data.filter(p => p.testId === 10)
+            data: part4Data.filter(p => p.testId === 10).flatMap(t => t.questions).flatMap(set => set.questions)
         },
         {
             partId: 5,

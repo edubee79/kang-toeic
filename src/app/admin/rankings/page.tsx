@@ -11,7 +11,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Trophy, RefreshCw, Medal, TrendingUp, Zap, BookOpen, Search } from "lucide-react";
+import { ArrowLeft, Trophy, RefreshCw, Medal, TrendingUp, BookOpen, Search, ArrowRight, Star } from "lucide-react";
 
 export default function AdminRankingsPage() {
     const [rankings, setRankings] = useState<any[]>([]);
@@ -139,35 +139,6 @@ export default function AdminRankingsPage() {
         }
     };
 
-    const handleGenerateDummy = async () => {
-        if (!confirm('테스트용 가상 데이터(학생 5명, 성적 20개)를 생성하시겠습니까?')) return;
-        try {
-            const res = await fetch('/api/test/generate-dummy-data', { method: 'POST' });
-            const data = await res.json();
-            if (data.success) {
-                alert('테스트 데이터 생성 완료! 이제 [랭킹 수동 집계]를 눌러보세요.');
-            } else {
-                alert('생성 실패: ' + data.error);
-            }
-        } catch (e) {
-            alert('오류 발생');
-        }
-    };
-
-    const handleDeleteDummy = async () => {
-        if (!confirm('생성된 테스트용 가상 데이터를 모두 삭제하시겠습니까?')) return;
-        try {
-            const res = await fetch('/api/test/delete-dummy-data', { method: 'POST' });
-            const data = await res.json();
-            if (data.success) {
-                alert('테스트 데이터 삭제 완료! [랭킹 수동 집계]를 눌러 랭킹을 갱신해주세요.');
-            } else {
-                alert('삭제 실패: ' + data.error);
-            }
-        } catch (e) {
-            alert('오류 발생');
-        }
-    };
 
     const getRankIcon = (rank: number) => {
         if (rank === 1) return <Medal className="w-6 h-6 text-yellow-400 fill-yellow-400" />;
@@ -192,7 +163,7 @@ export default function AdminRankingsPage() {
                         <p className="text-slate-500 text-xs font-bold mt-1">학생 경쟁 및 동기부여 관리</p>
                     </div>
                 </div>
-                <div className="flex-1 min-w-0 max-w-xl mx-auto overflow-x-auto pb-2 scrollbar-hide">
+                <div className="flex-1 min-w-0 overflow-x-auto pb-2 scrollbar-hide">
                     <div className="flex gap-2 min-w-max px-1">
                         <Button
                             onClick={() => setFilterClass('all')}
@@ -223,36 +194,15 @@ export default function AdminRankingsPage() {
                         <RefreshCw className={`w-4 h-4 ${updating ? 'animate-spin' : ''}`} />
                         {updating ? '집계 중...' : '랭킹 수동 집계'}
                     </Button>
-                    <div className="flex flex-col items-end gap-1">
-                        <Button
-                            onClick={handleGenerateDummy}
-                            variant="ghost"
-                            className="text-slate-400 hover:text-indigo-600 text-[10px] h-6 px-2"
-                        >
-                            <Zap className="w-3 h-3 mr-1" /> Test Data
-                        </Button>
-                        <Button
-                            onClick={handleDeleteDummy}
-                            variant="ghost"
-                            className="text-slate-400 hover:text-rose-600 text-[10px] h-6 px-2"
-                        >
-                            <RefreshCw className="w-3 h-3 mr-1" /> Clear Data
-                        </Button>
-                    </div>
+
                 </div>
             </header >
 
             <Tabs defaultValue="total" className="w-full" onValueChange={setActiveTab}>
                 <TabsList className="grid w-full grid-cols-3 lg:w-[450px] mb-8 bg-slate-100 p-1 rounded-xl">
-                    <TabsTrigger value="total" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-indigo-600 data-[state=active]:shadow-sm">
-                        실전 실력 순위
-                    </TabsTrigger>
-                    <TabsTrigger value="voca" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-emerald-600 data-[state=active]:shadow-sm">
-                        단어왕
-                    </TabsTrigger>
-                    <TabsTrigger value="consistency" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-orange-600 data-[state=active]:shadow-sm">
-                        학습 열정 순위
-                    </TabsTrigger>
+                    <TabsTrigger value="total" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-indigo-600 data-[state=active]:shadow-sm">실전 실력 순위</TabsTrigger>
+                    <TabsTrigger value="voca" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-emerald-600 data-[state=active]:shadow-sm">단어왕</TabsTrigger>
+                    <TabsTrigger value="consistency" className="rounded-lg font-black data-[state=active]:bg-white data-[state=active]:text-orange-600 data-[state=active]:shadow-sm">학습 열정 순위</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="total" className="mt-0">
@@ -290,9 +240,7 @@ export default function AdminRankingsPage() {
                                 <TableHead className="w-24 text-center font-black text-xs uppercase text-slate-500">Rank</TableHead>
                                 <TableHead className="font-bold text-xs text-slate-500">Student Info</TableHead>
                                 <TableHead className="font-bold text-xs text-slate-500">Class Info</TableHead>
-                                {type === 'total' && (
-                                    <TableHead className="text-center font-bold text-xs text-slate-500">Effort Rank</TableHead>
-                                )}
+
                                 <TableHead className="text-right font-bold text-xs text-slate-500">
                                     {type === 'voca' ? '단어 실력 (AVG)' : type === 'consistency' ? '학습 열정 (Diligence)' : '실전 실력 (Score)'}
                                 </TableHead>
@@ -325,16 +273,7 @@ export default function AdminRankingsPage() {
                                             {rank.className || 'No Class'}
                                         </Badge>
                                     </TableCell>
-                                    {type === 'total' && (
-                                        <TableCell className="text-center">
-                                            <div className="flex flex-col items-center">
-                                                <Badge className="bg-orange-100 text-orange-600 border-orange-200 font-black px-3 py-1 text-[11px] italic">
-                                                    #{rank.effortRank || '-'}
-                                                </Badge>
-                                                <span className="text-[9px] font-bold text-slate-400 mt-1 uppercase tracking-tighter">Diligence</span>
-                                            </div>
-                                        </TableCell>
-                                    )}
+
                                     <TableCell className="text-right">
                                         <div className="flex flex-col items-end gap-0.5">
                                             <span className={`text-lg font-black ${type === 'voca' ? 'text-emerald-600' : type === 'consistency' ? 'text-orange-600' : 'text-indigo-600'}`}>

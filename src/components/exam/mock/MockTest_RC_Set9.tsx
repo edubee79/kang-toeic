@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { test9Part5, test9Part6, test9Part7Single, test9Part7Multi } from "@/data/mock/set9_data";
 import { ChevronLeft, ChevronRight, Clock, Info, CheckCircle2 } from "lucide-react";
+import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 
 interface Props {
@@ -15,6 +16,8 @@ interface Props {
 }
 
 export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testId, initialAnswers = {}, initialSpread = 0, timeLeft }: Props) {
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/';
     const [currentSpread, setCurrentSpread] = useState(initialSpread);
     const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
     const [timeLogs, setTimeLogs] = useState<Record<string, number>>({ p5: 0, p6: 0, p7s: 0, p7m: 0 });
@@ -204,7 +207,7 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
             {/* Header */}
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30">
                 <div className="flex items-center gap-6">
-                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                    <Link href={fromPath} className="hover:opacity-80 transition-opacity">
                         <span className="font-black italic text-xl tracking-tighter">KANG'S <span className="text-indigo-600">TOEIC</span></span>
                     </Link>
                     <div className="h-6 w-px bg-slate-200"></div>

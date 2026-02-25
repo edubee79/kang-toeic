@@ -186,7 +186,7 @@ export default function WeaknessReviewPage() {
                 lastUpdated: new Date()
             });
             alert('학습 상태가 저장되었습니다.');
-            router.push('/weakness/dashboard');
+            router.push('/student/analysis');
         } catch (e) {
             console.error("Save failed:", e);
             alert("저장에 실패했습니다.");
@@ -199,13 +199,13 @@ export default function WeaknessReviewPage() {
             await deleteDoc(doc(db, 'users', userId, 'weakness_sessions_v3', tag));
         }
         alert(`완료! 점수: ${score + (selectedOption === currentQ.correctAnswer ? 0 : 0)} / ${questions.length}`);
-        router.push('/weakness/dashboard');
+        router.push('/student/analysis');
     };
 
     const handleNext = () => {
         if (isLast) {
             alert(`완료! 점수: ${score + (selectedOption === currentQ.correctAnswer ? 0 : 0)} / ${questions.length}`);
-            router.push('/weakness/dashboard');
+            router.push('/student/analysis');
         } else {
             setCurrentIndex(prev => prev + 1);
             setSelectedOption(null);

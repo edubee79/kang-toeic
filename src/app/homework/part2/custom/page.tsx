@@ -6,7 +6,7 @@ import { doc, getDoc, addDoc, collection, serverTimestamp } from 'firebase/fires
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Clock, BookOpen, Volume2, Play } from "lucide-react";
+import { ArrowLeft, CheckCircle2, XCircle, Trophy, Clock, BookOpen, Volume2, Play, AlertTriangle } from "lucide-react";
 import { cn } from '@/lib/utils';
 
 interface Question {
@@ -41,6 +41,7 @@ export default function Part2CustomPage() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [showResult, setShowResult] = useState(false);
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
 
     useEffect(() => {
         const loadAssignment = async () => {
@@ -274,7 +275,7 @@ export default function Part2CustomPage() {
             <div className="min-h-screen bg-slate-950 py-12 px-4">
                 <div className="max-w-3xl mx-auto">
                     <Button
-                        onClick={() => router.push('/weakness/dashboard')}
+                        onClick={() => router.push('/student/analysis')}
                         variant="ghost"
                         className="mb-8 text-slate-400 hover:text-white"
                     >
@@ -369,8 +370,8 @@ export default function Part2CustomPage() {
 
     // Correct audio path format
     const tNum = String(currentQ.testId).padStart(2, '0');
-    const qNum = String(currentQ.questionNo).padStart(2, '0');
-    const audioPath = `/audio/lc/part2/Test_${tNum}-${qNum}.mp3`;
+    const qNum = String(currentQ.questionNo);
+    const audioPath = `/audio/ETS_TOEIC_3/Test_${tNum}/TEST ${tNum}_PART 2_${qNum}.mp3`;
 
     return (
         <div className="min-h-screen bg-slate-950 flex flex-col">
@@ -388,7 +389,7 @@ export default function Part2CustomPage() {
                 <div className="max-w-3xl mx-auto px-4 py-4">
                     <div className="flex items-center justify-between mb-4">
                         <Button
-                            onClick={() => router.back()}
+                            onClick={() => setShowExitConfirm(true)}
                             variant="ghost"
                             size="sm"
                             className="text-slate-400 hover:text-white"
@@ -401,11 +402,11 @@ export default function Part2CustomPage() {
                                     if (currentIndex > 0) {
                                         saveProgress();
                                     }
-                                    router.push('/weakness/dashboard');
+                                    router.push('/student/analysis');
                                 }}
-                                className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
+                                className="px-2 py-0.5 rounded text-[10px] font-bold uppercase text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 flex items-center gap-1 ml-1"
                             >
-                                <span className="text-[9px] font-black uppercase tracking-widest">SAVE & EXIT</span>
+                                💾 저장하고 나가기
                             </button>
                             <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">
                                 Part 2 유형별 복습
@@ -525,6 +526,39 @@ export default function Part2CustomPage() {
                     </div>
                 )}
             </div>
+
+            {/* Exit Confirmation Modal */}
+            {showExitConfirm && (
+                <div className="fixed inset-0 z-[200] bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-300">
+                    <div className="max-w-xs w-full bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] shadow-2xl text-center space-y-6">
+                        <div className="w-20 h-20 bg-rose-500/10 text-rose-500 rounded-full flex items-center justify-center mx-auto ring-4 ring-rose-500/5">
+                            <AlertTriangle className="w-10 h-10" />
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-xl font-black text-white tracking-tight">학습을 중단할까요?</h3>
+                            <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                                '저장하고 나가기'를 누르지 않으면<br />
+                                현재까지의 진행 상황이 사라집니다.
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <Button
+                                onClick={() => router.push('/student/analysis')}
+                                variant="ghost"
+                                className="w-full h-12 text-rose-400 hover:text-rose-300 hover:bg-rose-500/5 font-bold"
+                            >
+                                저장 없이 그냥 나가기
+                            </Button>
+                            <Button
+                                onClick={() => setShowExitConfirm(false)}
+                                className="w-full h-14 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-2xl transition-all"
+                            >
+                                계속 학습하기
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

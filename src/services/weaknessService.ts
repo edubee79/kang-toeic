@@ -52,9 +52,35 @@ export interface WeaknessReport {
     };
 }
 
+// --- Caching Logic ---
+interface CachedReport {
+    data: WeaknessReport;
+    timestamp: number;
+}
+const CACHE_KEY_PREFIX = 'weakness_report_';
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
 export const WeaknessService = {
-    analyzeUserWeakness: async (userId: string): Promise<WeaknessReport> => {
+    // Force clear cache for a specific user (useful after finishing a test)
+    clearCache: (userId: string) => {
+        if (typeof window !== 'undefined') {
+            sessionStorage.removeItem(`${CACHE_KEY_PREFIX}${userId}`);
+        }
+    },
+
+    analyzeUserWeakness: async (userId: string, forceRefresh: boolean = false): Promise<WeaknessReport> => {
         try {
+            // Check cache first if not force refreshing
+            if (!forceRefresh && typeof window !== 'undefined') {
+                const cached = sessionStorage.getItem(`${CACHE_KEY_PREFIX}${userId}`);
+                if (cached) {
+                    const { data, timestamp }: CachedReport = JSON.parse(cached);
+                    if (Date.now() - timestamp < CACHE_TTL) {
+                        return data;
+                    }
+                }
+            }
+
             // 1. Get user data and targets from 'Winter_Users' collection
             const userRef = doc(db, 'Winter_Users', userId);
             const userSnap = await getDoc(userRef);
@@ -255,7 +281,7 @@ export const WeaknessService = {
             const totalTargetLC = calculateToeicScore(targetLCCount, true);
             const totalTargetRC = calculateToeicScore(targetRCCount, false);
 
-            return {
+            const report: WeaknessReport = {
                 userId,
                 totalAccuracy: goalAnalysis.overallAchievement,
                 weakestTags,
@@ -273,6 +299,16 @@ export const WeaknessService = {
                 latestWeeklyReport: userData.latestWeeklyReport,
                 weakestPart: goalAnalysis.weakestPart
             };
+
+            // Save to cache
+            if (typeof window !== 'undefined') {
+                sessionStorage.setItem(`${CACHE_KEY_PREFIX}${userId}`, JSON.stringify({
+                    data: report,
+                    timestamp: Date.now()
+                }));
+            }
+
+            return report;
 
         } catch (error) {
             console.error('Error analyzing user weakness:', error);

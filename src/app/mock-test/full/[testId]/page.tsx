@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { mockTests } from '@/data/mock-test-data';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -28,6 +28,8 @@ export default function MockTestRunner() {
     const params = useParams();
     const router = useRouter();
     const testId = Number(params?.testId);
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/mock-test';
 
     // State
     const [status, setStatus] = useState<'loading' | 'lc' | 'rc' | 'completed'>('loading');
@@ -70,7 +72,7 @@ export default function MockTestRunner() {
     useEffect(() => {
         if (!testData) {
             alert('Test data not found!');
-            router.push('/mock-test');
+            router.push(fromPath);
             return;
         }
 
@@ -95,16 +97,22 @@ export default function MockTestRunner() {
             const snapshot = await getDocs(q);
 
             if (!snapshot.empty) {
-                const existing = snapshot.docs[0];
+                // Pick the most RECENT in_progress attempt if multiple exist for some reason
+                const sortedDocs = snapshot.docs.sort((a, b) => {
+                    const dateA = a.data().date ? new Date(a.data().date).getTime() : 0;
+                    const dateB = b.data().date ? new Date(b.data().date).getTime() : 0;
+                    return dateB - dateA;
+                });
+
+                const existing = sortedDocs[0];
                 const data = existing.data();
 
                 if (confirm("이전에 풀던 기록이 있습니다. 이어서 진행하시겠습니까?\n(취소 시 새로 시작하며 기존 기록은 무효화됩니다.)")) {
-                    toggleFullScreen(); // Try to auto fullscreen on user gesture
+                    toggleFullScreen();
                     setAttemptId(existing.id);
                     setAnswers(data.answers || {});
-                    setInitialSpread(data.lastSpread || 0); // Restore spread
+                    setInitialSpread(data.lastSpread || 0);
 
-                    // Restore status and timer
                     if (data.rcEndTime) {
                         const remaining = Math.max(0, Math.floor((data.rcEndTime - Date.now()) / 1000));
                         if (remaining <= 0) {
@@ -118,11 +126,15 @@ export default function MockTestRunner() {
                     } else {
                         setStatus('lc');
                     }
-                    setCurrentPart(data.lastPart || 1); // Restore part
+                    setCurrentPart(data.lastPart || 1);
                     return;
                 } else {
-                    // Mark old as abandoned
-                    await updateDoc(doc(db, 'MockTestAttempts', existing.id), { status: 'abandoned' });
+                    // Mark ALL existing in_progress records as abandoned to clean up
+                    const batch = writeBatch(db);
+                    snapshot.docs.forEach(d => {
+                        batch.update(d.ref, { status: 'abandoned' });
+                    });
+                    await batch.commit();
                 }
             }
 
@@ -712,7 +724,7 @@ export default function MockTestRunner() {
                                 }
                             }
 
-                            router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
+                            router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}${searchParams.get('from') ? `&from=${searchParams.get('from')}` : ''}`);
                         }}
                     />
                 </>

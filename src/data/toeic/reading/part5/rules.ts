@@ -467,7 +467,7 @@ export const P5_RULES: Record<string, ClassificationRule> = {
         logicConstraint: "완전절(부사) vs 불완전절(대명사) 판별 알고리즘 기계적 적용",
         exclusionConstraint: "ac4",
         priority: 5
-    }
+    },
 
     // --- Connectors (c, pr) ---
     "c1": {

@@ -12,9 +12,13 @@
     *   **내용**: "담는 내용물". 표준 기호(ID) 목록 및 의미.
     *   **참조 시점**: `docType`, `classification` 등에 어떤 코드를 넣을지 결정할 때.
 
-3.  **[03_CLASSIFICATION_CRITERIA.md](./03_CLASSIFICATION_CRITERIA.md)** (판정 논리)
-    *   **내용**: "판단의 근거". 특정 기호를 선택하는 로직(Trigger/Rule).
-    *   **참조 시점**: 문항의 유형을 분류하거나 지문의 성격을 판단할 때. (예: `most likely` 질문의 분류법)
+3.  **[03_LC_CRITERIA.md](./03_LC_CRITERIA.md)** (LC 판정 논리 - Part 1~4)
+     *   **내용**: "판단의 근거". LC 각 파트의 기호를 선택하는 로직(Trigger/Rule).
+     *   **참조 시점**: Part 1~4 문항 유형 분류 시. 특히 Part 2의 `Indirect` 최우선 판정 원칙 참조.
+
+3b. **[03_RC_CRITERIA.md](./03_RC_CRITERIA.md)** (RC 판정 논리 - Part 5~7)
+     *   **내용**: "판단의 근거". RC 각 파트의 기호를 선택하는 로직.
+     *   **참조 시점**: Part 5~7 문항 유형 분류 시.
 
 4.  **[04_LAYOUT_RENDERING_GUIDE.md](./04_LAYOUT_RENDERING_GUIDE.md)** (시각 표현)
     *   **내용**: "보여주는 방식". UI 레이아웃 및 렌더링 규칙.

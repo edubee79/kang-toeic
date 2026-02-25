@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
@@ -37,6 +37,8 @@ export default function DayPage() {
     const params = useParams();
     const day = parseInt(params.day as string);
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/home';
 
     // Data State
     const [loading, setLoading] = useState(true);
@@ -49,18 +51,22 @@ export default function DayPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showBack, setShowBack] = useState(false);
     const [subStep, setSubStep] = useState<'front' | 'confirm'>('front');
+    const [studyMode, setStudyMode] = useState<'basic' | 'advanced'>('advanced');
 
     // Stage-specific Queues
     const [learningQueue, setLearningQueue] = useState<VocabularyWord[]>([]);
     const [testQueue, setTestQueue] = useState<VocabularyWord[]>([]);
     const [listeningQueue, setListeningQueue] = useState<VocabularyWord[]>([]);
+    const [pendingReviews, setPendingReviews] = useState<VocabularyWord[]>([]);
 
     // Test State
-    const [timeLeft, setTimeLeft] = useState(3);
+    const [timeLeft, setTimeLeft] = useState(10);
     const [testScore, setTestScore] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [testOptions, setTestOptions] = useState<string[]>([]);
     const [results, setResults] = useState<boolean[]>([]);
+    const [testType, setTestType] = useState<'meaning' | 'collocation' | 'example_fill'>('meaning');
+    const [colloQuestion, setColloQuestion] = useState<{ en: string; ko?: string } | null>(null);
 
     // Listening Feedback State
     const [listeningFeedback, setListeningFeedback] = useState<'correct' | 'incorrect' | null>(null);
@@ -76,6 +82,7 @@ export default function DayPage() {
             learningQueue,
             testQueue,
             listeningQueue,
+            pendingReviews,
             results,
             testScore,
             subStep,
@@ -83,8 +90,8 @@ export default function DayPage() {
             timestamp: Date.now()
         };
         localStorage.setItem(`voca_day_progress_${userId}_${day}`, JSON.stringify(progress));
-        router.push('/homework/voca');
-    }, [userId, day, mode, currentIndex, allWords, learningQueue, testQueue, listeningQueue, results, testScore, subStep, showBack, router]);
+        router.push(fromPath);
+    }, [userId, day, mode, currentIndex, allWords, learningQueue, testQueue, listeningQueue, pendingReviews, results, testScore, subStep, showBack, router, fromPath]);
 
     // Initialization
     useEffect(() => {
@@ -128,21 +135,19 @@ export default function DayPage() {
                 // 2. Normal Fetching
                 const [dailyWords, reviewWords] = await Promise.all([
                     getWordsForDay(user.userId, day, score as 650 | 800 | 900),
-                    getDueReviews(user.userId)
+                    getDueReviews(user.userId, 40) // Limit to 40 for optimal balance
                 ]);
 
-                // Merge: Reviews first, then Daily words.
-                const dailyIds = new Set(dailyWords.map(w => w.id));
-                const uniqueReviews = reviewWords.filter(w => !dailyIds.has(w.id));
-                const combinedWords = [...uniqueReviews, ...dailyWords];
-
-                // --- TEST MODE: 5 words for rapid verification ---
+                // Phase 1 (Sorting) ONLY uses Daily words
                 const urlParams = new URLSearchParams(window.location.search);
                 if (urlParams.get('test') === 'true') {
-                    setAllWords(combinedWords.slice(0, 5));
+                    setAllWords(dailyWords.slice(0, 5));
                 } else {
-                    setAllWords(combinedWords);
+                    setAllWords(dailyWords);
                 }
+
+                // Store reviews to be merged in Phase 2
+                setPendingReviews(reviewWords);
             } catch (error) {
                 console.error('Error loading words:', error);
             } finally {
@@ -164,12 +169,12 @@ export default function DayPage() {
         return newArray;
     };
 
-    const speak = (text: string, rate = 1.0) => {
+    const speak = (text: string) => {
         if (!window.speechSynthesis) return;
         window.speechSynthesis.cancel();
         const utter = new SpeechSynthesisUtterance(text);
         utter.lang = 'en-US';
-        utter.rate = rate; // Adjustable rate
+        utter.rate = 0.85;
         window.speechSynthesis.speak(utter);
     };
 
@@ -229,8 +234,14 @@ export default function DayPage() {
         setMode('learn');
         setCurrentIndex(0);
         setShowBack(false);
-        // Shuffle the words marked for learning
-        setLearningQueue(prev => shuffle(prev));
+
+        // Merge "Don't know" words from today + SRS Pending Reviews
+        setLearningQueue(prev => {
+            // Deduplicate if any overlap (though rare due to logic)
+            const currentIds = new Set(prev.map(w => w.id));
+            const filteredReviews = pendingReviews.filter(w => !currentIds.has(w.id));
+            return shuffle([...prev, ...filteredReviews]);
+        });
     };
 
     // --- LEARN LOGIC ---
@@ -268,21 +279,76 @@ export default function DayPage() {
         setTestQueue(selected);
         setMode('test');
         setCurrentIndex(0);
-        generateTestOptions(selected[0]);
-        setTimeLeft(5);
+        generateTestOptions(selected[0], 0);
+        setTimeLeft(8); // Start with 8s for Part 1
     };
 
     // --- TEST LOGIC ---
 
-    const generateTestOptions = useCallback((correctWord: VocabularyWord) => {
-        const distractors = allWords
-            .filter(w => w.id !== correctWord.id)
-            .map(w => w.meaning);
+    const generateTestOptions = useCallback((correctWord: VocabularyWord, index: number) => {
+        const rand = Math.random();
 
-        const shuffledDistractors = shuffle(distractors).slice(0, 3);
-        const options = shuffle([correctWord.meaning, ...shuffledDistractors]);
-        setTestOptions(options);
-    }, [allWords]);
+        // 1. Determine Test Type based on Part
+        let type: 'meaning' | 'collocation' | 'example_fill' = 'meaning';
+
+        if (index >= 20) {
+            // Part 2: Advanced Contextual (Example or Collocation)
+            if (correctWord.collocations && correctWord.collocations.length > 0 && rand > 0.5) {
+                type = 'collocation';
+            } else if (correctWord.example) {
+                type = 'example_fill';
+            } else {
+                // Fallback if no example data
+                type = 'meaning';
+            }
+        } else {
+            // Part 1: Basic Meaning Match
+            type = 'meaning';
+        }
+
+        setTestType(type);
+
+        // 2. Helper to get POS-matched distractors
+        const getDistractors = (count: number, field: 'word' | 'meaning') => {
+            // Try to find words with same POS first
+            let candidates = allWords.filter(w =>
+                w.id !== correctWord.id &&
+                w.word.toLowerCase() !== correctWord.word.toLowerCase()
+            );
+
+            const samePos = candidates.filter(w => w.pos === correctWord.pos);
+
+            // If we have enough same-POS words, use them. Otherwise fallback.
+            const source = samePos.length >= count ? samePos : candidates;
+
+            return shuffle(source)
+                .slice(0, count)
+                .map(w => w[field]);
+        };
+
+        // 3. Generate content based on type
+        if (type === 'collocation') {
+            const collo = correctWord.collocations![Math.floor(Math.random() * correctWord.collocations!.length)];
+            const blankedEn = collo.en.replace(new RegExp(correctWord.word, 'gi'), ' ____ ');
+            setColloQuestion({ en: blankedEn, ko: collo.ko });
+
+            const distractors = getDistractors(3, 'word');
+            setTestOptions(shuffle([correctWord.word, ...distractors]));
+        }
+        else if (type === 'example_fill') {
+            const blankedEn = correctWord.example.replace(new RegExp(correctWord.word, 'gi'), ' ____ ');
+            setColloQuestion({ en: blankedEn, ko: correctWord.exampleKo });
+
+            const distractors = getDistractors(3, 'word');
+            setTestOptions(shuffle([correctWord.word, ...distractors]));
+        }
+        else {
+            // Meaning Match
+            setColloQuestion(null);
+            const distractors = getDistractors(3, 'meaning');
+            setTestOptions(shuffle([correctWord.meaning, ...distractors]));
+        }
+    }, [allWords]); // removed studyMode as we use index now
 
     useEffect(() => {
         if (mode !== 'test' || selectedAnswer !== null) return;
@@ -300,7 +366,13 @@ export default function DayPage() {
 
         setSelectedAnswer(index);
         const currentWord = testQueue[currentIndex];
-        const isCorrect = index !== -1 && testOptions[index] === currentWord.meaning;
+
+        // Validation changes based on type
+        const isCorrect = index !== -1 && (
+            testType === 'meaning'
+                ? testOptions[index] === currentWord.meaning
+                : testOptions[index] === currentWord.word
+        );
 
         if (isCorrect) setTestScore(prev => prev + 1);
         setResults(prev => [...prev, isCorrect]);
@@ -313,9 +385,11 @@ export default function DayPage() {
             if (currentIndex < testQueue.length - 1) {
                 const nextIdx = currentIndex + 1;
                 setCurrentIndex(nextIdx);
-                generateTestOptions(testQueue[nextIdx]);
+                generateTestOptions(testQueue[nextIdx], nextIdx);
                 setSelectedAnswer(null);
-                setTimeLeft(5);
+
+                // Dynamic Time: Part 1 (0-19) -> 8s, Part 2 (20-39) -> 20s
+                setTimeLeft(nextIdx >= 20 ? 20 : 8);
             } else {
                 setMode('result');
             }
@@ -427,12 +501,25 @@ export default function DayPage() {
                     <div className="flex justify-between items-end mb-2 px-1">
                         <div className="flex flex-col">
                             <span className="text-indigo-400 font-bold tracking-widest italic text-[10px] md:text-sm">SORTING</span>
-                            <button
-                                onClick={handleSaveAndExit}
-                                className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-0.5"
-                            >
-                                SAVE & EXIT
-                            </button>
+                            <div className="flex gap-2 items-center mt-1">
+                                <button
+                                    onClick={handleSaveAndExit}
+                                    className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit"
+                                >
+                                    SAVE & EXIT
+                                </button>
+                                <button
+                                    onClick={() => setStudyMode(prev => prev === 'basic' ? 'advanced' : 'basic')}
+                                    className={cn(
+                                        "text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded border transition-all",
+                                        studyMode === 'advanced'
+                                            ? "bg-indigo-500/20 text-indigo-400 border-indigo-500/30"
+                                            : "bg-slate-800 text-slate-400 border-slate-700"
+                                    )}
+                                >
+                                    {studyMode === 'advanced' ? 'ADVANCED MODE' : 'BASIC MODE'}
+                                </button>
+                            </div>
                         </div>
                         <span className="text-slate-500 font-bold italic text-sm md:text-lg leading-none">
                             <span className="text-white font-black">{currentIndex + 1}</span>
@@ -455,6 +542,7 @@ export default function DayPage() {
                             showBack={showBack}
                             onFlip={handleSortKnow}
                             clickable={false}
+                            studyMode={studyMode}
                         />
                     </div>
 
@@ -515,12 +603,25 @@ export default function DayPage() {
                     <div className="flex justify-between items-end mb-2">
                         <div className="flex flex-col">
                             <span className="text-amber-500 font-bold tracking-widest italic text-[10px] md:text-sm">LEARNING</span>
-                            <button
-                                onClick={handleSaveAndExit}
-                                className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit mt-0.5"
-                            >
-                                SAVE & EXIT
-                            </button>
+                            <div className="flex gap-2 items-center mt-1">
+                                <button
+                                    onClick={handleSaveAndExit}
+                                    className="text-[9px] font-black text-emerald-400/80 uppercase tracking-widest bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 hover:bg-emerald-500/20 transition-all w-fit"
+                                >
+                                    SAVE & EXIT
+                                </button>
+                                <button
+                                    onClick={() => setStudyMode(prev => prev === 'basic' ? 'advanced' : 'basic')}
+                                    className={cn(
+                                        "text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded border transition-all",
+                                        studyMode === 'advanced'
+                                            ? "bg-amber-500/20 text-amber-400 border-amber-500/30"
+                                            : "bg-slate-800 text-slate-400 border-slate-700"
+                                    )}
+                                >
+                                    {studyMode === 'advanced' ? 'ADVANCED MODE' : 'BASIC MODE'}
+                                </button>
+                            </div>
                         </div>
                         <span className="text-slate-500 font-bold italic text-sm md:text-lg leading-none">
                             <span className="text-white font-black">{currentIndex + 1}</span>
@@ -541,6 +642,7 @@ export default function DayPage() {
                                 }
                             }}
                             clickable={true}
+                            studyMode={studyMode}
                         />
                     </div>
 
@@ -600,9 +702,10 @@ export default function DayPage() {
                         <div
                             className={cn(
                                 "h-full transition-all duration-1000",
-                                timeLeft > 2 ? "bg-emerald-500" : timeLeft > 1 ? "bg-amber-500" : "bg-rose-500"
+                                currentIndex >= 20 ? (timeLeft > 10 ? "bg-emerald-500" : timeLeft > 5 ? "bg-amber-500" : "bg-rose-500") :
+                                    (timeLeft > 5 ? "bg-emerald-500" : timeLeft > 2 ? "bg-amber-500" : "bg-rose-500")
                             )}
-                            style={{ width: `${(timeLeft / 5) * 100}%` }}
+                            style={{ width: `${(timeLeft / (currentIndex >= 20 ? 20 : 8)) * 100}%` }}
                         />
                     </div>
 
@@ -613,8 +716,24 @@ export default function DayPage() {
                                 timeLeft <= 1 ? "text-rose-500 animate-pulse" : "text-slate-700"
                             )} />
                         </div>
-                        <div className="text-center">
-                            <h2 className="text-2xl md:text-5xl font-black text-white italic tracking-tight">{currentWord.word}</h2>
+                        <div className="text-center space-y-4">
+                            {testType === 'meaning' ? (
+                                <h2 className="text-2xl md:text-5xl font-black text-white italic tracking-tight">{currentWord.word}</h2>
+                            ) : (
+                                <div className="space-y-4">
+                                    <div className="bg-slate-950/80 p-4 md:p-6 rounded-2xl border border-white/5 shadow-inner">
+                                        <h2 className="text-xl md:text-3xl font-black text-white italic tracking-tight leading-relaxed">
+                                            "{colloQuestion?.en}"
+                                        </h2>
+                                    </div>
+                                    {colloQuestion?.ko && (
+                                        <div className="bg-indigo-500/10 py-2 px-4 rounded-xl border border-indigo-500/20">
+                                            <p className="text-indigo-300 text-xs md:text-base font-bold italic">{colloQuestion.ko}</p>
+                                        </div>
+                                    )}
+                                    <p className="text-[10px] md:text-xs text-slate-500 font-black uppercase tracking-widest">Select the word for the blank</p>
+                                </div>
+                            )}
                         </div>
                     </Card>
 
@@ -860,7 +979,7 @@ export default function DayPage() {
                             </Button>
                         )}
                         <Button
-                            onClick={() => router.push('/homework/voca')}
+                            onClick={() => router.push(`/homework/voca?from=${fromPath}`)}
                             variant="outline"
                             className="w-full h-12 md:h-16 border-2 border-slate-800 bg-transparent text-slate-400 font-bold text-base md:text-xl italic rounded-xl md:rounded-2xl hover:text-white"
                         >

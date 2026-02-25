@@ -15,7 +15,7 @@ export interface FeatureAccess {
     grammar?: boolean;
     part1_real?: boolean;
     levelTest?: boolean;
-    maxSets?: Record<string, number>;
+    maxSets?: Record<string, number | Record<string, number>>;
 }
 
 const DEFAULT_ACCESS: FeatureAccess = {
@@ -33,17 +33,17 @@ const DEFAULT_ACCESS: FeatureAccess = {
     levelTest: true,
     maxSets: {
         part1: 10,
-        part2: 10,
-        part3: 10,
-        part4: 10,
-        part5: 10,
-        part6: 5,
-        part7: 5,
-        part7_double: 5,
+        part1_real: { "3": 10, "4": 10 },
+        part2: { "3": 10, "4": 10 },
+        part3: { "3": 10, "4": 10 },
+        part4: { "3": 10, "4": 10 },
+        part5: { "3": 10, "4": 10 },
+        part6: { "3": 10, "4": 10 },
+        part7: { "4": 10 },
+        part7_double: { "4": 10 },
         mockTest: 10,
-        voca: 15,
+        voca: 20,
         grammar: 10,
-        part1_real: 10,
         levelTest: 2
     }
 };
@@ -55,10 +55,31 @@ export const getFeatureAccess = async (): Promise<FeatureAccess> => {
 
         if (docSnap.exists()) {
             const data = docSnap.data();
+            // Deep merge maxSets to handle both number and object formats
+            const mergedMaxSets = { ...(DEFAULT_ACCESS.maxSets || {}) };
+
+            if (data.maxSets) {
+                Object.keys(data.maxSets).forEach(key => {
+                    const value = data.maxSets[key];
+                    const defaultValue = DEFAULT_ACCESS.maxSets?.[key];
+
+                    if (typeof defaultValue === 'object' && defaultValue !== null) {
+                        // If default is an object, ensure result is an object
+                        mergedMaxSets[key] = {
+                            ...defaultValue,
+                            ...(typeof value === 'object' ? value : {})
+                        };
+                    } else {
+                        // Otherwise (default is number or undefined), use value from DB
+                        mergedMaxSets[key] = value;
+                    }
+                });
+            }
+
             return {
                 ...DEFAULT_ACCESS,
                 ...data,
-                maxSets: { ...(DEFAULT_ACCESS.maxSets || {}), ...(data.maxSets || {}) }
+                maxSets: mergedMaxSets
             } as FeatureAccess;
         }
         return DEFAULT_ACCESS;

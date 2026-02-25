@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { breakdownTripleSet, PracticeSet } from '@/data/rc_part7_practice';
+import { part7MultiTestData, PracticeSet } from '@/data/toeic/reading/part7/multi_tests';
+const breakdownTripleSet = part7MultiTestData.test1[2];
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 
@@ -59,7 +60,7 @@ export default function Part7PracticePage() {
             {/* Minimal Header */}
             <header className="h-14 bg-white border-b border-gray-200 flex items-center px-6 justify-between shrink-0">
                 <div className="flex items-center gap-4">
-                    <Link href="/student/dashboard" className="text-gray-500 hover:text-gray-900 flex items-center gap-1 text-sm font-medium">
+                    <Link href="/student/home" className="text-gray-500 hover:text-gray-900 flex items-center gap-1 text-sm font-medium">
                         <ChevronLeft size={18} />
                         나가기
                     </Link>

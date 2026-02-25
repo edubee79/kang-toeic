@@ -209,7 +209,25 @@ export const HalfTestService = {
                 else partKey = "p7m";
             }
 
-            const isCorrect = userAns === correctAnswers[qId];
+            // 3. Robust Correctness Check (handles p2-9-q7 vs p2-t9-q7)
+            const getCorrectAnswer = (qid: string) => {
+                if (correctAnswers[qid]) return correctAnswers[qid];
+                // Try fuzzy matching if direct key fails
+                const num = qid.split('-q')[1] || qid.replace(/[^\d]/g, '');
+                const prefix = qid.split('-')[0]; // "p1", "p2", etc.
+                const variations = [
+                    `${prefix}-t9-q${num}`, `${prefix}-t10-q${num}`,
+                    `${prefix}-9-q${num}`, `${prefix}-10-q${num}`,
+                    num
+                ];
+                for (const v of variations) {
+                    if (correctAnswers[v]) return correctAnswers[v];
+                }
+                return undefined;
+            };
+
+            const correctAns = getCorrectAnswer(qId);
+            const isCorrect = userAns === correctAns;
             if (!partKey) return; // Prevent errors for unknown IDs
 
             // RC/LC classification for total score

@@ -1,24 +1,33 @@
-import { Part7Test } from './types';
-import { test1Data } from './test1';
-import { test2Data } from './test2';
-import { test3Data } from './test3';
-import { test4Data } from './test4';
-import { test5Data } from './test5';
-import { test6Data } from './test6';
-import { test7Data } from './test7';
-import { test8Data } from './test8';
-import { test9Data } from './test9';
-import { test10Data } from './test10';
+// V4 Tests (1-10) - Single Passage (Vol 4)
+import { Part7Test } from '../../v4/reading/part7/single/types';
+import { test1Data } from '../../v4/reading/part7/single/v4_p7_t01';
+import { test2Data } from '../../v4/reading/part7/single/v4_p7_t02';
+import { test3Data } from '../../v4/reading/part7/single/v4_p7_t03';
+import { test4Data } from '../../v4/reading/part7/single/v4_p7_t04';
+import { test5Data } from '../../v4/reading/part7/single/v4_p7_t05';
+import { test6Data } from '../../v4/reading/part7/single/v4_p7_t06';
+import { test7Data } from '../../v4/reading/part7/single/v4_p7_t07';
+import { test8Data } from '../../v4/reading/part7/single/v4_p7_t08';
+import { test9Data } from '../../v4/reading/part7/single/v4_p7_t09';
+import { test10Data } from '../../v4/reading/part7/single/v4_p7_t10';
+
+export type { Part7Test, Part7Set, Part7Passage, Part7Question } from '../../v4/reading/part7/single/types';
+
+// Helper to inject Vol info
+const withVol = (data: Part7Test, vol: number): Part7Test => ({
+    ...data,
+    vol
+});
 
 export const part7TestData: Part7Test[] = [
-    test1Data,
-    test2Data,
-    test3Data,
-    test4Data,
-    test5Data,
-    test6Data,
-    test7Data,
-    test8Data,
-    test9Data,
-    test10Data,
+    withVol(test1Data, 4),
+    withVol(test2Data, 4),
+    withVol(test3Data, 4),
+    withVol(test4Data, 4),
+    withVol(test5Data, 4),
+    withVol(test6Data, 4),
+    withVol(test7Data, 4),
+    withVol(test8Data, 4),
+    withVol(test9Data, 4),
+    withVol(test10Data, 4)
 ];

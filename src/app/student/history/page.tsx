@@ -17,6 +17,7 @@ import {
     Headphones,
     FileText,
     Layout,
+    RotateCcw,
     Sparkles,
     Target,
     Zap
@@ -85,52 +86,58 @@ export default function StudentHistoryPage() {
     const getHomeworkLink = (type: string, detail: string, id: string, attemptId?: string) => {
         const typeLower = (type || '').toLowerCase();
         const detailLower = (detail || '').toLowerCase();
+        const currentPath = '/student/history';
+
+        let path = '#';
 
         // 1. If it's a summary record with attemptId, go to full report
         if (attemptId && (typeLower === 'mock_test' || typeLower === 'level_test' || detailLower.includes('diagnosis'))) {
             const testId = detail.includes('2회') || detailLower.includes('10a') || detailLower.includes('set10') ? 10 : 9;
-            return typeLower === 'level_test'
+            path = typeLower === 'level_test'
                 ? `/mock-test/level/result?testId=${detailLower.includes('2회') || detailLower.includes('9b') ? '9b' : '9a'}&attemptId=${attemptId}`
                 : `/mock-test/full/${testId}/result?attemptId=${attemptId}`;
+        } else {
+            // 2. Extract test number safely
+            const testNum = detailLower.match(/\d+/)?.[0] || '1';
+
+            // 3. Mapping for individual parts (Review/Practice)
+            switch (typeLower) {
+                case 'voca': path = `/homework/voca`; break;
+                case 'grammar': path = `/homework/part5`; break;
+                case 'part1_test': path = `/homework/part1-real/test/${testNum}`; break;
+                case 'part1_shadow': path = `/homework/part1/${testNum}`; break;
+                case 'part2_test': path = `/homework/part2/${testNum}`; break;
+                case 'part3_test': path = `/homework/part3/test/${testNum}`; break;
+                case 'part4_test': path = `/homework/part4/test/${testNum}`; break;
+                case 'part5_test': path = `/homework/part5-real/test/${testNum}`; break;
+                case 'part6_test': path = `/homework/part6/test/${testNum}`; break;
+                case 'part7_test':
+                case 'part7_single':
+                    path = `/homework/part7/test/${testNum}`; break;
+                case 'part7_double':
+                case 'part7_triple':
+                case 'part7_multi':
+                case 'part7_double_test':
+                    path = `/homework/part7/practice?test=${testNum}`; break;
+                case 'weakness_review': path = `/homework/weakness/${id}`; break;
+                case 'level_test':
+                    const levelId = detailLower.includes('2회') || detailLower.includes('9b') ? '9b' : '9a';
+                    path = `/mock-test/half/${levelId}`; break;
+                default:
+                    // Fallback for partial matches
+                    if (typeLower.includes('part1')) path = `/homework/part1-real/test/${testNum}`;
+                    else if (typeLower.includes('part2')) path = `/homework/part2/${testNum}`;
+                    else if (typeLower.includes('part3')) path = `/homework/part3/test/${testNum}`;
+                    else if (typeLower.includes('part4')) path = `/homework/part4/test/${testNum}`;
+                    else if (typeLower.includes('part5')) path = `/homework/part5-real/test/${testNum}`;
+                    else if (typeLower.includes('part6')) path = `/homework/part6/test/${testNum}`;
+                    else if (typeLower.includes('part7')) path = `/homework/part7/test/${testNum}`;
+            }
         }
 
-        // 2. Extract test number safely
-        const testNum = detailLower.match(/\d+/)?.[0] || '1';
-
-        // 3. Mapping for individual parts (Review/Practice)
-        switch (typeLower) {
-            case 'voca': return `/homework/voca`;
-            case 'grammar': return `/homework/part5`;
-            case 'part1_test': return `/homework/part1-real/test/${testNum}`;
-            case 'part1_shadow': return `/homework/part1/${testNum}`;
-            case 'part2_test': return `/homework/part2/${testNum}`;
-            case 'part3_test': return `/homework/part3/test/${testNum}`;
-            case 'part4_test': return `/homework/part4/test/${testNum}`;
-            case 'part5_test': return `/homework/part5-real/test/${testNum}`;
-            case 'part6_test': return `/homework/part6/test/${testNum}`;
-            case 'part7_test':
-            case 'part7_single':
-                return `/homework/part7/test/${testNum}`;
-            case 'part7_double':
-            case 'part7_triple':
-            case 'part7_multi':
-            case 'part7_double_test':
-                return `/homework/part7/practice?test=${testNum}`;
-            case 'weakness_review': return `/homework/weakness/${id}`;
-            case 'level_test':
-                const levelId = detailLower.includes('2회') || detailLower.includes('9b') ? '9b' : '9a';
-                return `/mock-test/half/${levelId}`;
-            default:
-                // Fallback for partial matches
-                if (typeLower.includes('part1')) return `/homework/part1-real/test/${testNum}`;
-                if (typeLower.includes('part2')) return `/homework/part2/${testNum}`;
-                if (typeLower.includes('part3')) return `/homework/part3/test/${testNum}`;
-                if (typeLower.includes('part4')) return `/homework/part4/test/${testNum}`;
-                if (typeLower.includes('part5')) return `/homework/part5-real/test/${testNum}`;
-                if (typeLower.includes('part6')) return `/homework/part6/test/${testNum}`;
-                if (typeLower.includes('part7')) return `/homework/part7/test/${testNum}`;
-                return '#';
-        }
+        if (path === '#') return '#';
+        const separator = path.includes('?') ? '&' : '?';
+        return `${path}${separator}from=${currentPath}`;
     };
 
     const formatScore = (res: ManagerResult) => {
@@ -233,19 +240,13 @@ export default function StudentHistoryPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/5 pb-8">
                     <div className="flex items-center gap-4">
-                        <Link href="/student/dashboard">
-                            <Button variant="ghost" className="w-10 h-10 md:w-auto p-0 md:px-4 bg-slate-900/50 border border-white/5 text-slate-400 hover:text-white rounded-xl">
-                                <ArrowLeft className="w-5 h-5 md:mr-2" />
-                                <span className="hidden md:inline font-bold">대시보드</span>
-                            </Button>
-                        </Link>
                         <div>
                             <div className="flex items-center gap-2 mb-1">
-                                <Trophy className="w-4 h-4 text-amber-500" />
-                                <span className="text-[10px] font-black text-amber-500/80 uppercase tracking-[0.2em] italic">Learning Achievement</span>
+                                <RotateCcw className="w-4 h-4 text-rose-500" />
+                                <span className="text-[10px] font-black text-rose-500/80 uppercase tracking-[0.2em] italic">Review & Re-training Mode</span>
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase italic">My Archive</h2>
-                            <p className="text-slate-500 text-xs md:text-sm font-medium mt-1">그동안 쌓아온 노력의 기록입니다. 강쌤의 진단과 함께 복습하세요.</p>
+                            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase italic">복습 & 오답 정복</h2>
+                            <p className="text-slate-500 text-xs md:text-sm font-medium mt-1">틀린 문제를 분석하고 다시 풀어보며 취약점을 완벽하게 보완하세요.</p>
                         </div>
                     </div>
 
@@ -266,22 +267,22 @@ export default function StudentHistoryPage() {
                                         setActiveSubTab('all'); // Reset sub-tab when main tab changes
                                     }}
                                     className={cn(
-                                        "flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 text-[10px] md:text-xs font-black rounded-xl transition-all uppercase tracking-widest italic",
+                                        "flex items-center gap-2 px-2.5 md:px-4 py-2 text-sm md:text-lg font-black rounded-xl transition-all uppercase tracking-wider italic",
                                         activeTab === tab.id
-                                            ? "bg-indigo-600 text-white shadow-[0_0_20px_rgba(79,70,229,0.4)]"
+                                            ? "bg-indigo-600 text-white shadow-[0_4_20px_rgba(79,70,229,0.4)]"
                                             : "text-slate-500 hover:text-slate-300 hover:bg-white/5"
                                     )}
                                 >
-                                    <tab.icon className={cn("w-3 h-3 md:w-4 md:h-4", activeTab === tab.id ? "animate-pulse" : "")} />
+                                    <tab.icon className={cn("w-3.5 h-3.5 md:w-5 md:h-5", activeTab === tab.id ? "animate-pulse" : "")} />
                                     {tab.label}
                                 </button>
                             ))}
                         </div>
 
                         {/* Sub-Tabs Row (Stable secondary navigation) */}
-                        <div className="min-h-[40px] flex items-center">
+                        <div className="min-h-[40px] flex items-center justify-center">
                             {(activeTab === 'lc' || activeTab === 'rc') && (
-                                <div className="flex flex-wrap gap-2 animate-in fade-in slide-in-from-left-2 duration-300">
+                                <div className="flex flex-wrap justify-center gap-2 animate-in fade-in slide-in-from-left-2 duration-300">
                                     {[
                                         ...(activeTab === 'lc'
                                             ? [{ id: 'all', label: '전체' }, { id: 'p1', label: 'Part 1' }, { id: 'p2', label: 'Part 2' }, { id: 'p3', label: 'Part 3' }, { id: 'p4', label: 'Part 4' }]
@@ -292,7 +293,7 @@ export default function StudentHistoryPage() {
                                             key={sub.id}
                                             onClick={() => setActiveSubTab(sub.id)}
                                             className={cn(
-                                                "px-4 py-1.5 text-[10px] font-black rounded-lg transition-all border uppercase tracking-widest italic",
+                                                "px-3 py-1 text-xs font-black rounded-lg transition-all border uppercase tracking-wider italic",
                                                 activeSubTab === sub.id
                                                     ? "bg-white text-slate-900 border-white shadow-lg"
                                                     : "bg-slate-900/50 text-slate-500 border-white/5 hover:border-white/20 hover:text-slate-300"
@@ -318,7 +319,7 @@ export default function StudentHistoryPage() {
                                     <p className="text-slate-400 font-black text-lg uppercase tracking-tight italic">No Records Found</p>
                                     <p className="text-slate-600 text-sm font-medium mt-1">해당 카테고리의 학습 데이터가 아직 없습니다.</p>
                                 </div>
-                                <Link href="/student/dashboard">
+                                <Link href="/student/home">
                                     <Button className="bg-indigo-600 hover:bg-indigo-500 font-black italic uppercase text-xs px-8 h-12 rounded-2xl mt-4">
                                         새로운 학습 시작하기
                                     </Button>
@@ -449,8 +450,8 @@ export default function StudentHistoryPage() {
                                                                         : "bg-white/5 hover:bg-white/10 text-white border border-white/10"
                                                                 )}
                                                             >
-                                                                {isMock ? '리포트 확인' : '복습하기'}
-                                                                <ExternalLink className="w-3.5 h-3.5" />
+                                                                {isMock ? '분석 리포트' : '틀린문제 다시풀기'}
+                                                                <RotateCcw className="w-3.5 h-3.5" />
                                                             </Button>
                                                         </Link>
                                                     </div>

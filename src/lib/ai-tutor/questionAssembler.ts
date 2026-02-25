@@ -77,13 +77,13 @@ export const QuestionAssembler = {
 
             if (isPart3or4 && isContextType) {
                 // Part 3/4 with contextType: situation-based drill
-                finalUrl = `/homework/${baseUrl}/test/${testId}?mode=drill&context=${tag}&returnTo=/weakness/dashboard`;
+                finalUrl = `/homework/${baseUrl}/test/${testId}?mode=drill&context=${tag}&returnTo=/student/analysis`;
                 description = `${label} 대화 상황을 집중적으로 청취하며 익숙해집니다.`;
             } else {
                 // Other LC parts OR classification-based drill (INFERENCE/GRAPHIC)
                 finalUrl = baseUrl === 'part2'
-                    ? `/homework/part2/${testId}?mode=drill&tag=${tag}&returnTo=/weakness/dashboard`
-                    : `/homework/${baseUrl}/test/${testId}?mode=drill&tag=${tag}&returnTo=/weakness/dashboard`;
+                    ? `/homework/part2/${testId}?mode=drill&tag=${tag}&returnTo=/student/analysis`
+                    : `/homework/${baseUrl}/test/${testId}?mode=drill&tag=${tag}&returnTo=/student/analysis`;
                 description = `${label} 유형의 문제를 집중적으로 청취하며 돌발 상황에 대비합니다.`;
             }
 
@@ -123,7 +123,7 @@ export const QuestionAssembler = {
             questionIds,
             targetTag: tag,
             targetLabel: label,
-            homeworkUrl: `/homework/part5-real/ai-drill?tag=${tag}&returnTo=/weakness/dashboard`,
+            homeworkUrl: `/homework/part5-real/ai-drill?tag=${tag}&returnTo=/student/analysis`,
             isAiGenerated: true,
             status: 'active',
             createdAt: new Date().toISOString(),
@@ -137,8 +137,8 @@ export const QuestionAssembler = {
         const partName = this.getPartName(part);
         const baseUrl = this.getPartUrl(part);
         const finalUrl = baseUrl === 'part2'
-            ? `/homework/part2/${testId}?direct=true&mode=real&returnTo=/weakness/dashboard`
-            : `/homework/${baseUrl}/test/${testId}?direct=true&mode=real&returnTo=/weakness/dashboard`;
+            ? `/homework/part2/${testId}?direct=true&mode=real&returnTo=/student/analysis`
+            : `/homework/${baseUrl}/test/${testId}?direct=true&mode=real&returnTo=/student/analysis`;
 
         return {
             targetStudentId: userId,

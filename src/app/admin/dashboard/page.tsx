@@ -155,6 +155,8 @@ export default function AdminDashboard() {
             setLoadingAnalysis(false);
         };
 
+        checkAdmin();
+
         const checkAndAutoUpdateRankings = async () => {
             try {
                 const now = new Date();
@@ -192,7 +194,6 @@ export default function AdminDashboard() {
             }
         };
 
-        checkAdmin();
         checkAndAutoUpdateRankings();
     }, [router]);
 

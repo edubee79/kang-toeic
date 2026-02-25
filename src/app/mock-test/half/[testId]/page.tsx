@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp, updateDoc, doc, writeBatch } from 'firebase/firestore';
 import { calculateLevelScore } from '@/lib/level/scoring';
@@ -19,6 +19,8 @@ export default function HalfTestPage() {
     const params = useParams();
     const router = useRouter();
     const testId = params?.testId as string;
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/mock-test';
 
     const [status, setStatus] = useState<'loading' | 'lc' | 'rc' | 'completed' | 'submitting'>('loading');
     const [attemptId, setAttemptId] = useState<string | null>(null);
@@ -30,7 +32,7 @@ export default function HalfTestPage() {
             const userStr = localStorage.getItem('toeic_user');
             if (!userStr) {
                 alert("로그인이 필요합니다.");
-                router.push('/mock-test');
+                router.push(fromPath);
                 return;
             }
             const user = JSON.parse(userStr);
@@ -173,7 +175,7 @@ export default function HalfTestPage() {
             };
             localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
 
-            const resultUrl = `/mock-test/level/result?testId=${testId}&attemptId=${attemptId}`;
+            const resultUrl = `/mock-test/level/result?testId=${testId}&attemptId=${attemptId}${searchParams.get('from') ? `&from=${searchParams.get('from')}` : ''}`;
             router.push(resultUrl);
 
             setTimeout(() => {

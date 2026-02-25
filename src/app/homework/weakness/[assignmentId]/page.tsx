@@ -129,7 +129,11 @@ export default function WeaknessReviewPage() {
                     questions={questions}
                     testId={assignmentId}
                     mode="drill"
-                    onFinish={() => router.push('/student/dashboard')}
+                    onFinish={() => {
+                        const searchParams = new URLSearchParams(window.location.search);
+                        const from = searchParams.get('from') || '/student/home';
+                        router.push(from);
+                    }}
                 />
             </div>
         </div>

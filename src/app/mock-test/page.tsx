@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, HelpCircle, AlertCircle, Monitor, PlayCircle, Lock, BookOpen, Volume2 } from "lucide-react";
+import { Clock, HelpCircle, AlertCircle, Monitor, PlayCircle, Lock, BookOpen, Volume2, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
 import { db } from '@/lib/firebase';
@@ -19,6 +19,8 @@ interface TestAttempt {
 
 export default function MockTestLobby() {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const fromPath = searchParams.get('from') || '/student/selection?tab=PROBLEM';
     const [attempts, setAttempts] = useState<Record<string, TestAttempt>>({});
     const [isMobile, setIsMobile] = useState(false);
     const [access, setAccess] = useState<FeatureAccess | null>(null);
@@ -91,7 +93,7 @@ export default function MockTestLobby() {
             return;
         }
 
-        router.push(`/mock-test/${testType}/${testId}`);
+        router.push(`/mock-test/${testType}/${testId}?from=${encodeURIComponent(`/mock-test?from=${encodeURIComponent(fromPath)}`)}`);
     };
 
     if (loading) {
@@ -109,12 +111,22 @@ export default function MockTestLobby() {
         <div className="min-h-screen bg-slate-950 text-slate-200 pb-20">
             <div className="max-w-5xl mx-auto px-2 md:px-8 py-6 md:py-12">
                 <header className="mb-8 md:mb-16 relative px-2">
-                    <div className="flex items-center gap-3 mb-4">
-                        <span className="bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-wider">
-                            Beta Phase
-                        </span>
-                        <div className="h-px w-8 bg-slate-800"></div>
-                        <p className="text-slate-500 font-bold text-[10px] md:text-sm">{maxMock}회차 오픈</p>
+                    <div className="flex items-center gap-4 mb-6">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => router.push(fromPath)}
+                            className="bg-slate-900/50 border border-slate-800 text-slate-400 hover:text-white rounded-full h-8 w-8 md:h-10 md:w-10"
+                        >
+                            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
+                        </Button>
+                        <div className="flex items-center gap-3">
+                            <span className="bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-wider">
+                                Beta Phase
+                            </span>
+                            <div className="h-px w-8 bg-slate-800"></div>
+                            <p className="text-slate-500 font-bold text-[10px] md:text-sm">{maxMock}회차 오픈</p>
+                        </div>
                     </div>
 
                     <h1 className="text-2xl md:text-5xl font-black italic tracking-tighter text-white mb-2 uppercase">

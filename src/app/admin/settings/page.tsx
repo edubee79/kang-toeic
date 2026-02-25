@@ -33,6 +33,7 @@ export default function AdminSettingsPage() {
         mockTest: true,
         voca: true,
         grammar: true,
+        part1_real: true,
         levelTest: true,
         maxSets: {}
     });
@@ -69,12 +70,24 @@ export default function AdminSettingsPage() {
         setAccess(prev => ({ ...prev, [key]: !prev[key] }));
     };
 
-    const handleMaxSetChange = (key: string, value: string) => {
+    const handleMaxSetChange = (key: string, value: string, vol?: string) => {
         const numValue = parseInt(value) || 0;
-        setAccess(prev => ({
-            ...prev,
-            maxSets: { ...(prev.maxSets || {}), [key]: numValue }
-        }));
+        setAccess(prev => {
+            const currentMaxSets = { ...(prev.maxSets || {}) };
+            if (vol) {
+                // Handle object-based volume limits
+                const volData = { ...(currentMaxSets[key] as Record<string, number> || {}) };
+                volData[vol] = numValue;
+                currentMaxSets[key] = volData;
+            } else {
+                // Handle single number limits
+                currentMaxSets[key] = numValue;
+            }
+            return {
+                ...prev,
+                maxSets: currentMaxSets
+            };
+        });
     };
 
     const handleSave = async () => {
@@ -195,17 +208,36 @@ export default function AdminSettingsPage() {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-10 bg-slate-50/50 p-2 pl-4 rounded-2xl border border-slate-100">
-                                        <div className="flex flex-col">
+                                    <div className="flex items-center gap-10 bg-slate-50/50 p-2 pl-4 rounded-2xl border border-slate-100 min-w-[240px]">
+                                        <div className="flex flex-col flex-1">
                                             <span className="text-[10px] text-slate-400 font-bold uppercase mb-1">Max Range</span>
-                                            <div className="flex items-center gap-2">
-                                                <Input
-                                                    type="number"
-                                                    className="w-20 h-8 text-sm font-black bg-white text-slate-900 focus:ring-indigo-500 border-slate-200"
-                                                    value={access.maxSets?.[item.key] || 0}
-                                                    onChange={(e) => handleMaxSetChange(item.key, e.target.value)}
-                                                />
-                                                <span className="text-xs text-slate-500 font-bold">{item.key === 'voca' ? '일차' : '회차'}</span>
+                                            <div className="space-y-2">
+                                                {typeof access.maxSets?.[item.key] === 'object' ? (
+                                                    <div className="bg-indigo-50/50 p-2 rounded-xl border border-indigo-100/50 space-y-2">
+                                                        {Object.keys(access.maxSets![item.key] as object).sort().map(vol => (
+                                                            <div key={vol} className="flex items-center gap-2">
+                                                                <span className="text-[10px] text-indigo-600 font-black w-10 text-right">VOL {vol}</span>
+                                                                <Input
+                                                                    type="number"
+                                                                    className="w-16 h-7 text-xs font-black bg-white text-slate-900 focus:ring-indigo-500 border-slate-200"
+                                                                    value={(access.maxSets![item.key] as any)[vol] || 0}
+                                                                    onChange={(e) => handleMaxSetChange(item.key, e.target.value, vol)}
+                                                                />
+                                                                <span className="text-[10px] text-slate-400 font-bold">회차</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                ) : (
+                                                    <div className="flex items-center gap-2 pl-2">
+                                                        <Input
+                                                            type="number"
+                                                            className="w-20 h-8 text-sm font-black bg-white text-slate-900 focus:ring-indigo-500 border-slate-200"
+                                                            value={(access.maxSets?.[item.key] as number) || 0}
+                                                            onChange={(e) => handleMaxSetChange(item.key, e.target.value)}
+                                                        />
+                                                        <span className="text-xs text-slate-500 font-bold">{item.key === 'voca' ? '일차' : '회차'}</span>
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
 
@@ -252,8 +284,8 @@ export default function AdminSettingsPage() {
                                         <label
                                             key={idx}
                                             className={`flex-1 flex flex-col items-center gap-2 p-3 rounded-xl border-2 cursor-pointer transition-all ${aiSchedule.enabledDays.includes(idx)
-                                                    ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
-                                                    : 'bg-slate-50 border-slate-200 text-slate-400 hover:border-slate-300'
+                                                ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
+                                                : 'bg-slate-50 border-slate-200 text-slate-400 hover:border-slate-300'
                                                 }`}
                                         >
                                             <input

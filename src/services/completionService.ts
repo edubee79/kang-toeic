@@ -28,14 +28,21 @@ export async function getTestCompletion(userId: string, unit: string): Promise<T
             return { completed: false, score: 0, total: 0, attempts: 0 };
         }
 
-        const doc = snapshot.docs[0];
         const data = doc.data();
+        let score = data.score || 0;
+        let total = data.total || 0;
+
+        // ✅ Legacy Support for Part 1 (saved as percentage 0-100 without total)
+        if (unit.includes('Part1') && total === 0 && score > 6) {
+            total = 6;
+            score = Math.round((score / 100) * total);
+        }
 
         return {
             completed: true,
-            score: data.score || 0,
-            total: data.total || 0,
-            attempts: 1, // We'll count attempts separately if needed
+            score,
+            total,
+            attempts: 1,
             timestamp: data.timestamp?.toDate()
         };
     } catch (error) {
@@ -82,10 +89,19 @@ export async function getMultipleTestCompletions(
                 });
 
                 const latest = sorted[0];
+                let score = latest.score || 0;
+                let total = latest.total || 0;
+
+                // ✅ Legacy Support for Part 1 (saved as percentage 0-100 without total)
+                if (unit.includes('Part1') && total === 0 && score > 6) {
+                    total = 6;
+                    score = Math.round((score / 100) * total);
+                }
+
                 results[unit] = {
                     completed: true,
-                    score: latest.score || 0,
-                    total: latest.total || 0,
+                    score,
+                    total,
                     attempts: sorted.length,
                     timestamp: latest.timestamp?.toDate()
                 };

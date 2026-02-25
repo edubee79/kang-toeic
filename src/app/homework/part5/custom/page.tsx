@@ -236,7 +236,7 @@ export default function Part5CustomPage() {
                 <div className="max-w-3xl mx-auto">
                     {/* Header */}
                     <Button
-                        onClick={() => router.push('/weakness/dashboard')}
+                        onClick={() => router.push('/student/analysis')}
                         variant="ghost"
                         className="mb-8 text-slate-400 hover:text-white"
                     >
@@ -359,7 +359,7 @@ export default function Part5CustomPage() {
                                     if (currentIndex > 0) {
                                         saveProgress();
                                     }
-                                    router.push('/weakness/dashboard');
+                                    router.push('/student/analysis');
                                 }}
                                 className="inline-flex items-center gap-1 px-2 py-0.5 mb-1 rounded bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 transition-colors cursor-pointer active:scale-95"
                             >
