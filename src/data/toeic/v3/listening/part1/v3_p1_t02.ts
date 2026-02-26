@@ -44,7 +44,7 @@ export const test2Data: Part1TestSet = {
         {
             id: "v3-p1-t02-q3",
             image: "/images/ETS_TOEIC_3/Test_02/Part_01/p1_q03.png",
-            audio: "/audio/ETS_TOEIC_3/Test_02/TEST%2002_PART%201_2.mp3",
+            audio: "/audio/ETS_TOEIC_3/Test_02/TEST%2002_PART%201_3.mp3",
             questionType: "Woman",
             correctAnswer: "C",
             options: { A: "(A)", B: "(B)", C: "(C)", D: "(D)" },

@@ -18,83 +18,131 @@ export async function POST(req: Request) {
 
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
-        // --- Step 1: Context Memory - Fetch Previous Report ---
+        // --- Step 1: Context Memory - Enriched Statistical Comparison ---
         let previousContext = "기존 분석 이력이 없습니다. 이번이 첫 번째 주간 리포트입니다.";
+        let pastStats = null;
+
         if (userId) {
             const userDoc = await db.collection('Winter_Users').doc(userId).get();
             const userData = userDoc.data();
             if (userData?.latestWeeklyReport) {
                 const prev = userData.latestWeeklyReport;
+                pastStats = prev.statsSummarized || null;
                 previousContext = `
-[지난주 AI 분석 및 처방 이력]
+[지난주 학습 데이터 및 AI 진단 이력]
 - 작성일: ${prev.createdAt}
-- 지난주 예측 점수: ${prev.statsSummarized?.prediction || 'N/A'}
-- 지난주 분석 내용 요약: 
-${prev.content.substring(0, 1000)}... (생략됨)
+- 지난주 AI 예측 점수: ${pastStats?.prediction || 'N/A'}점
+- 지난주 총 풀이 문항: ${pastStats?.totalSolved || 0}문항
+- 지난주 파트별 정답률 정보: ${JSON.stringify(pastStats?.partAccuracies || {}, null, 2)}
+- 지난주 리포트 본문 핵심 요약: "${prev.content.substring(0, 500).replace(/\n/g, ' ')}"
+(주의: 위 요약에 언급되지 않은 내용은 지난주에 언급되지 않은 것입니다. 가상의 과거를 지어내지 마십시오.)
                 `;
             }
         }
 
         const currentDate = new Date().toISOString().split('T')[0];
 
+        // Prepare current Part Accuracies for comparison and future saving
+        const currentPartAccuracies: Record<string, number> = {};
+        Object.entries(stats.parts).forEach(([part, s]: [string, any]) => {
+            currentPartAccuracies[part] = s.solved > 0 ? Math.round((s.correct / s.solved) * 100) : 0;
+        });
+
+        // --- Tag Mapping Logic (INTERNAL CODES -> KOREAN LABELS) ---
+        const { TOEIC_TAG_REGISTRY } = await import('@/types/toeic-standards');
+
+        const mappedWeakestTags = (weakestTags || []).map((t: any) => {
+            // Find standard registry entry
+            const baseTag = (t.tag || '').split(' ')[0].split('(')[0].trim();
+            const registryEntry = TOEIC_TAG_REGISTRY[baseTag as any] || TOEIC_TAG_REGISTRY[t.tag as any];
+
+            // PRIORITY: Use the registry's clean Korean label if it exists
+            const rawLabel = registryEntry ? registryEntry.label : t.label;
+
+            // Aggressive cleaner for the UI/Report
+            const cleaned = (rawLabel || '')
+                .replace(/^[A-Z]\d[\d\w]*[\.\s\-:]+/i, '') // Remove A1. A1-
+                .replace(/\(.*?\)/g, '')                   // Remove (voice_message)
+                .replace(/\[.*?\]/g, '')                   // Remove [Day 1]
+                .replace(/[a-z0-0]{2,}_[a-z0-0]{2,}/gi, '') // Remove snake_case_codes
+                .replace(/\s+/g, ' ')
+                .trim();
+
+            const finalLabel = cleaned || rawLabel || t.tag;
+
+            // Critical: Ensure Part 2 tags (Who, When...) are correctly mapped to 'p2'
+            let part = t.part;
+            if (!part) {
+                const p2Tags = ['Who', 'When', 'Where', 'Why', 'How', 'What', 'YesNo', 'Choice', 'Statement', 'Tag', 'Negative', 'Indirect'];
+                if (p2Tags.includes(baseTag)) part = 'p2';
+            }
+
+            return {
+                tag: t.tag,
+                label: finalLabel,
+                description: registryEntry ? registryEntry.description : '',
+                incorrectCount: t.incorrectCount || t.incorrect || 0,
+                part: part
+            };
+        });
+
+        // AI Prompt Data: Group by Part so the AI doesn't mix them up
+        const tagsByPart: Record<string, any[]> = {};
+        mappedWeakestTags.forEach(t => {
+            const p = t.part || '기타';
+            if (!tagsByPart[p]) tagsByPart[p] = [];
+            tagsByPart[p].push({
+                유형명: t.label,
+                설명: t.description,
+                오답수: t.incorrectCount
+            });
+        });
+
         const prompt = `
 당신은 20년 경력의 베테랑 토익 전문가 '강쌤'입니다. 
-학생의 지난 1주일간의 학습 데이터를 분석하고, 특히 **지난주 분석 내용과 비교하여** 정밀 진단 리포트를 작성하십시오.
+학생의 1주일간 학습 데이터와 **지난주 데이터와의 수치적 비교**를 통해 [0-1-2 전략] 기반의 정밀 진단 리포트를 작성하십시오.
 
-**[중요] 오늘 날짜: ${currentDate}**
-리포트 제목에는 반드시 위 날짜를 사용하십시오. 다른 날짜로 변경하지 마십시오.
+**[절대 원칙]**
+1. **토익 만점은 990점입니다.** 어떤 경우에도 예측 점수나 지난주 점수가 990점을 넘는다고 말하지 마십시오. (1000점 등은 불가능함)
+2. **과거 조작 금지**: 제공된 [지난주 학습 데이터 및 AI 진단 이력]에 명시된 사실만 언급하십시오. 지난주에 한 적 없는 조언을 마치 했던 것처럼 말하지 마십시오.
+3. **코드 노출 금지**: 리포트 본문에서 "B3", "D2_ads", "voice_message" 같은 내부 코드를 절대 노출하지 마십시오. 반드시 함께 제공되는 'label' 명칭(예: "사내방송", "음성메시지 광고" 등)으로만 지칭하십시오.
+4. **이상 데이터 대응**: 만약 이번 주 성적이 비정상적으로 급락(예: 990 -> 200)했다면, 이를 단순 실력 하락으로 치부하기보다 "테스트용 무성의 풀이" 또는 "번아웃/심각한 컨디션 난조"로 가정하고 격려와 페이스 회복을 권고하십시오.
+
+**[오늘 날짜: ${currentDate}]**
 
 ${previousContext}
 
 [학생 정보]
 - 성함: ${studentName || "학생"}님
 - 현재 목표 점수: ${goals.targetScore}점 (LC: ${goals.targetLC}, RC: ${goals.targetRC})
-- 현재 AI 예측 점수: ${goals.currentEst}점 (예측 점수 추이를 확인하세요)
+- 현재 AI 예측 점수: ${Math.min(990, goals.currentEst)}점
 
-[주간 학습 데이터 통계]
+[금주 학습 데이터 통계 (Current)]
 - 총 풀이 문항 수: ${stats.totalSolved}문항
 - 파트별 상세 (최근 1주일):
 ${JSON.stringify(stats.parts, null, 2)}
 
-[취약 유형 및 오답 패턴]
-- 가장 많이 틀린 태그: ${JSON.stringify(weakestTags, null, 2)}
+[취약 파트별 오답 유형 (이 유형명으로만 분석하십시오)]
+${JSON.stringify(tagsByPart, null, 2)}
+(주의: 각 파트를 분석할 때 반드시 해당 파트에 속한 '유형명'만 언급하십시오. "A2", "D2", "voice_message" 같은 코드를 적는 것은 엄격히 금지됩니다.)
 
-**중요**: Part 3/4의 경우, 위 태그는 "대화 상황"을 나타냅니다 (예: "A1. 회의 / 일정 조정").
-학생이 특정 상황의 대화를 듣는 데 어려움을 겪고 있다는 의미입니다.
-INFERENCE나 GRAPHIC 같은 특수 문제 유형은 예외적으로 문제 유형으로 표시됩니다.
-
-[요청 사항]
-리포트는 반드시 다음 제목으로 시작하십시오 (날짜 변경 금지):
+**[리포트 작성 지침 - 0-1-2 전략]**
 
 # 토익 정밀진단 리포트 (${currentDate})
 
-이후 다음 구조에 따라 답변하십시오:
+**Step 0. 주간 성취도 종합 평가 (Performance Audit)**
+- 지난주와 이번 주의 **예측 점수(Max 990), 정답률, 문항 수**를 대조하여 학습 결과를 [상승 / 정체 / 하락] 중 하나로 판정하십시오.
+- 데이터와 모순되는 비판은 금지합니다. 하락폭이 너무 크다면 데이터의 특수성을 언급하십시오.
 
-1. 🎯 목표 달성 현황 진단:
-   - 지난주와 비교하여 예측 점수가 얼마나 변했는지, 학습 페이스가 개선되었는지 분석하세요.
-   - 학생의 이름을 부드러게 언급하며 대화를 시작하세요.
+**Step 1. 심층 원인 분석 및 중점 파트 선정 (Strategic Diagnosis)**
+- 데이터 추이를 분석하여 다음 1주일간 개선이 시급한 **'딱 하나의 급소 파트'**를 선정하십시오.
+- "B3", "D2" 등의 코드 대신 한글 레이블을 사용하여 원인을 분석하십시오.
+- **현실적인 차주 목표**: 다음 주까지 달성해야 할 구체적 수치 목표를 제시하십시오.
 
-2. 🔍 파트별 심층 분석 (원인 및 논리):
-   - 지난주에 지적했던 취약점이 개선되었는지, 아니면 새로운 취약점이 발견되었는지 분석하세요.
-   - 학생이 왜 이 문제를 틀리는지 문법적/심리적 원인을 AI 전문가로서 추론하여 설명하세요.
+**Step 2. 맞춤형 집중 처방 (Action Plan)**
+- 우리 사이트 내 기능([AI 오답 드릴], [파트별 실전 연습], [쉐도잉 훈련]) 위주로 처방하십시오.
 
-3. 📉 차주 정밀 목표 (Quantitative Goals):
-   - **가장 중요한 섹션입니다.** 다음 주말 테스트(또는 연습)에서 달성해야 할 **구체적인 수치 목표**를 제시하십시오.
-   - 예시: "현재 65%인 Part 2 정답률을 80%까지 끌어올리기", "Part 5에서 문법 오답을 3개 이내로 줄이기" 등.
-   - 이를 통해 기대되는 차주 예상 점수도 함께 언급하십시오 (예: "다음 주에는 600점 돌파를 목표로 합시다").
-
-4. 💊 다음 주 집중 처방전 (Action Plan):
-   - 위 목표를 달성하기 위해 다음 주에 반드시 실천해야 할 구체적인 학습량과 방법을 제시하세요. (예: 특정 파트 시간 제한 훈련 등)
-
-5. 🔥 강쌤의 한마디:
-   - 지난주의 노력을 격려하거나, 부족한 점을 따끔하게 지적하며 신뢰감 있는 코멘트로 마무리하세요.
-
-[주의사항]
-- **제목의 날짜는 절대 변경 금지: ${currentDate}만 사용하십시오.**
-- **막연한 격려보다는 데이터에 기반한 수치적 가이드라인**을 우선시하십시오.
-- 말투는 '하십시오체'를 사용하며, 신뢰감 있고 권위 있는 전문가의 어조를 유지하세요.
-- 불필요한 서론은 생략하고 마크다운(Markdown) 형식을 사용하여 가독성을 높이십시오.
-- 숫자를 적극 활용하여 분석의 신뢰도를 높이십시오.
+**강쌤의 한마디** (말투: 하십시오체)
 `;
 
         // --- Gemini API Call with Retry Logic ---
@@ -132,11 +180,11 @@ INFERENCE나 GRAPHIC 같은 특수 문제 유형은 예외적으로 문제 유�
 
         let aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "데이터 분석 중 오류가 발생했습니다.";
 
-        // --- Assignment Logic ---
+        // --- Step 3: Analysis of AI Response and Curriculum Assembly ---
         if (userId) {
             const assignmentsRef = db.collection('Assignments');
 
-            // ⚠️ Cleanup: Delete OLD AI assignments for this user before creating new ones
+            // Cleanup: Delete OLD AI assignments
             try {
                 const oldAiSnap = await assignmentsRef
                     .where('targetStudentId', '==', userId)
@@ -152,36 +200,41 @@ INFERENCE나 GRAPHIC 같은 특수 문제 유형은 예외적으로 문제 유�
                 console.error("Cleanup old AI assignments error:", cleanupError);
             }
 
-            // --- Step 3: Curriculum Assembly ---
             try {
-                // Find top weak parts for Real Mode (Even Days)
-                const weakParts = Object.entries(stats.parts)
+                // AI의 답변에서 "중점 파트"를 추출하여 과제 생성에 반영 (예: "Part 5", "p5")
+                const focusMatch = aiText.match(/Step 1\. .*?(Part|p)\s*([1-7])/i);
+                let aiFocusPart = '';
+                if (focusMatch) {
+                    const pNum = focusMatch[2];
+                    aiFocusPart = `p${pNum}`;
+                    // Handle special cases for p7
+                    if (aiFocusPart === 'p7') aiFocusPart = 'p7s';
+                }
+
+                // Find top weak parts for the curriculum (AI's choice first)
+                let weakParts = Object.entries(stats.parts)
                     .map(([part, s]: [string, any]) => ({
                         part,
                         accuracy: s.solved > 0 ? (s.correct / s.solved) * 100 : 100,
-                        solved: s.solved,
                         current: s.correct || 0,
                         target: (body.targetStats && body.targetStats[part]) ? body.targetStats[part].target : 0
                     }))
-                    .filter(p => p.solved > 0)
-                    .filter(p => p.current < p.target)  // ✅ 목표 미달 파트만
-                    .sort((a, b) => a.accuracy - b.accuracy)
+                    .filter(p => p.part === aiFocusPart || (p.current < p.target))
+                    .sort((a, b) => {
+                        if (a.part === aiFocusPart) return -1;
+                        if (b.part === aiFocusPart) return 1;
+                        return a.accuracy - b.accuracy;
+                    })
                     .map(p => p.part)
                     .slice(0, 3);
 
-                // Default fallback if no weak parts found
                 const finalWeakParts = weakParts.length > 0 ? weakParts : ['p2', 'p5', 'p7s'];
 
                 const curriculum = await QuestionAssembler.assembleWeeklyCurriculum({
                     userId,
                     studentName: studentName || '학생',
                     courseType: '8week',
-                    weakestTags: (weakestTags || []).slice(0, 4).map((t: any) => ({
-                        tag: t.tag,
-                        label: t.label,
-                        count: t.incorrectCount || t.incorrect || 0,
-                        part: t.part
-                    })),
+                    weakestTags: mappedWeakestTags.slice(0, 4),
                     weakestParts: finalWeakParts
                 });
 
@@ -193,17 +246,16 @@ INFERENCE나 GRAPHIC 같은 특수 문제 유형은 예외적으로 문제 유�
 
                 await batch.commit();
 
-                // Append assignment list to AI report for transparency
                 const assignmentList = curriculum
                     .map(a => `- **Day ${a.dayOffset}**: ${a.title}`)
                     .join('\n');
-                aiText += `\n\n---\n\n## 📋 이번 주 과제 목록\n\n${assignmentList}\n\n*위 과제는 AI 분석을 바탕으로 자동 생성되었습니다.*`;
+                aiText += `\n\n---\n\n## 📋 이번 주 과제 목록\n\n${assignmentList}\n\n*위 과제는 AI 분석(Step 1)을 바탕으로 자동 생성되었습니다.*`;
 
             } catch (asmError) {
                 console.error("[AI Weekly Report] Assignment Assembly Failed:", asmError);
             }
 
-            // --- Persistence Logic (Save after assignment list is added) ---
+            // --- Persistence Logic: Save with ENRICHED stats ---
             const userRef = db.collection('Winter_Users').doc(userId);
             await userRef.set({
                 latestWeeklyReport: {
@@ -211,12 +263,12 @@ INFERENCE나 GRAPHIC 같은 특수 문제 유형은 예외적으로 문제 유�
                     createdAt: new Date().toISOString(),
                     statsSummarized: {
                         totalSolved: stats.totalSolved,
-                        prediction: goals.currentEst
+                        prediction: goals.currentEst,
+                        partAccuracies: currentPartAccuracies // NEW: Save for next week's comparison
                     }
                 }
             }, { merge: true });
 
-            // ✅ Update last report date in schedule
             try {
                 const { updateLastReportDate } = await import('@/services/configService');
                 await updateLastReportDate();
