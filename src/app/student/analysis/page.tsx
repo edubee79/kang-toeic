@@ -21,12 +21,21 @@ import { ResponsiveContainer } from 'recharts';
 import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
 import { TargetSettingSection } from '@/components/dashboard/TargetSettingSection';
 import { UserProfile } from '@/services/userService';
+import { useUserData } from '@/context/UserDataContext';
+import { ApprovalGatedAction } from '@/components/auth/ApprovalGatedSection';
 
 // 🧪 PRODUCTION MODE (TEST_MODE logic has been merged into logic block)
 const TEST_MODE = false;
 
 export default function StudentAnalysisPage() {
     const router = useRouter();
+    const {
+        user: profile,
+        report: globalReport,
+        loading: globalLoading,
+        refreshAll
+    } = useUserData();
+
     const [loading, setLoading] = useState(true);
     const [report, setReport] = useState<WeaknessReport | null>(null);
     const [isMounted, setIsMounted] = useState(false);
@@ -44,29 +53,42 @@ export default function StudentAnalysisPage() {
     const [aiSchedule, setAiSchedule] = useState<any>(null);
     const [isReportDayEnabled, setIsReportDayEnabled] = useState(true);
     const [analysisTab, setAnalysisTab] = useState<'ANALYSIS' | 'PRESCRIPTION'>('ANALYSIS');
+    const [isTargetModalOpen, setIsTargetModalOpen] = useState(false);
 
     const [error, setError] = useState<string | null>(null);
     const [showGuide, setShowGuide] = useState(false);
 
-    const fetchWeaknessData = async (forceRefresh: boolean = false) => {
+    useEffect(() => {
+        setIsMounted(true);
+        const userStr = localStorage.getItem('toeic_user');
+        if (!userStr) {
+            router.push('/');
+            return;
+        }
+        const parsedUser = JSON.parse(userStr);
+        setUser(parsedUser);
+
+        // Initial global sync
+        refreshAll(parsedUser.userId, parsedUser.className);
+    }, [router, refreshAll]);
+
+    // Sync global data to local state and trigger side effects
+    useEffect(() => {
+        if (globalReport && user) {
+            setReport(globalReport);
+            fetchPageSpecificData(user.userId, globalReport);
+        }
+    }, [globalReport, user]);
+
+    useEffect(() => {
+        if (!globalLoading) {
+            setLoading(false);
+        }
+    }, [globalLoading]);
+
+    const fetchPageSpecificData = async (userId: string, currentReport: WeaknessReport | null) => {
+        if (!currentReport) return;
         try {
-            setLoading(true);
-            setError(null);
-
-            const userStr = localStorage.getItem('toeic_user');
-            if (!userStr) {
-                router.push('/');
-                return;
-            }
-            const userObj = JSON.parse(userStr);
-            const userId = userObj.userId || userObj.uid;
-            setUser(userObj);
-
-            // Fetch Main Report
-            console.log("Fetching weakness analysis...", forceRefresh ? "(Force Refresh)" : "");
-            const data = await WeaknessService.analyzeUserWeakness(userId, forceRefresh);
-            setReport(data);
-
             // Fetch AI Recommendations (Prescriptions)
             const aiRecs = await WeaknessService.getAiRecommendations(userId);
             setAiRecommendations(aiRecs);
@@ -82,9 +104,9 @@ export default function StudentAnalysisPage() {
             setIsReportDayEnabled(isEnabled);
 
             // Fetch recommended test if there's a weakest part
-            if (data.weakestPart && data.weakestPart.part !== 'none') {
+            if (currentReport.weakestPart && currentReport.weakestPart.part !== 'none') {
                 try {
-                    const response = await fetch(`/api/homework/next-test?userId=${userId}&part=${data.weakestPart.part}`);
+                    const response = await fetch(`/api/homework/next-test?userId=${userId}&part=${currentReport.weakestPart.part}`);
                     const testData = await response.json();
 
                     if (testData.success && testData.testId) {
@@ -92,11 +114,11 @@ export default function StudentAnalysisPage() {
                             'p1': 'part1-real', 'p2': 'part2-real', 'p3': 'part3-real', 'p4': 'part4-real',
                             'p5': 'part5-real', 'p6': 'part6-real', 'p7_single': 'part7-real', 'p7_double': 'part7-real'
                         };
-                        const url = partUrlMap[data.weakestPart.part];
+                        const url = partUrlMap[currentReport.weakestPart.part];
 
                         setRecommendedTest({
                             testId: testData.testId,
-                            title: `Part ${data.weakestPart.part.replace('p', '')} Test ${testData.testId}`,
+                            title: `Part ${currentReport.weakestPart.part.replace('p', '')} Test ${testData.testId}`,
                             url: `/homework/${url}?test=${testData.testId}&from=/student/analysis`
                         });
                     }
@@ -123,7 +145,7 @@ export default function StudentAnalysisPage() {
                 console.warn('Assignments fetch failed:', err);
             }
 
-            // Fetch Manager_Results
+            // Fetch Manager_Results for assignment completion status
             try {
                 const qResults = query(
                     collection(db, 'Manager_Results'),
@@ -141,24 +163,16 @@ export default function StudentAnalysisPage() {
                 console.warn('Results fetch failed:', err);
             }
 
-            // Fetch Persisted AI Report
-            if (data.latestWeeklyReport) {
-                setAiWeeklyReport(data.latestWeeklyReport.content);
-                setReportDate(data.latestWeeklyReport.createdAt);
+            // Sync Weekly Report text
+            if (currentReport.latestWeeklyReport) {
+                setAiWeeklyReport(currentReport.latestWeeklyReport.content);
+                setReportDate(currentReport.latestWeeklyReport.createdAt);
             }
-
-        } catch (err: any) {
-            console.error('Initial load failed:', err);
-            setError(err.message || '데이터를 불러오는 중 오류가 발생했습니다.');
-        } finally {
-            setLoading(false);
+        } catch (err) {
+            console.error('Error fetching page specific data:', err);
         }
     };
 
-    useEffect(() => {
-        setIsMounted(true);
-        fetchWeaknessData();
-    }, [router]);
 
     if (!isMounted) return null;
 
@@ -166,7 +180,7 @@ export default function StudentAnalysisPage() {
         return (
             <div className="min-h-screen bg-slate-950 text-white animate-in fade-in duration-500">
                 {/* Force Push Notification Activation */}
-                {user?.userId && <NotificationForceModal userId={user.userId || user.uid} />}
+                {profile?.userId && <NotificationForceModal userId={profile.userId} />}
 
                 <div className="flex h-screen items-center justify-center">
                     <Loader2 className="h-8 w-8 animate-spin text-indigo-500" />
@@ -347,7 +361,7 @@ export default function StudentAnalysisPage() {
                                         </p>
                                     </div>
                                     <Button
-                                        onClick={() => router.push('/student/home')}
+                                        onClick={() => setIsTargetModalOpen(true)}
                                         variant="outline"
                                         className="h-8 text-xs border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
                                     >
@@ -481,91 +495,93 @@ export default function StudentAnalysisPage() {
                                     <Zap className="w-5 h-5 text-amber-400" />
                                     AI 주간 정밀 분석 (Beta)
                                 </CardTitle>
-                                <Button
-                                    onClick={async () => {
-                                        if (!report) return;
+                                <ApprovalGatedAction>
+                                    <Button
+                                        onClick={async () => {
+                                            if (!report) return;
 
-                                        // ✅ Check if today is an enabled day
-                                        if (!isReportDayEnabled) {
-                                            const dayNames = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
-                                            const enabledDayNames = aiSchedule?.enabledDays.map((d: number) => dayNames[d]).join(', ') || '설정된 요일 없음';
-                                            alert(`AI 리포트는 ${enabledDayNames}에만 생성할 수 있습니다.`);
-                                            return;
-                                        }
-
-                                        setLoadingWeeklyReport(true);
-                                        try {
-                                            const userStr = localStorage.getItem('toeic_user');
-                                            const user = userStr ? JSON.parse(userStr) : {};
-
-                                            // ✅ Fetch AI report schedule and calculate period
-                                            const { getAIReportSchedule, calculateReportPeriod } = await import('@/services/configService');
-                                            const schedule = await getAIReportSchedule();
-                                            const periodDays = calculateReportPeriod(schedule.lastReportDate);
-
-                                            const weeklyStats = await WeaknessService.getWeeklyDetailedStats(
-                                                user.userId || user.uid,
-                                                periodDays  // ✅ Dynamic period
-                                            );
-
-                                            const response = await fetch('/api/ai-tutor/weekly-report', {
-                                                method: 'POST',
-                                                headers: { 'Content-Type': 'application/json' },
-                                                body: JSON.stringify({
-                                                    stats: weeklyStats,
-                                                    goals: {
-                                                        targetScore: report.targetScore,
-                                                        targetLC: report.targetLCScore,
-                                                        targetRC: report.targetRCScore,
-                                                        currentEst: estScore
-                                                    },
-                                                    targetStats: report.targetStats,  // ✅ 파트별 목표 추가
-                                                    weakestTags: report.weakestTags,
-                                                    studentName: user.userName || user.name || "학생",
-                                                    userId: user.userId || user.uid,
-                                                    periodDays  // ✅ Pass period to API
-                                                })
-                                            });
-
-                                            const data = await response.json();
-
-                                            if (response.ok && data.text) {
-                                                setAiWeeklyReport(data.text);
-                                                setReportDate(new Date().toISOString());
-                                                setShowFullReport(true); // Open upon generation
-                                            } else {
-                                                console.error("API Error:", data.error || "Unknown error");
-                                                alert(data.error || "리포트 생성 중 오류가 발생했습니다. 잠시 후 서버가 재시작되면 다시 시도해주세요.");
+                                            // ✅ Check if today is an enabled day
+                                            if (!isReportDayEnabled) {
+                                                const dayNames = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+                                                const enabledDayNames = aiSchedule?.enabledDays.map((d: number) => dayNames[d]).join(', ') || '설정된 요일 없음';
+                                                alert(`AI 리포트는 ${enabledDayNames}에만 생성할 수 있습니다.`);
+                                                return;
                                             }
-                                        } catch (e) {
-                                            console.error(e);
-                                        } finally {
-                                            setLoadingWeeklyReport(false);
-                                        }
-                                    }}
-                                    disabled={loadingWeeklyReport || !isReportDayEnabled}
-                                    className={`text-xs font-bold h-8 ${!isReportDayEnabled
-                                        ? 'bg-slate-600 hover:bg-slate-600 cursor-not-allowed'
-                                        : 'bg-indigo-600 hover:bg-indigo-500'
-                                        }`}
-                                >
-                                    {loadingWeeklyReport ? (
-                                        <>
-                                            <Loader2 className="w-3 h-3 mr-2 animate-spin" />
-                                            분석 중...
-                                        </>
-                                    ) : !isReportDayEnabled ? (
-                                        <>
-                                            <Lock className="w-3 h-3 mr-2" />
-                                            오늘은 생성 불가
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Sparkles className="w-3 h-3 mr-2" />
-                                            리포트 생성하기
-                                        </>
-                                    )}
-                                </Button>
+
+                                            setLoadingWeeklyReport(true);
+                                            try {
+                                                const userStr = localStorage.getItem('toeic_user');
+                                                const user = userStr ? JSON.parse(userStr) : {};
+
+                                                // ✅ Fetch AI report schedule and calculate period
+                                                const { getAIReportSchedule, calculateReportPeriod } = await import('@/services/configService');
+                                                const schedule = await getAIReportSchedule();
+                                                const periodDays = calculateReportPeriod(schedule.lastReportDate);
+
+                                                const weeklyStats = await WeaknessService.getWeeklyDetailedStats(
+                                                    user.userId || user.uid,
+                                                    periodDays  // ✅ Dynamic period
+                                                );
+
+                                                const response = await fetch('/api/ai-tutor/weekly-report', {
+                                                    method: 'POST',
+                                                    headers: { 'Content-Type': 'application/json' },
+                                                    body: JSON.stringify({
+                                                        stats: weeklyStats,
+                                                        goals: {
+                                                            targetScore: report.targetScore,
+                                                            targetLC: report.targetLCScore,
+                                                            targetRC: report.targetRCScore,
+                                                            currentEst: estScore
+                                                        },
+                                                        targetStats: report.targetStats,  // ✅ 파트별 목표 추가
+                                                        weakestTags: report.weakestTags,
+                                                        studentName: user.userName || user.name || "학생",
+                                                        userId: user.userId || user.uid,
+                                                        periodDays  // ✅ Pass period to API
+                                                    })
+                                                });
+
+                                                const data = await response.json();
+
+                                                if (response.ok && data.text) {
+                                                    setAiWeeklyReport(data.text);
+                                                    setReportDate(new Date().toISOString());
+                                                    setShowFullReport(true); // Open upon generation
+                                                } else {
+                                                    console.error("API Error:", data.error || "Unknown error");
+                                                    alert(data.error || "리포트 생성 중 오류가 발생했습니다. 잠시 후 서버가 재시작되면 다시 시도해주세요.");
+                                                }
+                                            } catch (e) {
+                                                console.error(e);
+                                            } finally {
+                                                setLoadingWeeklyReport(false);
+                                            }
+                                        }}
+                                        disabled={loadingWeeklyReport || !isReportDayEnabled}
+                                        className={`text-xs font-bold h-8 ${!isReportDayEnabled
+                                            ? 'bg-slate-600 hover:bg-slate-600 cursor-not-allowed'
+                                            : 'bg-indigo-600 hover:bg-indigo-500'
+                                            }`}
+                                    >
+                                        {loadingWeeklyReport ? (
+                                            <>
+                                                <Loader2 className="w-3 h-3 mr-2 animate-spin" />
+                                                분석 중...
+                                            </>
+                                        ) : !isReportDayEnabled ? (
+                                            <>
+                                                <Lock className="w-3 h-3 mr-2" />
+                                                오늘은 생성 불가
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Sparkles className="w-3 h-3 mr-2" />
+                                                리포트 생성하기
+                                            </>
+                                        )}
+                                    </Button>
+                                </ApprovalGatedAction>
                             </CardHeader>
                             <CardContent>
                                 {loadingWeeklyReport ? (
@@ -703,63 +719,62 @@ export default function StudentAnalysisPage() {
                                             const isDone = completedMap[matchKey];
 
                                             return (
-                                                <button
-                                                    key={item.id}
-                                                    onClick={() => {
-                                                        const link = item.homeworkUrl;
-                                                        const separator = link.includes('?') ? '&' : '?';
-                                                        router.push(`${link}${separator}from=/student/analysis`);
-                                                    }}
-                                                    className={cn(
-                                                        "group relative bg-slate-950 border rounded-2xl p-6 text-left transition-all overflow-hidden",
-                                                        isDone ? "border-emerald-500/50 bg-emerald-500/5 shadow-inner" : "border-white/5 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10"
-                                                    )}
-                                                >
-                                                    <div className={cn(
-                                                        "absolute top-0 right-0 w-24 h-24 rounded-full -mr-12 -mt-12 blur-2xl transition-colors",
-                                                        isDone ? "bg-emerald-500/10" : "bg-emerald-500/5 group-hover:bg-emerald-500/10"
-                                                    )}></div>
-                                                    <div className="relative z-10">
-                                                        <div className="flex justify-between items-start mb-4">
-                                                            <div className={cn(
-                                                                "w-12 h-12 rounded-xl flex items-center justify-center transition-transform",
-                                                                isDone ? "bg-emerald-500 text-white" : "bg-emerald-500/10 text-emerald-400 group-hover:scale-110"
-                                                            )}>
-                                                                {isDone ? <CheckCircle2 className="w-6 h-6" /> : <Zap className="w-6 h-6" />}
-                                                            </div>
-                                                            {isDone && (
-                                                                <div className="flex items-center gap-1.5 px-3 py-1 bg-emerald-500 text-white rounded-full text-[10px] font-black uppercase tracking-widest animate-in fade-in zoom-in duration-300">
-                                                                    <CheckCircle2 className="w-3 h-3" />
-                                                                    COMPLETED
+                                                <ApprovalGatedAction key={item.id}>
+                                                    <button
+                                                        onClick={() => {
+                                                            const link = item.homeworkUrl;
+                                                            const separator = link.includes('?') ? '&' : '?';
+                                                            router.push(`${link}${separator}from=/student/analysis`);
+                                                        }}
+                                                        className={cn(
+                                                            "group relative bg-slate-950 border rounded-2xl p-6 text-left transition-all overflow-hidden w-full",
+                                                            isDone ? "border-emerald-500/50 bg-emerald-500/5 shadow-inner" : "border-white/5 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10"
+                                                        )}
+                                                    >
+                                                        <div className={cn(
+                                                            "absolute top-0 right-0 w-24 h-24 rounded-full -mr-12 -mt-12 blur-2xl transition-colors",
+                                                            isDone ? "bg-emerald-500/10" : "bg-emerald-500/5 group-hover:bg-emerald-500/10"
+                                                        )}></div>
+                                                        <div className="relative z-10">
+                                                            <div className="mb-5">
+                                                                <div className="flex justify-between items-center mb-1.5">
+                                                                    <span className={cn(
+                                                                        "text-[11px] font-black uppercase tracking-[0.2em]",
+                                                                        isDone ? "text-emerald-500/50" : "text-emerald-400"
+                                                                    )}>
+                                                                        Day {item.dayOffset || 0}
+                                                                    </span>
+                                                                    {isDone && (
+                                                                        <div className="flex items-center gap-1 text-emerald-500 text-[10px] font-black uppercase tracking-widest">
+                                                                            <CheckCircle2 className="w-3.5 h-3.5" />
+                                                                            DONE
+                                                                        </div>
+                                                                    )}
                                                                 </div>
-                                                            )}
-                                                        </div>
-                                                        <div className="space-y-3">
-                                                            <div className="flex items-center gap-2">
-                                                                <span className={cn(
-                                                                    "text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-widest",
-                                                                    isDone ? "text-emerald-300 bg-emerald-900/40" : "text-emerald-400 bg-emerald-500/10"
+
+                                                                <h4 className={cn(
+                                                                    "text-[18px] font-black leading-tight",
+                                                                    isDone ? "text-emerald-100/70" : "text-white"
                                                                 )}>
-                                                                    AI Priority
-                                                                </span>
+                                                                    {item.title.replace(/^\[?Day\s*\d+\]?[:\s]*/i, '')}
+                                                                </h4>
                                                             </div>
-                                                            <h4 className={cn(
-                                                                "text-[17px] font-black leading-tight",
-                                                                isDone ? "text-emerald-100/70" : "text-white"
-                                                            )}>{item.title}</h4>
-                                                            <p className="text-[11px] text-slate-400 leading-relaxed font-medium line-clamp-3">
-                                                                {item.description}
-                                                            </p>
-                                                            <div className={cn(
-                                                                "pt-2 flex items-center gap-2 text-[10px] font-black transition-transform",
-                                                                isDone ? "text-emerald-500" : "text-emerald-400 group-hover:translate-x-2"
-                                                            )}>
-                                                                <span>{isDone ? '다시 보강하기' : '지금 바로 보강하기'}</span>
-                                                                <ChevronRight className="w-3 h-3" />
+
+                                                            <div className="space-y-4">
+                                                                <p className="text-[11px] text-slate-400 leading-relaxed font-medium line-clamp-3">
+                                                                    {item.description}
+                                                                </p>
+                                                                <div className={cn(
+                                                                    "pt-2 flex items-center gap-2 text-[10px] font-black transition-all",
+                                                                    isDone ? "text-emerald-600" : "text-emerald-400 group-hover:translate-x-2"
+                                                                )}>
+                                                                    <span>{isDone ? '다시 보강하기' : '지금 바로 보강하기'}</span>
+                                                                    <ChevronRight className="w-3 h-3" />
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </button>
+                                                    </button>
+                                                </ApprovalGatedAction>
                                             );
                                         })
                                     ) : (
@@ -772,6 +787,38 @@ export default function StudentAnalysisPage() {
                             </div>
                         </CardContent>
                     </Card>
+                </div>
+            )}
+            {/* Target Setting Modal */}
+            {isTargetModalOpen && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
+                    <div
+                        className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-300"
+                        onClick={() => setIsTargetModalOpen(false)}
+                    />
+                    <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-white/10 rounded-[2.5rem] shadow-2xl animate-in zoom-in-95 duration-300 no-scrollbar">
+                        <div className="sticky top-0 right-0 p-6 flex justify-end z-20 pointer-events-none">
+                            <Button
+                                onClick={() => setIsTargetModalOpen(false)}
+                                variant="ghost"
+                                className="h-10 w-10 p-0 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 pointer-events-auto"
+                            >
+                                <ChevronRight className="w-5 h-5 rotate-90" />
+                            </Button>
+                        </div>
+                        <div className="px-6 pb-12 -mt-16">
+                            {user && (
+                                <TargetSettingSection
+                                    user={user}
+                                    currentStats={currentStatsForTarget}
+                                    onUpdate={() => {
+                                        setIsTargetModalOpen(false);
+                                        fetchWeaknessData(true); // Refresh report with new goals
+                                    }}
+                                />
+                            )}
+                        </div>
+                    </div>
                 </div>
             )}
         </div>

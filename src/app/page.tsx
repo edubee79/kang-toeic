@@ -34,8 +34,8 @@ export default function Dashboard() {
         const parsedUser = JSON.parse(userData);
         setUser(parsedUser);
 
-        // If user is approved, redirect to the new Home immediately
-        if (parsedUser.status !== 'pending' && parsedUser.status !== 'rejected') {
+        // If user is approved or pending, redirect to the new Home immediately
+        if (parsedUser.status !== 'rejected') {
             router.replace('/student/home');
             return;
         }
@@ -68,11 +68,6 @@ export default function Dashboard() {
                             이용하실 수 있습니다.
                         </p>
                         <div className="space-y-3">
-                            <Link href="/admin">
-                                <Button variant="outline" className="w-full text-xs border-slate-700 text-slate-500 hover:bg-slate-800 hover:text-white rounded-xl h-12 font-bold uppercase transition-all">
-                                    관리자 페이지 바로가기 (ADMIN)
-                                </Button>
-                            </Link>
                             <Button
                                 variant="ghost"
                                 onClick={() => {

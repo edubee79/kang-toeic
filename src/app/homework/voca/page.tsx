@@ -10,6 +10,7 @@ import { getUserTargetScore, getUserProgress, getDueReviews } from '@/services/v
 import { ArrowLeft, BookOpen, Brain, CheckCircle, RefreshCw, ArrowRight, Target, Lock, HelpCircle, Shield, Volume2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { ApprovalGatedAction } from '@/components/auth/ApprovalGatedSection';
 
 export default function VocabularyDashboard() {
     const [loading, setLoading] = useState(true);
@@ -126,7 +127,7 @@ export default function VocabularyDashboard() {
     };
 
     return (
-        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
+        <div className="w-full space-y-3 md:space-y-6 pb-32 px-0 bg-slate-950 min-h-screen">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
                     <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
@@ -266,49 +267,50 @@ export default function VocabularyDashboard() {
                         const isLocked = day > maxDay;
 
                         return (
-                            <Link
-                                key={day}
-                                href={isLocked ? "#" : `/homework/voca/${day}?from=${encodeURIComponent(`/homework/voca?from=${encodeURIComponent(fromPath)}`)}`}
-                                onClick={(e) => {
-                                    if (isLocked) {
-                                        e.preventDefault();
-                                        alert(`Day ${maxDay}번까지만 현재 오픈되어 있습니다.`);
-                                    }
-                                }}
-                            >
-                                <Card className={cn(
-                                    "group relative p-2 md:p-3.5 rounded-xl md:rounded-2xl border transition-all cursor-pointer overflow-hidden flex flex-col items-center justify-center gap-1 h-auto min-h-[64px] md:min-h-[110px]",
-                                    isLocked
-                                        ? 'bg-slate-900 border-slate-800 opacity-40 grayscale'
-                                        : isPassed
-                                            ? 'bg-indigo-500/10 border-indigo-500/40 hover:bg-indigo-500/20 shadow-lg shadow-indigo-500/10'
-                                            : 'bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50'
-                                )}>
-                                    {isPassed && !isLocked && (
-                                        <div className="absolute top-1.5 right-1.5 text-emerald-500">
-                                            <CheckCircle className="w-3 h-3 md:w-4 md:h-4" />
-                                        </div>
-                                    )}
-                                    <div className="text-center relative z-10">
-                                        <span className={cn(
-                                            "font-black text-xl md:text-4xl italic tracking-tighter block leading-none",
-                                            isLocked ? 'text-slate-600' : isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
-                                        )}>
-                                            DAY {String(day).padStart(2, '0')}
-                                        </span>
-                                        {!isLocked && (
-                                            <span className="text-[8px] md:text-xs text-slate-500 font-black uppercase block truncate max-w-[70px] md:max-w-none mt-1 tracking-tighter">
-                                                {theme}
-                                            </span>
+                            <ApprovalGatedAction key={day}>
+                                <Link
+                                    href={isLocked ? "#" : `/homework/voca/${day}?from=${encodeURIComponent(`/homework/voca?from=${encodeURIComponent(fromPath)}`)}`}
+                                    onClick={(e) => {
+                                        if (isLocked) {
+                                            e.preventDefault();
+                                            alert(`Day ${maxDay}번까지만 현재 오픈되어 있습니다.`);
+                                        }
+                                    }}
+                                >
+                                    <Card className={cn(
+                                        "group relative p-2 md:p-3.5 rounded-xl md:rounded-2xl border transition-all cursor-pointer overflow-hidden flex flex-col items-center justify-center gap-1 h-auto min-h-[64px] md:min-h-[110px]",
+                                        isLocked
+                                            ? 'bg-slate-900 border-slate-800 opacity-40 grayscale'
+                                            : isPassed
+                                                ? 'bg-indigo-500/10 border-indigo-500/40 hover:bg-indigo-500/20 shadow-lg shadow-indigo-500/10'
+                                                : 'bg-slate-800/80 border-slate-700/50 hover:bg-slate-800 hover:border-indigo-500/50'
+                                    )}>
+                                        {isPassed && !isLocked && (
+                                            <div className="absolute top-1.5 right-1.5 text-emerald-500">
+                                                <CheckCircle className="w-3 h-3 md:w-4 md:h-4" />
+                                            </div>
                                         )}
-                                    </div>
-                                    {isLocked && (
-                                        <div className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">
-                                            <Lock className="w-2.5 h-2.5" />
+                                        <div className="text-center relative z-10">
+                                            <span className={cn(
+                                                "font-black text-xl md:text-4xl italic tracking-tighter block leading-none",
+                                                isLocked ? 'text-slate-600' : isPassed ? 'text-indigo-400' : 'text-slate-300 group-hover:text-white'
+                                            )}>
+                                                DAY {String(day).padStart(2, '0')}
+                                            </span>
+                                            {!isLocked && (
+                                                <span className="text-[8px] md:text-xs text-slate-500 font-black uppercase block truncate max-w-[70px] md:max-w-none mt-1 tracking-tighter">
+                                                    {theme}
+                                                </span>
+                                            )}
                                         </div>
-                                    )}
-                                </Card>
-                            </Link>
+                                        {isLocked && (
+                                            <div className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">
+                                                <Lock className="w-2.5 h-2.5" />
+                                            </div>
+                                        )}
+                                    </Card>
+                                </Link>
+                            </ApprovalGatedAction>
                         );
                     })}
                 </div>

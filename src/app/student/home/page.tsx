@@ -5,19 +5,16 @@ import { useRouter } from 'next/navigation';
 import { collection, query, where, getDocs, orderBy, doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
-import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User } from "lucide-react";
+import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User, AlertCircle } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
-import { getUserProfile } from '@/services/userService';
-import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
-import { getUserStreak, getUserRankInfo } from '@/services/rankingService';
+import { useUserData } from '@/context/UserDataContext';
 import { NotificationSetter } from '@/components/dashboard/NotificationSetter';
 import { NotificationForceModal } from '@/components/dashboard/NotificationForceModal';
 import { NotificationDropdown } from '@/components/dashboard/NotificationDropdown';
-
-// --- UI Components for Home ---
+import { GoalOnboardingModal } from '@/components/modals/GoalOnboardingModal';
 
 // 1. 목표 달성도 컴포넌트 (기존 대시보드 오리지널 스타일)
 function GoalAchievement({ current, target }: { current: number; target: number }) {
@@ -34,7 +31,7 @@ function GoalAchievement({ current, target }: { current: number; target: number 
                 <div className="grid grid-cols-2 gap-8">
                     <div>
                         <p className="text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-tight">목표 점수</p>
-                        <div className="text-3xl font-black text-white italic tracking-tighter">
+                        <div className="text-3xl font-black text-white italic tracking-tighter pr-2">
                             {target}<span className="text-base text-slate-500 ml-1 font-normal not-italic">점</span>
                         </div>
                         <div className="mt-2 text-[10px] text-slate-500 font-bold uppercase tracking-tight">
@@ -43,7 +40,7 @@ function GoalAchievement({ current, target }: { current: number; target: number 
                     </div>
                     <div>
                         <p className="text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-tight">AI 예측 점수</p>
-                        <div className="text-3xl font-black text-indigo-400 italic tracking-tighter">
+                        <div className="text-3xl font-black text-indigo-400 italic tracking-tighter pr-2">
                             {current}<span className="text-base text-indigo-500/50 ml-1 font-normal not-italic">점</span>
                         </div>
                         <div className="mt-2 text-[10px] text-slate-500 flex items-center gap-1 font-bold uppercase tracking-tight">
@@ -55,7 +52,7 @@ function GoalAchievement({ current, target }: { current: number; target: number 
                 <div className="mt-8">
                     <div className="flex justify-between text-xs text-slate-400 mb-2">
                         <span className="font-bold uppercase tracking-widest opacity-60">진행도</span>
-                        <span className="font-black text-indigo-400 italic">{percentage}%</span>
+                        <span className="font-black text-indigo-400 italic pr-1">{percentage}%</span>
                     </div>
                     <div className="w-full bg-slate-800 rounded-full h-2">
                         <div
@@ -71,15 +68,24 @@ function GoalAchievement({ current, target }: { current: number; target: number 
 
 export default function StudentHomePage() {
     const router = useRouter();
-    const [user, setUser] = useState<any>(null);
+    const {
+        user: profile,
+        report: weaknessReport,
+        rankInfo,
+        streak,
+        loading: globalLoading,
+        refreshAll,
+        setUserGoal
+    } = useUserData();
+
     const [loading, setLoading] = useState(true);
     const [assignments, setAssignments] = useState<any[]>([]);
     const [completedMap, setCompletedMap] = useState<Record<string, any>>({});
-    const [currentScore, setCurrentScore] = useState<number>(0);
-    const [targetScore, setTargetScore] = useState<number>(850);
-    const [weaknessReport, setWeaknessReport] = useState<WeaknessReport | null>(null);
-    const [streak, setStreak] = useState<number>(0);
-    const [rankInfo, setRankInfo] = useState<any>(null);
+    const [showOnboarding, setShowOnboarding] = useState(false);
+
+    // Derived values from context
+    const currentScore = profile?.performanceSummary?.predictedTotal || 0;
+    const targetScore = profile?.targetScore || 850;
 
     useEffect(() => {
         const userData = localStorage.getItem('toeic_user');
@@ -88,36 +94,33 @@ export default function StudentHomePage() {
             return;
         }
         const parsedUser = JSON.parse(userData);
-        setUser(parsedUser);
-        fetchData(parsedUser.userId, parsedUser.className);
-    }, [router]);
 
-    const fetchData = async (userId: string, className: string) => {
-        setLoading(true);
-        try {
-            const [profile, report] = await Promise.all([
-                getUserProfile(userId),
-                WeaknessService.analyzeUserWeakness(userId)
-            ]);
+        // Use global refresh instead of local fetch
+        refreshAll(parsedUser.userId, parsedUser.className);
+        fetchAssignments(parsedUser.className, parsedUser.userId);
+    }, [router, refreshAll]);
 
-            if (profile) {
-                setTargetScore(profile.targetScore || 850);
-                if (profile.performanceSummary) {
-                    setCurrentScore(profile.performanceSummary.predictedTotal);
-                }
+    // Check for onboarding
+    useEffect(() => {
+        if (!globalLoading && profile) {
+            if (!profile.targetScore || profile.targetScore === 0) {
+                setShowOnboarding(true);
+            } else {
+                setShowOnboarding(false);
             }
+        }
+    }, [globalLoading, profile]);
 
-            const [streakCount, rankData] = await Promise.all([
-                getUserStreak(userId),
-                getUserRankInfo(userId, className)
-            ]);
-
-            setStreak(streakCount);
-            setRankInfo(rankData);
-            setWeaknessReport(report);
-            await fetchAssignments(className, userId);
-        } finally {
+    // Internal loading state should sync with global or internal processes
+    useEffect(() => {
+        if (!globalLoading) {
             setLoading(false);
+        }
+    }, [globalLoading]);
+
+    const handleOnboardingConfirm = async (score: number) => {
+        if (profile) {
+            await setUserGoal(profile.userId, profile.className || 'default', score);
         }
     };
 
@@ -171,15 +174,38 @@ export default function StudentHomePage() {
     return (
         <div className="min-h-screen bg-[#0B0F1A] pb-24 font-sans text-white">
             {/* Force Push Notification Activation */}
-            {user?.userId && <NotificationForceModal userId={user.userId} />}
+            {profile?.userId && <NotificationForceModal userId={profile.userId} />}
+
+            {/* Goal Onboarding Modal */}
+            <GoalOnboardingModal
+                isOpen={showOnboarding}
+                onConfirm={handleOnboardingConfirm}
+            />
+
+            {/* Approval Status Banner */}
+            {profile?.status === 'pending' && (
+                <div className="mx-6 mt-6 p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl flex items-center gap-4 animate-in fade-in slide-in-from-top-4 duration-700">
+                    <div className="w-10 h-10 bg-indigo-500/20 rounded-full flex items-center justify-center shrink-0 border border-indigo-500/30">
+                        <AlertCircle className="w-6 h-6 text-indigo-400" />
+                    </div>
+                    <div className="flex-1">
+                        <p className="text-white font-bold text-sm tracking-tight">
+                            현재 <span className="text-indigo-400">가입 승인 대기 중</span>입니다.
+                        </p>
+                        <p className="text-slate-400 text-xs font-medium">
+                            관리자의 승인이 완료된 후 모든 학습 기능을 정상적으로 이용하실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            )}
 
             {/* Header: Class & Notifications */}
             <div className="px-6 pt-8 flex justify-between items-center">
                 <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 rounded-full border border-white/10">
                     <div className="flex items-center gap-1.5 pr-2 border-r border-white/10">
                         <Trophy className="w-3.5 h-3.5 text-amber-500" />
-                        <span className="text-xs font-black italic">
-                            {user?.className || '수강반 정보 없음'}
+                        <span className="text-xs font-black italic pr-1">
+                            {profile?.className || '수강반 정보 없음'}
                             <span className="text-slate-500 not-italic ml-1">반</span>
                         </span>
                     </div>
@@ -187,7 +213,7 @@ export default function StudentHomePage() {
                     {rankInfo && (
                         <div className="flex items-center gap-1 pr-2 border-r border-white/10">
                             <Medal className="w-3.5 h-3.5 text-indigo-400" />
-                            <span className="text-xs font-black italic">
+                            <span className="text-xs font-black italic pr-1">
                                 {rankInfo.rank}<span className="text-slate-500 not-italic ml-0.5">위</span>
                             </span>
                         </div>
@@ -195,17 +221,17 @@ export default function StudentHomePage() {
 
                     <div className="flex items-center gap-1">
                         <Flame className="w-3.5 h-3.5 text-orange-500" />
-                        <span className="text-xs font-black italic">
+                        <span className="text-xs font-black italic pr-1">
                             {streak}<span className="text-slate-500 not-italic ml-0.5">일째</span>
                         </span>
                     </div>
                 </div>
 
                 <div className="flex items-center gap-2">
-                    {user?.userId && (
+                    {profile?.userId && (
                         <div className="flex items-center gap-3">
-                            <NotificationDropdown userId={user.userId} />
-                            <NotificationSetter userId={user.userId} />
+                            <NotificationDropdown userId={profile.userId} />
+                            <NotificationSetter userId={profile.userId} />
                         </div>
                     )}
                 </div>
@@ -223,7 +249,7 @@ export default function StudentHomePage() {
                 <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                         <Calendar className="w-5 h-5 text-indigo-400" />
-                        <h3 className="text-lg font-black uppercase tracking-tighter italic">선생님의 미션</h3>
+                        <h3 className="text-lg font-black uppercase tracking-tighter italic pr-2">선생님의 미션</h3>
                     </div>
                     {pendingAssignments.length > 0 && (
                         <span className="text-[10px] font-black text-indigo-400 uppercase bg-indigo-500/10 px-2 py-1 rounded-md">
@@ -240,12 +266,12 @@ export default function StudentHomePage() {
                                     <div className="absolute right-0 top-0 w-24 h-full bg-indigo-500/5 -skew-x-12 translate-x-12"></div>
                                     <div className="relative z-10 flex justify-between items-center">
                                         <div className="space-y-1">
-                                            <Badge variant="outline" className="text-[9px] font-black border-none bg-indigo-500/20 text-indigo-300 uppercase italic tracking-widest">{assign.typeLabel || assign.type}</Badge>
-                                            <h4 className="text-xl font-black text-white italic tracking-tight leading-tight truncate max-w-[200px]">
+                                            <Badge variant="outline" className="text-[9px] font-black border-none bg-indigo-500/20 text-indigo-300 uppercase italic tracking-widest pr-1">{assign.typeLabel || assign.type}</Badge>
+                                            <h4 className="text-xl font-black text-white italic tracking-tight leading-tight truncate max-w-[200px] pr-2">
                                                 {assign.title || assign.detail}
                                             </h4>
                                         </div>
-                                        <Button size="sm" className="bg-indigo-600 hover:bg-indigo-500 text-white font-black italic uppercase text-xs h-10 px-5 rounded-xl shadow-lg shadow-indigo-900/50">
+                                        <Button size="sm" className="bg-indigo-600 hover:bg-indigo-500 text-white font-black italic uppercase text-xs h-10 px-5 rounded-xl shadow-lg shadow-indigo-900/50 pr-6">
                                             Go <ArrowRight className="ml-1 w-3 h-3" />
                                         </Button>
                                     </div>

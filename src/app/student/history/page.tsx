@@ -39,6 +39,8 @@ interface ManagerResult {
     mode: string;
     unit?: string;
     attemptId?: string;
+    timeSpent?: number;
+    isSummary?: boolean;
 }
 
 export default function StudentHistoryPage() {
@@ -83,55 +85,66 @@ export default function StudentHistoryPage() {
         }
     };
 
-    const getHomeworkLink = (type: string, detail: string, id: string, attemptId?: string) => {
-        const typeLower = (type || '').toLowerCase();
-        const detailLower = (detail || '').toLowerCase();
+    const getHomeworkLink = (res: ManagerResult) => {
+        const type = (res.type || '').toLowerCase();
+        const detail = (res.detail || '').toLowerCase();
+        const id = res.id;
+        const attemptId = res.attemptId;
+        const vol = res.vol;
         const currentPath = '/student/history';
 
         let path = '#';
 
         // 1. If it's a summary record with attemptId, go to full report
-        if (attemptId && (typeLower === 'mock_test' || typeLower === 'level_test' || detailLower.includes('diagnosis'))) {
-            const testId = detail.includes('2회') || detailLower.includes('10a') || detailLower.includes('set10') ? 10 : 9;
-            path = typeLower === 'level_test'
-                ? `/mock-test/level/result?testId=${detailLower.includes('2회') || detailLower.includes('9b') ? '9b' : '9a'}&attemptId=${attemptId}`
-                : `/mock-test/full/${testId}/result?attemptId=${attemptId}`;
+        if (attemptId && (type === 'mock_test' || type === 'level_test' || detail.includes('diagnosis'))) {
+            const testIdLabel = detail.includes('2회') || detail.includes('10a') || detail.includes('set10') ? 10 : 9;
+            path = type === 'level_test'
+                ? `/mock-test/level/result?testId=${detail.includes('2회') || detail.includes('9b') ? '9b' : '9a'}&attemptId=${attemptId}`
+                : `/mock-test/full/${testIdLabel}/result?attemptId=${attemptId}`;
         } else {
             // 2. Extract test number safely
-            const testNum = detailLower.match(/\d+/)?.[0] || '1';
+            const testNum = detail.match(/\d+/)?.[0] || '1';
 
             // 3. Mapping for individual parts (Review/Practice)
-            switch (typeLower) {
+            switch (type) {
                 case 'voca': path = `/homework/voca`; break;
                 case 'grammar': path = `/homework/part5`; break;
                 case 'part1_test': path = `/homework/part1-real/test/${testNum}`; break;
                 case 'part1_shadow': path = `/homework/part1/${testNum}`; break;
                 case 'part2_test': path = `/homework/part2/${testNum}`; break;
-                case 'part3_test': path = `/homework/part3/test/${testNum}`; break;
-                case 'part4_test': path = `/homework/part4/test/${testNum}`; break;
+                case 'part3_test':
+                    path = vol ? `/homework/part3/test/${vol}/${testNum}` : `/homework/part3/test/${testNum}`;
+                    break;
+                case 'part4_test':
+                    path = vol ? `/homework/part4/test/${vol}/${testNum}` : `/homework/part4/test/${testNum}`;
+                    break;
                 case 'part5_test': path = `/homework/part5-real/test/${testNum}`; break;
-                case 'part6_test': path = `/homework/part6/test/${testNum}`; break;
+                case 'part6_test':
+                    path = vol ? `/homework/part6/test/${vol}/${testNum}` : `/homework/part6/test/${testNum}`;
+                    break;
                 case 'part7_test':
                 case 'part7_single':
-                    path = `/homework/part7/test/${testNum}`; break;
+                    path = vol ? `/homework/part7/single-passage/${vol}/${testNum}` : `/homework/part7/test/${testNum}`;
+                    break;
                 case 'part7_double':
                 case 'part7_triple':
                 case 'part7_multi':
                 case 'part7_double_test':
-                    path = `/homework/part7/practice?test=${testNum}`; break;
+                    path = vol ? `/homework/part7/double-passage/${vol}/${testNum}` : `/homework/part7/practice?test=${testNum}`;
+                    break;
                 case 'weakness_review': path = `/homework/weakness/${id}`; break;
                 case 'level_test':
-                    const levelId = detailLower.includes('2회') || detailLower.includes('9b') ? '9b' : '9a';
+                    const levelId = detail.includes('2회') || detail.includes('9b') ? '9b' : '9a';
                     path = `/mock-test/half/${levelId}`; break;
                 default:
                     // Fallback for partial matches
-                    if (typeLower.includes('part1')) path = `/homework/part1-real/test/${testNum}`;
-                    else if (typeLower.includes('part2')) path = `/homework/part2/${testNum}`;
-                    else if (typeLower.includes('part3')) path = `/homework/part3/test/${testNum}`;
-                    else if (typeLower.includes('part4')) path = `/homework/part4/test/${testNum}`;
-                    else if (typeLower.includes('part5')) path = `/homework/part5-real/test/${testNum}`;
-                    else if (typeLower.includes('part6')) path = `/homework/part6/test/${testNum}`;
-                    else if (typeLower.includes('part7')) path = `/homework/part7/test/${testNum}`;
+                    if (type.includes('part1')) path = `/homework/part1-real/test/${testNum}`;
+                    else if (type.includes('part2')) path = `/homework/part2/${testNum}`;
+                    else if (type.includes('part3')) path = vol ? `/homework/part3/test/${vol}/${testNum}` : `/homework/part3/test/${testNum}`;
+                    else if (type.includes('part4')) path = vol ? `/homework/part4/test/${vol}/${testNum}` : `/homework/part4/test/${testNum}`;
+                    else if (type.includes('part5')) path = `/homework/part5-real/test/${testNum}`;
+                    else if (type.includes('part6')) path = vol ? `/homework/part6/test/${vol}/${testNum}` : `/homework/part6/test/${testNum}`;
+                    else if (type.includes('part7')) path = vol ? `/homework/part7/single-passage/${vol}/${testNum}` : `/homework/part7/test/${testNum}`;
             }
         }
 
@@ -207,24 +220,33 @@ export default function StudentHistoryPage() {
                 typeLower.includes('lc');
             if (!isLC) return false;
         } else if (activeTab === 'rc') {
+            // Remove 'grammar' from RC and keep only Part 5/6/7
             const isRC = typeLower.includes('part5') || typeLower.includes('part6') ||
-                typeLower.includes('part7') || typeLower.includes('grammar') ||
-                typeLower.includes('rc');
+                typeLower.includes('part7') || typeLower.includes('rc');
             if (!isRC) return false;
         } else if (activeTab === 'voca') {
-            if (!typeLower.includes('voca')) return false;
+            const isVocaOrEtc = typeLower.includes('voca') || typeLower.includes('grammar');
+            if (!isVocaOrEtc) return false;
         }
 
-        // 4. Sub-tab Filter (for LC/RC homework)
+        // 4. Sub-tab Filter
         if (activeSubTab === 'all') return true;
 
-        const partMap: Record<string, string> = {
-            'p1': 'part1', 'p2': 'part2', 'p3': 'part3', 'p4': 'part4',
-            'p5': 'part5', 'p6': 'part6', 'p7': 'part7'
-        };
-
-        const targetPart = partMap[activeSubTab];
-        return typeLower.includes(targetPart);
+        if (activeTab === 'mock') {
+            if (activeSubTab === 'full') return typeLower === 'mock_test';
+            if (activeSubTab === 'half') return typeLower === 'level_test' || typeLower === 'level';
+        } else if (activeTab === 'voca') {
+            if (activeSubTab === 'voca') return typeLower.includes('voca');
+            if (activeSubTab === 'grammar') return typeLower.includes('grammar');
+        } else {
+            const partMap: Record<string, string> = {
+                'p1': 'part1', 'p2': 'part2', 'p3': 'part3', 'p4': 'part4',
+                'p5': 'part5', 'p6': 'part6', 'p7': 'part7'
+            };
+            const targetPart = partMap[activeSubTab];
+            return typeLower.includes(targetPart);
+        }
+        return true;
     });
 
     if (loading) return (
@@ -235,7 +257,7 @@ export default function StudentHistoryPage() {
     );
 
     return (
-        <div className="min-h-screen bg-slate-950 p-4 md:p-8 font-sans selection:bg-indigo-500/30">
+        <div className="min-h-screen bg-slate-950 p-4 md:p-8 pb-32 font-sans selection:bg-indigo-500/30">
             <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in duration-700">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/5 pb-8">
@@ -253,57 +275,60 @@ export default function StudentHistoryPage() {
                     {/* Tab Section Stack */}
                     <div className="space-y-6">
                         {/* Main Category Tabs */}
-                        <div className="flex bg-slate-900/80 backdrop-blur-xl border border-white/5 p-1.5 rounded-2xl shadow-2xl w-fit mx-auto md:mx-0">
-                            {[
-                                { id: 'mock', label: '모의고사', icon: Target },
-                                { id: 'lc', label: '리스닝(LC)', icon: Headphones },
-                                { id: 'rc', label: '리딩(RC)', icon: Layout },
-                                { id: 'voca', label: '단어/기타', icon: BookOpen }
-                            ].map((tab) => (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => {
-                                        setActiveTab(tab.id);
-                                        setActiveSubTab('all'); // Reset sub-tab when main tab changes
-                                    }}
-                                    className={cn(
-                                        "flex items-center gap-2 px-2.5 md:px-4 py-2 text-sm md:text-lg font-black rounded-xl transition-all uppercase tracking-wider italic",
-                                        activeTab === tab.id
-                                            ? "bg-indigo-600 text-white shadow-[0_4_20px_rgba(79,70,229,0.4)]"
-                                            : "text-slate-500 hover:text-slate-300 hover:bg-white/5"
-                                    )}
-                                >
-                                    <tab.icon className={cn("w-3.5 h-3.5 md:w-5 md:h-5", activeTab === tab.id ? "animate-pulse" : "")} />
-                                    {tab.label}
-                                </button>
-                            ))}
+                        <div className="flex bg-slate-900/80 backdrop-blur-xl border border-white/5 p-1.5 rounded-2xl shadow-2xl w-full md:w-fit overflow-x-auto no-scrollbar">
+                            <div className="flex min-w-full md:min-w-0">
+                                {[
+                                    { id: 'mock', label: '모의고사', icon: Target },
+                                    { id: 'lc', label: '리스닝(LC)', icon: Headphones },
+                                    { id: 'rc', label: '리딩(RC)', icon: Layout },
+                                    { id: 'voca', label: '단어/기타', icon: BookOpen }
+                                ].map((tab) => (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => {
+                                            setActiveTab(tab.id);
+                                            setActiveSubTab('all'); // Reset sub-tab when main tab changes
+                                        }}
+                                        className={cn(
+                                            "flex items-center gap-2 px-3 md:px-4 py-2 text-sm md:text-lg font-black rounded-xl transition-all uppercase tracking-wider italic whitespace-nowrap shrink-0",
+                                            activeTab === tab.id
+                                                ? "bg-indigo-600 text-white shadow-[0_4_20px_rgba(79,70,229,0.4)]"
+                                                : "text-slate-500 hover:text-slate-300 hover:bg-white/5"
+                                        )}
+                                    >
+                                        <tab.icon className={cn("w-3.5 h-3.5 md:w-5 md:h-5", activeTab === tab.id ? "animate-pulse" : "")} />
+                                        {tab.label}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
 
-                        {/* Sub-Tabs Row (Stable secondary navigation) */}
                         <div className="min-h-[40px] flex items-center justify-center">
-                            {(activeTab === 'lc' || activeTab === 'rc') && (
-                                <div className="flex flex-wrap justify-center gap-2 animate-in fade-in slide-in-from-left-2 duration-300">
-                                    {[
-                                        ...(activeTab === 'lc'
+                            <div className="flex flex-wrap justify-center gap-2 animate-in fade-in slide-in-from-left-2 duration-300">
+                                {[
+                                    ...(activeTab === 'mock'
+                                        ? [{ id: 'all', label: '전체' }, { id: 'full', label: '모의고사' }, { id: 'half', label: '하프테스트' }]
+                                        : activeTab === 'lc'
                                             ? [{ id: 'all', label: '전체' }, { id: 'p1', label: 'Part 1' }, { id: 'p2', label: 'Part 2' }, { id: 'p3', label: 'Part 3' }, { id: 'p4', label: 'Part 4' }]
-                                            : [{ id: 'all', label: '전체' }, { id: 'p5', label: 'Part 5' }, { id: 'p6', label: 'Part 6' }, { id: 'p7', label: 'Part 7' }]
-                                        )
-                                    ].map((sub) => (
-                                        <button
-                                            key={sub.id}
-                                            onClick={() => setActiveSubTab(sub.id)}
-                                            className={cn(
-                                                "px-3 py-1 text-xs font-black rounded-lg transition-all border uppercase tracking-wider italic",
-                                                activeSubTab === sub.id
-                                                    ? "bg-white text-slate-900 border-white shadow-lg"
-                                                    : "bg-slate-900/50 text-slate-500 border-white/5 hover:border-white/20 hover:text-slate-300"
-                                            )}
-                                        >
-                                            {sub.label}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
+                                            : activeTab === 'rc'
+                                                ? [{ id: 'all', label: '전체' }, { id: 'p5', label: 'Part 5' }, { id: 'p6', label: 'Part 6' }, { id: 'p7', label: 'Part 7' }]
+                                                : [{ id: 'all', label: '전체' }, { id: 'voca', label: '단어' }, { id: 'grammar', label: '문법연습' }]
+                                    )
+                                ].map((sub) => (
+                                    <button
+                                        key={sub.id}
+                                        onClick={() => setActiveSubTab(sub.id)}
+                                        className={cn(
+                                            "px-3 py-1 text-xs font-black rounded-lg transition-all border uppercase tracking-wider italic",
+                                            activeSubTab === sub.id
+                                                ? "bg-white text-slate-900 border-white shadow-lg"
+                                                : "bg-slate-900/50 text-slate-500 border-white/5 hover:border-white/20 hover:text-slate-300"
+                                        )}
+                                    >
+                                        {sub.label}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -370,87 +395,100 @@ export default function StudentHistoryPage() {
                                                 )}
 
                                                 <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                                                    <div className="flex items-center gap-5">
-                                                        {/* Time Badge */}
-                                                        <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center shrink-0">
-                                                            <span className="text-[8px] text-slate-500 font-black leading-none mb-1 uppercase tracking-tighter">Time</span>
-                                                            <span className="text-sm font-black text-white italic">{format(date, 'HH:mm')}</span>
+                                                    <div className="flex items-center gap-4 md:gap-6 min-w-0">
+                                                        {/* Icon Box */}
+                                                        <div className={cn(
+                                                            "w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center shrink-0 transition-all",
+                                                            isMock ? "bg-indigo-500/20 text-indigo-400 shadow-lg shadow-indigo-500/10" : "bg-white/5 text-slate-500"
+                                                        )}>
+                                                            <Icon className="w-5 h-5 md:w-7 md:h-7" />
                                                         </div>
 
-                                                        <div className="min-w-0">
-                                                            <div className="flex items-center gap-2 mb-1.5">
-                                                                {(() => {
-                                                                    const typeLower = (res.type || '').toLowerCase();
-                                                                    const detailLower = (res.detail || '').toLowerCase();
-                                                                    const unitLower = (res.unit || '').toLowerCase();
-                                                                    const isSummary = typeLower === 'mock_test' ||
-                                                                        typeLower === 'level_test' ||
-                                                                        typeLower === 'mock_summary' ||
-                                                                        res.isSummary === true ||
-                                                                        unitLower.includes('result') ||
-                                                                        detailLower.includes('diagnosis');
+                                                        <div className="min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
+                                                            {(() => {
+                                                                const typeLower = (res.type || '').toLowerCase();
+                                                                const detailLower = (res.detail || '').toLowerCase();
+                                                                const unitLower = (res.unit || '').toLowerCase();
+                                                                const isSummary = typeLower === 'mock_test' ||
+                                                                    typeLower === 'level_test' ||
+                                                                    typeLower === 'mock_summary' ||
+                                                                    res.isSummary === true ||
+                                                                    unitLower.includes('result') ||
+                                                                    detailLower.includes('diagnosis');
 
-                                                                    return (
-                                                                        <Badge variant="outline" className={cn(
-                                                                            "text-[9px] font-black h-5 px-2 uppercase italic tracking-widest border-none",
-                                                                            isSummary ? "bg-indigo-600 text-white" : "bg-white/10 text-slate-400"
-                                                                        )}>
-                                                                            {isSummary ? 'Premium Analysis' : (res.type || 'H.W').replace('_test', '').toUpperCase()}
-                                                                        </Badge>
-                                                                    );
-                                                                })()}
-                                                                <span className="text-[10px] text-slate-600 font-bold uppercase tracking-tight hidden sm:inline">Successfully Completed</span>
-                                                            </div>
-                                                            <div className="flex items-center gap-3">
-                                                                <div className={cn(
-                                                                    "w-8 h-8 rounded-lg flex items-center justify-center shrink-0",
-                                                                    (res.type || '').toLowerCase().includes('mock') || (res.type || '').toLowerCase().includes('level') || (res.detail || '').toLowerCase().includes('레벨') || (res.detail || '').toLowerCase().includes('모의') ? "bg-indigo-500/20 text-indigo-400" : "bg-white/5 text-slate-500"
-                                                                )}>
-                                                                    <Icon className="w-4 h-4" />
-                                                                </div>
-                                                                <p className="font-black text-white text-lg md:text-xl truncate tracking-tight uppercase italic">{res.detail}</p>
-                                                            </div>
+                                                                const typeLabel = isSummary
+                                                                    ? 'ANALYSIS'
+                                                                    : (res.type || 'H.W').replace('_test', '').replace('_shadow', '').replace('_', ' ').toUpperCase();
+
+                                                                return (
+                                                                    <span className={cn(
+                                                                        "text-lg md:text-2xl font-black italic tracking-tighter uppercase pr-1",
+                                                                        isMock ? "text-indigo-400" : "text-emerald-500"
+                                                                    )}>
+                                                                        {typeLabel}
+                                                                    </span>
+                                                                );
+                                                            })()}
+                                                            <h4 className="text-lg md:text-2xl font-black text-white truncate tracking-tighter uppercase italic pr-2">
+                                                                {res.detail}
+                                                            </h4>
                                                         </div>
                                                     </div>
 
-                                                    <div className="flex items-center justify-between md:justify-end gap-10 pt-4 md:pt-0 border-t md:border-t-0 border-white/5">
-                                                        {/* Score Section */}
-                                                        {(() => {
-                                                            const { score, total } = formatScore(res);
-                                                            return (
-                                                                <div className="flex flex-col items-center md:items-end">
-                                                                    <div className="flex items-baseline gap-1.5">
-                                                                        <span className={cn(
-                                                                            "text-3xl font-black tracking-tighter italic",
-                                                                            (res.type || '').toLowerCase().includes('mock') || (res.type || '').toLowerCase().includes('level') ? "text-indigo-400" : "text-emerald-400"
-                                                                        )}>{score}</span>
-                                                                        <span className="text-xs text-slate-600 font-bold">/ {total || '-'}</span>
+                                                    <div className="flex items-center justify-between md:justify-end gap-6 md:gap-10 pt-4 md:pt-0 border-t md:border-t-0 border-white/5">
+                                                        {/* Moved Time Badge here */}
+                                                        <div className="flex items-center gap-4">
+                                                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center shrink-0">
+                                                                <span className="text-[7px] md:text-[8px] text-slate-500 font-black leading-none mb-1 uppercase tracking-tighter">
+                                                                    {res.timeSpent ? 'Elapsed' : 'Time'}
+                                                                </span>
+                                                                <span className="text-xs md:text-sm font-black text-white italic">
+                                                                    {res.timeSpent
+                                                                        ? `${Math.floor(res.timeSpent / 60)}:${(res.timeSpent % 60).toString().padStart(2, '0')}`
+                                                                        : format(date, 'HH:mm')
+                                                                    }
+                                                                </span>
+                                                            </div>
+
+                                                            {/* Score Section */}
+                                                            {(() => {
+                                                                const { score, total } = formatScore(res);
+                                                                return (
+                                                                    <div className="flex flex-col items-center md:items-end">
+                                                                        <div className="flex items-baseline gap-1.5">
+                                                                            <span className={cn(
+                                                                                "text-2xl md:text-3xl font-black tracking-tighter italic",
+                                                                                (res.type || '').toLowerCase().includes('mock') || (res.type || '').toLowerCase().includes('level') ? "text-indigo-400" : "text-emerald-400"
+                                                                            )}>{score}</span>
+                                                                            <span className="text-[10px] md:text-xs text-slate-600 font-bold">/ {total || '-'}</span>
+                                                                        </div>
+                                                                        <div className="w-16 md:w-24 h-1 bg-white/5 rounded-full mt-1 md:mt-2 overflow-hidden hidden md:block border border-white/5">
+                                                                            <div
+                                                                                className={cn(
+                                                                                    "h-full transition-all duration-1000",
+                                                                                    (res.type || '').toLowerCase().includes('mock') || (res.type || '').toLowerCase().includes('level') ? "bg-indigo-500 shadow-[0_0_10px_rgba(79,70,229,0.8)]" : "bg-emerald-500/80"
+                                                                                )}
+                                                                                style={{ width: `${(score / (total || 1)) * 100}%` }}
+                                                                            />
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="w-24 h-1 bg-white/5 rounded-full mt-2 overflow-hidden hidden md:block border border-white/5">
-                                                                        <div
-                                                                            className={cn(
-                                                                                "h-full transition-all duration-1000",
-                                                                                (res.type || '').toLowerCase().includes('mock') || (res.type || '').toLowerCase().includes('level') ? "bg-indigo-500 shadow-[0_0_10px_rgba(79,70,229,0.8)]" : "bg-emerald-500/80"
-                                                                            )}
-                                                                            style={{ width: `${(score / (total || 1)) * 100}%` }}
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                            );
-                                                        })()}
+                                                                );
+                                                            })()}
+                                                        </div>
 
                                                         {/* Link Button */}
-                                                        <Link href={getHomeworkLink(res.type, res.detail, res.id, res.attemptId)} className="shrink-0">
+                                                        <Link href={getHomeworkLink(res)} className="shrink-0 ml-auto md:ml-0">
                                                             <Button
                                                                 size="sm"
                                                                 className={cn(
-                                                                    "font-black text-xs h-12 px-6 rounded-2xl gap-2 tracking-widest italic transition-all group-hover:scale-105",
+                                                                    "font-black text-[10px] md:text-xs h-10 md:h-12 px-4 md:px-6 rounded-xl md:rounded-2xl gap-2 tracking-widest italic transition-all group-hover:scale-105",
                                                                     isMock
                                                                         ? "bg-indigo-600 hover:bg-indigo-500 text-white"
                                                                         : "bg-white/5 hover:bg-white/10 text-white border border-white/10"
                                                                 )}
                                                             >
-                                                                {isMock ? '분석 리포트' : '틀린문제 다시풀기'}
+                                                                <span className="hidden sm:inline">{isMock ? '분석 리포트' : '틀린문제 다시풀기'}</span>
+                                                                <span className="sm:hidden">{isMock ? '리포트' : '다시풀기'}</span>
                                                                 <RotateCcw className="w-3.5 h-3.5" />
                                                             </Button>
                                                         </Link>

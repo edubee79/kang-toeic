@@ -144,15 +144,13 @@ export const WeaknessService = {
                 };
             }
 
-            const goalAnalysis = await analyzeGoalStatus(userId, partTargets);
-
-            // 3. Optional: Check for pre-calculated summary to speed up scores
-            const summary = userData.performanceSummary;
-
-            // 4. Get all results for tag analysis (Still needed for specific tag counts)
+            // 3. Get all results for analysis (Fetch once, reuse for goal analysis and tag analysis)
             const resultsRef = collection(db, 'Manager_Results');
             const q = query(resultsRef, where('studentId', '==', userId));
             const snapshot = await getDocs(q);
+
+            const goalAnalysis = await analyzeGoalStatus(userId, partTargets, snapshot);
+            const summary = userData.performanceSummary;
 
             // 4. Analyze tags from actual tests only
             const tagStats: Record<string, { total: number; incorrect: number; part: string }> = {};

@@ -57,12 +57,8 @@ export default function LoginPage() {
                 return;
             }
 
-            // Check approval status
-            if (userData.status === 'pending') {
-                setError("가입 승인 대기 중입니다. 관리자 승인 후 로그인하실 수 있습니다.");
-                setIsLoading(false);
-                return;
-            }
+            // Proceed with login for approved and pending users
+            // (Rejected users are still blocked below)
 
             if (userData.status === 'rejected') {
                 const reason = userData.rejectionReason ? `\n사유: ${userData.rejectionReason}` : '';

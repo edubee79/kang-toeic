@@ -15,6 +15,8 @@ export interface UserProfile {
         p5_goal: number; p6_goal: number;
         p7s_goal: number; p7d_goal: number; p7f_goal?: number;
     };
+    status?: 'pending' | 'approved' | 'rejected';
+    rejectionReason?: string;
 }
 
 export const getUserProfile = async (userId: string): Promise<UserProfile | null> => {

@@ -84,8 +84,13 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                     {children}
                 </main>
 
-                {/* Bottom Navigation for Main Tabs */}
-                {isMainTabPage && <MainBottomNav />}
+                {/* Bottom Navigation for Main Tabs & Lobby Pages */}
+                {(isMainTabPage ||
+                    pathname === '/mock-test' ||
+                    pathname === '/level-test' ||
+                    (pathname.startsWith('/homework/') && pathname.split('/').filter(Boolean).length === 2 && !pathname.includes('voca'))) && (
+                        <MainBottomNav />
+                    )}
             </div>
         </div>
     );

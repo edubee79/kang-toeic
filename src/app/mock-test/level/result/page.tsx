@@ -200,7 +200,7 @@ export default function LevelTestResult() {
                 {/* Footer */}
                 <div className="flex gap-4 pt-2">
                     <Button
-                        onClick={() => router.push(fromPath)}
+                        onClick={() => router.push('/student/home')}
                         variant="outline"
                         className="flex-1 h-20 border-2 border-slate-200 rounded-[2rem] font-black text-slate-700 hover:bg-slate-50 transition-all shadow-sm"
                     >

@@ -92,7 +92,7 @@ export default function Part7LobbyPage() {
     const filteredTests = part7TestData.filter(t => (t.vol || 4) === selectedVol);
 
     return (
-        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
+        <div className="w-full space-y-3 md:space-y-6 pb-32 px-0 bg-slate-950 min-h-screen">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
                     <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
@@ -104,7 +104,7 @@ export default function Part7LobbyPage() {
                         <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">지문 분석 ⸱ 단일 지문 집중 훈련</p>
                     </div>
                 </div>
-                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none hidden md:block">{maxTest} Tests Open (Vol {selectedVol})</p>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none hidden md:block">{maxTest} Tests Open</p>
             </div>
 
             <div className="w-full px-0 md:px-8 py-4 md:py-6">
@@ -180,13 +180,13 @@ export default function Part7LobbyPage() {
                                         </div>
                                         <div className="flex flex-col">
                                             <h3 className={cn(
-                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter truncate",
+                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter truncate pr-2",
                                                 isLocked ? "text-slate-600" : "text-white"
                                             )}>
                                                 TEST {String(test.testId).padStart(2, '0')}
                                             </h3>
                                             {!isLocked && completions[`RC_Part7_Vol${test.vol || 4}_Single_Test${test.testId}_real`]?.completed && (
-                                                <span className="text-[10px] font-black text-amber-500 mt-1 uppercase italic">
+                                                <span className="text-[10px] font-black text-amber-500 mt-1 uppercase italic pr-1">
                                                     SCORE: {completions[`RC_Part7_Vol${test.vol || 4}_Single_Test${test.testId}_real`].score}/{completions[`RC_Part7_Vol${test.vol || 4}_Single_Test${test.testId}_real`].total}
                                                 </span>
                                             )}

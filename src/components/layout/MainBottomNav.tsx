@@ -36,7 +36,15 @@ export default function MainBottomNav() {
         <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-t border-white/5 pb-safe-area-inset-bottom shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
             <div className="flex justify-around items-center h-16 max-w-lg mx-auto px-4">
                 {navItems.map((item) => {
-                    const isActive = pathname === item.href;
+                    let isActive = pathname === item.href;
+
+                    // Logic to keep "Selection Learning" active for its sub-lobby pages
+                    if (item.href === '/student/selection') {
+                        if (pathname.startsWith('/homework/') || pathname === '/mock-test' || pathname === '/level-test') {
+                            isActive = true;
+                        }
+                    }
+
                     const Icon = item.icon;
 
                     return (

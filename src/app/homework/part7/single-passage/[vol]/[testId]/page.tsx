@@ -445,7 +445,12 @@ function Part7SingleTestRunnerContent() {
                                                 {passage.docType.replace('_', ' ')}
                                             </div>
                                         )}
-                                        <DocumentRenderer doc={passage} />
+                                        <DocumentRenderer doc={{
+                                            ...passage,
+                                            header: (passage.docType === 'ARTICLE' || passage.type?.toUpperCase() === 'ARTICLE')
+                                                ? { ...passage.header, columns: 1 }
+                                                : passage.header
+                                        }} />
                                     </div>
                                     {passage.translation && reviewMode && (
                                         <div className="bg-slate-900/50 p-1 lg:p-4 rounded lg:rounded-xl text-slate-400 text-[10px] lg:text-sm">

@@ -108,7 +108,7 @@ export default function MockTestLobby() {
 
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-200 pb-20">
+        <div className="min-h-screen bg-slate-950 text-slate-200 pb-32">
             <div className="max-w-5xl mx-auto px-2 md:px-8 py-6 md:py-12">
                 <header className="mb-8 md:mb-16 relative px-2">
                     <div className="flex items-center gap-4 mb-6">

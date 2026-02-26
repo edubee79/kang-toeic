@@ -84,7 +84,7 @@ export default function Part1RealLobby() {
                     </div>
                 </div>
                 <div className="text-right">
-                    <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxSet} Sets Open (Vol {selectedVol})</p>
+                    <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxSet} Sets Open</p>
                 </div>
             </div>
 
@@ -155,13 +155,13 @@ export default function Part1RealLobby() {
                                         </div>
                                         <div className="flex flex-col">
                                             <h3 className={cn(
-                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter",
+                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-2",
                                                 isLocked ? "text-slate-600" : "text-white"
                                             )}>
                                                 TEST {String(test.testId).padStart(2, '0')}
                                             </h3>
                                             {!isLocked && completions[`Part1 Real Test Vol${test.vol} ${test.testId}`]?.completed && (
-                                                <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic">
+                                                <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic pr-1">
                                                     SCORE: {completions[`Part1 Real Test Vol${test.vol} ${test.testId}`].score}/{completions[`Part1 Real Test Vol${test.vol} ${test.testId}`].total}
                                                 </span>
                                             )}

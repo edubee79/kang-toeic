@@ -87,7 +87,7 @@ export default function Part4LobbyPage() {
     }));
 
     return (
-        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0">
+        <div className="w-full space-y-3 md:space-y-6 pb-32 px-0">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
                     <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
@@ -99,7 +99,7 @@ export default function Part4LobbyPage() {
                         <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">1인 담화 청해 ⸱ 30문항 실전 정복</p>
                     </div>
                 </div>
-                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxTest} Tests Open (Vol {selectedVol})</p>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxTest} Tests Open</p>
             </div>
 
             <div className="w-full px-0 md:px-8 py-4 md:py-6">
@@ -166,13 +166,13 @@ export default function Part4LobbyPage() {
                                         </div>
                                         <div className="flex flex-col">
                                             <h3 className={cn(
-                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter",
+                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-2",
                                                 !test.isActive ? "text-slate-600" : "text-white"
                                             )}>
                                                 TEST {String(test.id).padStart(2, '0')}
                                             </h3>
                                             {test.isActive && completions[`Part4 Real Test Vol${test.vol} ${test.id}`]?.completed && (
-                                                <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic">
+                                                <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic pr-1">
                                                     SCORE: {completions[`Part4 Real Test Vol${test.vol} ${test.id}`].score}/{completions[`Part4 Real Test Vol${test.vol} ${test.id}`].total}
                                                 </span>
                                             )}

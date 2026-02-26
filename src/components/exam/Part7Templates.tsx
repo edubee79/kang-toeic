@@ -239,7 +239,7 @@ export const ArticleTemplate: React.FC<ArticleProps> = ({ header, content, class
             </div>
             <div className={cn(
                 "gap-10 [column-fill:_balance] leading-relaxed text-left antialiased text-black",
-                header.columns === 1 ? "columns-1" : "columns-2"
+                header.columns === 1 ? "columns-1" : "columns-1 lg:columns-2"
             )}>
                 {content.map((para, i) => (
                     <div key={i} className={cn(

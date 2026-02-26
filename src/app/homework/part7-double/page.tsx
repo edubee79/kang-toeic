@@ -81,7 +81,7 @@ export default function Part7DoubleLobbyPage() {
                         <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">이중/삼중 지문 ⸱ PC 전용 학습 모드</p>
                     </div>
                 </div>
-                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none hidden md:block">{maxTest} Tests Open (Vol {selectedVol})</p>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none hidden md:block">{maxTest} Tests Open</p>
             </div>
 
             <div className="w-full px-0 md:px-8 py-4 md:py-6">
@@ -169,13 +169,13 @@ export default function Part7DoubleLobbyPage() {
                                         </div>
                                         <div className="flex flex-col">
                                             <h3 className={cn(
-                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter truncate",
+                                                "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter truncate pr-2",
                                                 isLocked ? "text-slate-600" : "text-white"
                                             )}>
                                                 TEST {String(testId).padStart(2, '0')}
                                             </h3>
                                             {!isLocked && completion?.completed && (
-                                                <span className="text-[10px] font-black text-emerald-400 mt-1 uppercase italic">
+                                                <span className="text-[10px] font-black text-emerald-400 mt-1 uppercase italic pr-1">
                                                     SCORE: {completion.score}/{completion.total}
                                                 </span>
                                             )}

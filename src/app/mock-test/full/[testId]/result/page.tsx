@@ -107,7 +107,7 @@ export default function MockTestResult() {
             <Card className="p-10 text-center space-y-4">
                 <AlertCircle className="w-12 h-12 text-rose-500 mx-auto" />
                 <h2 className="text-xl font-black italic">데이터를 불러올 수 없습니다.</h2>
-                <Button onClick={() => router.push(fromPath)}>메인으로 돌아가기</Button>
+                <Button onClick={() => router.push('/student/home')}>메인으로 돌아가기</Button>
             </Card>
         </div>
     );
@@ -213,7 +213,7 @@ export default function MockTestResult() {
                                 <FileText className="w-8 h-8 text-indigo-500 group-hover:scale-110 transition-transform" />
                                 <span className="text-sm italic uppercase tracking-tighter">학습 기록</span>
                             </Button>
-                            <Button className="h-28 rounded-[2.5rem] bg-slate-900 hover:bg-black font-black text-white transition-all flex flex-col items-center justify-center gap-3 shadow-xl shadow-slate-900/20 group active:scale-95" onClick={() => router.push(fromPath)}>
+                            <Button className="h-28 rounded-[2.5rem] bg-slate-900 hover:bg-black font-black text-white transition-all flex flex-col items-center justify-center gap-3 shadow-xl shadow-slate-900/20 group active:scale-95" onClick={() => router.push('/student/home')}>
                                 <Home className="w-8 h-8 text-slate-400 group-hover:scale-110 transition-transform" />
                                 <span className="text-sm italic uppercase tracking-tighter">나의 학습방</span>
                             </Button>

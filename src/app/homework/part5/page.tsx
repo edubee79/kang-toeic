@@ -69,7 +69,7 @@ export default function Part5LobbyPage() {
     };
 
     return (
-        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
+        <div className="w-full space-y-3 md:space-y-6 pb-32 px-0 bg-slate-950 min-h-screen">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
                     <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
@@ -147,7 +147,7 @@ export default function Part5LobbyPage() {
                                     </div>
                                     <div className="space-y-0.5 mt-auto">
                                         <h3 className={cn(
-                                            "text-[18px] md:text-2xl font-black transition-colors leading-none italic tracking-tighter truncate",
+                                            "text-[18px] md:text-2xl font-black transition-colors leading-none italic tracking-tighter truncate pr-2",
                                             isLocked ? "text-slate-600" : "text-white"
                                         )}>
                                             {UNIT_TITLES[unitId] || unitId.replace(/Unit_\d+_/, '').replace(/_/g, ' ')}

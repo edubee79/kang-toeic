@@ -26,6 +26,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { WeaknessService, WeaknessReport } from '@/services/weaknessService';
 import { getFeatureAccess, FeatureAccess } from '@/services/configService';
+import { useUserData } from '@/context/UserDataContext';
+import { ApprovalGatedAction } from '@/components/auth/ApprovalGatedSection';
 
 // --- Types & Data ---
 
@@ -64,44 +66,62 @@ const CONTENT_ITEMS: ContentItem[] = [
     { id: 'level_test', title: 'TOEIC 모의 하프테스트', description: '현재 실력 정밀 진단 시스템 (PC 전용)', icon: Target, href: '/level-test', category: 'FULL', featureKey: 'levelTest', color: 'amber' },
 ];
 
-function StudentSelectionContent() {
+export default function SelectionPage() {
+    return (
+        <Suspense fallback={<LoadingState />}>
+            <SelectionContent />
+        </Suspense>
+    );
+}
+
+function LoadingState() {
+    return (
+        <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+            <Sparkles className="w-12 h-12 text-indigo-500 animate-pulse mb-4" />
+            <div className="text-slate-500 font-black uppercase tracking-widest text-sm italic">사다리 타는 중...</div>
+        </div>
+    );
+}
+
+function SelectionContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const initialTab = searchParams.get('tab') as Category;
-    const [activeTab, setActiveTab] = useState<Category>(initialTab || 'PROBLEM');
+    const {
+        user: profile,
+        report: weaknessReport,
+        loading: globalLoading,
+        refreshAll
+    } = useUserData();
+
+    const [activeTab, setActiveTab] = useState<Category>('PROBLEM');
     const [loading, setLoading] = useState(true);
-    const [report, setReport] = useState<WeaknessReport | null>(null);
     const [access, setAccess] = useState<FeatureAccess | null>(null);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        if (initialTab && initialTab !== activeTab) {
-            setActiveTab(initialTab);
-        }
-    }, [initialTab, activeTab]);
+        setIsMounted(true);
+        const tab = searchParams.get('tab') as Category;
+        if (tab) setActiveTab(tab);
 
-    useEffect(() => {
-        const userData = localStorage.getItem('toeic_user');
-        if (!userData) {
-            router.push('/login');
+        const userStr = localStorage.getItem('toeic_user');
+        if (!userStr) {
+            router.push('/');
             return;
         }
-        const parsedUser = JSON.parse(userData);
-        fetchInitialData(parsedUser.userId);
-    }, [router]);
+        const parsedUser = JSON.parse(userStr);
 
-    const fetchInitialData = async (userId: string, forceRefresh: boolean = false) => {
-        setLoading(true);
-        try {
-            const [weaknessData, accessData] = await Promise.all([
-                WeaknessService.analyzeUserWeakness(userId, forceRefresh),
-                getFeatureAccess()
-            ]);
-            setReport(weaknessData);
-            setAccess(accessData);
-        } finally {
+        // Initial sync
+        refreshAll(parsedUser.userId, parsedUser.className);
+
+        // Fetch separate feature access
+        getFeatureAccess().then(setAccess);
+    }, [router, searchParams, refreshAll]);
+
+    useEffect(() => {
+        if (!globalLoading) {
             setLoading(false);
         }
-    };
+    }, [globalLoading]);
 
     const handleItemClick = (item: ContentItem) => {
         const isLocked = item.featureKey && access && !access[item.featureKey as keyof FeatureAccess];
@@ -132,7 +152,7 @@ function StudentSelectionContent() {
             <div className="px-6 pt-12 mb-10">
                 <div className="flex items-end justify-between mb-6">
                     <div className="flex flex-col">
-                        <h3 className="text-4xl font-black text-white tracking-tighter leading-tight italic uppercase">
+                        <h3 className="text-4xl font-black text-white tracking-tighter leading-tight italic uppercase pr-2">
                             꼭 보완해야 할 <br />
                             <span className="text-rose-500">취약 파트 TOP 3</span>
                         </h3>
@@ -142,10 +162,8 @@ function StudentSelectionContent() {
                             variant="ghost"
                             size="sm"
                             onClick={() => {
-                                const userData = localStorage.getItem('toeic_user');
-                                if (userData) {
-                                    const parsed = JSON.parse(userData);
-                                    fetchInitialData(parsed.userId, true);
+                                if (profile) {
+                                    refreshAll(profile.userId, profile.className, true);
                                 }
                             }}
                             className="h-8 w-8 p-0 text-slate-700 hover:text-indigo-400 hover:bg-indigo-500/10 rounded-full transition-all"
@@ -161,7 +179,7 @@ function StudentSelectionContent() {
 
                 <div className="bg-slate-900/50 rounded-2xl border border-white/5 overflow-hidden">
                     <div className="divide-y divide-white/5">
-                        {Object.entries(report?.targetStats || {})
+                        {Object.entries(weaknessReport?.targetStats || {})
                             .map(([part, stats]) => ({ part, ...stats }))
                             .filter(p => p.target > 0)
                             .sort((a, b) => a.gap - b.gap) // Most negative gap first
@@ -187,7 +205,7 @@ function StudentSelectionContent() {
                                                 {idx + 1}
                                             </div>
                                             <div>
-                                                <p className="text-sm font-black text-slate-200 uppercase italic tracking-tighter group-hover:text-white transition-colors">
+                                                <p className="text-sm font-black text-slate-200 uppercase italic tracking-tighter group-hover:text-white transition-colors pr-1">
                                                     {partLabels[item.part] || item.part}
                                                 </p>
                                                 <p className={cn(
@@ -201,7 +219,7 @@ function StudentSelectionContent() {
                                         <div className="text-right">
                                             <div className="text-[9px] text-slate-500 font-bold uppercase mb-0.5 tracking-wider">Status</div>
                                             <div className="flex items-baseline gap-1">
-                                                <span className={cn("text-lg font-black italic tracking-tighter", isCritical ? "text-rose-500" : "text-emerald-400")}>
+                                                <span className={cn("text-lg font-black italic tracking-tighter pr-1", isCritical ? "text-rose-500" : "text-emerald-400")}>
                                                     {item.latest}
                                                 </span>
                                                 <span className="text-[10px] font-black text-slate-700">/ {item.target}</span>
@@ -226,7 +244,7 @@ function StudentSelectionContent() {
                         { id: 'PROBLEM', label: '문제', icon: PenSquare },
                         { id: 'VOCA', label: '어휘', icon: BookMarked },
                         { id: 'LECTURE', label: '강의', icon: GraduationCap },
-                        { id: 'FULL', label: '실전모의고사', icon: Trophy },
+                        { id: 'FULL', label: '모의고사', icon: Trophy },
                     ].map((tab) => (
                         <button
                             key={tab.id}
@@ -251,89 +269,90 @@ function StudentSelectionContent() {
                     CONTENT_ITEMS.filter(item => item.category === activeTab).map((item) => {
                         const isLocked = item.featureKey && access && !access[item.featureKey as keyof FeatureAccess];
                         return (
-                            <div
-                                key={item.id}
-                                onClick={() => handleItemClick(item)}
-                                className={cn(
-                                    "relative group cursor-pointer transition-all duration-500 w-full",
-                                    isLocked ? "opacity-40 grayscale" : "active:scale-95"
-                                )}
-                            >
-                                {/* Card Background with Glass Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent rounded-[1.5rem] sm:rounded-[2.5rem] border border-white/10 group-hover:border-indigo-500/30 transition-colors"></div>
+                            <ApprovalGatedAction key={item.id}>
+                                <div
+                                    onClick={() => handleItemClick(item)}
+                                    className={cn(
+                                        "relative group cursor-pointer transition-all duration-500 w-full",
+                                        isLocked ? "opacity-40 grayscale" : "active:scale-95"
+                                    )}
+                                >
+                                    {/* Card Background with Glass Effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent rounded-[1.5rem] sm:rounded-[2.5rem] border border-white/10 group-hover:border-indigo-500/30 transition-colors"></div>
 
-                                <div className="relative p-4 sm:p-6 flex items-center gap-4 sm:gap-6">
-                                    {/* Icon Container - Responsive Size */}
-                                    <div className={cn(
-                                        "w-12 h-12 sm:w-16 sm:h-16 rounded-[1rem] sm:rounded-[1.8rem] flex items-center justify-center shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 flex-shrink-0",
-                                        item.color === 'emerald' && "bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-emerald-900/40",
-                                        item.color === 'blue' && "bg-gradient-to-br from-blue-500 to-blue-700 shadow-blue-900/40",
-                                        item.color === 'indigo' && "bg-gradient-to-br from-indigo-500 to-indigo-700 shadow-indigo-900/40",
-                                        item.color === 'rose' && "bg-gradient-to-br from-rose-500 to-rose-700 shadow-rose-900/40",
-                                        item.color === 'violet' && "bg-gradient-to-br from-violet-500 to-violet-700 shadow-violet-900/40",
-                                        item.color === 'amber' && "bg-gradient-to-br from-amber-500 to-amber-700 shadow-amber-900/40",
-                                        item.color === 'cyan' && "bg-gradient-to-br from-cyan-500 to-cyan-700 shadow-cyan-900/40",
-                                        item.color === 'orange' && "bg-gradient-to-br from-orange-500 to-orange-700 shadow-orange-900/40",
-                                        item.color === 'pink' && "bg-gradient-to-br from-pink-500 to-pink-700 shadow-pink-900/40",
-                                        !item.color && "bg-gradient-to-br from-slate-500 to-slate-700 shadow-slate-900/40"
-                                    )}>
-                                        <item.icon className="w-5 h-5 sm:w-8 sm:h-8" />
-                                    </div>
-
-                                    {/* Text Content - Better Hierarchy */}
-                                    <div className="flex-1 min-w-0">
-                                        <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
-                                            <h5 className="text-lg sm:text-2xl font-black text-white italic tracking-tighter uppercase leading-tight truncate">
-                                                {item.title}
-                                            </h5>
-                                            {item.id.includes('double') || item.id.includes('mock') || item.id.includes('level') ? (
-                                                <span className={cn(
-                                                    "px-1.5 py-0.5 bg-white/10 border border-white/20 rounded-md text-[7px] sm:text-[8px] font-black text-white uppercase tracking-widest flex-shrink-0",
-                                                    item.color === 'pink' && "bg-pink-500/10 border-pink-500/20 text-pink-400",
-                                                    item.color === 'amber' && "bg-amber-500/10 border-amber-500/20 text-amber-400"
-                                                )}>
-                                                    PC
-                                                </span>
-                                            ) : null}
+                                    <div className="relative p-4 sm:p-6 flex items-center gap-4 sm:gap-6">
+                                        {/* Icon Container - Responsive Size */}
+                                        <div className={cn(
+                                            "w-12 h-12 sm:w-16 sm:h-16 rounded-[1rem] sm:rounded-[1.8rem] flex items-center justify-center shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 flex-shrink-0",
+                                            item.color === 'emerald' && "bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-emerald-900/40",
+                                            item.color === 'blue' && "bg-gradient-to-br from-blue-500 to-blue-700 shadow-blue-900/40",
+                                            item.color === 'indigo' && "bg-gradient-to-br from-indigo-500 to-indigo-700 shadow-indigo-900/40",
+                                            item.color === 'rose' && "bg-gradient-to-br from-rose-500 to-rose-700 shadow-rose-900/40",
+                                            item.color === 'violet' && "bg-gradient-to-br from-violet-500 to-violet-700 shadow-violet-900/40",
+                                            item.color === 'amber' && "bg-gradient-to-br from-amber-500 to-amber-700 shadow-amber-900/40",
+                                            item.color === 'cyan' && "bg-gradient-to-br from-cyan-500 to-cyan-700 shadow-cyan-900/40",
+                                            item.color === 'orange' && "bg-gradient-to-br from-orange-500 to-orange-700 shadow-orange-900/40",
+                                            item.color === 'pink' && "bg-gradient-to-br from-pink-500 to-pink-700 shadow-pink-900/40",
+                                            !item.color && "bg-gradient-to-br from-slate-500 to-slate-700 shadow-slate-900/40"
+                                        )}>
+                                            <item.icon className="w-5 h-5 sm:w-8 sm:h-8" />
                                         </div>
-                                        <p className="text-[11px] sm:text-sm font-bold text-slate-400 uppercase tracking-wide leading-snug line-clamp-1 sm:line-clamp-2 opacity-80">
-                                            {item.description}
-                                        </p>
+
+                                        {/* Text Content - Better Hierarchy */}
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
+                                                <h5 className="text-lg sm:text-2xl font-black text-white italic tracking-tighter uppercase leading-tight truncate pr-2">
+                                                    {item.title}
+                                                </h5>
+                                                {item.id.includes('double') || item.id.includes('mock') || item.id.includes('level') ? (
+                                                    <span className={cn(
+                                                        "px-1.5 py-0.5 bg-white/10 border border-white/20 rounded-md text-[7px] sm:text-[8px] font-black text-white uppercase tracking-widest flex-shrink-0",
+                                                        item.color === 'pink' && "bg-pink-500/10 border-pink-500/20 text-pink-400",
+                                                        item.color === 'amber' && "bg-amber-500/10 border-amber-500/20 text-amber-400"
+                                                    )}>
+                                                        PC
+                                                    </span>
+                                                ) : null}
+                                            </div>
+                                            <p className="text-[11px] sm:text-sm font-bold text-slate-400 uppercase tracking-wide leading-snug line-clamp-1 sm:line-clamp-2 opacity-80">
+                                                {item.description}
+                                            </p>
+                                        </div>
+
+                                        {/* Action Indicator */}
+                                        <div className={cn(
+                                            "hidden sm:flex w-10 h-10 rounded-full bg-white/5 items-center justify-center transition-all group-hover:text-white",
+                                            item.color === 'emerald' && "group-hover:bg-emerald-500",
+                                            item.color === 'blue' && "group-hover:bg-blue-500",
+                                            item.color === 'indigo' && "group-hover:bg-indigo-500",
+                                            item.color === 'rose' && "group-hover:bg-rose-500",
+                                            item.color === 'violet' && "group-hover:bg-violet-500",
+                                            item.color === 'amber' && "group-hover:bg-amber-500",
+                                            item.color === 'cyan' && "group-hover:bg-cyan-500",
+                                            item.color === 'orange' && "group-hover:bg-orange-500",
+                                            item.color === 'pink' && "group-hover:bg-pink-500",
+                                            !item.color && "group-hover:bg-indigo-500"
+                                        )}>
+                                            <ArrowRight className="w-5 h-5" />
+                                        </div>
                                     </div>
 
-                                    {/* Action Indicator */}
+                                    {/* Bottom Accent Line */}
                                     <div className={cn(
-                                        "hidden sm:flex w-10 h-10 rounded-full bg-white/5 items-center justify-center transition-all group-hover:text-white",
-                                        item.color === 'emerald' && "group-hover:bg-emerald-500",
-                                        item.color === 'blue' && "group-hover:bg-blue-500",
-                                        item.color === 'indigo' && "group-hover:bg-indigo-500",
-                                        item.color === 'rose' && "group-hover:bg-rose-500",
-                                        item.color === 'violet' && "group-hover:bg-violet-500",
-                                        item.color === 'amber' && "group-hover:bg-amber-500",
-                                        item.color === 'cyan' && "group-hover:bg-cyan-500",
-                                        item.color === 'orange' && "group-hover:bg-orange-500",
-                                        item.color === 'pink' && "group-hover:bg-pink-500",
-                                        !item.color && "group-hover:bg-indigo-500"
-                                    )}>
-                                        <ArrowRight className="w-5 h-5" />
-                                    </div>
+                                        "absolute bottom-0 left-12 right-12 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity",
+                                        item.color === 'emerald' && "via-emerald-500/40",
+                                        item.color === 'blue' && "via-blue-500/40",
+                                        item.color === 'indigo' && "via-indigo-500/40",
+                                        item.color === 'rose' && "via-rose-500/40",
+                                        item.color === 'violet' && "via-violet-500/40",
+                                        item.color === 'amber' && "via-amber-500/40",
+                                        item.color === 'cyan' && "via-cyan-500/40",
+                                        item.color === 'orange' && "via-orange-500/40",
+                                        item.color === 'pink' && "via-pink-500/40",
+                                        !item.color && "via-indigo-500/40"
+                                    )}></div>
                                 </div>
-
-                                {/* Bottom Accent Line */}
-                                <div className={cn(
-                                    "absolute bottom-0 left-12 right-12 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity",
-                                    item.color === 'emerald' && "via-emerald-500/40",
-                                    item.color === 'blue' && "via-blue-500/40",
-                                    item.color === 'indigo' && "via-indigo-500/40",
-                                    item.color === 'rose' && "via-rose-500/40",
-                                    item.color === 'violet' && "via-violet-500/40",
-                                    item.color === 'amber' && "via-amber-500/40",
-                                    item.color === 'cyan' && "via-cyan-500/40",
-                                    item.color === 'orange' && "via-orange-500/40",
-                                    item.color === 'pink' && "via-pink-500/40",
-                                    !item.color && "via-indigo-500/40"
-                                )}></div>
-                            </div>
+                            </ApprovalGatedAction>
                         );
                     })
                 }
@@ -349,20 +368,7 @@ function StudentSelectionContent() {
                         </div>
                     )
                 }
-            </div >
-        </div >
-    );
-}
-
-export default function StudentSelectionPage() {
-    return (
-        <Suspense fallback={
-            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
-                <Sparkles className="w-12 h-12 text-indigo-500 animate-pulse mb-4" />
-                <div className="text-slate-500 font-black uppercase tracking-widest text-sm italic">로딩 중...</div>
             </div>
-        }>
-            <StudentSelectionContent />
-        </Suspense>
+        </div>
     );
 }

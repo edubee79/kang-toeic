@@ -94,7 +94,7 @@ export default function Part5RealLobbyPage() {
                         <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">실전 30문항 ⸱ 10분 타임어택</p>
                     </div>
                 </div>
-                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxTest} Tests Open (Vol {selectedVol})</p>
+                <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">{maxTest} Tests Open</p>
             </div>
 
             <div className="w-full px-0 md:px-8 py-4 md:py-6">
@@ -174,13 +174,13 @@ export default function Part5RealLobbyPage() {
                                             </div>
                                             <div className="flex flex-col">
                                                 <h3 className={cn(
-                                                    "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter",
+                                                    "text-xl md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-2",
                                                     isLocked ? "text-slate-600" : "text-white"
                                                 )}>
                                                     TEST {String(test.testId).padStart(2, '0')}
                                                 </h3>
                                                 {!isLocked && completion?.completed && (
-                                                    <span className="text-[10px] font-black text-amber-500 mt-1 uppercase italic">
+                                                    <span className="text-[10px] font-black text-amber-500 mt-1 uppercase italic pr-1">
                                                         SCORE: {completion.score}/{completion.total}
                                                     </span>
                                                 )}

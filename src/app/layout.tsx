@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
+import { UserDataProvider } from "@/context/UserDataContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,9 @@ export default function RootLayout({
     return (
         <html lang="ko">
             <body className={`${inter.className} antialiased bg-slate-900 text-white`} suppressHydrationWarning={true}>
-                <LayoutWrapper>{children}</LayoutWrapper>
+                <UserDataProvider>
+                    <LayoutWrapper>{children}</LayoutWrapper>
+                </UserDataProvider>
             </body>
         </html>
     );

@@ -49,7 +49,7 @@ export default function ShadowingLobby() {
     const maxSet = access?.maxSets?.part1 || 5;
 
     return (
-        <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0">
+        <div className="w-full space-y-3 md:space-y-6 pb-32 px-0">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
                 <div className="flex items-center gap-4">
                     <Link href={fromPath}><ArrowLeft className="w-5 h-5 text-slate-500 hover:text-white transition-colors" /></Link>
@@ -107,13 +107,13 @@ export default function ShadowingLobby() {
                                             </div>
                                             <div className="flex flex-col">
                                                 <h3 className={cn(
-                                                    "text-[22px] md:text-3xl font-black transition-colors leading-none italic tracking-tighter",
+                                                    "text-[22px] md:text-3xl font-black transition-colors leading-none italic tracking-tighter pr-2",
                                                     isLocked ? "text-slate-600" : "text-white"
                                                 )}>
                                                     SET {String(set).padStart(2, '0')}
                                                 </h3>
                                                 {!isLocked && completions[`Shadowing_Unit01_Set${set}`]?.completed && (
-                                                    <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic">
+                                                    <span className="text-[10px] font-black text-indigo-400 mt-1 uppercase italic pr-1">
                                                         SCORE: {completions[`Shadowing_Unit01_Set${set}`].score}/20
                                                     </span>
                                                 )}
