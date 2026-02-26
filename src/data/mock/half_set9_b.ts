@@ -17,7 +17,7 @@ const test9PracticeSet = part7MultiTestData.test9;
 // [Listening - 50문항]
 
 // 1. Part 1 (3문항): 2, 4, 6번
-const p1_raw = part1RealTests.find(t => t.testId === 9)?.questions || [];
+const p1_raw = part1RealTests.find(t => t.testId === 9)?.questions?.questions || [];
 export const half9bPart1 = p1_raw
     .filter(q => [2, 4, 6].includes(parseInt(q.id.split('-q')[1])))
     .map(q => ({ ...q, id: q.id })); // Already standard
@@ -29,14 +29,14 @@ export const half9bPart2 = (part2Data[9] || [])
     .map(q => ({ ...q, id: q.id })); // Already standard
 
 // 3. Part 3 (21문항): A형(6세트) 제외한 나머지 7세트
-const p3_raw = part3RealTests.filter(d => d.testId === 9);
+const p3_raw = part3RealTests.filter(d => d.testId === 9).flatMap(t => t.questions);
 export const half9bPart3 = [1, 3, 5, 7, 9, 11, 12].map(idx => p3_raw[idx]).filter(Boolean).map(s => ({
     ...s,
     questions: s.questions.map((q: any) => ({ ...q, id: q.id }))
 }));
 
 // 4. Part 4 (15문항): A형(5세트) 제외한 나머지 5세트
-const p4_raw = part4Data.filter(d => d.testId === 9);
+const p4_raw = part4Data.filter(d => d.testId === 9).flatMap(t => t.questions);
 export const half9bPart4 = [1, 3, 5, 7, 9].map(idx => p4_raw[idx]).filter(Boolean).map(s => ({
     ...s,
     questions: s.questions.map((q: any) => ({ ...q, id: q.id }))
