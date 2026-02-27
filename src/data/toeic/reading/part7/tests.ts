@@ -1,3 +1,9 @@
+// V3 Test (1-2) - Single Passage (Vol 3)
+import { test1Data as v3_test1Data } from '../../v3/reading/part7/single/v3_p7_t01';
+import { test2Data as v3_test2Data } from '../../v3/reading/part7/single/v3_p7_t02';
+import { test3Data as v3_test3Data } from '../../v3/reading/part7/single/v3_p7_t03';
+import { test4Data as v3_test4Data } from '../../v3/reading/part7/single/v3_p7_t04';
+
 // V4 Tests (1-10) - Single Passage (Vol 4)
 import { Part7Test } from '../../v4/reading/part7/single/types';
 import { test1Data } from '../../v4/reading/part7/single/v4_p7_t01';
@@ -20,6 +26,10 @@ const withVol = (data: Part7Test, vol: number): Part7Test => ({
 });
 
 export const part7TestData: Part7Test[] = [
+    withVol(v3_test1Data, 3),
+    withVol(v3_test2Data, 3),
+    withVol(v3_test3Data, 3),
+    withVol(v3_test4Data, 3),
     withVol(test1Data, 4),
     withVol(test2Data, 4),
     withVol(test3Data, 4),

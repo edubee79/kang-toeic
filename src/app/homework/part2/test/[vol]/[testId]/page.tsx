@@ -282,28 +282,35 @@ export default function Part2Test() {
             if (currentIndex < mainQueue.length - 1) {
                 setCurrentIndex(prev => prev + 1);
             } else {
-                showReportScreen();
+                // Determine the most accurate wrong queue for saving
+                let finalWrongQueue = wrongQueue;
+                if (!isCorrect && !isReviewMode && !wrongQueue.find(q => q.id === currentQuestion.id)) {
+                    finalWrongQueue = [...wrongQueue, currentQuestion];
+                }
+                showReportScreen(finalWrongQueue);
             }
         }, 1000);
     };
 
-    const showReportScreen = () => setIsReportMode(true);
-
-    const startReview = () => {
-        setIsReviewMode(true);
-        setCurrentIndex(0);
-        setPlayDelay(2000);
-        setIsReportMode(false);
+    const showReportScreen = (finalWrongQueue?: Part2Question[]) => {
+        setIsReportMode(true);
+        // CRITICAL: Save immediately when reaching report screen for LC Part 2
+        // This ensures data is saved even if user skips review or closes browser
+        saveManagerResult(finalWrongQueue || wrongQueue);
     };
 
-    const finishAll = async () => {
-        const score = questions.length - wrongQueue.length;
+    const saveManagerResult = async (currentWrongQueue: Part2Question[]) => {
+        // Prevent double saving
+        const saveKey = `p2_saved_v${vol}_t${testId}`;
+        if (sessionStorage.getItem(saveKey)) return;
+
+        const score = questions.length - currentWrongQueue.length;
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);
             const userId = user.userId || user.uid;
             try {
-                const incorrects = wrongQueue.map(q => ({
+                const incorrects = currentWrongQueue.map(q => ({
                     id: q.id,
                     classification: q.questionType || 'Unknown'
                 }));
@@ -316,18 +323,31 @@ export default function Part2Test() {
                     detail: `Vol ${vol} Test ${testId}`,
                     score: score,
                     total: questions.length,
-                    wrongCount: wrongQueue.length,
+                    wrongCount: currentWrongQueue.length,
                     incorrectQuestions: incorrects,
                     vol: vol,
                     testId: testId,
                     timestamp: serverTimestamp()
                 });
                 await PerformanceSyncService.syncUserSummary(userId);
+                sessionStorage.setItem(saveKey, 'true');
             } catch (e) {
                 console.error("Save error:", e);
             }
         }
+    };
+
+    const startReview = () => {
+        setIsReviewMode(true);
+        setCurrentIndex(0);
+        setPlayDelay(2000);
+        setIsReportMode(false);
+    };
+
+    const finishAll = async () => {
+        // Final guard/cleanup
         localStorage.removeItem(`part2_progress_v${vol}_t${testId}`);
+        sessionStorage.removeItem(`p2_saved_v${vol}_t${testId}`);
         router.push(fromPath);
     };
 

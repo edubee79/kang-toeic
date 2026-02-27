@@ -29,13 +29,10 @@ if (!admin.apps.length) {
                     privateKey: privateKey,
                 }),
             });
-            console.log('✅ Firebase Admin initialized with certificate');
+            console.log('✅ [FirebaseAdmin] Initialized with Service Account:', email);
         } else {
-            console.error('❌ Firebase Admin credentials missing:', {
-                hasPK,
-                hasEmail,
-                projectId
-            });
+            console.error('❌ [FirebaseAdmin] Credentials missing or invalid. Falling back to applicationDefault');
+            console.error('   Details:', { hasPK, hasEmail, projectId });
             // Try to use environment's default (service account file) if available, 
             // but log a clear warning as this usually fails in local dev without ADC set.
             admin.initializeApp({

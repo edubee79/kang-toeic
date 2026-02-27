@@ -243,6 +243,10 @@ export default function Part3TestRunnerPage() {
     };
 
     const finishTest = async (finalAns = selectedAnswers) => {
+        // Prevent double saving for the same attempt in this session
+        const saveKey = `p3_saved_v${vol}_t${testId}_${history.attempts}`;
+        const alreadySaved = sessionStorage.getItem(saveKey);
+
         let score = 0;
         const wrongOnes: Part3Question[] = [];
         testSets.forEach(set => {
@@ -253,6 +257,10 @@ export default function Part3TestRunnerPage() {
         });
         setWrongQueue(wrongOnes);
         setShowCompletion(true);
+
+        // Only save to DB if not already saved for this attempt
+        if (alreadySaved) return;
+
         const newHist = { attempts: history.attempts, lastScore: score };
         setHistory(newHist);
         localStorage.setItem(`p3_hist_v${vol}_t${testId}`, JSON.stringify(newHist));
@@ -289,7 +297,10 @@ export default function Part3TestRunnerPage() {
                     timestamp: serverTimestamp()
                 });
                 await PerformanceSyncService.syncUserSummary(userId);
-            } catch (e) { console.error(e); }
+                sessionStorage.setItem(saveKey, 'true');
+            } catch (e) {
+                console.error("Save error:", e);
+            }
         }
     };
 

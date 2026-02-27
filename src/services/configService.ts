@@ -39,8 +39,8 @@ const DEFAULT_ACCESS: FeatureAccess = {
         part4: { "3": 10, "4": 10 },
         part5: { "3": 10, "4": 10 },
         part6: { "3": 10, "4": 10 },
-        part7: { "4": 10 },
-        part7_double: { "4": 10 },
+        part7: { "3": 10, "4": 10 },
+        part7_double: { "3": 10, "4": 10 },
         mockTest: 10,
         voca: 20,
         grammar: 10,
@@ -105,13 +105,16 @@ export const setFeatureAccess = async (access: FeatureAccess): Promise<void> => 
 
 export interface AIReportSchedule {
     enabledDays: number[];  // 0=Sunday, 1=Monday, ..., 6=Saturday
-    lastReportDate?: string;  // ISO date string
+    isAutoBatchEnabled: boolean;
+    nextBatchDate?: string; // Optional: specific date for next auto-run
+    lastReportDate?: string;
     updatedAt?: string;
     updatedBy?: string;
 }
 
 const DEFAULT_SCHEDULE: AIReportSchedule = {
-    enabledDays: [5],  // Default: Friday only
+    enabledDays: [5],  // Default: Friday
+    isAutoBatchEnabled: false,
 };
 
 export const getAIReportSchedule = async (): Promise<AIReportSchedule> => {

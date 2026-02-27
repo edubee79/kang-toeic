@@ -221,6 +221,14 @@ export function Part5Runner({
                                 </div>
 
                                 <div className="flex-1 space-y-4 md:space-y-6">
+                                    {/* Part 7 지문 패널 */}
+                                    {q.passage && (
+                                        <div className="p-4 bg-slate-800/60 rounded-2xl border border-slate-700/60 mb-2">
+                                            <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-3">Reading Passage</p>
+                                            <p className="text-sm text-slate-300 leading-relaxed whitespace-pre-line">{q.passage}</p>
+                                        </div>
+                                    )}
+
                                     {/* Question Text or Audio Player */}
                                     {q.audio ? (
                                         <div className="space-y-4">
@@ -241,9 +249,10 @@ export function Part5Runner({
                                                     <p className="text-xs text-slate-500">정답을 듣고 A, B, C 중 선택하세요.</p>
                                                 </div>
                                             </div>
-                                            {isRevealed && q.text && q.text !== "(Audio Question)" && (
-                                                <p className="text-base font-medium text-slate-400 italic">
-                                                    Script: {q.text}
+                                            {/* 질문 텍스트: Part3/4는 항상 표시, Part2는 숨김 */}
+                                            {q.text && q.text !== "(Audio Question)" && (
+                                                <p className="text-base md:text-lg font-medium text-slate-200 leading-relaxed px-2">
+                                                    {q.text}
                                                 </p>
                                             )}
                                         </div>

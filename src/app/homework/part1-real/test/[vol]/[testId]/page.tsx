@@ -150,20 +150,26 @@ export default function Part1TestRunner() {
         }
 
         const alreadySelected = !!selectedAnswers[currentQ.id];
-        setSelectedAnswers(prev => ({ ...prev, [currentQ.id]: option }));
+        const newAnswers = { ...selectedAnswers, [currentQ.id]: option };
+        setSelectedAnswers(newAnswers);
 
         // Auto-next after selecting an answer for the first time
         if (!alreadySelected) {
             setTimeout(() => {
-                handleNext();
+                if (displayIndex < (displayQuestions?.length || 0) - 1) {
+                    setDisplayIndex(prev => prev + 1);
+                } else if (!reviewMode) {
+                    finishTest(newAnswers);
+                }
             }, 500); // 0.5s delay for visual feedback
         }
     };
 
-    const finishTest = async () => {
+    const finishTest = async (finalAnswers?: Record<string, string>) => {
+        const answersToUse = finalAnswers || selectedAnswers;
         let correct = 0;
         testSet.questions.forEach((q: any) => {
-            if (selectedAnswers[q.id] === q.correctAnswer) correct++;
+            if (answersToUse[q.id] === q.correctAnswer) correct++;
         });
 
         const finalPercentage = Math.round((correct / testSet.questions.length) * 100);
@@ -176,7 +182,7 @@ export default function Part1TestRunner() {
             try {
                 const incorrects: any[] = [];
                 testSet.questions.forEach((q: any) => {
-                    if (selectedAnswers[q.id] !== q.correctAnswer) {
+                    if (answersToUse[q.id] !== q.correctAnswer) {
                         incorrects.push({
                             id: q.id,
                             classification: q.classification || 'Unknown'

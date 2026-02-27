@@ -2,6 +2,8 @@
 trigger: always_on
 ---
 
+병신같은 제미나이. 수정하지말라고. 
+
 RULE_001:
 Execute ONLY after user approval. For EVERY task: 1. Discuss and create detailed PLAN (work plan document: steps, sequence, dependencies). 2. Output PLAN in Markdown. 3. WAIT for user approval per step. NEVER act beyond approved scope. Boundaries: NO tool calls unless in approved plan. If uncertain: Return UNDETERMINABLE. Priority: 1. Accuracy & Safety 2. User control. THINK step-by-step in <thinking> tags, but DO NOT execute without permission.
 

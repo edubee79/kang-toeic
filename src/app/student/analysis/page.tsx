@@ -285,15 +285,22 @@ export default function StudentAnalysisPage() {
                 <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => fetchWeaknessData(true)}
+                    onClick={() => {
+                        const id = user?.userId || user?.uid;
+                        if (id) {
+                            refreshAll(id, user.className || '', true);
+                        }
+                    }}
                     className="h-10 w-10 p-0 text-slate-500 hover:text-indigo-400 hover:bg-indigo-500/10 rounded-full transition-all"
                 >
-                    <RotateCcw className={cn("w-5 h-5", loading && "animate-spin")} />
+                    <RotateCcw className={cn("w-5 h-5", (loading || globalLoading) && "animate-spin")} />
                 </Button>
             </div>
 
             {analysisTab === 'ANALYSIS' ? (
                 <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+
                     {/* 헬프 가이드 (토글형) */}
                     <Card className="bg-slate-900 border-indigo-500/20 p-4 relative overflow-hidden group">
                         <div className="relative z-10">
@@ -458,13 +465,15 @@ export default function StudentAnalysisPage() {
                                 </div>
                                 <div className="grid grid-cols-2 gap-8">
                                     <div>
-                                        <p className="text-slate-400 text-xs font-medium mb-1">TARGET SCORE</p>
+                                        <p className="text-slate-400 text-xs font-medium mb-1">목표점수</p>
                                         <div className="text-3xl font-black text-white">{report.targetScore}<span className="text-base text-slate-500 ml-1 font-normal">점</span></div>
+                                        <div className="text-sm font-bold text-slate-400 mt-1">LC {report.targetLCScore}점 / RC {report.targetRCScore}점</div>
                                         <div className="mt-2 text-xs text-slate-500">목표까지 <span className="text-indigo-400 font-bold">+{Math.max(0, report.targetScore - estScore)}점</span> 남았습니다.</div>
                                     </div>
                                     <div>
-                                        <p className="text-slate-400 text-xs font-medium mb-1 font-bold">AI PREDICTION</p>
+                                        <p className="text-slate-400 text-xs font-medium mb-1 font-bold">AI 예상점수</p>
                                         <div className="text-3xl font-black text-indigo-400">{estScore}<span className="text-base text-indigo-500/50 ml-1 font-normal">점</span></div>
+                                        <div className="text-sm font-bold text-indigo-300 mt-1">LC {Math.max(0, lcScore)}점 / RC {Math.max(0, rcScore)}점</div>
                                         <div className="mt-2 text-xs text-slate-500 flex items-center gap-1">
                                             <TrendingUp className="w-3 h-3 text-emerald-500" />
                                             <span className="text-emerald-500 font-bold">최근 학습 결과 반영</span>
@@ -548,6 +557,9 @@ export default function StudentAnalysisPage() {
                                                     setAiWeeklyReport(data.text);
                                                     setReportDate(new Date().toISOString());
                                                     setShowFullReport(true); // Open upon generation
+                                                    if (report) {
+                                                        fetchPageSpecificData(user.userId || user.uid, report); // UI 아이템 즉시 갱신
+                                                    }
                                                 } else {
                                                     console.error("API Error:", data.error || "Unknown error");
                                                     alert(data.error || "리포트 생성 중 오류가 발생했습니다. 잠시 후 서버가 재시작되면 다시 시도해주세요.");

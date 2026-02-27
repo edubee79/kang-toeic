@@ -320,14 +320,21 @@ export const WeaknessService = {
             const startDate = new Date();
             startDate.setDate(startDate.getDate() - periodDays);
 
-            // ⚠️ Removed orderBy to avoid requiring complex Firestore indexes
+            // Fetch all for studentId to avoid index requirement
             const q = query(
                 resultsRef,
-                where('studentId', '==', userId),
-                where('timestamp', '>=', startDate)
+                where('studentId', '==', userId)
             );
 
             const snapshot = await getDocs(q);
+            const allDocs = snapshot.docs.map(doc => doc.data() as ManagerResult);
+
+            // Filter by date in memory
+            const recentDocs = allDocs.filter(d => {
+                const dDate = d.timestamp ? (typeof d.timestamp === 'string' ? new Date(d.timestamp) : d.timestamp.toDate()) : new Date(0);
+                return dDate >= startDate;
+            });
+
             const stats: any = {
                 totalSolved: 0,
                 parts: {} as any,
@@ -336,8 +343,7 @@ export const WeaknessService = {
 
             const tagMap: Record<string, { total: number, incorrect: number }> = {};
 
-            snapshot.docs.forEach(docSnap => {
-                const data = docSnap.data() as ManagerResult;
+            recentDocs.forEach(data => {
                 const part = mapToPartKey(data);
                 if (part === 'unknown') return; // Skip non-TOEIC data
 
@@ -355,8 +361,9 @@ export const WeaknessService = {
 
                 if (data.incorrectQuestions) {
                     data.incorrectQuestions.forEach((iq: any) => {
-                        const tag = iq.classification || 'Unknown';
-                        if (!tagMap[tag]) tagMap[tag] = { total: 0, incorrect: 0 };
+                        const tag = iq.classification || iq.contextType || 'Unknown';
+                        if (tag === 'Unknown') return;
+                        if (!tagMap[tag]) tagMap[tag] = { total: 0, incorrect: 0, part: mapToPartKey(data) };
                         tagMap[tag].incorrect++;
                     });
                 }
@@ -367,10 +374,11 @@ export const WeaknessService = {
                 .map(([tag, val]) => ({
                     tag,
                     label: getToeicTagLabel(tag),
-                    incorrectCount: val.incorrect
+                    incorrectCount: val.incorrect,
+                    part: (val as any).part || ''
                 }))
                 .sort((a, b) => b.incorrectCount - a.incorrectCount)
-                .slice(0, 5);
+                .slice(0, 10);
 
             return stats;
         } catch (error) {
@@ -391,15 +399,18 @@ export const WeaknessService = {
             const snapshot = await getDocs(q);
             const allAssignments = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-            // Client-side filtering: get latest 7 assignments by createdAt
+            // Client-side sorting: show ALL current AI assignments (since old ones are batch-deleted upon generation)
+            // Sort primarily by dayOffset, then Voca before Drill for the same day
             return allAssignments
                 .sort((a: any, b: any) => {
-                    const dateA = new Date(a.createdAt || 0).getTime();
-                    const dateB = new Date(b.createdAt || 0).getTime();
-                    return dateB - dateA;  // 최신순
-                })
-                .slice(0, 7)  // 최신 7개만
-                .sort((a: any, b: any) => (a.dayOffset || 0) - (b.dayOffset || 0));  // dayOffset 순서로 재정렬
+                    const dayA = a.dayOffset || 0;
+                    const dayB = b.dayOffset || 0;
+                    if (dayA !== dayB) return dayA - dayB;
+
+                    const isVocaA = a.type === 'voca_boost' ? -1 : 1;
+                    const isVocaB = b.type === 'voca_boost' ? -1 : 1;
+                    return isVocaA - isVocaB;
+                });
         } catch (error) {
             console.error('Error getting AI recommendations:', error);
             return [];

@@ -19,7 +19,8 @@ export default function AdminSettingsPage() {
     const [saving, setSaving] = useState(false);
     const [migrating, setMigrating] = useState(false);
     const [aiSchedule, setAiSchedule] = useState<AIReportSchedule>({
-        enabledDays: [5]
+        enabledDays: [5],
+        isAutoBatchEnabled: false
     });
     const [access, setAccess] = useState<FeatureAccess>({
         part1: true,
@@ -93,9 +94,14 @@ export default function AdminSettingsPage() {
     const handleSave = async () => {
         setSaving(true);
         try {
-            await setFeatureAccess(access);
-            alert("설정이 저장되었습니다.");
+            // Save both Feature Access and AI Schedule simultaneously
+            await Promise.all([
+                setFeatureAccess(access),
+                setAIReportSchedule(aiSchedule)
+            ]);
+            alert("전체 설정이 안전하게 저장되었습니다.");
         } catch (error) {
+            console.error("Save Error:", error);
             alert("저장 중 오류가 발생했습니다.");
         } finally {
             setSaving(false);
@@ -263,19 +269,47 @@ export default function AdminSettingsPage() {
                     </CardContent>
                 </Card>
 
-                <Card className="border-none shadow-xl bg-white rounded-[2rem] overflow-hidden">
-                    <CardHeader className="p-8 border-b border-slate-50 bg-indigo-50/30">
-                        <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-2xl bg-indigo-100 flex items-center justify-center">
-                                <span className="text-2xl">🤖</span>
+                <Card className="border-none shadow-2xl bg-white rounded-[2.5rem] overflow-hidden ring-1 ring-slate-200">
+                    <CardHeader className="p-8 border-b border-slate-100 bg-gradient-to-br from-indigo-50/50 to-white">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                            <div className="flex items-center gap-4">
+                                <div className="w-14 h-14 rounded-[1.25rem] bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-200 ring-4 ring-indigo-50">
+                                    <Zap className="w-7 h-7 text-white" />
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <CardTitle className="text-2xl font-black text-slate-900 tracking-tight">AI 리포트 자동 생성</CardTitle>
+                                        <span className={`text-[11px] font-black px-2.5 py-0.5 rounded-full shadow-sm ${aiSchedule.isAutoBatchEnabled ? 'bg-emerald-500 text-white animate-pulse' : 'bg-slate-200 text-slate-500'}`}>
+                                            {aiSchedule.isAutoBatchEnabled ? 'SYSTEM ACTIVE' : 'SYSTEM OFF'}
+                                        </span>
+                                    </div>
+                                    <CardDescription className="text-slate-500 font-medium">매주 정해진 스케줄에 맞춰 AI 분석 및 숙제를 생성합니다.</CardDescription>
+                                </div>
                             </div>
-                            <div>
-                                <CardTitle className="text-xl font-bold">AI 리포트 스케줄 설정</CardTitle>
-                                <CardDescription>AI 주간 리포트 생성 가능 요일을 설정합니다</CardDescription>
+
+                            {/* HIGH CONTRAST CONTROL BOX */}
+                            <div className="bg-slate-900 p-5 rounded-[2rem] border border-slate-800 shadow-2xl min-w-[280px]">
+                                <div className="flex items-center justify-between gap-6">
+                                    <div className="space-y-0.5">
+                                        <p className="text-[10px] font-black text-indigo-400 uppercase tracking-tighter">Automation Master Switch</p>
+                                        <p className="text-sm font-bold text-white">자동 생성 모드 활성화</p>
+                                    </div>
+                                    <div className="flex items-center gap-3 bg-white/5 p-2 px-3 rounded-2xl border border-white/10">
+                                        <span className={`text-[10px] font-black ${aiSchedule.isAutoBatchEnabled ? 'text-emerald-400' : 'text-slate-500'}`}>
+                                            {aiSchedule.isAutoBatchEnabled ? 'ON' : 'OFF'}
+                                        </span>
+                                        <Switch
+                                            id="auto-batch-toggle"
+                                            checked={!!aiSchedule.isAutoBatchEnabled}
+                                            onCheckedChange={(checked) => setAiSchedule(prev => ({ ...prev, isAutoBatchEnabled: checked }))}
+                                            className="data-[state=unchecked]:bg-slate-700 data-[state=checked]:bg-indigo-500 scale-125"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </CardHeader>
-                    <CardContent className="p-8">
+                    <CardContent className="p-8 space-y-8">
                         <div className="space-y-6">
                             <div>
                                 <h4 className="text-sm font-bold text-slate-700 mb-3">리포트 생성 가능 요일</h4>
@@ -303,14 +337,51 @@ export default function AdminSettingsPage() {
                                 </div>
                             </div>
 
-                            {aiSchedule.lastReportDate && (
-                                <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                                    <div className="flex items-center justify-between">
+                            <div className="bg-slate-900 rounded-[2rem] p-7 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+                                <div className="space-y-2">
+                                    <div className="flex items-center gap-2 opacity-80">
+                                        <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                                        <h4 className="text-[10px] font-black text-indigo-400 uppercase tracking-widest leading-none">
+                                            Pro Analysis Engine v1.8
+                                        </h4>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white tracking-tight">지능형 자동 스케줄러가 대기 중입니다</h3>
+                                    <p className="text-sm text-slate-400 font-medium leading-relaxed max-w-lg">
+                                        설정된 요일에 맞춰 모든 학생의 성적을 실시간으로 서버에서 정밀 분석합니다. <br />
+                                        분석 결과에 따라 개인화된 리포트와 6일치 동적 숙제를 자정에 자동으로 배분합니다.
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 p-6 rounded-3xl border border-white/10 flex flex-col items-center min-w-[200px]">
+                                    <span className="text-[10px] text-slate-500 font-black mb-2 uppercase tracking-tighter">System Engine Status</span>
+                                    <div className="flex items-center gap-3">
+                                        <div className={`w-3 h-3 rounded-full ${aiSchedule.isAutoBatchEnabled ? 'bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.5)]' : 'bg-slate-700'}`}></div>
+                                        <span className={`text-xl font-black italic tracking-tighter ${aiSchedule.isAutoBatchEnabled ? 'text-white' : 'text-slate-600'}`}>
+                                            {aiSchedule.isAutoBatchEnabled ? 'READY TO ACT' : 'STANDBY'}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="bg-white border border-slate-100 rounded-xl p-4">
+                                    <h4 className="text-[10px] text-slate-400 font-bold uppercase mb-2">Next Batch Date</h4>
+                                    <div className="flex gap-2">
+                                        <Input
+                                            type="date"
+                                            className="font-bold text-slate-900 border-slate-100 bg-slate-50 focus:ring-indigo-500"
+                                            value={aiSchedule.nextBatchDate || ''}
+                                            onChange={(e) => setAiSchedule(prev => ({ ...prev, nextBatchDate: e.target.value }))}
+                                        />
+                                    </div>
+                                    <p className="text-[10px] text-slate-400 mt-2 italic font-medium">관리자가 지정한 특정 날짜에 일괄 생성을 수행합니다.</p>
+                                </div>
+
+                                {aiSchedule.lastReportDate && (
+                                    <div className="bg-white border border-slate-100 rounded-xl p-4 flex items-center justify-between">
                                         <div>
-                                            <p className="text-xs font-bold text-slate-500 mb-1">마지막 리포트 생성</p>
+                                            <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Last Batch Run</p>
                                             <p className="text-sm font-bold text-slate-900">
                                                 {new Date(aiSchedule.lastReportDate).toLocaleDateString('ko-KR', {
-                                                    year: 'numeric',
                                                     month: 'long',
                                                     day: 'numeric',
                                                     weekday: 'short'
@@ -318,31 +389,57 @@ export default function AdminSettingsPage() {
                                             </p>
                                         </div>
                                         <div className="text-right">
-                                            <p className="text-xs font-bold text-slate-500 mb-1">경과 일수</p>
-                                            <p className="text-2xl font-black text-indigo-600">
+                                            <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Gap Days</p>
+                                            <p className="text-xl font-black text-indigo-600">
                                                 {calculateReportPeriod(aiSchedule.lastReportDate)}
-                                                <span className="text-sm text-slate-400 ml-1">일</span>
+                                                <span className="text-xs text-slate-400 ml-1 italic font-medium">일전</span>
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                            )}
+                                )}
+                            </div>
 
-                            <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
-                                <p className="text-xs text-blue-800 leading-relaxed">
-                                    <strong className="font-bold">💡 동작 방식:</strong> 설정된 요일에 학생이 리포트를 생성하면,
-                                    마지막 리포트 이후 경과 일수만큼의 데이터를 분석합니다.
-                                    예: 화요일/금요일 설정 시 → 금요일 생성 시 7일 데이터, 화요일 생성 시 3일 데이터 분석
+                            <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 flex gap-3">
+                                <Shield className="w-5 h-5 text-amber-500" />
+                                <p className="text-xs text-amber-800 leading-relaxed">
+                                    <strong className="font-bold font-italic">주의:</strong> 자동 생성(Batch) 활성화 시, 시스템 부하를 줄이기 위해 설정된 당일에만 실행됩니다.
+                                    대기 중인 학생이 많을 경우 완료까지 수 분이 소요될 수 있습니다.
                                 </p>
                             </div>
 
                             <Button
                                 onClick={handleSaveSchedule}
                                 disabled={saving || aiSchedule.enabledDays.length === 0}
-                                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold h-12 rounded-xl"
+                                className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold h-12 rounded-xl mb-3"
                             >
                                 {saving ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Save className="w-4 h-4 mr-2" />}
-                                스케줄 저장하기
+                                스케줄 설정 저장
+                            </Button>
+
+                            <Button
+                                onClick={async () => {
+                                    if (!confirm("모든 학생의 주간 리포트와 숙제를 즉시 일괄 생성하시겠습니까? (AI API 비용이 발생하며 수 분이 소요될 수 있습니다.)")) return;
+                                    setSaving(true);
+                                    try {
+                                        const res = await fetch('/api/admin/batch-report?force=true', { method: 'POST' });
+                                        const data = await res.json();
+                                        if (res.ok) {
+                                            alert(`배치 생성 완료: 성공 ${data.summary.success}, 실패 ${data.summary.failed}`);
+                                            fetchSettings();
+                                        } else {
+                                            throw new Error(data.error);
+                                        }
+                                    } catch (err: any) {
+                                        alert("배치 생성 중 오류: " + err.message);
+                                    } finally {
+                                        setSaving(false);
+                                    }
+                                }}
+                                disabled={saving}
+                                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black h-12 rounded-xl shadow-lg shadow-indigo-600/20"
+                            >
+                                {saving ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Zap className="w-4 h-4 mr-2" />}
+                                [일괄 실행] 주간 리포트 & 숙제 지금 생성하기
                             </Button>
                         </div>
                     </CardContent>

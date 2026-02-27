@@ -66,6 +66,7 @@ export interface TextChainProps {
 
 export interface WebPageProps extends BaseDocProps {
     header?: {
+        title?: string;
         url?: string;
         navItems?: string[];
     };
@@ -265,7 +266,14 @@ export const AdvertisementTemplate: React.FC<AdvertisementProps> = ({ header, co
                 {header.tagline && <p className="text-base font-medium text-blue-700 mt-2">{header.tagline}</p>}
             </div>
             <div className="space-y-4 text-center">
-                {content.map((para, i) => <p key={i} className="font-medium">{para}</p>)}
+                {content.map((para, i) => (
+                    <div key={i} className={cn(
+                        "prose prose-sm lg:prose-base max-w-none text-black font-medium mx-auto",
+                        para.includes('\n') && "whitespace-pre-wrap text-left inline-block"
+                    )}>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                    </div>
+                ))}
             </div>
             {footer && (
                 <div className="mt-6 pt-4 border-t border-gray-300 text-center font-bold text-sm text-gray-600">
@@ -361,6 +369,11 @@ export const WebPageTemplate: React.FC<WebPageProps> = ({ header, content, class
                     )}
             </div>
             <div className="p-6 space-y-4 leading-relaxed">
+                {header?.title && (
+                    <h1 className="text-2xl font-black text-black mb-6 pb-2 border-b-2 border-gray-100 leading-tight">
+                        {header.title}
+                    </h1>
+                )}
                 {content.map((para, i) => (
                     <div key={i} className={cn(
                         "prose prose-sm max-w-none",
@@ -627,7 +640,7 @@ export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc }) => {
                     contentLines.push(...lines);
                 }
             }
-            finalDoc.header = header;
+            finalDoc.header = { title: doc.title, ...header };
             const bodyText = contentLines.join('\n').trim();
             finalDoc.content = bodyText.split(/\n\n+/).map(s => s.trim()).filter(Boolean);
         } else {

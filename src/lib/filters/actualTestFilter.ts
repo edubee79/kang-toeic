@@ -62,7 +62,7 @@ export function isActualTest(data: ManagerResult): boolean {
     }
 
     // Pattern B: unit field contains 'Test', '회', 'Level', or 'p7'
-    if (unit.includes('_Test') || unit.match(/Test\d+/) || unit.match(/\d+회/) || unit.includes('Level') || unit.includes('p7s') || unit.includes('p7d')) {
+    if (unit.includes('_Test') || unit.includes('Real Test') || unit.match(/Test.*?\d+/) || unit.match(/\d+회/) || unit.includes('Level') || unit.includes('p7s') || unit.includes('p7d')) {
         return true;
     }
 
