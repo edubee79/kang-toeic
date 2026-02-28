@@ -60,17 +60,24 @@ export const QuestionAssembler = {
                     curriculum.push(await this.createRealModePart(userId, studentName, probePart, day, '미학습 파트 데이터 확보'));
                 } else {
                     // 취약 태그 드릴: Day 1~4를 LC/RC 번갈아 배분
-                    // Day 1,3 → LC weakest, Day 2,4 → RC weakest
                     const isLCDay = (day % 2 === 1); // 홀수: LC, 짝수: RC
                     const focusPart = isLCDay ? weakestLC : weakestRC;
                     const relevantTags = weakestTags.filter(t => t.part === focusPart);
                     const modeSuffix = '취약 유형 집중 훈련';
 
                     if (relevantTags.length > 0) {
-                        curriculum.push(await this.createLogicDrill(userId, studentName, relevantTags[0], day, modeSuffix));
+                        const pickedTag = relevantTags[(day % 2 === 1 ? 0 : 1) % relevantTags.length] || relevantTags[0];
+                        curriculum.push(await this.createLogicDrill(userId, studentName, pickedTag, day, modeSuffix));
                     } else {
-                        // 태그 없음 → 해당 파트 실전 드릴
-                        curriculum.push(await this.createRealModePart(userId, studentName, focusPart, day, '취약 유형 집중 훈련'));
+                        // 태그 없음 (오답 누적 부족) → 과거 전체 기록에서 강제 추출 (Top 1~2)
+                        const historicalTags = await this._getHistoricalFallbackTags(userId, focusPart);
+                        if (historicalTags.length > 0) {
+                            const pickedTag = historicalTags[(day % 2 === 1 ? 0 : 1) % historicalTags.length] || historicalTags[0];
+                            curriculum.push(await this.createLogicDrill(userId, studentName, pickedTag, day, modeSuffix + ' (누적 약점)'));
+                        } else {
+                            // 진짜 아무 기록도 없음 (생초보) → 해당 파트 실전 드릴
+                            curriculum.push(await this.createRealModePart(userId, studentName, focusPart, day, '실전 감각 배양 (최초 진단)'));
+                        }
                     }
                 }
             } else if (day === 5) {
@@ -83,6 +90,75 @@ export const QuestionAssembler = {
         }
 
         return curriculum;
+    },
+
+    async _getHistoricalFallbackTags(userId: string, targetPart: string): Promise<any[]> {
+        try {
+            const resultsRef = db.collection('Manager_Results');
+            const q = resultsRef.where('studentId', '==', userId).where('isArchived', '==', false);
+            const snapshot = await q.get();
+
+            const tagStats: Record<string, { incorrect: number; label: string }> = {};
+
+            snapshot.docs.forEach(docSnap => {
+                const data = docSnap.data();
+                if (data.mode !== 'real' && data.mode !== 'test') return;
+
+                // 파트 매칭 로직 간소화
+                let dataPart = '';
+                if (data.type === 'part1_test') dataPart = 'p1';
+                else if (data.type === 'part2_test') dataPart = 'p2';
+                else if (data.type === 'part3_test') dataPart = 'p3';
+                else if (data.type === 'part4_test') dataPart = 'p4';
+                else if (data.type === 'part5_test') dataPart = 'p5';
+                else if (data.type === 'part6_test') dataPart = 'p6';
+                else if (data.type === 'part7_test') {
+                    dataPart = data.detail?.includes('single') ? 'p7s' : (data.detail?.includes('double') ? 'p7d' : 'p7f');
+                }
+
+                if (dataPart !== targetPart || !data.incorrectQuestions) return;
+
+                const isPart3or4 = dataPart === 'p3' || dataPart === 'p4';
+
+                data.incorrectQuestions.forEach((q: any) => {
+                    let tag = 'Unknown';
+                    if (isPart3or4) {
+                        const cls = q.classification || '';
+                        if (cls === 'INFERENCE' || cls === 'GRAPHIC') tag = cls;
+                        else tag = q.contextType || 'Unknown';
+                    } else if (dataPart === 'p6' || dataPart === 'p7s' || dataPart === 'p7d') {
+                        const cType = q.contextType || q.docType;
+                        const cls = q.classification;
+                        const overrideTags = ['P7_INFERENCE', 'P7_INSERTION', 'P7_NOT_TRUE', 'P7_SYNONYM'];
+                        if (overrideTags.includes(cls) || !cType) tag = cls;
+                        else tag = cType;
+                    } else {
+                        tag = q.classification || q.questionType || 'Unknown';
+                    }
+
+                    if (tag === 'Unknown') return;
+
+                    if (!tagStats[tag]) tagStats[tag] = { incorrect: 0, label: tag };
+                    tagStats[tag].incorrect++;
+                });
+            });
+
+            // 오답 1개 이상이면 무조건 통과 (임계치 3 조건 해제)
+            const sortedTags = Object.entries(tagStats)
+                .filter(([_, stat]) => stat.incorrect > 0)
+                .sort((a, b) => b[1].incorrect - a[1].incorrect)
+                .map(([tag, stat]) => ({
+                    tag,
+                    label: this._cleanLabel(stat.label) || tag,
+                    part: targetPart,
+                    incorrectCount: stat.incorrect
+                }));
+
+            return sortedTags.slice(0, 2); // Top 2만 반환
+        } catch (e) {
+            console.error('Historical fallback tag fetch failed:', e);
+            return [];
+        }
     },
 
     /**
