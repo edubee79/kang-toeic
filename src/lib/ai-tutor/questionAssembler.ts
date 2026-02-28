@@ -112,8 +112,10 @@ export const QuestionAssembler = {
                 else if (data.type === 'part4_test') dataPart = 'p4';
                 else if (data.type === 'part5_test') dataPart = 'p5';
                 else if (data.type === 'part6_test') dataPart = 'p6';
+                else if (data.type === 'part7_single') dataPart = 'p7s';
+                else if (data.type === 'part7_double' || data.type === 'part7_triple' || data.type === 'part7_multi') dataPart = 'p7d';
                 else if (data.type === 'part7_test') {
-                    dataPart = data.detail?.includes('single') ? 'p7s' : (data.detail?.includes('double') ? 'p7d' : 'p7f');
+                    dataPart = data.detail?.includes('single') ? 'p7s' : (data.detail?.includes('double') || data.detail?.includes('multi') ? 'p7d' : 'p7f');
                 }
 
                 if (dataPart !== targetPart || !data.incorrectQuestions) return;

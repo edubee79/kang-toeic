@@ -54,7 +54,7 @@ export function isActualTest(data: ManagerResult): boolean {
     const actualTestTypes = [
         'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7s', 'p7d', 'p7',
         'part1_test', 'part2_test', 'part3_test', 'part4_test', 'part5_test', 'part6_test', 'part7_test',
-        'part7_single', 'part7_double'
+        'part7_single', 'part7_double', 'part7_multi'
     ];
 
     if (actualTestTypes.includes(type) || type.endsWith('_test')) {

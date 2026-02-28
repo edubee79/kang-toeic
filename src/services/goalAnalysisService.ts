@@ -113,7 +113,7 @@ async function calculateActualTestStats(userId: string, preFetchedSnapshot?: any
     const LONG_TO_SHORT: Record<string, string> = {
         'part1_test': 'p1', 'part2_test': 'p2', 'part3_test': 'p3', 'part4_test': 'p4',
         'part5_test': 'p5', 'part6_test': 'p6',
-        'part7_single': 'p7s', 'part7_double': 'p7d', 'part7_triple': 'p7d', 'part7_test': 'p7f',
+        'part7_single': 'p7s', 'part7_double': 'p7d', 'part7_triple': 'p7d', 'part7_multi': 'p7d', 'part7_test': 'p7f',
         'p1': 'p1', 'p2': 'p2', 'p3': 'p3', 'p4': 'p4', 'p5': 'p5', 'p6': 'p6', 'p7s': 'p7s', 'p7d': 'p7d', 'p7t': 'p7d', 'p7f': 'p7f', 'p7m': 'p7d'
     };
 
