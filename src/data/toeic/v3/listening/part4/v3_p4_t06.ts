@@ -5,7 +5,7 @@ export const test6Data: Part4Set[] = [
     "testId": 6,
     "setId": "v3-p4-t6-s1",
     "questionRange": "71-73",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_71-73.mp3",
     "questions": [
       {
@@ -260,7 +260,7 @@ export const test6Data: Part4Set[] = [
     "testId": 6,
     "setId": "v3-p4-t6-s6",
     "questionRange": "86-88",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_86-88.mp3",
     "questions": [
       {
@@ -413,7 +413,7 @@ export const test6Data: Part4Set[] = [
     "testId": 6,
     "setId": "v3-p4-t6-s9",
     "questionRange": "95-97",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_06/TEST 06_PART 4_95-97.mp3",
     "image": "/images/ETS_TOEIC_3/Test_06/Part_04/p4_q95.png",
     "questions": [

@@ -151,6 +151,7 @@ export default function Part7DoublePassagePage() {
                     studentId: user.userId || user.uid || "Guest",
                     studentName: user.userName || user.name || "Unknown",
                     type: 'part7_multi',
+                    detail: `Test ${testId}`,
                     unit: `RC_Part7_Vol${vol}_Multi_Test${testId}_real`,
                     score: correctCount,
                     total: allQuestions.length,

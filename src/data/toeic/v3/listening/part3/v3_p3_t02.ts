@@ -261,7 +261,7 @@ export const test2Data: Part3Set[] = [
         testId: 2,
         vol: 3,
         setId: "v3-p3-t02-s5",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "44-46",
         audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 3_44-46.mp3",
         questions: [

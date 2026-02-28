@@ -221,7 +221,7 @@ export const test4Data: Part3Set[] = [
         testId: 4,
         vol: 3,
         setId: "v3-p3-t04-s4",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "41-43",
         audio: "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_41-43.mp3",
         questions: [
@@ -501,7 +501,7 @@ export const test4Data: Part3Set[] = [
         testId: 4,
         vol: 3,
         setId: "v3-p3-t04-s8",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "53-55",
         audio: "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_53-55.mp3",
         questions: [
@@ -577,7 +577,7 @@ export const test4Data: Part3Set[] = [
         testId: 4,
         vol: 3,
         setId: "v3-p3-t04-s9",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "56-58",
         audio: "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 3_56-58.mp3",
         questions: [

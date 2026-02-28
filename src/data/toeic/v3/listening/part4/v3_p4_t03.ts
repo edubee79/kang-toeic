@@ -171,7 +171,7 @@ export const test3Data: Part4Set[] = [
     vol: 3,
     setId: "v3-p4-t3-s4",
     questionRange: "80-82",
-    contextType: "D2 (voice_message)",
+    contextType: "G1_message",
     audio: "/audio/ETS_TOEIC_3/Test_03/TEST 03_PART 4_80-82.mp3",
     questions: [
       {

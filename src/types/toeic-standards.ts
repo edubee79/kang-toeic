@@ -25,7 +25,8 @@ export type LCP4ContextTag =
     | 'C1_service' | 'C2_customer' | 'C3_membership' | 'C4_technical' // 서비스안내
     | 'D1_ads' | 'D2_ads' | 'D3_ads' | 'D4_ads'                    // 광고홍보
     | 'E1_trans' | 'E2_trans' | 'E3_travel' | 'E4_facility'        // 교통여행
-    | 'F1_event' | 'F2_community' | 'F3_public';                   // 이벤트문화
+    | 'F1_event' | 'F2_community' | 'F3_public'                    // 이벤트문화
+    | 'G1_message' | 'G2_ars';                                     // 전화메시지
 
 /** Part 3/4: Question Type (9) */
 export type LCP34QuestionTag =
@@ -154,6 +155,8 @@ export const TOEIC_TAG_REGISTRY: Record<ToeicTag, { label: string, description: 
     'F1_event': { label: '전시공연', description: '미술관 전시 및 음악 공연 일정 안내' },
     'F2_community': { label: '지역공지', description: '반상회, 지역 축제 등 지역 사회 소식' },
     'F3_public': { label: '공공서비스', description: '수도, 전기, 공공기관 이용 관련 공지' },
+    'G1_message': { label: '음성메시지', description: '개인이 남긴 부재중 전화 및 업무용 음성 메시지' },
+    'G2_ars': { label: '자동응답', description: '고객센터, 병원 등의 ARS 자동 응답 및 녹음 안내' },
 
     // P3/4 QuestType
     'DETAIL': { label: '구체 정보 검색', description: '지문 내 명시된 팩트의 즉각적 포착' },

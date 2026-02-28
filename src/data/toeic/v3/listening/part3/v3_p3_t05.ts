@@ -164,7 +164,7 @@ export const test5Data: Part3Set[] = [
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s4",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "41-43",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_41-43.mp3",
         questions: [
@@ -271,7 +271,7 @@ export const test5Data: Part3Set[] = [
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s6",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "47-49",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_47-49.mp3",
         questions: [

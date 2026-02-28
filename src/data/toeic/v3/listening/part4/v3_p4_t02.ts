@@ -6,7 +6,7 @@ export const test2Data: Part4Set[] = [
     vol: 3,
     setId: "v3-p4-t2-s1",
     questionRange: "71-73",
-    contextType: "D2 (voice_message)",
+    contextType: "G1_message",
     audio: "/audio/ETS_TOEIC_3/Test_02/TEST 02_PART 4_71-73.mp3",
     questions: [
       {

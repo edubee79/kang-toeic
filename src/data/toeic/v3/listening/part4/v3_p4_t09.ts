@@ -5,7 +5,7 @@ export const test9Data: Part4Set[] = [
     "testId": 9,
     "setId": "v3-p4-t9-s1",
     "questionRange": "71-73",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_71-73.mp3",
     "questions": [
       {
@@ -362,7 +362,7 @@ export const test9Data: Part4Set[] = [
     "testId": 9,
     "setId": "v3-p4-t9-s8",
     "questionRange": "92-94",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_09/TEST 09_PART 4_92-94.mp3",
     "questions": [
       {

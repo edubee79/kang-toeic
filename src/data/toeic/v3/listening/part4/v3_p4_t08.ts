@@ -1,11 +1,11 @@
 import { Part4Set } from './types';
 
 export const test8Data: Part4Set[] = [
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s1",
     "questionRange": "71-73",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_71-73.mp3",
     "questions": [
       {
@@ -52,7 +52,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s2",
     "questionRange": "74-76",
@@ -103,7 +103,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s3",
     "questionRange": "77-79",
@@ -154,7 +154,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s4",
     "questionRange": "80-82",
@@ -205,7 +205,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s5",
     "questionRange": "83-85",
@@ -256,11 +256,11 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s6",
     "questionRange": "86-88",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_86-88.mp3",
     "questions": [
       {
@@ -307,7 +307,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s7",
     "questionRange": "89-91",
@@ -358,7 +358,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s8",
     "questionRange": "92-94",
@@ -409,7 +409,7 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s9",
     "questionRange": "95-97",
@@ -461,11 +461,11 @@ export const test8Data: Part4Set[] = [
       }
     ]
   },
-{
+  {
     "testId": 8,
     "setId": "v3-p4-t8-s10",
     "questionRange": "98-100",
-    "contextType": "D2 (voice_message)",
+    "contextType": "G1_message",
     "audio": "/audio/ETS_TOEIC_3/Test_08/TEST 08_PART 4_98-100.mp3",
     "image": "/images/ETS_TOEIC_3/Test_08/Part_04/p4_q98.png",
     "questions": [

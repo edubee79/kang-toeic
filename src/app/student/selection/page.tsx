@@ -19,7 +19,11 @@ import {
     GraduationCap,
     Trophy,
     TrendingUp,
-    RotateCcw
+    RotateCcw,
+    AlertCircle,
+    ChevronDown,
+    ChevronUp,
+    Rocket
 } from "lucide-react";
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -96,6 +100,7 @@ function SelectionContent() {
     const [activeTab, setActiveTab] = useState<Category>('PROBLEM');
     const [loading, setLoading] = useState(true);
     const [access, setAccess] = useState<FeatureAccess | null>(null);
+    const [expandedPart, setExpandedPart] = useState<string | null>(null);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -191,40 +196,95 @@ function SelectionContent() {
                                 };
                                 const isCritical = item.gap <= -3;
 
+                                const isExpanded = expandedPart === item.part;
+                                const tags = weaknessReport?.partWeakestTags?.[item.part] || [];
+
                                 return (
-                                    <div
-                                        key={item.part}
-                                        onClick={() => handleItemClick(CONTENT_ITEMS.find(ci => ci.id.includes(item.part.toLowerCase())) as ContentItem)}
-                                        className="px-5 py-4 flex items-center justify-between hover:bg-white/[0.05] transition-colors group cursor-pointer"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <div className={cn(
-                                                "w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-black border",
-                                                idx === 0 ? "bg-rose-500 text-white border-rose-400" : "bg-slate-800 text-slate-500 border-slate-700"
-                                            )}>
-                                                {idx + 1}
-                                            </div>
-                                            <div>
-                                                <p className="text-sm font-black text-slate-200 uppercase italic tracking-tighter group-hover:text-white transition-colors pr-1">
-                                                    {partLabels[item.part] || item.part}
-                                                </p>
-                                                <p className={cn(
-                                                    "text-[10px] font-bold uppercase tracking-tight",
-                                                    isCritical ? "text-rose-400" : "text-slate-500"
+                                    <div key={item.part} className="flex flex-col border-b border-white/5 last:border-0 group">
+                                        <div
+                                            onClick={() => setExpandedPart(isExpanded ? null : item.part)}
+                                            className="px-5 py-4 flex items-center justify-between hover:bg-white/[0.05] transition-colors cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-4">
+                                                <div className={cn(
+                                                    "w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-black border",
+                                                    idx === 0 ? "bg-rose-500 text-white border-rose-400" : "bg-slate-800 text-slate-500 border-slate-700"
                                                 )}>
-                                                    {item.gap < 0 ? `${Math.abs(item.gap)}문제 더 맞춰야 함` : '목표 달성 중'}
-                                                </p>
+                                                    {idx + 1}
+                                                </div>
+                                                <div>
+                                                    <p className="text-sm font-black text-slate-200 uppercase italic tracking-tighter group-hover:text-white transition-colors pr-1">
+                                                        {partLabels[item.part] || item.part}
+                                                    </p>
+                                                    <p className={cn(
+                                                        "text-[10px] font-bold uppercase tracking-tight",
+                                                        isCritical ? "text-rose-400" : "text-slate-500"
+                                                    )}>
+                                                        {item.gap < 0 ? `${Math.abs(item.gap)}문제 더 맞춰야 함` : '목표 달성 중'}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                <div className="text-right">
+                                                    <div className="text-[9px] text-slate-500 font-bold uppercase mb-0.5 tracking-wider">Status</div>
+                                                    <div className="flex items-baseline gap-1">
+                                                        <span className={cn("text-lg font-black italic tracking-tighter pr-1", isCritical ? "text-rose-500" : "text-emerald-400")}>
+                                                            {item.latest}
+                                                        </span>
+                                                        <span className="text-[10px] font-black text-emerald-400">/ {item.target}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="text-slate-500 group-hover:text-indigo-400 transition-colors">
+                                                    {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="text-right">
-                                            <div className="text-[9px] text-slate-500 font-bold uppercase mb-0.5 tracking-wider">Status</div>
-                                            <div className="flex items-baseline gap-1">
-                                                <span className={cn("text-lg font-black italic tracking-tighter pr-1", isCritical ? "text-rose-500" : "text-emerald-400")}>
-                                                    {item.latest}
-                                                </span>
-                                                <span className="text-[10px] font-black text-slate-700">/ {item.target}</span>
+
+                                        {isExpanded && (
+                                            <div className="px-5 pb-5 pt-2 bg-slate-950/20 border-t border-white/5 animate-in slide-in-from-top-2 fade-in duration-200">
+                                                {item.evaluationMessage && (
+                                                    <p className="text-sm text-slate-300 font-medium leading-relaxed mb-4 p-3 bg-slate-900/50 rounded-xl border border-white/5">
+                                                        {item.evaluationMessage}
+                                                    </p>
+                                                )}
+
+                                                {tags.length > 0 ? (
+                                                    <div className="space-y-3">
+                                                        <h4 className="text-[11px] font-black text-slate-500 uppercase flex items-center gap-2 tracking-widest">
+                                                            <AlertCircle className="w-3.5 h-3.5 text-rose-500" />
+                                                            [{partLabels[item.part] || item.part}] 집중 오답 형태 (상위 5개)
+                                                        </h4>
+                                                        <div className="flex flex-wrap gap-2">
+                                                            {tags.map(tag => (
+                                                                <div key={tag.tag} className="bg-slate-800/80 border border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-2 shadow-sm">
+                                                                    <span className="text-xs font-bold text-slate-200">{tag.label}</span>
+                                                                    <span className="bg-rose-500/10 text-rose-400 text-[10px] font-black px-1.5 py-0.5 rounded border border-rose-500/20">
+                                                                        {tag.incorrect}회 오답
+                                                                    </span>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    <div className="mt-2 p-4 bg-slate-800/30 rounded-xl border border-dashed border-slate-700 text-center">
+                                                        <p className="text-[11px] text-slate-400 font-medium flex items-center justify-center gap-2 uppercase tracking-wide">
+                                                            <Target className="w-3.5 h-3.5 text-emerald-500" />
+                                                            해당 파트에는 아직 3회 이상 반복해서 틀린 오답 패턴이 없습니다.
+                                                        </p>
+                                                    </div>
+                                                )}
+
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleItemClick(CONTENT_ITEMS.find(ci => ci.id.includes(item.part.toLowerCase())) as ContentItem);
+                                                    }}
+                                                    className="w-full mt-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition-colors flex items-center justify-center gap-2 text-sm font-black text-white italic tracking-tighter uppercase shadow-lg shadow-indigo-900/20"
+                                                >
+                                                    <Rocket className="w-4 h-4" /> 🚀 이 파트 성적 끌어올리기 보강 학습
+                                                </button>
                                             </div>
-                                        </div>
+                                        )}
                                     </div>
                                 );
                             })}

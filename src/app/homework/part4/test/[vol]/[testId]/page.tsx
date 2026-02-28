@@ -251,6 +251,7 @@ export default function Part4TestRunnerPage() {
                     studentId: userId,
                     studentName: user.userName || user.name || "Unknown",
                     type: 'part4_test',
+                    detail: `Test ${testId}`,
                     unit: `Part4 Real Test Vol${vol} ${testId}`,
                     score,
                     total: testSets.reduce((a, s) => a + s.questions.length, 0),

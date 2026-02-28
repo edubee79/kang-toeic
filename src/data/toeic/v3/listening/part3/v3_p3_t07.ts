@@ -5,7 +5,7 @@ export const test7Data: Part3Set[] = [
         testId: 7,
         vol: 3,
         setId: "v3-p3-t07-s1",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "32-34",
         audio: "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_32-34.mp3",
         questions: [
@@ -59,7 +59,7 @@ export const test7Data: Part3Set[] = [
         testId: 7,
         vol: 3,
         setId: "v3-p3-t07-s2",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "35-37",
         audio: "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_35-37.mp3",
         questions: [
@@ -222,7 +222,7 @@ export const test7Data: Part3Set[] = [
         testId: 7,
         vol: 3,
         setId: "v3-p3-t07-s5",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "44-46",
         audio: "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_44-46.mp3",
         questions: [
@@ -488,7 +488,7 @@ export const test7Data: Part3Set[] = [
         testId: 7,
         vol: 3,
         setId: "v3-p3-t07-s10",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "59-61",
         audio: "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_59-61.mp3",
         questions: [
@@ -649,7 +649,7 @@ export const test7Data: Part3Set[] = [
         testId: 7,
         vol: 3,
         setId: "v3-p3-t07-s13",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         questionRange: "68-70",
         audio: "/audio/ETS_TOEIC_3/Test_07/TEST 07_PART 3_68-70.mp3",
         questions: [

@@ -1956,6 +1956,10 @@ body {
   margin-top: auto;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .line-clamp-1 {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -4700,6 +4704,10 @@ body {
   background-color: #1e293b99;
 }
 
+.bg-slate-950\/20 {
+  background-color: #02061733;
+}
+
 .bg-\[url\(\'https\:\/\/www\.transparenttextures\.com\/patterns\/carbon-fibre\.png\'\)\] {
   background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
 }
@@ -5501,6 +5509,10 @@ body {
 
 .pt-\[60px\] {
   padding-top: 60px;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .text-left {
@@ -6793,6 +6805,11 @@ body {
 
 .shadow-violet-900\/40 {
   --tw-shadow-color: #4c1d9566;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-indigo-900\/20 {
+  --tw-shadow-color: #312e8133;
   --tw-shadow: var(--tw-shadow-colored);
 }
 

@@ -204,7 +204,8 @@ export default function StudentAnalysisPage() {
         );
     }
 
-    if (!report || report.weakestTags.length === 0) {
+    const hasData = report && Object.values(report.targetStats).some(stat => stat.totalQuestions > 0);
+    if (!report || !hasData) {
         return (
             <div className="flex h-screen flex-col items-center justify-center bg-slate-900 p-6 text-center">
                 <div className="mb-4 rounded-full bg-slate-800 p-4">
@@ -595,84 +596,67 @@ export default function StudentAnalysisPage() {
                                     </Button>
                                 </ApprovalGatedAction>
                             </CardHeader>
-                            <CardContent>
-                                {loadingWeeklyReport ? (
-                                    <div className="flex flex-col items-center justify-center py-20 space-y-4">
-                                        <div className="relative">
-                                            <div className="w-16 h-16 border-4 border-indigo-500/20 border-t-indigo-500 rounded-full animate-spin"></div>
-                                            <Sparkles className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-indigo-400 animate-pulse" />
-                                        </div>
-                                        <div className="text-center">
-                                            <p className="text-white font-bold">강쌤 AI가 분석 중입니다...</p>
-                                            <p className="text-slate-500 text-xs mt-1">지난 1주일간의 모든 학습 데이터를 검토하고 있습니다.</p>
-                                        </div>
-                                    </div>
-                                ) : aiWeeklyReport ? (
-                                    <div className="space-y-4">
-                                        <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg border border-white/5">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                                                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-white font-bold text-sm">최신 정밀 리포트가 준비되어 있습니다</p>
-                                                    <p className="text-slate-500 text-[10px]">{reportDate ? new Date(reportDate).toLocaleDateString() : ''} 분석 완료</p>
-                                                </div>
+                            <CardContent className="space-y-8">
+                                {/* AI 주간 정밀 분석 리포트 영역 */}
+                                <div>
+                                    {loadingWeeklyReport ? (
+                                        <div className="flex flex-col items-center justify-center py-10 space-y-4">
+                                            <div className="relative">
+                                                <div className="w-16 h-16 border-4 border-indigo-500/20 border-t-indigo-500 rounded-full animate-spin"></div>
+                                                <Sparkles className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-indigo-400 animate-pulse" />
                                             </div>
-                                            <Button
-                                                variant="outline"
-                                                size="sm"
-                                                onClick={() => setShowFullReport(!showFullReport)}
-                                                className="text-xs border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10 h-8"
-                                            >
-                                                {showFullReport ? '리포트 숨기기' : '전체 내용 보기'}
-                                            </Button>
+                                            <div className="text-center">
+                                                <p className="text-white font-bold">강쌤 AI가 분석 중입니다...</p>
+                                                <p className="text-slate-500 text-xs mt-1">지난 1주일간의 모든 학습 데이터를 검토하고 있습니다.</p>
+                                            </div>
                                         </div>
+                                    ) : aiWeeklyReport ? (
+                                        <div className="space-y-4">
+                                            <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg border border-white/5">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                                                        <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-white font-bold text-sm">최신 정밀 리포트가 준비되어 있습니다</p>
+                                                        <p className="text-slate-500 text-[10px]">{reportDate ? new Date(reportDate).toLocaleDateString() : ''} 분석 완료</p>
+                                                    </div>
+                                                </div>
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={() => setShowFullReport(!showFullReport)}
+                                                    className="text-xs border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10 h-8"
+                                                >
+                                                    {showFullReport ? '리포트 숨기기' : '전체 내용 보기'}
+                                                </Button>
+                                            </div>
 
-                                        {showFullReport && (
-                                            <div className="text-slate-200 text-sm leading-relaxed prose prose-invert max-w-none prose-p:my-2 prose-headings:text-white prose-headings:font-black prose-strong:text-amber-400 animate-in fade-in slide-in-from-top-4 duration-500 border-t border-white/5 pt-4">
-                                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                                    {aiWeeklyReport}
-                                                </ReactMarkdown>
-                                                <div className="mt-8 pt-4 border-t border-white/5 flex justify-end">
-                                                    <button
-                                                        onClick={() => setShowFullReport(false)}
-                                                        className="text-[10px] text-slate-500 hover:text-white font-bold uppercase transition-colors"
-                                                    >
-                                                        리포트 닫기
-                                                    </button>
+                                            {showFullReport && (
+                                                <div className="text-slate-200 text-sm leading-relaxed prose prose-invert max-w-none prose-p:my-2 prose-headings:text-white prose-headings:font-black prose-strong:text-amber-400 animate-in fade-in slide-in-from-top-4 duration-500 border-t border-white/5 pt-4">
+                                                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                                        {aiWeeklyReport}
+                                                    </ReactMarkdown>
+                                                    <div className="mt-8 pt-4 border-t border-white/5 flex justify-end">
+                                                        <button
+                                                            onClick={() => setShowFullReport(false)}
+                                                            className="text-[10px] text-slate-500 hover:text-white font-bold uppercase transition-colors"
+                                                        >
+                                                            리포트 닫기
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <>
-                                        <p className="text-slate-200 text-lg leading-relaxed font-medium mb-6">
-                                            {report.analysisMessage}
-                                        </p>
-                                        {report.weakestTags.length > 0 && (
-                                            <div className="space-y-3">
-                                                <h4 className="text-xs font-bold text-slate-500 uppercase flex items-center gap-2">
-                                                    <AlertCircle className="w-3 h-3 text-rose-500" />
-                                                    반복 오답 분석 (상위 5개)
-                                                </h4>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {report.weakestTags.map(tag => (
-                                                        <div key={tag.tag} className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-2">
-                                                            <span className="text-sm font-bold text-slate-200">{tag.label}</span>
-                                                            <span className="bg-rose-500/20 text-rose-500 text-[10px] font-black px-1.5 py-0.5 rounded">
-                                                                {tag.incorrect}회 오답
-                                                            </span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                                <p className="text-[11px] text-slate-500 mt-4 leading-relaxed italic">
-                                                    * 우측 상단의 '리포트 생성하기' 버튼을 누르면 AI가 오답 원인과 처방전이 포함된 정밀 리포트를 작성합니다.
-                                                </p>
-                                            </div>
-                                        )}
-                                    </>
-                                )}
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <div className="py-8 flex flex-col items-center justify-center text-center bg-transparent rounded-2xl mx-auto w-full">
+                                            <Sparkles className="w-8 h-8 text-slate-700 mb-3" />
+                                            <p className="text-slate-500 text-sm font-medium">
+                                                우측 상단의 '리포트 생성하기' 버튼을 누르면 AI가<br />오답 원인과 처방전이 포함된 정밀 리포트를 작성합니다.
+                                            </p>
+                                        </div>
+                                    )}
+                                </div>
                             </CardContent>
                         </Card>
                     </div>

@@ -167,7 +167,7 @@ export const test1Data: Part3Set[] = [
         vol: 3,
         setId: "v3-p3-t01-s4",
         questionRange: "41-43",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_41-43.mp3",
         questions: [
             {
@@ -482,7 +482,7 @@ export const test1Data: Part3Set[] = [
         vol: 3,
         setId: "v3-p3-t01-s10",
         questionRange: "59-61",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_59-61.mp3",
         questions: [
             {
@@ -588,7 +588,7 @@ export const test1Data: Part3Set[] = [
         vol: 3,
         setId: "v3-p3-t01-s12",
         questionRange: "65-67",
-        contextType: "B4. 문의 / 안내",
+        contextType: "B4. 일반문의",
         audio: "/audio/ETS_TOEIC_3/Test_01/TEST 01_PART 3_65-67.mp3",
         image: "/images/ETS_TOEIC_3/Test_01/Part_03/p3_q65.png",
         questions: [

@@ -21,12 +21,15 @@ export interface PartStats {
     latest: number;
     gap: number;
     totalQuestions: number;
+    evaluationMessage?: string;
+    achievementRate?: number;
 }
 
 export interface WeaknessReport {
     userId: string;
     totalAccuracy: number;
     weakestTags: WeaknessTag[];
+    partWeakestTags: Record<string, WeaknessTag[]>; // 각 파트별 상위 5개 태그
     partBreakdown: Record<string, number>;
     targetStats: Record<string, PartStats>;
     priorityPart: string;
@@ -95,6 +98,7 @@ export const WeaknessService = {
                     userId,
                     totalAccuracy: 0,
                     weakestTags: [],
+                    partWeakestTags: {},
                     partBreakdown: {},
                     targetStats: targetStats as Record<string, PartStats>,
                     priorityPart: 'p1',
@@ -195,19 +199,27 @@ export const WeaknessService = {
                 }
             });
 
-            // 5. Build weakest tags (3+ incorrect)
-            const weakestTags: WeaknessTag[] = Object.entries(tagStats)
+            // 5. Build weakest tags (3+ incorrect) and partWeakestTags
+            const weakestPartShort = goalAnalysis.weakestPart.part; // This is directly like 'p1', 'p2', 'p3'
+
+            const allTags: WeaknessTag[] = Object.entries(tagStats)
                 .map(([tag, stat]) => ({
                     tag,
-                    label: getToeicTagLabel(tag) || tag,
+                    label: getToeicTagLabel(tag, stat.part) || tag,
                     total: stat.total,
                     incorrect: stat.incorrect,
                     accuracy: stat.total > 0 ? Math.round(((stat.total - stat.incorrect) / stat.total) * 100) : 0,
                     part: stat.part
                 }))
                 .filter(tag => tag.incorrect >= 3)
-                .sort((a, b) => b.incorrect - a.incorrect)
-                .slice(0, 5);
+                .sort((a, b) => b.incorrect - a.incorrect);
+
+            const partWeakestTags: Record<string, WeaknessTag[]> = {};
+            ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7s', 'p7d', 'p7f'].forEach(pt => {
+                partWeakestTags[pt] = allTags.filter(t => t.part === pt).slice(0, 5);
+            });
+
+            const weakestTags = partWeakestTags[weakestPartShort] || [];
 
             // 6. Build targetStats (keys already in p1/p2 format)
             const targetStats: Record<string, PartStats> = {};
@@ -219,7 +231,9 @@ export const WeaknessService = {
                     average: pg.averageScore,
                     latest: pg.latestScore,
                     gap: pg.gap,
-                    totalQuestions: pg.completedTests
+                    totalQuestions: pg.completedTests,
+                    evaluationMessage: pg.evaluationMessage,
+                    achievementRate: pg.achievementRate
                 };
                 partBreakdown[pg.part] = pg.latestScore;
             });
@@ -283,6 +297,7 @@ export const WeaknessService = {
                 userId,
                 totalAccuracy: goalAnalysis.overallAchievement,
                 weakestTags,
+                partWeakestTags,
                 partBreakdown,
                 targetStats,
                 priorityPart: goalAnalysis.weakestPart.part,

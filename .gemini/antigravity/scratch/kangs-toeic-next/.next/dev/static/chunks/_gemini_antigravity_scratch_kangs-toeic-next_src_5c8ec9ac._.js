@@ -1771,6 +1771,14 @@ const TOEIC_TAG_REGISTRY = {
         label: '공공서비스',
         description: '수도, 전기, 공공기관 이용 관련 공지'
     },
+    'G1_message': {
+        label: '음성메시지',
+        description: '개인이 남긴 부재중 전화 및 업무용 음성 메시지'
+    },
+    'G2_ars': {
+        label: '자동응답',
+        description: '고객센터, 병원 등의 ARS 자동 응답 및 녹음 안내'
+    },
     // P3/4 QuestType
     'DETAIL': {
         label: '구체 정보 검색',
@@ -2286,9 +2294,31 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$types$2f$toeic$2d$standards$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/.gemini/antigravity/scratch/kangs-toeic-next/src/types/toeic-standards.ts [app-client] (ecmascript)");
 ;
-const getToeicTagLabel = (tag)=>{
+const getToeicTagLabel = (tag, part)=>{
+    // 1. Exact match
     const metadata = __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$types$2f$toeic$2d$standards$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TOEIC_TAG_REGISTRY"][tag];
-    return metadata ? metadata.label : tag;
+    if (metadata) return metadata.label;
+    const cleanTag = tag.trim();
+    // 2. Base Code extraction (e.g., "B4. 일반문의" -> "B4", "A1 (announcement_general)" -> "A1")
+    // Match the first letter + numbers (optional underscores)
+    const match = cleanTag.match(/^([A-Z]\d+)(?:_[a-z]+)?/i);
+    if (match) {
+        const baseCode = match[1].toUpperCase();
+        // 3. For Part 4: Auto-map base codes to Part 4 specific keys (e.g., A1 -> A1_ann)
+        if (part && (part.includes('p4') || part.includes('part4'))) {
+            const possibleP4Keys = Object.keys(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$types$2f$toeic$2d$standards$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TOEIC_TAG_REGISTRY"]).filter((k)=>k.startsWith(`${baseCode}_`));
+            if (possibleP4Keys.length > 0) {
+                return __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$types$2f$toeic$2d$standards$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TOEIC_TAG_REGISTRY"][possibleP4Keys[0]].label;
+            }
+        }
+        // 4. Fallback: try direct baseCode match
+        const fallbackMetadata = __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$types$2f$toeic$2d$standards$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TOEIC_TAG_REGISTRY"][baseCode];
+        if (fallbackMetadata) {
+            return fallbackMetadata.label;
+        }
+    }
+    // 5. Keep original if totally unmatchable
+    return tag;
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
@@ -2864,6 +2894,7 @@ const WeaknessService = {
                     userId,
                     totalAccuracy: 0,
                     weakestTags: [],
+                    partWeakestTags: {},
                     partBreakdown: {},
                     targetStats: targetStats,
                     priorityPart: 'p1',
@@ -2952,15 +2983,31 @@ const WeaknessService = {
                     });
                 }
             });
-            // 5. Build weakest tags (3+ incorrect)
-            const weakestTags = Object.entries(tagStats).map(([tag, stat])=>({
+            // 5. Build weakest tags (3+ incorrect) and partWeakestTags
+            const weakestPartShort = goalAnalysis.weakestPart.part; // This is directly like 'p1', 'p2', 'p3'
+            const allTags = Object.entries(tagStats).map(([tag, stat])=>({
                     tag,
-                    label: (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$utils$2f$toeic$2d$tag$2d$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getToeicTagLabel"])(tag) || tag,
+                    label: (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$utils$2f$toeic$2d$tag$2d$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getToeicTagLabel"])(tag, stat.part) || tag,
                     total: stat.total,
                     incorrect: stat.incorrect,
                     accuracy: stat.total > 0 ? Math.round((stat.total - stat.incorrect) / stat.total * 100) : 0,
                     part: stat.part
-                })).filter((tag)=>tag.incorrect >= 3).sort((a, b)=>b.incorrect - a.incorrect).slice(0, 5);
+                })).filter((tag)=>tag.incorrect >= 3).sort((a, b)=>b.incorrect - a.incorrect);
+            const partWeakestTags = {};
+            [
+                'p1',
+                'p2',
+                'p3',
+                'p4',
+                'p5',
+                'p6',
+                'p7s',
+                'p7d',
+                'p7f'
+            ].forEach((pt)=>{
+                partWeakestTags[pt] = allTags.filter((t)=>t.part === pt).slice(0, 5);
+            });
+            const weakestTags = partWeakestTags[weakestPartShort] || [];
             // 6. Build targetStats (keys already in p1/p2 format)
             const targetStats = {};
             const partBreakdown = {};
@@ -2970,7 +3017,9 @@ const WeaknessService = {
                     average: pg.averageScore,
                     latest: pg.latestScore,
                     gap: pg.gap,
-                    totalQuestions: pg.completedTests
+                    totalQuestions: pg.completedTests,
+                    evaluationMessage: pg.evaluationMessage,
+                    achievementRate: pg.achievementRate
                 };
                 partBreakdown[pg.part] = pg.latestScore;
             });
@@ -3040,6 +3089,7 @@ const WeaknessService = {
                 userId,
                 totalAccuracy: goalAnalysis.overallAchievement,
                 weakestTags,
+                partWeakestTags,
                 partBreakdown,
                 targetStats,
                 priorityPart: goalAnalysis.weakestPart.part,
