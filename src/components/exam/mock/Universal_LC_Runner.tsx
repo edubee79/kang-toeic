@@ -1,25 +1,35 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { test9Part1, test9Part2, test9Part3, test9Part4, test9FullLCAudio } from "@/data/mock/set9_data";
 import { ChevronLeft, ChevronRight, Clock, Volume2, Monitor } from "lucide-react";
 import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
 
+export interface MockTestLCDataStructure {
+    p1: any[];
+    p2: any[];
+    p3: any[];
+    p4: any[];
+    audioUrl?: string;
+    audioUrls?: string[];
+}
+
 interface Props {
+    data: MockTestLCDataStructure;
     onFinishLC: (answers: Record<string, string>) => void;
     onProgressUpdate?: (answers: Record<string, string>, currentPart: number, timeLogs?: Record<string, number>, currentSpread?: number) => void;
     testId?: number;
     initialSpread?: number;
 }
 
-export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId, initialSpread = 0 }: Props) {
+export default function Universal_LC_Runner({ data, onFinishLC, onProgressUpdate, testId, initialSpread = 0 }: Props) {
     const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/';
     const [currentSpread, setCurrentSpread] = useState(initialSpread);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [isPlaying, setIsPlaying] = useState(false);
+    const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const lastAdvancedSpreadRef = useRef<number>(-1);
     const mainContainerRef = useRef<HTMLDivElement>(null);
@@ -30,6 +40,16 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
             mainContainerRef.current.scrollTop = 0;
         }
     }, [currentSpread]);
+
+    // Handle seamless audio relay for split tracks
+    useEffect(() => {
+        if (isPlaying && data.audioUrls && currentAudioIndex > 0) {
+            if (audioRef.current) {
+                audioRef.current.currentTime = 0;
+                audioRef.current.play().catch(e => console.error('Relay play error:', e));
+            }
+        }
+    }, [currentAudioIndex, isPlaying, data.audioUrls]);
 
     // Answer handler
     const handleAnswer = (qId: string, value: string) => {
@@ -75,8 +95,8 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
     // Audio Control (Starting once at the beginning) - User requested no pausing
     const startExam = () => {
         if (audioRef.current) {
-            audioRef.current.currentTime = 5; // Skip intro (YBM etc.)
-            audioRef.current.play();
+            audioRef.current.currentTime = data.audioUrls ? 0 : 5; // Only skip 5s for full test mp3
+            audioRef.current.play().catch(e => console.error(e));
             setIsPlaying(true);
         }
     };
@@ -106,21 +126,21 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
 
     const getSpreadQuestions = (idx: number): string[] => {
         const qIds: string[] = [];
-        if (idx === 0) test9Part1.slice(0, 2).forEach(q => qIds.push(q.id));
-        if (idx === 1) test9Part1.slice(2, 6).forEach(q => qIds.push(q.id));
+        if (idx === 0) data.p1.slice(0, 2).forEach(q => qIds.push(q.id));
+        if (idx === 1) data.p1.slice(2, 6).forEach(q => qIds.push(q.id));
         if (idx === 2) {
-            test9Part2.forEach(q => qIds.push(q.id));
-            test9Part3.slice(0, 4).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
+            data.p2.forEach(q => qIds.push(q.id));
+            data.p3.slice(0, 4).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
         }
         if (idx === 3) {
-            test9Part3.slice(4, 11).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
+            data.p3.slice(4, 11).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
         }
         if (idx === 4) {
-            test9Part3.slice(11, 13).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
-            test9Part4.slice(0, 5).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
+            data.p3.slice(11, 13).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
+            data.p4.slice(0, 4).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
         }
         if (idx === 5) {
-            test9Part4.slice(5, 10).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
+            data.p4.slice(4, 10).forEach(set => set.questions.forEach((q: any) => qIds.push(q.id)));
         }
         return qIds;
     };
@@ -132,7 +152,17 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
     return (
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
             {/* Audio Element */}
-            <audio ref={audioRef} src={test9FullLCAudio} onEnded={() => onFinishLC(answers)} />
+            <audio
+                ref={audioRef}
+                src={data.audioUrls ? data.audioUrls[currentAudioIndex] : data.audioUrl}
+                onEnded={() => {
+                    if (data.audioUrls && currentAudioIndex < data.audioUrls.length - 1) {
+                        setCurrentAudioIndex(prev => prev + 1);
+                    } else {
+                        onFinishLC(answers);
+                    }
+                }}
+            />
 
             {/* Header */}
             <header className="h-14 border-b bg-white flex items-center justify-between px-6 shrink-0 z-30">
@@ -179,7 +209,7 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
                 <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-slate-200/50 z-10 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.05)]"></div>
 
                 <div className="w-full h-fit min-h-full flex">
-                    {renderSpread(currentSpread, answers, handleAnswer)}
+                    {renderSpread(currentSpread, answers, handleAnswer, data)}
                 </div>
             </main>
 
@@ -275,7 +305,9 @@ export default function MockTest_LC_Set9({ onFinishLC, onProgressUpdate, testId,
     );
 }
 
-function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
+export function renderSpread(spreadIdx: number, answers: any, onAnswer: any, data: MockTestLCDataStructure) {
+    if (!data.p1 || !data.p2 || !data.p3 || !data.p4) return null;
+
     switch (spreadIdx) {
         case 0: // P1 Directions | P1 Q1-2
             return (
@@ -296,7 +328,7 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {test9Part1.slice(0, 2).map(q => (
+                            {data.p1.slice(0, 2).map(q => (
                                 <React.Fragment key={q.id}>{renderP1Question(q, answers, onAnswer)}</React.Fragment>
                             ))}
                         </div>
@@ -308,14 +340,14 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                 <>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {test9Part1.slice(2, 4).map(q => (
+                            {data.p1.slice(2, 4).map(q => (
                                 <React.Fragment key={q.id}>{renderP1Question(q, answers, onAnswer)}</React.Fragment>
                             ))}
                         </div>
                     </div>
                     <div className="booklet-page">
                         <div className="flex flex-col gap-10">
-                            {test9Part1.slice(4, 6).map(q => (
+                            {data.p1.slice(4, 6).map(q => (
                                 <React.Fragment key={q.id}>{renderP1Question(q, answers, onAnswer)}</React.Fragment>
                             ))}
                         </div>
@@ -332,13 +364,13 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         </div>
                         <div className="flex-1 flex gap-0">
                             <div className="flex-1 space-y-2">
-                                {test9Part2.slice(0, 13).map(q => (
+                                {data.p2.slice(0, 13).map(q => (
                                     <React.Fragment key={q.id}>{renderP2Row(q, answers, onAnswer)}</React.Fragment>
                                 ))}
                             </div>
                             <div className="column-divider"></div>
                             <div className="flex-1 space-y-2">
-                                {test9Part2.slice(13).map(q => (
+                                {data.p2.slice(13).map(q => (
                                     <React.Fragment key={q.id}>{renderP2Row(q, answers, onAnswer)}</React.Fragment>
                                 ))}
                             </div>
@@ -349,67 +381,59 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
                             <span className="font-black text-indigo-600 mr-2">PART 3</span>
                             <strong>Directions:</strong> You will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation. Select the best response to each question.
                         </div>
-                        {renderP34Page(test9Part3.slice(0, 4), answers, onAnswer)}
-                    </div>
-                </>
-            );
-        case 3: // P3 Sets 5-8 | P3 Sets 9-11
-            return (
-                <>
-                    <div className="booklet-page">
-                        {renderP34Page(test9Part3.slice(4, 8), answers, onAnswer)}
-                    </div>
-                    <div className="booklet-page">
-                        {renderP34Page(test9Part3.slice(8, 11), answers, onAnswer)}
-                    </div>
-                </>
-            );
-        case 4: // P3 Sets 12-13 + P4 Set 1 | P4 Sets 2-5
-            return (
-                <>
-                    <div className="booklet-page">
-                        <div className="flex h-full gap-8">
-                            <div className="flex-1 flex flex-col gap-6">
-                                {test9Part3.slice(11, 13).map(set => (
-                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
-                                ))}
-                            </div>
-                            <div className="w-px bg-slate-100 my-4"></div>
-                            <div className="flex-1 flex flex-col gap-6">
-                                <div className="border-b pb-4 mb-2">
-                                    <span className="font-black text-indigo-600 text-[12px] block mb-2 underline decoration-2 underline-offset-4">PART 4 STARTS HERE</span>
-                                </div>
-                                {test9Part4.slice(0, 1).map(set => (
-                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
-                                ))}
-                            </div>
+                        <div className="flex-1">
+                            {renderTwoColumn(data.p3.slice(0, 2), data.p3.slice(2, 4), answers, onAnswer)}
                         </div>
                     </div>
-                    <div className="booklet-page">
-                        {renderP34Page(test9Part4.slice(1, 5), answers, onAnswer)}
-                    </div>
                 </>
             );
-        case 5: // P4 Sets 6-9 | P4 Set 10
+        case 3: // P3 Sets 5-8 (Left) | P3 Sets 9-11 (Right)
             return (
                 <>
                     <div className="booklet-page">
-                        {renderP34Page(test9Part4.slice(5, 9), answers, onAnswer)}
+                        {renderTwoColumn(data.p3.slice(4, 6), data.p3.slice(6, 8), answers, onAnswer)}
+                    </div>
+                    <div className="booklet-page">
+                        {renderTwoColumn(data.p3.slice(8, 10), data.p3.slice(10, 11), answers, onAnswer)}
+                    </div>
+                </>
+            );
+        case 4: // P3 Sets 12-13 Graphic (Left) | P4 Sets 1-4 (Right)
+            return (
+                <>
+                    <div className="booklet-page">
+                        <div className="directions-box !py-2 !mb-3 text-[10px] bg-amber-50/50 border-amber-100 flex items-center justify-center">
+                            <span className="font-bold text-amber-600">Graphic Questions (시각 자료 연계 문제)</span>
+                        </div>
+                        {renderTwoColumn(data.p3.slice(11, 12), data.p3.slice(12, 13), answers, onAnswer)}
+                    </div>
+                    <div className="booklet-page flex flex-col">
+                        <div className="directions-box !py-3 !mb-5 text-[12px]">
+                            <span className="font-black text-indigo-600 mr-2">PART 4</span>
+                            <strong>Directions:</strong> You will hear some talks given by a single speaker. You will be asked to answer three questions about what the speaker says in each talk. Select the best response to each question and mark the letter (A), (B), (C), or (D) on your answer sheet. The talks will not be printed in your test book and will be spoken only one time.
+                        </div>
+                        <div className="flex-1">
+                            {renderTwoColumn(data.p4.slice(0, 2), data.p4.slice(2, 4), answers, onAnswer)}
+                        </div>
+                    </div>
+                </>
+            );
+        case 5: // P4 Sets 5-8 (Left) | P4 Sets 9-10 Graphic (Right)
+            return (
+                <>
+                    <div className="booklet-page">
+                        {renderTwoColumn(data.p4.slice(4, 6), data.p4.slice(6, 8), answers, onAnswer)}
                     </div>
                     <div className="booklet-page flex flex-col h-full !overflow-hidden">
-                        <div className="flex h-full gap-8">
-                            <div className="flex-1 flex flex-col gap-6">
-                                {test9Part4.slice(9, 10).map(set => (
-                                    <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
-                                ))}
-                            </div>
-                            <div className="w-px bg-slate-100 my-4"></div>
-                            <div className="flex-1 flex flex-col gap-6">
-                                <div className="mt-12 text-center opacity-10 select-none border-t pt-8">
-                                    <span className="font-black text-4xl block mb-2 italic tracking-tighter text-slate-900">LISTENING END</span>
-                                    <p className="font-bold text-sm uppercase tracking-widest text-slate-800">Please continue to Reading Section</p>
-                                </div>
-                            </div>
+                        <div className="directions-box !py-2 !mb-3 text-[10px] bg-amber-50/50 border-amber-100 flex items-center justify-center">
+                            <span className="font-bold text-amber-600">Graphic Questions (시각 자료 연계 문제)</span>
+                        </div>
+                        <div className="flex-1 overflow-visible">
+                            {renderTwoColumn(data.p4.slice(8, 9), data.p4.slice(9, 10), answers, onAnswer)}
+                        </div>
+                        <div className="mt-4 text-center opacity-10 select-none pb-4 border-t pt-4">
+                            <span className="font-black text-3xl block mb-2 italic tracking-tighter text-slate-900">LISTENING END</span>
+                            <p className="font-bold text-[10px] uppercase tracking-widest text-slate-800">Please continue to Reading Section</p>
                         </div>
                     </div>
                 </>
@@ -419,17 +443,18 @@ function renderSpread(spreadIdx: number, answers: any, onAnswer: any) {
     }
 }
 
-function renderP34Page(sets: any[], answers: any, onAnswer: any) {
+// Universal rendering function for a single page with 2 columns
+function renderTwoColumn(col1Sets: any[], col2Sets: any[], answers: any, onAnswer: any) {
     return (
         <div className="flex h-full gap-8">
             <div className="flex-1 flex flex-col gap-6">
-                {sets.slice(0, 2).map(set => (
+                {col1Sets.map(set => (
                     <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
                 ))}
             </div>
             <div className="w-px bg-slate-100 my-4"></div>
             <div className="flex-1 flex flex-col gap-6">
-                {sets.slice(2, 4).map(set => (
+                {col2Sets.map(set => (
                     <React.Fragment key={set.setId}>{renderP34Set(set, answers, onAnswer)}</React.Fragment>
                 ))}
             </div>

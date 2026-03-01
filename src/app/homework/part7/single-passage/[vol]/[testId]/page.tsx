@@ -208,7 +208,7 @@ function Part7SingleTestRunnerContent() {
             try {
                 const incorrects: { id: string, classification: string, contextType?: string }[] = [];
                 testSet?.sets.forEach(set => {
-                    const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
+                    const passageTypes = Array.from(new Set(set.passages.map(p => p.contextType || p.docType || getStandardizedPassageType(p.type)))).join(' / ');
                     const contextType = set.contextType || passageTypes;
 
                     set.questions.forEach(q => {

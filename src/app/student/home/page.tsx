@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { collection, query, where, getDocs, orderBy, doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
-import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User, AlertCircle } from "lucide-react";
+import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -82,6 +82,7 @@ export default function StudentHomePage() {
     const [assignments, setAssignments] = useState<any[]>([]);
     const [completedMap, setCompletedMap] = useState<Record<string, any>>({});
     const [showOnboarding, setShowOnboarding] = useState(false);
+    const [showPastAssignments, setShowPastAssignments] = useState(false);
 
     // Derived values from context
     const currentScore = profile?.performanceSummary?.predictedTotal || 0;
@@ -171,6 +172,27 @@ export default function StudentHomePage() {
 
     const pendingAssignments = assignments.filter(a => !completedMap[`${a.type}_${a.detail}`]);
 
+    const getThisWeekMonday = () => {
+        const now = new Date();
+        const day = now.getDay(); // 0 is Sunday, 1 is Monday...
+        // If Sunday (0), we need to go back 6 days to get to Monday. Otherwise, subtract (day - 1)
+        const diff = now.getDate() - day + (day === 0 ? -6 : 1);
+        const monday = new Date(now.setDate(diff));
+        monday.setHours(0, 0, 0, 0);
+        return monday;
+    };
+
+    const thisWeekMonday = getThisWeekMonday();
+
+    const thisWeekAssignments = pendingAssignments.filter(a => {
+        if (!a.createdAt || !a.createdAt.toDate) return false;
+        return a.createdAt.toDate() >= thisWeekMonday;
+    });
+
+    const pastAssignments = pendingAssignments.filter(a => {
+        if (!a.createdAt || !a.createdAt.toDate) return true; // Without date falls to past backlog
+        return a.createdAt.toDate() < thisWeekMonday;
+    });
     return (
         <div className="min-h-screen bg-[#0B0F1A] pb-24 font-sans text-white">
             {/* Force Push Notification Activation */}
@@ -249,18 +271,18 @@ export default function StudentHomePage() {
                 <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                         <Calendar className="w-5 h-5 text-indigo-400" />
-                        <h3 className="text-lg font-black uppercase tracking-tighter italic pr-2">선생님의 미션</h3>
+                        <h3 className="text-lg font-black uppercase tracking-tighter italic pr-2">이번 주 미션</h3>
                     </div>
-                    {pendingAssignments.length > 0 && (
+                    {thisWeekAssignments.length > 0 && (
                         <span className="text-[10px] font-black text-indigo-400 uppercase bg-indigo-500/10 px-2 py-1 rounded-md">
-                            {pendingAssignments.length}개의 남은 과제
+                            이번 주 {thisWeekAssignments.length}개 남음
                         </span>
                     )}
                 </div>
 
-                {pendingAssignments.length > 0 ? (
+                {thisWeekAssignments.length > 0 ? (
                     <div className="space-y-4">
-                        {pendingAssignments.slice(0, 2).map((assign) => (
+                        {thisWeekAssignments.map((assign) => (
                             <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id, assign.homeworkUrl)}>
                                 <Card className="p-6 bg-slate-900/60 border-white/5 hover:border-indigo-500/30 transition-all rounded-[2rem] group relative overflow-hidden">
                                     <div className="absolute right-0 top-0 w-24 h-full bg-indigo-500/5 -skew-x-12 translate-x-12"></div>
@@ -282,8 +304,53 @@ export default function StudentHomePage() {
                 ) : (
                     <Card className="p-10 bg-slate-900/20 border-dashed border-white/5 rounded-[2rem] flex flex-col items-center justify-center text-center">
                         <CheckCircle2 className="w-12 h-12 text-emerald-500/50 mb-3" />
-                        <p className="text-slate-400 font-black italic">오늘의 모든 미션을 완료했습니다!</p>
+                        <p className="text-slate-400 font-black italic">이번 주의 모든 미션을 완료했습니다!</p>
                     </Card>
+                )}
+
+                {/* Past Backlogs */}
+                {pastAssignments.length > 0 && (
+                    <div className="mt-8 border-t border-slate-800/50 pt-6">
+                        <Button
+                            variant="ghost"
+                            className="w-full flex items-center justify-between p-4 h-auto bg-slate-900/30 hover:bg-slate-900/60 border border-slate-800 rounded-2xl"
+                            onClick={() => setShowPastAssignments(!showPastAssignments)}
+                        >
+                            <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                                    <AlertCircle className="w-4 h-4 text-slate-400" />
+                                </div>
+                                <div className="text-left">
+                                    <h4 className="font-bold text-slate-300 text-sm">지난 주 밀린 과제 보기</h4>
+                                    <p className="text-xs text-slate-500">기한이 지났지만 완료하지 않은 과제가 {pastAssignments.length}개 있습니다.</p>
+                                </div>
+                            </div>
+                            {showPastAssignments ? <ChevronUp className="w-5 h-5 text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-500" />}
+                        </Button>
+
+                        {showPastAssignments && (
+                            <div className="mt-4 space-y-3 animate-in fade-in slide-in-from-top-2">
+                                {pastAssignments.map((assign) => (
+                                    <Link key={assign.id} href={getHomeworkLink(assign.type, assign.detail, assign.id, assign.homeworkUrl)} className="block opacity-70 hover:opacity-100 transition-opacity">
+                                        <Card className="p-4 bg-slate-900/40 border-slate-800 hover:border-slate-700 transition-all rounded-xl group relative overflow-hidden flex justify-between items-center">
+                                            <div className="space-y-0.5">
+                                                <div className="flex items-center gap-2">
+                                                    <Badge variant="outline" className="text-[9px] font-black border-slate-700 bg-slate-800/50 text-slate-400 uppercase pr-1">{assign.typeLabel || assign.type}</Badge>
+                                                    <span className="text-xs text-rose-500/70 font-black tracking-tight">기한 초과</span>
+                                                </div>
+                                                <h4 className="text-sm font-bold text-slate-300 truncate max-w-[200px]">
+                                                    {assign.title || assign.detail}
+                                                </h4>
+                                            </div>
+                                            <Button size="sm" variant="ghost" className="text-slate-400 hover:text-white group-hover:bg-slate-800 h-8 px-3 rounded-lg">
+                                                진행 <ArrowRight className="ml-1 w-3 h-3" />
+                                            </Button>
+                                        </Card>
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 )}
             </div>
 

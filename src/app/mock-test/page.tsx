@@ -25,6 +25,7 @@ export default function MockTestLobby() {
     const [isMobile, setIsMobile] = useState(false);
     const [access, setAccess] = useState<FeatureAccess | null>(null);
     const [loading, setLoading] = useState(true);
+    const [customTests, setCustomTests] = useState<any[]>([]);
 
     useEffect(() => {
         const init = async () => {
@@ -69,6 +70,16 @@ export default function MockTestLobby() {
                     });
                     console.log("✅ Mock Test Attempts loaded:", dbAttempts);
                     setAttempts(dbAttempts);
+
+                    // 3. Fetch Custom Mock Tests
+                    const { orderBy } = await import('firebase/firestore');
+                    const cTestQuery = query(collection(db, "CustomMockTests"), orderBy("createdAt", "desc"));
+                    const cTestSnapshot = await getDocs(cTestQuery);
+                    const ctList: any[] = [];
+                    cTestSnapshot.forEach(doc => {
+                        ctList.push({ id: doc.id, ...doc.data() });
+                    });
+                    setCustomTests(ctList);
                 }
             } catch (error) {
                 console.error("Initialization error:", error);
@@ -214,36 +225,44 @@ export default function MockTestLobby() {
                         <h2 className="text-base md:text-2xl font-black text-white italic uppercase tracking-tight">Full Mock Exam</h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-8 px-1">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 px-1">
                         {[
-                            { id: '9', title: '1회 실전 모의', description: '실전 감각' },
-                            { id: '10', title: '2회 실전 모의', description: '최종 점검' }
+                            { id: '9', title: '1회 실전 모의', description: '실전', isCustom: false },
+                            { id: '10', title: '2회 실전 모의', description: '최종', isCustom: false },
+                            ...customTests.map(ct => ({ id: ct.id, title: ct.title, description: 'SPECIAL', isCustom: true }))
                         ].map((test, index) => {
                             const status = attempts[`full-${test.id}`]?.status || 'none';
                             const isCompleted = status === 'completed';
                             const isStarted = status === 'started';
-                            const realTestIndex = test.id === '9' ? 1 : 2;
-                            const isLocked = realTestIndex > maxMock;
+                            const realTestIndex = test.id === '9' ? 1 : (test.id === '10' ? 2 : 999);
+                            const isLocked = !test.isCustom && realTestIndex > maxMock;
 
                             return (
                                 <Card
                                     key={test.id}
                                     className={cn(
                                         "bg-slate-900 border transition-all duration-500 relative overflow-hidden h-full rounded-2xl md:rounded-[2rem]",
-                                        isLocked ? "border-slate-800 opacity-50 grayscale" : "border-slate-800/50 hover:border-indigo-500/30"
+                                        isLocked ? "border-slate-800 opacity-50 grayscale" : (test.isCustom ? "border-rose-500/30 hover:border-rose-500/70" : "border-slate-800/50 hover:border-indigo-500/30")
                                     )}
                                 >
-                                    <CardContent className="p-3 md:p-8 flex flex-col justify-between h-full gap-3 md:gap-6">
-                                        <div className="space-y-1">
+                                    <div className={cn(
+                                        "absolute -inset-x-0 -top-10 h-20 blur-2xl opacity-20",
+                                        test.isCustom ? "bg-rose-500" : "bg-indigo-500"
+                                    )}></div>
+
+                                    <CardContent className="p-3 md:p-6 flex flex-col justify-between h-full gap-3 md:gap-5 relative z-10">
+                                        <div className="space-y-2">
                                             <div className="flex justify-between items-start">
                                                 <Badge variant="outline" className={cn(
                                                     "text-[8px] md:text-[10px] font-black uppercase tracking-widest px-2 py-0 md:py-1",
-                                                    isCompleted ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" : "bg-indigo-500/20 text-indigo-400 border-indigo-500/30"
+                                                    isCompleted
+                                                        ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
+                                                        : (test.isCustom ? "bg-rose-500/20 text-rose-400 border-rose-500/30" : "bg-indigo-500/20 text-indigo-400 border-indigo-500/30")
                                                 )}>
-                                                    Full • 200Q
+                                                    {test.isCustom ? "CUSTOM" : "STANDARD"}
                                                 </Badge>
                                             </div>
-                                            <h3 className="text-sm md:text-2xl font-black text-white italic tracking-tight leading-tight uppercase">
+                                            <h3 className="text-sm md:text-xl font-black text-white italic tracking-tight leading-tight uppercase line-clamp-2">
                                                 {test.title}
                                             </h3>
                                         </div>
@@ -252,12 +271,12 @@ export default function MockTestLobby() {
                                             onClick={() => handleStartTest('full', test.id)}
                                             disabled={isCompleted || isLocked}
                                             className={cn(
-                                                "w-full h-8 md:h-16 rounded-xl md:rounded-2xl font-black text-[10px] md:text-lg flex items-center justify-center gap-2 transition-all",
+                                                "w-full h-8 md:h-12 rounded-xl font-black text-[10px] md:text-sm flex items-center justify-center gap-2 transition-all mt-auto",
                                                 isCompleted
                                                     ? "bg-slate-800 text-slate-500 cursor-not-allowed"
                                                     : isMobile
                                                         ? "bg-slate-800 text-slate-500 cursor-default"
-                                                        : "bg-indigo-600 hover:bg-indigo-500 text-white"
+                                                        : (test.isCustom ? "bg-rose-600 hover:bg-rose-500 text-white" : "bg-indigo-600 hover:bg-indigo-500 text-white")
                                             )}
                                         >
                                             {isMobile ? (
@@ -266,7 +285,7 @@ export default function MockTestLobby() {
                                                 "COMPLETED"
                                             ) : (
                                                 <>
-                                                    <PlayCircle className="w-4 h-4 md:w-6 md:h-6" />
+                                                    <PlayCircle className="w-4 h-4" />
                                                     {isStarted ? "RESUME" : "START"}
                                                 </>
                                             )}

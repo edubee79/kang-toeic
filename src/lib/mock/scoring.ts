@@ -108,7 +108,8 @@ export interface MockScoreResult {
 export function calculateMockScore(
     testId: string,
     answers: Record<string, string>,
-    isHalf: boolean = false
+    isHalf: boolean = false,
+    truthMap?: Record<string, string> // NEW: Pass dynamically generated correct answers
 ): MockScoreResult {
     const testIdKey = String(testId).toLowerCase();
     // Strictly handle Full Mock Tests 9 (Set 1) and 10 (Set 2)
@@ -116,11 +117,12 @@ export function calculateMockScore(
     const isTest9 = testIdKey === '9' || testIdKey.startsWith('full-9') || testIdKey.includes('test9');
     const isTest10 = testIdKey === '10' || testIdKey.startsWith('full-10') || testIdKey.includes('test10');
 
-    if (!isTest9 && !isTest10) {
-        console.warn('calculateMockScore called for non-mock test ID:', testId);
+    if (!isTest9 && !isTest10 && !truthMap) {
+        console.warn('calculateMockScore called for non-mock test ID without truthMap:', testId);
     }
 
-    const correctAnswers = isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10();
+    // Use truthMap if provided, otherwise fallback to static test 9/10
+    const correctAnswers = truthMap || (isTest9 ? getCorrectAnswersForTest9() : getCorrectAnswersForTest10());
 
     let correctCount = 0;
     let standardMatches = 0;

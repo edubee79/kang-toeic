@@ -1,13 +1,20 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { test9Part5, test9Part6, test9Part7Single, test9Part7Multi } from "@/data/mock/set9_data";
 import { ChevronLeft, ChevronRight, Clock, Info, CheckCircle2 } from "lucide-react";
 import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 import { DocumentRenderer } from "@/components/exam/Part7Templates";
 
+export interface MockTestDataStructure {
+    p5: any[];
+    p6: any[];
+    p7s: any[];
+    p7m: any[];
+}
+
 interface Props {
+    data: MockTestDataStructure;
     onFinishExam: (answers: Record<string, string>, timeLogs: Record<string, number>) => void;
     onProgressUpdate?: (answers: Record<string, string>, currentPart: number, timeLogs: Record<string, number>, currentSpread: number) => void;
     testId?: number;
@@ -16,7 +23,7 @@ interface Props {
     timeLeft: number;
 }
 
-export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testId, initialAnswers = {}, initialSpread = 0, timeLeft }: Props) {
+export default function Universal_RC_Runner({ data, onFinishExam, onProgressUpdate, testId, initialAnswers = {}, initialSpread = 0, timeLeft }: Props) {
     const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/';
     const [currentSpread, setCurrentSpread] = useState(initialSpread);
@@ -173,30 +180,30 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
     const getRCSpreadQuestions = (idx: number): string[] => {
         const qIds: string[] = [];
         if (idx === 0) {
-            test9Part5.slice(0, 16).forEach(q => qIds.push(String(q.id)));
+            data.p5.slice(0, 16).forEach(q => qIds.push(String(q.id)));
         } else if (idx === 1) {
-            test9Part5.slice(16, 30).forEach(q => qIds.push(String(q.id)));
+            data.p5.slice(16, 30).forEach(q => qIds.push(String(q.id)));
         } else if (idx === 2) {
-            test9Part6[0]?.questions.forEach((q: any) => qIds.push(String(q.id)));
-            test9Part6[1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            data.p6[0]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            data.p6[1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
         } else if (idx === 3) {
-            test9Part6[2]?.questions.forEach((q: any) => qIds.push(String(q.id)));
-            test9Part6[3]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            data.p6[2]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            data.p6[3]?.questions.forEach((q: any) => qIds.push(String(q.id)));
         } else if (idx === 4) {
-            test9Part7Single[0]?.questions.forEach((q: any) => qIds.push(String(q.id)));
-            test9Part7Single[1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            data.p7s[0]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            data.p7s[1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
         } else {
             // Dynamic Single Sets (Idx >= 5)
             const singleOffset = (idx - 5) * 2 + 2;
-            if (singleOffset < test9Part7Single.length) {
-                test9Part7Single[singleOffset]?.questions.forEach((q: any) => qIds.push(String(q.id)));
-                test9Part7Single[singleOffset + 1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+            if (singleOffset < data.p7s.length) {
+                data.p7s[singleOffset]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+                data.p7s[singleOffset + 1]?.questions.forEach((q: any) => qIds.push(String(q.id)));
             } else {
                 // Multi Sets
-                const singleCount = test9Part7Single.length;
+                const singleCount = data.p7s.length;
                 const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
                 const multiIdx = idx - singleSpreadsEndIdx - 1;
-                test9Part7Multi[multiIdx]?.questions.forEach((q: any) => qIds.push(String(q.id)));
+                data.p7m[multiIdx]?.questions.forEach((q: any) => qIds.push(String(q.id)));
             }
         }
         return qIds;
@@ -206,7 +213,7 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
         setCurrentSpread(s => s - 1);
     };
 
-    const totalSpreads = 5 + test9Part7Multi.length + Math.ceil((test9Part7Single.length - 2) / 2);
+    const totalSpreads = 5 + data.p7m.length + Math.ceil((data.p7s.length - 2) / 2);
 
     return (
         <div className="fixed inset-0 z-[100] flex flex-col h-screen bg-white overflow-hidden text-slate-900 select-none">
@@ -247,7 +254,7 @@ export default function MockTest_RC_Set9({ onFinishExam, onProgressUpdate, testI
             <main ref={mainContainerRef} className="flex-1 overflow-hidden relative flex bg-slate-100/50">
                 <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-slate-200/50 z-10 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.05)]"></div>
                 <div className="w-full h-full flex">
-                    {renderRCSpread(currentSpread, answers, handleAnswer)}
+                    {renderRCSpread(currentSpread, answers, handleAnswer, data)}
                 </div>
             </main>
 
@@ -440,9 +447,9 @@ const MarkdownTable = ({ content, tableData }: { content: string, tableData?: an
     );
 };
 
-const totalSpreads = 5 + test9Part7Multi.length + Math.ceil((test9Part7Single.length - 2) / 2);
+export function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any, data: MockTestDataStructure) {
+    if (!data.p5 || !data.p6 || !data.p7s || !data.p7m) return null;
 
-function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 0) {
         return (
             <>
@@ -453,16 +460,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <strong>Directions:</strong> A word or phrase is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence.
                     </div>
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(0, 4).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(4, 8).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
                 <div className="booklet-page pt-[120px]">
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(8, 12).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(12, 16).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(12, 16).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
             </>
@@ -474,16 +481,16 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
             <>
                 <div className="booklet-page">
                     <div className="flex h-fit mt-12">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(16, 20).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(16, 20).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(20, 24).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(20, 24).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
                 <div className="booklet-page pt-[120px]">
                     <div className="flex h-fit">
-                        <div className="flex-1 space-y-4">{test9Part5.slice(24, 27).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(24, 27).map(q => renderP5Question(q, answers, onAnswer))}</div>
                         <div className="column-divider-RC"></div>
-                        <div className="flex-1 space-y-4">{test9Part5.slice(27, 30).map(q => renderP5Question(q, answers, onAnswer))}</div>
+                        <div className="flex-1 space-y-4">{data.p5.slice(27, 30).map(q => renderP5Question(q, answers, onAnswer))}</div>
                     </div>
                 </div>
             </>
@@ -498,10 +505,10 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <span className="font-black text-indigo-600 mr-2 uppercase">Part 6</span>
                         <strong>Directions:</strong> Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each empty space are shown below the text.
                     </div>
-                    {renderP6Set(test9Part6[0], answers, onAnswer)}
+                    {renderP6Set(data.p6[0], answers, onAnswer)}
                 </div>
                 <div className="booklet-page pt-[60px]">
-                    {renderP6Set(test9Part6[1], answers, onAnswer)}
+                    {renderP6Set(data.p6[1], answers, onAnswer)}
                 </div>
             </>
         );
@@ -510,8 +517,8 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
     if (spreadIdx === 3) {
         return (
             <>
-                <div className="booklet-page">{renderP6Set(test9Part6[2], answers, onAnswer)}</div>
-                <div className="booklet-page">{renderP6Set(test9Part6[3], answers, onAnswer)}</div>
+                <div className="booklet-page">{renderP6Set(data.p6[2], answers, onAnswer)}</div>
+                <div className="booklet-page">{renderP6Set(data.p6[3], answers, onAnswer)}</div>
             </>
         );
     }
@@ -524,10 +531,10 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
                         <span className="font-black text-indigo-600 mr-2 uppercase">Part 7</span>
                         <strong>Directions:</strong> In this part you will read a selection of texts. Select the best answer for each question.
                     </div>
-                    {renderP7SingleSet(test9Part7Single[0], answers, onAnswer)}
+                    {renderP7SingleSet(data.p7s[0], answers, onAnswer)}
                 </div>
                 <div className="booklet-page pt-[60px]">
-                    {test9Part7Single[1] && renderP7SingleSet(test9Part7Single[1], answers, onAnswer)}
+                    {data.p7s[1] && renderP7SingleSet(data.p7s[1], answers, onAnswer)}
                 </div>
             </>
         );
@@ -535,22 +542,22 @@ function renderRCSpread(spreadIdx: number, answers: any, onAnswer: any) {
 
     // Dynamic Single Sets (Idx >= 5)
     const singleOffset = (spreadIdx - 5) * 2 + 2;
-    if (singleOffset < test9Part7Single.length) {
+    if (singleOffset < data.p7s.length) {
         return (
             <>
-                <div className="booklet-page">{renderP7SingleSet(test9Part7Single[singleOffset], answers, onAnswer)}</div>
-                <div className="booklet-page">{test9Part7Single[singleOffset + 1] && renderP7SingleSet(test9Part7Single[singleOffset + 1], answers, onAnswer)}</div>
+                <div className="booklet-page">{renderP7SingleSet(data.p7s[singleOffset], answers, onAnswer)}</div>
+                <div className="booklet-page">{data.p7s[singleOffset + 1] && renderP7SingleSet(data.p7s[singleOffset + 1], answers, onAnswer)}</div>
             </>
         );
     }
 
     // Multi Sets starts after all single sets are rendered
-    const singleCount = test9Part7Single.length;
+    const singleCount = data.p7s.length;
     const singleSpreadsEndIdx = Math.ceil((singleCount - 2) / 2) + 4;
 
     const multiIdx = spreadIdx - singleSpreadsEndIdx - 1;
-    if (multiIdx >= 0 && multiIdx < test9Part7Multi.length) {
-        return renderP7MultiSpread(test9Part7Multi[multiIdx], answers, onAnswer);
+    if (multiIdx >= 0 && multiIdx < data.p7m.length) {
+        return renderP7MultiSpread(data.p7m[multiIdx], answers, onAnswer);
     }
 
     return null;

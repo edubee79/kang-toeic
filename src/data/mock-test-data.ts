@@ -137,5 +137,10 @@ export const mockTest10: MockTest = {
 
 export const mockTests: Record<number, MockTest> = {
     9: mockTest9,
-    10: mockTest10
+    10: mockTest10,
+    999: {
+        id: 999,
+        title: "[개발모드] 랜덤 생성 유니버설 모의고사",
+        parts: [] // Data injected dynamically in page.tsx
+    }
 };

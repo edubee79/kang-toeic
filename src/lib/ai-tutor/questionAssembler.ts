@@ -95,7 +95,7 @@ export const QuestionAssembler = {
     async _getHistoricalFallbackTags(userId: string, targetPart: string): Promise<any[]> {
         try {
             const resultsRef = db.collection('Manager_Results');
-            const q = resultsRef.where('studentId', '==', userId).where('isArchived', '==', false);
+            const q = resultsRef.where('studentId', '==', userId);
             const snapshot = await q.get();
 
             const tagStats: Record<string, { incorrect: number; label: string }> = {};
@@ -266,8 +266,12 @@ export const QuestionAssembler = {
                 finalUrl = `/homework/weakness/{assignmentId}`;
                 questionIds = targetQuestions;
             } else {
-                // Fallback: 매칭 문제 없음 → ai-drill (Firebase fallback)
-                finalUrl = `/homework/part5-real/ai-drill?tag=${tag}&returnTo=/student/analysis`;
+                // Fallback: 매칭 문제 없음
+                if (part === 'p6') {
+                    finalUrl = `/homework/part6/test/4/${testId}?mode=drill&tag=${tag}&returnTo=/student/analysis`;
+                } else {
+                    finalUrl = `/homework/part5-real/ai-drill?tag=${tag}&returnTo=/student/analysis`;
+                }
             }
         }
 
@@ -323,7 +327,16 @@ export const QuestionAssembler = {
     async _getQuestionsByTag(part: string, tag: string): Promise<string[]> {
         const questionIds: string[] = [];
         try {
-            if (part === 'p2') {
+            if (part === 'p1') {
+                // Part 1: classification / questionType 기반 매칭
+                const { part1RealTests } = await import('@/data/toeic/listening/part1/tests');
+                for (const testSet of part1RealTests) {
+                    const matched = testSet.questions
+                        .filter((q: any) => q.classification === tag || q.questionType === tag)
+                        .map((q: any) => q.id);
+                    questionIds.push(...matched);
+                }
+            } else if (part === 'p2') {
                 // Part 2: questionType 기반 매칭, 개별 문제 수집
                 const { part2Data } = await import('@/data/part2');
                 for (const qs of Object.values(part2Data as Record<string, any[]>)) {
@@ -382,8 +395,8 @@ export const QuestionAssembler = {
                 const selected = matchedSets.sort(() => 0.5 - Math.random()).slice(0, 3);
                 for (const s of selected) questionIds.push(...s.ids);
 
-            } else if (part === 'p5' || part === 'p6') {
-                // Part 5/6 RC: classification 기반 개별 문제 수집
+            } else if (part === 'p5') {
+                // Part 5 RC: classification 기반 개별 문제 수집
                 const { part5RealTests } = await import('@/data/toeic/reading/part5/tests');
                 for (const testSet of part5RealTests) {
                     const matched = testSet.questions
@@ -391,6 +404,26 @@ export const QuestionAssembler = {
                         .map((q: any) => q.id);
                     questionIds.push(...matched);
                 }
+            } else if (part === 'p6') {
+                // Part 6 RC: 지문 세트 단위 수집 및 개별 문제 분류 매칭
+                const { part6TestData } = await import('@/data/toeic/reading/part6/tests');
+                const addedSets = new Set<string>();
+                const matchedSets: { setId: string; ids: string[] }[] = [];
+
+                for (const test of (part6TestData as any[])) {
+                    for (const set of test.passages) {
+                        const setKey = set.setId || set.id;
+                        if (addedSets.has(setKey)) continue;
+
+                        const setMatches = set.contextType === tag || set.docType === tag || set.questions.some((q: any) => q.classification === tag);
+                        if (setMatches) {
+                            matchedSets.push({ setId: setKey, ids: set.questions.map((q: any) => q.id) });
+                            addedSets.add(setKey);
+                        }
+                    }
+                }
+                const selected = matchedSets.sort(() => 0.5 - Math.random()).slice(0, 3);
+                for (const s of selected) questionIds.push(...s.ids);
             } else if (part === 'p7s' || part === 'p7d') {
                 // Part 7: 세트 단위 수집 — 문제 유형(classification) 또는 지문 유형(contextType/docType) 매칭
                 const { part7TestData } = await import('@/data/toeic/reading/part7/tests');

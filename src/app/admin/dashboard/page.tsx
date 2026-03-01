@@ -316,6 +316,11 @@ export default function AdminDashboard() {
                             <Trophy className="w-4 h-4" /> 랭킹 관리
                         </Button>
                     </Link>
+                    <Link href="/admin/mock-builder">
+                        <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-rose-600 border-rose-200 hover:bg-rose-50">
+                            <PenSquare className="w-4 h-4" /> 커스텀 모의고사 창설
+                        </Button>
+                    </Link>
                     <Link href="/admin/settings">
                         <Button variant="outline" className="gap-2 text-xs font-bold bg-white text-amber-600 border-amber-200 hover:bg-amber-50">
                             <Shield className="w-4 h-4" /> 접근 제어 설정

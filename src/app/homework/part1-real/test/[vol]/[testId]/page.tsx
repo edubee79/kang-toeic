@@ -185,7 +185,7 @@ export default function Part1TestRunner() {
                     if (answersToUse[q.id] !== q.correctAnswer) {
                         incorrects.push({
                             id: q.id,
-                            classification: q.classification || 'Unknown'
+                            classification: q.classification || q.questionType || 'Unknown'
                         });
                     }
                 });

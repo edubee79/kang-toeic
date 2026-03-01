@@ -211,7 +211,7 @@ function Part6TestRunnerContent() {
                             incorrects.push({
                                 id: q.id,
                                 classification: q.classification || 'Unknown',
-                                contextType: getStandardizedPassageType(passage.type)
+                                contextType: passage.contextType || passage.docType || getStandardizedPassageType(passage.type) || 'Unknown'
                             });
                         }
                     });

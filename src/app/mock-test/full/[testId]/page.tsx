@@ -12,6 +12,9 @@ import MockTest_LC_Set9 from '@/components/exam/mock/MockTest_LC_Set9';
 import MockTest_RC_Set9 from '@/components/exam/mock/MockTest_RC_Set9';
 import MockTest_LC_Set10 from '@/components/exam/mock/MockTest_LC_Set10';
 import MockTest_RC_Set10 from '@/components/exam/mock/MockTest_RC_Set10';
+import Universal_LC_Runner, { MockTestLCDataStructure } from '@/components/exam/mock/Universal_LC_Runner';
+import Universal_RC_Runner, { MockTestRCDataStructure } from '@/components/exam/mock/Universal_RC_Runner';
+import { buildUniversalMockTest } from '@/lib/mock/dataBuilder';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp, query, where, getDocs, updateDoc, doc, writeBatch } from 'firebase/firestore';
 import {
@@ -27,7 +30,17 @@ import { PerformanceSyncService } from '@/services/performanceSyncService';
 export default function MockTestRunner() {
     const params = useParams();
     const router = useRouter();
-    const testId = Number(params?.testId);
+    const testIdRaw = params?.testId as string;
+
+    // Check if testIdRaw is just a standard Number string '9' or '10'
+    const isStandard = testIdRaw === '9' || testIdRaw === '10';
+    const isSandbox = testIdRaw === '999';
+    // If it's not standard 9, 10, or sandbox, it is a Custom/Dynamically generated test.
+    const isCustom = !isStandard && !isSandbox;
+
+    // Fallback for number-based operations where legacy code expects a number
+    const testId = isStandard ? Number(testIdRaw) : testIdRaw;
+
     const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/mock-test';
 
@@ -42,7 +55,52 @@ export default function MockTestRunner() {
     const [currentPage, setCurrentPage] = useState(0);
     const [initialSpread, setInitialSpread] = useState(0);
 
-    const testData = mockTests[testId];
+    // Dynamic Engine State (Phase 2 & 4)
+    const [dynamicLC, setDynamicLC] = useState<MockTestLCDataStructure | null>(null);
+    const [dynamicRC, setDynamicRC] = useState<MockTestRCDataStructure | null>(null);
+    const [dynamicTruthMap, setDynamicTruthMap] = useState<Record<string, string> | null>(null);
+    const [customTestTitle, setCustomTestTitle] = useState("유니버설 커스텀 모의고사");
+
+    // Loader Effect for testId === 999 or Custom Tests (starts with 'c')
+    useEffect(() => {
+        if ((isSandbox || isCustom) && !dynamicLC) {
+            const loadData = async () => {
+                try {
+                    let schema: any;
+
+                    if (isSandbox) {
+                        schema = {
+                            p1: 'v4_p1_t05', p2: 'v4_p2_t03', p3: 'v4_p3_t10', p4: 'v4_p4_t01',
+                            p5: 'v4_p5_t08', p6: 'v4_p6_t07', p7s: 'v4_p7_t06', p7m: 'v4_p7_t05_multi'
+                        };
+                    } else if (isCustom) {
+                        const { doc, getDoc } = await import('firebase/firestore');
+                        const docSnap = await getDoc(doc(db, 'CustomMockTests', testIdRaw));
+                        if (docSnap.exists()) {
+                            schema = docSnap.data().schema;
+                            schema.audioUrl = docSnap.data().audioUrl;
+                            if (docSnap.data().title) setCustomTestTitle(docSnap.data().title);
+                        } else {
+                            alert("존재하지 않거나 삭제된 모의고사입니다.");
+                            router.push('/');
+                            return;
+                        }
+                    }
+
+                    const { lc, rc, truthMap } = await buildUniversalMockTest(schema);
+                    setDynamicLC(lc);
+                    setDynamicRC(rc);
+                    setDynamicTruthMap(truthMap);
+                } catch (e) {
+                    console.error("Failed to dynamically build mock test payload:", e);
+                    alert("동적 모의고사 데이터를 가져오는데 실패했습니다.");
+                }
+            };
+            loadData();
+        }
+    }, [testIdRaw, isSandbox, isCustom, dynamicLC, router]);
+
+    const testData = isCustom ? null : mockTests[testId as number];
 
     const [attemptId, setAttemptId] = useState<string | null>(null);
     const [announcement, setAnnouncement] = useState<{ message: string, type: 'info' | 'warning' | 'danger' } | null>(null);
@@ -50,10 +108,11 @@ export default function MockTestRunner() {
 
     const toggleFullScreen = () => {
         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(e => {
-                console.error(`Error attempting to enable full-screen mode: ${e.message}`);
+            document.documentElement.requestFullscreen().then(() => {
+                setIsFullScreen(true);
+            }).catch(e => {
+                console.warn(`Fullscreen not allowed or available: ${e.message}`);
             });
-            setIsFullScreen(true);
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
@@ -70,13 +129,16 @@ export default function MockTestRunner() {
     }, []);
 
     useEffect(() => {
-        if (!testData) {
+        if (!testData && !isSandbox && !isCustom) {
             alert('Test data not found!');
             router.push(fromPath);
             return;
         }
 
         const checkAndStartAttempt = async () => {
+            // Prevent creating attempt with default fallback title before custom data is loaded
+            if (isCustom && customTestTitle === "유니버설 커스텀 모의고사") return;
+
             const userStr = localStorage.getItem('toeic_user');
             if (!userStr) {
                 alert("로그인이 필요합니다.");
@@ -144,7 +206,7 @@ export default function MockTestRunner() {
                     userId,
                     studentName: user.userName || user.name || "Unknown",
                     testId,
-                    testTitle: testData.title,
+                    testTitle: isCustom ? customTestTitle : (isSandbox ? "유니버설 혼합 모의고사" : testData?.title || "Unknown Test"),
                     status: 'in_progress',
                     date: new Date().toISOString(),
                     timestamp: serverTimestamp(),
@@ -160,7 +222,7 @@ export default function MockTestRunner() {
         };
 
         checkAndStartAttempt();
-    }, [testData, router, testId]);
+    }, [testData, router, testId, isSandbox, isCustom, customTestTitle]);
 
     // Timer logic ... (same as before)
     useEffect(() => {
@@ -569,6 +631,183 @@ export default function MockTestRunner() {
                             }
 
 
+                            router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
+                        }}
+                    />
+                </>
+            );
+        }
+    }
+
+    // Sandbox & Custom Testing for Universal Engine
+    // All tests that are NOT testId 9 or 10 will use the Universal Engine
+    if (true) {
+        if (!dynamicLC || !dynamicRC) return <div className="p-20 text-center font-bold text-slate-500 animate-pulse">🛠️ 유니버설 엔진 동적 데이터 조립 중...</div>;
+
+        if (status === 'lc') {
+            return (
+                <>
+                    {renderFullScreenButton()}
+                    <Universal_LC_Runner
+                        data={dynamicLC}
+                        testId={testId}
+                        initialSpread={initialSpread}
+                        onProgressUpdate={(lcAnswers, part, _, spread) => {
+                            setAnswers(prev => ({ ...prev, ...lcAnswers }));
+                            setCurrentPart(part);
+                            syncProgress({ ...answers, ...lcAnswers }, part, undefined, spread);
+                        }}
+                        onFinishLC={(lcAnswers) => {
+                            const finalLCAnswers = { ...answers, ...lcAnswers };
+                            setAnswers(finalLCAnswers);
+                            const rcEndTime = Date.now() + (75 * 60 * 1000);
+                            if (attemptId) {
+                                updateDoc(doc(db, 'MockTestAttempts', attemptId), {
+                                    rcEndTime: rcEndTime,
+                                    lastPart: 4,
+                                    answers: finalLCAnswers
+                                });
+                            }
+                            setTimeLeft(75 * 60);
+                            setStatus('rc');
+                        }}
+                    />
+                </>
+            );
+        }
+
+        if (status === 'rc') {
+            return (
+                <>
+                    {renderFullScreenButton()}
+                    {renderAnnouncement()}
+                    <Universal_RC_Runner
+                        data={dynamicRC}
+                        testId={testId}
+                        initialAnswers={answers}
+                        initialSpread={initialSpread}
+                        timeLeft={timeLeft}
+                        onProgressUpdate={(rcAnswers, part, rcTimeLogs, spread) => {
+                            setAnswers(prev => ({ ...prev, ...rcAnswers }));
+                            setCurrentPart(part);
+                            syncProgress({ ...answers, ...rcAnswers }, part, rcTimeLogs, spread);
+                        }}
+                        onFinishExam={async (rcAnswers, timeLogs) => {
+                            const finalAnswers = { ...answers, ...rcAnswers };
+                            setAnswers(finalAnswers);
+
+                            const attempt = {
+                                status: 'completed',
+                                date: new Date().toISOString(),
+                                answers: finalAnswers,
+                                timeLogs: timeLogs,
+                                testId
+                            };
+                            const savedAttempts = JSON.parse(localStorage.getItem('mock_test_attempts') || '{}');
+                            savedAttempts[`full-${testId}`] = attempt;
+                            localStorage.setItem('mock_test_attempts', JSON.stringify(savedAttempts));
+
+                            // Scoring engine logic will run here using dynamic lookup in Phase 3.
+                            if (attemptId && dynamicTruthMap) {
+                                try {
+                                    console.log('Finishing Universal Exam, calculating score dynamically...', testId);
+
+                                    // 🚀 CALL SCORING ENGINE WITH THE DYNAMIC TRUTH MAP!
+                                    const result = calculateMockScore(String(testId), finalAnswers, false, dynamicTruthMap);
+                                    const totalQs = result.totalQuestions;
+                                    const totalCorrect = result.correctCount;
+                                    const partScores = result.partScores;
+
+                                    const userStr = localStorage.getItem('toeic_user');
+                                    const user = userStr ? JSON.parse(userStr) : null;
+                                    const userId = user?.userId || user?.uid || "Unknown";
+                                    const testLabel = customTestTitle;
+
+                                    const batch = writeBatch(db);
+
+                                    // 1. Update MockTestAttempts Doc
+                                    const attemptRef = doc(db, 'MockTestAttempts', attemptId);
+                                    batch.update(attemptRef, {
+                                        status: 'completed',
+                                        completedAt: serverTimestamp(),
+                                        totalScore: totalCorrect,
+                                        totalQuestions: totalQs,
+                                        partScores: partScores,
+                                        timeLogs: timeLogs,
+                                        answers: finalAnswers
+                                    });
+
+                                    // 2. Sync Each Part to Manager_Results
+                                    const resultsRef = collection(db, "Manager_Results");
+                                    const partMap: Record<string, string> = {
+                                        p1: 'part1_test', p2: 'part2_test', p3: 'part3_test', p4: 'part4_test',
+                                        p5: 'part5_test', p6: 'part6_test', p7s: 'part7_single', p7m: 'part7_double'
+                                    };
+
+                                    Object.entries(partScores).forEach(([pKey, stat]: [string, any]) => {
+                                        if (pKey === 'p7') return;
+                                        if (stat.total > 0) {
+                                            const type = partMap[pKey] || pKey;
+
+                                            // Identify incorrect questions for this part
+                                            const incorrects: any[] = [];
+                                            Object.entries(finalAnswers).forEach(([qId, ans]) => {
+                                                const correctAns = dynamicTruthMap[qId];
+                                                if (correctAns && ans !== correctAns) {
+                                                    // We must only push if it belongs to this part.
+                                                    // Since IDs contain 'p1-univ', 'p2-univ', we can check that.
+                                                    if (qId.startsWith(`${pKey}-univ`)) {
+                                                        incorrects.push({
+                                                            id: qId, // We just save the ID for now. AI Tutor will resolve tags later.
+                                                            studentAnswer: ans,
+                                                            correctAnswer: correctAns
+                                                        });
+                                                    }
+                                                }
+                                            });
+
+                                            batch.set(doc(resultsRef), {
+                                                student: user?.userName || user?.name || "Unknown",
+                                                studentId: userId,
+                                                unit: `${testLabel} (${pKey.toUpperCase()})`,
+                                                detail: testLabel,
+                                                type: type,
+                                                score: stat.correct,
+                                                total: stat.total,
+                                                wrongCount: stat.total - stat.correct,
+                                                incorrectQuestions: incorrects,
+                                                attemptId: attemptId,
+                                                timestamp: serverTimestamp(),
+                                                createdAt: serverTimestamp()
+                                            });
+                                        }
+                                    });
+
+                                    // 3. Sync Summary
+                                    batch.set(doc(resultsRef), {
+                                        student: user?.userName || user?.name || "Unknown",
+                                        studentId: userId,
+                                        unit: testLabel,
+                                        detail: testLabel,
+                                        type: 'mock_test',
+                                        score: totalCorrect,
+                                        total: totalQs,
+                                        attemptId: attemptId,
+                                        timestamp: serverTimestamp(),
+                                        createdAt: serverTimestamp()
+                                    });
+
+                                    await batch.commit();
+
+                                    // 4. Update Summary
+                                    await PerformanceSyncService.syncUserSummary(userId);
+
+                                } catch (error) {
+                                    console.error("Failed to sync Dynamic Mock Test results:", error);
+                                }
+                            }
+
+                            // For now, redirect to result screen.
                             router.push(`/mock-test/full/${testId}/result?attemptId=${attemptId}`);
                         }}
                     />

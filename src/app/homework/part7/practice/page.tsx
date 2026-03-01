@@ -214,7 +214,7 @@ function Part7PracticePageContent() {
                 const incorrects: { id: string, classification: string, contentType?: string }[] = [];
                 testData.forEach(set => {
                     // Collect and standardize types for all passages in the set
-                    const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
+                    const passageTypes = Array.from(new Set(set.passages.map(p => p.contextType || p.docType || getStandardizedPassageType(p.type)))).join(' / ');
 
                     set.questions.forEach(q => {
                         if (answers[q.id] !== (q.correctAnswer || q.answer)) {

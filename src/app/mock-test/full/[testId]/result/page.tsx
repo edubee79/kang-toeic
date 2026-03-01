@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Home, BarChart3, Clock, AlertCircle, FileText, CheckCircle2, Sparkles, ChevronRight, Search, Target, Calendar, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { HalfTestService, HalfTestAnalysis } from '@/services/halfTestService';
+import { UniversalTestService } from '@/services/universalTestService';
 import { db } from '@/lib/firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { cn } from '@/lib/utils';
@@ -46,7 +47,13 @@ export default function MockTestResult() {
                         setAiReport(data.savedAiReport);
                     }
 
-                    const analysis = await HalfTestService.analyzeAttempt(attemptId);
+                    const rawTestId = String(params?.testId);
+                    const isStaticMock = rawTestId === '9' || rawTestId === '10';
+
+                    const analysis = isStaticMock
+                        ? await HalfTestService.analyzeAttempt(attemptId)
+                        : await UniversalTestService.analyzeAttempt(attemptId);
+
                     if (analysis) {
                         setHalfAnalysis(analysis);
                         if (!data.savedAiReport && !isGeneratingAi) {
@@ -125,7 +132,7 @@ export default function MockTestResult() {
                             <span className="text-slate-500 text-[10px] font-black uppercase italic tracking-widest mt-1">수험번호: {attemptId?.slice(-6)}</span>
                         </div>
                         <h1 className="text-4xl md:text-[64px] font-black tracking-tighter uppercase italic leading-[1.1]">
-                            {testId === 10 ? '2회 모의고사' : '1회 모의고사'} <span className="text-indigo-400 not-italic">리포트</span>
+                            {attempt.testTitle || (testId === 10 ? '2회 모의고사' : '1회 모의고사')} <span className="text-indigo-400 not-italic">리포트</span>
                         </h1>
                         <div className="flex items-center gap-4 text-slate-300 text-xs font-bold uppercase tracking-tight">
                             <span className="flex items-center gap-1.5 border-r border-white/10 pr-4 italic"><CheckCircle2 className="w-4 h-4 text-indigo-500" /> {attempt.studentName} 수험생님</span>

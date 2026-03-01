@@ -133,7 +133,7 @@ export default function Part7DoublePassagePage() {
             try {
                 const incorrects: any[] = [];
                 fullPracticeTest.forEach(set => {
-                    const passageTypes = Array.from(new Set(set.passages.map(p => getStandardizedPassageType(p.type)))).join(' / ');
+                    const passageTypes = Array.from(new Set(set.passages.map(p => p.contextType || p.docType || getStandardizedPassageType(p.type)))).join(' / ');
                     const contextType = set.contextType || passageTypes;
 
                     set.questions.forEach(q => {
