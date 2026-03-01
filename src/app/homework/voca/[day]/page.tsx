@@ -117,18 +117,31 @@ export default function DayPage() {
                     const parsed = JSON.parse(saved);
                     // Check if data exists and is valid
                     if (parsed.allWords && parsed.allWords.length > 0) {
-                        setAllWords(parsed.allWords);
-                        setMode(parsed.mode || 'sort');
-                        setCurrentIndex(parsed.currentIndex || 0);
-                        setLearningQueue(parsed.learningQueue || []);
-                        setTestQueue(parsed.testQueue || []);
-                        setListeningQueue(parsed.listeningQueue || []);
-                        setResults(parsed.results || []);
-                        setTestScore(parsed.testScore || 0);
-                        setSubStep(parsed.subStep || 'front');
-                        setShowBack(parsed.showBack || false);
-                        setLoading(false);
-                        return;
+                        // [V3/Sinagong Integrity Check]
+                        // Sinagong days always have 50 words. 
+                        // If it's not 50, or if it's missing modern fields, it's a legacy session.
+                        const isLegacyData = parsed.allWords.length !== 50 ||
+                            !parsed.allWords[0].id ||
+                            !parsed.allWords[0].targetScore;
+
+                        if (isLegacyData) {
+                            console.log("Legacy or corrupted vocabulary cache detected. Clearing...");
+                            localStorage.removeItem(savedKey);
+                            // Fall through to normal fetching
+                        } else {
+                            setAllWords(parsed.allWords);
+                            setMode(parsed.mode || 'sort');
+                            setCurrentIndex(parsed.currentIndex || 0);
+                            setLearningQueue(parsed.learningQueue || []);
+                            setTestQueue(parsed.testQueue || []);
+                            setListeningQueue(parsed.listeningQueue || []);
+                            setResults(parsed.results || []);
+                            setTestScore(parsed.testScore || 0);
+                            setSubStep(parsed.subStep || 'front');
+                            setShowBack(parsed.showBack || false);
+                            setLoading(false);
+                            return;
+                        }
                     }
                 }
 
