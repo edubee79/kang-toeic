@@ -172,44 +172,33 @@ export default function SignupPage() {
                 return;
             }
 
-            // *** NOTIFICATION ALLOWANCE CHECK ***
+            // *** NOTIFICATION ALLOWANCE CHECK (Non-Blocking) ***
             let fcmToken = '';
 
-            // 1. Request Permission
-            // Check if Notification API is supported
-            if (!('Notification' in window)) {
-                // If notification not supported (e.g. very old browser), maybe let pass or block?
-                // Let's assume modern browsers for this PWA
-                console.warn("This browser does not support desktop notification");
-            } else {
-                const permission = await Notification.requestPermission();
-                if (permission !== 'granted') {
-                    setError('회원가입을 하려면 [알림 권한]을 반드시 허용해야 합니다. 브라우저 설정(주소창 자물쇠 아이콘 등)에서 알림을 허용하고 다시 시도해주세요.');
-                    setIsLoading(false);
-                    return;
-                }
-            }
-
-            // 2. Get Token if messaging is available
-            if (messaging) {
+            if (typeof window !== 'undefined' && 'Notification' in window) {
                 try {
-                    // Try to get token. If fails (e.g. no vapid key setup / localhost http), warn but maybe allow if permission granted?
-                    // User said "If not done, no signup". The previous step checks permission. 
-                    // Token generation might fail if service worker isn't registered or env issues.
-                    // Ideally we should have the VAPID key.
-                    const vapidKey = process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY;
-                    if (vapidKey) {
-                        fcmToken = await getToken(messaging, { vapidKey });
-                    } else {
-                        // Fallback without vapid key (might work in legacy, but recommended to have one)
-                        fcmToken = await getToken(messaging);
+                    // Check current permission
+                    let currentPermission = Notification.permission;
+
+                    if (currentPermission === 'default') {
+                        // Request only if not already decided. Timeout after 5s to prevent hang.
+                        currentPermission = await Promise.race([
+                            Notification.requestPermission(),
+                            new Promise<NotificationPermission>((resolve) => setTimeout(() => resolve('default'), 5000))
+                        ]);
                     }
-                } catch (tokErr) {
-                    console.warn("Token generation failed:", tokErr);
-                    // Decide strictness on token generation vs permission grant.
-                    // Permission grant is the user action. Token failure is system/network.
-                    // We will allow signup if permission was granted, even if token failed (to avoid blocking due to tech issues).
-                    // But we will log it.
+
+                    if (currentPermission === 'granted' && messaging) {
+                        try {
+                            const vapidKey = process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY;
+                            fcmToken = await getToken(messaging, { vapidKey });
+                            console.log("FCM Token acquired:", !!fcmToken);
+                        } catch (tokErr) {
+                            console.warn("FCM Token acquisition failed (proceeding without it):", tokErr);
+                        }
+                    }
+                } catch (notiErr) {
+                    console.warn("Notification/FCM logic error (proceeding):", notiErr);
                 }
             }
 
@@ -222,6 +211,8 @@ export default function SignupPage() {
                 return;
             }
 
+            // DB Storage (The most critical part)
+            console.log("Saving user to DB:", formData.userId);
             await setDoc(doc(db, "Winter_Users", formData.userId), {
                 username: formData.username,
                 email: formData.email,
@@ -236,12 +227,13 @@ export default function SignupPage() {
                 fcmToken: fcmToken || null,
             });
 
+            console.log("Signup successful for:", formData.userId);
             setSuccess(true);
             setTimeout(() => router.push('/login'), 3000);
 
-        } catch (error) {
-            console.error("Signup error:", error);
-            setError('회원가입 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        } catch (error: any) {
+            console.error("Signup error details:", error);
+            setError(`회원가입 중 오류가 발생했습니다 (${error.message || 'Unknown'}). 잠시 후 다시 시도하거나 관리자에게 문의해주세요.`);
         } finally {
             setIsLoading(false);
         }

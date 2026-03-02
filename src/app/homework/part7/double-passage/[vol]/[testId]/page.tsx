@@ -3,7 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { part7MultiTestData, PracticeSet } from '@/data/toeic/reading/part7/multi_tests';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight, ArrowLeft, Timer } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowLeft, Timer, RotateCcw } from 'lucide-react';
+import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
+import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
 import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
 import { DocumentRenderer } from '@/components/exam/Part7Templates';
 import { Button } from "@/components/ui/button";
@@ -18,6 +22,8 @@ export default function Part7DoublePassagePage() {
     const testId = Number(params.testId);
 
     const fromPath = searchParams.get('from') || '/homework/part7-double';
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
 
     const testKey = `test${testId}` as keyof typeof part7MultiTestData;
     const fullPracticeTest = part7MultiTestData[testKey];
@@ -33,6 +39,9 @@ export default function Part7DoublePassagePage() {
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
     const [showExitConfirm, setShowExitConfirm] = useState(false);
+    const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const [reSolveMode, setReSolveMode] = useState(false);
+    const [originalAnswers, setOriginalAnswers] = useState<Record<string, string>>({});
 
     // Refs for scrolling to top on set change
     const leftPanelRef = useRef<HTMLDivElement>(null);
@@ -63,21 +72,50 @@ export default function Part7DoublePassagePage() {
         checkDevice();
         window.addEventListener('resize', checkDevice);
 
-        // Load Progress
-        const savedProgress = localStorage.getItem(`part7_multi_progress_v${vol}_t${testId}`);
-        if (savedProgress) {
-            try {
-                const parsed = JSON.parse(savedProgress);
-                if (parsed.answers) setAnswers(parsed.answers);
-                if (parsed.elapsedTime) setElapsedTime(parsed.elapsedTime);
-                if (parsed.currentSetIndex !== undefined) setCurrentSetIndex(parsed.currentSetIndex);
-            } catch (e) {
-                console.error("Failed to load progress", e);
+        // Load Retry Data if needed
+        if (retryMode && resultId) {
+            const fetchRetryData = async () => {
+                setIsLoadingRetry(true);
+                try {
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const resData = docSnap.data();
+                        if (resData.incorrectQuestions) {
+                            const ids = resData.incorrectQuestions.map((iq: any) => iq.id);
+                            const dummyOriginal: Record<string, string> = {};
+                            fullPracticeTest.flatMap(s => s.questions).forEach(q => {
+                                if (ids.includes(q.id)) dummyOriginal[q.id] = 'WRONG_PLACEHOLDER';
+                                else dummyOriginal[q.id] = q.correctAnswer;
+                            });
+                            setOriginalAnswers(dummyOriginal);
+                            setReSolveMode(true);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Retry loading failed:", e);
+                } finally {
+                    setIsLoadingRetry(false);
+                }
+            };
+            fetchRetryData();
+        } else {
+            // Load Progress
+            const savedProgress = localStorage.getItem(`part7_multi_progress_v${vol}_t${testId}`);
+            if (savedProgress) {
+                try {
+                    const parsed = JSON.parse(savedProgress);
+                    if (parsed.answers) setAnswers(parsed.answers);
+                    if (parsed.elapsedTime) setElapsedTime(parsed.elapsedTime);
+                    if (parsed.currentSetIndex !== undefined) setCurrentSetIndex(parsed.currentSetIndex);
+                } catch (e) {
+                    console.error("Failed to load progress", e);
+                }
             }
         }
 
         return () => window.removeEventListener('resize', checkDevice);
-    }, [vol, testId]);
+    }, [vol, testId, retryMode, resultId, fullPracticeTest]);
 
     // Save Progress
     useEffect(() => {
@@ -127,6 +165,10 @@ export default function Part7DoublePassagePage() {
         const correctCount = allQuestions.filter(q => answers[q.id] === q.correctAnswer).length;
 
         // Save to Firebase (Real Mode only)
+        if (retryMode) {
+            setShowResults(true);
+            return;
+        }
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);
@@ -195,6 +237,15 @@ export default function Part7DoublePassagePage() {
         );
     }
 
+    if (isLoadingRetry) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4">
+                <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+                <p className="text-slate-500 font-black italic uppercase tracking-widest text-xs">오답 데이터를 매칭하는 중...</p>
+            </div>
+        );
+    }
+
     return (
         <div className="fixed inset-0 z-[50] min-h-screen bg-gray-100 flex flex-col h-screen overflow-hidden font-sans">
             {/* Minimal Header */}
@@ -256,7 +307,7 @@ export default function Part7DoublePassagePage() {
                             <ChevronLeft size={20} />
                         </button>
                         <span className="text-sm font-black text-gray-600 min-w-[3rem] text-center">
-                            {currentSetIndex + 1} / {fullPracticeTest.length}
+                            {currentSetIndex + 1} / {retryMode ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer)).length : fullPracticeTest.length}
                         </span>
                         <button
                             onClick={handleNext}
@@ -277,23 +328,25 @@ export default function Part7DoublePassagePage() {
                 {/* Left Panel: Passages 1 & 2 (60%) */}
                 <div ref={leftPanelRef} className="w-[60%] bg-gray-50 h-full overflow-y-auto border-r border-gray-300 shadow-inner scroll-smooth">
                     <div className="space-y-8 pb-20 p-6">
-                        {data.passages.slice(0, 2).map((passage, idx) => (
-                            <div key={passage.id} className="bg-white border border-gray-200 shadow-sm p-4 relative">
-                                {/* Passage Label */}
-                                <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10 flex gap-2">
-                                    <span>Passage {idx + 1}</span>
-                                    {passage.docType && (
-                                        <>
-                                            <span className="text-gray-500">|</span>
-                                            <span className="text-yellow-400">{passage.docType}</span>
-                                        </>
-                                    )}
+                        {(retryMode
+                            ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
+                            : fullPracticeTest)[currentSetIndex].passages.slice(0, 2).map((passage, idx) => (
+                                <div key={passage.id} className="bg-white border border-gray-200 shadow-sm p-4 relative">
+                                    {/* Passage Label */}
+                                    <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10 flex gap-2">
+                                        <span>Passage {idx + 1}</span>
+                                        {passage.docType && (
+                                            <>
+                                                <span className="text-gray-500">|</span>
+                                                <span className="text-yellow-400">{passage.docType}</span>
+                                            </>
+                                        )}
+                                    </div>
+                                    <div className="mt-8">
+                                        <DocumentRenderer doc={passage} />
+                                    </div>
                                 </div>
-                                <div className="mt-8">
-                                    <DocumentRenderer doc={passage} />
-                                </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
                 </div>
 
@@ -322,86 +375,97 @@ export default function Part7DoublePassagePage() {
                     <div ref={rightBottomRef} className={`${data.passages[2] ? 'h-[50%]' : 'h-full'} bg-white overflow-y-auto scroll-smooth`}>
                         <div className="pb-20 p-4">
                             <h2 className="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 border-b border-gray-100 pb-2">
-                                Questions {data.questions[0].questionNo}–{data.questions[data.questions.length - 1].questionNo}
+                                Questions {(retryMode
+                                    ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
+                                    : fullPracticeTest)[currentSetIndex].questions[0].questionNo}–{(retryMode
+                                        ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
+                                        : fullPracticeTest)[currentSetIndex].questions[(retryMode
+                                            ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
+                                            : fullPracticeTest)[currentSetIndex].questions.length - 1].questionNo}
                             </h2>
 
                             <div className="space-y-3"> {/* Tightened spacing */}
-                                {data.questions.map((q, idx) => {
-                                    const qNum = String(q.questionNo); // Ensure string for consistency
-                                    const myAnswer = answers[q.id]; // Use q.id for unique key
-                                    const correctLabel = q.correctAnswer;
-                                    const isCorrect = showResults && myAnswer === correctLabel;
-                                    const isWrong = showResults && myAnswer && myAnswer !== correctLabel;
+                                {(retryMode
+                                    ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
+                                    : fullPracticeTest)[currentSetIndex].questions.filter(q => {
+                                        if (retryMode) return originalAnswers[q.id] !== q.correctAnswer;
+                                        return true;
+                                    }).map((q, idx) => {
+                                        const qNum = String(q.questionNo); // Ensure string for consistency
+                                        const myAnswer = answers[q.id]; // Use q.id for unique key
+                                        const correctLabel = q.correctAnswer;
+                                        const isCorrect = showResults && myAnswer === correctLabel;
+                                        const isWrong = showResults && myAnswer && myAnswer !== correctLabel;
 
-                                    // Handle options safely (Object or Array)
-                                    const processedOptions = Array.isArray(q.options)
-                                        ? q.options.map((text, idx) => ({ label: String.fromCharCode(65 + idx), text }))
-                                        : Object.entries(q.options).sort((a, b) => a[0].localeCompare(b[0])).map(([label, text]) => ({ label, text: text as string }));
+                                        // Handle options safely (Object or Array)
+                                        const processedOptions = Array.isArray(q.options)
+                                            ? q.options.map((text, idx) => ({ label: String.fromCharCode(65 + idx), text }))
+                                            : Object.entries(q.options).sort((a, b) => a[0].localeCompare(b[0])).map(([label, text]) => ({ label, text: text as string }));
 
-                                    return (
-                                        <div key={q.id} className={cn(
-                                            "transition p-4 rounded-xl border",
-                                            showResults && isCorrect ? "bg-green-50 border-green-100" :
-                                                showResults && isWrong ? "bg-red-50 border-red-100" : "border-transparent"
-                                        )}>
-                                            <div className="flex gap-2 mb-2">
-                                                <span className="font-bold text-blue-900 text-[16px] shrink-0">{qNum}.</span>
-                                                <p className="font-bold text-gray-900 text-[16px] leading-tight pt-0.5">
-                                                    {q.text}
-                                                </p>
-                                            </div>
-
-                                            <div className="space-y-1 pl-4">
-                                                {processedOptions.map((opt, optIdx) => {
-                                                    const isSelected = myAnswer === opt.label;
-                                                    const isCorrectOpt = opt.label === correctLabel;
-
-                                                    let optionClass = "border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700";
-                                                    if (isSelected) optionClass = "border-blue-500 bg-blue-50 text-blue-900 font-semibold";
-
-                                                    if (showResults) {
-                                                        if (isCorrectOpt) optionClass = "border-green-500 bg-green-100 text-green-900 font-bold";
-                                                        else if (isSelected) optionClass = "border-red-500 bg-red-100 text-red-900 line-through";
-                                                        else optionClass = "border-transparent opacity-50";
-                                                    }
-
-                                                    return (
-                                                        <label
-                                                            key={optIdx}
-                                                            className={cn(
-                                                                "flex items-start gap-3 py-1.5 px-2 rounded border cursor-pointer transition-all",
-                                                                optionClass
-                                                            )}
-                                                        >
-                                                            <input
-                                                                type="radio"
-                                                                name={`question-${q.id}`}
-                                                                className="hidden"
-                                                                onChange={() => !showResults && handleAnswerChange(q.id, optIdx, opt.label)}
-                                                                disabled={showResults}
-                                                            />
-                                                            <span className={cn(
-                                                                "w-6 h-6 flex items-center justify-center rounded-full border text-xs font-black shrink-0 mt-0.5 transition-colors",
-                                                                isSelected ? "bg-blue-600 border-blue-600 text-white" : "bg-white border-gray-300 text-gray-500",
-                                                                showResults && isCorrectOpt ? "bg-green-600 border-green-600 text-white" :
-                                                                    showResults && isSelected && !isCorrectOpt ? "bg-red-600 border-red-600 text-white" : ""
-                                                            )}>
-                                                                {opt.label}
-                                                            </span>
-                                                            <span className="text-[15px] font-medium leading-snug">{opt.text}</span>
-                                                        </label>
-                                                    );
-                                                })}
-                                            </div>
-                                            {showResults && (
-                                                <div className="mt-4 pl-4 text-sm text-gray-600 border-t border-gray-100 pt-3">
-                                                    <p className="mb-2"><span className="font-bold text-green-700">Answer: {correctLabel}</span></p>
-                                                    <p className="leading-relaxed">{q.explanation || "해설이 등록되지 않았습니다."}</p>
+                                        return (
+                                            <div key={q.id} className={cn(
+                                                "transition p-4 rounded-xl border",
+                                                showResults && isCorrect ? "bg-green-50 border-green-100" :
+                                                    showResults && isWrong ? "bg-red-50 border-red-100" : "border-transparent"
+                                            )}>
+                                                <div className="flex gap-2 mb-2">
+                                                    <span className="font-bold text-blue-900 text-[16px] shrink-0">{qNum}.</span>
+                                                    <p className="font-bold text-gray-900 text-[16px] leading-tight pt-0.5">
+                                                        {q.text}
+                                                    </p>
                                                 </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
+
+                                                <div className="space-y-1 pl-4">
+                                                    {processedOptions.map((opt, optIdx) => {
+                                                        const isSelected = myAnswer === opt.label;
+                                                        const isCorrectOpt = opt.label === correctLabel;
+
+                                                        let optionClass = "border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700";
+                                                        if (isSelected) optionClass = "border-blue-500 bg-blue-50 text-blue-900 font-semibold";
+
+                                                        if (showResults) {
+                                                            if (isCorrectOpt) optionClass = "border-green-500 bg-green-100 text-green-900 font-bold";
+                                                            else if (isSelected) optionClass = "border-red-500 bg-red-100 text-red-900 line-through";
+                                                            else optionClass = "border-transparent opacity-50";
+                                                        }
+
+                                                        return (
+                                                            <label
+                                                                key={optIdx}
+                                                                className={cn(
+                                                                    "flex items-start gap-3 py-1.5 px-2 rounded border cursor-pointer transition-all",
+                                                                    optionClass
+                                                                )}
+                                                            >
+                                                                <input
+                                                                    type="radio"
+                                                                    name={`question-${q.id}`}
+                                                                    className="hidden"
+                                                                    onChange={() => !showResults && handleAnswerChange(q.id, optIdx, opt.label)}
+                                                                    disabled={showResults}
+                                                                />
+                                                                <span className={cn(
+                                                                    "w-6 h-6 flex items-center justify-center rounded-full border text-xs font-black shrink-0 mt-0.5 transition-colors",
+                                                                    isSelected ? "bg-blue-600 border-blue-600 text-white" : "bg-white border-gray-300 text-gray-500",
+                                                                    showResults && isCorrectOpt ? "bg-green-600 border-green-600 text-white" :
+                                                                        showResults && isSelected && !isCorrectOpt ? "bg-red-600 border-red-600 text-white" : ""
+                                                                )}>
+                                                                    {opt.label}
+                                                                </span>
+                                                                <span className="text-[15px] font-medium leading-snug">{opt.text}</span>
+                                                            </label>
+                                                        );
+                                                    })}
+                                                </div>
+                                                {showResults && (
+                                                    <div className="mt-4 pl-4 text-sm text-gray-600 border-t border-gray-100 pt-3">
+                                                        <p className="mb-2"><span className="font-bold text-green-700">Answer: {correctLabel}</span></p>
+                                                        <p className="leading-relaxed">{q.explanation || "해설이 등록되지 않았습니다."}</p>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
 
                                 {!showResults && isLastSet && (
                                     <div className="mt-8 pt-8 border-t border-gray-200 flex justify-center">

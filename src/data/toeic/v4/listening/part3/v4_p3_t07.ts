@@ -320,7 +320,7 @@ export const test7Data: Part3Set[] = [
                 translation_D: "대학교에 기부하기"
             },
             {
-                id: "id: \"v4-p3-t07-q46\"",
+                id: "v4-p3-t07-q46",
                 text: "What does the woman volunteer to do?",
                 classification: "OFFER_SUGGEST",
                 options: {

@@ -103,29 +103,6 @@ export default function VocabularyDashboard() {
     // Generate Day 1-20
     const days = Array.from({ length: 20 }, (_, i) => i + 1);
 
-    const DAY_THEMES: Record<number, string> = {
-        1: "채용/인사",
-        2: "사무/행정",
-        3: "연결어/전치사",
-        4: "계약/성과",
-        5: "급여/복지",
-        6: "경영/관리",
-        7: "재무/회계",
-        8: "금융/은행",
-        9: "투자/M&A",
-        10: "고난도 부사",
-        11: "생산/제조",
-        12: "품질/재고",
-        13: "물류/배송",
-        14: "마케팅/광고",
-        15: "시장조사/고객",
-        16: "IT/기술연구",
-        17: "법률/규정",
-        18: "의료/환경",
-        19: "교통/여행",
-        20: "혼동어휘/완성",
-    };
-
     return (
         <div className="w-full space-y-3 md:space-y-6 pb-32 px-0 bg-slate-950 min-h-screen">
             <div className="flex justify-between items-center px-3 md:px-8 py-4 md:py-8 bg-slate-900/50 border-b border-slate-800">
@@ -136,11 +113,11 @@ export default function VocabularyDashboard() {
                             <span className="text-white">Word</span>
                             <span className="text-indigo-500"> Master</span>
                         </h2>
-                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">TOEIC 필수 어휘 1600개 완성</p>
+                        <p className="text-slate-500 font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mt-1">TOEIC 필수 어휘 완성</p>
                     </div>
                 </div>
                 <div className="text-right">
-                    <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">Goal: {targetScore}</p>
+                    <p className="text-slate-500 font-black text-xs md:text-sm uppercase tracking-widest leading-none">Goal: 1000</p>
                     <p className="text-slate-600 font-black text-[9px] md:text-xs uppercase tracking-widest mt-1">Day {maxDay} Open</p>
                 </div>
             </div>
@@ -263,7 +240,6 @@ export default function VocabularyDashboard() {
                     {days.map((day) => {
                         const completionKey = `Voca_Day${day}`;
                         const isPassed = completions[completionKey]?.completed || false;
-                        const theme = DAY_THEMES[day] || "Loading";
                         const isLocked = day > maxDay;
 
                         return (
@@ -297,11 +273,6 @@ export default function VocabularyDashboard() {
                                             )}>
                                                 DAY {String(day).padStart(2, '0')}
                                             </span>
-                                            {!isLocked && (
-                                                <span className="text-[8px] md:text-xs text-slate-500 font-black uppercase block truncate max-w-[70px] md:max-w-none mt-1 tracking-tighter">
-                                                    {theme}
-                                                </span>
-                                            )}
                                         </div>
                                         {isLocked && (
                                             <div className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-slate-800 flex items-center justify-center text-slate-600">

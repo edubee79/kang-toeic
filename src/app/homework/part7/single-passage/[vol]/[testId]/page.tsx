@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { part7TestData, Part7Question } from '@/data/toeic/reading/part7/tests';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
 import { Timer, CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight, AlertCircle, BookOpen, ChevronLeft, Tag, AlertTriangle } from "lucide-react";
@@ -25,7 +25,10 @@ function Part7SingleTestRunnerContent() {
     const mode = searchParams.get('mode') || 'real'; // 'real' or 'drill' or 'review'
     const fromPath = searchParams.get('from') || (mode === 'drill' ? '/student/analysis' : '/homework/part7');
     const isDrillMode = mode === 'drill';
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
     const [isLoadingMock, setIsLoadingMock] = useState(false);
+    const [isLoadingRetry, setIsLoadingRetry] = useState(false);
 
     // Find Test Data
     const testSet = part7TestData.find(t => t.testId === testId && t.vol === vol);
@@ -83,7 +86,6 @@ function Part7SingleTestRunnerContent() {
             const fetchMockData = async () => {
                 setIsLoadingMock(true);
                 try {
-                    const { doc, getDoc } = await import('firebase/firestore');
                     const docRef = doc(db, 'MockTestAttempts', mockAttemptId);
                     const snap = await getDoc(docRef);
                     if (snap.exists()) {
@@ -103,6 +105,35 @@ function Part7SingleTestRunnerContent() {
                 }
             };
             fetchMockData();
+        }
+
+        // Case: Retry Mode from History (Non-mock)
+        if (retryMode && resultId) {
+            const fetchRetryData = async () => {
+                setIsLoadingRetry(true);
+                try {
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const resData = docSnap.data();
+                        if (resData.incorrectQuestions) {
+                            const ids = resData.incorrectQuestions.map((iq: any) => iq.id);
+                            const dummyOriginal: Record<string, string> = {};
+                            allQuestions.forEach(q => {
+                                if (ids.includes(q.id)) dummyOriginal[q.id] = 'WRONG_PLACEHOLDER';
+                                else dummyOriginal[q.id] = (q.correctAnswer || (q as any).answer);
+                            });
+                            setOriginalAnswers(dummyOriginal);
+                            setReSolveMode(true);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Retry loading failed:", e);
+                } finally {
+                    setIsLoadingRetry(false);
+                }
+            };
+            fetchRetryData();
         }
 
         // Load History
@@ -202,6 +233,7 @@ function Part7SingleTestRunnerContent() {
         }
 
         // Save to Firebase (Real Mode only)
+        if (retryMode) return;
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);
@@ -340,12 +372,14 @@ function Part7SingleTestRunnerContent() {
         );
     }
 
-    if (isLoadingMock) {
+    if (isLoadingMock || isLoadingRetry) {
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center">
                 <div className="text-center space-y-4">
                     <Timer className="w-10 h-10 text-indigo-500 animate-spin mx-auto opacity-20" />
-                    <p className="font-black text-slate-500 uppercase tracking-widest italic text-sm">모의고사 오답 데이터를 분석 중...</p>
+                    <p className="font-black text-slate-500 uppercase tracking-widest italic text-sm">
+                        {isLoadingRetry ? "오답 데이터를 매칭하는 중..." : "모의고사 오답 데이터를 분석 중..."}
+                    </p>
                 </div>
             </div>
         )

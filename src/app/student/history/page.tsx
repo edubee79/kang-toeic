@@ -41,6 +41,8 @@ interface ManagerResult {
     attemptId?: string;
     timeSpent?: number;
     isSummary?: boolean;
+    vol?: number | string;
+    testId?: number | string;
 }
 
 export default function StudentHistoryPage() {
@@ -103,28 +105,40 @@ export default function StudentHistoryPage() {
                 : `/mock-test/full/${testIdLabel}/result?attemptId=${attemptId}`;
         } else {
             // 2. Extract test number safely
-            const testNum = detail.match(/\d+/)?.[0] || '1';
+            const testNum = res.testId || detail.match(/test\s*(\d+)/i)?.[1] || detail.match(/\d+/g)?.slice(-1)[0] || '1';
 
             // 3. Mapping for individual parts (Review/Practice)
             switch (type) {
-                case 'voca': path = `/homework/voca`; break;
-                case 'grammar': path = `/homework/part5`; break;
-                case 'part1_test': path = `/homework/part1-real/test/${testNum}`; break;
-                case 'part1_shadow': path = `/homework/part1/${testNum}`; break;
-                case 'part2_test': path = `/homework/part2/${testNum}`; break;
+                case 'voca':
+                    path = `/homework/voca/${testNum}`;
+                    break;
+                case 'grammar':
+                    path = `/homework/part5`;
+                    break;
+                case 'part1_test':
+                    path = vol ? `/homework/part1-real/test/${vol}/${testNum}` : `/homework/part1-real/test/1/${testNum}`;
+                    break;
+                case 'part1_shadow':
+                    path = `/homework/part1/${testNum}`;
+                    break;
+                case 'part2_test':
+                    path = vol ? `/homework/part2/test/${vol}/${testNum}` : `/homework/part2/${testNum}`;
+                    break;
                 case 'part3_test':
-                    path = vol ? `/homework/part3/test/${vol}/${testNum}` : `/homework/part3/test/${testNum}`;
+                    path = vol ? `/homework/part3/test/${vol}/${testNum}` : `/homework/part3/test/1/${testNum}`;
                     break;
                 case 'part4_test':
-                    path = vol ? `/homework/part4/test/${vol}/${testNum}` : `/homework/part4/test/${testNum}`;
+                    path = vol ? `/homework/part4/test/${vol}/${testNum}` : `/homework/part4/test/1/${testNum}`;
                     break;
-                case 'part5_test': path = `/homework/part5-real/test/${testNum}`; break;
+                case 'part5_test':
+                    path = vol ? `/homework/part5-real/test/${vol}/${testNum}` : `/homework/part5-real/test/1/${testNum}`;
+                    break;
                 case 'part6_test':
-                    path = vol ? `/homework/part6/test/${vol}/${testNum}` : `/homework/part6/test/${testNum}`;
+                    path = vol ? `/homework/part6/test/${vol}/${testNum}` : `/homework/part6/test/1/${testNum}`;
                     break;
                 case 'part7_test':
                 case 'part7_single':
-                    path = vol ? `/homework/part7/single-passage/${vol}/${testNum}` : `/homework/part7/test/${testNum}`;
+                    path = vol ? `/homework/part7/single-passage/${vol}/${testNum}` : `/homework/part7/single-passage/1/${testNum}`;
                     break;
                 case 'part7_double':
                 case 'part7_triple':
@@ -132,25 +146,36 @@ export default function StudentHistoryPage() {
                 case 'part7_double_test':
                     path = vol ? `/homework/part7/double-passage/${vol}/${testNum}` : `/homework/part7/practice?test=${testNum}`;
                     break;
-                case 'weakness_review': path = `/homework/weakness/${id}`; break;
+                case 'weakness_review':
+                    path = `/homework/weakness/${id}`;
+                    break;
                 case 'level_test':
                     const levelId = detail.includes('2회') || detail.includes('9b') ? '9b' : '9a';
-                    path = `/mock-test/half/${levelId}`; break;
+                    path = `/mock-test/half/${levelId}`;
+                    break;
                 default:
                     // Fallback for partial matches
-                    if (type.includes('part1')) path = `/homework/part1-real/test/${testNum}`;
-                    else if (type.includes('part2')) path = `/homework/part2/${testNum}`;
-                    else if (type.includes('part3')) path = vol ? `/homework/part3/test/${vol}/${testNum}` : `/homework/part3/test/${testNum}`;
-                    else if (type.includes('part4')) path = vol ? `/homework/part4/test/${vol}/${testNum}` : `/homework/part4/test/${testNum}`;
-                    else if (type.includes('part5')) path = `/homework/part5-real/test/${testNum}`;
-                    else if (type.includes('part6')) path = vol ? `/homework/part6/test/${vol}/${testNum}` : `/homework/part6/test/${testNum}`;
-                    else if (type.includes('part7')) path = vol ? `/homework/part7/single-passage/${vol}/${testNum}` : `/homework/part7/test/${testNum}`;
+                    if (type.includes('part1')) path = vol ? `/homework/part1-real/test/${vol}/${testNum}` : `/homework/part1-real/test/1/${testNum}`;
+                    else if (type.includes('part2')) path = vol ? `/homework/part2/test/${vol}/${testNum}` : `/homework/part2/${testNum}`;
+                    else if (type.includes('part3')) path = vol ? `/homework/part3/test/${vol}/${testNum}` : `/homework/part3/test/1/${testNum}`;
+                    else if (type.includes('part4')) path = vol ? `/homework/part4/test/${vol}/${testNum}` : `/homework/part4/test/1/${testNum}`;
+                    else if (type.includes('part5')) path = vol ? `/homework/part5-real/test/${vol}/${testNum}` : `/homework/part5-real/test/1/${testNum}`;
+                    else if (type.includes('part6')) path = vol ? `/homework/part6/test/${vol}/${testNum}` : `/homework/part6/test/1/${testNum}`;
+                    else if (type.includes('part7')) path = vol ? `/homework/part7/single-passage/${vol}/${testNum}` : `/homework/part7/single-passage/1/${testNum}`;
             }
         }
 
         if (path === '#') return '#';
         const separator = path.includes('?') ? '&' : '?';
-        return `${path}${separator}from=${currentPath}`;
+
+        let finalPath = `${path}${separator}from=${currentPath}`;
+
+        // Add retry parameters for non-mock tests
+        if (!attemptId && id && type !== 'mock_test' && type !== 'level_test') {
+            finalPath += `&mode=retry&resultId=${id}`;
+        }
+
+        return finalPath;
     };
 
     const formatScore = (res: ManagerResult) => {
@@ -196,8 +221,17 @@ export default function StudentHistoryPage() {
         const detailLower = (r.detail || '').toLowerCase();
         const unitLower = (r.unit || '').toLowerCase();
 
-        // 1. Identify Mock/Level Test Related Records (Standard markers)
-        const isMockRelated = typeLower.includes('mock') || typeLower.includes('level') || !!r.attemptId;
+        // 1. Identify Mock/Level Test Related Records (More robust check)
+        const isMockRelated =
+            typeLower.includes('mock') ||
+            typeLower.includes('level') ||
+            !!r.attemptId ||
+            detailLower.includes('모의고사') ||
+            detailLower.includes('하프') ||
+            detailLower.includes('레벨') ||
+            unitLower.includes('모의고사') ||
+            unitLower.includes('하프') ||
+            unitLower.includes('레벨');
 
         // 2. Identify Summary vs Sub-Part
         const isSummary =
@@ -211,7 +245,8 @@ export default function StudentHistoryPage() {
             return isMockRelated && isSummary;
         }
 
-        // For LC, RC, Voca tabs - hide all mock components
+        // For LC, RC, Voca tabs - hide ALL mock-related parts to avoid redundancy.
+        // User follows: Mock Tab -> Analysis -> Review by Parts.
         if (isMockRelated) return false;
 
         if (activeTab === 'lc') {
@@ -439,13 +474,13 @@ export default function StudentHistoryPage() {
                                                         {/* Moved Time Badge here */}
                                                         <div className="flex items-center gap-4">
                                                             <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center shrink-0">
-                                                                <span className="text-[7px] md:text-[8px] text-slate-500 font-black leading-none mb-1 uppercase tracking-tighter">
-                                                                    {res.timeSpent ? 'Elapsed' : 'Time'}
+                                                                <span className="text-[7px] md:text-[8px] text-slate-500 font-black leading-none mb-0.5 uppercase tracking-tighter">
+                                                                    소요시간
                                                                 </span>
                                                                 <span className="text-xs md:text-sm font-black text-white italic">
                                                                     {res.timeSpent
                                                                         ? `${Math.floor(res.timeSpent / 60)}:${(res.timeSpent % 60).toString().padStart(2, '0')}`
-                                                                        : format(date, 'HH:mm')
+                                                                        : '--:--'
                                                                     }
                                                                 </span>
                                                             </div>

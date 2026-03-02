@@ -174,7 +174,7 @@ export const test05Data: Part6TestSet = {
                     classification: "p6g"
                 },
                 {
-                    id: "id: v4-p6-t05-q141",
+                    id: "v4-p6-t05-q141",
                     questionNo: 141,
                     text: "Select the best answer.",
                     options: {

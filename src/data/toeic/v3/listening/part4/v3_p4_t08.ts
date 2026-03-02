@@ -11,38 +11,38 @@ export const test8Data: Part4Set[] = [
       {
         "id": "v3-p4-t8-q71",
         "questionType": "WHO_LOC",
-        "text": "Who most likely is the speaker?",
+        "text": "Where does the speaker work?",
         "options": {
-          "A": "A roofing expert",
-          "B": "A landscape designer",
-          "C": "A health inspector",
-          "D": "A flooring manufacturer"
+          "A": "At a roofing company",
+          "B": "At a catering company",
+          "C": "At a community park headquarters",
+          "D": "At an interior-design firm"
         },
         "correctAnswer": "A"
       },
       {
         "id": "v3-p4-t8-q72",
         "questionType": "WHAT_WHICH",
-        "text": "What is the problem?",
+        "text": "What information was incorrect?",
         "options": {
-          "A": "A deadline has passed.",
-          "B": "A material is more expensive.",
-          "C": "A machine is broken.",
-          "D": "Some measurements are incorrect."
+          "A": "An order number",
+          "B": "A file name",
+          "C": "An address",
+          "D": "A price"
         },
-        "correctAnswer": "B"
+        "correctAnswer": "D"
       },
       {
         "id": "v3-p4-t8-q73",
         "questionType": "WHY_REASON",
-        "text": "Why does the speaker recommend acting soon?",
+        "text": "Why does the speaker recommend placing an order soon?",
         "options": {
-          "A": "To accommodate a schedule change",
-          "B": "To take advantage of a sale",
-          "C": "To train a new employee",
-          "D": "To avoid a seasonal delay"
+          "A": "A material is in high demand.",
+          "B": "The rainy season is coming.",
+          "C": "Some new fees will be introduced.",
+          "D": "A permit is about to expire."
         },
-        "correctAnswer": "D"
+        "correctAnswer": "B"
       }
     ],
     "script": [

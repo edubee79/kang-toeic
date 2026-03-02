@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -39,6 +39,8 @@ export default function DayPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/student/home';
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
 
     // Data State
     const [loading, setLoading] = useState(true);
@@ -58,6 +60,7 @@ export default function DayPage() {
     const [testQueue, setTestQueue] = useState<VocabularyWord[]>([]);
     const [listeningQueue, setListeningQueue] = useState<VocabularyWord[]>([]);
     const [pendingReviews, setPendingReviews] = useState<VocabularyWord[]>([]);
+    const [startTime] = useState(Date.now());
 
     // Test State
     const [timeLeft, setTimeLeft] = useState(10);
@@ -71,11 +74,12 @@ export default function DayPage() {
     // Listening Feedback State
     const [listeningFeedback, setListeningFeedback] = useState<'correct' | 'incorrect' | null>(null);
     const [selectedListeningOption, setSelectedListeningOption] = useState<string | null>(null);
+    const [isProcessing, setIsProcessing] = useState(false);
 
     // Save Logic
-    const handleSaveAndExit = useCallback(() => {
+    const saveVocaProgress = useCallback((overrideData?: any) => {
         if (!userId) return;
-        const progress = {
+        const base = {
             mode,
             currentIndex,
             allWords,
@@ -89,9 +93,14 @@ export default function DayPage() {
             showBack,
             timestamp: Date.now()
         };
-        localStorage.setItem(`voca_day_progress_${userId}_${day}`, JSON.stringify(progress));
+        const finalProgress = { ...base, ...overrideData };
+        localStorage.setItem(`voca_day_progress_${userId}_${day}`, JSON.stringify(finalProgress));
+    }, [userId, day, mode, currentIndex, allWords, learningQueue, testQueue, listeningQueue, pendingReviews, results, testScore, subStep, showBack]);
+
+    const handleSaveAndExit = useCallback(() => {
+        saveVocaProgress();
         router.push(fromPath);
-    }, [userId, day, mode, currentIndex, allWords, learningQueue, testQueue, listeningQueue, pendingReviews, results, testScore, subStep, showBack, router, fromPath]);
+    }, [saveVocaProgress, router, fromPath]);
 
     // Initialization
     useEffect(() => {
@@ -141,6 +150,34 @@ export default function DayPage() {
                             setShowBack(parsed.showBack || false);
                             setLoading(false);
                             return;
+                        }
+                    }
+                }
+
+                // 1.5 Retry Mode Check
+                if (retryMode && resultId) {
+                    const resultRef = doc(db, "Manager_Results", resultId);
+                    const resultSnap = await getDoc(resultRef);
+                    if (resultSnap.exists()) {
+                        const data = resultSnap.data();
+                        if (data.incorrectQuestions && data.incorrectQuestions.length > 0) {
+                            const ids = data.incorrectQuestions.map((q: any) => q.id);
+                            const dailyWords = await getWordsForDay(user.userId, day, score as 650 | 800 | 900);
+                            setAllWords(dailyWords);
+
+                            const filtered = dailyWords.filter(w => ids.includes(w.id));
+                            if (filtered.length > 0) {
+                                const shuffled = shuffle(filtered);
+                                setTestQueue(shuffled);
+                                setMode('test');
+                                setCurrentIndex(0);
+                                setResults([]);
+                                setTestScore(0);
+                                generateTestOptions(shuffled[0], 0);
+                                setTimeLeft(8);
+                                setLoading(false);
+                                return;
+                            }
                         }
                     }
                 }
@@ -200,8 +237,11 @@ export default function DayPage() {
     };
 
     const handleSortDontKnow = async () => {
-        if (!allWords[currentIndex]) return;
+        if (!allWords[currentIndex] || isProcessing) return;
         const currentWord = allWords[currentIndex];
+
+        setIsProcessing(true);
+        setShowBack(true);
 
         // 1. Optimistic Update (Local)
         setLearningQueue(prev => [...prev, currentWord]);
@@ -216,12 +256,15 @@ export default function DayPage() {
             });
         }
 
-        // 3. Advance immediately
-        advanceSort();
+        // 3. Advance after 1.5 seconds delay
+        setTimeout(() => {
+            advanceSort();
+            setIsProcessing(false);
+        }, 1500);
     };
 
     const handleReallyKnow = async () => {
-        if (!allWords[currentIndex]) return;
+        if (!allWords[currentIndex] || isProcessing) return;
         const currentWord = allWords[currentIndex];
 
         // Fire-and-forget DB update
@@ -286,14 +329,30 @@ export default function DayPage() {
     };
 
     const startTest = () => {
-        // Generate test queue: shuffle all words and take 50%
-        const shuffledAll = shuffle(allWords);
-        const selected = shuffledAll.slice(0, Math.ceil(allWords.length * 0.5));
+        // Generate test queue: Always exactly 40 words
+        // Mix of today's words + pending reviews
+        const shuffledPool = shuffle([...allWords]);
+
+        // Take up to 40 words. If pool is smaller than 40 (unlikely for day + reviews), take all.
+        const selected = shuffledPool.slice(0, 40);
+
         setTestQueue(selected);
         setMode('test');
         setCurrentIndex(0);
+        setResults([]);
+        setTestScore(0);
+
         generateTestOptions(selected[0], 0);
         setTimeLeft(8); // Start with 8s for Part 1
+
+        // Initial auto-save for test start
+        saveVocaProgress({
+            mode: 'test',
+            currentIndex: 0,
+            testQueue: selected,
+            results: [],
+            testScore: 0
+        });
     };
 
     // --- TEST LOGIC ---
@@ -323,45 +382,60 @@ export default function DayPage() {
 
         // 2. Helper to get POS-matched distractors
         const getDistractors = (count: number, field: 'word' | 'meaning') => {
-            // Try to find words with same POS first
+            // Filter out the correct word
             let candidates = allWords.filter(w =>
                 w.id !== correctWord.id &&
                 w.word.toLowerCase() !== correctWord.word.toLowerCase()
             );
 
+            // Safety: If somehow we don't have enough candidates in allWords, 
+            // fallback to the entire vocabulary pool (rare)
+            if (candidates.length < count) {
+                candidates = allWords;
+            }
+
             const samePos = candidates.filter(w => w.pos === correctWord.pos);
 
-            // If we have enough same-POS words, use them. Otherwise fallback.
+            // Robust fallback: If same-POS words are not enough, use any candidate
             const source = samePos.length >= count ? samePos : candidates;
 
             return shuffle(source)
                 .slice(0, count)
-                .map(w => w[field]);
+                .map(w => w[field])
+                .filter(val => !!val); // Ensure no undefined values
         };
 
         // 3. Generate content based on type
-        if (type === 'collocation') {
-            const collo = correctWord.collocations![Math.floor(Math.random() * correctWord.collocations!.length)];
-            const blankedEn = collo.en.replace(new RegExp(correctWord.word, 'gi'), ' ____ ');
-            setColloQuestion({ en: blankedEn, ko: collo.ko });
+        try {
+            if (type === 'collocation' && correctWord.collocations && correctWord.collocations.length > 0) {
+                const collo = correctWord.collocations[Math.floor(Math.random() * correctWord.collocations.length)];
+                const blankedEn = collo.en.replace(new RegExp(correctWord.word, 'gi'), ' ____ ');
+                setColloQuestion({ en: blankedEn, ko: collo.ko });
 
-            const distractors = getDistractors(3, 'word');
-            setTestOptions(shuffle([correctWord.word, ...distractors]));
-        }
-        else if (type === 'example_fill') {
-            const blankedEn = correctWord.example.replace(new RegExp(correctWord.word, 'gi'), ' ____ ');
-            setColloQuestion({ en: blankedEn, ko: correctWord.exampleKo });
+                const distractors = getDistractors(3, 'word');
+                setTestOptions(shuffle([correctWord.word, ...distractors]));
+            }
+            else if (type === 'example_fill' && correctWord.example) {
+                const blankedEn = correctWord.example.replace(new RegExp(correctWord.word, 'gi'), ' ____ ');
+                setColloQuestion({ en: blankedEn, ko: correctWord.exampleKo });
 
-            const distractors = getDistractors(3, 'word');
-            setTestOptions(shuffle([correctWord.word, ...distractors]));
+                const distractors = getDistractors(3, 'word');
+                setTestOptions(shuffle([correctWord.word, ...distractors]));
+            }
+            else {
+                // Default: Meaning Match
+                setTestType('meaning');
+                setColloQuestion(null);
+                const distractors = getDistractors(3, 'meaning');
+                setTestOptions(shuffle([correctWord.meaning, ...distractors]));
+            }
+        } catch (err) {
+            console.error("Option generation error:", err);
+            // Emergency fallback to simple meaning match
+            setTestType('meaning');
+            setTestOptions([correctWord.meaning, "오류", "데이터", "확인중"].sort(() => 0.5 - Math.random()));
         }
-        else {
-            // Meaning Match
-            setColloQuestion(null);
-            const distractors = getDistractors(3, 'meaning');
-            setTestOptions(shuffle([correctWord.meaning, ...distractors]));
-        }
-    }, [allWords]); // removed studyMode as we use index now
+    }, [allWords]);
 
     useEffect(() => {
         if (mode !== 'test' || selectedAnswer !== null) return;
@@ -397,14 +471,24 @@ export default function DayPage() {
         setTimeout(() => {
             if (currentIndex < testQueue.length - 1) {
                 const nextIdx = currentIndex + 1;
+                const nextWord = testQueue[nextIdx];
+
                 setCurrentIndex(nextIdx);
-                generateTestOptions(testQueue[nextIdx], nextIdx);
+                generateTestOptions(nextWord, nextIdx);
                 setSelectedAnswer(null);
 
                 // Dynamic Time: Part 1 (0-19) -> 8s, Part 2 (20-39) -> 20s
                 setTimeLeft(nextIdx >= 20 ? 20 : 8);
+
+                // AUTO-SAVE after each question
+                saveVocaProgress({
+                    currentIndex: nextIdx,
+                    results: [...results, isCorrect],
+                    testScore: isCorrect ? testScore + 1 : testScore
+                });
             } else {
                 setMode('result');
+                saveVocaProgress({ mode: 'result' });
             }
         }, 1000);
     };
@@ -566,13 +650,18 @@ export default function DayPage() {
                                 <Button
                                     onClick={handleSortDontKnow}
                                     variant="outline"
-                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-lg md:text-xl italic hover:bg-rose-500/10 hover:border-rose-500/50 transition-all"
+                                    disabled={isProcessing}
+                                    className={cn(
+                                        "h-14 md:h-20 rounded-2xl md:rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-lg md:text-xl italic transition-all",
+                                        isProcessing ? "opacity-50" : "hover:bg-rose-500/10 hover:border-rose-500/50"
+                                    )}
                                 >
                                     <X className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 몰라요
                                 </Button>
                                 <Button
                                     onClick={handleSortKnow}
-                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl bg-indigo-600 text-white font-black text-lg md:text-xl italic hover:bg-indigo-500 shadow-xl shadow-indigo-600/20 active:scale-95 transition-all"
+                                    disabled={isProcessing}
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl bg-indigo-600 text-white font-black text-lg md:text-xl italic hover:bg-indigo-500 shadow-xl shadow-indigo-600/20 active:scale-95 transition-all disabled:opacity-50"
                                 >
                                     <CheckCircle className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 알아요
                                 </Button>
@@ -582,13 +671,15 @@ export default function DayPage() {
                                 <Button
                                     onClick={handleSortDontKnow}
                                     variant="outline"
-                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-lg md:text-xl italic hover:bg-rose-500/10"
+                                    disabled={isProcessing}
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl border-2 border-slate-800 bg-slate-900/50 text-rose-500 font-black text-lg md:text-xl italic hover:bg-rose-500/10 disabled:opacity-50"
                                 >
                                     <X className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 몰라요
                                 </Button>
                                 <Button
                                     onClick={handleReallyKnow}
-                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl bg-emerald-600 text-white font-black text-lg md:text-xl italic hover:bg-emerald-500 shadow-xl shadow-emerald-600/20 active:scale-95 transition-all"
+                                    disabled={isProcessing}
+                                    className="h-14 md:h-20 rounded-2xl md:rounded-3xl bg-emerald-600 text-white font-black text-lg md:text-xl italic hover:bg-emerald-500 shadow-xl shadow-emerald-600/20 active:scale-95 transition-all disabled:opacity-50"
                                 >
                                     <CheckCircle className="w-5 h-5 md:w-6 md:h-6 mr-1.5" /> 진짜 알아요
                                 </Button>
@@ -958,6 +1049,9 @@ export default function DayPage() {
                         total={total}
                         day={day}
                         userId={userId}
+                        incorrectQuestions={testQueue.filter((_, i) => results[i] === false).map(q => ({ id: q.id, meaning: q.meaning }))}
+                        retryMode={retryMode}
+                        timeSpent={Math.round((Date.now() - startTime) / 1000)}
                     />
 
                     <div className="space-y-3">
@@ -1008,15 +1102,14 @@ export default function DayPage() {
 }
 
 // Side-effect component to handle saving
-function SaveResultEffect({ testScore, total, day, userId }: { testScore: number, total: number, day: number, userId: string | null }) {
+function SaveResultEffect({ testScore, total, day, userId, incorrectQuestions, retryMode, timeSpent }: { testScore: number, total: number, day: number, userId: string | null, incorrectQuestions: any[], retryMode: boolean, timeSpent: number }) {
     useEffect(() => {
         const save = async () => {
+            if (retryMode) return; // Don't save if in retry mode
+
             const userStr = localStorage.getItem('toeic_user');
             if (userStr && userId) {
                 const user = JSON.parse(userStr);
-                // Only save if passed? The user said "all homework... upon completion".
-                // Even fail records might be useful, but let's stick to completing the flow.
-                // Assuming reaching 'result' screen means "completed" (pass or fail).
                 try {
                     await addDoc(collection(db, "Manager_Results"), {
                         student: user.userName || user.username || user.name || "Unknown",
@@ -1026,6 +1119,10 @@ function SaveResultEffect({ testScore, total, day, userId }: { testScore: number
                         score: testScore,
                         total: total,
                         wrongCount: total - testScore,
+                        incorrectQuestions: incorrectQuestions,
+                        vol: 1, // Placeholder Vol
+                        testId: day, // Save Day number to TestId for history linking
+                        timeSpent: timeSpent, // Record duration
                         timestamp: serverTimestamp(),
                         type: 'voca',
                         detail: `Day ${day}`

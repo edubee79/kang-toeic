@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Loader2, Play, Volume2, RotateCcw, CheckCircle, XCircle, AlertTriangle, X, Triangle } from "lucide-react";
@@ -41,6 +41,9 @@ export default function Part2Test() {
     const [showExitConfirm, setShowExitConfirm] = useState(false);
     const [reviewedAnswers, setReviewedAnswers] = useState<Record<string, string>>({});
     const [showTranslation, setShowTranslation] = useState(false);
+    const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
     const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/homework/part2';
 
@@ -60,30 +63,52 @@ export default function Part2Test() {
             return;
         }
 
-        // found.questions is Part2TestSet — need .questions to get Part2Question[]
         const data = found.questions.questions;
         setQuestions(data);
 
-        // Load saved progress
-        const saved = localStorage.getItem(`part2_progress_v${vol}_t${testId}`);
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved);
-                if (parsed.mainQueue && parsed.mainQueue.length > 0) {
-                    setMainQueue(parsed.mainQueue);
+        const fetchRetryAndLoad = async () => {
+            // Case 1: Retry Mode from History
+            if (retryMode && resultId) {
+                setIsLoadingRetry(true);
+                try {
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const resData = docSnap.data();
+                        if (resData.incorrectQuestions) {
+                            const ids = resData.incorrectQuestions.map((iq: any) => iq.id);
+                            const filtered = data.filter(q => ids.includes(q.id));
+                            setMainQueue(data); // Keep full set for reference if needed
+                            setWrongQueue(filtered);
+                            setIsReviewMode(true); // Direct to review/retry mode
+                        }
+                    }
+                } catch (e) {
+                    console.error("Retry fetch failed", e);
+                } finally {
+                    setIsLoadingRetry(false);
+                }
+            }
+            // Case 2: Standard Load / Local Progress
+            else {
+                const saved = localStorage.getItem(`part2_progress_v${vol}_t${testId}`);
+                if (saved) {
+                    try {
+                        const parsed = JSON.parse(saved);
+                        if (parsed.mainQueue && parsed.mainQueue.length > 0) setMainQueue(parsed.mainQueue);
+                        else setMainQueue(data);
+                        if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
+                        if (parsed.wrongQueue) setWrongQueue(parsed.wrongQueue);
+                    } catch (e) {
+                        setMainQueue(data);
+                    }
                 } else {
                     setMainQueue(data);
                 }
-                if (parsed.currentIndex !== undefined) setCurrentIndex(parsed.currentIndex);
-                if (parsed.wrongQueue) setWrongQueue(parsed.wrongQueue);
-            } catch (e) {
-                console.error("Failed to restore LC progress", e);
-                setMainQueue(data);
             }
-        } else {
-            setMainQueue(data);
-        }
+        };
 
+        fetchRetryAndLoad();
         setLoading(false);
         setTimeout(() => setIsReady(true), 0);
 
@@ -302,7 +327,7 @@ export default function Part2Test() {
     const saveManagerResult = async (currentWrongQueue: Part2Question[]) => {
         // Prevent double saving
         const saveKey = `p2_saved_v${vol}_t${testId}`;
-        if (sessionStorage.getItem(saveKey)) return;
+        if (sessionStorage.getItem(saveKey) || retryMode) return;
 
         const score = questions.length - currentWrongQueue.length;
         const userStr = localStorage.getItem('toeic_user');
@@ -351,9 +376,12 @@ export default function Part2Test() {
         router.push(fromPath);
     };
 
-    if (loading) return (
+    if (loading || isLoadingRetry) return (
         <div className="flex h-screen items-center justify-center bg-slate-950">
-            <Loader2 className="animate-spin text-emerald-500" />
+            <div className="flex flex-col items-center gap-4">
+                <Loader2 className="animate-spin text-emerald-500 w-10 h-10" />
+                <p className="text-slate-500 font-black italic uppercase tracking-widest text-xs">오답 데이터를 매칭하는 중...</p>
+            </div>
         </div>
     );
 

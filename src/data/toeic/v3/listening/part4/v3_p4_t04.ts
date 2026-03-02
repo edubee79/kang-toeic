@@ -502,56 +502,52 @@ export const test4Data: Part4Set[] = [
     vol: 3,
     setId: "v3-p4-t4-s10",
     questionRange: "98-100",
-    contextType: "B1 (internal_meeting)",
+    contextType: "A1 (announcement)",
     audio: "/audio/ETS_TOEIC_3/Test_04/TEST 04_PART 4_98-100.mp3",
     image: "/images/ETS_TOEIC_3/Test_04/Part_04/p4_q98.png",
     questions: [
       {
         id: "v3-p4-t4-q98",
-        text: "Who is the speaker?",
+        text: "Who most likely is the speaker?",
         classification: "WHO_LOC",
-
         options: {
-          A: "A structural engineer",
-          B: "A journalist",
-          C: "A tour guide",
-          D: "A city official"
+          A: "A musician",
+          B: "An actor",
+          C: "A writing instructor",
+          D: "An art teacher"
         },
         correctAnswer: "D"
       },
       {
         id: "v3-p4-t4-q99",
-        text: "Why is a building special?",
+        text: "What are the listeners asked to do?",
         classification: "DETAIL",
-
         options: {
-          A: "It was constructed in a short time.",
-          B: "It has a technologically advanced security system.",
-          C: "It has environmentally friendly features.",
-          D: "It was designed by a famous architect."
+          A: "Arrive early",
+          B: "Help clean an area",
+          C: "Silence mobile phones",
+          D: "Provide feedback"
         },
-        correctAnswer: "C"
+        correctAnswer: "B"
       },
       {
         id: "v3-p4-t4-q100",
-        text: "Look at the graphic. Which floor of the building is not open yet?",
+        text: "Look at the graphic. On which date will there be a special guest?",
         classification: "GRAPHIC",
-
         options: {
-          A: "Floor 4",
-          B: "Floor 3",
-          C: "Floor 2",
-          D: "Floor 1"
+          A: "June 7",
+          B: "June 9",
+          C: "June 13",
+          D: "June 15"
         },
-        correctAnswer: "A"
+        correctAnswer: "C"
       }
     ],
     script: [
       {
         speaker: "Speaker",
-        text: "M-Cn: Welcome to the new Conference Center. I'm the mayor, and I'm delighted to give you a tour of this building. As you can see from the diagram, the building has four floors. The first floor has a food court. The second floor is a recreation center. The third floor has offices. And the fourth floor, the Conference Center, is not open yet. We're still working on it. Now, what makes this building special is that it has many environmentally friendly features. For example, the building uses solar panels for energy. Let me show you around."
+        text: "W-Br: Thanks for coming to today's painting class at the Lightdale Community Center. I hope you enjoyed learning some of the techniques I showed you. If you could collect your brushes and paints and leave them right here on this table, it'll make my cleanup easier. And before you go, I want to remind everyone about the other great events here at the center. There's a copy of the schedule at the door. I recommend the Mystery Book Club meeting, because there will be a special guest that night—the author Gerard Messina will be reading from his latest novel."
       }
     ]
   }
 ];
-

@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Play, Pause, ChevronRight, CheckCircle2, AlertCircle, RotateCcw, Timer, Trophy, BookOpen, AlertTriangle } from "lucide-react";
@@ -33,17 +33,40 @@ export default function Part1TestRunner() {
     const [showOnlyWrong, setShowOnlyWrong] = useState(false);
     const [displayIndex, setDisplayIndex] = useState(0);
 
-    // Filtered questions for review mode
-    const displayQuestions = reviewMode && showOnlyWrong
-        ? testSet?.questions.filter((q: any) => selectedAnswers[q.id] !== q.correctAnswer)
-        : testSet?.questions;
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
+    const [incorrectIds, setIncorrectIds] = useState<string[]>([]);
+    const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+
+    // Filtered questions for review mode or retry mode
+    const displayQuestions = useMemo(() => {
+        if (!testSet?.questions) return [];
+
+        // Priority 1: Retry mode based on external result ID
+        if (retryMode && incorrectIds.length > 0) {
+            return testSet.questions.filter((q: any) => incorrectIds.includes(q.id));
+        }
+
+        // Priority 2: Manual review mode (Show Only Wrong)
+        if (reviewMode && showOnlyWrong) {
+            return testSet.questions.filter((q: any) => selectedAnswers[q.id] !== q.correctAnswer);
+        }
+
+        return testSet.questions;
+    }, [testSet, retryMode, incorrectIds, reviewMode, showOnlyWrong, selectedAnswers]);
 
     const currentQ = displayQuestions?.[displayIndex];
 
     const handleNext = () => {
         if (displayIndex < (displayQuestions?.length || 0) - 1) {
             setDisplayIndex(prev => prev + 1);
-        } else if (!reviewMode) {
+        } else if (reviewMode) {
+            // End of review mode: go back to result screen
+            setIsFinished(true);
+            setReviewMode(false);
+            setShowOnlyWrong(false);
+        } else {
+            // End of normal test: finish and save
             finishTest();
         }
     };
@@ -69,6 +92,34 @@ export default function Part1TestRunner() {
             router.push('/homework/part1-real');
         }
     }, [vol, testId, router]);
+
+    // Fetch incorrect IDs if in retry mode
+    useEffect(() => {
+        const fetchRetryData = async () => {
+            if (retryMode && resultId) {
+                setIsLoadingRetry(true);
+                try {
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const data = docSnap.data();
+                        if (data.incorrectQuestions) {
+                            const ids = data.incorrectQuestions.map((q: any) => q.id);
+                            setIncorrectIds(ids);
+                            // Set review mode automatically when retrying from history
+                            setReviewMode(true);
+                            setShowOnlyWrong(true);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Retry data fetch failed", e);
+                } finally {
+                    setIsLoadingRetry(false);
+                }
+            }
+        };
+        fetchRetryData();
+    }, [retryMode, resultId]);
 
     // Load Progress
     useEffect(() => {
@@ -177,7 +228,7 @@ export default function Part1TestRunner() {
         setIsFinished(true);
 
         const userStr = localStorage.getItem('toeic_user');
-        if (userStr) {
+        if (userStr && !retryMode) { // Only save new result if NOT in retry mode
             const user = JSON.parse(userStr);
             try {
                 const incorrects: any[] = [];
@@ -211,7 +262,12 @@ export default function Part1TestRunner() {
         }
     };
 
-    if (!testSet) return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-500">Loading...</div>;
+    if (!testSet || isLoadingRetry) return <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+            <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+            <p className="text-slate-500 font-black italic uppercase tracking-widest text-xs">오답 데이터를 매칭하는 중...</p>
+        </div>
+    </div>;
 
     if (isFinished) {
         const correctCount = testSet.questions.filter((q: any) => selectedAnswers[q.id] === q.correctAnswer).length;

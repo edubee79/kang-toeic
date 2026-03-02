@@ -361,7 +361,7 @@ export const test1Data: Part4Set[] = [
           C: "It is lightweight.",
           D: "It comes in many colors."
         },
-        correctAnswer: "A"
+        correctAnswer: "B"
       },
       {
         id: "v3-p4-t1-q91",

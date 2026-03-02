@@ -292,32 +292,47 @@ export const test5Data: Part3Set[] = [
                 text: "Why is the woman calling?",
                 classification: "WHY_REASON",
                 options: {
-                    A: "To complain about a fee",
-                    B: "To reserve a picnic area",
-                    C: "To report a broken light",
-                    D: "To ask for an application"
+                    A: "To report a fallen tree",
+                    B: "To ask about city-job openings",
+                    C: "To find out the cost of a project",
+                    D: "To inquire about a tree planting program"
                 },
-                correctAnswer: "B"
+                correctAnswer: "D"
             },
             {
                 id: "v3-p3-t05-q49",
-                text: "What will the man do for the woman?",
+                text: "What does the man tell the woman to do?",
                 classification: "DETAIL",
                 options: {
-                    A: "Send a form",
-                    B: "Arrange an inspection",
-                    C: "Give her a map",
-                    D: "Make a payment"
+                    A: "Review a policy",
+                    B: "Make an appointment",
+                    C: "Complete an online form",
+                    D: "Contact a different office"
                 },
-                correctAnswer: "A"
+                correctAnswer: "C"
             }
         ],
         script: [
-            { speaker: "M-Au", text: "City Parks and Recreation. How may I help you?" },
-            { speaker: "W-Am", text: "Hi, I'm calling from Milliken Pharmaceuticals. I'd like to reserve the outdoor picnic area in Brookside Park for an employee event on June third." },
-            { speaker: "M-Au", text: "OK... let me see if that area is available then. Yes, it's free. To finish the reservation, you'll have to complete some paperwork." },
-            { speaker: "W-Am", text: "Fine. Can you e-mail that to me?" },
-            { speaker: "M-Au", text: "I can. I'll also need you to pay the reservation fee. You can send us a check or come here in person." }
+            {
+                speaker: "M-Au",
+                text: "Mount Alifan Department of Parks and Recreation. How can I help you?"
+            },
+            {
+                speaker: "W-Am",
+                text: "Hello, I read about your tree planting initiative, and I wanted to learn more about it."
+            },
+            {
+                speaker: "M-Au",
+                text: "Sure. Our department is now offering residents the opportunity to have a tree planted on their street in honor of someone special. It's part of our city's new beautification project."
+            },
+            {
+                speaker: "W-Am",
+                text: "That's great. How can I make a request to do this?"
+            },
+            {
+                speaker: "M-Au",
+                text: "You'll need to fill out an online request form from our Web site. After you put in all your information and submit the form, you'll receive weekly e-mail updates."
+            }
         ]
     },
     {
@@ -330,25 +345,25 @@ export const test5Data: Part3Set[] = [
         questions: [
             {
                 id: "v3-p3-t05-q50",
-                text: "What product is the woman talking about?",
-                classification: "WHAT_WHICH",
+                text: "What did the woman recently review?",
+                classification: "DETAIL",
                 options: {
-                    A: "Mobile phones",
-                    B: "Calculators",
-                    C: "Laptops",
-                    D: "Headphones"
+                    A: "A sales report",
+                    B: "An assembly line",
+                    C: "Some online brochures",
+                    D: "Some assembly directions"
                 },
-                correctAnswer: "D"
+                correctAnswer: "A"
             },
             {
                 id: "v3-p3-t05-q51",
-                text: "What does the woman suggest doing?",
-                classification: "OFFER_SUGGEST",
+                text: "What does the woman ask the man about?",
+                classification: "DETAIL",
                 options: {
-                    A: "Launching a new website",
-                    B: "Hiring temporary workers",
-                    C: "Offering a discount",
-                    D: "Conducting a survey"
+                    A: "Packaging additional shipments",
+                    B: "Hiring temporary employees",
+                    C: "Changing a deadline",
+                    D: "Sending a press release"
                 },
                 correctAnswer: "B"
             },
@@ -357,26 +372,38 @@ export const test5Data: Part3Set[] = [
                 text: "What information will the man provide this afternoon?",
                 classification: "DETAIL",
                 options: {
-                    A: "A budget",
-                    B: "An inventory count",
-                    C: "A work schedule",
-                    D: "A client list"
+                    A: "Overtime schedules",
+                    B: "Design improvements",
+                    C: "Production costs",
+                    D: "Inventory status"
                 },
-                correctAnswer: "B"
+                correctAnswer: "D"
             }
         ],
         script: [
-            { speaker: "W-Am", text: "Rohan, I have a question about the production of our new model KT17 wireless headphones. I just reviewed the quarterly sales report. They're selling even better than we expected." },
-            { speaker: "M-Au", text: "Yeah, I've heard consumer demand is increasing for those." },
-            { speaker: "W-Am", text: "That's what I wanted to discuss. Do you think we'll need to hire some temporary workers for the factory floor? I'm concerned that we won't be able keep up with the demand over the holidays." },
-            { speaker: "M-Au", text: "We do have a lot of existing inventory ready to ship, so we may not need to hire more people. I'll get an exact count of how many KT17 headphones are available for shipment and let you know this afternoon." }
+            {
+                speaker: "W-Br",
+                text: "Rohan, I have a question about the production of our new model KT17 wireless headphones. I just reviewed the quarterly sales report. They're selling even better than we expected."
+            },
+            {
+                speaker: "M-Au",
+                text: "Yeah, I've heard consumer demand is increasing for those."
+            },
+            {
+                speaker: "W-Br",
+                text: "That's what I wanted to discuss. Do you think we'll need to hire some temporary workers for the factory floor? I'm concerned that we won't be able keep up with the demand over the holidays."
+            },
+            {
+                speaker: "M-Au",
+                text: "We do have a lot of existing inventory ready to ship, so we may not need to hire more people. I'll get an exact count of how many KT17 headphones are available for shipment and let you know this afternoon."
+            }
         ]
     },
     {
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s8",
-        contextType: "A1. 회의 / 일정 조정",
+        contextType: "A2. 프로젝트 / 업무 진행",
         questionRange: "53-55",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_53-55.mp3",
         questions: [
@@ -397,10 +424,10 @@ export const test5Data: Part3Set[] = [
                 text: "What problem does the man mention?",
                 classification: "PROBLEM_CONCERN",
                 options: {
-                    A: "He has a scheduling conflict.",
-                    B: "He missed a presentation.",
-                    C: "Some data is unavailable.",
-                    D: "There are errors in a report."
+                    A: "He has a scheduling conflict",
+                    B: "He missed a presentation",
+                    C: "Some data is unavailable",
+                    D: "There are errors in a report"
                 },
                 correctAnswer: "A"
             },
@@ -418,20 +445,41 @@ export const test5Data: Part3Set[] = [
             }
         ],
         script: [
-            { speaker: "M-Au", text: "Miss Chaudry, I'm glad I caught you before you left for the day. About our meeting tomorrow..." },
-            { speaker: "W-Am", text: "Yes, it's in the afternoon, right? We have to go over your designs for the new advertising campaign for Softwell Shoes." },
-            { speaker: "M-Au", text: "I'm sorry, but unfortunately I need to reschedule. I forgot that I have a doctor's appointment." },
-            { speaker: "W-Am", text: "Hmm. Since we're presenting our ideas to the Softwell representative next week, we should discuss them soon. Are you free in the morning instead? At ten o'clock?" },
-            { speaker: "M-Au", text: "Yes, that works." },
-            { speaker: "W-Am", text: "OK, great. Oh, and could you post the images in the shared folder? I'd like to look at them in advance." },
-            { speaker: "M-Au", text: "Sure. I'll take care of that now." }
+            {
+                speaker: "M-Au",
+                text: "Miss Chaudry, I'm glad I caught you before you left for the day. About our meeting tomorrow..."
+            },
+            {
+                speaker: "W-Br",
+                text: "Yes, it's in the afternoon, right? We have to go over your designs for the new advertising campaign for Softwell Shoes."
+            },
+            {
+                speaker: "M-Au",
+                text: "I'm sorry, but unfortunately I need to reschedule. I forgot that I have a doctor's appointment."
+            },
+            {
+                speaker: "W-Br",
+                text: "Hmm. Since we're presenting our ideas to the Softwell representative next week, we should discuss them soon. Are you free in the morning instead? At ten o'clock?"
+            },
+            {
+                speaker: "M-Au",
+                text: "Yes, that works."
+            },
+            {
+                speaker: "W-Br",
+                text: "OK, great. Oh, and could you post the images in the shared folder? I'd like to look at them in advance."
+            },
+            {
+                speaker: "M-Au",
+                text: "Sure. I'll take care of that now."
+            }
         ]
     },
     {
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s9",
-        contextType: "A5. 교육 / 트레이닝",
+        contextType: "B3. 사내 교육",
         questionRange: "56-58",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_56-58.mp3",
         questions: [
@@ -473,18 +521,33 @@ export const test5Data: Part3Set[] = [
             }
         ],
         script: [
-            { speaker: "W-Am", text: "Welcome, everyone, to your second day of training to be an industrial fabric worker. You did a great job running the sewing machines yesterday. Before we get started, do you have any questions?" },
-            { speaker: "M-Au", text: "This isn't about the training, but... this morning, my security badge didn't work. The guard had to let me into the factory." },
-            { speaker: "W-Am", text: "OK, I'll follow up with you about that later. Any other questions?" },
-            { speaker: "W-Br", text: "Miss Park? Yesterday you showed us how to make a castle knot on the machine. Could we practice that?" },
-            { speaker: "W-Am", text: "Of course. Let's practice that knot—it's essential to sewing almost all shirts. Turn on your sewing machines." }
+            {
+                speaker: "W-Am",
+                text: "Welcome, everyone, to your second day of training to be an industrial fabric worker. You did a great job running the sewing machines yesterday. Before we get started, do you have any questions?"
+            },
+            {
+                speaker: "M-Au",
+                text: "This isn't about the training, but... this morning, my security badge didn't work. The guard had to let me into the factory."
+            },
+            {
+                speaker: "W-Am",
+                text: "OK, I'll follow up with you about that later. Any other questions?"
+            },
+            {
+                speaker: "W-Br",
+                text: "Miss Park? Yesterday you showed us how to make a castle knot on the machine. Could we practice that?"
+            },
+            {
+                speaker: "W-Am",
+                text: "Of course. Let's practice that knot—it's essential to sewing almost all shirts. Turn on your sewing machines."
+            }
         ]
     },
     {
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s10",
-        contextType: "A3. 인사 / 휴가 / 근무",
+        contextType: "A2. 프로젝트 / 업무 진행",
         questionRange: "59-61",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_59-61.mp3",
         questions: [
@@ -505,17 +568,17 @@ export const test5Data: Part3Set[] = [
                 text: "What does the woman mean when she says, \"I've presented at that conference before\"?",
                 classification: "IMPLY_MEANING",
                 options: {
-                    A: "She has a lot of professional experience.",
-                    B: "She dislikes giving presentations.",
-                    C: "She understands the man's situation.",
-                    D: "She has completed a requirement."
+                    A: "She has a lot of professional experience",
+                    B: "She dislikes giving presentations",
+                    C: "She understands the man's situation",
+                    D: "She has completed a requirement"
                 },
                 correctAnswer: "C"
             },
             {
                 id: "v3-p3-t05-q61",
                 text: "What do the speakers agree to do?",
-                classification: "DETAIL",
+                classification: "ACTION_NEXT",
                 options: {
                     A: "Temporarily close an office",
                     B: "Postpone hiring an employee",
@@ -526,19 +589,37 @@ export const test5Data: Part3Set[] = [
             }
         ],
         script: [
-            { speaker: "M-Au", text: "Hi Dolores, I know we were supposed to review applications for a medical assistant today, but I'm still working on my presentation for the international surgeons' conference next week." },
-            { speaker: "W-Am", text: "No problem. I've presented at that conference before. You'll need to be prepared." },
-            { speaker: "M-Au", text: "So... should we reschedule for next week?" },
-            { speaker: "W-Am", text: "Actually, why don't we just postpone hiring someone until next month?" },
-            { speaker: "M-Au", text: "That would work better for me. But don't we need someone sooner?" },
-            { speaker: "W-Am", text: "No. Jerome just told me he could stay until we find his replacement." }
+            {
+                speaker: "M-Cn",
+                text: "Hi Dolores, I know we were supposed to review applications for a medical assistant today, but I'm still working on my presentation for the international surgeons' conference next week."
+            },
+            {
+                speaker: "W-Br",
+                text: "No problem. I've presented at that conference before. You'll need to be prepared."
+            },
+            {
+                speaker: "M-Cn",
+                text: "So... should we reschedule for next week?"
+            },
+            {
+                speaker: "W-Br",
+                text: "Actually, why don't we just postpone hiring someone until next month?"
+            },
+            {
+                speaker: "M-Cn",
+                text: "That would work better for me. But don't we need someone sooner?"
+            },
+            {
+                speaker: "W-Br",
+                text: "No. Jerome just told me he could stay until we find his replacement."
+            }
         ]
     },
     {
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s11",
-        contextType: "B2. 주문 / 배송",
+        contextType: "C2. 제품 주문 / 결제",
         questionRange: "62-64",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_62-64.mp3",
         questions: [
@@ -559,10 +640,10 @@ export const test5Data: Part3Set[] = [
                 text: "According to the man, what will happen in May?",
                 classification: "DETAIL",
                 options: {
-                    A: "A store will take inventory.",
-                    B: "A new restaurant will open.",
-                    C: "A product line will launch.",
-                    D: "A factory will move to a new location."
+                    A: "A store will take inventory",
+                    B: "A new restaurant will open",
+                    C: "A product line will launch",
+                    D: "A factory will move to a new location"
                 },
                 correctAnswer: "B"
             },
@@ -571,21 +652,39 @@ export const test5Data: Part3Set[] = [
                 text: "What problem does the woman mention?",
                 classification: "PROBLEM_CONCERN",
                 options: {
-                    A: "Some shipping fees will increase.",
-                    B: "Some items will become unavailable.",
-                    C: "Some items were damaged during shipping.",
-                    D: "Some catalogs contain inaccurate information."
+                    A: "Some shipping fees will increase",
+                    B: "Some items will become unavailable",
+                    C: "Some items were damaged during shipping",
+                    D: "Some catalogs contain inaccurate information"
                 },
                 correctAnswer: "B"
             }
         ],
         script: [
-            { speaker: "W-Am", text: "Thanks for calling Rose Mound Pottery. How can I help you?" },
-            { speaker: "M-Au", text: "I'm interested in ordering some dishes that I saw in your catalog for my new restaurant. They're the ones with the large star in the middle and smaller ones around the edge." },
-            { speaker: "W-Am", text: "Yes, I know the ones you mean. Did you notice that pattern's a limited edition?" },
-            { speaker: "M-Au", text: "Oh no. I hope they're still available. The grand opening for my restaurant is in May." },
-            { speaker: "W-Am", text: "Yes, they're still in stock. But I know that pattern will be discontinued at the end of the year. They'll be hard to replace after that." },
-            { speaker: "M-Au", text: "I'm glad you told me. Then I'll order extra ones now." }
+            {
+                speaker: "W-Am",
+                text: "Thanks for calling Rose Mound Pottery. How can I help you?"
+            },
+            {
+                speaker: "M-Au",
+                text: "I'm interested in ordering some dishes that I saw in your catalog for my new restaurant. They're the ones with the large star in the middle and smaller ones around the edge."
+            },
+            {
+                speaker: "W-Am",
+                text: "Yes, I know the ones you mean. Did you notice that pattern's a limited edition?"
+            },
+            {
+                speaker: "M-Au",
+                text: "Oh no. I hope they're still available. The grand opening for my restaurant is in May."
+            },
+            {
+                speaker: "W-Am",
+                text: "Yes, they're still in stock. But I know that pattern will be discontinued at the end of the year. They'll be hard to replace after that."
+            },
+            {
+                speaker: "M-Au",
+                text: "I'm glad you told me. Then I'll order extra ones now."
+            }
         ],
         image: "/images/ETS_TOEIC_3/Test_05/Part_03/p3_q62.png"
     },
@@ -593,14 +692,14 @@ export const test5Data: Part3Set[] = [
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s12",
-        contextType: "C3. 일정 변경 / 취소",
+        contextType: "B4. 일반문의",
         questionRange: "65-67",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_65-67.mp3",
         questions: [
             {
                 id: "v3-p3-t05-q65",
                 text: "What type of business is the woman calling?",
-                classification: "DETAIL",
+                classification: "WHO_LOC",
                 options: {
                     A: "A railway company",
                     B: "A bus company",
@@ -635,14 +734,38 @@ export const test5Data: Part3Set[] = [
             }
         ],
         script: [
-            { speaker: "M-Au", text: "Taggert Railways. How may I help you?" },
-            { speaker: "W-Am", text: "Good morning. I have a question about a reservation for a trip to San Francisco. The confirmation code is 0146H." },
-            { speaker: "M-Au", text: "OK, let me look it up. I see you have three tickets." },
-            { speaker: "W-Am", text: "That's right. I was wondering if there's a train leaving a day earlier, but at the same time." },
-            { speaker: "M-Au", text: "Let me check... Yes there is, and the tickets are the same price." },
-            { speaker: "W-Am", text: "Perfect. Then I'd like to make that change." },
-            { speaker: "M-Au", text: "OK. Should I use the e-mail associated with your original reservation to send you the new information?" },
-            { speaker: "W-Am", text: "Yes, please." }
+            {
+                speaker: "M-Cn",
+                text: "Taggert Railways. How may I help you?"
+            },
+            {
+                speaker: "W-Br",
+                text: "Good morning. I have a question about a reservation for a trip to San Francisco. The confirmation code is 0146H."
+            },
+            {
+                speaker: "M-Cn",
+                text: "OK, let me look it up. I see you have three tickets."
+            },
+            {
+                speaker: "W-Br",
+                text: "That's right. I was wondering if there's a train leaving a day earlier, but at the same time."
+            },
+            {
+                speaker: "M-Cn",
+                text: "Let me check... Yes there is, and the tickets are the same price."
+            },
+            {
+                speaker: "W-Br",
+                text: "Perfect. Then I'd like to make that change."
+            },
+            {
+                speaker: "M-Cn",
+                text: "OK. Should I use the e-mail associated with your original reservation to send you the new information?"
+            },
+            {
+                speaker: "W-Br",
+                text: "Yes, please."
+            }
         ],
         image: "/images/ETS_TOEIC_3/Test_05/Part_03/p3_q65.png"
     },
@@ -650,7 +773,7 @@ export const test5Data: Part3Set[] = [
         testId: 5,
         vol: 3,
         setId: "v3-p3-t05-s13",
-        contextType: "D1. 사무기기 고장",
+        contextType: "A2. 프로젝트 / 업무 진행",
         questionRange: "68-70",
         audio: "/audio/ETS_TOEIC_3/Test_05/TEST 05_PART 3_68-70.mp3",
         questions: [
@@ -659,7 +782,7 @@ export const test5Data: Part3Set[] = [
                 text: "What does the man ask the woman for?",
                 classification: "DETAIL",
                 options: {
-                    A: "Some plastic ties",
+                    A: "Some plastic zip ties",
                     B: "Some computer cables",
                     C: "An Internet password",
                     D: "A storage room key"
@@ -669,7 +792,7 @@ export const test5Data: Part3Set[] = [
             {
                 id: "v3-p3-t05-q69",
                 text: "What is the man doing tomorrow?",
-                classification: "DETAIL",
+                classification: "ACTION_NEXT",
                 options: {
                     A: "Inspecting a factory",
                     B: "Upgrading a company database",
@@ -680,7 +803,7 @@ export const test5Data: Part3Set[] = [
             },
             {
                 id: "v3-p3-t05-q70",
-                text: "Look at the graphic. Which brand did the man buy?",
+                text: "Look at the graphic. Which electronic tracker did the man buy?",
                 classification: "GRAPHIC",
                 options: {
                     A: "Beep It",
@@ -692,11 +815,26 @@ export const test5Data: Part3Set[] = [
             }
         ],
         script: [
-            { speaker: "M-Au", text: "Margaret, do you have any plastic zip ties? We used some to tie cables together when we installed the servers last week." },
-            { speaker: "W-Am", text: "Sure, they're on my desk. Need help with anything?" },
-            { speaker: "M-Au", text: "No, I just need them to fasten some electronic trackers to my luggage. I'm flying to Shanghai tomorrow for a week to meet the new clients, and I want to be able to keep track of my suitcases while I'm traveling." },
-            { speaker: "W-Am", text: "I need one of those. I misplace my keys all the time. How'd you decide which one to buy?" },
-            { speaker: "M-Au", text: "The most important feature for me is battery life, so I bought the one with the longest-lasting battery." }
+            {
+                speaker: "M-Au",
+                text: "Margaret, do you have any plastic zip ties? We used some to tie cables together when we installed the servers last week."
+            },
+            {
+                speaker: "W-Am",
+                text: "Sure, they're on my desk. Need help with anything?"
+            },
+            {
+                speaker: "M-Au",
+                text: "No, I just need them to fasten some electronic trackers to my luggage. I'm flying to Shanghai tomorrow for a week to meet the new clients, and I want to be able to keep track of my suitcases while I'm traveling."
+            },
+            {
+                speaker: "W-Am",
+                text: "I need one of those. I misplace my keys all the time. How'd you decide which one to buy?"
+            },
+            {
+                speaker: "M-Au",
+                text: "The most important feature for me is battery life, so I bought the one with the longest-lasting battery."
+            }
         ],
         image: "/images/ETS_TOEIC_3/Test_05/Part_03/p3_q68.png"
     }

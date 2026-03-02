@@ -331,7 +331,7 @@ export const test4Data: Part3Set[] = [
                     C: "Talk to some colleagues",
                     D: "Read a company report"
                 },
-                correctAnswer: "C"
+                correctAnswer: "B"
             }
         ],
         script: [

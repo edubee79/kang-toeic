@@ -174,7 +174,7 @@ export const test8Data: Part2TestSet = {
             id: "v3-p2-t08-q22",
             text: "How many more deliveries are we expecting today?",
             options: { A: "It was a great turnout.", B: "I can wait for them if you need to leave.", C: "No, it should be less than that." },
-            correctAnswer: "C",
+            correctAnswer: "B",
             questionType: "How",
             translation: "오늘 배송이 얼마나 더 올 예정인가요?",
             translation_A: "참석 인원이 아주 많았습니다.",

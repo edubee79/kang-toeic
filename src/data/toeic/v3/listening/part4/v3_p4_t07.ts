@@ -18,37 +18,37 @@ export const test7Data: Part4Set[] = [
           "C": "To request approval for an expense",
           "D": "To confirm an e-mail address"
         },
-        "correctAnswer": "A"
+        "correctAnswer": "C"
       },
       {
         "id": "v3-p4-t7-q72",
         "questionType": "WHAT_WHICH",
-        "text": "What has the speaker agreed to do?",
+        "text": "What does the speaker say about a job candidate?",
         "options": {
-          "A": "Complete a design project",
-          "B": "Write a press release",
-          "C": "Give an opening speech",
-          "D": "Revise a budget"
+          "A": "He requires additional training.",
+          "B": "He has good references.",
+          "C": "He speaks several languages.",
+          "D": "He does not live in the area."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "D"
       },
       {
         "id": "v3-p4-t7-q73",
         "questionType": "ACTION_NEXT",
-        "text": "What will the speaker send the listener?",
+        "text": "What did the speaker send in an e-mail?",
         "options": {
-          "A": "A draft of a speech",
-          "B": "A contract",
-          "C": "A business card",
-          "D": "An updated itinerary"
+          "A": "A résumé",
+          "B": "A cost estimate",
+          "C": "A meeting agenda",
+          "D": "A tour itinerary"
         },
-        "correctAnswer": "D"
+        "correctAnswer": "B"
       }
     ],
     "script": [
       {
         "speaker": "Speaker",
-        "text": "W-Am Hi, Antonio. This is Yukiko from the public relations department. I'm calling about the schedule for next week's tech conference. There's been a change I wanted to make you aware of because I know you're making travel arrangements for our executive team. They've updated the program for Tuesday morning. I've agreed to deliver the conference's opening address, so now we'll need to arrive at the event center by eight-thirty. I'll e-mail you the new itinerary for the trip right away. Thanks."
+        "text": "W-Am Hi, Kavi. This is Anna. I just got off the phone with a candidate for the strategy director position. I'd like to bring him in for an interview, but I want to check with you about the cost. Will you approve travel expenses for him to come here? He doesn't live locally—he'd be flying in from Chicago. I'd like to make these arrangements quickly, if possible. I just e-mailed you a cost estimate. Can you let me know what you think?"
       }
     ]
   },
@@ -62,44 +62,44 @@ export const test7Data: Part4Set[] = [
       {
         "id": "v3-p4-t7-q74",
         "questionType": "WHO_LOC",
-        "text": "Who is the speaker?",
+        "text": "Where are the listeners?",
         "options": {
-          "A": "A restaurant owner",
-          "B": "A corporate accountant",
-          "C": "A grocery store manager",
-          "D": "An agricultural scientist"
+          "A": "In an airport",
+          "B": "On a train",
+          "C": "At a theater",
+          "D": "On a ferry"
         },
-        "correctAnswer": "C"
+        "correctAnswer": "B"
       },
       {
         "id": "v3-p4-t7-q75",
         "questionType": "DETAIL",
-        "text": "What does the speaker dislike about some vegetables?",
+        "text": "What are the listeners with e-tickets asked to do?",
         "options": {
-          "A": "They are too expensive.",
-          "B": "They are not fresh.",
-          "C": "They are out of stock.",
-          "D": "They are not locally grown."
+          "A": "Check their seat numbers",
+          "B": "Increase their screen's brightness",
+          "C": "Come to the front of the line",
+          "D": "Download a mobile application"
         },
         "correctAnswer": "B"
       },
       {
         "id": "v3-p4-t7-q76",
         "questionType": "ACTION_NEXT",
-        "text": "What does the speaker plan to do next week?",
+        "text": "Why does the speaker say, \"you shouldn't leave any belongings on the seat next to you\"?",
         "options": {
-          "A": "Review some resumes",
-          "B": "Visit a farm",
-          "C": "Purchase some new equipment",
-          "D": "Inspect a kitchen"
+          "A": "To ask the listeners to clear space",
+          "B": "To remind the listeners about forgotten items",
+          "C": "To explain safety regulations",
+          "D": "To clarify the checked baggage policy"
         },
-        "correctAnswer": "B"
+        "correctAnswer": "A"
       }
     ],
     "script": [
       {
         "speaker": "Speaker",
-        "text": "M-Au Good morning. I called this meeting to discuss the feedback we've received from our grocery store customers recently. We've had a lot of complaints about our vegetable selection. We've been buying our produce from a large industrial farm. The problem is that the vegetables are harvested before they're ripe so they can survive the two-day truck ride to our store. By the time they get here, they're not very fresh. I found a local organic farm that I'd like to start buying from. I'm going there next week to check it out. I'll take some pictures and bring them back to show you."
+        "text": "M-Au Attention, passengers. The conductor will soon make his way through the train to check tickets. Please have them ready. If you have an e-ticket on your smartphone, please make sure you set your screen brightness to high. The conductor will be using an electronic scanner to read the tickets, and the scanner won't be able to read your ticket code if the light on your phone's screen is too low. Also, this is a fully booked train, so you shouldn't leave any belongings on the seat next to you."
       }
     ]
   },
@@ -112,32 +112,32 @@ export const test7Data: Part4Set[] = [
     "questions": [
       {
         "id": "v3-p4-t7-q77",
-        "questionType": "WHAT_WHICH",
-        "text": "What type of business does the listener own?",
+        "questionType": "WHY_REASON",
+        "text": "Why is the speaker calling?",
         "options": {
-          "A": "A bicycle repair shop",
-          "B": "A flower shop",
-          "C": "A health club",
-          "D": "A delivery service"
+          "A": "To reschedule an inspection",
+          "B": "To request a demonstration",
+          "C": "To book a vacation package",
+          "D": "To change an order"
         },
-        "correctAnswer": "A"
+        "correctAnswer": "B"
       },
       {
         "id": "v3-p4-t7-q78",
-        "questionType": "WHY_REASON",
-        "text": "Why does the speaker's company want to hire the listener?",
+        "questionType": "DETAIL",
+        "text": "What has the speaker's company recently done?",
         "options": {
-          "A": "To fix a heating system",
-          "B": "To host a corporate event",
-          "C": "To train some employees",
-          "D": "To participate in a fair"
+          "A": "It changed its hours of operation.",
+          "B": "It hired additional staff.",
+          "C": "It moved to a new location.",
+          "D": "It started a health program."
         },
         "correctAnswer": "D"
       },
       {
         "id": "v3-p4-t7-q79",
         "questionType": "DETAIL",
-        "text": "What is the listener asked to bring?",
+        "text": "What does the speaker encourage the listener to do?",
         "options": {
           "A": "Display some products",
           "B": "Offer some coupons",

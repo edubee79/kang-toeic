@@ -36,6 +36,10 @@ function Part5TestRunnerContent() {
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
     const [showExitConfirm, setShowExitConfirm] = useState(false);
+    const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const [incorrectIds, setIncorrectIds] = useState<string[]>([]);
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
 
     // Refs for scrolling
     const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -53,10 +57,11 @@ function Part5TestRunnerContent() {
     const [originalAnswers, setOriginalAnswers] = useState<Record<string, string>>({});
 
     useEffect(() => {
-        const fetchMockAnswers = async () => {
+        const fetchRetryData = async () => {
             const mockAttemptId = searchParams.get('mockAttemptId');
             const urlMode = searchParams.get('mode');
 
+            // Case 1: Legacy Mock Review (Using attemptId)
             if (urlMode === 'review' && mockAttemptId) {
                 setIsLoadingMock(true);
                 try {
@@ -66,26 +71,34 @@ function Part5TestRunnerContent() {
 
                     if (snap.exists()) {
                         const data = snap.data();
-                        if (data.answers) {
-                            setOriginalAnswers(data.answers);
-                        }
+                        if (data.answers) setOriginalAnswers(data.answers);
                         setReSolveMode(true);
-                        setReviewMode(false);
-                        setShowCompletion(false);
-                        setIsTimerRunning(true);
-                        setElapsedTime(0);
-                        setSelectedAnswers({});
                     }
-                } catch (e) {
-                    console.error("Failed to fetch mock answers for review:", e);
-                } finally {
-                    setIsLoadingMock(false);
-                }
+                } catch (e) { console.error(e); }
+                finally { setIsLoadingMock(false); }
+            }
+
+            // Case 2: New Manager Results Retry
+            else if (retryMode && resultId) {
+                setIsLoadingRetry(true);
+                try {
+                    const { doc, getDoc } = await import('firebase/firestore');
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const data = docSnap.data();
+                        if (data.incorrectQuestions) {
+                            setIncorrectIds(data.incorrectQuestions.map((q: any) => q.id));
+                            setReSolveMode(true);
+                        }
+                    }
+                } catch (e) { console.error(e); }
+                finally { setIsLoadingRetry(false); }
             }
         };
 
-        fetchMockAnswers();
-    }, [searchParams]);
+        fetchRetryData();
+    }, [searchParams, retryMode, resultId]);
 
     useEffect(() => {
         if (!testSet) return;
@@ -140,12 +153,12 @@ function Part5TestRunnerContent() {
     }, [isTimerRunning, showCompletion, reviewMode, isLoadingMock]);
 
 
-    if (isLoadingMock) {
+    if (isLoadingMock || isLoadingRetry) {
         return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
                 <div className="text-center space-y-4">
                     <Loader2 className="w-10 h-10 text-indigo-500 animate-spin mx-auto" />
-                    <p className="font-black text-slate-500 uppercase tracking-widest italic text-sm">모의고사 오답 데이터를 불러오는 중...</p>
+                    <p className="font-black text-slate-500 uppercase tracking-widest italic text-sm">오답 데이터를 매칭하는 중...</p>
                 </div>
             </div>
         )
@@ -188,7 +201,9 @@ function Part5TestRunnerContent() {
     const calculateScore = () => {
         let score = 0;
         const targetQuestions = reSolveMode
-            ? testSet.questions.filter(q => originalAnswers[q.id] !== q.correctAnswer)
+            ? (incorrectIds.length > 0
+                ? testSet.questions.filter(q => incorrectIds.includes(q.id.toString()))
+                : testSet.questions.filter(q => originalAnswers[q.id] !== q.correctAnswer))
             : testSet.questions;
 
         targetQuestions.forEach(q => {
@@ -210,7 +225,7 @@ function Part5TestRunnerContent() {
         }
 
         const userStr = localStorage.getItem('toeic_user');
-        if (userStr) {
+        if (userStr && !retryMode && !reSolveMode) {
             const user = JSON.parse(userStr);
             try {
                 const incorrects: { id: string, classification: string }[] = [];
@@ -297,7 +312,9 @@ function Part5TestRunnerContent() {
     };
 
     if (showCompletion) {
-        const redoCount = reSolveMode ? testSet.questions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : testSet.questions.length;
+        const redoCount = reSolveMode
+            ? (incorrectIds.length > 0 ? incorrectIds.length : testSet.questions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length)
+            : testSet.questions.length;
         return (
             <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
                 <div className={cn(
@@ -398,7 +415,10 @@ function Part5TestRunnerContent() {
             <div className="max-w-3xl mx-auto px-4 md:px-4 py-4 md:py-8 space-y-4 md:space-y-6">
                 {testSet.questions
                     .filter(q => {
-                        if (reSolveMode) return originalAnswers[q.id] !== q.correctAnswer;
+                        if (reSolveMode) {
+                            if (incorrectIds.length > 0) return incorrectIds.includes(q.id.toString());
+                            return originalAnswers[q.id] !== q.correctAnswer;
+                        }
                         if (reviewMode) return selectedAnswers[q.id] !== q.correctAnswer;
                         return true;
                     })

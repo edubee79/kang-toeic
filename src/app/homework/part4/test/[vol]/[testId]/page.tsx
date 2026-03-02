@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Trophy, RotateCcw, AlertTriangle } from "lucide-react";
 import { part4RealTests, Part4Set, Part4Question } from '@/data/toeic/listening/part4/tests';
@@ -88,6 +88,9 @@ export default function Part4TestRunnerPage() {
     const [showExitConfirm, setShowExitConfirm] = useState(false);
     const [reviewedAnswers, setReviewedAnswers] = useState<Record<string, string>>({});
     const [showTranslation, setShowTranslation] = useState(false);
+    const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const retryMode = searchParams.get('mode') === 'retry';
+    const resultId = searchParams.get('resultId');
     const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/homework/part4';
 
@@ -97,10 +100,44 @@ export default function Part4TestRunnerPage() {
         if (!testId || !vol) return;
         const found = part4RealTests.find(t => t.vol === vol && t.testId === testId);
         if (!found) { alert("Test not found"); router.push('/homework/part4'); return; }
-        setTestSets(found.questions);
-        const savedHistory = localStorage.getItem(`p4_hist_v${vol}_t${testId}`);
-        if (savedHistory) { try { setHistory(JSON.parse(savedHistory)); } catch (e) { } }
-    }, [testId, vol, router]);
+        const data = found.questions;
+        setTestSets(data);
+
+        const fetchRetryAndLoad = async () => {
+            if (retryMode && resultId) {
+                setIsLoadingRetry(true);
+                try {
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const resData = docSnap.data();
+                        if (resData.incorrectQuestions) {
+                            const ids = resData.incorrectQuestions.map((iq: any) => iq.id);
+                            const wQueue: Part4Question[] = [];
+                            data.forEach(set => {
+                                set.questions.forEach(q => {
+                                    if (ids.includes(q.id)) wQueue.push(q);
+                                });
+                            });
+                            setWrongQueue(wQueue);
+                            setIsReady(true);
+                            setMode('skim');
+                            setReviewMode(true);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Retry fetch failed", e);
+                } finally {
+                    setIsLoadingRetry(false);
+                }
+            } else {
+                const savedHistory = localStorage.getItem(`p4_hist_v${vol}_t${testId}`);
+                if (savedHistory) { try { setHistory(JSON.parse(savedHistory)); } catch (e) { } }
+            }
+        };
+
+        fetchRetryAndLoad();
+    }, [testId, vol, router, retryMode, resultId]);
 
     useEffect(() => {
         if (!mode || testSets.length === 0) return;
@@ -223,7 +260,7 @@ export default function Part4TestRunnerPage() {
         setShowCompletion(true);
 
         // Only save to DB if not already saved for this attempt
-        if (alreadySaved) return;
+        if (alreadySaved || retryMode) return;
 
         const newHist = { attempts: history.attempts, lastScore: score };
         setHistory(newHist);
@@ -280,8 +317,13 @@ export default function Part4TestRunnerPage() {
     };
 
     // ── MODE SELECTION ──
-    if (!mode || !isReady) {
-        if (testSets.length === 0) return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-500">Loading...</div>;
+    if (!mode || !isReady || isLoadingRetry) {
+        if (testSets.length === 0 || isLoadingRetry) return (
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4">
+                <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+                <p className="text-slate-500 font-black italic uppercase tracking-widest text-xs">오답 데이터를 매칭하는 중...</p>
+            </div>
+        );
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
                 <div className="max-w-md w-full bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl space-y-8">
