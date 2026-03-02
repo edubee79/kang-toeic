@@ -42,9 +42,9 @@ export default function Part2Test() {
     const [reviewedAnswers, setReviewedAnswers] = useState<Record<string, string>>({});
     const [showTranslation, setShowTranslation] = useState(false);
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const searchParams = useSearchParams();
     const retryMode = searchParams.get('mode') === 'retry';
     const resultId = searchParams.get('resultId');
-    const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/homework/part2';
 
     // Refs

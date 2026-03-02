@@ -99,9 +99,9 @@ export default function Part3TestRunnerPage() {
     const [reviewedAnswers, setReviewedAnswers] = useState<Record<string, string>>({});
     const [showTranslation, setShowTranslation] = useState(false);
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const searchParams = useSearchParams();
     const retryMode = searchParams.get('mode') === 'retry';
     const resultId = searchParams.get('resultId');
-    const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/homework/part3';
 
     const [skimmingState, setSkimmingState] = useState<'idle' | 'active' | 'done'>('idle');

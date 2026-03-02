@@ -89,9 +89,12 @@ export default function Part4TestRunnerPage() {
     const [reviewedAnswers, setReviewedAnswers] = useState<Record<string, string>>({});
     const [showTranslation, setShowTranslation] = useState(false);
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const [skimmingState, setSkimmingState] = useState<'idle' | 'active' | 'done'>('idle');
+    const [timeLeft, setTimeLeft] = useState(SKIM_TIME);
+    const [isAudioBlocked, setIsAudioBlocked] = useState(false);
+    const searchParams = useSearchParams();
     const retryMode = searchParams.get('mode') === 'retry';
     const resultId = searchParams.get('resultId');
-    const searchParams = useSearchParams();
     const fromPath = searchParams.get('from') || '/homework/part4';
 
     const audioRef = useRef<HTMLAudioElement>(null);
