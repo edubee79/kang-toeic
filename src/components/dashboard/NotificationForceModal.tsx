@@ -54,6 +54,12 @@ export function NotificationForceModal({ userId }: NotificationForceModalProps) 
 
     const handleEnable = async () => {
         setStatus('loading');
+
+        // Safety timeout: 15 seconds max for the entire process
+        const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('TIMEOUT')), 15000)
+        );
+
         try {
             if (!('Notification' in window)) {
                 alert("이 브라우저는 알림 기능을 지원하지 않습니다. 크롬이나 엣지 브라우저를 사용해주세요.");
@@ -67,52 +73,75 @@ export function NotificationForceModal({ userId }: NotificationForceModalProps) 
                 return;
             }
 
-            if (!messaging) {
-                console.warn("Messaging not initialized");
-                setStatus('idle');
-                return;
-            }
+            // Task: Acquire FCM Token with timeout
+            await Promise.race([
+                (async () => {
+                    // 1. Wait for messaging object if it's missing (it's initialized async in firebase.ts)
+                    let currentMessaging = messaging;
+                    if (!currentMessaging) {
+                        for (let i = 0; i < 10; i++) { // Try for 5 seconds
+                            await new Promise(r => setTimeout(r, 500));
+                            const { messaging: lateMessaging } = await import('@/lib/firebase');
+                            if (lateMessaging) {
+                                currentMessaging = lateMessaging;
+                                break;
+                            }
+                        }
+                    }
 
-            // Register service worker and get token
-            const configParams = new URLSearchParams({
-                apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '',
-                authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || '',
-                projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
-                storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || '',
-                messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || '',
-                appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
-            }).toString();
+                    if (!currentMessaging) {
+                        throw new Error("MESSAGING_NOT_READY");
+                    }
 
-            const swUrl = `/firebase-messaging-sw.js?${configParams}`;
-            const registration = await navigator.serviceWorker.register(swUrl, {
-                scope: '/firebase-cloud-messaging-push-scope',
-            });
+                    // 2. Register service worker
+                    const configParams = new URLSearchParams({
+                        apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '',
+                        authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || '',
+                        projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
+                        storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || '',
+                        messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || '',
+                        appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
+                    }).toString();
 
-            // Wait for sw to be active
-            const sw = registration.installing || registration.waiting || registration.active;
-            if (sw && sw.state !== 'activated') {
-                await new Promise<void>((resolve) => {
-                    sw.addEventListener('statechange', (e: any) => {
-                        if (e.target.state === 'activated') resolve();
+                    const swUrl = `/firebase-messaging-sw.js?${configParams}`;
+                    const registration = await navigator.serviceWorker.register(swUrl, {
+                        scope: '/firebase-cloud-messaging-push-scope',
                     });
-                });
-            }
 
-            const vapidKey = process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY;
-            const token = await getToken(messaging, {
-                vapidKey,
-                serviceWorkerRegistration: registration
-            });
+                    // 3. Wait for service worker to be ready
+                    await navigator.serviceWorker.ready;
 
-            if (token) {
-                await updateDoc(doc(db, "Winter_Users", userId), {
-                    fcmToken: token
-                });
-                setStatus('success');
-                setIsVisible(false);
+                    // 4. Get token
+                    const vapidKey = process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY;
+                    const token = await getToken(currentMessaging, {
+                        vapidKey,
+                        serviceWorkerRegistration: registration
+                    });
+
+                    if (token) {
+                        await updateDoc(doc(db, "Winter_Users", userId), {
+                            fcmToken: token,
+                            notificationPermission: 'granted',
+                            lastTokenUpdate: new Date().toISOString()
+                        });
+                        setStatus('success');
+                        setIsVisible(false);
+                    } else {
+                        throw new Error("TOKEN_EMPTY");
+                    }
+                })(),
+                timeoutPromise
+            ]);
+
+        } catch (error: any) {
+            console.error("Failed to force enable notifications:", error);
+            if (error.message === 'TIMEOUT') {
+                alert("알림 활성화 시간이 초과되었습니다. 페이지를 새로고침한 후 다시 시도해 주세요.");
+            } else if (error.message === 'MESSAGING_NOT_READY') {
+                alert("알림 모듈 초기화가 지연되고 있습니다. 잠시 후 다시 시도해 주세요.");
+            } else {
+                alert("알림 활성화 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
             }
-        } catch (error) {
-            console.error("Failed to force enable notifications", error);
             setStatus('idle');
         }
     };
