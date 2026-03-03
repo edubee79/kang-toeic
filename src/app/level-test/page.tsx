@@ -81,7 +81,7 @@ export default function LevelTestLobby() {
             alert("This test is only available on PC screens.");
             return;
         }
-        router.push(`/level-test/${testId}?from=${encodeURIComponent(`/level-test?from=${encodeURIComponent(fromPath)}`)}`);
+        router.push(`/mock-test/half/${testId}?from=${encodeURIComponent(`/level-test?from=${encodeURIComponent(fromPath)}`)}`);
     };
 
     if (loading) {
