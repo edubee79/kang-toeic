@@ -614,20 +614,20 @@ export const test7Data: Part4Set[] = [
             },
             {
                 id: "v4-p4-t07-q100",
-                text: "What will follow the commercial break?",
+                text: "What will the listeners hear after a commercial break?",
                 classification: "DETAIL",
                 options: {
-                    A: "An interview with a songwriter",
-                    B: "A traffic report",
-                    C: "A weather forecast",
-                    D: "A financial summary"
+                    A: "A financial report",
+                    B: "A weather forecast",
+                    C: "An interview with a government official",
+                    D: "A live musical performance"
                 },
-                correctAnswer: "C",
+                correctAnswer: "B",
                 translation: "광고 후 어떤 일이 이어질 것인가?",
-                translation_A: "작곡가와의 인터뷰",
-                translation_B: "교통 보고",
-                translation_C: "일기 예보",
-                translation_D: "재무 요약"
+                translation_A: "재무 보고",
+                translation_B: "일기 예보",
+                translation_C: "정부 관계자와의 인터뷰",
+                translation_D: "라이브 음악 공연"
             }
         ],
         script: "Welcome to the evening news program on WXNL Radio. In local news, the much-anticipated holiday parade will be held downtown this Saturday, beginning promptly at ten A.M. on Main Street. However, according to the city government's Web site, there's been one important change. The parade was supposed to follow a route along five city roads, but because of traffic concerns, the parade will now stop at the end of Curtis Avenue instead of continuing to the originally planned end point. Now, in case you're wondering whether we'll have sunny skies or clouds on the day of the parade, stay tuned after the commercial break for our weekend forecast.",

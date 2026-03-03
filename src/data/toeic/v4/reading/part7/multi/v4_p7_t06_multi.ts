@@ -24,7 +24,7 @@ export const test6MultiData: PracticeSet[] = [
                 id: "v4-p7-t6-s11-p2",
                 contextType: "P1",
                 docType: "EMAIL",
-                content: `From: ota.kyle@opalmail.com.au\nTo: dlu@blissfulhorsestables.com.au\nSubject: Part-time position\nDate: 1 August\nAttachment: @ota.rtf\n\nDear Ms. Lu,\n\nThis e-mail is in response to the advertisement that appeared in yesterday's edition of the Colby Today. At this time, I work for Ness Large Animal Clinic as a technician's assistant, but only three days a week. The part-time position you are advertising would enable me to do something I enjoy while increasing my working hours. I am happy to provide references upon request.\n\nAll the best,\nKyle Ota`
+                content: `From: ota.kyle@opalmail.com.au\nTo: dlu@blissfulhorsestables.com.au\nSubject: Part-time position\nDate: 1 August\nAttachment: ota.rfg\n\nDear Ms. Lu,\n\nThis e-mail is in response to the advertisement that appeared in yesterday's edition of the Colby Today. At this time, I work for Ness Large Animal Clinic as a technician's assistant, but only three days a week. The part-time position you are advertising would enable me to do something I enjoy while increasing my working hours. I am happy to provide references upon request.\n\nAll the best,\nKyle Ota`
             }
         ],
         questions: [
@@ -33,14 +33,14 @@ export const test6MultiData: PracticeSet[] = [
                 questionNo: 176,
                 text: "What is NOT indicated about Blissful Horse Stables?",
                 options: {
-                    "A": "It offers riding lessons.",
+                    "A": "It provides grooming services.",
                     "B": "It requires a minimum stay of three days.",
-                    "C": "It has been in business for over 20 years.",
+                    "C": "It has a large, grassy field for grazing.",
                     "D": "It is a family-run business."
                 },
                 correctAnswer: "B",
                 classification: "P7_NEGATIVE",
-                explanation: "지문 1에서 말타기 강습(lessons)을 제공하고, 1988년부터 운영(20년 이상)되었으며, Gandy 가족이 운영(family-run)한다고 명시되어 있으나, 최소 3일 숙박 조건은 언급되지 않았습니다."
+                explanation: "지문 1에서 마구간 시설에는 실내외 운동장과 5에이커 규모의 방목용 목초지(grassy field for grazing)가 있고, 가족이 운영(family-run)하며, 말 세척 및 그루밍 서비스(grooming services)를 위한 인력을 구인 중임을 알 수 있으나, 최소 3일 숙박 조건은 언급되지 않았습니다."
             },
             {
                 id: "v4-p7-t6-q177",
@@ -48,13 +48,13 @@ export const test6MultiData: PracticeSet[] = [
                 text: "In the advertisement, the word 'facility' is closest in meaning to",
                 options: {
                     "A": "simplicity",
-                    "B": "expense",
-                    "C": "location",
-                    "D": "owner"
+                    "B": "chance",
+                    "C": "openness",
+                    "D": "center"
                 },
-                correctAnswer: "C",
+                correctAnswer: "D",
                 classification: "P7_VOCABULARY",
-                explanation: "여기서 'facility'는 Blissful Horse Stables라는 장소나 시설을 의미하므로 'location(장소, 지점)'이 문맥상 가장 가깝습니다."
+                explanation: "여기서 'facility'는 Blissful Horse Stables라는 시설이나 장소를 의미하므로 'center(센터, 시설)'가 문맥상 가장 가깝습니다."
             },
             {
                 id: "v4-p7-t6-q178",
@@ -63,7 +63,7 @@ export const test6MultiData: PracticeSet[] = [
                 options: {
                     "A": "A regional newspaper",
                     "B": "A newsletter for horse owners",
-                    "C": "A Web site",
+                    "C": "A television program",
                     "D": "A tourism brochure"
                 },
                 correctAnswer: "A",
@@ -73,7 +73,7 @@ export const test6MultiData: PracticeSet[] = [
             {
                 id: "v4-p7-t6-q179",
                 questionNo: 179,
-                text: "What is implied about Mr. Ora?",
+                text: "What is implied about Mr. Ota?",
                 options: {
                     "A": "He has experience working with animals.",
                     "B": "He graduated from a local school.",
@@ -82,12 +82,12 @@ export const test6MultiData: PracticeSet[] = [
                 },
                 correctAnswer: "A",
                 classification: "P7_INFERENCE",
-                explanation: "Mr. Ora는 현재 'New Large Animal Clinic'에서 'technician's assistant'로 일하고 있다고 했으므로, 동물과 함께 일한 경험이 있음을 알 수 있습니다."
+                explanation: "Mr. Ota는 현재 'Ness Large Animal Clinic'에서 'technician's assistant'로 일하고 있다고 했으므로, 동물과 함께 일한 경험이 있음을 알 수 있습니다."
             },
             {
                 id: "v4-p7-t6-q180",
                 questionNo: 180,
-                text: "What has Mr. Ora most likely attached to his e-mail?",
+                text: "What has Mr. Ota most likely attached to his e-mail?",
                 options: {
                     "A": "A diploma",
                     "B": "A résumé",
@@ -96,7 +96,7 @@ export const test6MultiData: PracticeSet[] = [
                 },
                 correctAnswer: "B",
                 classification: "P7_DETAIL",
-                explanation: "광고에서 지원 시 이력서(résumé)를 첨부하라고 했으며, 이메일에 'orakyle.rtf'라는 파일이 첨부되어 있으므로 이는 그의 이력서일 가능성이 높습니다."
+                explanation: "광고에서 지원 시 이력서(résumé)를 첨부하라고 했으며, 이메일에 'ota.rfg'라는 파일이 첨부되어 있으므로 이는 그의 이력서일 가능성이 높습니다."
             }
         ]
     },
@@ -148,14 +148,14 @@ export const test6MultiData: PracticeSet[] = [
                 questionNo: 182,
                 text: "What is indicated about Ms. Dixon?",
                 options: {
-                    "A": "She is managing a small business with her neighbors.",
+                    "A": "She wants to turn her hobby into a full-time business.",
                     "B": "She would like a part-time job at Pink Fern Gardens.",
-                    "C": "She founded a community garden in Henderson.",
-                    "D": "She is the president of a gardening club."
+                    "C": "She founded a community garden with her neighbors.",
+                    "D": "She is president of a gardening club in Helensville."
                 },
-                correctAnswer: "A",
+                correctAnswer: "C",
                 classification: "P7_DETAIL",
-                explanation: "그녀의 코멘트에서 '이웃들과 함께 화분 식물을 판매하는 소규모 사업을 시작했다(started a small business... with my neighbours)'고 직접 언급했습니다."
+                explanation: "Dixon 씨는 Helensville에서 '이웃들과 함께 대규모 공동 식품 정원을 시작했다(started a large community food garden with my neighbours here in Helensville)'고 언급했으므로 (C)가 정답입니다."
             },
             {
                 id: "v4-p7-t6-q183",
@@ -178,12 +178,12 @@ export const test6MultiData: PracticeSet[] = [
                 options: {
                     "A": "Send him a list of supplies",
                     "B": "Contact an independent grower",
-                    "C": "Inform him if she can supply plants at his prices",
-                    "D": "Provide a price quote for Pink Fern Gardens"
+                    "C": "Buy seeds from Pink Fern Gardens",
+                    "D": "Bring some plants to Pink Fern Gardens"
                 },
-                correctAnswer: "C",
+                correctAnswer: "D",
                 classification: "P7_PURPOSE",
-                explanation: "이메일 끝부분에서 제시한 가격대(prices)에 식물을 공급(deliver)할 수 있는지 여부를 알려달라고 요청했습니다."
+                explanation: "이메일 끝부분에서 '당신이 제공하는 것들의 샘플을 가지고 들러달라(Please stop by ... with samples of your offerings)'고 요청했으므로 (D)가 정답입니다."
             },
             {
                 id: "v4-p7-t6-q185",
@@ -193,11 +193,11 @@ export const test6MultiData: PracticeSet[] = [
                     "A": "$8.00",
                     "B": "$6.00",
                     "C": "$5.00",
-                    "D": "$4.00"
+                    "D": "$2.00"
                 },
-                correctAnswer: "B",
+                correctAnswer: "D",
                 classification: "P7_LINK",
-                explanation: "Ms. Dixon은 민트(mint) 묘목을 가지고 있다고 했고, Mr. Yoneda가 제시한 가격표에서 민트는 개당 $6로 책정되어 있습니다."
+                explanation: "Ms. Dixon은 민트(mint) 묘목을 가지고 있다고 했고, Mr. Yoneda가 이메일에서 언급한 가격표에 따르면 허브류(민트 포함)는 개당 $2입니다."
             }
         ]
     },
@@ -248,28 +248,28 @@ export const test6MultiData: PracticeSet[] = [
                 questionNo: 186,
                 text: "According to the Web page, what is true about Elektroproof Repair?",
                 options: {
-                    "A": "It recently opened for business.",
-                    "B": "It has experienced a sudden increase in business.",
-                    "C": "It requires full payment before work can begin.",
-                    "D": "It offers free consultations to new customers."
+                    "A": "It recently raised its prices.",
+                    "B": "It is hiring more technicians.",
+                    "C": "It has experienced a sudden increase in business.",
+                    "D": "It requires full payment before work can begin."
                 },
-                correctAnswer: "B",
+                correctAnswer: "C",
                 classification: "P7_DETAIL",
-                explanation: "웹 페이지의 'NOTE' 섹션에서 '수요의 급격한 증가(dramatic increase in demand)'로 인해 기존 고객만 예약을 받는다고 명시되어 있습니다."
+                explanation: "웹 페이지의 'NOTE' 섹션에서 '수요의 급격한 증가(dramatic increase in demand)'로 인해 모든 서비스에 예약이 필요하다고 명시되어 있습니다."
             },
             {
                 id: "v4-p7-t6-q187",
                 questionNo: 187,
                 text: "According to the e-mail, what is the earliest date when Ms. Nelson could bring in her laptop?",
                 options: {
-                    "A": "On January 15",
-                    "B": "On January 31",
-                    "C": "On February 1",
-                    "D": "On February 3"
+                    "A": "On January 14",
+                    "B": "On January 15",
+                    "C": "On January 18",
+                    "D": "On January 19"
                 },
                 correctAnswer: "D",
                 classification: "P7_DETAIL",
-                explanation: "이메일에서 1월 말까지는 예약이 꽉 찼으며(booked solid), 2월 3일에 빈 시간(opening on February 3)이 있다고 안내하고 있습니다."
+                explanation: "이메일에서 1월 18일까지는 예약이 꽉 찼으며(booked solid through January 18), 1월 19일 오전 8시가 가장 빠른 시간(earliest available time slot ... on January 19)이라고 안내하고 있습니다."
             },
             {
                 id: "v4-p7-t6-q188",
@@ -277,18 +277,18 @@ export const test6MultiData: PracticeSet[] = [
                 text: "What is most likely true about Mr. Jacquet?",
                 options: {
                     "A": "He owns the business.",
-                    "B": "He works for Elektroproof Repair.",
-                    "C": "He is a regular customer.",
-                    "D": "He is Silvia Lau's coworker."
+                    "B": "He is a technician.",
+                    "C": "He is a receptionist.",
+                    "D": "He delivers repaired equipment."
                 },
-                correctAnswer: "B",
+                correctAnswer: "A",
                 classification: "P7_INFERENCE",
-                explanation: "Arthur Jacquet은 이메일에서 서명을 통해 회사 소속임을 밝혔으며, 리뷰에서도 수리 완료 소식을 전화로 전해준 사람으로 언급됩니다."
+                explanation: "리뷰에서 Jessica Nelson은 '주인(owner)으로부터 직접 이메일을 받았다'고 했으며, 그 이메일의 발신인이 Arthur Jacquet이므로 그는 사장(owner)임을 알 수 있습니다."
             },
             {
                 id: "v4-p7-t6-q189",
                 questionNo: 189,
-                text: "According to the review, what was Ms. Lau's main concern about her laptop?",
+                text: "According to the review, what was Ms. Nelson's main concern about her laptop?",
                 options: {
                     "A": "That internal parts might be damaged.",
                     "B": "That it would not be repaired in time.",
@@ -297,7 +297,7 @@ export const test6MultiData: PracticeSet[] = [
                 },
                 correctAnswer: "A",
                 classification: "P7_DETAIL",
-                explanation: "리뷰에서 Silvia Lau는 액체를 쏟은 후 '내부 부품이 손상되었을까 봐 걱정했다(afraid the internal components might have been damaged)'고 언급했습니다."
+                explanation: "리뷰에서 Jessica Nelson은 액체를 쏟은 후 '내부 부품이 망가졌을까 봐 걱정했다(afraid the internal components might have been ruined)'고 언급했습니다."
             },
             {
                 id: "v4-p7-t6-q190",
@@ -370,70 +370,70 @@ export const test6MultiData: PracticeSet[] = [
                 questionNo: 191,
                 text: "What is the purpose of the advertisement?",
                 options: {
-                    "A": "To sell musical instruments",
-                    "B": "To promote a new lesson service",
-                    "C": "To recruit music teachers",
-                    "D": "To offer a trade-in program"
+                    "A": "To sell guitars",
+                    "B": "To promote lessons",
+                    "C": "To attract music teachers",
+                    "D": "To announce a new location"
                 },
                 correctAnswer: "B",
                 classification: "P7_PURPOSE",
-                explanation: "광고는 기타 연주 교습(guitar instruction)을 시작한다는 부수적인 서비스 개시를 알리고 있습니다."
+                explanation: "광고의 제목과 본문에서 기타 연주를 배울 수 있다는 점(Learn to play guitar)과 수업 개시(Alexis Instruments will offer ... instruction)를 홍보하고 있으므로 (B)가 정답입니다."
             },
             {
                 id: "v4-p7-t6-q192",
                 questionNo: 192,
-                text: "What is suggested about the guitar Ms. Rivera ordered?",
+                text: "What is most likely true about the store where Ms. Towers works?",
                 options: {
-                    "A": "It is a rare vintage model.",
-                    "B": "It was previously used by a teacher.",
-                    "C": "It was the only one of its kind at the Santa Barbara store.",
-                    "D": "It has some minor surface scratches."
+                    "A": "It has been renovated.",
+                    "B": "It is hiring new employees.",
+                    "C": "It has more inventory than other locations.",
+                    "D": "It has extended its hours of operation."
                 },
-                correctAnswer: "C",
+                correctAnswer: "A",
                 classification: "P7_LINK",
-                explanation: "이메일에서 '재고가 단 하나뿐(only one... in stock)'이며 그것이 산타바바라 쇼룸에 전시되어 있던 것이라고 언급했습니다."
+                explanation: "광고(지문 1)에서 '각 지점은 최근 건설된 교실과 연습실로 업데이트되었다(updated with newly constructed classrooms...)'고 했으므로 (A) 개조되었다(renovated)는 것이 정답입니다."
             },
             {
                 id: "v4-p7-t6-q193",
                 questionNo: 193,
-                text: "Where will Ms. Rivera most likely have her first guitar lesson?",
+                text: "What does the e-mail indicate about the guitar?",
                 options: {
-                    "A": "In Santa Barbara",
-                    "B": "In Chico",
-                    "C": "At her home",
-                    "D": "Online"
+                    "A": "It is in need of repairs.",
+                    "B": "It has been on a shelf at the store in Chico.",
+                    "C": "It was previously owned by an Alexis Instruments customer.",
+                    "D": "It is the only one of its model currently available."
                 },
-                correctAnswer: "B",
+                correctAnswer: "D",
                 classification: "P7_LINK",
-                explanation: "이메일에서 기타를 '당신의 지역 매장(local store)'으로 보낼 것이라고 했고, 영수증의 배송지가 'Chico' 매장으로 되어 있습니다. 또한 광고에서도 Chico의 Kanga Drive에서 수업이 열린다고 했습니다."
+                explanation: "이메일(지문 2)에서 '우리는 당신이 원하는 모델의 기타를 단 하나만 재고로 보유하고 있다(We have only one guitar of the model you want in stock)'고 했으므로 (D)가 정답입니다."
             },
             {
                 id: "v4-p7-t6-q194",
                 questionNo: 194,
-                text: "What did Ms. Rivera decide to do about her order?",
+                text: "What can be inferred about Ms. Rivera?",
                 options: {
-                    "A": "Request a full refund",
-                    "B": "Wait for a new guitar to arrive",
-                    "C": "Purchase the maintenance plan only",
-                    "D": "Accept the display model"
+                    "A": "She damaged her guitar.",
+                    "B": "She requested a refund.",
+                    "C": "She was previously enrolled in an online class.",
+                    "D": "She purchased the floor model."
                 },
                 correctAnswer: "D",
                 classification: "P7_LINK",
-                explanation: "영수증에 10% 가격 할인(Discount)이 반영된 것으로 보아, 그녀는 이메일에서 제안한 두 번째 옵션(전시용 모델 수락 및 할인)을 선택했음을 알 수 있습니다."
+                explanation: "이메일에서 전시용 모델(floor model) 수락 시 10% 할인을 제안했고, 영수증(지문 3)에 10% 할인이 반영되어 있으므로 그녀가 전시용 모델을 구매했음을 알 수 있습니다."
             },
             {
                 id: "v4-p7-t6-q195",
                 questionNo: 195,
-                text: "What is true about the maintenance plan purchased by Ms. Rivera?",
+                text: "According to the receipt, what is true about Alexis Instruments?",
                 options: {
-                    "A": "It is valid at any store location.",
-                    "B": "It costs more than the guitar strings.",
-                    "C": "It must be renewed every three years.",
-                    "D": "It does not cover acoustic guitars."
+                    "A": "It repairs instruments in its stores.",
+                    "B": "It has two stores in Santa Barbara.",
+                    "C": "It is holding an annual sale.",
+                    "D": "It was founded by a professional musician."
                 },
                 correctAnswer: "A",
                 classification: "P7_DETAIL",
-                explanation: "기존 데이터의 영수증 상세 항목에 따르면 유지보수 플랜은 'Alexis Instruments의 어느 지점에서나 유효(good at any... location)'하다고 되어 있습니다."
+                explanation: "영수증(지문 3)에 '수리 및 유지보수 플랜(repair and maintenance plan)' 항목이 포함되어 있으며 어느 지점에서나 유효하다고 했으므로 매장에서 수리를 제공함을 알 수 있습니다."
             }
         ]
     },

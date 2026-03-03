@@ -18,7 +18,21 @@ export default function Part7DoubleLobbyPage() {
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
     const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
-    const [selectedVol, setSelectedVol] = useState<number>(4);
+    const [selectedVol, setSelectedVol] = useState<number>(() => {
+        const volParam = searchParams.get('vol');
+        return volParam ? parseInt(volParam) : 3;
+    });
+
+    // Update selectedVol when URL param changes (e.g., via back button)
+    useEffect(() => {
+        const volParam = searchParams.get('vol');
+        if (volParam) {
+            const v = parseInt(volParam);
+            if (!isNaN(v) && v !== selectedVol) {
+                setSelectedVol(v);
+            }
+        }
+    }, [searchParams, selectedVol]);
 
     useEffect(() => {
         setIsMounted(true);
@@ -33,10 +47,11 @@ export default function Part7DoubleLobbyPage() {
 
                 // For Double, currently no specific scoring system is implemented in the PC only view 
                 // but we might want to check for completion if implemented later.
-                // Assuming keys might be RC_Part7_Vol4_Double_TestX... 
-                // But for now, the Double Passage Runner doesn't submit fully structured data to Firestore yet in the same way.
-                // We'll prepare the fetching logic anyway.
-                const units = Array.from({ length: 15 }, (_, i) => `RC_Part7_Vol4_Double_Test${i + 1}_real`);
+                // Fetch completion status for both Volume 3 and 4
+                const units = [
+                    ...Array.from({ length: 15 }, (_, i) => `RC_Part7_Vol3_Double_Test${i + 1}_real`),
+                    ...Array.from({ length: 15 }, (_, i) => `RC_Part7_Vol4_Double_Test${i + 1}_real`)
+                ];
                 const completionData = await getMultipleTestCompletions(userId, units);
                 setCompletions(completionData);
             }
@@ -57,7 +72,7 @@ export default function Part7DoubleLobbyPage() {
     }
 
     // Volume Logic
-    const volumes = Array.from(new Set(part7MultiTestArray.map(t => (t[0] as any).vol || 4))).sort();
+    const volumes = Array.from(new Set(part7MultiTestArray.map(t => (t[0] as any).vol || 3))).sort();
 
     // NEW: Get limit for the specific volume
     const volLimits = access?.maxSets?.part7_double;
@@ -66,7 +81,7 @@ export default function Part7DoubleLobbyPage() {
         : (volLimits || 10);
 
     // Filter by volume (checking first item in the set array)
-    const filteredTests = part7MultiTestArray.filter(t => ((t[0] as any).vol || 4) === selectedVol);
+    const filteredTests = part7MultiTestArray.filter(t => ((t[0] as any).vol || 3) === selectedVol);
 
     return (
         <div className="w-full space-y-3 md:space-y-6 pb-10 md:pb-20 px-0 bg-slate-950 min-h-screen">
@@ -107,7 +122,12 @@ export default function Part7DoubleLobbyPage() {
                         {volumes.map((v) => (
                             <button
                                 key={v}
-                                onClick={() => setSelectedVol(v)}
+                                onClick={() => {
+                                    setSelectedVol(v);
+                                    const params = new URLSearchParams(searchParams.toString());
+                                    params.set('vol', v.toString());
+                                    router.push(`/homework/part7-double?${params.toString()}`, { scroll: false });
+                                }}
                                 className={cn(
                                     "px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 flex items-center gap-2",
                                     selectedVol === v
@@ -127,7 +147,7 @@ export default function Part7DoubleLobbyPage() {
                         // Extract metadata from the first item in the set
                         const firstItem = testSet[0] as any;
                         const testId = firstItem.testId || (idx + 1); // Fallback if testId missing
-                        const vol = firstItem.vol || 4;
+                        const vol = firstItem.vol || 3;
 
                         const isLocked = testId > maxTest;
                         const completionKey = `RC_Part7_Vol${vol}_Double_Test${testId}_real`;
@@ -136,7 +156,7 @@ export default function Part7DoubleLobbyPage() {
                         return (
                             <Link
                                 key={testId}
-                                href={isLocked ? "#" : `/homework/part7/double-passage/${vol}/${testId}?from=${encodeURIComponent(`/homework/part7-double?from=${encodeURIComponent(fromPath)}`)}`}
+                                href={isLocked ? "#" : `/homework/part7/double-passage/${vol}/${testId}?from=${encodeURIComponent(`/homework/part7-double?vol=${selectedVol}&from=${encodeURIComponent(fromPath)}`)}`}
                                 onClick={(e) => {
                                     if (isLocked) {
                                         e.preventDefault();

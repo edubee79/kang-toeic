@@ -29,7 +29,21 @@ export default function Part4LobbyPage() {
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
     const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
-    const [selectedVol, setSelectedVol] = useState<number>(3);
+    const [selectedVol, setSelectedVol] = useState<number>(() => {
+        const volParam = searchParams.get('vol');
+        return volParam ? parseInt(volParam) : 3;
+    });
+
+    // Update selectedVol when URL param changes (e.g., via back button)
+    useEffect(() => {
+        const volParam = searchParams.get('vol');
+        if (volParam) {
+            const v = parseInt(volParam);
+            if (!isNaN(v) && v !== selectedVol) {
+                setSelectedVol(v);
+            }
+        }
+    }, [searchParams, selectedVol]);
 
     useEffect(() => {
         setIsMounted(true);
@@ -119,7 +133,12 @@ export default function Part4LobbyPage() {
                         {volumes.map((v) => (
                             <button
                                 key={v}
-                                onClick={() => setSelectedVol(v)}
+                                onClick={() => {
+                                    setSelectedVol(v);
+                                    const params = new URLSearchParams(searchParams.toString());
+                                    params.set('vol', v.toString());
+                                    router.push(`/homework/part4?${params.toString()}`, { scroll: false });
+                                }}
                                 className={cn(
                                     "px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 flex items-center gap-2",
                                     selectedVol === v
@@ -138,7 +157,7 @@ export default function Part4LobbyPage() {
                     {outputTests.map((test) => (
                         <Link
                             key={test.id}
-                            href={test.isActive ? `/homework/part4/test/${test.vol}/${test.id}?from=${encodeURIComponent(`/homework/part4?from=${encodeURIComponent(fromPath)}`)}` : '#'}
+                            href={test.isActive ? `/homework/part4/test/${test.vol}/${test.id}?from=${encodeURIComponent(`/homework/part4?vol=${selectedVol}&from=${encodeURIComponent(fromPath)}`)}` : '#'}
                             onClick={(e) => {
                                 if (!test.isActive) {
                                     e.preventDefault();

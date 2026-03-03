@@ -44,14 +44,14 @@ export const test1MultiData: PracticeSet[] = [
                 questionNo: 176,
                 text: "What is the purpose of the press release?",
                 options: {
-                    "A": "To introduce a corporate partnership",
-                    "B": "To advertise a cooking class",
+                    "A": "To promote a restaurant opening",
+                    "B": "To announce a business partnership",
                     "C": "To introduce a travel program",
                     "D": "To congratulate an award recipient"
                 },
-                correctAnswer: "A",
+                correctAnswer: "B",
                 classification: "P7_PURPOSE",
-                translation: "보도 자료의 목적은 무엇인가?",
+                translation: "보도 자료의 목적은 무엇인가?\n(A) 레스토랑 개점을 홍보하려고\n(B) 사업 제휴를 발표하려고\n(C) 여행 프로그램을 소개하려고\n(D) 수상자를 축하하려고",
                 explanation: "보도 자료 첫 문장에서 Kitchen Swift와 Chef Darius Cordero가 협력하여 새로운 제품 라인을 선보인다고 발표하고 있습니다."
             },
             {
@@ -104,14 +104,14 @@ export const test1MultiData: PracticeSet[] = [
                 questionNo: 180,
                 text: "What did Ms. Cuan suggest about Enrique's in the review?",
                 options: {
-                    "A": "It has a limited lunch menu.",
-                    "B": "It is located in the Philippines.",
-                    "C": "It serves bread from a local bakery.",
-                    "D": "It is difficult to get a reservation for dinner."
+                    "A": "It has a limited lunch menu",
+                    "B": "It is difficult to get a reservation for dinner",
+                    "C": "It serves bread from a local bakery",
+                    "D": "It has a branch in Hong Kong"
                 },
-                correctAnswer: "D",
+                correctAnswer: "B",
                 classification: "P7_INFERENCE",
-                translation: "Cuan 씨가 Enrique's에 대해 리뷰에서 언급한 것은?",
+                translation: "Cuan 씨가 Enrique's에 대해 리뷰에서 암시한 것은?\n(A) 점심 메뉴가 한정되어 있다\n(B) 저녁 식사 예약이 어렵다\n(C) 현지 제과점의 빵을 제공한다\n(D) 홍콩에 지점이 있다",
                 explanation: "저녁 시간에는 보통 예약이 꽉 차서(fully booked for dinner) 몇 달 전에 전화해야 할 수도 있다고 언급하여 예약이 어려움을 나타냈습니다."
             }
         ]

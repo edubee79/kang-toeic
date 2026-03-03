@@ -315,18 +315,18 @@ export const test10Data: Part7Test = {
                 {
                     id: "v4-p7-t10-q160",
                     questionNo: 160,
-                    text: "How many years did Mr. Ngam work at CG&E?",
-                    classification: "P7_DETAIL",
+                    text: "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\n\"The last position he held at the company was director of research and development.\"",
+                    classification: "P7_INSERTION",
 
                     options: {
-                        "A": "4",
-                        "B": "14",
-                        "C": "25",
-                        "D": "30"
+                        "A": "[1]",
+                        "B": "[2]",
+                        "C": "[3]",
+                        "D": "[4]"
                     },
-                    correctAnswer: "C",
-                    translation: "응암 씨는 CG&E에서 몇 년 동안 근무했는가?",
-                    explanation: `첫 번째 단락의 세 번째 문장에서 25년의 기간 동안(Over a period of 25 years) CG&E에서 근무했다고 언급했으므로 (C)가 정답이다.`
+                    correctAnswer: "B",
+                    translation: "[1], [2], [3], [4]로 표시된 위치 중 다음 문장이 들어가기에 가장 적절한 곳은?\n\n\"그가 회사에서 마지막으로 맡았던 직책은 연구 개발 이사였습니다.\"",
+                    explanation: `제시된 문장은 응암 씨가 회사에서 마지막으로 맡았던 직책을 언급하고 있다. 따라서 응암 씨가 회사(CG&E)에서 25년 동안 근무하며 명성을 쌓았다는 내용 뒤인 [2]의 위치에 들어가는 것이 가장 자연스럽다. 이후 문장부터는 회사를 그만둔 후 컨설팅 회사를 시작한 현재의 이야기가 이어지므로 [2]가 정답이다.`
                 }
             ]
         },

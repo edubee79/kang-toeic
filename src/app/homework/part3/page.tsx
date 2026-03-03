@@ -21,7 +21,21 @@ export default function Part3LobbyPage() {
     const [completions, setCompletions] = useState<Record<string, TestCompletion>>({});
 
     // NEW: Volume Filtering State
-    const [selectedVol, setSelectedVol] = useState<number>(3);
+    const [selectedVol, setSelectedVol] = useState<number>(() => {
+        const volParam = searchParams.get('vol');
+        return volParam ? parseInt(volParam) : 3;
+    });
+
+    // Update selectedVol when URL param changes (e.g., via back button)
+    useEffect(() => {
+        const volParam = searchParams.get('vol');
+        if (volParam) {
+            const v = parseInt(volParam);
+            if (!isNaN(v) && v !== selectedVol) {
+                setSelectedVol(v);
+            }
+        }
+    }, [searchParams, selectedVol]);
 
     useEffect(() => {
         setIsMounted(true);
@@ -100,7 +114,12 @@ export default function Part3LobbyPage() {
                         {volumes.map((v) => (
                             <button
                                 key={v}
-                                onClick={() => setSelectedVol(v as number)}
+                                onClick={() => {
+                                    setSelectedVol(v as number);
+                                    const params = new URLSearchParams(searchParams.toString());
+                                    params.set('vol', v.toString());
+                                    router.push(`/homework/part3?${params.toString()}`, { scroll: false });
+                                }}
                                 className={cn(
                                     "px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 flex items-center gap-2",
                                     selectedVol === v
@@ -124,7 +143,7 @@ export default function Part3LobbyPage() {
                         return (
                             <Link
                                 key={`${test.vol}-${test.testId}`}
-                                href={!isLocked ? `/homework/part3/test/${test.vol}/${test.testId}?from=${encodeURIComponent(`/homework/part3?from=${encodeURIComponent(fromPath)}`)}` : '#'}
+                                href={!isLocked ? `/homework/part3/test/${test.vol}/${test.testId}?from=${encodeURIComponent(`/homework/part3?vol=${selectedVol}&from=${encodeURIComponent(fromPath)}`)}` : '#'}
                                 onClick={(e) => {
                                     if (isLocked) {
                                         e.preventDefault();

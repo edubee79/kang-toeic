@@ -127,36 +127,36 @@ export const test3Data: Part5TestSet = {
         {
             "id": "v4-p5-t3-q108",
             "questionNo": 108,
-            "text": "If your plans change, please contact us at least 24 hours _____ the time of your reservation.",
+            "text": "If your plans change, please contact us at least 24 hours before the time of your _____.",
             "options": {
-                "A": "behind",
-                "B": "before",
-                "C": "below",
-                "D": "above"
+                "A": "reserved",
+                "B": "reservation",
+                "C": "reservable",
+                "D": "reserve"
             },
-            "classification": "pr1",
+            "classification": "n1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "B",
             "translation": "계획이 변경될 경우, 늦어도 예약 시간 24시간 전에는 연락 주시기 바랍니다.",
-            "explanation": "빈칸 뒤 명사구 the time of your reservation과 함께 '예약 시간 24시간 전에'라는 의미가 되어야 자연스럽다. 따라서 '~ 전에'를 뜻하는 전치사 (B) before가 정답이다. (A) behind는 '~ 뒤에', (C) below는 '~ 아래에', (D) above는 '~ 위에'를 뜻하므로 문맥상 어울리지 않는다."
+            "explanation": "전치사 of의 목적어로 소유격(your) 뒤에 올 명사 자리이다. 문맥상 '예약 시간'이라는 의미가 되어야 자연스러우므로 명사 (B) reservation이 정답이다."
         },
         {
             "id": "v4-p5-t3-q109",
             "questionNo": 109,
-            "text": "The latest edition of our employee benefit handbook is now _____ at the human resources office.",
+            "text": "Hold the tomato seedling gently by the stem in order to avoid harming ------- roots.",
             "options": {
-                "A": "available",
-                "B": "aware",
-                "C": "general",
-                "D": "practical"
+                "A": "its",
+                "B": "at",
+                "C": "that",
+                "D": "in"
             },
-            "classification": "a2",
+            "classification": "p1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "A",
-            "translation": "우리 직원 복지 안내서의 최신판은 이제 인사과에서 이용 가능합니다.",
-            "explanation": "be동사 is 뒤에서 주어(The latest edition ~ handbook)를 보충 설명하는 주격 보어 자리이므로 형용사가 필요하다. 문맥상 안내서를 '이용할 수 있다'는 내용이 되어야 하므로 '이용 가능한'이라는 뜻의 형용사 (A) available이 정답이다."
+            "translation": "뿌리가 다치지 않게 토마토 묘목을 줄기 쪽으로 살며시 잡으세요.",
+            "explanation": "빈칸은 명사 roots를 수식하는 한정사 자리이다. 앞의 단수 명사 tomato seedling을 가리키는 소유격 인칭대명사가 필요하므로 (A) its가 정답이다."
         },
         {
             "id": "v4-p5-t3-q110",
@@ -173,24 +173,24 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "D",
             "translation": "회의에 입장하기 전에 등록 테이블에서 반드시 이름표를 수령하세요.",
-            "explanation": "빈칸은 뒤에 오는 entering the conference와 함께 앞에 있는 완전한 절(be sure to collect your name tag)을 수식하는 자리이다. entering과 함께 쓰여 '들어가기 전에'라는 의미를 나타내는 것이 적절하므로 (D) before가 정답이다. 부사인 (A) very, (B) often, (C) always 또한 구조상으로 가능해 보일 수 있으나, (A) very는 동사를 수식하지 않고, (B) often과 (C) always는 의미상 어색하므로 정답이 될 수 없다."
+            "explanation": "entering과 함께 쓰여 '~하기 전에'라는 의미를 나타내는 것이 적절하므로 전치사 (D) before가 정답이다."
         },
         {
             "id": "v4-p5-t3-q111",
             "questionNo": 111,
-            "text": "The finance director mentioned _____ the recent increase in shipping costs during the board meeting.",
+            "text": "Maihama vehicles include an extended ------- to cover engine repairs.",
             "options": {
-                "A": "each",
-                "B": "with",
-                "C": "briefly",
-                "D": "across"
+                "A": "record",
+                "B": "operation",
+                "C": "budget",
+                "D": "warranty"
             },
-            "classification": "av1",
+            "classification": "n1",
             "testId": 3,
             "vol": 4,
-            "correctAnswer": "C",
-            "translation": "재무 이사는 이사회 동안 최근의 배송비 인상에 대해 간략히 언급했습니다.",
-            "explanation": "동사 mentioned를 수식하여 '간략하게 언급했다'라는 의미가 되어야 자연스러우므로 부사가 와야 한다. 따라서 '간략히, 잠시'라는 뜻의 부사 (C) briefly가 정답이다."
+            "correctAnswer": "D",
+            "translation": "마이하마 차량에는 엔진 수리를 보장하는 연장된 보증이 포함되어 있다.",
+            "explanation": "문맥상 엔진 수리 등을 보장하는 서비스는 '보증'이 적절하므로 (D) warranty가 정답이다."
         },
         {
             "id": "v4-p5-t3-q112",
@@ -202,12 +202,12 @@ export const test3Data: Part5TestSet = {
                 "C": "impressive",
                 "D": "undefeated"
             },
-            "classification": "voc1",
+            "classification": "a1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "C",
             "translation": "호텔의 새로운 웹사이트는 인상적인 고품질 이미지 컬렉션이 특징이다.",
-            "explanation": "명사 collection을 수식하기에 적절한 형용사를 고르는 문제이다. collection이 고품질 이미지들로 구성되었다는 수식어구(of high-quality images)로 보아 문맥상 '고품질 이미지를 인상적으로 모아놓은 것'이라는 내용이 되어야 적절하므로 '인상적인'이라는 뜻의 (C) impressive가 정답이다. (A) absolute는 '절대적인', (B) efficient는 '효율적인', (D) undefeated는 '무패의'라는 의미이다."
+            "explanation": "명사 collection을 꾸며주는 형용사 자리로 '인상적인'이라는 뜻의 (C) impressive가 정답이다."
         },
         {
             "id": "v4-p5-t3-q113",
@@ -219,12 +219,12 @@ export const test3Data: Part5TestSet = {
                 "C": "sincerely",
                 "D": "perfectly"
             },
-            "classification": "voc1",
+            "classification": "av1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "C",
             "translation": "유니언타운 은행의 모든 임직원을 대표하여, 귀하의 지속적인 이용에 진심으로 감사드립니다.",
-            "explanation": "동사 thank를 수식하여 적절한 문맥을 완성하는 부사를 고르는 문제이다. '지속적인 이용에 진심으로 감사드린다'는 내용이 되어야 자연스러우므로 '진심으로'라는 뜻의 (C) sincerely가 정답이다. (A) deservedly는 '마땅히', (B) commonly는 '흔히', (D) perfectly는 '완벽하게'라는 의미로 문맥상 어울리지 않는다."
+            "explanation": "동사 thank를 수식하는 부사 자리로 '진심으로'라는 뜻의 (C) sincerely가 정답이다."
         },
         {
             "id": "v4-p5-t3-q114",
@@ -241,24 +241,24 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "D",
             "translation": "깨지기 쉬운 장비는 실수로 손상되지 않도록 안전한 장소에 보관되어야 한다.",
-            "explanation": "빈칸은 be동사 is와 과거분사 damaged 사이에서 동사를 수식하는 부사 자리이다. 따라서 '우연히, 실수로'라는 뜻의 부사 (D) accidentally가 정답이다. (A) accident와 (B) accidents는 명사, (C) accidental은 형용사이므로 품사상 오답이다."
+            "explanation": "be동사와 과거분사 사이에서 동사를 수식하는 부사 자리이므로 (D) accidentally가 정답이다."
         },
         {
             "id": "v4-p5-t3-q115",
             "questionNo": 115,
-            "text": "Bancroft Publishing is _____ seeking a skilled web developer for its main office in Chicago.",
+            "text": "Ms. Sampson will not arrive at the convention ------- after our team's presentation.",
             "options": {
-                "A": "currently",
-                "B": "exactly",
-                "C": "briefly",
-                "D": "nearly"
+                "A": "until",
+                "B": "lately",
+                "C": "from",
+                "D": "when"
             },
-            "classification": "av1",
+            "classification": "pr1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "A",
-            "translation": "뱅크로프트 출판사는 현재 시카고 본사에서 근무할 숙련된 웹 개발자를 찾고 있습니다.",
-            "explanation": "현재 진행형 동사구(is seeking) 사이에서 동사를 수식하는 부사 자리이다. 문맥상 '현재 찾고 있다'는 의미가 되어야 하므로 '현재'를 뜻하는 (A) currently가 정답이다."
+            "translation": "샘슨 씨는 우리 팀의 발표가 끝난 이후에야 컨벤션에 도착할 것이다.",
+            "explanation": "문맥상 '발표 이후에야 도착할 것이다'라는 의미가 되어야 하므로 not과 함께 쓰여 '~할 때까지는 ...하지 않다'를 뜻하는 (A) until이 정답이다."
         },
         {
             "id": "v4-p5-t3-q116",
@@ -275,41 +275,41 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "A",
             "translation": "지역 사회 피크닉은 셀처 공공 도서관 뒤에 있는 공원에서 열릴 예정이다.",
-            "explanation": "명사구 the park를 목적어로 취하는 전치사 자리로, 보기에서 (A) in과 (C) for 중 하나를 선택해야 한다. the park가 장소를 나타내는 명사이고, 문맥상 '공원에서 열릴 것이다'라는 내용이 되어야 자연스러우므로 장소 명사와 함께 쓰여 '~에서'를 뜻하는 전치사 (A) in이 정답이다. (C) for(~을 위한)는 문맥상 어색하고, (B) all은 한정사/부사, (D) here는 부사이므로 빈칸에 적절하지 않다."
+            "explanation": "장소 명사 the park와 어울리는 전치사 (A) in이 정답이다."
         },
         {
             "id": "v4-p5-t3-q117",
             "questionNo": 117,
-            "text": "The new hires _____ for an orientation on May 10 at 9:00 ?.?.",
+            "text": "The new hires _____ for an orientation on May 10 at 9:00 A.M.",
             "options": {
                 "A": "to be gathering",
                 "B": "will gather",
                 "C": "gathering",
                 "D": "to gather"
             },
-            "classification": "v4",
+            "classification": "v1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "B",
             "translation": "신입 사원들은 5월 10일 오전 9시에 오리엔테이션을 위해 모일 예정이다.",
-            "explanation": "빈칸은 주어 The new hires의 동사 자리이다. 따라서 문장에서 본동사 역할을 할 수 있는 (B) will gather가 정답이다. (A) to be gathering과 (D) to gather는 to부정사, (C) gathering은 명사/동명사/현재분사이므로 품사상 답이 될 수 없다."
+            "explanation": "주어의 본동사 자리이므로 미래 시제를 나타내는 (B) will gather가 정답이다."
         },
         {
             "id": "v4-p5-t3-q118",
             "questionNo": 118,
-            "text": "Mr. Grant was _____ when he was chosen as the company's employee of the year.",
+            "text": "When Mr. Young approached the desk, the receptionist ------- offered him a seat in the waiting room.",
             "options": {
-                "A": "surprise",
-                "B": "surprised",
-                "C": "surprising",
-                "D": "surprisingly"
+                "A": "politely",
+                "B": "polite",
+                "C": "politeness",
+                "D": "politest"
             },
-            "classification": "a2",
+            "classification": "av1",
             "testId": 3,
             "vol": 4,
-            "correctAnswer": "B",
-            "translation": "그랜트 씨는 올해의 우수 사원으로 선정되었을 때 깜짝 놀랐습니다.",
-            "explanation": "be동사 was 뒤의 보어 자리이며, 주어인 Mr. Grant가 느낀 감정을 나타내야 하므로 과거분사 형태의 형용사가 와야 한다. 따라서 '놀란'이라는 뜻의 (B) surprised가 정답이다."
+            "correctAnswer": "A",
+            "translation": "영 씨가 데스크로 다가가자 접수 담당자는 정중하게 대기실 자리를 권했다.",
+            "explanation": "동사 offered를 수식하는 부사 자리이므로 (A) politely가 정답이다."
         },
         {
             "id": "v4-p5-t3-q119",
@@ -326,7 +326,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "C",
             "translation": "마베일의 마케팅 팀원들은 그들의 것이 새로운 회사 로고를 위한 최고의 디자인이라고 주장했다.",
-            "explanation": "빈칸은 주절의 동사 claimed의 목적어 역할을 하는 that절의 주어 자리이다. was는 단수동사이므로 복수주어인 (A) they는 답이 될 수 없고, 문맥상 '그들(Members of the Marvale marketing team)의 것'이라는 의미를 나타내는 소유대명사 (C) theirs가 정답이다."
+            "explanation": "that절의 주어 자리이며 문맥상 '그들의 것'을 뜻하는 소유대명사 (C) theirs가 정답이다."
         },
         {
             "id": "v4-p5-t3-q120",
@@ -338,12 +338,12 @@ export const test3Data: Part5TestSet = {
                 "C": "within",
                 "D": "including"
             },
-            "classification": "pa5",
+            "classification": "pr1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "D",
             "translation": "신형 키츠나 비디오카메라는 현재 세금을 포함하지 않고 375달러에 판매되고 있다.",
-            "explanation": "문맥상 '세금을 포함하지 않고'라는 의미가 되어야 하는데 앞에 not이 있으므로 '~을 포함하여'라는 뜻의 전치사 (D) including이 정답이다. '~을 제외하고'라는 뜻의 (A) excepting은 not과 함께 '~도 예외 없이'를 의미하므로 문맥에 맞지 않다. (B) alongside는 '~와 나란히', (C) within은 '~ 이내에'라는 의미이다."
+            "explanation": "'세금을 포함하여'라는 뜻인 (D) including이 정답이며, 앞에 not이 있어 '포함하지 않고'가 된다."
         },
         {
             "id": "v4-p5-t3-q121",
@@ -355,12 +355,12 @@ export const test3Data: Part5TestSet = {
                 "C": "maintained",
                 "D": "expected"
             },
-            "classification": "v2",
+            "classification": "v1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "D",
             "translation": "모든 직원들은 안내서에 기술된 표준 운영 절차를 따라야 한다.",
-            "explanation": "be동사 are와 to부정사 to follow 사이에서 과거분사 형태로 적절한 문맥을 완성하는 동사를 골라야 한다. '절차를 따라야 한다', 즉 '절차를 따를 것으로 기대된다'라는 의미가 되어야 하므로 'be expected to'의 형태로 쓰여 '~할 것으로 기대[예상]되다'를 의미하는 (D) expected가 정답이다. (A) concerned는 '우려하는'이라는 의미로 뒤에 주로 전치사 about이나 that절을 취하므로 빈칸에 적절하지 않고, (B)의 tend는 '경향이 있다'라는 뜻의 자동사로 수동태로 쓰이지 않으며, (C)의 maintain은 '유지하다'라는 뜻으로 문맥상 오답이다."
+            "explanation": "'be expected to' 구문으로 '~할 것으로 예상(기대)되다'는 의미의 (D) expected가 정답이다."
         },
         {
             "id": "v4-p5-t3-q122",
@@ -377,7 +377,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "D",
             "translation": "이번 달 프램리 출판사는 지금까지 했던 것 중 가장 야심 찬 확장 사업을 착수할 것이다.",
-            "explanation": "빈칸 앞에 소유격, 뒤에 명사 expansion이 있으므로 빈칸에는 명사를 수식하는 형용사나 복합명사를 이루는 명사가 들어갈 수 있다. 문맥상으로 '가장 야심 찬 확장 사업'이라는 의미가 되어야 자연스러우므로 '야심 찬'이라는 뜻의 형용사 ambitious의 최상급 (D) most ambitious가 정답이다. 명사인 (C) ambition은 '야심'이라는 뜻으로 expansion과 복합명사를 이루지 않고, (A) ambitiously와 (B) most ambitiously는 부사이므로 품사상 빈칸에 들어갈 수 없다."
+            "explanation": "명사 expansion을 꾸며주는 형용사의 최상급인 (D) most ambitious가 정답이다."
         },
         {
             "id": "v4-p5-t3-q123",
@@ -389,12 +389,12 @@ export const test3Data: Part5TestSet = {
                 "C": "finally",
                 "D": "intensely"
             },
-            "classification": "voc1",
+            "classification": "av1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "C",
             "translation": "몇 달간의 협업 끝에 매트릭스 테크놀로지의 소프트웨어 개발자들은 마침내 최고 품질의 제품을 출시했다.",
-            "explanation": "빈칸 뒤의 동사 released를 수식하여 '마침내 출시했다'는 의미가 되어야 적절하므로 '마침내'라는 뜻의 (C) finally가 정답이다. (A) profoundly는 '깊이', (B) overly는 '지나치게', (D) intensely '몹시'라는 의미이다."
+            "explanation": "동사 released를 수식하는 부사로 '마침내'라는 뜻의 (C) finally가 정답이다."
         },
         {
             "id": "v4-p5-t3-q124",
@@ -406,12 +406,12 @@ export const test3Data: Part5TestSet = {
                 "C": "permission",
                 "D": "turnover"
             },
-            "classification": "voc1",
+            "classification": "n1",
             "testId": 3,
             "vol": 4,
             "correctAnswer": "B",
             "translation": "티켓으로는 1회 입장만 유효하며 행사장에는 재입장할 수 없습니다.",
-            "explanation": "빈칸 뒤 장소를 나타내는 전치사구 into the venue가 있고 앞에서 티켓은 1회 입장에만 유효하다(Tickets are valid for one-time access)고 했으므로, '행사장에 재입장할 수 없다'라는 내용으로 연결되어야 자연스럽다. 따라서 '재입장'을 뜻하는 (B) reentry가 정답이다. (A) duplication은 '이중, 중복', (C) permission은 '허락', (D) turnover는 '(상품의) 회전율'이라는 의미로 문맥에 어울리지 않는다."
+            "explanation": "문맥상 '재입장'을 나타내는 명사 (B) reentry가 정답이다."
         },
         {
             "id": "v4-p5-t3-q125",
@@ -428,7 +428,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "D",
             "translation": "우리는 오카포 건설이 프로젝트의 최저 입찰자가 아님에도 불구하고 보수 공사 담당 업체로 고용했다.",
-            "explanation": "빈칸 뒤 완전한 절(it was not the lowest bidder on the project)을 이끄는 부사절 접속사 자리로 (A) if only, (C) whereas, (D) even though가 가능하다. 문맥상 '최저 입찰자가 아님에도 불구하고'라는 의미가 되어야 자연스러우므로 '~에도 불구하고, ~일지라도'를 뜻하는 (D) even though가 정답이다. (A) if only는 '~하면(좋을 텐데)'의 의미로 주로 가정법 시제와 쓰이고, (C) whereas는 '반면에'라는 뜻으로 의미상 적절하지 않으며, (B) alternatively는 부사이므로 품사상 오답이다."
+            "explanation": "양보의 부사절을 이끄는 접속사 (D) even though(~에도 불구하고)가 정답이다."
         },
         {
             "id": "v4-p5-t3-q126",
@@ -445,7 +445,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "A",
             "translation": "교육의 첫 부분은 특정한 직장에서의 책무를 직원들에게 소개할 것이다.",
-            "explanation": "빈칸은 동사 will introduce의 주어 자리로, 빈칸 앞에 관사 The와 형용사 first가 있으므로 명사가 와야 한다. 따라서 명사인 (A) part가 정답이다. (B) parted는 동사/과거분사, (D) partial은 형용사이므로 품사상 빈칸에 들어갈 수 없다. (C) parting은 동명사로 쓰일 경우 주어 자리에 들어갈 수 있지만 '갈라짐'을 의미하므로 답이 될 수 없다."
+            "explanation": "정관사와 형용사 뒤의 주어 명사 자리이므로 (A) part가 정답이다."
         },
         {
             "id": "v4-p5-t3-q127",
@@ -462,7 +462,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "D",
             "translation": "업계 보고에 따르면, 기라 컴퍼니는 본사를 호주로 이전할 계획입니다.",
-            "explanation": "전치사 According to 뒤에서 industry의 수식을 받는 명사 자리이다. 문맥상 '업계 보고(보고서)에 따르면'이라는 의미가 적절하므로 복수 명사 (D) reports가 정답이다. (C) reporter는 '기자'라는 뜻으로 문맥상 적절하지 않다."
+            "explanation": "industry와 결합하여 '업계 보고'라는 뜻을 완성하는 명사 (D) reports가 정답이다."
         },
         {
             "id": "v4-p5-t3-q128",
@@ -478,8 +478,8 @@ export const test3Data: Part5TestSet = {
             "testId": 3,
             "vol": 4,
             "correctAnswer": "A",
-            "translation": "다음 달 니쓰 하우스(Kneath House)는 18세기의 진품 가구 및 의류 전시회를 개최할 예정입니다.",
-            "explanation": "명사구 furniture and clothing을 수식하는 형용사 자리이다. 문맥상 '진품의, 진짜인'이라는 의미가 되어야 하므로 형용사 (A) authentic이 정답이다. (D) authenticity는 '진실성'이라는 의미의 명사이다."
+            "translation": "다음 달 니쓰 하우스는 18세기의 진품 가구 및 의류 전시회를 개최할 예정입니다.",
+            "explanation": "명사구를 수식하는 형용사 자리로 '진품의'라는 의미인 (A) authentic이 정답이다."
         },
         {
             "id": "v4-p5-t3-q129",
@@ -496,7 +496,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "B",
             "translation": "PKTM의 지역 관리자들은 부사장의 지휘하에 근무한다.",
-            "explanation": "빈칸 뒤의 명사구 the direction과 함께 '지휘[감독]하에'라는 의미를 나타내는 (B) under가 정답이다. (A) among은 '(셋 이상의) ~ 사이에'라는 의미로 복수명사가 뒤따라야 하므로 적절하지 않고, (C) behind는 '~ 뒤에', (D) opposite는 '~ 맞은편에'를 뜻하므로 문맥에 어울리지 않는다."
+            "explanation": "'~의 지휘하에'를 뜻하는 전치사 (B) under가 정답이다."
         },
         {
             "id": "v4-p5-t3-q130",
@@ -513,7 +513,7 @@ export const test3Data: Part5TestSet = {
             "vol": 4,
             "correctAnswer": "D",
             "translation": "최근 수요 급증으로 인해 바니타 케이터링은 네 명의 서빙 종업원을 추가로 채용 중이다.",
-            "explanation": "빈칸은 명사구 a recent surge in demand와 함께 콤마 뒤 완전한 절(Vanita's Catering is hiring ~ servers)을 수식하는 자리이므로 전치사가 들어가야 한다. 따라서 '~ 때문에'라는 의미의 전치사 (D) Owing to가 정답이다. (A) Everywhere는 대명사/부사, (B) Possibly와 (C) In total은 부사이므로 품사상 빈칸에 들어갈 수 없다."
+            "explanation": "'~ 때문에(이유)'를 뜻하는 전치사 구 (D) Owing to가 정답이다."
         }
     ]
 };

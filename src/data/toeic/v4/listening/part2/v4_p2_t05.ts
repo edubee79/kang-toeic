@@ -273,7 +273,7 @@ export const test5Data: Part2TestSet = {
             id: "v4-p2-t05-q31",
             text: "Which band is playing at the club tonight?",
             options: { A: "there's always a comedy show on Thursday night", B: "yes, I've played the piano for many years", C: "their number one hit" },
-            correctAnswer: "C",
+            correctAnswer: "A",
             questionType: "Indirect",
             translation: "오늘 밤 클럽에서 공연하는 밴드가 누구인가요?",
             translation_A: "목요일 밤에는 항상 코미디 쇼가 열립니다.",

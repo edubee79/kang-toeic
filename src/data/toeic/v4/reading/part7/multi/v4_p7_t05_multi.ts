@@ -37,27 +37,27 @@ export const test5MultiData: PracticeSet[] = [
                 text: "Who most likely is Ms. Rafferty?",
                 options: {
                     "A": "A job recruiter",
-                    "B": "A Web site contractor",
+                    "B": "A plumbing contractor",
                     "C": "A Galway historian",
-                    "D": "A mechanical engineer"
+                    "D": "A Web-site designer"
                 },
-                correctAnswer: "B",
+                correctAnswer: "D",
                 classification: "P7_INFERENCE",
-                explanation: "이메일에서 Zimri 씨는 Rafferty 씨에게 '회사 역사 페이지' 수정과 '홈페이지 팝업' 등에 대해 만족한다고 했습니다. 이는 그녀가 웹사이트 관련 작업을 수행하는 외부 계약자임을 시사합니다."
+                explanation: "이메일에서 Zimri 씨는 Rafferty 씨에게 '회사 역사 페이지' 수정과 '홈페이지 팝업' 등에 대해 만족한다고 했습니다. 이는 그녀가 웹사이트 관련 작업을 수행하는 외부 계약자(Web-site designer)임을 시사합니다."
             },
             {
                 id: "v4-p7-t5-q177",
                 questionNo: 177,
                 text: "What is indicated about Mr. Zimri?",
                 options: {
-                    "A": "He is trying to recruit employees.",
-                    "B": "He is a member of Clary Medical Center's board of directors.",
-                    "C": "He manages the company's work at a former shoe factory.",
+                    "A": "He is trying to recruit an assistant architect.",
+                    "B": "He is a member of Clary Medical Centre's board of directors.",
+                    "C": "He is pleased with his firm's work at a former shoe factory.",
                     "D": "He is waiting for Dr. O'Leary's feedback on a portfolio."
                 },
-                correctAnswer: "A",
+                correctAnswer: "C",
                 classification: "P7_DETAIL",
-                explanation: "이메일에서 Zimri 씨는 홈페이지에 올린 '구인 팝업(help-wanted pop-up)'이 기계 분야 경력이 있는 지원자들을 끌어들이기를 바란다고 했습니다. 따라서 그는 직원을 채용하려 하고 있습니다."
+                explanation: "Zimri 씨는 이메일에서 클리닉의 배관 및 난방 시스템 교체 작업을 성공적으로 마친 결과가 자랑스럽다고 했습니다. 웹 페이지를 보면 이 클리닉은 과거 신발 공장(Brandmore shoe factory)이었던 건물을 개조한 것이므로, 자신의 회사가 수행한 작업에 만족하고 있다는 (C)가 정답입니다."
             },
             {
                 id: "v4-p7-t5-q178",
@@ -318,13 +318,13 @@ export const test5MultiData: PracticeSet[] = [
                 text: "What is suggested about Nadir Kalwar?",
                 options: {
                     "A": "He is a videographer.",
-                    "B": "He lives in Sheffield.",
-                    "C": "He works at KD Building Concepts.",
-                    "D": "He is a real estate agent."
+                    "B": "He works in Germany.",
+                    "C": "He is planning to buy a house in Sheffield.",
+                    "D": "He specializes in construction materials."
                 },
-                correctAnswer: "C",
+                correctAnswer: "B",
                 classification: "P7_INFERENCE",
-                explanation: "이메일의 수신자 주소가 'kalwar.n@kdbuildingconcepts.com'이며, Olek Dzik이 마케팅 계획에 도움을 준 것에 감사하다고 말하고 있으므로 같은 회사 직원임을 알 수 있습니다."
+                explanation: "Olek Dzik이 보낸 이메일에서 다음 건설 프로젝트가 Kalwar 씨의 사무실 건물에서 불과 몇 킬로미터 거리에 있다고 했습니다. 기사(지문 3)에서 KD Building Concepts의 다음 프로젝트는 독일 함부르크(Hamburg, Germany)에서의 주택 건설이라고 언급되었으므로, Kalwar 씨는 독일에서 근무함을 알 수 있습니다."
             },
             {
                 id: "v4-p7-t5-q190",
