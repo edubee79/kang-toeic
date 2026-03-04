@@ -85,10 +85,29 @@ export const WeaknessService = {
             }
 
             // 1. Get user data and targets from 'Winter_Users' collection
-            const userRef = doc(db, 'Winter_Users', userId);
-            const userSnap = await getDoc(userRef);
+            let userSnap: any;
+            let userDocRef = doc(db, 'Winter_Users', userId);
+            let initialSnap = await getDoc(userDocRef);
 
-            if (!userSnap.exists()) {
+            if (initialSnap.exists()) {
+                userSnap = initialSnap;
+            } else {
+                // Try fallback 1: by userId field
+                const q1 = query(collection(db, 'Winter_Users'), where('userId', '==', userId));
+                const snap1 = await getDocs(q1);
+                if (!snap1.empty) {
+                    userSnap = snap1.docs[0];
+                } else {
+                    // Try fallback 2: by username field
+                    const q2 = query(collection(db, 'Winter_Users'), where('username', '==', userId));
+                    const snap2 = await getDocs(q2);
+                    if (!snap2.empty) {
+                        userSnap = snap2.docs[0];
+                    }
+                }
+            }
+
+            if (!userSnap) {
                 console.warn(`User ${userId} not found in Winter_Users collection. Returning default report.`);
                 const defaultStats = { target: 0, average: 0, latest: 0, gap: 0, totalQuestions: 0 };
                 const parts = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7_single', 'p7_double'];
@@ -241,7 +260,7 @@ export const WeaknessService = {
             // 7. Calculate Actual Total Score (No Projection as requested)
             // Logic: Only sum what the student has actually solved. Unattempted parts = 0.
             const lcParts = ['p1', 'p2', 'p3', 'p4'];
-            const rcParts = ['p5', 'p6', 'p7s', 'p7d', 'p7f'];
+            const rcParts = ['p5', 'p6', 'p7s', 'p7d'];
 
             let actualLCCount = 0;
             let actualRCCount = 0;
@@ -250,34 +269,32 @@ export const WeaknessService = {
                 actualLCCount += (targetStats[p]?.latest || 0);
             });
 
-            // Handle Part 7: prioritize single/double, fallback to total p7f
-            const p7s = targetStats['p7s'];
-            const p7d = targetStats['p7d'];
-            const p7full = targetStats['p7f'];
-
-            if ((p7s?.totalQuestions || 0) > 0 || (p7d?.totalQuestions || 0) > 0) {
-                actualRCCount += (p7s?.latest || 0);
-                actualRCCount += (p7d?.latest || 0);
-            } else if ((p7full?.totalQuestions || 0) > 0) {
-                actualRCCount += p7full.latest;
-            }
-
-            // Other RC parts
-            ['p5', 'p6'].forEach(p => {
+            rcParts.forEach(p => {
                 actualRCCount += (targetStats[p]?.latest || 0);
             });
 
-            // TOEIC Score Conversion (Realistic Calibration - Calibrated to Hackers table)
-            // LC: Score = (CorrectCount - 9) / 0.18
-            // RC: Score = (CorrectCount - 21) / 0.16
+            // TOEIC Score Conversion (Hybrid Logic)
+            const allParts = [...lcParts, ...rcParts];
+            const hasCompleteData = allParts.every(p => (targetStats[p]?.latest || 0) > 0);
+
             const calculateToeicScore = (count: number, isLC: boolean) => {
                 if (count === 0) return 5;
-                let score;
-                if (isLC) {
-                    score = Math.round(((count - 9) / 0.18) / 5) * 5;
+                let score = 5;
+
+                if (hasCompleteData) {
+                    if (isLC) {
+                        score = Math.round(((count - 9) / 0.18) / 5) * 5;
+                    } else {
+                        score = Math.round(((count - 21) / 0.16) / 5) * 5;
+                    }
                 } else {
-                    score = Math.round(((count - 21) / 0.16) / 5) * 5;
+                    if (isLC) {
+                        score = (count * 5) + 10;
+                    } else {
+                        score = (count * 5) - 10;
+                    }
                 }
+
                 return Math.max(5, Math.min(495, score));
             };
 
