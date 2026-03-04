@@ -37,6 +37,7 @@ export default function Part1TestRunner() {
     const resultId = searchParams.get('resultId');
     const [incorrectIds, setIncorrectIds] = useState<string[]>([]);
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
+    const [isPerfectScore, setIsPerfectScore] = useState(false);
 
     // Filtered questions for review mode or retry mode
     const displayQuestions = useMemo(() => {
@@ -103,12 +104,15 @@ export default function Part1TestRunner() {
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
                         const data = docSnap.data();
-                        if (data.incorrectQuestions) {
+                        if (data.incorrectQuestions && data.incorrectQuestions.length > 0) {
                             const ids = data.incorrectQuestions.map((q: any) => q.id);
                             setIncorrectIds(ids);
                             // Set review mode automatically when retrying from history
                             setReviewMode(true);
                             setShowOnlyWrong(true);
+                        } else {
+                            // If they have no incorrect questions, they got a perfect score.
+                            setIsPerfectScore(true);
                         }
                     }
                 } catch (e) {
@@ -268,6 +272,41 @@ export default function Part1TestRunner() {
             <p className="text-slate-500 font-black italic uppercase tracking-widest text-xs">오답 데이터를 매칭하는 중...</p>
         </div>
     </div>;
+
+    if (isPerfectScore) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center text-white">
+                <div className="w-24 h-24 rounded-3xl bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500/50 flex items-center justify-center mb-6 shadow-2xl">
+                    <CheckCircle2 className="w-12 h-12" />
+                </div>
+                <h2 className="text-3xl font-black italic tracking-tighter uppercase mb-2">Perfect Score</h2>
+                <p className="text-emerald-400 font-bold tracking-widest text-xs uppercase mb-8">틀린 문제가 없습니다! 완벽합니다.</p>
+
+                <p className="text-slate-400 font-bold text-sm mb-6 bg-slate-900 border border-slate-800 py-3 px-6 rounded-2xl w-full max-w-sm">
+                    맞힌 문제라도 지문과 음원을 다시 들으며<br />가볍게 1회독 복습하시겠습니까?
+                </p>
+
+                <div className="space-y-4 w-full max-w-xs">
+                    <button
+                        onClick={() => {
+                            setIsPerfectScore(false);
+                            setReviewMode(true);
+                            setShowOnlyWrong(false);
+                        }}
+                        className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 hover:scale-[1.02] transition-all"
+                    >
+                        예 (전체 문제 복습)
+                    </button>
+                    <button
+                        onClick={() => router.push(fromPath)}
+                        className="w-full h-14 bg-slate-800 text-slate-300 rounded-2xl font-bold hover:bg-slate-700 hover:text-white transition-all"
+                    >
+                        아니고 (목록으로 복귀)
+                    </button>
+                </div>
+            </div>
+        );
+    }
 
     if (isFinished) {
         const correctCount = testSet.questions.filter((q: any) => selectedAnswers[q.id] === q.correctAnswer).length;

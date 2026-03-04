@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { part7MultiTestData, PracticeSet } from '@/data/toeic/reading/part7/multi_tests';
-const breakdownTripleSet = part7MultiTestData.test1[2];
+const breakdownTripleSet = part7MultiTestData.v3.test4[0];
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
+import { DocumentRenderer } from '@/components/exam/Part7Templates';
 
 export default function Part7PracticePage() {
     const [isMobile, setIsMobile] = useState(false);
@@ -83,29 +84,14 @@ export default function Part7PracticePage() {
                 {/* Left Panel: Passages (60%) */}
                 <div className="w-[60%] bg-gray-50 h-full overflow-y-auto border-r border-gray-300 shadow-inner">
                     <div className="space-y-8 pb-20 p-6">
-                        {data.passages.map((passage, idx) => (
-                            <div key={passage.id} className="bg-white border border-gray-200 shadow-sm p-8 relative">
+                        {data.passages.slice(0, 2).map((passage, idx) => (
+                            <div key={passage.id} className="bg-white border border-gray-200 shadow-sm p-4 relative">
                                 {/* Passage Label */}
-                                <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+                                <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10">
                                     Passage {idx + 1}
                                 </div>
-                                <div className="mt-4">
-                                    {/* Type Header */}
-                                    <div className="border-b-2 border-gray-800 pb-2 mb-6 flex justify-between items-end">
-                                        <h3 className="text-xl font-bold text-gray-900 uppercase tracking-tight">
-                                            {passage.type}
-                                        </h3>
-                                        {passage.title && (
-                                            <span className="text-gray-600 font-serif italic text-lg">
-                                                {passage.title}
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    {/* Content (Preserving newlines) */}
-                                    <div className="text-gray-800 leading-relaxed font-serif text-[17px] whitespace-pre-line">
-                                        {passage.content}
-                                    </div>
+                                <div className="mt-8">
+                                    <DocumentRenderer doc={{ ...passage, type: passage.docType || 'notice' }} />
                                 </div>
                             </div>
                         ))}
@@ -118,23 +104,11 @@ export default function Part7PracticePage() {
                     {/* Top Right: Passage 3 (if exists) */}
                     {data.passages[2] && (
                         <div className="h-[40%] bg-gray-50 border-b border-gray-300 overflow-y-auto p-6 shadow-inner relative">
-                            <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+                            <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10">
                                 Passage 3
                             </div>
-                            <div className="mt-4">
-                                <div className="border-b-2 border-gray-800 pb-1 mb-3 flex justify-between items-end">
-                                    <h3 className="text-lg font-bold text-gray-900 uppercase tracking-tight">
-                                        {data.passages[2].type}
-                                    </h3>
-                                    {data.passages[2].title && (
-                                        <span className="text-gray-600 font-serif italic text-base">
-                                            {data.passages[2].title}
-                                        </span>
-                                    )}
-                                </div>
-                                <div className="text-gray-800 leading-relaxed font-serif text-[16px] whitespace-pre-line">
-                                    {data.passages[2].content}
-                                </div>
+                            <div className="mt-8">
+                                <DocumentRenderer doc={{ ...data.passages[2], type: data.passages[2].docType || 'notice' }} />
                             </div>
                         </div>
                     )}
@@ -164,8 +138,7 @@ export default function Part7PracticePage() {
                                             </div>
 
                                             <div className="space-y-1 pl-6"> {/* Reduced left padding and vertical spacing */}
-                                                {q.options.map((option, optIdx) => {
-                                                    const labelChar = String.fromCharCode(65 + optIdx);
+                                                {Object.entries(q.options).sort((a, b) => a[0].localeCompare(b[0])).map(([labelChar, option], optIdx) => {
                                                     const isSelected = myAnswer === labelChar;
 
                                                     let optionClass = "border-transparent bg-gray-50 hover:bg-gray-100 text-gray-700";
@@ -193,7 +166,7 @@ export default function Part7PracticePage() {
                                                                 onChange={() => !showResults && handleAnswerChange(qNum, optIdx, labelChar)}
                                                                 disabled={showResults}
                                                             />
-                                                            <span className="text-[14px]">{option}</span> {/* Slightly smaller font */}
+                                                            <span className="text-[14px]">{option as string}</span> {/* Slightly smaller font */}
                                                         </label>
                                                     );
                                                 })}

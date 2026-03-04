@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { collection, query, where, getDocs, orderBy, doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
-import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User, AlertCircle, ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -95,10 +95,13 @@ export default function StudentHomePage() {
             return;
         }
         const parsedUser = JSON.parse(userData);
+        const activeUserId = parsedUser.userId || parsedUser.id || parsedUser.username;
 
-        // Use global refresh instead of local fetch
-        refreshAll(parsedUser.userId, parsedUser.className);
-        fetchAssignments(parsedUser.className, parsedUser.userId);
+        if (activeUserId) {
+            // Use global refresh instead of local fetch
+            refreshAll(activeUserId, parsedUser.className || 'default');
+            fetchAssignments(parsedUser.className || 'default', activeUserId);
+        }
     }, [router, refreshAll]);
 
     // Check for onboarding
@@ -250,10 +253,20 @@ export default function StudentHomePage() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    {profile?.userId && (
+                    {(profile?.userId || profile?.username || profile?.id) && (
                         <div className="flex items-center gap-3">
-                            <NotificationDropdown userId={profile.userId} />
-                            <NotificationSetter userId={profile.userId} />
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => refreshAll(profile.userId || profile.username || profile.id, profile.className || 'default', true)}
+                                disabled={globalLoading}
+                                className="h-10 w-10 p-0 text-slate-500 hover:text-indigo-400 hover:bg-indigo-500/10 rounded-full transition-all"
+                                title="점수 및 정보 새로고침"
+                            >
+                                <RotateCcw className={cn("w-5 h-5", globalLoading && "animate-spin")} />
+                            </Button>
+                            <NotificationDropdown userId={profile.userId || profile.username || profile.id} />
+                            <NotificationSetter userId={profile.userId || profile.username || profile.id} />
                         </div>
                     )}
                 </div>

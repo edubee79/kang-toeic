@@ -44,6 +44,8 @@ export default function LoginPage() {
 
             const userDoc = querySnapshot.docs[0];
             const userData = userDoc.data();
+            userData.id = userDoc.id;
+            if (!userData.userId) userData.userId = userDoc.id;
             console.log("👤 User found:", userData.username, "Status:", userData.status);
 
             // Verify password

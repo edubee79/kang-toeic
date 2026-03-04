@@ -584,7 +584,7 @@ export const test6Data: Part7Test = {
                     explanation: "오후의 '나머지(remainder)' 시간이라는 의미로 사용되었습니다."
                 },
                 {
-                    id: "v3-p7-t7-q175",
+                    id: "v3-p7-t6-q175",
                     questionNo: 175,
                     text: "What will Mr. Pham do in the afternoon?",
                     classification: "P7_DETAIL",

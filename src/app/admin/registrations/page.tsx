@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, getDocs, query, where, updateDoc, deleteDoc, doc, Timestamp, orderBy } from 'firebase/firestore'; // Added deleteDoc, orderBy
+import { collection, getDocs, query, where, updateDoc, deleteDoc, doc, Timestamp, orderBy, writeBatch } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,7 +34,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import Link from 'next/link';
-import { CheckCircle2, XCircle, Upload, Search, Loader2, ArrowLeft, Trash2, Filter, Users as UsersIcon } from "lucide-react"; // Added Trash2, Filter
+import { CheckCircle2, XCircle, Upload, Search, Loader2, ArrowLeft, Trash2, Filter, Users as UsersIcon, Bomb, Eraser } from "lucide-react";
 import { parseExcelFile, validateExcelData, type ExcelRow } from '@/lib/excel';
 import type { User } from '@/types/user';
 
@@ -65,6 +65,16 @@ export default function RegistrationsPage() {
     // Delete Dialog
     const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
     const [usersToDelete, setUsersToDelete] = useState<User[]>([]); // For confirm dialog
+
+    // Wipe Dialog (Hard Reset)
+    const [wipeDialogOpen, setWipeDialogOpen] = useState(false);
+    const [usersToWipe, setUsersToWipe] = useState<User[]>([]);
+    const [isWiping, setIsWiping] = useState(false);
+
+    // Clear Records Dialog (Manager_Results only)
+    const [clearRecordsDialogOpen, setClearRecordsDialogOpen] = useState(false);
+    const [usersToClearRecords, setUsersToClearRecords] = useState<User[]>([]);
+    const [isClearingRecords, setIsClearingRecords] = useState(false);
 
     // Excel upload
     const [excelFile, setExcelFile] = useState<File | null>(null);
@@ -295,6 +305,100 @@ export default function RegistrationsPage() {
         }
     };
 
+    // --- Hard Wipe Logic ---
+    const confirmWipe = (users: User[]) => {
+        setUsersToWipe(users);
+        setWipeDialogOpen(true);
+    };
+
+    const handleWipeData = async () => {
+        if (usersToWipe.length === 0) return;
+        setIsWiping(true);
+
+        try {
+            for (const user of usersToWipe) {
+                const targetUid = user.userId || user.uid || user.id;
+
+                // 1. Delete all Manager_Results
+                const resultsQuery = query(collection(db, "Manager_Results"), where("studentId", "==", targetUid));
+                const resultsSnap = await getDocs(resultsQuery);
+                const batch1 = writeBatch(db);
+                resultsSnap.forEach(d => batch1.delete(d.ref));
+                await batch1.commit();
+
+                // 2. Delete all MockTestAttempts
+                const mockQuery = query(collection(db, "MockTestAttempts"), where("userId", "==", targetUid));
+                const mockSnap = await getDocs(mockQuery);
+                const batch2 = writeBatch(db);
+                mockSnap.forEach(d => batch2.delete(d.ref));
+                await batch2.commit();
+
+                // 3. Delete Performance_Summaries
+                await deleteDoc(doc(db, "Performance_Summaries", targetUid));
+
+                // 4. Finally, reset the User document instead of deleting it (Plan 3)
+                if (user.id) {
+                    await updateDoc(doc(db, "Winter_Users", user.id), {
+                        performanceSummary: { predictedTotal: 0, predictedLC: 0, predictedRC: 0, partStats: {} },
+                        targetScore: 0,
+                        targetLCScore: 0,
+                        targetRCScore: 0,
+                        weaknesses: []
+                    });
+                }
+            }
+
+            setWipeDialogOpen(false);
+            setUsersToWipe([]);
+            setSelectedUsers(new Set());
+            fetchRegistrations();
+            alert(`${usersToWipe.length}명의 학생과 연동된 모든 학습 데이터가 완벽히 삭제(초기화)되었습니다.`);
+        } catch (error) {
+            console.error("Error wiping user data:", error);
+            alert("완전 삭제 중 오류가 발생했습니다.");
+        } finally {
+            setIsWiping(false);
+        }
+    };
+
+
+    // --- Clear Records Logic (Manager_Results Only) ---
+    const confirmClearRecords = (users: User[]) => {
+        setUsersToClearRecords(users);
+        setClearRecordsDialogOpen(true);
+    };
+
+    const handleClearRecords = async () => {
+        if (usersToClearRecords.length === 0) return;
+        setIsClearingRecords(true);
+
+        try {
+            for (const user of usersToClearRecords) {
+                const targetUid = user.userId || user.uid || user.id;
+
+                // 1. Delete all Manager_Results (단과 숙제 기록들)
+                const resultsQuery = query(collection(db, "Manager_Results"), where("studentId", "==", targetUid));
+                const resultsSnap = await getDocs(resultsQuery);
+                const batch1 = writeBatch(db);
+                resultsSnap.forEach(d => batch1.delete(d.ref));
+                await batch1.commit();
+
+                // 2. Delete Performance_Summaries (통계가 꼬이지 않도록 요약본도 함께 파기)
+                await deleteDoc(doc(db, "Performance_Summaries", targetUid));
+            }
+
+            setClearRecordsDialogOpen(false);
+            setUsersToClearRecords([]);
+            setSelectedUsers(new Set());
+            fetchRegistrations();
+            alert(`${usersToClearRecords.length}명의 학생의 단과 학습 기록(Manager_Results)이 깨끗하게 삭제되었습니다.\n* 로그인 계정과 모의고사 기록은 유지됩니다.`);
+        } catch (error) {
+            console.error("Error clearing user records:", error);
+            alert("학습 기록 삭제 중 오류가 발생했습니다.");
+        } finally {
+            setIsClearingRecords(false);
+        }
+    };
 
     const handleExcelUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
@@ -413,18 +517,40 @@ export default function RegistrationsPage() {
                         </Select>
 
                         {selectedUsers.size > 0 && (
-                            <Button
-                                variant="destructive"
-                                className="bg-rose-600 hover:bg-rose-700 animate-in fade-in"
-                                onClick={() => {
-                                    // Map selected IDs back to user objects
-                                    const users = registrations.filter(u => u.id && selectedUsers.has(u.id));
-                                    confirmDelete(users);
-                                }}
-                            >
-                                <Trash2 className="w-4 h-4 mr-2" />
-                                선택 삭제 ({selectedUsers.size})
-                            </Button>
+                            <div className="flex gap-2 animate-in fade-in">
+                                <Button
+                                    variant="destructive"
+                                    className="bg-rose-600 hover:bg-rose-700"
+                                    onClick={() => {
+                                        const users = registrations.filter(u => u.id && selectedUsers.has(u.id));
+                                        confirmDelete(users);
+                                    }}
+                                >
+                                    <Trash2 className="w-4 h-4 mr-2" />
+                                    선택 삭제 ({selectedUsers.size})
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    className="bg-orange-950 text-orange-400 hover:bg-orange-900 border border-orange-900/50"
+                                    onClick={() => {
+                                        const users = registrations.filter(u => u.id && selectedUsers.has(u.id));
+                                        confirmClearRecords(users);
+                                    }}
+                                >
+                                    <Eraser className="w-4 h-4 mr-2" />
+                                    단과 기록만 삭제 ({selectedUsers.size})
+                                </Button>
+                                <Button
+                                    className="bg-red-950 text-red-400 hover:bg-red-900 border border-red-900/50"
+                                    onClick={() => {
+                                        const users = registrations.filter(u => u.id && selectedUsers.has(u.id));
+                                        confirmWipe(users);
+                                    }}
+                                >
+                                    <Bomb className="w-4 h-4 mr-2" />
+                                    모든 데이터 완전 삭제 ({selectedUsers.size})
+                                </Button>
+                            </div>
                         )}
                     </div>
                 </div>
@@ -529,15 +655,32 @@ export default function RegistrationsPage() {
                                                                     </Button>
                                                                 </>
                                                             )}
-                                                            {/* Always show delete based on requirement, but usually delete is mostly for approved/finished students */}
                                                             <Button
                                                                 size="sm"
                                                                 variant="ghost"
                                                                 className="h-8 text-slate-500 hover:text-rose-500 hover:bg-rose-500/10"
                                                                 onClick={() => confirmDelete([user])}
-                                                                title="삭제 (영구)"
+                                                                title="계정만 삭제 (데이터 남김)"
                                                             >
                                                                 <Trash2 className="w-4 h-4" />
+                                                            </Button>
+                                                            <Button
+                                                                size="sm"
+                                                                variant="ghost"
+                                                                className="h-8 text-slate-500 hover:text-orange-500 hover:bg-orange-500/10"
+                                                                onClick={() => confirmClearRecords([user])}
+                                                                title="단과 학습 기록만 삭제 (계정 유지)"
+                                                            >
+                                                                <Eraser className="w-4 h-4" />
+                                                            </Button>
+                                                            <Button
+                                                                size="sm"
+                                                                variant="ghost"
+                                                                className="h-8 text-slate-600 hover:text-red-500 hover:bg-red-500/10"
+                                                                onClick={() => confirmWipe([user])}
+                                                                title="계정 및 모든 학습 기록 데이터 완전 삭제 (초기화)"
+                                                            >
+                                                                <Bomb className="w-4 h-4" />
                                                             </Button>
                                                         </div>
                                                     </TableCell>
@@ -615,19 +758,19 @@ export default function RegistrationsPage() {
                 </DialogContent>
             </Dialog>
 
-            {/* Delete Confirmation Dialog */}
+            {/* Delete Confirmation Dialog (Account Only) */}
             <Dialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
                 <DialogContent className="bg-slate-900 border-rose-500/20 text-white">
                     <DialogHeader>
                         <DialogTitle className="text-rose-500 flex items-center gap-2">
                             <Trash2 className="w-5 h-5" />
-                            회원 삭제 확인
+                            가벼운 계정 삭제 확인 (기록 유지)
                         </DialogTitle>
                         <DialogDescription className="text-slate-300">
-                            선택한 <strong>{usersToDelete.length}명</strong>의 회원을 영구적으로 삭제하시겠습니까?
+                            선택한 <strong>{usersToDelete.length}명</strong>의 계정을 목록에서 지우시겠습니까?
                             <br />
                             <span className="text-xs text-rose-400 mt-2 block">
-                                * 이 작업은 되돌릴 수 없으며, 사용자의 모든 데이터가 손실될 수 있습니다.
+                                * 학생이 로그인할 수 없게 되지만, 이미 쌓아놓은 정답률/학습 데이터는 통계용으로 DB에 남겨집니다.
                             </span>
                         </DialogDescription>
                     </DialogHeader>
@@ -648,7 +791,86 @@ export default function RegistrationsPage() {
                             disabled={isDeleting}
                         >
                             {isDeleting ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Trash2 className="w-4 h-4 mr-2" />}
-                            영구 삭제
+                            계정만 삭제하기
+                        </Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
+
+            {/* Hard Wipe Confirmation Dialog */}
+            <Dialog open={wipeDialogOpen} onOpenChange={setWipeDialogOpen}>
+                <DialogContent className="bg-slate-900 border-red-500/50 text-white shadow-2xl shadow-red-900/20 md:max-w-md">
+                    <DialogHeader>
+                        <DialogTitle className="text-red-500 flex items-center gap-2 font-black text-xl">
+                            <Bomb className="w-6 h-6 animate-pulse" />
+                            초강력 데이터 완전 삭제 (WIPE)
+                        </DialogTitle>
+                        <DialogDescription className="text-slate-300 text-sm leading-relaxed mt-4">
+                            선택한 <strong>{usersToWipe.length}명</strong>의 계정은 물론이고, 이 학생들이 남긴 <strong className="text-red-400 underline underline-offset-4">모든 단과 숙제 기록, 모의고사 성적, 오답 관리 등 파이어베이스에 작성된 기록 전체</strong>를 시스템에서 완전히 도려냅니다.
+                            <br /><br />
+                            <span className="bg-red-500/10 border border-red-500/30 p-3 rounded-xl text-red-400 block font-bold">
+                                ⚠️ 주의: 테스트용 계정 삭제나, 과거 꼬인 데이터를 완전히 청소하고 시스템을 리셋할 때만 사용하세요. 이 작업은 절대 복구할 수 없습니다.
+                            </span>
+                        </DialogDescription>
+                    </DialogHeader>
+
+                    <div className="max-h-[150px] overflow-auto bg-black p-4 rounded-lg border border-slate-800 my-2">
+                        <ul className="space-y-1 text-sm font-mono text-slate-500">
+                            {usersToWipe.map((u, i) => (
+                                <li key={u.id || i}>&gt; target_uid: {u.userName} ({u.userId})</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <DialogFooter className="mt-4 gap-2 sm:gap-0">
+                        <Button variant="ghost" onClick={() => setWipeDialogOpen(false)} className="hover:bg-slate-800">취소</Button>
+                        <Button
+                            onClick={handleWipeData}
+                            className="bg-red-600 hover:bg-red-500 text-white font-black tracking-widest"
+                            disabled={isWiping}
+                        >
+                            {isWiping ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Bomb className="w-4 h-4 mr-2" />}
+                            영구 폭파 실행
+                        </Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
+
+            {/* Clear Records Confirmation Dialog */}
+            <Dialog open={clearRecordsDialogOpen} onOpenChange={setClearRecordsDialogOpen}>
+                <DialogContent className="bg-slate-900 border-orange-500/20 text-white">
+                    <DialogHeader>
+                        <DialogTitle className="text-orange-500 flex items-center gap-2">
+                            <Eraser className="w-5 h-5" />
+                            단과 학습 기록만 삭제 확인
+                        </DialogTitle>
+                        <DialogDescription className="text-slate-300">
+                            선택한 <strong>{usersToClearRecords.length}명</strong>의 파트별(1~7) <strong>숙제/테스트 기록(Manager_Results)</strong>과 <strong>누적 통계</strong>만 지우시겠습니까?
+                            <br />
+                            <span className="text-xs text-orange-400 mt-2 block">
+                                * 학생의 로그인 계정, 인적사항, 모의고사(Mock Test) 응시 기록은 그대로 유지됩니다.
+                                <br />* 이전 데이터로 인해 꼬인 누적 정답률 통계를 초기화할 때 적합합니다.
+                            </span>
+                        </DialogDescription>
+                    </DialogHeader>
+
+                    <div className="max-h-[200px] overflow-auto bg-slate-950 p-4 rounded-lg border border-slate-800 my-4">
+                        <ul className="space-y-1 text-sm text-slate-400">
+                            {usersToClearRecords.map(u => (
+                                <li key={u.id}>• {u.userName} ({u.userId})</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <DialogFooter>
+                        <Button variant="ghost" onClick={() => setClearRecordsDialogOpen(false)}>취소</Button>
+                        <Button
+                            onClick={handleClearRecords}
+                            className="bg-orange-600 hover:bg-orange-500"
+                            disabled={isClearingRecords}
+                        >
+                            {isClearingRecords ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <Eraser className="w-4 h-4 mr-2" />}
+                            기록만 지우기
                         </Button>
                     </DialogFooter>
                 </DialogContent>

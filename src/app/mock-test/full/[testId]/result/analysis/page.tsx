@@ -54,22 +54,7 @@ export default function IncorrectAnalysisPage() {
     const totalMissed = Object.values(halfAnalysis.partStats).reduce((acc, s) => acc + (s.total - s.correct), 0);
 
     const getReviewUrl = (p: string) => {
-        const originalTestId = testId;
-        const baseUrl = (() => {
-            switch (p) {
-                case 'p1': return '/homework/part1-real/test';
-                case 'p2': return '/homework/part2';
-                case 'p3': return '/homework/part3/test';
-                case 'p4': return '/homework/part4/test';
-                case 'p5': return '/homework/part5-real/test';
-                case 'p6': return '/homework/part6/test';
-                case 'p7s':
-                case 'p7m': return '/homework/part7/test';
-                default: return '';
-            }
-        })();
-        if (!baseUrl) return '#';
-        return `${baseUrl}/${originalTestId}?mode=review&mockAttemptId=${attemptId}`;
+        return `/mock-test/universal-review?attemptId=${attemptId}&part=${p}`;
     };
 
     const getQuickSolutionUrl = (p: string) => {

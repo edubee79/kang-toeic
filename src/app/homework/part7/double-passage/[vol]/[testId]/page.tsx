@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { part7MultiTestData, PracticeSet } from '@/data/toeic/reading/part7/multi_tests';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight, ArrowLeft, Timer, RotateCcw } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowLeft, Timer, RotateCcw, CheckCircle2 } from 'lucide-react';
 import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { PerformanceSyncService } from '@/services/performanceSyncService';
@@ -25,8 +25,17 @@ export default function Part7DoublePassagePage() {
     const retryMode = searchParams.get('mode') === 'retry';
     const resultId = searchParams.get('resultId');
 
-    const testKey = `test${testId}` as keyof typeof part7MultiTestData;
-    const fullPracticeTest = part7MultiTestData[testKey];
+    const testKey = `test${testId}` as 'test1' | 'test2' | 'test3' | 'test4' | 'test5' | 'test6' | 'test7' | 'test8' | 'test9' | 'test10';
+
+    let fullPracticeTest: any = null;
+    if (vol === 3) {
+        fullPracticeTest = (part7MultiTestData.v3 as any)[testKey];
+    } else if (vol === 4) {
+        fullPracticeTest = (part7MultiTestData.v4 as any)[testKey];
+    } else {
+        // Fallback for direct access if vol is not recognized
+        fullPracticeTest = (part7MultiTestData as any)[testKey];
+    }
 
     if (!fullPracticeTest) {
         return notFound();
@@ -42,6 +51,7 @@ export default function Part7DoublePassagePage() {
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
     const [reSolveMode, setReSolveMode] = useState(false);
     const [originalAnswers, setOriginalAnswers] = useState<Record<string, string>>({});
+    const [isPerfectScore, setIsPerfectScore] = useState(false);
 
     // Refs for scrolling to top on set change
     const leftPanelRef = useRef<HTMLDivElement>(null);
@@ -81,15 +91,17 @@ export default function Part7DoublePassagePage() {
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
                         const resData = docSnap.data();
-                        if (resData.incorrectQuestions) {
+                        if (resData.incorrectQuestions && resData.incorrectQuestions.length > 0) {
                             const ids = resData.incorrectQuestions.map((iq: any) => iq.id);
                             const dummyOriginal: Record<string, string> = {};
-                            fullPracticeTest.flatMap(s => s.questions).forEach(q => {
+                            fullPracticeTest.flatMap((s: any) => s.questions).forEach((q: any) => {
                                 if (ids.includes(q.id)) dummyOriginal[q.id] = 'WRONG_PLACEHOLDER';
                                 else dummyOriginal[q.id] = q.correctAnswer;
                             });
                             setOriginalAnswers(dummyOriginal);
                             setReSolveMode(true);
+                        } else {
+                            setIsPerfectScore(true);
                         }
                     }
                 } catch (e) {
@@ -242,6 +254,25 @@ export default function Part7DoublePassagePage() {
             <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4">
                 <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
                 <p className="text-slate-500 font-black italic uppercase tracking-widest text-xs">오답 데이터를 매칭하는 중...</p>
+            </div>
+        );
+    }
+
+    if (isPerfectScore) {
+        return (
+            <div className="fixed inset-0 z-[50] min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center text-white font-sans">
+                <div className="w-24 h-24 rounded-3xl bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500/50 flex items-center justify-center mb-6 shadow-2xl">
+                    <CheckCircle2 className="w-12 h-12" />
+                </div>
+                <h2 className="text-3xl font-black italic tracking-tighter uppercase mb-2">Perfect Score</h2>
+                <p className="text-emerald-400 font-bold tracking-widest text-xs uppercase mb-8">틀린 문제가 없습니다! 완벽합니다.</p>
+                <p className="text-slate-400 font-bold text-sm mb-6 bg-slate-900 border border-slate-800 py-3 px-6 rounded-2xl w-full max-w-sm">
+                    맞힌 문제라도 지문과 함께 가볍게<br />1회독 복습하시겠습니까?
+                </p>
+                <div className="space-y-4 w-full max-w-xs">
+                    <button onClick={() => { setIsPerfectScore(false); setShowResults(true); }} className="w-full h-14 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-500 hover:scale-[1.02] transition-all">예 (전체 문제 복습)</button>
+                    <button onClick={() => router.push(fromPath)} className="w-full h-14 bg-slate-800 text-slate-300 rounded-2xl font-bold hover:bg-slate-700 hover:text-white transition-all">아니오 (목록으로 복귀)</button>
+                </div>
             </div>
         );
     }

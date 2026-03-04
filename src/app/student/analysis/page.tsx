@@ -226,18 +226,10 @@ export default function StudentAnalysisPage() {
         fullTag: tag
     }));
 
-    // NEW PREDICTION LOGIC (UNIFIED)
-    const lcParts = ['p1', 'p2', 'p3', 'p4'];
-    const rcParts = ['p5', 'p6', 'p7s', 'p7d'];
-
-    const lcCorrect = lcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
-    const rcCorrect = rcParts.reduce((sum, p) => sum + (report.targetStats[p]?.latest || 0), 0);
-
-    // User Formula: (LC_Sum * 5) + 10, (RC_Sum * 5) - 10
-    const lcScore = lcCorrect > 0 ? (lcCorrect * 5) + 10 : 0;
-    const rcScore = rcCorrect > 0 ? (rcCorrect * 5) - 10 : 0;
-
-    const estScore = Math.max(0, lcScore) + Math.max(0, rcScore);
+    // NEW PREDICTION LOGIC (UNIFIED) - Sourced directly from WeaknessReport (Hackers Algorithm)
+    const lcScore = report.currentTotalLC || 0;
+    const rcScore = report.currentTotalRC || 0;
+    const estScore = lcScore + rcScore;
     const progress = Math.min(100, Math.round((estScore / report.targetScore) * 100));
 
     // Map stats for TargetSettingSection

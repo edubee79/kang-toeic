@@ -224,7 +224,7 @@ export default function MockTestRunner() {
         checkAndStartAttempt();
     }, [testData, router, testId, isSandbox, isCustom, customTestTitle]);
 
-    // Timer logic ... (same as before)
+    // Timer logic
     useEffect(() => {
         if (status !== 'rc') return; // Only RC has a countdown timer
 
@@ -232,7 +232,6 @@ export default function MockTestRunner() {
             setTimeLeft((prev) => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    handleSubmit();
                     return 0;
                 }
                 return prev - 1;
@@ -241,6 +240,15 @@ export default function MockTestRunner() {
 
         return () => clearInterval(timer);
     }, [status]);
+
+    // Handle auto-submit when timer expires
+    useEffect(() => {
+        if (status === 'rc' && timeLeft === 0) {
+            // For safety, ensure handleSubmit is called if the child component (Runner) hasn't triggered it.
+            // Note: Runners like MockTest_RC_Set9 also call onFinishExam when timeLeft hits 0.
+            handleSubmit();
+        }
+    }, [timeLeft, status]);
 
     const speakAnnouncement = (text: string) => {
         if (typeof window === 'undefined' || !window.speechSynthesis) return;
@@ -641,7 +649,7 @@ export default function MockTestRunner() {
 
     // Sandbox & Custom Testing for Universal Engine
     // All tests that are NOT testId 9 or 10 will use the Universal Engine
-    if (true) {
+    if (isSandbox || isCustom) {
         if (!dynamicLC || !dynamicRC) return <div className="p-20 text-center font-bold text-slate-500 animate-pulse">🛠️ 유니버설 엔진 동적 데이터 조립 중...</div>;
 
         if (status === 'lc') {
