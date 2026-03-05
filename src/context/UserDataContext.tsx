@@ -6,6 +6,7 @@ import { getUserProfile, UserProfile } from '@/services/userService';
 import { getUserStreak, getUserRankInfo } from '@/services/rankingService';
 import { calculateDistributedGoals } from '@/lib/utils/goal-utils';
 import { updateTargetDetails } from '@/services/userService';
+import { PerformanceSyncService } from '@/services/performanceSyncService';
 
 interface UserDataContextType {
     user: UserProfile | null;
@@ -35,6 +36,15 @@ export function UserDataProvider({ children }: { children: React.ReactNode }) {
         setLoading(true);
         try {
             console.log(`[UserDataContext] Fetching data for ${userId}... (force: ${force})`);
+
+            // If forced refresh, recalculate the backend performance summary first to guarantee consistency
+            if (force) {
+                try {
+                    await PerformanceSyncService.syncUserSummary(userId);
+                } catch (e) {
+                    console.warn('[UserDataContext] Optional syncUserSummary failed:', e);
+                }
+            }
 
             // Parallel execution for maximum speed
             const [profile, analysisReport, streakCount, rankData] = await Promise.all([

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깡쌤토익 X AI - 단 하나의 고득점 시너지</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --primary: #6366f1;
+            --accent: #f43f5e;
+            --secondary: #10b981;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Noto Sans KR', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- [기] Intro: Problem Setting --- */
+        section.intro {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(15, 23, 42, 0.9)),
+                url('promo_assets/hero.png');
+            background-size: cover;
+            background-position: center;
+            padding: 0 5%;
+        }
+
+        .intro-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .intro-text span.highlight {
+            color: var(--accent);
+        }
+
+        .intro-text p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        /* --- [승] Solution: Introduction of the App --- */
+        section.solution {
+            padding: 150px 0;
+            background: #0f172a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+        }
+
+        .glass-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        /* --- [전] Climax: Class Synergy & Real Usage --- */
+        section.climax {
+            padding: 150px 0;
+            background: var(--bg-dark);
+        }
+
+        .usage-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 150px;
+        }
+
+        .usage-step.reverse {
+            direction: rtl;
+        }
+
+        .usage-step.reverse>* {
+            direction: ltr;
+        }
+
+        .usage-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .usage-content h2 span {
+            color: var(--secondary);
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        .usage-content p {
+            color: var(--text-dim);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .app-img {
+            width: 100%;
+            border-radius: 20px;
+            border: 4px solid var(--glass-border);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- [결] Conclusion: Transformation & CTA --- */
+        section.conclusion {
+            padding: 150px 0;
+            text-align: center;
+            background: linear-gradient(to top, #020617, #1e1b4b);
+        }
+
+        .cta-box {
+            background: var(--glass);
+            border: 2px solid var(--primary);
+            padding: 80px 40px;
+            border-radius: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 22px 60px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            text-decoration: none;
+            margin-top: 40px;
+            box-shadow: 0 20px 40px var(--primary-glow);
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        /* --- Badges --- */
+        .badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 900px) {
+
+            .card-container,
+            .usage-step {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- [기] 도입: 문제 제기 -->
+    <section class="intro">
+        <div class="intro-text container">
+            <h1 class="reveal">열심히 하는데 왜 토익 점수는 <br><span class="highlight">그대로입니까?</span></h1>
+            <p class="reveal">
+                수동적인 인강, 끝나면 휘발되는 오프라인 수업만으로는 부족합니다.<br>
+                당신의 오답 데이터는 수업이 끝난 후에도 살아있어야 합니다.
+            </p>
+            <div style="margin-top: 60px;" class="reveal">
+                <i data-lucide="chevron-down" class="animate-bounce" style="color: var(--text-dim);"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- [승] 전개: 해결책 제시 (앱의 등장) -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 80px;">
+                <h2 style="font-size: 2.8rem;">수업의 감동을 데이터로 완성하는 <br><span style="color: var(--primary);">오직 깡쌤토익 수강생 전용
+                        시스템</span></h2>
+            </div>
+            <div class="card-container">
+                <div class="glass-card reveal">
+                    <div class="badge">POINT 01</div>
+                    <h3>빈틈없는 오답 추적</h3>
+                    <p style="color: var(--text-dim);">한 번 틀린 문제는 AI가 필사적으로 따라붙습니다. '아는 것'과 '안다고 착각하는 것'을 데이터로 분리합니다.
+                    </p>
+                </div>
+                <div class="glass-card reveal" style="transition-delay: 0.1s;">
+                    <div class="badge">POINT 02</div>
+                    <h3>실전 압박의 구현</h3>
+                    <p style="color: var(--text-dim);">PC 전용 UI로 실제 고사장과 동일한 환경을 제공합니다. 클릭 한 번, 스크롤 한 번까지 실전입니다.</p>
+                </div>
+                <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                    <div class="badge">POINT 03</div>
+                    <h3>강의-숙제 완벽 연동</h3>
+                    <p style="color: var(--text-dim);">수업 중 다룬 핵심 문법이 숙제 앱에서 즉시 반복됩니다. 깡쌤의 커리큘럼이 앱 속으로 들어왔습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [전] 절정: 실제 수업 활용 (기승전결의 핵심) -->
+    <section class="climax">
+        <div class="container">
+
+            <!-- Step 1: Lesson to App -->
+            <div class="usage-step reveal">
+                <div class="usage-content">
+                    <div class="badge" style="background: rgba(16, 185, 129, 0.1); color: var(--secondary);">IN CLASS
+                    </div>
+                    <h2>수업 종료 직후, <br><span>AI 하프테스트</span> 진단</h2>
+                    <p>
+                        오늘 배운 내용을 정말 이해했는지 35분간의 압축 진단을 수행합니다. <br>
+                        선생님은 수강생 전원의 성적 데이터를 실시간으로 모니터링하여 다음 수업의 난이도를 조절합니다.
+                    </p>
+                    <img src="promo_assets/diagnosis.jpg" alt="Half Test" class="app-img">
+                </div>
+                <div class="usage-content"
+                    style="padding: 40px; background: var(--glass); border-radius: 32px; border: 1px solid var(--glass-border);">
+                    <h3 style="margin-bottom: 20px;">현장 강의의 생동감</h3>
+                    <p style="font-size: 1rem;">"수업만 들을 때는 다 아는 것 같았는데, 끝나자마자 앱으로 하프테스트를 치니까 제 취약점이 확연히 드러나더라고요. 깡쌤이 바로
+                        그 데이터를 보고 제 숙제를 지정해주셨습니다."</p>
+                    <div style="margin-top: 30px; display: flex; gap: 15px;">
+                        <span class="badge">실전모드</span>
+                        <span class="badge">스키밍 훈련</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Homework Persistence -->
+            <div class="usage-step reverse reveal">
+                <div class="usage-content">
+                    <div class="badge">AFTER CLASS</div>
+                    <h2>집에서도 이어지는 <br><span>지능형 과제 시스템</span></h2>
+                    <p>
+                        앱은 당신이 수업 중 가장 많이 망설였던 '파트 5의 수일치' 문제를 기억합니다.<br>
+                        매일 제공되는 커스텀 드릴은 당신의 오답 패턴만을 집요하게 공격합니다.
+                    </p>
+                    <img src="promo_assets/training.jpg" alt="Training Mode" class="app-img">
+                </div>
+                <div class="usage-content" style="padding-right: 40px;">
+                    <div class="glass-card">
+                        <h4 style="color: var(--secondary); margin-bottom: 15px;">Smart Word Master</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">단순 암기가 아닙니다. 깡쌤 수업의 빈출 유의어와 파생어가 예문 중심의 4단계
+                            학습법으로 자동 반복됩니다.</p>
+                        <img src="promo_assets/vocab.jpg" alt="Vocab Guide"
+                            style="width: 100%; border-radius: 12px; opacity: 0.8;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Simulation -->
+            <div class="usage-step reveal">
+                <div class="usage-content">
+                    <div class="badge" style="background: rgba(244, 63, 94, 0.1); color: var(--accent);">MOCK TEST</div>
+                    <h2>시험 전날, <br><span>완벽한 시뮬레이션</span></h2>
+                    <p>
+                        고사장에 가기 전, 120분의 긴장을 미리 경험하십시오.<br>
+                        이중 지문 파악부터 LC 그림 문제까지 PC 화면을 통해 실제 시험과 100% 동일한 동선으로 훈련합니다.
+                    </p>
+                    <img src="promo_assets/mock.png" alt="Full Mock" class="app-img">
+                </div>
+                <div class="usage-content" style="padding-left: 40px;">
+                    <div class="glass-card" style="border-left: 4px solid var(--accent);">
+                        <p style="font-weight: 700; color: var(--text-main); font-size: 1.1rem;">"UI 적응만으로 50점이 올랐습니다."
+                        </p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">PC 전용 뷰어로 이중/삼중 지문을 한눈에 분석하는 훈련이 실전에서 결정적인 시간
+                            단축을 가져왔습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- [결] 결말: 변화 제안 및 CTA -->
+    <section class="conclusion reveal">
+        <div class="container cta-box">
+            <h2 style="font-size: 3rem; margin-bottom: 24px;">강의의 깊이에 <br>데이터의 정밀함을 더하다</h2>
+            <p style="color: var(--text-dim); font-size: 1.1rem;">당신의 토익 공부는 이제 과거와는 전혀 다른 차원으로 이동합니다.<br>점수로 증명되는 깡쌤만의
+                독보적인 시너지 시스템.</p>
+            <a href="#" class="cta-btn">지금 깡쌤토익 수강 상담하기</a>
+            <p style="margin-top: 30px; font-size: 0.85rem; color: var(--text-dim);">* 본 시스템은 깡쌤토익 정규 수강생에게만 제공되는 프리미엄
+                서비스입니다.</p>
+        </div>
+    </section>
+
+    <footer
+        style="padding: 80px 0; text-align: center; color: var(--text-dim); font-size: 0.9rem; background: var(--bg-dark);">
+        <p>&copy; 2026 KANG'S TOEIC ACADEMY X AI AGENTIC SYSTEM. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

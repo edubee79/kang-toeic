@@ -2379,7 +2379,8 @@ function isActualTest(data) {
         'part6_test',
         'part7_test',
         'part7_single',
-        'part7_double'
+        'part7_double',
+        'part7_multi'
     ];
     if (actualTestTypes.includes(type) || type.endsWith('_test')) {
         return true;
@@ -2537,6 +2538,7 @@ async function analyzeGoalStatus(userId, partTargets, preFetchedSnapshot) {
         'part7_single': 'p7s',
         'part7_double': 'p7d',
         'part7_triple': 'p7d',
+        'part7_multi': 'p7d',
         'part7_test': 'p7f',
         'p1': 'p1',
         'p2': 'p2',
@@ -2865,9 +2867,27 @@ const WeaknessService = {
                 }
             }
             // 1. Get user data and targets from 'Winter_Users' collection
-            const userRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users', userId);
-            const userSnap = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDoc"])(userRef);
-            if (!userSnap.exists()) {
+            let userSnap;
+            let userDocRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users', userId);
+            let initialSnap = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDoc"])(userDocRef);
+            if (initialSnap.exists()) {
+                userSnap = initialSnap;
+            } else {
+                // Try fallback 1: by userId field
+                const q1 = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["query"])((0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users'), (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["where"])('userId', '==', userId));
+                const snap1 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDocs"])(q1);
+                if (!snap1.empty) {
+                    userSnap = snap1.docs[0];
+                } else {
+                    // Try fallback 2: by username field
+                    const q2 = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["query"])((0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users'), (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["where"])('username', '==', userId));
+                    const snap2 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDocs"])(q2);
+                    if (!snap2.empty) {
+                        userSnap = snap2.docs[0];
+                    }
+                }
+            }
+            if (!userSnap) {
                 console.warn(`User ${userId} not found in Winter_Users collection. Returning default report.`);
                 const defaultStats = {
                     target: 0,
@@ -3060,16 +3080,27 @@ const WeaknessService = {
             ].forEach((p)=>{
                 actualRCCount += targetStats[p]?.latest || 0;
             });
-            // TOEIC Score Conversion (Realistic Calibration - Calibrated to Hackers table)
-            // LC: Score = (CorrectCount - 9) / 0.18
-            // RC: Score = (CorrectCount - 21) / 0.16
+            // TOEIC Score Conversion (Hybrid Logic)
+            const allParts = [
+                ...lcParts,
+                ...rcParts
+            ];
+            const hasCompleteData = allParts.every((p)=>(targetStats[p]?.latest || 0) > 0);
             const calculateToeicScore = (count, isLC)=>{
                 if (count === 0) return 5;
-                let score;
-                if (isLC) {
-                    score = Math.round((count - 9) / 0.18 / 5) * 5;
+                let score = 5;
+                if (hasCompleteData) {
+                    if (isLC) {
+                        score = Math.round((count - 9) / 0.18 / 5) * 5;
+                    } else {
+                        score = Math.round((count - 21) / 0.16 / 5) * 5;
+                    }
                 } else {
-                    score = Math.round((count - 21) / 0.16 / 5) * 5;
+                    if (isLC) {
+                        score = count * 5 + 10;
+                    } else {
+                        score = count * 5 - 10;
+                    }
                 }
                 return Math.max(5, Math.min(495, score));
             };
@@ -3229,15 +3260,39 @@ var __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$s
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/.gemini/antigravity/scratch/kangs-toeic-next/src/lib/firebase.ts [app-client] (ecmascript)");
 ;
 ;
+const getVerifiedUserDoc = async (userId)=>{
+    if (!userId) return null;
+    // 1. Try exact document ID
+    const userRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users', userId);
+    const userSnap = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDoc"])(userRef);
+    if (userSnap.exists()) return {
+        ref: userRef,
+        snap: userSnap
+    };
+    // 2. Try by userId field
+    const q = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["query"])((0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users'), (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["where"])('userId', '==', userId));
+    const qSnap = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDocs"])(q);
+    if (!qSnap.empty) return {
+        ref: qSnap.docs[0].ref,
+        snap: qSnap.docs[0]
+    };
+    // 3. Try by username field
+    const q2 = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["query"])((0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users'), (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["where"])('username', '==', userId));
+    const qSnap2 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDocs"])(q2);
+    if (!qSnap2.empty) return {
+        ref: qSnap2.docs[0].ref,
+        snap: qSnap2.docs[0]
+    };
+    return null; // Not found anywhere
+};
 const getUserProfile = async (userId)=>{
     if (!userId) return null;
     try {
-        const userRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users', userId);
-        const userSnap = await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDoc"])(userRef);
-        if (userSnap.exists()) {
+        const verified = await getVerifiedUserDoc(userId);
+        if (verified && verified.snap && verified.snap.exists()) {
             return {
                 userId,
-                ...userSnap.data()
+                ...verified.snap.data()
             };
         } else {
             return null;
@@ -3251,8 +3306,9 @@ const updateTargetScore = async (userId, targetScore)=>{
     // Legacy support or simple update
     // We should probably create a more detailed update function
     try {
-        const userRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users', userId);
-        await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setDoc"])(userRef, {
+        const verified = await getVerifiedUserDoc(userId);
+        if (!verified) throw new Error("User document not found.");
+        await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setDoc"])(verified.ref, {
             targetScore: targetScore
         }, {
             merge: true
@@ -3264,8 +3320,9 @@ const updateTargetScore = async (userId, targetScore)=>{
 };
 const updateTargetDetails = async (userId, data)=>{
     try {
-        const userRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], 'Winter_Users', userId);
-        await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setDoc"])(userRef, data, {
+        const verified = await getVerifiedUserDoc(userId);
+        if (!verified) throw new Error("User document not found.");
+        await (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setDoc"])(verified.ref, data, {
             merge: true
         });
     } catch (error) {
@@ -3695,6 +3752,14 @@ function UserDataProvider({ children }) {
             setLoading(true);
             try {
                 console.log(`[UserDataContext] Fetching data for ${userId}... (force: ${force})`);
+                // If forced refresh, recalculate the backend performance summary first to guarantee consistency
+                if (force) {
+                    try {
+                        await PerformanceSyncService.syncUserSummary(userId);
+                    } catch (e) {
+                        console.warn('[UserDataContext] Optional syncUserSummary failed:', e);
+                    }
+                }
                 // Parallel execution for maximum speed
                 const [profile, analysisReport, streakCount, rankData] = await Promise.all([
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f2e$gemini$2f$antigravity$2f$scratch$2f$kangs$2d$toeic$2d$next$2f$src$2f$services$2f$userService$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getUserProfile"])(userId),
@@ -3749,7 +3814,7 @@ function UserDataProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/.gemini/antigravity/scratch/kangs-toeic-next/src/context/UserDataContext.tsx",
-        lineNumber: 76,
+        lineNumber: 85,
         columnNumber: 9
     }, this);
 }

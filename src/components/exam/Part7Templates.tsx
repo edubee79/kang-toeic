@@ -33,6 +33,7 @@ export interface NoticeProps extends BaseDocProps {
     header: {
         title: string;
         subtitle?: string;
+        date?: string;
     };
 }
 
@@ -207,6 +208,7 @@ export const NoticeTemplate: React.FC<NoticeProps> = ({ header, content, classNa
             <div className="bg-gray-100 border-b-[2px] border-black px-4 py-3 text-center">
                 <h2 className="text-xl font-black uppercase tracking-[0.2em] text-black underline underline-offset-4">{header.title}</h2>
                 {header.subtitle && <p className="text-[14px] font-bold text-black mt-1.5">{header.subtitle}</p>}
+                {header.date && <p className="text-[14px] font-bold text-black mt-1">{header.date}</p>}
             </div>
             <div className="p-6 space-y-4 leading-relaxed text-black">
                 {content.map((para, i) => (

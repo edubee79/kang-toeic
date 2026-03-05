@@ -5,7 +5,7 @@ import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { Trophy, RotateCcw, AlertTriangle, BookOpen } from "lucide-react";
+import { Trophy, RotateCcw, AlertTriangle, BookOpen, CheckCircle2 } from "lucide-react";
 import { part3RealTests, Part3Set, Part3Question } from '@/data/toeic/listening/part3/tests';
 import { cn } from "@/lib/utils";
 import { PerformanceSyncService } from '@/services/performanceSyncService';
@@ -415,6 +415,21 @@ export default function Part3TestRunnerPage() {
 
     // ── COMPLETION SCREEN ──
     if (showCompletion) {
+        if (reviewMode) {
+            return (
+                <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                    <CheckCircle2 className="w-16 h-16 text-emerald-500 mb-6" />
+                    <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tighter">학습 완료</h2>
+                    <p className="text-slate-400 font-medium mb-8">오답 문제 복습을 모두 완료했습니다!</p>
+                    <div className="space-y-3 w-full max-w-xs">
+                        <Link href={fromPath} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center rounded-2xl font-bold transition-all shadow-lg shadow-emerald-500/20">
+                            목록으로 돌아가기
+                        </Link>
+                    </div>
+                </div>
+            );
+        }
+
         const total = testSets.reduce((a, s) => a + s.questions.length, 0);
         return (
             <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6">

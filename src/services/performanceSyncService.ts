@@ -1,6 +1,6 @@
 
 import { db } from '@/lib/firebase';
-import { collection, query, where, getDocs, doc, updateDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, query, where, getDocs, getDoc, doc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { isActualTest, mapToPartKey, ManagerResult } from '@/lib/filters/actualTestFilter';
 
 export interface PerformancePartStat {
@@ -106,16 +106,39 @@ export const PerformanceSyncService = {
                 };
             });
 
-            // Calculate Predicted Score
-            // Same logic as weaknessService.ts
+            // Calculate Predicted Score (Hybrid Logic)
+            const lcParts = ['p1', 'p2', 'p3', 'p4'];
+            const rcParts = ['p5', 'p6', 'p7s', 'p7d'];
+            const allParts = [...lcParts, ...rcParts];
+
+            // Check if all parts have actual score data (> 0 answers correct/attempted)
+            const hasCompleteData = allParts.every(p => partStats[p].latest > 0);
+
             const calculateToeicScore = (count: number, isLC: boolean) => {
-                if (count === 0) return 30; // Min score
-                if (isLC) return Math.min(495, (count * 5) + 10);
-                return Math.min(495, (count * 5) - 10);
+                if (count === 0) return 5;
+                let score = 5;
+
+                if (hasCompleteData) {
+                    // Strict Hacker's formula for students with full data
+                    if (isLC) {
+                        score = Math.round(((count - 9) / 0.18) / 5) * 5;
+                    } else {
+                        score = Math.round(((count - 21) / 0.16) / 5) * 5;
+                    }
+                } else {
+                    // Gradual/Linear formula for new students with partial data
+                    if (isLC) {
+                        score = (count * 5) + 10;
+                    } else {
+                        score = (count * 5) - 10;
+                    }
+                }
+
+                return Math.max(5, Math.min(495, score));
             };
 
-            const lcCorrect = ['p1', 'p2', 'p3', 'p4'].reduce((sum, p) => sum + (partStats[p].latest), 0);
-            const rcCorrect = ['p5', 'p6', 'p7s', 'p7d'].reduce((sum, p) => sum + (partStats[p].latest), 0);
+            const lcCorrect = lcParts.reduce((sum, p) => sum + (partStats[p].latest), 0);
+            const rcCorrect = rcParts.reduce((sum, p) => sum + (partStats[p].latest), 0);
 
             const predictedLC = calculateToeicScore(lcCorrect, true);
             const predictedRC = calculateToeicScore(rcCorrect, false);
@@ -128,9 +151,26 @@ export const PerformanceSyncService = {
                 partStats
             };
 
-            // Update Winter_Users document
-            const userRef = doc(db, 'Winter_Users', userId);
-            await updateDoc(userRef, {
+            // 1. Find the correct Firebase Document ID for the user
+            let targetDocRef = doc(db, 'Winter_Users', userId);
+            let userSnap = await getDoc(targetDocRef);
+
+            if (!userSnap.exists()) {
+                const userQuery = query(collection(db, "Winter_Users"), where("userId", "==", userId));
+                const snap1 = await getDocs(userQuery);
+                if (!snap1.empty) {
+                    targetDocRef = snap1.docs[0].ref;
+                } else {
+                    const q2 = query(collection(db, "Winter_Users"), where("username", "==", userId));
+                    const snap2 = await getDocs(q2);
+                    if (!snap2.empty) {
+                        targetDocRef = snap2.docs[0].ref;
+                    }
+                }
+            }
+
+            // 2. Update Winter_Users document
+            await updateDoc(targetDocRef, {
                 performanceSummary: summary
             });
 
