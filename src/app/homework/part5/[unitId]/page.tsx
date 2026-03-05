@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { doc, getDoc, collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
@@ -45,6 +45,11 @@ export default function Part5Quiz() {
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
 
+    const searchParams = useSearchParams();
+    const resultId = searchParams.get('resultId');
+    const mode = searchParams.get('mode');
+    const [isLoadingRetry, setIsLoadingRetry] = useState(mode === 'retry' && !!resultId);
+
     // Load Progress
     useEffect(() => {
         const savedProgress = localStorage.getItem(`grammar_mission_${unitId}`);
@@ -75,6 +80,34 @@ export default function Part5Quiz() {
         }
         return () => clearInterval(interval);
     }, [isTimerRunning]);
+
+    // Fetch Retry Data
+    useEffect(() => {
+        const fetchRetryData = async () => {
+            if (mode === 'retry' && resultId) {
+                try {
+                    const docRef = doc(db, "Manager_Results", resultId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const data = docSnap.data();
+                        if (data.details && Array.isArray(data.details)) {
+                            setLogs(data.details);
+                            setScore(data.score || 0);
+                            setElapsedTime(data.timeSpent || data.elapsedTime || 0);
+                            setIsFinished(true);
+                            setIsTimerRunning(false);
+                            // We don't want to load standard progress if we are in retry mode
+                        }
+                    }
+                } catch (e) {
+                    console.error("Retry data fetch failed", e);
+                } finally {
+                    setIsLoadingRetry(false);
+                }
+            }
+        };
+        fetchRetryData();
+    }, [mode, resultId]);
 
     // Fetch Questions
     useEffect(() => {
@@ -189,7 +222,7 @@ export default function Part5Quiz() {
         }
     };
 
-    if (loading) {
+    if (loading || isLoadingRetry) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center text-slate-500 gap-4">
                 <Loader2 className="w-10 h-10 animate-spin text-indigo-500" />
@@ -207,7 +240,7 @@ export default function Part5Quiz() {
                         <Trophy className="w-10 h-10" />
                     </div>
                     <h2 className="text-4xl font-black mb-2 tracking-tighter uppercase text-white">Mission Complete</h2>
-                    <p className="text-slate-400 font-bold italic text-xl">SCORE: <span className="text-indigo-400">{score}</span> / {questions.length}</p>
+                    <p className="text-slate-400 font-bold italic text-xl">SCORE: <span className="text-indigo-400">{score}</span> / {logs.length || questions.length}</p>
                     <div className="text-slate-500 font-bold flex items-center justify-center gap-2 mt-4 grayscale opacity-70">
                         <Timer className="w-4 h-4" />
                         <span>소요 시간: {formatTime(elapsedTime)}</span>
@@ -218,8 +251,8 @@ export default function Part5Quiz() {
                     <Button onClick={() => router.push('/homework/part5')} className="h-14 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-black text-lg">
                         LOBBY
                     </Button>
-                    <Button onClick={() => window.location.reload()} variant="outline" className="h-14 bg-transparent border-slate-700 text-slate-300 hover:bg-slate-800 rounded-2xl font-black text-lg">
-                        RETRY
+                    <Button onClick={() => router.push('/homework/part5')} variant="outline" className="h-14 bg-transparent border-slate-700 text-slate-300 hover:bg-slate-800 rounded-2xl font-black text-lg">
+                        BACK TO LIST
                     </Button>
                 </div>
 

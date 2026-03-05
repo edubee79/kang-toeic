@@ -10,7 +10,7 @@ export const test4MultiData: PracticeSet[] = [
             {
                 id: 'v3-p7-t4-multi-set11-p1',
                 contextType: 'P1',
-                docType: 'NOTICE',
+                docType: 'ADVERTISEMENT',
                 header: {
                     title: 'Get Business Cards Custom Made by You'
                 },

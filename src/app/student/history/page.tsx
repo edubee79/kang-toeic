@@ -113,7 +113,7 @@ export default function StudentHistoryPage() {
                     path = `/homework/voca/${testNum}`;
                     break;
                 case 'grammar':
-                    path = `/homework/part5`;
+                    path = res.unit ? `/homework/part5/${res.unit}` : `/homework/part5`;
                     break;
                 case 'part1_test':
                     path = vol ? `/homework/part1-real/test/${vol}/${testNum}` : `/homework/part1-real/test/1/${testNum}`;
@@ -522,8 +522,8 @@ export default function StudentHistoryPage() {
                                                                         : "bg-white/5 hover:bg-white/10 text-white border border-white/10"
                                                                 )}
                                                             >
-                                                                <span className="hidden sm:inline">{isMock ? '분석 리포트' : '틀린문제 다시풀기'}</span>
-                                                                <span className="sm:hidden">{isMock ? '리포트' : '다시풀기'}</span>
+                                                                <span className="hidden sm:inline">{isMock ? '분석 리포트' : (res.type || '').toLowerCase().includes('grammar') ? '틀린문제 확인하기' : '틀린문제 다시풀기'}</span>
+                                                                <span className="sm:hidden">{isMock ? '리포트' : (res.type || '').toLowerCase().includes('grammar') ? '확인하기' : '다시풀기'}</span>
                                                                 <RotateCcw className="w-3.5 h-3.5" />
                                                             </Button>
                                                         </Link>

@@ -177,9 +177,21 @@ function Part6TestRunnerContent() {
         if (reviewMode) return;
         if ((isDrillMode || reSolveMode) && selectedAnswers[questionId]) return;
 
-        setSelectedAnswers(prev => ({ ...prev, [questionId]: optionLabel }));
+        setSelectedAnswers(prev => {
+            const newAnswers = { ...prev, [questionId]: optionLabel };
+
+            const allAnswered = passage.questions.every(q => newAnswers[q.id]);
+            if (allAnswered && currentPassageIndex < (testSet?.passages.length || 0) - 1) {
+                setTimeout(() => {
+                    setCurrentPassageIndex(idx => idx + 1);
+                }, 600);
+            } else {
+                scrollToNext(questionId);
+            }
+
+            return newAnswers;
+        });
         setActiveQuestionId(questionId);
-        scrollToNext(questionId);
     };
 
     const scrollToNext = (currentId: string) => {
@@ -540,7 +552,7 @@ function Part6TestRunnerContent() {
                                     </div>
                                 )}
                                 {passage.title && <h3 className="font-sans font-bold text-center border-b pb-1 lg:pb-4 mb-1 lg:mb-4 text-slate-800 text-[13px] lg:text-base">{passage.title}</h3>}
-                                <div className="whitespace-pre-wrap space-y-2 lg:space-y-3 text-justify">
+                                <div className="whitespace-pre-wrap space-y-2 lg:space-y-3 text-left">
                                     {renderContentWithMarkers(passage.content, passage.questions)}
                                 </div>
                             </div>
@@ -554,7 +566,7 @@ function Part6TestRunnerContent() {
                             )}
                         </div>
 
-                        <div className="flex flex-col flex-1 lg:h-auto lg:col-span-3 overflow-hidden">
+                        <div className="flex flex-col flex-1 lg:h-auto lg:col-span-3 overflow-hidden lg:overflow-visible">
                             <div
                                 ref={questionContainerRef}
                                 className={cn(

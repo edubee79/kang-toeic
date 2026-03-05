@@ -14,6 +14,12 @@ export const metadata: Metadata = {
         icon: "/favicon.jpg",
         apple: "/icons/app-main-icon.jpg",
     },
+    formatDetection: {
+        telephone: false,
+        date: false,
+        email: false,
+        address: false,
+    },
 };
 
 export const viewport: Viewport = {

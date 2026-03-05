@@ -3,6 +3,19 @@ import { cn } from "@/lib/utils";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+const CustomMarkdown = ({ children }: { children: string }) => (
+    <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+            del: ({ node, ...props }) => <span className="bg-yellow-200 text-yellow-900 px-1 rounded font-bold not-italic no-underline inline-block" style={{ textDecoration: 'none' }} {...props} />,
+            // Disable clickable links (emails/urls) by rendering them as styled spans instead of anchor tags
+            a: ({ node, ...props }) => <span className="text-blue-600 underline cursor-text" {...props}>{props.children}</span>
+        }}
+    >
+        {children}
+    </ReactMarkdown>
+);
+
 // ----------------------------------------------------------------------------
 // Types
 // ----------------------------------------------------------------------------
@@ -11,6 +24,12 @@ export type DocType = 'email' | 'letter' | 'notice' | 'memo' | 'article' | 'adve
 export interface BaseDocProps {
     content: string[]; // Paragraphs
     className?: string;
+    table_data?: {
+        headers: string[];
+        rows: string[][];
+        summary?: string;
+    };
+    footer?: string;
 }
 
 export interface EmailProps extends BaseDocProps {
@@ -25,6 +44,7 @@ export interface EmailProps extends BaseDocProps {
 export interface LetterProps extends BaseDocProps {
     header?: {
         date?: string;
+        sender_address?: string[];
         recipient_address?: string[];
     };
 }
@@ -95,6 +115,12 @@ export interface TableProps extends BaseDocProps {
     };
 }
 
+export interface VocabHighlight {
+    keyword: string;
+    /** 0-based paragraph index into the content[] array */
+    paragraphIndex: number;
+}
+
 export interface DocumentRendererProps {
     doc: {
         id: string;
@@ -107,6 +133,26 @@ export interface DocumentRendererProps {
         table_data?: any;
         messages?: any[];
     };
+    /** If set, highlights keyword in the specified paragraph of the passage */
+    highlight?: VocabHighlight;
+}
+
+/**
+ * Wraps a paragraph string so that occurrences of `keyword` are rendered
+ * as <mark> elements. Returns a React element if keyword found, else the raw string.
+ */
+export function HighlightedParagraph({ text, keyword }: { text: string; keyword: string }): React.ReactElement {
+    const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const parts = text.split(new RegExp(`(${escaped})`, 'gi'));
+    return (
+        <>
+            {parts.map((part, i) =>
+                part.toLowerCase() === keyword.toLowerCase()
+                    ? <mark key={i} className="bg-yellow-200 text-yellow-900 rounded px-0.5 font-bold not-italic">{part}</mark>
+                    : <React.Fragment key={i}>{part}</React.Fragment>
+            )}
+        </>
+    );
 }
 
 // ----------------------------------------------------------------------------
@@ -116,7 +162,7 @@ export interface DocumentRendererProps {
 /**
  * 1. Email Template (ETS Style)
  */
-export const EmailTemplate: React.FC<EmailProps> = ({ header, content, className }) => {
+export const EmailTemplate: React.FC<EmailProps> = ({ header, content, table_data, footer, className }) => {
     return (
         <div className={cn("font-sans text-[15px] text-gray-900 border-[2px] border-solid border-black p-0 bg-white shadow-lg overflow-hidden", className)}>
             <div className="bg-[#f3f4f6] border-b-[2px] border-black px-4 h-9 flex items-center justify-between">
@@ -152,15 +198,48 @@ export const EmailTemplate: React.FC<EmailProps> = ({ header, content, className
             <div className="p-6 space-y-5 leading-relaxed text-black">
                 {content.map((para, i) => (
                     <div key={i} className={cn(
-                        "prose prose-base max-w-none !text-black prose-p:my-0",
+                        "prose auto prose-base max-w-none !text-black prose-p:my-0  [&_del]:no-underline [&_del]:bg-yellow-200 prose-del:text-yellow-900 prose-del:px-0.5 prose-del:rounded prose-del:font-bold prose-del:not-italic",
                         para.includes('\n') && "whitespace-pre-wrap",
                         "prose-table:border-collapse prose-table:border prose-table:border-black",
                         "prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:!text-black",
                         "prose-td:border prose-td:border-black prose-td:p-2 prose-td:!text-black"
                     )}>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        <CustomMarkdown>{para}</CustomMarkdown>
                     </div>
                 ))}
+
+                {table_data && (
+                    <div className="mt-6 border-2 border-black overflow-hidden">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="bg-gray-100 border-b-2 border-black">
+                                    {table_data.headers.map((h, i) => (
+                                        <th key={i} className="py-2 px-3 font-bold text-[13px] uppercase border-r border-black last:border-r-0 text-center">
+                                            {h}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {table_data.rows.map((row, rIdx) => (
+                                    <tr key={rIdx} className="border-b border-black last:border-b-0">
+                                        {row.map((cell, cIdx) => (
+                                            <td key={cIdx} className="py-2 px-3 border-r border-black last:border-r-0 text-[14px] text-black font-medium">
+                                                {cell}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                )}
+
+                {footer && (
+                    <div className="mt-8 pt-4 border-t border-gray-100 italic text-gray-700 whitespace-pre-wrap">
+                        {footer}
+                    </div>
+                )}
             </div>
         </div>
     );
@@ -169,11 +248,16 @@ export const EmailTemplate: React.FC<EmailProps> = ({ header, content, className
 /**
  * 2. Letter Template
  */
-export const LetterTemplate: React.FC<LetterProps> = ({ header, content, className }) => {
+export const LetterTemplate: React.FC<LetterProps> = ({ header, content, table_data, footer, className }) => {
     return (
-        <div className={cn("font-serif text-sm text-gray-900 p-6 bg-white border border-gray-200 shadow-sm", className)}>
+        <div className={cn("font-serif text-sm text-gray-900 p-8 bg-white border border-gray-200 shadow-sm", className)}>
             {header && (
-                <div className="mb-6 text-gray-800">
+                <div className="mb-8 text-gray-800">
+                    {header.sender_address && (
+                        <div className="mb-6 space-y-0.5 text-right font-bold italic">
+                            {header.sender_address.map((line, i) => <p key={i}>{line}</p>)}
+                        </div>
+                    )}
                     {header.date && <p className="mb-4">{header.date}</p>}
                     {header.recipient_address && (
                         <div className="space-y-0.5">
@@ -185,16 +269,49 @@ export const LetterTemplate: React.FC<LetterProps> = ({ header, content, classNa
             <div className="space-y-4 leading-relaxed text-black">
                 {content.map((para, i) => (
                     <div key={i} className={cn(
-                        "prose prose-sm max-w-none !text-black prose-p:my-0",
+                        "prose auto prose-sm max-w-none !text-black prose-p:my-0  [&_del]:no-underline [&_del]:bg-yellow-200 prose-del:text-yellow-900 prose-del:px-0.5 prose-del:rounded prose-del:font-bold prose-del:not-italic",
                         para.includes('\n') && "whitespace-pre-wrap",
                         "prose-table:border-collapse prose-table:border prose-table:border-black",
                         "prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:!text-black",
                         "prose-td:border prose-td:border-black prose-td:p-2 prose-td:!text-black"
                     )}>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        <CustomMarkdown>{para}</CustomMarkdown>
                     </div>
                 ))}
             </div>
+
+            {table_data && (
+                <div className="mt-6 border-2 border-black overflow-hidden">
+                    <table className="w-full text-left border-collapse">
+                        <thead>
+                            <tr className="bg-gray-100 border-b-2 border-black">
+                                {table_data.headers.map((h, i) => (
+                                    <th key={i} className="py-2 px-3 font-bold text-[13px] uppercase border-r border-black last:border-r-0 text-center">
+                                        {h}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_data.rows.map((row, rIdx) => (
+                                <tr key={rIdx} className="border-b border-black last:border-b-0">
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className="py-2 px-3 border-r border-black last:border-r-0 text-[14px] text-black font-medium">
+                                            {cell}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+
+            {footer && (
+                <div className="mt-8 pt-4 border-t border-gray-100 font-bold text-gray-700 whitespace-pre-wrap">
+                    {footer}
+                </div>
+            )}
         </div>
     );
 };
@@ -202,7 +319,7 @@ export const LetterTemplate: React.FC<LetterProps> = ({ header, content, classNa
 /**
  * 3. Notice / Memo Template
  */
-export const NoticeTemplate: React.FC<NoticeProps> = ({ header, content, className }) => {
+export const NoticeTemplate: React.FC<NoticeProps> = ({ header, content, table_data, footer, className }) => {
     return (
         <div className={cn("font-sans text-base text-gray-900 border-[2px] border-black p-0 bg-white shadow-lg", className)}>
             <div className="bg-gray-100 border-b-[2px] border-black px-4 py-3 text-center">
@@ -220,16 +337,49 @@ export const NoticeTemplate: React.FC<NoticeProps> = ({ header, content, classNa
                             prose-table:border-collapse prose-table:border prose-table:border-black 
                             prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:text-black
                             prose-td:border prose-td:border-black prose-td:p-2 prose-td:text-black">
-                            <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                            <CustomMarkdown>{para}</CustomMarkdown>
                         </div>
                     )
                 ))}
+
+                {table_data && (
+                    <div className="mt-6 border-2 border-black overflow-hidden">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="bg-gray-100 border-b-2 border-black">
+                                    {table_data.headers.map((h, i) => (
+                                        <th key={i} className="py-2 px-3 font-bold text-[13px] uppercase border-r border-black last:border-r-0 text-center">
+                                            {h}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {table_data.rows.map((row, rIdx) => (
+                                    <tr key={rIdx} className="border-b border-black last:border-b-0">
+                                        {row.map((cell, cIdx) => (
+                                            <td key={cIdx} className="py-2 px-3 border-r border-black last:border-r-0 text-[14px] text-black font-medium">
+                                                {cell}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                )}
+
+                {footer && (
+                    <div className="mt-8 pt-4 border-t border-gray-100 text-[14px] font-bold text-gray-800 whitespace-pre-wrap">
+                        {footer}
+                    </div>
+                )}
             </div>
         </div>
     );
 };
 
-export const ArticleTemplate: React.FC<ArticleProps> = ({ header, content, className }) => {
+export const ArticleTemplate: React.FC<ArticleProps> = ({ header, content, table_data, footer, className }) => {
     return (
         <div className={cn("font-serif text-base text-gray-900 p-8 bg-white border border-gray-200 shadow-lg", className)}>
             <div className="border-b-4 border-black pb-4 mb-6 text-center">
@@ -249,10 +399,43 @@ export const ArticleTemplate: React.FC<ArticleProps> = ({ header, content, class
                         "prose prose-base max-w-none text-black mb-6 first:mt-0 font-medium",
                         para.includes('\n') && "whitespace-pre-wrap"
                     )}>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        <CustomMarkdown>{para}</CustomMarkdown>
                     </div>
                 ))}
             </div>
+
+            {table_data && (
+                <div className="mt-6 border-2 border-black overflow-hidden clarity-article-table">
+                    <table className="w-full text-left border-collapse">
+                        <thead>
+                            <tr className="bg-gray-100 border-b-2 border-black">
+                                {table_data.headers.map((h, i) => (
+                                    <th key={i} className="py-2 px-3 font-bold text-[13px] uppercase border-r border-black last:border-r-0 text-center">
+                                        {h}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_data.rows.map((row, rIdx) => (
+                                <tr key={rIdx} className="border-b border-black last:border-b-0">
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className="py-2 px-3 border-r border-black last:border-r-0 text-[14px] text-black font-medium">
+                                            {cell}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+
+            {footer && (
+                <div className="mt-8 pt-4 border-t border-black text-[13px] font-bold italic text-gray-700 whitespace-pre-wrap">
+                    {footer}
+                </div>
+            )}
         </div>
     );
 };
@@ -260,7 +443,7 @@ export const ArticleTemplate: React.FC<ArticleProps> = ({ header, content, class
 /**
  * 5. Advertisement Template
  */
-export const AdvertisementTemplate: React.FC<AdvertisementProps> = ({ header, content, footer, className }) => {
+export const AdvertisementTemplate: React.FC<AdvertisementProps> = ({ header, content, table_data, footer, className }) => {
     return (
         <div className={cn("font-sans text-sm text-gray-900 border border-dashed border-gray-400 p-6 bg-gray-50", className)}>
             <div className="text-center mb-6">
@@ -273,12 +456,40 @@ export const AdvertisementTemplate: React.FC<AdvertisementProps> = ({ header, co
                         "prose prose-sm lg:prose-base max-w-none text-black font-medium mx-auto",
                         para.includes('\n') && "whitespace-pre-wrap text-left inline-block"
                     )}>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        <CustomMarkdown>{para}</CustomMarkdown>
                     </div>
                 ))}
             </div>
+
+            {table_data && (
+                <div className="mt-6 border-2 border-black overflow-hidden mx-6">
+                    <table className="w-full text-left border-collapse">
+                        <thead>
+                            <tr className="bg-gray-100 border-b-2 border-black">
+                                {table_data.headers.map((h, i) => (
+                                    <th key={i} className="py-2 px-3 font-bold text-[13px] uppercase border-r border-black last:border-r-0 text-center">
+                                        {h}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_data.rows.map((row, rIdx) => (
+                                <tr key={rIdx} className="border-b border-black last:border-b-0">
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className="py-2 px-3 border-r border-black last:border-r-0 text-[14px] text-black font-medium">
+                                            {cell}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+
             {footer && (
-                <div className="mt-6 pt-4 border-t border-gray-300 text-center font-bold text-sm text-gray-600">
+                <div className="mt-6 pt-4 border-t border-gray-300 text-center font-bold text-sm text-gray-600 px-6 pb-6">
                     {footer}
                 </div>
             )}
@@ -350,7 +561,7 @@ export const OnlineChatTemplate: React.FC<TextChainProps> = ({ messages, classNa
 /**
  * 8. Web Page Template
  */
-export const WebPageTemplate: React.FC<WebPageProps> = ({ header, content, className }) => {
+export const WebPageTemplate: React.FC<WebPageProps> = ({ header, content, table_data, footer, className }) => {
     return (
         <div className={cn("font-sans text-[13px] text-gray-900 border border-gray-400 rounded-t-md overflow-hidden bg-white shadow-md", className)}>
             <div className="bg-gray-200 border-b border-gray-400 p-2 flex items-center gap-3">
@@ -384,9 +595,42 @@ export const WebPageTemplate: React.FC<WebPageProps> = ({ header, content, class
                         "prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:p-2",
                         "prose-td:border prose-td:border-gray-300 prose-td:p-2"
                     )}>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        <CustomMarkdown>{para}</CustomMarkdown>
                     </div>
                 ))}
+
+                {table_data && (
+                    <div className="mt-6 border-2 border-black overflow-hidden">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="bg-gray-100 border-b-2 border-black">
+                                    {table_data.headers.map((h, i) => (
+                                        <th key={i} className="py-2 px-3 font-bold text-[13px] uppercase border-r border-black last:border-r-0 text-center">
+                                            {h}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {table_data.rows.map((row, rIdx) => (
+                                    <tr key={rIdx} className="border-b border-black last:border-b-0">
+                                        {row.map((cell, cIdx) => (
+                                            <td key={cIdx} className="py-2 px-3 border-r border-black last:border-r-0 text-[14px] text-black font-medium">
+                                                {cell}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                )}
+
+                {footer && (
+                    <div className="mt-8 pt-4 border-t border-gray-100 text-[12px] text-gray-400 italic whitespace-pre-wrap text-right">
+                        {footer}
+                    </div>
+                )}
             </div>
         </div>
     );
@@ -413,7 +657,7 @@ export const ReviewTemplate: React.FC<ReviewProps> = ({ header, content, classNa
             <div className="p-6 space-y-4">
                 {content.map((para, i) => (
                     <div key={i} className="prose prose-base max-w-none text-black prose-p:leading-relaxed">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                        <CustomMarkdown>{para}</CustomMarkdown>
                     </div>
                 ))}
             </div>
@@ -448,11 +692,11 @@ export const TableTemplate: React.FC<TableProps> = ({ header, content, table_dat
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
                         {content.map((para, i) => (
                             <div key={i} className="prose prose-base max-w-none text-left
-                                prose-p:my-0 prose-p:leading-snug
+                                prose-p:my-0   [&_del]:no-underline [&_del]:bg-yellow-200 prose-del:text-yellow-900 prose-del:px-0.5 prose-del:rounded  prose-del:font-bold prose-del:not-italic prose-p:leading-snug
                                 prose-table:border-collapse prose-table:border prose-table:border-black 
                                 prose-th:border prose-th:border-black prose-th:bg-gray-100 prose-th:p-2 prose-th:text-[13px] prose-th:!text-black
                                 prose-td:border prose-td:border-black prose-td:p-3 prose-td:text-[15px] prose-td:!text-black">
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>{para}</ReactMarkdown>
+                                <CustomMarkdown>{para}</CustomMarkdown>
                             </div>
                         ))}
                     </div>
@@ -509,7 +753,7 @@ export const TableTemplate: React.FC<TableProps> = ({ header, content, table_dat
 // ----------------------------------------------------------------------------
 // Main Factory Component
 // ----------------------------------------------------------------------------
-export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc }) => {
+export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc, highlight }) => {
     if (!doc) return null;
 
     const resolveDocType = (rawType: string, rawDocType?: string): DocType => {
@@ -542,8 +786,8 @@ export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc }) => {
     // --- Helper to parse legacy string content ---
     let finalDoc = { ...doc };
 
-    // IF table_data exists, FORCE it to be a table type regardless of what it's called
-    const resolvedType = doc.table_data ? 'table' : resolveDocType(doc.type, doc.docType || doc.title);
+    // Use original type even if table_data exists, so specific templates can render the table 
+    const resolvedType = resolveDocType(doc.type, doc.docType || doc.title);
 
     if (typeof doc.content === 'string') {
         const text = doc.content as string;
@@ -650,31 +894,75 @@ export const DocumentRenderer: React.FC<DocumentRendererProps> = ({ doc }) => {
             finalDoc.content = text.split(/\r?\n\r?\n+/).map(s => s.trim()).filter(Boolean);
         }
     } else if (Array.isArray(doc.content)) {
-        finalDoc.content = doc.content;
+        finalDoc.content = [...doc.content];
     } else {
         finalDoc.content = [];
     }
 
+    // Hack: use Markdown strikethrough (~~) to render highlights without extra plugins
+    if (highlight && Array.isArray(finalDoc.content)) {
+        const escaped = highlight.keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`\\b(${escaped})\\b`, 'i');
+        let replaced = false;
+
+        const idx = highlight.paragraphIndex;
+        if (idx < finalDoc.content.length && typeof finalDoc.content[idx] === 'string' && regex.test(finalDoc.content[idx])) {
+            finalDoc.content[idx] = finalDoc.content[idx].replace(regex, '~~$1~~');
+            replaced = true;
+        }
+
+        // Fallback: search across all paragraphs
+        if (!replaced) {
+            for (let i = 0; i < finalDoc.content.length; i++) {
+                if (typeof finalDoc.content[i] === 'string' && regex.test(finalDoc.content[i])) {
+                    finalDoc.content[i] = finalDoc.content[i].replace(regex, '~~$1~~');
+                    replaced = true;
+                    break;
+                }
+            }
+        }
+
+        // Final fallback: search without word boundaries (in case punctuation is attached)
+        if (!replaced) {
+            const regexNoBoundaries = new RegExp(`(${escaped})`, 'i');
+            for (let i = 0; i < finalDoc.content.length; i++) {
+                if (typeof finalDoc.content[i] === 'string' && regexNoBoundaries.test(finalDoc.content[i])) {
+                    finalDoc.content[i] = finalDoc.content[i].replace(regexNoBoundaries, '~~$1~~');
+                    replaced = true;
+                    break;
+                }
+            }
+        }
+    }
+
     switch (resolvedType) {
         case 'email':
-            return <EmailTemplate header={finalDoc.header} content={finalDoc.content as string[]} />;
+            return <EmailTemplate header={finalDoc.header} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'letter':
-            return <LetterTemplate header={finalDoc.header} content={finalDoc.content as string[]} />;
+            // Support legacy header.address or header.from as sender_address if sender_address is missing
+            const letterHeader = { ...finalDoc.header };
+            if (!letterHeader.sender_address && (letterHeader.address || letterHeader.from)) {
+                letterHeader.sender_address = (letterHeader.address || letterHeader.from).split('\n');
+            }
+            if (!letterHeader.recipient_address && letterHeader.recipient) {
+                letterHeader.recipient_address = letterHeader.recipient.split('\n');
+            }
+            return <LetterTemplate header={letterHeader} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'notice':
         case 'memo':
-            return <NoticeTemplate header={finalDoc.header || { title: finalDoc.title || finalDoc.type }} content={finalDoc.content as string[]} />;
+            return <NoticeTemplate header={finalDoc.header || { title: finalDoc.title || finalDoc.type }} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'article':
-            return <ArticleTemplate header={finalDoc.header || { headline: finalDoc.title || finalDoc.type }} content={finalDoc.content as string[]} />;
+            return <ArticleTemplate header={finalDoc.header || { headline: finalDoc.title || finalDoc.type }} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'advertisement':
-            return <AdvertisementTemplate header={finalDoc.header || { title: finalDoc.title || finalDoc.type }} content={finalDoc.content as string[]} footer={finalDoc.footer} />;
+            return <AdvertisementTemplate header={finalDoc.header || { title: finalDoc.title || finalDoc.type }} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'review':
-            return <ReviewTemplate header={finalDoc.header || { title: finalDoc.title || finalDoc.type, rating: 5 }} content={finalDoc.content as string[]} />;
+            return <ReviewTemplate header={finalDoc.header || { title: finalDoc.title || finalDoc.type, rating: 5 }} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'text_message':
             return <TextMessageTemplate messages={finalDoc.messages || []} />;
         case 'online_chat':
             return <OnlineChatTemplate messages={finalDoc.messages || []} />;
         case 'web_page':
-            return <WebPageTemplate header={finalDoc.header} content={finalDoc.content as string[]} />;
+            return <WebPageTemplate header={finalDoc.header} content={finalDoc.content as string[]} table_data={doc.table_data} footer={doc.footer} />;
         case 'table':
         case 'form':
             if (finalDoc.table_data) {

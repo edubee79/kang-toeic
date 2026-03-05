@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { getStandardizedPassageType } from '@/lib/toeic/rc-passage-types';
 import { PerformanceSyncService } from '@/services/performanceSyncService';
 import { DocumentRenderer } from '@/components/exam/Part7Templates';
+import { parseVocabQuestion, cleanVocabQuestionText, isVocabQuestion } from '@/lib/toeic/vocab-highlight';
 
 function Part7SingleTestRunnerContent() {
     const params = useParams();
@@ -177,10 +178,21 @@ function Part7SingleTestRunnerContent() {
         if (reviewMode) return;
         if (isDrillMode && selectedAnswers[questionId]) return;
 
-        setSelectedAnswers(prev => ({ ...prev, [questionId]: optionLabel }));
+        setSelectedAnswers(prev => {
+            const newAnswers = { ...prev, [questionId]: optionLabel };
 
-        // Auto-scroll to next question
-        scrollToNext(questionId);
+            const allAnswered = currentSet.questions.every(q => newAnswers[q.id]);
+            if (allAnswered && currentSetIndex < (testSet?.sets.length || 0) - 1) {
+                setTimeout(() => {
+                    setCurrentSetIndex(idx => idx + 1);
+                }, 600);
+            } else {
+                // Auto-scroll to next question
+                scrollToNext(questionId);
+            }
+
+            return newAnswers;
+        });
     };
 
     const scrollToNext = (currentId: string) => {
@@ -514,12 +526,27 @@ function Part7SingleTestRunnerContent() {
                                                 {passage.docType.replace('_', ' ')}
                                             </div>
                                         )}
-                                        <DocumentRenderer doc={{
-                                            ...passage,
-                                            header: (passage.docType === 'ARTICLE' || passage.type?.toUpperCase() === 'ARTICLE')
-                                                ? { ...passage.header, columns: 1 }
-                                                : passage.header
-                                        }} />
+                                        {(() => {
+                                            // Find the first vocab question in the current set for this passage
+                                            const vocabQ = currentSet.questions.find((q: any) =>
+                                                isVocabQuestion(q.classification) &&
+                                                // Usually single passages always map to passage index 0
+                                                (pIdx === 0)
+                                            );
+                                            const highlightInfo = vocabQ ? parseVocabQuestion(vocabQ.text) : null;
+
+                                            return (
+                                                <DocumentRenderer
+                                                    doc={{
+                                                        ...passage,
+                                                        header: (passage.docType === 'ARTICLE' || passage.type?.toUpperCase() === 'ARTICLE')
+                                                            ? { ...passage.header, columns: 1 }
+                                                            : passage.header
+                                                    }}
+                                                    highlight={highlightInfo || undefined}
+                                                />
+                                            );
+                                        })()}
                                     </div>
                                     {passage.translation && reviewMode && (
                                         <div className="bg-slate-900/50 p-1 lg:p-4 rounded lg:rounded-xl text-slate-400 text-[10px] lg:text-sm">
@@ -532,7 +559,7 @@ function Part7SingleTestRunnerContent() {
                         </div>
 
                         {/* Questions */}
-                        <div className="flex flex-col flex-1 lg:h-auto lg:col-span-3 overflow-hidden">
+                        <div className="flex flex-col flex-1 lg:h-auto lg:col-span-3 overflow-hidden lg:overflow-visible">
                             <div ref={questionContainerRef} className={cn(
                                 "flex-1 overflow-y-auto lg:overflow-visible bg-slate-900/50 lg:bg-transparent p-0 lg:p-0",
                                 "space-y-0.5 lg:space-y-3"
@@ -568,7 +595,7 @@ function Part7SingleTestRunnerContent() {
                                                             )}>
                                                                 {q.questionNo || q.id}.
                                                             </span>
-                                                            {q.text}
+                                                            {isVocabQuestion(q.classification) ? cleanVocabQuestionText(q.text) : q.text}
                                                         </p>
                                                         {isRevealed && !isCorrect && (
                                                             <span className="text-[10px] font-black text-rose-500 px-1.5 py-0.5 bg-rose-500/10 rounded uppercase">Incorrect</span>

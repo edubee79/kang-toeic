@@ -12,6 +12,7 @@ import { notFound, useParams, useRouter, useSearchParams } from 'next/navigation
 import { DocumentRenderer } from '@/components/exam/Part7Templates';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { parseVocabQuestion, cleanVocabQuestionText, isVocabQuestion } from '@/lib/toeic/vocab-highlight';
 
 
 export default function Part7DoublePassagePage() {
@@ -57,6 +58,7 @@ export default function Part7DoublePassagePage() {
     const leftPanelRef = useRef<HTMLDivElement>(null);
     const rightTopRef = useRef<HTMLDivElement>(null);
     const rightBottomRef = useRef<HTMLDivElement>(null);
+    const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     // Handle 404
     if (!fullPracticeTest) {
@@ -163,10 +165,39 @@ export default function Part7DoublePassagePage() {
         rightBottomRef.current?.scrollTo(0, 0);
     }, [currentSetIndex]);
 
+    const scrollToNext = (currentId: string) => {
+        const questionsInSet = data.questions;
+        const currentIndex = questionsInSet.findIndex(q => q.id === currentId);
+
+        if (currentIndex !== -1 && currentIndex < questionsInSet.length - 1) {
+            const nextId = questionsInSet[currentIndex + 1].id;
+            setTimeout(() => {
+                const nextEl = questionRefs.current[nextId];
+                const container = rightBottomRef.current;
+                if (nextEl && container) {
+                    const containerTop = container.getBoundingClientRect().top;
+                    const elementTop = nextEl.getBoundingClientRect().top;
+                    const scrollPos = elementTop - containerTop + container.scrollTop;
+                    container.scrollTo({ top: scrollPos - 10, behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    };
+
     const handleAnswerChange = (qId: string, optionIdx: number, optionLabel: string) => {
         if (showResults) return;
         setAnswers(prev => {
             const newAnswers = { ...prev, [qId]: optionLabel };
+
+            const allAnswered = data.questions.every(q => newAnswers[q.id]);
+            if (allAnswered && !isLastSet) {
+                setTimeout(() => {
+                    setCurrentSetIndex(prevIdx => prevIdx + 1);
+                }, 600);
+            } else {
+                scrollToNext(qId);
+            }
+
             return newAnswers;
         });
     };
@@ -374,7 +405,18 @@ export default function Part7DoublePassagePage() {
                                         )}
                                     </div>
                                     <div className="mt-8">
-                                        <DocumentRenderer doc={passage} />
+                                        {(() => {
+                                            const currentSetData = (retryMode
+                                                ? fullPracticeTest.filter((s: any) => s.questions.some((q: any) => originalAnswers[q.id] !== q.correctAnswer))
+                                                : fullPracticeTest)[currentSetIndex];
+
+                                            // Try to associate vocab question with passage (simplistic association)
+                                            // Ideally we'd map questions exactly to passages, but here we just pass the first match's highlight info
+                                            const vocabQ = currentSetData.questions.find((q: any) => isVocabQuestion(q.classification));
+                                            const highlightInfo = vocabQ ? parseVocabQuestion(vocabQ.text) : null;
+
+                                            return <DocumentRenderer doc={passage} highlight={highlightInfo || undefined} />
+                                        })()}
                                     </div>
                                 </div>
                             ))}
@@ -397,7 +439,11 @@ export default function Part7DoublePassagePage() {
                                 )}
                             </div>
                             <div className="mt-8">
-                                <DocumentRenderer doc={data.passages[2]} />
+                                {(() => {
+                                    const vocabQ = data.questions.find(q => isVocabQuestion(q.classification));
+                                    const highlightInfo = vocabQ ? parseVocabQuestion(vocabQ.text) : null;
+                                    return <DocumentRenderer doc={data.passages[2]} highlight={highlightInfo || undefined} />;
+                                })()}
                             </div>
                         </div>
                     )}
@@ -434,7 +480,7 @@ export default function Part7DoublePassagePage() {
                                             : Object.entries(q.options).sort((a, b) => a[0].localeCompare(b[0])).map(([label, text]) => ({ label, text: text as string }));
 
                                         return (
-                                            <div key={q.id} className={cn(
+                                            <div key={q.id} ref={el => { questionRefs.current[q.id] = el; }} className={cn(
                                                 "transition p-4 rounded-xl border",
                                                 showResults && isCorrect ? "bg-green-50 border-green-100" :
                                                     showResults && isWrong ? "bg-red-50 border-red-100" : "border-transparent"
@@ -442,7 +488,7 @@ export default function Part7DoublePassagePage() {
                                                 <div className="flex gap-2 mb-2">
                                                     <span className="font-bold text-blue-900 text-[16px] shrink-0">{qNum}.</span>
                                                     <p className="font-bold text-gray-900 text-[16px] leading-tight pt-0.5">
-                                                        {q.text}
+                                                        {isVocabQuestion(q.classification) ? cleanVocabQuestionText(q.text) : q.text}
                                                     </p>
                                                 </div>
 

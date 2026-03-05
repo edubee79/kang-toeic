@@ -126,7 +126,7 @@ export const test5MultiData: PracticeSet[] = [
             {
                 id: 'v3-p7-t5-multi-set12-p1',
                 contextType: 'P2',
-                docType: 'NOTICE',
+                docType: 'ADVERTISEMENT',
                 header: {
                     title: 'Job Advertisement'
                 },

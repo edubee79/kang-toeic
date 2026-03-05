@@ -4,6 +4,10 @@ import { test2MultiData as v3_t2 } from '../../v3/reading/part7/multi/v3_p7_t02_
 import { test3MultiData as v3_t3 } from '../../v3/reading/part7/multi/v3_p7_t03_multi';
 import { test4MultiData as v3_t4 } from '../../v3/reading/part7/multi/v3_p7_t04_multi';
 import { test5MultiData as v3_t5 } from '../../v3/reading/part7/multi/v3_p7_t05_multi';
+import { test6MultiData as v3_t6 } from '../../v3/reading/part7/multi/v3_p7_t06_multi';
+import { test7MultiData as v3_t7 } from '../../v3/reading/part7/multi/v3_p7_t07_multi';
+import { test8MultiData as v3_t8 } from '../../v3/reading/part7/multi/v3_p7_t08_multi';
+
 
 // V4 Multi-Passage Tests (1-10) - Double/Triple (Vol 4)
 import { PracticeSet } from '../../v4/reading/part7/multi/types';
@@ -36,7 +40,10 @@ export const part7MultiTestData = {
         test2: withMeta(v3_t2, 3, 2),
         test3: withMeta(v3_t3, 3, 3),
         test4: withMeta(v3_t4, 3, 4),
-        test5: withMeta(v3_t5, 3, 5)
+        test5: withMeta(v3_t5, 3, 5),
+        test6: withMeta(v3_t6, 3, 6),
+        test7: withMeta(v3_t7, 3, 7),
+        test8: withMeta(v3_t8, 3, 8)
     },
     // Volume 4
     v4: {
@@ -72,6 +79,10 @@ export const part7MultiTestArray = [
     part7MultiTestData.v3.test3,
     part7MultiTestData.v3.test4,
     part7MultiTestData.v3.test5,
+    part7MultiTestData.v3.test6,
+    part7MultiTestData.v3.test7,
+    part7MultiTestData.v3.test8,
+
     // V4
     part7MultiTestData.v4.test1,
     part7MultiTestData.v4.test2,
