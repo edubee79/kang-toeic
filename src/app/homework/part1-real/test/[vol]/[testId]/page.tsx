@@ -341,18 +341,6 @@ export default function Part1TestRunner() {
                 </Button>
                 <div className="flex items-center gap-4">
                     <span className="text-white font-bold tracking-tight">Part 1 - Vol {vol} Test {testId}</span>
-                    {reviewMode && (
-                        <div className="flex items-center bg-slate-800 rounded-full p-1 ml-4 border border-slate-700">
-                            <button
-                                onClick={() => { setShowOnlyWrong(false); setDisplayIndex(0); }}
-                                className={cn("px-4 py-1.5 text-xs font-black rounded-full transition-all", !showOnlyWrong ? "bg-indigo-600 text-white shadow-lg" : "text-slate-500 hover:text-slate-300")}
-                            >전체</button>
-                            <button
-                                onClick={() => { setShowOnlyWrong(true); setDisplayIndex(0); }}
-                                className={cn("px-4 py-1.5 text-xs font-black rounded-full transition-all", showOnlyWrong ? "bg-rose-600 text-white shadow-lg" : "text-slate-500 hover:text-slate-300")}
-                            >오답만</button>
-                        </div>
-                    )}
                 </div>
                 <div className="flex items-center gap-3">
                     {reviewMode && (
