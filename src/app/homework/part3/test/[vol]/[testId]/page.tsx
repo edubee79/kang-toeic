@@ -656,7 +656,7 @@ export default function Part3TestRunnerPage() {
                                             );
                                         })}
                                     </div>
-                                    {reviewMode && currentSet.script && (wasCorrect || !!reviewedAnswers[q.id]) && (
+                                    {reviewMode && currentSet.script && (q.correctAnswer === selectedAnswers[q.id] || !!reviewedAnswers[q.id]) && (
                                         <div className="mt-4 p-4 bg-indigo-500/5 border border-indigo-500/10 rounded-2xl animate-in fade-in slide-in-from-top-2 duration-300">
                                             <p className="text-[10px] font-black text-indigo-500 uppercase tracking-widest mb-2">Analysis & Script</p>
                                             <p className="text-xs text-slate-400 leading-relaxed italic">
