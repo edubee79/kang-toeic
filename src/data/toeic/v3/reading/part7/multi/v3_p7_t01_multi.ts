@@ -98,9 +98,9 @@ export const test1MultiData: PracticeSet[] = [
                     "C": "She travels frequently in her work.",
                     "D": "She read the previous issue of Alberta Business Matters."
                 },
-                correctAnswer: "C",
+                correctAnswer: "D",
                 classification: "P7_LINK",
-                explanation: "Testa 씨는 편지에서 자신의 회사가 'today's on-the-move employees'(오늘날의 이동이 잦은 직원들)를 위한 제품을 만든다고 설명하며 에드먼턴 본사와 지사 사무실을 오가는 예시를 듭니다. 이는 그녀의 업무 환경이 이동이 잦음(C)을 암시합니다.",
+                explanation: "Maria Testa는 자신의 편지에서 기사(P1)의 내용을 인지하고 보완하는 제품들을 소개하고 있으므로, Alberta Business Matters의 기사(또는 지난 호)를 읽었음(D)을 알 수 있습니다.",
                 translation: "Ms. Testa에 대해 암시된 것은?\n(A) 그녀는 전문 작가이다.\n(B) 그녀는 새로운 회사를 시작하고 있다.\n(C) 그녀는 업무상 자주 여행을 다닌다.\n(D) 그녀는 Alberta Business Matters의 지난 호를 읽었다."
             },
             {

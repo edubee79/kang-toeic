@@ -179,7 +179,10 @@ export default function Part2Lobby() {
                                             <Lock className="w-3.5 h-3.5 md:w-5 md:h-5 text-slate-700" />
                                         ) : completion?.completed ? (
                                             <>
-                                                <CheckCircle className="w-5 h-5 md:w-7 md:h-7 text-emerald-500" />
+                                                <CheckCircle className="w-5 h-5 md:w-7 md:h-7 text-emerald-500" title="Completed" />
+                                                <Link href={`/homework/part2/test/${test.vol}/${test.testId}?from=${encodeURIComponent(`/homework/part2?vol=${selectedVol}&from=${encodeURIComponent(fromPath)}`)}`} title="Test Mode">
+                                                    <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 hover:text-emerald-400 transition-colors" />
+                                                </Link>
                                                 <Link href={`/homework/part2/shadowing/${test.vol}/${test.testId}?from=${encodeURIComponent(`/homework/part2?vol=${selectedVol}&from=${encodeURIComponent(fromPath)}`)}`} title="Shadowing Mode">
                                                     <Mic2 className="w-5 h-5 md:w-7 md:h-7 text-slate-600 hover:text-emerald-400 transition-colors" />
                                                 </Link>

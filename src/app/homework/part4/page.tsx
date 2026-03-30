@@ -201,7 +201,10 @@ export default function Part4LobbyPage() {
                                         {!test.isActive ? (
                                             <Lock className="w-3.5 h-3.5 md:w-5 md:h-5 text-slate-700" />
                                         ) : completions[`Part4 Real Test Vol${test.vol} ${test.id}`]?.completed ? (
-                                            <CheckCircle className="w-5 h-5 md:w-7 md:h-7 text-emerald-500" />
+                                            <>
+                                                <CheckCircle className="w-5 h-5 md:w-7 md:h-7 text-emerald-500" />
+                                                <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-emerald-400 transition-colors ml-1 md:ml-2" />
+                                            </>
                                         ) : (
                                             <PlayCircle className="w-5 h-5 md:w-7 md:h-7 text-slate-600 group-hover:text-indigo-400 transition-colors" />
                                         )}

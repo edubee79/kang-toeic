@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { part7MultiTestData, PracticeSet } from '@/data/toeic/reading/part7/multi_tests';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight, ArrowLeft, Timer, RotateCcw, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowLeft, Timer, RotateCcw, CheckCircle2, Trophy } from 'lucide-react';
 import { collection, addDoc, serverTimestamp, getDoc, doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { PerformanceSyncService } from '@/services/performanceSyncService';
@@ -46,6 +46,7 @@ export default function Part7DoublePassagePage() {
     const [currentSetIndex, setCurrentSetIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [showResults, setShowResults] = useState(false);
+    const [showCompletion, setShowCompletion] = useState(false);
     const [elapsedTime, setElapsedTime] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
     const [showExitConfirm, setShowExitConfirm] = useState(false);
@@ -53,6 +54,7 @@ export default function Part7DoublePassagePage() {
     const [reSolveMode, setReSolveMode] = useState(false);
     const [originalAnswers, setOriginalAnswers] = useState<Record<string, string>>({});
     const [isPerfectScore, setIsPerfectScore] = useState(false);
+    const [history, setHistory] = useState<{ attempts: number; lastScore?: number }>({ attempts: 1 });
 
     // Refs for scrolling to top on set change
     const leftPanelRef = useRef<HTMLDivElement>(null);
@@ -65,12 +67,20 @@ export default function Part7DoublePassagePage() {
         return notFound();
     }
 
-    // Load Current Data Set
-    const data: PracticeSet = fullPracticeTest[currentSetIndex];
-    if (!data) return <div>Data Error</div>; // Fallback
+    const allQuestions = fullPracticeTest.flatMap((s: any) => s.questions);
+
+    // Filter active sets based on mode
+    const activeSets = showResults
+        ? fullPracticeTest.filter((s: any) => s.questions.some((q: any) => answers[q.id] !== q.correctAnswer))
+        : ((retryMode || reSolveMode) && Object.keys(originalAnswers).length > 0)
+            ? fullPracticeTest.filter((s: any) => s.questions.some((q: any) => originalAnswers[q.id] !== q.correctAnswer))
+            : fullPracticeTest;
+
+    // Load Current Data Set from active sets (fallback to prevent hooks violation)
+    const data: PracticeSet = activeSets[currentSetIndex] || activeSets[0] || fullPracticeTest[0];
 
     const isFirstSet = currentSetIndex === 0;
-    const isLastSet = currentSetIndex === fullPracticeTest.length - 1;
+    const isLastSet = currentSetIndex === activeSets.length - 1;
 
     useEffect(() => {
         const checkDevice = () => {
@@ -133,7 +143,7 @@ export default function Part7DoublePassagePage() {
 
     // Save Progress
     useEffect(() => {
-        if (showResults) return;
+        if (showResults || showCompletion) return;
         if (Object.keys(answers).length > 0) {
             localStorage.setItem(`part7_multi_progress_v${vol}_t${testId}`, JSON.stringify({
                 answers,
@@ -141,7 +151,7 @@ export default function Part7DoublePassagePage() {
                 currentSetIndex
             }));
         }
-    }, [answers, elapsedTime, currentSetIndex, vol, testId, showResults]);
+    }, [answers, elapsedTime, currentSetIndex, vol, testId, showResults, showCompletion]);
 
     // Timer logic
     useEffect(() => {
@@ -186,20 +196,20 @@ export default function Part7DoublePassagePage() {
 
     const handleAnswerChange = (qId: string, optionIdx: number, optionLabel: string) => {
         if (showResults) return;
-        setAnswers(prev => {
-            const newAnswers = { ...prev, [qId]: optionLabel };
 
-            const allAnswered = data.questions.every(q => newAnswers[q.id]);
-            if (allAnswered && !isLastSet) {
-                setTimeout(() => {
-                    setCurrentSetIndex(prevIdx => prevIdx + 1);
-                }, 600);
-            } else {
-                scrollToNext(qId);
-            }
+        const newAnswers = { ...answers, [qId]: optionLabel };
 
-            return newAnswers;
-        });
+        const allAnswered = data.questions.every(q => newAnswers[q.id]);
+        if (allAnswered && !isLastSet) {
+            // Side-effect outside updater to avoid React StrictMode double-invocation
+            setTimeout(() => {
+                setCurrentSetIndex(prevIdx => prevIdx + 1);
+            }, 600);
+        } else {
+            scrollToNext(qId);
+        }
+
+        setAnswers(newAnswers);
     };
 
     const toggleResults = async () => {
@@ -207,11 +217,15 @@ export default function Part7DoublePassagePage() {
         const allQuestions = fullPracticeTest.flatMap(s => s.questions);
         const correctCount = allQuestions.filter(q => answers[q.id] === q.correctAnswer).length;
 
-        // Save to Firebase (Real Mode only)
-        if (retryMode) {
-            setShowResults(true);
-            return;
-        }
+        // Set completion state and clear localStorage BEFORE await
+        // to prevent save effect from re-saving data during async Firebase call
+        setShowCompletion(true);
+        setHistory(prev => ({ ...prev, lastScore: correctCount }));
+        localStorage.removeItem(`part7_multi_progress_v${vol}_t${testId}`);
+
+        if (retryMode) return;
+
+        // Save to Firebase (Real Mode only - background)
         const userStr = localStorage.getItem('toeic_user');
         if (userStr) {
             const user = JSON.parse(userStr);
@@ -237,7 +251,7 @@ export default function Part7DoublePassagePage() {
                     studentName: user.userName || user.name || "Unknown",
                     type: 'part7_multi',
                     detail: `Test ${testId}`,
-                    unit: `RC_Part7_Vol${vol}_Multi_Test${testId}_real`,
+                    unit: `RC_Part7_Vol${vol}_Double_Test${testId}_real`,
                     score: correctCount,
                     total: allQuestions.length,
                     wrongCount: allQuestions.length - correctCount,
@@ -253,7 +267,9 @@ export default function Part7DoublePassagePage() {
             }
         }
 
-        setShowResults(true);
+        localStorage.removeItem(`part7_multi_progress_v${vol}_t${testId}`);
+        setShowCompletion(true);
+        setHistory(prev => ({ ...prev, lastScore: correctCount }));
     };
 
     const handlePrev = () => {
@@ -280,6 +296,89 @@ export default function Part7DoublePassagePage() {
         );
     }
 
+    if (showCompletion) {
+        if (showResults) {
+            return (
+                <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                    <CheckCircle2 className="w-16 h-16 text-emerald-500 mb-6" />
+                    <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tighter">학습 완료</h2>
+                    <p className="text-slate-400 font-medium mb-8">오답 문제 복습을 모두 완료했습니다!</p>
+                    <div className="space-y-3 w-full max-w-xs">
+                        <button onClick={() => router.push(fromPath)} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold transition-all shadow-lg shadow-emerald-500/20">목록으로 돌아가기</button>
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                <div className="bg-amber-500/10 text-amber-500 ring-amber-500/50 w-24 h-24 rounded-3xl flex items-center justify-center text-5xl mb-6 ring-1 shadow-2xl">
+                    <Trophy className="w-12 h-12" />
+                </div>
+                <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tight">
+                    {reSolveMode ? "오답 다시 풀기 완료" : "학습 완료"}
+                </h2>
+                <p className={cn("font-bold tracking-widest text-xs uppercase mb-8", reSolveMode ? "text-rose-500" : "text-amber-500")}>
+                    Part 7 Double • Vol {vol} Test {testId} • {reSolveMode ? "Mock Review" : `시도 횟수: ${history.attempts}회`}
+                </p>
+
+                <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm mb-8">
+                    <div className="flex items-end justify-center gap-2 mb-2">
+                        <span className="text-6xl font-black text-white leading-none">{history.lastScore}</span>
+                        <span className="text-2xl font-bold text-slate-600 mb-1">/ {reSolveMode ? allQuestions.filter((q: any) => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length}</span>
+                    </div>
+                    <div className="text-slate-500 font-bold flex items-center justify-center gap-2 mt-4 grayscale opacity-70">
+                        <Timer className="w-4 h-4" />
+                        <span>소요 시간: {formatTime(elapsedTime)}</span>
+                    </div>
+                </div>
+
+                <div className="space-y-3 w-full max-w-xs">
+                    {history.lastScore === (reSolveMode ? allQuestions.filter((q: any) => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length) ? (
+                        <div className="w-full h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl font-bold flex items-center justify-center gap-2 text-emerald-400">
+                            <CheckCircle2 className="w-5 h-5" />
+                            <span>완벽합니다! 🎉</span>
+                        </div>
+                    ) : (
+                        <>
+                            <button
+                                onClick={() => {
+                                    setShowCompletion(false);
+                                    setShowResults(true);
+                                    setCurrentSetIndex(0);
+                                }}
+                                className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                            >
+                                틀린문제 정답확인
+                            </button>
+                            {!reSolveMode && (
+                                <button
+                                    onClick={() => {
+                                        setShowCompletion(false);
+                                        setReSolveMode(true);
+                                        setOriginalAnswers({...answers});
+                                        setAnswers({});
+                                        setCurrentSetIndex(0);
+                                        window.scrollTo(0, 0);
+                                    }}
+                                    className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors"
+                                >
+                                    틀린문제 다시풀기
+                                </button>
+                            )}
+                        </>
+                    )}
+                    <button
+                        onClick={() => router.push(fromPath)}
+                        className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
+                    >
+                        목록으로 돌아가기
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
     if (isLoadingRetry) {
         return (
             <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4">
@@ -301,7 +400,12 @@ export default function Part7DoublePassagePage() {
                     맞힌 문제라도 지문과 함께 가볍게<br />1회독 복습하시겠습니까?
                 </p>
                 <div className="space-y-4 w-full max-w-xs">
-                    <button onClick={() => { setIsPerfectScore(false); setShowResults(true); }} className="w-full h-14 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-500 hover:scale-[1.02] transition-all">예 (전체 문제 복습)</button>
+                    <button onClick={() => {
+                        const score = allQuestions.filter((q: any) => answers[q.id] === q.correctAnswer).length;
+                        setIsPerfectScore(false);
+                        setShowCompletion(true);
+                        setHistory(prev => ({ ...prev, lastScore: score }));
+                    }} className="w-full h-14 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-500 hover:scale-[1.02] transition-all">예 (전체 문제 복습)</button>
                     <button onClick={() => router.push(fromPath)} className="w-full h-14 bg-slate-800 text-slate-300 rounded-2xl font-bold hover:bg-slate-700 hover:text-white transition-all">아니오 (목록으로 복귀)</button>
                 </div>
             </div>
@@ -369,7 +473,7 @@ export default function Part7DoublePassagePage() {
                             <ChevronLeft size={20} />
                         </button>
                         <span className="text-sm font-black text-gray-600 min-w-[3rem] text-center">
-                            {currentSetIndex + 1} / {retryMode ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer)).length : fullPracticeTest.length}
+                            {currentSetIndex + 1} / {activeSets.length}
                         </span>
                         <button
                             onClick={handleNext}
@@ -390,9 +494,7 @@ export default function Part7DoublePassagePage() {
                 {/* Left Panel: Passages 1 & 2 (60%) */}
                 <div ref={leftPanelRef} className="w-[60%] bg-gray-50 h-full overflow-y-auto border-r border-gray-300 shadow-inner scroll-smooth">
                     <div className="space-y-8 pb-20 p-6">
-                        {(retryMode
-                            ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
-                            : fullPracticeTest)[currentSetIndex].passages.slice(0, 2).map((passage, idx) => (
+                        {data.passages.slice(0, 2).map((passage, idx) => (
                                 <div key={passage.id} className="bg-white border border-gray-200 shadow-sm p-4 relative">
                                     {/* Passage Label */}
                                     <div className="absolute top-0 left-0 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10 flex gap-2">
@@ -406,16 +508,9 @@ export default function Part7DoublePassagePage() {
                                     </div>
                                     <div className="mt-8">
                                         {(() => {
-                                            const currentSetData = (retryMode
-                                                ? fullPracticeTest.filter((s: any) => s.questions.some((q: any) => originalAnswers[q.id] !== q.correctAnswer))
-                                                : fullPracticeTest)[currentSetIndex];
-
-                                            // Try to associate vocab question with passage (simplistic association)
-                                            // Ideally we'd map questions exactly to passages, but here we just pass the first match's highlight info
-                                            const vocabQ = currentSetData.questions.find((q: any) => isVocabQuestion(q.classification));
+                                            const vocabQ = data.questions.find((q: any) => isVocabQuestion(q.classification));
                                             const highlightInfo = vocabQ ? parseVocabQuestion(vocabQ.text) : null;
-
-                                            return <DocumentRenderer doc={passage} highlight={highlightInfo || undefined} />
+                                            return <DocumentRenderer doc={passage} highlight={highlightInfo || undefined} />;
                                         })()}
                                     </div>
                                 </div>
@@ -452,20 +547,12 @@ export default function Part7DoublePassagePage() {
                     <div ref={rightBottomRef} className={`${data.passages[2] ? 'h-[50%]' : 'h-full'} bg-white overflow-y-auto scroll-smooth`}>
                         <div className="pb-20 p-4">
                             <h2 className="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 border-b border-gray-100 pb-2">
-                                Questions {(retryMode
-                                    ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
-                                    : fullPracticeTest)[currentSetIndex].questions[0].questionNo}–{(retryMode
-                                        ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
-                                        : fullPracticeTest)[currentSetIndex].questions[(retryMode
-                                            ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
-                                            : fullPracticeTest)[currentSetIndex].questions.length - 1].questionNo}
+                                Questions {data.questions[0].questionNo}–{data.questions[data.questions.length - 1].questionNo}
                             </h2>
 
                             <div className="space-y-3"> {/* Tightened spacing */}
-                                {(retryMode
-                                    ? fullPracticeTest.filter(s => s.questions.some(q => originalAnswers[q.id] !== q.correctAnswer))
-                                    : fullPracticeTest)[currentSetIndex].questions.filter(q => {
-                                        if (retryMode) return originalAnswers[q.id] !== q.correctAnswer;
+                                {data.questions.filter((q: any) => {
+                                        if (retryMode || reSolveMode) return originalAnswers[q.id] !== q.correctAnswer;
                                         return true;
                                     }).map((q, idx) => {
                                         const qNum = String(q.questionNo); // Ensure string for consistency
@@ -553,6 +640,22 @@ export default function Part7DoublePassagePage() {
                                             <span className="text-lg">제출하기</span>
                                             <span className="text-sm opacity-60">|</span>
                                             <span className="text-sm">Submit</span>
+                                        </button>
+                                    </div>
+                                )}
+                                {showResults && isLastSet && (
+                                    <div className="mt-8 pt-8 border-t border-gray-200 flex justify-center">
+                                        <button
+                                            onClick={() => {
+                                                setShowResults(false);
+                                                setShowCompletion(true);
+                                                setCurrentSetIndex(0);
+                                            }}
+                                            className="px-10 py-3 bg-slate-700 text-white font-black rounded-xl hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2"
+                                        >
+                                            <span className="text-lg">학습 결과로</span>
+                                            <span className="text-sm opacity-60">|</span>
+                                            <span className="text-sm">Back to Results</span>
                                         </button>
                                     </div>
                                 )}

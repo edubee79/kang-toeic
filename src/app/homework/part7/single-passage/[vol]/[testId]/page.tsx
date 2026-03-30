@@ -68,8 +68,8 @@ function Part7SingleTestRunnerContent() {
         setIsMounted(true);
         if (!testSet) return;
 
-        // Load Progress (Real Mode only)
-        if (!isDrillMode) {
+        // Load Progress (Real Mode only, not in retry/review mode)
+        if (!isDrillMode && !retryMode) {
             const savedProgress = localStorage.getItem(`part7_single_progress_v${vol}_t${testId}`);
             if (savedProgress) {
                 try {
@@ -178,21 +178,19 @@ function Part7SingleTestRunnerContent() {
         if (reviewMode) return;
         if (isDrillMode && selectedAnswers[questionId]) return;
 
-        setSelectedAnswers(prev => {
-            const newAnswers = { ...prev, [questionId]: optionLabel };
+        const newAnswers = { ...selectedAnswers, [questionId]: optionLabel };
 
-            const allAnswered = currentSet.questions.every(q => newAnswers[q.id]);
-            if (allAnswered && currentSetIndex < (testSet?.sets.length || 0) - 1) {
-                setTimeout(() => {
-                    setCurrentSetIndex(idx => idx + 1);
-                }, 600);
-            } else {
-                // Auto-scroll to next question
-                scrollToNext(questionId);
-            }
+        const allAnswered = currentSet.questions.every(q => newAnswers[q.id]);
+        if (allAnswered && currentSetIndex < filteredSets.length - 1) {
+            // Side-effect outside updater to avoid React StrictMode double-invocation
+            setTimeout(() => {
+                setCurrentSetIndex(prev => prev + 1);
+            }, 600);
+        } else {
+            scrollToNext(questionId);
+        }
 
-            return newAnswers;
-        });
+        setSelectedAnswers(newAnswers);
     };
 
     const scrollToNext = (currentId: string) => {
@@ -344,7 +342,7 @@ function Part7SingleTestRunnerContent() {
                 <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm mb-8">
                     <div className="flex items-end justify-center gap-2 mb-2">
                         <span className="text-6xl font-black text-white leading-none">{history.lastScore}</span>
-                        <span className="text-2xl font-bold text-slate-600 mb-1">/ {reSolveMode ? filteredSets.flatMap(s => s.questions).length : allQuestions.length}</span>
+                        <span className="text-2xl font-bold text-slate-600 mb-1">/ {reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== (q.correctAnswer || (q as any).answer)).length : allQuestions.length}</span>
                     </div>
                     <div className="text-slate-500 font-bold flex items-center justify-center gap-2 mt-4 grayscale opacity-70">
                         <Timer className="w-4 h-4" />
@@ -353,23 +351,42 @@ function Part7SingleTestRunnerContent() {
                 </div>
 
                 <div className="space-y-3 w-full max-w-xs">
-                    {history.lastScore === allQuestions.length ? (
+                    {history.lastScore === (reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== (q.correctAnswer || (q as any).answer)).length : allQuestions.length) ? (
                         <div className="w-full h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl font-bold flex items-center justify-center gap-2 text-emerald-400">
                             <CheckCircle2 className="w-5 h-5" />
                             <span>완벽합니다! 🎉</span>
                         </div>
                     ) : (
-                        <button onClick={() => { setShowCompletion(false); setReviewMode(true); setCurrentSetIndex(0); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
-                            틀린문제 확인
-                        </button>
+                        <>
+                            <button
+                                onClick={() => {
+                                    setShowCompletion(false);
+                                    setReviewMode(true);
+                                    setCurrentSetIndex(0);
+                                }}
+                                className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                            >
+                                틀린문제 정답확인
+                            </button>
+                            {!reSolveMode && (
+                                <button
+                                    onClick={() => {
+                                        setShowCompletion(false);
+                                        setReSolveMode(true);
+                                        setOriginalAnswers({...selectedAnswers});
+                                        setSelectedAnswers({});
+                                        setCurrentSetIndex(0);
+                                        window.scrollTo(0, 0);
+                                    }}
+                                    className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors"
+                                >
+                                    틀린문제 다시풀기
+                                </button>
+                            )}
+                        </>
                     )}
-                    <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
-                        다시 풀기
-                    </button>
                     <button
-                        onClick={() => {
-                            router.push(fromPath);
-                        }}
+                        onClick={() => router.push(fromPath)}
                         className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
                     >
                         목록으로 돌아가기
@@ -476,7 +493,7 @@ function Part7SingleTestRunnerContent() {
                     {!reviewMode && (
                         <Button
                             onClick={finishTest}
-                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < allQuestions.length}
+                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < (reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length)}
                             className={cn(
                                 "h-8 lg:h-10 text-xs lg:text-sm px-3 lg:px-4",
                                 isDrillMode ? (Object.keys(selectedAnswers).length === allQuestions.length ? "bg-indigo-600" : "bg-slate-800") : "bg-amber-600"
@@ -700,7 +717,7 @@ function Part7SingleTestRunnerContent() {
                                         <Button
                                             className="flex-1 h-8 lg:h-12 text-xs lg:text-sm bg-emerald-600 hover:bg-emerald-500 text-white font-bold"
                                             onClick={finishTest}
-                                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < allQuestions.length}
+                                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < (reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length)}
                                         >
                                             <span className="hidden lg:inline">시험 종료</span>
                                             <span className="lg:hidden">종료</span>

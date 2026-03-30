@@ -17,6 +17,7 @@ export interface UserProfile {
     };
     status?: 'pending' | 'approved' | 'rejected';
     rejectionReason?: string;
+    registeredAt?: any;
 }
 
 const getVerifiedUserDoc = async (userId: string): Promise<{ ref: DocumentReference, snap?: DocumentSnapshot } | null> => {

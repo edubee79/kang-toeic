@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { collection, query, where, getDocs, orderBy, doc, updateDoc } from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy, doc, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
 import { Target, Calendar, BarChart2, Zap, CheckCircle2, Trophy, ArrowRight, Flame, TrendingUp, Medal, Settings, User, AlertCircle, ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
@@ -134,9 +134,13 @@ export default function StudentHomePage() {
         const qAll = query(collection(db, "Assignments"), where("targetClass", "==", "all"));
         const statsQ = query(collection(db, "Manager_Results"), where("studentId", "==", userId));
 
-        const [pSnap, cSnap, aSnap, sSnap] = await Promise.all([
-            getDocs(qPersonal), getDocs(qClass), getDocs(qAll), getDocs(statsQ)
+        const [pSnap, cSnap, aSnap, sSnap, uSnap] = await Promise.all([
+            getDocs(qPersonal), getDocs(qClass), getDocs(qAll), getDocs(statsQ),
+            getDoc(doc(db, "Winter_Users", userId))
         ]);
+
+        const userDoc = uSnap.exists() ? uSnap.data() : null;
+        const registeredAt = userDoc?.registeredAt;
 
         const doneMap: Record<string, any> = {};
         sSnap.forEach(d => {
@@ -151,7 +155,19 @@ export default function StudentHomePage() {
         });
 
         const sorted = Array.from(assignmentMap.values())
-            .filter(data => !data.isAiGenerated)
+            .filter(data => {
+                if (data.isAiGenerated) return false;
+                
+                // 1. 개인 과제는 가입일과 무관하게 노출
+                if (data.targetStudentId === userId) return true;
+                
+                // 2. 클래스/전체 과제는 가입일 이후 것만 노출 (가입일 정보가 있을 때만)
+                if (registeredAt && data.createdAt) {
+                    return data.createdAt.seconds >= registeredAt.seconds;
+                }
+                
+                return true; // 가입일 정보가 없으면 안전하게 노출
+            })
             .sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
 
         setAssignments(sorted);

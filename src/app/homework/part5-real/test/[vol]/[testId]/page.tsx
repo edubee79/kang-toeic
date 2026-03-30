@@ -106,8 +106,8 @@ function Part5TestRunnerContent() {
     useEffect(() => {
         if (!testSet) return;
 
-        // Load Progress (Real Mode only)
-        if (!isDrillMode) {
+        // Load Progress (Real Mode only, not in retry/review mode)
+        if (!isDrillMode && !retryMode) {
             const savedProgress = localStorage.getItem(`part5_progress_v${vol}_t${testId}`);
             if (savedProgress) {
                 try {
@@ -374,19 +374,39 @@ function Part5TestRunnerContent() {
                 </div>
 
                 <div className="space-y-3 w-full max-w-xs">
-                    {history.lastScore === testSet.questions.length ? (
+                    {history.lastScore === redoCount ? (
                         <div className="w-full h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl font-bold flex items-center justify-center gap-2 text-emerald-400">
                             <CheckCircle2 className="w-5 h-5" />
                             <span>완벽합니다! 🎉</span>
                         </div>
                     ) : (
-                        <button onClick={() => { setShowCompletion(false); setReviewMode(true); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
-                            틀린문제 확인
-                        </button>
+                        <>
+                            <button
+                                onClick={() => {
+                                    setShowCompletion(false);
+                                    setReviewMode(true);
+                                    // isQuickReview logic can safely use reviewMode
+                                }}
+                                className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                            >
+                                틀린문제 정답확인
+                            </button>
+                            {!reSolveMode && (
+                                <button
+                                    onClick={() => {
+                                        setShowCompletion(false);
+                                        setReSolveMode(true);
+                                        setOriginalAnswers({...selectedAnswers});
+                                        setSelectedAnswers({});
+                                        window.scrollTo(0, 0);
+                                    }}
+                                    className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors"
+                                >
+                                    틀린문제 다시풀기
+                                </button>
+                            )}
+                        </>
                     )}
-                    <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
-                        다시 풀기
-                    </button>
                     <button
                         onClick={() => router.push(fromPath)}
                         className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
@@ -555,7 +575,7 @@ function Part5TestRunnerContent() {
                                                     <div className="ml-auto flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-800 border border-slate-700">
                                                         <Tag className="w-3 h-3 text-slate-500" />
                                                         <span className="text-[10px] text-slate-400 font-bold">
-                                                            {getToeicTagLabel(q.classification)}
+                                                            {getToeicTagLabel(q.classification ?? '')}
                                                         </span>
                                                     </div>
 
@@ -642,7 +662,16 @@ function Part5TestRunnerContent() {
                     <div className="fixed bottom-6 left-0 right-0 px-6 flex justify-center pointer-events-none">
                         <button
                             onClick={finishTest}
-                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < testSet.questions.length}
+                            disabled={
+                                !isDrillMode &&
+                                Object.keys(selectedAnswers).length < (
+                                    reSolveMode
+                                        ? (incorrectIds.length > 0
+                                            ? incorrectIds.length
+                                            : testSet.questions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length)
+                                        : testSet.questions.length
+                                )
+                            }
                             className={cn(
                                 "pointer-events-auto shadow-2xl px-8 py-4 rounded-full font-black text-lg flex items-center gap-2 transition-all active:scale-95",
                                 isDrillMode

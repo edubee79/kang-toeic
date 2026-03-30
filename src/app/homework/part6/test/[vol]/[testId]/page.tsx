@@ -61,8 +61,8 @@ function Part6TestRunnerContent() {
         setIsMounted(true);
         if (!testSet) return;
 
-        // Load Progress (Real Mode only)
-        if (!isDrillMode) {
+        // Load Progress (Real Mode only, not in retry/review mode)
+        if (!isDrillMode && !retryMode) {
             const savedProgress = localStorage.getItem(`part6_progress_v${vol}_t${testId}`);
             if (savedProgress) {
                 try {
@@ -177,20 +177,24 @@ function Part6TestRunnerContent() {
         if (reviewMode) return;
         if ((isDrillMode || reSolveMode) && selectedAnswers[questionId]) return;
 
-        setSelectedAnswers(prev => {
-            const newAnswers = { ...prev, [questionId]: optionLabel };
+        const newAnswers = { ...selectedAnswers, [questionId]: optionLabel };
 
-            const allAnswered = passage.questions.every(q => newAnswers[q.id]);
-            if (allAnswered && currentPassageIndex < (testSet?.passages.length || 0) - 1) {
-                setTimeout(() => {
-                    setCurrentPassageIndex(idx => idx + 1);
-                }, 600);
-            } else {
-                scrollToNext(questionId);
-            }
+        // In reSolveMode, only check questions the user needs to answer (incorrect ones)
+        const questionsToAnswer = reSolveMode
+            ? passage.questions.filter((q: any) => originalAnswers[q.id] !== q.correctAnswer)
+            : passage.questions;
+        const allAnswered = questionsToAnswer.every(q => newAnswers[q.id]);
 
-            return newAnswers;
-        });
+        if (allAnswered && currentPassageIndex < filteredPassages.length - 1) {
+            // Side-effect outside updater to avoid React StrictMode double-invocation
+            setTimeout(() => {
+                setCurrentPassageIndex(prev => prev + 1);
+            }, 600);
+        } else {
+            scrollToNext(questionId);
+        }
+
+        setSelectedAnswers(newAnswers);
         setActiveQuestionId(questionId);
     };
 
@@ -259,7 +263,7 @@ function Part6TestRunnerContent() {
                             incorrects.push({
                                 id: q.id,
                                 classification: q.classification || 'Unknown',
-                                contextType: passage.contextType || passage.docType || getStandardizedPassageType(passage.type) || 'Unknown'
+                                contextType: passage.contextType || passage.docType || getStandardizedPassageType((passage as any).type) || 'Unknown'
                             });
                         }
                     });
@@ -319,7 +323,7 @@ function Part6TestRunnerContent() {
                 const answer = selectedAnswers[qId];
                 const isRevealed = reviewMode || (isDrillMode && !!answer);
                 const isCorrect = answer === q?.correctAnswer;
-                const markerText = isRevealed && answer ? q?.options.find(o => o.label === answer)?.text : `[${q?.questionNo || qId}]`;
+                const markerText = isRevealed && answer && q ? normalizeOptions(q.options).find(o => o.label === answer)?.text : `[${q?.questionNo || qId}]`;
 
                 return (
                     <span
@@ -378,7 +382,7 @@ function Part6TestRunnerContent() {
                 <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm mb-8">
                     <div className="flex items-end justify-center gap-2 mb-2">
                         <span className="text-6xl font-black text-white leading-none">{history.lastScore}</span>
-                        <span className="text-2xl font-bold text-slate-600 mb-1">/ {allQuestions.length}</span>
+                        <span className="text-2xl font-bold text-slate-600 mb-1">/ {reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length}</span>
                     </div>
                     <div className="text-slate-500 font-bold flex items-center justify-center gap-2 mt-4 grayscale opacity-70">
                         <Timer className="w-4 h-4" />
@@ -387,19 +391,39 @@ function Part6TestRunnerContent() {
                 </div>
 
                 <div className="space-y-3 w-full max-w-xs">
-                    {history.lastScore === allQuestions.length ? (
+                    {history.lastScore === (reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length) ? (
                         <div className="w-full h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl font-bold flex items-center justify-center gap-2 text-emerald-400">
                             <CheckCircle2 className="w-5 h-5" />
                             <span>완벽합니다! 🎉</span>
                         </div>
                     ) : (
-                        <button onClick={() => { setShowCompletion(false); setReviewMode(true); setCurrentPassageIndex(0); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
-                            틀린문제 확인
-                        </button>
+                        <>
+                            <button
+                                onClick={() => {
+                                    setShowCompletion(false);
+                                    setReviewMode(true);
+                                }}
+                                className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                            >
+                                틀린문제 정답확인
+                            </button>
+                            {!reSolveMode && (
+                                <button
+                                    onClick={() => {
+                                        setShowCompletion(false);
+                                        setReSolveMode(true);
+                                        setOriginalAnswers({...selectedAnswers});
+                                        setSelectedAnswers({});
+                                        setCurrentPassageIndex(0);
+                                        window.scrollTo(0, 0);
+                                    }}
+                                    className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors"
+                                >
+                                    틀린문제 다시풀기
+                                </button>
+                            )}
+                        </>
                     )}
-                    <button onClick={handleRetake} className={cn("w-full h-14 text-white rounded-2xl font-bold active:scale-95 transition-all", isDrillMode ? "bg-indigo-600 hover:bg-indigo-500" : "bg-amber-600 hover:bg-amber-500")}>
-                        다시 풀기
-                    </button>
                     <button
                         onClick={() => router.push(fromPath)}
                         className="block w-full py-4 text-slate-500 hover:text-white text-sm font-bold"
@@ -508,7 +532,7 @@ function Part6TestRunnerContent() {
                     {!reviewMode && (
                         <Button
                             onClick={finishTest}
-                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < allQuestions.length}
+                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < (reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length)}
                             className={cn(
                                 "h-8 lg:h-10 text-xs lg:text-sm px-3 lg:px-4",
                                 isDrillMode ? (Object.keys(selectedAnswers).length === allQuestions.length ? "bg-indigo-600" : "bg-slate-800") : "bg-amber-600"
@@ -539,7 +563,7 @@ function Part6TestRunnerContent() {
                     </div>
 
                     {/* Vertical Split Layout: 70% Passage / 30% Questions on Mobile */}
-                    <div key={passage.id} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full overflow-hidden lg:overflow-visible">
+                    <div key={(passage as any).id || currentPassageIndex} className="flex flex-col lg:grid lg:grid-cols-10 gap-0 lg:gap-8 flex-1 h-full overflow-hidden lg:overflow-visible">
                         {/* Passage: 70% on Mobile, 70% on Desktop */}
                         <div className={cn(
                             "max-h-[60%] lg:h-fit overflow-y-auto lg:overflow-visible p-0 lg:p-0 border-b border-slate-700 lg:border-none",
@@ -560,7 +584,7 @@ function Part6TestRunnerContent() {
                                 <div className="bg-slate-900/50 p-1 lg:p-4 rounded lg:rounded-xl text-slate-400 text-[10px] lg:text-sm mt-4">
                                     <p className="font-bold mb-0 lg:mb-1 text-slate-300 text-[10px] lg:text-sm">전문 해석:</p>
                                     <div className="whitespace-pre-wrap">
-                                        {passage.vol === 3 && testId === 1 ? <TouchDictionary text={passage.translation} /> : passage.translation}
+                                        {vol === 3 && testId === 1 ? <TouchDictionary text={passage.translation} /> : passage.translation}
                                     </div>
                                 </div>
                             )}
@@ -711,7 +735,7 @@ function Part6TestRunnerContent() {
                                         <Button
                                             className="flex-1 h-8 lg:h-12 text-xs lg:text-sm bg-emerald-600 hover:bg-emerald-500 text-white font-bold"
                                             onClick={finishTest}
-                                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < allQuestions.length}
+                                            disabled={!isDrillMode && Object.keys(selectedAnswers).length < (reSolveMode ? allQuestions.filter(q => originalAnswers[q.id] !== q.correctAnswer).length : allQuestions.length)}
                                         >
                                             <span className="hidden lg:inline">시험 종료</span>
                                             <span className="lg:hidden">종료</span>

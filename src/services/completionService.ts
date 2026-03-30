@@ -28,7 +28,7 @@ export async function getTestCompletion(userId: string, unit: string): Promise<T
             return { completed: false, score: 0, total: 0, attempts: 0 };
         }
 
-        const data = doc.data();
+        const data = snapshot.docs[0].data();
         let score = data.score || 0;
         let total = data.total || 0;
 
@@ -81,8 +81,15 @@ export async function getMultipleTestCompletions(
         // For each requested unit, get the latest result
         units.forEach(unit => {
             if (unitMap[unit]) {
-                // Sort by timestamp and get latest
+                // Sort by score (descending) and get best
                 const sorted = unitMap[unit].sort((a, b) => {
+                    const aScore = a.score || 0;
+                    const bScore = b.score || 0;
+                    
+                    if (bScore !== aScore) {
+                        return bScore - aScore; // Descending by score
+                    }
+                    // If scores are equal, sort by newest
                     const aTime = a.timestamp?.toDate?.()?.getTime() || 0;
                     const bTime = b.timestamp?.toDate?.()?.getTime() || 0;
                     return bTime - aTime;

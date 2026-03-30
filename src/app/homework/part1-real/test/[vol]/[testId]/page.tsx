@@ -38,13 +38,14 @@ export default function Part1TestRunner() {
     const [incorrectIds, setIncorrectIds] = useState<string[]>([]);
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
     const [isPerfectScore, setIsPerfectScore] = useState(false);
+    const [isQuickReview, setIsQuickReview] = useState(false);
 
     // Filtered questions for review mode or retry mode
     const displayQuestions = useMemo(() => {
         if (!testSet?.questions) return [];
 
-        // Priority 1: Retry mode based on external result ID
-        if (retryMode && incorrectIds.length > 0) {
+        // Priority 1: incorrectIds 기반 필터 (Firebase retry 또는 복습결과 정답보기)
+        if (incorrectIds.length > 0) {
             return testSet.questions.filter((q: any) => incorrectIds.includes(q.id));
         }
 
@@ -64,8 +65,6 @@ export default function Part1TestRunner() {
         } else if (reviewMode) {
             // End of review mode: go back to result screen
             setIsFinished(true);
-            setReviewMode(false);
-            setShowOnlyWrong(false);
         } else {
             // End of normal test: finish and save
             finishTest();
@@ -231,6 +230,9 @@ export default function Part1TestRunner() {
         setScore(finalPercentage);
         setIsFinished(true);
 
+        // Clear saved progress so next entry starts fresh
+        localStorage.removeItem(`part1_progress_v${vol}_t${testId}`);
+
         const userStr = localStorage.getItem('toeic_user');
         if (userStr && !retryMode) { // Only save new result if NOT in retry mode
             const user = JSON.parse(userStr);
@@ -308,15 +310,93 @@ export default function Part1TestRunner() {
         );
     }
 
+    const reviewedCount = Object.keys(reviewedAnswers).filter(id => {
+        const q = testSet?.questions?.find((q: any) => q.id === id);
+        return reviewedAnswers[id] === q?.correctAnswer;
+    }).length;
+
     if (isFinished) {
         if (reviewMode) {
+            if (isQuickReview) {
+                return (
+                    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                        <CheckCircle2 className="w-16 h-16 text-emerald-500 mb-6" />
+                        <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tighter">오답 확인 완료</h2>
+                        <p className="text-slate-400 font-medium mb-8">틀린 문제 확인을 모두 완료했습니다!</p>
+                        <div className="space-y-3 w-full max-w-xs">
+                            <button onClick={() => router.push(fromPath)} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold transition-all shadow-lg shadow-emerald-500/20">
+                                목록으로 돌아가기
+                            </button>
+                        </div>
+                    </div>
+                );
+            }
+
+            // 복습에서 다시 푼 문제 목록 (wrongQueue = 다시풀기 대상)
+            const retryTargetIds = incorrectIds.length > 0
+                ? incorrectIds  // Firebase retry 모드
+                : testSet?.questions
+                    .filter((q: any) => selectedAnswers[q.id] !== q.correctAnswer)
+                    .map((q: any) => q.id) ?? [];
+
+            const retryTotal = retryTargetIds.length;
+
+            // 복습에서 맞은 수 (reviewedAnswers 기준)
+            const retryCorrect = retryTargetIds.filter((id: string) => {
+                const q = testSet?.questions?.find((q: any) => q.id === id);
+                return reviewedAnswers[id] === q?.correctAnswer;
+            }).length;
+
+            // 복습에서도 틀린 문제 목록 (정답보기 대상)
+            const stillWrongIds = retryTargetIds.filter((id: string) => {
+                const q = testSet?.questions?.find((q: any) => q.id === id);
+                return reviewedAnswers[id] !== q?.correctAnswer;
+            });
+
             return (
                 <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
                     <CheckCircle2 className="w-16 h-16 text-emerald-500 mb-6" />
-                    <h2 className="text-3xl font-black text-white mb-2 uppercase">학습 완료</h2>
-                    <p className="text-slate-400 font-medium mb-8">오답 문제 복습을 모두 완료했습니다!</p>
+                    <h2 className="text-3xl font-black text-white mb-2 uppercase">오답 복습 완료</h2>
+                    <p className="text-slate-400 font-medium mb-6">복습 결과를 확인하세요</p>
+                    <div className="bg-slate-900/50 rounded-3xl p-8 border border-slate-800 w-full max-w-sm mb-8">
+                        <div className="flex items-center justify-center gap-6">
+                            <div className="text-center">
+                                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">맞은 문제</p>
+                                <p className="text-5xl font-black text-white leading-none">{retryCorrect}</p>
+                            </div>
+                            <div className="w-px h-12 bg-slate-800" />
+                            <div className="text-center">
+                                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">복습 문제 수</p>
+                                <p className="text-5xl font-black text-slate-400 leading-none">{retryTotal}</p>
+                            </div>
+                        </div>
+                        {retryCorrect === retryTotal && (
+                            <p className="text-emerald-400 font-bold text-sm mt-4">🎉 모든 복습 문제를 맞혔습니다!</p>
+                        )}
+                    </div>
                     <div className="space-y-3 w-full max-w-xs">
-                        <button onClick={() => router.push(fromPath)} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold transition-all shadow-lg shadow-emerald-500/20">목록으로 돌아가기</button>
+                        {stillWrongIds.length > 0 && (
+                            <button
+                                onClick={() => {
+                                    setIsFinished(false);
+                                    setReviewMode(true);
+                                    setIsQuickReview(true);
+                                    setDisplayIndex(0);
+                                    setShowOnlyWrong(false);
+                                    // 복습에서도 틀린 문제만 표시하기 위해 incorrectIds 업데이트
+                                    setIncorrectIds(stillWrongIds);
+                                }}
+                                className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                            >
+                                틀린문제 정답보기
+                            </button>
+                        )}
+                        <button
+                            onClick={() => router.push(fromPath)}
+                            className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold transition-all shadow-lg shadow-emerald-500/20"
+                        >
+                            목록으로 돌아가기
+                        </button>
                     </div>
                 </div>
             );
@@ -332,14 +412,37 @@ export default function Part1TestRunner() {
                 <p className="text-amber-500 font-bold mb-8">Vol {vol} Test {testId} • Real Mode</p>
                 <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-sm mb-8">
                     <div className="flex items-end justify-center gap-2">
-                        <span className="text-6xl font-black text-white">{correctCount}</span>
-                        <span className="text-2xl font-bold text-slate-600">/ {totalCount}</span>
+                        <span className="text-6xl font-black text-white">{retryMode ? reviewedCount : correctCount}</span>
+                        <span className="text-2xl font-bold text-slate-600">/ {retryMode ? incorrectIds.length : totalCount}</span>
                     </div>
                 </div>
                 <div className="space-y-3 w-full max-w-xs">
-                    <button onClick={() => { setIsFinished(false); setReviewMode(true); setDisplayIndex(0); setShowOnlyWrong(true); }} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold hover:bg-slate-700">틀린문제 확인</button>
-                    <button onClick={handleRetake} className="w-full h-14 bg-amber-600 text-white rounded-2xl font-bold hover:bg-amber-500">다시 풀기</button>
-                    <button onClick={() => router.push(fromPath)} className="w-full py-4 text-slate-500 font-bold">목록으로 돌아가기</button>
+                    <button
+                        onClick={() => {
+                            setIsFinished(false);
+                            setReviewMode(true);
+                            setIsQuickReview(true);
+                            setDisplayIndex(0);
+                            setShowOnlyWrong(true);
+                        }}
+                        className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                    >
+                        틀린문제 정답확인
+                    </button>
+                    <button
+                        onClick={() => {
+                            setIsFinished(false);
+                            setReviewMode(true);
+                            setIsQuickReview(false);
+                            setDisplayIndex(0);
+                            setShowOnlyWrong(true);
+                            setReviewedAnswers({});
+                        }}
+                        className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold hover:bg-slate-700"
+                    >
+                        틀린문제 다시풀기
+                    </button>
+                    <button onClick={() => router.push(fromPath)} className="w-full h-14 bg-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-300">목록으로 돌아가기</button>
                 </div>
             </div>
         );
@@ -383,14 +486,14 @@ export default function Part1TestRunner() {
                         {reviewMode && currentQ && (
                             <div className={cn(
                                 "absolute top-4 left-4 px-4 py-2 rounded-xl border font-black text-sm shadow-2xl backdrop-blur-md z-20",
-                                (selectedAnswers[currentQ.id] === currentQ.correctAnswer || reviewedAnswers[currentQ.id] === currentQ.correctAnswer)
+                                (isQuickReview || selectedAnswers[currentQ.id] === currentQ.correctAnswer || reviewedAnswers[currentQ.id] === currentQ.correctAnswer)
                                     ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
                                     : (reviewedAnswers[currentQ.id] && reviewedAnswers[currentQ.id] !== currentQ.correctAnswer)
                                         ? "bg-rose-500/20 border-rose-500 text-rose-400"
                                         : "bg-slate-800 border-slate-700 text-slate-400"
                             )}>
-                                {(selectedAnswers[currentQ.id] === currentQ.correctAnswer || reviewedAnswers[currentQ.id] === currentQ.correctAnswer)
-                                    ? "CORRECT"
+                                {(isQuickReview || selectedAnswers[currentQ.id] === currentQ.correctAnswer || reviewedAnswers[currentQ.id] === currentQ.correctAnswer)
+                                    ? (isQuickReview ? "REVIEW" : "CORRECT")
                                     : (reviewedAnswers[currentQ.id] && reviewedAnswers[currentQ.id] !== currentQ.correctAnswer)
                                         ? "WRONG"
                                         : "RETRY"}
@@ -423,15 +526,20 @@ export default function Part1TestRunner() {
                                 <button key={opt} onClick={() => handleSelect(opt)} className={cn(
                                     "p-5 rounded-2xl border flex items-center gap-4 transition-all text-left group",
                                     reviewMode
-                                        ? (isCorrect && (isCorrectInitial || !!reviewAns) ? "border-emerald-500 bg-emerald-950/40" : (reviewAns === opt ? "border-rose-500 bg-rose-950/40" : "border-slate-800 bg-slate-900/50"))
+                                        ? (isCorrect && (isQuickReview || isCorrectInitial || !!reviewAns)
+                                            ? "border-emerald-500 bg-emerald-950/40"
+                                            : (isQuickReview
+                                                ? ((reviewAns === opt || (!reviewAns && isSelected)) ? "border-rose-500 bg-rose-950/40" : "border-slate-800 bg-slate-900/50")
+                                                : (reviewAns === opt ? "border-rose-500 bg-rose-950/40" : "border-slate-800 bg-slate-900/50")
+                                            ))
                                         : (isSelected ? "border-indigo-500 bg-indigo-600 text-white shadow-xl shadow-indigo-500/20 scale-[1.02]" : "border-slate-800 bg-slate-900/50 text-slate-400 hover:border-slate-700")
                                 )}>
                                     <span className={cn(
                                         "w-10 h-10 rounded-full border flex items-center justify-center font-black transition-colors shrink-0",
-                                        isSelected || (reviewMode && reviewAns === opt) ? "border-white bg-white text-indigo-600" : "border-slate-700"
+                                        (!reviewMode && isSelected) || (reviewMode && (reviewAns === opt || (isQuickReview && isSelected))) ? "border-white bg-white text-indigo-600" : "border-slate-700"
                                     )}>{opt}</span>
                                     <div className="hidden md:block flex-1">
-                                        {reviewMode && currentQ.script && (isCorrectInitial || !!reviewAns) && (
+                                        {reviewMode && currentQ.script && (isQuickReview || isCorrectInitial || !!reviewAns) && (
                                             <div className="mt-1 animate-in slide-in-from-left-2 fade-in duration-300">
                                                 <p className={cn(
                                                     "text-sm font-medium",
@@ -447,7 +555,7 @@ export default function Part1TestRunner() {
                             );
                         })}
                     </div>
-                    {reviewMode && currentQ?.script?.translation && (selectedAnswers[currentQ.id] === currentQ.correctAnswer || !!reviewedAnswers[currentQ.id]) && (
+                    {reviewMode && currentQ?.script?.translation && (isQuickReview || selectedAnswers[currentQ.id] === currentQ.correctAnswer || !!reviewedAnswers[currentQ.id]) && (
                         <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl animate-in slide-in-from-bottom-2 duration-300">
                             <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-2">Analysis & Script</p>
                             <p className="text-xs text-slate-400 italic leading-relaxed">{currentQ.script.translation}</p>

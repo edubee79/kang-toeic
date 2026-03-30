@@ -558,62 +558,62 @@ export const test1Data: Part7Test = {
                 {
                     id: "v3-p7-t1-q172",
                     questionNo: 172,
-                    text: "What is being discussed?",
-                    classification: "P7_PURPOSE",
+                    text: "For what type of company do the writers work?",
+                    classification: "P7_INFERENCE",
                     options: {
-                        "A": "Providing a reference for a coworker",
-                        "B": "Planning a job interview",
-                        "C": "Applying for a freelance position",
-                        "D": "Rescheduling a meeting with a client"
+                        "A": "A book publisher",
+                        "B": "A newspaper",
+                        "C": "A film production company",
+                        "D": "A job-placement firm"
                     },
                     correctAnswer: "B",
-                    translation: "무엇에 대해 논의하고 있는가?",
-                    explanation: "에릭슨 씨의 다음 면접(next interview) 일정을 잡는 것에 대해 이야기하고 있으므로 구직 면접 계획이 정답입니다."
+                    translation: "이 대화를 나누는 사람들은 어떤 종류의 회사에서 근무합니까?",
+                    explanation: "대화 내용 중 기사(reporter), 뉴스 보도(news reporting), 원고 샘플 등을 언급하는 것으로 보아 신문사(newspaper)에서 일하고 있음을 알 수 있습니다."
                 },
                 {
                     id: "v3-p7-t1-q173",
                     questionNo: 173,
-                    text: "What is suggested about Mr. Erickson?",
-                    classification: "P7_INFERENCE",
+                    text: "At 8:59 A.M., what does Ms. Randolph most likely mean when she writes, \"Not at all\"?",
+                    classification: "P7_INTENTION",
                     options: {
-                        "A": "He is currently a freelance writer.",
-                        "B": "He used to work with Mr. Peters.",
-                        "C": "He has previously been a reporter.",
-                        "D": "He is looking for a part-time job."
+                        "A": "She would like to participate in an interview.",
+                        "B": "She does not think Mr. Erickson should be hired.",
+                        "C": "She feels comfortable fulfilling a request.",
+                        "D": "She has not read Mr. Erickson's writing."
                     },
-                    correctAnswer: "A",
-                    translation: "에릭슨 씨에 대해 암시된 것은?",
-                    explanation: "피터스 씨가 왜 프리랜서 작가에서 전향하려 하는지(why Mr. Erickson wants to transition from freelance writing) 물어볼 것이라는 대목에서 현재 프리랜서임을 알 수 있습니다."
+                    correctAnswer: "C",
+                    translation: "오전 8시 59분에 Ms. Randolph가 \"Not at all\"이라고 쓴 의미는 무엇입니까?",
+                    explanation: "Ashley가 다음 면접 일정을 위해 에릭슨 씨에게 연락해 줄 수 있느냐고 물었을 때, 전혀 문제없다는 뜻으로 요청을 기꺼이 들어주겠다는 의미입니다."
                 },
                 {
                     id: "v3-p7-t1-q174",
                     questionNo: 174,
-                    text: "What does Mr. Campbell imply when he writes, \"I'd really like to work with him\"?",
-                    classification: "P7_INTENTION",
+                    text: "What is indicated about Mr. Erickson?",
+                    classification: "P7_DETAIL",
                     options: {
-                        "A": "He wants to apply for a different position.",
-                        "B": "He would like to assist with an interview.",
-                        "C": "He is impressed by Mr. Erickson.",
-                        "D": "He is too busy to complete a task."
+                        "A": "He has never been on a job interview before.",
+                        "B": "He has held many different types of jobs.",
+                        "C": "He is taking over Mr. Peters' position.",
+                        "D": "He is a former colleague of Ms. Montaine."
                     },
-                    correctAnswer: "C",
-                    translation: "단 캠벨 씨가 \"그와 정말 함께 일하고 싶어요\"라고 쓴 의도는?",
-                    explanation: "에릭슨 씨가 훌륭한 기자가 될 것이라고 칭찬한 뒤에 한 말이므로, 에릭슨 씨에게 깊은 인상을 받았음을 나타냅니다."
+                    correctAnswer: "B",
+                    translation: "Mr. Erickson에 대해 알 수 있는 사실은 무엇입니까?",
+                    explanation: "Ashley의 말(varied work history)을 통해 그가 다양한 직업적 배경을 가지고 있음을 알 수 있습니다."
                 },
                 {
                     id: "v3-p7-t1-q175",
                     questionNo: 175,
-                    text: "What will Ms. Randolph likely do next?",
-                    classification: "P7_INFERENCE",
+                    text: "According to the discussion, what is important to Mr. Peters about a new hire?",
+                    classification: "P7_DETAIL",
                     options: {
-                        "A": "Conduct a reporter interview",
-                        "B": "Write a news article",
-                        "C": "Speak with Mr. Peters",
-                        "D": "Contact a job applicant"
+                        "A": "Prior news reporting experience",
+                        "B": "Ability to begin working immediately",
+                        "C": "Communicating well with colleagues",
+                        "D": "Staying with the company over the long term"
                     },
                     correctAnswer: "D",
-                    translation: "랜돌프 씨가 다음에 할 일로 가장 가능성이 높은 것은?",
-                    explanation: "마지막 대화에서 곧 이메일을 쓰겠다(I'll write an e-mail shortly)고 했는데, 이는 금요일 오전으로 면접 시간을 정했으므로 지원자인 에릭슨 씨에게 연락하겠다는 의미입니다."
+                    translation: "대화에 따르면, Mr. Peters가 신규 채용 시 중요하게 생각하는 것은 무엇입니까?",
+                    explanation: "Dan Campbell의 말(will stick around for several years)을 통해 Mr. Peters가 지원자가 회사에 오랫동안 머물 것인지에 대한 확신을 원한다는 것을 알 수 있습니다."
                 }
             ]
         }

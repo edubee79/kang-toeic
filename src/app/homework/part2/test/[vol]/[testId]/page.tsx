@@ -43,6 +43,8 @@ export default function Part2Test() {
     const [showTranslation, setShowTranslation] = useState(false);
     const [isLoadingRetry, setIsLoadingRetry] = useState(false);
     const [isPerfectScore, setIsPerfectScore] = useState(false);
+    const [isQuickReview, setIsQuickReview] = useState(false);
+    const [originalAnswers, setOriginalAnswers] = useState<Record<string, string>>({});
     const searchParams = useSearchParams();
     const retryMode = searchParams.get('mode') === 'retry';
     const resultId = searchParams.get('resultId');
@@ -129,6 +131,14 @@ export default function Part2Test() {
     // Current Question Data
     const currentQueue = isReviewMode ? wrongQueue : mainQueue;
     const currentQuestion = currentQueue[currentIndex];
+
+    // 자동 0번 초기화 진입 (이미 완료한 후 재진입 시 다시 풀 수 있도록 인덱스 초과 시 복구)
+    useEffect(() => {
+        if (isReady && !currentQuestion && !isReportMode && !isPerfectScore && questions.length > 0) {
+            setCurrentIndex(0);
+            setWrongQueue([]);
+        }
+    }, [isReady, currentQuestion, isReportMode, isPerfectScore, questions.length]);
 
     // Audio Playback Engine
     useEffect(() => {
@@ -292,11 +302,14 @@ export default function Part2Test() {
         setIsPlaying(false);
 
         if (isReviewMode) {
+            if (isQuickReview) return;
             setReviewedAnswers(prev => ({ ...prev, [currentQuestion.id]: key }));
+            setShowResult(true);
             return;
         }
 
         setSelectedAnswer(key);
+        setOriginalAnswers(prev => ({ ...prev, [currentQuestion.id]: key }));
         setShowResult(true);
 
         const isCorrect = key === currentQuestion.correctAnswer;
@@ -368,6 +381,16 @@ export default function Part2Test() {
 
     const startReview = () => {
         setIsReviewMode(true);
+        setIsQuickReview(false);
+        setCurrentIndex(0);
+        setPlayDelay(2000);
+        setIsReportMode(false);
+        setReviewedAnswers({});
+    };
+
+    const startDirectReview = () => {
+        setIsReviewMode(true);
+        setIsQuickReview(true);
         setCurrentIndex(0);
         setPlayDelay(2000);
         setIsReportMode(false);
@@ -425,15 +448,78 @@ export default function Part2Test() {
         );
     }
 
+    const reviewedAnswersCount = Object.keys(reviewedAnswers).filter(id => reviewedAnswers[id] === questions?.find(q => q.id === id)?.correctAnswer).length;
+
     if (isReportMode) {
         if (isReviewMode) {
+            if (isQuickReview) {
+                return (
+                    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                        <CheckCircle className="w-16 h-16 text-emerald-500 mb-6" />
+                        <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tighter">오답 확인 완료</h2>
+                        <p className="text-slate-400 font-medium mb-8">틀린 문제 확인을 모두 완료했습니다!</p>
+                        <div className="space-y-3 w-full max-w-xs">
+                            <Button
+                                onClick={finishAll}
+                                className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold border-none text-lg"
+                            >
+                                목록으로 돌아가기
+                            </Button>
+                        </div>
+                    </div>
+                );
+            }
+
+            // 복습에서도 틀린 문제 목록
+            const stillWrongQueue = wrongQueue.filter(q =>
+                reviewedAnswers[q.id] !== q.correctAnswer
+            );
+            const retryCorrect = wrongQueue.length - stillWrongQueue.length;
+            const retryTotal = wrongQueue.length;
+
+            // 정답보기: stillWrongQueue로 wrongQueue를 교체
+            const startAnswerView = () => {
+                setWrongQueue(stillWrongQueue);
+                setIsQuickReview(true);
+                setCurrentIndex(0);
+                setPlayDelay(2000);
+                setIsReportMode(false);
+            };
+
             return (
                 <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
                     <CheckCircle className="w-16 h-16 text-emerald-500 mb-6" />
-                    <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tighter">학습 완료</h2>
-                    <p className="text-slate-400 font-medium mb-8">오답 문제 복습을 모두 완료했습니다!</p>
+                    <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-tighter">오답 복습 완료</h2>
+                    <p className="text-slate-400 font-medium mb-6">복습 결과를 확인하세요</p>
+                    <div className="bg-slate-900/50 rounded-3xl p-8 border border-slate-800 w-full max-w-sm mb-8">
+                        <div className="flex items-center justify-center gap-6">
+                            <div className="text-center">
+                                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">맞은 문제</p>
+                                <p className="text-5xl font-black text-white leading-none">{retryCorrect}</p>
+                            </div>
+                            <div className="w-px h-12 bg-slate-800" />
+                            <div className="text-center">
+                                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">복습 문제 수</p>
+                                <p className="text-5xl font-black text-slate-400 leading-none">{retryTotal}</p>
+                            </div>
+                        </div>
+                        {retryCorrect === retryTotal && (
+                            <p className="text-emerald-400 font-bold text-sm mt-4">🎉 모든 복습 문제를 맞혔습니다!</p>
+                        )}
+                    </div>
                     <div className="space-y-3 w-full max-w-xs">
-                        <Button onClick={finishAll} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold transition-all shadow-lg shadow-emerald-500/20 text-lg">
+                        {stillWrongQueue.length > 0 && (
+                            <button
+                                onClick={startAnswerView}
+                                className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20"
+                            >
+                                틀린문제 정답보기
+                            </button>
+                        )}
+                        <Button
+                            onClick={finishAll}
+                            className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold border-none text-lg"
+                        >
                             목록으로 돌아가기
                         </Button>
                     </div>
@@ -453,12 +539,12 @@ export default function Part2Test() {
                     <div className="bg-slate-900/50 rounded-3xl p-8 border border-slate-800">
                         <div className="flex items-center justify-center gap-4 mb-6">
                             <div className="text-center">
-                                <p className="text-sm font-bold text-slate-500 uppercase">Score</p>
-                                <p className="text-4xl font-black text-white">{questions.length - wrongQueue.length}</p>
+                                <p className="text-sm font-bold text-slate-500 uppercase">{retryMode ? "Wrong Score" : "Score"}</p>
+                                <p className="text-4xl font-black text-white">{retryMode ? reviewedAnswersCount : (questions.length - wrongQueue.length)}</p>
                             </div>
                             <div className="w-px h-12 bg-slate-700"></div>
                             <div className="text-center">
-                                <p className="text-sm font-bold text-slate-500 uppercase">Wrong</p>
+                                <p className="text-sm font-bold text-slate-500 uppercase">{retryMode ? "Wrong Total" : "Wrong"}</p>
                                 <p className="text-4xl font-black text-rose-500">{wrongQueue.length}</p>
                             </div>
                         </div>
@@ -482,9 +568,14 @@ export default function Part2Test() {
                     </div>
                     <div className="space-y-3">
                         {wrongQueue.length > 0 && (
-                            <Button onClick={startReview} className="w-full h-14 bg-emerald-600 hover:bg-emerald-500 text-lg font-bold rounded-2xl shadow-lg shadow-emerald-500/20">
-                                <RotateCcw className="mr-2 w-5 h-5" /> 틀린 문제 재학습
-                            </Button>
+                            <>
+                                <button onClick={startDirectReview} className="w-full h-14 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-500/20">
+                                    틀린문제 정답확인
+                                </button>
+                                <button onClick={startReview} className="w-full h-14 bg-slate-800 text-white rounded-2xl font-bold border border-slate-700 hover:bg-slate-700 transition-colors">
+                                    틀린문제 다시풀기
+                                </button>
+                            </>
                         )}
                         <Button onClick={finishAll} variant="outline" className="w-full h-14 border-slate-700 bg-transparent text-slate-400 hover:bg-slate-800 hover:text-white text-lg font-bold rounded-2xl">
                             <CheckCircle className="mr-2 w-5 h-5" /> 학습 종료
@@ -494,6 +585,8 @@ export default function Part2Test() {
             </div>
         );
     }
+
+    
 
     if (!currentQuestion) return null;
 
@@ -584,7 +677,7 @@ export default function Part2Test() {
                     <p className="mt-6 text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
                         {isPlaying ? (useTTS ? "AI Speaking..." : "Listening...") : "Listen Carefully"}
                     </p>
-                    {isReviewMode && (showTranslation || !!reviewedAnswers[currentQuestion.id]) && (
+                    {isReviewMode && (isQuickReview || showTranslation || !!reviewedAnswers[currentQuestion.id]) && (
                         <div className="mt-6 pt-6 border-t border-slate-700/50 text-left animate-in fade-in slide-in-from-top-2 duration-300">
                             <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-2">Question Script</p>
                             <p className="text-sm text-slate-200 font-medium italic">"{currentQuestion.text}"</p>
@@ -609,9 +702,9 @@ export default function Part2Test() {
                             btnClass = "bg-amber-950/20 border-amber-500/50 text-slate-200";
                         }
 
-                        if (showResult || reviewAns) {
+                        if (showResult || reviewAns || (isReviewMode && isQuickReview)) {
                             if (isCorrect) btnClass = "bg-emerald-600/20 border-emerald-500 text-emerald-400";
-                            else if ((selectedAnswer === key) || (reviewAns === key)) btnClass = "bg-rose-600/20 border-rose-500 text-rose-400";
+                            else if ((selectedAnswer === key) || (reviewAns === key) || (isReviewMode && isQuickReview && originalAnswers[currentQuestion.id] === key)) btnClass = "bg-rose-600/20 border-rose-500 text-rose-400";
                             else btnClass = "bg-slate-900 border-slate-800 text-slate-600 opacity-50";
                         }
 
@@ -619,7 +712,7 @@ export default function Part2Test() {
                             <div key={key} className="flex gap-3 relative">
                                 <button
                                     onClick={() => handleAnswer(key)}
-                                    disabled={showResult || !!reviewAns}
+                                    disabled={showResult || !!reviewAns || isQuickReview}
                                     className={cn(
                                         "w-full p-5 rounded-2xl border font-bold text-left transition-all relative overflow-hidden min-h-[80px] md:min-h-[90px] flex items-center",
                                         btnClass
@@ -628,15 +721,15 @@ export default function Part2Test() {
                                     <div className="flex items-center gap-4 z-10 relative w-full">
                                         <div className={cn(
                                             "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-black transition-colors shrink-0",
-                                            (showResult || reviewAns) && isCorrect ? "bg-emerald-500 text-slate-900" : "bg-slate-900/50"
+                                            (showResult || reviewAns || isQuickReview) && isCorrect ? "bg-emerald-500 text-slate-900" : "bg-slate-900/50"
                                         )}>
                                             {key}
                                         </div>
                                         <div className="flex-1">
-                                            <p className={cn("text-sm font-medium transition-opacity duration-300", (showResult || reviewAns) ? "opacity-100" : "opacity-0")}>
+                                            <p className={cn("text-sm font-medium transition-opacity duration-300", (showResult || reviewAns || isQuickReview) ? "opacity-100" : "opacity-0")}>
                                                 {currentQuestion.options[key]}
                                             </p>
-                                            {(showResult || reviewAns) && showTranslation && (currentQuestion as any)[`translation_${key}`] && (
+                                            {(showResult || reviewAns || isQuickReview) && showTranslation && (currentQuestion as any)[`translation_${key}`] && (
                                                 <p className="text-[11px] text-slate-500 mt-1 italic animate-in fade-in duration-300">
                                                     {(currentQuestion as any)[`translation_${key}`]}
                                                 </p>
@@ -684,13 +777,13 @@ export default function Part2Test() {
                                 if (currentIndex < currentQueue.length - 1) {
                                     setCurrentIndex(prev => prev + 1);
                                 } else {
-                                    finishAll();
+                                    setIsReportMode(true);
                                 }
                             }}
-                            disabled={!reviewedAnswers[currentQuestion.id]}
+                            disabled={!isQuickReview && !reviewedAnswers[currentQuestion.id]}
                             className={cn(
                                 "px-8 h-14 rounded-2xl font-black text-sm tracking-widest transition-all",
-                                reviewedAnswers[currentQuestion.id]
+                                (isQuickReview || reviewedAnswers[currentQuestion.id])
                                     ? "bg-indigo-600 text-white hover:bg-indigo-500 shadow-xl"
                                     : "bg-slate-900 text-slate-600 border border-slate-800 pointer-events-none"
                             )}
